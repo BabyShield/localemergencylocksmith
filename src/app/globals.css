@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-inter, 'Inter', Arial, sans-serif);
+}
+
+/* Ensure content is not hidden behind the mobile call bar */
+@media (max-width: 767px) {
+  body {
+    padding-bottom: 56px;
+  }
+}
