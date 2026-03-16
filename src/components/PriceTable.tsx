@@ -22,7 +22,7 @@ export default function PriceTable() {
         <div className="bg-white rounded-xl border border-gray-200 overflow-hidden shadow-sm">
           <table className="w-full">
             <thead>
-              <tr className="bg-green-800 text-white">
+              <tr className="bg-[#0F1B2D] text-white">
                 <th className="text-left px-6 py-3 font-bold">Service</th>
                 <th className="text-right px-6 py-3 font-bold">Price From</th>
               </tr>
@@ -34,7 +34,7 @@ export default function PriceTable() {
                   className={`border-b border-gray-100 ${i % 2 === 0 ? 'bg-white' : 'bg-gray-50'}`}
                 >
                   <td className="px-6 py-3 text-gray-800">{row.service}</td>
-                  <td className={`px-6 py-3 text-right font-black ${row.price === 'FREE' ? 'text-green-700' : 'text-green-800'} text-lg`}>
+                  <td className={`px-6 py-3 text-right font-black ${row.price === 'FREE' ? 'text-[#FFB800]' : 'text-[#FFB800]'} text-lg`}>
                     {row.price}
                   </td>
                 </tr>

@@ -129,17 +129,17 @@ export default async function ArticlePage({ params }: Props) {
 
       {/* Breadcrumb */}
       <nav className="max-w-6xl mx-auto px-4 py-3 text-sm text-gray-500">
-        <Link href="/" className="hover:text-green-700">
+        <Link href="/" className="hover:text-[#FFB800]">
           Home
         </Link>
         <span className="mx-2">›</span>
-        <Link href="/blog" className="hover:text-green-700">
+        <Link href="/blog" className="hover:text-[#FFB800]">
           Blog
         </Link>
         <span className="mx-2">›</span>
         <Link
           href={`/blog/${areaSlug}/locked-out-at-night`}
-          className="hover:text-green-700"
+          className="hover:text-[#FFB800]"
         >
           {area.name}
         </Link>
@@ -150,25 +150,25 @@ export default async function ArticlePage({ params }: Props) {
       {/* Hero */}
       <section
         className="py-12 px-4 text-white"
-        style={{ background: 'linear-gradient(135deg, #1B5E20, #2E7D32)' }}
+        style={{ background: '#0F1B2D' }}
       >
         <div className="max-w-4xl mx-auto">
           <div className="flex flex-wrap gap-2 mb-4">
-            <span className="bg-green-700 text-green-100 text-xs font-semibold px-3 py-1 rounded-full">
+            <span className="bg-[#162438] text-gray-200 text-xs font-semibold px-3 py-1 rounded-full">
               {area.postcode}
             </span>
-            <span className="bg-orange-600 text-white text-xs font-semibold px-3 py-1 rounded-full">
+            <span className="bg-[#FFB800] text-[#0F1B2D] text-xs font-semibold px-3 py-1 rounded-full">
               ⏱ {area.responseTime} response
             </span>
           </div>
           <h1 className="text-2xl md:text-4xl font-black mb-4 leading-tight">{pageTitle}</h1>
-          <p className="text-green-100 text-lg leading-relaxed max-w-3xl">{intro}</p>
+          <p className="text-gray-300 text-lg leading-relaxed max-w-3xl">{intro}</p>
           <div className="mt-6">
             <a
               href={`tel:${SITE_CONFIG.phoneTel}`}
-              className="inline-flex flex-col items-center bg-orange-600 hover:bg-orange-700 text-white px-8 py-4 rounded-xl font-black text-lg transition-colors shadow-lg"
+              className="inline-flex flex-col items-center bg-[#FFB800] hover:bg-[#FFC933] text-[#0F1B2D] px-8 py-4 rounded-xl font-black text-lg transition-colors shadow-lg"
             >
-              <span className="text-xs font-bold uppercase tracking-widest text-orange-100">
+              <span className="text-xs font-bold uppercase tracking-widest text-[#0F1B2D]/70">
                 Call Now — 24/7
               </span>
               <span className="text-2xl">{SITE_CONFIG.phone}</span>
@@ -198,11 +198,11 @@ export default async function ArticlePage({ params }: Props) {
             ))}
 
             {/* Local context callout */}
-            <div className="bg-green-50 border border-green-200 rounded-xl p-6">
-              <h2 className="text-lg font-black text-green-900 mb-3">
+            <div className="bg-[#F7F7F5] border border-gray-200 rounded-xl p-6">
+              <h2 className="text-lg font-black text-[#0F1B2D] mb-3">
                 About {area.name} ({area.postcode})
               </h2>
-              <p className="text-green-800 leading-relaxed">{area.uniqueContent}</p>
+              <p className="text-gray-700 leading-relaxed">{area.uniqueContent}</p>
             </div>
 
             {/* CTA inline */}
@@ -212,9 +212,9 @@ export default async function ArticlePage({ params }: Props) {
               </p>
               <a
                 href={`tel:${SITE_CONFIG.phoneTel}`}
-                className="inline-flex flex-col items-center bg-orange-600 hover:bg-orange-700 text-white px-8 py-4 rounded-xl font-black text-xl transition-colors shadow"
+                className="inline-flex flex-col items-center bg-[#FFB800] hover:bg-[#FFC933] text-[#0F1B2D] px-8 py-4 rounded-xl font-black text-xl transition-colors shadow"
               >
-                <span className="text-xs font-bold uppercase tracking-widest text-orange-100">
+                <span className="text-xs font-bold uppercase tracking-widest text-[#0F1B2D]/70">
                   Call Now — Free Quote
                 </span>
                 <span className="text-2xl">{SITE_CONFIG.phone}</span>
@@ -236,7 +236,7 @@ export default async function ArticlePage({ params }: Props) {
                 <li>
                   <Link
                     href={`/areas/${areaSlug}`}
-                    className="text-green-700 hover:underline font-medium"
+                    className="text-[#0F1B2D] hover:underline font-medium"
                   >
                     Emergency Locksmith in {area.name} →
                   </Link>
@@ -245,7 +245,7 @@ export default async function ArticlePage({ params }: Props) {
                   <li key={slug}>
                     <Link
                       href={`/services/${slug}`}
-                      className="text-green-700 hover:underline font-medium capitalize"
+                      className="text-[#0F1B2D] hover:underline font-medium capitalize"
                     >
                       {slug.replace(/-/g, ' ')} →
                     </Link>
@@ -258,7 +258,7 @@ export default async function ArticlePage({ params }: Props) {
                     <li key={slug}>
                       <Link
                         href={`/blog/${areaSlug}/${slug}`}
-                        className="text-green-700 hover:underline font-medium"
+                        className="text-[#0F1B2D] hover:underline font-medium"
                       >
                         {renderTemplate(related.titleTemplate, area)} →
                       </Link>
@@ -269,11 +269,11 @@ export default async function ArticlePage({ params }: Props) {
             </div>
 
             {/* Quick info */}
-            <div className="bg-green-800 text-white rounded-xl p-5">
-              <h3 className="text-sm font-black uppercase tracking-wide mb-4 text-green-100">
+            <div className="bg-[#0F1B2D] text-white rounded-xl p-5">
+              <h3 className="text-sm font-black uppercase tracking-wide mb-4 text-[#FFB800]">
                 {area.name} — Key Facts
               </h3>
-              <ul className="space-y-2 text-sm text-green-100">
+              <ul className="space-y-2 text-sm text-gray-300">
                 <li>
                   <span className="font-bold text-white">Postcode:</span> {area.postcode}
                 </li>
@@ -296,7 +296,7 @@ export default async function ArticlePage({ params }: Props) {
               </ul>
               <a
                 href={`tel:${SITE_CONFIG.phoneTel}`}
-                className="block mt-4 bg-orange-600 hover:bg-orange-700 text-white text-center py-3 rounded-lg font-black transition-colors"
+                className="block mt-4 bg-[#FFB800] hover:bg-[#FFC933] text-[#0F1B2D] text-center py-3 rounded-lg font-black transition-colors"
               >
                 {SITE_CONFIG.phone}
               </a>
@@ -317,7 +317,7 @@ export default async function ArticlePage({ params }: Props) {
                 <Link
                   key={neighbour.slug}
                   href={`/blog/${neighbour.slug}/${articleSlug}`}
-                  className="bg-white border border-gray-200 rounded-lg px-4 py-3 text-sm font-medium text-gray-700 hover:border-green-700 hover:text-green-800 transition-colors text-center"
+                  className="bg-white border border-gray-200 rounded-lg px-4 py-3 text-sm font-medium text-gray-700 hover:border-[#FFB800] hover:text-[#0F1B2D] transition-colors text-center"
                 >
                   {neighbour.name}
                 </Link>

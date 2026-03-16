@@ -101,9 +101,9 @@ export default async function AreaPage({ params }: Props) {
 
       {/* Breadcrumb */}
       <nav className="max-w-6xl mx-auto px-4 py-3 text-sm text-gray-500">
-        <Link href="/" className="hover:text-green-700">Home</Link>
+        <Link href="/" className="hover:text-[#FFB800]">Home</Link>
         <span className="mx-2">›</span>
-        <Link href="/areas" className="hover:text-green-700">Areas</Link>
+        <Link href="/areas" className="hover:text-[#FFB800]">Areas</Link>
         <span className="mx-2">›</span>
         <span className="text-gray-800 font-medium">{area.name}</span>
       </nav>
@@ -125,7 +125,7 @@ export default async function AreaPage({ params }: Props) {
           </p>
           <p className="text-gray-700 leading-relaxed mb-4">
             I&apos;m an independent local locksmith — not a national call centre. When you call{' '}
-            <a href={`tel:${SITE_CONFIG.phoneTel}`} className="text-green-800 font-bold hover:underline">
+            <a href={`tel:${SITE_CONFIG.phoneTel}`} className="text-[#0F1B2D] font-bold hover:underline">
               {SITE_CONFIG.phone}
             </a>
             , I answer. I give you a price on the phone, I tell you honestly when I&apos;ll arrive, and
@@ -142,7 +142,7 @@ export default async function AreaPage({ params }: Props) {
             ].map((item) => (
               <div key={item.label} className="bg-gray-50 rounded-xl p-4 text-center border border-gray-100">
                 <p className="text-xs text-gray-500 uppercase tracking-wide mb-1">{item.label}</p>
-                <p className="font-black text-green-800 text-lg">{item.value}</p>
+                <p className="font-black text-[#FFB800] text-lg">{item.value}</p>
               </div>
             ))}
           </div>
@@ -150,9 +150,9 @@ export default async function AreaPage({ params }: Props) {
           <div className="text-center">
             <a
               href={`tel:${SITE_CONFIG.phoneTel}`}
-              className="inline-flex flex-col items-center bg-orange-600 hover:bg-orange-700 text-white px-8 py-4 rounded-xl font-black text-xl transition-colors shadow"
+              className="inline-flex flex-col items-center bg-[#FFB800] hover:bg-[#FFC933] text-[#0F1B2D] px-8 py-4 rounded-xl font-black text-xl transition-colors shadow"
             >
-              <span className="text-sm font-bold uppercase tracking-widest text-orange-100">Call Now — Free Quote</span>
+              <span className="text-sm font-bold uppercase tracking-widest text-[#0F1B2D]/70">Call Now — Free Quote</span>
               <span className="text-2xl">{SITE_CONFIG.phone}</span>
             </a>
           </div>
@@ -209,13 +209,13 @@ export default async function AreaPage({ params }: Props) {
                 <div>
                   <Link
                     href={`/services/${s.slug}`}
-                    className="font-semibold text-gray-900 hover:text-green-800 hover:underline"
+                    className="font-semibold text-gray-900 hover:text-[#0F1B2D] hover:underline"
                   >
                     {s.shortName}
                   </Link>
                   <p className="text-sm text-gray-600">{s.description}</p>
                 </div>
-                <span className="text-green-800 font-black text-lg ml-4 flex-shrink-0">
+                <span className="text-[#FFB800] font-black text-lg ml-4 flex-shrink-0">
                   From £{s.priceFrom}
                 </span>
               </div>
@@ -239,7 +239,7 @@ export default async function AreaPage({ params }: Props) {
             and I&apos;ll come.
           </p>
           <div className="flex flex-wrap gap-2 mt-4">
-            <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-semibold">
+            <span className="bg-[#0F1B2D] text-white px-3 py-1 rounded-full text-sm font-semibold">
               {area.postcode}
             </span>
             {neighbours.slice(0, 3).map((n) => (
@@ -263,7 +263,7 @@ export default async function AreaPage({ params }: Props) {
                 <Link
                   key={n.slug}
                   href={`/areas/${n.slug}`}
-                  className="bg-gray-50 hover:bg-gray-100 border border-gray-200 hover:border-green-700 text-gray-700 hover:text-green-800 px-4 py-3 rounded-lg text-sm font-medium transition-colors"
+                  className="bg-gray-50 hover:bg-gray-100 border border-gray-200 hover:border-[#FFB800] text-gray-700 hover:text-[#0F1B2D] px-4 py-3 rounded-lg text-sm font-medium transition-colors"
                 >
                   Locksmith {n.name}
                   <span className="block text-xs text-gray-500 mt-1">{n.postcode}</span>

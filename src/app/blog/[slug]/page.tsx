@@ -380,9 +380,9 @@ export default async function BlogPostPage({ params }: Props) {
       <SchemaMarkup schema={breadcrumbSchema} />
 
       <nav className="max-w-4xl mx-auto px-4 py-3 text-sm text-gray-500">
-        <Link href="/" className="hover:text-green-700">Home</Link>
+        <Link href="/" className="hover:text-[#FFB800]">Home</Link>
         <span className="mx-2">›</span>
-        <Link href="/blog" className="hover:text-green-700">Blog</Link>
+        <Link href="/blog" className="hover:text-[#FFB800]">Blog</Link>
         <span className="mx-2">›</span>
         <span className="text-gray-800 font-medium truncate max-w-xs inline-block align-bottom">{post.title}</span>
       </nav>
@@ -399,7 +399,7 @@ export default async function BlogPostPage({ params }: Props) {
             {post.title}
           </h1>
 
-          <p className="text-lg text-gray-600 leading-relaxed mb-8 border-l-4 border-green-700 pl-4">
+          <p className="text-lg text-gray-600 leading-relaxed mb-8 border-l-4 border-[#FFB800] pl-4">
             {post.excerpt}
           </p>
 
@@ -443,9 +443,9 @@ export default async function BlogPostPage({ params }: Props) {
           </div>
 
           {/* Author bio */}
-          <div className="mt-12 bg-green-50 rounded-xl p-6 border border-green-200">
-            <p className="font-bold text-green-900 mb-2">About the Author</p>
-            <p className="text-green-800 text-sm leading-relaxed">
+          <div className="mt-12 bg-[#F7F7F5] rounded-xl p-6 border border-gray-200">
+            <p className="font-bold text-[#0F1B2D] mb-2">About the Author</p>
+            <p className="text-gray-700 text-sm leading-relaxed">
               I&apos;m Ross, a local independent locksmith covering Coventry, Nuneaton, Rugby, Leamington Spa,
               Warwick, and all surrounding areas. I&apos;ve been working as a locksmith in the Coventry area
               for years and I&apos;ve seen every type of lock problem there is. If you need a locksmith, call
@@ -465,7 +465,7 @@ export default async function BlogPostPage({ params }: Props) {
                 <Link
                   key={p.slug}
                   href={`/blog/${p.slug}`}
-                  className="block text-green-700 hover:underline text-sm"
+                  className="block text-[#0F1B2D] hover:underline text-sm"
                 >
                   → {p.title}
                 </Link>

@@ -16,7 +16,7 @@ export default function AreaGrid() {
         <div className="space-y-8">
           {Object.entries(areasByRegion).map(([region, areas]) => (
             <div key={region}>
-              <h3 className="text-lg font-bold text-green-800 mb-3 border-b border-green-200 pb-2">
+              <h3 className="text-lg font-bold text-[#0F1B2D] mb-3 border-b border-[#FFB800]/30 pb-2">
                 {region}
               </h3>
               <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2">
@@ -26,10 +26,10 @@ export default function AreaGrid() {
                     href={`/areas/${area.slug}`}
                     className="flex flex-col py-2 px-2 rounded hover:bg-white transition-colors group"
                   >
-                    <span className="text-sm text-gray-700 group-hover:text-green-800 font-medium leading-tight">
+                    <span className="text-sm text-gray-700 group-hover:text-[#0F1B2D] font-medium leading-tight">
                       {area.name}
                     </span>
-                    <span className="text-xs text-gray-400 group-hover:text-green-600 mt-0.5">
+                    <span className="text-xs text-gray-400 group-hover:text-[#FFB800] mt-0.5">
                       {area.postcode}
                     </span>
                   </Link>

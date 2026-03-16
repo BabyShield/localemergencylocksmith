@@ -25,22 +25,22 @@ export default function ContactPage() {
       <SchemaMarkup schema={contactSchema} />
 
       <nav className="max-w-6xl mx-auto px-4 py-3 text-sm text-gray-500">
-        <Link href="/" className="hover:text-green-700">Home</Link>
+        <Link href="/" className="hover:text-[#FFB800]">Home</Link>
         <span className="mx-2">›</span>
         <span className="text-gray-800 font-medium">Contact</span>
       </nav>
 
-      <section className="py-12 px-4 text-white" style={{ background: 'linear-gradient(135deg, #1B5E20, #2E7D32)' }}>
+      <section className="py-12 px-4 text-white" style={{ background: '#0F1B2D' }}>
         <div className="max-w-3xl mx-auto text-center">
           <h1 className="text-3xl md:text-4xl font-black mb-4">Contact Us</h1>
-          <p className="text-green-100 text-lg mb-6">
+          <p className="text-gray-300 text-lg mb-6">
             For emergencies, call now — the fastest response is always by phone.
           </p>
           <a
             href={`tel:${SITE_CONFIG.phoneTel}`}
-            className="inline-flex flex-col items-center bg-orange-600 hover:bg-orange-700 text-white px-8 py-4 rounded-xl font-black text-xl transition-colors shadow"
+            className="inline-flex flex-col items-center bg-[#FFB800] hover:bg-[#FFC933] text-[#0F1B2D] px-8 py-4 rounded-xl font-black text-xl transition-colors shadow"
           >
-            <span className="text-sm font-bold uppercase tracking-widest text-orange-100">Call Now — 24/7</span>
+            <span className="text-sm font-bold uppercase tracking-widest text-[#0F1B2D]/70">Call Now — 24/7</span>
             <span className="text-2xl">{SITE_CONFIG.phone}</span>
           </a>
         </div>
@@ -57,7 +57,7 @@ export default function ContactPage() {
                 <span className="text-2xl">📞</span>
                 <div>
                   <p className="font-bold text-gray-900">Phone (emergencies)</p>
-                  <a href={`tel:${SITE_CONFIG.phoneTel}`} className="text-green-800 font-black text-xl hover:underline">
+                  <a href={`tel:${SITE_CONFIG.phoneTel}`} className="text-[#0F1B2D] font-black text-xl hover:underline">
                     {SITE_CONFIG.phone}
                   </a>
                   <p className="text-sm text-gray-500 mt-1">Available {SITE_CONFIG.hours}</p>
@@ -67,7 +67,7 @@ export default function ContactPage() {
                 <span className="text-2xl">✉️</span>
                 <div>
                   <p className="font-bold text-gray-900">Email</p>
-                  <a href={`mailto:${SITE_CONFIG.email}`} className="text-green-800 hover:underline">
+                  <a href={`mailto:${SITE_CONFIG.email}`} className="text-[#0F1B2D] hover:underline">
                     {SITE_CONFIG.email}
                   </a>
                   <p className="text-sm text-gray-500 mt-1">For non-urgent enquiries</p>
@@ -78,7 +78,7 @@ export default function ContactPage() {
                 <div>
                   <p className="font-bold text-gray-900">Service Area</p>
                   <p className="text-gray-700">Coventry, Nuneaton, Rugby, Leamington Spa, Warwick, Stratford-upon-Avon and all surrounding areas</p>
-                  <Link href="/areas" className="text-green-700 text-sm hover:underline mt-1 inline-block">
+                  <Link href="/areas" className="text-[#0F1B2D] text-sm hover:underline mt-1 inline-block">
                     View all areas →
                   </Link>
                 </div>
@@ -93,8 +93,8 @@ export default function ContactPage() {
               </div>
             </div>
 
-            <div className="mt-8 bg-green-50 rounded-xl p-5 border border-green-200">
-              <p className="text-green-900 font-semibold text-sm">
+            <div className="mt-8 bg-[#F7F7F5] rounded-xl p-5 border border-gray-200">
+              <p className="text-[#0F1B2D] font-semibold text-sm">
                 ⚠️ <strong>For emergencies — please call, don&apos;t email.</strong> I check email
                 during normal hours but I may not see it immediately if you are locked out at 2am.
                 Call {SITE_CONFIG.phone} for an instant response.
@@ -123,7 +123,7 @@ export default function ContactPage() {
                   id="name"
                   name="name"
                   required
-                  className="w-full border border-gray-300 rounded-lg px-4 py-3 text-gray-900 focus:outline-none focus:ring-2 focus:ring-green-700 focus:border-transparent"
+                  className="w-full border border-gray-300 rounded-lg px-4 py-3 text-gray-900 focus:outline-none focus:ring-2 focus:ring-[#0F1B2D] focus:border-transparent"
                   placeholder="John Smith"
                 />
               </div>
@@ -136,7 +136,7 @@ export default function ContactPage() {
                   id="phone"
                   name="phone"
                   required
-                  className="w-full border border-gray-300 rounded-lg px-4 py-3 text-gray-900 focus:outline-none focus:ring-2 focus:ring-green-700 focus:border-transparent"
+                  className="w-full border border-gray-300 rounded-lg px-4 py-3 text-gray-900 focus:outline-none focus:ring-2 focus:ring-[#0F1B2D] focus:border-transparent"
                   placeholder="07700 000000"
                 />
               </div>
@@ -148,7 +148,7 @@ export default function ContactPage() {
                   type="text"
                   id="postcode"
                   name="postcode"
-                  className="w-full border border-gray-300 rounded-lg px-4 py-3 text-gray-900 focus:outline-none focus:ring-2 focus:ring-green-700 focus:border-transparent"
+                  className="w-full border border-gray-300 rounded-lg px-4 py-3 text-gray-900 focus:outline-none focus:ring-2 focus:ring-[#0F1B2D] focus:border-transparent"
                   placeholder="CV1 1AA"
                 />
               </div>
@@ -161,13 +161,13 @@ export default function ContactPage() {
                   name="message"
                   required
                   rows={4}
-                  className="w-full border border-gray-300 rounded-lg px-4 py-3 text-gray-900 focus:outline-none focus:ring-2 focus:ring-green-700 focus:border-transparent"
+                  className="w-full border border-gray-300 rounded-lg px-4 py-3 text-gray-900 focus:outline-none focus:ring-2 focus:ring-[#0F1B2D] focus:border-transparent"
                   placeholder="Describe what you need..."
                 />
               </div>
               <button
                 type="submit"
-                className="w-full bg-green-800 hover:bg-green-900 text-white py-3 px-6 rounded-lg font-bold transition-colors min-h-[48px]"
+                className="w-full bg-[#0F1B2D] hover:bg-[#162438] text-white py-3 px-6 rounded-lg font-bold transition-colors min-h-[48px]"
               >
                 Send Message
               </button>

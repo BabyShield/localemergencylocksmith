@@ -6,7 +6,7 @@ export default function Footer() {
   const year = new Date().getFullYear()
 
   return (
-    <footer className="bg-gray-900 text-gray-300 py-12 px-4 pb-24 md:pb-12">
+    <footer className="bg-[#0F1B2D] text-gray-300 py-12 px-4 pb-24 md:pb-12">
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
         <div className="md:col-span-1">
           <h3 className="text-white font-black text-lg mb-4 uppercase">Local Emergency Locksmith</h3>
@@ -14,19 +14,19 @@ export default function Footer() {
             Independent emergency locksmith serving Coventry, Nuneaton, Rugby, Leamington Spa, Warwick, and all surrounding areas.
           </p>
           <p className="text-sm">
-            <span className="text-green-400 font-semibold">Phone: </span>
+            <span className="text-[#FFB800] font-semibold">Phone: </span>
             <a href={`tel:${SITE_CONFIG.phoneTel}`} className="hover:text-white transition-colors font-bold">
               {SITE_CONFIG.phone}
             </a>
           </p>
           <p className="text-sm mt-1">
-            <span className="text-green-400 font-semibold">Email: </span>
+            <span className="text-[#FFB800] font-semibold">Email: </span>
             <a href={`mailto:${SITE_CONFIG.email}`} className="hover:text-white transition-colors">
               {SITE_CONFIG.email}
             </a>
           </p>
           <p className="text-sm mt-1">
-            <span className="text-green-400 font-semibold">Hours: </span>
+            <span className="text-[#FFB800] font-semibold">Hours: </span>
             {SITE_CONFIG.hours}
           </p>
         </div>
@@ -69,7 +69,7 @@ export default function Footer() {
               </li>
             ))}
             <li>
-              <Link href="/areas" className="hover:text-white transition-colors font-semibold text-green-400">
+              <Link href="/areas" className="hover:text-white transition-colors font-semibold text-[#FFB800]">
                 All Areas →
               </Link>
             </li>

@@ -28,24 +28,24 @@ export default function ServicesPage() {
       <SchemaMarkup schema={breadcrumbSchema} />
 
       <nav className="max-w-6xl mx-auto px-4 py-3 text-sm text-gray-500">
-        <Link href="/" className="hover:text-green-700">Home</Link>
+        <Link href="/" className="hover:text-[#FFB800]">Home</Link>
         <span className="mx-2">›</span>
         <span className="text-gray-800 font-medium">Services</span>
       </nav>
 
-      <section className="py-12 px-4 text-white" style={{ background: 'linear-gradient(135deg, #1B5E20, #2E7D32)' }}>
+      <section className="py-12 px-4 text-white" style={{ background: '#0F1B2D' }}>
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-3xl md:text-4xl font-black mb-4">
             Locksmith Services — Coventry & Warwickshire
           </h1>
-          <p className="text-green-100 text-lg mb-6 max-w-2xl mx-auto">
+          <p className="text-gray-300 text-lg mb-6 max-w-2xl mx-auto">
             Emergency and planned locksmith services available 24/7. No VAT, no call-out fee.
           </p>
           <a
             href={`tel:${SITE_CONFIG.phoneTel}`}
-            className="inline-flex flex-col items-center bg-orange-600 hover:bg-orange-700 text-white px-8 py-4 rounded-xl font-black text-xl transition-colors shadow"
+            className="inline-flex flex-col items-center bg-[#FFB800] hover:bg-[#FFC933] text-[#0F1B2D] px-8 py-4 rounded-xl font-black text-xl transition-colors shadow"
           >
-            <span className="text-sm font-bold uppercase tracking-widest text-orange-100">Call Now — Free Quote</span>
+            <span className="text-sm font-bold uppercase tracking-widest text-[#0F1B2D]/70">Call Now — Free Quote</span>
             <span className="text-2xl">{SITE_CONFIG.phone}</span>
           </a>
         </div>

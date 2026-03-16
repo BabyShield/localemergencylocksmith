@@ -94,26 +94,26 @@ export default function PricesPage() {
 
       {/* Breadcrumb */}
       <nav className="max-w-6xl mx-auto px-4 py-3 text-sm text-gray-500">
-        <Link href="/" className="hover:text-green-700">Home</Link>
+        <Link href="/" className="hover:text-[#FFB800]">Home</Link>
         <span className="mx-2">›</span>
         <span className="text-gray-800 font-medium">Prices</span>
       </nav>
 
       {/* Hero */}
-      <section className="py-12 px-4 text-white" style={{ background: 'linear-gradient(135deg, #1B5E20, #2E7D32)' }}>
+      <section className="py-12 px-4 text-white" style={{ background: '#0F1B2D' }}>
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-3xl md:text-5xl font-black mb-4">
             Transparent Locksmith Prices
           </h1>
-          <p className="text-green-100 text-lg mb-6 max-w-2xl mx-auto">
+          <p className="text-gray-300 text-lg mb-6 max-w-2xl mx-auto">
             No VAT. No call-out fee. No &ldquo;call for a quote&rdquo; — just real prices. The price you see
             is the price you pay.
           </p>
           <a
             href={`tel:${SITE_CONFIG.phoneTel}`}
-            className="inline-flex flex-col items-center bg-orange-600 hover:bg-orange-700 text-white px-8 py-4 rounded-xl font-black text-xl transition-colors shadow"
+            className="inline-flex flex-col items-center bg-[#FFB800] hover:bg-[#FFC933] text-[#0F1B2D] px-8 py-4 rounded-xl font-black text-xl transition-colors shadow"
           >
-            <span className="text-sm font-bold uppercase tracking-widest text-orange-100">Get a Quote Now</span>
+            <span className="text-sm font-bold uppercase tracking-widest text-[#0F1B2D]/70">Get a Quote Now</span>
             <span className="text-2xl">{SITE_CONFIG.phone}</span>
           </a>
         </div>
@@ -125,7 +125,7 @@ export default function PricesPage() {
           <div className="bg-white rounded-xl border border-gray-200 overflow-hidden shadow-sm">
             <table className="w-full">
               <thead>
-                <tr className="bg-green-800 text-white">
+                <tr className="bg-[#0F1B2D] text-white">
                   <th className="text-left px-6 py-4 font-bold">Service</th>
                   <th className="text-right px-6 py-4 font-bold whitespace-nowrap">Price From</th>
                 </tr>
@@ -137,7 +137,7 @@ export default function PricesPage() {
                       <p className="font-semibold text-gray-900">{row.service}</p>
                       <p className="text-sm text-gray-500 mt-1">{row.detail}</p>
                     </td>
-                    <td className={`px-6 py-4 text-right font-black text-xl align-top pt-5 ${row.price === 0 ? 'text-green-600' : 'text-green-800'}`}>
+                    <td className={`px-6 py-4 text-right font-black text-xl align-top pt-5 text-[#FFB800]`}>
                       {row.price === 0 ? 'FREE' : `£${row.price}`}
                     </td>
                   </tr>
@@ -146,9 +146,9 @@ export default function PricesPage() {
             </table>
           </div>
 
-          <div className="mt-6 bg-green-50 rounded-xl p-6 border border-green-200">
-            <h3 className="font-bold text-green-900 text-lg mb-3">What these prices include:</h3>
-            <ul className="space-y-2 text-sm text-green-800">
+          <div className="mt-6 bg-[#F7F7F5] rounded-xl p-6 border border-gray-200">
+            <h3 className="font-bold text-[#0F1B2D] text-lg mb-3">What these prices include:</h3>
+            <ul className="space-y-2 text-sm text-gray-700">
               <li>✓ No VAT — all prices are the final total</li>
               <li>✓ No call-out fee — ever</li>
               <li>✓ Labour included in all prices</li>
@@ -158,9 +158,9 @@ export default function PricesPage() {
             </ul>
           </div>
 
-          <div className="mt-6 bg-orange-50 rounded-xl p-6 border border-orange-200">
-            <h3 className="font-bold text-orange-900 text-lg mb-2">Why no VAT?</h3>
-            <p className="text-orange-800 text-sm leading-relaxed">
+          <div className="mt-6 bg-[#0F1B2D] rounded-xl p-6 border border-[#162438]">
+            <h3 className="font-bold text-[#FFB800] text-lg mb-2">Why no VAT?</h3>
+            <p className="text-gray-300 text-sm leading-relaxed">
               As an independent sole trader, I am not VAT registered. This means I do not add 20% VAT to
               my prices. A national company charging £59 + VAT is actually charging you £70.80. My £59 is
               £59 — no additions, no surprises.

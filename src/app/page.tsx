@@ -117,7 +117,7 @@ export default function HomePage() {
       />
 
       {/* Personal trust bar */}
-      <div className="bg-green-50 border-b border-green-200 py-4 px-4">
+      <div className="bg-[#F7F7F5] border-b border-gray-200 py-4 px-4">
         <div className="max-w-4xl mx-auto flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 text-center text-sm">
           <div className="flex items-center gap-2">
             <span className="text-yellow-400 text-xl leading-none">★★★★★</span>
@@ -130,7 +130,7 @@ export default function HomePage() {
           </div>
           <span className="hidden sm:block text-gray-300">|</span>
           <div>
-            <a href={`tel:${SITE_CONFIG.phoneTel}`} className="text-green-800 font-black text-lg hover:underline">
+            <a href={`tel:${SITE_CONFIG.phoneTel}`} className="text-[#0F1B2D] font-black text-lg hover:underline">
               {SITE_CONFIG.phone}
             </a>
           </div>
@@ -170,10 +170,10 @@ export default function HomePage() {
                 desc: 'For most of Coventry I can be with you in 15-30 minutes. No van driving from Birmingham.',
               },
             ].map((item) => (
-              <div key={item.title} className="bg-gray-50 rounded-xl p-6 text-center">
+              <div key={item.title} className="bg-[#162438] rounded-xl p-6 text-center">
                 <div className="text-4xl mb-3">{item.icon}</div>
-                <h3 className="font-bold text-gray-900 text-lg mb-2">{item.title}</h3>
-                <p className="text-gray-600 text-sm leading-relaxed">{item.desc}</p>
+                <h3 className="font-bold text-[#FFB800] text-lg mb-2">{item.title}</h3>
+                <p className="text-white text-sm leading-relaxed">{item.desc}</p>
               </div>
             ))}
           </div>
@@ -181,7 +181,7 @@ export default function HomePage() {
       </section>
 
       {/* Services */}
-      <section className="py-12 px-4 bg-gray-50">
+      <section className="py-12 px-4 bg-[#F7F7F5]">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-2xl md:text-3xl font-black text-gray-900 mb-2 text-center">
             Locksmith Services in Coventry
@@ -210,12 +210,12 @@ export default function HomePage() {
             Locked out at 2am on Christmas morning? I&apos;ll answer. No premium for unsociable hours.
             No extra charge for weekends. Same price, always.
           </p>
-          <p className="text-green-800 font-bold mb-2">
+          <p className="text-[#0F1B2D] font-bold mb-2">
             Covering CV1, CV2, CV3, CV4, CV5, CV6, CV7 and all surrounding postcodes
           </p>
           <a
             href={`tel:${SITE_CONFIG.phoneTel}`}
-            className="inline-block mb-6 text-2xl font-black text-orange-600 hover:underline"
+            className="inline-block mb-6 text-2xl font-black text-[#FFB800] hover:underline"
           >
             {SITE_CONFIG.phone}
           </a>
@@ -228,7 +228,7 @@ export default function HomePage() {
               '✓ Sunday evenings',
               '✓ Any weather',
             ].map((item) => (
-              <span key={item} className="bg-green-50 text-green-800 px-3 py-1 rounded-full font-medium">
+              <span key={item} className="bg-[#0F1B2D] text-white px-3 py-1 rounded-full font-medium">
                 {item}
               </span>
             ))}
@@ -293,7 +293,7 @@ export default function HomePage() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="bg-white border border-gray-200 hover:border-green-700 text-gray-700 hover:text-green-800 px-4 py-2 rounded-lg text-sm font-medium transition-colors"
+                className="bg-white border border-gray-200 hover:border-[#FFB800] text-gray-700 hover:text-[#0F1B2D] px-4 py-2 rounded-lg text-sm font-medium transition-colors"
               >
                 {link.label}
               </Link>

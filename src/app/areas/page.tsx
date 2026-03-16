@@ -31,25 +31,25 @@ export default function AreasPage() {
       <SchemaMarkup schema={breadcrumbSchema} />
 
       <nav className="max-w-6xl mx-auto px-4 py-3 text-sm text-gray-500">
-        <Link href="/" className="hover:text-green-700">Home</Link>
+        <Link href="/" className="hover:text-[#FFB800]">Home</Link>
         <span className="mx-2">›</span>
         <span className="text-gray-800 font-medium">All Areas</span>
       </nav>
 
-      <section className="py-12 px-4 text-white" style={{ background: 'linear-gradient(135deg, #1B5E20, #2E7D32)' }}>
+      <section className="py-12 px-4 text-white" style={{ background: '#0F1B2D' }}>
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-3xl md:text-4xl font-black mb-4">
             Emergency Locksmith — All Areas Covered
           </h1>
-          <p className="text-green-100 text-lg mb-6 max-w-2xl mx-auto">
+          <p className="text-gray-300 text-lg mb-6 max-w-2xl mx-auto">
             I cover Coventry and the whole of Warwickshire — over 90 towns, villages, and suburbs.
             No VAT, no call-out fee, 15-30 minute response for most areas.
           </p>
           <a
             href={`tel:${SITE_CONFIG.phoneTel}`}
-            className="inline-flex flex-col items-center bg-orange-600 hover:bg-orange-700 text-white px-8 py-4 rounded-xl font-black text-xl transition-colors shadow"
+            className="inline-flex flex-col items-center bg-[#FFB800] hover:bg-[#FFC933] text-[#0F1B2D] px-8 py-4 rounded-xl font-black text-xl transition-colors shadow"
           >
-            <span className="text-sm font-bold uppercase tracking-widest text-orange-100">Call Now — Free Quote</span>
+            <span className="text-sm font-bold uppercase tracking-widest text-[#0F1B2D]/70">Call Now — Free Quote</span>
             <span className="text-2xl">{SITE_CONFIG.phone}</span>
           </a>
         </div>
@@ -59,7 +59,7 @@ export default function AreasPage() {
         <div className="max-w-6xl mx-auto space-y-10">
           {Object.entries(areasByRegion).map(([region, areas]) => (
             <div key={region}>
-              <h2 className="text-2xl font-black text-gray-900 mb-4 pb-2 border-b-2 border-green-800">
+              <h2 className="text-2xl font-black text-gray-900 mb-4 pb-2 border-b-2 border-[#0F1B2D]">
                 {region}
               </h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
@@ -67,13 +67,13 @@ export default function AreasPage() {
                   <Link
                     key={area.slug}
                     href={`/areas/${area.slug}`}
-                    className="block bg-gray-50 hover:bg-white border border-gray-200 hover:border-green-700 rounded-xl p-4 transition-all group"
+                    className="block bg-gray-50 hover:bg-white border border-gray-200 hover:border-[#FFB800] rounded-xl p-4 transition-all group"
                   >
-                    <p className="font-bold text-gray-900 group-hover:text-green-800">
+                    <p className="font-bold text-gray-900 group-hover:text-[#0F1B2D]">
                       {area.name}
                     </p>
                     <p className="text-sm text-gray-500 mt-1">{area.postcode}</p>
-                    <p className="text-xs text-green-700 mt-1">{area.responseTime}</p>
+                    <p className="text-xs text-[#FFB800] mt-1">{area.responseTime}</p>
                   </Link>
                 ))}
               </div>

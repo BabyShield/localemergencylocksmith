@@ -33,7 +33,7 @@ export default function FAQSection({
                 aria-expanded={openIndex === i}
               >
                 <span>{faq.q}</span>
-                <span className="text-green-700 text-xl ml-4 flex-shrink-0">
+                <span className="text-[#FFB800] text-xl ml-4 flex-shrink-0">
                   {openIndex === i ? '−' : '+'}
                 </span>
               </button>

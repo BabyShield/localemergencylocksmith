@@ -245,9 +245,9 @@ export default async function ServicePage({ params }: Props) {
 
       {/* Breadcrumb */}
       <nav className="max-w-6xl mx-auto px-4 py-3 text-sm text-gray-500">
-        <Link href="/" className="hover:text-green-700">Home</Link>
+        <Link href="/" className="hover:text-[#FFB800]">Home</Link>
         <span className="mx-2">›</span>
-        <Link href="/services" className="hover:text-green-700">Services</Link>
+        <Link href="/services" className="hover:text-[#FFB800]">Services</Link>
         <span className="mx-2">›</span>
         <span className="text-gray-800 font-medium">{service.shortName}</span>
       </nav>
@@ -281,7 +281,7 @@ export default async function ServicePage({ params }: Props) {
             <ol className="space-y-4">
               {content.steps.map((step, i) => (
                 <li key={i} className="flex gap-4 items-start">
-                  <span className="flex-shrink-0 w-12 h-12 rounded-full bg-green-800 text-white font-black text-lg flex items-center justify-center shadow-sm">
+                  <span className="flex-shrink-0 w-12 h-12 rounded-full bg-[#FFB800] text-[#0F1B2D] font-black text-lg flex items-center justify-center shadow-sm">
                     {i + 1}
                   </span>
                   <span className="text-gray-800 pt-3 text-base">{step}</span>
@@ -298,10 +298,10 @@ export default async function ServicePage({ params }: Props) {
           <h2 className="text-2xl font-black text-gray-900 mb-4">
             {service.shortName} Prices
           </h2>
-          <div className="inline-block bg-green-800 text-white rounded-xl px-10 py-6">
-            <p className="text-green-200 text-sm uppercase tracking-widest mb-1">Starting from</p>
-            <p className="text-5xl font-black">£{service.priceFrom}</p>
-            <p className="text-green-200 text-sm mt-2">No VAT &bull; No call-out fee &bull; Includes labour</p>
+          <div className="inline-block bg-[#0F1B2D] text-white rounded-xl px-10 py-6">
+            <p className="text-gray-400 text-sm uppercase tracking-widest mb-1">Starting from</p>
+            <p className="text-5xl font-black text-[#FFB800]">£{service.priceFrom}</p>
+            <p className="text-gray-400 text-sm mt-2">No VAT &bull; No call-out fee &bull; Includes labour</p>
           </div>
           <p className="text-gray-600 mt-6 text-sm">
             The price you are quoted when you call is the final price. No surprises.
@@ -320,7 +320,7 @@ export default async function ServicePage({ params }: Props) {
               <Link
                 key={area.slug}
                 href={`/areas/${area.slug}`}
-                className="bg-white border border-gray-200 hover:border-green-700 text-gray-700 hover:text-green-800 px-4 py-2 rounded-lg text-sm font-medium transition-colors text-center"
+                className="bg-white border border-gray-200 hover:border-[#FFB800] text-gray-700 hover:text-[#0F1B2D] px-4 py-2 rounded-lg text-sm font-medium transition-colors text-center"
               >
                 {area.name}
               </Link>
@@ -331,12 +331,12 @@ export default async function ServicePage({ params }: Props) {
               <Link
                 key={area.slug}
                 href={`/areas/${area.slug}`}
-                className="text-sm text-gray-600 hover:text-green-700 hover:underline px-2 py-1"
+                className="text-sm text-gray-600 hover:text-[#FFB800] hover:underline px-2 py-1"
               >
                 {area.name}
               </Link>
             ))}
-            <Link href="/areas" className="text-sm text-green-700 font-semibold hover:underline px-2 py-1">
+            <Link href="/areas" className="text-sm text-[#0F1B2D] font-semibold hover:underline px-2 py-1">
               View all areas →
             </Link>
           </div>
@@ -360,16 +360,16 @@ export default async function ServicePage({ params }: Props) {
               <Link
                 key={s.slug}
                 href={`/services/${s.slug}`}
-                className="flex items-center gap-4 bg-gray-50 hover:bg-green-50 border border-gray-200 hover:border-green-700 rounded-xl p-4 transition-colors group"
+                className="flex items-center gap-4 bg-gray-50 hover:bg-[#F7F7F5] border border-gray-200 hover:border-[#FFB800] rounded-xl p-4 transition-colors group"
               >
                 <div className="flex-1">
-                  <div className="font-black text-gray-900 group-hover:text-green-800 text-base leading-tight">
+                  <div className="font-black text-gray-900 group-hover:text-[#0F1B2D] text-base leading-tight">
                     {s.shortName}
                   </div>
                   <div className="text-sm text-gray-500 mt-0.5">{s.description}</div>
                 </div>
                 <div className="text-right flex-shrink-0">
-                  <div className="text-green-800 font-black text-lg">from £{s.priceFrom}</div>
+                  <div className="text-[#FFB800] font-black text-lg">from £{s.priceFrom}</div>
                   <div className="text-xs text-gray-400">No VAT</div>
                 </div>
               </Link>
