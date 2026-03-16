@@ -116,6 +116,27 @@ export default function HomePage() {
         subheading="Locked out? I'll be there in 15-30 minutes. Local, independent — no VAT, no call-out fee, no hidden charges."
       />
 
+      {/* Personal trust bar */}
+      <div className="bg-green-50 border-b border-green-200 py-4 px-4">
+        <div className="max-w-4xl mx-auto flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 text-center text-sm">
+          <div className="flex items-center gap-2">
+            <span className="text-yellow-400 text-xl leading-none">★★★★★</span>
+            <span className="font-bold text-gray-800">5-Star Rated on Google</span>
+          </div>
+          <span className="hidden sm:block text-gray-300">|</span>
+          <div className="flex items-center gap-2">
+            <span className="text-lg">📱</span>
+            <span className="font-bold text-gray-800">I answer personally — no call centre</span>
+          </div>
+          <span className="hidden sm:block text-gray-300">|</span>
+          <div>
+            <a href={`tel:${SITE_CONFIG.phoneTel}`} className="text-green-800 font-black text-lg hover:underline">
+              {SITE_CONFIG.phone}
+            </a>
+          </div>
+        </div>
+      </div>
+
       {/* Why choose us */}
       <section className="py-12 px-4 bg-white">
         <div className="max-w-6xl mx-auto">
@@ -185,10 +206,19 @@ export default function HomePage() {
           <h2 className="text-2xl md:text-3xl font-black text-gray-900 mb-4">
             24 Hour Locksmith Coventry — Any Time, Any Day
           </h2>
-          <p className="text-gray-700 leading-relaxed text-lg max-w-2xl mx-auto mb-6">
+          <p className="text-gray-700 leading-relaxed text-lg max-w-2xl mx-auto mb-4">
             Locked out at 2am on Christmas morning? I&apos;ll answer. No premium for unsociable hours.
             No extra charge for weekends. Same price, always.
           </p>
+          <p className="text-green-800 font-bold mb-2">
+            Covering CV1, CV2, CV3, CV4, CV5, CV6, CV7 and all surrounding postcodes
+          </p>
+          <a
+            href={`tel:${SITE_CONFIG.phoneTel}`}
+            className="inline-block mb-6 text-2xl font-black text-orange-600 hover:underline"
+          >
+            {SITE_CONFIG.phone}
+          </a>
           <div className="flex flex-wrap justify-center gap-3 text-sm">
             {[
               '✓ Midnight lockouts',

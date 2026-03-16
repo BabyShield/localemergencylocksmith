@@ -7,8 +7,8 @@ export default function Footer() {
 
   return (
     <footer className="bg-gray-900 text-gray-300 py-12 px-4 pb-24 md:pb-12">
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div>
+      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="md:col-span-1">
           <h3 className="text-white font-black text-lg mb-4 uppercase">Local Emergency Locksmith</h3>
           <p className="text-sm leading-relaxed mb-4">
             Independent emergency locksmith serving Coventry, Nuneaton, Rugby, Leamington Spa, Warwick, and all surrounding areas.
@@ -50,7 +50,7 @@ export default function Footer() {
         </div>
 
         <div>
-          <h3 className="text-white font-bold mb-4">Main Areas</h3>
+          <h3 className="text-white font-bold mb-4">Main Towns</h3>
           <ul className="space-y-2 text-sm">
             {[
               { slug: 'coventry-city-centre', name: 'Coventry' },
@@ -60,6 +60,7 @@ export default function Footer() {
               { slug: 'warwick', name: 'Warwick' },
               { slug: 'stratford-upon-avon', name: 'Stratford-upon-Avon' },
               { slug: 'kenilworth', name: 'Kenilworth' },
+              { slug: 'bedworth', name: 'Bedworth' },
             ].map((area) => (
               <li key={area.slug}>
                 <Link href={`/areas/${area.slug}`} className="hover:text-white transition-colors">
@@ -72,6 +73,30 @@ export default function Footer() {
                 All Areas →
               </Link>
             </li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 className="text-white font-bold mb-4">Coventry Suburbs</h3>
+          <ul className="space-y-2 text-sm">
+            {[
+              { slug: 'earlsdon', name: 'Earlsdon' },
+              { slug: 'tile-hill', name: 'Tile Hill' },
+              { slug: 'canley', name: 'Canley' },
+              { slug: 'radford', name: 'Radford' },
+              { slug: 'stoke-coventry', name: 'Stoke' },
+              { slug: 'wyken', name: 'Wyken' },
+              { slug: 'binley', name: 'Binley' },
+              { slug: 'cheylesmore', name: 'Cheylesmore' },
+              { slug: 'longford', name: 'Longford' },
+              { slug: 'allesley', name: 'Allesley' },
+            ].map((area) => (
+              <li key={area.slug}>
+                <Link href={`/areas/${area.slug}`} className="hover:text-white transition-colors">
+                  Locksmith {area.name}
+                </Link>
+              </li>
+            ))}
           </ul>
         </div>
       </div>

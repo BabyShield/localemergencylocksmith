@@ -43,8 +43,10 @@ const SERVICE_CONTENT: Record<string, {
   steps: string[]
   faqs: { q: string; a: string }[]
   howToName: string
+  h1: string
 }> = {
   'emergency-lockout': {
+    h1: 'Emergency Locksmith Coventry — Locked Out?',
     intro: [
       "Being locked out of your home is stressful — especially late at night or in bad weather. I provide fast, professional emergency lockout services across Coventry and Warwickshire, available 24 hours a day, 7 days a week, 365 days a year.",
       "When you call me, I'll ask you for your address and a brief description of your door and lock type. I'll give you an honest price upfront — from £59 — and an honest arrival time. No call-out fee. No VAT.",
@@ -67,6 +69,7 @@ const SERVICE_CONTENT: Record<string, {
     howToName: 'How to Get an Emergency Locksmith in Coventry',
   },
   'lock-change': {
+    h1: 'Lock Change Coventry — Same Day Service',
     intro: [
       "Whether you've moved into a new property, lost a key, had a break-in, or simply want to upgrade your security, I supply and fit replacement locks across Coventry and Warwickshire the same day you call.",
       "I carry a full range of lock types including British Standard BS3621 five-lever mortice deadlocks, high-security cylinder locks, anti-snap cylinders, and Yale nightlatches. If your insurance requires a specific lock type, I'll make sure you get the right one.",
@@ -89,6 +92,7 @@ const SERVICE_CONTENT: Record<string, {
     howToName: 'How to Get a Lock Changed in Coventry',
   },
   'upvc-lock-repair': {
+    h1: 'uPVC Door Lock Repair Coventry — Fast & Affordable',
     intro: [
       "uPVC door and window locks are the most common lock type in UK homes built since the 1990s, and they are also the most common source of repair calls I receive. A stiff, sticky, or misaligned uPVC lock is not just annoying — it is a security risk.",
       "I repair and replace uPVC door multipoint locking mechanisms, euro cylinders, window espagnolette locks, and door handles across Coventry and Warwickshire. In most cases I can repair the existing lock; where replacement is necessary I carry the most common lock types in my van.",
@@ -111,6 +115,7 @@ const SERVICE_CONTENT: Record<string, {
     howToName: 'How to Get a uPVC Lock Repaired in Coventry',
   },
   'boarding-up': {
+    h1: 'Emergency Boarding Up Coventry — 24/7 Service',
     intro: [
       "After a break-in, storm damage, or accidental breakage, a smashed window or damaged door needs securing immediately. I provide emergency boarding-up services across Coventry and Warwickshire, available 24 hours a day.",
       "I use heavy-duty boarding materials to secure your property against weather and further intrusion until a permanent repair can be arranged. Where possible I will also advise on the most secure temporary solution for your specific situation.",
@@ -132,6 +137,7 @@ const SERVICE_CONTENT: Record<string, {
     howToName: 'How to Get Emergency Boarding Up in Coventry',
   },
   'lock-upgrade': {
+    h1: 'Lock Upgrade Coventry — BS3621 & Anti-Snap Cylinders',
     intro: [
       "Upgrading your locks is one of the most cost-effective security improvements you can make. Whether you want to comply with home insurance requirements, improve resistance to forced entry, or simply feel more secure, I supply and fit a full range of security-approved locks.",
       "I fit British Standard BS3621 mortice deadlocks, Secured by Design cylinders, anti-snap euro cylinders, and high-security mortice locks. I can also carry out a free security assessment of your property and advise on any weak points.",
@@ -247,7 +253,7 @@ export default async function ServicePage({ params }: Props) {
       </nav>
 
       <HeroSection
-        heading={`${service.name} — Coventry & Warwickshire`}
+        heading={content?.h1 ?? `${service.name} — Coventry & Warwickshire`}
         subheading={`${service.description} Call now for a price — no VAT, no call-out fee.`}
       />
 
@@ -275,10 +281,10 @@ export default async function ServicePage({ params }: Props) {
             <ol className="space-y-4">
               {content.steps.map((step, i) => (
                 <li key={i} className="flex gap-4 items-start">
-                  <span className="flex-shrink-0 w-8 h-8 rounded-full bg-green-800 text-white font-black text-sm flex items-center justify-center">
+                  <span className="flex-shrink-0 w-12 h-12 rounded-full bg-green-800 text-white font-black text-lg flex items-center justify-center shadow-sm">
                     {i + 1}
                   </span>
-                  <span className="text-gray-800 pt-1">{step}</span>
+                  <span className="text-gray-800 pt-3 text-base">{step}</span>
                 </li>
               ))}
             </ol>
@@ -348,15 +354,24 @@ export default async function ServicePage({ params }: Props) {
       {/* Other services */}
       <section className="py-12 px-4 bg-white">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-xl font-bold text-gray-900 mb-4">Other Services</h2>
-          <div className="flex flex-wrap gap-3">
+          <h2 className="text-2xl font-black text-gray-900 mb-6">Other Services</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {SERVICES.filter((s) => s.slug !== slug).map((s) => (
               <Link
                 key={s.slug}
                 href={`/services/${s.slug}`}
-                className="bg-gray-50 hover:bg-gray-100 text-gray-700 px-4 py-2 rounded-lg text-sm font-medium transition-colors border border-gray-200"
+                className="flex items-center gap-4 bg-gray-50 hover:bg-green-50 border border-gray-200 hover:border-green-700 rounded-xl p-4 transition-colors group"
               >
-                {s.shortName} — from £{s.priceFrom}
+                <div className="flex-1">
+                  <div className="font-black text-gray-900 group-hover:text-green-800 text-base leading-tight">
+                    {s.shortName}
+                  </div>
+                  <div className="text-sm text-gray-500 mt-0.5">{s.description}</div>
+                </div>
+                <div className="text-right flex-shrink-0">
+                  <div className="text-green-800 font-black text-lg">from £{s.priceFrom}</div>
+                  <div className="text-xs text-gray-400">No VAT</div>
+                </div>
               </Link>
             ))}
           </div>

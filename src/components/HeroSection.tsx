@@ -22,7 +22,7 @@ export default function HeroSection({ heading, subheading, areaName }: HeroSecti
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-6">
           <a
             href={`tel:${SITE_CONFIG.phoneTel}`}
-            className="inline-flex flex-col items-center bg-orange-600 hover:bg-orange-700 text-white px-8 py-4 rounded-xl font-black text-xl transition-colors min-h-[72px] justify-center shadow-lg"
+            className="inline-flex flex-col items-center bg-orange-600 hover:bg-orange-700 text-white px-8 py-4 rounded-xl font-black text-xl transition-colors min-h-[72px] justify-center shadow-lg ring-4 ring-white ring-offset-2 ring-offset-transparent"
           >
             <span className="text-sm font-bold uppercase tracking-widest text-orange-100">Call Now — Free Quote</span>
             <span className="text-2xl">{SITE_CONFIG.phone}</span>

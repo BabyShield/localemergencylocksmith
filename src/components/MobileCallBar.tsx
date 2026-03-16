@@ -2,7 +2,7 @@ import { SITE_CONFIG } from '@/data/config'
 
 export default function MobileCallBar() {
   return (
-    <div className="fixed bottom-0 left-0 right-0 z-50 md:hidden">
+    <div className="fixed bottom-0 left-0 right-0 z-50">
       <a
         href={`tel:${SITE_CONFIG.phoneTel}`}
         className="flex items-center justify-center gap-3 bg-orange-600 hover:bg-orange-700 text-white py-4 px-6 w-full transition-colors min-h-[56px]"

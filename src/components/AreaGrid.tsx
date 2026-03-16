@@ -24,9 +24,14 @@ export default function AreaGrid() {
                   <Link
                     key={area.slug}
                     href={`/areas/${area.slug}`}
-                    className="text-sm text-gray-700 hover:text-green-800 hover:underline py-1 px-2 rounded hover:bg-white transition-colors"
+                    className="flex flex-col py-2 px-2 rounded hover:bg-white transition-colors group"
                   >
-                    {area.name}
+                    <span className="text-sm text-gray-700 group-hover:text-green-800 font-medium leading-tight">
+                      {area.name}
+                    </span>
+                    <span className="text-xs text-gray-400 group-hover:text-green-600 mt-0.5">
+                      {area.postcode}
+                    </span>
                   </Link>
                 ))}
               </div>
