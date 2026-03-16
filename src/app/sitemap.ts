@@ -2,6 +2,7 @@ import type { MetadataRoute } from 'next'
 import { AREAS } from '@/data/areas'
 import { SERVICES } from '@/data/services'
 import { SITE_CONFIG } from '@/data/config'
+import { ARTICLE_TEMPLATES } from '@/data/articles'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = SITE_CONFIG.domain
@@ -29,5 +30,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }))
 
-  return [...staticPages, ...servicePages, ...areaPages]
+  const blogArticlePages: MetadataRoute.Sitemap = AREAS.flatMap((a) =>
+    ARTICLE_TEMPLATES.map((t) => ({
+      url: `${base}/blog/${a.slug}/${t.slug}`,
+      lastModified: now,
+      changeFrequency: 'monthly' as const,
+      priority: 0.6,
+    }))
+  )
+
+  return [...staticPages, ...servicePages, ...areaPages, ...blogArticlePages]
 }

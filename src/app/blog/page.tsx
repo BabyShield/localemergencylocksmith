@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { SITE_CONFIG } from '@/data/config'
+import { ARTICLE_TEMPLATES } from '@/data/articles'
 
 export const metadata: Metadata = {
   title: 'Locksmith Blog — Tips & Advice | Local Emergency Locksmith Coventry',
@@ -100,6 +101,81 @@ export default function BlogPage() {
                 </Link>
               </article>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Browse by area */}
+      <section className="py-12 px-4 bg-gray-50">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-2xl font-black text-gray-900 mb-2">
+            Browse Articles by Area
+          </h2>
+          <p className="text-gray-600 mb-8">
+            Every article is tailored to your specific area — with local response times, postcodes, and pricing.
+          </p>
+
+          {/* Major area quick links */}
+          <div className="mb-10">
+            <h3 className="text-sm font-black text-gray-500 uppercase tracking-wide mb-4">
+              Popular Areas
+            </h3>
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
+              {[
+                { slug: 'coventry-city-centre', name: 'Coventry City Centre' },
+                { slug: 'earlsdon', name: 'Earlsdon' },
+                { slug: 'kenilworth', name: 'Kenilworth' },
+                { slug: 'leamington-spa', name: 'Leamington Spa' },
+                { slug: 'nuneaton', name: 'Nuneaton' },
+                { slug: 'rugby', name: 'Rugby' },
+                { slug: 'stratford-upon-avon', name: 'Stratford-upon-Avon' },
+                { slug: 'bedworth', name: 'Bedworth' },
+                { slug: 'atherstone', name: 'Atherstone' },
+                { slug: 'warwick', name: 'Warwick' },
+                { slug: 'solihull', name: 'Solihull' },
+                { slug: 'tile-hill', name: 'Tile Hill' },
+              ].map((area) => (
+                <Link
+                  key={area.slug}
+                  href={`/blog/${area.slug}/locked-out-at-night`}
+                  className="bg-white border border-gray-200 rounded-lg px-4 py-3 text-sm font-medium text-gray-700 hover:border-green-700 hover:text-green-800 transition-colors text-center"
+                >
+                  {area.name}
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          {/* Article topics */}
+          <div>
+            <h3 className="text-sm font-black text-gray-500 uppercase tracking-wide mb-4">
+              Article Topics (All Areas)
+            </h3>
+            <div className="space-y-3">
+              {ARTICLE_TEMPLATES.map((article) => (
+                <div
+                  key={article.slug}
+                  className="bg-white border border-gray-200 rounded-xl p-4 hover:border-green-700 hover:shadow-sm transition-all"
+                >
+                  <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+                    <div>
+                      <p className="font-bold text-gray-900">
+                        {article.titleTemplate.replace(/\{area\}/g, '[Your Area]')}
+                      </p>
+                      <p className="text-xs text-gray-500 mt-1">
+                        Available for all {78} covered areas
+                      </p>
+                    </div>
+                    <Link
+                      href={`/blog/coventry-city-centre/${article.slug}`}
+                      className="text-green-700 font-semibold hover:underline text-sm whitespace-nowrap"
+                    >
+                      Read example →
+                    </Link>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
