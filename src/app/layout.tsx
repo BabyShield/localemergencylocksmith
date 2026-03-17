@@ -41,15 +41,28 @@ export const metadata: Metadata = {
 const globalSchema = {
   '@context': 'https://schema.org',
   '@type': ['LocalBusiness', 'Locksmith'],
+  '@id': `${SITE_CONFIG.domain}/#business`,
   name: 'Local Emergency Locksmith',
   url: SITE_CONFIG.domain,
   telephone: SITE_CONFIG.phoneTel,
   email: SITE_CONFIG.email,
   description:
-    'Emergency locksmith serving Coventry and Warwickshire. No VAT, no call-out fee, 15-30 minute response.',
+    'Emergency locksmith serving Coventry and Warwickshire. No VAT, no call-out fee, 15-30 minute response. Available 24/7, 365 days a year.',
   priceRange: '££',
   currenciesAccepted: 'GBP',
   paymentAccepted: 'Cash, Credit Card, Debit Card',
+  image: `${SITE_CONFIG.domain}/og-image.png`,
+  geo: {
+    '@type': 'GeoCoordinates',
+    latitude: 52.4068,
+    longitude: -1.5197,
+  },
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Coventry',
+    addressRegion: 'West Midlands',
+    addressCountry: 'GB',
+  },
   openingHoursSpecification: {
     '@type': 'OpeningHoursSpecification',
     dayOfWeek: [
@@ -67,12 +80,15 @@ const globalSchema = {
   areaServed: [
     { '@type': 'City', name: 'Coventry' },
     { '@type': 'City', name: 'Nuneaton' },
+    { '@type': 'City', name: 'Bedworth' },
     { '@type': 'City', name: 'Rugby' },
     { '@type': 'City', name: 'Leamington Spa' },
     { '@type': 'City', name: 'Warwick' },
     { '@type': 'City', name: 'Stratford-upon-Avon' },
     { '@type': 'City', name: 'Kenilworth' },
-    { '@type': 'City', name: 'Bedworth' },
+    { '@type': 'City', name: 'Solihull' },
+    { '@type': 'City', name: 'Southam' },
+    { '@type': 'City', name: 'Atherstone' },
   ],
   hasOfferCatalog: {
     '@type': 'OfferCatalog',
@@ -81,35 +97,78 @@ const globalSchema = {
       {
         '@type': 'Offer',
         name: 'Emergency Lockout',
+        description: 'Emergency door opening — non-destructive entry when possible. Available 24/7.',
         priceSpecification: {
           '@type': 'PriceSpecification',
           price: '59',
           priceCurrency: 'GBP',
           minPrice: '59',
+          valueAddedTaxIncluded: true,
         },
       },
       {
         '@type': 'Offer',
-        name: 'Lock Change',
+        name: 'Lock Change & Replacement',
+        description: 'Replace any lock type — Yale, mortice, euro cylinder, multipoint. Includes new lock and fitting.',
         priceSpecification: {
           '@type': 'PriceSpecification',
           price: '69',
           priceCurrency: 'GBP',
           minPrice: '69',
+          valueAddedTaxIncluded: true,
         },
       },
       {
         '@type': 'Offer',
-        name: 'uPVC Lock Repair',
+        name: 'uPVC Door Lock Repair',
+        description: 'Repair or replace uPVC door lock mechanisms, cylinders, and handles.',
         priceSpecification: {
           '@type': 'PriceSpecification',
           price: '59',
           priceCurrency: 'GBP',
           minPrice: '59',
+          valueAddedTaxIncluded: true,
+        },
+      },
+      {
+        '@type': 'Offer',
+        name: 'Emergency Boarding Up',
+        description: 'Emergency board-up service after break-ins or damage. Same-day response.',
+        priceSpecification: {
+          '@type': 'PriceSpecification',
+          price: '79',
+          priceCurrency: 'GBP',
+          minPrice: '79',
+          valueAddedTaxIncluded: true,
+        },
+      },
+      {
+        '@type': 'Offer',
+        name: 'Lock Upgrade (BS3621 / Anti-Snap)',
+        description: 'Upgrade to insurance-approved BS3621 deadlocks or anti-snap euro cylinders.',
+        priceSpecification: {
+          '@type': 'PriceSpecification',
+          price: '79',
+          priceCurrency: 'GBP',
+          minPrice: '79',
+          valueAddedTaxIncluded: true,
         },
       },
     ],
   },
+  sameAs: [
+    'https://www.facebook.com/localemergencylocksmith',
+  ],
+}
+
+const websiteSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  '@id': `${SITE_CONFIG.domain}/#website`,
+  name: 'Local Emergency Locksmith',
+  url: SITE_CONFIG.domain,
+  publisher: { '@id': `${SITE_CONFIG.domain}/#business` },
+  inLanguage: 'en-GB',
 }
 
 export default function RootLayout({
@@ -123,6 +182,7 @@ export default function RootLayout({
         <link rel="preconnect" href="https://www.googletagmanager.com" />
         <link rel="dns-prefetch" href="https://maps.googleapis.com" />
         <SchemaMarkup schema={globalSchema} />
+        <SchemaMarkup schema={websiteSchema} />
       </head>
       <body className="font-[var(--font-inter)] antialiased bg-white text-gray-900">
         <StickyHeader />
