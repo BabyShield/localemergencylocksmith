@@ -7,7 +7,9 @@ import { SITE_CONFIG } from '@/data/config'
 import HeroSection from '@/components/HeroSection'
 import CTABlock from '@/components/CTABlock'
 import FAQSection from '@/components/FAQSection'
+import AreaFacts from '@/components/AreaFacts'
 import SchemaMarkup from '@/components/SchemaMarkup'
+import { getAreaFacts } from '@/data/area-facts'
 
 export const dynamic = 'force-static'
 export const revalidate = false
@@ -48,6 +50,7 @@ export default async function AreaPage({ params }: Props) {
   if (!area) notFound()
 
   const neighbours = getAreaNeighbours(area)
+  const facts = getAreaFacts(slug)
 
   const breadcrumbSchema = {
     '@context': 'https://schema.org',
@@ -272,6 +275,11 @@ export default async function AreaPage({ params }: Props) {
             </div>
           </div>
         </section>
+      )}
+
+      {/* Area Facts */}
+      {facts.length > 0 && (
+        <AreaFacts areaName={area.name} facts={facts} postcode={area.postcode} />
       )}
 
       {/* FAQ */}
