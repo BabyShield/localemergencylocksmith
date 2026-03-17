@@ -4,34 +4,66 @@ interface HeroSectionProps {
   heading: string
   subheading: string
   areaName?: string
+  compact?: boolean
 }
 
-export default function HeroSection({ heading, subheading, areaName }: HeroSectionProps) {
+export default function HeroSection({ heading, subheading, areaName, compact }: HeroSectionProps) {
   return (
-    <section
-      className="py-12 md:py-20 px-4 text-white"
-      style={{ background: '#0F1B2D' }}
-    >
-      <div className="max-w-4xl mx-auto text-center">
-        <h1 className="text-3xl md:text-5xl font-black leading-tight mb-4">
-          {heading}
+    <section className={`relative overflow-hidden ${compact ? 'py-10 md:py-14' : 'py-14 md:py-24'} px-4 text-white`}>
+      {/* Background with gradient and subtle pattern */}
+      <div className="absolute inset-0 bg-gradient-to-br from-[#0A1628] via-[#0F1B2D] to-[#162438]" />
+      <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'url("data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'1\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")' }} />
+      {/* Glow effect */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-[#FFB800]/5 rounded-full blur-3xl" />
+
+      <div className="relative max-w-4xl mx-auto text-center">
+        {/* Availability badge */}
+        <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/10 rounded-full px-4 py-1.5 mb-6">
+          <span className="relative flex h-2.5 w-2.5">
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75" />
+            <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-green-500" />
+          </span>
+          <span className="text-sm font-medium text-gray-200">Available Now — 24/7</span>
+        </div>
+
+        <h1 className={`font-black leading-[1.1] mb-5 ${compact ? 'text-3xl md:text-4xl' : 'text-4xl md:text-6xl'}`}>
+          <span className="text-white">{heading.split('—')[0]}</span>
+          {heading.includes('—') && (
+            <span className="block text-[#FFB800] mt-1">{heading.split('—')[1]}</span>
+          )}
+          {!heading.includes('—') && heading.includes('?') && null}
         </h1>
-        <p className="text-lg md:text-xl text-gray-200 mb-8 max-w-2xl mx-auto">
+
+        <p className={`text-gray-300 mb-8 max-w-2xl mx-auto leading-relaxed ${compact ? 'text-base md:text-lg' : 'text-lg md:text-xl'}`}>
           {subheading}
         </p>
+
+        {/* CTA cluster */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-6">
           <a
             href={`tel:${SITE_CONFIG.phoneTel}`}
-            className="inline-flex flex-col items-center bg-[#FFB800] hover:bg-[#FFC933] text-[#0F1B2D] px-8 py-4 rounded-xl font-black text-xl transition-colors min-h-[72px] justify-center shadow-lg"
+            className="group relative inline-flex flex-col items-center bg-[#FFB800] hover:bg-[#FFC933] text-[#0F1B2D] px-10 py-5 rounded-2xl font-black transition-all duration-200 min-h-[72px] justify-center shadow-[0_4px_24px_rgba(255,184,0,0.3)] hover:shadow-[0_4px_32px_rgba(255,184,0,0.5)] hover:scale-[1.02]"
           >
-            <span className="text-sm font-bold uppercase tracking-widest text-[#0F1B2D]/70">Call Now — Free Quote</span>
-            <span className="text-2xl">{SITE_CONFIG.phone}</span>
+            <span className="text-xs font-bold uppercase tracking-[0.15em] text-[#0F1B2D]/60">Call Now — Free Quote</span>
+            <span className="text-2xl md:text-3xl">{SITE_CONFIG.phone}</span>
           </a>
         </div>
-        <p className="text-gray-300 text-sm md:text-base">
-          Available {SITE_CONFIG.hours} — No VAT &bull; No Call-Out Fee &bull; {SITE_CONFIG.responseTime} Response
-          {areaName ? ` in ${areaName}` : ''}
-        </p>
+
+        {/* Trust indicators */}
+        <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm text-gray-400">
+          <span className="flex items-center gap-1.5">
+            <svg className="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" /></svg>
+            No VAT
+          </span>
+          <span className="flex items-center gap-1.5">
+            <svg className="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" /></svg>
+            No Call-Out Fee
+          </span>
+          <span className="flex items-center gap-1.5">
+            <svg className="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" /></svg>
+            {SITE_CONFIG.responseTime} Response{areaName ? ` in ${areaName}` : ''}
+          </span>
+        </div>
       </div>
     </section>
   )

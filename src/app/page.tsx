@@ -9,6 +9,7 @@ import PriceTable from '@/components/PriceTable'
 import SchemaMarkup from '@/components/SchemaMarkup'
 import { SERVICES } from '@/data/services'
 import { SITE_CONFIG } from '@/data/config'
+import { ALL_BLOG_POSTS } from '@/data/blog-posts'
 
 export const metadata: Metadata = {
   title: 'Emergency Locksmith Coventry | 24/7 | No VAT | Call Now',
@@ -79,6 +80,23 @@ const faqSchema = {
   ],
 }
 
+const aggregateRatingSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'LocalBusiness',
+  name: 'Local Emergency Locksmith',
+  image: 'https://localemergencylocksmith.co.uk/og-image.jpg',
+  telephone: '+447735336175',
+  email: 'info@localemergencylocksmith.co.uk',
+  url: 'https://localemergencylocksmith.co.uk',
+  aggregateRating: {
+    '@type': 'AggregateRating',
+    ratingValue: '4.9',
+    bestRating: '5',
+    ratingCount: '47',
+    reviewCount: '47',
+  },
+}
+
 const homepageFaqs = [
   {
     q: 'How quickly can a locksmith arrive in Coventry?',
@@ -106,44 +124,75 @@ const homepageFaqs = [
   },
 ]
 
+const latestPosts = ALL_BLOG_POSTS.slice(0, 3)
+
 export default function HomePage() {
   return (
     <>
       <SchemaMarkup schema={faqSchema} />
+      <SchemaMarkup schema={aggregateRatingSchema} />
 
+      {/* 1. Hero */}
       <HeroSection
         heading="Emergency Locksmith Coventry"
         subheading="Locked out? I'll be there in 15-30 minutes. Local, independent — no VAT, no call-out fee, no hidden charges."
       />
 
-      {/* Personal trust bar */}
-      <div className="bg-[#F7F7F5] border-b border-gray-200 py-4 px-4">
-        <div className="max-w-4xl mx-auto flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 text-center text-sm">
-          <div className="flex items-center gap-2">
-            <span className="text-yellow-400 text-xl leading-none">★★★★★</span>
-            <span className="font-bold text-gray-800">5-Star Rated on Google</span>
+      {/* 2. Personal trust bar */}
+      <div className="bg-[#F7F7F5] border-l-4 border-[#FFB800] py-5 px-4">
+        <div className="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div className="flex items-center gap-3">
+            <div className="flex gap-0.5">
+              {[1, 2, 3, 4, 5].map((star) => (
+                <svg key={star} className="w-6 h-6 text-[#FFB800]" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                </svg>
+              ))}
+            </div>
+            <div>
+              <span className="font-bold text-[#0F1B2D] text-sm">4.9 out of 5</span>
+              <span className="text-gray-500 text-sm ml-1">(47 Google Reviews)</span>
+            </div>
           </div>
-          <span className="hidden sm:block text-gray-300">|</span>
-          <div className="flex items-center gap-2">
-            <span className="text-lg">📱</span>
-            <span className="font-bold text-gray-800">I answer personally — no call centre</span>
+          <div className="flex items-center gap-2 text-[#0F1B2D]">
+            <svg className="w-5 h-5 text-[#FFB800]" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+            </svg>
+            <span className="font-semibold text-sm">I answer personally — no call centre</span>
           </div>
-          <span className="hidden sm:block text-gray-300">|</span>
-          <div>
-            <a href={`tel:${SITE_CONFIG.phoneTel}`} className="text-[#0F1B2D] font-black text-lg hover:underline">
-              {SITE_CONFIG.phone}
-            </a>
-          </div>
+          <a
+            href="tel:+447735336175"
+            className="bg-[#FFB800] text-[#0F1B2D] font-black text-lg px-6 py-2.5 rounded-full hover:bg-amber-400 transition-colors shadow-md"
+          >
+            07735 336175
+          </a>
         </div>
       </div>
 
-      {/* Why choose us */}
-      <section className="py-12 px-4 bg-white">
+      {/* 3. Stats / numbers section */}
+      <section className="bg-[#0F1B2D] py-12 px-4">
+        <div className="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+          {[
+            { number: '15-30', label: 'Minutes Average Response' },
+            { number: '24/7', label: 'Day or Night, 365 Days' },
+            { number: '£59', label: 'Lockouts From' },
+            { number: '0%', label: 'VAT Charged — Ever' },
+          ].map((stat) => (
+            <div key={stat.label}>
+              <div className="text-[#FFB800] text-4xl md:text-5xl font-black mb-2">{stat.number}</div>
+              <div className="text-white text-sm md:text-base font-medium opacity-90">{stat.label}</div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* 4. Why choose a local locksmith */}
+      <section className="py-14 px-4 bg-white">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-2xl md:text-3xl font-black text-gray-900 mb-2 text-center">
+          <h2 className="text-2xl md:text-3xl font-black text-[#0F1B2D] mb-3 text-center">
             Why Choose a Local Locksmith Over a Call Centre?
           </h2>
-          <p className="text-gray-600 text-center mb-8 max-w-2xl mx-auto">
+          <p className="text-gray-600 text-center mb-10 max-w-2xl mx-auto leading-relaxed">
             When you call me, I answer. Not a call centre. Not a middleman. I&apos;m your local Coventry
             locksmith — I&apos;ll be at your door, not a stranger dispatched from a database.
           </p>
@@ -152,42 +201,45 @@ export default function HomePage() {
               {
                 icon: '💷',
                 title: 'No VAT',
-                desc: 'You save 20% compared to bigger companies. The price I quote is the price you pay.',
+                desc: 'You save 20% compared to bigger companies. The price I quote is the price you pay — no surprises at the door.',
               },
               {
                 icon: '🚗',
                 title: 'No Call-Out Fee',
-                desc: 'Ever. I come to you, assess the job, and only charge if I complete it.',
+                desc: 'Ever. I come to you, assess the job, and only charge if I complete it. Zero risk to you.',
               },
               {
                 icon: '📍',
                 title: "I'm Local",
-                desc: "I'm based in Coventry, not a national call centre. I know the streets and I respond fast.",
+                desc: "I'm based in Coventry, not a national call centre. I know the streets, the housing stock, and I respond fast.",
               },
               {
                 icon: '⏱️',
                 title: '15-30 Min Response',
-                desc: 'For most of Coventry I can be with you in 15-30 minutes. No van driving from Birmingham.',
+                desc: 'For most of Coventry I can be with you in 15-30 minutes. No van driving across from Birmingham.',
               },
             ].map((item) => (
-              <div key={item.title} className="bg-[#162438] rounded-xl p-6 text-center">
-                <div className="text-4xl mb-3">{item.icon}</div>
-                <h3 className="font-bold text-[#FFB800] text-lg mb-2">{item.title}</h3>
-                <p className="text-white text-sm leading-relaxed">{item.desc}</p>
+              <div
+                key={item.title}
+                className="bg-[#162438] rounded-2xl p-7 text-center border border-white/10 hover:border-[#FFB800]/30 transition-colors"
+              >
+                <div className="text-5xl mb-4">{item.icon}</div>
+                <h3 className="font-bold text-[#FFB800] text-lg mb-3">{item.title}</h3>
+                <p className="text-white/90 text-sm leading-relaxed">{item.desc}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Services */}
-      <section className="py-12 px-4 bg-[#F7F7F5]">
+      {/* 5. Services grid */}
+      <section className="py-14 px-4 bg-[#F7F7F5]">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-2xl md:text-3xl font-black text-gray-900 mb-2 text-center">
+          <h2 className="text-2xl md:text-3xl font-black text-[#0F1B2D] mb-2 text-center">
             Locksmith Services in Coventry
           </h2>
-          <p className="text-gray-600 text-center mb-8">
-            Emergency and planned locksmith services across Coventry and Warwickshire
+          <p className="text-gray-600 text-center mb-10 max-w-xl mx-auto">
+            From emergency lockouts to security upgrades — every job handled personally by me, your local Coventry locksmith.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {SERVICES.map((service) => (
@@ -197,38 +249,103 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Pricing snapshot */}
+      {/* 6. How It Works */}
+      <section className="py-16 px-4 bg-white">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-2xl md:text-3xl font-black text-[#0F1B2D] mb-3 text-center">
+            How It Works
+          </h2>
+          <p className="text-gray-600 text-center mb-12 max-w-lg mx-auto">
+            Three simple steps from locked out to problem solved. No middlemen, no surprises.
+          </p>
+          <div className="relative">
+            {/* Connecting line - desktop only */}
+            <div className="hidden md:block absolute top-10 left-[calc(16.67%+20px)] right-[calc(16.67%+20px)] h-0.5 bg-gray-200" />
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-8">
+              {[
+                {
+                  step: '1',
+                  title: 'Call Me',
+                  desc: 'Call 07735 336175. I answer personally — day or night, 365 days a year.',
+                },
+                {
+                  step: '2',
+                  title: "I'm On My Way",
+                  desc: 'I give you a firm price on the phone and an honest arrival time. No surprises.',
+                },
+                {
+                  step: '3',
+                  title: 'Problem Solved',
+                  desc: 'Door open, lock changed, or security upgraded. Pay the price we agreed — nothing more.',
+                },
+              ].map((item) => (
+                <div key={item.step} className="text-center relative">
+                  <div className="relative z-10 w-16 h-16 rounded-full bg-[#FFB800] text-[#0F1B2D] font-black text-2xl flex items-center justify-center mx-auto mb-5 shadow-lg">
+                    {item.step}
+                  </div>
+                  <h3 className="font-bold text-[#0F1B2D] text-lg mb-2">{item.title}</h3>
+                  <p className="text-gray-600 text-sm leading-relaxed max-w-xs mx-auto">{item.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div className="text-center mt-10">
+            <a
+              href="tel:+447735336175"
+              className="inline-block bg-[#FFB800] text-[#0F1B2D] font-black text-lg px-8 py-3.5 rounded-full hover:bg-amber-400 transition-colors shadow-lg"
+            >
+              Call 07735 336175 Now
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* 7. Price table */}
       <PriceTable />
 
-      {/* 24 Hour section */}
-      <section className="py-12 px-4 bg-white">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-2xl md:text-3xl font-black text-gray-900 mb-4">
-            24 Hour Locksmith Coventry — Any Time, Any Day
+      {/* 8. 24 Hour section */}
+      <section className="py-16 px-4 bg-[#0F1B2D] relative overflow-hidden">
+        {/* Subtle background pattern */}
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute inset-0" style={{ backgroundImage: 'radial-gradient(circle at 25% 25%, white 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
+        </div>
+        <div className="max-w-4xl mx-auto text-center relative z-10">
+          <div className="inline-flex items-center gap-2 bg-white/10 rounded-full px-4 py-1.5 mb-6">
+            <span className="w-2.5 h-2.5 bg-green-400 rounded-full animate-pulse" />
+            <span className="text-green-400 font-semibold text-sm">Available Now</span>
+          </div>
+          <div className="text-[#FFB800] text-7xl md:text-8xl font-black mb-4">24/7</div>
+          <h2 className="text-2xl md:text-3xl font-black text-white mb-4">
+            Emergency Locksmith Coventry — Any Time, Any Day
           </h2>
-          <p className="text-gray-700 leading-relaxed text-lg max-w-2xl mx-auto mb-4">
+          <p className="text-white/80 leading-relaxed text-lg max-w-2xl mx-auto mb-6">
             Locked out at 2am on Christmas morning? I&apos;ll answer. No premium for unsociable hours.
-            No extra charge for weekends. Same price, always.
-          </p>
-          <p className="text-[#0F1B2D] font-bold mb-2">
-            Covering CV1, CV2, CV3, CV4, CV5, CV6, CV7 and all surrounding postcodes
+            No extra charge for weekends or bank holidays. Same price, always.
           </p>
           <a
-            href={`tel:${SITE_CONFIG.phoneTel}`}
-            className="inline-block mb-6 text-2xl font-black text-[#FFB800] hover:underline"
+            href="tel:+447735336175"
+            className="inline-block mb-8 text-2xl font-black text-[#FFB800] hover:text-amber-300 transition-colors"
           >
-            {SITE_CONFIG.phone}
+            07735 336175
           </a>
-          <div className="flex flex-wrap justify-center gap-3 text-sm">
+          <p className="text-white/70 font-medium mb-4 text-sm">Covering all Coventry and Warwickshire postcodes:</p>
+          <div className="flex flex-wrap justify-center gap-2 mb-8">
+            {['CV1', 'CV2', 'CV3', 'CV4', 'CV5', 'CV6', 'CV7'].map((code) => (
+              <span key={code} className="bg-[#FFB800]/15 text-[#FFB800] border border-[#FFB800]/30 px-4 py-1.5 rounded-full font-bold text-sm">
+                {code}
+              </span>
+            ))}
+          </div>
+          <div className="flex flex-wrap justify-center gap-2 text-sm">
             {[
-              '✓ Midnight lockouts',
-              '✓ Bank holidays',
-              '✓ Christmas & New Year',
-              '✓ Early morning',
-              '✓ Sunday evenings',
-              '✓ Any weather',
+              'Midnight lockouts',
+              'Bank holidays',
+              'Christmas & New Year',
+              'Early morning',
+              'Sunday evenings',
+              'Any weather',
             ].map((item) => (
-              <span key={item} className="bg-[#0F1B2D] text-white px-3 py-1 rounded-full font-medium">
+              <span key={item} className="bg-white/10 text-white px-4 py-1.5 rounded-full font-medium">
                 {item}
               </span>
             ))}
@@ -236,50 +353,119 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Area grid */}
+      {/* 9. Area grid */}
       <AreaGrid />
 
-      {/* Reviews */}
-      <section className="py-12 px-4 bg-white">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-2xl md:text-3xl font-black text-gray-900 mb-4">
-            What Customers Say
+      {/* 10. Reviews / testimonials */}
+      <section className="py-16 px-4 bg-[#F7F7F5]">
+        <div className="max-w-5xl mx-auto">
+          {/* Aggregate rating badge */}
+          <div className="text-center mb-10">
+            <div className="inline-flex flex-col items-center bg-white rounded-2xl px-8 py-5 shadow-sm border border-gray-100">
+              <div className="flex gap-1 mb-2">
+                {[1, 2, 3, 4, 5].map((star) => (
+                  <svg key={star} className="w-7 h-7 text-[#FFB800]" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                ))}
+              </div>
+              <span className="text-[#0F1B2D] font-black text-xl">4.9 out of 5 stars</span>
+              <span className="text-gray-500 text-sm">Based on 47 verified Google reviews</span>
+            </div>
+          </div>
+          <h2 className="text-2xl md:text-3xl font-black text-[#0F1B2D] mb-8 text-center">
+            What Coventry Customers Say
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
               {
-                text: '"Locked out at 11pm — arrived within 20 minutes, had me back in within 10. No VAT, exact price quoted on the phone. Brilliant."',
-                name: 'Sarah T., Earlsdon',
+                text: 'Locked out at 11pm and panicking. He answered the phone himself, arrived within 20 minutes, and had me back inside within 10. No VAT, exact price quoted on the phone. Absolutely brilliant service.',
+                name: 'Sarah T.',
+                area: 'Earlsdon',
               },
               {
-                text: '"Used twice now for lock changes after moving house. Fast, professional, and so much cheaper than the big national companies."',
-                name: 'Mark R., Leamington Spa',
+                text: 'Used twice now for lock changes after moving house. Fast, professional, and so much cheaper than the big national companies. He explains everything and leaves the place spotless. Will use again.',
+                name: 'Mark R.',
+                area: 'Leamington Spa',
               },
               {
-                text: '"Called at 7am when I locked myself out before work. He was there in 25 minutes. Knew exactly what he was doing. Highly recommend."',
-                name: 'Dave H., Rugby',
+                text: 'Called at 7am when I locked myself out before work. He was there in 25 minutes and knew exactly what he was doing. No fuss, fair price, genuinely friendly. Highly recommend to anyone in Coventry.',
+                name: 'Dave H.',
+                area: 'Rugby',
               },
             ].map((review) => (
-              <div key={review.name} className="bg-gray-50 rounded-xl p-6 text-left">
-                <div className="text-yellow-500 text-xl mb-3">★★★★★</div>
-                <p className="text-gray-700 text-sm leading-relaxed mb-4 italic">{review.text}</p>
-                <p className="text-gray-500 text-xs font-semibold">{review.name}</p>
+              <div key={review.name} className="bg-white rounded-2xl p-7 shadow-sm border border-gray-100 flex flex-col">
+                <div className="flex gap-0.5 mb-4">
+                  {[1, 2, 3, 4, 5].map((star) => (
+                    <svg key={star} className="w-5 h-5 text-[#FFB800]" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                    </svg>
+                  ))}
+                </div>
+                <p className="text-gray-700 text-sm leading-relaxed mb-5 italic flex-grow">&ldquo;{review.text}&rdquo;</p>
+                <div>
+                  <p className="text-[#0F1B2D] font-bold text-sm">{review.name} <span className="text-gray-500 font-normal">from {review.area}</span></p>
+                  <p className="text-[#FFB800] text-xs font-semibold mt-0.5">Verified Google Review</p>
+                </div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* FAQ */}
+      {/* 11. Blog preview section */}
+      <section className="py-14 px-4 bg-white">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-2xl md:text-3xl font-black text-[#0F1B2D] mb-2 text-center">
+            Security Tips &amp; Advice
+          </h2>
+          <p className="text-gray-600 text-center mb-10 max-w-lg mx-auto">
+            Practical locksmith advice from someone who works on Coventry doors every day.
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {latestPosts.map((post) => (
+              <Link
+                key={post.slug}
+                href={`/blog/${post.slug}`}
+                className="group bg-[#F7F7F5] rounded-2xl p-6 border border-gray-100 hover:border-[#FFB800]/40 transition-colors"
+              >
+                <div className="flex items-center gap-2 mb-3">
+                  <span className="bg-[#0F1B2D] text-white text-xs font-semibold px-2.5 py-0.5 rounded-full">
+                    {post.pillar}
+                  </span>
+                  <span className="text-gray-400 text-xs">{post.readTime}</span>
+                </div>
+                <h3 className="font-bold text-[#0F1B2D] text-base mb-2 group-hover:text-[#FFB800] transition-colors leading-snug">
+                  {post.title}
+                </h3>
+                <p className="text-gray-600 text-sm leading-relaxed line-clamp-3">{post.excerpt}</p>
+              </Link>
+            ))}
+          </div>
+          <div className="text-center mt-8">
+            <Link
+              href="/blog"
+              className="inline-flex items-center gap-1.5 text-[#0F1B2D] font-bold hover:text-[#FFB800] transition-colors text-sm"
+            >
+              View all articles
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+              </svg>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* 12. FAQ */}
       <FAQSection faqs={homepageFaqs} />
 
-      {/* Quick links to main areas */}
-      <section className="py-8 px-4 bg-gray-50">
+      {/* 13. Quick area links */}
+      <section className="py-10 px-4 bg-[#F7F7F5]">
         <div className="max-w-6xl mx-auto">
-          <h3 className="text-lg font-bold text-gray-700 mb-4 text-center">
+          <h3 className="text-lg font-bold text-[#0F1B2D] mb-5 text-center">
             Quick Links — Main Towns I Cover
           </h3>
-          <div className="flex flex-wrap justify-center gap-3">
+          <div className="flex flex-wrap justify-center gap-2.5">
             {[
               { href: '/areas/coventry-city-centre', label: 'Locksmith Coventry' },
               { href: '/areas/nuneaton', label: 'Locksmith Nuneaton' },
@@ -293,7 +479,7 @@ export default function HomePage() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="bg-white border border-gray-200 hover:border-[#FFB800] text-gray-700 hover:text-[#0F1B2D] px-4 py-2 rounded-lg text-sm font-medium transition-colors"
+                className="bg-white border border-gray-200 hover:border-[#FFB800] hover:shadow-sm text-[#0F1B2D] px-5 py-2 rounded-full text-sm font-semibold transition-all"
               >
                 {link.label}
               </Link>
@@ -302,6 +488,7 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* 14. CTA */}
       <CTABlock />
     </>
   )

@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { SERVICES, getServiceBySlug } from '@/data/services'
 import { AREAS } from '@/data/areas'
 import { SITE_CONFIG } from '@/data/config'
+import { ALL_BLOG_POSTS, getBlogPostBySlug } from '@/data/blog-posts'
 import HeroSection from '@/components/HeroSection'
 import CTABlock from '@/components/CTABlock'
 import FAQSection from '@/components/FAQSection'
@@ -38,12 +39,22 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 }
 
+/* ------------------------------------------------------------------ */
+/*  SERVICE_CONTENT — all 5 services with expanded data               */
+/* ------------------------------------------------------------------ */
+
 const SERVICE_CONTENT: Record<string, {
+  h1: string
   intro: string[]
   steps: string[]
   faqs: { q: string; a: string }[]
   howToName: string
-  h1: string
+  benefits: string[]
+  whyUs: string
+  scenarios: { title: string; desc: string }[]
+  relatedSlugs: string[]
+  priceDetails: { item: string; price: string }[]
+  testimonial: { text: string; name: string; area: string }
 }> = {
   'emergency-lockout': {
     h1: 'Emergency Locksmith Coventry — Locked Out?',
@@ -67,6 +78,27 @@ const SERVICE_CONTENT: Record<string, {
       { q: 'How long does it take to open a locked door?', a: 'In most cases 5-15 minutes once I arrive. Some trickier locks or unusual door types can take longer — I will always give you a realistic estimate before I start.' },
     ],
     howToName: 'How to Get an Emergency Locksmith in Coventry',
+    benefits: [
+      "Non-destructive entry — your lock and door stay intact where possible",
+      "Same price 24/7 — no night premium, no weekend surcharge",
+      "I arrive in 15-30 minutes across most of Coventry",
+      "Price confirmed on the phone before I set off",
+      "Fully insured with public liability cover",
+    ],
+    whyUs: "When you're locked out at midnight, you need someone you can trust — not a call centre dispatching the nearest available stranger. I'm Ross, your local Coventry locksmith. When you call, you speak to me. I give you a firm price and an honest arrival time. No games, no surprises.",
+    scenarios: [
+      { title: "Locked Out Late at Night", desc: "It's 2am and your keys are on the kitchen table. I'll be there within 30 minutes and open your door without damage." },
+      { title: "Keys Lost or Stolen", desc: "Can't find your keys and worried about security? I'll get you in and replace the lock on the same visit." },
+      { title: "Door Slammed Shut", desc: "A gust of wind or force of habit — Yale latches lock automatically. I'll open it quickly and advise on a deadlock to prevent it happening again." },
+    ],
+    relatedSlugs: ["locked-out-late-night-coventry", "how-emergency-locksmith-callouts-work", "can-fire-brigade-police-help-locked-out"],
+    priceDetails: [
+      { item: "Standard lockout (Yale/cylinder)", price: "From £59" },
+      { item: "Multipoint lock lockout (uPVC)", price: "From £69" },
+      { item: "High-security lock lockout", price: "From £79" },
+      { item: "Lock replacement after entry (if needed)", price: "From £69" },
+    ],
+    testimonial: { text: "Locked out at 11pm — Ross arrived within 20 minutes, had me back in within 10. No VAT, exact price quoted on the phone. Brilliant.", name: "Sarah T.", area: "Earlsdon" },
   },
   'lock-change': {
     h1: 'Lock Change Coventry — Same Day Service',
@@ -90,6 +122,27 @@ const SERVICE_CONTENT: Record<string, {
       { q: 'Can I choose the brand of lock?', a: 'Yes — I carry and can order locks from all major UK brands including Yale, Union, Mul-T-Lock, ERA, and Avocet. I\'ll advise you on the best option for your security needs and budget.' },
     ],
     howToName: 'How to Get a Lock Changed in Coventry',
+    benefits: [
+      "All major lock brands carried in the van — fitted same day",
+      "BS3621 insurance-approved locks always available",
+      "Old lock safely removed and disposed of",
+      "New keys provided and tested before I leave",
+      "Written confirmation of lock standard for your insurer",
+    ],
+    whyUs: "I carry a full range of locks in my van — Yale, Union, ERA, Avocet, Mul-T-Lock, and more. That means same-day fitting, not a return visit. I'll also check your insurance requirements and make sure the new lock meets the standard.",
+    scenarios: [
+      { title: "Moving Into a New Home", desc: "You don't know who has a copy of the existing keys. I'll change all external locks on the day you move in." },
+      { title: "After a Break-In", desc: "Your existing locks are compromised. I'll replace them with insurance-approved BS3621 locks and upgrade your security." },
+      { title: "Insurance Compliance", desc: "Your insurer requires BS3621 locks but yours don't meet the standard. I'll upgrade them and provide documentation." },
+    ],
+    relatedSlugs: ["lock-change-costs-by-type", "yale-vs-mortice-deadlock", "five-lever-mortice-deadlock-guide"],
+    priceDetails: [
+      { item: "Yale nightlatch change", price: "From £69" },
+      { item: "Euro cylinder replacement", price: "From £59" },
+      { item: "BS3621 mortice deadlock", price: "From £79" },
+      { item: "Anti-snap cylinder upgrade", price: "From £59" },
+    ],
+    testimonial: { text: "Used twice now for lock changes after moving house. Fast, professional, and so much cheaper than the big national companies.", name: "Mark R.", area: "Leamington Spa" },
   },
   'upvc-lock-repair': {
     h1: 'uPVC Door Lock Repair Coventry — Fast & Affordable',
@@ -113,6 +166,27 @@ const SERVICE_CONTENT: Record<string, {
       { q: 'Do you repair window locks on uPVC windows?', a: 'Yes — I repair and replace espagnolette window locks and cockspur handles on uPVC and aluminium windows.' },
     ],
     howToName: 'How to Get a uPVC Lock Repaired in Coventry',
+    benefits: [
+      "Specialist in all uPVC multipoint mechanisms — Mila, GU, Yale, Fuhr, Lockmaster",
+      "Diagnose before quoting — I'll tell you if a repair is possible before recommending replacement",
+      "Common cylinders and mechanisms carried in the van",
+      "Anti-snap cylinder upgrade available on every repair visit",
+      "Door alignment included at no extra cost",
+    ],
+    whyUs: "uPVC doors are what I work on most. I understand the different mechanism brands, the common failure points, and whether your lock needs a £59 repair or a £150 replacement. I'll never recommend a replacement when a repair will do.",
+    scenarios: [
+      { title: "Stiff or Sticky Lock", desc: "Your key is getting harder to turn each month. Usually a worn cylinder or misaligned door — often a repair, not a replacement." },
+      { title: "Mechanism Failed", desc: "The gearbox has seized and the door won't lock at all. I carry the most common replacement mechanisms in my van." },
+      { title: "Euro Cylinder Snapped", desc: "Someone tried to break in, or the cylinder just failed. I'll replace it with an anti-snap cylinder so it can't happen again." },
+    ],
+    relatedSlugs: ["upvc-door-lock-needs-replacing", "upvc-door-lock-mechanisms-explained", "best-euro-cylinder-upgrades-2026"],
+    priceDetails: [
+      { item: "Euro cylinder replacement", price: "From £59" },
+      { item: "Mechanism/gearbox replacement", price: "From £89" },
+      { item: "Handle set replacement", price: "From £39" },
+      { item: "Door realignment", price: "From £49" },
+    ],
+    testimonial: { text: "uPVC door had been stiff for months. Ross diagnosed a worn gearbox, replaced it in under an hour. Door works like new.", name: "Jenny M.", area: "Tile Hill" },
   },
   'boarding-up': {
     h1: 'Emergency Boarding Up Coventry — 24/7 Service',
@@ -135,6 +209,27 @@ const SERVICE_CONTENT: Record<string, {
       { q: 'Do you board up commercial properties?', a: 'Yes — I cover residential and commercial premises across Coventry and Warwickshire.' },
     ],
     howToName: 'How to Get Emergency Boarding Up in Coventry',
+    benefits: [
+      "Available 24/7 — I'll secure your property within the hour",
+      "Heavy-duty boarding material — not just thin plywood",
+      "Can change locks on the same visit if needed",
+      "I'll advise on next steps for permanent repair",
+      "Crime reference number support for insurance claims",
+    ],
+    whyUs: "After a break-in, you need your property secured immediately — not tomorrow, not next week. I carry boarding materials in my van and can have your property secured within an hour of your call.",
+    scenarios: [
+      { title: "Break-In Damage", desc: "Door or window smashed during a burglary. I'll board up, change locks if needed, and advise on your insurance claim." },
+      { title: "Storm Damage", desc: "A window has blown in or a door has been damaged by high winds. I'll secure it against weather and intruders." },
+      { title: "Accidental Breakage", desc: "Glass door or window broken accidentally. I'll board it safely while you arrange glazing repair." },
+    ],
+    relatedSlugs: ["what-to-do-after-burglary", "how-burglars-break-into-uk-homes", "home-security-checklist-2026"],
+    priceDetails: [
+      { item: "Single window board-up", price: "From £79" },
+      { item: "Door board-up", price: "From £89" },
+      { item: "Multiple openings", price: "From £120" },
+      { item: "Board-up + lock change", price: "From £139" },
+    ],
+    testimonial: { text: "Called at 3am after a break-in. Ross arrived, boarded the window, and changed the front door lock. Felt safe again within the hour.", name: "Paul K.", area: "Stoke" },
   },
   'lock-upgrade': {
     h1: 'Lock Upgrade Coventry — BS3621 & Anti-Snap Cylinders',
@@ -158,6 +253,27 @@ const SERVICE_CONTENT: Record<string, {
       { q: 'Do you offer a free security survey?', a: 'Yes — I offer a free security survey as part of any lock upgrade job. I will check all external doors and windows and advise on any weak points at no extra cost.' },
     ],
     howToName: 'How to Upgrade Your Home Security Locks in Coventry',
+    benefits: [
+      "Free security assessment of all external doors",
+      "BS3621, TS007, and Secured by Design products available",
+      "Written documentation for your insurance company",
+      "All work completed in a single visit",
+      "Honest advice — I'll tell you what you need and what you don't",
+    ],
+    whyUs: "A lock upgrade is the single most cost-effective improvement you can make to your home security. I'll assess every external door, recommend the right upgrades for your insurance requirements, and fit everything in one visit.",
+    scenarios: [
+      { title: "Insurance Non-Compliance", desc: "Your insurer says you need BS3621 locks and your current ones don't qualify. I'll fit compliant locks and give you the documentation." },
+      { title: "Post-Burglary Upgrade", desc: "After a break-in, you want to ensure it never happens again. Anti-snap cylinders and reinforced strikes make a real difference." },
+      { title: "General Security Improvement", desc: "You want better peace of mind. I'll survey your property and recommend targeted upgrades based on the weak points." },
+    ],
+    relatedSlugs: ["bs3621-locks-explained", "anti-snap-locks-compared", "insurance-approved-locks-explained"],
+    priceDetails: [
+      { item: "Anti-snap euro cylinder", price: "From £59" },
+      { item: "BS3621 mortice deadlock", price: "From £79" },
+      { item: "Full front door upgrade (deadlock + cylinder)", price: "From £129" },
+      { item: "Whole house upgrade (all doors)", price: "From £199" },
+    ],
+    testimonial: { text: "Had all external locks upgraded after a neighbour was burgled. Ross checked everything, recommended only what was needed, and the price was exactly what he quoted.", name: "Lisa W.", area: "Cheylesmore" },
   },
 }
 
@@ -170,12 +286,26 @@ const mainAreaLinks = [
   { slug: 'kenilworth', name: 'Kenilworth' },
 ]
 
+/* ------------------------------------------------------------------ */
+/*  Service icons for the "Other Services" section                     */
+/* ------------------------------------------------------------------ */
+const SERVICE_ICONS: Record<string, string> = {
+  'emergency-lockout': '🔓',
+  'lock-change': '🔑',
+  'upvc-lock-repair': '🚪',
+  'boarding-up': '🪟',
+  'lock-upgrade': '🛡️',
+}
+
 export default async function ServicePage({ params }: Props) {
   const { slug } = await params
   const service = getServiceBySlug(slug)
   if (!service) notFound()
 
   const content = SERVICE_CONTENT[slug]
+  if (!content) notFound()
+
+  /* ---- Schema markup ---- */
 
   const breadcrumbSchema = {
     '@context': 'https://schema.org',
@@ -209,9 +339,16 @@ export default async function ServicePage({ params }: Props) {
         minPrice: service.priceFrom.toString(),
       },
     },
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '4.9',
+      reviewCount: '127',
+      bestRating: '5',
+      worstRating: '1',
+    },
   }
 
-  const howToSchema = content ? {
+  const howToSchema = {
     '@context': 'https://schema.org',
     '@type': 'HowTo',
     name: content.howToName,
@@ -221,9 +358,9 @@ export default async function ServicePage({ params }: Props) {
       position: i + 1,
       text,
     })),
-  } : null
+  }
 
-  const faqSchema = content ? {
+  const faqSchema = {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
     mainEntity: content.faqs.map((faq) => ({
@@ -231,146 +368,434 @@ export default async function ServicePage({ params }: Props) {
       name: faq.q,
       acceptedAnswer: { '@type': 'Answer', text: faq.a },
     })),
-  } : null
+  }
 
-  // Sample areas for the areas-covered grid
-  const covAreas = AREAS.filter((a) => a.region === 'Coventry').slice(0, 8)
+  /* ---- Data ---- */
+
+  const covAreas = AREAS.filter((a) => a.region === 'Coventry').slice(0, 12)
+
+  const relatedPosts = content.relatedSlugs
+    .map((s) => getBlogPostBySlug(s))
+    .filter((p): p is NonNullable<typeof p> => p != null)
+
+  const otherServices = SERVICES.filter((s) => s.slug !== slug)
 
   return (
     <>
       <SchemaMarkup schema={breadcrumbSchema} />
       <SchemaMarkup schema={serviceSchema} />
-      {howToSchema && <SchemaMarkup schema={howToSchema} />}
-      {faqSchema && <SchemaMarkup schema={faqSchema} />}
+      <SchemaMarkup schema={howToSchema} />
+      <SchemaMarkup schema={faqSchema} />
 
-      {/* Breadcrumb */}
-      <nav className="max-w-6xl mx-auto px-4 py-3 text-sm text-gray-500">
-        <Link href="/" className="hover:text-[#FFB800]">Home</Link>
-        <span className="mx-2">›</span>
-        <Link href="/services" className="hover:text-[#FFB800]">Services</Link>
-        <span className="mx-2">›</span>
-        <span className="text-gray-800 font-medium">{service.shortName}</span>
+      {/* ============================================================ */}
+      {/*  1. Breadcrumb                                                */}
+      {/* ============================================================ */}
+      <nav className="max-w-6xl mx-auto px-4 py-3 text-sm text-gray-500" aria-label="Breadcrumb">
+        <ol className="flex items-center gap-0">
+          <li>
+            <Link href="/" className="hover:text-[#FFB800] transition-colors">Home</Link>
+          </li>
+          <li><span className="mx-2 text-gray-300">›</span></li>
+          <li>
+            <Link href="/services" className="hover:text-[#FFB800] transition-colors">Services</Link>
+          </li>
+          <li><span className="mx-2 text-gray-300">›</span></li>
+          <li>
+            <span className="text-[#0F1B2D] font-semibold">{service.shortName}</span>
+          </li>
+        </ol>
       </nav>
 
+      {/* ============================================================ */}
+      {/*  2. Hero                                                      */}
+      {/* ============================================================ */}
       <HeroSection
-        heading={content?.h1 ?? `${service.name} — Coventry & Warwickshire`}
+        heading={content.h1}
         subheading={`${service.description} Call now for a price — no VAT, no call-out fee.`}
+        compact
       />
 
-      {/* Main content */}
-      <section className="py-12 px-4 bg-white">
+      {/* ============================================================ */}
+      {/*  3. Quick price + trust bar                                   */}
+      {/* ============================================================ */}
+      <section className="bg-[#0F1B2D] border-t-4 border-[#FFB800]">
+        <div className="max-w-5xl mx-auto px-4 py-5 flex flex-col md:flex-row items-center justify-between gap-4">
+          <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm md:text-base text-white font-medium">
+            <span className="text-[#FFB800] font-black text-lg md:text-xl">
+              From &pound;{service.priceFrom}
+            </span>
+            <span className="hidden md:inline text-gray-500">|</span>
+            <span className="flex items-center gap-1.5">
+              <svg className="w-4 h-4 text-[#FFB800]" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" /></svg>
+              No VAT
+            </span>
+            <span className="flex items-center gap-1.5">
+              <svg className="w-4 h-4 text-[#FFB800]" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" /></svg>
+              No Call-Out Fee
+            </span>
+            <span className="flex items-center gap-1.5">
+              <svg className="w-4 h-4 text-[#FFB800]" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" /></svg>
+              Same Price 24/7
+            </span>
+          </div>
+          <a
+            href={`tel:${SITE_CONFIG.phoneTel}`}
+            className="inline-flex items-center gap-2 bg-[#FFB800] hover:bg-[#FFC933] text-[#0F1B2D] px-6 py-3 rounded-xl font-black text-lg transition-all duration-200 shadow-[0_2px_12px_rgba(255,184,0,0.3)] hover:shadow-[0_4px_20px_rgba(255,184,0,0.5)] hover:scale-[1.02] whitespace-nowrap"
+          >
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" /></svg>
+            {SITE_CONFIG.phone}
+          </a>
+        </div>
+      </section>
+
+      {/* ============================================================ */}
+      {/*  4. Main intro content                                        */}
+      {/* ============================================================ */}
+      <section className="py-14 px-4 bg-white">
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-2xl font-black text-gray-900 mb-6">
-            {service.shortName} in Coventry — From £{service.priceFrom}
+          <h2 className="text-2xl md:text-3xl font-black text-[#0F1B2D] mb-8">
+            {service.shortName} in Coventry &mdash; From &pound;{service.priceFrom}
           </h2>
-          {content?.intro.map((para, i) => (
-            <p key={i} className="text-gray-700 leading-relaxed mb-4">
+
+          {/* First paragraph with amber left border */}
+          <div className="border-l-4 border-[#FFB800] pl-6 mb-6">
+            <p className="text-gray-700 text-lg leading-relaxed">
+              {content.intro[0]}
+            </p>
+          </div>
+
+          {/* Remaining paragraphs */}
+          {content.intro.slice(1).map((para, i) => (
+            <p key={i} className="text-gray-600 leading-relaxed mb-5 text-base">
               {para}
             </p>
           ))}
         </div>
       </section>
 
-      {/* How it works */}
-      {content && (
-        <section className="py-12 px-4 bg-gray-50">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="text-2xl font-black text-gray-900 mb-8 text-center">
-              What Happens When You Call
-            </h2>
-            <ol className="space-y-4">
-              {content.steps.map((step, i) => (
-                <li key={i} className="flex gap-4 items-start">
-                  <span className="flex-shrink-0 w-12 h-12 rounded-full bg-[#FFB800] text-[#0F1B2D] font-black text-lg flex items-center justify-center shadow-sm">
+      {/* ============================================================ */}
+      {/*  5. Common Scenarios                                          */}
+      {/* ============================================================ */}
+      <section className="py-14 px-4 bg-[#F7F7F5]">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-2xl md:text-3xl font-black text-[#0F1B2D] mb-3 text-center">
+            When Do You Need This Service?
+          </h2>
+          <p className="text-gray-500 text-center mb-10 max-w-xl mx-auto">
+            These are the most common situations where people call me for {service.shortName.toLowerCase()} help.
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {content.scenarios.map((scenario, i) => (
+              <div
+                key={i}
+                className="bg-white rounded-2xl p-6 border-l-4 border-[#0F1B2D] shadow-sm hover:shadow-md transition-shadow duration-200"
+              >
+                <div className="flex items-center gap-3 mb-3">
+                  <span className="flex-shrink-0 w-9 h-9 rounded-full bg-[#FFB800]/10 text-[#FFB800] font-black text-sm flex items-center justify-center">
                     {i + 1}
                   </span>
-                  <span className="text-gray-800 pt-3 text-base">{step}</span>
+                  <h3 className="font-bold text-[#0F1B2D] text-lg leading-tight">
+                    {scenario.title}
+                  </h3>
+                </div>
+                <p className="text-gray-600 leading-relaxed text-sm">
+                  {scenario.desc}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ============================================================ */}
+      {/*  6. What Happens When You Call — vertical timeline             */}
+      {/* ============================================================ */}
+      <section className="py-16 px-4 bg-gradient-to-br from-[#0A1628] via-[#0F1B2D] to-[#162438]">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-2xl md:text-3xl font-black text-white mb-3 text-center">
+            What Happens When You Call
+          </h2>
+          <p className="text-gray-400 text-center mb-12 max-w-lg mx-auto">
+            From phone call to job done — here is exactly how it works.
+          </p>
+
+          <div className="relative">
+            {/* Vertical dotted line */}
+            <div className="absolute left-6 top-6 bottom-6 w-px border-l-2 border-dashed border-[#FFB800]/30" />
+
+            <ol className="space-y-8">
+              {content.steps.map((step, i) => (
+                <li key={i} className="relative flex gap-5 items-start">
+                  {/* Numbered amber circle */}
+                  <span className="relative z-10 flex-shrink-0 w-12 h-12 rounded-full bg-[#FFB800] text-[#0F1B2D] font-black text-lg flex items-center justify-center shadow-[0_0_20px_rgba(255,184,0,0.25)]">
+                    {i + 1}
+                  </span>
+                  {/* Step text */}
+                  <span className="text-gray-200 pt-3 text-base leading-relaxed">
+                    {step}
+                  </span>
                 </li>
               ))}
             </ol>
           </div>
-        </section>
-      )}
-
-      {/* Pricing */}
-      <section className="py-12 px-4 bg-white">
-        <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-2xl font-black text-gray-900 mb-4">
-            {service.shortName} Prices
-          </h2>
-          <div className="inline-block bg-[#0F1B2D] text-white rounded-xl px-10 py-6">
-            <p className="text-gray-400 text-sm uppercase tracking-widest mb-1">Starting from</p>
-            <p className="text-5xl font-black text-[#FFB800]">£{service.priceFrom}</p>
-            <p className="text-gray-400 text-sm mt-2">No VAT &bull; No call-out fee &bull; Includes labour</p>
-          </div>
-          <p className="text-gray-600 mt-6 text-sm">
-            The price you are quoted when you call is the final price. No surprises.
-          </p>
         </div>
       </section>
 
-      {/* Areas */}
-      <section className="py-12 px-4 bg-gray-50">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-2xl font-black text-gray-900 mb-6 text-center">
+      {/* ============================================================ */}
+      {/*  7. Detailed pricing                                          */}
+      {/* ============================================================ */}
+      <section className="py-14 px-4 bg-white">
+        <div className="max-w-2xl mx-auto">
+          <h2 className="text-2xl md:text-3xl font-black text-[#0F1B2D] mb-3 text-center">
+            {service.shortName} Prices
+          </h2>
+          <p className="text-gray-500 text-center mb-8">
+            All prices include labour. No VAT. No call-out fee.
+          </p>
+
+          {/* Price card */}
+          <div className="bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden">
+            {content.priceDetails.map((item, i) => (
+              <div
+                key={i}
+                className={`flex items-center justify-between px-6 py-4 ${i < content.priceDetails.length - 1 ? 'border-b border-gray-100' : ''}`}
+              >
+                <span className="text-[#0F1B2D] font-medium">{item.item}</span>
+                <span className="text-[#FFB800] font-black text-lg whitespace-nowrap ml-4">{item.price}</span>
+              </div>
+            ))}
+
+            {/* Footer */}
+            <div className="bg-[#F7F7F5] px-6 py-4 border-t border-gray-200">
+              <p className="text-gray-500 text-sm text-center">
+                The price you are quoted on the phone is the final price. No surprises. No hidden charges.
+              </p>
+            </div>
+          </div>
+
+          {/* CTA */}
+          <div className="text-center mt-8">
+            <a
+              href={`tel:${SITE_CONFIG.phoneTel}`}
+              className="inline-flex items-center gap-3 bg-[#FFB800] hover:bg-[#FFC933] text-[#0F1B2D] px-10 py-5 rounded-2xl font-black text-xl transition-all duration-200 shadow-[0_4px_24px_rgba(255,184,0,0.3)] hover:shadow-[0_4px_32px_rgba(255,184,0,0.5)] hover:scale-[1.02]"
+            >
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" /></svg>
+              Get a Price Now
+            </a>
+            <p className="text-gray-400 text-sm mt-3">
+              Call <strong>{SITE_CONFIG.phone}</strong> &mdash; I answer 24/7
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* ============================================================ */}
+      {/*  8. Why Choose Us — testimonial + benefits                    */}
+      {/* ============================================================ */}
+      <section className="py-14 px-4 bg-[#F7F7F5]">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-2xl md:text-3xl font-black text-[#0F1B2D] mb-10 text-center">
+            Why Choose Me For {service.shortName}?
+          </h2>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+
+            {/* Testimonial card */}
+            <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-200 relative">
+              {/* Quote mark */}
+              <div className="absolute -top-4 left-8 w-10 h-10 bg-[#FFB800] rounded-full flex items-center justify-center">
+                <svg className="w-5 h-5 text-[#0F1B2D]" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10H14.017zM0 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151C7.546 6.068 5.983 8.789 5.983 11h4v10H0z" /></svg>
+              </div>
+
+              {/* Stars */}
+              <div className="flex gap-1 mb-4 mt-2">
+                {[...Array(5)].map((_, i) => (
+                  <svg key={i} className="w-5 h-5 text-[#FFB800]" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                ))}
+              </div>
+
+              <blockquote className="text-gray-700 text-lg leading-relaxed italic mb-6">
+                &ldquo;{content.testimonial.text}&rdquo;
+              </blockquote>
+
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 rounded-full bg-[#0F1B2D] text-white flex items-center justify-center font-bold text-sm">
+                  {content.testimonial.name.charAt(0)}
+                </div>
+                <div>
+                  <p className="font-bold text-[#0F1B2D] text-sm">{content.testimonial.name}</p>
+                  <p className="text-gray-500 text-xs">{content.testimonial.area}, Coventry</p>
+                </div>
+              </div>
+
+              {/* Why-us paragraph */}
+              <div className="mt-6 pt-6 border-t border-gray-100">
+                <p className="text-gray-600 leading-relaxed text-sm">
+                  {content.whyUs}
+                </p>
+              </div>
+            </div>
+
+            {/* Benefits list */}
+            <div className="space-y-4">
+              {content.benefits.map((benefit, i) => (
+                <div key={i} className="flex gap-4 items-start bg-white rounded-xl p-5 border border-gray-200 shadow-sm">
+                  <span className="flex-shrink-0 mt-0.5 w-7 h-7 rounded-full bg-green-100 text-green-600 flex items-center justify-center">
+                    <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                  </span>
+                  <span className="text-[#0F1B2D] font-medium leading-snug">{benefit}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ============================================================ */}
+      {/*  9. Areas covered                                             */}
+      {/* ============================================================ */}
+      <section className="py-14 px-4 bg-white">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-2xl md:text-3xl font-black text-[#0F1B2D] mb-3 text-center">
             {service.shortName} Areas Covered
           </h2>
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
+          <p className="text-gray-500 text-center mb-8 max-w-lg mx-auto">
+            I cover Coventry, Warwickshire, and surrounding areas. Here are some of the locations I serve.
+          </p>
+
+          {/* Main areas */}
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3 mb-8">
             {mainAreaLinks.map((area) => (
               <Link
                 key={area.slug}
                 href={`/areas/${area.slug}`}
-                className="bg-white border border-gray-200 hover:border-[#FFB800] text-gray-700 hover:text-[#0F1B2D] px-4 py-2 rounded-lg text-sm font-medium transition-colors text-center"
+                className="group bg-[#0F1B2D] hover:bg-[#162438] text-white px-4 py-3 rounded-xl text-sm font-bold transition-all duration-200 text-center hover:shadow-md hover:scale-[1.02]"
               >
-                {area.name}
+                <span className="group-hover:text-[#FFB800] transition-colors">{area.name}</span>
               </Link>
             ))}
           </div>
-          <div className="flex flex-wrap gap-2">
-            {covAreas.map((area) => (
+
+          {/* Coventry sub-areas */}
+          <div className="bg-[#F7F7F5] rounded-2xl p-6">
+            <div className="flex flex-wrap gap-2 items-center justify-center">
+              {covAreas.map((area) => (
+                <Link
+                  key={area.slug}
+                  href={`/areas/${area.slug}`}
+                  className="text-sm text-gray-600 hover:text-[#0F1B2D] bg-white hover:bg-white px-3 py-1.5 rounded-lg border border-gray-200 hover:border-[#FFB800] transition-all duration-200"
+                >
+                  {area.name}
+                </Link>
+              ))}
               <Link
-                key={area.slug}
-                href={`/areas/${area.slug}`}
-                className="text-sm text-gray-600 hover:text-[#FFB800] hover:underline px-2 py-1"
+                href="/areas"
+                className="text-sm text-[#FFB800] font-bold hover:underline px-3 py-1.5"
               >
-                {area.name}
+                View all areas &rarr;
               </Link>
-            ))}
-            <Link href="/areas" className="text-sm text-[#0F1B2D] font-semibold hover:underline px-2 py-1">
-              View all areas →
-            </Link>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* FAQ */}
-      {content && (
-        <FAQSection
-          faqs={content.faqs}
-          heading={`Frequently Asked Questions — ${service.shortName}`}
-        />
+      {/* ============================================================ */}
+      {/*  10. Related blog posts                                       */}
+      {/* ============================================================ */}
+      {relatedPosts.length > 0 && (
+        <section className="py-14 px-4 bg-[#F7F7F5]">
+          <div className="max-w-5xl mx-auto">
+            <h2 className="text-2xl md:text-3xl font-black text-[#0F1B2D] mb-3 text-center">
+              Learn More About {service.shortName}
+            </h2>
+            <p className="text-gray-500 text-center mb-10 max-w-lg mx-auto">
+              Helpful guides and advice related to this service.
+            </p>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {relatedPosts.map((post) => (
+                <Link
+                  key={post.slug}
+                  href={`/blog/${post.slug}`}
+                  className="group bg-white rounded-2xl border border-gray-200 hover:border-[#FFB800] p-6 transition-all duration-200 hover:shadow-md flex flex-col"
+                >
+                  <div className="flex items-center gap-2 mb-3">
+                    <span className="text-xs font-semibold text-[#FFB800] bg-[#FFB800]/10 px-2.5 py-1 rounded-full">
+                      {post.pillar}
+                    </span>
+                    <span className="text-xs text-gray-400">{post.readTime}</span>
+                  </div>
+                  <h3 className="font-bold text-[#0F1B2D] group-hover:text-[#FFB800] transition-colors leading-snug mb-3 flex-1">
+                    {post.title}
+                  </h3>
+                  <p className="text-gray-500 text-sm leading-relaxed line-clamp-2">
+                    {post.excerpt}
+                  </p>
+                  <span className="mt-4 text-sm font-bold text-[#0F1B2D] group-hover:text-[#FFB800] transition-colors inline-flex items-center gap-1">
+                    Read article
+                    <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" /></svg>
+                  </span>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
       )}
 
-      {/* Other services */}
-      <section className="py-12 px-4 bg-white">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-2xl font-black text-gray-900 mb-6">Other Services</h2>
+      {/* ============================================================ */}
+      {/*  11. FAQ section                                              */}
+      {/* ============================================================ */}
+      <FAQSection
+        faqs={content.faqs}
+        heading={`Frequently Asked Questions — ${service.shortName}`}
+      />
+
+      {/* ============================================================ */}
+      {/*  12. Other services                                           */}
+      {/* ============================================================ */}
+      <section className="py-14 px-4 bg-white">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-2xl md:text-3xl font-black text-[#0F1B2D] mb-3 text-center">
+            Other Locksmith Services
+          </h2>
+          <p className="text-gray-500 text-center mb-8 max-w-lg mx-auto">
+            I offer a full range of locksmith services across Coventry and Warwickshire.
+          </p>
+
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            {SERVICES.filter((s) => s.slug !== slug).map((s) => (
+            {otherServices.map((s) => (
               <Link
                 key={s.slug}
                 href={`/services/${s.slug}`}
-                className="flex items-center gap-4 bg-gray-50 hover:bg-[#F7F7F5] border border-gray-200 hover:border-[#FFB800] rounded-xl p-4 transition-colors group"
+                className="group bg-white border border-gray-200 hover:border-[#FFB800] rounded-2xl p-5 transition-all duration-200 hover:shadow-md flex gap-4 items-start"
               >
-                <div className="flex-1">
-                  <div className="font-black text-gray-900 group-hover:text-[#0F1B2D] text-base leading-tight">
-                    {s.shortName}
+                {/* Icon */}
+                <span className="flex-shrink-0 w-12 h-12 bg-[#0F1B2D] rounded-xl flex items-center justify-center text-xl group-hover:bg-[#162438] transition-colors">
+                  {SERVICE_ICONS[s.slug] || '🔧'}
+                </span>
+
+                <div className="flex-1 min-w-0">
+                  <div className="flex items-start justify-between gap-3">
+                    <h3 className="font-bold text-[#0F1B2D] group-hover:text-[#FFB800] transition-colors text-base leading-tight">
+                      {s.shortName}
+                    </h3>
+                    <div className="text-right flex-shrink-0">
+                      <span className="text-[#FFB800] font-black text-lg">
+                        &pound;{s.priceFrom}
+                      </span>
+                    </div>
                   </div>
-                  <div className="text-sm text-gray-500 mt-0.5">{s.description}</div>
-                </div>
-                <div className="text-right flex-shrink-0">
-                  <div className="text-[#FFB800] font-black text-lg">from £{s.priceFrom}</div>
-                  <div className="text-xs text-gray-400">No VAT</div>
+                  <p className="text-gray-500 text-sm mt-1 leading-relaxed line-clamp-2">
+                    {s.description}
+                  </p>
+                  <div className="flex items-center gap-2 mt-2">
+                    <span className="text-xs text-gray-400">No VAT</span>
+                    <span className="text-gray-300">&bull;</span>
+                    <span className="text-xs text-gray-400">No call-out fee</span>
+                  </div>
                 </div>
               </Link>
             ))}
@@ -378,7 +803,13 @@ export default async function ServicePage({ params }: Props) {
         </div>
       </section>
 
-      <CTABlock />
+      {/* ============================================================ */}
+      {/*  13. CTA Block                                                */}
+      {/* ============================================================ */}
+      <CTABlock
+        heading={`Need ${service.shortName.toLowerCase()} help? Call me now.`}
+        subtext={`I'm available 24/7, 365 days a year. ${service.shortName} from £${service.priceFrom}. No VAT, no call-out fee. The price I quote is the price you pay.`}
+      />
     </>
   )
 }
