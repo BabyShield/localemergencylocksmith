@@ -2,65 +2,23 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { SITE_CONFIG } from '@/data/config'
 import { ARTICLE_TEMPLATES } from '@/data/articles'
+import { ALL_BLOG_POSTS, PILLARS } from '@/data/blog-posts'
 
 export const metadata: Metadata = {
-  title: 'Locksmith Blog — Tips & Advice | Local Emergency Locksmith Coventry',
+  title: 'Locksmith Blog — Tips, Security Advice & Guides | Local Emergency Locksmith Coventry',
   description:
-    'Locksmith tips, security advice, and guides for Coventry and Warwickshire homeowners. How to stay secure, what to do in a lockout, and more.',
+    'Expert locksmith advice for Coventry and Warwickshire homeowners. Lock types, security guides, honest pricing, uPVC door help, and seasonal tips — from a working locksmith.',
   alternates: {
     canonical: `${SITE_CONFIG.domain}/blog`,
   },
 }
-
-export const BLOG_POSTS = [
-  {
-    slug: 'emergency-locksmith-cost-coventry-2026',
-    title: 'How Much Does an Emergency Locksmith Cost in Coventry in 2026?',
-    excerpt:
-      'Wondering what a locksmith really costs in Coventry? Here are the actual prices — no vague ranges, no "call for a quote". Honest costs for every common job.',
-    date: '2026-03-01',
-    readTime: '6 min read',
-  },
-  {
-    slug: 'locked-out-late-night-coventry',
-    title: 'Locked Out Late at Night in Coventry? Here Is Exactly What to Do',
-    excerpt:
-      "It's midnight. You're locked out. Here is a step-by-step guide for what to do — and what not to do — if you're locked out of your home in Coventry at night.",
-    date: '2026-03-08',
-    readTime: '5 min read',
-  },
-  {
-    slug: 'bs3621-locks-explained',
-    title: 'BS3621 Locks Explained — Why Your Home Insurance May Require One',
-    excerpt:
-      'Does your home insurance require a BS3621 lock? Many policies do — and many homeowners don\'t have one. Here\'s what it means and how to check.',
-    date: '2026-03-15',
-    readTime: '7 min read',
-  },
-  {
-    slug: 'upvc-door-lock-needs-replacing',
-    title: 'How to Tell If Your uPVC Door Lock Needs Replacing (Not Just Fixing)',
-    excerpt:
-      "A stiff uPVC door isn't always a broken lock. Here's how to tell whether you need a repair, a replacement, or just a door adjustment.",
-    date: '2026-03-22',
-    readTime: '5 min read',
-  },
-  {
-    slug: 'locksmith-wont-give-price-on-phone',
-    title: 'Why You Should Never Use a Locksmith Who Won\'t Give a Price on the Phone',
-    excerpt:
-      "Rogue locksmith scams cost UK homeowners millions every year. Here's exactly what to look for — and how to avoid being ripped off when you're locked out.",
-    date: '2026-03-29',
-    readTime: '6 min read',
-  },
-]
 
 export default function BlogPage() {
   return (
     <>
       <nav className="max-w-6xl mx-auto px-4 py-3 text-sm text-gray-500">
         <Link href="/" className="hover:text-[#FFB800]">Home</Link>
-        <span className="mx-2">›</span>
+        <span className="mx-2">&rsaquo;</span>
         <span className="text-gray-800 font-medium">Blog</span>
       </nav>
 
@@ -69,50 +27,87 @@ export default function BlogPage() {
           <h1 className="text-3xl md:text-4xl font-black mb-4">
             Locksmith Tips & Security Advice
           </h1>
-          <p className="text-gray-300 text-lg">
+          <p className="text-gray-300 text-lg mb-2">
             Honest advice from a Coventry locksmith — no fluff, no corporate waffle.
+          </p>
+          <p className="text-gray-400 text-sm">
+            {ALL_BLOG_POSTS.length} articles across {PILLARS.length} topics
           </p>
         </div>
       </section>
 
-      <section className="py-12 px-4 bg-white">
+      {/* Quick nav to pillars */}
+      <section className="py-6 px-4 bg-[#F7F7F5] border-b border-gray-200">
         <div className="max-w-4xl mx-auto">
-          <div className="space-y-8">
-            {BLOG_POSTS.map((post) => (
-              <article
-                key={post.slug}
-                className="bg-white border border-gray-200 rounded-xl p-6 hover:border-[#FFB800] hover:shadow-sm transition-all"
+          <p className="text-xs font-bold text-gray-500 uppercase tracking-wide mb-3">Jump to topic:</p>
+          <div className="flex flex-wrap gap-2">
+            {PILLARS.map((pillar) => (
+              <a
+                key={pillar.slug}
+                href={`#${pillar.slug}`}
+                className="bg-white border border-gray-200 rounded-lg px-3 py-1.5 text-sm font-medium text-gray-700 hover:border-[#FFB800] hover:text-[#0F1B2D] transition-colors"
               >
-                <div className="text-xs text-gray-400 mb-2">
-                  {new Date(post.date).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })}
-                  {' · '}{post.readTime}
-                </div>
-                <h2 className="text-xl font-black text-gray-900 mb-3">
-                  <Link href={`/blog/${post.slug}`} className="hover:text-[#0F1B2D]">
-                    {post.title}
-                  </Link>
-                </h2>
-                <p className="text-gray-600 leading-relaxed mb-4">{post.excerpt}</p>
-                <Link
-                  href={`/blog/${post.slug}`}
-                  className="text-[#0F1B2D] font-semibold hover:underline text-sm"
-                >
-                  Read more →
-                </Link>
-              </article>
+                {pillar.name}
+              </a>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Browse by area */}
+      {/* Posts grouped by pillar */}
+      <section className="py-12 px-4 bg-white">
+        <div className="max-w-4xl mx-auto">
+          {PILLARS.map((pillar) => {
+            const posts = ALL_BLOG_POSTS.filter((p) => p.pillarSlug === pillar.slug)
+            return (
+              <div key={pillar.slug} id={pillar.slug} className="mb-16 last:mb-0 scroll-mt-8">
+                <div className="mb-6">
+                  <h2 className="text-2xl font-black text-gray-900 mb-2">{pillar.name}</h2>
+                  <p className="text-gray-500 text-sm">{pillar.description}</p>
+                </div>
+                <div className="space-y-4">
+                  {posts.map((post) => (
+                    <article
+                      key={post.slug}
+                      className="bg-white border border-gray-200 rounded-xl p-5 hover:border-[#FFB800] hover:shadow-sm transition-all"
+                    >
+                      <div className="flex flex-col sm:flex-row sm:items-start gap-3">
+                        <div className="flex-1">
+                          <div className="text-xs text-gray-400 mb-1.5">
+                            {new Date(post.date).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })}
+                            {' · '}{post.readTime}
+                          </div>
+                          <h3 className="text-lg font-black text-gray-900 mb-2">
+                            <Link href={`/blog/${post.slug}`} className="hover:text-[#0F1B2D]">
+                              {post.title}
+                            </Link>
+                          </h3>
+                          <p className="text-gray-600 text-sm leading-relaxed">{post.excerpt}</p>
+                        </div>
+                        <Link
+                          href={`/blog/${post.slug}`}
+                          className="text-[#0F1B2D] font-semibold hover:underline text-sm whitespace-nowrap self-end sm:self-center"
+                        >
+                          Read &rarr;
+                        </Link>
+                      </div>
+                    </article>
+                  ))}
+                </div>
+              </div>
+            )
+          })}
+        </div>
+      </section>
+
+      {/* Browse by area (Plan 2 articles) */}
       <section className="py-12 px-4 bg-gray-50">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-2xl font-black text-gray-900 mb-2">
-            Browse Articles by Area
+            Browse Local Area Guides
           </h2>
           <p className="text-gray-600 mb-8">
-            Every article is tailored to your specific area — with local response times, postcodes, and pricing.
+            Every area guide is tailored to your specific location — with local response times, postcodes, and pricing.
           </p>
 
           {/* Major area quick links */}
@@ -130,10 +125,10 @@ export default function BlogPage() {
                 { slug: 'rugby', name: 'Rugby' },
                 { slug: 'stratford-upon-avon', name: 'Stratford-upon-Avon' },
                 { slug: 'bedworth', name: 'Bedworth' },
-                { slug: 'atherstone', name: 'Atherstone' },
                 { slug: 'warwick', name: 'Warwick' },
-                { slug: 'solihull', name: 'Solihull' },
                 { slug: 'tile-hill', name: 'Tile Hill' },
+                { slug: 'canley', name: 'Canley' },
+                { slug: 'binley', name: 'Binley' },
               ].map((area) => (
                 <Link
                   key={area.slug}
@@ -149,7 +144,7 @@ export default function BlogPage() {
           {/* Article topics */}
           <div>
             <h3 className="text-sm font-black text-gray-500 uppercase tracking-wide mb-4">
-              Article Topics (All Areas)
+              Area Article Topics
             </h3>
             <div className="space-y-3">
               {ARTICLE_TEMPLATES.map((article) => (
@@ -163,14 +158,14 @@ export default function BlogPage() {
                         {article.titleTemplate.replace(/\{area\}/g, '[Your Area]')}
                       </p>
                       <p className="text-xs text-gray-500 mt-1">
-                        Available for all {78} covered areas
+                        Available for all 78 covered areas
                       </p>
                     </div>
                     <Link
                       href={`/blog/coventry-city-centre/${article.slug}`}
                       className="text-[#0F1B2D] font-semibold hover:underline text-sm whitespace-nowrap"
                     >
-                      Read example →
+                      Read example &rarr;
                     </Link>
                   </div>
                 </div>

@@ -3,6 +3,7 @@ import { AREAS } from '@/data/areas'
 import { SERVICES } from '@/data/services'
 import { SITE_CONFIG } from '@/data/config'
 import { ARTICLE_TEMPLATES } from '@/data/articles'
+import { ALL_BLOG_POSTS } from '@/data/blog-posts'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = SITE_CONFIG.domain
@@ -30,7 +31,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }))
 
-  const blogArticlePages: MetadataRoute.Sitemap = AREAS.flatMap((a) =>
+  // Plan 2: Area-specific blog articles (78 areas × 10 templates = 780 pages)
+  const areaArticlePages: MetadataRoute.Sitemap = AREAS.flatMap((a) =>
     ARTICLE_TEMPLATES.map((t) => ({
       url: `${base}/blog/${a.slug}/${t.slug}`,
       lastModified: now,
@@ -39,5 +41,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }))
   )
 
-  return [...staticPages, ...servicePages, ...areaPages, ...blogArticlePages]
+  // Plan 3: Standalone blog posts (52 posts across 7 pillars)
+  const blogPostPages: MetadataRoute.Sitemap = ALL_BLOG_POSTS.map((p) => ({
+    url: `${base}/blog/${p.slug}`,
+    lastModified: new Date(p.date),
+    changeFrequency: 'monthly' as const,
+    priority: 0.7,
+  }))
+
+  return [...staticPages, ...servicePages, ...areaPages, ...areaArticlePages, ...blogPostPages]
 }
