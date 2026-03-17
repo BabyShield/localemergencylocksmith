@@ -2,15 +2,15 @@ import Link from 'next/link'
 import { SITE_CONFIG } from '@/data/config'
 
 const PRICES = [
-  { service: 'Emergency lockout', price: '£59', desc: 'Non-destructive door opening' },
-  { service: 'Lock change (standard)', price: '£69', desc: 'Yale or cylinder replacement' },
-  { service: 'Lock change (BS3621)', price: '£79', desc: 'Insurance-approved deadlock' },
-  { service: 'uPVC lock repair', price: '£59', desc: 'Cylinder or mechanism repair' },
-  { service: 'uPVC lock replacement', price: '£89', desc: 'Full mechanism swap' },
-  { service: 'Anti-snap cylinder upgrade', price: '£59', desc: 'Snap-resistant euro cylinder' },
-  { service: 'Boarding up (emergency)', price: '£79', desc: 'Same-day emergency boarding' },
-  { service: 'Window lock repair', price: '£49', desc: 'Espagnolette or cockspur' },
-  { service: 'Security survey', price: 'FREE', desc: 'Full property assessment' },
+  { service: 'Emergency lockout', price: '£59', desc: 'Non-destructive door opening', includes: 'Labour, no VAT' },
+  { service: 'Lock change (standard)', price: '£69', desc: 'Yale or cylinder replacement', includes: 'New lock + fitting' },
+  { service: 'Lock change (BS3621)', price: '£79', desc: 'Insurance-approved deadlock', includes: 'Lock + fitting' },
+  { service: 'Anti-snap cylinder', price: '£59', desc: 'Snap-resistant euro cylinder', includes: 'Cylinder + fitting' },
+  { service: 'uPVC lock repair', price: '£59', desc: 'Cylinder or mechanism repair', includes: 'Labour, no VAT' },
+  { service: 'uPVC lock replacement', price: '£89', desc: 'Full mechanism swap', includes: 'Mechanism + fitting' },
+  { service: 'Boarding up (emergency)', price: '£79', desc: 'Same-day emergency boarding', includes: 'Materials + labour' },
+  { service: 'Window lock repair', price: '£49', desc: 'Espagnolette or cockspur', includes: 'Labour, no VAT' },
+  { service: 'Security survey', price: 'FREE', desc: 'Full property assessment', includes: 'No obligation' },
 ]
 
 export default function PriceTable() {
@@ -26,30 +26,35 @@ export default function PriceTable() {
           </p>
         </div>
 
-        <div className="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm">
-          {/* Header */}
-          <div className="bg-[#0F1B2D] text-white px-6 py-4 flex justify-between items-center">
-            <span className="font-bold text-sm uppercase tracking-wide">Service</span>
-            <span className="font-bold text-sm uppercase tracking-wide">From</span>
-          </div>
-
-          {/* Rows */}
-          <div className="divide-y divide-gray-100">
-            {PRICES.map((row) => (
-              <div
-                key={row.service}
-                className="flex items-center justify-between px-6 py-4 hover:bg-[#F7F7F5] transition-colors"
-              >
-                <div>
-                  <p className="font-bold text-[#0F1B2D] text-sm">{row.service}</p>
-                  <p className="text-xs text-gray-400 mt-0.5">{row.desc}</p>
-                </div>
-                <span className={`font-black text-lg flex-shrink-0 ml-4 ${row.price === 'FREE' ? 'text-green-600' : 'text-[#FFB800]'}`}>
-                  {row.price}
-                </span>
-              </div>
-            ))}
-          </div>
+        {/* Semantic HTML table for AI/snippet extraction */}
+        <div className="overflow-x-auto">
+          <table className="w-full border-collapse bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-200">
+            <caption className="sr-only">Emergency locksmith prices in Coventry — 2026</caption>
+            <thead>
+              <tr className="bg-[#0F1B2D] text-white">
+                <th scope="col" className="text-left px-5 py-3 text-sm font-bold uppercase tracking-wide">Service</th>
+                <th scope="col" className="text-right px-5 py-3 text-sm font-bold uppercase tracking-wide">From</th>
+                <th scope="col" className="text-left px-5 py-3 text-sm font-bold uppercase tracking-wide hidden sm:table-cell">Includes</th>
+              </tr>
+            </thead>
+            <tbody>
+              {PRICES.map((row, i) => (
+                <tr
+                  key={row.service}
+                  className={`border-b border-gray-100 hover:bg-[#F7F7F5] transition-colors ${i % 2 === 0 ? '' : 'bg-gray-50/50'}`}
+                >
+                  <td className="px-5 py-3.5">
+                    <span className="font-bold text-[#0F1B2D] text-sm block">{row.service}</span>
+                    <span className="text-xs text-gray-400 sm:hidden">{row.desc}</span>
+                  </td>
+                  <td className={`px-5 py-3.5 text-right font-black text-lg whitespace-nowrap ${row.price === 'FREE' ? 'text-green-600' : 'text-[#FFB800]'}`}>
+                    {row.price}
+                  </td>
+                  <td className="px-5 py-3.5 text-gray-500 text-sm hidden sm:table-cell">{row.includes}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
         </div>
 
         {/* Footer notes */}

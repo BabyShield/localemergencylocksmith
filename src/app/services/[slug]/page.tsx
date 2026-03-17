@@ -9,6 +9,8 @@ import HeroSection from '@/components/HeroSection'
 import CTABlock from '@/components/CTABlock'
 import FAQSection from '@/components/FAQSection'
 import SchemaMarkup from '@/components/SchemaMarkup'
+import DirectAnswer from '@/components/DirectAnswer'
+import LastUpdated from '@/components/LastUpdated'
 
 export const dynamic = 'force-static'
 export const revalidate = false
@@ -55,6 +57,8 @@ const SERVICE_CONTENT: Record<string, {
   relatedSlugs: string[]
   priceDetails: { item: string; price: string }[]
   testimonial: { text: string; name: string; area: string }
+  directAnswer: { question: string; answer: string }
+  voiceFaqs: { q: string; a: string }[]
 }> = {
   'emergency-lockout': {
     h1: 'Emergency Locksmith Coventry — Locked Out?',
@@ -99,6 +103,15 @@ const SERVICE_CONTENT: Record<string, {
       { item: "Lock replacement after entry (if needed)", price: "From £69" },
     ],
     testimonial: { text: "Locked out at 11pm — Ross arrived within 20 minutes, had me back in within 10. No VAT, exact price quoted on the phone. Brilliant.", name: "Sarah T.", area: "Earlsdon" },
+    directAnswer: {
+      question: 'How much does an emergency locksmith cost in Coventry?',
+      answer: 'An emergency locksmith in Coventry costs from £59 for a standard lockout. This price includes labour, with no VAT and no call-out fee. Response time is typically 15 to 30 minutes. No extra charge applies for evenings, weekends, or bank holidays.',
+    },
+    voiceFaqs: [
+      { q: 'How quickly can a locksmith get to me in Coventry?', a: 'A local locksmith in Coventry can typically reach you within fifteen to thirty minutes. I cover the entire Coventry area and respond the same speed whether it is two in the afternoon or two in the morning.' },
+      { q: 'Will a locksmith damage my door when opening it?', a: 'No. A professional locksmith uses non-destructive entry techniques to open most standard residential locks. Your door and lock stay intact. If a lock does need replacing, the locksmith will explain why and quote you before starting.' },
+      { q: 'Is it more expensive to call a locksmith at night?', a: 'Not with a local independent locksmith. I charge the same price twenty-four hours a day, seven days a week, including bank holidays. National companies often add a night premium of fifty to one hundred pounds.' },
+    ],
   },
   'lock-change': {
     h1: 'Lock Change Coventry — Same Day Service',
@@ -143,6 +156,15 @@ const SERVICE_CONTENT: Record<string, {
       { item: "Anti-snap cylinder upgrade", price: "From £59" },
     ],
     testimonial: { text: "Used twice now for lock changes after moving house. Fast, professional, and so much cheaper than the big national companies.", name: "Mark R.", area: "Leamington Spa" },
+    directAnswer: {
+      question: 'How much does it cost to change a lock in Coventry?',
+      answer: 'A lock change in Coventry costs from £69 for a standard Yale or cylinder lock, including the new lock and fitting. A BS3621 insurance-approved deadlock costs from £79 fitted. No VAT is charged and there is no call-out fee.',
+    },
+    voiceFaqs: [
+      { q: 'What type of lock does my home insurance require?', a: 'Most UK home insurance policies require a five-lever mortice deadlock to British Standard BS3621 on all final exit doors. If your front door only has a Yale nightlatch, it likely does not meet the insurance requirement.' },
+      { q: 'Can a locksmith change my locks on the same day?', a: 'Yes. A local locksmith carries common lock types in the van and can change most locks on the same day you call. I carry Yale, Union, ERA, Avocet, and Mul-T-Lock brands.' },
+      { q: 'Should I change the locks when I move house?', a: 'Yes. You have no way of knowing how many copies of the existing keys are in circulation. Previous owners, estate agents, cleaners, and builders may all have copies. Changing the locks on moving day is strongly recommended.' },
+    ],
   },
   'upvc-lock-repair': {
     h1: 'uPVC Door Lock Repair Coventry — Fast & Affordable',
@@ -187,6 +209,15 @@ const SERVICE_CONTENT: Record<string, {
       { item: "Door realignment", price: "From £49" },
     ],
     testimonial: { text: "uPVC door had been stiff for months. Ross diagnosed a worn gearbox, replaced it in under an hour. Door works like new.", name: "Jenny M.", area: "Tile Hill" },
+    directAnswer: {
+      question: 'How much does a uPVC door lock repair cost?',
+      answer: 'A uPVC door lock repair costs from £59 for a cylinder replacement and from £89 for a multipoint mechanism replacement. The price includes parts and labour with no VAT and no call-out fee. Most repairs are completed within one hour.',
+    },
+    voiceFaqs: [
+      { q: 'Why is my uPVC door stiff to lock?', a: 'A stiff uPVC door is usually caused by a worn euro cylinder, a misaligned door dropping on its hinges, or a failing gearbox mechanism. In many cases it is repairable without replacing the full mechanism.' },
+      { q: 'What is an anti-snap cylinder and do I need one?', a: 'An anti-snap cylinder is designed to resist snap attacks, where a burglar snaps the exposed part of the euro cylinder to gain entry. If your uPVC door has a standard euro cylinder, upgrading to anti-snap is strongly recommended.' },
+      { q: 'How long does a uPVC door lock last?', a: 'A quality uPVC multipoint locking mechanism should last fifteen to twenty years with normal use. Budget mechanisms on cheaper doors can fail in five to eight years. Regular lubrication with graphite extends the lifespan significantly.' },
+    ],
   },
   'boarding-up': {
     h1: 'Emergency Boarding Up Coventry — 24/7 Service',
@@ -230,6 +261,15 @@ const SERVICE_CONTENT: Record<string, {
       { item: "Board-up + lock change", price: "From £139" },
     ],
     testimonial: { text: "Called at 3am after a break-in. Ross arrived, boarded the window, and changed the front door lock. Felt safe again within the hour.", name: "Paul K.", area: "Stoke" },
+    directAnswer: {
+      question: 'How much does emergency boarding up cost in Coventry?',
+      answer: 'Emergency boarding up in Coventry costs from £79 for a single window or door. The service is available 24 hours a day, 7 days a week. Lock changes can be done on the same visit if needed. No VAT is charged.',
+    },
+    voiceFaqs: [
+      { q: 'Should I call the police before calling a locksmith after a break-in?', a: 'Yes. Call 999 if the break-in is still in progress, or 101 to report it after the fact. Get a crime reference number first as you will need it for your insurance claim. Then call a locksmith to secure the property.' },
+      { q: 'How long will boarding hold before I need a permanent repair?', a: 'Proper boarding using heavy-duty materials is secure and weatherproof. It will hold indefinitely until you arrange permanent glazing or joinery repair. I use solid boarding material, not thin plywood.' },
+      { q: 'Can you change the locks after boarding up?', a: 'Yes. If a break-in has compromised your locks, I can change them on the same visit. I always carry replacement locks in the van so there is no need for a return visit.' },
+    ],
   },
   'lock-upgrade': {
     h1: 'Lock Upgrade Coventry — BS3621 & Anti-Snap Cylinders',
@@ -274,6 +314,15 @@ const SERVICE_CONTENT: Record<string, {
       { item: "Whole house upgrade (all doors)", price: "From £199" },
     ],
     testimonial: { text: "Had all external locks upgraded after a neighbour was burgled. Ross checked everything, recommended only what was needed, and the price was exactly what he quoted.", name: "Lisa W.", area: "Cheylesmore" },
+    directAnswer: {
+      question: 'How much does a lock upgrade cost in Coventry?',
+      answer: 'A lock upgrade in Coventry costs from £79 for a BS3621 insurance-approved mortice deadlock or from £59 for an anti-snap euro cylinder. The price includes the lock and fitting. A free security survey is included with every upgrade.',
+    },
+    voiceFaqs: [
+      { q: 'What is the difference between a Yale lock and a deadlock?', a: 'A Yale nightlatch is a spring-loaded latch that locks automatically when the door closes. A deadlock is a separate lock with a solid bolt that can only be opened with a key. Most secure front doors have both.' },
+      { q: 'Is a lock upgrade worth the money?', a: 'Yes. A quality lock upgrade costing seventy-nine to one hundred and fifty pounds significantly reduces burglary risk, keeps your home insurance valid, and gives you peace of mind. It is one of the best value security investments available.' },
+      { q: 'Do you offer a free security survey?', a: 'Yes. I offer a free security assessment as part of any lock upgrade. I check all external doors and windows and advise on any weak points, with no obligation to proceed.' },
+    ],
   },
 }
 
@@ -363,11 +412,21 @@ export default async function ServicePage({ params }: Props) {
   const faqSchema = {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
-    mainEntity: content.faqs.map((faq) => ({
+    mainEntity: [...content.voiceFaqs, ...content.faqs].map((faq) => ({
       '@type': 'Question',
       name: faq.q,
       acceptedAnswer: { '@type': 'Answer', text: faq.a },
     })),
+  }
+
+  const speakableSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    speakable: {
+      '@type': 'SpeakableSpecification',
+      cssSelector: ['.direct-answer', '.hero-subtitle'],
+    },
+    url: `${SITE_CONFIG.domain}/services/${slug}`,
   }
 
   /* ---- Data ---- */
@@ -386,6 +445,7 @@ export default async function ServicePage({ params }: Props) {
       <SchemaMarkup schema={serviceSchema} />
       <SchemaMarkup schema={howToSchema} />
       <SchemaMarkup schema={faqSchema} />
+      <SchemaMarkup schema={speakableSchema} />
 
       {/* ============================================================ */}
       {/*  1. Breadcrumb                                                */}
@@ -414,6 +474,17 @@ export default async function ServicePage({ params }: Props) {
         subheading={`${service.description} Call now for a price — no VAT, no call-out fee.`}
         compact
       />
+
+      {/* ============================================================ */}
+      {/*  2b. Direct Answer (AI/voice optimization)                    */}
+      {/* ============================================================ */}
+      {content?.directAnswer && (
+        <section className="py-6 px-4 bg-white">
+          <div className="max-w-3xl mx-auto">
+            <DirectAnswer question={content.directAnswer.question} answer={content.directAnswer.answer} />
+          </div>
+        </section>
+      )}
 
       {/* ============================================================ */}
       {/*  3. Quick price + trust bar                                   */}
@@ -470,6 +541,8 @@ export default async function ServicePage({ params }: Props) {
               {para}
             </p>
           ))}
+
+          <LastUpdated date="2026-03-17" />
         </div>
       </section>
 
@@ -749,7 +822,7 @@ export default async function ServicePage({ params }: Props) {
       {/*  11. FAQ section                                              */}
       {/* ============================================================ */}
       <FAQSection
-        faqs={content.faqs}
+        faqs={[...content.voiceFaqs, ...content.faqs]}
         heading={`Frequently Asked Questions — ${service.shortName}`}
       />
 

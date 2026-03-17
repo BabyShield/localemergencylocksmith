@@ -7,6 +7,8 @@ import ServiceCard from '@/components/ServiceCard'
 import AreaGrid from '@/components/AreaGrid'
 import PriceTable from '@/components/PriceTable'
 import SchemaMarkup from '@/components/SchemaMarkup'
+import DirectAnswer from '@/components/DirectAnswer'
+import LastUpdated from '@/components/LastUpdated'
 import { SERVICES } from '@/data/services'
 import { SITE_CONFIG } from '@/data/config'
 import { ALL_BLOG_POSTS } from '@/data/blog-posts'
@@ -168,6 +170,16 @@ export default function HomePage() {
           </a>
         </div>
       </div>
+
+      {/* Direct Answer */}
+      <section className="py-6 px-4 bg-white">
+        <div className="max-w-3xl mx-auto">
+          <DirectAnswer
+            question="How much does an emergency locksmith cost in Coventry?"
+            answer="An emergency locksmith in Coventry costs from £59 for a standard lockout. This includes labour with no VAT and no call-out fee. Response time is 15 to 30 minutes across most of Coventry. The same price applies 24 hours a day, 7 days a week, including bank holidays."
+          />
+        </div>
+      </section>
 
       {/* 3. Stats / numbers section */}
       <section className="bg-[#0F1B2D] py-12 px-4">
@@ -458,6 +470,38 @@ export default function HomePage() {
 
       {/* 12. FAQ */}
       <FAQSection faqs={homepageFaqs} />
+
+      {/* Multi-language emergency */}
+      <section className="py-8 px-4 bg-white border-t border-gray-100">
+        <div className="max-w-3xl mx-auto text-center">
+          <h3 className="text-sm font-bold text-gray-400 uppercase tracking-widest mb-4">
+            Emergency? We can help.
+          </h3>
+          <div className="flex flex-wrap justify-center gap-x-8 gap-y-3 text-sm">
+            <p lang="pl" className="text-gray-600">
+              <span className="font-bold text-gray-800">Zamknięty?</span> Zadzwoń teraz:{' '}
+              <a href="tel:+447735336175" className="font-black text-[#0F1B2D]">07735 336175</a>
+            </p>
+            <p lang="ro" className="text-gray-600">
+              <span className="font-bold text-gray-800">Blocat afară?</span> Sunați acum:{' '}
+              <a href="tel:+447735336175" className="font-black text-[#0F1B2D]">07735 336175</a>
+            </p>
+            <p lang="ur" dir="rtl" className="text-gray-600">
+              <span className="font-bold text-gray-800">ایمرجنسی؟</span> ابھی کال کریں:{' '}
+              <a href="tel:+447735336175" className="font-black text-[#0F1B2D]">07735 336175</a>
+            </p>
+            <p lang="hi" className="text-gray-600">
+              <span className="font-bold text-gray-800">बंद हो गए?</span> अभी कॉल करें:{' '}
+              <a href="tel:+447735336175" className="font-black text-[#0F1B2D]">07735 336175</a>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Last updated */}
+      <div className="text-center py-4 px-4 bg-white">
+        <LastUpdated date="2026-03-17" />
+      </div>
 
       {/* 13. Quick area links */}
       <section className="py-10 px-4 bg-[#F7F7F5]">
