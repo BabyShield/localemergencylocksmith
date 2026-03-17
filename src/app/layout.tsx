@@ -5,6 +5,8 @@ import StickyHeader from '@/components/StickyHeader'
 import MobileCallBar from '@/components/MobileCallBar'
 import TrustStrip from '@/components/TrustStrip'
 import Footer from '@/components/Footer'
+import WhatsAppButton from '@/components/WhatsAppButton'
+import ScrollCTA from '@/components/ScrollCTA'
 import SchemaMarkup from '@/components/SchemaMarkup'
 import { SITE_CONFIG } from '@/data/config'
 
@@ -185,11 +187,14 @@ export default function RootLayout({
         <SchemaMarkup schema={websiteSchema} />
       </head>
       <body className="font-[var(--font-inter)] antialiased bg-white text-gray-900">
+        <a href="#main-content" className="skip-link">Skip to main content</a>
         <StickyHeader />
         <TrustStrip />
-        <main>{children}</main>
+        <main id="main-content">{children}</main>
         <Footer />
         <MobileCallBar />
+        <WhatsAppButton />
+        <ScrollCTA />
       </body>
     </html>
   )
