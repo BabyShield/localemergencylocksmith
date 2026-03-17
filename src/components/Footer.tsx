@@ -84,7 +84,7 @@ export default function Footer() {
               { slug: 'tile-hill', name: 'Tile Hill' },
               { slug: 'canley', name: 'Canley' },
               { slug: 'radford', name: 'Radford' },
-              { slug: 'stoke-coventry', name: 'Stoke' },
+              { slug: 'stoke', name: 'Stoke' },
               { slug: 'wyken', name: 'Wyken' },
               { slug: 'binley', name: 'Binley' },
               { slug: 'cheylesmore', name: 'Cheylesmore' },
@@ -102,11 +102,17 @@ export default function Footer() {
       </div>
 
       <div className="max-w-6xl mx-auto mt-8 pt-6 border-t border-gray-700 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-500">
-        <p>© {year} Local Emergency Locksmith. All rights reserved.</p>
-        <div className="flex gap-4">
+        <p>&copy; {year} Local Emergency Locksmith. All rights reserved.</p>
+        <div className="flex flex-wrap justify-center gap-4">
+          <Link href="/about" className="hover:text-gray-300 transition-colors">About</Link>
+          <Link href="/blog" className="hover:text-gray-300 transition-colors">Blog</Link>
           <Link href="/contact" className="hover:text-gray-300 transition-colors">Contact</Link>
           <Link href="/areas" className="hover:text-gray-300 transition-colors">Areas</Link>
           <Link href="/prices" className="hover:text-gray-300 transition-colors">Pricing</Link>
+          <Link href="/testimonials" className="hover:text-gray-300 transition-colors">Reviews</Link>
+          <Link href="/faq" className="hover:text-gray-300 transition-colors">FAQ</Link>
+          <Link href="/privacy" className="hover:text-gray-300 transition-colors">Privacy Policy</Link>
+          <Link href="/terms" className="hover:text-gray-300 transition-colors">Terms</Link>
         </div>
       </div>
     </footer>

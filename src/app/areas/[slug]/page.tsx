@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { AREAS, getAreaBySlug, getAreaNeighbours } from '@/data/areas'
 import { SERVICES } from '@/data/services'
+import { ARTICLE_TEMPLATES } from '@/data/articles'
 import { SITE_CONFIG } from '@/data/config'
 import HeroSection from '@/components/HeroSection'
 import CTABlock from '@/components/CTABlock'
@@ -65,6 +66,7 @@ export default async function AreaPage({ params }: Props) {
   const areaSchema = {
     '@context': 'https://schema.org',
     '@type': ['LocalBusiness', 'Locksmith'],
+    '@id': `${SITE_CONFIG.domain}/#business`,
     name: 'Local Emergency Locksmith',
     url: SITE_CONFIG.domain,
     telephone: SITE_CONFIG.phoneTel,
@@ -227,6 +229,60 @@ export default async function AreaPage({ params }: Props) {
           <p className="text-sm text-gray-500 mt-4">
             * No VAT &bull; No call-out fee &bull; Same price evenings and weekends
           </p>
+        </div>
+      </section>
+
+      {/* Housing stock & common issues — rendered if data exists */}
+      {area.housingStock && (
+        <section className="py-10 px-4 bg-[#F7F7F5]">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="text-2xl font-black text-[#0F1B2D] mb-4">
+              Locksmith Services for {area.name} Homes
+            </h2>
+            <p className="text-gray-700 leading-relaxed mb-4">{area.housingStock}</p>
+            {area.commonIssues && (
+              <>
+                <h3 className="text-lg font-bold text-[#0F1B2D] mt-6 mb-3">
+                  Common Lock Problems in {area.name}
+                </h3>
+                <p className="text-gray-700 leading-relaxed">{area.commonIssues}</p>
+              </>
+            )}
+            {area.localDetail && (
+              <>
+                <h3 className="text-lg font-bold text-[#0F1B2D] mt-6 mb-3">
+                  About {area.name}
+                </h3>
+                <p className="text-gray-700 leading-relaxed">{area.localDetail}</p>
+              </>
+            )}
+          </div>
+        </section>
+      )}
+
+      {/* Helpful guides for this area — links to area-specific blog articles */}
+      <section className="py-10 px-4 bg-white">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-xl font-black text-[#0F1B2D] mb-2">
+            Helpful Guides for {area.name}
+          </h2>
+          <p className="text-gray-500 text-sm mb-5">
+            Locksmith advice tailored to {area.name} and the {area.postcode} area
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            {ARTICLE_TEMPLATES.map((article) => (
+              <Link
+                key={article.slug}
+                href={`/blog/${slug}/${article.slug}`}
+                className="bg-[#F7F7F5] hover:bg-white border border-gray-100 hover:border-[#FFB800]/50 rounded-xl p-4 transition-all hover:shadow-sm group"
+              >
+                <p className="font-bold text-[#0F1B2D] text-sm group-hover:text-[#FFB800] transition-colors leading-snug">
+                  {article.titleTemplate.replace(/\{area\}/g, area.name)}
+                </p>
+                <p className="text-xs text-gray-400 mt-1">5 min read</p>
+              </Link>
+            ))}
+          </div>
         </div>
       </section>
 

@@ -252,6 +252,37 @@ export default async function BlogPostPage({ params }: Props) {
               ))}
             </div>
           </div>
+          {/* Find a locksmith near you */}
+          <div className="mt-10 bg-[#0F1B2D] rounded-2xl p-6">
+            <h3 className="text-lg font-bold text-white mb-4">Find a Locksmith Near You</h3>
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
+              {[
+                { slug: 'coventry-city-centre', name: 'Coventry' },
+                { slug: 'earlsdon', name: 'Earlsdon' },
+                { slug: 'tile-hill', name: 'Tile Hill' },
+                { slug: 'nuneaton', name: 'Nuneaton' },
+                { slug: 'rugby', name: 'Rugby' },
+                { slug: 'leamington-spa', name: 'Leamington Spa' },
+                { slug: 'warwick', name: 'Warwick' },
+                { slug: 'kenilworth', name: 'Kenilworth' },
+                { slug: 'bedworth', name: 'Bedworth' },
+                { slug: 'stratford-upon-avon', name: 'Stratford' },
+                { slug: 'canley', name: 'Canley' },
+                { slug: 'binley', name: 'Binley' },
+              ].map((area) => (
+                <Link
+                  key={area.slug}
+                  href={`/areas/${area.slug}`}
+                  className="text-gray-300 hover:text-[#FFB800] text-sm transition-colors"
+                >
+                  {area.name} &rarr;
+                </Link>
+              ))}
+            </div>
+            <Link href="/areas" className="text-[#FFB800] text-sm font-bold hover:underline mt-3 inline-block">
+              View all 78 areas &rarr;
+            </Link>
+          </div>
         </div>
       </article>
 

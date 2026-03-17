@@ -85,6 +85,7 @@ const faqSchema = {
 const aggregateRatingSchema = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
+  '@id': 'https://localemergencylocksmith.co.uk/#business',
   name: 'Local Emergency Locksmith',
   image: 'https://localemergencylocksmith.co.uk/og-image.jpg',
   telephone: '+447735336175',

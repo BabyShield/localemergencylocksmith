@@ -105,7 +105,7 @@ const globalSchema = {
           price: '59',
           priceCurrency: 'GBP',
           minPrice: '59',
-          valueAddedTaxIncluded: true,
+          valueAddedTaxIncluded: false,
         },
       },
       {
@@ -117,7 +117,7 @@ const globalSchema = {
           price: '69',
           priceCurrency: 'GBP',
           minPrice: '69',
-          valueAddedTaxIncluded: true,
+          valueAddedTaxIncluded: false,
         },
       },
       {
@@ -129,7 +129,7 @@ const globalSchema = {
           price: '59',
           priceCurrency: 'GBP',
           minPrice: '59',
-          valueAddedTaxIncluded: true,
+          valueAddedTaxIncluded: false,
         },
       },
       {
@@ -141,7 +141,7 @@ const globalSchema = {
           price: '79',
           priceCurrency: 'GBP',
           minPrice: '79',
-          valueAddedTaxIncluded: true,
+          valueAddedTaxIncluded: false,
         },
       },
       {
@@ -153,7 +153,7 @@ const globalSchema = {
           price: '79',
           priceCurrency: 'GBP',
           minPrice: '79',
-          valueAddedTaxIncluded: true,
+          valueAddedTaxIncluded: false,
         },
       },
     ],

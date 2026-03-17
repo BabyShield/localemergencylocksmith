@@ -9,7 +9,7 @@ export const SITE_CONFIG = {
   responseTime: '15-30 minutes',
   primaryCity: 'Coventry',
   colors: {
-    primary: '#1B5E20',
-    accent: '#FF6F00',
+    primary: '#0F1B2D',
+    accent: '#FFB800',
   },
 } as const
