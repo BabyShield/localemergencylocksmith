@@ -1,26 +1,59 @@
+'use client'
+
+import { useState } from 'react'
 import Link from 'next/link'
 import { SITE_CONFIG } from '@/data/config'
 
+const NAV_LINKS = [
+  { href: '/services', label: 'Services' },
+  { href: '/areas', label: 'Areas' },
+  { href: '/prices', label: 'Prices' },
+  { href: '/blog', label: 'Blog' },
+  { href: '/contact', label: 'Contact' },
+]
+
 export default function StickyHeader() {
+  const [menuOpen, setMenuOpen] = useState(false)
+
   return (
     <header className="sticky top-0 z-50 bg-[#0F1B2D]/95 backdrop-blur-md shadow-lg shadow-black/10 border-b border-white/5">
       <div className="max-w-6xl mx-auto px-4 py-2.5 flex items-center justify-between">
-        <Link href="/" className="flex flex-col">
+        {/* Hamburger — mobile only */}
+        <button
+          onClick={() => setMenuOpen(!menuOpen)}
+          className="lg:hidden flex items-center justify-center w-10 h-10 -ml-2 text-white"
+          aria-label="Toggle menu"
+          aria-expanded={menuOpen}
+        >
+          {menuOpen ? (
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          ) : (
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          )}
+        </button>
+
+        {/* Logo */}
+        <Link href="/" className="flex flex-col" onClick={() => setMenuOpen(false)}>
           <span className="text-white font-black text-base md:text-lg leading-tight tracking-tight">
             Local Emergency Locksmith
           </span>
           <span className="text-gray-400 text-[11px] md:text-xs tracking-wide">{SITE_CONFIG.tagline}</span>
         </Link>
 
-        {/* Desktop nav links */}
+        {/* Desktop nav */}
         <nav className="hidden lg:flex items-center gap-6 text-sm">
-          <Link href="/services" className="text-gray-300 hover:text-white transition-colors font-medium">Services</Link>
-          <Link href="/areas" className="text-gray-300 hover:text-white transition-colors font-medium">Areas</Link>
-          <Link href="/prices" className="text-gray-300 hover:text-white transition-colors font-medium">Prices</Link>
-          <Link href="/blog" className="text-gray-300 hover:text-white transition-colors font-medium">Blog</Link>
-          <Link href="/contact" className="text-gray-300 hover:text-white transition-colors font-medium">Contact</Link>
+          {NAV_LINKS.map((link) => (
+            <Link key={link.href} href={link.href} className="text-gray-300 hover:text-white transition-colors font-medium">
+              {link.label}
+            </Link>
+          ))}
         </nav>
 
+        {/* Call button */}
         <a
           href={`tel:${SITE_CONFIG.phoneTel}`}
           className="flex items-center gap-2 bg-[#FFB800] hover:bg-[#FFC933] text-[#0F1B2D] px-4 py-2.5 rounded-xl transition-all duration-200 min-h-[48px] hover:shadow-[0_2px_12px_rgba(255,184,0,0.3)]"
@@ -34,6 +67,28 @@ export default function StickyHeader() {
           </div>
         </a>
       </div>
+
+      {/* Mobile menu dropdown */}
+      {menuOpen && (
+        <nav className="lg:hidden bg-[#0F1B2D] border-t border-white/10 px-4 pb-4">
+          {NAV_LINKS.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              onClick={() => setMenuOpen(false)}
+              className="block py-3 text-gray-200 hover:text-[#FFB800] font-medium text-base border-b border-white/5 last:border-0 transition-colors"
+            >
+              {link.label}
+            </Link>
+          ))}
+          <a
+            href={`tel:${SITE_CONFIG.phoneTel}`}
+            className="flex items-center justify-center gap-2 bg-[#FFB800] text-[#0F1B2D] font-black py-3 rounded-xl mt-3 text-base"
+          >
+            Call {SITE_CONFIG.phone}
+          </a>
+        </nav>
+      )}
     </header>
   )
 }
