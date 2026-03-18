@@ -11,6 +11,12 @@ export const metadata: Metadata = {
   alternates: {
     canonical: `${SITE_CONFIG.domain}/prices`,
   },
+  openGraph: {
+    title: 'Locksmith Prices Coventry | Transparent Pricing | No VAT | No Call-Out Fee',
+    description:
+      'Clear locksmith prices for Coventry and Warwickshire. Emergency lockout from £59. No VAT, no call-out fee, no hidden charges. Call 07735 336175.',
+    url: `${SITE_CONFIG.domain}/prices`,
+  },
 }
 
 const PRICES = [
@@ -56,6 +62,15 @@ const PRICES = [
   },
 ]
 
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_CONFIG.domain },
+    { '@type': 'ListItem', position: 2, name: 'Prices', item: `${SITE_CONFIG.domain}/prices` },
+  ],
+}
+
 const faqSchema = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
@@ -90,6 +105,7 @@ const faqSchema = {
 export default function PricesPage() {
   return (
     <>
+      <SchemaMarkup schema={breadcrumbSchema} />
       <SchemaMarkup schema={faqSchema} />
 
       {/* Breadcrumb */}
@@ -164,6 +180,90 @@ export default function PricesPage() {
               As an independent sole trader, I am not VAT registered. This means I do not add 20% VAT to
               my prices. A national company charging £59 + VAT is actually charging you £70.80. My £59 is
               £59 — no additions, no surprises.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Us vs National Companies */}
+      <section className="py-12 px-4 bg-gray-50">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-2xl font-black text-gray-900 mb-6 text-center">Us vs National Companies</h2>
+          <div className="bg-white rounded-xl border border-gray-200 overflow-hidden shadow-sm">
+            <table className="w-full">
+              <caption className="px-6 py-3 text-sm text-gray-500 bg-gray-50 text-left">
+                Price comparison: Local Emergency Locksmith vs national locksmith companies (2026)
+              </caption>
+              <thead>
+                <tr className="bg-[#0F1B2D] text-white">
+                  <th className="text-left px-4 py-3 font-bold text-sm">Service</th>
+                  <th className="text-right px-4 py-3 font-bold text-sm">Our Price</th>
+                  <th className="text-right px-4 py-3 font-bold text-sm">National Company</th>
+                  <th className="text-right px-4 py-3 font-bold text-sm">You Save</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="border-b border-gray-100 bg-white">
+                  <td className="px-4 py-3 font-semibold text-gray-900 text-sm">Emergency lockout</td>
+                  <td className="px-4 py-3 text-right font-black text-[#FFB800]">£59</td>
+                  <td className="px-4 py-3 text-right text-gray-500 text-sm">£150–£250</td>
+                  <td className="px-4 py-3 text-right font-bold text-green-600 text-sm">£91–£191</td>
+                </tr>
+                <tr className="border-b border-gray-100 bg-gray-50">
+                  <td className="px-4 py-3 font-semibold text-gray-900 text-sm">Lock change</td>
+                  <td className="px-4 py-3 text-right font-black text-[#FFB800]">£69</td>
+                  <td className="px-4 py-3 text-right text-gray-500 text-sm">£120–£200</td>
+                  <td className="px-4 py-3 text-right font-bold text-green-600 text-sm">£51–£131</td>
+                </tr>
+                <tr className="border-b border-gray-100 bg-white">
+                  <td className="px-4 py-3 font-semibold text-gray-900 text-sm">uPVC repair</td>
+                  <td className="px-4 py-3 text-right font-black text-[#FFB800]">£59</td>
+                  <td className="px-4 py-3 text-right text-gray-500 text-sm">£100–£180</td>
+                  <td className="px-4 py-3 text-right font-bold text-green-600 text-sm">£41–£121</td>
+                </tr>
+                <tr className="border-b border-gray-100 bg-gray-50">
+                  <td className="px-4 py-3 font-semibold text-gray-900 text-sm">Boarding up</td>
+                  <td className="px-4 py-3 text-right font-black text-[#FFB800]">£79</td>
+                  <td className="px-4 py-3 text-right text-gray-500 text-sm">£150–£300</td>
+                  <td className="px-4 py-3 text-right font-bold text-green-600 text-sm">£71–£221</td>
+                </tr>
+                <tr className="bg-white">
+                  <td className="px-4 py-3 font-semibold text-gray-900 text-sm">Lock upgrade</td>
+                  <td className="px-4 py-3 text-right font-black text-[#FFB800]">£79</td>
+                  <td className="px-4 py-3 text-right text-gray-500 text-sm">£130–£220</td>
+                  <td className="px-4 py-3 text-right font-bold text-green-600 text-sm">£51–£141</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr className="bg-gray-50 border-t border-gray-200">
+                  <td colSpan={4} className="px-4 py-3 text-xs text-gray-500">
+                    National company prices include VAT and typical call-out fees
+                  </td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+
+          <div className="mt-8 space-y-4 text-gray-700 leading-relaxed">
+            <p>
+              I accept payment by <strong>cash or card</strong> — whatever is easiest for you. There is no
+              surcharge for card payments. I can also provide a receipt and invoice for insurance claims or
+              landlord records.
+            </p>
+            <p>
+              All lock fittings come with a <strong>12-month guarantee</strong> on parts and labour. If a lock
+              I have fitted develops a fault within 12 months, I will return and fix it at no cost to you.
+            </p>
+            <p>
+              There are <strong>no evening or weekend surcharges</strong> — the price is the same whether you
+              call at 2pm on a Tuesday or 2am on Christmas Day. I do not charge extra for unsociable hours
+              because emergencies do not wait for office hours.
+            </p>
+            <p>
+              Every job is <strong>priced and confirmed on the phone before I come out</strong>. I will tell
+              you the exact cost, and that is what you pay. If I arrive and the job turns out to be more
+              complex than expected, I will discuss any change with you before proceeding — you are never
+              committed to a higher price without agreeing to it first.
             </p>
           </div>
         </div>

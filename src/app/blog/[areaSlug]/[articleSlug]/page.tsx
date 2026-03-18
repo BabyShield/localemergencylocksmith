@@ -208,6 +208,24 @@ export default async function ArticlePage({ params }: Props) {
               <p className="text-gray-700 leading-relaxed">{area.uniqueContent}</p>
             </div>
 
+            {/* Area-specific content sections — genuine differentiation per area */}
+            {article.areaContentSections && article.areaContentSections.map((section, i) => {
+              const fieldValue = section.areaField === 'housingStock' ? area.housingStock
+                : section.areaField === 'commonIssues' ? area.commonIssues
+                : section.areaField === 'localDetail' ? area.localDetail
+                : area.uniqueContent
+              if (!fieldValue) return null
+              return (
+                <div key={i} className="bg-[#F7F7F5] rounded-xl p-6 border border-gray-100 mt-6">
+                  <h2 className="text-lg font-black text-[#0F1B2D] mb-3">
+                    {renderTemplate(section.heading, area)}
+                  </h2>
+                  <p className="text-gray-500 text-sm mb-3">{renderTemplate(section.prefix, area)}</p>
+                  <p className="text-gray-700 leading-relaxed">{fieldValue}</p>
+                </div>
+              )
+            })}
+
             {/* CTA inline */}
             <div className="bg-gray-900 text-white rounded-xl p-6 text-center">
               <p className="font-bold text-lg mb-3">

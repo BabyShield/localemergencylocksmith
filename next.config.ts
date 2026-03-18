@@ -27,7 +27,23 @@ const securityHeaders = [
   },
 ]
 
+// Cut article templates — redirect to parent area page (preserves link equity)
+const cutArticleSlugs = [
+  'yale-vs-deadlock-which-is-safer',
+  'find-trustworthy-locksmith',
+  'best-door-locks-security-guide',
+  'lost-keys-what-to-do',
+  'landlord-lock-change',
+]
+
 const nextConfig: NextConfig = {
+  async redirects() {
+    return cutArticleSlugs.map((slug) => ({
+      source: `/blog/:area/${slug}`,
+      destination: '/areas/:area',
+      permanent: true,
+    }))
+  },
   async headers() {
     return [
       {

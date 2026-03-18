@@ -3,6 +3,12 @@ export interface ArticleSection {
   paragraphs: string[] // each string may contain {area}, {postcode}, {region}, {responseTime}
 }
 
+export interface AreaContentSection {
+  heading: string
+  areaField: 'housingStock' | 'commonIssues' | 'localDetail' | 'uniqueContent'
+  prefix: string
+}
+
 export interface ArticleTemplate {
   slug: string
   titleTemplate: string
@@ -15,12 +21,23 @@ export interface ArticleTemplate {
     outskirts: string
   }
   sections: ArticleSection[]
+  areaContentSections?: AreaContentSection[]
   ctaTemplate: string
   relatedServiceSlugs: string[]
   relatedArticleSlugs: string[]
 }
 
-export const ARTICLE_TEMPLATES: ArticleTemplate[] = [
+// Only these 5 templates are active (highest-value, best differentiation)
+// The other 5 are retained in data but excluded + redirected to area pages
+const KEPT_SLUGS = [
+  'locked-out-at-night',
+  'how-much-does-emergency-locksmith-cost',
+  'upvc-door-lock-problems',
+  'lock-change-after-burglary',
+  'bs3621-locks-home-insurance',
+]
+
+const ALL_ARTICLE_TEMPLATES: ArticleTemplate[] = [
   // =====================================================================
   // 1. locked-out-at-night
   // =====================================================================
@@ -91,6 +108,10 @@ export const ARTICLE_TEMPLATES: ArticleTemplate[] = [
           'If your lock was cheap or old, this is also a good opportunity to upgrade to an anti-snap cylinder or an insurance-approved BS3621 lock. I\'ll always advise you on your options and give you a price before doing anything.',
         ],
       },
+    ],
+    areaContentSections: [
+      { heading: 'Door Types in {area}', areaField: 'housingStock', prefix: 'The type of lock on your door affects how quickly a locksmith can get you back in.' },
+      { heading: 'Why Lockouts Happen in {area}', areaField: 'commonIssues', prefix: 'Based on my experience working in {area}, here are the most common reasons people get locked out.' },
     ],
     ctaTemplate:
       'Locked out in {area} right now? Call me on 07735 336175 — I\'ll answer, give you a fixed price, and be with you in {responseTime}.',
@@ -163,6 +184,10 @@ export const ARTICLE_TEMPLATES: ArticleTemplate[] = [
           'I\'m genuinely local to {region} — I can tell you exactly which streets I cover in {area}, I have real Google Reviews from real customers, and I give fixed prices on every call. If you\'re unsure about any locksmith you\'ve found, the simplest test is to ask: "What is your fixed price for a standard lockout in {area}?" A real local locksmith answers immediately.',
         ],
       },
+    ],
+    areaContentSections: [
+      { heading: 'Lock Types and Costs in {area}', areaField: 'housingStock', prefix: 'The cost of a locksmith callout depends partly on what type of lock you have.' },
+      { heading: 'Common Jobs in {area}', areaField: 'commonIssues', prefix: 'Here are the most common locksmith jobs I do in {area} and what they typically cost.' },
     ],
     ctaTemplate:
       'Need a locksmith in {area}? Call 07735 336175 for a fixed price, right now. From £59, no VAT, {responseTime} response.',
@@ -243,6 +268,10 @@ export const ARTICLE_TEMPLATES: ArticleTemplate[] = [
     ],
     ctaTemplate:
       'uPVC door problem in {area}? Call 07735 336175 for a free diagnosis and fixed price. Typically {responseTime} response.',
+    areaContentSections: [
+      { heading: 'uPVC Doors in {area}', areaField: 'housingStock', prefix: 'The prevalence and age of uPVC doors varies significantly by area.' },
+      { heading: 'Common uPVC Issues in {area}', areaField: 'commonIssues', prefix: 'Here are the uPVC door problems I see most often in {area}.' },
+    ],
     relatedServiceSlugs: ['upvc-lock-repair'],
     relatedArticleSlugs: ['locked-out-at-night', 'best-door-locks-security-guide'],
   },
@@ -310,10 +339,14 @@ export const ARTICLE_TEMPLATES: ArticleTemplate[] = [
         ],
       },
     ],
+    areaContentSections: [
+      { heading: 'Security in {area}', areaField: 'localDetail', prefix: 'Understanding your local area helps you make better security decisions after a break-in.' },
+      { heading: 'Recommended Lock Upgrades in {area}', areaField: 'commonIssues', prefix: 'After a break-in, here are the lock changes I most commonly recommend for homes in {area}.' },
+    ],
     ctaTemplate:
       'Break-in in {area}? Call 07735 336175 now. Same-day lock change from £69, {responseTime} response, full paperwork for insurers.',
     relatedServiceSlugs: ['lock-change', 'lock-upgrade'],
-    relatedArticleSlugs: ['yale-vs-deadlock-which-is-safer', 'best-door-locks-security-guide'],
+    relatedArticleSlugs: ['bs3621-locks-home-insurance', 'upvc-door-lock-problems'],
   },
 
   // =====================================================================
@@ -448,10 +481,14 @@ export const ARTICLE_TEMPLATES: ArticleTemplate[] = [
         ],
       },
     ],
+    areaContentSections: [
+      { heading: 'Lock Standards for {area} Homes', areaField: 'housingStock', prefix: 'Whether your home needs a BS3621 lock depends on your door type and what is currently fitted.' },
+      { heading: 'Insurance Lock Recommendations in {area}', areaField: 'localDetail', prefix: 'Here is what I typically recommend for homes in {area}.' },
+    ],
     ctaTemplate:
       'Need a BS3621 lock in {area}? Call 07735 336175. Supply and fit from £79, no VAT. {responseTime} response.',
     relatedServiceSlugs: ['lock-upgrade', 'lock-change'],
-    relatedArticleSlugs: ['yale-vs-deadlock-which-is-safer', 'best-door-locks-security-guide'],
+    relatedArticleSlugs: ['locked-out-at-night', 'upvc-door-lock-problems'],
   },
 
   // =====================================================================
@@ -744,6 +781,14 @@ export const ARTICLE_TEMPLATES: ArticleTemplate[] = [
     relatedArticleSlugs: ['bs3621-locks-home-insurance', 'best-door-locks-security-guide'],
   },
 ]
+
+// Active templates (5 kept, 5 cut and redirected to area pages)
+export const ARTICLE_TEMPLATES = ALL_ARTICLE_TEMPLATES.filter((t) => KEPT_SLUGS.includes(t.slug))
+
+// Cut template slugs (for redirect config)
+export const CUT_ARTICLE_SLUGS = ALL_ARTICLE_TEMPLATES
+  .filter((t) => !KEPT_SLUGS.includes(t.slug))
+  .map((t) => t.slug)
 
 // Helper: render template string with area data
 export function renderTemplate(

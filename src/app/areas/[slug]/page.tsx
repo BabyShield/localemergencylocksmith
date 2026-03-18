@@ -70,6 +70,13 @@ export default async function AreaPage({ params }: Props) {
     name: 'Local Emergency Locksmith',
     url: SITE_CONFIG.domain,
     telephone: SITE_CONFIG.phoneTel,
+    ...(area.lat && area.lng ? {
+      geo: {
+        '@type': 'GeoCoordinates',
+        latitude: area.lat,
+        longitude: area.lng,
+      },
+    } : {}),
     areaServed: {
       '@type': 'Place',
       name: area.name,

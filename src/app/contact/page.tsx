@@ -10,6 +10,21 @@ export const metadata: Metadata = {
   alternates: {
     canonical: `${SITE_CONFIG.domain}/contact`,
   },
+  openGraph: {
+    title: 'Contact — Local Emergency Locksmith Coventry | 07735 336175',
+    description:
+      'Contact Local Emergency Locksmith in Coventry. Available 24/7 — call 07735 336175 for immediate help or use the contact form.',
+    url: `${SITE_CONFIG.domain}/contact`,
+  },
+}
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_CONFIG.domain },
+    { '@type': 'ListItem', position: 2, name: 'Contact', item: `${SITE_CONFIG.domain}/contact` },
+  ],
 }
 
 const contactSchema = {
@@ -22,6 +37,7 @@ const contactSchema = {
 export default function ContactPage() {
   return (
     <>
+      <SchemaMarkup schema={breadcrumbSchema} />
       <SchemaMarkup schema={contactSchema} />
 
       <nav className="max-w-6xl mx-auto px-4 py-3 text-sm text-gray-500">
