@@ -29,7 +29,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!area) return {}
 
   const title = `Emergency Locksmith ${area.name} | 24/7 | No VAT | Call Now`
-  const description = `Locked out in ${area.name}? Local emergency locksmith, ${area.responseTime} response. No VAT, no call-out fee. Call ${SITE_CONFIG.phone} now.`
+  const description = `Locksmith near me in ${area.name}? Local emergency locksmith, ${area.responseTime} response. No VAT, no call-out fee. Call ${SITE_CONFIG.phone} now.`
 
   return {
     title,
@@ -174,7 +174,9 @@ export default async function AreaPage({ params }: Props) {
             {[
               {
                 icon: '📍',
-                text: `I'm based locally, not a national call centre. I know ${area.name} and I respond fast.`,
+                text: area.localDetail
+                  ? `I'm based locally and know ${area.name} well — ${area.localDetail.split('.')[0]}.`
+                  : `I'm based locally, not a national call centre. I know ${area.name} and I respond fast.`,
               },
               {
                 icon: '💷',
@@ -182,15 +184,23 @@ export default async function AreaPage({ params }: Props) {
               },
               {
                 icon: '✅',
-                text: 'Transparent pricing — I always confirm the price on the phone before I come out.',
+                text: 'Transparent pricing — I always confirm the price on the phone before I come out. No hidden charges.',
               },
               {
                 icon: '🔒',
-                text: 'No lock drilling unless absolutely necessary — I always try non-destructive entry first.',
+                text: area.commonIssues
+                  ? `${area.commonIssues.split('.')[0]}. I always try non-destructive entry first.`
+                  : 'No lock drilling unless absolutely necessary — I always try non-destructive entry first.',
               },
               {
                 icon: '⏱️',
-                text: `${area.responseTime} response for most ${area.name} locations.`,
+                text: `${area.responseTime} response for ${area.name} — I cover the entire ${area.postcode} postcode area.`,
+              },
+              {
+                icon: '🏠',
+                text: area.housingStock
+                  ? `${area.housingStock.split('.')[0]}.`
+                  : `I work on all lock types found in ${area.name} — Yale, mortice, uPVC multipoint, and euro cylinders.`,
               },
             ].map((item) => (
               <li key={item.text} className="flex gap-3 items-start">

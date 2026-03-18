@@ -1,9 +1,11 @@
+import React from 'react'
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { SITE_CONFIG } from '@/data/config'
 import { ALL_BLOG_POSTS, getBlogPostBySlug, getRelatedPosts, PILLARS } from '@/data/blog-posts'
 import { ALL_BLOG_CONTENT } from '@/data/blog-content'
+import { getAllAreasByRegion } from '@/data/areas'
 import CTABlock from '@/components/CTABlock'
 import SchemaMarkup from '@/components/SchemaMarkup'
 
@@ -35,6 +37,55 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 }
 
+function renderInlineMarkdown(text: string): React.ReactNode {
+  // First split on markdown links [text](url)
+  const linkPattern = /\[([^\]]+)\]\(([^)]+)\)/g
+  const parts: React.ReactNode[] = []
+  let lastIndex = 0
+  let match: RegExpExecArray | null
+  let keyIdx = 0
+
+  while ((match = linkPattern.exec(text)) !== null) {
+    // Text before this link
+    if (match.index > lastIndex) {
+      parts.push(...renderBoldSegments(text.slice(lastIndex, match.index), keyIdx))
+      keyIdx += 10
+    }
+    const linkText = match[1]
+    const url = match[2]
+    if (url.startsWith('/')) {
+      parts.push(
+        <Link key={`link-${keyIdx++}`} href={url} className="text-[#0F1B2D] underline font-semibold hover:text-[#FFB800] transition-colors">
+          {linkText}
+        </Link>
+      )
+    } else {
+      parts.push(
+        <a key={`link-${keyIdx++}`} href={url} target="_blank" rel="noopener noreferrer" className="text-[#0F1B2D] underline font-semibold hover:text-[#FFB800] transition-colors">
+          {linkText}
+        </a>
+      )
+    }
+    lastIndex = match.index + match[0].length
+  }
+
+  // Remaining text after last link
+  if (lastIndex < text.length) {
+    parts.push(...renderBoldSegments(text.slice(lastIndex), keyIdx))
+  }
+
+  return parts.length === 1 ? parts[0] : parts
+}
+
+function renderBoldSegments(text: string, startKey: number): React.ReactNode[] {
+  const boldParts = text.split(/\*\*/g)
+  return boldParts.map((part, k) =>
+    k % 2 === 1
+      ? <strong key={`b-${startKey}-${k}`}>{part}</strong>
+      : <span key={`t-${startKey}-${k}`}>{part}</span>
+  )
+}
+
 export default async function BlogPostPage({ params }: Props) {
   const { slug } = await params
   const post = getBlogPostBySlug(slug)
@@ -52,7 +103,8 @@ export default async function BlogPostPage({ params }: Props) {
     headline: post.title,
     description: post.excerpt,
     datePublished: post.date,
-    dateModified: post.date,
+    dateModified: '2026-03-17',
+    image: 'https://localemergencylocksmith.co.uk/og-image.jpg',
     author: {
       '@type': 'Person',
       name: 'Ross',
@@ -171,21 +223,17 @@ export default async function BlogPostPage({ params }: Props) {
                       return <p key={j} className="font-bold text-gray-900 mb-2">{line.replace(/\*\*/g, '')}</p>
                     }
                     if (line.match(/^\*\*[^*]+\*\*/)) {
-                      // Line starts with bold text followed by more text
-                      const parts = line.split(/\*\*/g)
                       return (
                         <p key={j} className="text-gray-700 leading-relaxed mb-3">
-                          {parts.map((part, k) =>
-                            k % 2 === 1 ? <strong key={k}>{part}</strong> : part
-                          )}
+                          {renderInlineMarkdown(line)}
                         </p>
                       )
                     }
                     if (line.startsWith('- ')) {
-                      return <li key={j} className="text-gray-700 ml-4 mb-1">{line.replace('- ', '')}</li>
+                      return <li key={j} className="text-gray-700 ml-4 mb-1">{renderInlineMarkdown(line.replace('- ', ''))}</li>
                     }
                     if (line.match(/^\d+\. /)) {
-                      return <li key={j} className="text-gray-700 ml-4 mb-2 list-decimal">{line.replace(/^\d+\. /, '')}</li>
+                      return <li key={j} className="text-gray-700 ml-4 mb-2 list-decimal">{renderInlineMarkdown(line.replace(/^\d+\. /, ''))}</li>
                     }
                     if (line.startsWith('| ')) {
                       // Simple table rendering
@@ -200,7 +248,7 @@ export default async function BlogPostPage({ params }: Props) {
                       )
                     }
                     if (line.trim() === '') return <div key={j} className="mb-4" />
-                    return <p key={j} className="text-gray-700 leading-relaxed mb-4">{line}</p>
+                    return <p key={j} className="text-gray-700 leading-relaxed mb-4">{renderInlineMarkdown(line)}</p>
                   })}
                 </div>
               )
@@ -253,36 +301,33 @@ export default async function BlogPostPage({ params }: Props) {
             </div>
           </div>
           {/* Find a locksmith near you */}
-          <div className="mt-10 bg-[#0F1B2D] rounded-2xl p-6">
-            <h3 className="text-lg font-bold text-white mb-4">Find a Locksmith Near You</h3>
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
-              {[
-                { slug: 'coventry-city-centre', name: 'Coventry' },
-                { slug: 'earlsdon', name: 'Earlsdon' },
-                { slug: 'tile-hill', name: 'Tile Hill' },
-                { slug: 'nuneaton', name: 'Nuneaton' },
-                { slug: 'rugby', name: 'Rugby' },
-                { slug: 'leamington-spa', name: 'Leamington Spa' },
-                { slug: 'warwick', name: 'Warwick' },
-                { slug: 'kenilworth', name: 'Kenilworth' },
-                { slug: 'bedworth', name: 'Bedworth' },
-                { slug: 'stratford-upon-avon', name: 'Stratford' },
-                { slug: 'canley', name: 'Canley' },
-                { slug: 'binley', name: 'Binley' },
-              ].map((area) => (
-                <Link
-                  key={area.slug}
-                  href={`/areas/${area.slug}`}
-                  className="text-gray-300 hover:text-[#FFB800] text-sm transition-colors"
-                >
-                  {area.name} &rarr;
+          {(() => {
+            const areasByRegion = getAllAreasByRegion()
+            return (
+              <div className="mt-10 bg-[#0F1B2D] rounded-2xl p-6">
+                <h3 className="text-lg font-bold text-white mb-4">Find a Locksmith Near You</h3>
+                {Object.entries(areasByRegion).map(([region, areas]) => (
+                  <div key={region} className="mb-4">
+                    <h4 className="text-[#FFB800] font-bold text-sm mb-2">{region}</h4>
+                    <div className="grid grid-cols-2 sm:grid-cols-4 gap-1.5">
+                      {areas.map((area) => (
+                        <Link
+                          key={area.slug}
+                          href={`/areas/${area.slug}`}
+                          className="text-gray-300 hover:text-[#FFB800] text-xs transition-colors"
+                        >
+                          {area.name} &rarr;
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                ))}
+                <Link href="/areas" className="text-[#FFB800] text-sm font-bold hover:underline mt-3 inline-block">
+                  View all 78 areas &rarr;
                 </Link>
-              ))}
-            </div>
-            <Link href="/areas" className="text-[#FFB800] text-sm font-bold hover:underline mt-3 inline-block">
-              View all 78 areas &rarr;
-            </Link>
-          </div>
+              </div>
+            )
+          })()}
         </div>
       </article>
 

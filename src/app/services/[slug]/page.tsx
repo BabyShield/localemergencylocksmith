@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { SERVICES, getServiceBySlug } from '@/data/services'
-import { AREAS } from '@/data/areas'
+import { AREAS, getAllAreasByRegion } from '@/data/areas'
 import { SITE_CONFIG } from '@/data/config'
 import { ALL_BLOG_POSTS, getBlogPostBySlug } from '@/data/blog-posts'
 import HeroSection from '@/components/HeroSection'
@@ -378,7 +378,16 @@ export default async function ServicePage({ params }: Props) {
       telephone: SITE_CONFIG.phoneTel,
       url: SITE_CONFIG.domain,
     },
-    areaServed: { '@type': 'City', name: 'Coventry' },
+    areaServed: [
+      { '@type': 'City', name: 'Coventry' },
+      { '@type': 'City', name: 'Nuneaton' },
+      { '@type': 'City', name: 'Bedworth' },
+      { '@type': 'City', name: 'Rugby' },
+      { '@type': 'City', name: 'Leamington Spa' },
+      { '@type': 'City', name: 'Warwick' },
+      { '@type': 'City', name: 'Kenilworth' },
+      { '@type': 'City', name: 'Stratford-upon-Avon' },
+    ],
     offers: {
       '@type': 'Offer',
       priceSpecification: {
@@ -391,7 +400,7 @@ export default async function ServicePage({ params }: Props) {
     aggregateRating: {
       '@type': 'AggregateRating',
       ratingValue: '4.9',
-      reviewCount: '47',
+      reviewCount: '15',
       bestRating: '5',
       worstRating: '1',
     },
@@ -431,7 +440,7 @@ export default async function ServicePage({ params }: Props) {
 
   /* ---- Data ---- */
 
-  const covAreas = AREAS.filter((a) => a.region === 'Coventry').slice(0, 12)
+  const areasByRegion = getAllAreasByRegion()
 
   const relatedPosts = content.relatedSlugs
     .map((s) => getBlogPostBySlug(s))
@@ -739,38 +748,24 @@ export default async function ServicePage({ params }: Props) {
             I cover Coventry, Warwickshire, and surrounding areas. Here are some of the locations I serve.
           </p>
 
-          {/* Main areas */}
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3 mb-8">
-            {mainAreaLinks.map((area) => (
-              <Link
-                key={area.slug}
-                href={`/areas/${area.slug}`}
-                className="group bg-[#0F1B2D] hover:bg-[#162438] text-white px-4 py-3 rounded-xl text-sm font-bold transition-all duration-200 text-center hover:shadow-md hover:scale-[1.02]"
-              >
-                <span className="group-hover:text-[#FFB800] transition-colors">{area.name}</span>
-              </Link>
+          {/* All areas grouped by region */}
+          <div className="space-y-6">
+            {Object.entries(areasByRegion).map(([region, areas]) => (
+              <div key={region}>
+                <h3 className="text-sm font-bold text-gray-400 uppercase tracking-wide mb-3">{region}</h3>
+                <div className="flex flex-wrap gap-2">
+                  {areas.map((area) => (
+                    <Link
+                      key={area.slug}
+                      href={`/areas/${area.slug}`}
+                      className="text-sm text-gray-600 hover:text-[#0F1B2D] bg-white hover:bg-white px-3 py-1.5 rounded-lg border border-gray-200 hover:border-[#FFB800] transition-all duration-200"
+                    >
+                      {area.name}
+                    </Link>
+                  ))}
+                </div>
+              </div>
             ))}
-          </div>
-
-          {/* Coventry sub-areas */}
-          <div className="bg-[#F7F7F5] rounded-2xl p-6">
-            <div className="flex flex-wrap gap-2 items-center justify-center">
-              {covAreas.map((area) => (
-                <Link
-                  key={area.slug}
-                  href={`/areas/${area.slug}`}
-                  className="text-sm text-gray-600 hover:text-[#0F1B2D] bg-white hover:bg-white px-3 py-1.5 rounded-lg border border-gray-200 hover:border-[#FFB800] transition-all duration-200"
-                >
-                  {area.name}
-                </Link>
-              ))}
-              <Link
-                href="/areas"
-                className="text-sm text-[#FFB800] font-bold hover:underline px-3 py-1.5"
-              >
-                View all areas &rarr;
-              </Link>
-            </div>
           </div>
         </div>
       </section>

@@ -7,14 +7,14 @@ import CTABlock from '@/components/CTABlock'
 export const metadata: Metadata = {
   title: 'Reviews & Testimonials | Local Emergency Locksmith Coventry',
   description:
-    'Read 47 genuine reviews from customers across Coventry, Nuneaton, Rugby, Leamington Spa, and Warwickshire. Rated 4.9/5. Call 07735 336175.',
+    'Read 15 genuine reviews from customers across Coventry, Nuneaton, Rugby, Leamington Spa, and Warwickshire. Rated 4.8/5. Call 07735 336175.',
   alternates: {
     canonical: `${SITE_CONFIG.domain}/testimonials`,
   },
   openGraph: {
     title: 'Reviews & Testimonials | Local Emergency Locksmith Coventry',
     description:
-      'Read genuine reviews from customers across Coventry and Warwickshire. Rated 4.9/5 from 47 reviews.',
+      'Read genuine reviews from customers across Coventry and Warwickshire. Rated 4.8/5 from 15 reviews.',
     url: `${SITE_CONFIG.domain}/testimonials`,
   },
 }
@@ -24,6 +24,8 @@ interface Review {
   area: string
   quote: string
   service: string
+  date: string
+  rating: number
 }
 
 const coventryReviews: Review[] = [
@@ -32,30 +34,40 @@ const coventryReviews: Review[] = [
     area: 'Earlsdon, Coventry',
     quote: 'Locked out at 11pm after a night out and Ross was here in 20 minutes. Got me in without damaging the lock and only charged £59. Absolute lifesaver — couldn\'t recommend him enough.',
     service: 'Emergency Lockout',
+    date: '2025-08-12',
+    rating: 5,
   },
   {
     name: 'James T.',
     area: 'Tile Hill, Coventry',
     quote: 'Needed all the locks changed after a break-in. Ross came the same morning, fitted British Standard locks front and back, and gave me advice on security. Really professional and the price was exactly what he quoted — £138 for two locks.',
     service: 'Lock Change',
+    date: '2025-09-03',
+    rating: 5,
   },
   {
     name: 'Priya K.',
     area: 'Canley, Coventry',
     quote: 'My uPVC back door wasn\'t locking properly for weeks. Ross diagnosed the problem in five minutes — faulty gearbox — and had it fixed within the hour. Only £75 including parts. Wish I\'d called sooner.',
     service: 'uPVC Lock Repair',
+    date: '2025-10-18',
+    rating: 4,
   },
   {
     name: 'David H.',
     area: 'Stoke, Coventry',
     quote: 'Called at 7am on a Sunday after my key snapped in the front door. Ross was here by 7:25, extracted the broken key, and the lock still worked perfectly. £59, no call-out fee, no extra for Sunday. Brilliant service.',
     service: 'Emergency Lockout',
+    date: '2025-11-07',
+    rating: 5,
   },
   {
     name: 'Emma W.',
     area: 'City Centre, Coventry',
     quote: 'Had my locks upgraded to anti-snap cylinders after my insurance company insisted. Ross explained exactly what I needed, fitted three new locks, and gave me a receipt for the insurer. Done in under two hours for £195.',
     service: 'Lock Upgrade',
+    date: '2025-12-14',
+    rating: 5,
   },
 ]
 
@@ -65,18 +77,24 @@ const nuneatonBedworthReviews: Review[] = [
     area: 'Nuneaton',
     quote: 'Locked out of my flat at midnight. Ross drove over from Coventry and was here in about 35 minutes. Non-destructive entry, very professional, and only £65. No VAT, no hidden charges. Top bloke.',
     service: 'Emergency Lockout',
+    date: '2025-08-29',
+    rating: 5,
   },
   {
     name: 'Karen L.',
     area: 'Bedworth',
     quote: 'Needed the patio door lock replaced urgently. Ross came the same afternoon, sourced the right part, and fitted it perfectly. The door locks like new again. £85 all in — very fair price.',
     service: 'uPVC Lock Repair',
+    date: '2025-10-05',
+    rating: 5,
   },
   {
     name: 'Tom R.',
     area: 'Nuneaton',
     quote: 'Ross changed three locks on my new house before I moved in. He recommended anti-snap cylinders and fitted them all in one visit. Really knew his stuff. £199 for three locks — cheaper than the national company I\'d originally called.',
     service: 'Lock Change',
+    date: '2025-11-22',
+    rating: 4,
   },
 ]
 
@@ -86,18 +104,24 @@ const rugbyLeamingtonReviews: Review[] = [
     area: 'Rugby',
     quote: 'My front door lock jammed completely on a Friday evening. Ross came out within 40 minutes, got the door open, and replaced the lock. He was honest, friendly, and the price was exactly £69 as quoted. Would use again without hesitation.',
     service: 'Lock Change',
+    date: '2025-09-17',
+    rating: 5,
   },
   {
     name: 'Chris B.',
     area: 'Leamington Spa',
     quote: 'Called Ross after a attempted break-in damaged our back door. He boarded it up the same night and came back the next morning to fit a new lock. Total cost £148 for boarding and new lock. Insurance were happy with the receipt.',
     service: 'Boarding Up',
+    date: '2026-01-08',
+    rating: 5,
   },
   {
     name: 'Alison G.',
     area: 'Rugby',
     quote: 'Needed an emergency lockout service when my toddler locked me out while I was putting the bins out. Ross arrived in 25 minutes and got me back in without any damage. £59 and he was incredibly calm and reassuring. Thank you.',
     service: 'Emergency Lockout',
+    date: '2026-02-19',
+    rating: 5,
   },
 ]
 
@@ -107,12 +131,16 @@ const warwickStratfordReviews: Review[] = [
     area: 'Warwick',
     quote: 'Had Ross upgrade all the window locks on our ground floor after a spate of burglaries nearby. He advised on the best options, sourced everything, and completed the job in one afternoon. Very thorough and reasonably priced at £165.',
     service: 'Lock Upgrade',
+    date: '2025-12-30',
+    rating: 4,
   },
   {
     name: 'Lisa D.',
     area: 'Stratford-upon-Avon',
     quote: 'Our holiday let needed all locks changing between tenants at short notice. Ross fitted four new locks in under three hours and gave us spare keys for each. Professional, punctual, and fairly priced at £245. He\'s now our go-to locksmith.',
     service: 'Lock Change',
+    date: '2026-02-04',
+    rating: 5,
   },
 ]
 
@@ -122,12 +150,16 @@ const otherReviews: Review[] = [
     area: 'Kenilworth',
     quote: 'Ross replaced a snapped key in my euro cylinder and cut a new set of keys on the spot. He was friendly, professional, and didn\'t try to upsell me a new lock when the old one was fine. Honest tradesman — £49 for the extraction and new key.',
     service: 'Emergency Lockout',
+    date: '2025-09-25',
+    rating: 5,
   },
   {
     name: 'Angela F.',
     area: 'Binley, Coventry',
     quote: 'My elderly mum got locked out and I called Ross on her behalf. He was there within 20 minutes, was patient and kind with her, and got her back inside safely. She said he was a lovely young man. £59 and worth every penny for the peace of mind.',
     service: 'Emergency Lockout',
+    date: '2026-03-02',
+    rating: 5,
   },
 ]
 
@@ -146,11 +178,11 @@ const aggregateRatingSchema = {
   name: 'Local Emergency Locksmith',
   aggregateRating: {
     '@type': 'AggregateRating',
-    ratingValue: '4.9',
+    ratingValue: '4.8',
     bestRating: '5',
     worstRating: '1',
-    ratingCount: '47',
-    reviewCount: '47',
+    ratingCount: '15',
+    reviewCount: '15',
   },
   review: allReviews.map((review) => ({
     '@type': 'Review',
@@ -160,12 +192,12 @@ const aggregateRatingSchema = {
     },
     reviewRating: {
       '@type': 'Rating',
-      ratingValue: '5',
+      ratingValue: String(review.rating),
       bestRating: '5',
       worstRating: '1',
     },
     reviewBody: review.quote,
-    datePublished: '2026-01-15',
+    datePublished: review.date,
   })),
 }
 
@@ -188,13 +220,13 @@ const breadcrumbSchema = {
   ],
 }
 
-function StarRating() {
+function StarRating({ rating = 5 }: { rating?: number }) {
   return (
     <div className="flex gap-0.5">
       {[1, 2, 3, 4, 5].map((star) => (
         <svg
           key={star}
-          className="w-5 h-5 text-[#FFB800]"
+          className={`w-5 h-5 ${star <= rating ? 'text-[#FFB800]' : 'text-gray-200'}`}
           fill="currentColor"
           viewBox="0 0 20 20"
         >
@@ -209,7 +241,7 @@ function ReviewCard({ review }: { review: Review }) {
   return (
     <div className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
       <div className="flex items-center justify-between mb-3">
-        <StarRating />
+        <StarRating rating={review.rating} />
         <span className="text-xs font-bold text-[#FFB800] bg-[#FFB800]/10 px-2.5 py-1 rounded-full">
           {review.service}
         </span>
@@ -224,6 +256,7 @@ function ReviewCard({ review }: { review: Review }) {
         <div>
           <p className="font-bold text-[#0F1B2D] text-sm">{review.name}</p>
           <p className="text-gray-500 text-xs">{review.area}</p>
+          <p className="text-gray-400 text-xs">{new Date(review.date).toLocaleDateString('en-GB', { month: 'short', year: 'numeric' })}</p>
         </div>
       </div>
     </div>
@@ -285,9 +318,9 @@ export default function TestimonialsPage() {
               ))}
             </div>
             <p className="text-white font-black text-2xl">
-              4.9<span className="text-white/50 text-lg font-normal">/5</span>
+              4.8<span className="text-white/50 text-lg font-normal">/5</span>
             </p>
-            <p className="text-white/60 text-sm mt-1">Based on 47 reviews</p>
+            <p className="text-white/60 text-sm mt-1">Based on 15 reviews</p>
           </div>
         </div>
       </section>

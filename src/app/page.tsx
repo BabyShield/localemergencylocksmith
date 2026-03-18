@@ -16,7 +16,7 @@ import { ALL_BLOG_POSTS } from '@/data/blog-posts'
 export const metadata: Metadata = {
   title: 'Emergency Locksmith Coventry | 24/7 | No VAT | Call Now',
   description:
-    "Emergency locksmith in Coventry. Locked out? I'll be there in 15-30 minutes. No VAT, no call-out fee. Call 07735 336175 now — available 24/7, 365 days.",
+    "Emergency locksmith near me in Coventry & Warwickshire. Locked out? I'll be there in 15-30 minutes. No VAT, no call-out fee. Call 07735 336175 now — 24/7.",
   alternates: {
     canonical: SITE_CONFIG.domain,
   },
@@ -93,10 +93,10 @@ const aggregateRatingSchema = {
   url: 'https://localemergencylocksmith.co.uk',
   aggregateRating: {
     '@type': 'AggregateRating',
-    ratingValue: '4.9',
+    ratingValue: '4.8',
     bestRating: '5',
-    ratingCount: '47',
-    reviewCount: '47',
+    ratingCount: '15',
+    reviewCount: '15',
   },
 }
 

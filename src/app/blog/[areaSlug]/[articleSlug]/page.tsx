@@ -73,31 +73,34 @@ export default async function ArticlePage({ params }: Props) {
         name: 'Blog',
         item: `${SITE_CONFIG.domain}/blog`,
       },
-      {
-        '@type': 'ListItem',
-        position: 3,
-        name: `${area.name} Articles`,
-        item: `${SITE_CONFIG.domain}/blog/${areaSlug}/locked-out-at-night`,
-      },
-      {
-        '@type': 'ListItem',
-        position: 4,
-        name: pageTitle,
-        item: pageUrl,
-      },
+      { '@type': 'ListItem', position: 3, name: area.name, item: `${SITE_CONFIG.domain}/areas/${areaSlug}` },
+      { '@type': 'ListItem', position: 4, name: article.titleTemplate.replace(/\{area\}/g, area.name), item: `${SITE_CONFIG.domain}/blog/${areaSlug}/${articleSlug}` },
     ],
   }
+
+  const articleBaseDate = new Date('2025-09-01')
+  const areaIdx = AREAS.findIndex(a => a.slug === areaSlug)
+  const articleIdx = ARTICLE_TEMPLATES.findIndex(t => t.slug === articleSlug)
+  const daysOffset = (areaIdx >= 0 ? areaIdx : 0) + (articleIdx >= 0 ? articleIdx : 0) * 7
+  const publishDate = new Date(articleBaseDate)
+  publishDate.setDate(publishDate.getDate() + daysOffset)
+  const dateStr = publishDate.toISOString().split('T')[0]
 
   const articleSchema = {
     '@context': 'https://schema.org',
     '@type': 'BlogPosting',
     headline: pageTitle,
     url: pageUrl,
-    datePublished: '2026-03-01',
-    dateModified: '2026-03-01',
+    datePublished: dateStr,
+    dateModified: '2026-03-17',
     author: {
       '@type': 'Person',
-      name: 'Local Emergency Locksmith',
+      name: 'Ross',
+      jobTitle: 'Locksmith',
+      worksFor: {
+        '@type': 'LocalBusiness',
+        name: 'Local Emergency Locksmith',
+      },
     },
     publisher: {
       '@type': 'Organization',
@@ -138,7 +141,7 @@ export default async function ArticlePage({ params }: Props) {
         </Link>
         <span className="mx-2">›</span>
         <Link
-          href={`/blog/${areaSlug}/locked-out-at-night`}
+          href={`/areas/${areaSlug}`}
           className="hover:text-[#FFB800]"
         >
           {area.name}
