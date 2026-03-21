@@ -390,12 +390,10 @@ export default async function ServicePage({ params }: Props) {
     ],
     offers: {
       '@type': 'Offer',
-      priceSpecification: {
-        '@type': 'PriceSpecification',
-        price: service.priceFrom.toString(),
-        priceCurrency: 'GBP',
-        minPrice: service.priceFrom.toString(),
-      },
+      price: service.priceFrom.toString(),
+      priceCurrency: 'GBP',
+      availability: 'https://schema.org/InStock',
+      validFrom: '2026-01-01',
     },
     aggregateRating: {
       '@type': 'AggregateRating',
@@ -414,6 +412,7 @@ export default async function ServicePage({ params }: Props) {
     step: content.steps.map((text, i) => ({
       '@type': 'HowToStep',
       position: i + 1,
+      name: `Step ${i + 1}`,
       text,
     })),
   }
