@@ -395,13 +395,6 @@ export default async function ServicePage({ params }: Props) {
       availability: 'https://schema.org/InStock',
       validFrom: '2026-01-01',
     },
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.9',
-      reviewCount: '15',
-      bestRating: '5',
-      worstRating: '1',
-    },
   }
 
   const howToSchema = {

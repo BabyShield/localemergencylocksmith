@@ -82,23 +82,7 @@ const faqSchema = {
   ],
 }
 
-const aggregateRatingSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'LocalBusiness',
-  '@id': 'https://localemergencylocksmith.co.uk/#business',
-  name: 'Local Emergency Locksmith',
-  image: 'https://localemergencylocksmith.co.uk/og-image.jpg',
-  telephone: '+447735336175',
-  email: 'info@localemergencylocksmith.co.uk',
-  url: 'https://localemergencylocksmith.co.uk',
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: '4.8',
-    bestRating: '5',
-    ratingCount: '15',
-    reviewCount: '15',
-  },
-}
+// aggregateRating removed — add back when real Google reviews exist
 
 const homepageFaqs = [
   {
@@ -133,7 +117,6 @@ export default function HomePage() {
   return (
     <>
       <SchemaMarkup schema={faqSchema} />
-      <SchemaMarkup schema={aggregateRatingSchema} />
 
       {/* 1. Hero */}
       <HeroSection

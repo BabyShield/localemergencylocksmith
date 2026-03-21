@@ -171,35 +171,7 @@ const allReviews = [
   ...otherReviews,
 ]
 
-const aggregateRatingSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'LocalBusiness',
-  '@id': 'https://localemergencylocksmith.co.uk/#business',
-  name: 'Local Emergency Locksmith',
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: '4.8',
-    bestRating: '5',
-    worstRating: '1',
-    ratingCount: '15',
-    reviewCount: '15',
-  },
-  review: allReviews.map((review) => ({
-    '@type': 'Review',
-    author: {
-      '@type': 'Person',
-      name: review.name,
-    },
-    reviewRating: {
-      '@type': 'Rating',
-      ratingValue: String(review.rating),
-      bestRating: '5',
-      worstRating: '1',
-    },
-    reviewBody: review.quote,
-    datePublished: review.date,
-  })),
-}
+// aggregateRating schema removed — add back when real Google reviews exist
 
 const breadcrumbSchema = {
   '@context': 'https://schema.org',
@@ -279,7 +251,6 @@ function ReviewSection({ title, reviews }: { title: string; reviews: Review[] })
 export default function TestimonialsPage() {
   return (
     <>
-      <SchemaMarkup schema={aggregateRatingSchema} />
       <SchemaMarkup schema={breadcrumbSchema} />
 
       {/* Breadcrumb */}
