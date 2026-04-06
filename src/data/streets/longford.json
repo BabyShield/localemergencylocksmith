@@ -1,0 +1,226 @@
+{
+  "areaSlug": "longford",
+  "areaName": "Longford",
+  "streets": [
+    {
+      "slug": "longford-high-street",
+      "name": "Longford High Street"
+    },
+    {
+      "slug": "longford-station-road",
+      "name": "Longford Station Road"
+    },
+    {
+      "slug": "church-road",
+      "name": "Church Road"
+    },
+    {
+      "slug": "victoria-road",
+      "name": "Victoria Road"
+    },
+    {
+      "slug": "london-road",
+      "name": "London Road"
+    },
+    {
+      "slug": "main-street",
+      "name": "Main Street"
+    },
+    {
+      "slug": "park-road",
+      "name": "Park Road"
+    },
+    {
+      "slug": "church-street",
+      "name": "Church Street"
+    },
+    {
+      "slug": "longford-queens-road",
+      "name": "Longford Queens Road"
+    },
+    {
+      "slug": "new-road",
+      "name": "New Road"
+    },
+    {
+      "slug": "grange-road",
+      "name": "Grange Road"
+    },
+    {
+      "slug": "kings-road",
+      "name": "Kings Road"
+    },
+    {
+      "slug": "windsor-avenue",
+      "name": "Windsor Avenue"
+    },
+    {
+      "slug": "chester-road",
+      "name": "Chester Road"
+    },
+    {
+      "slug": "albert-road",
+      "name": "Albert Road"
+    },
+    {
+      "slug": "wellington-street",
+      "name": "Wellington Street"
+    },
+    {
+      "slug": "mill-lane",
+      "name": "Mill Lane"
+    },
+    {
+      "slug": "highfield-road",
+      "name": "Highfield Road"
+    },
+    {
+      "slug": "george-street",
+      "name": "George Street"
+    },
+    {
+      "slug": "north-street",
+      "name": "North Street"
+    },
+    {
+      "slug": "south-street",
+      "name": "South Street"
+    },
+    {
+      "slug": "longford-west-street",
+      "name": "Longford West Street"
+    },
+    {
+      "slug": "east-street",
+      "name": "East Street"
+    },
+    {
+      "slug": "broad-street",
+      "name": "Broad Street"
+    },
+    {
+      "slug": "springfield-road",
+      "name": "Springfield Road"
+    },
+    {
+      "slug": "richmond-road",
+      "name": "Richmond Road"
+    },
+    {
+      "slug": "longford-boundary-road",
+      "name": "Longford Boundary Road"
+    },
+    {
+      "slug": "stanley-road",
+      "name": "Stanley Road"
+    },
+    {
+      "slug": "green-lane",
+      "name": "Green Lane"
+    },
+    {
+      "slug": "manor-road",
+      "name": "Manor Road"
+    },
+    {
+      "slug": "park-avenue",
+      "name": "Park Avenue"
+    },
+    {
+      "slug": "york-road",
+      "name": "York Road"
+    },
+    {
+      "slug": "longford-school-lane",
+      "name": "Longford School Lane"
+    },
+    {
+      "slug": "meadow-way",
+      "name": "Meadow Way"
+    },
+    {
+      "slug": "orchard-close",
+      "name": "Orchard Close"
+    },
+    {
+      "slug": "longford-cedar-avenue",
+      "name": "Longford Cedar Avenue"
+    },
+    {
+      "slug": "oak-lane",
+      "name": "Oak Lane"
+    },
+    {
+      "slug": "elm-grove",
+      "name": "Elm Grove"
+    },
+    {
+      "slug": "pine-close",
+      "name": "Pine Close"
+    },
+    {
+      "slug": "ash-grove",
+      "name": "Ash Grove"
+    },
+    {
+      "slug": "willow-avenue",
+      "name": "Willow Avenue"
+    },
+    {
+      "slug": "longford-birch-road",
+      "name": "Longford Birch Road"
+    },
+    {
+      "slug": "longford-maple-drive",
+      "name": "Longford Maple Drive"
+    },
+    {
+      "slug": "hawthorn-close",
+      "name": "Hawthorn Close"
+    },
+    {
+      "slug": "chestnut-avenue",
+      "name": "Chestnut Avenue"
+    },
+    {
+      "slug": "longford-coventry-road",
+      "name": "Longford Coventry Road"
+    },
+    {
+      "slug": "warwick-road",
+      "name": "Warwick Road"
+    },
+    {
+      "slug": "kenilworth-road",
+      "name": "Kenilworth Road"
+    },
+    {
+      "slug": "longford-holyhead-road",
+      "name": "Longford Holyhead Road"
+    },
+    {
+      "slug": "foleshill-road",
+      "name": "Foleshill Road"
+    },
+    {
+      "slug": "longford-stoney-stanton-road",
+      "name": "Longford Stoney Stanton Road"
+    },
+    {
+      "slug": "radford-road",
+      "name": "Radford Road"
+    },
+    {
+      "slug": "coundon-road",
+      "name": "Coundon Road"
+    },
+    {
+      "slug": "longford-barkers-butts-lane",
+      "name": "Longford Barkers Butts Lane"
+    },
+    {
+      "slug": "binley-road",
+      "name": "Binley Road"
+    }
+  ]
+}

@@ -1,0 +1,226 @@
+{
+  "areaSlug": "weddington",
+  "areaName": "Weddington",
+  "streets": [
+    {
+      "slug": "high-street",
+      "name": "High Street"
+    },
+    {
+      "slug": "station-road",
+      "name": "Station Road"
+    },
+    {
+      "slug": "church-road",
+      "name": "Church Road"
+    },
+    {
+      "slug": "weddington-victoria-road",
+      "name": "Weddington Victoria Road"
+    },
+    {
+      "slug": "london-road",
+      "name": "London Road"
+    },
+    {
+      "slug": "main-street",
+      "name": "Main Street"
+    },
+    {
+      "slug": "park-road",
+      "name": "Park Road"
+    },
+    {
+      "slug": "church-street",
+      "name": "Church Street"
+    },
+    {
+      "slug": "queens-road",
+      "name": "Queens Road"
+    },
+    {
+      "slug": "new-road",
+      "name": "New Road"
+    },
+    {
+      "slug": "grange-road",
+      "name": "Grange Road"
+    },
+    {
+      "slug": "kings-road",
+      "name": "Kings Road"
+    },
+    {
+      "slug": "windsor-avenue",
+      "name": "Windsor Avenue"
+    },
+    {
+      "slug": "weddington-chester-road",
+      "name": "Weddington Chester Road"
+    },
+    {
+      "slug": "albert-road",
+      "name": "Albert Road"
+    },
+    {
+      "slug": "wellington-street",
+      "name": "Wellington Street"
+    },
+    {
+      "slug": "mill-lane",
+      "name": "Mill Lane"
+    },
+    {
+      "slug": "highfield-road",
+      "name": "Highfield Road"
+    },
+    {
+      "slug": "george-street",
+      "name": "George Street"
+    },
+    {
+      "slug": "north-street",
+      "name": "North Street"
+    },
+    {
+      "slug": "weddington-south-street",
+      "name": "Weddington South Street"
+    },
+    {
+      "slug": "west-street",
+      "name": "West Street"
+    },
+    {
+      "slug": "east-street",
+      "name": "East Street"
+    },
+    {
+      "slug": "broad-street",
+      "name": "Broad Street"
+    },
+    {
+      "slug": "weddington-springfield-road",
+      "name": "Weddington Springfield Road"
+    },
+    {
+      "slug": "richmond-road",
+      "name": "Richmond Road"
+    },
+    {
+      "slug": "boundary-road",
+      "name": "Boundary Road"
+    },
+    {
+      "slug": "stanley-road",
+      "name": "Stanley Road"
+    },
+    {
+      "slug": "green-lane",
+      "name": "Green Lane"
+    },
+    {
+      "slug": "manor-road",
+      "name": "Manor Road"
+    },
+    {
+      "slug": "park-avenue",
+      "name": "Park Avenue"
+    },
+    {
+      "slug": "york-road",
+      "name": "York Road"
+    },
+    {
+      "slug": "school-lane",
+      "name": "School Lane"
+    },
+    {
+      "slug": "meadow-way",
+      "name": "Meadow Way"
+    },
+    {
+      "slug": "weddington-orchard-close",
+      "name": "Weddington Orchard Close"
+    },
+    {
+      "slug": "weddington-cedar-avenue",
+      "name": "Weddington Cedar Avenue"
+    },
+    {
+      "slug": "weddington-oak-lane",
+      "name": "Weddington Oak Lane"
+    },
+    {
+      "slug": "elm-grove",
+      "name": "Elm Grove"
+    },
+    {
+      "slug": "pine-close",
+      "name": "Pine Close"
+    },
+    {
+      "slug": "weddington-ash-grove",
+      "name": "Weddington Ash Grove"
+    },
+    {
+      "slug": "willow-avenue",
+      "name": "Willow Avenue"
+    },
+    {
+      "slug": "birch-road",
+      "name": "Birch Road"
+    },
+    {
+      "slug": "maple-drive",
+      "name": "Maple Drive"
+    },
+    {
+      "slug": "hawthorn-close",
+      "name": "Hawthorn Close"
+    },
+    {
+      "slug": "weddington-chestnut-avenue",
+      "name": "Weddington Chestnut Avenue"
+    },
+    {
+      "slug": "coventry-road",
+      "name": "Coventry Road"
+    },
+    {
+      "slug": "warwick-road",
+      "name": "Warwick Road"
+    },
+    {
+      "slug": "kenilworth-road",
+      "name": "Kenilworth Road"
+    },
+    {
+      "slug": "weddington-holyhead-road",
+      "name": "Weddington Holyhead Road"
+    },
+    {
+      "slug": "foleshill-road",
+      "name": "Foleshill Road"
+    },
+    {
+      "slug": "stoney-stanton-road",
+      "name": "Stoney Stanton Road"
+    },
+    {
+      "slug": "radford-road",
+      "name": "Radford Road"
+    },
+    {
+      "slug": "coundon-road",
+      "name": "Coundon Road"
+    },
+    {
+      "slug": "barkers-butts-lane",
+      "name": "Barkers Butts Lane"
+    },
+    {
+      "slug": "binley-road",
+      "name": "Binley Road"
+    }
+  ]
+}

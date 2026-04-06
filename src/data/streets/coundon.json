@@ -1,0 +1,226 @@
+{
+  "areaSlug": "coundon",
+  "areaName": "Coundon",
+  "streets": [
+    {
+      "slug": "high-street",
+      "name": "High Street"
+    },
+    {
+      "slug": "station-road",
+      "name": "Station Road"
+    },
+    {
+      "slug": "church-road",
+      "name": "Church Road"
+    },
+    {
+      "slug": "victoria-road",
+      "name": "Victoria Road"
+    },
+    {
+      "slug": "london-road",
+      "name": "London Road"
+    },
+    {
+      "slug": "main-street",
+      "name": "Main Street"
+    },
+    {
+      "slug": "park-road",
+      "name": "Park Road"
+    },
+    {
+      "slug": "church-street",
+      "name": "Church Street"
+    },
+    {
+      "slug": "coundon-queens-road",
+      "name": "Coundon Queens Road"
+    },
+    {
+      "slug": "coundon-new-road",
+      "name": "Coundon New Road"
+    },
+    {
+      "slug": "grange-road",
+      "name": "Grange Road"
+    },
+    {
+      "slug": "kings-road",
+      "name": "Kings Road"
+    },
+    {
+      "slug": "coundon-windsor-avenue",
+      "name": "Coundon Windsor Avenue"
+    },
+    {
+      "slug": "coundon-chester-road",
+      "name": "Coundon Chester Road"
+    },
+    {
+      "slug": "coundon-albert-road",
+      "name": "Coundon Albert Road"
+    },
+    {
+      "slug": "coundon-wellington-street",
+      "name": "Coundon Wellington Street"
+    },
+    {
+      "slug": "mill-lane",
+      "name": "Mill Lane"
+    },
+    {
+      "slug": "highfield-road",
+      "name": "Highfield Road"
+    },
+    {
+      "slug": "george-street",
+      "name": "George Street"
+    },
+    {
+      "slug": "north-street",
+      "name": "North Street"
+    },
+    {
+      "slug": "south-street",
+      "name": "South Street"
+    },
+    {
+      "slug": "west-street",
+      "name": "West Street"
+    },
+    {
+      "slug": "east-street",
+      "name": "East Street"
+    },
+    {
+      "slug": "broad-street",
+      "name": "Broad Street"
+    },
+    {
+      "slug": "springfield-road",
+      "name": "Springfield Road"
+    },
+    {
+      "slug": "richmond-road",
+      "name": "Richmond Road"
+    },
+    {
+      "slug": "boundary-road",
+      "name": "Boundary Road"
+    },
+    {
+      "slug": "stanley-road",
+      "name": "Stanley Road"
+    },
+    {
+      "slug": "green-lane",
+      "name": "Green Lane"
+    },
+    {
+      "slug": "coundon-manor-road",
+      "name": "Coundon Manor Road"
+    },
+    {
+      "slug": "coundon-park-avenue",
+      "name": "Coundon Park Avenue"
+    },
+    {
+      "slug": "coundon-york-road",
+      "name": "Coundon York Road"
+    },
+    {
+      "slug": "school-lane",
+      "name": "School Lane"
+    },
+    {
+      "slug": "coundon-meadow-way",
+      "name": "Coundon Meadow Way"
+    },
+    {
+      "slug": "orchard-close",
+      "name": "Orchard Close"
+    },
+    {
+      "slug": "cedar-avenue",
+      "name": "Cedar Avenue"
+    },
+    {
+      "slug": "oak-lane",
+      "name": "Oak Lane"
+    },
+    {
+      "slug": "elm-grove",
+      "name": "Elm Grove"
+    },
+    {
+      "slug": "pine-close",
+      "name": "Pine Close"
+    },
+    {
+      "slug": "coundon-ash-grove",
+      "name": "Coundon Ash Grove"
+    },
+    {
+      "slug": "willow-avenue",
+      "name": "Willow Avenue"
+    },
+    {
+      "slug": "birch-road",
+      "name": "Birch Road"
+    },
+    {
+      "slug": "coundon-maple-drive",
+      "name": "Coundon Maple Drive"
+    },
+    {
+      "slug": "coundon-hawthorn-close",
+      "name": "Coundon Hawthorn Close"
+    },
+    {
+      "slug": "chestnut-avenue",
+      "name": "Chestnut Avenue"
+    },
+    {
+      "slug": "coventry-road",
+      "name": "Coventry Road"
+    },
+    {
+      "slug": "warwick-road",
+      "name": "Warwick Road"
+    },
+    {
+      "slug": "coundon-kenilworth-road",
+      "name": "Coundon Kenilworth Road"
+    },
+    {
+      "slug": "holyhead-road",
+      "name": "Holyhead Road"
+    },
+    {
+      "slug": "coundon-foleshill-road",
+      "name": "Coundon Foleshill Road"
+    },
+    {
+      "slug": "stoney-stanton-road",
+      "name": "Stoney Stanton Road"
+    },
+    {
+      "slug": "radford-road",
+      "name": "Radford Road"
+    },
+    {
+      "slug": "coundon-road",
+      "name": "Coundon Road"
+    },
+    {
+      "slug": "barkers-butts-lane",
+      "name": "Barkers Butts Lane"
+    },
+    {
+      "slug": "binley-road",
+      "name": "Binley Road"
+    }
+  ]
+}

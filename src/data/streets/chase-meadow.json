@@ -1,0 +1,226 @@
+{
+  "areaSlug": "chase-meadow",
+  "areaName": "Chase Meadow",
+  "streets": [
+    {
+      "slug": "high-street",
+      "name": "High Street"
+    },
+    {
+      "slug": "chase-meadow-station-road",
+      "name": "Chase Meadow Station Road"
+    },
+    {
+      "slug": "church-road",
+      "name": "Church Road"
+    },
+    {
+      "slug": "victoria-road",
+      "name": "Victoria Road"
+    },
+    {
+      "slug": "chase-meadow-london-road",
+      "name": "Chase Meadow London Road"
+    },
+    {
+      "slug": "main-street",
+      "name": "Main Street"
+    },
+    {
+      "slug": "park-road",
+      "name": "Park Road"
+    },
+    {
+      "slug": "church-street",
+      "name": "Church Street"
+    },
+    {
+      "slug": "chase-meadow-queens-road",
+      "name": "Chase Meadow Queens Road"
+    },
+    {
+      "slug": "new-road",
+      "name": "New Road"
+    },
+    {
+      "slug": "chase-meadow-grange-road",
+      "name": "Chase Meadow Grange Road"
+    },
+    {
+      "slug": "kings-road",
+      "name": "Kings Road"
+    },
+    {
+      "slug": "windsor-avenue",
+      "name": "Windsor Avenue"
+    },
+    {
+      "slug": "chester-road",
+      "name": "Chester Road"
+    },
+    {
+      "slug": "albert-road",
+      "name": "Albert Road"
+    },
+    {
+      "slug": "wellington-street",
+      "name": "Wellington Street"
+    },
+    {
+      "slug": "chase-meadow-mill-lane",
+      "name": "Chase Meadow Mill Lane"
+    },
+    {
+      "slug": "highfield-road",
+      "name": "Highfield Road"
+    },
+    {
+      "slug": "george-street",
+      "name": "George Street"
+    },
+    {
+      "slug": "north-street",
+      "name": "North Street"
+    },
+    {
+      "slug": "south-street",
+      "name": "South Street"
+    },
+    {
+      "slug": "west-street",
+      "name": "West Street"
+    },
+    {
+      "slug": "east-street",
+      "name": "East Street"
+    },
+    {
+      "slug": "chase-meadow-broad-street",
+      "name": "Chase Meadow Broad Street"
+    },
+    {
+      "slug": "springfield-road",
+      "name": "Springfield Road"
+    },
+    {
+      "slug": "richmond-road",
+      "name": "Richmond Road"
+    },
+    {
+      "slug": "boundary-road",
+      "name": "Boundary Road"
+    },
+    {
+      "slug": "stanley-road",
+      "name": "Stanley Road"
+    },
+    {
+      "slug": "green-lane",
+      "name": "Green Lane"
+    },
+    {
+      "slug": "manor-road",
+      "name": "Manor Road"
+    },
+    {
+      "slug": "chase-meadow-park-avenue",
+      "name": "Chase Meadow Park Avenue"
+    },
+    {
+      "slug": "york-road",
+      "name": "York Road"
+    },
+    {
+      "slug": "school-lane",
+      "name": "School Lane"
+    },
+    {
+      "slug": "meadow-way",
+      "name": "Meadow Way"
+    },
+    {
+      "slug": "chase-meadow-orchard-close",
+      "name": "Chase Meadow Orchard Close"
+    },
+    {
+      "slug": "chase-meadow-cedar-avenue",
+      "name": "Chase Meadow Cedar Avenue"
+    },
+    {
+      "slug": "oak-lane",
+      "name": "Oak Lane"
+    },
+    {
+      "slug": "elm-grove",
+      "name": "Elm Grove"
+    },
+    {
+      "slug": "pine-close",
+      "name": "Pine Close"
+    },
+    {
+      "slug": "ash-grove",
+      "name": "Ash Grove"
+    },
+    {
+      "slug": "willow-avenue",
+      "name": "Willow Avenue"
+    },
+    {
+      "slug": "chase-meadow-birch-road",
+      "name": "Chase Meadow Birch Road"
+    },
+    {
+      "slug": "maple-drive",
+      "name": "Maple Drive"
+    },
+    {
+      "slug": "chase-meadow-hawthorn-close",
+      "name": "Chase Meadow Hawthorn Close"
+    },
+    {
+      "slug": "chestnut-avenue",
+      "name": "Chestnut Avenue"
+    },
+    {
+      "slug": "coventry-road",
+      "name": "Coventry Road"
+    },
+    {
+      "slug": "chase-meadow-warwick-road",
+      "name": "Chase Meadow Warwick Road"
+    },
+    {
+      "slug": "kenilworth-road",
+      "name": "Kenilworth Road"
+    },
+    {
+      "slug": "holyhead-road",
+      "name": "Holyhead Road"
+    },
+    {
+      "slug": "foleshill-road",
+      "name": "Foleshill Road"
+    },
+    {
+      "slug": "stoney-stanton-road",
+      "name": "Stoney Stanton Road"
+    },
+    {
+      "slug": "radford-road",
+      "name": "Radford Road"
+    },
+    {
+      "slug": "coundon-road",
+      "name": "Coundon Road"
+    },
+    {
+      "slug": "chase-meadow-barkers-butts-lane",
+      "name": "Chase Meadow Barkers Butts Lane"
+    },
+    {
+      "slug": "binley-road",
+      "name": "Binley Road"
+    }
+  ]
+}

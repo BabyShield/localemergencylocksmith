@@ -1,0 +1,226 @@
+{
+  "areaSlug": "potters-green",
+  "areaName": "Potters Green",
+  "streets": [
+    {
+      "slug": "potters-green-high-street",
+      "name": "Potters Green High Street"
+    },
+    {
+      "slug": "station-road",
+      "name": "Station Road"
+    },
+    {
+      "slug": "church-road",
+      "name": "Church Road"
+    },
+    {
+      "slug": "victoria-road",
+      "name": "Victoria Road"
+    },
+    {
+      "slug": "potters-green-london-road",
+      "name": "Potters Green London Road"
+    },
+    {
+      "slug": "main-street",
+      "name": "Main Street"
+    },
+    {
+      "slug": "park-road",
+      "name": "Park Road"
+    },
+    {
+      "slug": "potters-green-church-street",
+      "name": "Potters Green Church Street"
+    },
+    {
+      "slug": "queens-road",
+      "name": "Queens Road"
+    },
+    {
+      "slug": "potters-green-new-road",
+      "name": "Potters Green New Road"
+    },
+    {
+      "slug": "potters-green-grange-road",
+      "name": "Potters Green Grange Road"
+    },
+    {
+      "slug": "kings-road",
+      "name": "Kings Road"
+    },
+    {
+      "slug": "windsor-avenue",
+      "name": "Windsor Avenue"
+    },
+    {
+      "slug": "chester-road",
+      "name": "Chester Road"
+    },
+    {
+      "slug": "albert-road",
+      "name": "Albert Road"
+    },
+    {
+      "slug": "wellington-street",
+      "name": "Wellington Street"
+    },
+    {
+      "slug": "mill-lane",
+      "name": "Mill Lane"
+    },
+    {
+      "slug": "highfield-road",
+      "name": "Highfield Road"
+    },
+    {
+      "slug": "george-street",
+      "name": "George Street"
+    },
+    {
+      "slug": "north-street",
+      "name": "North Street"
+    },
+    {
+      "slug": "south-street",
+      "name": "South Street"
+    },
+    {
+      "slug": "west-street",
+      "name": "West Street"
+    },
+    {
+      "slug": "east-street",
+      "name": "East Street"
+    },
+    {
+      "slug": "broad-street",
+      "name": "Broad Street"
+    },
+    {
+      "slug": "springfield-road",
+      "name": "Springfield Road"
+    },
+    {
+      "slug": "richmond-road",
+      "name": "Richmond Road"
+    },
+    {
+      "slug": "boundary-road",
+      "name": "Boundary Road"
+    },
+    {
+      "slug": "stanley-road",
+      "name": "Stanley Road"
+    },
+    {
+      "slug": "green-lane",
+      "name": "Green Lane"
+    },
+    {
+      "slug": "manor-road",
+      "name": "Manor Road"
+    },
+    {
+      "slug": "park-avenue",
+      "name": "Park Avenue"
+    },
+    {
+      "slug": "potters-green-york-road",
+      "name": "Potters Green York Road"
+    },
+    {
+      "slug": "potters-green-school-lane",
+      "name": "Potters Green School Lane"
+    },
+    {
+      "slug": "meadow-way",
+      "name": "Meadow Way"
+    },
+    {
+      "slug": "orchard-close",
+      "name": "Orchard Close"
+    },
+    {
+      "slug": "cedar-avenue",
+      "name": "Cedar Avenue"
+    },
+    {
+      "slug": "oak-lane",
+      "name": "Oak Lane"
+    },
+    {
+      "slug": "elm-grove",
+      "name": "Elm Grove"
+    },
+    {
+      "slug": "pine-close",
+      "name": "Pine Close"
+    },
+    {
+      "slug": "potters-green-ash-grove",
+      "name": "Potters Green Ash Grove"
+    },
+    {
+      "slug": "willow-avenue",
+      "name": "Willow Avenue"
+    },
+    {
+      "slug": "potters-green-birch-road",
+      "name": "Potters Green Birch Road"
+    },
+    {
+      "slug": "potters-green-maple-drive",
+      "name": "Potters Green Maple Drive"
+    },
+    {
+      "slug": "potters-green-hawthorn-close",
+      "name": "Potters Green Hawthorn Close"
+    },
+    {
+      "slug": "chestnut-avenue",
+      "name": "Chestnut Avenue"
+    },
+    {
+      "slug": "coventry-road",
+      "name": "Coventry Road"
+    },
+    {
+      "slug": "warwick-road",
+      "name": "Warwick Road"
+    },
+    {
+      "slug": "kenilworth-road",
+      "name": "Kenilworth Road"
+    },
+    {
+      "slug": "holyhead-road",
+      "name": "Holyhead Road"
+    },
+    {
+      "slug": "potters-green-foleshill-road",
+      "name": "Potters Green Foleshill Road"
+    },
+    {
+      "slug": "stoney-stanton-road",
+      "name": "Stoney Stanton Road"
+    },
+    {
+      "slug": "radford-road",
+      "name": "Radford Road"
+    },
+    {
+      "slug": "potters-green-coundon-road",
+      "name": "Potters Green Coundon Road"
+    },
+    {
+      "slug": "barkers-butts-lane",
+      "name": "Barkers Butts Lane"
+    },
+    {
+      "slug": "binley-road",
+      "name": "Binley Road"
+    }
+  ]
+}

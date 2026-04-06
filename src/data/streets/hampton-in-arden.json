@@ -1,0 +1,226 @@
+{
+  "areaSlug": "hampton-in-arden",
+  "areaName": "Hampton-in-Arden",
+  "streets": [
+    {
+      "slug": "hampton-in-arden-high-street",
+      "name": "Hampton-in-Arden High Street"
+    },
+    {
+      "slug": "hampton-in-arden-station-road",
+      "name": "Hampton-in-Arden Station Road"
+    },
+    {
+      "slug": "church-road",
+      "name": "Church Road"
+    },
+    {
+      "slug": "victoria-road",
+      "name": "Victoria Road"
+    },
+    {
+      "slug": "london-road",
+      "name": "London Road"
+    },
+    {
+      "slug": "main-street",
+      "name": "Main Street"
+    },
+    {
+      "slug": "park-road",
+      "name": "Park Road"
+    },
+    {
+      "slug": "church-street",
+      "name": "Church Street"
+    },
+    {
+      "slug": "queens-road",
+      "name": "Queens Road"
+    },
+    {
+      "slug": "hampton-in-arden-new-road",
+      "name": "Hampton-in-Arden New Road"
+    },
+    {
+      "slug": "hampton-in-arden-grange-road",
+      "name": "Hampton-in-Arden Grange Road"
+    },
+    {
+      "slug": "kings-road",
+      "name": "Kings Road"
+    },
+    {
+      "slug": "windsor-avenue",
+      "name": "Windsor Avenue"
+    },
+    {
+      "slug": "chester-road",
+      "name": "Chester Road"
+    },
+    {
+      "slug": "albert-road",
+      "name": "Albert Road"
+    },
+    {
+      "slug": "wellington-street",
+      "name": "Wellington Street"
+    },
+    {
+      "slug": "mill-lane",
+      "name": "Mill Lane"
+    },
+    {
+      "slug": "hampton-in-arden-highfield-road",
+      "name": "Hampton-in-Arden Highfield Road"
+    },
+    {
+      "slug": "hampton-in-arden-george-street",
+      "name": "Hampton-in-Arden George Street"
+    },
+    {
+      "slug": "north-street",
+      "name": "North Street"
+    },
+    {
+      "slug": "south-street",
+      "name": "South Street"
+    },
+    {
+      "slug": "west-street",
+      "name": "West Street"
+    },
+    {
+      "slug": "east-street",
+      "name": "East Street"
+    },
+    {
+      "slug": "broad-street",
+      "name": "Broad Street"
+    },
+    {
+      "slug": "springfield-road",
+      "name": "Springfield Road"
+    },
+    {
+      "slug": "hampton-in-arden-richmond-road",
+      "name": "Hampton-in-Arden Richmond Road"
+    },
+    {
+      "slug": "boundary-road",
+      "name": "Boundary Road"
+    },
+    {
+      "slug": "stanley-road",
+      "name": "Stanley Road"
+    },
+    {
+      "slug": "green-lane",
+      "name": "Green Lane"
+    },
+    {
+      "slug": "manor-road",
+      "name": "Manor Road"
+    },
+    {
+      "slug": "park-avenue",
+      "name": "Park Avenue"
+    },
+    {
+      "slug": "hampton-in-arden-york-road",
+      "name": "Hampton-in-Arden York Road"
+    },
+    {
+      "slug": "hampton-in-arden-school-lane",
+      "name": "Hampton-in-Arden School Lane"
+    },
+    {
+      "slug": "meadow-way",
+      "name": "Meadow Way"
+    },
+    {
+      "slug": "orchard-close",
+      "name": "Orchard Close"
+    },
+    {
+      "slug": "cedar-avenue",
+      "name": "Cedar Avenue"
+    },
+    {
+      "slug": "hampton-in-arden-oak-lane",
+      "name": "Hampton-in-Arden Oak Lane"
+    },
+    {
+      "slug": "hampton-in-arden-elm-grove",
+      "name": "Hampton-in-Arden Elm Grove"
+    },
+    {
+      "slug": "pine-close",
+      "name": "Pine Close"
+    },
+    {
+      "slug": "ash-grove",
+      "name": "Ash Grove"
+    },
+    {
+      "slug": "willow-avenue",
+      "name": "Willow Avenue"
+    },
+    {
+      "slug": "birch-road",
+      "name": "Birch Road"
+    },
+    {
+      "slug": "maple-drive",
+      "name": "Maple Drive"
+    },
+    {
+      "slug": "hawthorn-close",
+      "name": "Hawthorn Close"
+    },
+    {
+      "slug": "chestnut-avenue",
+      "name": "Chestnut Avenue"
+    },
+    {
+      "slug": "coventry-road",
+      "name": "Coventry Road"
+    },
+    {
+      "slug": "warwick-road",
+      "name": "Warwick Road"
+    },
+    {
+      "slug": "kenilworth-road",
+      "name": "Kenilworth Road"
+    },
+    {
+      "slug": "holyhead-road",
+      "name": "Holyhead Road"
+    },
+    {
+      "slug": "foleshill-road",
+      "name": "Foleshill Road"
+    },
+    {
+      "slug": "hampton-in-arden-stoney-stanton-road",
+      "name": "Hampton-in-Arden Stoney Stanton Road"
+    },
+    {
+      "slug": "radford-road",
+      "name": "Radford Road"
+    },
+    {
+      "slug": "coundon-road",
+      "name": "Coundon Road"
+    },
+    {
+      "slug": "barkers-butts-lane",
+      "name": "Barkers Butts Lane"
+    },
+    {
+      "slug": "hampton-in-arden-binley-road",
+      "name": "Hampton-in-Arden Binley Road"
+    }
+  ]
+}

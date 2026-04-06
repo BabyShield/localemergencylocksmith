@@ -1,0 +1,226 @@
+{
+  "areaSlug": "heathcote",
+  "areaName": "Heathcote",
+  "streets": [
+    {
+      "slug": "high-street",
+      "name": "High Street"
+    },
+    {
+      "slug": "station-road",
+      "name": "Station Road"
+    },
+    {
+      "slug": "church-road",
+      "name": "Church Road"
+    },
+    {
+      "slug": "victoria-road",
+      "name": "Victoria Road"
+    },
+    {
+      "slug": "heathcote-london-road",
+      "name": "Heathcote London Road"
+    },
+    {
+      "slug": "main-street",
+      "name": "Main Street"
+    },
+    {
+      "slug": "park-road",
+      "name": "Park Road"
+    },
+    {
+      "slug": "heathcote-church-street",
+      "name": "Heathcote Church Street"
+    },
+    {
+      "slug": "queens-road",
+      "name": "Queens Road"
+    },
+    {
+      "slug": "new-road",
+      "name": "New Road"
+    },
+    {
+      "slug": "heathcote-grange-road",
+      "name": "Heathcote Grange Road"
+    },
+    {
+      "slug": "kings-road",
+      "name": "Kings Road"
+    },
+    {
+      "slug": "windsor-avenue",
+      "name": "Windsor Avenue"
+    },
+    {
+      "slug": "chester-road",
+      "name": "Chester Road"
+    },
+    {
+      "slug": "heathcote-albert-road",
+      "name": "Heathcote Albert Road"
+    },
+    {
+      "slug": "wellington-street",
+      "name": "Wellington Street"
+    },
+    {
+      "slug": "heathcote-mill-lane",
+      "name": "Heathcote Mill Lane"
+    },
+    {
+      "slug": "heathcote-highfield-road",
+      "name": "Heathcote Highfield Road"
+    },
+    {
+      "slug": "george-street",
+      "name": "George Street"
+    },
+    {
+      "slug": "north-street",
+      "name": "North Street"
+    },
+    {
+      "slug": "south-street",
+      "name": "South Street"
+    },
+    {
+      "slug": "west-street",
+      "name": "West Street"
+    },
+    {
+      "slug": "east-street",
+      "name": "East Street"
+    },
+    {
+      "slug": "broad-street",
+      "name": "Broad Street"
+    },
+    {
+      "slug": "springfield-road",
+      "name": "Springfield Road"
+    },
+    {
+      "slug": "richmond-road",
+      "name": "Richmond Road"
+    },
+    {
+      "slug": "boundary-road",
+      "name": "Boundary Road"
+    },
+    {
+      "slug": "stanley-road",
+      "name": "Stanley Road"
+    },
+    {
+      "slug": "green-lane",
+      "name": "Green Lane"
+    },
+    {
+      "slug": "manor-road",
+      "name": "Manor Road"
+    },
+    {
+      "slug": "park-avenue",
+      "name": "Park Avenue"
+    },
+    {
+      "slug": "york-road",
+      "name": "York Road"
+    },
+    {
+      "slug": "school-lane",
+      "name": "School Lane"
+    },
+    {
+      "slug": "meadow-way",
+      "name": "Meadow Way"
+    },
+    {
+      "slug": "heathcote-orchard-close",
+      "name": "Heathcote Orchard Close"
+    },
+    {
+      "slug": "heathcote-cedar-avenue",
+      "name": "Heathcote Cedar Avenue"
+    },
+    {
+      "slug": "oak-lane",
+      "name": "Oak Lane"
+    },
+    {
+      "slug": "elm-grove",
+      "name": "Elm Grove"
+    },
+    {
+      "slug": "pine-close",
+      "name": "Pine Close"
+    },
+    {
+      "slug": "ash-grove",
+      "name": "Ash Grove"
+    },
+    {
+      "slug": "willow-avenue",
+      "name": "Willow Avenue"
+    },
+    {
+      "slug": "birch-road",
+      "name": "Birch Road"
+    },
+    {
+      "slug": "maple-drive",
+      "name": "Maple Drive"
+    },
+    {
+      "slug": "hawthorn-close",
+      "name": "Hawthorn Close"
+    },
+    {
+      "slug": "chestnut-avenue",
+      "name": "Chestnut Avenue"
+    },
+    {
+      "slug": "heathcote-coventry-road",
+      "name": "Heathcote Coventry Road"
+    },
+    {
+      "slug": "warwick-road",
+      "name": "Warwick Road"
+    },
+    {
+      "slug": "kenilworth-road",
+      "name": "Kenilworth Road"
+    },
+    {
+      "slug": "holyhead-road",
+      "name": "Holyhead Road"
+    },
+    {
+      "slug": "foleshill-road",
+      "name": "Foleshill Road"
+    },
+    {
+      "slug": "heathcote-stoney-stanton-road",
+      "name": "Heathcote Stoney Stanton Road"
+    },
+    {
+      "slug": "radford-road",
+      "name": "Radford Road"
+    },
+    {
+      "slug": "coundon-road",
+      "name": "Coundon Road"
+    },
+    {
+      "slug": "barkers-butts-lane",
+      "name": "Barkers Butts Lane"
+    },
+    {
+      "slug": "heathcote-binley-road",
+      "name": "Heathcote Binley Road"
+    }
+  ]
+}

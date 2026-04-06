@@ -1,0 +1,226 @@
+{
+  "areaSlug": "finham",
+  "areaName": "Finham",
+  "streets": [
+    {
+      "slug": "high-street",
+      "name": "High Street"
+    },
+    {
+      "slug": "station-road",
+      "name": "Station Road"
+    },
+    {
+      "slug": "finham-church-road",
+      "name": "Finham Church Road"
+    },
+    {
+      "slug": "victoria-road",
+      "name": "Victoria Road"
+    },
+    {
+      "slug": "london-road",
+      "name": "London Road"
+    },
+    {
+      "slug": "main-street",
+      "name": "Main Street"
+    },
+    {
+      "slug": "park-road",
+      "name": "Park Road"
+    },
+    {
+      "slug": "church-street",
+      "name": "Church Street"
+    },
+    {
+      "slug": "queens-road",
+      "name": "Queens Road"
+    },
+    {
+      "slug": "new-road",
+      "name": "New Road"
+    },
+    {
+      "slug": "grange-road",
+      "name": "Grange Road"
+    },
+    {
+      "slug": "finham-kings-road",
+      "name": "Finham Kings Road"
+    },
+    {
+      "slug": "windsor-avenue",
+      "name": "Windsor Avenue"
+    },
+    {
+      "slug": "chester-road",
+      "name": "Chester Road"
+    },
+    {
+      "slug": "albert-road",
+      "name": "Albert Road"
+    },
+    {
+      "slug": "wellington-street",
+      "name": "Wellington Street"
+    },
+    {
+      "slug": "finham-mill-lane",
+      "name": "Finham Mill Lane"
+    },
+    {
+      "slug": "highfield-road",
+      "name": "Highfield Road"
+    },
+    {
+      "slug": "finham-george-street",
+      "name": "Finham George Street"
+    },
+    {
+      "slug": "finham-north-street",
+      "name": "Finham North Street"
+    },
+    {
+      "slug": "finham-south-street",
+      "name": "Finham South Street"
+    },
+    {
+      "slug": "west-street",
+      "name": "West Street"
+    },
+    {
+      "slug": "east-street",
+      "name": "East Street"
+    },
+    {
+      "slug": "finham-broad-street",
+      "name": "Finham Broad Street"
+    },
+    {
+      "slug": "finham-springfield-road",
+      "name": "Finham Springfield Road"
+    },
+    {
+      "slug": "richmond-road",
+      "name": "Richmond Road"
+    },
+    {
+      "slug": "boundary-road",
+      "name": "Boundary Road"
+    },
+    {
+      "slug": "stanley-road",
+      "name": "Stanley Road"
+    },
+    {
+      "slug": "green-lane",
+      "name": "Green Lane"
+    },
+    {
+      "slug": "manor-road",
+      "name": "Manor Road"
+    },
+    {
+      "slug": "park-avenue",
+      "name": "Park Avenue"
+    },
+    {
+      "slug": "york-road",
+      "name": "York Road"
+    },
+    {
+      "slug": "school-lane",
+      "name": "School Lane"
+    },
+    {
+      "slug": "meadow-way",
+      "name": "Meadow Way"
+    },
+    {
+      "slug": "orchard-close",
+      "name": "Orchard Close"
+    },
+    {
+      "slug": "finham-cedar-avenue",
+      "name": "Finham Cedar Avenue"
+    },
+    {
+      "slug": "oak-lane",
+      "name": "Oak Lane"
+    },
+    {
+      "slug": "elm-grove",
+      "name": "Elm Grove"
+    },
+    {
+      "slug": "pine-close",
+      "name": "Pine Close"
+    },
+    {
+      "slug": "ash-grove",
+      "name": "Ash Grove"
+    },
+    {
+      "slug": "willow-avenue",
+      "name": "Willow Avenue"
+    },
+    {
+      "slug": "birch-road",
+      "name": "Birch Road"
+    },
+    {
+      "slug": "maple-drive",
+      "name": "Maple Drive"
+    },
+    {
+      "slug": "finham-hawthorn-close",
+      "name": "Finham Hawthorn Close"
+    },
+    {
+      "slug": "chestnut-avenue",
+      "name": "Chestnut Avenue"
+    },
+    {
+      "slug": "coventry-road",
+      "name": "Coventry Road"
+    },
+    {
+      "slug": "warwick-road",
+      "name": "Warwick Road"
+    },
+    {
+      "slug": "kenilworth-road",
+      "name": "Kenilworth Road"
+    },
+    {
+      "slug": "holyhead-road",
+      "name": "Holyhead Road"
+    },
+    {
+      "slug": "foleshill-road",
+      "name": "Foleshill Road"
+    },
+    {
+      "slug": "stoney-stanton-road",
+      "name": "Stoney Stanton Road"
+    },
+    {
+      "slug": "radford-road",
+      "name": "Radford Road"
+    },
+    {
+      "slug": "finham-coundon-road",
+      "name": "Finham Coundon Road"
+    },
+    {
+      "slug": "barkers-butts-lane",
+      "name": "Barkers Butts Lane"
+    },
+    {
+      "slug": "finham-binley-road",
+      "name": "Finham Binley Road"
+    }
+  ]
+}
