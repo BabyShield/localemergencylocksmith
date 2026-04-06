@@ -6,6 +6,9 @@ import Footer from '@/components/Footer'
 import { MapPin, ArrowRight, ShieldCheck, Clock, CheckCircle } from 'lucide-react'
 import { notFound } from 'next/navigation'
 
+export const dynamic = 'force-static'
+export const revalidate = false
+
 export async function generateStaticParams() {
   const postcodes = new Set(AREAS.map(a => a.postcode.toLowerCase()))
   return Array.from(postcodes).map(postcode => ({
@@ -18,7 +21,9 @@ interface Props {
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const { postcode } = await params
+  const resolvedParams = await params
+  const postcode = resolvedParams?.postcode
+  if (!postcode) return {}
   const upperPostcode = postcode.toUpperCase()
   
   return {
@@ -28,7 +33,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export default async function PostcodePage({ params }: Props) {
-  const { postcode } = await params
+  const resolvedParams = await params
+  const postcode = resolvedParams?.postcode
+  if (!postcode) notFound()
   const upperPostcode = postcode.toUpperCase()
   
   const relevantAreas = AREAS.filter(a => a.postcode.toLowerCase() === postcode)
