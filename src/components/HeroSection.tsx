@@ -1,4 +1,6 @@
 import { SITE_CONFIG } from '@/data/config'
+import { Suspense } from 'react'
+import PPCHandler from './PPCHandler'
 
 interface HeroSectionProps {
   heading: string
@@ -10,6 +12,9 @@ interface HeroSectionProps {
 export default function HeroSection({ heading, subheading, areaName, compact }: HeroSectionProps) {
   return (
     <section className={`relative overflow-hidden ${compact ? 'py-10 md:py-14' : 'py-14 md:py-24'} px-4 text-white`}>
+      <Suspense fallback={null}>
+         <PPCHandler />
+      </Suspense>
       {/* Background with gradient and subtle pattern */}
       <div className="absolute inset-0 bg-gradient-to-br from-[#0A1628] via-[#0F1B2D] to-[#162438]" />
       <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'url("data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'1\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")' }} />

@@ -50,6 +50,24 @@ const nextConfig: NextConfig = {
         source: '/(.*)',
         headers: securityHeaders,
       },
+      {
+        source: '/areas/:path*',
+        headers: [
+          { key: 'Cache-Control', value: 's-maxage=86400, stale-while-revalidate=2592000' }
+        ],
+      },
+      {
+        source: '/guides/:path*',
+        headers: [
+          { key: 'Cache-Control', value: 's-maxage=86400, stale-while-revalidate=2592000' }
+        ],
+      },
+      {
+        source: '/near-me/:path*',
+        headers: [
+          { key: 'Cache-Control', value: 's-maxage=86400, stale-while-revalidate=2592000' }
+        ],
+      },
     ]
   },
   images: {
