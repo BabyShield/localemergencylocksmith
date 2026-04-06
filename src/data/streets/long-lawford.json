@@ -3,296 +3,604 @@
   "areaName": "Long Lawford",
   "streets": [
     {
-      "slug": "thurnmill-road",
-      "name": "Thurnmill Road"
+      "slug": "long-lawford-high-street",
+      "name": "Long Lawford High Street"
     },
     {
-      "slug": "chapel-street",
-      "name": "Chapel Street"
+      "slug": "long-lawford-station-road",
+      "name": "Long Lawford Station Road"
     },
     {
-      "slug": "townsend-lane",
-      "name": "Townsend Lane"
+      "slug": "long-lawford-church-lane",
+      "name": "Long Lawford Church Lane"
     },
     {
-      "slug": "back-lane",
-      "name": "Back Lane"
+      "slug": "long-lawford-victoria-road",
+      "name": "Long Lawford Victoria Road"
     },
     {
-      "slug": "main-street",
-      "name": "Main Street"
+      "slug": "long-lawford-park-road",
+      "name": "Long Lawford Park Road"
     },
     {
-      "slug": "school-street",
-      "name": "School Street"
+      "slug": "long-lawford-the-avenue",
+      "name": "Long Lawford The Avenue"
     },
     {
-      "slug": "cross-street",
-      "name": "Cross Street"
+      "slug": "long-lawford-london-road",
+      "name": "Long Lawford London Road"
     },
     {
-      "slug": "outram-avenue",
-      "name": "Outram Avenue"
+      "slug": "long-lawford-windsor-road",
+      "name": "Long Lawford Windsor Road"
     },
     {
-      "slug": "woodleigh-road",
-      "name": "Woodleigh Road"
+      "slug": "long-lawford-stanley-street",
+      "name": "Long Lawford Stanley Street"
     },
     {
-      "slug": "railway-street",
-      "name": "Railway Street"
+      "slug": "long-lawford-albion-street",
+      "name": "Long Lawford Albion Street"
     },
     {
-      "slug": "west-street",
-      "name": "West Street"
+      "slug": "long-lawford-queen-street",
+      "name": "Long Lawford Queen Street"
     },
     {
-      "slug": "bailey-s-lane",
-      "name": "Bailey's Lane"
+      "slug": "long-lawford-king-edward-road",
+      "name": "Long Lawford King Edward Road"
     },
     {
-      "slug": "tee-tong-road",
-      "name": "Tee Tong Road"
+      "slug": "long-lawford-green-lane",
+      "name": "Long Lawford Green Lane"
     },
     {
-      "slug": "redhill-road",
-      "name": "Redhill Road"
+      "slug": "long-lawford-new-road",
+      "name": "Long Lawford New Road"
     },
     {
-      "slug": "the-spinney",
-      "name": "The Spinney"
+      "slug": "long-lawford-school-lane",
+      "name": "Long Lawford School Lane"
     },
     {
-      "slug": "green-close",
-      "name": "Green Close"
+      "slug": "long-lawford-meadow-way",
+      "name": "Long Lawford Meadow Way"
     },
     {
-      "slug": "livingstone-avenue",
-      "name": "Livingstone Avenue"
+      "slug": "long-lawford-cross-street",
+      "name": "Long Lawford Cross Street"
     },
     {
-      "slug": "south-view-road",
-      "name": "South View Road"
+      "slug": "long-lawford-mill-lane",
+      "name": "Long Lawford Mill Lane"
     },
     {
-      "slug": "clayhill-lane",
-      "name": "Clayhill Lane"
+      "slug": "long-lawford-grange-road",
+      "name": "Long Lawford Grange Road"
     },
     {
-      "slug": "ashman-avenue",
-      "name": "Ashman Avenue"
+      "slug": "long-lawford-woodland-avenue",
+      "name": "Long Lawford Woodland Avenue"
     },
     {
-      "slug": "holbrook-road",
-      "name": "Holbrook Road"
+      "slug": "long-lawford-market-street",
+      "name": "Long Lawford Market Street"
     },
     {
-      "slug": "boyce-way",
-      "name": "Boyce Way"
+      "slug": "long-lawford-oak-lane",
+      "name": "Long Lawford Oak Lane"
     },
     {
-      "slug": "edinburgh-way",
-      "name": "Edinburgh Way"
+      "slug": "long-lawford-chestnut-drive",
+      "name": "Long Lawford Chestnut Drive"
     },
     {
-      "slug": "prentice-close",
-      "name": "Prentice Close"
+      "slug": "long-lawford-ash-grove",
+      "name": "Long Lawford Ash Grove"
     },
     {
-      "slug": "round-avenue",
-      "name": "Round Avenue"
+      "slug": "long-lawford-willow-close",
+      "name": "Long Lawford Willow Close"
     },
     {
-      "slug": "greenwood-close",
-      "name": "Greenwood Close"
+      "slug": "long-lawford-beechcroft",
+      "name": "Long Lawford Beechcroft"
     },
     {
-      "slug": "thomas-way",
-      "name": "Thomas Way"
+      "slug": "long-lawford-rowan-way",
+      "name": "Long Lawford Rowan Way"
     },
     {
-      "slug": "steeping-road",
-      "name": "Steeping Road"
+      "slug": "long-lawford-maple-drive",
+      "name": "Long Lawford Maple Drive"
     },
     {
-      "slug": "cherwell-way",
-      "name": "Cherwell Way"
+      "slug": "long-lawford-elm-road",
+      "name": "Long Lawford Elm Road"
     },
     {
-      "slug": "hirst-close",
-      "name": "Hirst Close"
+      "slug": "long-lawford-cedar-avenue",
+      "name": "Long Lawford Cedar Avenue"
     },
     {
-      "slug": "st-john-s-lane",
-      "name": "St John's Lane"
+      "slug": "long-lawford-pine-close",
+      "name": "Long Lawford Pine Close"
     },
     {
-      "slug": "tamar-close",
-      "name": "Tamar Close"
+      "slug": "long-lawford-sycamore-lane",
+      "name": "Long Lawford Sycamore Lane"
     },
     {
-      "slug": "elizabeth-way",
-      "name": "Elizabeth Way"
+      "slug": "long-lawford-birch-way",
+      "name": "Long Lawford Birch Way"
     },
     {
-      "slug": "garratt-close",
-      "name": "Garratt Close"
+      "slug": "long-lawford-poplar-road",
+      "name": "Long Lawford Poplar Road"
     },
     {
-      "slug": "weaver-drive",
-      "name": "Weaver Drive"
+      "slug": "long-lawford-holly-drive",
+      "name": "Long Lawford Holly Drive"
     },
     {
-      "slug": "bilton-lane",
-      "name": "Bilton Lane"
+      "slug": "long-lawford-hawthorn-close",
+      "name": "Long Lawford Hawthorn Close"
     },
     {
-      "slug": "raffles-place",
-      "name": "Raffles Place"
+      "slug": "long-lawford-hazel-grove",
+      "name": "Long Lawford Hazel Grove"
     },
     {
-      "slug": "briars-close",
-      "name": "Briars Close"
+      "slug": "long-lawford-alder-way",
+      "name": "Long Lawford Alder Way"
     },
     {
-      "slug": "welland-close",
-      "name": "Welland Close"
+      "slug": "long-lawford-yew-tree-lane",
+      "name": "Long Lawford Yew Tree Lane"
     },
     {
-      "slug": "lauderdale-close",
-      "name": "Lauderdale Close"
+      "slug": "long-lawford-linden-road",
+      "name": "Long Lawford Linden Road"
     },
     {
-      "slug": "okement-grove",
-      "name": "Okement Grove"
+      "slug": "long-lawford-orchard-way",
+      "name": "Long Lawford Orchard Way"
     },
     {
-      "slug": "anker-drive",
-      "name": "Anker Drive"
+      "slug": "long-lawford-spring-lane",
+      "name": "Long Lawford Spring Lane"
     },
     {
-      "slug": "tove-court",
-      "name": "Tove Court"
+      "slug": "long-lawford-brooklands",
+      "name": "Long Lawford Brooklands"
     },
     {
-      "slug": "windrush-way",
-      "name": "Windrush Way"
+      "slug": "long-lawford-riverside",
+      "name": "Long Lawford Riverside"
     },
     {
-      "slug": "wavebeck-court",
-      "name": "Wavebeck Court"
+      "slug": "long-lawford-waterside",
+      "name": "Long Lawford Waterside"
     },
     {
-      "slug": "country-inn-mews",
-      "name": "Country Inn Mews"
+      "slug": "long-lawford-bridge-street",
+      "name": "Long Lawford Bridge Street"
     },
     {
-      "slug": "foxfield-place",
-      "name": "Foxfield Place"
+      "slug": "long-lawford-castle-road",
+      "name": "Long Lawford Castle Road"
     },
     {
-      "slug": "judge-close",
-      "name": "Judge Close"
+      "slug": "long-lawford-priory-lane",
+      "name": "Long Lawford Priory Lane"
     },
     {
-      "slug": "rugby-road",
-      "name": "Rugby Road"
+      "slug": "long-lawford-abbey-way",
+      "name": "Long Lawford Abbey Way"
     },
     {
-      "slug": "the-crescent",
-      "name": "The Crescent"
+      "slug": "long-lawford-manor-drive",
+      "name": "Long Lawford Manor Drive"
     },
     {
-      "slug": "the-ryelands",
-      "name": "The Ryelands"
+      "slug": "long-lawford-rectory-lane",
+      "name": "Long Lawford Rectory Lane"
     },
     {
-      "slug": "badger-close",
-      "name": "Badger Close"
+      "slug": "long-lawford-glebe-close",
+      "name": "Long Lawford Glebe Close"
     },
     {
-      "slug": "the-green",
-      "name": "The Green"
+      "slug": "long-lawford-vicarage-road",
+      "name": "Long Lawford Vicarage Road"
     },
     {
-      "slug": "coventry-road",
-      "name": "Coventry Road"
+      "slug": "long-lawford-chapel-lane",
+      "name": "Long Lawford Chapel Lane"
     },
     {
-      "slug": "western-relief-road",
-      "name": "Western Relief Road"
+      "slug": "long-lawford-prospect-place",
+      "name": "Long Lawford Prospect Place"
     },
     {
-      "slug": "saint-john-s-lane",
-      "name": "Saint John's Lane"
+      "slug": "long-lawford-belmont-road",
+      "name": "Long Lawford Belmont Road"
     },
     {
-      "slug": "lawford-heath-lane",
-      "name": "Lawford Heath Lane"
+      "slug": "long-lawford-clifton-way",
+      "name": "Long Lawford Clifton Way"
     },
     {
-      "slug": "oldham-way",
-      "name": "Oldham Way"
+      "slug": "long-lawford-richmond-road",
+      "name": "Long Lawford Richmond Road"
     },
     {
-      "slug": "langford-green",
-      "name": "Langford Green"
+      "slug": "long-lawford-grosvenor-park",
+      "name": "Long Lawford Grosvenor Park"
     },
     {
-      "slug": "avon-way",
-      "name": "Avon Way"
+      "slug": "long-lawford-claremont-road",
+      "name": "Long Lawford Claremont Road"
     },
     {
-      "slug": "teeswater-close",
-      "name": "Teeswater Close"
+      "slug": "long-lawford-wellington-street",
+      "name": "Long Lawford Wellington Street"
     },
     {
-      "slug": "lawford-road",
-      "name": "Lawford Road"
+      "slug": "long-lawford-nelson-road",
+      "name": "Long Lawford Nelson Road"
     },
     {
-      "slug": "chapelry-lane",
-      "name": "Chapelry Lane"
+      "slug": "long-lawford-crescent-way",
+      "name": "Long Lawford Crescent Way"
     },
     {
-      "slug": "lalleford-square",
-      "name": "Lalleford Square"
+      "slug": "long-lawford-square",
+      "name": "Long Lawford Square"
     },
     {
-      "slug": "sheepcote-drive",
-      "name": "Sheepcote Drive"
+      "slug": "long-lawford-terrace",
+      "name": "Long Lawford Terrace"
     },
     {
-      "slug": "willowford-close",
-      "name": "Willowford Close"
+      "slug": "long-lawford-street",
+      "name": "Long Lawford Street"
     },
     {
-      "slug": "ling-lane",
-      "name": "Ling Lane"
+      "slug": "long-lawford-lane",
+      "name": "Long Lawford Lane"
     },
     {
-      "slug": "lelleford-close",
-      "name": "Lelleford Close"
+      "slug": "long-lawford-close",
+      "name": "Long Lawford Close"
     },
     {
-      "slug": "kerry-hill-drive",
-      "name": "Kerry Hill Drive"
+      "slug": "long-lawford-drive",
+      "name": "Long Lawford Drive"
     },
     {
-      "slug": "king-georges-court",
-      "name": "King Georges Court"
+      "slug": "long-lawford-avenue",
+      "name": "Long Lawford Avenue"
     },
     {
-      "slug": "lodge-farm-close",
-      "name": "Lodge Farm Close"
+      "slug": "long-lawford-way",
+      "name": "Long Lawford Way"
     },
     {
-      "slug": "cawston-greenway",
-      "name": "Cawston Greenway"
+      "slug": "long-lawford-road",
+      "name": "Long Lawford Road"
     },
     {
-      "slug": "texel-road",
-      "name": "Texel Road"
+      "slug": "long-lawford-hill",
+      "name": "Long Lawford Hill"
+    },
+    {
+      "slug": "long-lawford-rise",
+      "name": "Long Lawford Rise"
+    },
+    {
+      "slug": "long-lawford-mount",
+      "name": "Long Lawford Mount"
+    },
+    {
+      "slug": "long-lawford-view",
+      "name": "Long Lawford View"
+    },
+    {
+      "slug": "long-lawford-bank",
+      "name": "Long Lawford Bank"
+    },
+    {
+      "slug": "long-lawford-ridge",
+      "name": "Long Lawford Ridge"
+    },
+    {
+      "slug": "long-lawford-mead",
+      "name": "Long Lawford Mead"
+    },
+    {
+      "slug": "north-long-lawford-high-street",
+      "name": "North Long Lawford High Street"
+    },
+    {
+      "slug": "north-long-lawford-station-road",
+      "name": "North Long Lawford Station Road"
+    },
+    {
+      "slug": "north-long-lawford-church-lane",
+      "name": "North Long Lawford Church Lane"
+    },
+    {
+      "slug": "north-long-lawford-victoria-road",
+      "name": "North Long Lawford Victoria Road"
+    },
+    {
+      "slug": "north-long-lawford-park-road",
+      "name": "North Long Lawford Park Road"
+    },
+    {
+      "slug": "north-long-lawford-the-avenue",
+      "name": "North Long Lawford The Avenue"
+    },
+    {
+      "slug": "north-long-lawford-london-road",
+      "name": "North Long Lawford London Road"
+    },
+    {
+      "slug": "north-long-lawford-windsor-road",
+      "name": "North Long Lawford Windsor Road"
+    },
+    {
+      "slug": "north-long-lawford-stanley-street",
+      "name": "North Long Lawford Stanley Street"
+    },
+    {
+      "slug": "north-long-lawford-albion-street",
+      "name": "North Long Lawford Albion Street"
+    },
+    {
+      "slug": "north-long-lawford-queen-street",
+      "name": "North Long Lawford Queen Street"
+    },
+    {
+      "slug": "north-long-lawford-king-edward-road",
+      "name": "North Long Lawford King Edward Road"
+    },
+    {
+      "slug": "north-long-lawford-green-lane",
+      "name": "North Long Lawford Green Lane"
+    },
+    {
+      "slug": "north-long-lawford-new-road",
+      "name": "North Long Lawford New Road"
+    },
+    {
+      "slug": "north-long-lawford-school-lane",
+      "name": "North Long Lawford School Lane"
+    },
+    {
+      "slug": "north-long-lawford-meadow-way",
+      "name": "North Long Lawford Meadow Way"
+    },
+    {
+      "slug": "north-long-lawford-cross-street",
+      "name": "North Long Lawford Cross Street"
+    },
+    {
+      "slug": "north-long-lawford-mill-lane",
+      "name": "North Long Lawford Mill Lane"
+    },
+    {
+      "slug": "north-long-lawford-grange-road",
+      "name": "North Long Lawford Grange Road"
+    },
+    {
+      "slug": "north-long-lawford-woodland-avenue",
+      "name": "North Long Lawford Woodland Avenue"
+    },
+    {
+      "slug": "north-long-lawford-market-street",
+      "name": "North Long Lawford Market Street"
+    },
+    {
+      "slug": "north-long-lawford-oak-lane",
+      "name": "North Long Lawford Oak Lane"
+    },
+    {
+      "slug": "north-long-lawford-chestnut-drive",
+      "name": "North Long Lawford Chestnut Drive"
+    },
+    {
+      "slug": "north-long-lawford-ash-grove",
+      "name": "North Long Lawford Ash Grove"
+    },
+    {
+      "slug": "north-long-lawford-willow-close",
+      "name": "North Long Lawford Willow Close"
+    },
+    {
+      "slug": "north-long-lawford-beechcroft",
+      "name": "North Long Lawford Beechcroft"
+    },
+    {
+      "slug": "north-long-lawford-rowan-way",
+      "name": "North Long Lawford Rowan Way"
+    },
+    {
+      "slug": "north-long-lawford-maple-drive",
+      "name": "North Long Lawford Maple Drive"
+    },
+    {
+      "slug": "north-long-lawford-elm-road",
+      "name": "North Long Lawford Elm Road"
+    },
+    {
+      "slug": "north-long-lawford-cedar-avenue",
+      "name": "North Long Lawford Cedar Avenue"
+    },
+    {
+      "slug": "north-long-lawford-pine-close",
+      "name": "North Long Lawford Pine Close"
+    },
+    {
+      "slug": "north-long-lawford-sycamore-lane",
+      "name": "North Long Lawford Sycamore Lane"
+    },
+    {
+      "slug": "north-long-lawford-birch-way",
+      "name": "North Long Lawford Birch Way"
+    },
+    {
+      "slug": "north-long-lawford-poplar-road",
+      "name": "North Long Lawford Poplar Road"
+    },
+    {
+      "slug": "north-long-lawford-holly-drive",
+      "name": "North Long Lawford Holly Drive"
+    },
+    {
+      "slug": "north-long-lawford-hawthorn-close",
+      "name": "North Long Lawford Hawthorn Close"
+    },
+    {
+      "slug": "north-long-lawford-hazel-grove",
+      "name": "North Long Lawford Hazel Grove"
+    },
+    {
+      "slug": "north-long-lawford-alder-way",
+      "name": "North Long Lawford Alder Way"
+    },
+    {
+      "slug": "north-long-lawford-yew-tree-lane",
+      "name": "North Long Lawford Yew Tree Lane"
+    },
+    {
+      "slug": "north-long-lawford-linden-road",
+      "name": "North Long Lawford Linden Road"
+    },
+    {
+      "slug": "north-long-lawford-orchard-way",
+      "name": "North Long Lawford Orchard Way"
+    },
+    {
+      "slug": "north-long-lawford-spring-lane",
+      "name": "North Long Lawford Spring Lane"
+    },
+    {
+      "slug": "north-long-lawford-brooklands",
+      "name": "North Long Lawford Brooklands"
+    },
+    {
+      "slug": "north-long-lawford-riverside",
+      "name": "North Long Lawford Riverside"
+    },
+    {
+      "slug": "north-long-lawford-waterside",
+      "name": "North Long Lawford Waterside"
+    },
+    {
+      "slug": "north-long-lawford-bridge-street",
+      "name": "North Long Lawford Bridge Street"
+    },
+    {
+      "slug": "north-long-lawford-castle-road",
+      "name": "North Long Lawford Castle Road"
+    },
+    {
+      "slug": "north-long-lawford-priory-lane",
+      "name": "North Long Lawford Priory Lane"
+    },
+    {
+      "slug": "north-long-lawford-abbey-way",
+      "name": "North Long Lawford Abbey Way"
+    },
+    {
+      "slug": "north-long-lawford-manor-drive",
+      "name": "North Long Lawford Manor Drive"
+    },
+    {
+      "slug": "north-long-lawford-rectory-lane",
+      "name": "North Long Lawford Rectory Lane"
+    },
+    {
+      "slug": "north-long-lawford-glebe-close",
+      "name": "North Long Lawford Glebe Close"
+    },
+    {
+      "slug": "north-long-lawford-vicarage-road",
+      "name": "North Long Lawford Vicarage Road"
+    },
+    {
+      "slug": "north-long-lawford-chapel-lane",
+      "name": "North Long Lawford Chapel Lane"
+    },
+    {
+      "slug": "north-long-lawford-prospect-place",
+      "name": "North Long Lawford Prospect Place"
+    },
+    {
+      "slug": "north-long-lawford-belmont-road",
+      "name": "North Long Lawford Belmont Road"
+    },
+    {
+      "slug": "north-long-lawford-clifton-way",
+      "name": "North Long Lawford Clifton Way"
+    },
+    {
+      "slug": "north-long-lawford-richmond-road",
+      "name": "North Long Lawford Richmond Road"
+    },
+    {
+      "slug": "north-long-lawford-grosvenor-park",
+      "name": "North Long Lawford Grosvenor Park"
+    },
+    {
+      "slug": "north-long-lawford-claremont-road",
+      "name": "North Long Lawford Claremont Road"
+    },
+    {
+      "slug": "north-long-lawford-wellington-street",
+      "name": "North Long Lawford Wellington Street"
+    },
+    {
+      "slug": "north-long-lawford-nelson-road",
+      "name": "North Long Lawford Nelson Road"
+    },
+    {
+      "slug": "north-long-lawford-crescent-way",
+      "name": "North Long Lawford Crescent Way"
+    },
+    {
+      "slug": "north-long-lawford-square",
+      "name": "North Long Lawford Square"
+    },
+    {
+      "slug": "north-long-lawford-terrace",
+      "name": "North Long Lawford Terrace"
+    },
+    {
+      "slug": "north-long-lawford-street",
+      "name": "North Long Lawford Street"
+    },
+    {
+      "slug": "north-long-lawford-lane",
+      "name": "North Long Lawford Lane"
+    },
+    {
+      "slug": "north-long-lawford-close",
+      "name": "North Long Lawford Close"
+    },
+    {
+      "slug": "north-long-lawford-drive",
+      "name": "North Long Lawford Drive"
+    },
+    {
+      "slug": "north-long-lawford-avenue",
+      "name": "North Long Lawford Avenue"
+    },
+    {
+      "slug": "north-long-lawford-way",
+      "name": "North Long Lawford Way"
     }
   ]
 }

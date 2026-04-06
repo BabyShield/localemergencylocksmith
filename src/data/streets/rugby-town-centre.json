@@ -1,0 +1,606 @@
+{
+  "areaSlug": "rugby-town-centre",
+  "areaName": "Rugby Town Centre",
+  "streets": [
+    {
+      "slug": "rugby-town-centre-high-street",
+      "name": "Rugby Town Centre High Street"
+    },
+    {
+      "slug": "rugby-town-centre-station-road",
+      "name": "Rugby Town Centre Station Road"
+    },
+    {
+      "slug": "rugby-town-centre-church-lane",
+      "name": "Rugby Town Centre Church Lane"
+    },
+    {
+      "slug": "rugby-town-centre-victoria-road",
+      "name": "Rugby Town Centre Victoria Road"
+    },
+    {
+      "slug": "rugby-town-centre-park-road",
+      "name": "Rugby Town Centre Park Road"
+    },
+    {
+      "slug": "rugby-town-centre-the-avenue",
+      "name": "Rugby Town Centre The Avenue"
+    },
+    {
+      "slug": "rugby-town-centre-london-road",
+      "name": "Rugby Town Centre London Road"
+    },
+    {
+      "slug": "rugby-town-centre-windsor-road",
+      "name": "Rugby Town Centre Windsor Road"
+    },
+    {
+      "slug": "rugby-town-centre-stanley-street",
+      "name": "Rugby Town Centre Stanley Street"
+    },
+    {
+      "slug": "rugby-town-centre-albion-street",
+      "name": "Rugby Town Centre Albion Street"
+    },
+    {
+      "slug": "rugby-town-centre-queen-street",
+      "name": "Rugby Town Centre Queen Street"
+    },
+    {
+      "slug": "rugby-town-centre-king-edward-road",
+      "name": "Rugby Town Centre King Edward Road"
+    },
+    {
+      "slug": "rugby-town-centre-green-lane",
+      "name": "Rugby Town Centre Green Lane"
+    },
+    {
+      "slug": "rugby-town-centre-new-road",
+      "name": "Rugby Town Centre New Road"
+    },
+    {
+      "slug": "rugby-town-centre-school-lane",
+      "name": "Rugby Town Centre School Lane"
+    },
+    {
+      "slug": "rugby-town-centre-meadow-way",
+      "name": "Rugby Town Centre Meadow Way"
+    },
+    {
+      "slug": "rugby-town-centre-cross-street",
+      "name": "Rugby Town Centre Cross Street"
+    },
+    {
+      "slug": "rugby-town-centre-mill-lane",
+      "name": "Rugby Town Centre Mill Lane"
+    },
+    {
+      "slug": "rugby-town-centre-grange-road",
+      "name": "Rugby Town Centre Grange Road"
+    },
+    {
+      "slug": "rugby-town-centre-woodland-avenue",
+      "name": "Rugby Town Centre Woodland Avenue"
+    },
+    {
+      "slug": "rugby-town-centre-market-street",
+      "name": "Rugby Town Centre Market Street"
+    },
+    {
+      "slug": "rugby-town-centre-oak-lane",
+      "name": "Rugby Town Centre Oak Lane"
+    },
+    {
+      "slug": "rugby-town-centre-chestnut-drive",
+      "name": "Rugby Town Centre Chestnut Drive"
+    },
+    {
+      "slug": "rugby-town-centre-ash-grove",
+      "name": "Rugby Town Centre Ash Grove"
+    },
+    {
+      "slug": "rugby-town-centre-willow-close",
+      "name": "Rugby Town Centre Willow Close"
+    },
+    {
+      "slug": "rugby-town-centre-beechcroft",
+      "name": "Rugby Town Centre Beechcroft"
+    },
+    {
+      "slug": "rugby-town-centre-rowan-way",
+      "name": "Rugby Town Centre Rowan Way"
+    },
+    {
+      "slug": "rugby-town-centre-maple-drive",
+      "name": "Rugby Town Centre Maple Drive"
+    },
+    {
+      "slug": "rugby-town-centre-elm-road",
+      "name": "Rugby Town Centre Elm Road"
+    },
+    {
+      "slug": "rugby-town-centre-cedar-avenue",
+      "name": "Rugby Town Centre Cedar Avenue"
+    },
+    {
+      "slug": "rugby-town-centre-pine-close",
+      "name": "Rugby Town Centre Pine Close"
+    },
+    {
+      "slug": "rugby-town-centre-sycamore-lane",
+      "name": "Rugby Town Centre Sycamore Lane"
+    },
+    {
+      "slug": "rugby-town-centre-birch-way",
+      "name": "Rugby Town Centre Birch Way"
+    },
+    {
+      "slug": "rugby-town-centre-poplar-road",
+      "name": "Rugby Town Centre Poplar Road"
+    },
+    {
+      "slug": "rugby-town-centre-holly-drive",
+      "name": "Rugby Town Centre Holly Drive"
+    },
+    {
+      "slug": "rugby-town-centre-hawthorn-close",
+      "name": "Rugby Town Centre Hawthorn Close"
+    },
+    {
+      "slug": "rugby-town-centre-hazel-grove",
+      "name": "Rugby Town Centre Hazel Grove"
+    },
+    {
+      "slug": "rugby-town-centre-alder-way",
+      "name": "Rugby Town Centre Alder Way"
+    },
+    {
+      "slug": "rugby-town-centre-yew-tree-lane",
+      "name": "Rugby Town Centre Yew Tree Lane"
+    },
+    {
+      "slug": "rugby-town-centre-linden-road",
+      "name": "Rugby Town Centre Linden Road"
+    },
+    {
+      "slug": "rugby-town-centre-orchard-way",
+      "name": "Rugby Town Centre Orchard Way"
+    },
+    {
+      "slug": "rugby-town-centre-spring-lane",
+      "name": "Rugby Town Centre Spring Lane"
+    },
+    {
+      "slug": "rugby-town-centre-brooklands",
+      "name": "Rugby Town Centre Brooklands"
+    },
+    {
+      "slug": "rugby-town-centre-riverside",
+      "name": "Rugby Town Centre Riverside"
+    },
+    {
+      "slug": "rugby-town-centre-waterside",
+      "name": "Rugby Town Centre Waterside"
+    },
+    {
+      "slug": "rugby-town-centre-bridge-street",
+      "name": "Rugby Town Centre Bridge Street"
+    },
+    {
+      "slug": "rugby-town-centre-castle-road",
+      "name": "Rugby Town Centre Castle Road"
+    },
+    {
+      "slug": "rugby-town-centre-priory-lane",
+      "name": "Rugby Town Centre Priory Lane"
+    },
+    {
+      "slug": "rugby-town-centre-abbey-way",
+      "name": "Rugby Town Centre Abbey Way"
+    },
+    {
+      "slug": "rugby-town-centre-manor-drive",
+      "name": "Rugby Town Centre Manor Drive"
+    },
+    {
+      "slug": "rugby-town-centre-rectory-lane",
+      "name": "Rugby Town Centre Rectory Lane"
+    },
+    {
+      "slug": "rugby-town-centre-glebe-close",
+      "name": "Rugby Town Centre Glebe Close"
+    },
+    {
+      "slug": "rugby-town-centre-vicarage-road",
+      "name": "Rugby Town Centre Vicarage Road"
+    },
+    {
+      "slug": "rugby-town-centre-chapel-lane",
+      "name": "Rugby Town Centre Chapel Lane"
+    },
+    {
+      "slug": "rugby-town-centre-prospect-place",
+      "name": "Rugby Town Centre Prospect Place"
+    },
+    {
+      "slug": "rugby-town-centre-belmont-road",
+      "name": "Rugby Town Centre Belmont Road"
+    },
+    {
+      "slug": "rugby-town-centre-clifton-way",
+      "name": "Rugby Town Centre Clifton Way"
+    },
+    {
+      "slug": "rugby-town-centre-richmond-road",
+      "name": "Rugby Town Centre Richmond Road"
+    },
+    {
+      "slug": "rugby-town-centre-grosvenor-park",
+      "name": "Rugby Town Centre Grosvenor Park"
+    },
+    {
+      "slug": "rugby-town-centre-claremont-road",
+      "name": "Rugby Town Centre Claremont Road"
+    },
+    {
+      "slug": "rugby-town-centre-wellington-street",
+      "name": "Rugby Town Centre Wellington Street"
+    },
+    {
+      "slug": "rugby-town-centre-nelson-road",
+      "name": "Rugby Town Centre Nelson Road"
+    },
+    {
+      "slug": "rugby-town-centre-crescent-way",
+      "name": "Rugby Town Centre Crescent Way"
+    },
+    {
+      "slug": "rugby-town-centre-square",
+      "name": "Rugby Town Centre Square"
+    },
+    {
+      "slug": "rugby-town-centre-terrace",
+      "name": "Rugby Town Centre Terrace"
+    },
+    {
+      "slug": "rugby-town-centre-street",
+      "name": "Rugby Town Centre Street"
+    },
+    {
+      "slug": "rugby-town-centre-lane",
+      "name": "Rugby Town Centre Lane"
+    },
+    {
+      "slug": "rugby-town-centre-close",
+      "name": "Rugby Town Centre Close"
+    },
+    {
+      "slug": "rugby-town-centre-drive",
+      "name": "Rugby Town Centre Drive"
+    },
+    {
+      "slug": "rugby-town-centre-avenue",
+      "name": "Rugby Town Centre Avenue"
+    },
+    {
+      "slug": "rugby-town-centre-way",
+      "name": "Rugby Town Centre Way"
+    },
+    {
+      "slug": "rugby-town-centre-road",
+      "name": "Rugby Town Centre Road"
+    },
+    {
+      "slug": "rugby-town-centre-hill",
+      "name": "Rugby Town Centre Hill"
+    },
+    {
+      "slug": "rugby-town-centre-rise",
+      "name": "Rugby Town Centre Rise"
+    },
+    {
+      "slug": "rugby-town-centre-mount",
+      "name": "Rugby Town Centre Mount"
+    },
+    {
+      "slug": "rugby-town-centre-view",
+      "name": "Rugby Town Centre View"
+    },
+    {
+      "slug": "rugby-town-centre-bank",
+      "name": "Rugby Town Centre Bank"
+    },
+    {
+      "slug": "rugby-town-centre-ridge",
+      "name": "Rugby Town Centre Ridge"
+    },
+    {
+      "slug": "rugby-town-centre-mead",
+      "name": "Rugby Town Centre Mead"
+    },
+    {
+      "slug": "north-rugby-town-centre-high-street",
+      "name": "North Rugby Town Centre High Street"
+    },
+    {
+      "slug": "north-rugby-town-centre-station-road",
+      "name": "North Rugby Town Centre Station Road"
+    },
+    {
+      "slug": "north-rugby-town-centre-church-lane",
+      "name": "North Rugby Town Centre Church Lane"
+    },
+    {
+      "slug": "north-rugby-town-centre-victoria-road",
+      "name": "North Rugby Town Centre Victoria Road"
+    },
+    {
+      "slug": "north-rugby-town-centre-park-road",
+      "name": "North Rugby Town Centre Park Road"
+    },
+    {
+      "slug": "north-rugby-town-centre-the-avenue",
+      "name": "North Rugby Town Centre The Avenue"
+    },
+    {
+      "slug": "north-rugby-town-centre-london-road",
+      "name": "North Rugby Town Centre London Road"
+    },
+    {
+      "slug": "north-rugby-town-centre-windsor-road",
+      "name": "North Rugby Town Centre Windsor Road"
+    },
+    {
+      "slug": "north-rugby-town-centre-stanley-street",
+      "name": "North Rugby Town Centre Stanley Street"
+    },
+    {
+      "slug": "north-rugby-town-centre-albion-street",
+      "name": "North Rugby Town Centre Albion Street"
+    },
+    {
+      "slug": "north-rugby-town-centre-queen-street",
+      "name": "North Rugby Town Centre Queen Street"
+    },
+    {
+      "slug": "north-rugby-town-centre-king-edward-road",
+      "name": "North Rugby Town Centre King Edward Road"
+    },
+    {
+      "slug": "north-rugby-town-centre-green-lane",
+      "name": "North Rugby Town Centre Green Lane"
+    },
+    {
+      "slug": "north-rugby-town-centre-new-road",
+      "name": "North Rugby Town Centre New Road"
+    },
+    {
+      "slug": "north-rugby-town-centre-school-lane",
+      "name": "North Rugby Town Centre School Lane"
+    },
+    {
+      "slug": "north-rugby-town-centre-meadow-way",
+      "name": "North Rugby Town Centre Meadow Way"
+    },
+    {
+      "slug": "north-rugby-town-centre-cross-street",
+      "name": "North Rugby Town Centre Cross Street"
+    },
+    {
+      "slug": "north-rugby-town-centre-mill-lane",
+      "name": "North Rugby Town Centre Mill Lane"
+    },
+    {
+      "slug": "north-rugby-town-centre-grange-road",
+      "name": "North Rugby Town Centre Grange Road"
+    },
+    {
+      "slug": "north-rugby-town-centre-woodland-avenue",
+      "name": "North Rugby Town Centre Woodland Avenue"
+    },
+    {
+      "slug": "north-rugby-town-centre-market-street",
+      "name": "North Rugby Town Centre Market Street"
+    },
+    {
+      "slug": "north-rugby-town-centre-oak-lane",
+      "name": "North Rugby Town Centre Oak Lane"
+    },
+    {
+      "slug": "north-rugby-town-centre-chestnut-drive",
+      "name": "North Rugby Town Centre Chestnut Drive"
+    },
+    {
+      "slug": "north-rugby-town-centre-ash-grove",
+      "name": "North Rugby Town Centre Ash Grove"
+    },
+    {
+      "slug": "north-rugby-town-centre-willow-close",
+      "name": "North Rugby Town Centre Willow Close"
+    },
+    {
+      "slug": "north-rugby-town-centre-beechcroft",
+      "name": "North Rugby Town Centre Beechcroft"
+    },
+    {
+      "slug": "north-rugby-town-centre-rowan-way",
+      "name": "North Rugby Town Centre Rowan Way"
+    },
+    {
+      "slug": "north-rugby-town-centre-maple-drive",
+      "name": "North Rugby Town Centre Maple Drive"
+    },
+    {
+      "slug": "north-rugby-town-centre-elm-road",
+      "name": "North Rugby Town Centre Elm Road"
+    },
+    {
+      "slug": "north-rugby-town-centre-cedar-avenue",
+      "name": "North Rugby Town Centre Cedar Avenue"
+    },
+    {
+      "slug": "north-rugby-town-centre-pine-close",
+      "name": "North Rugby Town Centre Pine Close"
+    },
+    {
+      "slug": "north-rugby-town-centre-sycamore-lane",
+      "name": "North Rugby Town Centre Sycamore Lane"
+    },
+    {
+      "slug": "north-rugby-town-centre-birch-way",
+      "name": "North Rugby Town Centre Birch Way"
+    },
+    {
+      "slug": "north-rugby-town-centre-poplar-road",
+      "name": "North Rugby Town Centre Poplar Road"
+    },
+    {
+      "slug": "north-rugby-town-centre-holly-drive",
+      "name": "North Rugby Town Centre Holly Drive"
+    },
+    {
+      "slug": "north-rugby-town-centre-hawthorn-close",
+      "name": "North Rugby Town Centre Hawthorn Close"
+    },
+    {
+      "slug": "north-rugby-town-centre-hazel-grove",
+      "name": "North Rugby Town Centre Hazel Grove"
+    },
+    {
+      "slug": "north-rugby-town-centre-alder-way",
+      "name": "North Rugby Town Centre Alder Way"
+    },
+    {
+      "slug": "north-rugby-town-centre-yew-tree-lane",
+      "name": "North Rugby Town Centre Yew Tree Lane"
+    },
+    {
+      "slug": "north-rugby-town-centre-linden-road",
+      "name": "North Rugby Town Centre Linden Road"
+    },
+    {
+      "slug": "north-rugby-town-centre-orchard-way",
+      "name": "North Rugby Town Centre Orchard Way"
+    },
+    {
+      "slug": "north-rugby-town-centre-spring-lane",
+      "name": "North Rugby Town Centre Spring Lane"
+    },
+    {
+      "slug": "north-rugby-town-centre-brooklands",
+      "name": "North Rugby Town Centre Brooklands"
+    },
+    {
+      "slug": "north-rugby-town-centre-riverside",
+      "name": "North Rugby Town Centre Riverside"
+    },
+    {
+      "slug": "north-rugby-town-centre-waterside",
+      "name": "North Rugby Town Centre Waterside"
+    },
+    {
+      "slug": "north-rugby-town-centre-bridge-street",
+      "name": "North Rugby Town Centre Bridge Street"
+    },
+    {
+      "slug": "north-rugby-town-centre-castle-road",
+      "name": "North Rugby Town Centre Castle Road"
+    },
+    {
+      "slug": "north-rugby-town-centre-priory-lane",
+      "name": "North Rugby Town Centre Priory Lane"
+    },
+    {
+      "slug": "north-rugby-town-centre-abbey-way",
+      "name": "North Rugby Town Centre Abbey Way"
+    },
+    {
+      "slug": "north-rugby-town-centre-manor-drive",
+      "name": "North Rugby Town Centre Manor Drive"
+    },
+    {
+      "slug": "north-rugby-town-centre-rectory-lane",
+      "name": "North Rugby Town Centre Rectory Lane"
+    },
+    {
+      "slug": "north-rugby-town-centre-glebe-close",
+      "name": "North Rugby Town Centre Glebe Close"
+    },
+    {
+      "slug": "north-rugby-town-centre-vicarage-road",
+      "name": "North Rugby Town Centre Vicarage Road"
+    },
+    {
+      "slug": "north-rugby-town-centre-chapel-lane",
+      "name": "North Rugby Town Centre Chapel Lane"
+    },
+    {
+      "slug": "north-rugby-town-centre-prospect-place",
+      "name": "North Rugby Town Centre Prospect Place"
+    },
+    {
+      "slug": "north-rugby-town-centre-belmont-road",
+      "name": "North Rugby Town Centre Belmont Road"
+    },
+    {
+      "slug": "north-rugby-town-centre-clifton-way",
+      "name": "North Rugby Town Centre Clifton Way"
+    },
+    {
+      "slug": "north-rugby-town-centre-richmond-road",
+      "name": "North Rugby Town Centre Richmond Road"
+    },
+    {
+      "slug": "north-rugby-town-centre-grosvenor-park",
+      "name": "North Rugby Town Centre Grosvenor Park"
+    },
+    {
+      "slug": "north-rugby-town-centre-claremont-road",
+      "name": "North Rugby Town Centre Claremont Road"
+    },
+    {
+      "slug": "north-rugby-town-centre-wellington-street",
+      "name": "North Rugby Town Centre Wellington Street"
+    },
+    {
+      "slug": "north-rugby-town-centre-nelson-road",
+      "name": "North Rugby Town Centre Nelson Road"
+    },
+    {
+      "slug": "north-rugby-town-centre-crescent-way",
+      "name": "North Rugby Town Centre Crescent Way"
+    },
+    {
+      "slug": "north-rugby-town-centre-square",
+      "name": "North Rugby Town Centre Square"
+    },
+    {
+      "slug": "north-rugby-town-centre-terrace",
+      "name": "North Rugby Town Centre Terrace"
+    },
+    {
+      "slug": "north-rugby-town-centre-street",
+      "name": "North Rugby Town Centre Street"
+    },
+    {
+      "slug": "north-rugby-town-centre-lane",
+      "name": "North Rugby Town Centre Lane"
+    },
+    {
+      "slug": "north-rugby-town-centre-close",
+      "name": "North Rugby Town Centre Close"
+    },
+    {
+      "slug": "north-rugby-town-centre-drive",
+      "name": "North Rugby Town Centre Drive"
+    },
+    {
+      "slug": "north-rugby-town-centre-avenue",
+      "name": "North Rugby Town Centre Avenue"
+    },
+    {
+      "slug": "north-rugby-town-centre-way",
+      "name": "North Rugby Town Centre Way"
+    }
+  ]
+}

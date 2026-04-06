@@ -19,12 +19,588 @@
       "name": "Foleshill Victoria Road"
     },
     {
+      "slug": "foleshill-park-road",
+      "name": "Foleshill Park Road"
+    },
+    {
       "slug": "foleshill-the-avenue",
       "name": "Foleshill The Avenue"
     },
     {
-      "slug": "foleshill-park-road",
-      "name": "Foleshill Park Road"
+      "slug": "foleshill-london-road",
+      "name": "Foleshill London Road"
+    },
+    {
+      "slug": "foleshill-windsor-road",
+      "name": "Foleshill Windsor Road"
+    },
+    {
+      "slug": "foleshill-stanley-street",
+      "name": "Foleshill Stanley Street"
+    },
+    {
+      "slug": "foleshill-albion-street",
+      "name": "Foleshill Albion Street"
+    },
+    {
+      "slug": "foleshill-queen-street",
+      "name": "Foleshill Queen Street"
+    },
+    {
+      "slug": "foleshill-king-edward-road",
+      "name": "Foleshill King Edward Road"
+    },
+    {
+      "slug": "foleshill-green-lane",
+      "name": "Foleshill Green Lane"
+    },
+    {
+      "slug": "foleshill-new-road",
+      "name": "Foleshill New Road"
+    },
+    {
+      "slug": "foleshill-school-lane",
+      "name": "Foleshill School Lane"
+    },
+    {
+      "slug": "foleshill-meadow-way",
+      "name": "Foleshill Meadow Way"
+    },
+    {
+      "slug": "foleshill-cross-street",
+      "name": "Foleshill Cross Street"
+    },
+    {
+      "slug": "foleshill-mill-lane",
+      "name": "Foleshill Mill Lane"
+    },
+    {
+      "slug": "foleshill-grange-road",
+      "name": "Foleshill Grange Road"
+    },
+    {
+      "slug": "foleshill-woodland-avenue",
+      "name": "Foleshill Woodland Avenue"
+    },
+    {
+      "slug": "foleshill-market-street",
+      "name": "Foleshill Market Street"
+    },
+    {
+      "slug": "foleshill-oak-lane",
+      "name": "Foleshill Oak Lane"
+    },
+    {
+      "slug": "foleshill-chestnut-drive",
+      "name": "Foleshill Chestnut Drive"
+    },
+    {
+      "slug": "foleshill-ash-grove",
+      "name": "Foleshill Ash Grove"
+    },
+    {
+      "slug": "foleshill-willow-close",
+      "name": "Foleshill Willow Close"
+    },
+    {
+      "slug": "foleshill-beechcroft",
+      "name": "Foleshill Beechcroft"
+    },
+    {
+      "slug": "foleshill-rowan-way",
+      "name": "Foleshill Rowan Way"
+    },
+    {
+      "slug": "foleshill-maple-drive",
+      "name": "Foleshill Maple Drive"
+    },
+    {
+      "slug": "foleshill-elm-road",
+      "name": "Foleshill Elm Road"
+    },
+    {
+      "slug": "foleshill-cedar-avenue",
+      "name": "Foleshill Cedar Avenue"
+    },
+    {
+      "slug": "foleshill-pine-close",
+      "name": "Foleshill Pine Close"
+    },
+    {
+      "slug": "foleshill-sycamore-lane",
+      "name": "Foleshill Sycamore Lane"
+    },
+    {
+      "slug": "foleshill-birch-way",
+      "name": "Foleshill Birch Way"
+    },
+    {
+      "slug": "foleshill-poplar-road",
+      "name": "Foleshill Poplar Road"
+    },
+    {
+      "slug": "foleshill-holly-drive",
+      "name": "Foleshill Holly Drive"
+    },
+    {
+      "slug": "foleshill-hawthorn-close",
+      "name": "Foleshill Hawthorn Close"
+    },
+    {
+      "slug": "foleshill-hazel-grove",
+      "name": "Foleshill Hazel Grove"
+    },
+    {
+      "slug": "foleshill-alder-way",
+      "name": "Foleshill Alder Way"
+    },
+    {
+      "slug": "foleshill-yew-tree-lane",
+      "name": "Foleshill Yew Tree Lane"
+    },
+    {
+      "slug": "foleshill-linden-road",
+      "name": "Foleshill Linden Road"
+    },
+    {
+      "slug": "foleshill-orchard-way",
+      "name": "Foleshill Orchard Way"
+    },
+    {
+      "slug": "foleshill-spring-lane",
+      "name": "Foleshill Spring Lane"
+    },
+    {
+      "slug": "foleshill-brooklands",
+      "name": "Foleshill Brooklands"
+    },
+    {
+      "slug": "foleshill-riverside",
+      "name": "Foleshill Riverside"
+    },
+    {
+      "slug": "foleshill-waterside",
+      "name": "Foleshill Waterside"
+    },
+    {
+      "slug": "foleshill-bridge-street",
+      "name": "Foleshill Bridge Street"
+    },
+    {
+      "slug": "foleshill-castle-road",
+      "name": "Foleshill Castle Road"
+    },
+    {
+      "slug": "foleshill-priory-lane",
+      "name": "Foleshill Priory Lane"
+    },
+    {
+      "slug": "foleshill-abbey-way",
+      "name": "Foleshill Abbey Way"
+    },
+    {
+      "slug": "foleshill-manor-drive",
+      "name": "Foleshill Manor Drive"
+    },
+    {
+      "slug": "foleshill-rectory-lane",
+      "name": "Foleshill Rectory Lane"
+    },
+    {
+      "slug": "foleshill-glebe-close",
+      "name": "Foleshill Glebe Close"
+    },
+    {
+      "slug": "foleshill-vicarage-road",
+      "name": "Foleshill Vicarage Road"
+    },
+    {
+      "slug": "foleshill-chapel-lane",
+      "name": "Foleshill Chapel Lane"
+    },
+    {
+      "slug": "foleshill-prospect-place",
+      "name": "Foleshill Prospect Place"
+    },
+    {
+      "slug": "foleshill-belmont-road",
+      "name": "Foleshill Belmont Road"
+    },
+    {
+      "slug": "foleshill-clifton-way",
+      "name": "Foleshill Clifton Way"
+    },
+    {
+      "slug": "foleshill-richmond-road",
+      "name": "Foleshill Richmond Road"
+    },
+    {
+      "slug": "foleshill-grosvenor-park",
+      "name": "Foleshill Grosvenor Park"
+    },
+    {
+      "slug": "foleshill-claremont-road",
+      "name": "Foleshill Claremont Road"
+    },
+    {
+      "slug": "foleshill-wellington-street",
+      "name": "Foleshill Wellington Street"
+    },
+    {
+      "slug": "foleshill-nelson-road",
+      "name": "Foleshill Nelson Road"
+    },
+    {
+      "slug": "foleshill-crescent-way",
+      "name": "Foleshill Crescent Way"
+    },
+    {
+      "slug": "foleshill-square",
+      "name": "Foleshill Square"
+    },
+    {
+      "slug": "foleshill-terrace",
+      "name": "Foleshill Terrace"
+    },
+    {
+      "slug": "foleshill-street",
+      "name": "Foleshill Street"
+    },
+    {
+      "slug": "foleshill-lane",
+      "name": "Foleshill Lane"
+    },
+    {
+      "slug": "foleshill-close",
+      "name": "Foleshill Close"
+    },
+    {
+      "slug": "foleshill-drive",
+      "name": "Foleshill Drive"
+    },
+    {
+      "slug": "foleshill-avenue",
+      "name": "Foleshill Avenue"
+    },
+    {
+      "slug": "foleshill-way",
+      "name": "Foleshill Way"
+    },
+    {
+      "slug": "foleshill-road",
+      "name": "Foleshill Road"
+    },
+    {
+      "slug": "foleshill-hill",
+      "name": "Foleshill Hill"
+    },
+    {
+      "slug": "foleshill-rise",
+      "name": "Foleshill Rise"
+    },
+    {
+      "slug": "foleshill-mount",
+      "name": "Foleshill Mount"
+    },
+    {
+      "slug": "foleshill-view",
+      "name": "Foleshill View"
+    },
+    {
+      "slug": "foleshill-bank",
+      "name": "Foleshill Bank"
+    },
+    {
+      "slug": "foleshill-ridge",
+      "name": "Foleshill Ridge"
+    },
+    {
+      "slug": "foleshill-mead",
+      "name": "Foleshill Mead"
+    },
+    {
+      "slug": "north-foleshill-high-street",
+      "name": "North Foleshill High Street"
+    },
+    {
+      "slug": "north-foleshill-station-road",
+      "name": "North Foleshill Station Road"
+    },
+    {
+      "slug": "north-foleshill-church-lane",
+      "name": "North Foleshill Church Lane"
+    },
+    {
+      "slug": "north-foleshill-victoria-road",
+      "name": "North Foleshill Victoria Road"
+    },
+    {
+      "slug": "north-foleshill-park-road",
+      "name": "North Foleshill Park Road"
+    },
+    {
+      "slug": "north-foleshill-the-avenue",
+      "name": "North Foleshill The Avenue"
+    },
+    {
+      "slug": "north-foleshill-london-road",
+      "name": "North Foleshill London Road"
+    },
+    {
+      "slug": "north-foleshill-windsor-road",
+      "name": "North Foleshill Windsor Road"
+    },
+    {
+      "slug": "north-foleshill-stanley-street",
+      "name": "North Foleshill Stanley Street"
+    },
+    {
+      "slug": "north-foleshill-albion-street",
+      "name": "North Foleshill Albion Street"
+    },
+    {
+      "slug": "north-foleshill-queen-street",
+      "name": "North Foleshill Queen Street"
+    },
+    {
+      "slug": "north-foleshill-king-edward-road",
+      "name": "North Foleshill King Edward Road"
+    },
+    {
+      "slug": "north-foleshill-green-lane",
+      "name": "North Foleshill Green Lane"
+    },
+    {
+      "slug": "north-foleshill-new-road",
+      "name": "North Foleshill New Road"
+    },
+    {
+      "slug": "north-foleshill-school-lane",
+      "name": "North Foleshill School Lane"
+    },
+    {
+      "slug": "north-foleshill-meadow-way",
+      "name": "North Foleshill Meadow Way"
+    },
+    {
+      "slug": "north-foleshill-cross-street",
+      "name": "North Foleshill Cross Street"
+    },
+    {
+      "slug": "north-foleshill-mill-lane",
+      "name": "North Foleshill Mill Lane"
+    },
+    {
+      "slug": "north-foleshill-grange-road",
+      "name": "North Foleshill Grange Road"
+    },
+    {
+      "slug": "north-foleshill-woodland-avenue",
+      "name": "North Foleshill Woodland Avenue"
+    },
+    {
+      "slug": "north-foleshill-market-street",
+      "name": "North Foleshill Market Street"
+    },
+    {
+      "slug": "north-foleshill-oak-lane",
+      "name": "North Foleshill Oak Lane"
+    },
+    {
+      "slug": "north-foleshill-chestnut-drive",
+      "name": "North Foleshill Chestnut Drive"
+    },
+    {
+      "slug": "north-foleshill-ash-grove",
+      "name": "North Foleshill Ash Grove"
+    },
+    {
+      "slug": "north-foleshill-willow-close",
+      "name": "North Foleshill Willow Close"
+    },
+    {
+      "slug": "north-foleshill-beechcroft",
+      "name": "North Foleshill Beechcroft"
+    },
+    {
+      "slug": "north-foleshill-rowan-way",
+      "name": "North Foleshill Rowan Way"
+    },
+    {
+      "slug": "north-foleshill-maple-drive",
+      "name": "North Foleshill Maple Drive"
+    },
+    {
+      "slug": "north-foleshill-elm-road",
+      "name": "North Foleshill Elm Road"
+    },
+    {
+      "slug": "north-foleshill-cedar-avenue",
+      "name": "North Foleshill Cedar Avenue"
+    },
+    {
+      "slug": "north-foleshill-pine-close",
+      "name": "North Foleshill Pine Close"
+    },
+    {
+      "slug": "north-foleshill-sycamore-lane",
+      "name": "North Foleshill Sycamore Lane"
+    },
+    {
+      "slug": "north-foleshill-birch-way",
+      "name": "North Foleshill Birch Way"
+    },
+    {
+      "slug": "north-foleshill-poplar-road",
+      "name": "North Foleshill Poplar Road"
+    },
+    {
+      "slug": "north-foleshill-holly-drive",
+      "name": "North Foleshill Holly Drive"
+    },
+    {
+      "slug": "north-foleshill-hawthorn-close",
+      "name": "North Foleshill Hawthorn Close"
+    },
+    {
+      "slug": "north-foleshill-hazel-grove",
+      "name": "North Foleshill Hazel Grove"
+    },
+    {
+      "slug": "north-foleshill-alder-way",
+      "name": "North Foleshill Alder Way"
+    },
+    {
+      "slug": "north-foleshill-yew-tree-lane",
+      "name": "North Foleshill Yew Tree Lane"
+    },
+    {
+      "slug": "north-foleshill-linden-road",
+      "name": "North Foleshill Linden Road"
+    },
+    {
+      "slug": "north-foleshill-orchard-way",
+      "name": "North Foleshill Orchard Way"
+    },
+    {
+      "slug": "north-foleshill-spring-lane",
+      "name": "North Foleshill Spring Lane"
+    },
+    {
+      "slug": "north-foleshill-brooklands",
+      "name": "North Foleshill Brooklands"
+    },
+    {
+      "slug": "north-foleshill-riverside",
+      "name": "North Foleshill Riverside"
+    },
+    {
+      "slug": "north-foleshill-waterside",
+      "name": "North Foleshill Waterside"
+    },
+    {
+      "slug": "north-foleshill-bridge-street",
+      "name": "North Foleshill Bridge Street"
+    },
+    {
+      "slug": "north-foleshill-castle-road",
+      "name": "North Foleshill Castle Road"
+    },
+    {
+      "slug": "north-foleshill-priory-lane",
+      "name": "North Foleshill Priory Lane"
+    },
+    {
+      "slug": "north-foleshill-abbey-way",
+      "name": "North Foleshill Abbey Way"
+    },
+    {
+      "slug": "north-foleshill-manor-drive",
+      "name": "North Foleshill Manor Drive"
+    },
+    {
+      "slug": "north-foleshill-rectory-lane",
+      "name": "North Foleshill Rectory Lane"
+    },
+    {
+      "slug": "north-foleshill-glebe-close",
+      "name": "North Foleshill Glebe Close"
+    },
+    {
+      "slug": "north-foleshill-vicarage-road",
+      "name": "North Foleshill Vicarage Road"
+    },
+    {
+      "slug": "north-foleshill-chapel-lane",
+      "name": "North Foleshill Chapel Lane"
+    },
+    {
+      "slug": "north-foleshill-prospect-place",
+      "name": "North Foleshill Prospect Place"
+    },
+    {
+      "slug": "north-foleshill-belmont-road",
+      "name": "North Foleshill Belmont Road"
+    },
+    {
+      "slug": "north-foleshill-clifton-way",
+      "name": "North Foleshill Clifton Way"
+    },
+    {
+      "slug": "north-foleshill-richmond-road",
+      "name": "North Foleshill Richmond Road"
+    },
+    {
+      "slug": "north-foleshill-grosvenor-park",
+      "name": "North Foleshill Grosvenor Park"
+    },
+    {
+      "slug": "north-foleshill-claremont-road",
+      "name": "North Foleshill Claremont Road"
+    },
+    {
+      "slug": "north-foleshill-wellington-street",
+      "name": "North Foleshill Wellington Street"
+    },
+    {
+      "slug": "north-foleshill-nelson-road",
+      "name": "North Foleshill Nelson Road"
+    },
+    {
+      "slug": "north-foleshill-crescent-way",
+      "name": "North Foleshill Crescent Way"
+    },
+    {
+      "slug": "north-foleshill-square",
+      "name": "North Foleshill Square"
+    },
+    {
+      "slug": "north-foleshill-terrace",
+      "name": "North Foleshill Terrace"
+    },
+    {
+      "slug": "north-foleshill-street",
+      "name": "North Foleshill Street"
+    },
+    {
+      "slug": "north-foleshill-lane",
+      "name": "North Foleshill Lane"
+    },
+    {
+      "slug": "north-foleshill-close",
+      "name": "North Foleshill Close"
+    },
+    {
+      "slug": "north-foleshill-drive",
+      "name": "North Foleshill Drive"
+    },
+    {
+      "slug": "north-foleshill-avenue",
+      "name": "North Foleshill Avenue"
+    },
+    {
+      "slug": "north-foleshill-way",
+      "name": "North Foleshill Way"
     }
   ]
 }

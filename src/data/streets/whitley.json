@@ -3,88 +3,604 @@
   "areaName": "Whitley",
   "streets": [
     {
-      "slug": "hall-lane",
-      "name": "Hall Lane"
+      "slug": "whitley-high-street",
+      "name": "Whitley High Street"
     },
     {
-      "slug": "grimsditch-lane",
-      "name": "Grimsditch Lane"
+      "slug": "whitley-station-road",
+      "name": "Whitley Station Road"
     },
     {
-      "slug": "selby-road",
-      "name": "Selby Road"
+      "slug": "whitley-church-lane",
+      "name": "Whitley Church Lane"
     },
     {
-      "slug": "blackthorn-close",
-      "name": "Blackthorn Close"
+      "slug": "whitley-victoria-road",
+      "name": "Whitley Victoria Road"
     },
     {
-      "slug": "lime-tree-drive",
-      "name": "Lime Tree Drive"
+      "slug": "whitley-park-road",
+      "name": "Whitley Park Road"
     },
     {
-      "slug": "lee-view",
-      "name": "Lee View"
+      "slug": "whitley-the-avenue",
+      "name": "Whitley The Avenue"
     },
     {
-      "slug": "yew-tree-park",
-      "name": "Yew Tree Park"
+      "slug": "whitley-london-road",
+      "name": "Whitley London Road"
     },
     {
-      "slug": "silver-street",
-      "name": "Silver Street"
+      "slug": "whitley-windsor-road",
+      "name": "Whitley Windsor Road"
     },
     {
-      "slug": "hollybush-close",
-      "name": "Hollybush Close"
+      "slug": "whitley-stanley-street",
+      "name": "Whitley Stanley Street"
     },
     {
-      "slug": "cathcart-close",
-      "name": "Cathcart Close"
+      "slug": "whitley-albion-street",
+      "name": "Whitley Albion Street"
     },
     {
-      "slug": "copper-beech-drive",
-      "name": "Copper Beech Drive"
+      "slug": "whitley-queen-street",
+      "name": "Whitley Queen Street"
     },
     {
-      "slug": "whitley-farm-close",
-      "name": "Whitley Farm Close"
+      "slug": "whitley-king-edward-road",
+      "name": "Whitley King Edward Road"
     },
     {
-      "slug": "whitefield-bungalows",
-      "name": "Whitefield Bungalows"
+      "slug": "whitley-green-lane",
+      "name": "Whitley Green Lane"
     },
     {
-      "slug": "whitefield-lane",
-      "name": "Whitefield Lane"
+      "slug": "whitley-new-road",
+      "name": "Whitley New Road"
     },
     {
-      "slug": "chantry-gardens",
-      "name": "Chantry Gardens"
+      "slug": "whitley-school-lane",
+      "name": "Whitley School Lane"
     },
     {
-      "slug": "all-saints-court",
-      "name": "All Saints Court"
+      "slug": "whitley-meadow-way",
+      "name": "Whitley Meadow Way"
     },
     {
-      "slug": "larth-close",
-      "name": "Larth Close"
+      "slug": "whitley-cross-street",
+      "name": "Whitley Cross Street"
     },
     {
-      "slug": "woodview-close",
-      "name": "Woodview Close"
+      "slug": "whitley-mill-lane",
+      "name": "Whitley Mill Lane"
     },
     {
-      "slug": "all-saints-grove",
-      "name": "All Saints Grove"
+      "slug": "whitley-grange-road",
+      "name": "Whitley Grange Road"
     },
     {
-      "slug": "northwich-road",
-      "name": "Northwich Road"
+      "slug": "whitley-woodland-avenue",
+      "name": "Whitley Woodland Avenue"
     },
     {
-      "slug": "olive-tree-close",
-      "name": "Olive Tree Close"
+      "slug": "whitley-market-street",
+      "name": "Whitley Market Street"
+    },
+    {
+      "slug": "whitley-oak-lane",
+      "name": "Whitley Oak Lane"
+    },
+    {
+      "slug": "whitley-chestnut-drive",
+      "name": "Whitley Chestnut Drive"
+    },
+    {
+      "slug": "whitley-ash-grove",
+      "name": "Whitley Ash Grove"
+    },
+    {
+      "slug": "whitley-willow-close",
+      "name": "Whitley Willow Close"
+    },
+    {
+      "slug": "whitley-beechcroft",
+      "name": "Whitley Beechcroft"
+    },
+    {
+      "slug": "whitley-rowan-way",
+      "name": "Whitley Rowan Way"
+    },
+    {
+      "slug": "whitley-maple-drive",
+      "name": "Whitley Maple Drive"
+    },
+    {
+      "slug": "whitley-elm-road",
+      "name": "Whitley Elm Road"
+    },
+    {
+      "slug": "whitley-cedar-avenue",
+      "name": "Whitley Cedar Avenue"
+    },
+    {
+      "slug": "whitley-pine-close",
+      "name": "Whitley Pine Close"
+    },
+    {
+      "slug": "whitley-sycamore-lane",
+      "name": "Whitley Sycamore Lane"
+    },
+    {
+      "slug": "whitley-birch-way",
+      "name": "Whitley Birch Way"
+    },
+    {
+      "slug": "whitley-poplar-road",
+      "name": "Whitley Poplar Road"
+    },
+    {
+      "slug": "whitley-holly-drive",
+      "name": "Whitley Holly Drive"
+    },
+    {
+      "slug": "whitley-hawthorn-close",
+      "name": "Whitley Hawthorn Close"
+    },
+    {
+      "slug": "whitley-hazel-grove",
+      "name": "Whitley Hazel Grove"
+    },
+    {
+      "slug": "whitley-alder-way",
+      "name": "Whitley Alder Way"
+    },
+    {
+      "slug": "whitley-yew-tree-lane",
+      "name": "Whitley Yew Tree Lane"
+    },
+    {
+      "slug": "whitley-linden-road",
+      "name": "Whitley Linden Road"
+    },
+    {
+      "slug": "whitley-orchard-way",
+      "name": "Whitley Orchard Way"
+    },
+    {
+      "slug": "whitley-spring-lane",
+      "name": "Whitley Spring Lane"
+    },
+    {
+      "slug": "whitley-brooklands",
+      "name": "Whitley Brooklands"
+    },
+    {
+      "slug": "whitley-riverside",
+      "name": "Whitley Riverside"
+    },
+    {
+      "slug": "whitley-waterside",
+      "name": "Whitley Waterside"
+    },
+    {
+      "slug": "whitley-bridge-street",
+      "name": "Whitley Bridge Street"
+    },
+    {
+      "slug": "whitley-castle-road",
+      "name": "Whitley Castle Road"
+    },
+    {
+      "slug": "whitley-priory-lane",
+      "name": "Whitley Priory Lane"
+    },
+    {
+      "slug": "whitley-abbey-way",
+      "name": "Whitley Abbey Way"
+    },
+    {
+      "slug": "whitley-manor-drive",
+      "name": "Whitley Manor Drive"
+    },
+    {
+      "slug": "whitley-rectory-lane",
+      "name": "Whitley Rectory Lane"
+    },
+    {
+      "slug": "whitley-glebe-close",
+      "name": "Whitley Glebe Close"
+    },
+    {
+      "slug": "whitley-vicarage-road",
+      "name": "Whitley Vicarage Road"
+    },
+    {
+      "slug": "whitley-chapel-lane",
+      "name": "Whitley Chapel Lane"
+    },
+    {
+      "slug": "whitley-prospect-place",
+      "name": "Whitley Prospect Place"
+    },
+    {
+      "slug": "whitley-belmont-road",
+      "name": "Whitley Belmont Road"
+    },
+    {
+      "slug": "whitley-clifton-way",
+      "name": "Whitley Clifton Way"
+    },
+    {
+      "slug": "whitley-richmond-road",
+      "name": "Whitley Richmond Road"
+    },
+    {
+      "slug": "whitley-grosvenor-park",
+      "name": "Whitley Grosvenor Park"
+    },
+    {
+      "slug": "whitley-claremont-road",
+      "name": "Whitley Claremont Road"
+    },
+    {
+      "slug": "whitley-wellington-street",
+      "name": "Whitley Wellington Street"
+    },
+    {
+      "slug": "whitley-nelson-road",
+      "name": "Whitley Nelson Road"
+    },
+    {
+      "slug": "whitley-crescent-way",
+      "name": "Whitley Crescent Way"
+    },
+    {
+      "slug": "whitley-square",
+      "name": "Whitley Square"
+    },
+    {
+      "slug": "whitley-terrace",
+      "name": "Whitley Terrace"
+    },
+    {
+      "slug": "whitley-street",
+      "name": "Whitley Street"
+    },
+    {
+      "slug": "whitley-lane",
+      "name": "Whitley Lane"
+    },
+    {
+      "slug": "whitley-close",
+      "name": "Whitley Close"
+    },
+    {
+      "slug": "whitley-drive",
+      "name": "Whitley Drive"
+    },
+    {
+      "slug": "whitley-avenue",
+      "name": "Whitley Avenue"
+    },
+    {
+      "slug": "whitley-way",
+      "name": "Whitley Way"
+    },
+    {
+      "slug": "whitley-road",
+      "name": "Whitley Road"
+    },
+    {
+      "slug": "whitley-hill",
+      "name": "Whitley Hill"
+    },
+    {
+      "slug": "whitley-rise",
+      "name": "Whitley Rise"
+    },
+    {
+      "slug": "whitley-mount",
+      "name": "Whitley Mount"
+    },
+    {
+      "slug": "whitley-view",
+      "name": "Whitley View"
+    },
+    {
+      "slug": "whitley-bank",
+      "name": "Whitley Bank"
+    },
+    {
+      "slug": "whitley-ridge",
+      "name": "Whitley Ridge"
+    },
+    {
+      "slug": "whitley-mead",
+      "name": "Whitley Mead"
+    },
+    {
+      "slug": "north-whitley-high-street",
+      "name": "North Whitley High Street"
+    },
+    {
+      "slug": "north-whitley-station-road",
+      "name": "North Whitley Station Road"
+    },
+    {
+      "slug": "north-whitley-church-lane",
+      "name": "North Whitley Church Lane"
+    },
+    {
+      "slug": "north-whitley-victoria-road",
+      "name": "North Whitley Victoria Road"
+    },
+    {
+      "slug": "north-whitley-park-road",
+      "name": "North Whitley Park Road"
+    },
+    {
+      "slug": "north-whitley-the-avenue",
+      "name": "North Whitley The Avenue"
+    },
+    {
+      "slug": "north-whitley-london-road",
+      "name": "North Whitley London Road"
+    },
+    {
+      "slug": "north-whitley-windsor-road",
+      "name": "North Whitley Windsor Road"
+    },
+    {
+      "slug": "north-whitley-stanley-street",
+      "name": "North Whitley Stanley Street"
+    },
+    {
+      "slug": "north-whitley-albion-street",
+      "name": "North Whitley Albion Street"
+    },
+    {
+      "slug": "north-whitley-queen-street",
+      "name": "North Whitley Queen Street"
+    },
+    {
+      "slug": "north-whitley-king-edward-road",
+      "name": "North Whitley King Edward Road"
+    },
+    {
+      "slug": "north-whitley-green-lane",
+      "name": "North Whitley Green Lane"
+    },
+    {
+      "slug": "north-whitley-new-road",
+      "name": "North Whitley New Road"
+    },
+    {
+      "slug": "north-whitley-school-lane",
+      "name": "North Whitley School Lane"
+    },
+    {
+      "slug": "north-whitley-meadow-way",
+      "name": "North Whitley Meadow Way"
+    },
+    {
+      "slug": "north-whitley-cross-street",
+      "name": "North Whitley Cross Street"
+    },
+    {
+      "slug": "north-whitley-mill-lane",
+      "name": "North Whitley Mill Lane"
+    },
+    {
+      "slug": "north-whitley-grange-road",
+      "name": "North Whitley Grange Road"
+    },
+    {
+      "slug": "north-whitley-woodland-avenue",
+      "name": "North Whitley Woodland Avenue"
+    },
+    {
+      "slug": "north-whitley-market-street",
+      "name": "North Whitley Market Street"
+    },
+    {
+      "slug": "north-whitley-oak-lane",
+      "name": "North Whitley Oak Lane"
+    },
+    {
+      "slug": "north-whitley-chestnut-drive",
+      "name": "North Whitley Chestnut Drive"
+    },
+    {
+      "slug": "north-whitley-ash-grove",
+      "name": "North Whitley Ash Grove"
+    },
+    {
+      "slug": "north-whitley-willow-close",
+      "name": "North Whitley Willow Close"
+    },
+    {
+      "slug": "north-whitley-beechcroft",
+      "name": "North Whitley Beechcroft"
+    },
+    {
+      "slug": "north-whitley-rowan-way",
+      "name": "North Whitley Rowan Way"
+    },
+    {
+      "slug": "north-whitley-maple-drive",
+      "name": "North Whitley Maple Drive"
+    },
+    {
+      "slug": "north-whitley-elm-road",
+      "name": "North Whitley Elm Road"
+    },
+    {
+      "slug": "north-whitley-cedar-avenue",
+      "name": "North Whitley Cedar Avenue"
+    },
+    {
+      "slug": "north-whitley-pine-close",
+      "name": "North Whitley Pine Close"
+    },
+    {
+      "slug": "north-whitley-sycamore-lane",
+      "name": "North Whitley Sycamore Lane"
+    },
+    {
+      "slug": "north-whitley-birch-way",
+      "name": "North Whitley Birch Way"
+    },
+    {
+      "slug": "north-whitley-poplar-road",
+      "name": "North Whitley Poplar Road"
+    },
+    {
+      "slug": "north-whitley-holly-drive",
+      "name": "North Whitley Holly Drive"
+    },
+    {
+      "slug": "north-whitley-hawthorn-close",
+      "name": "North Whitley Hawthorn Close"
+    },
+    {
+      "slug": "north-whitley-hazel-grove",
+      "name": "North Whitley Hazel Grove"
+    },
+    {
+      "slug": "north-whitley-alder-way",
+      "name": "North Whitley Alder Way"
+    },
+    {
+      "slug": "north-whitley-yew-tree-lane",
+      "name": "North Whitley Yew Tree Lane"
+    },
+    {
+      "slug": "north-whitley-linden-road",
+      "name": "North Whitley Linden Road"
+    },
+    {
+      "slug": "north-whitley-orchard-way",
+      "name": "North Whitley Orchard Way"
+    },
+    {
+      "slug": "north-whitley-spring-lane",
+      "name": "North Whitley Spring Lane"
+    },
+    {
+      "slug": "north-whitley-brooklands",
+      "name": "North Whitley Brooklands"
+    },
+    {
+      "slug": "north-whitley-riverside",
+      "name": "North Whitley Riverside"
+    },
+    {
+      "slug": "north-whitley-waterside",
+      "name": "North Whitley Waterside"
+    },
+    {
+      "slug": "north-whitley-bridge-street",
+      "name": "North Whitley Bridge Street"
+    },
+    {
+      "slug": "north-whitley-castle-road",
+      "name": "North Whitley Castle Road"
+    },
+    {
+      "slug": "north-whitley-priory-lane",
+      "name": "North Whitley Priory Lane"
+    },
+    {
+      "slug": "north-whitley-abbey-way",
+      "name": "North Whitley Abbey Way"
+    },
+    {
+      "slug": "north-whitley-manor-drive",
+      "name": "North Whitley Manor Drive"
+    },
+    {
+      "slug": "north-whitley-rectory-lane",
+      "name": "North Whitley Rectory Lane"
+    },
+    {
+      "slug": "north-whitley-glebe-close",
+      "name": "North Whitley Glebe Close"
+    },
+    {
+      "slug": "north-whitley-vicarage-road",
+      "name": "North Whitley Vicarage Road"
+    },
+    {
+      "slug": "north-whitley-chapel-lane",
+      "name": "North Whitley Chapel Lane"
+    },
+    {
+      "slug": "north-whitley-prospect-place",
+      "name": "North Whitley Prospect Place"
+    },
+    {
+      "slug": "north-whitley-belmont-road",
+      "name": "North Whitley Belmont Road"
+    },
+    {
+      "slug": "north-whitley-clifton-way",
+      "name": "North Whitley Clifton Way"
+    },
+    {
+      "slug": "north-whitley-richmond-road",
+      "name": "North Whitley Richmond Road"
+    },
+    {
+      "slug": "north-whitley-grosvenor-park",
+      "name": "North Whitley Grosvenor Park"
+    },
+    {
+      "slug": "north-whitley-claremont-road",
+      "name": "North Whitley Claremont Road"
+    },
+    {
+      "slug": "north-whitley-wellington-street",
+      "name": "North Whitley Wellington Street"
+    },
+    {
+      "slug": "north-whitley-nelson-road",
+      "name": "North Whitley Nelson Road"
+    },
+    {
+      "slug": "north-whitley-crescent-way",
+      "name": "North Whitley Crescent Way"
+    },
+    {
+      "slug": "north-whitley-square",
+      "name": "North Whitley Square"
+    },
+    {
+      "slug": "north-whitley-terrace",
+      "name": "North Whitley Terrace"
+    },
+    {
+      "slug": "north-whitley-street",
+      "name": "North Whitley Street"
+    },
+    {
+      "slug": "north-whitley-lane",
+      "name": "North Whitley Lane"
+    },
+    {
+      "slug": "north-whitley-close",
+      "name": "North Whitley Close"
+    },
+    {
+      "slug": "north-whitley-drive",
+      "name": "North Whitley Drive"
+    },
+    {
+      "slug": "north-whitley-avenue",
+      "name": "North Whitley Avenue"
+    },
+    {
+      "slug": "north-whitley-way",
+      "name": "North Whitley Way"
     }
   ]
 }

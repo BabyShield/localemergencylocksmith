@@ -107,11 +107,24 @@ async function main() {
       } catch (e) {}
     }
 
-    // If still 0, we'll keep what they have or use a localized name pattern
     if (streets.length === 0) {
       console.log(`No streets found for ${name}. Generating algorithmic fallbacks.`)
-      const common = ['High Street', 'Station Road', 'Church Lane', 'Victoria Road', 'The Avenue', 'Park Road']
-      streets = common.map(c => `${name} ${c}`)
+      const baseNames = ['High Street', 'Station Road', 'Church Lane', 'Victoria Road', 'Park Road', 'The Avenue', 'London Road', 'Windsor Road', 'Stanley Street', 'Albion Street', 'Queen Street', 'King Edward Road', 'Green Lane', 'New Road', 'School Lane', 'Meadow Way', 'Cross Street', 'Mill Lane', 'Grange Road', 'Woodland Avenue', 'Market Street', 'Oak Lane', 'Chestnut Drive', 'Ash Grove', 'Willow Close', 'Beechcroft', 'Rowan Way', 'Maple Drive', 'Elm Road', 'Cedar Avenue', 'Pine Close', 'Sycamore Lane', 'Birch Way', 'Poplar Road', 'Holly Drive', 'Hawthorn Close', 'Hazel Grove', 'Alder Way', 'Yew Tree Lane', 'Linden Road', 'Orchard Way', 'Spring Lane', 'Brooklands', 'Riverside', 'Waterside', 'Bridge Street', 'Castle Road', 'Priory Lane', 'Abbey Way', 'Manor Drive', 'Rectory Lane', 'Glebe Close', 'Vicarage Road', 'Chapel Lane', 'Prospect Place', 'Belmont Road', 'Clifton Way', 'Richmond Road', 'Grosvenor Park', 'Claremont Road', 'Wellington Street', 'Nelson Road', 'Crescent Way', 'Square', 'Terrace', 'Street', 'Lane', 'Close', 'Drive', 'Avenue', 'Way', 'Road', 'Hill', 'Rise', 'Mount', 'View', 'Bank', 'Ridge', 'Mead']
+      streets = []
+      let i = 0
+      while (streets.length < 150 && i < baseNames.length) {
+         streets.push(`${name} ${baseNames[i]}`)
+         i++
+         if (i >= baseNames.length) {
+            // Mix adjectives for more combinations
+            const adjs = ['North', 'South', 'Upper', 'Lower', 'Old', 'New', 'Little', 'Great'];
+            adjs.forEach(adj => {
+               baseNames.forEach(b => {
+                 if (streets.length < 150) streets.push(`${adj} ${name} ${b}`)
+               })
+            })
+         }
+      }
     }
 
     // Sort and limit to 150 top streets per area for SEO scale

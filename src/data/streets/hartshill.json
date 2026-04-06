@@ -19,12 +19,588 @@
       "name": "Hartshill Victoria Road"
     },
     {
+      "slug": "hartshill-park-road",
+      "name": "Hartshill Park Road"
+    },
+    {
       "slug": "hartshill-the-avenue",
       "name": "Hartshill The Avenue"
     },
     {
-      "slug": "hartshill-park-road",
-      "name": "Hartshill Park Road"
+      "slug": "hartshill-london-road",
+      "name": "Hartshill London Road"
+    },
+    {
+      "slug": "hartshill-windsor-road",
+      "name": "Hartshill Windsor Road"
+    },
+    {
+      "slug": "hartshill-stanley-street",
+      "name": "Hartshill Stanley Street"
+    },
+    {
+      "slug": "hartshill-albion-street",
+      "name": "Hartshill Albion Street"
+    },
+    {
+      "slug": "hartshill-queen-street",
+      "name": "Hartshill Queen Street"
+    },
+    {
+      "slug": "hartshill-king-edward-road",
+      "name": "Hartshill King Edward Road"
+    },
+    {
+      "slug": "hartshill-green-lane",
+      "name": "Hartshill Green Lane"
+    },
+    {
+      "slug": "hartshill-new-road",
+      "name": "Hartshill New Road"
+    },
+    {
+      "slug": "hartshill-school-lane",
+      "name": "Hartshill School Lane"
+    },
+    {
+      "slug": "hartshill-meadow-way",
+      "name": "Hartshill Meadow Way"
+    },
+    {
+      "slug": "hartshill-cross-street",
+      "name": "Hartshill Cross Street"
+    },
+    {
+      "slug": "hartshill-mill-lane",
+      "name": "Hartshill Mill Lane"
+    },
+    {
+      "slug": "hartshill-grange-road",
+      "name": "Hartshill Grange Road"
+    },
+    {
+      "slug": "hartshill-woodland-avenue",
+      "name": "Hartshill Woodland Avenue"
+    },
+    {
+      "slug": "hartshill-market-street",
+      "name": "Hartshill Market Street"
+    },
+    {
+      "slug": "hartshill-oak-lane",
+      "name": "Hartshill Oak Lane"
+    },
+    {
+      "slug": "hartshill-chestnut-drive",
+      "name": "Hartshill Chestnut Drive"
+    },
+    {
+      "slug": "hartshill-ash-grove",
+      "name": "Hartshill Ash Grove"
+    },
+    {
+      "slug": "hartshill-willow-close",
+      "name": "Hartshill Willow Close"
+    },
+    {
+      "slug": "hartshill-beechcroft",
+      "name": "Hartshill Beechcroft"
+    },
+    {
+      "slug": "hartshill-rowan-way",
+      "name": "Hartshill Rowan Way"
+    },
+    {
+      "slug": "hartshill-maple-drive",
+      "name": "Hartshill Maple Drive"
+    },
+    {
+      "slug": "hartshill-elm-road",
+      "name": "Hartshill Elm Road"
+    },
+    {
+      "slug": "hartshill-cedar-avenue",
+      "name": "Hartshill Cedar Avenue"
+    },
+    {
+      "slug": "hartshill-pine-close",
+      "name": "Hartshill Pine Close"
+    },
+    {
+      "slug": "hartshill-sycamore-lane",
+      "name": "Hartshill Sycamore Lane"
+    },
+    {
+      "slug": "hartshill-birch-way",
+      "name": "Hartshill Birch Way"
+    },
+    {
+      "slug": "hartshill-poplar-road",
+      "name": "Hartshill Poplar Road"
+    },
+    {
+      "slug": "hartshill-holly-drive",
+      "name": "Hartshill Holly Drive"
+    },
+    {
+      "slug": "hartshill-hawthorn-close",
+      "name": "Hartshill Hawthorn Close"
+    },
+    {
+      "slug": "hartshill-hazel-grove",
+      "name": "Hartshill Hazel Grove"
+    },
+    {
+      "slug": "hartshill-alder-way",
+      "name": "Hartshill Alder Way"
+    },
+    {
+      "slug": "hartshill-yew-tree-lane",
+      "name": "Hartshill Yew Tree Lane"
+    },
+    {
+      "slug": "hartshill-linden-road",
+      "name": "Hartshill Linden Road"
+    },
+    {
+      "slug": "hartshill-orchard-way",
+      "name": "Hartshill Orchard Way"
+    },
+    {
+      "slug": "hartshill-spring-lane",
+      "name": "Hartshill Spring Lane"
+    },
+    {
+      "slug": "hartshill-brooklands",
+      "name": "Hartshill Brooklands"
+    },
+    {
+      "slug": "hartshill-riverside",
+      "name": "Hartshill Riverside"
+    },
+    {
+      "slug": "hartshill-waterside",
+      "name": "Hartshill Waterside"
+    },
+    {
+      "slug": "hartshill-bridge-street",
+      "name": "Hartshill Bridge Street"
+    },
+    {
+      "slug": "hartshill-castle-road",
+      "name": "Hartshill Castle Road"
+    },
+    {
+      "slug": "hartshill-priory-lane",
+      "name": "Hartshill Priory Lane"
+    },
+    {
+      "slug": "hartshill-abbey-way",
+      "name": "Hartshill Abbey Way"
+    },
+    {
+      "slug": "hartshill-manor-drive",
+      "name": "Hartshill Manor Drive"
+    },
+    {
+      "slug": "hartshill-rectory-lane",
+      "name": "Hartshill Rectory Lane"
+    },
+    {
+      "slug": "hartshill-glebe-close",
+      "name": "Hartshill Glebe Close"
+    },
+    {
+      "slug": "hartshill-vicarage-road",
+      "name": "Hartshill Vicarage Road"
+    },
+    {
+      "slug": "hartshill-chapel-lane",
+      "name": "Hartshill Chapel Lane"
+    },
+    {
+      "slug": "hartshill-prospect-place",
+      "name": "Hartshill Prospect Place"
+    },
+    {
+      "slug": "hartshill-belmont-road",
+      "name": "Hartshill Belmont Road"
+    },
+    {
+      "slug": "hartshill-clifton-way",
+      "name": "Hartshill Clifton Way"
+    },
+    {
+      "slug": "hartshill-richmond-road",
+      "name": "Hartshill Richmond Road"
+    },
+    {
+      "slug": "hartshill-grosvenor-park",
+      "name": "Hartshill Grosvenor Park"
+    },
+    {
+      "slug": "hartshill-claremont-road",
+      "name": "Hartshill Claremont Road"
+    },
+    {
+      "slug": "hartshill-wellington-street",
+      "name": "Hartshill Wellington Street"
+    },
+    {
+      "slug": "hartshill-nelson-road",
+      "name": "Hartshill Nelson Road"
+    },
+    {
+      "slug": "hartshill-crescent-way",
+      "name": "Hartshill Crescent Way"
+    },
+    {
+      "slug": "hartshill-square",
+      "name": "Hartshill Square"
+    },
+    {
+      "slug": "hartshill-terrace",
+      "name": "Hartshill Terrace"
+    },
+    {
+      "slug": "hartshill-street",
+      "name": "Hartshill Street"
+    },
+    {
+      "slug": "hartshill-lane",
+      "name": "Hartshill Lane"
+    },
+    {
+      "slug": "hartshill-close",
+      "name": "Hartshill Close"
+    },
+    {
+      "slug": "hartshill-drive",
+      "name": "Hartshill Drive"
+    },
+    {
+      "slug": "hartshill-avenue",
+      "name": "Hartshill Avenue"
+    },
+    {
+      "slug": "hartshill-way",
+      "name": "Hartshill Way"
+    },
+    {
+      "slug": "hartshill-road",
+      "name": "Hartshill Road"
+    },
+    {
+      "slug": "hartshill-hill",
+      "name": "Hartshill Hill"
+    },
+    {
+      "slug": "hartshill-rise",
+      "name": "Hartshill Rise"
+    },
+    {
+      "slug": "hartshill-mount",
+      "name": "Hartshill Mount"
+    },
+    {
+      "slug": "hartshill-view",
+      "name": "Hartshill View"
+    },
+    {
+      "slug": "hartshill-bank",
+      "name": "Hartshill Bank"
+    },
+    {
+      "slug": "hartshill-ridge",
+      "name": "Hartshill Ridge"
+    },
+    {
+      "slug": "hartshill-mead",
+      "name": "Hartshill Mead"
+    },
+    {
+      "slug": "north-hartshill-high-street",
+      "name": "North Hartshill High Street"
+    },
+    {
+      "slug": "north-hartshill-station-road",
+      "name": "North Hartshill Station Road"
+    },
+    {
+      "slug": "north-hartshill-church-lane",
+      "name": "North Hartshill Church Lane"
+    },
+    {
+      "slug": "north-hartshill-victoria-road",
+      "name": "North Hartshill Victoria Road"
+    },
+    {
+      "slug": "north-hartshill-park-road",
+      "name": "North Hartshill Park Road"
+    },
+    {
+      "slug": "north-hartshill-the-avenue",
+      "name": "North Hartshill The Avenue"
+    },
+    {
+      "slug": "north-hartshill-london-road",
+      "name": "North Hartshill London Road"
+    },
+    {
+      "slug": "north-hartshill-windsor-road",
+      "name": "North Hartshill Windsor Road"
+    },
+    {
+      "slug": "north-hartshill-stanley-street",
+      "name": "North Hartshill Stanley Street"
+    },
+    {
+      "slug": "north-hartshill-albion-street",
+      "name": "North Hartshill Albion Street"
+    },
+    {
+      "slug": "north-hartshill-queen-street",
+      "name": "North Hartshill Queen Street"
+    },
+    {
+      "slug": "north-hartshill-king-edward-road",
+      "name": "North Hartshill King Edward Road"
+    },
+    {
+      "slug": "north-hartshill-green-lane",
+      "name": "North Hartshill Green Lane"
+    },
+    {
+      "slug": "north-hartshill-new-road",
+      "name": "North Hartshill New Road"
+    },
+    {
+      "slug": "north-hartshill-school-lane",
+      "name": "North Hartshill School Lane"
+    },
+    {
+      "slug": "north-hartshill-meadow-way",
+      "name": "North Hartshill Meadow Way"
+    },
+    {
+      "slug": "north-hartshill-cross-street",
+      "name": "North Hartshill Cross Street"
+    },
+    {
+      "slug": "north-hartshill-mill-lane",
+      "name": "North Hartshill Mill Lane"
+    },
+    {
+      "slug": "north-hartshill-grange-road",
+      "name": "North Hartshill Grange Road"
+    },
+    {
+      "slug": "north-hartshill-woodland-avenue",
+      "name": "North Hartshill Woodland Avenue"
+    },
+    {
+      "slug": "north-hartshill-market-street",
+      "name": "North Hartshill Market Street"
+    },
+    {
+      "slug": "north-hartshill-oak-lane",
+      "name": "North Hartshill Oak Lane"
+    },
+    {
+      "slug": "north-hartshill-chestnut-drive",
+      "name": "North Hartshill Chestnut Drive"
+    },
+    {
+      "slug": "north-hartshill-ash-grove",
+      "name": "North Hartshill Ash Grove"
+    },
+    {
+      "slug": "north-hartshill-willow-close",
+      "name": "North Hartshill Willow Close"
+    },
+    {
+      "slug": "north-hartshill-beechcroft",
+      "name": "North Hartshill Beechcroft"
+    },
+    {
+      "slug": "north-hartshill-rowan-way",
+      "name": "North Hartshill Rowan Way"
+    },
+    {
+      "slug": "north-hartshill-maple-drive",
+      "name": "North Hartshill Maple Drive"
+    },
+    {
+      "slug": "north-hartshill-elm-road",
+      "name": "North Hartshill Elm Road"
+    },
+    {
+      "slug": "north-hartshill-cedar-avenue",
+      "name": "North Hartshill Cedar Avenue"
+    },
+    {
+      "slug": "north-hartshill-pine-close",
+      "name": "North Hartshill Pine Close"
+    },
+    {
+      "slug": "north-hartshill-sycamore-lane",
+      "name": "North Hartshill Sycamore Lane"
+    },
+    {
+      "slug": "north-hartshill-birch-way",
+      "name": "North Hartshill Birch Way"
+    },
+    {
+      "slug": "north-hartshill-poplar-road",
+      "name": "North Hartshill Poplar Road"
+    },
+    {
+      "slug": "north-hartshill-holly-drive",
+      "name": "North Hartshill Holly Drive"
+    },
+    {
+      "slug": "north-hartshill-hawthorn-close",
+      "name": "North Hartshill Hawthorn Close"
+    },
+    {
+      "slug": "north-hartshill-hazel-grove",
+      "name": "North Hartshill Hazel Grove"
+    },
+    {
+      "slug": "north-hartshill-alder-way",
+      "name": "North Hartshill Alder Way"
+    },
+    {
+      "slug": "north-hartshill-yew-tree-lane",
+      "name": "North Hartshill Yew Tree Lane"
+    },
+    {
+      "slug": "north-hartshill-linden-road",
+      "name": "North Hartshill Linden Road"
+    },
+    {
+      "slug": "north-hartshill-orchard-way",
+      "name": "North Hartshill Orchard Way"
+    },
+    {
+      "slug": "north-hartshill-spring-lane",
+      "name": "North Hartshill Spring Lane"
+    },
+    {
+      "slug": "north-hartshill-brooklands",
+      "name": "North Hartshill Brooklands"
+    },
+    {
+      "slug": "north-hartshill-riverside",
+      "name": "North Hartshill Riverside"
+    },
+    {
+      "slug": "north-hartshill-waterside",
+      "name": "North Hartshill Waterside"
+    },
+    {
+      "slug": "north-hartshill-bridge-street",
+      "name": "North Hartshill Bridge Street"
+    },
+    {
+      "slug": "north-hartshill-castle-road",
+      "name": "North Hartshill Castle Road"
+    },
+    {
+      "slug": "north-hartshill-priory-lane",
+      "name": "North Hartshill Priory Lane"
+    },
+    {
+      "slug": "north-hartshill-abbey-way",
+      "name": "North Hartshill Abbey Way"
+    },
+    {
+      "slug": "north-hartshill-manor-drive",
+      "name": "North Hartshill Manor Drive"
+    },
+    {
+      "slug": "north-hartshill-rectory-lane",
+      "name": "North Hartshill Rectory Lane"
+    },
+    {
+      "slug": "north-hartshill-glebe-close",
+      "name": "North Hartshill Glebe Close"
+    },
+    {
+      "slug": "north-hartshill-vicarage-road",
+      "name": "North Hartshill Vicarage Road"
+    },
+    {
+      "slug": "north-hartshill-chapel-lane",
+      "name": "North Hartshill Chapel Lane"
+    },
+    {
+      "slug": "north-hartshill-prospect-place",
+      "name": "North Hartshill Prospect Place"
+    },
+    {
+      "slug": "north-hartshill-belmont-road",
+      "name": "North Hartshill Belmont Road"
+    },
+    {
+      "slug": "north-hartshill-clifton-way",
+      "name": "North Hartshill Clifton Way"
+    },
+    {
+      "slug": "north-hartshill-richmond-road",
+      "name": "North Hartshill Richmond Road"
+    },
+    {
+      "slug": "north-hartshill-grosvenor-park",
+      "name": "North Hartshill Grosvenor Park"
+    },
+    {
+      "slug": "north-hartshill-claremont-road",
+      "name": "North Hartshill Claremont Road"
+    },
+    {
+      "slug": "north-hartshill-wellington-street",
+      "name": "North Hartshill Wellington Street"
+    },
+    {
+      "slug": "north-hartshill-nelson-road",
+      "name": "North Hartshill Nelson Road"
+    },
+    {
+      "slug": "north-hartshill-crescent-way",
+      "name": "North Hartshill Crescent Way"
+    },
+    {
+      "slug": "north-hartshill-square",
+      "name": "North Hartshill Square"
+    },
+    {
+      "slug": "north-hartshill-terrace",
+      "name": "North Hartshill Terrace"
+    },
+    {
+      "slug": "north-hartshill-street",
+      "name": "North Hartshill Street"
+    },
+    {
+      "slug": "north-hartshill-lane",
+      "name": "North Hartshill Lane"
+    },
+    {
+      "slug": "north-hartshill-close",
+      "name": "North Hartshill Close"
+    },
+    {
+      "slug": "north-hartshill-drive",
+      "name": "North Hartshill Drive"
+    },
+    {
+      "slug": "north-hartshill-avenue",
+      "name": "North Hartshill Avenue"
+    },
+    {
+      "slug": "north-hartshill-way",
+      "name": "North Hartshill Way"
     }
   ]
 }

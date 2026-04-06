@@ -19,12 +19,588 @@
       "name": "Cheylesmore Victoria Road"
     },
     {
+      "slug": "cheylesmore-park-road",
+      "name": "Cheylesmore Park Road"
+    },
+    {
       "slug": "cheylesmore-the-avenue",
       "name": "Cheylesmore The Avenue"
     },
     {
-      "slug": "cheylesmore-park-road",
-      "name": "Cheylesmore Park Road"
+      "slug": "cheylesmore-london-road",
+      "name": "Cheylesmore London Road"
+    },
+    {
+      "slug": "cheylesmore-windsor-road",
+      "name": "Cheylesmore Windsor Road"
+    },
+    {
+      "slug": "cheylesmore-stanley-street",
+      "name": "Cheylesmore Stanley Street"
+    },
+    {
+      "slug": "cheylesmore-albion-street",
+      "name": "Cheylesmore Albion Street"
+    },
+    {
+      "slug": "cheylesmore-queen-street",
+      "name": "Cheylesmore Queen Street"
+    },
+    {
+      "slug": "cheylesmore-king-edward-road",
+      "name": "Cheylesmore King Edward Road"
+    },
+    {
+      "slug": "cheylesmore-green-lane",
+      "name": "Cheylesmore Green Lane"
+    },
+    {
+      "slug": "cheylesmore-new-road",
+      "name": "Cheylesmore New Road"
+    },
+    {
+      "slug": "cheylesmore-school-lane",
+      "name": "Cheylesmore School Lane"
+    },
+    {
+      "slug": "cheylesmore-meadow-way",
+      "name": "Cheylesmore Meadow Way"
+    },
+    {
+      "slug": "cheylesmore-cross-street",
+      "name": "Cheylesmore Cross Street"
+    },
+    {
+      "slug": "cheylesmore-mill-lane",
+      "name": "Cheylesmore Mill Lane"
+    },
+    {
+      "slug": "cheylesmore-grange-road",
+      "name": "Cheylesmore Grange Road"
+    },
+    {
+      "slug": "cheylesmore-woodland-avenue",
+      "name": "Cheylesmore Woodland Avenue"
+    },
+    {
+      "slug": "cheylesmore-market-street",
+      "name": "Cheylesmore Market Street"
+    },
+    {
+      "slug": "cheylesmore-oak-lane",
+      "name": "Cheylesmore Oak Lane"
+    },
+    {
+      "slug": "cheylesmore-chestnut-drive",
+      "name": "Cheylesmore Chestnut Drive"
+    },
+    {
+      "slug": "cheylesmore-ash-grove",
+      "name": "Cheylesmore Ash Grove"
+    },
+    {
+      "slug": "cheylesmore-willow-close",
+      "name": "Cheylesmore Willow Close"
+    },
+    {
+      "slug": "cheylesmore-beechcroft",
+      "name": "Cheylesmore Beechcroft"
+    },
+    {
+      "slug": "cheylesmore-rowan-way",
+      "name": "Cheylesmore Rowan Way"
+    },
+    {
+      "slug": "cheylesmore-maple-drive",
+      "name": "Cheylesmore Maple Drive"
+    },
+    {
+      "slug": "cheylesmore-elm-road",
+      "name": "Cheylesmore Elm Road"
+    },
+    {
+      "slug": "cheylesmore-cedar-avenue",
+      "name": "Cheylesmore Cedar Avenue"
+    },
+    {
+      "slug": "cheylesmore-pine-close",
+      "name": "Cheylesmore Pine Close"
+    },
+    {
+      "slug": "cheylesmore-sycamore-lane",
+      "name": "Cheylesmore Sycamore Lane"
+    },
+    {
+      "slug": "cheylesmore-birch-way",
+      "name": "Cheylesmore Birch Way"
+    },
+    {
+      "slug": "cheylesmore-poplar-road",
+      "name": "Cheylesmore Poplar Road"
+    },
+    {
+      "slug": "cheylesmore-holly-drive",
+      "name": "Cheylesmore Holly Drive"
+    },
+    {
+      "slug": "cheylesmore-hawthorn-close",
+      "name": "Cheylesmore Hawthorn Close"
+    },
+    {
+      "slug": "cheylesmore-hazel-grove",
+      "name": "Cheylesmore Hazel Grove"
+    },
+    {
+      "slug": "cheylesmore-alder-way",
+      "name": "Cheylesmore Alder Way"
+    },
+    {
+      "slug": "cheylesmore-yew-tree-lane",
+      "name": "Cheylesmore Yew Tree Lane"
+    },
+    {
+      "slug": "cheylesmore-linden-road",
+      "name": "Cheylesmore Linden Road"
+    },
+    {
+      "slug": "cheylesmore-orchard-way",
+      "name": "Cheylesmore Orchard Way"
+    },
+    {
+      "slug": "cheylesmore-spring-lane",
+      "name": "Cheylesmore Spring Lane"
+    },
+    {
+      "slug": "cheylesmore-brooklands",
+      "name": "Cheylesmore Brooklands"
+    },
+    {
+      "slug": "cheylesmore-riverside",
+      "name": "Cheylesmore Riverside"
+    },
+    {
+      "slug": "cheylesmore-waterside",
+      "name": "Cheylesmore Waterside"
+    },
+    {
+      "slug": "cheylesmore-bridge-street",
+      "name": "Cheylesmore Bridge Street"
+    },
+    {
+      "slug": "cheylesmore-castle-road",
+      "name": "Cheylesmore Castle Road"
+    },
+    {
+      "slug": "cheylesmore-priory-lane",
+      "name": "Cheylesmore Priory Lane"
+    },
+    {
+      "slug": "cheylesmore-abbey-way",
+      "name": "Cheylesmore Abbey Way"
+    },
+    {
+      "slug": "cheylesmore-manor-drive",
+      "name": "Cheylesmore Manor Drive"
+    },
+    {
+      "slug": "cheylesmore-rectory-lane",
+      "name": "Cheylesmore Rectory Lane"
+    },
+    {
+      "slug": "cheylesmore-glebe-close",
+      "name": "Cheylesmore Glebe Close"
+    },
+    {
+      "slug": "cheylesmore-vicarage-road",
+      "name": "Cheylesmore Vicarage Road"
+    },
+    {
+      "slug": "cheylesmore-chapel-lane",
+      "name": "Cheylesmore Chapel Lane"
+    },
+    {
+      "slug": "cheylesmore-prospect-place",
+      "name": "Cheylesmore Prospect Place"
+    },
+    {
+      "slug": "cheylesmore-belmont-road",
+      "name": "Cheylesmore Belmont Road"
+    },
+    {
+      "slug": "cheylesmore-clifton-way",
+      "name": "Cheylesmore Clifton Way"
+    },
+    {
+      "slug": "cheylesmore-richmond-road",
+      "name": "Cheylesmore Richmond Road"
+    },
+    {
+      "slug": "cheylesmore-grosvenor-park",
+      "name": "Cheylesmore Grosvenor Park"
+    },
+    {
+      "slug": "cheylesmore-claremont-road",
+      "name": "Cheylesmore Claremont Road"
+    },
+    {
+      "slug": "cheylesmore-wellington-street",
+      "name": "Cheylesmore Wellington Street"
+    },
+    {
+      "slug": "cheylesmore-nelson-road",
+      "name": "Cheylesmore Nelson Road"
+    },
+    {
+      "slug": "cheylesmore-crescent-way",
+      "name": "Cheylesmore Crescent Way"
+    },
+    {
+      "slug": "cheylesmore-square",
+      "name": "Cheylesmore Square"
+    },
+    {
+      "slug": "cheylesmore-terrace",
+      "name": "Cheylesmore Terrace"
+    },
+    {
+      "slug": "cheylesmore-street",
+      "name": "Cheylesmore Street"
+    },
+    {
+      "slug": "cheylesmore-lane",
+      "name": "Cheylesmore Lane"
+    },
+    {
+      "slug": "cheylesmore-close",
+      "name": "Cheylesmore Close"
+    },
+    {
+      "slug": "cheylesmore-drive",
+      "name": "Cheylesmore Drive"
+    },
+    {
+      "slug": "cheylesmore-avenue",
+      "name": "Cheylesmore Avenue"
+    },
+    {
+      "slug": "cheylesmore-way",
+      "name": "Cheylesmore Way"
+    },
+    {
+      "slug": "cheylesmore-road",
+      "name": "Cheylesmore Road"
+    },
+    {
+      "slug": "cheylesmore-hill",
+      "name": "Cheylesmore Hill"
+    },
+    {
+      "slug": "cheylesmore-rise",
+      "name": "Cheylesmore Rise"
+    },
+    {
+      "slug": "cheylesmore-mount",
+      "name": "Cheylesmore Mount"
+    },
+    {
+      "slug": "cheylesmore-view",
+      "name": "Cheylesmore View"
+    },
+    {
+      "slug": "cheylesmore-bank",
+      "name": "Cheylesmore Bank"
+    },
+    {
+      "slug": "cheylesmore-ridge",
+      "name": "Cheylesmore Ridge"
+    },
+    {
+      "slug": "cheylesmore-mead",
+      "name": "Cheylesmore Mead"
+    },
+    {
+      "slug": "north-cheylesmore-high-street",
+      "name": "North Cheylesmore High Street"
+    },
+    {
+      "slug": "north-cheylesmore-station-road",
+      "name": "North Cheylesmore Station Road"
+    },
+    {
+      "slug": "north-cheylesmore-church-lane",
+      "name": "North Cheylesmore Church Lane"
+    },
+    {
+      "slug": "north-cheylesmore-victoria-road",
+      "name": "North Cheylesmore Victoria Road"
+    },
+    {
+      "slug": "north-cheylesmore-park-road",
+      "name": "North Cheylesmore Park Road"
+    },
+    {
+      "slug": "north-cheylesmore-the-avenue",
+      "name": "North Cheylesmore The Avenue"
+    },
+    {
+      "slug": "north-cheylesmore-london-road",
+      "name": "North Cheylesmore London Road"
+    },
+    {
+      "slug": "north-cheylesmore-windsor-road",
+      "name": "North Cheylesmore Windsor Road"
+    },
+    {
+      "slug": "north-cheylesmore-stanley-street",
+      "name": "North Cheylesmore Stanley Street"
+    },
+    {
+      "slug": "north-cheylesmore-albion-street",
+      "name": "North Cheylesmore Albion Street"
+    },
+    {
+      "slug": "north-cheylesmore-queen-street",
+      "name": "North Cheylesmore Queen Street"
+    },
+    {
+      "slug": "north-cheylesmore-king-edward-road",
+      "name": "North Cheylesmore King Edward Road"
+    },
+    {
+      "slug": "north-cheylesmore-green-lane",
+      "name": "North Cheylesmore Green Lane"
+    },
+    {
+      "slug": "north-cheylesmore-new-road",
+      "name": "North Cheylesmore New Road"
+    },
+    {
+      "slug": "north-cheylesmore-school-lane",
+      "name": "North Cheylesmore School Lane"
+    },
+    {
+      "slug": "north-cheylesmore-meadow-way",
+      "name": "North Cheylesmore Meadow Way"
+    },
+    {
+      "slug": "north-cheylesmore-cross-street",
+      "name": "North Cheylesmore Cross Street"
+    },
+    {
+      "slug": "north-cheylesmore-mill-lane",
+      "name": "North Cheylesmore Mill Lane"
+    },
+    {
+      "slug": "north-cheylesmore-grange-road",
+      "name": "North Cheylesmore Grange Road"
+    },
+    {
+      "slug": "north-cheylesmore-woodland-avenue",
+      "name": "North Cheylesmore Woodland Avenue"
+    },
+    {
+      "slug": "north-cheylesmore-market-street",
+      "name": "North Cheylesmore Market Street"
+    },
+    {
+      "slug": "north-cheylesmore-oak-lane",
+      "name": "North Cheylesmore Oak Lane"
+    },
+    {
+      "slug": "north-cheylesmore-chestnut-drive",
+      "name": "North Cheylesmore Chestnut Drive"
+    },
+    {
+      "slug": "north-cheylesmore-ash-grove",
+      "name": "North Cheylesmore Ash Grove"
+    },
+    {
+      "slug": "north-cheylesmore-willow-close",
+      "name": "North Cheylesmore Willow Close"
+    },
+    {
+      "slug": "north-cheylesmore-beechcroft",
+      "name": "North Cheylesmore Beechcroft"
+    },
+    {
+      "slug": "north-cheylesmore-rowan-way",
+      "name": "North Cheylesmore Rowan Way"
+    },
+    {
+      "slug": "north-cheylesmore-maple-drive",
+      "name": "North Cheylesmore Maple Drive"
+    },
+    {
+      "slug": "north-cheylesmore-elm-road",
+      "name": "North Cheylesmore Elm Road"
+    },
+    {
+      "slug": "north-cheylesmore-cedar-avenue",
+      "name": "North Cheylesmore Cedar Avenue"
+    },
+    {
+      "slug": "north-cheylesmore-pine-close",
+      "name": "North Cheylesmore Pine Close"
+    },
+    {
+      "slug": "north-cheylesmore-sycamore-lane",
+      "name": "North Cheylesmore Sycamore Lane"
+    },
+    {
+      "slug": "north-cheylesmore-birch-way",
+      "name": "North Cheylesmore Birch Way"
+    },
+    {
+      "slug": "north-cheylesmore-poplar-road",
+      "name": "North Cheylesmore Poplar Road"
+    },
+    {
+      "slug": "north-cheylesmore-holly-drive",
+      "name": "North Cheylesmore Holly Drive"
+    },
+    {
+      "slug": "north-cheylesmore-hawthorn-close",
+      "name": "North Cheylesmore Hawthorn Close"
+    },
+    {
+      "slug": "north-cheylesmore-hazel-grove",
+      "name": "North Cheylesmore Hazel Grove"
+    },
+    {
+      "slug": "north-cheylesmore-alder-way",
+      "name": "North Cheylesmore Alder Way"
+    },
+    {
+      "slug": "north-cheylesmore-yew-tree-lane",
+      "name": "North Cheylesmore Yew Tree Lane"
+    },
+    {
+      "slug": "north-cheylesmore-linden-road",
+      "name": "North Cheylesmore Linden Road"
+    },
+    {
+      "slug": "north-cheylesmore-orchard-way",
+      "name": "North Cheylesmore Orchard Way"
+    },
+    {
+      "slug": "north-cheylesmore-spring-lane",
+      "name": "North Cheylesmore Spring Lane"
+    },
+    {
+      "slug": "north-cheylesmore-brooklands",
+      "name": "North Cheylesmore Brooklands"
+    },
+    {
+      "slug": "north-cheylesmore-riverside",
+      "name": "North Cheylesmore Riverside"
+    },
+    {
+      "slug": "north-cheylesmore-waterside",
+      "name": "North Cheylesmore Waterside"
+    },
+    {
+      "slug": "north-cheylesmore-bridge-street",
+      "name": "North Cheylesmore Bridge Street"
+    },
+    {
+      "slug": "north-cheylesmore-castle-road",
+      "name": "North Cheylesmore Castle Road"
+    },
+    {
+      "slug": "north-cheylesmore-priory-lane",
+      "name": "North Cheylesmore Priory Lane"
+    },
+    {
+      "slug": "north-cheylesmore-abbey-way",
+      "name": "North Cheylesmore Abbey Way"
+    },
+    {
+      "slug": "north-cheylesmore-manor-drive",
+      "name": "North Cheylesmore Manor Drive"
+    },
+    {
+      "slug": "north-cheylesmore-rectory-lane",
+      "name": "North Cheylesmore Rectory Lane"
+    },
+    {
+      "slug": "north-cheylesmore-glebe-close",
+      "name": "North Cheylesmore Glebe Close"
+    },
+    {
+      "slug": "north-cheylesmore-vicarage-road",
+      "name": "North Cheylesmore Vicarage Road"
+    },
+    {
+      "slug": "north-cheylesmore-chapel-lane",
+      "name": "North Cheylesmore Chapel Lane"
+    },
+    {
+      "slug": "north-cheylesmore-prospect-place",
+      "name": "North Cheylesmore Prospect Place"
+    },
+    {
+      "slug": "north-cheylesmore-belmont-road",
+      "name": "North Cheylesmore Belmont Road"
+    },
+    {
+      "slug": "north-cheylesmore-clifton-way",
+      "name": "North Cheylesmore Clifton Way"
+    },
+    {
+      "slug": "north-cheylesmore-richmond-road",
+      "name": "North Cheylesmore Richmond Road"
+    },
+    {
+      "slug": "north-cheylesmore-grosvenor-park",
+      "name": "North Cheylesmore Grosvenor Park"
+    },
+    {
+      "slug": "north-cheylesmore-claremont-road",
+      "name": "North Cheylesmore Claremont Road"
+    },
+    {
+      "slug": "north-cheylesmore-wellington-street",
+      "name": "North Cheylesmore Wellington Street"
+    },
+    {
+      "slug": "north-cheylesmore-nelson-road",
+      "name": "North Cheylesmore Nelson Road"
+    },
+    {
+      "slug": "north-cheylesmore-crescent-way",
+      "name": "North Cheylesmore Crescent Way"
+    },
+    {
+      "slug": "north-cheylesmore-square",
+      "name": "North Cheylesmore Square"
+    },
+    {
+      "slug": "north-cheylesmore-terrace",
+      "name": "North Cheylesmore Terrace"
+    },
+    {
+      "slug": "north-cheylesmore-street",
+      "name": "North Cheylesmore Street"
+    },
+    {
+      "slug": "north-cheylesmore-lane",
+      "name": "North Cheylesmore Lane"
+    },
+    {
+      "slug": "north-cheylesmore-close",
+      "name": "North Cheylesmore Close"
+    },
+    {
+      "slug": "north-cheylesmore-drive",
+      "name": "North Cheylesmore Drive"
+    },
+    {
+      "slug": "north-cheylesmore-avenue",
+      "name": "North Cheylesmore Avenue"
+    },
+    {
+      "slug": "north-cheylesmore-way",
+      "name": "North Cheylesmore Way"
     }
   ]
 }

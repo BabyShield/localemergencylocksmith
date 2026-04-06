@@ -19,12 +19,588 @@
       "name": "Walsgrave Victoria Road"
     },
     {
+      "slug": "walsgrave-park-road",
+      "name": "Walsgrave Park Road"
+    },
+    {
       "slug": "walsgrave-the-avenue",
       "name": "Walsgrave The Avenue"
     },
     {
-      "slug": "walsgrave-park-road",
-      "name": "Walsgrave Park Road"
+      "slug": "walsgrave-london-road",
+      "name": "Walsgrave London Road"
+    },
+    {
+      "slug": "walsgrave-windsor-road",
+      "name": "Walsgrave Windsor Road"
+    },
+    {
+      "slug": "walsgrave-stanley-street",
+      "name": "Walsgrave Stanley Street"
+    },
+    {
+      "slug": "walsgrave-albion-street",
+      "name": "Walsgrave Albion Street"
+    },
+    {
+      "slug": "walsgrave-queen-street",
+      "name": "Walsgrave Queen Street"
+    },
+    {
+      "slug": "walsgrave-king-edward-road",
+      "name": "Walsgrave King Edward Road"
+    },
+    {
+      "slug": "walsgrave-green-lane",
+      "name": "Walsgrave Green Lane"
+    },
+    {
+      "slug": "walsgrave-new-road",
+      "name": "Walsgrave New Road"
+    },
+    {
+      "slug": "walsgrave-school-lane",
+      "name": "Walsgrave School Lane"
+    },
+    {
+      "slug": "walsgrave-meadow-way",
+      "name": "Walsgrave Meadow Way"
+    },
+    {
+      "slug": "walsgrave-cross-street",
+      "name": "Walsgrave Cross Street"
+    },
+    {
+      "slug": "walsgrave-mill-lane",
+      "name": "Walsgrave Mill Lane"
+    },
+    {
+      "slug": "walsgrave-grange-road",
+      "name": "Walsgrave Grange Road"
+    },
+    {
+      "slug": "walsgrave-woodland-avenue",
+      "name": "Walsgrave Woodland Avenue"
+    },
+    {
+      "slug": "walsgrave-market-street",
+      "name": "Walsgrave Market Street"
+    },
+    {
+      "slug": "walsgrave-oak-lane",
+      "name": "Walsgrave Oak Lane"
+    },
+    {
+      "slug": "walsgrave-chestnut-drive",
+      "name": "Walsgrave Chestnut Drive"
+    },
+    {
+      "slug": "walsgrave-ash-grove",
+      "name": "Walsgrave Ash Grove"
+    },
+    {
+      "slug": "walsgrave-willow-close",
+      "name": "Walsgrave Willow Close"
+    },
+    {
+      "slug": "walsgrave-beechcroft",
+      "name": "Walsgrave Beechcroft"
+    },
+    {
+      "slug": "walsgrave-rowan-way",
+      "name": "Walsgrave Rowan Way"
+    },
+    {
+      "slug": "walsgrave-maple-drive",
+      "name": "Walsgrave Maple Drive"
+    },
+    {
+      "slug": "walsgrave-elm-road",
+      "name": "Walsgrave Elm Road"
+    },
+    {
+      "slug": "walsgrave-cedar-avenue",
+      "name": "Walsgrave Cedar Avenue"
+    },
+    {
+      "slug": "walsgrave-pine-close",
+      "name": "Walsgrave Pine Close"
+    },
+    {
+      "slug": "walsgrave-sycamore-lane",
+      "name": "Walsgrave Sycamore Lane"
+    },
+    {
+      "slug": "walsgrave-birch-way",
+      "name": "Walsgrave Birch Way"
+    },
+    {
+      "slug": "walsgrave-poplar-road",
+      "name": "Walsgrave Poplar Road"
+    },
+    {
+      "slug": "walsgrave-holly-drive",
+      "name": "Walsgrave Holly Drive"
+    },
+    {
+      "slug": "walsgrave-hawthorn-close",
+      "name": "Walsgrave Hawthorn Close"
+    },
+    {
+      "slug": "walsgrave-hazel-grove",
+      "name": "Walsgrave Hazel Grove"
+    },
+    {
+      "slug": "walsgrave-alder-way",
+      "name": "Walsgrave Alder Way"
+    },
+    {
+      "slug": "walsgrave-yew-tree-lane",
+      "name": "Walsgrave Yew Tree Lane"
+    },
+    {
+      "slug": "walsgrave-linden-road",
+      "name": "Walsgrave Linden Road"
+    },
+    {
+      "slug": "walsgrave-orchard-way",
+      "name": "Walsgrave Orchard Way"
+    },
+    {
+      "slug": "walsgrave-spring-lane",
+      "name": "Walsgrave Spring Lane"
+    },
+    {
+      "slug": "walsgrave-brooklands",
+      "name": "Walsgrave Brooklands"
+    },
+    {
+      "slug": "walsgrave-riverside",
+      "name": "Walsgrave Riverside"
+    },
+    {
+      "slug": "walsgrave-waterside",
+      "name": "Walsgrave Waterside"
+    },
+    {
+      "slug": "walsgrave-bridge-street",
+      "name": "Walsgrave Bridge Street"
+    },
+    {
+      "slug": "walsgrave-castle-road",
+      "name": "Walsgrave Castle Road"
+    },
+    {
+      "slug": "walsgrave-priory-lane",
+      "name": "Walsgrave Priory Lane"
+    },
+    {
+      "slug": "walsgrave-abbey-way",
+      "name": "Walsgrave Abbey Way"
+    },
+    {
+      "slug": "walsgrave-manor-drive",
+      "name": "Walsgrave Manor Drive"
+    },
+    {
+      "slug": "walsgrave-rectory-lane",
+      "name": "Walsgrave Rectory Lane"
+    },
+    {
+      "slug": "walsgrave-glebe-close",
+      "name": "Walsgrave Glebe Close"
+    },
+    {
+      "slug": "walsgrave-vicarage-road",
+      "name": "Walsgrave Vicarage Road"
+    },
+    {
+      "slug": "walsgrave-chapel-lane",
+      "name": "Walsgrave Chapel Lane"
+    },
+    {
+      "slug": "walsgrave-prospect-place",
+      "name": "Walsgrave Prospect Place"
+    },
+    {
+      "slug": "walsgrave-belmont-road",
+      "name": "Walsgrave Belmont Road"
+    },
+    {
+      "slug": "walsgrave-clifton-way",
+      "name": "Walsgrave Clifton Way"
+    },
+    {
+      "slug": "walsgrave-richmond-road",
+      "name": "Walsgrave Richmond Road"
+    },
+    {
+      "slug": "walsgrave-grosvenor-park",
+      "name": "Walsgrave Grosvenor Park"
+    },
+    {
+      "slug": "walsgrave-claremont-road",
+      "name": "Walsgrave Claremont Road"
+    },
+    {
+      "slug": "walsgrave-wellington-street",
+      "name": "Walsgrave Wellington Street"
+    },
+    {
+      "slug": "walsgrave-nelson-road",
+      "name": "Walsgrave Nelson Road"
+    },
+    {
+      "slug": "walsgrave-crescent-way",
+      "name": "Walsgrave Crescent Way"
+    },
+    {
+      "slug": "walsgrave-square",
+      "name": "Walsgrave Square"
+    },
+    {
+      "slug": "walsgrave-terrace",
+      "name": "Walsgrave Terrace"
+    },
+    {
+      "slug": "walsgrave-street",
+      "name": "Walsgrave Street"
+    },
+    {
+      "slug": "walsgrave-lane",
+      "name": "Walsgrave Lane"
+    },
+    {
+      "slug": "walsgrave-close",
+      "name": "Walsgrave Close"
+    },
+    {
+      "slug": "walsgrave-drive",
+      "name": "Walsgrave Drive"
+    },
+    {
+      "slug": "walsgrave-avenue",
+      "name": "Walsgrave Avenue"
+    },
+    {
+      "slug": "walsgrave-way",
+      "name": "Walsgrave Way"
+    },
+    {
+      "slug": "walsgrave-road",
+      "name": "Walsgrave Road"
+    },
+    {
+      "slug": "walsgrave-hill",
+      "name": "Walsgrave Hill"
+    },
+    {
+      "slug": "walsgrave-rise",
+      "name": "Walsgrave Rise"
+    },
+    {
+      "slug": "walsgrave-mount",
+      "name": "Walsgrave Mount"
+    },
+    {
+      "slug": "walsgrave-view",
+      "name": "Walsgrave View"
+    },
+    {
+      "slug": "walsgrave-bank",
+      "name": "Walsgrave Bank"
+    },
+    {
+      "slug": "walsgrave-ridge",
+      "name": "Walsgrave Ridge"
+    },
+    {
+      "slug": "walsgrave-mead",
+      "name": "Walsgrave Mead"
+    },
+    {
+      "slug": "north-walsgrave-high-street",
+      "name": "North Walsgrave High Street"
+    },
+    {
+      "slug": "north-walsgrave-station-road",
+      "name": "North Walsgrave Station Road"
+    },
+    {
+      "slug": "north-walsgrave-church-lane",
+      "name": "North Walsgrave Church Lane"
+    },
+    {
+      "slug": "north-walsgrave-victoria-road",
+      "name": "North Walsgrave Victoria Road"
+    },
+    {
+      "slug": "north-walsgrave-park-road",
+      "name": "North Walsgrave Park Road"
+    },
+    {
+      "slug": "north-walsgrave-the-avenue",
+      "name": "North Walsgrave The Avenue"
+    },
+    {
+      "slug": "north-walsgrave-london-road",
+      "name": "North Walsgrave London Road"
+    },
+    {
+      "slug": "north-walsgrave-windsor-road",
+      "name": "North Walsgrave Windsor Road"
+    },
+    {
+      "slug": "north-walsgrave-stanley-street",
+      "name": "North Walsgrave Stanley Street"
+    },
+    {
+      "slug": "north-walsgrave-albion-street",
+      "name": "North Walsgrave Albion Street"
+    },
+    {
+      "slug": "north-walsgrave-queen-street",
+      "name": "North Walsgrave Queen Street"
+    },
+    {
+      "slug": "north-walsgrave-king-edward-road",
+      "name": "North Walsgrave King Edward Road"
+    },
+    {
+      "slug": "north-walsgrave-green-lane",
+      "name": "North Walsgrave Green Lane"
+    },
+    {
+      "slug": "north-walsgrave-new-road",
+      "name": "North Walsgrave New Road"
+    },
+    {
+      "slug": "north-walsgrave-school-lane",
+      "name": "North Walsgrave School Lane"
+    },
+    {
+      "slug": "north-walsgrave-meadow-way",
+      "name": "North Walsgrave Meadow Way"
+    },
+    {
+      "slug": "north-walsgrave-cross-street",
+      "name": "North Walsgrave Cross Street"
+    },
+    {
+      "slug": "north-walsgrave-mill-lane",
+      "name": "North Walsgrave Mill Lane"
+    },
+    {
+      "slug": "north-walsgrave-grange-road",
+      "name": "North Walsgrave Grange Road"
+    },
+    {
+      "slug": "north-walsgrave-woodland-avenue",
+      "name": "North Walsgrave Woodland Avenue"
+    },
+    {
+      "slug": "north-walsgrave-market-street",
+      "name": "North Walsgrave Market Street"
+    },
+    {
+      "slug": "north-walsgrave-oak-lane",
+      "name": "North Walsgrave Oak Lane"
+    },
+    {
+      "slug": "north-walsgrave-chestnut-drive",
+      "name": "North Walsgrave Chestnut Drive"
+    },
+    {
+      "slug": "north-walsgrave-ash-grove",
+      "name": "North Walsgrave Ash Grove"
+    },
+    {
+      "slug": "north-walsgrave-willow-close",
+      "name": "North Walsgrave Willow Close"
+    },
+    {
+      "slug": "north-walsgrave-beechcroft",
+      "name": "North Walsgrave Beechcroft"
+    },
+    {
+      "slug": "north-walsgrave-rowan-way",
+      "name": "North Walsgrave Rowan Way"
+    },
+    {
+      "slug": "north-walsgrave-maple-drive",
+      "name": "North Walsgrave Maple Drive"
+    },
+    {
+      "slug": "north-walsgrave-elm-road",
+      "name": "North Walsgrave Elm Road"
+    },
+    {
+      "slug": "north-walsgrave-cedar-avenue",
+      "name": "North Walsgrave Cedar Avenue"
+    },
+    {
+      "slug": "north-walsgrave-pine-close",
+      "name": "North Walsgrave Pine Close"
+    },
+    {
+      "slug": "north-walsgrave-sycamore-lane",
+      "name": "North Walsgrave Sycamore Lane"
+    },
+    {
+      "slug": "north-walsgrave-birch-way",
+      "name": "North Walsgrave Birch Way"
+    },
+    {
+      "slug": "north-walsgrave-poplar-road",
+      "name": "North Walsgrave Poplar Road"
+    },
+    {
+      "slug": "north-walsgrave-holly-drive",
+      "name": "North Walsgrave Holly Drive"
+    },
+    {
+      "slug": "north-walsgrave-hawthorn-close",
+      "name": "North Walsgrave Hawthorn Close"
+    },
+    {
+      "slug": "north-walsgrave-hazel-grove",
+      "name": "North Walsgrave Hazel Grove"
+    },
+    {
+      "slug": "north-walsgrave-alder-way",
+      "name": "North Walsgrave Alder Way"
+    },
+    {
+      "slug": "north-walsgrave-yew-tree-lane",
+      "name": "North Walsgrave Yew Tree Lane"
+    },
+    {
+      "slug": "north-walsgrave-linden-road",
+      "name": "North Walsgrave Linden Road"
+    },
+    {
+      "slug": "north-walsgrave-orchard-way",
+      "name": "North Walsgrave Orchard Way"
+    },
+    {
+      "slug": "north-walsgrave-spring-lane",
+      "name": "North Walsgrave Spring Lane"
+    },
+    {
+      "slug": "north-walsgrave-brooklands",
+      "name": "North Walsgrave Brooklands"
+    },
+    {
+      "slug": "north-walsgrave-riverside",
+      "name": "North Walsgrave Riverside"
+    },
+    {
+      "slug": "north-walsgrave-waterside",
+      "name": "North Walsgrave Waterside"
+    },
+    {
+      "slug": "north-walsgrave-bridge-street",
+      "name": "North Walsgrave Bridge Street"
+    },
+    {
+      "slug": "north-walsgrave-castle-road",
+      "name": "North Walsgrave Castle Road"
+    },
+    {
+      "slug": "north-walsgrave-priory-lane",
+      "name": "North Walsgrave Priory Lane"
+    },
+    {
+      "slug": "north-walsgrave-abbey-way",
+      "name": "North Walsgrave Abbey Way"
+    },
+    {
+      "slug": "north-walsgrave-manor-drive",
+      "name": "North Walsgrave Manor Drive"
+    },
+    {
+      "slug": "north-walsgrave-rectory-lane",
+      "name": "North Walsgrave Rectory Lane"
+    },
+    {
+      "slug": "north-walsgrave-glebe-close",
+      "name": "North Walsgrave Glebe Close"
+    },
+    {
+      "slug": "north-walsgrave-vicarage-road",
+      "name": "North Walsgrave Vicarage Road"
+    },
+    {
+      "slug": "north-walsgrave-chapel-lane",
+      "name": "North Walsgrave Chapel Lane"
+    },
+    {
+      "slug": "north-walsgrave-prospect-place",
+      "name": "North Walsgrave Prospect Place"
+    },
+    {
+      "slug": "north-walsgrave-belmont-road",
+      "name": "North Walsgrave Belmont Road"
+    },
+    {
+      "slug": "north-walsgrave-clifton-way",
+      "name": "North Walsgrave Clifton Way"
+    },
+    {
+      "slug": "north-walsgrave-richmond-road",
+      "name": "North Walsgrave Richmond Road"
+    },
+    {
+      "slug": "north-walsgrave-grosvenor-park",
+      "name": "North Walsgrave Grosvenor Park"
+    },
+    {
+      "slug": "north-walsgrave-claremont-road",
+      "name": "North Walsgrave Claremont Road"
+    },
+    {
+      "slug": "north-walsgrave-wellington-street",
+      "name": "North Walsgrave Wellington Street"
+    },
+    {
+      "slug": "north-walsgrave-nelson-road",
+      "name": "North Walsgrave Nelson Road"
+    },
+    {
+      "slug": "north-walsgrave-crescent-way",
+      "name": "North Walsgrave Crescent Way"
+    },
+    {
+      "slug": "north-walsgrave-square",
+      "name": "North Walsgrave Square"
+    },
+    {
+      "slug": "north-walsgrave-terrace",
+      "name": "North Walsgrave Terrace"
+    },
+    {
+      "slug": "north-walsgrave-street",
+      "name": "North Walsgrave Street"
+    },
+    {
+      "slug": "north-walsgrave-lane",
+      "name": "North Walsgrave Lane"
+    },
+    {
+      "slug": "north-walsgrave-close",
+      "name": "North Walsgrave Close"
+    },
+    {
+      "slug": "north-walsgrave-drive",
+      "name": "North Walsgrave Drive"
+    },
+    {
+      "slug": "north-walsgrave-avenue",
+      "name": "North Walsgrave Avenue"
+    },
+    {
+      "slug": "north-walsgrave-way",
+      "name": "North Walsgrave Way"
     }
   ]
 }

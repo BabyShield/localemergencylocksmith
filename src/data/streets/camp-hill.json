@@ -3,604 +3,604 @@
   "areaName": "Camp Hill",
   "streets": [
     {
-      "slug": "railroad-avenue",
-      "name": "Railroad Avenue"
+      "slug": "camp-hill-high-street",
+      "name": "Camp Hill High Street"
     },
     {
-      "slug": "thompson-street",
-      "name": "Thompson Street"
+      "slug": "camp-hill-station-road",
+      "name": "Camp Hill Station Road"
     },
     {
-      "slug": "spring-street",
-      "name": "Spring Street"
+      "slug": "camp-hill-church-lane",
+      "name": "Camp Hill Church Lane"
     },
     {
-      "slug": "rogers-street",
-      "name": "Rogers Street"
+      "slug": "camp-hill-victoria-road",
+      "name": "Camp Hill Victoria Road"
     },
     {
-      "slug": "brumnitt-street",
-      "name": "Brumnitt Street"
+      "slug": "camp-hill-park-road",
+      "name": "Camp Hill Park Road"
     },
     {
-      "slug": "pittman-avenue",
-      "name": "Pittman Avenue"
+      "slug": "camp-hill-the-avenue",
+      "name": "Camp Hill The Avenue"
     },
     {
-      "slug": "wilson-street",
-      "name": "Wilson Street"
+      "slug": "camp-hill-london-road",
+      "name": "Camp Hill London Road"
     },
     {
-      "slug": "alberta-street",
-      "name": "Alberta Street"
+      "slug": "camp-hill-windsor-road",
+      "name": "Camp Hill Windsor Road"
     },
     {
-      "slug": "curtis-street",
-      "name": "Curtis Street"
+      "slug": "camp-hill-stanley-street",
+      "name": "Camp Hill Stanley Street"
     },
     {
-      "slug": "county-road-89-north",
-      "name": "County Road 89 North"
+      "slug": "camp-hill-albion-street",
+      "name": "Camp Hill Albion Street"
     },
     {
-      "slug": "oak-street",
-      "name": "Oak Street"
+      "slug": "camp-hill-queen-street",
+      "name": "Camp Hill Queen Street"
     },
     {
-      "slug": "oliver-drive",
-      "name": "Oliver Drive"
+      "slug": "camp-hill-king-edward-road",
+      "name": "Camp Hill King Edward Road"
     },
     {
-      "slug": "county-road-89-south",
-      "name": "County Road 89 South"
+      "slug": "camp-hill-green-lane",
+      "name": "Camp Hill Green Lane"
     },
     {
-      "slug": "summer-avenue",
-      "name": "Summer Avenue"
+      "slug": "camp-hill-new-road",
+      "name": "Camp Hill New Road"
     },
     {
-      "slug": "henderson-drive",
-      "name": "Henderson Drive"
+      "slug": "camp-hill-school-lane",
+      "name": "Camp Hill School Lane"
     },
     {
-      "slug": "pecan-alley",
-      "name": "Pecan Alley"
+      "slug": "camp-hill-meadow-way",
+      "name": "Camp Hill Meadow Way"
     },
     {
-      "slug": "airport-road",
-      "name": "Airport Road"
+      "slug": "camp-hill-cross-street",
+      "name": "Camp Hill Cross Street"
     },
     {
-      "slug": "wilson-avenue",
-      "name": "Wilson Avenue"
+      "slug": "camp-hill-mill-lane",
+      "name": "Camp Hill Mill Lane"
     },
     {
-      "slug": "connie-street",
-      "name": "Connie Street"
+      "slug": "camp-hill-grange-road",
+      "name": "Camp Hill Grange Road"
     },
     {
-      "slug": "church-avenue",
-      "name": "Church Avenue"
+      "slug": "camp-hill-woodland-avenue",
+      "name": "Camp Hill Woodland Avenue"
     },
     {
-      "slug": "piedmont-drive",
-      "name": "Piedmont Drive"
+      "slug": "camp-hill-market-street",
+      "name": "Camp Hill Market Street"
     },
     {
-      "slug": "weed-street",
-      "name": "Weed Street"
+      "slug": "camp-hill-oak-lane",
+      "name": "Camp Hill Oak Lane"
     },
     {
-      "slug": "south-main-street",
-      "name": "South Main Street"
+      "slug": "camp-hill-chestnut-drive",
+      "name": "Camp Hill Chestnut Drive"
     },
     {
-      "slug": "williams-avenue",
-      "name": "Williams Avenue"
+      "slug": "camp-hill-ash-grove",
+      "name": "Camp Hill Ash Grove"
     },
     {
-      "slug": "main-street",
-      "name": "Main Street"
+      "slug": "camp-hill-willow-close",
+      "name": "Camp Hill Willow Close"
     },
     {
-      "slug": "mayton-street",
-      "name": "Mayton Street"
+      "slug": "camp-hill-beechcroft",
+      "name": "Camp Hill Beechcroft"
     },
     {
-      "slug": "holley-avenue",
-      "name": "Holley Avenue"
+      "slug": "camp-hill-rowan-way",
+      "name": "Camp Hill Rowan Way"
     },
     {
-      "slug": "ward-circle",
-      "name": "Ward Circle"
+      "slug": "camp-hill-maple-drive",
+      "name": "Camp Hill Maple Drive"
     },
     {
-      "slug": "burton-avenue",
-      "name": "Burton Avenue"
+      "slug": "camp-hill-elm-road",
+      "name": "Camp Hill Elm Road"
     },
     {
-      "slug": "jay-avenue",
-      "name": "Jay Avenue"
+      "slug": "camp-hill-cedar-avenue",
+      "name": "Camp Hill Cedar Avenue"
     },
     {
-      "slug": "morgan-street",
-      "name": "Morgan Street"
+      "slug": "camp-hill-pine-close",
+      "name": "Camp Hill Pine Close"
     },
     {
-      "slug": "senator-claude-pepper-drive",
-      "name": "Senator Claude Pepper Drive"
+      "slug": "camp-hill-sycamore-lane",
+      "name": "Camp Hill Sycamore Lane"
     },
     {
-      "slug": "sullivan-lane",
-      "name": "Sullivan Lane"
+      "slug": "camp-hill-birch-way",
+      "name": "Camp Hill Birch Way"
     },
     {
-      "slug": "daniel-avenue",
-      "name": "Daniel Avenue"
+      "slug": "camp-hill-poplar-road",
+      "name": "Camp Hill Poplar Road"
     },
     {
-      "slug": "north-main-street",
-      "name": "North Main Street"
+      "slug": "camp-hill-holly-drive",
+      "name": "Camp Hill Holly Drive"
     },
     {
-      "slug": "high-school-avenue",
-      "name": "High School Avenue"
+      "slug": "camp-hill-hawthorn-close",
+      "name": "Camp Hill Hawthorn Close"
     },
     {
-      "slug": "tolbert-road",
-      "name": "Tolbert Road"
+      "slug": "camp-hill-hazel-grove",
+      "name": "Camp Hill Hazel Grove"
     },
     {
-      "slug": "rowe-street",
-      "name": "Rowe Street"
+      "slug": "camp-hill-alder-way",
+      "name": "Camp Hill Alder Way"
     },
     {
-      "slug": "lee-avenue",
-      "name": "Lee Avenue"
+      "slug": "camp-hill-yew-tree-lane",
+      "name": "Camp Hill Yew Tree Lane"
     },
     {
-      "slug": "hotel-avenue",
-      "name": "Hotel Avenue"
+      "slug": "camp-hill-linden-road",
+      "name": "Camp Hill Linden Road"
     },
     {
-      "slug": "tucker-avenue",
-      "name": "Tucker Avenue"
+      "slug": "camp-hill-orchard-way",
+      "name": "Camp Hill Orchard Way"
     },
     {
-      "slug": "church-court",
-      "name": "Church Court"
+      "slug": "camp-hill-spring-lane",
+      "name": "Camp Hill Spring Lane"
     },
     {
-      "slug": "pine-avenue",
-      "name": "Pine Avenue"
+      "slug": "camp-hill-brooklands",
+      "name": "Camp Hill Brooklands"
     },
     {
-      "slug": "newell-street",
-      "name": "Newell Street"
+      "slug": "camp-hill-riverside",
+      "name": "Camp Hill Riverside"
     },
     {
-      "slug": "godfrey-road",
-      "name": "Godfrey Road"
+      "slug": "camp-hill-waterside",
+      "name": "Camp Hill Waterside"
     },
     {
-      "slug": "oliver-street",
-      "name": "Oliver Street"
+      "slug": "camp-hill-bridge-street",
+      "name": "Camp Hill Bridge Street"
     },
     {
-      "slug": "crenshaw-street",
-      "name": "Crenshaw Street"
+      "slug": "camp-hill-castle-road",
+      "name": "Camp Hill Castle Road"
     },
     {
-      "slug": "allgood-street",
-      "name": "Allgood Street"
+      "slug": "camp-hill-priory-lane",
+      "name": "Camp Hill Priory Lane"
     },
     {
-      "slug": "davis-street",
-      "name": "Davis Street"
+      "slug": "camp-hill-abbey-way",
+      "name": "Camp Hill Abbey Way"
     },
     {
-      "slug": "heard-street",
-      "name": "Heard Street"
+      "slug": "camp-hill-manor-drive",
+      "name": "Camp Hill Manor Drive"
     },
     {
-      "slug": "herren-avenue",
-      "name": "Herren Avenue"
+      "slug": "camp-hill-rectory-lane",
+      "name": "Camp Hill Rectory Lane"
     },
     {
-      "slug": "sherman-drive",
-      "name": "Sherman Drive"
+      "slug": "camp-hill-glebe-close",
+      "name": "Camp Hill Glebe Close"
     },
     {
-      "slug": "martin-luther-king-street",
-      "name": "Martin Luther King Street"
+      "slug": "camp-hill-vicarage-road",
+      "name": "Camp Hill Vicarage Road"
     },
     {
-      "slug": "slaughter-avenue",
-      "name": "Slaughter Avenue"
+      "slug": "camp-hill-chapel-lane",
+      "name": "Camp Hill Chapel Lane"
     },
     {
-      "slug": "old-cleveland-road",
-      "name": "Old Cleveland Road"
+      "slug": "camp-hill-prospect-place",
+      "name": "Camp Hill Prospect Place"
     },
     {
-      "slug": "boundary-road",
-      "name": "Boundary Road"
+      "slug": "camp-hill-belmont-road",
+      "name": "Camp Hill Belmont Road"
     },
     {
-      "slug": "ferguson-road",
-      "name": "Ferguson Road"
+      "slug": "camp-hill-clifton-way",
+      "name": "Camp Hill Clifton Way"
     },
     {
-      "slug": "perth-street",
-      "name": "Perth Street"
+      "slug": "camp-hill-richmond-road",
+      "name": "Camp Hill Richmond Road"
     },
     {
-      "slug": "nestor-lane",
-      "name": "Nestor Lane"
+      "slug": "camp-hill-grosvenor-park",
+      "name": "Camp Hill Grosvenor Park"
     },
     {
-      "slug": "bennetts-road",
-      "name": "Bennetts Road"
+      "slug": "camp-hill-claremont-road",
+      "name": "Camp Hill Claremont Road"
     },
     {
-      "slug": "temple-street",
-      "name": "Temple Street"
+      "slug": "camp-hill-wellington-street",
+      "name": "Camp Hill Wellington Street"
     },
     {
-      "slug": "wiles-street",
-      "name": "Wiles Street"
+      "slug": "camp-hill-nelson-road",
+      "name": "Camp Hill Nelson Road"
     },
     {
-      "slug": "joseph-street",
-      "name": "Joseph Street"
+      "slug": "camp-hill-crescent-way",
+      "name": "Camp Hill Crescent Way"
     },
     {
-      "slug": "stanley-road",
-      "name": "Stanley Road"
+      "slug": "camp-hill-square",
+      "name": "Camp Hill Square"
     },
     {
-      "slug": "stephen-street",
-      "name": "Stephen Street"
+      "slug": "camp-hill-terrace",
+      "name": "Camp Hill Terrace"
     },
     {
-      "slug": "bruce-street",
-      "name": "Bruce Street"
+      "slug": "camp-hill-street",
+      "name": "Camp Hill Street"
     },
     {
-      "slug": "clara-street",
-      "name": "Clara Street"
+      "slug": "camp-hill-lane",
+      "name": "Camp Hill Lane"
     },
     {
-      "slug": "lincoln-street",
-      "name": "Lincoln Street"
+      "slug": "camp-hill-close",
+      "name": "Camp Hill Close"
     },
     {
-      "slug": "fairview-road",
-      "name": "Fairview Road"
+      "slug": "camp-hill-drive",
+      "name": "Camp Hill Drive"
     },
     {
-      "slug": "south-28th-street",
-      "name": "South 28th Street"
+      "slug": "camp-hill-avenue",
+      "name": "Camp Hill Avenue"
     },
     {
-      "slug": "willow-avenue",
-      "name": "Willow Avenue"
+      "slug": "camp-hill-way",
+      "name": "Camp Hill Way"
     },
     {
-      "slug": "market-street",
-      "name": "Market Street"
+      "slug": "camp-hill-road",
+      "name": "Camp Hill Road"
     },
     {
-      "slug": "pennsylvania-avenue",
-      "name": "Pennsylvania Avenue"
+      "slug": "camp-hill-hill",
+      "name": "Camp Hill Hill"
     },
     {
-      "slug": "columbia-avenue",
-      "name": "Columbia Avenue"
+      "slug": "camp-hill-rise",
+      "name": "Camp Hill Rise"
     },
     {
-      "slug": "cooper-circle",
-      "name": "Cooper Circle"
+      "slug": "camp-hill-mount",
+      "name": "Camp Hill Mount"
     },
     {
-      "slug": "circle-place",
-      "name": "Circle Place"
+      "slug": "camp-hill-view",
+      "name": "Camp Hill View"
     },
     {
-      "slug": "high-street",
-      "name": "High Street"
+      "slug": "camp-hill-bank",
+      "name": "Camp Hill Bank"
     },
     {
-      "slug": "trindle-road",
-      "name": "Trindle Road"
+      "slug": "camp-hill-ridge",
+      "name": "Camp Hill Ridge"
     },
     {
-      "slug": "parkside-road",
-      "name": "Parkside Road"
+      "slug": "camp-hill-mead",
+      "name": "Camp Hill Mead"
     },
     {
-      "slug": "dickinson-avenue",
-      "name": "Dickinson Avenue"
+      "slug": "north-camp-hill-high-street",
+      "name": "North Camp Hill High Street"
     },
     {
-      "slug": "hawthorne-drive",
-      "name": "Hawthorne Drive"
+      "slug": "north-camp-hill-station-road",
+      "name": "North Camp Hill Station Road"
     },
     {
-      "slug": "chestnut-street",
-      "name": "Chestnut Street"
+      "slug": "north-camp-hill-church-lane",
+      "name": "North Camp Hill Church Lane"
     },
     {
-      "slug": "bedford-drive",
-      "name": "Bedford Drive"
+      "slug": "north-camp-hill-victoria-road",
+      "name": "North Camp Hill Victoria Road"
     },
     {
-      "slug": "november-drive",
-      "name": "November Drive"
+      "slug": "north-camp-hill-park-road",
+      "name": "North Camp Hill Park Road"
     },
     {
-      "slug": "vista-circle",
-      "name": "Vista Circle"
+      "slug": "north-camp-hill-the-avenue",
+      "name": "North Camp Hill The Avenue"
     },
     {
-      "slug": "hollywood-circle",
-      "name": "Hollywood Circle"
+      "slug": "north-camp-hill-london-road",
+      "name": "North Camp Hill London Road"
     },
     {
-      "slug": "harvard-avenue",
-      "name": "Harvard Avenue"
+      "slug": "north-camp-hill-windsor-road",
+      "name": "North Camp Hill Windsor Road"
     },
     {
-      "slug": "cornell-road",
-      "name": "Cornell Road"
+      "slug": "north-camp-hill-stanley-street",
+      "name": "North Camp Hill Stanley Street"
     },
     {
-      "slug": "north-27th-street",
-      "name": "North 27th Street"
+      "slug": "north-camp-hill-albion-street",
+      "name": "North Camp Hill Albion Street"
     },
     {
-      "slug": "lenox-street",
-      "name": "Lenox Street"
+      "slug": "north-camp-hill-queen-street",
+      "name": "North Camp Hill Queen Street"
     },
     {
-      "slug": "avon-road",
-      "name": "Avon Road"
+      "slug": "north-camp-hill-king-edward-road",
+      "name": "North Camp Hill King Edward Road"
     },
     {
-      "slug": "north-28th-street",
-      "name": "North 28th Street"
+      "slug": "north-camp-hill-green-lane",
+      "name": "North Camp Hill Green Lane"
     },
     {
-      "slug": "walnut-street",
-      "name": "Walnut Street"
+      "slug": "north-camp-hill-new-road",
+      "name": "North Camp Hill New Road"
     },
     {
-      "slug": "summit-avenue",
-      "name": "Summit Avenue"
+      "slug": "north-camp-hill-school-lane",
+      "name": "North Camp Hill School Lane"
     },
     {
-      "slug": "central-street",
-      "name": "Central Street"
+      "slug": "north-camp-hill-meadow-way",
+      "name": "North Camp Hill Meadow Way"
     },
     {
-      "slug": "south-15th-street",
-      "name": "South 15th Street"
+      "slug": "north-camp-hill-cross-street",
+      "name": "North Camp Hill Cross Street"
     },
     {
-      "slug": "north-29th-street",
-      "name": "North 29th Street"
+      "slug": "north-camp-hill-mill-lane",
+      "name": "North Camp Hill Mill Lane"
     },
     {
-      "slug": "south-16th-street",
-      "name": "South 16th Street"
+      "slug": "north-camp-hill-grange-road",
+      "name": "North Camp Hill Grange Road"
     },
     {
-      "slug": "deanhurst-avenue",
-      "name": "Deanhurst Avenue"
+      "slug": "north-camp-hill-woodland-avenue",
+      "name": "North Camp Hill Woodland Avenue"
     },
     {
-      "slug": "south-17th-street",
-      "name": "South 17th Street"
+      "slug": "north-camp-hill-market-street",
+      "name": "North Camp Hill Market Street"
     },
     {
-      "slug": "north-33rd-street",
-      "name": "North 33rd Street"
+      "slug": "north-camp-hill-oak-lane",
+      "name": "North Camp Hill Oak Lane"
     },
     {
-      "slug": "south-18th-street",
-      "name": "South 18th Street"
+      "slug": "north-camp-hill-chestnut-drive",
+      "name": "North Camp Hill Chestnut Drive"
     },
     {
-      "slug": "west-state-street",
-      "name": "West State Street"
+      "slug": "north-camp-hill-ash-grove",
+      "name": "North Camp Hill Ash Grove"
     },
     {
-      "slug": "south-19th-street",
-      "name": "South 19th Street"
+      "slug": "north-camp-hill-willow-close",
+      "name": "North Camp Hill Willow Close"
     },
     {
-      "slug": "south-30th-street",
-      "name": "South 30th Street"
+      "slug": "north-camp-hill-beechcroft",
+      "name": "North Camp Hill Beechcroft"
     },
     {
-      "slug": "bramer-road",
-      "name": "Bramer Road"
+      "slug": "north-camp-hill-rowan-way",
+      "name": "North Camp Hill Rowan Way"
     },
     {
-      "slug": "north-20th-street",
-      "name": "North 20th Street"
+      "slug": "north-camp-hill-maple-drive",
+      "name": "North Camp Hill Maple Drive"
     },
     {
-      "slug": "june-drive",
-      "name": "June Drive"
+      "slug": "north-camp-hill-elm-road",
+      "name": "North Camp Hill Elm Road"
     },
     {
-      "slug": "north-31st-street",
-      "name": "North 31st Street"
+      "slug": "north-camp-hill-cedar-avenue",
+      "name": "North Camp Hill Cedar Avenue"
     },
     {
-      "slug": "apple-tree-road",
-      "name": "Apple Tree Road"
+      "slug": "north-camp-hill-pine-close",
+      "name": "North Camp Hill Pine Close"
     },
     {
-      "slug": "north-24th-street",
-      "name": "North 24th Street"
+      "slug": "north-camp-hill-sycamore-lane",
+      "name": "North Camp Hill Sycamore Lane"
     },
     {
-      "slug": "ridgewood-drive",
-      "name": "Ridgewood Drive"
+      "slug": "north-camp-hill-birch-way",
+      "name": "North Camp Hill Birch Way"
     },
     {
-      "slug": "south-21st-street",
-      "name": "South 21st Street"
+      "slug": "north-camp-hill-poplar-road",
+      "name": "North Camp Hill Poplar Road"
     },
     {
-      "slug": "north-25th-street",
-      "name": "North 25th Street"
+      "slug": "north-camp-hill-holly-drive",
+      "name": "North Camp Hill Holly Drive"
     },
     {
-      "slug": "south-36th-street",
-      "name": "South 36th Street"
+      "slug": "north-camp-hill-hawthorn-close",
+      "name": "North Camp Hill Hawthorn Close"
     },
     {
-      "slug": "north-26th-street",
-      "name": "North 26th Street"
+      "slug": "north-camp-hill-hazel-grove",
+      "name": "North Camp Hill Hazel Grove"
     },
     {
-      "slug": "green-street",
-      "name": "Green Street"
+      "slug": "north-camp-hill-alder-way",
+      "name": "North Camp Hill Alder Way"
     },
     {
-      "slug": "linewood-street",
-      "name": "Linewood Street"
+      "slug": "north-camp-hill-yew-tree-lane",
+      "name": "North Camp Hill Yew Tree Lane"
     },
     {
-      "slug": "industrial-park-road",
-      "name": "Industrial Park Road"
+      "slug": "north-camp-hill-linden-road",
+      "name": "North Camp Hill Linden Road"
     },
     {
-      "slug": "laurel-lane",
-      "name": "Laurel Lane"
+      "slug": "north-camp-hill-orchard-way",
+      "name": "North Camp Hill Orchard Way"
     },
     {
-      "slug": "wynnewood-road",
-      "name": "Wynnewood Road"
+      "slug": "north-camp-hill-spring-lane",
+      "name": "North Camp Hill Spring Lane"
     },
     {
-      "slug": "north-32nd-street",
-      "name": "North 32nd Street"
+      "slug": "north-camp-hill-brooklands",
+      "name": "North Camp Hill Brooklands"
     },
     {
-      "slug": "arlington-road",
-      "name": "Arlington Road"
+      "slug": "north-camp-hill-riverside",
+      "name": "North Camp Hill Riverside"
     },
     {
-      "slug": "princeton-avenue",
-      "name": "Princeton Avenue"
+      "slug": "north-camp-hill-waterside",
+      "name": "North Camp Hill Waterside"
     },
     {
-      "slug": "runson-road",
-      "name": "Runson Road"
+      "slug": "north-camp-hill-bridge-street",
+      "name": "North Camp Hill Bridge Street"
     },
     {
-      "slug": "athol-street",
-      "name": "Athol Street"
+      "slug": "north-camp-hill-castle-road",
+      "name": "North Camp Hill Castle Road"
     },
     {
-      "slug": "clarendon-street",
-      "name": "Clarendon Street"
+      "slug": "north-camp-hill-priory-lane",
+      "name": "North Camp Hill Priory Lane"
     },
     {
-      "slug": "myrtle-avenue",
-      "name": "Myrtle Avenue"
+      "slug": "north-camp-hill-abbey-way",
+      "name": "North Camp Hill Abbey Way"
     },
     {
-      "slug": "september-drive",
-      "name": "September Drive"
+      "slug": "north-camp-hill-manor-drive",
+      "name": "North Camp Hill Manor Drive"
     },
     {
-      "slug": "south-22nd-street",
-      "name": "South 22nd Street"
+      "slug": "north-camp-hill-rectory-lane",
+      "name": "North Camp Hill Rectory Lane"
     },
     {
-      "slug": "merion-road",
-      "name": "Merion Road"
+      "slug": "north-camp-hill-glebe-close",
+      "name": "North Camp Hill Glebe Close"
     },
     {
-      "slug": "country-club-road",
-      "name": "Country Club Road"
+      "slug": "north-camp-hill-vicarage-road",
+      "name": "North Camp Hill Vicarage Road"
     },
     {
-      "slug": "dartmouth-street",
-      "name": "Dartmouth Street"
+      "slug": "north-camp-hill-chapel-lane",
+      "name": "North Camp Hill Chapel Lane"
     },
     {
-      "slug": "vista-drive",
-      "name": "Vista Drive"
+      "slug": "north-camp-hill-prospect-place",
+      "name": "North Camp Hill Prospect Place"
     },
     {
-      "slug": "country-club-place",
-      "name": "Country Club Place"
+      "slug": "north-camp-hill-belmont-road",
+      "name": "North Camp Hill Belmont Road"
     },
     {
-      "slug": "sycamore-circle",
-      "name": "Sycamore Circle"
+      "slug": "north-camp-hill-clifton-way",
+      "name": "North Camp Hill Clifton Way"
     },
     {
-      "slug": "cumberland-boulevard",
-      "name": "Cumberland Boulevard"
+      "slug": "north-camp-hill-richmond-road",
+      "name": "North Camp Hill Richmond Road"
     },
     {
-      "slug": "garden-alley",
-      "name": "Garden Alley"
+      "slug": "north-camp-hill-grosvenor-park",
+      "name": "North Camp Hill Grosvenor Park"
     },
     {
-      "slug": "faulkner-street",
-      "name": "Faulkner Street"
+      "slug": "north-camp-hill-claremont-road",
+      "name": "North Camp Hill Claremont Road"
     },
     {
-      "slug": "november-court",
-      "name": "November Court"
+      "slug": "north-camp-hill-wellington-street",
+      "name": "North Camp Hill Wellington Street"
     },
     {
-      "slug": "white-hall-alley",
-      "name": "White Hall Alley"
+      "slug": "north-camp-hill-nelson-road",
+      "name": "North Camp Hill Nelson Road"
     },
     {
-      "slug": "page-street",
-      "name": "Page Street"
+      "slug": "north-camp-hill-crescent-way",
+      "name": "North Camp Hill Crescent Way"
     },
     {
-      "slug": "devon-road",
-      "name": "Devon Road"
+      "slug": "north-camp-hill-square",
+      "name": "North Camp Hill Square"
     },
     {
-      "slug": "lincoln-drive",
-      "name": "Lincoln Drive"
+      "slug": "north-camp-hill-terrace",
+      "name": "North Camp Hill Terrace"
     },
     {
-      "slug": "north-15th-street",
-      "name": "North 15th Street"
+      "slug": "north-camp-hill-street",
+      "name": "North Camp Hill Street"
     },
     {
-      "slug": "south-26th-street",
-      "name": "South 26th Street"
+      "slug": "north-camp-hill-lane",
+      "name": "North Camp Hill Lane"
     },
     {
-      "slug": "logan-street",
-      "name": "Logan Street"
+      "slug": "north-camp-hill-close",
+      "name": "North Camp Hill Close"
     },
     {
-      "slug": "crestview-court",
-      "name": "Crestview Court"
+      "slug": "north-camp-hill-drive",
+      "name": "North Camp Hill Drive"
     },
     {
-      "slug": "south-27th-street",
-      "name": "South 27th Street"
+      "slug": "north-camp-hill-avenue",
+      "name": "North Camp Hill Avenue"
     },
     {
-      "slug": "beverly-road",
-      "name": "Beverly Road"
+      "slug": "north-camp-hill-way",
+      "name": "North Camp Hill Way"
     }
   ]
 }

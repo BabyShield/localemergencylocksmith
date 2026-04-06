@@ -3,28 +3,604 @@
   "areaName": "Rugby",
   "streets": [
     {
-      "slug": "rugby-high-street",
-      "name": "Rugby High Street"
+      "slug": "rugby-interchange",
+      "name": "Rugby Interchange"
     },
     {
-      "slug": "rugby-station-road",
-      "name": "Rugby Station Road"
+      "slug": "coventry-eastern-bypass",
+      "name": "Coventry Eastern Bypass"
     },
     {
-      "slug": "rugby-church-lane",
-      "name": "Rugby Church Lane"
+      "slug": "koeberg-road",
+      "name": "Koeberg Road"
     },
     {
-      "slug": "rugby-victoria-road",
-      "name": "Rugby Victoria Road"
+      "slug": "london-road",
+      "name": "London Road"
     },
     {
-      "slug": "rugby-the-avenue",
-      "name": "Rugby The Avenue"
+      "slug": "coventry-road",
+      "name": "Coventry Road"
     },
     {
-      "slug": "rugby-park-road",
-      "name": "Rugby Park Road"
+      "slug": "thurlaston-interchange",
+      "name": "Thurlaston Interchange"
+    },
+    {
+      "slug": "fosse-way",
+      "name": "Fosse Way"
+    },
+    {
+      "slug": "oxford-road",
+      "name": "Oxford Road"
+    },
+    {
+      "slug": "daventry-road",
+      "name": "Daventry Road"
+    },
+    {
+      "slug": "leicester-road",
+      "name": "Leicester Road"
+    },
+    {
+      "slug": "newbold-road",
+      "name": "Newbold Road"
+    },
+    {
+      "slug": "dunchurch-road",
+      "name": "Dunchurch Road"
+    },
+    {
+      "slug": "r-sselsheim-way",
+      "name": "Rüsselsheim Way"
+    },
+    {
+      "slug": "ansty-interchange",
+      "name": "Ansty Interchange"
+    },
+    {
+      "slug": "hinckley-road",
+      "name": "Hinckley Road"
+    },
+    {
+      "slug": "great-central-walk",
+      "name": "Great Central Walk"
+    },
+    {
+      "slug": "rugby-road",
+      "name": "Rugby Road"
+    },
+    {
+      "slug": "brandon-road",
+      "name": "Brandon Road"
+    },
+    {
+      "slug": "union-road",
+      "name": "Union Road"
+    },
+    {
+      "slug": "kiln-street",
+      "name": "Kiln Street"
+    },
+    {
+      "slug": "donegal-street",
+      "name": "Donegal Street"
+    },
+    {
+      "slug": "max-road",
+      "name": "Max Road"
+    },
+    {
+      "slug": "farnworth-street",
+      "name": "Farnworth Street"
+    },
+    {
+      "slug": "linnet-street",
+      "name": "Linnet Street"
+    },
+    {
+      "slug": "gannet-street",
+      "name": "Gannet Street"
+    },
+    {
+      "slug": "pixie-street",
+      "name": "Pixie Street"
+    },
+    {
+      "slug": "bolmear-road",
+      "name": "Bolmear Road"
+    },
+    {
+      "slug": "hussar-street",
+      "name": "Hussar Street"
+    },
+    {
+      "slug": "impala-street",
+      "name": "Impala Street"
+    },
+    {
+      "slug": "gluckman-avenue",
+      "name": "Gluckman Avenue"
+    },
+    {
+      "slug": "zalkin-street",
+      "name": "Zalkin Street"
+    },
+    {
+      "slug": "dreyer-street",
+      "name": "Dreyer Street"
+    },
+    {
+      "slug": "stanberry-road",
+      "name": "Stanberry Road"
+    },
+    {
+      "slug": "egret-street",
+      "name": "Egret Street"
+    },
+    {
+      "slug": "narwahl-street",
+      "name": "Narwahl Street"
+    },
+    {
+      "slug": "chamois-street",
+      "name": "Chamois Street"
+    },
+    {
+      "slug": "palmetto-street",
+      "name": "Palmetto Street"
+    },
+    {
+      "slug": "lincluden-road",
+      "name": "Lincluden Road"
+    },
+    {
+      "slug": "kettley-way",
+      "name": "Kettley Way"
+    },
+    {
+      "slug": "magnolia-crescent",
+      "name": "Magnolia Crescent"
+    },
+    {
+      "slug": "protea-crescent",
+      "name": "Protea Crescent"
+    },
+    {
+      "slug": "daisy-circle",
+      "name": "Daisy Circle"
+    },
+    {
+      "slug": "madeira-street",
+      "name": "Madeira Street"
+    },
+    {
+      "slug": "santos-street",
+      "name": "Santos Street"
+    },
+    {
+      "slug": "epping-street",
+      "name": "Epping Street"
+    },
+    {
+      "slug": "bancroft-street",
+      "name": "Bancroft Street"
+    },
+    {
+      "slug": "church-road",
+      "name": "Church Road"
+    },
+    {
+      "slug": "temple-hill",
+      "name": "Temple Hill"
+    },
+    {
+      "slug": "church-hill",
+      "name": "Church Hill"
+    },
+    {
+      "slug": "alwyn-road",
+      "name": "Alwyn Road"
+    },
+    {
+      "slug": "oliver-street",
+      "name": "Oliver Street"
+    },
+    {
+      "slug": "boughton-road",
+      "name": "Boughton Road"
+    },
+    {
+      "slug": "church-street",
+      "name": "Church Street"
+    },
+    {
+      "slug": "evreux-way",
+      "name": "Evreux Way"
+    },
+    {
+      "slug": "corporation-street",
+      "name": "Corporation Street"
+    },
+    {
+      "slug": "bruce-williams-way",
+      "name": "Bruce Williams Way"
+    },
+    {
+      "slug": "whitehall-road",
+      "name": "Whitehall Road"
+    },
+    {
+      "slug": "clifton-road",
+      "name": "Clifton Road"
+    },
+    {
+      "slug": "murray-road",
+      "name": "Murray Road"
+    },
+    {
+      "slug": "unique-drive",
+      "name": "Unique Drive"
+    },
+    {
+      "slug": "state-highway-3",
+      "name": "State Highway 3"
+    },
+    {
+      "slug": "2nd-street-northeast",
+      "name": "2nd Street Northeast"
+    },
+    {
+      "slug": "3rd-street-southeast",
+      "name": "3rd Street Southeast"
+    },
+    {
+      "slug": "4th-street-southeast",
+      "name": "4th Street Southeast"
+    },
+    {
+      "slug": "2nd-avenue-southeast",
+      "name": "2nd Avenue Southeast"
+    },
+    {
+      "slug": "3rd-avenue-northwest",
+      "name": "3rd Avenue Northwest"
+    },
+    {
+      "slug": "12th-street-southeast",
+      "name": "12th Street Southeast"
+    },
+    {
+      "slug": "4th-avenue-southwest",
+      "name": "4th Avenue Southwest"
+    },
+    {
+      "slug": "south-main-avenue",
+      "name": "South Main Avenue"
+    },
+    {
+      "slug": "east-dewey-street",
+      "name": "East Dewey Street"
+    },
+    {
+      "slug": "panther-street",
+      "name": "Panther Street"
+    },
+    {
+      "slug": "8th-avenue-southeast",
+      "name": "8th Avenue Southeast"
+    },
+    {
+      "slug": "3rd-avenue-southeast",
+      "name": "3rd Avenue Southeast"
+    },
+    {
+      "slug": "sunset-lane",
+      "name": "Sunset Lane"
+    },
+    {
+      "slug": "eastgate-drive-southeast",
+      "name": "Eastgate Drive Southeast"
+    },
+    {
+      "slug": "10th-street-southeast",
+      "name": "10th Street Southeast"
+    },
+    {
+      "slug": "6th-avenue-northwest",
+      "name": "6th Avenue Northwest"
+    },
+    {
+      "slug": "territorial-drive",
+      "name": "Territorial Drive"
+    },
+    {
+      "slug": "2nd-street-northwest",
+      "name": "2nd Street Northwest"
+    },
+    {
+      "slug": "3rd-street-southwest",
+      "name": "3rd Street Southwest"
+    },
+    {
+      "slug": "4th-street-southwest",
+      "name": "4th Street Southwest"
+    },
+    {
+      "slug": "3rd-avenue-southwest",
+      "name": "3rd Avenue Southwest"
+    },
+    {
+      "slug": "7th-street-southwest",
+      "name": "7th Street Southwest"
+    },
+    {
+      "slug": "2nd-avenue-southwest",
+      "name": "2nd Avenue Southwest"
+    },
+    {
+      "slug": "6th-avenue-southeast",
+      "name": "6th Avenue Southeast"
+    },
+    {
+      "slug": "5th-avenue-northwest",
+      "name": "5th Avenue Northwest"
+    },
+    {
+      "slug": "12th-street-southwest",
+      "name": "12th Street Southwest"
+    },
+    {
+      "slug": "9th-street-southeast",
+      "name": "9th Street Southeast"
+    },
+    {
+      "slug": "2nd-street-southeast",
+      "name": "2nd Street Southeast"
+    },
+    {
+      "slug": "west-dewey-street",
+      "name": "West Dewey Street"
+    },
+    {
+      "slug": "5th-street-southeast",
+      "name": "5th Street Southeast"
+    },
+    {
+      "slug": "8th-avenue-southwest",
+      "name": "8th Avenue Southwest"
+    },
+    {
+      "slug": "10th-street-southwest",
+      "name": "10th Street Southwest"
+    },
+    {
+      "slug": "north-main-avenue",
+      "name": "North Main Avenue"
+    },
+    {
+      "slug": "7th-avenue-southeast",
+      "name": "7th Avenue Southeast"
+    },
+    {
+      "slug": "5th-avenue-southeast",
+      "name": "5th Avenue Southeast"
+    },
+    {
+      "slug": "3rd-street-northeast",
+      "name": "3rd Street Northeast"
+    },
+    {
+      "slug": "heritage-circle",
+      "name": "Heritage Circle"
+    },
+    {
+      "slug": "6th-street-southeast",
+      "name": "6th Street Southeast"
+    },
+    {
+      "slug": "4th-street-northeast",
+      "name": "4th Street Northeast"
+    },
+    {
+      "slug": "1st-street-northeast",
+      "name": "1st Street Northeast"
+    },
+    {
+      "slug": "9th-avenue-southwest",
+      "name": "9th Avenue Southwest"
+    },
+    {
+      "slug": "2nd-avenue-northeast",
+      "name": "2nd Avenue Northeast"
+    },
+    {
+      "slug": "6th-avenue-southwest",
+      "name": "6th Avenue Southwest"
+    },
+    {
+      "slug": "11th-street-southeast",
+      "name": "11th Street Southeast"
+    },
+    {
+      "slug": "9th-street-southwest",
+      "name": "9th Street Southwest"
+    },
+    {
+      "slug": "ellery-park",
+      "name": "Ellery Park"
+    },
+    {
+      "slug": "2nd-street-southwest",
+      "name": "2nd Street Southwest"
+    },
+    {
+      "slug": "31st-avenue-northeast",
+      "name": "31st Avenue Northeast"
+    },
+    {
+      "slug": "industrial-road",
+      "name": "Industrial Road"
+    },
+    {
+      "slug": "4th-avenue-northwest",
+      "name": "4th Avenue Northwest"
+    },
+    {
+      "slug": "2-1-2-avenue-southeast",
+      "name": "2 1/2 Avenue Southeast"
+    },
+    {
+      "slug": "8th-street-southwest",
+      "name": "8th Street Southwest"
+    },
+    {
+      "slug": "viking-drive",
+      "name": "Viking Drive"
+    },
+    {
+      "slug": "30th-avenue-northeast",
+      "name": "30th Avenue Northeast"
+    },
+    {
+      "slug": "14th-street-southwest",
+      "name": "14th Street Southwest"
+    },
+    {
+      "slug": "32nd-avenue-northeast",
+      "name": "32nd Avenue Northeast"
+    },
+    {
+      "slug": "parkland-drive-southwest",
+      "name": "Parkland Drive Southwest"
+    },
+    {
+      "slug": "leisure-lane",
+      "name": "Leisure Lane"
+    },
+    {
+      "slug": "7th-avenue-southwest",
+      "name": "7th Avenue Southwest"
+    },
+    {
+      "slug": "5th-avenue-southwest",
+      "name": "5th Avenue Southwest"
+    },
+    {
+      "slug": "3rd-street-northwest",
+      "name": "3rd Street Northwest"
+    },
+    {
+      "slug": "4th-street-northwest",
+      "name": "4th Street Northwest"
+    },
+    {
+      "slug": "6th-street-southwest",
+      "name": "6th Street Southwest"
+    },
+    {
+      "slug": "4th-avenue-southeast",
+      "name": "4th Avenue Southeast"
+    },
+    {
+      "slug": "15th-street-southwest",
+      "name": "15th Street Southwest"
+    },
+    {
+      "slug": "western-avenue",
+      "name": "Western Avenue"
+    },
+    {
+      "slug": "1st-street-northwest",
+      "name": "1st Street Northwest"
+    },
+    {
+      "slug": "2nd-avenue-northwest",
+      "name": "2nd Avenue Northwest"
+    },
+    {
+      "slug": "11th-street-southwest",
+      "name": "11th Street Southwest"
+    },
+    {
+      "slug": "leamington-road",
+      "name": "Leamington Road"
+    },
+    {
+      "slug": "warwick-street",
+      "name": "Warwick Street"
+    },
+    {
+      "slug": "ashlawn-road",
+      "name": "Ashlawn Road"
+    },
+    {
+      "slug": "cawston-lane",
+      "name": "Cawston Lane"
+    },
+    {
+      "slug": "hillmorton-road",
+      "name": "Hillmorton Road"
+    },
+    {
+      "slug": "mill-road",
+      "name": "Mill Road"
+    },
+    {
+      "slug": "lancaster-road",
+      "name": "Lancaster Road"
+    },
+    {
+      "slug": "hunter-street",
+      "name": "Hunter Street"
+    },
+    {
+      "slug": "school-street",
+      "name": "School Street"
+    },
+    {
+      "slug": "queens-road",
+      "name": "Queens Road"
+    },
+    {
+      "slug": "straight-mile",
+      "name": "Straight Mile"
+    },
+    {
+      "slug": "bilton-road",
+      "name": "Bilton Road"
+    },
+    {
+      "slug": "combe-fields-road",
+      "name": "Combe Fields Road"
+    },
+    {
+      "slug": "lentons-lane",
+      "name": "Lentons Lane"
+    },
+    {
+      "slug": "bulkington-road",
+      "name": "Bulkington Road"
+    },
+    {
+      "slug": "gipsy-lane",
+      "name": "Gipsy Lane"
+    },
+    {
+      "slug": "smockington-lane",
+      "name": "Smockington Lane"
+    },
+    {
+      "slug": "withybrook-road",
+      "name": "Withybrook Road"
+    },
+    {
+      "slug": "flecknoe-road",
+      "name": "Flecknoe Road"
+    },
+    {
+      "slug": "top-road",
+      "name": "Top Road"
     }
   ]
 }

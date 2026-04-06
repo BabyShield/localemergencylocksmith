@@ -19,12 +19,588 @@
       "name": "Warwick Gates Victoria Road"
     },
     {
+      "slug": "warwick-gates-park-road",
+      "name": "Warwick Gates Park Road"
+    },
+    {
       "slug": "warwick-gates-the-avenue",
       "name": "Warwick Gates The Avenue"
     },
     {
-      "slug": "warwick-gates-park-road",
-      "name": "Warwick Gates Park Road"
+      "slug": "warwick-gates-london-road",
+      "name": "Warwick Gates London Road"
+    },
+    {
+      "slug": "warwick-gates-windsor-road",
+      "name": "Warwick Gates Windsor Road"
+    },
+    {
+      "slug": "warwick-gates-stanley-street",
+      "name": "Warwick Gates Stanley Street"
+    },
+    {
+      "slug": "warwick-gates-albion-street",
+      "name": "Warwick Gates Albion Street"
+    },
+    {
+      "slug": "warwick-gates-queen-street",
+      "name": "Warwick Gates Queen Street"
+    },
+    {
+      "slug": "warwick-gates-king-edward-road",
+      "name": "Warwick Gates King Edward Road"
+    },
+    {
+      "slug": "warwick-gates-green-lane",
+      "name": "Warwick Gates Green Lane"
+    },
+    {
+      "slug": "warwick-gates-new-road",
+      "name": "Warwick Gates New Road"
+    },
+    {
+      "slug": "warwick-gates-school-lane",
+      "name": "Warwick Gates School Lane"
+    },
+    {
+      "slug": "warwick-gates-meadow-way",
+      "name": "Warwick Gates Meadow Way"
+    },
+    {
+      "slug": "warwick-gates-cross-street",
+      "name": "Warwick Gates Cross Street"
+    },
+    {
+      "slug": "warwick-gates-mill-lane",
+      "name": "Warwick Gates Mill Lane"
+    },
+    {
+      "slug": "warwick-gates-grange-road",
+      "name": "Warwick Gates Grange Road"
+    },
+    {
+      "slug": "warwick-gates-woodland-avenue",
+      "name": "Warwick Gates Woodland Avenue"
+    },
+    {
+      "slug": "warwick-gates-market-street",
+      "name": "Warwick Gates Market Street"
+    },
+    {
+      "slug": "warwick-gates-oak-lane",
+      "name": "Warwick Gates Oak Lane"
+    },
+    {
+      "slug": "warwick-gates-chestnut-drive",
+      "name": "Warwick Gates Chestnut Drive"
+    },
+    {
+      "slug": "warwick-gates-ash-grove",
+      "name": "Warwick Gates Ash Grove"
+    },
+    {
+      "slug": "warwick-gates-willow-close",
+      "name": "Warwick Gates Willow Close"
+    },
+    {
+      "slug": "warwick-gates-beechcroft",
+      "name": "Warwick Gates Beechcroft"
+    },
+    {
+      "slug": "warwick-gates-rowan-way",
+      "name": "Warwick Gates Rowan Way"
+    },
+    {
+      "slug": "warwick-gates-maple-drive",
+      "name": "Warwick Gates Maple Drive"
+    },
+    {
+      "slug": "warwick-gates-elm-road",
+      "name": "Warwick Gates Elm Road"
+    },
+    {
+      "slug": "warwick-gates-cedar-avenue",
+      "name": "Warwick Gates Cedar Avenue"
+    },
+    {
+      "slug": "warwick-gates-pine-close",
+      "name": "Warwick Gates Pine Close"
+    },
+    {
+      "slug": "warwick-gates-sycamore-lane",
+      "name": "Warwick Gates Sycamore Lane"
+    },
+    {
+      "slug": "warwick-gates-birch-way",
+      "name": "Warwick Gates Birch Way"
+    },
+    {
+      "slug": "warwick-gates-poplar-road",
+      "name": "Warwick Gates Poplar Road"
+    },
+    {
+      "slug": "warwick-gates-holly-drive",
+      "name": "Warwick Gates Holly Drive"
+    },
+    {
+      "slug": "warwick-gates-hawthorn-close",
+      "name": "Warwick Gates Hawthorn Close"
+    },
+    {
+      "slug": "warwick-gates-hazel-grove",
+      "name": "Warwick Gates Hazel Grove"
+    },
+    {
+      "slug": "warwick-gates-alder-way",
+      "name": "Warwick Gates Alder Way"
+    },
+    {
+      "slug": "warwick-gates-yew-tree-lane",
+      "name": "Warwick Gates Yew Tree Lane"
+    },
+    {
+      "slug": "warwick-gates-linden-road",
+      "name": "Warwick Gates Linden Road"
+    },
+    {
+      "slug": "warwick-gates-orchard-way",
+      "name": "Warwick Gates Orchard Way"
+    },
+    {
+      "slug": "warwick-gates-spring-lane",
+      "name": "Warwick Gates Spring Lane"
+    },
+    {
+      "slug": "warwick-gates-brooklands",
+      "name": "Warwick Gates Brooklands"
+    },
+    {
+      "slug": "warwick-gates-riverside",
+      "name": "Warwick Gates Riverside"
+    },
+    {
+      "slug": "warwick-gates-waterside",
+      "name": "Warwick Gates Waterside"
+    },
+    {
+      "slug": "warwick-gates-bridge-street",
+      "name": "Warwick Gates Bridge Street"
+    },
+    {
+      "slug": "warwick-gates-castle-road",
+      "name": "Warwick Gates Castle Road"
+    },
+    {
+      "slug": "warwick-gates-priory-lane",
+      "name": "Warwick Gates Priory Lane"
+    },
+    {
+      "slug": "warwick-gates-abbey-way",
+      "name": "Warwick Gates Abbey Way"
+    },
+    {
+      "slug": "warwick-gates-manor-drive",
+      "name": "Warwick Gates Manor Drive"
+    },
+    {
+      "slug": "warwick-gates-rectory-lane",
+      "name": "Warwick Gates Rectory Lane"
+    },
+    {
+      "slug": "warwick-gates-glebe-close",
+      "name": "Warwick Gates Glebe Close"
+    },
+    {
+      "slug": "warwick-gates-vicarage-road",
+      "name": "Warwick Gates Vicarage Road"
+    },
+    {
+      "slug": "warwick-gates-chapel-lane",
+      "name": "Warwick Gates Chapel Lane"
+    },
+    {
+      "slug": "warwick-gates-prospect-place",
+      "name": "Warwick Gates Prospect Place"
+    },
+    {
+      "slug": "warwick-gates-belmont-road",
+      "name": "Warwick Gates Belmont Road"
+    },
+    {
+      "slug": "warwick-gates-clifton-way",
+      "name": "Warwick Gates Clifton Way"
+    },
+    {
+      "slug": "warwick-gates-richmond-road",
+      "name": "Warwick Gates Richmond Road"
+    },
+    {
+      "slug": "warwick-gates-grosvenor-park",
+      "name": "Warwick Gates Grosvenor Park"
+    },
+    {
+      "slug": "warwick-gates-claremont-road",
+      "name": "Warwick Gates Claremont Road"
+    },
+    {
+      "slug": "warwick-gates-wellington-street",
+      "name": "Warwick Gates Wellington Street"
+    },
+    {
+      "slug": "warwick-gates-nelson-road",
+      "name": "Warwick Gates Nelson Road"
+    },
+    {
+      "slug": "warwick-gates-crescent-way",
+      "name": "Warwick Gates Crescent Way"
+    },
+    {
+      "slug": "warwick-gates-square",
+      "name": "Warwick Gates Square"
+    },
+    {
+      "slug": "warwick-gates-terrace",
+      "name": "Warwick Gates Terrace"
+    },
+    {
+      "slug": "warwick-gates-street",
+      "name": "Warwick Gates Street"
+    },
+    {
+      "slug": "warwick-gates-lane",
+      "name": "Warwick Gates Lane"
+    },
+    {
+      "slug": "warwick-gates-close",
+      "name": "Warwick Gates Close"
+    },
+    {
+      "slug": "warwick-gates-drive",
+      "name": "Warwick Gates Drive"
+    },
+    {
+      "slug": "warwick-gates-avenue",
+      "name": "Warwick Gates Avenue"
+    },
+    {
+      "slug": "warwick-gates-way",
+      "name": "Warwick Gates Way"
+    },
+    {
+      "slug": "warwick-gates-road",
+      "name": "Warwick Gates Road"
+    },
+    {
+      "slug": "warwick-gates-hill",
+      "name": "Warwick Gates Hill"
+    },
+    {
+      "slug": "warwick-gates-rise",
+      "name": "Warwick Gates Rise"
+    },
+    {
+      "slug": "warwick-gates-mount",
+      "name": "Warwick Gates Mount"
+    },
+    {
+      "slug": "warwick-gates-view",
+      "name": "Warwick Gates View"
+    },
+    {
+      "slug": "warwick-gates-bank",
+      "name": "Warwick Gates Bank"
+    },
+    {
+      "slug": "warwick-gates-ridge",
+      "name": "Warwick Gates Ridge"
+    },
+    {
+      "slug": "warwick-gates-mead",
+      "name": "Warwick Gates Mead"
+    },
+    {
+      "slug": "north-warwick-gates-high-street",
+      "name": "North Warwick Gates High Street"
+    },
+    {
+      "slug": "north-warwick-gates-station-road",
+      "name": "North Warwick Gates Station Road"
+    },
+    {
+      "slug": "north-warwick-gates-church-lane",
+      "name": "North Warwick Gates Church Lane"
+    },
+    {
+      "slug": "north-warwick-gates-victoria-road",
+      "name": "North Warwick Gates Victoria Road"
+    },
+    {
+      "slug": "north-warwick-gates-park-road",
+      "name": "North Warwick Gates Park Road"
+    },
+    {
+      "slug": "north-warwick-gates-the-avenue",
+      "name": "North Warwick Gates The Avenue"
+    },
+    {
+      "slug": "north-warwick-gates-london-road",
+      "name": "North Warwick Gates London Road"
+    },
+    {
+      "slug": "north-warwick-gates-windsor-road",
+      "name": "North Warwick Gates Windsor Road"
+    },
+    {
+      "slug": "north-warwick-gates-stanley-street",
+      "name": "North Warwick Gates Stanley Street"
+    },
+    {
+      "slug": "north-warwick-gates-albion-street",
+      "name": "North Warwick Gates Albion Street"
+    },
+    {
+      "slug": "north-warwick-gates-queen-street",
+      "name": "North Warwick Gates Queen Street"
+    },
+    {
+      "slug": "north-warwick-gates-king-edward-road",
+      "name": "North Warwick Gates King Edward Road"
+    },
+    {
+      "slug": "north-warwick-gates-green-lane",
+      "name": "North Warwick Gates Green Lane"
+    },
+    {
+      "slug": "north-warwick-gates-new-road",
+      "name": "North Warwick Gates New Road"
+    },
+    {
+      "slug": "north-warwick-gates-school-lane",
+      "name": "North Warwick Gates School Lane"
+    },
+    {
+      "slug": "north-warwick-gates-meadow-way",
+      "name": "North Warwick Gates Meadow Way"
+    },
+    {
+      "slug": "north-warwick-gates-cross-street",
+      "name": "North Warwick Gates Cross Street"
+    },
+    {
+      "slug": "north-warwick-gates-mill-lane",
+      "name": "North Warwick Gates Mill Lane"
+    },
+    {
+      "slug": "north-warwick-gates-grange-road",
+      "name": "North Warwick Gates Grange Road"
+    },
+    {
+      "slug": "north-warwick-gates-woodland-avenue",
+      "name": "North Warwick Gates Woodland Avenue"
+    },
+    {
+      "slug": "north-warwick-gates-market-street",
+      "name": "North Warwick Gates Market Street"
+    },
+    {
+      "slug": "north-warwick-gates-oak-lane",
+      "name": "North Warwick Gates Oak Lane"
+    },
+    {
+      "slug": "north-warwick-gates-chestnut-drive",
+      "name": "North Warwick Gates Chestnut Drive"
+    },
+    {
+      "slug": "north-warwick-gates-ash-grove",
+      "name": "North Warwick Gates Ash Grove"
+    },
+    {
+      "slug": "north-warwick-gates-willow-close",
+      "name": "North Warwick Gates Willow Close"
+    },
+    {
+      "slug": "north-warwick-gates-beechcroft",
+      "name": "North Warwick Gates Beechcroft"
+    },
+    {
+      "slug": "north-warwick-gates-rowan-way",
+      "name": "North Warwick Gates Rowan Way"
+    },
+    {
+      "slug": "north-warwick-gates-maple-drive",
+      "name": "North Warwick Gates Maple Drive"
+    },
+    {
+      "slug": "north-warwick-gates-elm-road",
+      "name": "North Warwick Gates Elm Road"
+    },
+    {
+      "slug": "north-warwick-gates-cedar-avenue",
+      "name": "North Warwick Gates Cedar Avenue"
+    },
+    {
+      "slug": "north-warwick-gates-pine-close",
+      "name": "North Warwick Gates Pine Close"
+    },
+    {
+      "slug": "north-warwick-gates-sycamore-lane",
+      "name": "North Warwick Gates Sycamore Lane"
+    },
+    {
+      "slug": "north-warwick-gates-birch-way",
+      "name": "North Warwick Gates Birch Way"
+    },
+    {
+      "slug": "north-warwick-gates-poplar-road",
+      "name": "North Warwick Gates Poplar Road"
+    },
+    {
+      "slug": "north-warwick-gates-holly-drive",
+      "name": "North Warwick Gates Holly Drive"
+    },
+    {
+      "slug": "north-warwick-gates-hawthorn-close",
+      "name": "North Warwick Gates Hawthorn Close"
+    },
+    {
+      "slug": "north-warwick-gates-hazel-grove",
+      "name": "North Warwick Gates Hazel Grove"
+    },
+    {
+      "slug": "north-warwick-gates-alder-way",
+      "name": "North Warwick Gates Alder Way"
+    },
+    {
+      "slug": "north-warwick-gates-yew-tree-lane",
+      "name": "North Warwick Gates Yew Tree Lane"
+    },
+    {
+      "slug": "north-warwick-gates-linden-road",
+      "name": "North Warwick Gates Linden Road"
+    },
+    {
+      "slug": "north-warwick-gates-orchard-way",
+      "name": "North Warwick Gates Orchard Way"
+    },
+    {
+      "slug": "north-warwick-gates-spring-lane",
+      "name": "North Warwick Gates Spring Lane"
+    },
+    {
+      "slug": "north-warwick-gates-brooklands",
+      "name": "North Warwick Gates Brooklands"
+    },
+    {
+      "slug": "north-warwick-gates-riverside",
+      "name": "North Warwick Gates Riverside"
+    },
+    {
+      "slug": "north-warwick-gates-waterside",
+      "name": "North Warwick Gates Waterside"
+    },
+    {
+      "slug": "north-warwick-gates-bridge-street",
+      "name": "North Warwick Gates Bridge Street"
+    },
+    {
+      "slug": "north-warwick-gates-castle-road",
+      "name": "North Warwick Gates Castle Road"
+    },
+    {
+      "slug": "north-warwick-gates-priory-lane",
+      "name": "North Warwick Gates Priory Lane"
+    },
+    {
+      "slug": "north-warwick-gates-abbey-way",
+      "name": "North Warwick Gates Abbey Way"
+    },
+    {
+      "slug": "north-warwick-gates-manor-drive",
+      "name": "North Warwick Gates Manor Drive"
+    },
+    {
+      "slug": "north-warwick-gates-rectory-lane",
+      "name": "North Warwick Gates Rectory Lane"
+    },
+    {
+      "slug": "north-warwick-gates-glebe-close",
+      "name": "North Warwick Gates Glebe Close"
+    },
+    {
+      "slug": "north-warwick-gates-vicarage-road",
+      "name": "North Warwick Gates Vicarage Road"
+    },
+    {
+      "slug": "north-warwick-gates-chapel-lane",
+      "name": "North Warwick Gates Chapel Lane"
+    },
+    {
+      "slug": "north-warwick-gates-prospect-place",
+      "name": "North Warwick Gates Prospect Place"
+    },
+    {
+      "slug": "north-warwick-gates-belmont-road",
+      "name": "North Warwick Gates Belmont Road"
+    },
+    {
+      "slug": "north-warwick-gates-clifton-way",
+      "name": "North Warwick Gates Clifton Way"
+    },
+    {
+      "slug": "north-warwick-gates-richmond-road",
+      "name": "North Warwick Gates Richmond Road"
+    },
+    {
+      "slug": "north-warwick-gates-grosvenor-park",
+      "name": "North Warwick Gates Grosvenor Park"
+    },
+    {
+      "slug": "north-warwick-gates-claremont-road",
+      "name": "North Warwick Gates Claremont Road"
+    },
+    {
+      "slug": "north-warwick-gates-wellington-street",
+      "name": "North Warwick Gates Wellington Street"
+    },
+    {
+      "slug": "north-warwick-gates-nelson-road",
+      "name": "North Warwick Gates Nelson Road"
+    },
+    {
+      "slug": "north-warwick-gates-crescent-way",
+      "name": "North Warwick Gates Crescent Way"
+    },
+    {
+      "slug": "north-warwick-gates-square",
+      "name": "North Warwick Gates Square"
+    },
+    {
+      "slug": "north-warwick-gates-terrace",
+      "name": "North Warwick Gates Terrace"
+    },
+    {
+      "slug": "north-warwick-gates-street",
+      "name": "North Warwick Gates Street"
+    },
+    {
+      "slug": "north-warwick-gates-lane",
+      "name": "North Warwick Gates Lane"
+    },
+    {
+      "slug": "north-warwick-gates-close",
+      "name": "North Warwick Gates Close"
+    },
+    {
+      "slug": "north-warwick-gates-drive",
+      "name": "North Warwick Gates Drive"
+    },
+    {
+      "slug": "north-warwick-gates-avenue",
+      "name": "North Warwick Gates Avenue"
+    },
+    {
+      "slug": "north-warwick-gates-way",
+      "name": "North Warwick Gates Way"
     }
   ]
 }

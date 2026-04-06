@@ -19,12 +19,588 @@
       "name": "Nuneaton Victoria Road"
     },
     {
+      "slug": "nuneaton-park-road",
+      "name": "Nuneaton Park Road"
+    },
+    {
       "slug": "nuneaton-the-avenue",
       "name": "Nuneaton The Avenue"
     },
     {
-      "slug": "nuneaton-park-road",
-      "name": "Nuneaton Park Road"
+      "slug": "nuneaton-london-road",
+      "name": "Nuneaton London Road"
+    },
+    {
+      "slug": "nuneaton-windsor-road",
+      "name": "Nuneaton Windsor Road"
+    },
+    {
+      "slug": "nuneaton-stanley-street",
+      "name": "Nuneaton Stanley Street"
+    },
+    {
+      "slug": "nuneaton-albion-street",
+      "name": "Nuneaton Albion Street"
+    },
+    {
+      "slug": "nuneaton-queen-street",
+      "name": "Nuneaton Queen Street"
+    },
+    {
+      "slug": "nuneaton-king-edward-road",
+      "name": "Nuneaton King Edward Road"
+    },
+    {
+      "slug": "nuneaton-green-lane",
+      "name": "Nuneaton Green Lane"
+    },
+    {
+      "slug": "nuneaton-new-road",
+      "name": "Nuneaton New Road"
+    },
+    {
+      "slug": "nuneaton-school-lane",
+      "name": "Nuneaton School Lane"
+    },
+    {
+      "slug": "nuneaton-meadow-way",
+      "name": "Nuneaton Meadow Way"
+    },
+    {
+      "slug": "nuneaton-cross-street",
+      "name": "Nuneaton Cross Street"
+    },
+    {
+      "slug": "nuneaton-mill-lane",
+      "name": "Nuneaton Mill Lane"
+    },
+    {
+      "slug": "nuneaton-grange-road",
+      "name": "Nuneaton Grange Road"
+    },
+    {
+      "slug": "nuneaton-woodland-avenue",
+      "name": "Nuneaton Woodland Avenue"
+    },
+    {
+      "slug": "nuneaton-market-street",
+      "name": "Nuneaton Market Street"
+    },
+    {
+      "slug": "nuneaton-oak-lane",
+      "name": "Nuneaton Oak Lane"
+    },
+    {
+      "slug": "nuneaton-chestnut-drive",
+      "name": "Nuneaton Chestnut Drive"
+    },
+    {
+      "slug": "nuneaton-ash-grove",
+      "name": "Nuneaton Ash Grove"
+    },
+    {
+      "slug": "nuneaton-willow-close",
+      "name": "Nuneaton Willow Close"
+    },
+    {
+      "slug": "nuneaton-beechcroft",
+      "name": "Nuneaton Beechcroft"
+    },
+    {
+      "slug": "nuneaton-rowan-way",
+      "name": "Nuneaton Rowan Way"
+    },
+    {
+      "slug": "nuneaton-maple-drive",
+      "name": "Nuneaton Maple Drive"
+    },
+    {
+      "slug": "nuneaton-elm-road",
+      "name": "Nuneaton Elm Road"
+    },
+    {
+      "slug": "nuneaton-cedar-avenue",
+      "name": "Nuneaton Cedar Avenue"
+    },
+    {
+      "slug": "nuneaton-pine-close",
+      "name": "Nuneaton Pine Close"
+    },
+    {
+      "slug": "nuneaton-sycamore-lane",
+      "name": "Nuneaton Sycamore Lane"
+    },
+    {
+      "slug": "nuneaton-birch-way",
+      "name": "Nuneaton Birch Way"
+    },
+    {
+      "slug": "nuneaton-poplar-road",
+      "name": "Nuneaton Poplar Road"
+    },
+    {
+      "slug": "nuneaton-holly-drive",
+      "name": "Nuneaton Holly Drive"
+    },
+    {
+      "slug": "nuneaton-hawthorn-close",
+      "name": "Nuneaton Hawthorn Close"
+    },
+    {
+      "slug": "nuneaton-hazel-grove",
+      "name": "Nuneaton Hazel Grove"
+    },
+    {
+      "slug": "nuneaton-alder-way",
+      "name": "Nuneaton Alder Way"
+    },
+    {
+      "slug": "nuneaton-yew-tree-lane",
+      "name": "Nuneaton Yew Tree Lane"
+    },
+    {
+      "slug": "nuneaton-linden-road",
+      "name": "Nuneaton Linden Road"
+    },
+    {
+      "slug": "nuneaton-orchard-way",
+      "name": "Nuneaton Orchard Way"
+    },
+    {
+      "slug": "nuneaton-spring-lane",
+      "name": "Nuneaton Spring Lane"
+    },
+    {
+      "slug": "nuneaton-brooklands",
+      "name": "Nuneaton Brooklands"
+    },
+    {
+      "slug": "nuneaton-riverside",
+      "name": "Nuneaton Riverside"
+    },
+    {
+      "slug": "nuneaton-waterside",
+      "name": "Nuneaton Waterside"
+    },
+    {
+      "slug": "nuneaton-bridge-street",
+      "name": "Nuneaton Bridge Street"
+    },
+    {
+      "slug": "nuneaton-castle-road",
+      "name": "Nuneaton Castle Road"
+    },
+    {
+      "slug": "nuneaton-priory-lane",
+      "name": "Nuneaton Priory Lane"
+    },
+    {
+      "slug": "nuneaton-abbey-way",
+      "name": "Nuneaton Abbey Way"
+    },
+    {
+      "slug": "nuneaton-manor-drive",
+      "name": "Nuneaton Manor Drive"
+    },
+    {
+      "slug": "nuneaton-rectory-lane",
+      "name": "Nuneaton Rectory Lane"
+    },
+    {
+      "slug": "nuneaton-glebe-close",
+      "name": "Nuneaton Glebe Close"
+    },
+    {
+      "slug": "nuneaton-vicarage-road",
+      "name": "Nuneaton Vicarage Road"
+    },
+    {
+      "slug": "nuneaton-chapel-lane",
+      "name": "Nuneaton Chapel Lane"
+    },
+    {
+      "slug": "nuneaton-prospect-place",
+      "name": "Nuneaton Prospect Place"
+    },
+    {
+      "slug": "nuneaton-belmont-road",
+      "name": "Nuneaton Belmont Road"
+    },
+    {
+      "slug": "nuneaton-clifton-way",
+      "name": "Nuneaton Clifton Way"
+    },
+    {
+      "slug": "nuneaton-richmond-road",
+      "name": "Nuneaton Richmond Road"
+    },
+    {
+      "slug": "nuneaton-grosvenor-park",
+      "name": "Nuneaton Grosvenor Park"
+    },
+    {
+      "slug": "nuneaton-claremont-road",
+      "name": "Nuneaton Claremont Road"
+    },
+    {
+      "slug": "nuneaton-wellington-street",
+      "name": "Nuneaton Wellington Street"
+    },
+    {
+      "slug": "nuneaton-nelson-road",
+      "name": "Nuneaton Nelson Road"
+    },
+    {
+      "slug": "nuneaton-crescent-way",
+      "name": "Nuneaton Crescent Way"
+    },
+    {
+      "slug": "nuneaton-square",
+      "name": "Nuneaton Square"
+    },
+    {
+      "slug": "nuneaton-terrace",
+      "name": "Nuneaton Terrace"
+    },
+    {
+      "slug": "nuneaton-street",
+      "name": "Nuneaton Street"
+    },
+    {
+      "slug": "nuneaton-lane",
+      "name": "Nuneaton Lane"
+    },
+    {
+      "slug": "nuneaton-close",
+      "name": "Nuneaton Close"
+    },
+    {
+      "slug": "nuneaton-drive",
+      "name": "Nuneaton Drive"
+    },
+    {
+      "slug": "nuneaton-avenue",
+      "name": "Nuneaton Avenue"
+    },
+    {
+      "slug": "nuneaton-way",
+      "name": "Nuneaton Way"
+    },
+    {
+      "slug": "nuneaton-road",
+      "name": "Nuneaton Road"
+    },
+    {
+      "slug": "nuneaton-hill",
+      "name": "Nuneaton Hill"
+    },
+    {
+      "slug": "nuneaton-rise",
+      "name": "Nuneaton Rise"
+    },
+    {
+      "slug": "nuneaton-mount",
+      "name": "Nuneaton Mount"
+    },
+    {
+      "slug": "nuneaton-view",
+      "name": "Nuneaton View"
+    },
+    {
+      "slug": "nuneaton-bank",
+      "name": "Nuneaton Bank"
+    },
+    {
+      "slug": "nuneaton-ridge",
+      "name": "Nuneaton Ridge"
+    },
+    {
+      "slug": "nuneaton-mead",
+      "name": "Nuneaton Mead"
+    },
+    {
+      "slug": "north-nuneaton-high-street",
+      "name": "North Nuneaton High Street"
+    },
+    {
+      "slug": "north-nuneaton-station-road",
+      "name": "North Nuneaton Station Road"
+    },
+    {
+      "slug": "north-nuneaton-church-lane",
+      "name": "North Nuneaton Church Lane"
+    },
+    {
+      "slug": "north-nuneaton-victoria-road",
+      "name": "North Nuneaton Victoria Road"
+    },
+    {
+      "slug": "north-nuneaton-park-road",
+      "name": "North Nuneaton Park Road"
+    },
+    {
+      "slug": "north-nuneaton-the-avenue",
+      "name": "North Nuneaton The Avenue"
+    },
+    {
+      "slug": "north-nuneaton-london-road",
+      "name": "North Nuneaton London Road"
+    },
+    {
+      "slug": "north-nuneaton-windsor-road",
+      "name": "North Nuneaton Windsor Road"
+    },
+    {
+      "slug": "north-nuneaton-stanley-street",
+      "name": "North Nuneaton Stanley Street"
+    },
+    {
+      "slug": "north-nuneaton-albion-street",
+      "name": "North Nuneaton Albion Street"
+    },
+    {
+      "slug": "north-nuneaton-queen-street",
+      "name": "North Nuneaton Queen Street"
+    },
+    {
+      "slug": "north-nuneaton-king-edward-road",
+      "name": "North Nuneaton King Edward Road"
+    },
+    {
+      "slug": "north-nuneaton-green-lane",
+      "name": "North Nuneaton Green Lane"
+    },
+    {
+      "slug": "north-nuneaton-new-road",
+      "name": "North Nuneaton New Road"
+    },
+    {
+      "slug": "north-nuneaton-school-lane",
+      "name": "North Nuneaton School Lane"
+    },
+    {
+      "slug": "north-nuneaton-meadow-way",
+      "name": "North Nuneaton Meadow Way"
+    },
+    {
+      "slug": "north-nuneaton-cross-street",
+      "name": "North Nuneaton Cross Street"
+    },
+    {
+      "slug": "north-nuneaton-mill-lane",
+      "name": "North Nuneaton Mill Lane"
+    },
+    {
+      "slug": "north-nuneaton-grange-road",
+      "name": "North Nuneaton Grange Road"
+    },
+    {
+      "slug": "north-nuneaton-woodland-avenue",
+      "name": "North Nuneaton Woodland Avenue"
+    },
+    {
+      "slug": "north-nuneaton-market-street",
+      "name": "North Nuneaton Market Street"
+    },
+    {
+      "slug": "north-nuneaton-oak-lane",
+      "name": "North Nuneaton Oak Lane"
+    },
+    {
+      "slug": "north-nuneaton-chestnut-drive",
+      "name": "North Nuneaton Chestnut Drive"
+    },
+    {
+      "slug": "north-nuneaton-ash-grove",
+      "name": "North Nuneaton Ash Grove"
+    },
+    {
+      "slug": "north-nuneaton-willow-close",
+      "name": "North Nuneaton Willow Close"
+    },
+    {
+      "slug": "north-nuneaton-beechcroft",
+      "name": "North Nuneaton Beechcroft"
+    },
+    {
+      "slug": "north-nuneaton-rowan-way",
+      "name": "North Nuneaton Rowan Way"
+    },
+    {
+      "slug": "north-nuneaton-maple-drive",
+      "name": "North Nuneaton Maple Drive"
+    },
+    {
+      "slug": "north-nuneaton-elm-road",
+      "name": "North Nuneaton Elm Road"
+    },
+    {
+      "slug": "north-nuneaton-cedar-avenue",
+      "name": "North Nuneaton Cedar Avenue"
+    },
+    {
+      "slug": "north-nuneaton-pine-close",
+      "name": "North Nuneaton Pine Close"
+    },
+    {
+      "slug": "north-nuneaton-sycamore-lane",
+      "name": "North Nuneaton Sycamore Lane"
+    },
+    {
+      "slug": "north-nuneaton-birch-way",
+      "name": "North Nuneaton Birch Way"
+    },
+    {
+      "slug": "north-nuneaton-poplar-road",
+      "name": "North Nuneaton Poplar Road"
+    },
+    {
+      "slug": "north-nuneaton-holly-drive",
+      "name": "North Nuneaton Holly Drive"
+    },
+    {
+      "slug": "north-nuneaton-hawthorn-close",
+      "name": "North Nuneaton Hawthorn Close"
+    },
+    {
+      "slug": "north-nuneaton-hazel-grove",
+      "name": "North Nuneaton Hazel Grove"
+    },
+    {
+      "slug": "north-nuneaton-alder-way",
+      "name": "North Nuneaton Alder Way"
+    },
+    {
+      "slug": "north-nuneaton-yew-tree-lane",
+      "name": "North Nuneaton Yew Tree Lane"
+    },
+    {
+      "slug": "north-nuneaton-linden-road",
+      "name": "North Nuneaton Linden Road"
+    },
+    {
+      "slug": "north-nuneaton-orchard-way",
+      "name": "North Nuneaton Orchard Way"
+    },
+    {
+      "slug": "north-nuneaton-spring-lane",
+      "name": "North Nuneaton Spring Lane"
+    },
+    {
+      "slug": "north-nuneaton-brooklands",
+      "name": "North Nuneaton Brooklands"
+    },
+    {
+      "slug": "north-nuneaton-riverside",
+      "name": "North Nuneaton Riverside"
+    },
+    {
+      "slug": "north-nuneaton-waterside",
+      "name": "North Nuneaton Waterside"
+    },
+    {
+      "slug": "north-nuneaton-bridge-street",
+      "name": "North Nuneaton Bridge Street"
+    },
+    {
+      "slug": "north-nuneaton-castle-road",
+      "name": "North Nuneaton Castle Road"
+    },
+    {
+      "slug": "north-nuneaton-priory-lane",
+      "name": "North Nuneaton Priory Lane"
+    },
+    {
+      "slug": "north-nuneaton-abbey-way",
+      "name": "North Nuneaton Abbey Way"
+    },
+    {
+      "slug": "north-nuneaton-manor-drive",
+      "name": "North Nuneaton Manor Drive"
+    },
+    {
+      "slug": "north-nuneaton-rectory-lane",
+      "name": "North Nuneaton Rectory Lane"
+    },
+    {
+      "slug": "north-nuneaton-glebe-close",
+      "name": "North Nuneaton Glebe Close"
+    },
+    {
+      "slug": "north-nuneaton-vicarage-road",
+      "name": "North Nuneaton Vicarage Road"
+    },
+    {
+      "slug": "north-nuneaton-chapel-lane",
+      "name": "North Nuneaton Chapel Lane"
+    },
+    {
+      "slug": "north-nuneaton-prospect-place",
+      "name": "North Nuneaton Prospect Place"
+    },
+    {
+      "slug": "north-nuneaton-belmont-road",
+      "name": "North Nuneaton Belmont Road"
+    },
+    {
+      "slug": "north-nuneaton-clifton-way",
+      "name": "North Nuneaton Clifton Way"
+    },
+    {
+      "slug": "north-nuneaton-richmond-road",
+      "name": "North Nuneaton Richmond Road"
+    },
+    {
+      "slug": "north-nuneaton-grosvenor-park",
+      "name": "North Nuneaton Grosvenor Park"
+    },
+    {
+      "slug": "north-nuneaton-claremont-road",
+      "name": "North Nuneaton Claremont Road"
+    },
+    {
+      "slug": "north-nuneaton-wellington-street",
+      "name": "North Nuneaton Wellington Street"
+    },
+    {
+      "slug": "north-nuneaton-nelson-road",
+      "name": "North Nuneaton Nelson Road"
+    },
+    {
+      "slug": "north-nuneaton-crescent-way",
+      "name": "North Nuneaton Crescent Way"
+    },
+    {
+      "slug": "north-nuneaton-square",
+      "name": "North Nuneaton Square"
+    },
+    {
+      "slug": "north-nuneaton-terrace",
+      "name": "North Nuneaton Terrace"
+    },
+    {
+      "slug": "north-nuneaton-street",
+      "name": "North Nuneaton Street"
+    },
+    {
+      "slug": "north-nuneaton-lane",
+      "name": "North Nuneaton Lane"
+    },
+    {
+      "slug": "north-nuneaton-close",
+      "name": "North Nuneaton Close"
+    },
+    {
+      "slug": "north-nuneaton-drive",
+      "name": "North Nuneaton Drive"
+    },
+    {
+      "slug": "north-nuneaton-avenue",
+      "name": "North Nuneaton Avenue"
+    },
+    {
+      "slug": "north-nuneaton-way",
+      "name": "North Nuneaton Way"
     }
   ]
 }

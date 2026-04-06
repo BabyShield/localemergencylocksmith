@@ -1,0 +1,606 @@
+{
+  "areaSlug": "stratford-upon-avon-town-centre",
+  "areaName": "Stratford-upon-Avon Town Centre",
+  "streets": [
+    {
+      "slug": "stratford-upon-avon-town-centre-high-street",
+      "name": "Stratford-upon-Avon Town Centre High Street"
+    },
+    {
+      "slug": "stratford-upon-avon-town-centre-station-road",
+      "name": "Stratford-upon-Avon Town Centre Station Road"
+    },
+    {
+      "slug": "stratford-upon-avon-town-centre-church-lane",
+      "name": "Stratford-upon-Avon Town Centre Church Lane"
+    },
+    {
+      "slug": "stratford-upon-avon-town-centre-victoria-road",
+      "name": "Stratford-upon-Avon Town Centre Victoria Road"
+    },
+    {
+      "slug": "stratford-upon-avon-town-centre-park-road",
+      "name": "Stratford-upon-Avon Town Centre Park Road"
+    },
+    {
+      "slug": "stratford-upon-avon-town-centre-the-avenue",
+      "name": "Stratford-upon-Avon Town Centre The Avenue"
+    },
+    {
+      "slug": "stratford-upon-avon-town-centre-london-road",
+      "name": "Stratford-upon-Avon Town Centre London Road"
+    },
+    {
+      "slug": "stratford-upon-avon-town-centre-windsor-road",
+      "name": "Stratford-upon-Avon Town Centre Windsor Road"
+    },
+    {
+      "slug": "stratford-upon-avon-town-centre-stanley-street",
+      "name": "Stratford-upon-Avon Town Centre Stanley Street"
+    },
+    {
+      "slug": "stratford-upon-avon-town-centre-albion-street",
+      "name": "Stratford-upon-Avon Town Centre Albion Street"
+    },
+    {
+      "slug": "stratford-upon-avon-town-centre-queen-street",
+      "name": "Stratford-upon-Avon Town Centre Queen Street"
+    },
+    {
+      "slug": "stratford-upon-avon-town-centre-king-edward-road",
+      "name": "Stratford-upon-Avon Town Centre King Edward Road"
+    },
+    {
+      "slug": "stratford-upon-avon-town-centre-green-lane",
+      "name": "Stratford-upon-Avon Town Centre Green Lane"
+    },
+    {
+      "slug": "stratford-upon-avon-town-centre-new-road",
+      "name": "Stratford-upon-Avon Town Centre New Road"
+    },
+    {
+      "slug": "stratford-upon-avon-town-centre-school-lane",
+      "name": "Stratford-upon-Avon Town Centre School Lane"
+    },
+    {
+      "slug": "stratford-upon-avon-town-centre-meadow-way",
+      "name": "Stratford-upon-Avon Town Centre Meadow Way"
+    },
+    {
+      "slug": "stratford-upon-avon-town-centre-cross-street",
+      "name": "Stratford-upon-Avon Town Centre Cross Street"
+    },
+    {
+      "slug": "stratford-upon-avon-town-centre-mill-lane",
+      "name": "Stratford-upon-Avon Town Centre Mill Lane"
+    },
+    {
+      "slug": "stratford-upon-avon-town-centre-grange-road",
+      "name": "Stratford-upon-Avon Town Centre Grange Road"
+    },
+    {
+      "slug": "stratford-upon-avon-town-centre-woodland-avenue",
+      "name": "Stratford-upon-Avon Town Centre Woodland Avenue"
+    },
+    {
+      "slug": "stratford-upon-avon-town-centre-market-street",
+      "name": "Stratford-upon-Avon Town Centre Market Street"
+    },
+    {
+      "slug": "stratford-upon-avon-town-centre-oak-lane",
+      "name": "Stratford-upon-Avon Town Centre Oak Lane"
+    },
+    {
+      "slug": "stratford-upon-avon-town-centre-chestnut-drive",
+      "name": "Stratford-upon-Avon Town Centre Chestnut Drive"
+    },
+    {
+      "slug": "stratford-upon-avon-town-centre-ash-grove",
+      "name": "Stratford-upon-Avon Town Centre Ash Grove"
+    },
+    {
+      "slug": "stratford-upon-avon-town-centre-willow-close",
+      "name": "Stratford-upon-Avon Town Centre Willow Close"
+    },
+    {
+      "slug": "stratford-upon-avon-town-centre-beechcroft",
+      "name": "Stratford-upon-Avon Town Centre Beechcroft"
+    },
+    {
+      "slug": "stratford-upon-avon-town-centre-rowan-way",
+      "name": "Stratford-upon-Avon Town Centre Rowan Way"
+    },
+    {
+      "slug": "stratford-upon-avon-town-centre-maple-drive",
+      "name": "Stratford-upon-Avon Town Centre Maple Drive"
+    },
+    {
+      "slug": "stratford-upon-avon-town-centre-elm-road",
+      "name": "Stratford-upon-Avon Town Centre Elm Road"
+    },
+    {
+      "slug": "stratford-upon-avon-town-centre-cedar-avenue",
+      "name": "Stratford-upon-Avon Town Centre Cedar Avenue"
+    },
+    {
+      "slug": "stratford-upon-avon-town-centre-pine-close",
+      "name": "Stratford-upon-Avon Town Centre Pine Close"
+    },
+    {
+      "slug": "stratford-upon-avon-town-centre-sycamore-lane",
+      "name": "Stratford-upon-Avon Town Centre Sycamore Lane"
+    },
+    {
+      "slug": "stratford-upon-avon-town-centre-birch-way",
+      "name": "Stratford-upon-Avon Town Centre Birch Way"
+    },
+    {
+      "slug": "stratford-upon-avon-town-centre-poplar-road",
+      "name": "Stratford-upon-Avon Town Centre Poplar Road"
+    },
+    {
+      "slug": "stratford-upon-avon-town-centre-holly-drive",
+      "name": "Stratford-upon-Avon Town Centre Holly Drive"
+    },
+    {
+      "slug": "stratford-upon-avon-town-centre-hawthorn-close",
+      "name": "Stratford-upon-Avon Town Centre Hawthorn Close"
+    },
+    {
+      "slug": "stratford-upon-avon-town-centre-hazel-grove",
+      "name": "Stratford-upon-Avon Town Centre Hazel Grove"
+    },
+    {
+      "slug": "stratford-upon-avon-town-centre-alder-way",
+      "name": "Stratford-upon-Avon Town Centre Alder Way"
+    },
+    {
+      "slug": "stratford-upon-avon-town-centre-yew-tree-lane",
+      "name": "Stratford-upon-Avon Town Centre Yew Tree Lane"
+    },
+    {
+      "slug": "stratford-upon-avon-town-centre-linden-road",
+      "name": "Stratford-upon-Avon Town Centre Linden Road"
+    },
+    {
+      "slug": "stratford-upon-avon-town-centre-orchard-way",
+      "name": "Stratford-upon-Avon Town Centre Orchard Way"
+    },
+    {
+      "slug": "stratford-upon-avon-town-centre-spring-lane",
+      "name": "Stratford-upon-Avon Town Centre Spring Lane"
+    },
+    {
+      "slug": "stratford-upon-avon-town-centre-brooklands",
+      "name": "Stratford-upon-Avon Town Centre Brooklands"
+    },
+    {
+      "slug": "stratford-upon-avon-town-centre-riverside",
+      "name": "Stratford-upon-Avon Town Centre Riverside"
+    },
+    {
+      "slug": "stratford-upon-avon-town-centre-waterside",
+      "name": "Stratford-upon-Avon Town Centre Waterside"
+    },
+    {
+      "slug": "stratford-upon-avon-town-centre-bridge-street",
+      "name": "Stratford-upon-Avon Town Centre Bridge Street"
+    },
+    {
+      "slug": "stratford-upon-avon-town-centre-castle-road",
+      "name": "Stratford-upon-Avon Town Centre Castle Road"
+    },
+    {
+      "slug": "stratford-upon-avon-town-centre-priory-lane",
+      "name": "Stratford-upon-Avon Town Centre Priory Lane"
+    },
+    {
+      "slug": "stratford-upon-avon-town-centre-abbey-way",
+      "name": "Stratford-upon-Avon Town Centre Abbey Way"
+    },
+    {
+      "slug": "stratford-upon-avon-town-centre-manor-drive",
+      "name": "Stratford-upon-Avon Town Centre Manor Drive"
+    },
+    {
+      "slug": "stratford-upon-avon-town-centre-rectory-lane",
+      "name": "Stratford-upon-Avon Town Centre Rectory Lane"
+    },
+    {
+      "slug": "stratford-upon-avon-town-centre-glebe-close",
+      "name": "Stratford-upon-Avon Town Centre Glebe Close"
+    },
+    {
+      "slug": "stratford-upon-avon-town-centre-vicarage-road",
+      "name": "Stratford-upon-Avon Town Centre Vicarage Road"
+    },
+    {
+      "slug": "stratford-upon-avon-town-centre-chapel-lane",
+      "name": "Stratford-upon-Avon Town Centre Chapel Lane"
+    },
+    {
+      "slug": "stratford-upon-avon-town-centre-prospect-place",
+      "name": "Stratford-upon-Avon Town Centre Prospect Place"
+    },
+    {
+      "slug": "stratford-upon-avon-town-centre-belmont-road",
+      "name": "Stratford-upon-Avon Town Centre Belmont Road"
+    },
+    {
+      "slug": "stratford-upon-avon-town-centre-clifton-way",
+      "name": "Stratford-upon-Avon Town Centre Clifton Way"
+    },
+    {
+      "slug": "stratford-upon-avon-town-centre-richmond-road",
+      "name": "Stratford-upon-Avon Town Centre Richmond Road"
+    },
+    {
+      "slug": "stratford-upon-avon-town-centre-grosvenor-park",
+      "name": "Stratford-upon-Avon Town Centre Grosvenor Park"
+    },
+    {
+      "slug": "stratford-upon-avon-town-centre-claremont-road",
+      "name": "Stratford-upon-Avon Town Centre Claremont Road"
+    },
+    {
+      "slug": "stratford-upon-avon-town-centre-wellington-street",
+      "name": "Stratford-upon-Avon Town Centre Wellington Street"
+    },
+    {
+      "slug": "stratford-upon-avon-town-centre-nelson-road",
+      "name": "Stratford-upon-Avon Town Centre Nelson Road"
+    },
+    {
+      "slug": "stratford-upon-avon-town-centre-crescent-way",
+      "name": "Stratford-upon-Avon Town Centre Crescent Way"
+    },
+    {
+      "slug": "stratford-upon-avon-town-centre-square",
+      "name": "Stratford-upon-Avon Town Centre Square"
+    },
+    {
+      "slug": "stratford-upon-avon-town-centre-terrace",
+      "name": "Stratford-upon-Avon Town Centre Terrace"
+    },
+    {
+      "slug": "stratford-upon-avon-town-centre-street",
+      "name": "Stratford-upon-Avon Town Centre Street"
+    },
+    {
+      "slug": "stratford-upon-avon-town-centre-lane",
+      "name": "Stratford-upon-Avon Town Centre Lane"
+    },
+    {
+      "slug": "stratford-upon-avon-town-centre-close",
+      "name": "Stratford-upon-Avon Town Centre Close"
+    },
+    {
+      "slug": "stratford-upon-avon-town-centre-drive",
+      "name": "Stratford-upon-Avon Town Centre Drive"
+    },
+    {
+      "slug": "stratford-upon-avon-town-centre-avenue",
+      "name": "Stratford-upon-Avon Town Centre Avenue"
+    },
+    {
+      "slug": "stratford-upon-avon-town-centre-way",
+      "name": "Stratford-upon-Avon Town Centre Way"
+    },
+    {
+      "slug": "stratford-upon-avon-town-centre-road",
+      "name": "Stratford-upon-Avon Town Centre Road"
+    },
+    {
+      "slug": "stratford-upon-avon-town-centre-hill",
+      "name": "Stratford-upon-Avon Town Centre Hill"
+    },
+    {
+      "slug": "stratford-upon-avon-town-centre-rise",
+      "name": "Stratford-upon-Avon Town Centre Rise"
+    },
+    {
+      "slug": "stratford-upon-avon-town-centre-mount",
+      "name": "Stratford-upon-Avon Town Centre Mount"
+    },
+    {
+      "slug": "stratford-upon-avon-town-centre-view",
+      "name": "Stratford-upon-Avon Town Centre View"
+    },
+    {
+      "slug": "stratford-upon-avon-town-centre-bank",
+      "name": "Stratford-upon-Avon Town Centre Bank"
+    },
+    {
+      "slug": "stratford-upon-avon-town-centre-ridge",
+      "name": "Stratford-upon-Avon Town Centre Ridge"
+    },
+    {
+      "slug": "stratford-upon-avon-town-centre-mead",
+      "name": "Stratford-upon-Avon Town Centre Mead"
+    },
+    {
+      "slug": "north-stratford-upon-avon-town-centre-high-street",
+      "name": "North Stratford-upon-Avon Town Centre High Street"
+    },
+    {
+      "slug": "north-stratford-upon-avon-town-centre-station-road",
+      "name": "North Stratford-upon-Avon Town Centre Station Road"
+    },
+    {
+      "slug": "north-stratford-upon-avon-town-centre-church-lane",
+      "name": "North Stratford-upon-Avon Town Centre Church Lane"
+    },
+    {
+      "slug": "north-stratford-upon-avon-town-centre-victoria-road",
+      "name": "North Stratford-upon-Avon Town Centre Victoria Road"
+    },
+    {
+      "slug": "north-stratford-upon-avon-town-centre-park-road",
+      "name": "North Stratford-upon-Avon Town Centre Park Road"
+    },
+    {
+      "slug": "north-stratford-upon-avon-town-centre-the-avenue",
+      "name": "North Stratford-upon-Avon Town Centre The Avenue"
+    },
+    {
+      "slug": "north-stratford-upon-avon-town-centre-london-road",
+      "name": "North Stratford-upon-Avon Town Centre London Road"
+    },
+    {
+      "slug": "north-stratford-upon-avon-town-centre-windsor-road",
+      "name": "North Stratford-upon-Avon Town Centre Windsor Road"
+    },
+    {
+      "slug": "north-stratford-upon-avon-town-centre-stanley-street",
+      "name": "North Stratford-upon-Avon Town Centre Stanley Street"
+    },
+    {
+      "slug": "north-stratford-upon-avon-town-centre-albion-street",
+      "name": "North Stratford-upon-Avon Town Centre Albion Street"
+    },
+    {
+      "slug": "north-stratford-upon-avon-town-centre-queen-street",
+      "name": "North Stratford-upon-Avon Town Centre Queen Street"
+    },
+    {
+      "slug": "north-stratford-upon-avon-town-centre-king-edward-road",
+      "name": "North Stratford-upon-Avon Town Centre King Edward Road"
+    },
+    {
+      "slug": "north-stratford-upon-avon-town-centre-green-lane",
+      "name": "North Stratford-upon-Avon Town Centre Green Lane"
+    },
+    {
+      "slug": "north-stratford-upon-avon-town-centre-new-road",
+      "name": "North Stratford-upon-Avon Town Centre New Road"
+    },
+    {
+      "slug": "north-stratford-upon-avon-town-centre-school-lane",
+      "name": "North Stratford-upon-Avon Town Centre School Lane"
+    },
+    {
+      "slug": "north-stratford-upon-avon-town-centre-meadow-way",
+      "name": "North Stratford-upon-Avon Town Centre Meadow Way"
+    },
+    {
+      "slug": "north-stratford-upon-avon-town-centre-cross-street",
+      "name": "North Stratford-upon-Avon Town Centre Cross Street"
+    },
+    {
+      "slug": "north-stratford-upon-avon-town-centre-mill-lane",
+      "name": "North Stratford-upon-Avon Town Centre Mill Lane"
+    },
+    {
+      "slug": "north-stratford-upon-avon-town-centre-grange-road",
+      "name": "North Stratford-upon-Avon Town Centre Grange Road"
+    },
+    {
+      "slug": "north-stratford-upon-avon-town-centre-woodland-avenue",
+      "name": "North Stratford-upon-Avon Town Centre Woodland Avenue"
+    },
+    {
+      "slug": "north-stratford-upon-avon-town-centre-market-street",
+      "name": "North Stratford-upon-Avon Town Centre Market Street"
+    },
+    {
+      "slug": "north-stratford-upon-avon-town-centre-oak-lane",
+      "name": "North Stratford-upon-Avon Town Centre Oak Lane"
+    },
+    {
+      "slug": "north-stratford-upon-avon-town-centre-chestnut-drive",
+      "name": "North Stratford-upon-Avon Town Centre Chestnut Drive"
+    },
+    {
+      "slug": "north-stratford-upon-avon-town-centre-ash-grove",
+      "name": "North Stratford-upon-Avon Town Centre Ash Grove"
+    },
+    {
+      "slug": "north-stratford-upon-avon-town-centre-willow-close",
+      "name": "North Stratford-upon-Avon Town Centre Willow Close"
+    },
+    {
+      "slug": "north-stratford-upon-avon-town-centre-beechcroft",
+      "name": "North Stratford-upon-Avon Town Centre Beechcroft"
+    },
+    {
+      "slug": "north-stratford-upon-avon-town-centre-rowan-way",
+      "name": "North Stratford-upon-Avon Town Centre Rowan Way"
+    },
+    {
+      "slug": "north-stratford-upon-avon-town-centre-maple-drive",
+      "name": "North Stratford-upon-Avon Town Centre Maple Drive"
+    },
+    {
+      "slug": "north-stratford-upon-avon-town-centre-elm-road",
+      "name": "North Stratford-upon-Avon Town Centre Elm Road"
+    },
+    {
+      "slug": "north-stratford-upon-avon-town-centre-cedar-avenue",
+      "name": "North Stratford-upon-Avon Town Centre Cedar Avenue"
+    },
+    {
+      "slug": "north-stratford-upon-avon-town-centre-pine-close",
+      "name": "North Stratford-upon-Avon Town Centre Pine Close"
+    },
+    {
+      "slug": "north-stratford-upon-avon-town-centre-sycamore-lane",
+      "name": "North Stratford-upon-Avon Town Centre Sycamore Lane"
+    },
+    {
+      "slug": "north-stratford-upon-avon-town-centre-birch-way",
+      "name": "North Stratford-upon-Avon Town Centre Birch Way"
+    },
+    {
+      "slug": "north-stratford-upon-avon-town-centre-poplar-road",
+      "name": "North Stratford-upon-Avon Town Centre Poplar Road"
+    },
+    {
+      "slug": "north-stratford-upon-avon-town-centre-holly-drive",
+      "name": "North Stratford-upon-Avon Town Centre Holly Drive"
+    },
+    {
+      "slug": "north-stratford-upon-avon-town-centre-hawthorn-close",
+      "name": "North Stratford-upon-Avon Town Centre Hawthorn Close"
+    },
+    {
+      "slug": "north-stratford-upon-avon-town-centre-hazel-grove",
+      "name": "North Stratford-upon-Avon Town Centre Hazel Grove"
+    },
+    {
+      "slug": "north-stratford-upon-avon-town-centre-alder-way",
+      "name": "North Stratford-upon-Avon Town Centre Alder Way"
+    },
+    {
+      "slug": "north-stratford-upon-avon-town-centre-yew-tree-lane",
+      "name": "North Stratford-upon-Avon Town Centre Yew Tree Lane"
+    },
+    {
+      "slug": "north-stratford-upon-avon-town-centre-linden-road",
+      "name": "North Stratford-upon-Avon Town Centre Linden Road"
+    },
+    {
+      "slug": "north-stratford-upon-avon-town-centre-orchard-way",
+      "name": "North Stratford-upon-Avon Town Centre Orchard Way"
+    },
+    {
+      "slug": "north-stratford-upon-avon-town-centre-spring-lane",
+      "name": "North Stratford-upon-Avon Town Centre Spring Lane"
+    },
+    {
+      "slug": "north-stratford-upon-avon-town-centre-brooklands",
+      "name": "North Stratford-upon-Avon Town Centre Brooklands"
+    },
+    {
+      "slug": "north-stratford-upon-avon-town-centre-riverside",
+      "name": "North Stratford-upon-Avon Town Centre Riverside"
+    },
+    {
+      "slug": "north-stratford-upon-avon-town-centre-waterside",
+      "name": "North Stratford-upon-Avon Town Centre Waterside"
+    },
+    {
+      "slug": "north-stratford-upon-avon-town-centre-bridge-street",
+      "name": "North Stratford-upon-Avon Town Centre Bridge Street"
+    },
+    {
+      "slug": "north-stratford-upon-avon-town-centre-castle-road",
+      "name": "North Stratford-upon-Avon Town Centre Castle Road"
+    },
+    {
+      "slug": "north-stratford-upon-avon-town-centre-priory-lane",
+      "name": "North Stratford-upon-Avon Town Centre Priory Lane"
+    },
+    {
+      "slug": "north-stratford-upon-avon-town-centre-abbey-way",
+      "name": "North Stratford-upon-Avon Town Centre Abbey Way"
+    },
+    {
+      "slug": "north-stratford-upon-avon-town-centre-manor-drive",
+      "name": "North Stratford-upon-Avon Town Centre Manor Drive"
+    },
+    {
+      "slug": "north-stratford-upon-avon-town-centre-rectory-lane",
+      "name": "North Stratford-upon-Avon Town Centre Rectory Lane"
+    },
+    {
+      "slug": "north-stratford-upon-avon-town-centre-glebe-close",
+      "name": "North Stratford-upon-Avon Town Centre Glebe Close"
+    },
+    {
+      "slug": "north-stratford-upon-avon-town-centre-vicarage-road",
+      "name": "North Stratford-upon-Avon Town Centre Vicarage Road"
+    },
+    {
+      "slug": "north-stratford-upon-avon-town-centre-chapel-lane",
+      "name": "North Stratford-upon-Avon Town Centre Chapel Lane"
+    },
+    {
+      "slug": "north-stratford-upon-avon-town-centre-prospect-place",
+      "name": "North Stratford-upon-Avon Town Centre Prospect Place"
+    },
+    {
+      "slug": "north-stratford-upon-avon-town-centre-belmont-road",
+      "name": "North Stratford-upon-Avon Town Centre Belmont Road"
+    },
+    {
+      "slug": "north-stratford-upon-avon-town-centre-clifton-way",
+      "name": "North Stratford-upon-Avon Town Centre Clifton Way"
+    },
+    {
+      "slug": "north-stratford-upon-avon-town-centre-richmond-road",
+      "name": "North Stratford-upon-Avon Town Centre Richmond Road"
+    },
+    {
+      "slug": "north-stratford-upon-avon-town-centre-grosvenor-park",
+      "name": "North Stratford-upon-Avon Town Centre Grosvenor Park"
+    },
+    {
+      "slug": "north-stratford-upon-avon-town-centre-claremont-road",
+      "name": "North Stratford-upon-Avon Town Centre Claremont Road"
+    },
+    {
+      "slug": "north-stratford-upon-avon-town-centre-wellington-street",
+      "name": "North Stratford-upon-Avon Town Centre Wellington Street"
+    },
+    {
+      "slug": "north-stratford-upon-avon-town-centre-nelson-road",
+      "name": "North Stratford-upon-Avon Town Centre Nelson Road"
+    },
+    {
+      "slug": "north-stratford-upon-avon-town-centre-crescent-way",
+      "name": "North Stratford-upon-Avon Town Centre Crescent Way"
+    },
+    {
+      "slug": "north-stratford-upon-avon-town-centre-square",
+      "name": "North Stratford-upon-Avon Town Centre Square"
+    },
+    {
+      "slug": "north-stratford-upon-avon-town-centre-terrace",
+      "name": "North Stratford-upon-Avon Town Centre Terrace"
+    },
+    {
+      "slug": "north-stratford-upon-avon-town-centre-street",
+      "name": "North Stratford-upon-Avon Town Centre Street"
+    },
+    {
+      "slug": "north-stratford-upon-avon-town-centre-lane",
+      "name": "North Stratford-upon-Avon Town Centre Lane"
+    },
+    {
+      "slug": "north-stratford-upon-avon-town-centre-close",
+      "name": "North Stratford-upon-Avon Town Centre Close"
+    },
+    {
+      "slug": "north-stratford-upon-avon-town-centre-drive",
+      "name": "North Stratford-upon-Avon Town Centre Drive"
+    },
+    {
+      "slug": "north-stratford-upon-avon-town-centre-avenue",
+      "name": "North Stratford-upon-Avon Town Centre Avenue"
+    },
+    {
+      "slug": "north-stratford-upon-avon-town-centre-way",
+      "name": "North Stratford-upon-Avon Town Centre Way"
+    }
+  ]
+}

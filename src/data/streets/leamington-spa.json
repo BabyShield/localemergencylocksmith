@@ -3,604 +3,604 @@
   "areaName": "Royal Leamington Spa",
   "streets": [
     {
-      "slug": "old-warwick-road",
-      "name": "Old Warwick Road"
+      "slug": "royal-leamington-spa-high-street",
+      "name": "Royal Leamington Spa High Street"
     },
     {
-      "slug": "high-street",
-      "name": "High Street"
+      "slug": "royal-leamington-spa-station-road",
+      "name": "Royal Leamington Spa Station Road"
     },
     {
-      "slug": "lillington-road",
-      "name": "Lillington Road"
+      "slug": "royal-leamington-spa-church-lane",
+      "name": "Royal Leamington Spa Church Lane"
     },
     {
-      "slug": "warwick-street",
-      "name": "Warwick Street"
+      "slug": "royal-leamington-spa-victoria-road",
+      "name": "Royal Leamington Spa Victoria Road"
     },
     {
-      "slug": "avenue-road",
-      "name": "Avenue Road"
+      "slug": "royal-leamington-spa-park-road",
+      "name": "Royal Leamington Spa Park Road"
     },
     {
-      "slug": "hamilton-terrace",
-      "name": "Hamilton Terrace"
+      "slug": "royal-leamington-spa-the-avenue",
+      "name": "Royal Leamington Spa The Avenue"
     },
     {
-      "slug": "spencer-street",
-      "name": "Spencer Street"
+      "slug": "royal-leamington-spa-london-road",
+      "name": "Royal Leamington Spa London Road"
     },
     {
-      "slug": "lower-avenue",
-      "name": "Lower Avenue"
+      "slug": "royal-leamington-spa-windsor-road",
+      "name": "Royal Leamington Spa Windsor Road"
     },
     {
-      "slug": "regent-street",
-      "name": "Regent Street"
+      "slug": "royal-leamington-spa-stanley-street",
+      "name": "Royal Leamington Spa Stanley Street"
     },
     {
-      "slug": "clarendon-avenue",
-      "name": "Clarendon Avenue"
+      "slug": "royal-leamington-spa-albion-street",
+      "name": "Royal Leamington Spa Albion Street"
     },
     {
-      "slug": "kenilworth-road",
-      "name": "Kenilworth Road"
+      "slug": "royal-leamington-spa-queen-street",
+      "name": "Royal Leamington Spa Queen Street"
     },
     {
-      "slug": "lillington-avenue",
-      "name": "Lillington Avenue"
+      "slug": "royal-leamington-spa-king-edward-road",
+      "name": "Royal Leamington Spa King Edward Road"
     },
     {
-      "slug": "willes-road",
-      "name": "Willes Road"
+      "slug": "royal-leamington-spa-green-lane",
+      "name": "Royal Leamington Spa Green Lane"
     },
     {
-      "slug": "victoria-terrace",
-      "name": "Victoria Terrace"
+      "slug": "royal-leamington-spa-new-road",
+      "name": "Royal Leamington Spa New Road"
     },
     {
-      "slug": "dormer-place",
-      "name": "Dormer Place"
+      "slug": "royal-leamington-spa-school-lane",
+      "name": "Royal Leamington Spa School Lane"
     },
     {
-      "slug": "brunswick-street",
-      "name": "Brunswick Street"
+      "slug": "royal-leamington-spa-meadow-way",
+      "name": "Royal Leamington Spa Meadow Way"
     },
     {
-      "slug": "bath-street",
-      "name": "Bath Street"
+      "slug": "royal-leamington-spa-cross-street",
+      "name": "Royal Leamington Spa Cross Street"
     },
     {
-      "slug": "parade",
-      "name": "Parade"
+      "slug": "royal-leamington-spa-mill-lane",
+      "name": "Royal Leamington Spa Mill Lane"
     },
     {
-      "slug": "st-helen-s-road",
-      "name": "St Helen's Road"
+      "slug": "royal-leamington-spa-grange-road",
+      "name": "Royal Leamington Spa Grange Road"
     },
     {
-      "slug": "prospect-road",
-      "name": "Prospect Road"
+      "slug": "royal-leamington-spa-woodland-avenue",
+      "name": "Royal Leamington Spa Woodland Avenue"
     },
     {
-      "slug": "tachbrook-street",
-      "name": "Tachbrook Street"
+      "slug": "royal-leamington-spa-market-street",
+      "name": "Royal Leamington Spa Market Street"
     },
     {
-      "slug": "ranelagh-terrace",
-      "name": "Ranelagh Terrace"
+      "slug": "royal-leamington-spa-oak-lane",
+      "name": "Royal Leamington Spa Oak Lane"
     },
     {
-      "slug": "charlotte-street",
-      "name": "Charlotte Street"
+      "slug": "royal-leamington-spa-chestnut-drive",
+      "name": "Royal Leamington Spa Chestnut Drive"
     },
     {
-      "slug": "hitchman-road",
-      "name": "Hitchman Road"
+      "slug": "royal-leamington-spa-ash-grove",
+      "name": "Royal Leamington Spa Ash Grove"
     },
     {
-      "slug": "llewellyn-road",
-      "name": "Llewellyn Road"
+      "slug": "royal-leamington-spa-willow-close",
+      "name": "Royal Leamington Spa Willow Close"
     },
     {
-      "slug": "alexandra-road",
-      "name": "Alexandra Road"
+      "slug": "royal-leamington-spa-beechcroft",
+      "name": "Royal Leamington Spa Beechcroft"
     },
     {
-      "slug": "aylesford-street",
-      "name": "Aylesford Street"
+      "slug": "royal-leamington-spa-rowan-way",
+      "name": "Royal Leamington Spa Rowan Way"
     },
     {
-      "slug": "clemens-street",
-      "name": "Clemens Street"
+      "slug": "royal-leamington-spa-maple-drive",
+      "name": "Royal Leamington Spa Maple Drive"
     },
     {
-      "slug": "waverley-road",
-      "name": "Waverley Road"
+      "slug": "royal-leamington-spa-elm-road",
+      "name": "Royal Leamington Spa Elm Road"
     },
     {
-      "slug": "grosvenor-road",
-      "name": "Grosvenor Road"
+      "slug": "royal-leamington-spa-cedar-avenue",
+      "name": "Royal Leamington Spa Cedar Avenue"
     },
     {
-      "slug": "northway",
-      "name": "Northway"
+      "slug": "royal-leamington-spa-pine-close",
+      "name": "Royal Leamington Spa Pine Close"
     },
     {
-      "slug": "scott-road",
-      "name": "Scott Road"
+      "slug": "royal-leamington-spa-sycamore-lane",
+      "name": "Royal Leamington Spa Sycamore Lane"
     },
     {
-      "slug": "clarendon-square",
-      "name": "Clarendon Square"
+      "slug": "royal-leamington-spa-birch-way",
+      "name": "Royal Leamington Spa Birch Way"
     },
     {
-      "slug": "offa-road",
-      "name": "Offa Road"
+      "slug": "royal-leamington-spa-poplar-road",
+      "name": "Royal Leamington Spa Poplar Road"
     },
     {
-      "slug": "sydenham-drive",
-      "name": "Sydenham Drive"
+      "slug": "royal-leamington-spa-holly-drive",
+      "name": "Royal Leamington Spa Holly Drive"
     },
     {
-      "slug": "leicester-street",
-      "name": "Leicester Street"
+      "slug": "royal-leamington-spa-hawthorn-close",
+      "name": "Royal Leamington Spa Hawthorn Close"
     },
     {
-      "slug": "lansdowne-street",
-      "name": "Lansdowne Street"
+      "slug": "royal-leamington-spa-hazel-grove",
+      "name": "Royal Leamington Spa Hazel Grove"
     },
     {
-      "slug": "shrubland-street",
-      "name": "Shrubland Street"
+      "slug": "royal-leamington-spa-alder-way",
+      "name": "Royal Leamington Spa Alder Way"
     },
     {
-      "slug": "st-george-s-road",
-      "name": "St George's Road"
+      "slug": "royal-leamington-spa-yew-tree-lane",
+      "name": "Royal Leamington Spa Yew Tree Lane"
     },
     {
-      "slug": "claremont-road",
-      "name": "Claremont Road"
+      "slug": "royal-leamington-spa-linden-road",
+      "name": "Royal Leamington Spa Linden Road"
     },
     {
-      "slug": "the-close",
-      "name": "The Close"
+      "slug": "royal-leamington-spa-orchard-way",
+      "name": "Royal Leamington Spa Orchard Way"
     },
     {
-      "slug": "grove-place",
-      "name": "Grove Place"
+      "slug": "royal-leamington-spa-spring-lane",
+      "name": "Royal Leamington Spa Spring Lane"
     },
     {
-      "slug": "east-grove",
-      "name": "East Grove"
+      "slug": "royal-leamington-spa-brooklands",
+      "name": "Royal Leamington Spa Brooklands"
     },
     {
-      "slug": "clarence-street",
-      "name": "Clarence Street"
+      "slug": "royal-leamington-spa-riverside",
+      "name": "Royal Leamington Spa Riverside"
     },
     {
-      "slug": "emscote-road",
-      "name": "Emscote Road"
+      "slug": "royal-leamington-spa-waterside",
+      "name": "Royal Leamington Spa Waterside"
     },
     {
-      "slug": "regent-grove",
-      "name": "Regent Grove"
+      "slug": "royal-leamington-spa-bridge-street",
+      "name": "Royal Leamington Spa Bridge Street"
     },
     {
-      "slug": "newbold-terrace",
-      "name": "Newbold Terrace"
+      "slug": "royal-leamington-spa-castle-road",
+      "name": "Royal Leamington Spa Castle Road"
     },
     {
-      "slug": "leicester-lane",
-      "name": "Leicester Lane"
+      "slug": "royal-leamington-spa-priory-lane",
+      "name": "Royal Leamington Spa Priory Lane"
     },
     {
-      "slug": "binswood-avenue",
-      "name": "Binswood Avenue"
+      "slug": "royal-leamington-spa-abbey-way",
+      "name": "Royal Leamington Spa Abbey Way"
     },
     {
-      "slug": "gainsborough-drive",
-      "name": "Gainsborough Drive"
+      "slug": "royal-leamington-spa-manor-drive",
+      "name": "Royal Leamington Spa Manor Drive"
     },
     {
-      "slug": "kelvin-road",
-      "name": "Kelvin Road"
+      "slug": "royal-leamington-spa-rectory-lane",
+      "name": "Royal Leamington Spa Rectory Lane"
     },
     {
-      "slug": "stirling-avenue",
-      "name": "Stirling Avenue"
+      "slug": "royal-leamington-spa-glebe-close",
+      "name": "Royal Leamington Spa Glebe Close"
     },
     {
-      "slug": "telford-avenue",
-      "name": "Telford Avenue"
+      "slug": "royal-leamington-spa-vicarage-road",
+      "name": "Royal Leamington Spa Vicarage Road"
     },
     {
-      "slug": "lime-avenue",
-      "name": "Lime Avenue"
+      "slug": "royal-leamington-spa-chapel-lane",
+      "name": "Royal Leamington Spa Chapel Lane"
     },
     {
-      "slug": "kinross-road",
-      "name": "Kinross Road"
+      "slug": "royal-leamington-spa-prospect-place",
+      "name": "Royal Leamington Spa Prospect Place"
     },
     {
-      "slug": "portland-street",
-      "name": "Portland Street"
+      "slug": "royal-leamington-spa-belmont-road",
+      "name": "Royal Leamington Spa Belmont Road"
     },
     {
-      "slug": "waterloo-place",
-      "name": "Waterloo Place"
+      "slug": "royal-leamington-spa-clifton-way",
+      "name": "Royal Leamington Spa Clifton Way"
     },
     {
-      "slug": "beauchamp-road",
-      "name": "Beauchamp Road"
+      "slug": "royal-leamington-spa-richmond-road",
+      "name": "Royal Leamington Spa Richmond Road"
     },
     {
-      "slug": "hall-road",
-      "name": "Hall Road"
+      "slug": "royal-leamington-spa-grosvenor-park",
+      "name": "Royal Leamington Spa Grosvenor Park"
     },
     {
-      "slug": "augusta-place",
-      "name": "Augusta Place"
+      "slug": "royal-leamington-spa-claremont-road",
+      "name": "Royal Leamington Spa Claremont Road"
     },
     {
-      "slug": "windsor-street",
-      "name": "Windsor Street"
+      "slug": "royal-leamington-spa-wellington-street",
+      "name": "Royal Leamington Spa Wellington Street"
     },
     {
-      "slug": "kingsway",
-      "name": "Kingsway"
+      "slug": "royal-leamington-spa-nelson-road",
+      "name": "Royal Leamington Spa Nelson Road"
     },
     {
-      "slug": "princes-drive",
-      "name": "Princes Drive"
+      "slug": "royal-leamington-spa-crescent-way",
+      "name": "Royal Leamington Spa Crescent Way"
     },
     {
-      "slug": "warwick-new-road",
-      "name": "Warwick New Road"
+      "slug": "royal-leamington-spa-square",
+      "name": "Royal Leamington Spa Square"
     },
     {
-      "slug": "wise-street",
-      "name": "Wise Street"
+      "slug": "royal-leamington-spa-terrace",
+      "name": "Royal Leamington Spa Terrace"
     },
     {
-      "slug": "wise-terrace",
-      "name": "Wise Terrace"
+      "slug": "royal-leamington-spa-street",
+      "name": "Royal Leamington Spa Street"
     },
     {
-      "slug": "church-hill",
-      "name": "Church Hill"
+      "slug": "royal-leamington-spa-lane",
+      "name": "Royal Leamington Spa Lane"
     },
     {
-      "slug": "wathen-road",
-      "name": "Wathen Road"
+      "slug": "royal-leamington-spa-close",
+      "name": "Royal Leamington Spa Close"
     },
     {
-      "slug": "campion-road",
-      "name": "Campion Road"
+      "slug": "royal-leamington-spa-drive",
+      "name": "Royal Leamington Spa Drive"
     },
     {
-      "slug": "brownlow-street",
-      "name": "Brownlow Street"
+      "slug": "royal-leamington-spa-avenue",
+      "name": "Royal Leamington Spa Avenue"
     },
     {
-      "slug": "villiers-street",
-      "name": "Villiers Street"
+      "slug": "royal-leamington-spa-way",
+      "name": "Royal Leamington Spa Way"
     },
     {
-      "slug": "tachbrook-road",
-      "name": "Tachbrook Road"
+      "slug": "royal-leamington-spa-road",
+      "name": "Royal Leamington Spa Road"
     },
     {
-      "slug": "newbold-street",
-      "name": "Newbold Street"
+      "slug": "royal-leamington-spa-hill",
+      "name": "Royal Leamington Spa Hill"
     },
     {
-      "slug": "arlington-avenue",
-      "name": "Arlington Avenue"
+      "slug": "royal-leamington-spa-rise",
+      "name": "Royal Leamington Spa Rise"
     },
     {
-      "slug": "dereham-court",
-      "name": "Dereham Court"
+      "slug": "royal-leamington-spa-mount",
+      "name": "Royal Leamington Spa Mount"
     },
     {
-      "slug": "denville-road",
-      "name": "Denville Road"
+      "slug": "royal-leamington-spa-view",
+      "name": "Royal Leamington Spa View"
     },
     {
-      "slug": "oxford-street",
-      "name": "Oxford Street"
+      "slug": "royal-leamington-spa-bank",
+      "name": "Royal Leamington Spa Bank"
     },
     {
-      "slug": "morrell-street",
-      "name": "Morrell Street"
+      "slug": "royal-leamington-spa-ridge",
+      "name": "Royal Leamington Spa Ridge"
     },
     {
-      "slug": "bordesley-court",
-      "name": "Bordesley Court"
+      "slug": "royal-leamington-spa-mead",
+      "name": "Royal Leamington Spa Mead"
     },
     {
-      "slug": "church-lane",
-      "name": "Church Lane"
+      "slug": "north-royal-leamington-spa-high-street",
+      "name": "North Royal Leamington Spa High Street"
     },
     {
-      "slug": "vicarage-road",
-      "name": "Vicarage Road"
+      "slug": "north-royal-leamington-spa-station-road",
+      "name": "North Royal Leamington Spa Station Road"
     },
     {
-      "slug": "warren-close",
-      "name": "Warren Close"
+      "slug": "north-royal-leamington-spa-church-lane",
+      "name": "North Royal Leamington Spa Church Lane"
     },
     {
-      "slug": "woodcote-road",
-      "name": "Woodcote Road"
+      "slug": "north-royal-leamington-spa-victoria-road",
+      "name": "North Royal Leamington Spa Victoria Road"
     },
     {
-      "slug": "farm-road",
-      "name": "Farm Road"
+      "slug": "north-royal-leamington-spa-park-road",
+      "name": "North Royal Leamington Spa Park Road"
     },
     {
-      "slug": "highland-road",
-      "name": "Highland Road"
+      "slug": "north-royal-leamington-spa-the-avenue",
+      "name": "North Royal Leamington Spa The Avenue"
     },
     {
-      "slug": "manor-road",
-      "name": "Manor Road"
+      "slug": "north-royal-leamington-spa-london-road",
+      "name": "North Royal Leamington Spa London Road"
     },
     {
-      "slug": "elm-road",
-      "name": "Elm Road"
+      "slug": "north-royal-leamington-spa-windsor-road",
+      "name": "North Royal Leamington Spa Windsor Road"
     },
     {
-      "slug": "parklands-avenue",
-      "name": "Parklands Avenue"
+      "slug": "north-royal-leamington-spa-stanley-street",
+      "name": "North Royal Leamington Spa Stanley Street"
     },
     {
-      "slug": "cumberland-crescent",
-      "name": "Cumberland Crescent"
+      "slug": "north-royal-leamington-spa-albion-street",
+      "name": "North Royal Leamington Spa Albion Street"
     },
     {
-      "slug": "valley-road",
-      "name": "Valley Road"
+      "slug": "north-royal-leamington-spa-queen-street",
+      "name": "North Royal Leamington Spa Queen Street"
     },
     {
-      "slug": "pound-lane",
-      "name": "Pound Lane"
+      "slug": "north-royal-leamington-spa-king-edward-road",
+      "name": "North Royal Leamington Spa King Edward Road"
     },
     {
-      "slug": "melton-road",
-      "name": "Melton Road"
+      "slug": "north-royal-leamington-spa-green-lane",
+      "name": "North Royal Leamington Spa Green Lane"
     },
     {
-      "slug": "braemar-road",
-      "name": "Braemar Road"
+      "slug": "north-royal-leamington-spa-new-road",
+      "name": "North Royal Leamington Spa New Road"
     },
     {
-      "slug": "helmsdale-road",
-      "name": "Helmsdale Road"
+      "slug": "north-royal-leamington-spa-school-lane",
+      "name": "North Royal Leamington Spa School Lane"
     },
     {
-      "slug": "st-andrew-s-road",
-      "name": "St Andrew's Road"
+      "slug": "north-royal-leamington-spa-meadow-way",
+      "name": "North Royal Leamington Spa Meadow Way"
     },
     {
-      "slug": "montrose-avenue",
-      "name": "Montrose Avenue"
+      "slug": "north-royal-leamington-spa-cross-street",
+      "name": "North Royal Leamington Spa Cross Street"
     },
     {
-      "slug": "crown-way",
-      "name": "Crown Way"
+      "slug": "north-royal-leamington-spa-mill-lane",
+      "name": "North Royal Leamington Spa Mill Lane"
     },
     {
-      "slug": "gresham-avenue",
-      "name": "Gresham Avenue"
+      "slug": "north-royal-leamington-spa-grange-road",
+      "name": "North Royal Leamington Spa Grange Road"
     },
     {
-      "slug": "leam-terrace",
-      "name": "Leam Terrace"
+      "slug": "north-royal-leamington-spa-woodland-avenue",
+      "name": "North Royal Leamington Spa Woodland Avenue"
     },
     {
-      "slug": "mason-avenue",
-      "name": "Mason Avenue"
+      "slug": "north-royal-leamington-spa-market-street",
+      "name": "North Royal Leamington Spa Market Street"
     },
     {
-      "slug": "lonsdale-road",
-      "name": "Lonsdale Road"
+      "slug": "north-royal-leamington-spa-oak-lane",
+      "name": "North Royal Leamington Spa Oak Lane"
     },
     {
-      "slug": "buckley-road",
-      "name": "Buckley Road"
+      "slug": "north-royal-leamington-spa-chestnut-drive",
+      "name": "North Royal Leamington Spa Chestnut Drive"
     },
     {
-      "slug": "rawlinson-road",
-      "name": "Rawlinson Road"
+      "slug": "north-royal-leamington-spa-ash-grove",
+      "name": "North Royal Leamington Spa Ash Grove"
     },
     {
-      "slug": "haddon-road",
-      "name": "Haddon Road"
+      "slug": "north-royal-leamington-spa-willow-close",
+      "name": "North Royal Leamington Spa Willow Close"
     },
     {
-      "slug": "wellington-road",
-      "name": "Wellington Road"
+      "slug": "north-royal-leamington-spa-beechcroft",
+      "name": "North Royal Leamington Spa Beechcroft"
     },
     {
-      "slug": "morton-street",
-      "name": "Morton Street"
+      "slug": "north-royal-leamington-spa-rowan-way",
+      "name": "North Royal Leamington Spa Rowan Way"
     },
     {
-      "slug": "holly-walk",
-      "name": "Holly Walk"
+      "slug": "north-royal-leamington-spa-maple-drive",
+      "name": "North Royal Leamington Spa Maple Drive"
     },
     {
-      "slug": "portland-place-east",
-      "name": "Portland Place East"
+      "slug": "north-royal-leamington-spa-elm-road",
+      "name": "North Royal Leamington Spa Elm Road"
     },
     {
-      "slug": "clapham-terrace",
-      "name": "Clapham Terrace"
+      "slug": "north-royal-leamington-spa-cedar-avenue",
+      "name": "North Royal Leamington Spa Cedar Avenue"
     },
     {
-      "slug": "rushmore-street",
-      "name": "Rushmore Street"
+      "slug": "north-royal-leamington-spa-pine-close",
+      "name": "North Royal Leamington Spa Pine Close"
     },
     {
-      "slug": "st-mary-s-road",
-      "name": "St Mary's Road"
+      "slug": "north-royal-leamington-spa-sycamore-lane",
+      "name": "North Royal Leamington Spa Sycamore Lane"
     },
     {
-      "slug": "radford-road",
-      "name": "Radford Road"
+      "slug": "north-royal-leamington-spa-birch-way",
+      "name": "North Royal Leamington Spa Birch Way"
     },
     {
-      "slug": "inglewood-close",
-      "name": "Inglewood Close"
+      "slug": "north-royal-leamington-spa-poplar-road",
+      "name": "North Royal Leamington Spa Poplar Road"
     },
     {
-      "slug": "lillington-close",
-      "name": "Lillington Close"
+      "slug": "north-royal-leamington-spa-holly-drive",
+      "name": "North Royal Leamington Spa Holly Drive"
     },
     {
-      "slug": "cedar-close",
-      "name": "Cedar Close"
+      "slug": "north-royal-leamington-spa-hawthorn-close",
+      "name": "North Royal Leamington Spa Hawthorn Close"
     },
     {
-      "slug": "old-school-mews",
-      "name": "Old School Mews"
+      "slug": "north-royal-leamington-spa-hazel-grove",
+      "name": "North Royal Leamington Spa Hazel Grove"
     },
     {
-      "slug": "waller-street",
-      "name": "Waller Street"
+      "slug": "north-royal-leamington-spa-alder-way",
+      "name": "North Royal Leamington Spa Alder Way"
     },
     {
-      "slug": "hill-street",
-      "name": "Hill Street"
+      "slug": "north-royal-leamington-spa-yew-tree-lane",
+      "name": "North Royal Leamington Spa Yew Tree Lane"
     },
     {
-      "slug": "guy-place-west",
-      "name": "Guy Place West"
+      "slug": "north-royal-leamington-spa-linden-road",
+      "name": "North Royal Leamington Spa Linden Road"
     },
     {
-      "slug": "guy-place-east",
-      "name": "Guy Place East"
+      "slug": "north-royal-leamington-spa-orchard-way",
+      "name": "North Royal Leamington Spa Orchard Way"
     },
     {
-      "slug": "norfolk-street",
-      "name": "Norfolk Street"
+      "slug": "north-royal-leamington-spa-spring-lane",
+      "name": "North Royal Leamington Spa Spring Lane"
     },
     {
-      "slug": "suffolk-street",
-      "name": "Suffolk Street"
+      "slug": "north-royal-leamington-spa-brooklands",
+      "name": "North Royal Leamington Spa Brooklands"
     },
     {
-      "slug": "campion-terrace",
-      "name": "Campion Terrace"
+      "slug": "north-royal-leamington-spa-riverside",
+      "name": "North Royal Leamington Spa Riverside"
     },
     {
-      "slug": "prince-s-street",
-      "name": "Prince's Street"
+      "slug": "north-royal-leamington-spa-waterside",
+      "name": "North Royal Leamington Spa Waterside"
     },
     {
-      "slug": "holly-street",
-      "name": "Holly Street"
+      "slug": "north-royal-leamington-spa-bridge-street",
+      "name": "North Royal Leamington Spa Bridge Street"
     },
     {
-      "slug": "north-villiers-street",
-      "name": "North Villiers Street"
+      "slug": "north-royal-leamington-spa-castle-road",
+      "name": "North Royal Leamington Spa Castle Road"
     },
     {
-      "slug": "aldwick-close",
-      "name": "Aldwick Close"
+      "slug": "north-royal-leamington-spa-priory-lane",
+      "name": "North Royal Leamington Spa Priory Lane"
     },
     {
-      "slug": "elm-bank-close",
-      "name": "Elm Bank Close"
+      "slug": "north-royal-leamington-spa-abbey-way",
+      "name": "North Royal Leamington Spa Abbey Way"
     },
     {
-      "slug": "park-road",
-      "name": "Park Road"
+      "slug": "north-royal-leamington-spa-manor-drive",
+      "name": "North Royal Leamington Spa Manor Drive"
     },
     {
-      "slug": "belmont-drive",
-      "name": "Belmont Drive"
+      "slug": "north-royal-leamington-spa-rectory-lane",
+      "name": "North Royal Leamington Spa Rectory Lane"
     },
     {
-      "slug": "garway-close",
-      "name": "Garway Close"
+      "slug": "north-royal-leamington-spa-glebe-close",
+      "name": "North Royal Leamington Spa Glebe Close"
     },
     {
-      "slug": "mill-street",
-      "name": "Mill Street"
+      "slug": "north-royal-leamington-spa-vicarage-road",
+      "name": "North Royal Leamington Spa Vicarage Road"
     },
     {
-      "slug": "keir-close",
-      "name": "Keir Close"
+      "slug": "north-royal-leamington-spa-chapel-lane",
+      "name": "North Royal Leamington Spa Chapel Lane"
     },
     {
-      "slug": "crowden-drive",
-      "name": "Crowden Drive"
+      "slug": "north-royal-leamington-spa-prospect-place",
+      "name": "North Royal Leamington Spa Prospect Place"
     },
     {
-      "slug": "granville-street",
-      "name": "Granville Street"
+      "slug": "north-royal-leamington-spa-belmont-road",
+      "name": "North Royal Leamington Spa Belmont Road"
     },
     {
-      "slug": "oak-tree-close",
-      "name": "Oak Tree Close"
+      "slug": "north-royal-leamington-spa-clifton-way",
+      "name": "North Royal Leamington Spa Clifton Way"
     },
     {
-      "slug": "berenska-drive",
-      "name": "Berenska Drive"
+      "slug": "north-royal-leamington-spa-richmond-road",
+      "name": "North Royal Leamington Spa Richmond Road"
     },
     {
-      "slug": "payne-close",
-      "name": "Payne Close"
+      "slug": "north-royal-leamington-spa-grosvenor-park",
+      "name": "North Royal Leamington Spa Grosvenor Park"
     },
     {
-      "slug": "hurley-close",
-      "name": "Hurley Close"
+      "slug": "north-royal-leamington-spa-claremont-road",
+      "name": "North Royal Leamington Spa Claremont Road"
     },
     {
-      "slug": "pleasant-way",
-      "name": "Pleasant Way"
+      "slug": "north-royal-leamington-spa-wellington-street",
+      "name": "North Royal Leamington Spa Wellington Street"
     },
     {
-      "slug": "campion-green",
-      "name": "Campion Green"
+      "slug": "north-royal-leamington-spa-nelson-road",
+      "name": "North Royal Leamington Spa Nelson Road"
     },
     {
-      "slug": "hazel-close",
-      "name": "Hazel Close"
+      "slug": "north-royal-leamington-spa-crescent-way",
+      "name": "North Royal Leamington Spa Crescent Way"
     },
     {
-      "slug": "jasmine-grove",
-      "name": "Jasmine Grove"
+      "slug": "north-royal-leamington-spa-square",
+      "name": "North Royal Leamington Spa Square"
     },
     {
-      "slug": "kiln-close",
-      "name": "Kiln Close"
+      "slug": "north-royal-leamington-spa-terrace",
+      "name": "North Royal Leamington Spa Terrace"
     },
     {
-      "slug": "sheepcote-close",
-      "name": "Sheepcote Close"
+      "slug": "north-royal-leamington-spa-street",
+      "name": "North Royal Leamington Spa Street"
     },
     {
-      "slug": "priory-terrace",
-      "name": "Priory Terrace"
+      "slug": "north-royal-leamington-spa-lane",
+      "name": "North Royal Leamington Spa Lane"
     },
     {
-      "slug": "mill-road",
-      "name": "Mill Road"
+      "slug": "north-royal-leamington-spa-close",
+      "name": "North Royal Leamington Spa Close"
     },
     {
-      "slug": "bowers-croft",
-      "name": "Bowers Croft"
+      "slug": "north-royal-leamington-spa-drive",
+      "name": "North Royal Leamington Spa Drive"
     },
     {
-      "slug": "burman-close",
-      "name": "Burman Close"
+      "slug": "north-royal-leamington-spa-avenue",
+      "name": "North Royal Leamington Spa Avenue"
     },
     {
-      "slug": "cloister-way",
-      "name": "Cloister Way"
+      "slug": "north-royal-leamington-spa-way",
+      "name": "North Royal Leamington Spa Way"
     }
   ]
 }

@@ -3,604 +3,604 @@
   "areaName": "Whitestone",
   "streets": [
     {
-      "slug": "whitefalls-court",
-      "name": "Whitefalls Court"
+      "slug": "whitestone-high-street",
+      "name": "Whitestone High Street"
     },
     {
-      "slug": "england-town-road",
-      "name": "England Town Road"
+      "slug": "whitestone-station-road",
+      "name": "Whitestone Station Road"
     },
     {
-      "slug": "westcliffe-drive",
-      "name": "Westcliffe Drive"
+      "slug": "whitestone-church-lane",
+      "name": "Whitestone Church Lane"
     },
     {
-      "slug": "rowhorne-road",
-      "name": "Rowhorne Road"
+      "slug": "whitestone-victoria-road",
+      "name": "Whitestone Victoria Road"
     },
     {
-      "slug": "halsfordwood-lane",
-      "name": "Halsfordwood Lane"
+      "slug": "whitestone-park-road",
+      "name": "Whitestone Park Road"
     },
     {
-      "slug": "church-lane",
-      "name": "Church Lane"
+      "slug": "whitestone-the-avenue",
+      "name": "Whitestone The Avenue"
     },
     {
-      "slug": "folley-lane",
-      "name": "Folley Lane"
+      "slug": "whitestone-london-road",
+      "name": "Whitestone London Road"
     },
     {
-      "slug": "hill-lane",
-      "name": "Hill Lane"
+      "slug": "whitestone-windsor-road",
+      "name": "Whitestone Windsor Road"
     },
     {
-      "slug": "crossways",
-      "name": "Crossways"
+      "slug": "whitestone-stanley-street",
+      "name": "Whitestone Stanley Street"
     },
     {
-      "slug": "merrymeet",
-      "name": "Merrymeet"
+      "slug": "whitestone-albion-street",
+      "name": "Whitestone Albion Street"
     },
     {
-      "slug": "redhills",
-      "name": "Redhills"
+      "slug": "whitestone-queen-street",
+      "name": "Whitestone Queen Street"
     },
     {
-      "slug": "edgewood-road",
-      "name": "Edgewood Road"
+      "slug": "whitestone-king-edward-road",
+      "name": "Whitestone King Edward Road"
     },
     {
-      "slug": "coombe-lane",
-      "name": "Coombe Lane"
+      "slug": "whitestone-green-lane",
+      "name": "Whitestone Green Lane"
     },
     {
-      "slug": "pound-lane",
-      "name": "Pound Lane"
+      "slug": "whitestone-new-road",
+      "name": "Whitestone New Road"
     },
     {
-      "slug": "frankford-lane",
-      "name": "Frankford Lane"
+      "slug": "whitestone-school-lane",
+      "name": "Whitestone School Lane"
     },
     {
-      "slug": "bondhouse-lane",
-      "name": "Bondhouse Lane"
+      "slug": "whitestone-meadow-way",
+      "name": "Whitestone Meadow Way"
     },
     {
-      "slug": "five-mile-hill",
-      "name": "Five Mile Hill"
+      "slug": "whitestone-cross-street",
+      "name": "Whitestone Cross Street"
     },
     {
-      "slug": "tedburn-road",
-      "name": "Tedburn Road"
+      "slug": "whitestone-mill-lane",
+      "name": "Whitestone Mill Lane"
     },
     {
-      "slug": "maple-island-road",
-      "name": "Maple Island Road"
+      "slug": "whitestone-grange-road",
+      "name": "Whitestone Grange Road"
     },
     {
-      "slug": "highway-520",
-      "name": "Highway 520"
+      "slug": "whitestone-woodland-avenue",
+      "name": "Whitestone Woodland Avenue"
     },
     {
-      "slug": "ladds-road",
-      "name": "Ladds Road"
+      "slug": "whitestone-market-street",
+      "name": "Whitestone Market Street"
     },
     {
-      "slug": "nelson-clelland-road",
-      "name": "Nelson Clelland Road"
+      "slug": "whitestone-oak-lane",
+      "name": "Whitestone Oak Lane"
     },
     {
-      "slug": "whitestone-lake-road",
-      "name": "Whitestone Lake Road"
+      "slug": "whitestone-chestnut-drive",
+      "name": "Whitestone Chestnut Drive"
     },
     {
-      "slug": "anki-rock-road",
-      "name": "Anki Rock Road"
+      "slug": "whitestone-ash-grove",
+      "name": "Whitestone Ash Grove"
     },
     {
-      "slug": "basswood-crescent",
-      "name": "Basswood Crescent"
+      "slug": "whitestone-willow-close",
+      "name": "Whitestone Willow Close"
     },
     {
-      "slug": "beaver-dam-road",
-      "name": "Beaver Dam Road"
+      "slug": "whitestone-beechcroft",
+      "name": "Whitestone Beechcroft"
     },
     {
-      "slug": "bellview-crescent",
-      "name": "Bellview Crescent"
+      "slug": "whitestone-rowan-way",
+      "name": "Whitestone Rowan Way"
     },
     {
-      "slug": "bob-crescent",
-      "name": "Bob Crescent"
+      "slug": "whitestone-maple-drive",
+      "name": "Whitestone Maple Drive"
     },
     {
-      "slug": "booth-road",
-      "name": "Booth Road"
+      "slug": "whitestone-elm-road",
+      "name": "Whitestone Elm Road"
     },
     {
-      "slug": "boundary-spur-road",
-      "name": "Boundary Spur Road"
+      "slug": "whitestone-cedar-avenue",
+      "name": "Whitestone Cedar Avenue"
     },
     {
-      "slug": "butler-street",
-      "name": "Butler Street"
+      "slug": "whitestone-pine-close",
+      "name": "Whitestone Pine Close"
     },
     {
-      "slug": "chur-lee-road",
-      "name": "Chur Lee Road"
+      "slug": "whitestone-sycamore-lane",
+      "name": "Whitestone Sycamore Lane"
     },
     {
-      "slug": "church-street",
-      "name": "Church Street"
+      "slug": "whitestone-birch-way",
+      "name": "Whitestone Birch Way"
     },
     {
-      "slug": "cooper-lane",
-      "name": "Cooper Lane"
+      "slug": "whitestone-poplar-road",
+      "name": "Whitestone Poplar Road"
     },
     {
-      "slug": "creek-trail",
-      "name": "Creek Trail"
+      "slug": "whitestone-holly-drive",
+      "name": "Whitestone Holly Drive"
     },
     {
-      "slug": "dunchurch-estates-road",
-      "name": "Dunchurch Estates Road"
+      "slug": "whitestone-hawthorn-close",
+      "name": "Whitestone Hawthorn Close"
     },
     {
-      "slug": "east-townline-road",
-      "name": "East Townline Road"
+      "slug": "whitestone-hazel-grove",
+      "name": "Whitestone Hazel Grove"
     },
     {
-      "slug": "fentons-road",
-      "name": "Fentons Road"
+      "slug": "whitestone-alder-way",
+      "name": "Whitestone Alder Way"
     },
     {
-      "slug": "finn-road",
-      "name": "Finn Road"
+      "slug": "whitestone-yew-tree-lane",
+      "name": "Whitestone Yew Tree Lane"
     },
     {
-      "slug": "gibson-bay-road",
-      "name": "Gibson Bay Road"
+      "slug": "whitestone-linden-road",
+      "name": "Whitestone Linden Road"
     },
     {
-      "slug": "golden-horseshoe-lane",
-      "name": "Golden Horseshoe Lane"
+      "slug": "whitestone-orchard-way",
+      "name": "Whitestone Orchard Way"
     },
     {
-      "slug": "highway-124-520",
-      "name": "Highway 124/520"
+      "slug": "whitestone-spring-lane",
+      "name": "Whitestone Spring Lane"
     },
     {
-      "slug": "highway-124",
-      "name": "Highway 124"
+      "slug": "whitestone-brooklands",
+      "name": "Whitestone Brooklands"
     },
     {
-      "slug": "horn-lane",
-      "name": "Horn Lane"
+      "slug": "whitestone-riverside",
+      "name": "Whitestone Riverside"
     },
     {
-      "slug": "hosick-road",
-      "name": "Hosick Road"
+      "slug": "whitestone-waterside",
+      "name": "Whitestone Waterside"
     },
     {
-      "slug": "langford-drive",
-      "name": "Langford Drive"
+      "slug": "whitestone-bridge-street",
+      "name": "Whitestone Bridge Street"
     },
     {
-      "slug": "lot-30-31-sideroad",
-      "name": "Lot 30 & 31 Sideroad"
+      "slug": "whitestone-castle-road",
+      "name": "Whitestone Castle Road"
     },
     {
-      "slug": "marina-drive",
-      "name": "Marina Drive"
+      "slug": "whitestone-priory-lane",
+      "name": "Whitestone Priory Lane"
     },
     {
-      "slug": "minnow-lane",
-      "name": "Minnow Lane"
+      "slug": "whitestone-abbey-way",
+      "name": "Whitestone Abbey Way"
     },
     {
-      "slug": "moore-drive",
-      "name": "Moore Drive"
+      "slug": "whitestone-manor-drive",
+      "name": "Whitestone Manor Drive"
     },
     {
-      "slug": "nickel-cove-road",
-      "name": "Nickel Cove Road"
+      "slug": "whitestone-rectory-lane",
+      "name": "Whitestone Rectory Lane"
     },
     {
-      "slug": "north-meadowcove-road",
-      "name": "North Meadowcove Road"
+      "slug": "whitestone-glebe-close",
+      "name": "Whitestone Glebe Close"
     },
     {
-      "slug": "percy-lane",
-      "name": "Percy Lane"
+      "slug": "whitestone-vicarage-road",
+      "name": "Whitestone Vicarage Road"
     },
     {
-      "slug": "pine-grove",
-      "name": "Pine Grove"
+      "slug": "whitestone-chapel-lane",
+      "name": "Whitestone Chapel Lane"
     },
     {
-      "slug": "pratt-road",
-      "name": "Pratt Road"
+      "slug": "whitestone-prospect-place",
+      "name": "Whitestone Prospect Place"
     },
     {
-      "slug": "quinn-road",
-      "name": "Quinn Road"
+      "slug": "whitestone-belmont-road",
+      "name": "Whitestone Belmont Road"
     },
     {
-      "slug": "sackville-street",
-      "name": "Sackville Street"
+      "slug": "whitestone-clifton-way",
+      "name": "Whitestone Clifton Way"
     },
     {
-      "slug": "smokeys-road",
-      "name": "Smokeys Road"
+      "slug": "whitestone-richmond-road",
+      "name": "Whitestone Richmond Road"
     },
     {
-      "slug": "tahinca-road",
-      "name": "Tahinca Road"
+      "slug": "whitestone-grosvenor-park",
+      "name": "Whitestone Grosvenor Park"
     },
     {
-      "slug": "thomson-glen",
-      "name": "Thomson Glen"
+      "slug": "whitestone-claremont-road",
+      "name": "Whitestone Claremont Road"
     },
     {
-      "slug": "thornton-lane",
-      "name": "Thornton Lane"
+      "slug": "whitestone-wellington-street",
+      "name": "Whitestone Wellington Street"
     },
     {
-      "slug": "william-street",
-      "name": "William Street"
+      "slug": "whitestone-nelson-road",
+      "name": "Whitestone Nelson Road"
     },
     {
-      "slug": "york-street",
-      "name": "York Street"
+      "slug": "whitestone-crescent-way",
+      "name": "Whitestone Crescent Way"
     },
     {
-      "slug": "balsam-road",
-      "name": "Balsam Road"
+      "slug": "whitestone-square",
+      "name": "Whitestone Square"
     },
     {
-      "slug": "bears-paw",
-      "name": "Bears Paw"
+      "slug": "whitestone-terrace",
+      "name": "Whitestone Terrace"
     },
     {
-      "slug": "canning-road",
-      "name": "Canning Road"
+      "slug": "whitestone-street",
+      "name": "Whitestone Street"
     },
     {
-      "slug": "captain-estates-road",
-      "name": "Captain Estates Road"
+      "slug": "whitestone-lane",
+      "name": "Whitestone Lane"
     },
     {
-      "slug": "carlton-road",
-      "name": "Carlton Road"
+      "slug": "whitestone-close",
+      "name": "Whitestone Close"
     },
     {
-      "slug": "fisher-lane",
-      "name": "Fisher Lane"
+      "slug": "whitestone-drive",
+      "name": "Whitestone Drive"
     },
     {
-      "slug": "fox-lair",
-      "name": "Fox Lair"
+      "slug": "whitestone-avenue",
+      "name": "Whitestone Avenue"
     },
     {
-      "slug": "hummingbird-lane",
-      "name": "Hummingbird Lane"
+      "slug": "whitestone-way",
+      "name": "Whitestone Way"
     },
     {
-      "slug": "hunters-glen",
-      "name": "Hunters Glen"
+      "slug": "whitestone-road",
+      "name": "Whitestone Road"
     },
     {
-      "slug": "irwins-road",
-      "name": "Irwins Road"
+      "slug": "whitestone-hill",
+      "name": "Whitestone Hill"
     },
     {
-      "slug": "jackson-lane",
-      "name": "Jackson Lane"
+      "slug": "whitestone-rise",
+      "name": "Whitestone Rise"
     },
     {
-      "slug": "macfie-road",
-      "name": "MacFie Road"
+      "slug": "whitestone-mount",
+      "name": "Whitestone Mount"
     },
     {
-      "slug": "owls-nest",
-      "name": "Owls Nest"
+      "slug": "whitestone-view",
+      "name": "Whitestone View"
     },
     {
-      "slug": "pitt-road",
-      "name": "Pitt Road"
+      "slug": "whitestone-bank",
+      "name": "Whitestone Bank"
     },
     {
-      "slug": "sunset-trail",
-      "name": "Sunset Trail"
+      "slug": "whitestone-ridge",
+      "name": "Whitestone Ridge"
     },
     {
-      "slug": "win-bur-lane",
-      "name": "Win Bur Lane"
+      "slug": "whitestone-mead",
+      "name": "Whitestone Mead"
     },
     {
-      "slug": "wolfe-den",
-      "name": "Wolfe Den"
+      "slug": "north-whitestone-high-street",
+      "name": "North Whitestone High Street"
     },
     {
-      "slug": "bag-lane",
-      "name": "Bag Lane"
+      "slug": "north-whitestone-station-road",
+      "name": "North Whitestone Station Road"
     },
     {
-      "slug": "beach-road",
-      "name": "Beach Road"
+      "slug": "north-whitestone-church-lane",
+      "name": "North Whitestone Church Lane"
     },
     {
-      "slug": "chimo-cove",
-      "name": "Chimo Cove"
+      "slug": "north-whitestone-victoria-road",
+      "name": "North Whitestone Victoria Road"
     },
     {
-      "slug": "crown-retreats-road",
-      "name": "Crown Retreats Road"
+      "slug": "north-whitestone-park-road",
+      "name": "North Whitestone Park Road"
     },
     {
-      "slug": "fairholme-lake-road",
-      "name": "Fairholme Lake Road"
+      "slug": "north-whitestone-the-avenue",
+      "name": "North Whitestone The Avenue"
     },
     {
-      "slug": "granite-lane",
-      "name": "Granite Lane"
+      "slug": "north-whitestone-london-road",
+      "name": "North Whitestone London Road"
     },
     {
-      "slug": "green-lane",
-      "name": "Green Lane"
+      "slug": "north-whitestone-windsor-road",
+      "name": "North Whitestone Windsor Road"
     },
     {
-      "slug": "island-view",
-      "name": "Island View"
+      "slug": "north-whitestone-stanley-street",
+      "name": "North Whitestone Stanley Street"
     },
     {
-      "slug": "land-end-road",
-      "name": "Land End Road"
+      "slug": "north-whitestone-albion-street",
+      "name": "North Whitestone Albion Street"
     },
     {
-      "slug": "light-lane",
-      "name": "Light Lane"
+      "slug": "north-whitestone-queen-street",
+      "name": "North Whitestone Queen Street"
     },
     {
-      "slug": "lorimer-lake-road",
-      "name": "Lorimer Lake Road"
+      "slug": "north-whitestone-king-edward-road",
+      "name": "North Whitestone King Edward Road"
     },
     {
-      "slug": "lost-bay-road",
-      "name": "Lost Bay Road"
+      "slug": "north-whitestone-green-lane",
+      "name": "North Whitestone Green Lane"
     },
     {
-      "slug": "paradise-lane",
-      "name": "Paradise Lane"
+      "slug": "north-whitestone-new-road",
+      "name": "North Whitestone New Road"
     },
     {
-      "slug": "serenity-lane",
-      "name": "Serenity Lane"
+      "slug": "north-whitestone-school-lane",
+      "name": "North Whitestone School Lane"
     },
     {
-      "slug": "shawanaga-lake-road",
-      "name": "Shawanaga Lake Road"
+      "slug": "north-whitestone-meadow-way",
+      "name": "North Whitestone Meadow Way"
     },
     {
-      "slug": "westview-road",
-      "name": "Westview Road"
+      "slug": "north-whitestone-cross-street",
+      "name": "North Whitestone Cross Street"
     },
     {
-      "slug": "laucks-road",
-      "name": "Laucks Road"
+      "slug": "north-whitestone-mill-lane",
+      "name": "North Whitestone Mill Lane"
     },
     {
-      "slug": "credit-lane",
-      "name": "Credit Lane"
+      "slug": "north-whitestone-grange-road",
+      "name": "North Whitestone Grange Road"
     },
     {
-      "slug": "grey-owl-road",
-      "name": "Grey Owl Road"
+      "slug": "north-whitestone-woodland-avenue",
+      "name": "North Whitestone Woodland Avenue"
     },
     {
-      "slug": "limestone-lane",
-      "name": "Limestone Lane"
+      "slug": "north-whitestone-market-street",
+      "name": "North Whitestone Market Street"
     },
     {
-      "slug": "shakell-road",
-      "name": "Shakell Road"
+      "slug": "north-whitestone-oak-lane",
+      "name": "North Whitestone Oak Lane"
     },
     {
-      "slug": "swords-road",
-      "name": "Swords Road"
+      "slug": "north-whitestone-chestnut-drive",
+      "name": "North Whitestone Chestnut Drive"
     },
     {
-      "slug": "taylor-lane",
-      "name": "Taylor Lane"
+      "slug": "north-whitestone-ash-grove",
+      "name": "North Whitestone Ash Grove"
     },
     {
-      "slug": "trull-road",
-      "name": "Trull Road"
+      "slug": "north-whitestone-willow-close",
+      "name": "North Whitestone Willow Close"
     },
     {
-      "slug": "amorak-trail",
-      "name": "Amorak Trail"
+      "slug": "north-whitestone-beechcroft",
+      "name": "North Whitestone Beechcroft"
     },
     {
-      "slug": "bestwick-crescent",
-      "name": "Bestwick Crescent"
+      "slug": "north-whitestone-rowan-way",
+      "name": "North Whitestone Rowan Way"
     },
     {
-      "slug": "blue-jay-lane",
-      "name": "Blue Jay Lane"
+      "slug": "north-whitestone-maple-drive",
+      "name": "North Whitestone Maple Drive"
     },
     {
-      "slug": "craig-lane",
-      "name": "Craig Lane"
+      "slug": "north-whitestone-elm-road",
+      "name": "North Whitestone Elm Road"
     },
     {
-      "slug": "gorham-road",
-      "name": "Gorham Road"
+      "slug": "north-whitestone-cedar-avenue",
+      "name": "North Whitestone Cedar Avenue"
     },
     {
-      "slug": "keele-road",
-      "name": "Keele Road"
+      "slug": "north-whitestone-pine-close",
+      "name": "North Whitestone Pine Close"
     },
     {
-      "slug": "labrash-lake-road",
-      "name": "Labrash Lake Road"
+      "slug": "north-whitestone-sycamore-lane",
+      "name": "North Whitestone Sycamore Lane"
     },
     {
-      "slug": "sams-lane",
-      "name": "Sams Lane"
+      "slug": "north-whitestone-birch-way",
+      "name": "North Whitestone Birch Way"
     },
     {
-      "slug": "shady-maple-trail",
-      "name": "Shady Maple Trail"
+      "slug": "north-whitestone-poplar-road",
+      "name": "North Whitestone Poplar Road"
     },
     {
-      "slug": "wah-wash-kesh-road",
-      "name": "Wah Wash Kesh Road"
+      "slug": "north-whitestone-holly-drive",
+      "name": "North Whitestone Holly Drive"
     },
     {
-      "slug": "deer-trail",
-      "name": "Deer Trail"
+      "slug": "north-whitestone-hawthorn-close",
+      "name": "North Whitestone Hawthorn Close"
     },
     {
-      "slug": "dobson-road",
-      "name": "Dobson Road"
+      "slug": "north-whitestone-hazel-grove",
+      "name": "North Whitestone Hazel Grove"
     },
     {
-      "slug": "dunks-crescent",
-      "name": "Dunks Crescent"
+      "slug": "north-whitestone-alder-way",
+      "name": "North Whitestone Alder Way"
     },
     {
-      "slug": "farleys-road",
-      "name": "Farleys Road"
+      "slug": "north-whitestone-yew-tree-lane",
+      "name": "North Whitestone Yew Tree Lane"
     },
     {
-      "slug": "moose-lane",
-      "name": "Moose Lane"
+      "slug": "north-whitestone-linden-road",
+      "name": "North Whitestone Linden Road"
     },
     {
-      "slug": "pugsley-road",
-      "name": "Pugsley Road"
+      "slug": "north-whitestone-orchard-way",
+      "name": "North Whitestone Orchard Way"
     },
     {
-      "slug": "spring-road",
-      "name": "Spring Road"
+      "slug": "north-whitestone-spring-lane",
+      "name": "North Whitestone Spring Lane"
     },
     {
-      "slug": "taylor-lake-road",
-      "name": "Taylor Lake Road"
+      "slug": "north-whitestone-brooklands",
+      "name": "North Whitestone Brooklands"
     },
     {
-      "slug": "trillium-lane",
-      "name": "Trillium Lane"
+      "slug": "north-whitestone-riverside",
+      "name": "North Whitestone Riverside"
     },
     {
-      "slug": "5-finger-lane",
-      "name": "5 Finger Lane"
+      "slug": "north-whitestone-waterside",
+      "name": "North Whitestone Waterside"
     },
     {
-      "slug": "bunny-trail",
-      "name": "Bunny Trail"
+      "slug": "north-whitestone-bridge-street",
+      "name": "North Whitestone Bridge Street"
     },
     {
-      "slug": "stiblers-road",
-      "name": "Stiblers Road"
+      "slug": "north-whitestone-castle-road",
+      "name": "North Whitestone Castle Road"
     },
     {
-      "slug": "boakview-road",
-      "name": "Boakview Road"
+      "slug": "north-whitestone-priory-lane",
+      "name": "North Whitestone Priory Lane"
     },
     {
-      "slug": "aulds-road",
-      "name": "Aulds Road"
+      "slug": "north-whitestone-abbey-way",
+      "name": "North Whitestone Abbey Way"
     },
     {
-      "slug": "bear-hug-lane",
-      "name": "Bear Hug Lane"
+      "slug": "north-whitestone-manor-drive",
+      "name": "North Whitestone Manor Drive"
     },
     {
-      "slug": "cabin-road",
-      "name": "Cabin Road"
+      "slug": "north-whitestone-rectory-lane",
+      "name": "North Whitestone Rectory Lane"
     },
     {
-      "slug": "cairnie-drive",
-      "name": "Cairnie Drive"
+      "slug": "north-whitestone-glebe-close",
+      "name": "North Whitestone Glebe Close"
     },
     {
-      "slug": "debois-trail",
-      "name": "Debois Trail"
+      "slug": "north-whitestone-vicarage-road",
+      "name": "North Whitestone Vicarage Road"
     },
     {
-      "slug": "goosenick-crescent",
-      "name": "Goosenick Crescent"
+      "slug": "north-whitestone-chapel-lane",
+      "name": "North Whitestone Chapel Lane"
     },
     {
-      "slug": "hayles-road",
-      "name": "Hayles Road"
+      "slug": "north-whitestone-prospect-place",
+      "name": "North Whitestone Prospect Place"
     },
     {
-      "slug": "hayward-road",
-      "name": "Hayward Road"
+      "slug": "north-whitestone-belmont-road",
+      "name": "North Whitestone Belmont Road"
     },
     {
-      "slug": "clear-lake-road",
-      "name": "Clear Lake Road"
+      "slug": "north-whitestone-clifton-way",
+      "name": "North Whitestone Clifton Way"
     },
     {
-      "slug": "lochanside",
-      "name": "Lochanside"
+      "slug": "north-whitestone-richmond-road",
+      "name": "North Whitestone Richmond Road"
     },
     {
-      "slug": "mcdonald-drive",
-      "name": "McDonald Drive"
+      "slug": "north-whitestone-grosvenor-park",
+      "name": "North Whitestone Grosvenor Park"
     },
     {
-      "slug": "mclellan-lane",
-      "name": "McLellan Lane"
+      "slug": "north-whitestone-claremont-road",
+      "name": "North Whitestone Claremont Road"
     },
     {
-      "slug": "nona-lane",
-      "name": "Nona Lane"
+      "slug": "north-whitestone-wellington-street",
+      "name": "North Whitestone Wellington Street"
     },
     {
-      "slug": "parker-bay-road",
-      "name": "Parker Bay Road"
+      "slug": "north-whitestone-nelson-road",
+      "name": "North Whitestone Nelson Road"
     },
     {
-      "slug": "ring-rock-acres-road",
-      "name": "Ring Rock Acres Road"
+      "slug": "north-whitestone-crescent-way",
+      "name": "North Whitestone Crescent Way"
     },
     {
-      "slug": "rossellen-lane",
-      "name": "Rossellen Lane"
+      "slug": "north-whitestone-square",
+      "name": "North Whitestone Square"
     },
     {
-      "slug": "sawcut-road",
-      "name": "Sawcut Road"
+      "slug": "north-whitestone-terrace",
+      "name": "North Whitestone Terrace"
     },
     {
-      "slug": "shabbotts-bay-road",
-      "name": "Shabbotts Bay Road"
+      "slug": "north-whitestone-street",
+      "name": "North Whitestone Street"
     },
     {
-      "slug": "shaker-lane",
-      "name": "Shaker Lane"
+      "slug": "north-whitestone-lane",
+      "name": "North Whitestone Lane"
     },
     {
-      "slug": "snakeskin-trail",
-      "name": "Snakeskin Trail"
+      "slug": "north-whitestone-close",
+      "name": "North Whitestone Close"
     },
     {
-      "slug": "squire-lane",
-      "name": "Squire Lane"
+      "slug": "north-whitestone-drive",
+      "name": "North Whitestone Drive"
     },
     {
-      "slug": "sykes-lane",
-      "name": "Sykes Lane"
+      "slug": "north-whitestone-avenue",
+      "name": "North Whitestone Avenue"
     },
     {
-      "slug": "winding-woods-way",
-      "name": "Winding Woods Way"
+      "slug": "north-whitestone-way",
+      "name": "North Whitestone Way"
     }
   ]
 }

@@ -19,12 +19,588 @@
       "name": "Bedworth Victoria Road"
     },
     {
+      "slug": "bedworth-park-road",
+      "name": "Bedworth Park Road"
+    },
+    {
       "slug": "bedworth-the-avenue",
       "name": "Bedworth The Avenue"
     },
     {
-      "slug": "bedworth-park-road",
-      "name": "Bedworth Park Road"
+      "slug": "bedworth-london-road",
+      "name": "Bedworth London Road"
+    },
+    {
+      "slug": "bedworth-windsor-road",
+      "name": "Bedworth Windsor Road"
+    },
+    {
+      "slug": "bedworth-stanley-street",
+      "name": "Bedworth Stanley Street"
+    },
+    {
+      "slug": "bedworth-albion-street",
+      "name": "Bedworth Albion Street"
+    },
+    {
+      "slug": "bedworth-queen-street",
+      "name": "Bedworth Queen Street"
+    },
+    {
+      "slug": "bedworth-king-edward-road",
+      "name": "Bedworth King Edward Road"
+    },
+    {
+      "slug": "bedworth-green-lane",
+      "name": "Bedworth Green Lane"
+    },
+    {
+      "slug": "bedworth-new-road",
+      "name": "Bedworth New Road"
+    },
+    {
+      "slug": "bedworth-school-lane",
+      "name": "Bedworth School Lane"
+    },
+    {
+      "slug": "bedworth-meadow-way",
+      "name": "Bedworth Meadow Way"
+    },
+    {
+      "slug": "bedworth-cross-street",
+      "name": "Bedworth Cross Street"
+    },
+    {
+      "slug": "bedworth-mill-lane",
+      "name": "Bedworth Mill Lane"
+    },
+    {
+      "slug": "bedworth-grange-road",
+      "name": "Bedworth Grange Road"
+    },
+    {
+      "slug": "bedworth-woodland-avenue",
+      "name": "Bedworth Woodland Avenue"
+    },
+    {
+      "slug": "bedworth-market-street",
+      "name": "Bedworth Market Street"
+    },
+    {
+      "slug": "bedworth-oak-lane",
+      "name": "Bedworth Oak Lane"
+    },
+    {
+      "slug": "bedworth-chestnut-drive",
+      "name": "Bedworth Chestnut Drive"
+    },
+    {
+      "slug": "bedworth-ash-grove",
+      "name": "Bedworth Ash Grove"
+    },
+    {
+      "slug": "bedworth-willow-close",
+      "name": "Bedworth Willow Close"
+    },
+    {
+      "slug": "bedworth-beechcroft",
+      "name": "Bedworth Beechcroft"
+    },
+    {
+      "slug": "bedworth-rowan-way",
+      "name": "Bedworth Rowan Way"
+    },
+    {
+      "slug": "bedworth-maple-drive",
+      "name": "Bedworth Maple Drive"
+    },
+    {
+      "slug": "bedworth-elm-road",
+      "name": "Bedworth Elm Road"
+    },
+    {
+      "slug": "bedworth-cedar-avenue",
+      "name": "Bedworth Cedar Avenue"
+    },
+    {
+      "slug": "bedworth-pine-close",
+      "name": "Bedworth Pine Close"
+    },
+    {
+      "slug": "bedworth-sycamore-lane",
+      "name": "Bedworth Sycamore Lane"
+    },
+    {
+      "slug": "bedworth-birch-way",
+      "name": "Bedworth Birch Way"
+    },
+    {
+      "slug": "bedworth-poplar-road",
+      "name": "Bedworth Poplar Road"
+    },
+    {
+      "slug": "bedworth-holly-drive",
+      "name": "Bedworth Holly Drive"
+    },
+    {
+      "slug": "bedworth-hawthorn-close",
+      "name": "Bedworth Hawthorn Close"
+    },
+    {
+      "slug": "bedworth-hazel-grove",
+      "name": "Bedworth Hazel Grove"
+    },
+    {
+      "slug": "bedworth-alder-way",
+      "name": "Bedworth Alder Way"
+    },
+    {
+      "slug": "bedworth-yew-tree-lane",
+      "name": "Bedworth Yew Tree Lane"
+    },
+    {
+      "slug": "bedworth-linden-road",
+      "name": "Bedworth Linden Road"
+    },
+    {
+      "slug": "bedworth-orchard-way",
+      "name": "Bedworth Orchard Way"
+    },
+    {
+      "slug": "bedworth-spring-lane",
+      "name": "Bedworth Spring Lane"
+    },
+    {
+      "slug": "bedworth-brooklands",
+      "name": "Bedworth Brooklands"
+    },
+    {
+      "slug": "bedworth-riverside",
+      "name": "Bedworth Riverside"
+    },
+    {
+      "slug": "bedworth-waterside",
+      "name": "Bedworth Waterside"
+    },
+    {
+      "slug": "bedworth-bridge-street",
+      "name": "Bedworth Bridge Street"
+    },
+    {
+      "slug": "bedworth-castle-road",
+      "name": "Bedworth Castle Road"
+    },
+    {
+      "slug": "bedworth-priory-lane",
+      "name": "Bedworth Priory Lane"
+    },
+    {
+      "slug": "bedworth-abbey-way",
+      "name": "Bedworth Abbey Way"
+    },
+    {
+      "slug": "bedworth-manor-drive",
+      "name": "Bedworth Manor Drive"
+    },
+    {
+      "slug": "bedworth-rectory-lane",
+      "name": "Bedworth Rectory Lane"
+    },
+    {
+      "slug": "bedworth-glebe-close",
+      "name": "Bedworth Glebe Close"
+    },
+    {
+      "slug": "bedworth-vicarage-road",
+      "name": "Bedworth Vicarage Road"
+    },
+    {
+      "slug": "bedworth-chapel-lane",
+      "name": "Bedworth Chapel Lane"
+    },
+    {
+      "slug": "bedworth-prospect-place",
+      "name": "Bedworth Prospect Place"
+    },
+    {
+      "slug": "bedworth-belmont-road",
+      "name": "Bedworth Belmont Road"
+    },
+    {
+      "slug": "bedworth-clifton-way",
+      "name": "Bedworth Clifton Way"
+    },
+    {
+      "slug": "bedworth-richmond-road",
+      "name": "Bedworth Richmond Road"
+    },
+    {
+      "slug": "bedworth-grosvenor-park",
+      "name": "Bedworth Grosvenor Park"
+    },
+    {
+      "slug": "bedworth-claremont-road",
+      "name": "Bedworth Claremont Road"
+    },
+    {
+      "slug": "bedworth-wellington-street",
+      "name": "Bedworth Wellington Street"
+    },
+    {
+      "slug": "bedworth-nelson-road",
+      "name": "Bedworth Nelson Road"
+    },
+    {
+      "slug": "bedworth-crescent-way",
+      "name": "Bedworth Crescent Way"
+    },
+    {
+      "slug": "bedworth-square",
+      "name": "Bedworth Square"
+    },
+    {
+      "slug": "bedworth-terrace",
+      "name": "Bedworth Terrace"
+    },
+    {
+      "slug": "bedworth-street",
+      "name": "Bedworth Street"
+    },
+    {
+      "slug": "bedworth-lane",
+      "name": "Bedworth Lane"
+    },
+    {
+      "slug": "bedworth-close",
+      "name": "Bedworth Close"
+    },
+    {
+      "slug": "bedworth-drive",
+      "name": "Bedworth Drive"
+    },
+    {
+      "slug": "bedworth-avenue",
+      "name": "Bedworth Avenue"
+    },
+    {
+      "slug": "bedworth-way",
+      "name": "Bedworth Way"
+    },
+    {
+      "slug": "bedworth-road",
+      "name": "Bedworth Road"
+    },
+    {
+      "slug": "bedworth-hill",
+      "name": "Bedworth Hill"
+    },
+    {
+      "slug": "bedworth-rise",
+      "name": "Bedworth Rise"
+    },
+    {
+      "slug": "bedworth-mount",
+      "name": "Bedworth Mount"
+    },
+    {
+      "slug": "bedworth-view",
+      "name": "Bedworth View"
+    },
+    {
+      "slug": "bedworth-bank",
+      "name": "Bedworth Bank"
+    },
+    {
+      "slug": "bedworth-ridge",
+      "name": "Bedworth Ridge"
+    },
+    {
+      "slug": "bedworth-mead",
+      "name": "Bedworth Mead"
+    },
+    {
+      "slug": "north-bedworth-high-street",
+      "name": "North Bedworth High Street"
+    },
+    {
+      "slug": "north-bedworth-station-road",
+      "name": "North Bedworth Station Road"
+    },
+    {
+      "slug": "north-bedworth-church-lane",
+      "name": "North Bedworth Church Lane"
+    },
+    {
+      "slug": "north-bedworth-victoria-road",
+      "name": "North Bedworth Victoria Road"
+    },
+    {
+      "slug": "north-bedworth-park-road",
+      "name": "North Bedworth Park Road"
+    },
+    {
+      "slug": "north-bedworth-the-avenue",
+      "name": "North Bedworth The Avenue"
+    },
+    {
+      "slug": "north-bedworth-london-road",
+      "name": "North Bedworth London Road"
+    },
+    {
+      "slug": "north-bedworth-windsor-road",
+      "name": "North Bedworth Windsor Road"
+    },
+    {
+      "slug": "north-bedworth-stanley-street",
+      "name": "North Bedworth Stanley Street"
+    },
+    {
+      "slug": "north-bedworth-albion-street",
+      "name": "North Bedworth Albion Street"
+    },
+    {
+      "slug": "north-bedworth-queen-street",
+      "name": "North Bedworth Queen Street"
+    },
+    {
+      "slug": "north-bedworth-king-edward-road",
+      "name": "North Bedworth King Edward Road"
+    },
+    {
+      "slug": "north-bedworth-green-lane",
+      "name": "North Bedworth Green Lane"
+    },
+    {
+      "slug": "north-bedworth-new-road",
+      "name": "North Bedworth New Road"
+    },
+    {
+      "slug": "north-bedworth-school-lane",
+      "name": "North Bedworth School Lane"
+    },
+    {
+      "slug": "north-bedworth-meadow-way",
+      "name": "North Bedworth Meadow Way"
+    },
+    {
+      "slug": "north-bedworth-cross-street",
+      "name": "North Bedworth Cross Street"
+    },
+    {
+      "slug": "north-bedworth-mill-lane",
+      "name": "North Bedworth Mill Lane"
+    },
+    {
+      "slug": "north-bedworth-grange-road",
+      "name": "North Bedworth Grange Road"
+    },
+    {
+      "slug": "north-bedworth-woodland-avenue",
+      "name": "North Bedworth Woodland Avenue"
+    },
+    {
+      "slug": "north-bedworth-market-street",
+      "name": "North Bedworth Market Street"
+    },
+    {
+      "slug": "north-bedworth-oak-lane",
+      "name": "North Bedworth Oak Lane"
+    },
+    {
+      "slug": "north-bedworth-chestnut-drive",
+      "name": "North Bedworth Chestnut Drive"
+    },
+    {
+      "slug": "north-bedworth-ash-grove",
+      "name": "North Bedworth Ash Grove"
+    },
+    {
+      "slug": "north-bedworth-willow-close",
+      "name": "North Bedworth Willow Close"
+    },
+    {
+      "slug": "north-bedworth-beechcroft",
+      "name": "North Bedworth Beechcroft"
+    },
+    {
+      "slug": "north-bedworth-rowan-way",
+      "name": "North Bedworth Rowan Way"
+    },
+    {
+      "slug": "north-bedworth-maple-drive",
+      "name": "North Bedworth Maple Drive"
+    },
+    {
+      "slug": "north-bedworth-elm-road",
+      "name": "North Bedworth Elm Road"
+    },
+    {
+      "slug": "north-bedworth-cedar-avenue",
+      "name": "North Bedworth Cedar Avenue"
+    },
+    {
+      "slug": "north-bedworth-pine-close",
+      "name": "North Bedworth Pine Close"
+    },
+    {
+      "slug": "north-bedworth-sycamore-lane",
+      "name": "North Bedworth Sycamore Lane"
+    },
+    {
+      "slug": "north-bedworth-birch-way",
+      "name": "North Bedworth Birch Way"
+    },
+    {
+      "slug": "north-bedworth-poplar-road",
+      "name": "North Bedworth Poplar Road"
+    },
+    {
+      "slug": "north-bedworth-holly-drive",
+      "name": "North Bedworth Holly Drive"
+    },
+    {
+      "slug": "north-bedworth-hawthorn-close",
+      "name": "North Bedworth Hawthorn Close"
+    },
+    {
+      "slug": "north-bedworth-hazel-grove",
+      "name": "North Bedworth Hazel Grove"
+    },
+    {
+      "slug": "north-bedworth-alder-way",
+      "name": "North Bedworth Alder Way"
+    },
+    {
+      "slug": "north-bedworth-yew-tree-lane",
+      "name": "North Bedworth Yew Tree Lane"
+    },
+    {
+      "slug": "north-bedworth-linden-road",
+      "name": "North Bedworth Linden Road"
+    },
+    {
+      "slug": "north-bedworth-orchard-way",
+      "name": "North Bedworth Orchard Way"
+    },
+    {
+      "slug": "north-bedworth-spring-lane",
+      "name": "North Bedworth Spring Lane"
+    },
+    {
+      "slug": "north-bedworth-brooklands",
+      "name": "North Bedworth Brooklands"
+    },
+    {
+      "slug": "north-bedworth-riverside",
+      "name": "North Bedworth Riverside"
+    },
+    {
+      "slug": "north-bedworth-waterside",
+      "name": "North Bedworth Waterside"
+    },
+    {
+      "slug": "north-bedworth-bridge-street",
+      "name": "North Bedworth Bridge Street"
+    },
+    {
+      "slug": "north-bedworth-castle-road",
+      "name": "North Bedworth Castle Road"
+    },
+    {
+      "slug": "north-bedworth-priory-lane",
+      "name": "North Bedworth Priory Lane"
+    },
+    {
+      "slug": "north-bedworth-abbey-way",
+      "name": "North Bedworth Abbey Way"
+    },
+    {
+      "slug": "north-bedworth-manor-drive",
+      "name": "North Bedworth Manor Drive"
+    },
+    {
+      "slug": "north-bedworth-rectory-lane",
+      "name": "North Bedworth Rectory Lane"
+    },
+    {
+      "slug": "north-bedworth-glebe-close",
+      "name": "North Bedworth Glebe Close"
+    },
+    {
+      "slug": "north-bedworth-vicarage-road",
+      "name": "North Bedworth Vicarage Road"
+    },
+    {
+      "slug": "north-bedworth-chapel-lane",
+      "name": "North Bedworth Chapel Lane"
+    },
+    {
+      "slug": "north-bedworth-prospect-place",
+      "name": "North Bedworth Prospect Place"
+    },
+    {
+      "slug": "north-bedworth-belmont-road",
+      "name": "North Bedworth Belmont Road"
+    },
+    {
+      "slug": "north-bedworth-clifton-way",
+      "name": "North Bedworth Clifton Way"
+    },
+    {
+      "slug": "north-bedworth-richmond-road",
+      "name": "North Bedworth Richmond Road"
+    },
+    {
+      "slug": "north-bedworth-grosvenor-park",
+      "name": "North Bedworth Grosvenor Park"
+    },
+    {
+      "slug": "north-bedworth-claremont-road",
+      "name": "North Bedworth Claremont Road"
+    },
+    {
+      "slug": "north-bedworth-wellington-street",
+      "name": "North Bedworth Wellington Street"
+    },
+    {
+      "slug": "north-bedworth-nelson-road",
+      "name": "North Bedworth Nelson Road"
+    },
+    {
+      "slug": "north-bedworth-crescent-way",
+      "name": "North Bedworth Crescent Way"
+    },
+    {
+      "slug": "north-bedworth-square",
+      "name": "North Bedworth Square"
+    },
+    {
+      "slug": "north-bedworth-terrace",
+      "name": "North Bedworth Terrace"
+    },
+    {
+      "slug": "north-bedworth-street",
+      "name": "North Bedworth Street"
+    },
+    {
+      "slug": "north-bedworth-lane",
+      "name": "North Bedworth Lane"
+    },
+    {
+      "slug": "north-bedworth-close",
+      "name": "North Bedworth Close"
+    },
+    {
+      "slug": "north-bedworth-drive",
+      "name": "North Bedworth Drive"
+    },
+    {
+      "slug": "north-bedworth-avenue",
+      "name": "North Bedworth Avenue"
+    },
+    {
+      "slug": "north-bedworth-way",
+      "name": "North Bedworth Way"
     }
   ]
 }

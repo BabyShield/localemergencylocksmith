@@ -3,28 +3,604 @@
   "areaName": "Radford",
   "streets": [
     {
-      "slug": "radford-high-street",
-      "name": "Radford High Street"
+      "slug": "va-f-057",
+      "name": "VA-F-057"
     },
     {
-      "slug": "radford-station-road",
-      "name": "Radford Station Road"
+      "slug": "wintergreen-drive",
+      "name": "Wintergreen Drive"
     },
     {
-      "slug": "radford-church-lane",
-      "name": "Radford Church Lane"
+      "slug": "little-river-dam-road",
+      "name": "Little River Dam Road"
     },
     {
-      "slug": "radford-victoria-road",
-      "name": "Radford Victoria Road"
+      "slug": "glenmore-lane",
+      "name": "Glenmore Lane"
     },
     {
-      "slug": "radford-the-avenue",
-      "name": "Radford The Avenue"
+      "slug": "knoll-court",
+      "name": "Knoll Court"
     },
     {
-      "slug": "radford-park-road",
-      "name": "Radford Park Road"
+      "slug": "allen-avenue",
+      "name": "Allen Avenue"
+    },
+    {
+      "slug": "wadsworth-street",
+      "name": "Wadsworth Street"
+    },
+    {
+      "slug": "14th-street",
+      "name": "14th Street"
+    },
+    {
+      "slug": "beverly-street",
+      "name": "Beverly Street"
+    },
+    {
+      "slug": "sanford-street",
+      "name": "Sanford Street"
+    },
+    {
+      "slug": "mary-alice-lane",
+      "name": "Mary Alice Lane"
+    },
+    {
+      "slug": "pershing-avenue",
+      "name": "Pershing Avenue"
+    },
+    {
+      "slug": "sutphin-lane",
+      "name": "Sutphin Lane"
+    },
+    {
+      "slug": "hidden-valley-lane",
+      "name": "Hidden Valley Lane"
+    },
+    {
+      "slug": "martin-avenue",
+      "name": "Martin Avenue"
+    },
+    {
+      "slug": "greenbrier-drive",
+      "name": "Greenbrier Drive"
+    },
+    {
+      "slug": "new-street",
+      "name": "New Street"
+    },
+    {
+      "slug": "auburn-avenue",
+      "name": "Auburn Avenue"
+    },
+    {
+      "slug": "overlook-lane",
+      "name": "Overlook Lane"
+    },
+    {
+      "slug": "greenfield-court",
+      "name": "Greenfield Court"
+    },
+    {
+      "slug": "haven-drive",
+      "name": "Haven Drive"
+    },
+    {
+      "slug": "east-main-street",
+      "name": "East Main Street"
+    },
+    {
+      "slug": "10th-street",
+      "name": "10th Street"
+    },
+    {
+      "slug": "randolph-street",
+      "name": "Randolph Street"
+    },
+    {
+      "slug": "round-hill-drive",
+      "name": "Round Hill Drive"
+    },
+    {
+      "slug": "wilderness-road",
+      "name": "Wilderness Road"
+    },
+    {
+      "slug": "fairfax-street",
+      "name": "Fairfax Street"
+    },
+    {
+      "slug": "rockford-street",
+      "name": "Rockford Street"
+    },
+    {
+      "slug": "fabio-drive",
+      "name": "Fabio Drive"
+    },
+    {
+      "slug": "mona-drive",
+      "name": "Mona Drive"
+    },
+    {
+      "slug": "ferdinand-drive",
+      "name": "Ferdinand Drive"
+    },
+    {
+      "slug": "water-tower-road",
+      "name": "Water Tower Road"
+    },
+    {
+      "slug": "grove-avenue",
+      "name": "Grove Avenue"
+    },
+    {
+      "slug": "4th-street",
+      "name": "4th Street"
+    },
+    {
+      "slug": "2nd-avenue",
+      "name": "2nd Avenue"
+    },
+    {
+      "slug": "midkiff-lane",
+      "name": "Midkiff Lane"
+    },
+    {
+      "slug": "university-drive",
+      "name": "University Drive"
+    },
+    {
+      "slug": "dick-davis-drive",
+      "name": "Dick Davis Drive"
+    },
+    {
+      "slug": "lawrence-street",
+      "name": "Lawrence Street"
+    },
+    {
+      "slug": "cold-mountain-road",
+      "name": "Cold Mountain Road"
+    },
+    {
+      "slug": "mcconnell-avenue",
+      "name": "McConnell Avenue"
+    },
+    {
+      "slug": "sundell-drive",
+      "name": "Sundell Drive"
+    },
+    {
+      "slug": "3rd-avenue",
+      "name": "3rd Avenue"
+    },
+    {
+      "slug": "9th-street",
+      "name": "9th Street"
+    },
+    {
+      "slug": "fieldale-drive",
+      "name": "Fieldale Drive"
+    },
+    {
+      "slug": "pulaski-street",
+      "name": "Pulaski Street"
+    },
+    {
+      "slug": "davis-street",
+      "name": "Davis Street"
+    },
+    {
+      "slug": "walker-drive",
+      "name": "Walker Drive"
+    },
+    {
+      "slug": "calhoun-street",
+      "name": "Calhoun Street"
+    },
+    {
+      "slug": "miller-street",
+      "name": "Miller Street"
+    },
+    {
+      "slug": "5th-street",
+      "name": "5th Street"
+    },
+    {
+      "slug": "river-point",
+      "name": "River Point"
+    },
+    {
+      "slug": "foundry-place",
+      "name": "Foundry Place"
+    },
+    {
+      "slug": "baldwin-street",
+      "name": "Baldwin Street"
+    },
+    {
+      "slug": "page-street",
+      "name": "Page Street"
+    },
+    {
+      "slug": "arnold-avenue",
+      "name": "Arnold Avenue"
+    },
+    {
+      "slug": "forest-avenue",
+      "name": "Forest Avenue"
+    },
+    {
+      "slug": "6th-avenue",
+      "name": "6th Avenue"
+    },
+    {
+      "slug": "holly-lane",
+      "name": "Holly Lane"
+    },
+    {
+      "slug": "hickory-road",
+      "name": "Hickory Road"
+    },
+    {
+      "slug": "roosevelt-avenue",
+      "name": "Roosevelt Avenue"
+    },
+    {
+      "slug": "pendleton-street",
+      "name": "Pendleton Street"
+    },
+    {
+      "slug": "watts-street",
+      "name": "Watts Street"
+    },
+    {
+      "slug": "clement-street",
+      "name": "Clement Street"
+    },
+    {
+      "slug": "berkley-street",
+      "name": "Berkley Street"
+    },
+    {
+      "slug": "13th-street",
+      "name": "13th Street"
+    },
+    {
+      "slug": "montgomery-street",
+      "name": "Montgomery Street"
+    },
+    {
+      "slug": "pine-view-drive",
+      "name": "Pine View Drive"
+    },
+    {
+      "slug": "gilbert-street",
+      "name": "Gilbert Street"
+    },
+    {
+      "slug": "jackson-circle",
+      "name": "Jackson Circle"
+    },
+    {
+      "slug": "centre-court",
+      "name": "Centre Court"
+    },
+    {
+      "slug": "tyler-avenue",
+      "name": "Tyler Avenue"
+    },
+    {
+      "slug": "high-meadows-parkway",
+      "name": "High Meadows Parkway"
+    },
+    {
+      "slug": "kirkwood-drive",
+      "name": "Kirkwood Drive"
+    },
+    {
+      "slug": "hammett-avenue",
+      "name": "Hammett Avenue"
+    },
+    {
+      "slug": "9th-avenue",
+      "name": "9th Avenue"
+    },
+    {
+      "slug": "stockton-street",
+      "name": "Stockton Street"
+    },
+    {
+      "slug": "george-street",
+      "name": "George Street"
+    },
+    {
+      "slug": "staples-street",
+      "name": "Staples Street"
+    },
+    {
+      "slug": "sanford-circle",
+      "name": "Sanford Circle"
+    },
+    {
+      "slug": "woods-view-court",
+      "name": "Woods View Court"
+    },
+    {
+      "slug": "smith-avenue",
+      "name": "Smith Avenue"
+    },
+    {
+      "slug": "charlton-lane",
+      "name": "Charlton Lane"
+    },
+    {
+      "slug": "prospect-street",
+      "name": "Prospect Street"
+    },
+    {
+      "slug": "duncan-lane",
+      "name": "Duncan Lane"
+    },
+    {
+      "slug": "hidden-valley-drive",
+      "name": "Hidden Valley Drive"
+    },
+    {
+      "slug": "wood-street",
+      "name": "Wood Street"
+    },
+    {
+      "slug": "lyle-street",
+      "name": "Lyle Street"
+    },
+    {
+      "slug": "scott-street",
+      "name": "Scott Street"
+    },
+    {
+      "slug": "jackson-street",
+      "name": "Jackson Street"
+    },
+    {
+      "slug": "8th-street",
+      "name": "8th Street"
+    },
+    {
+      "slug": "windsor-street",
+      "name": "Windsor Street"
+    },
+    {
+      "slug": "ridge-field-lane",
+      "name": "Ridge Field Lane"
+    },
+    {
+      "slug": "rock-road-east",
+      "name": "Rock Road East"
+    },
+    {
+      "slug": "harvey-street",
+      "name": "Harvey Street"
+    },
+    {
+      "slug": "17th-street",
+      "name": "17th Street"
+    },
+    {
+      "slug": "walnut-lane",
+      "name": "Walnut Lane"
+    },
+    {
+      "slug": "harrison-street",
+      "name": "Harrison Street"
+    },
+    {
+      "slug": "monroe-street",
+      "name": "Monroe Street"
+    },
+    {
+      "slug": "west-main-street",
+      "name": "West Main Street"
+    },
+    {
+      "slug": "wilson-street",
+      "name": "Wilson Street"
+    },
+    {
+      "slug": "carter-street",
+      "name": "Carter Street"
+    },
+    {
+      "slug": "gandy-street",
+      "name": "Gandy Street"
+    },
+    {
+      "slug": "barton-street",
+      "name": "Barton Street"
+    },
+    {
+      "slug": "2nd-street",
+      "name": "2nd Street"
+    },
+    {
+      "slug": "robertson-street",
+      "name": "Robertson Street"
+    },
+    {
+      "slug": "fairway-drive",
+      "name": "Fairway Drive"
+    },
+    {
+      "slug": "jefferson-street",
+      "name": "Jefferson Street"
+    },
+    {
+      "slug": "virginia-street",
+      "name": "Virginia Street"
+    },
+    {
+      "slug": "unruh-drive",
+      "name": "Unruh Drive"
+    },
+    {
+      "slug": "12th-street",
+      "name": "12th Street"
+    },
+    {
+      "slug": "fletcher-avenue",
+      "name": "Fletcher Avenue"
+    },
+    {
+      "slug": "milton-lane",
+      "name": "Milton Lane"
+    },
+    {
+      "slug": "glen-view-lane",
+      "name": "Glen View Lane"
+    },
+    {
+      "slug": "walker-street",
+      "name": "Walker Street"
+    },
+    {
+      "slug": "wirt-street",
+      "name": "Wirt Street"
+    },
+    {
+      "slug": "college-park-drive",
+      "name": "College Park Drive"
+    },
+    {
+      "slug": "dogwood-lane",
+      "name": "Dogwood Lane"
+    },
+    {
+      "slug": "charles-coles-drive",
+      "name": "Charles Coles Drive"
+    },
+    {
+      "slug": "jeffries-drive",
+      "name": "Jeffries Drive"
+    },
+    {
+      "slug": "spring-street",
+      "name": "Spring Street"
+    },
+    {
+      "slug": "howe-street",
+      "name": "Howe Street"
+    },
+    {
+      "slug": "downey-street",
+      "name": "Downey Street"
+    },
+    {
+      "slug": "preston-street",
+      "name": "Preston Street"
+    },
+    {
+      "slug": "farragut-drive",
+      "name": "Farragut Drive"
+    },
+    {
+      "slug": "macarthur-avenue",
+      "name": "Macarthur Avenue"
+    },
+    {
+      "slug": "5th-avenue",
+      "name": "5th Avenue"
+    },
+    {
+      "slug": "whitehall-street",
+      "name": "Whitehall Street"
+    },
+    {
+      "slug": "berkley-williams-drive",
+      "name": "Berkley Williams Drive"
+    },
+    {
+      "slug": "sheppard-avenue",
+      "name": "Sheppard Avenue"
+    },
+    {
+      "slug": "sutton-street",
+      "name": "Sutton Street"
+    },
+    {
+      "slug": "reese-goldsmith-circle",
+      "name": "Reese Goldsmith Circle"
+    },
+    {
+      "slug": "oakland-avenue",
+      "name": "Oakland Avenue"
+    },
+    {
+      "slug": "williams-avenue",
+      "name": "Williams Avenue"
+    },
+    {
+      "slug": "3rd-street",
+      "name": "3rd Street"
+    },
+    {
+      "slug": "7th-street",
+      "name": "7th Street"
+    },
+    {
+      "slug": "grand-view-drive",
+      "name": "Grand View Drive"
+    },
+    {
+      "slug": "roberts-street",
+      "name": "Roberts Street"
+    },
+    {
+      "slug": "vienna-avenue",
+      "name": "Vienna Avenue"
+    },
+    {
+      "slug": "de-haven-drive",
+      "name": "De Haven Drive"
+    },
+    {
+      "slug": "corporate-drive",
+      "name": "Corporate Drive"
+    },
+    {
+      "slug": "p-t-travis-avenue",
+      "name": "P T Travis Avenue"
+    },
+    {
+      "slug": "pine-tree-lane",
+      "name": "Pine Tree Lane"
+    },
+    {
+      "slug": "taylor-street",
+      "name": "Taylor Street"
+    },
+    {
+      "slug": "clay-street",
+      "name": "Clay Street"
+    },
+    {
+      "slug": "noblin-street",
+      "name": "Noblin Street"
+    },
+    {
+      "slug": "edgehill-lane",
+      "name": "Edgehill Lane"
+    },
+    {
+      "slug": "8th-avenue",
+      "name": "8th Avenue"
+    },
+    {
+      "slug": "polk-street",
+      "name": "Polk Street"
+    },
+    {
+      "slug": "fuqua-street",
+      "name": "Fuqua Street"
     }
   ]
 }

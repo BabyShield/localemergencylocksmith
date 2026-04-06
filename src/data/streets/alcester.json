@@ -11,6 +11,10 @@
       "name": "Swan Street"
     },
     {
+      "slug": "birmingham-road",
+      "name": "Birmingham Road"
+    },
+    {
       "slug": "mitchell-drive",
       "name": "Mitchell Drive"
     },
@@ -131,16 +135,16 @@
       "name": "Alcester Heath"
     },
     {
-      "slug": "birmingham-road",
-      "name": "Birmingham Road"
-    },
-    {
       "slug": "school-road",
       "name": "School Road"
     },
     {
       "slug": "willow-close",
       "name": "Willow Close"
+    },
+    {
+      "slug": "icknield-street",
+      "name": "Icknield Street"
     },
     {
       "slug": "gunnings-bridge",
@@ -155,12 +159,36 @@
       "name": "Seggs Lane"
     },
     {
+      "slug": "allimore-lane",
+      "name": "Allimore Lane"
+    },
+    {
+      "slug": "cold-comfort-lane",
+      "name": "Cold Comfort Lane"
+    },
+    {
+      "slug": "coughton-lane",
+      "name": "Coughton Lane"
+    },
+    {
+      "slug": "moorfield-road",
+      "name": "Moorfield Road"
+    },
+    {
+      "slug": "butter-street",
+      "name": "Butter Street"
+    },
+    {
       "slug": "henley-street",
       "name": "Henley Street"
     },
     {
       "slug": "stratford-road",
       "name": "Stratford Road"
+    },
+    {
+      "slug": "malt-mill-lane",
+      "name": "Malt Mill Lane"
     },
     {
       "slug": "gas-house-lane",
@@ -175,8 +203,24 @@
       "name": "Primrose Lane"
     },
     {
+      "slug": "bulls-head-yard-tuery",
+      "name": "Bulls Head Yard Tuery"
+    },
+    {
+      "slug": "bulls-head-yard",
+      "name": "Bulls Head Yard"
+    },
+    {
       "slug": "colebrook-close",
       "name": "Colebrook Close"
+    },
+    {
+      "slug": "oak-tuery",
+      "name": "Oak Tuery"
+    },
+    {
+      "slug": "precision-way",
+      "name": "Precision Way"
     },
     {
       "slug": "jephcott-close",
@@ -285,10 +329,6 @@
     {
       "slug": "chestnut-court",
       "name": "Chestnut Court"
-    },
-    {
-      "slug": "moorfield-road",
-      "name": "Moorfield Road"
     },
     {
       "slug": "roebuck-park",
@@ -403,6 +443,10 @@
       "name": "Fields Park Drive"
     },
     {
+      "slug": "kings-coughton-lane",
+      "name": "Kings Coughton Lane"
+    },
+    {
       "slug": "greville-road",
       "name": "Greville Road"
     },
@@ -413,6 +457,14 @@
     {
       "slug": "east-2nd-street",
       "name": "East 2nd Street"
+    },
+    {
+      "slug": "abbey-tuery",
+      "name": "Abbey Tuery"
+    },
+    {
+      "slug": "market-place-tuery",
+      "name": "Market Place Tuery"
     },
     {
       "slug": "wharrage-road",
@@ -467,6 +519,10 @@
       "name": "Bleachfield Street"
     },
     {
+      "slug": "adams-way",
+      "name": "Adams Way"
+    },
+    {
       "slug": "willoughby-close",
       "name": "Willoughby Close"
     },
@@ -479,8 +535,36 @@
       "name": "Plover Close"
     },
     {
+      "slug": "kinwarton-workshops",
+      "name": "Kinwarton Workshops"
+    },
+    {
+      "slug": "whitemoor-lane",
+      "name": "Whitemoor Lane"
+    },
+    {
+      "slug": "salt-box-row",
+      "name": "Salt Box Row"
+    },
+    {
+      "slug": "moorfield-court",
+      "name": "Moorfield Court"
+    },
+    {
       "slug": "old-rectory-garden",
       "name": "Old Rectory Garden"
+    },
+    {
+      "slug": "henley-court",
+      "name": "Henley Court"
+    },
+    {
+      "slug": "nelson-tuery",
+      "name": "Nelson Tuery"
+    },
+    {
+      "slug": "priory-tuery",
+      "name": "Priory Tuery"
     },
     {
       "slug": "hazlewood-close",
@@ -491,32 +575,32 @@
       "name": "SD Highway 11"
     },
     {
+      "slug": "millenium-way",
+      "name": "Millenium Way"
+    },
+    {
+      "slug": "lion-tuery",
+      "name": "Lion Tuery"
+    },
+    {
+      "slug": "arden-forest-way",
+      "name": "Arden Forest Way"
+    },
+    {
+      "slug": "bmx-track",
+      "name": "BMX Track"
+    },
+    {
+      "slug": "maples-drive",
+      "name": "Maples Drive"
+    },
+    {
       "slug": "cumberbatch-close",
       "name": "Cumberbatch Close"
     },
     {
       "slug": "weatherhead-close",
       "name": "Weatherhead Close"
-    },
-    {
-      "slug": "payne-drive",
-      "name": "Payne Drive"
-    },
-    {
-      "slug": "palmer-gardens",
-      "name": "Palmer Gardens"
-    },
-    {
-      "slug": "evesham-street",
-      "name": "Evesham Street"
-    },
-    {
-      "slug": "lapour-lane",
-      "name": "Lapour Lane"
-    },
-    {
-      "slug": "madge-close",
-      "name": "Madge Close"
     }
   ]
 }

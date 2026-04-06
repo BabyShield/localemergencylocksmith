@@ -3,200 +3,604 @@
   "areaName": "Milverton",
   "streets": [
     {
-      "slug": "wiveliscombe-road",
-      "name": "Wiveliscombe Road"
+      "slug": "milverton-high-street",
+      "name": "Milverton High Street"
     },
     {
-      "slug": "wood-street",
-      "name": "Wood Street"
+      "slug": "milverton-station-road",
+      "name": "Milverton Station Road"
     },
     {
-      "slug": "meadows-way",
-      "name": "Meadows Way"
+      "slug": "milverton-church-lane",
+      "name": "Milverton Church Lane"
     },
     {
-      "slug": "weekmore-lane",
-      "name": "Weekmore Lane"
+      "slug": "milverton-victoria-road",
+      "name": "Milverton Victoria Road"
     },
     {
-      "slug": "tougher-hill",
-      "name": "Tougher Hill"
+      "slug": "milverton-park-road",
+      "name": "Milverton Park Road"
     },
     {
-      "slug": "st-michael-s-hill",
-      "name": "St Michael's Hill"
+      "slug": "milverton-the-avenue",
+      "name": "Milverton The Avenue"
     },
     {
-      "slug": "creedwell-orchard",
-      "name": "Creedwell Orchard"
+      "slug": "milverton-london-road",
+      "name": "Milverton London Road"
     },
     {
-      "slug": "parsonage-lane",
-      "name": "Parsonage Lane"
+      "slug": "milverton-windsor-road",
+      "name": "Milverton Windsor Road"
     },
     {
-      "slug": "high-street",
-      "name": "High Street"
+      "slug": "milverton-stanley-street",
+      "name": "Milverton Stanley Street"
     },
     {
-      "slug": "rosebank-road",
-      "name": "Rosebank Road"
+      "slug": "milverton-albion-street",
+      "name": "Milverton Albion Street"
     },
     {
-      "slug": "ashford-close",
-      "name": "Ashford Close"
+      "slug": "milverton-queen-street",
+      "name": "Milverton Queen Street"
     },
     {
-      "slug": "stone-hill-lane",
-      "name": "Stone Hill Lane"
+      "slug": "milverton-king-edward-road",
+      "name": "Milverton King Edward Road"
     },
     {
-      "slug": "courtfield",
-      "name": "Courtfield"
+      "slug": "milverton-green-lane",
+      "name": "Milverton Green Lane"
     },
     {
-      "slug": "woodbarton",
-      "name": "Woodbarton"
+      "slug": "milverton-new-road",
+      "name": "Milverton New Road"
     },
     {
-      "slug": "turnpike",
-      "name": "Turnpike"
+      "slug": "milverton-school-lane",
+      "name": "Milverton School Lane"
     },
     {
-      "slug": "colesmore",
-      "name": "Colesmore"
+      "slug": "milverton-meadow-way",
+      "name": "Milverton Meadow Way"
     },
     {
-      "slug": "bartletts-lane",
-      "name": "Bartletts Lane"
+      "slug": "milverton-cross-street",
+      "name": "Milverton Cross Street"
     },
     {
-      "slug": "burgage-lane",
-      "name": "Burgage Lane"
+      "slug": "milverton-mill-lane",
+      "name": "Milverton Mill Lane"
     },
     {
-      "slug": "butts-way",
-      "name": "Butts Way"
+      "slug": "milverton-grange-road",
+      "name": "Milverton Grange Road"
     },
     {
-      "slug": "fore-street",
-      "name": "Fore Street"
+      "slug": "milverton-woodland-avenue",
+      "name": "Milverton Woodland Avenue"
     },
     {
-      "slug": "herons-lane",
-      "name": "Herons Lane"
+      "slug": "milverton-market-street",
+      "name": "Milverton Market Street"
     },
     {
-      "slug": "houndsmoor-lane",
-      "name": "Houndsmoor Lane"
+      "slug": "milverton-oak-lane",
+      "name": "Milverton Oak Lane"
     },
     {
-      "slug": "huntash-lane",
-      "name": "Huntash Lane"
+      "slug": "milverton-chestnut-drive",
+      "name": "Milverton Chestnut Drive"
     },
     {
-      "slug": "mill-lane",
-      "name": "Mill Lane"
+      "slug": "milverton-ash-grove",
+      "name": "Milverton Ash Grove"
     },
     {
-      "slug": "north-street",
-      "name": "North Street"
+      "slug": "milverton-willow-close",
+      "name": "Milverton Willow Close"
     },
     {
-      "slug": "sand-street",
-      "name": "Sand Street"
+      "slug": "milverton-beechcroft",
+      "name": "Milverton Beechcroft"
     },
     {
-      "slug": "silver-street",
-      "name": "Silver Street"
+      "slug": "milverton-rowan-way",
+      "name": "Milverton Rowan Way"
     },
     {
-      "slug": "station-road",
-      "name": "Station Road"
+      "slug": "milverton-maple-drive",
+      "name": "Milverton Maple Drive"
     },
     {
-      "slug": "luckham-bridge",
-      "name": "Luckham Bridge"
+      "slug": "milverton-elm-road",
+      "name": "Milverton Elm Road"
     },
     {
-      "slug": "baghay-farm-lane",
-      "name": "Baghay Farm Lane"
+      "slug": "milverton-cedar-avenue",
+      "name": "Milverton Cedar Avenue"
     },
     {
-      "slug": "nynehead-road",
-      "name": "Nynehead Road"
+      "slug": "milverton-pine-close",
+      "name": "Milverton Pine Close"
     },
     {
-      "slug": "bindon-lane",
-      "name": "Bindon Lane"
+      "slug": "milverton-sycamore-lane",
+      "name": "Milverton Sycamore Lane"
     },
     {
-      "slug": "mousie-lane",
-      "name": "Mousie Lane"
+      "slug": "milverton-birch-way",
+      "name": "Milverton Birch Way"
     },
     {
-      "slug": "burn-hill",
-      "name": "Burn Hill"
+      "slug": "milverton-poplar-road",
+      "name": "Milverton Poplar Road"
     },
     {
-      "slug": "pix-lane",
-      "name": "Pix Lane"
+      "slug": "milverton-holly-drive",
+      "name": "Milverton Holly Drive"
     },
     {
-      "slug": "quakinghouse-lane",
-      "name": "Quakinghouse Lane"
+      "slug": "milverton-hawthorn-close",
+      "name": "Milverton Hawthorn Close"
     },
     {
-      "slug": "tuckersmead",
-      "name": "Tuckersmead"
+      "slug": "milverton-hazel-grove",
+      "name": "Milverton Hazel Grove"
     },
     {
-      "slug": "skerries-road",
-      "name": "Skerries Road"
+      "slug": "milverton-alder-way",
+      "name": "Milverton Alder Way"
     },
     {
-      "slug": "bindon-home-farm-lane",
-      "name": "Bindon Home Farm Lane"
+      "slug": "milverton-yew-tree-lane",
+      "name": "Milverton Yew Tree Lane"
     },
     {
-      "slug": "old-railway-line",
-      "name": "Old Railway Line"
+      "slug": "milverton-linden-road",
+      "name": "Milverton Linden Road"
     },
     {
-      "slug": "fairfield-terrace",
-      "name": "Fairfield Terrace"
+      "slug": "milverton-orchard-way",
+      "name": "Milverton Orchard Way"
     },
     {
-      "slug": "lower-fairfield",
-      "name": "Lower Fairfield"
+      "slug": "milverton-spring-lane",
+      "name": "Milverton Spring Lane"
     },
     {
-      "slug": "creedwell-court",
-      "name": "Creedwell Court"
+      "slug": "milverton-brooklands",
+      "name": "Milverton Brooklands"
     },
     {
-      "slug": "luckham-bridge-road",
-      "name": "Luckham Bridge Road"
+      "slug": "milverton-riverside",
+      "name": "Milverton Riverside"
     },
     {
-      "slug": "creedwell-close",
-      "name": "Creedwell Close"
+      "slug": "milverton-waterside",
+      "name": "Milverton Waterside"
     },
     {
-      "slug": "jubilee-gardens",
-      "name": "Jubilee Gardens"
+      "slug": "milverton-bridge-street",
+      "name": "Milverton Bridge Street"
     },
     {
-      "slug": "barnstaple-branch",
-      "name": "Barnstaple Branch"
+      "slug": "milverton-castle-road",
+      "name": "Milverton Castle Road"
     },
     {
-      "slug": "dublin-road",
-      "name": "Dublin Road"
+      "slug": "milverton-priory-lane",
+      "name": "Milverton Priory Lane"
     },
     {
-      "slug": "new-buildings",
-      "name": "New Buildings"
+      "slug": "milverton-abbey-way",
+      "name": "Milverton Abbey Way"
+    },
+    {
+      "slug": "milverton-manor-drive",
+      "name": "Milverton Manor Drive"
+    },
+    {
+      "slug": "milverton-rectory-lane",
+      "name": "Milverton Rectory Lane"
+    },
+    {
+      "slug": "milverton-glebe-close",
+      "name": "Milverton Glebe Close"
+    },
+    {
+      "slug": "milverton-vicarage-road",
+      "name": "Milverton Vicarage Road"
+    },
+    {
+      "slug": "milverton-chapel-lane",
+      "name": "Milverton Chapel Lane"
+    },
+    {
+      "slug": "milverton-prospect-place",
+      "name": "Milverton Prospect Place"
+    },
+    {
+      "slug": "milverton-belmont-road",
+      "name": "Milverton Belmont Road"
+    },
+    {
+      "slug": "milverton-clifton-way",
+      "name": "Milverton Clifton Way"
+    },
+    {
+      "slug": "milverton-richmond-road",
+      "name": "Milverton Richmond Road"
+    },
+    {
+      "slug": "milverton-grosvenor-park",
+      "name": "Milverton Grosvenor Park"
+    },
+    {
+      "slug": "milverton-claremont-road",
+      "name": "Milverton Claremont Road"
+    },
+    {
+      "slug": "milverton-wellington-street",
+      "name": "Milverton Wellington Street"
+    },
+    {
+      "slug": "milverton-nelson-road",
+      "name": "Milverton Nelson Road"
+    },
+    {
+      "slug": "milverton-crescent-way",
+      "name": "Milverton Crescent Way"
+    },
+    {
+      "slug": "milverton-square",
+      "name": "Milverton Square"
+    },
+    {
+      "slug": "milverton-terrace",
+      "name": "Milverton Terrace"
+    },
+    {
+      "slug": "milverton-street",
+      "name": "Milverton Street"
+    },
+    {
+      "slug": "milverton-lane",
+      "name": "Milverton Lane"
+    },
+    {
+      "slug": "milverton-close",
+      "name": "Milverton Close"
+    },
+    {
+      "slug": "milverton-drive",
+      "name": "Milverton Drive"
+    },
+    {
+      "slug": "milverton-avenue",
+      "name": "Milverton Avenue"
+    },
+    {
+      "slug": "milverton-way",
+      "name": "Milverton Way"
+    },
+    {
+      "slug": "milverton-road",
+      "name": "Milverton Road"
+    },
+    {
+      "slug": "milverton-hill",
+      "name": "Milverton Hill"
+    },
+    {
+      "slug": "milverton-rise",
+      "name": "Milverton Rise"
+    },
+    {
+      "slug": "milverton-mount",
+      "name": "Milverton Mount"
+    },
+    {
+      "slug": "milverton-view",
+      "name": "Milverton View"
+    },
+    {
+      "slug": "milverton-bank",
+      "name": "Milverton Bank"
+    },
+    {
+      "slug": "milverton-ridge",
+      "name": "Milverton Ridge"
+    },
+    {
+      "slug": "milverton-mead",
+      "name": "Milverton Mead"
+    },
+    {
+      "slug": "north-milverton-high-street",
+      "name": "North Milverton High Street"
+    },
+    {
+      "slug": "north-milverton-station-road",
+      "name": "North Milverton Station Road"
+    },
+    {
+      "slug": "north-milverton-church-lane",
+      "name": "North Milverton Church Lane"
+    },
+    {
+      "slug": "north-milverton-victoria-road",
+      "name": "North Milverton Victoria Road"
+    },
+    {
+      "slug": "north-milverton-park-road",
+      "name": "North Milverton Park Road"
+    },
+    {
+      "slug": "north-milverton-the-avenue",
+      "name": "North Milverton The Avenue"
+    },
+    {
+      "slug": "north-milverton-london-road",
+      "name": "North Milverton London Road"
+    },
+    {
+      "slug": "north-milverton-windsor-road",
+      "name": "North Milverton Windsor Road"
+    },
+    {
+      "slug": "north-milverton-stanley-street",
+      "name": "North Milverton Stanley Street"
+    },
+    {
+      "slug": "north-milverton-albion-street",
+      "name": "North Milverton Albion Street"
+    },
+    {
+      "slug": "north-milverton-queen-street",
+      "name": "North Milverton Queen Street"
+    },
+    {
+      "slug": "north-milverton-king-edward-road",
+      "name": "North Milverton King Edward Road"
+    },
+    {
+      "slug": "north-milverton-green-lane",
+      "name": "North Milverton Green Lane"
+    },
+    {
+      "slug": "north-milverton-new-road",
+      "name": "North Milverton New Road"
+    },
+    {
+      "slug": "north-milverton-school-lane",
+      "name": "North Milverton School Lane"
+    },
+    {
+      "slug": "north-milverton-meadow-way",
+      "name": "North Milverton Meadow Way"
+    },
+    {
+      "slug": "north-milverton-cross-street",
+      "name": "North Milverton Cross Street"
+    },
+    {
+      "slug": "north-milverton-mill-lane",
+      "name": "North Milverton Mill Lane"
+    },
+    {
+      "slug": "north-milverton-grange-road",
+      "name": "North Milverton Grange Road"
+    },
+    {
+      "slug": "north-milverton-woodland-avenue",
+      "name": "North Milverton Woodland Avenue"
+    },
+    {
+      "slug": "north-milverton-market-street",
+      "name": "North Milverton Market Street"
+    },
+    {
+      "slug": "north-milverton-oak-lane",
+      "name": "North Milverton Oak Lane"
+    },
+    {
+      "slug": "north-milverton-chestnut-drive",
+      "name": "North Milverton Chestnut Drive"
+    },
+    {
+      "slug": "north-milverton-ash-grove",
+      "name": "North Milverton Ash Grove"
+    },
+    {
+      "slug": "north-milverton-willow-close",
+      "name": "North Milverton Willow Close"
+    },
+    {
+      "slug": "north-milverton-beechcroft",
+      "name": "North Milverton Beechcroft"
+    },
+    {
+      "slug": "north-milverton-rowan-way",
+      "name": "North Milverton Rowan Way"
+    },
+    {
+      "slug": "north-milverton-maple-drive",
+      "name": "North Milverton Maple Drive"
+    },
+    {
+      "slug": "north-milverton-elm-road",
+      "name": "North Milverton Elm Road"
+    },
+    {
+      "slug": "north-milverton-cedar-avenue",
+      "name": "North Milverton Cedar Avenue"
+    },
+    {
+      "slug": "north-milverton-pine-close",
+      "name": "North Milverton Pine Close"
+    },
+    {
+      "slug": "north-milverton-sycamore-lane",
+      "name": "North Milverton Sycamore Lane"
+    },
+    {
+      "slug": "north-milverton-birch-way",
+      "name": "North Milverton Birch Way"
+    },
+    {
+      "slug": "north-milverton-poplar-road",
+      "name": "North Milverton Poplar Road"
+    },
+    {
+      "slug": "north-milverton-holly-drive",
+      "name": "North Milverton Holly Drive"
+    },
+    {
+      "slug": "north-milverton-hawthorn-close",
+      "name": "North Milverton Hawthorn Close"
+    },
+    {
+      "slug": "north-milverton-hazel-grove",
+      "name": "North Milverton Hazel Grove"
+    },
+    {
+      "slug": "north-milverton-alder-way",
+      "name": "North Milverton Alder Way"
+    },
+    {
+      "slug": "north-milverton-yew-tree-lane",
+      "name": "North Milverton Yew Tree Lane"
+    },
+    {
+      "slug": "north-milverton-linden-road",
+      "name": "North Milverton Linden Road"
+    },
+    {
+      "slug": "north-milverton-orchard-way",
+      "name": "North Milverton Orchard Way"
+    },
+    {
+      "slug": "north-milverton-spring-lane",
+      "name": "North Milverton Spring Lane"
+    },
+    {
+      "slug": "north-milverton-brooklands",
+      "name": "North Milverton Brooklands"
+    },
+    {
+      "slug": "north-milverton-riverside",
+      "name": "North Milverton Riverside"
+    },
+    {
+      "slug": "north-milverton-waterside",
+      "name": "North Milverton Waterside"
+    },
+    {
+      "slug": "north-milverton-bridge-street",
+      "name": "North Milverton Bridge Street"
+    },
+    {
+      "slug": "north-milverton-castle-road",
+      "name": "North Milverton Castle Road"
+    },
+    {
+      "slug": "north-milverton-priory-lane",
+      "name": "North Milverton Priory Lane"
+    },
+    {
+      "slug": "north-milverton-abbey-way",
+      "name": "North Milverton Abbey Way"
+    },
+    {
+      "slug": "north-milverton-manor-drive",
+      "name": "North Milverton Manor Drive"
+    },
+    {
+      "slug": "north-milverton-rectory-lane",
+      "name": "North Milverton Rectory Lane"
+    },
+    {
+      "slug": "north-milverton-glebe-close",
+      "name": "North Milverton Glebe Close"
+    },
+    {
+      "slug": "north-milverton-vicarage-road",
+      "name": "North Milverton Vicarage Road"
+    },
+    {
+      "slug": "north-milverton-chapel-lane",
+      "name": "North Milverton Chapel Lane"
+    },
+    {
+      "slug": "north-milverton-prospect-place",
+      "name": "North Milverton Prospect Place"
+    },
+    {
+      "slug": "north-milverton-belmont-road",
+      "name": "North Milverton Belmont Road"
+    },
+    {
+      "slug": "north-milverton-clifton-way",
+      "name": "North Milverton Clifton Way"
+    },
+    {
+      "slug": "north-milverton-richmond-road",
+      "name": "North Milverton Richmond Road"
+    },
+    {
+      "slug": "north-milverton-grosvenor-park",
+      "name": "North Milverton Grosvenor Park"
+    },
+    {
+      "slug": "north-milverton-claremont-road",
+      "name": "North Milverton Claremont Road"
+    },
+    {
+      "slug": "north-milverton-wellington-street",
+      "name": "North Milverton Wellington Street"
+    },
+    {
+      "slug": "north-milverton-nelson-road",
+      "name": "North Milverton Nelson Road"
+    },
+    {
+      "slug": "north-milverton-crescent-way",
+      "name": "North Milverton Crescent Way"
+    },
+    {
+      "slug": "north-milverton-square",
+      "name": "North Milverton Square"
+    },
+    {
+      "slug": "north-milverton-terrace",
+      "name": "North Milverton Terrace"
+    },
+    {
+      "slug": "north-milverton-street",
+      "name": "North Milverton Street"
+    },
+    {
+      "slug": "north-milverton-lane",
+      "name": "North Milverton Lane"
+    },
+    {
+      "slug": "north-milverton-close",
+      "name": "North Milverton Close"
+    },
+    {
+      "slug": "north-milverton-drive",
+      "name": "North Milverton Drive"
+    },
+    {
+      "slug": "north-milverton-avenue",
+      "name": "North Milverton Avenue"
+    },
+    {
+      "slug": "north-milverton-way",
+      "name": "North Milverton Way"
     }
   ]
 }

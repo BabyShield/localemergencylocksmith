@@ -122,6 +122,15 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.8,
   }))
 
+  // 11. Postcode Hubs
+  const postcodes = new Set(AREAS.map(a => a.postcode.toLowerCase()))
+  const postcodePages: MetadataRoute.Sitemap = Array.from(postcodes).map(pc => ({
+    url: `${base}/postcodes/${pc}`,
+    lastModified: buildDate,
+    changeFrequency: 'weekly',
+    priority: 0.9,
+  }))
+
   return [
     ...staticPages,
     ...servicePages,
@@ -133,5 +142,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     ...blogPostPages,
     ...algorithmicPages,
     ...reviewPages,
+    ...postcodePages,
   ]
 }

@@ -11,6 +11,10 @@
       "name": "2e Rang"
     },
     {
+      "slug": "chemin-desjardins",
+      "name": "Chemin Desjardins"
+    },
+    {
       "slug": "3e-rang-ouest",
       "name": "3e Rang Ouest"
     },
@@ -71,6 +75,10 @@
       "name": "Rue des Pinsons"
     },
     {
+      "slug": "chemin-c-t",
+      "name": "Chemin Côté"
+    },
+    {
       "slug": "5e-rang-est",
       "name": "5e Rang Est"
     },
@@ -115,12 +123,24 @@
       "name": "Chemin Carrier"
     },
     {
+      "slug": "chemin-des-pieds-l-gers",
+      "name": "Chemin des Pieds-Légers"
+    },
+    {
       "slug": "chemin-dion",
       "name": "Chemin Dion"
     },
     {
       "slug": "chemin-du-4e-rang",
       "name": "Chemin du 4e Rang"
+    },
+    {
+      "slug": "5e-rang-ouest",
+      "name": "5e Rang Ouest"
+    },
+    {
+      "slug": "8e-rang-est",
+      "name": "8E Rang Est"
     },
     {
       "slug": "c-te-de-l-glise",
@@ -143,16 +163,52 @@
       "name": "Chemin Perreault"
     },
     {
+      "slug": "chemin-du-3e-rang",
+      "name": "Chemin du 3e Rang"
+    },
+    {
       "slug": "rue-des-c-dres",
       "name": "Rue des Cèdres"
+    },
+    {
+      "slug": "zone-chapman",
+      "name": "Zone Chapman"
+    },
+    {
+      "slug": "chapman-principal-se-chapman",
+      "name": "Chapman ~ Principal ~ SE ~ Chapman"
     },
     {
       "slug": "route-de-stoke",
       "name": "Route de Stoke"
     },
     {
+      "slug": "14-me-rang",
+      "name": "14ème Rang"
+    },
+    {
+      "slug": "cuckolds-green-road",
+      "name": "Cuckolds Green Road"
+    },
+    {
+      "slug": "hoppers-lane",
+      "name": "Hoppers Lane"
+    },
+    {
+      "slug": "chapman-acc-s-se-point-de-vue-grotte-de-l-ours-80-m",
+      "name": "Chapman ~ Accès ~ SE ~ Point de vue Grotte de l'Ours (80 m)"
+    },
+    {
       "slug": "chemin-saint-laurent",
       "name": "Chemin Saint-Laurent"
+    },
+    {
+      "slug": "1er-chemin-de-la-domtar",
+      "name": "1er chemin de la Domtar"
+    },
+    {
+      "slug": "10e-rang-est",
+      "name": "10e Rang Est"
     },
     {
       "slug": "9e-rang-est",
@@ -163,12 +219,28 @@
       "name": "Rue Guertin"
     },
     {
+      "slug": "13e-rang-est",
+      "name": "13e Rang Est"
+    },
+    {
       "slug": "chemin-lapointe",
       "name": "Chemin Lapointe"
     },
     {
       "slug": "chemin-de-la-domtar",
       "name": "Chemin de la Domtar"
+    },
+    {
+      "slug": "chemin-lemire",
+      "name": "Chemin Lemire"
+    },
+    {
+      "slug": "12e-rang-est",
+      "name": "12e Rang Est"
+    },
+    {
+      "slug": "11e-rang-est",
+      "name": "11e Rang Est"
     },
     {
       "slug": "rue-normand",
@@ -189,6 +261,14 @@
     {
       "slug": "chemin-poulin",
       "name": "Chemin Poulin"
+    },
+    {
+      "slug": "sentier-zone-east-angus",
+      "name": "Sentier Zone East Angus"
+    },
+    {
+      "slug": "church-terrace",
+      "name": "Church Terrace"
     },
     {
       "slug": "vicarage-close",
@@ -239,6 +319,54 @@
       "name": "Mallard Way"
     },
     {
+      "slug": "new-hall-farm-lane",
+      "name": "New Hall Farm Lane"
+    },
+    {
+      "slug": "chapman-acc-s-se-acc-s-la-grotte-de-l-ours-15-m",
+      "name": "Chapman ~ Accès ~ SE ~ Accès à la Grotte de l'Ours (15 m)"
+    },
+    {
+      "slug": "east-angus-acc-s-se-pv-danville-15-m",
+      "name": "East-Angus ~ Accès ~ SE ~ PV Danville (15 m)"
+    },
+    {
+      "slug": "east-angus-principal-se-principal",
+      "name": "East-Angus ~ Principal ~ SE ~ Principal"
+    },
+    {
+      "slug": "east-angus-acc-s-se-pv-tang-15-m",
+      "name": "East-Angus ~ Accès ~ SE ~ PV étang (15 m)"
+    },
+    {
+      "slug": "east-angus-acc-s-se-pv-altitude-500-15-m",
+      "name": "East-Angus ~ Accès ~ SE ~ PV altitude 500 (15 m)"
+    },
+    {
+      "slug": "east-angus-acc-s-se-pv-sommet-10-m",
+      "name": "East-Angus ~ Accès ~ SE ~ PV Sommet (10 m)"
+    },
+    {
+      "slug": "chapman-principal-se-chemin-forestier",
+      "name": "Chapman ~ Principal ~ SE ~ Chemin forestier"
+    },
+    {
+      "slug": "chapman-acc-s-se-acc-s-au-sommet-45-m",
+      "name": "Chapman ~ Accès ~ SE ~ Accès au sommet (45 m)"
+    },
+    {
+      "slug": "chapman-acc-s-se-deuxi-me-point-de-vue-20-m",
+      "name": "Chapman ~ Accès ~ SE ~ Deuxième point de vue (20 m)"
+    },
+    {
+      "slug": "chapman-acc-s-se-pic-bald-650-m",
+      "name": "Chapman ~ Accès ~ SE ~ Pic Bald (650 m)"
+    },
+    {
+      "slug": "chapman-acc-s-se-quatri-me-point-de-vue-15-m",
+      "name": "Chapman ~ Accès ~ SE ~ Quatrième point de vue (15 m)"
+    },
+    {
       "slug": "chemin-dub",
       "name": "Chemin Dubé"
     },
@@ -247,12 +375,36 @@
       "name": "Rue des Chanterelles"
     },
     {
+      "slug": "chemin-aub",
+      "name": "Chemin Aubé"
+    },
+    {
+      "slug": "chemin-de-la-graveli-re",
+      "name": "Chemin de la Gravelière"
+    },
+    {
       "slug": "rue-des-pins",
       "name": "Rue des Pins"
     },
     {
       "slug": "little-oakham-court",
       "name": "Little Oakham Court"
+    },
+    {
+      "slug": "parbrook-road",
+      "name": "Parbrook Road"
+    },
+    {
+      "slug": "creek-road",
+      "name": "Creek Road"
+    },
+    {
+      "slug": "chapman-acc-s-se-troisi-me-point-de-vue-10-m",
+      "name": "Chapman ~ Accès ~ SE ~ Troisième point de vue (10 m)"
+    },
+    {
+      "slug": "chapman-acc-s-se-chapman-450-m",
+      "name": "Chapman ~ Accès ~ SE ~ Chapman (450 m)"
     },
     {
       "slug": "allhallows-road",
@@ -275,8 +427,20 @@
       "name": "Burrows Lane"
     },
     {
+      "slug": "frys-cottages",
+      "name": "Frys Cottages"
+    },
+    {
+      "slug": "grebe-close",
+      "name": "Grebe Close"
+    },
+    {
       "slug": "bellwood-court",
       "name": "Bellwood Court"
+    },
+    {
+      "slug": "public-footpath-rs32",
+      "name": "Public Footpath RS32"
     },
     {
       "slug": "12e-avenue-nord",
@@ -311,6 +475,18 @@
       "name": "Rue du Havre"
     },
     {
+      "slug": "2e-chemin-de-la-domtar",
+      "name": "2e chemin de la Domtar"
+    },
+    {
+      "slug": "rang-4e-est",
+      "name": "Rang 4e Est"
+    },
+    {
+      "slug": "sentiers-p-destre-village-de-stoke",
+      "name": "Sentiers pédestre Village de Stoke"
+    },
+    {
       "slug": "rue-principale",
       "name": "Rue Principale"
     },
@@ -331,8 +507,20 @@
       "name": "Chemin Pinard"
     },
     {
+      "slug": "chapman-principal-se-boucle-chapman",
+      "name": "Chapman ~ Principal ~ SE ~ Boucle Chapman"
+    },
+    {
+      "slug": "chapman-acc-s-se-premier-point-de-vue-75-m",
+      "name": "Chapman ~ Accès ~ SE ~ Premier point de vue (75 m)"
+    },
+    {
       "slug": "chemin-du-2e-rang",
       "name": "Chemin du 2e Rang"
+    },
+    {
+      "slug": "14e-rang",
+      "name": "14e Rang"
     },
     {
       "slug": "chemin-de-la-rivi-re",
@@ -341,6 +529,10 @@
     {
       "slug": "rue-du-terroir",
       "name": "Rue du Terroir"
+    },
+    {
+      "slug": "raccourci",
+      "name": "Raccourci"
     },
     {
       "slug": "rue-jacob-c-t",
@@ -353,6 +545,10 @@
     {
       "slug": "rue-m-rilda",
       "name": "Rue Émérilda"
+    },
+    {
+      "slug": "chemin-de-la-glaci-re",
+      "name": "Chemin de la Glacière"
     },
     {
       "slug": "rang-4e-ouest",

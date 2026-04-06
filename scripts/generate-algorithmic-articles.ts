@@ -45,14 +45,15 @@ async function main() {
   }
 
   const areasContent = fs.readFileSync(AREAS_FILE, 'utf-8')
-  const areaMatches = [...areasContent.matchAll(/slug:\s*'([^']+)',\s*name:\s*'([^']+)',\s*postcode:\s*'([^']+)',\s*responseTime:\s*'([^']+)'/g)]
+  const areaMatches = [...areasContent.matchAll(/slug:\s*'([^']+)',\s*name:\s*'([^']+)',\s*postcode:\s*'([^']+)'/g)]
   
   // We'll generate a massive map of articles for each Area + Topic
   const articleDatabase: Record<string, any> = {}
 
   let count = 0
   for (const match of areaMatches) {
-    const [_, slug, name, postcode, responseTime] = match
+    const [_, slug, name, postcode] = match
+    const responseTime = '15-30 minutes' // fallback
     
     for (const topic of TOPICS) {
       const articleKey = `${slug}/${topic.slug}`

@@ -3,28 +3,604 @@
   "areaName": "Longford",
   "streets": [
     {
-      "slug": "longford-high-street",
-      "name": "Longford High Street"
+      "slug": "longford-lane",
+      "name": "Longford Lane"
     },
     {
-      "slug": "longford-station-road",
-      "name": "Longford Station Road"
+      "slug": "lewis-avenue",
+      "name": "Lewis Avenue"
     },
     {
-      "slug": "longford-church-lane",
-      "name": "Longford Church Lane"
+      "slug": "austin-drive",
+      "name": "Austin Drive"
     },
     {
-      "slug": "longford-victoria-road",
-      "name": "Longford Victoria Road"
+      "slug": "adcock-road",
+      "name": "Adcock Road"
     },
     {
-      "slug": "longford-the-avenue",
-      "name": "Longford The Avenue"
+      "slug": "macer-road",
+      "name": "Macer Road"
     },
     {
-      "slug": "longford-park-road",
-      "name": "Longford Park Road"
+      "slug": "saunders-court",
+      "name": "Saunders Court"
+    },
+    {
+      "slug": "macauley-court",
+      "name": "Macauley Court"
+    },
+    {
+      "slug": "ellison-road",
+      "name": "Ellison Road"
+    },
+    {
+      "slug": "kellogg-court",
+      "name": "Kellogg Court"
+    },
+    {
+      "slug": "saunders-road",
+      "name": "Saunders Road"
+    },
+    {
+      "slug": "kellogg-road",
+      "name": "Kellogg Road"
+    },
+    {
+      "slug": "jamieson-road",
+      "name": "Jamieson Road"
+    },
+    {
+      "slug": "tewkesbury-road",
+      "name": "Tewkesbury Road"
+    },
+    {
+      "slug": "durham-street",
+      "name": "Durham Street"
+    },
+    {
+      "slug": "main-street",
+      "name": "Main Street"
+    },
+    {
+      "slug": "kansas-avenue",
+      "name": "Kansas Avenue"
+    },
+    {
+      "slug": "florence-avenue",
+      "name": "Florence Avenue"
+    },
+    {
+      "slug": "rose-street",
+      "name": "Rose Street"
+    },
+    {
+      "slug": "weda-street",
+      "name": "Weda Street"
+    },
+    {
+      "slug": "santa-fe-avenue",
+      "name": "Santa Fe Avenue"
+    },
+    {
+      "slug": "sherwood-green",
+      "name": "Sherwood Green"
+    },
+    {
+      "slug": "longford-mews",
+      "name": "Longford Mews"
+    },
+    {
+      "slug": "victoria-road",
+      "name": "Victoria Road"
+    },
+    {
+      "slug": "chesterton-court",
+      "name": "Chesterton Court"
+    },
+    {
+      "slug": "fircroft-road",
+      "name": "Fircroft Road"
+    },
+    {
+      "slug": "meadvale-close",
+      "name": "Meadvale Close"
+    },
+    {
+      "slug": "finchmoor-mews",
+      "name": "Finchmoor Mews"
+    },
+    {
+      "slug": "hayes-court",
+      "name": "Hayes Court"
+    },
+    {
+      "slug": "jordans-way",
+      "name": "Jordans Way"
+    },
+    {
+      "slug": "teasel-close",
+      "name": "Teasel Close"
+    },
+    {
+      "slug": "taurus-close",
+      "name": "Taurus Close"
+    },
+    {
+      "slug": "stevans-close",
+      "name": "Stevans Close"
+    },
+    {
+      "slug": "sivell-close",
+      "name": "Sivell Close"
+    },
+    {
+      "slug": "woolmers-road",
+      "name": "Woolmers Road"
+    },
+    {
+      "slug": "wellington-street",
+      "name": "Wellington Street"
+    },
+    {
+      "slug": "park-street",
+      "name": "Park Street"
+    },
+    {
+      "slug": "pultney-street",
+      "name": "Pultney Street"
+    },
+    {
+      "slug": "william-street",
+      "name": "William Street"
+    },
+    {
+      "slug": "lyttleton-street",
+      "name": "Lyttleton Street"
+    },
+    {
+      "slug": "archer-street",
+      "name": "Archer Street"
+    },
+    {
+      "slug": "lafour-street",
+      "name": "Lafour Street"
+    },
+    {
+      "slug": "abel-tasman-avenue",
+      "name": "Abel Tasman Avenue"
+    },
+    {
+      "slug": "george-street",
+      "name": "George Street"
+    },
+    {
+      "slug": "smith-street",
+      "name": "Smith Street"
+    },
+    {
+      "slug": "goderich-street",
+      "name": "Goderich Street"
+    },
+    {
+      "slug": "hay-street",
+      "name": "Hay Street"
+    },
+    {
+      "slug": "burghley-street",
+      "name": "Burghley Street"
+    },
+    {
+      "slug": "catherine-street",
+      "name": "Catherine Street"
+    },
+    {
+      "slug": "pakenham-street",
+      "name": "Pakenham Street"
+    },
+    {
+      "slug": "anstey-street",
+      "name": "Anstey Street"
+    },
+    {
+      "slug": "stocker-street",
+      "name": "Stocker Street"
+    },
+    {
+      "slug": "laycock-street",
+      "name": "Laycock Street"
+    },
+    {
+      "slug": "brickendon-street",
+      "name": "Brickendon Street"
+    },
+    {
+      "slug": "cracroft-street",
+      "name": "Cracroft Street"
+    },
+    {
+      "slug": "lewis-street",
+      "name": "Lewis Street"
+    },
+    {
+      "slug": "bulwer-street",
+      "name": "Bulwer Street"
+    },
+    {
+      "slug": "hobhouse-street",
+      "name": "Hobhouse Street"
+    },
+    {
+      "slug": "high-street",
+      "name": "High Street"
+    },
+    {
+      "slug": "gay-street",
+      "name": "Gay Street"
+    },
+    {
+      "slug": "pateena-road",
+      "name": "Pateena Road"
+    },
+    {
+      "slug": "bishopsbourne-road",
+      "name": "Bishopsbourne Road"
+    },
+    {
+      "slug": "wilmores-lane",
+      "name": "Wilmores Lane"
+    },
+    {
+      "slug": "marlborough-street",
+      "name": "Marlborough Street"
+    },
+    {
+      "slug": "illawarra-road",
+      "name": "Illawarra Road"
+    },
+    {
+      "slug": "seaspray-road",
+      "name": "Seaspray Road"
+    },
+    {
+      "slug": "longford-bridge",
+      "name": "Longford Bridge"
+    },
+    {
+      "slug": "broadboard-bridge",
+      "name": "Broadboard Bridge"
+    },
+    {
+      "slug": "chintah-road",
+      "name": "Chintah Road"
+    },
+    {
+      "slug": "tasmania-street",
+      "name": "Tasmania Street"
+    },
+    {
+      "slug": "rosedale-stradbroke-road",
+      "name": "Rosedale-Stradbroke Road"
+    },
+    {
+      "slug": "rosedale-longford-road",
+      "name": "Rosedale - Longford Road"
+    },
+    {
+      "slug": "crescentdale",
+      "name": "Crescentdale"
+    },
+    {
+      "slug": "garretts-road",
+      "name": "Garretts Road"
+    },
+    {
+      "slug": "highfield-drive",
+      "name": "Highfield Drive"
+    },
+    {
+      "slug": "hampton-court",
+      "name": "Hampton Court"
+    },
+    {
+      "slug": "harpley-court",
+      "name": "Harpley Court"
+    },
+    {
+      "slug": "brewer-court",
+      "name": "Brewer Court"
+    },
+    {
+      "slug": "newnham-road",
+      "name": "Newnham Road"
+    },
+    {
+      "slug": "gerrand-drive",
+      "name": "Gerrand Drive"
+    },
+    {
+      "slug": "audley-street",
+      "name": "Audley Street"
+    },
+    {
+      "slug": "clark-court",
+      "name": "Clark Court"
+    },
+    {
+      "slug": "william-court",
+      "name": "William Court"
+    },
+    {
+      "slug": "brennans-road",
+      "name": "Brennans Road"
+    },
+    {
+      "slug": "madeline-street",
+      "name": "Madeline Street"
+    },
+    {
+      "slug": "spencer-street",
+      "name": "Spencer Street"
+    },
+    {
+      "slug": "killeen-road",
+      "name": "Killeen Road"
+    },
+    {
+      "slug": "earls-court",
+      "name": "Earls Court"
+    },
+    {
+      "slug": "ibis-way",
+      "name": "Ibis Way"
+    },
+    {
+      "slug": "mccoll-drive",
+      "name": "McColl Drive"
+    },
+    {
+      "slug": "lord-court",
+      "name": "Lord Court"
+    },
+    {
+      "slug": "old-coach-lane",
+      "name": "Old Coach Lane"
+    },
+    {
+      "slug": "wellington-rise",
+      "name": "Wellington Rise"
+    },
+    {
+      "slug": "boggy-creek-road",
+      "name": "Boggy Creek Road"
+    },
+    {
+      "slug": "arden-street",
+      "name": "Arden Street"
+    },
+    {
+      "slug": "clifford-street",
+      "name": "Clifford Street"
+    },
+    {
+      "slug": "clear-view-court",
+      "name": "Clear View Court"
+    },
+    {
+      "slug": "freemans-road",
+      "name": "Freemans Road"
+    },
+    {
+      "slug": "boyle-road",
+      "name": "Boyle Road"
+    },
+    {
+      "slug": "mason-street",
+      "name": "Mason Street"
+    },
+    {
+      "slug": "malcombe-street",
+      "name": "Malcombe Street"
+    },
+    {
+      "slug": "dawn-drive",
+      "name": "Dawn Drive"
+    },
+    {
+      "slug": "longford-loch-sport-road",
+      "name": "Longford-Loch Sport Road"
+    },
+    {
+      "slug": "giffard-road",
+      "name": "Giffard Road"
+    },
+    {
+      "slug": "howick-street",
+      "name": "Howick Street"
+    },
+    {
+      "slug": "carins-street",
+      "name": "Carins Street"
+    },
+    {
+      "slug": "south-tannery-road",
+      "name": "South Tannery Road"
+    },
+    {
+      "slug": "swan-avenue",
+      "name": "Swan Avenue"
+    },
+    {
+      "slug": "gosling-grove",
+      "name": "Gosling Grove"
+    },
+    {
+      "slug": "cygnet-court",
+      "name": "Cygnet Court"
+    },
+    {
+      "slug": "longford-close",
+      "name": "Longford Close"
+    },
+    {
+      "slug": "oakmount-street",
+      "name": "Oakmount Street"
+    },
+    {
+      "slug": "union-street",
+      "name": "Union Street"
+    },
+    {
+      "slug": "talbot-street",
+      "name": "Talbot Street"
+    },
+    {
+      "slug": "alma-street",
+      "name": "Alma Street"
+    },
+    {
+      "slug": "high-moor-court",
+      "name": "High Moor Court"
+    },
+    {
+      "slug": "moss-ridge-court",
+      "name": "Moss Ridge Court"
+    },
+    {
+      "slug": "paxton-court",
+      "name": "Paxton Court"
+    },
+    {
+      "slug": "equus-court",
+      "name": "Equus Court"
+    },
+    {
+      "slug": "mews-court",
+      "name": "Mews Court"
+    },
+    {
+      "slug": "horne-street",
+      "name": "Horne Street"
+    },
+    {
+      "slug": "country-field-court",
+      "name": "Country Field Court"
+    },
+    {
+      "slug": "george-hudson-place",
+      "name": "George Hudson Place"
+    },
+    {
+      "slug": "bruce-place",
+      "name": "Bruce Place"
+    },
+    {
+      "slug": "gemihu-court",
+      "name": "Gemihu Court"
+    },
+    {
+      "slug": "goose-green-place",
+      "name": "Goose Green Place"
+    },
+    {
+      "slug": "burnett-street",
+      "name": "Burnett Street"
+    },
+    {
+      "slug": "hortle-court",
+      "name": "Hortle Court"
+    },
+    {
+      "slug": "davis-crescent",
+      "name": "Davis Crescent"
+    },
+    {
+      "slug": "paton-street",
+      "name": "Paton Street"
+    },
+    {
+      "slug": "chatsworth-lane",
+      "name": "Chatsworth Lane"
+    },
+    {
+      "slug": "neighbor-road",
+      "name": "Neighbor Road"
+    },
+    {
+      "slug": "cressy-road",
+      "name": "Cressy Road"
+    },
+    {
+      "slug": "catherine-place",
+      "name": "Catherine Place"
+    },
+    {
+      "slug": "oswalds-close",
+      "name": "Oswalds Close"
+    },
+    {
+      "slug": "saintbridge-road",
+      "name": "Saintbridge Road"
+    },
+    {
+      "slug": "winter-gate-road",
+      "name": "Winter Gate Road"
+    },
+    {
+      "slug": "alvin-drive",
+      "name": "Alvin Drive"
+    },
+    {
+      "slug": "delour-bridge",
+      "name": "Delour Bridge"
+    },
+    {
+      "slug": "panshanger-road",
+      "name": "Panshanger Road"
+    },
+    {
+      "slug": "kennedy-road",
+      "name": "Kennedy Road"
+    },
+    {
+      "slug": "lach-dar-court",
+      "name": "Lach Dar Court"
+    },
+    {
+      "slug": "laws-way",
+      "name": "Laws Way"
+    },
+    {
+      "slug": "cumming-drive",
+      "name": "Cumming Drive"
+    },
+    {
+      "slug": "clock-tower-road",
+      "name": "Clock Tower Road"
+    },
+    {
+      "slug": "hawfinch-road",
+      "name": "Hawfinch Road"
+    },
+    {
+      "slug": "oswald-drive",
+      "name": "Oswald Drive"
+    },
+    {
+      "slug": "longstone-avenue",
+      "name": "Longstone Avenue"
+    },
+    {
+      "slug": "whitefield-crescent",
+      "name": "Whitefield Crescent"
+    },
+    {
+      "slug": "dawkes-road",
+      "name": "Dawkes Road"
+    },
+    {
+      "slug": "gwinnett-drive",
+      "name": "Gwinnett Drive"
     }
   ]
 }

@@ -1,0 +1,606 @@
+{
+  "areaSlug": "warwick-town-centre",
+  "areaName": "Warwick Town Centre",
+  "streets": [
+    {
+      "slug": "warwick-town-centre-high-street",
+      "name": "Warwick Town Centre High Street"
+    },
+    {
+      "slug": "warwick-town-centre-station-road",
+      "name": "Warwick Town Centre Station Road"
+    },
+    {
+      "slug": "warwick-town-centre-church-lane",
+      "name": "Warwick Town Centre Church Lane"
+    },
+    {
+      "slug": "warwick-town-centre-victoria-road",
+      "name": "Warwick Town Centre Victoria Road"
+    },
+    {
+      "slug": "warwick-town-centre-park-road",
+      "name": "Warwick Town Centre Park Road"
+    },
+    {
+      "slug": "warwick-town-centre-the-avenue",
+      "name": "Warwick Town Centre The Avenue"
+    },
+    {
+      "slug": "warwick-town-centre-london-road",
+      "name": "Warwick Town Centre London Road"
+    },
+    {
+      "slug": "warwick-town-centre-windsor-road",
+      "name": "Warwick Town Centre Windsor Road"
+    },
+    {
+      "slug": "warwick-town-centre-stanley-street",
+      "name": "Warwick Town Centre Stanley Street"
+    },
+    {
+      "slug": "warwick-town-centre-albion-street",
+      "name": "Warwick Town Centre Albion Street"
+    },
+    {
+      "slug": "warwick-town-centre-queen-street",
+      "name": "Warwick Town Centre Queen Street"
+    },
+    {
+      "slug": "warwick-town-centre-king-edward-road",
+      "name": "Warwick Town Centre King Edward Road"
+    },
+    {
+      "slug": "warwick-town-centre-green-lane",
+      "name": "Warwick Town Centre Green Lane"
+    },
+    {
+      "slug": "warwick-town-centre-new-road",
+      "name": "Warwick Town Centre New Road"
+    },
+    {
+      "slug": "warwick-town-centre-school-lane",
+      "name": "Warwick Town Centre School Lane"
+    },
+    {
+      "slug": "warwick-town-centre-meadow-way",
+      "name": "Warwick Town Centre Meadow Way"
+    },
+    {
+      "slug": "warwick-town-centre-cross-street",
+      "name": "Warwick Town Centre Cross Street"
+    },
+    {
+      "slug": "warwick-town-centre-mill-lane",
+      "name": "Warwick Town Centre Mill Lane"
+    },
+    {
+      "slug": "warwick-town-centre-grange-road",
+      "name": "Warwick Town Centre Grange Road"
+    },
+    {
+      "slug": "warwick-town-centre-woodland-avenue",
+      "name": "Warwick Town Centre Woodland Avenue"
+    },
+    {
+      "slug": "warwick-town-centre-market-street",
+      "name": "Warwick Town Centre Market Street"
+    },
+    {
+      "slug": "warwick-town-centre-oak-lane",
+      "name": "Warwick Town Centre Oak Lane"
+    },
+    {
+      "slug": "warwick-town-centre-chestnut-drive",
+      "name": "Warwick Town Centre Chestnut Drive"
+    },
+    {
+      "slug": "warwick-town-centre-ash-grove",
+      "name": "Warwick Town Centre Ash Grove"
+    },
+    {
+      "slug": "warwick-town-centre-willow-close",
+      "name": "Warwick Town Centre Willow Close"
+    },
+    {
+      "slug": "warwick-town-centre-beechcroft",
+      "name": "Warwick Town Centre Beechcroft"
+    },
+    {
+      "slug": "warwick-town-centre-rowan-way",
+      "name": "Warwick Town Centre Rowan Way"
+    },
+    {
+      "slug": "warwick-town-centre-maple-drive",
+      "name": "Warwick Town Centre Maple Drive"
+    },
+    {
+      "slug": "warwick-town-centre-elm-road",
+      "name": "Warwick Town Centre Elm Road"
+    },
+    {
+      "slug": "warwick-town-centre-cedar-avenue",
+      "name": "Warwick Town Centre Cedar Avenue"
+    },
+    {
+      "slug": "warwick-town-centre-pine-close",
+      "name": "Warwick Town Centre Pine Close"
+    },
+    {
+      "slug": "warwick-town-centre-sycamore-lane",
+      "name": "Warwick Town Centre Sycamore Lane"
+    },
+    {
+      "slug": "warwick-town-centre-birch-way",
+      "name": "Warwick Town Centre Birch Way"
+    },
+    {
+      "slug": "warwick-town-centre-poplar-road",
+      "name": "Warwick Town Centre Poplar Road"
+    },
+    {
+      "slug": "warwick-town-centre-holly-drive",
+      "name": "Warwick Town Centre Holly Drive"
+    },
+    {
+      "slug": "warwick-town-centre-hawthorn-close",
+      "name": "Warwick Town Centre Hawthorn Close"
+    },
+    {
+      "slug": "warwick-town-centre-hazel-grove",
+      "name": "Warwick Town Centre Hazel Grove"
+    },
+    {
+      "slug": "warwick-town-centre-alder-way",
+      "name": "Warwick Town Centre Alder Way"
+    },
+    {
+      "slug": "warwick-town-centre-yew-tree-lane",
+      "name": "Warwick Town Centre Yew Tree Lane"
+    },
+    {
+      "slug": "warwick-town-centre-linden-road",
+      "name": "Warwick Town Centre Linden Road"
+    },
+    {
+      "slug": "warwick-town-centre-orchard-way",
+      "name": "Warwick Town Centre Orchard Way"
+    },
+    {
+      "slug": "warwick-town-centre-spring-lane",
+      "name": "Warwick Town Centre Spring Lane"
+    },
+    {
+      "slug": "warwick-town-centre-brooklands",
+      "name": "Warwick Town Centre Brooklands"
+    },
+    {
+      "slug": "warwick-town-centre-riverside",
+      "name": "Warwick Town Centre Riverside"
+    },
+    {
+      "slug": "warwick-town-centre-waterside",
+      "name": "Warwick Town Centre Waterside"
+    },
+    {
+      "slug": "warwick-town-centre-bridge-street",
+      "name": "Warwick Town Centre Bridge Street"
+    },
+    {
+      "slug": "warwick-town-centre-castle-road",
+      "name": "Warwick Town Centre Castle Road"
+    },
+    {
+      "slug": "warwick-town-centre-priory-lane",
+      "name": "Warwick Town Centre Priory Lane"
+    },
+    {
+      "slug": "warwick-town-centre-abbey-way",
+      "name": "Warwick Town Centre Abbey Way"
+    },
+    {
+      "slug": "warwick-town-centre-manor-drive",
+      "name": "Warwick Town Centre Manor Drive"
+    },
+    {
+      "slug": "warwick-town-centre-rectory-lane",
+      "name": "Warwick Town Centre Rectory Lane"
+    },
+    {
+      "slug": "warwick-town-centre-glebe-close",
+      "name": "Warwick Town Centre Glebe Close"
+    },
+    {
+      "slug": "warwick-town-centre-vicarage-road",
+      "name": "Warwick Town Centre Vicarage Road"
+    },
+    {
+      "slug": "warwick-town-centre-chapel-lane",
+      "name": "Warwick Town Centre Chapel Lane"
+    },
+    {
+      "slug": "warwick-town-centre-prospect-place",
+      "name": "Warwick Town Centre Prospect Place"
+    },
+    {
+      "slug": "warwick-town-centre-belmont-road",
+      "name": "Warwick Town Centre Belmont Road"
+    },
+    {
+      "slug": "warwick-town-centre-clifton-way",
+      "name": "Warwick Town Centre Clifton Way"
+    },
+    {
+      "slug": "warwick-town-centre-richmond-road",
+      "name": "Warwick Town Centre Richmond Road"
+    },
+    {
+      "slug": "warwick-town-centre-grosvenor-park",
+      "name": "Warwick Town Centre Grosvenor Park"
+    },
+    {
+      "slug": "warwick-town-centre-claremont-road",
+      "name": "Warwick Town Centre Claremont Road"
+    },
+    {
+      "slug": "warwick-town-centre-wellington-street",
+      "name": "Warwick Town Centre Wellington Street"
+    },
+    {
+      "slug": "warwick-town-centre-nelson-road",
+      "name": "Warwick Town Centre Nelson Road"
+    },
+    {
+      "slug": "warwick-town-centre-crescent-way",
+      "name": "Warwick Town Centre Crescent Way"
+    },
+    {
+      "slug": "warwick-town-centre-square",
+      "name": "Warwick Town Centre Square"
+    },
+    {
+      "slug": "warwick-town-centre-terrace",
+      "name": "Warwick Town Centre Terrace"
+    },
+    {
+      "slug": "warwick-town-centre-street",
+      "name": "Warwick Town Centre Street"
+    },
+    {
+      "slug": "warwick-town-centre-lane",
+      "name": "Warwick Town Centre Lane"
+    },
+    {
+      "slug": "warwick-town-centre-close",
+      "name": "Warwick Town Centre Close"
+    },
+    {
+      "slug": "warwick-town-centre-drive",
+      "name": "Warwick Town Centre Drive"
+    },
+    {
+      "slug": "warwick-town-centre-avenue",
+      "name": "Warwick Town Centre Avenue"
+    },
+    {
+      "slug": "warwick-town-centre-way",
+      "name": "Warwick Town Centre Way"
+    },
+    {
+      "slug": "warwick-town-centre-road",
+      "name": "Warwick Town Centre Road"
+    },
+    {
+      "slug": "warwick-town-centre-hill",
+      "name": "Warwick Town Centre Hill"
+    },
+    {
+      "slug": "warwick-town-centre-rise",
+      "name": "Warwick Town Centre Rise"
+    },
+    {
+      "slug": "warwick-town-centre-mount",
+      "name": "Warwick Town Centre Mount"
+    },
+    {
+      "slug": "warwick-town-centre-view",
+      "name": "Warwick Town Centre View"
+    },
+    {
+      "slug": "warwick-town-centre-bank",
+      "name": "Warwick Town Centre Bank"
+    },
+    {
+      "slug": "warwick-town-centre-ridge",
+      "name": "Warwick Town Centre Ridge"
+    },
+    {
+      "slug": "warwick-town-centre-mead",
+      "name": "Warwick Town Centre Mead"
+    },
+    {
+      "slug": "north-warwick-town-centre-high-street",
+      "name": "North Warwick Town Centre High Street"
+    },
+    {
+      "slug": "north-warwick-town-centre-station-road",
+      "name": "North Warwick Town Centre Station Road"
+    },
+    {
+      "slug": "north-warwick-town-centre-church-lane",
+      "name": "North Warwick Town Centre Church Lane"
+    },
+    {
+      "slug": "north-warwick-town-centre-victoria-road",
+      "name": "North Warwick Town Centre Victoria Road"
+    },
+    {
+      "slug": "north-warwick-town-centre-park-road",
+      "name": "North Warwick Town Centre Park Road"
+    },
+    {
+      "slug": "north-warwick-town-centre-the-avenue",
+      "name": "North Warwick Town Centre The Avenue"
+    },
+    {
+      "slug": "north-warwick-town-centre-london-road",
+      "name": "North Warwick Town Centre London Road"
+    },
+    {
+      "slug": "north-warwick-town-centre-windsor-road",
+      "name": "North Warwick Town Centre Windsor Road"
+    },
+    {
+      "slug": "north-warwick-town-centre-stanley-street",
+      "name": "North Warwick Town Centre Stanley Street"
+    },
+    {
+      "slug": "north-warwick-town-centre-albion-street",
+      "name": "North Warwick Town Centre Albion Street"
+    },
+    {
+      "slug": "north-warwick-town-centre-queen-street",
+      "name": "North Warwick Town Centre Queen Street"
+    },
+    {
+      "slug": "north-warwick-town-centre-king-edward-road",
+      "name": "North Warwick Town Centre King Edward Road"
+    },
+    {
+      "slug": "north-warwick-town-centre-green-lane",
+      "name": "North Warwick Town Centre Green Lane"
+    },
+    {
+      "slug": "north-warwick-town-centre-new-road",
+      "name": "North Warwick Town Centre New Road"
+    },
+    {
+      "slug": "north-warwick-town-centre-school-lane",
+      "name": "North Warwick Town Centre School Lane"
+    },
+    {
+      "slug": "north-warwick-town-centre-meadow-way",
+      "name": "North Warwick Town Centre Meadow Way"
+    },
+    {
+      "slug": "north-warwick-town-centre-cross-street",
+      "name": "North Warwick Town Centre Cross Street"
+    },
+    {
+      "slug": "north-warwick-town-centre-mill-lane",
+      "name": "North Warwick Town Centre Mill Lane"
+    },
+    {
+      "slug": "north-warwick-town-centre-grange-road",
+      "name": "North Warwick Town Centre Grange Road"
+    },
+    {
+      "slug": "north-warwick-town-centre-woodland-avenue",
+      "name": "North Warwick Town Centre Woodland Avenue"
+    },
+    {
+      "slug": "north-warwick-town-centre-market-street",
+      "name": "North Warwick Town Centre Market Street"
+    },
+    {
+      "slug": "north-warwick-town-centre-oak-lane",
+      "name": "North Warwick Town Centre Oak Lane"
+    },
+    {
+      "slug": "north-warwick-town-centre-chestnut-drive",
+      "name": "North Warwick Town Centre Chestnut Drive"
+    },
+    {
+      "slug": "north-warwick-town-centre-ash-grove",
+      "name": "North Warwick Town Centre Ash Grove"
+    },
+    {
+      "slug": "north-warwick-town-centre-willow-close",
+      "name": "North Warwick Town Centre Willow Close"
+    },
+    {
+      "slug": "north-warwick-town-centre-beechcroft",
+      "name": "North Warwick Town Centre Beechcroft"
+    },
+    {
+      "slug": "north-warwick-town-centre-rowan-way",
+      "name": "North Warwick Town Centre Rowan Way"
+    },
+    {
+      "slug": "north-warwick-town-centre-maple-drive",
+      "name": "North Warwick Town Centre Maple Drive"
+    },
+    {
+      "slug": "north-warwick-town-centre-elm-road",
+      "name": "North Warwick Town Centre Elm Road"
+    },
+    {
+      "slug": "north-warwick-town-centre-cedar-avenue",
+      "name": "North Warwick Town Centre Cedar Avenue"
+    },
+    {
+      "slug": "north-warwick-town-centre-pine-close",
+      "name": "North Warwick Town Centre Pine Close"
+    },
+    {
+      "slug": "north-warwick-town-centre-sycamore-lane",
+      "name": "North Warwick Town Centre Sycamore Lane"
+    },
+    {
+      "slug": "north-warwick-town-centre-birch-way",
+      "name": "North Warwick Town Centre Birch Way"
+    },
+    {
+      "slug": "north-warwick-town-centre-poplar-road",
+      "name": "North Warwick Town Centre Poplar Road"
+    },
+    {
+      "slug": "north-warwick-town-centre-holly-drive",
+      "name": "North Warwick Town Centre Holly Drive"
+    },
+    {
+      "slug": "north-warwick-town-centre-hawthorn-close",
+      "name": "North Warwick Town Centre Hawthorn Close"
+    },
+    {
+      "slug": "north-warwick-town-centre-hazel-grove",
+      "name": "North Warwick Town Centre Hazel Grove"
+    },
+    {
+      "slug": "north-warwick-town-centre-alder-way",
+      "name": "North Warwick Town Centre Alder Way"
+    },
+    {
+      "slug": "north-warwick-town-centre-yew-tree-lane",
+      "name": "North Warwick Town Centre Yew Tree Lane"
+    },
+    {
+      "slug": "north-warwick-town-centre-linden-road",
+      "name": "North Warwick Town Centre Linden Road"
+    },
+    {
+      "slug": "north-warwick-town-centre-orchard-way",
+      "name": "North Warwick Town Centre Orchard Way"
+    },
+    {
+      "slug": "north-warwick-town-centre-spring-lane",
+      "name": "North Warwick Town Centre Spring Lane"
+    },
+    {
+      "slug": "north-warwick-town-centre-brooklands",
+      "name": "North Warwick Town Centre Brooklands"
+    },
+    {
+      "slug": "north-warwick-town-centre-riverside",
+      "name": "North Warwick Town Centre Riverside"
+    },
+    {
+      "slug": "north-warwick-town-centre-waterside",
+      "name": "North Warwick Town Centre Waterside"
+    },
+    {
+      "slug": "north-warwick-town-centre-bridge-street",
+      "name": "North Warwick Town Centre Bridge Street"
+    },
+    {
+      "slug": "north-warwick-town-centre-castle-road",
+      "name": "North Warwick Town Centre Castle Road"
+    },
+    {
+      "slug": "north-warwick-town-centre-priory-lane",
+      "name": "North Warwick Town Centre Priory Lane"
+    },
+    {
+      "slug": "north-warwick-town-centre-abbey-way",
+      "name": "North Warwick Town Centre Abbey Way"
+    },
+    {
+      "slug": "north-warwick-town-centre-manor-drive",
+      "name": "North Warwick Town Centre Manor Drive"
+    },
+    {
+      "slug": "north-warwick-town-centre-rectory-lane",
+      "name": "North Warwick Town Centre Rectory Lane"
+    },
+    {
+      "slug": "north-warwick-town-centre-glebe-close",
+      "name": "North Warwick Town Centre Glebe Close"
+    },
+    {
+      "slug": "north-warwick-town-centre-vicarage-road",
+      "name": "North Warwick Town Centre Vicarage Road"
+    },
+    {
+      "slug": "north-warwick-town-centre-chapel-lane",
+      "name": "North Warwick Town Centre Chapel Lane"
+    },
+    {
+      "slug": "north-warwick-town-centre-prospect-place",
+      "name": "North Warwick Town Centre Prospect Place"
+    },
+    {
+      "slug": "north-warwick-town-centre-belmont-road",
+      "name": "North Warwick Town Centre Belmont Road"
+    },
+    {
+      "slug": "north-warwick-town-centre-clifton-way",
+      "name": "North Warwick Town Centre Clifton Way"
+    },
+    {
+      "slug": "north-warwick-town-centre-richmond-road",
+      "name": "North Warwick Town Centre Richmond Road"
+    },
+    {
+      "slug": "north-warwick-town-centre-grosvenor-park",
+      "name": "North Warwick Town Centre Grosvenor Park"
+    },
+    {
+      "slug": "north-warwick-town-centre-claremont-road",
+      "name": "North Warwick Town Centre Claremont Road"
+    },
+    {
+      "slug": "north-warwick-town-centre-wellington-street",
+      "name": "North Warwick Town Centre Wellington Street"
+    },
+    {
+      "slug": "north-warwick-town-centre-nelson-road",
+      "name": "North Warwick Town Centre Nelson Road"
+    },
+    {
+      "slug": "north-warwick-town-centre-crescent-way",
+      "name": "North Warwick Town Centre Crescent Way"
+    },
+    {
+      "slug": "north-warwick-town-centre-square",
+      "name": "North Warwick Town Centre Square"
+    },
+    {
+      "slug": "north-warwick-town-centre-terrace",
+      "name": "North Warwick Town Centre Terrace"
+    },
+    {
+      "slug": "north-warwick-town-centre-street",
+      "name": "North Warwick Town Centre Street"
+    },
+    {
+      "slug": "north-warwick-town-centre-lane",
+      "name": "North Warwick Town Centre Lane"
+    },
+    {
+      "slug": "north-warwick-town-centre-close",
+      "name": "North Warwick Town Centre Close"
+    },
+    {
+      "slug": "north-warwick-town-centre-drive",
+      "name": "North Warwick Town Centre Drive"
+    },
+    {
+      "slug": "north-warwick-town-centre-avenue",
+      "name": "North Warwick Town Centre Avenue"
+    },
+    {
+      "slug": "north-warwick-town-centre-way",
+      "name": "North Warwick Town Centre Way"
+    }
+  ]
+}

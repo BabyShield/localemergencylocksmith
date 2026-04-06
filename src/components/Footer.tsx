@@ -109,6 +109,11 @@ export default function Footer() {
           <Link href="/contact" className="hover:text-gray-300 transition-colors">Contact</Link>
           <Link href="/areas" className="hover:text-gray-300 transition-colors">Areas</Link>
           <Link href="/near-me" className="hover:text-gray-300 transition-colors">Local Directory</Link>
+          <Link href="/postcodes/cv1" className="hover:text-gray-300 transition-colors">CV1</Link>
+          <Link href="/postcodes/cv31" className="hover:text-gray-300 transition-colors">CV31</Link>
+          <Link href="/postcodes/cv32" className="hover:text-gray-300 transition-colors">CV32</Link>
+          <Link href="/postcodes/cv34" className="hover:text-gray-300 transition-colors">CV34</Link>
+          <Link href="/postcodes/cv37" className="hover:text-gray-300 transition-colors">CV37</Link>
           <Link href="/prices" className="hover:text-gray-300 transition-colors">Pricing</Link>
           <Link href="/testimonials" className="hover:text-gray-300 transition-colors">Reviews</Link>
           <Link href="/faq" className="hover:text-gray-300 transition-colors">FAQ</Link>

@@ -3,28 +3,136 @@
   "areaName": "Baginton",
   "streets": [
     {
-      "slug": "baginton-high-street",
-      "name": "Baginton High Street"
+      "slug": "siskin-drive",
+      "name": "Siskin Drive"
     },
     {
-      "slug": "baginton-station-road",
-      "name": "Baginton Station Road"
+      "slug": "siskin-parkway-east",
+      "name": "Siskin Parkway East"
     },
     {
-      "slug": "baginton-church-lane",
-      "name": "Baginton Church Lane"
+      "slug": "siskin-parkway-west",
+      "name": "Siskin Parkway West"
     },
     {
-      "slug": "baginton-victoria-road",
-      "name": "Baginton Victoria Road"
+      "slug": "rowley-road",
+      "name": "Rowley Road"
     },
     {
-      "slug": "baginton-the-avenue",
-      "name": "Baginton The Avenue"
+      "slug": "roman-way",
+      "name": "Roman Way"
     },
     {
-      "slug": "baginton-park-road",
-      "name": "Baginton Park Road"
+      "slug": "mylgrove",
+      "name": "Mylgrove"
+    },
+    {
+      "slug": "holly-walk",
+      "name": "Holly Walk"
+    },
+    {
+      "slug": "bosworth-close",
+      "name": "Bosworth Close"
+    },
+    {
+      "slug": "mill-hill",
+      "name": "Mill Hill"
+    },
+    {
+      "slug": "friends-close",
+      "name": "Friends Close"
+    },
+    {
+      "slug": "bubbenhall-road",
+      "name": "Bubbenhall Road"
+    },
+    {
+      "slug": "cheylesmore-stivichall-bypass",
+      "name": "Cheylesmore & Stivichall Bypass"
+    },
+    {
+      "slug": "woodhams-road",
+      "name": "Woodhams Road"
+    },
+    {
+      "slug": "kimberley-road",
+      "name": "Kimberley Road"
+    },
+    {
+      "slug": "hall-drive",
+      "name": "Hall Drive"
+    },
+    {
+      "slug": "festival-island",
+      "name": "Festival Island"
+    },
+    {
+      "slug": "church-road",
+      "name": "Church Road"
+    },
+    {
+      "slug": "andrews-close",
+      "name": "Andrews Close"
+    },
+    {
+      "slug": "coventry-road",
+      "name": "Coventry Road"
+    },
+    {
+      "slug": "stoneleigh-road",
+      "name": "Stoneleigh Road"
+    },
+    {
+      "slug": "oak-close",
+      "name": "Oak Close"
+    },
+    {
+      "slug": "underhill-close",
+      "name": "Underhill Close"
+    },
+    {
+      "slug": "frances-road",
+      "name": "Frances Road"
+    },
+    {
+      "slug": "stable-yard",
+      "name": "Stable Yard"
+    },
+    {
+      "slug": "bubbenhall-bridge",
+      "name": "Bubbenhall Bridge"
+    },
+    {
+      "slug": "firefly-road",
+      "name": "Firefly Road"
+    },
+    {
+      "slug": "silver-eagle-way",
+      "name": "Silver Eagle Way"
+    },
+    {
+      "slug": "samaritan-way",
+      "name": "Samaritan Way"
+    },
+    {
+      "slug": "silver-crest-way",
+      "name": "Silver Crest Way"
+    },
+    {
+      "slug": "aspen-court",
+      "name": "Aspen Court"
+    },
+    {
+      "slug": "laurel-close",
+      "name": "Laurel Close"
+    },
+    {
+      "slug": "spruce-drive",
+      "name": "Spruce Drive"
+    },
+    {
+      "slug": "spindle-way",
+      "name": "Spindle Way"
     }
   ]
 }
