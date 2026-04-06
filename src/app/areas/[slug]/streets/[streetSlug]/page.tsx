@@ -8,6 +8,7 @@ import { SITE_CONFIG } from '@/data/config'
 import HeroSection from '@/components/HeroSection'
 import CTABlock from '@/components/CTABlock'
 import FAQSection from '@/components/FAQSection'
+import DynamicMapEmbed from '@/components/DynamicMapEmbed'
 import SchemaMarkup from '@/components/SchemaMarkup'
 
 // Use ISG/SSR for the long-tail street pages to avoid massive build times
@@ -93,10 +94,28 @@ export default async function AreaStreetPage({ params }: Props) {
     }
   }
 
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: `How fast can a locksmith arrive at ${street.name}?`,
+        acceptedAnswer: { '@type': 'Answer', text: `We typically arrive at ${street.name} in ${area.responseTime}.` }
+      },
+      {
+        '@type': 'Question',
+        name: `Do you charge a call-out fee for properties on ${street.name}?`,
+        acceptedAnswer: { '@type': 'Answer', text: `No. We never charge a call-out fee to visit ${street.name} or anywhere in ${area.name}.` }
+      }
+    ]
+  }
+
   return (
     <>
       <SchemaMarkup schema={breadcrumbSchema} />
       <SchemaMarkup schema={localBusinessSchema} />
+      <SchemaMarkup schema={faqSchema} />
 
       {/* Breadcrumb */}
       <nav className="max-w-6xl mx-auto px-4 py-3 text-sm text-gray-500">
@@ -136,6 +155,10 @@ export default async function AreaStreetPage({ params }: Props) {
                <li>💷 <strong>Clear Pricing:</strong> Quoted upfront, zero VAT, zero hidden fees.</li>
                <li>🏠 <strong>Architecture Knowledge:</strong> Understands the common door types around {area.name} ({area.postcode}).</li>
              </ul>
+          </div>
+
+          <div className="mb-8">
+            <DynamicMapEmbed streetName={street.name} areaName={area.name} />
           </div>
 
           <div className="text-center">
