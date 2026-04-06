@@ -13,8 +13,12 @@ export async function generateStaticParams() {
   }))
 }
 
-export async function generateMetadata({ params }: { params: { postcode: string } }): Promise<Metadata> {
-  const { postcode } = params
+interface Props {
+  params: Promise<{ postcode: string }>
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { postcode } = await params
   const upperPostcode = postcode.toUpperCase()
   
   return {
@@ -23,8 +27,8 @@ export async function generateMetadata({ params }: { params: { postcode: string 
   }
 }
 
-export default function PostcodePage({ params }: { params: { postcode: string } }) {
-  const { postcode } = params
+export default async function PostcodePage({ params }: Props) {
+  const { postcode } = await params
   const upperPostcode = postcode.toUpperCase()
   
   const relevantAreas = AREAS.filter(a => a.postcode.toLowerCase() === postcode)
