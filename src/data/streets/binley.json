@@ -3,224 +3,28 @@
   "areaName": "Binley",
   "streets": [
     {
-      "slug": "high-street",
-      "name": "High Street"
+      "slug": "binley-high-street",
+      "name": "Binley High Street"
     },
     {
       "slug": "binley-station-road",
       "name": "Binley Station Road"
     },
     {
-      "slug": "binley-church-road",
-      "name": "Binley Church Road"
+      "slug": "binley-church-lane",
+      "name": "Binley Church Lane"
     },
     {
-      "slug": "victoria-road",
-      "name": "Victoria Road"
+      "slug": "binley-victoria-road",
+      "name": "Binley Victoria Road"
     },
     {
-      "slug": "binley-london-road",
-      "name": "Binley London Road"
+      "slug": "binley-the-avenue",
+      "name": "Binley The Avenue"
     },
     {
-      "slug": "main-street",
-      "name": "Main Street"
-    },
-    {
-      "slug": "park-road",
-      "name": "Park Road"
-    },
-    {
-      "slug": "church-street",
-      "name": "Church Street"
-    },
-    {
-      "slug": "queens-road",
-      "name": "Queens Road"
-    },
-    {
-      "slug": "new-road",
-      "name": "New Road"
-    },
-    {
-      "slug": "grange-road",
-      "name": "Grange Road"
-    },
-    {
-      "slug": "kings-road",
-      "name": "Kings Road"
-    },
-    {
-      "slug": "windsor-avenue",
-      "name": "Windsor Avenue"
-    },
-    {
-      "slug": "binley-chester-road",
-      "name": "Binley Chester Road"
-    },
-    {
-      "slug": "albert-road",
-      "name": "Albert Road"
-    },
-    {
-      "slug": "binley-wellington-street",
-      "name": "Binley Wellington Street"
-    },
-    {
-      "slug": "mill-lane",
-      "name": "Mill Lane"
-    },
-    {
-      "slug": "highfield-road",
-      "name": "Highfield Road"
-    },
-    {
-      "slug": "george-street",
-      "name": "George Street"
-    },
-    {
-      "slug": "north-street",
-      "name": "North Street"
-    },
-    {
-      "slug": "south-street",
-      "name": "South Street"
-    },
-    {
-      "slug": "west-street",
-      "name": "West Street"
-    },
-    {
-      "slug": "east-street",
-      "name": "East Street"
-    },
-    {
-      "slug": "broad-street",
-      "name": "Broad Street"
-    },
-    {
-      "slug": "springfield-road",
-      "name": "Springfield Road"
-    },
-    {
-      "slug": "binley-richmond-road",
-      "name": "Binley Richmond Road"
-    },
-    {
-      "slug": "boundary-road",
-      "name": "Boundary Road"
-    },
-    {
-      "slug": "stanley-road",
-      "name": "Stanley Road"
-    },
-    {
-      "slug": "binley-green-lane",
-      "name": "Binley Green Lane"
-    },
-    {
-      "slug": "manor-road",
-      "name": "Manor Road"
-    },
-    {
-      "slug": "park-avenue",
-      "name": "Park Avenue"
-    },
-    {
-      "slug": "york-road",
-      "name": "York Road"
-    },
-    {
-      "slug": "school-lane",
-      "name": "School Lane"
-    },
-    {
-      "slug": "meadow-way",
-      "name": "Meadow Way"
-    },
-    {
-      "slug": "orchard-close",
-      "name": "Orchard Close"
-    },
-    {
-      "slug": "cedar-avenue",
-      "name": "Cedar Avenue"
-    },
-    {
-      "slug": "oak-lane",
-      "name": "Oak Lane"
-    },
-    {
-      "slug": "binley-elm-grove",
-      "name": "Binley Elm Grove"
-    },
-    {
-      "slug": "pine-close",
-      "name": "Pine Close"
-    },
-    {
-      "slug": "ash-grove",
-      "name": "Ash Grove"
-    },
-    {
-      "slug": "binley-willow-avenue",
-      "name": "Binley Willow Avenue"
-    },
-    {
-      "slug": "birch-road",
-      "name": "Birch Road"
-    },
-    {
-      "slug": "binley-maple-drive",
-      "name": "Binley Maple Drive"
-    },
-    {
-      "slug": "hawthorn-close",
-      "name": "Hawthorn Close"
-    },
-    {
-      "slug": "binley-chestnut-avenue",
-      "name": "Binley Chestnut Avenue"
-    },
-    {
-      "slug": "coventry-road",
-      "name": "Coventry Road"
-    },
-    {
-      "slug": "binley-warwick-road",
-      "name": "Binley Warwick Road"
-    },
-    {
-      "slug": "binley-kenilworth-road",
-      "name": "Binley Kenilworth Road"
-    },
-    {
-      "slug": "binley-holyhead-road",
-      "name": "Binley Holyhead Road"
-    },
-    {
-      "slug": "foleshill-road",
-      "name": "Foleshill Road"
-    },
-    {
-      "slug": "stoney-stanton-road",
-      "name": "Stoney Stanton Road"
-    },
-    {
-      "slug": "radford-road",
-      "name": "Radford Road"
-    },
-    {
-      "slug": "binley-coundon-road",
-      "name": "Binley Coundon Road"
-    },
-    {
-      "slug": "barkers-butts-lane",
-      "name": "Barkers Butts Lane"
-    },
-    {
-      "slug": "binley-road",
-      "name": "Binley Road"
+      "slug": "binley-park-road",
+      "name": "Binley Park Road"
     }
   ]
 }

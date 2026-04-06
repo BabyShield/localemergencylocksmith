@@ -7,220 +7,24 @@
       "name": "Cawston High Street"
     },
     {
-      "slug": "station-road",
-      "name": "Station Road"
+      "slug": "cawston-station-road",
+      "name": "Cawston Station Road"
     },
     {
-      "slug": "church-road",
-      "name": "Church Road"
+      "slug": "cawston-church-lane",
+      "name": "Cawston Church Lane"
     },
     {
-      "slug": "victoria-road",
-      "name": "Victoria Road"
+      "slug": "cawston-victoria-road",
+      "name": "Cawston Victoria Road"
     },
     {
-      "slug": "cawston-london-road",
-      "name": "Cawston London Road"
+      "slug": "cawston-the-avenue",
+      "name": "Cawston The Avenue"
     },
     {
-      "slug": "main-street",
-      "name": "Main Street"
-    },
-    {
-      "slug": "park-road",
-      "name": "Park Road"
-    },
-    {
-      "slug": "church-street",
-      "name": "Church Street"
-    },
-    {
-      "slug": "cawston-queens-road",
-      "name": "Cawston Queens Road"
-    },
-    {
-      "slug": "new-road",
-      "name": "New Road"
-    },
-    {
-      "slug": "grange-road",
-      "name": "Grange Road"
-    },
-    {
-      "slug": "kings-road",
-      "name": "Kings Road"
-    },
-    {
-      "slug": "windsor-avenue",
-      "name": "Windsor Avenue"
-    },
-    {
-      "slug": "chester-road",
-      "name": "Chester Road"
-    },
-    {
-      "slug": "albert-road",
-      "name": "Albert Road"
-    },
-    {
-      "slug": "cawston-wellington-street",
-      "name": "Cawston Wellington Street"
-    },
-    {
-      "slug": "cawston-mill-lane",
-      "name": "Cawston Mill Lane"
-    },
-    {
-      "slug": "highfield-road",
-      "name": "Highfield Road"
-    },
-    {
-      "slug": "george-street",
-      "name": "George Street"
-    },
-    {
-      "slug": "north-street",
-      "name": "North Street"
-    },
-    {
-      "slug": "south-street",
-      "name": "South Street"
-    },
-    {
-      "slug": "west-street",
-      "name": "West Street"
-    },
-    {
-      "slug": "east-street",
-      "name": "East Street"
-    },
-    {
-      "slug": "broad-street",
-      "name": "Broad Street"
-    },
-    {
-      "slug": "springfield-road",
-      "name": "Springfield Road"
-    },
-    {
-      "slug": "richmond-road",
-      "name": "Richmond Road"
-    },
-    {
-      "slug": "boundary-road",
-      "name": "Boundary Road"
-    },
-    {
-      "slug": "stanley-road",
-      "name": "Stanley Road"
-    },
-    {
-      "slug": "green-lane",
-      "name": "Green Lane"
-    },
-    {
-      "slug": "manor-road",
-      "name": "Manor Road"
-    },
-    {
-      "slug": "park-avenue",
-      "name": "Park Avenue"
-    },
-    {
-      "slug": "york-road",
-      "name": "York Road"
-    },
-    {
-      "slug": "school-lane",
-      "name": "School Lane"
-    },
-    {
-      "slug": "meadow-way",
-      "name": "Meadow Way"
-    },
-    {
-      "slug": "orchard-close",
-      "name": "Orchard Close"
-    },
-    {
-      "slug": "cedar-avenue",
-      "name": "Cedar Avenue"
-    },
-    {
-      "slug": "oak-lane",
-      "name": "Oak Lane"
-    },
-    {
-      "slug": "elm-grove",
-      "name": "Elm Grove"
-    },
-    {
-      "slug": "pine-close",
-      "name": "Pine Close"
-    },
-    {
-      "slug": "ash-grove",
-      "name": "Ash Grove"
-    },
-    {
-      "slug": "cawston-willow-avenue",
-      "name": "Cawston Willow Avenue"
-    },
-    {
-      "slug": "birch-road",
-      "name": "Birch Road"
-    },
-    {
-      "slug": "cawston-maple-drive",
-      "name": "Cawston Maple Drive"
-    },
-    {
-      "slug": "cawston-hawthorn-close",
-      "name": "Cawston Hawthorn Close"
-    },
-    {
-      "slug": "chestnut-avenue",
-      "name": "Chestnut Avenue"
-    },
-    {
-      "slug": "cawston-coventry-road",
-      "name": "Cawston Coventry Road"
-    },
-    {
-      "slug": "cawston-warwick-road",
-      "name": "Cawston Warwick Road"
-    },
-    {
-      "slug": "kenilworth-road",
-      "name": "Kenilworth Road"
-    },
-    {
-      "slug": "holyhead-road",
-      "name": "Holyhead Road"
-    },
-    {
-      "slug": "cawston-foleshill-road",
-      "name": "Cawston Foleshill Road"
-    },
-    {
-      "slug": "cawston-stoney-stanton-road",
-      "name": "Cawston Stoney Stanton Road"
-    },
-    {
-      "slug": "radford-road",
-      "name": "Radford Road"
-    },
-    {
-      "slug": "coundon-road",
-      "name": "Coundon Road"
-    },
-    {
-      "slug": "barkers-butts-lane",
-      "name": "Barkers Butts Lane"
-    },
-    {
-      "slug": "cawston-binley-road",
-      "name": "Cawston Binley Road"
+      "slug": "cawston-park-road",
+      "name": "Cawston Park Road"
     }
   ]
 }

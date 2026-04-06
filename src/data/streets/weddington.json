@@ -3,224 +3,604 @@
   "areaName": "Weddington",
   "streets": [
     {
-      "slug": "high-street",
-      "name": "High Street"
+      "slug": "amanda-drive",
+      "name": "Amanda Drive"
     },
     {
-      "slug": "station-road",
-      "name": "Station Road"
+      "slug": "royster-run",
+      "name": "Royster Run"
     },
     {
-      "slug": "church-road",
-      "name": "Church Road"
+      "slug": "baron-road",
+      "name": "Baron Road"
     },
     {
-      "slug": "weddington-victoria-road",
-      "name": "Weddington Victoria Road"
+      "slug": "heritage-acres-drive",
+      "name": "Heritage Acres Drive"
     },
     {
-      "slug": "london-road",
-      "name": "London Road"
+      "slug": "evans-manor-drive",
+      "name": "Evans Manor Drive"
     },
     {
-      "slug": "main-street",
-      "name": "Main Street"
+      "slug": "reefton-road",
+      "name": "Reefton Road"
     },
     {
-      "slug": "park-road",
-      "name": "Park Road"
+      "slug": "walden-trail",
+      "name": "Walden Trail"
     },
     {
-      "slug": "church-street",
-      "name": "Church Street"
+      "slug": "whispering-oaks-lane",
+      "name": "Whispering Oaks Lane"
     },
     {
-      "slug": "queens-road",
-      "name": "Queens Road"
+      "slug": "north-twelve-mile-creek-road",
+      "name": "North Twelve Mile Creek Road"
     },
     {
-      "slug": "new-road",
-      "name": "New Road"
+      "slug": "greylyn-drive",
+      "name": "Greylyn Drive"
     },
     {
-      "slug": "grange-road",
-      "name": "Grange Road"
+      "slug": "bexley-court",
+      "name": "Bexley Court"
     },
     {
-      "slug": "kings-road",
-      "name": "Kings Road"
+      "slug": "caledonia-way",
+      "name": "Caledonia Way"
     },
     {
-      "slug": "windsor-avenue",
-      "name": "Windsor Avenue"
+      "slug": "hunting-creek-drive",
+      "name": "Hunting Creek Drive"
     },
     {
-      "slug": "weddington-chester-road",
-      "name": "Weddington Chester Road"
+      "slug": "cherry-hollow-lane",
+      "name": "Cherry Hollow Lane"
     },
     {
-      "slug": "albert-road",
-      "name": "Albert Road"
+      "slug": "eagle-road",
+      "name": "Eagle Road"
     },
     {
-      "slug": "wellington-street",
-      "name": "Wellington Street"
+      "slug": "lochaven-road",
+      "name": "Lochaven Road"
     },
     {
-      "slug": "mill-lane",
-      "name": "Mill Lane"
+      "slug": "maremont-court",
+      "name": "Maremont Court"
     },
     {
-      "slug": "highfield-road",
-      "name": "Highfield Road"
+      "slug": "high-vista-court",
+      "name": "High Vista Court"
     },
     {
-      "slug": "george-street",
-      "name": "George Street"
+      "slug": "cornerstone-drive",
+      "name": "Cornerstone Drive"
     },
     {
-      "slug": "north-street",
-      "name": "North Street"
+      "slug": "stoneybrook-court",
+      "name": "Stoneybrook Court"
     },
     {
-      "slug": "weddington-south-street",
-      "name": "Weddington South Street"
+      "slug": "stirrup-court",
+      "name": "Stirrup Court"
     },
     {
-      "slug": "west-street",
-      "name": "West Street"
+      "slug": "cari-lane",
+      "name": "Cari Lane"
     },
     {
-      "slug": "east-street",
-      "name": "East Street"
+      "slug": "tee-top-lane",
+      "name": "Tee Top Lane"
     },
     {
-      "slug": "broad-street",
-      "name": "Broad Street"
+      "slug": "dundin-place",
+      "name": "Dundin Place"
     },
     {
-      "slug": "weddington-springfield-road",
-      "name": "Weddington Springfield Road"
+      "slug": "chasestone-court",
+      "name": "Chasestone Court"
     },
     {
-      "slug": "richmond-road",
-      "name": "Richmond Road"
+      "slug": "cobblecreek-drive",
+      "name": "Cobblecreek Drive"
     },
     {
-      "slug": "boundary-road",
-      "name": "Boundary Road"
+      "slug": "keegan-court",
+      "name": "Keegan Court"
     },
     {
-      "slug": "stanley-road",
-      "name": "Stanley Road"
+      "slug": "oxford-terrace",
+      "name": "Oxford Terrace"
     },
     {
-      "slug": "green-lane",
-      "name": "Green Lane"
+      "slug": "high-oaks-drive",
+      "name": "High Oaks Drive"
     },
     {
-      "slug": "manor-road",
-      "name": "Manor Road"
+      "slug": "thames-court",
+      "name": "Thames Court"
     },
     {
-      "slug": "park-avenue",
-      "name": "Park Avenue"
+      "slug": "homestead-place",
+      "name": "Homestead Place"
     },
     {
-      "slug": "york-road",
-      "name": "York Road"
+      "slug": "ranch-view-court",
+      "name": "Ranch View Court"
     },
     {
-      "slug": "school-lane",
-      "name": "School Lane"
+      "slug": "cambridge-oaks-drive",
+      "name": "Cambridge Oaks Drive"
     },
     {
-      "slug": "meadow-way",
-      "name": "Meadow Way"
+      "slug": "foxbridge-drive",
+      "name": "Foxbridge Drive"
     },
     {
-      "slug": "weddington-orchard-close",
-      "name": "Weddington Orchard Close"
+      "slug": "weddington-matthews-road",
+      "name": "Weddington Matthews Road"
     },
     {
-      "slug": "weddington-cedar-avenue",
-      "name": "Weddington Cedar Avenue"
+      "slug": "lester-davis-road",
+      "name": "Lester Davis Road"
     },
     {
-      "slug": "weddington-oak-lane",
-      "name": "Weddington Oak Lane"
+      "slug": "red-fox-trail",
+      "name": "Red Fox Trail"
     },
     {
-      "slug": "elm-grove",
-      "name": "Elm Grove"
+      "slug": "ennis-road",
+      "name": "Ennis Road"
     },
     {
-      "slug": "pine-close",
-      "name": "Pine Close"
+      "slug": "tree-hill-road",
+      "name": "Tree Hill Road"
     },
     {
-      "slug": "weddington-ash-grove",
-      "name": "Weddington Ash Grove"
+      "slug": "hunter-lane",
+      "name": "Hunter Lane"
     },
     {
-      "slug": "willow-avenue",
-      "name": "Willow Avenue"
+      "slug": "cherrywood-lane",
+      "name": "Cherrywood Lane"
     },
     {
-      "slug": "birch-road",
-      "name": "Birch Road"
+      "slug": "veery-court",
+      "name": "Veery Court"
     },
     {
-      "slug": "maple-drive",
-      "name": "Maple Drive"
+      "slug": "fox-run-road",
+      "name": "Fox Run Road"
     },
     {
-      "slug": "hawthorn-close",
-      "name": "Hawthorn Close"
+      "slug": "weddington-downs-drive",
+      "name": "Weddington Downs Drive"
     },
     {
-      "slug": "weddington-chestnut-avenue",
-      "name": "Weddington Chestnut Avenue"
+      "slug": "cone-mill-court",
+      "name": "Cone Mill Court"
     },
     {
-      "slug": "coventry-road",
-      "name": "Coventry Road"
+      "slug": "lake-providence-drive",
+      "name": "Lake Providence Drive"
     },
     {
-      "slug": "warwick-road",
-      "name": "Warwick Road"
+      "slug": "shannon-woods-lane",
+      "name": "Shannon Woods Lane"
     },
     {
-      "slug": "kenilworth-road",
-      "name": "Kenilworth Road"
+      "slug": "saddle-horn-trail",
+      "name": "Saddle Horn Trail"
     },
     {
-      "slug": "weddington-holyhead-road",
-      "name": "Weddington Holyhead Road"
+      "slug": "camden-drive",
+      "name": "Camden Drive"
     },
     {
-      "slug": "foleshill-road",
-      "name": "Foleshill Road"
+      "slug": "rea-road",
+      "name": "Rea Road"
     },
     {
-      "slug": "stoney-stanton-road",
-      "name": "Stoney Stanton Road"
+      "slug": "lemmond-drive",
+      "name": "Lemmond Drive"
     },
     {
-      "slug": "radford-road",
-      "name": "Radford Road"
+      "slug": "trappers-cove",
+      "name": "Trappers Cove"
     },
     {
-      "slug": "coundon-road",
-      "name": "Coundon Road"
+      "slug": "partridge-lane",
+      "name": "Partridge Lane"
     },
     {
-      "slug": "barkers-butts-lane",
-      "name": "Barkers Butts Lane"
+      "slug": "brandy-court",
+      "name": "Brandy Court"
     },
     {
-      "slug": "binley-road",
-      "name": "Binley Road"
+      "slug": "highview-road",
+      "name": "Highview Road"
+    },
+    {
+      "slug": "rising-sun-lane",
+      "name": "Rising Sun Lane"
+    },
+    {
+      "slug": "woods-loop",
+      "name": "Woods Loop"
+    },
+    {
+      "slug": "honeysuckle-drive",
+      "name": "Honeysuckle Drive"
+    },
+    {
+      "slug": "willow-oaks-trail",
+      "name": "Willow Oaks Trail"
+    },
+    {
+      "slug": "windward-cove",
+      "name": "Windward Cove"
+    },
+    {
+      "slug": "quail-ridge-lane",
+      "name": "Quail Ridge Lane"
+    },
+    {
+      "slug": "michelle-drive",
+      "name": "Michelle Drive"
+    },
+    {
+      "slug": "weddington-brook-drive",
+      "name": "Weddington Brook Drive"
+    },
+    {
+      "slug": "water-oak-lane",
+      "name": "Water Oak Lane"
+    },
+    {
+      "slug": "alderney-court",
+      "name": "Alderney Court"
+    },
+    {
+      "slug": "glencoe-drive",
+      "name": "Glencoe Drive"
+    },
+    {
+      "slug": "laurel-grove-lane",
+      "name": "Laurel Grove Lane"
+    },
+    {
+      "slug": "goldfinch-lane",
+      "name": "Goldfinch Lane"
+    },
+    {
+      "slug": "deal-road",
+      "name": "Deal Road"
+    },
+    {
+      "slug": "valley-run-drive",
+      "name": "Valley Run Drive"
+    },
+    {
+      "slug": "cedar-bend",
+      "name": "Cedar Bend"
+    },
+    {
+      "slug": "antioch-plantation-drive",
+      "name": "Antioch Plantation Drive"
+    },
+    {
+      "slug": "forest-ridge-road",
+      "name": "Forest Ridge Road"
+    },
+    {
+      "slug": "greywood-lane",
+      "name": "Greywood Lane"
+    },
+    {
+      "slug": "plymouth-drive",
+      "name": "Plymouth Drive"
+    },
+    {
+      "slug": "foxton-road",
+      "name": "Foxton Road"
+    },
+    {
+      "slug": "elderberry-court",
+      "name": "Elderberry Court"
+    },
+    {
+      "slug": "bluebird-hill-lane",
+      "name": "Bluebird Hill Lane"
+    },
+    {
+      "slug": "rocking-chair-road",
+      "name": "Rocking Chair Road"
+    },
+    {
+      "slug": "lake-point-drive",
+      "name": "Lake Point Drive"
+    },
+    {
+      "slug": "bluebird-lane",
+      "name": "Bluebird Lane"
+    },
+    {
+      "slug": "weddington-road",
+      "name": "Weddington Road"
+    },
+    {
+      "slug": "kirby-lane",
+      "name": "Kirby Lane"
+    },
+    {
+      "slug": "brookview-court",
+      "name": "Brookview Court"
+    },
+    {
+      "slug": "clover-crest-lane",
+      "name": "Clover Crest Lane"
+    },
+    {
+      "slug": "timber-lane",
+      "name": "Timber Lane"
+    },
+    {
+      "slug": "stallion-court",
+      "name": "Stallion Court"
+    },
+    {
+      "slug": "fair-haven-court",
+      "name": "Fair Haven Court"
+    },
+    {
+      "slug": "ironwood-drive",
+      "name": "Ironwood Drive"
+    },
+    {
+      "slug": "michelle-court",
+      "name": "Michelle Court"
+    },
+    {
+      "slug": "horseshoe-bend",
+      "name": "Horseshoe Bend"
+    },
+    {
+      "slug": "lago-vista-drive",
+      "name": "Lago Vista Drive"
+    },
+    {
+      "slug": "walden-lane",
+      "name": "Walden Lane"
+    },
+    {
+      "slug": "bent-tree-trail",
+      "name": "Bent Tree Trail"
+    },
+    {
+      "slug": "ashford-glen-drive",
+      "name": "Ashford Glen Drive"
+    },
+    {
+      "slug": "canterbury-lane",
+      "name": "Canterbury Lane"
+    },
+    {
+      "slug": "greenhurst-lane",
+      "name": "Greenhurst Lane"
+    },
+    {
+      "slug": "cottonfield-circle",
+      "name": "Cottonfield Circle"
+    },
+    {
+      "slug": "valley-glen-drive",
+      "name": "Valley Glen Drive"
+    },
+    {
+      "slug": "matthews-weddington-road",
+      "name": "Matthews Weddington Road"
+    },
+    {
+      "slug": "white-birch-trail",
+      "name": "White Birch Trail"
+    },
+    {
+      "slug": "valley-ranch-lane",
+      "name": "Valley Ranch Lane"
+    },
+    {
+      "slug": "long-view-court",
+      "name": "Long View Court"
+    },
+    {
+      "slug": "glen-oaks-drive",
+      "name": "Glen Oaks Drive"
+    },
+    {
+      "slug": "eagle-pass-court",
+      "name": "Eagle Pass Court"
+    },
+    {
+      "slug": "ancestry-circle",
+      "name": "Ancestry Circle"
+    },
+    {
+      "slug": "shadowmere-lane",
+      "name": "Shadowmere Lane"
+    },
+    {
+      "slug": "country-club-drive",
+      "name": "Country Club Drive"
+    },
+    {
+      "slug": "red-willow-lane",
+      "name": "Red Willow Lane"
+    },
+    {
+      "slug": "foggy-glen-place",
+      "name": "Foggy Glen Place"
+    },
+    {
+      "slug": "forest-lawn-drive",
+      "name": "Forest Lawn Drive"
+    },
+    {
+      "slug": "estate-lane",
+      "name": "Estate Lane"
+    },
+    {
+      "slug": "spring-oaks-drive",
+      "name": "Spring Oaks Drive"
+    },
+    {
+      "slug": "greystone-drive",
+      "name": "Greystone Drive"
+    },
+    {
+      "slug": "palomino-ridge-road",
+      "name": "Palomino Ridge Road"
+    },
+    {
+      "slug": "lost-cove",
+      "name": "Lost Cove"
+    },
+    {
+      "slug": "mourning-dove-drive",
+      "name": "Mourning Dove Drive"
+    },
+    {
+      "slug": "antioch-woods-lane",
+      "name": "Antioch Woods Lane"
+    },
+    {
+      "slug": "hemby-road",
+      "name": "Hemby Road"
+    },
+    {
+      "slug": "timber-oak-court",
+      "name": "Timber Oak Court"
+    },
+    {
+      "slug": "weddington-manor-court",
+      "name": "Weddington Manor Court"
+    },
+    {
+      "slug": "blossom-hill-drive",
+      "name": "Blossom Hill Drive"
+    },
+    {
+      "slug": "riverton-road",
+      "name": "Riverton Road"
+    },
+    {
+      "slug": "willow-trace-lane",
+      "name": "Willow Trace Lane"
+    },
+    {
+      "slug": "larkfield-drive",
+      "name": "Larkfield Drive"
+    },
+    {
+      "slug": "weddington-hills-drive",
+      "name": "Weddington Hills Drive"
+    },
+    {
+      "slug": "palomino-ridge",
+      "name": "Palomino Ridge"
+    },
+    {
+      "slug": "longleaf-court",
+      "name": "Longleaf Court"
+    },
+    {
+      "slug": "horseman-cove",
+      "name": "Horseman Cove"
+    },
+    {
+      "slug": "leyland-court",
+      "name": "Leyland Court"
+    },
+    {
+      "slug": "scottsdale-lane",
+      "name": "Scottsdale Lane"
+    },
+    {
+      "slug": "maple-grove-church-road",
+      "name": "Maple Grove Church Road"
+    },
+    {
+      "slug": "twelve-mile-creek-road",
+      "name": "Twelve Mile Creek Road"
+    },
+    {
+      "slug": "meadow-run-drive",
+      "name": "Meadow Run Drive"
+    },
+    {
+      "slug": "osprey-court",
+      "name": "Osprey Court"
+    },
+    {
+      "slug": "kee-court",
+      "name": "Kee Court"
+    },
+    {
+      "slug": "highgate-drive",
+      "name": "Highgate Drive"
+    },
+    {
+      "slug": "steeple-chase-circle",
+      "name": "Steeple Chase Circle"
+    },
+    {
+      "slug": "cedar-ridge-lane",
+      "name": "Cedar Ridge Lane"
+    },
+    {
+      "slug": "auckland-lane",
+      "name": "Auckland Lane"
+    },
+    {
+      "slug": "carole-court",
+      "name": "Carole Court"
+    },
+    {
+      "slug": "wellington-drive",
+      "name": "Wellington Drive"
+    },
+    {
+      "slug": "leahy-mill-court",
+      "name": "Leahy Mill Court"
+    },
+    {
+      "slug": "tilley-morris-road",
+      "name": "Tilley Morris Road"
+    },
+    {
+      "slug": "foxwood-lane",
+      "name": "Foxwood Lane"
+    },
+    {
+      "slug": "foxmeade-drive",
+      "name": "Foxmeade Drive"
+    },
+    {
+      "slug": "flint-court",
+      "name": "Flint Court"
+    },
+    {
+      "slug": "kings-manor-drive",
+      "name": "Kings Manor Drive"
+    },
+    {
+      "slug": "devonport-drive",
+      "name": "Devonport Drive"
+    },
+    {
+      "slug": "landsbury-drive",
+      "name": "Landsbury Drive"
     }
   ]
 }

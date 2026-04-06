@@ -3,224 +3,28 @@
   "areaName": "Foleshill",
   "streets": [
     {
-      "slug": "high-street",
-      "name": "High Street"
+      "slug": "foleshill-high-street",
+      "name": "Foleshill High Street"
     },
     {
-      "slug": "station-road",
-      "name": "Station Road"
+      "slug": "foleshill-station-road",
+      "name": "Foleshill Station Road"
     },
     {
-      "slug": "foleshill-church-road",
-      "name": "Foleshill Church Road"
+      "slug": "foleshill-church-lane",
+      "name": "Foleshill Church Lane"
     },
     {
-      "slug": "victoria-road",
-      "name": "Victoria Road"
+      "slug": "foleshill-victoria-road",
+      "name": "Foleshill Victoria Road"
     },
     {
-      "slug": "london-road",
-      "name": "London Road"
-    },
-    {
-      "slug": "foleshill-main-street",
-      "name": "Foleshill Main Street"
+      "slug": "foleshill-the-avenue",
+      "name": "Foleshill The Avenue"
     },
     {
       "slug": "foleshill-park-road",
       "name": "Foleshill Park Road"
-    },
-    {
-      "slug": "church-street",
-      "name": "Church Street"
-    },
-    {
-      "slug": "queens-road",
-      "name": "Queens Road"
-    },
-    {
-      "slug": "foleshill-new-road",
-      "name": "Foleshill New Road"
-    },
-    {
-      "slug": "grange-road",
-      "name": "Grange Road"
-    },
-    {
-      "slug": "kings-road",
-      "name": "Kings Road"
-    },
-    {
-      "slug": "windsor-avenue",
-      "name": "Windsor Avenue"
-    },
-    {
-      "slug": "chester-road",
-      "name": "Chester Road"
-    },
-    {
-      "slug": "albert-road",
-      "name": "Albert Road"
-    },
-    {
-      "slug": "wellington-street",
-      "name": "Wellington Street"
-    },
-    {
-      "slug": "mill-lane",
-      "name": "Mill Lane"
-    },
-    {
-      "slug": "foleshill-highfield-road",
-      "name": "Foleshill Highfield Road"
-    },
-    {
-      "slug": "foleshill-george-street",
-      "name": "Foleshill George Street"
-    },
-    {
-      "slug": "north-street",
-      "name": "North Street"
-    },
-    {
-      "slug": "south-street",
-      "name": "South Street"
-    },
-    {
-      "slug": "west-street",
-      "name": "West Street"
-    },
-    {
-      "slug": "east-street",
-      "name": "East Street"
-    },
-    {
-      "slug": "foleshill-broad-street",
-      "name": "Foleshill Broad Street"
-    },
-    {
-      "slug": "springfield-road",
-      "name": "Springfield Road"
-    },
-    {
-      "slug": "richmond-road",
-      "name": "Richmond Road"
-    },
-    {
-      "slug": "boundary-road",
-      "name": "Boundary Road"
-    },
-    {
-      "slug": "stanley-road",
-      "name": "Stanley Road"
-    },
-    {
-      "slug": "green-lane",
-      "name": "Green Lane"
-    },
-    {
-      "slug": "manor-road",
-      "name": "Manor Road"
-    },
-    {
-      "slug": "park-avenue",
-      "name": "Park Avenue"
-    },
-    {
-      "slug": "york-road",
-      "name": "York Road"
-    },
-    {
-      "slug": "foleshill-school-lane",
-      "name": "Foleshill School Lane"
-    },
-    {
-      "slug": "meadow-way",
-      "name": "Meadow Way"
-    },
-    {
-      "slug": "orchard-close",
-      "name": "Orchard Close"
-    },
-    {
-      "slug": "foleshill-cedar-avenue",
-      "name": "Foleshill Cedar Avenue"
-    },
-    {
-      "slug": "oak-lane",
-      "name": "Oak Lane"
-    },
-    {
-      "slug": "elm-grove",
-      "name": "Elm Grove"
-    },
-    {
-      "slug": "pine-close",
-      "name": "Pine Close"
-    },
-    {
-      "slug": "ash-grove",
-      "name": "Ash Grove"
-    },
-    {
-      "slug": "foleshill-willow-avenue",
-      "name": "Foleshill Willow Avenue"
-    },
-    {
-      "slug": "birch-road",
-      "name": "Birch Road"
-    },
-    {
-      "slug": "maple-drive",
-      "name": "Maple Drive"
-    },
-    {
-      "slug": "hawthorn-close",
-      "name": "Hawthorn Close"
-    },
-    {
-      "slug": "chestnut-avenue",
-      "name": "Chestnut Avenue"
-    },
-    {
-      "slug": "foleshill-coventry-road",
-      "name": "Foleshill Coventry Road"
-    },
-    {
-      "slug": "warwick-road",
-      "name": "Warwick Road"
-    },
-    {
-      "slug": "foleshill-kenilworth-road",
-      "name": "Foleshill Kenilworth Road"
-    },
-    {
-      "slug": "holyhead-road",
-      "name": "Holyhead Road"
-    },
-    {
-      "slug": "foleshill-foleshill-road",
-      "name": "Foleshill Foleshill Road"
-    },
-    {
-      "slug": "stoney-stanton-road",
-      "name": "Stoney Stanton Road"
-    },
-    {
-      "slug": "radford-road",
-      "name": "Radford Road"
-    },
-    {
-      "slug": "coundon-road",
-      "name": "Coundon Road"
-    },
-    {
-      "slug": "foleshill-barkers-butts-lane",
-      "name": "Foleshill Barkers Butts Lane"
-    },
-    {
-      "slug": "binley-road",
-      "name": "Binley Road"
     }
   ]
 }

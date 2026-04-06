@@ -3,224 +3,28 @@
   "areaName": "Bishopton",
   "streets": [
     {
-      "slug": "high-street",
-      "name": "High Street"
+      "slug": "bishopton-high-street",
+      "name": "Bishopton High Street"
     },
     {
       "slug": "bishopton-station-road",
       "name": "Bishopton Station Road"
     },
     {
-      "slug": "church-road",
-      "name": "Church Road"
+      "slug": "bishopton-church-lane",
+      "name": "Bishopton Church Lane"
     },
     {
       "slug": "bishopton-victoria-road",
       "name": "Bishopton Victoria Road"
     },
     {
-      "slug": "london-road",
-      "name": "London Road"
+      "slug": "bishopton-the-avenue",
+      "name": "Bishopton The Avenue"
     },
     {
-      "slug": "bishopton-main-street",
-      "name": "Bishopton Main Street"
-    },
-    {
-      "slug": "park-road",
-      "name": "Park Road"
-    },
-    {
-      "slug": "church-street",
-      "name": "Church Street"
-    },
-    {
-      "slug": "bishopton-queens-road",
-      "name": "Bishopton Queens Road"
-    },
-    {
-      "slug": "new-road",
-      "name": "New Road"
-    },
-    {
-      "slug": "grange-road",
-      "name": "Grange Road"
-    },
-    {
-      "slug": "kings-road",
-      "name": "Kings Road"
-    },
-    {
-      "slug": "windsor-avenue",
-      "name": "Windsor Avenue"
-    },
-    {
-      "slug": "chester-road",
-      "name": "Chester Road"
-    },
-    {
-      "slug": "bishopton-albert-road",
-      "name": "Bishopton Albert Road"
-    },
-    {
-      "slug": "wellington-street",
-      "name": "Wellington Street"
-    },
-    {
-      "slug": "mill-lane",
-      "name": "Mill Lane"
-    },
-    {
-      "slug": "highfield-road",
-      "name": "Highfield Road"
-    },
-    {
-      "slug": "george-street",
-      "name": "George Street"
-    },
-    {
-      "slug": "bishopton-north-street",
-      "name": "Bishopton North Street"
-    },
-    {
-      "slug": "south-street",
-      "name": "South Street"
-    },
-    {
-      "slug": "west-street",
-      "name": "West Street"
-    },
-    {
-      "slug": "bishopton-east-street",
-      "name": "Bishopton East Street"
-    },
-    {
-      "slug": "broad-street",
-      "name": "Broad Street"
-    },
-    {
-      "slug": "springfield-road",
-      "name": "Springfield Road"
-    },
-    {
-      "slug": "richmond-road",
-      "name": "Richmond Road"
-    },
-    {
-      "slug": "boundary-road",
-      "name": "Boundary Road"
-    },
-    {
-      "slug": "stanley-road",
-      "name": "Stanley Road"
-    },
-    {
-      "slug": "green-lane",
-      "name": "Green Lane"
-    },
-    {
-      "slug": "manor-road",
-      "name": "Manor Road"
-    },
-    {
-      "slug": "park-avenue",
-      "name": "Park Avenue"
-    },
-    {
-      "slug": "york-road",
-      "name": "York Road"
-    },
-    {
-      "slug": "bishopton-school-lane",
-      "name": "Bishopton School Lane"
-    },
-    {
-      "slug": "bishopton-meadow-way",
-      "name": "Bishopton Meadow Way"
-    },
-    {
-      "slug": "orchard-close",
-      "name": "Orchard Close"
-    },
-    {
-      "slug": "cedar-avenue",
-      "name": "Cedar Avenue"
-    },
-    {
-      "slug": "oak-lane",
-      "name": "Oak Lane"
-    },
-    {
-      "slug": "elm-grove",
-      "name": "Elm Grove"
-    },
-    {
-      "slug": "pine-close",
-      "name": "Pine Close"
-    },
-    {
-      "slug": "bishopton-ash-grove",
-      "name": "Bishopton Ash Grove"
-    },
-    {
-      "slug": "bishopton-willow-avenue",
-      "name": "Bishopton Willow Avenue"
-    },
-    {
-      "slug": "birch-road",
-      "name": "Birch Road"
-    },
-    {
-      "slug": "maple-drive",
-      "name": "Maple Drive"
-    },
-    {
-      "slug": "hawthorn-close",
-      "name": "Hawthorn Close"
-    },
-    {
-      "slug": "bishopton-chestnut-avenue",
-      "name": "Bishopton Chestnut Avenue"
-    },
-    {
-      "slug": "coventry-road",
-      "name": "Coventry Road"
-    },
-    {
-      "slug": "warwick-road",
-      "name": "Warwick Road"
-    },
-    {
-      "slug": "kenilworth-road",
-      "name": "Kenilworth Road"
-    },
-    {
-      "slug": "holyhead-road",
-      "name": "Holyhead Road"
-    },
-    {
-      "slug": "foleshill-road",
-      "name": "Foleshill Road"
-    },
-    {
-      "slug": "stoney-stanton-road",
-      "name": "Stoney Stanton Road"
-    },
-    {
-      "slug": "radford-road",
-      "name": "Radford Road"
-    },
-    {
-      "slug": "coundon-road",
-      "name": "Coundon Road"
-    },
-    {
-      "slug": "barkers-butts-lane",
-      "name": "Barkers Butts Lane"
-    },
-    {
-      "slug": "bishopton-binley-road",
-      "name": "Bishopton Binley Road"
+      "slug": "bishopton-park-road",
+      "name": "Bishopton Park Road"
     }
   ]
 }

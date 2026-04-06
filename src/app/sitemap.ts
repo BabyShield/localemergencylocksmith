@@ -102,6 +102,18 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.6,
   }))
 
+  // 9. Algorithmic Guides
+  const algorithmicBlogs = getJsonSafe('src/data/articles-generated/algorithmic-blogs.json')
+  const algorithmicPages: MetadataRoute.Sitemap = Object.keys(algorithmicBlogs).map((key) => {
+     const [area, topic] = key.split('/')
+     return {
+        url: `${base}/guides/${area}/${topic}`,
+        lastModified: buildDate,
+        changeFrequency: 'monthly',
+        priority: 0.5,
+     }
+  })
+
   return [
     ...staticPages,
     ...servicePages,
@@ -111,5 +123,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     ...nearMePages,
     ...areaArticlePages,
     ...blogPostPages,
+    ...algorithmicPages,
   ]
 }

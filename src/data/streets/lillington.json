@@ -3,224 +3,456 @@
   "areaName": "Lillington",
   "streets": [
     {
-      "slug": "high-street",
-      "name": "High Street"
+      "slug": "south-1st-street",
+      "name": "South 1st Street"
     },
     {
-      "slug": "station-road",
-      "name": "Station Road"
+      "slug": "west-harnett-street",
+      "name": "West Harnett Street"
     },
     {
-      "slug": "church-road",
-      "name": "Church Road"
+      "slug": "short-street",
+      "name": "Short Street"
     },
     {
-      "slug": "victoria-road",
-      "name": "Victoria Road"
+      "slug": "3rd-street",
+      "name": "3rd Street"
     },
     {
-      "slug": "london-road",
-      "name": "London Road"
+      "slug": "laura-lane",
+      "name": "Laura Lane"
     },
     {
-      "slug": "lillington-main-street",
-      "name": "Lillington Main Street"
+      "slug": "bain-street",
+      "name": "Bain Street"
     },
     {
-      "slug": "lillington-park-road",
-      "name": "Lillington Park Road"
+      "slug": "three-neighbor-lane",
+      "name": "Three Neighbor Lane"
     },
     {
-      "slug": "lillington-church-street",
-      "name": "Lillington Church Street"
+      "slug": "neills-creek-road",
+      "name": "Neills Creek Road"
     },
     {
-      "slug": "lillington-queens-road",
-      "name": "Lillington Queens Road"
+      "slug": "womble-drive",
+      "name": "Womble Drive"
     },
     {
-      "slug": "new-road",
-      "name": "New Road"
+      "slug": "east-james-street",
+      "name": "East James Street"
     },
     {
-      "slug": "grange-road",
-      "name": "Grange Road"
+      "slug": "cedar-grove-school-road",
+      "name": "Cedar Grove School Road"
     },
     {
-      "slug": "kings-road",
-      "name": "Kings Road"
+      "slug": "south-2nd-street",
+      "name": "South 2nd Street"
     },
     {
-      "slug": "windsor-avenue",
-      "name": "Windsor Avenue"
+      "slug": "fair-street",
+      "name": "Fair Street"
     },
     {
-      "slug": "chester-road",
-      "name": "Chester Road"
+      "slug": "south-parrish-street",
+      "name": "South Parrish Street"
     },
     {
-      "slug": "albert-road",
-      "name": "Albert Road"
+      "slug": "old-coats-road",
+      "name": "Old Coats Road"
     },
     {
-      "slug": "wellington-street",
-      "name": "Wellington Street"
+      "slug": "club-road",
+      "name": "Club Road"
     },
     {
-      "slug": "mill-lane",
-      "name": "Mill Lane"
+      "slug": "west-northington-street",
+      "name": "West Northington Street"
     },
     {
-      "slug": "highfield-road",
-      "name": "Highfield Road"
+      "slug": "east-ivey-street",
+      "name": "East Ivey Street"
     },
     {
-      "slug": "george-street",
-      "name": "George Street"
+      "slug": "burwell-drive",
+      "name": "Burwell Drive"
     },
     {
-      "slug": "north-street",
-      "name": "North Street"
+      "slug": "south-10th-street",
+      "name": "South 10th Street"
     },
     {
-      "slug": "south-street",
-      "name": "South Street"
+      "slug": "north-24th-street",
+      "name": "North 24th Street"
     },
     {
-      "slug": "west-street",
-      "name": "West Street"
+      "slug": "lakeside-drive",
+      "name": "Lakeside Drive"
     },
     {
-      "slug": "east-street",
-      "name": "East Street"
+      "slug": "south-11th-street",
+      "name": "South 11th Street"
     },
     {
-      "slug": "broad-street",
-      "name": "Broad Street"
+      "slug": "south-12th-street",
+      "name": "South 12th Street"
     },
     {
-      "slug": "lillington-springfield-road",
-      "name": "Lillington Springfield Road"
+      "slug": "green-street",
+      "name": "Green Street"
     },
     {
-      "slug": "richmond-road",
-      "name": "Richmond Road"
+      "slug": "old-school-lane",
+      "name": "Old School Lane"
     },
     {
-      "slug": "boundary-road",
-      "name": "Boundary Road"
+      "slug": "south-13th-street",
+      "name": "South 13th Street"
     },
     {
-      "slug": "stanley-road",
-      "name": "Stanley Road"
+      "slug": "west-edgar-street",
+      "name": "West Edgar Street"
     },
     {
-      "slug": "green-lane",
-      "name": "Green Lane"
+      "slug": "west-duncan-street",
+      "name": "West Duncan Street"
     },
     {
-      "slug": "manor-road",
-      "name": "Manor Road"
+      "slug": "east-northington-street",
+      "name": "East Northington Street"
     },
     {
-      "slug": "park-avenue",
-      "name": "Park Avenue"
+      "slug": "ross-road",
+      "name": "Ross Road"
     },
     {
-      "slug": "york-road",
-      "name": "York Road"
+      "slug": "south-8th-street",
+      "name": "South 8th Street"
     },
     {
-      "slug": "school-lane",
-      "name": "School Lane"
+      "slug": "south-9th-street",
+      "name": "South 9th Street"
     },
     {
-      "slug": "meadow-way",
-      "name": "Meadow Way"
+      "slug": "4th-street",
+      "name": "4th Street"
     },
     {
-      "slug": "orchard-close",
-      "name": "Orchard Close"
+      "slug": "north-3rd-street",
+      "name": "North 3rd Street"
     },
     {
-      "slug": "cedar-avenue",
-      "name": "Cedar Avenue"
+      "slug": "east-martha-drive",
+      "name": "East Martha Drive"
     },
     {
-      "slug": "oak-lane",
-      "name": "Oak Lane"
+      "slug": "north-main-street",
+      "name": "North Main Street"
     },
     {
-      "slug": "elm-grove",
-      "name": "Elm Grove"
+      "slug": "8th-street",
+      "name": "8th Street"
     },
     {
-      "slug": "lillington-pine-close",
-      "name": "Lillington Pine Close"
+      "slug": "6th-street",
+      "name": "6th Street"
     },
     {
-      "slug": "ash-grove",
-      "name": "Ash Grove"
+      "slug": "north-1st-street",
+      "name": "North 1st Street"
     },
     {
-      "slug": "willow-avenue",
-      "name": "Willow Avenue"
+      "slug": "hillside-drive",
+      "name": "Hillside Drive"
     },
     {
-      "slug": "birch-road",
-      "name": "Birch Road"
+      "slug": "east-duncan-street",
+      "name": "East Duncan Street"
     },
     {
-      "slug": "maple-drive",
-      "name": "Maple Drive"
+      "slug": "parker-lane",
+      "name": "Parker Lane"
     },
     {
-      "slug": "hawthorn-close",
-      "name": "Hawthorn Close"
+      "slug": "carrot-lane",
+      "name": "Carrot Lane"
     },
     {
-      "slug": "chestnut-avenue",
-      "name": "Chestnut Avenue"
+      "slug": "mclean-circle",
+      "name": "McLean Circle"
     },
     {
-      "slug": "coventry-road",
-      "name": "Coventry Road"
+      "slug": "west-ivey-street",
+      "name": "West Ivey Street"
     },
     {
-      "slug": "warwick-road",
-      "name": "Warwick Road"
+      "slug": "parrish-street",
+      "name": "Parrish Street"
     },
     {
-      "slug": "kenilworth-road",
-      "name": "Kenilworth Road"
+      "slug": "west-garden-street",
+      "name": "West Garden Street"
     },
     {
-      "slug": "holyhead-road",
-      "name": "Holyhead Road"
+      "slug": "north-16th-street",
+      "name": "North 16th Street"
     },
     {
-      "slug": "foleshill-road",
-      "name": "Foleshill Road"
+      "slug": "south-river-road",
+      "name": "South River Road"
     },
     {
-      "slug": "stoney-stanton-road",
-      "name": "Stoney Stanton Road"
+      "slug": "west-killiegrey-street",
+      "name": "West Killiegrey Street"
     },
     {
-      "slug": "lillington-radford-road",
-      "name": "Lillington Radford Road"
+      "slug": "edwards-drive",
+      "name": "Edwards Drive"
     },
     {
-      "slug": "coundon-road",
-      "name": "Coundon Road"
+      "slug": "weeping-willow-lane",
+      "name": "Weeping Willow Lane"
     },
     {
-      "slug": "barkers-butts-lane",
-      "name": "Barkers Butts Lane"
+      "slug": "washington-street",
+      "name": "Washington Street"
     },
     {
-      "slug": "binley-road",
-      "name": "Binley Road"
+      "slug": "east-lofton-street",
+      "name": "East Lofton Street"
+    },
+    {
+      "slug": "west-lofton-street",
+      "name": "West Lofton Street"
+    },
+    {
+      "slug": "north-14th-street",
+      "name": "North 14th Street"
+    },
+    {
+      "slug": "14th-street",
+      "name": "14th Street"
+    },
+    {
+      "slug": "west-front-street",
+      "name": "West Front Street"
+    },
+    {
+      "slug": "mckinney-parkway",
+      "name": "McKinney Parkway"
+    },
+    {
+      "slug": "east-harnett-street",
+      "name": "East Harnett Street"
+    },
+    {
+      "slug": "west-james-street",
+      "name": "West James Street"
+    },
+    {
+      "slug": "west-old-road",
+      "name": "West Old Road"
+    },
+    {
+      "slug": "fowler-circle",
+      "name": "Fowler Circle"
+    },
+    {
+      "slug": "east-killiegrey-street",
+      "name": "East Killiegrey Street"
+    },
+    {
+      "slug": "buck-road",
+      "name": "Buck Road"
+    },
+    {
+      "slug": "south-main-street",
+      "name": "South Main Street"
+    },
+    {
+      "slug": "east-front-street",
+      "name": "East Front Street"
+    },
+    {
+      "slug": "south-3rd-street",
+      "name": "South 3rd Street"
+    },
+    {
+      "slug": "bailey-ridge",
+      "name": "Bailey Ridge"
+    },
+    {
+      "slug": "bailey-ridge-lane",
+      "name": "Bailey Ridge Lane"
+    },
+    {
+      "slug": "east-edgar-street",
+      "name": "East Edgar Street"
+    },
+    {
+      "slug": "west-mcneill-street",
+      "name": "West McNeill Street"
+    },
+    {
+      "slug": "old-us-highway-421",
+      "name": "Old US Highway 421"
+    },
+    {
+      "slug": "archer-drive",
+      "name": "Archer Drive"
+    },
+    {
+      "slug": "battery-way",
+      "name": "Battery Way"
+    },
+    {
+      "slug": "botanical-court",
+      "name": "Botanical Court"
+    },
+    {
+      "slug": "folkstone-court",
+      "name": "Folkstone Court"
+    },
+    {
+      "slug": "crane-way",
+      "name": "Crane Way"
+    },
+    {
+      "slug": "vandercroft-way",
+      "name": "Vandercroft Way"
+    },
+    {
+      "slug": "brookfiefd-avenue",
+      "name": "Brookfiefd Avenue"
+    },
+    {
+      "slug": "autumn-fern-drive",
+      "name": "Autumn Fern Drive"
+    },
+    {
+      "slug": "bryson-court",
+      "name": "Bryson Court"
+    },
+    {
+      "slug": "springwood-avenue",
+      "name": "Springwood Avenue"
+    },
+    {
+      "slug": "summerwood-lane",
+      "name": "Summerwood Lane"
+    },
+    {
+      "slug": "timbleweed-avenue",
+      "name": "Timbleweed Avenue"
+    },
+    {
+      "slug": "warner-drive",
+      "name": "Warner Drive"
+    },
+    {
+      "slug": "emiles-crossing-way",
+      "name": "Emiles Crossing Way"
+    },
+    {
+      "slug": "anna-marie-court",
+      "name": "Anna Marie Court"
+    },
+    {
+      "slug": "lynn-bell-court",
+      "name": "Lynn Bell Court"
+    },
+    {
+      "slug": "michelle-court",
+      "name": "Michelle Court"
+    },
+    {
+      "slug": "otelia-court",
+      "name": "Otelia Court"
+    },
+    {
+      "slug": "bunce-court",
+      "name": "Bunce Court"
+    },
+    {
+      "slug": "parkside-drive",
+      "name": "Parkside Drive"
+    },
+    {
+      "slug": "woodwater-circle",
+      "name": "Woodwater Circle"
+    },
+    {
+      "slug": "rollings-waters-court",
+      "name": "Rollings Waters Court"
+    },
+    {
+      "slug": "falls-of-cape-drive",
+      "name": "Falls Of Cape Drive"
+    },
+    {
+      "slug": "east-mcneill-street",
+      "name": "East McNeill Street"
+    },
+    {
+      "slug": "shawtown-road",
+      "name": "Shawtown Road"
+    },
+    {
+      "slug": "dry-brook-circle",
+      "name": "Dry Brook Circle"
+    },
+    {
+      "slug": "avondale-drive",
+      "name": "Avondale Drive"
+    },
+    {
+      "slug": "macy-lane",
+      "name": "Macy Lane"
+    },
+    {
+      "slug": "west-ivy-street",
+      "name": "West Ivy Street"
+    },
+    {
+      "slug": "stonebarrow-drive",
+      "name": "Stonebarrow Drive"
+    },
+    {
+      "slug": "west-martha-drive",
+      "name": "West Martha Drive"
+    },
+    {
+      "slug": "cypress-moss-court",
+      "name": "Cypress Moss Court"
+    },
+    {
+      "slug": "shoreline-drive",
+      "name": "Shoreline Drive"
+    },
+    {
+      "slug": "capeside-court",
+      "name": "Capeside Court"
+    },
+    {
+      "slug": "streamline-court",
+      "name": "Streamline Court"
+    },
+    {
+      "slug": "lake-edge-drivwe",
+      "name": "Lake Edge Drivwe"
+    },
+    {
+      "slug": "grove-circle",
+      "name": "Grove Circle"
+    },
+    {
+      "slug": "hanson-court",
+      "name": "Hanson Court"
+    },
+    {
+      "slug": "summerseat-way",
+      "name": "Summerseat Way"
     }
   ]
 }

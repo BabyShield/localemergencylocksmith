@@ -3,224 +3,28 @@
   "areaName": "Shottery",
   "streets": [
     {
-      "slug": "high-street",
-      "name": "High Street"
+      "slug": "shottery-high-street",
+      "name": "Shottery High Street"
     },
     {
-      "slug": "station-road",
-      "name": "Station Road"
+      "slug": "shottery-station-road",
+      "name": "Shottery Station Road"
     },
     {
-      "slug": "church-road",
-      "name": "Church Road"
+      "slug": "shottery-church-lane",
+      "name": "Shottery Church Lane"
     },
     {
-      "slug": "victoria-road",
-      "name": "Victoria Road"
+      "slug": "shottery-victoria-road",
+      "name": "Shottery Victoria Road"
     },
     {
-      "slug": "london-road",
-      "name": "London Road"
+      "slug": "shottery-the-avenue",
+      "name": "Shottery The Avenue"
     },
     {
-      "slug": "main-street",
-      "name": "Main Street"
-    },
-    {
-      "slug": "park-road",
-      "name": "Park Road"
-    },
-    {
-      "slug": "church-street",
-      "name": "Church Street"
-    },
-    {
-      "slug": "queens-road",
-      "name": "Queens Road"
-    },
-    {
-      "slug": "shottery-new-road",
-      "name": "Shottery New Road"
-    },
-    {
-      "slug": "grange-road",
-      "name": "Grange Road"
-    },
-    {
-      "slug": "shottery-kings-road",
-      "name": "Shottery Kings Road"
-    },
-    {
-      "slug": "windsor-avenue",
-      "name": "Windsor Avenue"
-    },
-    {
-      "slug": "chester-road",
-      "name": "Chester Road"
-    },
-    {
-      "slug": "albert-road",
-      "name": "Albert Road"
-    },
-    {
-      "slug": "wellington-street",
-      "name": "Wellington Street"
-    },
-    {
-      "slug": "mill-lane",
-      "name": "Mill Lane"
-    },
-    {
-      "slug": "highfield-road",
-      "name": "Highfield Road"
-    },
-    {
-      "slug": "shottery-george-street",
-      "name": "Shottery George Street"
-    },
-    {
-      "slug": "north-street",
-      "name": "North Street"
-    },
-    {
-      "slug": "south-street",
-      "name": "South Street"
-    },
-    {
-      "slug": "west-street",
-      "name": "West Street"
-    },
-    {
-      "slug": "east-street",
-      "name": "East Street"
-    },
-    {
-      "slug": "broad-street",
-      "name": "Broad Street"
-    },
-    {
-      "slug": "springfield-road",
-      "name": "Springfield Road"
-    },
-    {
-      "slug": "richmond-road",
-      "name": "Richmond Road"
-    },
-    {
-      "slug": "boundary-road",
-      "name": "Boundary Road"
-    },
-    {
-      "slug": "stanley-road",
-      "name": "Stanley Road"
-    },
-    {
-      "slug": "green-lane",
-      "name": "Green Lane"
-    },
-    {
-      "slug": "manor-road",
-      "name": "Manor Road"
-    },
-    {
-      "slug": "shottery-park-avenue",
-      "name": "Shottery Park Avenue"
-    },
-    {
-      "slug": "york-road",
-      "name": "York Road"
-    },
-    {
-      "slug": "shottery-school-lane",
-      "name": "Shottery School Lane"
-    },
-    {
-      "slug": "meadow-way",
-      "name": "Meadow Way"
-    },
-    {
-      "slug": "shottery-orchard-close",
-      "name": "Shottery Orchard Close"
-    },
-    {
-      "slug": "cedar-avenue",
-      "name": "Cedar Avenue"
-    },
-    {
-      "slug": "oak-lane",
-      "name": "Oak Lane"
-    },
-    {
-      "slug": "elm-grove",
-      "name": "Elm Grove"
-    },
-    {
-      "slug": "pine-close",
-      "name": "Pine Close"
-    },
-    {
-      "slug": "shottery-ash-grove",
-      "name": "Shottery Ash Grove"
-    },
-    {
-      "slug": "willow-avenue",
-      "name": "Willow Avenue"
-    },
-    {
-      "slug": "shottery-birch-road",
-      "name": "Shottery Birch Road"
-    },
-    {
-      "slug": "maple-drive",
-      "name": "Maple Drive"
-    },
-    {
-      "slug": "shottery-hawthorn-close",
-      "name": "Shottery Hawthorn Close"
-    },
-    {
-      "slug": "chestnut-avenue",
-      "name": "Chestnut Avenue"
-    },
-    {
-      "slug": "coventry-road",
-      "name": "Coventry Road"
-    },
-    {
-      "slug": "warwick-road",
-      "name": "Warwick Road"
-    },
-    {
-      "slug": "kenilworth-road",
-      "name": "Kenilworth Road"
-    },
-    {
-      "slug": "holyhead-road",
-      "name": "Holyhead Road"
-    },
-    {
-      "slug": "shottery-foleshill-road",
-      "name": "Shottery Foleshill Road"
-    },
-    {
-      "slug": "stoney-stanton-road",
-      "name": "Stoney Stanton Road"
-    },
-    {
-      "slug": "radford-road",
-      "name": "Radford Road"
-    },
-    {
-      "slug": "coundon-road",
-      "name": "Coundon Road"
-    },
-    {
-      "slug": "barkers-butts-lane",
-      "name": "Barkers Butts Lane"
-    },
-    {
-      "slug": "binley-road",
-      "name": "Binley Road"
+      "slug": "shottery-park-road",
+      "name": "Shottery Park Road"
     }
   ]
 }

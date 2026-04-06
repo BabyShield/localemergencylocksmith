@@ -3,224 +3,360 @@
   "areaName": "Stoke",
   "streets": [
     {
+      "slug": "chemin-talbot",
+      "name": "Chemin Talbot"
+    },
+    {
+      "slug": "2e-rang",
+      "name": "2e Rang"
+    },
+    {
+      "slug": "3e-rang-ouest",
+      "name": "3e Rang Ouest"
+    },
+    {
+      "slug": "route-216",
+      "name": "Route 216"
+    },
+    {
+      "slug": "chemin-graham",
+      "name": "Chemin Graham"
+    },
+    {
+      "slug": "3e-rang-est",
+      "name": "3e Rang Est"
+    },
+    {
+      "slug": "rue-gobeil",
+      "name": "Rue Gobeil"
+    },
+    {
+      "slug": "rue-baldini",
+      "name": "Rue Baldini"
+    },
+    {
+      "slug": "rue-de-la-pommeraie",
+      "name": "Rue de la Pommeraie"
+    },
+    {
+      "slug": "rue-viger",
+      "name": "Rue Viger"
+    },
+    {
+      "slug": "rue-de-l-observatoire",
+      "name": "Rue de l'Observatoire"
+    },
+    {
+      "slug": "rue-de-la-cachette",
+      "name": "Rue de la Cachette"
+    },
+    {
+      "slug": "rue-du-mont-dufresne",
+      "name": "Rue du Mont-Dufresne"
+    },
+    {
+      "slug": "rue-phaneuf",
+      "name": "Rue Phaneuf"
+    },
+    {
+      "slug": "rue-des-m-sanges",
+      "name": "Rue des Mésanges"
+    },
+    {
+      "slug": "rue-des-fauvettes",
+      "name": "Rue des Fauvettes"
+    },
+    {
+      "slug": "rue-des-pinsons",
+      "name": "Rue des Pinsons"
+    },
+    {
+      "slug": "5e-rang-est",
+      "name": "5e Rang Est"
+    },
+    {
+      "slug": "chemin-coutu",
+      "name": "Chemin Coutu"
+    },
+    {
+      "slug": "chemin-deblois",
+      "name": "Chemin Deblois"
+    },
+    {
+      "slug": "chemin-desaulniers",
+      "name": "Chemin Desaulniers"
+    },
+    {
+      "slug": "chemin-baillargeon",
+      "name": "Chemin Baillargeon"
+    },
+    {
+      "slug": "chemin-du-lac",
+      "name": "Chemin du Lac"
+    },
+    {
+      "slug": "7e-rang-est",
+      "name": "7e Rang Est"
+    },
+    {
+      "slug": "7e-rang-ouest",
+      "name": "7e Rang Ouest"
+    },
+    {
+      "slug": "6e-rang-ouest",
+      "name": "6e Rang Ouest"
+    },
+    {
+      "slug": "rue-berjac",
+      "name": "Rue Berjac"
+    },
+    {
+      "slug": "chemin-carrier",
+      "name": "Chemin Carrier"
+    },
+    {
+      "slug": "chemin-dion",
+      "name": "Chemin Dion"
+    },
+    {
+      "slug": "chemin-du-4e-rang",
+      "name": "Chemin du 4e Rang"
+    },
+    {
+      "slug": "c-te-de-l-glise",
+      "name": "Côte de l'Église"
+    },
+    {
+      "slug": "chemin-jett",
+      "name": "Chemin Jetté"
+    },
+    {
+      "slug": "rue-leboeuf",
+      "name": "Rue LeBoeuf"
+    },
+    {
+      "slug": "8e-rang-ouest",
+      "name": "8e Rang Ouest"
+    },
+    {
+      "slug": "chemin-perreault",
+      "name": "Chemin Perreault"
+    },
+    {
+      "slug": "rue-des-c-dres",
+      "name": "Rue des Cèdres"
+    },
+    {
+      "slug": "route-de-stoke",
+      "name": "Route de Stoke"
+    },
+    {
+      "slug": "chemin-saint-laurent",
+      "name": "Chemin Saint-Laurent"
+    },
+    {
+      "slug": "9e-rang-est",
+      "name": "9e Rang Est"
+    },
+    {
+      "slug": "rue-guertin",
+      "name": "Rue Guertin"
+    },
+    {
+      "slug": "chemin-lapointe",
+      "name": "Chemin Lapointe"
+    },
+    {
+      "slug": "chemin-de-la-domtar",
+      "name": "Chemin de la Domtar"
+    },
+    {
+      "slug": "rue-normand",
+      "name": "Rue Normand"
+    },
+    {
+      "slug": "chemin-lieutenant",
+      "name": "Chemin Lieutenant"
+    },
+    {
+      "slug": "9e-rang-ouest",
+      "name": "9e Rang Ouest"
+    },
+    {
+      "slug": "chemin-rosario",
+      "name": "Chemin Rosario"
+    },
+    {
+      "slug": "chemin-poulin",
+      "name": "Chemin Poulin"
+    },
+    {
+      "slug": "vicarage-close",
+      "name": "Vicarage Close"
+    },
+    {
+      "slug": "dickensian-close",
+      "name": "Dickensian Close"
+    },
+    {
+      "slug": "vicarage-lane",
+      "name": "Vicarage Lane"
+    },
+    {
+      "slug": "grain-road",
+      "name": "Grain Road"
+    },
+    {
+      "slug": "shepherds-way",
+      "name": "Shepherds Way"
+    },
+    {
+      "slug": "anchorage-close",
+      "name": "Anchorage Close"
+    },
+    {
+      "slug": "heron-way",
+      "name": "Heron Way"
+    },
+    {
       "slug": "high-street",
       "name": "High Street"
     },
     {
-      "slug": "station-road",
-      "name": "Station Road"
+      "slug": "denison-mews",
+      "name": "Denison Mews"
     },
     {
-      "slug": "church-road",
-      "name": "Church Road"
+      "slug": "marshland-view",
+      "name": "Marshland View"
     },
     {
-      "slug": "victoria-road",
-      "name": "Victoria Road"
+      "slug": "button-drive",
+      "name": "Button Drive"
     },
     {
-      "slug": "stoke-london-road",
-      "name": "Stoke London Road"
+      "slug": "mallard-way",
+      "name": "Mallard Way"
     },
     {
-      "slug": "main-street",
-      "name": "Main Street"
+      "slug": "chemin-dub",
+      "name": "Chemin Dubé"
     },
     {
-      "slug": "park-road",
-      "name": "Park Road"
+      "slug": "rue-des-chanterelles",
+      "name": "Rue des Chanterelles"
     },
     {
-      "slug": "stoke-church-street",
-      "name": "Stoke Church Street"
+      "slug": "rue-des-pins",
+      "name": "Rue des Pins"
     },
     {
-      "slug": "queens-road",
-      "name": "Queens Road"
+      "slug": "little-oakham-court",
+      "name": "Little Oakham Court"
     },
     {
-      "slug": "new-road",
-      "name": "New Road"
+      "slug": "allhallows-road",
+      "name": "Allhallows Road"
     },
     {
-      "slug": "grange-road",
-      "name": "Grange Road"
+      "slug": "stoke-road",
+      "name": "Stoke Road"
     },
     {
-      "slug": "kings-road",
-      "name": "Kings Road"
+      "slug": "the-street",
+      "name": "The Street"
     },
     {
-      "slug": "windsor-avenue",
-      "name": "Windsor Avenue"
+      "slug": "malmaynes-hall-road",
+      "name": "Malmaynes Hall Road"
     },
     {
-      "slug": "chester-road",
-      "name": "Chester Road"
+      "slug": "burrows-lane",
+      "name": "Burrows Lane"
     },
     {
-      "slug": "albert-road",
-      "name": "Albert Road"
+      "slug": "bellwood-court",
+      "name": "Bellwood Court"
     },
     {
-      "slug": "wellington-street",
-      "name": "Wellington Street"
+      "slug": "12e-avenue-nord",
+      "name": "12e Avenue Nord"
     },
     {
-      "slug": "mill-lane",
-      "name": "Mill Lane"
+      "slug": "sandra-court",
+      "name": "Sandra Court"
     },
     {
-      "slug": "highfield-road",
-      "name": "Highfield Road"
+      "slug": "herbert-court",
+      "name": "Herbert Court"
     },
     {
-      "slug": "george-street",
-      "name": "George Street"
+      "slug": "chemin-daigle",
+      "name": "Chemin Daigle"
     },
     {
-      "slug": "stoke-north-street",
-      "name": "Stoke North Street"
+      "slug": "rue-de-la-baronne",
+      "name": "Rue De La Baronne"
     },
     {
-      "slug": "south-street",
-      "name": "South Street"
+      "slug": "chemin-du-sanctuaire",
+      "name": "Chemin du Sanctuaire"
     },
     {
-      "slug": "west-street",
-      "name": "West Street"
+      "slug": "rue-champ-tre",
+      "name": "Rue Champêtre"
     },
     {
-      "slug": "stoke-east-street",
-      "name": "Stoke East Street"
+      "slug": "rue-du-havre",
+      "name": "Rue du Havre"
     },
     {
-      "slug": "broad-street",
-      "name": "Broad Street"
+      "slug": "rue-principale",
+      "name": "Rue Principale"
     },
     {
-      "slug": "stoke-springfield-road",
-      "name": "Stoke Springfield Road"
+      "slug": "rue-h-l-ne",
+      "name": "Rue Hélène"
     },
     {
-      "slug": "richmond-road",
-      "name": "Richmond Road"
+      "slug": "chemin-gosselin",
+      "name": "Chemin Gosselin"
     },
     {
-      "slug": "boundary-road",
-      "name": "Boundary Road"
+      "slug": "chemin-des-erables",
+      "name": "Chemin des Erables"
     },
     {
-      "slug": "stanley-road",
-      "name": "Stanley Road"
+      "slug": "chemin-pinard",
+      "name": "Chemin Pinard"
     },
     {
-      "slug": "stoke-green-lane",
-      "name": "Stoke Green Lane"
+      "slug": "chemin-du-2e-rang",
+      "name": "Chemin du 2e Rang"
     },
     {
-      "slug": "manor-road",
-      "name": "Manor Road"
+      "slug": "chemin-de-la-rivi-re",
+      "name": "Chemin de la Rivière"
     },
     {
-      "slug": "stoke-park-avenue",
-      "name": "Stoke Park Avenue"
+      "slug": "rue-du-terroir",
+      "name": "Rue du Terroir"
     },
     {
-      "slug": "york-road",
-      "name": "York Road"
+      "slug": "rue-jacob-c-t",
+      "name": "Rue Jacob-Côté"
     },
     {
-      "slug": "school-lane",
-      "name": "School Lane"
+      "slug": "rue-mireille",
+      "name": "Rue Mireille"
     },
     {
-      "slug": "meadow-way",
-      "name": "Meadow Way"
+      "slug": "rue-m-rilda",
+      "name": "Rue Émérilda"
     },
     {
-      "slug": "orchard-close",
-      "name": "Orchard Close"
-    },
-    {
-      "slug": "cedar-avenue",
-      "name": "Cedar Avenue"
-    },
-    {
-      "slug": "oak-lane",
-      "name": "Oak Lane"
-    },
-    {
-      "slug": "elm-grove",
-      "name": "Elm Grove"
-    },
-    {
-      "slug": "stoke-pine-close",
-      "name": "Stoke Pine Close"
-    },
-    {
-      "slug": "ash-grove",
-      "name": "Ash Grove"
-    },
-    {
-      "slug": "stoke-willow-avenue",
-      "name": "Stoke Willow Avenue"
-    },
-    {
-      "slug": "birch-road",
-      "name": "Birch Road"
-    },
-    {
-      "slug": "stoke-maple-drive",
-      "name": "Stoke Maple Drive"
-    },
-    {
-      "slug": "hawthorn-close",
-      "name": "Hawthorn Close"
-    },
-    {
-      "slug": "chestnut-avenue",
-      "name": "Chestnut Avenue"
-    },
-    {
-      "slug": "coventry-road",
-      "name": "Coventry Road"
-    },
-    {
-      "slug": "stoke-warwick-road",
-      "name": "Stoke Warwick Road"
-    },
-    {
-      "slug": "kenilworth-road",
-      "name": "Kenilworth Road"
-    },
-    {
-      "slug": "holyhead-road",
-      "name": "Holyhead Road"
-    },
-    {
-      "slug": "foleshill-road",
-      "name": "Foleshill Road"
-    },
-    {
-      "slug": "stoney-stanton-road",
-      "name": "Stoney Stanton Road"
-    },
-    {
-      "slug": "stoke-radford-road",
-      "name": "Stoke Radford Road"
-    },
-    {
-      "slug": "coundon-road",
-      "name": "Coundon Road"
-    },
-    {
-      "slug": "barkers-butts-lane",
-      "name": "Barkers Butts Lane"
-    },
-    {
-      "slug": "binley-road",
-      "name": "Binley Road"
+      "slug": "rang-4e-ouest",
+      "name": "Rang 4e Ouest"
     }
   ]
 }

@@ -3,224 +3,148 @@
   "areaName": "Finham",
   "streets": [
     {
-      "slug": "high-street",
-      "name": "High Street"
-    },
-    {
-      "slug": "station-road",
-      "name": "Station Road"
-    },
-    {
-      "slug": "finham-church-road",
-      "name": "Finham Church Road"
-    },
-    {
-      "slug": "victoria-road",
-      "name": "Victoria Road"
-    },
-    {
-      "slug": "london-road",
-      "name": "London Road"
-    },
-    {
-      "slug": "main-street",
-      "name": "Main Street"
-    },
-    {
-      "slug": "park-road",
-      "name": "Park Road"
-    },
-    {
-      "slug": "church-street",
-      "name": "Church Street"
-    },
-    {
-      "slug": "queens-road",
-      "name": "Queens Road"
-    },
-    {
-      "slug": "new-road",
-      "name": "New Road"
-    },
-    {
-      "slug": "grange-road",
-      "name": "Grange Road"
-    },
-    {
-      "slug": "finham-kings-road",
-      "name": "Finham Kings Road"
-    },
-    {
-      "slug": "windsor-avenue",
-      "name": "Windsor Avenue"
-    },
-    {
-      "slug": "chester-road",
-      "name": "Chester Road"
-    },
-    {
-      "slug": "albert-road",
-      "name": "Albert Road"
-    },
-    {
-      "slug": "wellington-street",
-      "name": "Wellington Street"
-    },
-    {
-      "slug": "finham-mill-lane",
-      "name": "Finham Mill Lane"
-    },
-    {
-      "slug": "highfield-road",
-      "name": "Highfield Road"
-    },
-    {
-      "slug": "finham-george-street",
-      "name": "Finham George Street"
-    },
-    {
-      "slug": "finham-north-street",
-      "name": "Finham North Street"
-    },
-    {
-      "slug": "finham-south-street",
-      "name": "Finham South Street"
-    },
-    {
-      "slug": "west-street",
-      "name": "West Street"
-    },
-    {
-      "slug": "east-street",
-      "name": "East Street"
-    },
-    {
-      "slug": "finham-broad-street",
-      "name": "Finham Broad Street"
-    },
-    {
-      "slug": "finham-springfield-road",
-      "name": "Finham Springfield Road"
-    },
-    {
-      "slug": "richmond-road",
-      "name": "Richmond Road"
-    },
-    {
-      "slug": "boundary-road",
-      "name": "Boundary Road"
-    },
-    {
-      "slug": "stanley-road",
-      "name": "Stanley Road"
-    },
-    {
       "slug": "green-lane",
       "name": "Green Lane"
     },
     {
-      "slug": "manor-road",
-      "name": "Manor Road"
+      "slug": "gretna-road",
+      "name": "Gretna Road"
     },
     {
-      "slug": "park-avenue",
-      "name": "Park Avenue"
+      "slug": "cotswold-drive",
+      "name": "Cotswold Drive"
     },
     {
-      "slug": "york-road",
-      "name": "York Road"
+      "slug": "oxley-drive",
+      "name": "Oxley Drive"
     },
     {
-      "slug": "school-lane",
-      "name": "School Lane"
+      "slug": "leigh-avenue",
+      "name": "Leigh Avenue"
     },
     {
-      "slug": "meadow-way",
-      "name": "Meadow Way"
+      "slug": "howes-lane",
+      "name": "Howes Lane"
     },
     {
-      "slug": "orchard-close",
-      "name": "Orchard Close"
+      "slug": "bathway-road",
+      "name": "Bathway Road"
     },
     {
-      "slug": "finham-cedar-avenue",
-      "name": "Finham Cedar Avenue"
+      "slug": "anchorway-road",
+      "name": "Anchorway Road"
     },
     {
-      "slug": "oak-lane",
-      "name": "Oak Lane"
+      "slug": "droylsdon-park-road",
+      "name": "Droylsdon Park Road"
     },
     {
-      "slug": "elm-grove",
-      "name": "Elm Grove"
+      "slug": "finham-green-road",
+      "name": "Finham Green Road"
     },
     {
-      "slug": "pine-close",
-      "name": "Pine Close"
+      "slug": "crossway-road",
+      "name": "Crossway Road"
     },
     {
-      "slug": "ash-grove",
-      "name": "Ash Grove"
+      "slug": "st-martins-road",
+      "name": "St Martins Road"
     },
     {
-      "slug": "willow-avenue",
-      "name": "Willow Avenue"
+      "slug": "handcross-grove",
+      "name": "Handcross Grove"
     },
     {
-      "slug": "birch-road",
-      "name": "Birch Road"
+      "slug": "ilfracombe-grove",
+      "name": "Ilfracombe Grove"
     },
     {
-      "slug": "maple-drive",
-      "name": "Maple Drive"
+      "slug": "jedburgh-grove",
+      "name": "Jedburgh Grove"
     },
     {
-      "slug": "finham-hawthorn-close",
-      "name": "Finham Hawthorn Close"
+      "slug": "kingscote-grove",
+      "name": "Kingscote Grove"
     },
     {
-      "slug": "chestnut-avenue",
-      "name": "Chestnut Avenue"
+      "slug": "roman-way",
+      "name": "Roman Way"
     },
     {
-      "slug": "coventry-road",
-      "name": "Coventry Road"
+      "slug": "jacklin-drive",
+      "name": "Jacklin Drive"
     },
     {
-      "slug": "warwick-road",
-      "name": "Warwick Road"
+      "slug": "rees-drive",
+      "name": "Rees Drive"
     },
     {
-      "slug": "kenilworth-road",
-      "name": "Kenilworth Road"
+      "slug": "vardon-drive",
+      "name": "Vardon Drive"
     },
     {
-      "slug": "holyhead-road",
-      "name": "Holyhead Road"
+      "slug": "the-graylands",
+      "name": "The Graylands"
     },
     {
-      "slug": "foleshill-road",
-      "name": "Foleshill Road"
+      "slug": "wychwood-avenue",
+      "name": "Wychwood Avenue"
     },
     {
-      "slug": "stoney-stanton-road",
-      "name": "Stoney Stanton Road"
+      "slug": "alfriston-road",
+      "name": "Alfriston Road"
     },
     {
-      "slug": "radford-road",
-      "name": "Radford Road"
+      "slug": "canford-close",
+      "name": "Canford Close"
     },
     {
-      "slug": "finham-coundon-road",
-      "name": "Finham Coundon Road"
+      "slug": "winsham-walk",
+      "name": "Winsham Walk"
     },
     {
-      "slug": "barkers-butts-lane",
-      "name": "Barkers Butts Lane"
+      "slug": "fletcher-walk",
+      "name": "Fletcher Walk"
     },
     {
-      "slug": "finham-binley-road",
-      "name": "Finham Binley Road"
+      "slug": "afriston-road",
+      "name": "Afriston Road"
+    },
+    {
+      "slug": "hadleigh-road",
+      "name": "Hadleigh Road"
+    },
+    {
+      "slug": "mill-hill",
+      "name": "Mill Hill"
+    },
+    {
+      "slug": "joanna-drive",
+      "name": "Joanna Drive"
+    },
+    {
+      "slug": "grange-avenue",
+      "name": "Grange Avenue"
+    },
+    {
+      "slug": "stonehaven-drive",
+      "name": "Stonehaven Drive"
+    },
+    {
+      "slug": "finham-grove",
+      "name": "Finham Grove"
+    },
+    {
+      "slug": "st-martin-s-road",
+      "name": "St Martin's Road"
+    },
+    {
+      "slug": "fosseway-road",
+      "name": "Fosseway Road"
+    },
+    {
+      "slug": "erithway-road",
+      "name": "Erithway Road"
     }
   ]
 }

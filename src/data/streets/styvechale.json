@@ -3,224 +3,28 @@
   "areaName": "Styvechale",
   "streets": [
     {
-      "slug": "high-street",
-      "name": "High Street"
+      "slug": "styvechale-high-street",
+      "name": "Styvechale High Street"
     },
     {
-      "slug": "station-road",
-      "name": "Station Road"
+      "slug": "styvechale-station-road",
+      "name": "Styvechale Station Road"
     },
     {
-      "slug": "styvechale-church-road",
-      "name": "Styvechale Church Road"
+      "slug": "styvechale-church-lane",
+      "name": "Styvechale Church Lane"
     },
     {
-      "slug": "victoria-road",
-      "name": "Victoria Road"
+      "slug": "styvechale-victoria-road",
+      "name": "Styvechale Victoria Road"
     },
     {
-      "slug": "london-road",
-      "name": "London Road"
+      "slug": "styvechale-the-avenue",
+      "name": "Styvechale The Avenue"
     },
     {
-      "slug": "main-street",
-      "name": "Main Street"
-    },
-    {
-      "slug": "park-road",
-      "name": "Park Road"
-    },
-    {
-      "slug": "church-street",
-      "name": "Church Street"
-    },
-    {
-      "slug": "queens-road",
-      "name": "Queens Road"
-    },
-    {
-      "slug": "styvechale-new-road",
-      "name": "Styvechale New Road"
-    },
-    {
-      "slug": "grange-road",
-      "name": "Grange Road"
-    },
-    {
-      "slug": "kings-road",
-      "name": "Kings Road"
-    },
-    {
-      "slug": "styvechale-windsor-avenue",
-      "name": "Styvechale Windsor Avenue"
-    },
-    {
-      "slug": "chester-road",
-      "name": "Chester Road"
-    },
-    {
-      "slug": "styvechale-albert-road",
-      "name": "Styvechale Albert Road"
-    },
-    {
-      "slug": "styvechale-wellington-street",
-      "name": "Styvechale Wellington Street"
-    },
-    {
-      "slug": "mill-lane",
-      "name": "Mill Lane"
-    },
-    {
-      "slug": "highfield-road",
-      "name": "Highfield Road"
-    },
-    {
-      "slug": "george-street",
-      "name": "George Street"
-    },
-    {
-      "slug": "north-street",
-      "name": "North Street"
-    },
-    {
-      "slug": "south-street",
-      "name": "South Street"
-    },
-    {
-      "slug": "west-street",
-      "name": "West Street"
-    },
-    {
-      "slug": "east-street",
-      "name": "East Street"
-    },
-    {
-      "slug": "broad-street",
-      "name": "Broad Street"
-    },
-    {
-      "slug": "springfield-road",
-      "name": "Springfield Road"
-    },
-    {
-      "slug": "richmond-road",
-      "name": "Richmond Road"
-    },
-    {
-      "slug": "boundary-road",
-      "name": "Boundary Road"
-    },
-    {
-      "slug": "styvechale-stanley-road",
-      "name": "Styvechale Stanley Road"
-    },
-    {
-      "slug": "green-lane",
-      "name": "Green Lane"
-    },
-    {
-      "slug": "styvechale-manor-road",
-      "name": "Styvechale Manor Road"
-    },
-    {
-      "slug": "park-avenue",
-      "name": "Park Avenue"
-    },
-    {
-      "slug": "styvechale-york-road",
-      "name": "Styvechale York Road"
-    },
-    {
-      "slug": "styvechale-school-lane",
-      "name": "Styvechale School Lane"
-    },
-    {
-      "slug": "styvechale-meadow-way",
-      "name": "Styvechale Meadow Way"
-    },
-    {
-      "slug": "orchard-close",
-      "name": "Orchard Close"
-    },
-    {
-      "slug": "cedar-avenue",
-      "name": "Cedar Avenue"
-    },
-    {
-      "slug": "oak-lane",
-      "name": "Oak Lane"
-    },
-    {
-      "slug": "elm-grove",
-      "name": "Elm Grove"
-    },
-    {
-      "slug": "pine-close",
-      "name": "Pine Close"
-    },
-    {
-      "slug": "ash-grove",
-      "name": "Ash Grove"
-    },
-    {
-      "slug": "styvechale-willow-avenue",
-      "name": "Styvechale Willow Avenue"
-    },
-    {
-      "slug": "birch-road",
-      "name": "Birch Road"
-    },
-    {
-      "slug": "styvechale-maple-drive",
-      "name": "Styvechale Maple Drive"
-    },
-    {
-      "slug": "hawthorn-close",
-      "name": "Hawthorn Close"
-    },
-    {
-      "slug": "chestnut-avenue",
-      "name": "Chestnut Avenue"
-    },
-    {
-      "slug": "coventry-road",
-      "name": "Coventry Road"
-    },
-    {
-      "slug": "warwick-road",
-      "name": "Warwick Road"
-    },
-    {
-      "slug": "kenilworth-road",
-      "name": "Kenilworth Road"
-    },
-    {
-      "slug": "holyhead-road",
-      "name": "Holyhead Road"
-    },
-    {
-      "slug": "foleshill-road",
-      "name": "Foleshill Road"
-    },
-    {
-      "slug": "styvechale-stoney-stanton-road",
-      "name": "Styvechale Stoney Stanton Road"
-    },
-    {
-      "slug": "radford-road",
-      "name": "Radford Road"
-    },
-    {
-      "slug": "coundon-road",
-      "name": "Coundon Road"
-    },
-    {
-      "slug": "barkers-butts-lane",
-      "name": "Barkers Butts Lane"
-    },
-    {
-      "slug": "binley-road",
-      "name": "Binley Road"
+      "slug": "styvechale-park-road",
+      "name": "Styvechale Park Road"
     }
   ]
 }

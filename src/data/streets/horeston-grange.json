@@ -3,224 +3,28 @@
   "areaName": "Horeston Grange",
   "streets": [
     {
-      "slug": "high-street",
-      "name": "High Street"
+      "slug": "horeston-grange-high-street",
+      "name": "Horeston Grange High Street"
     },
     {
       "slug": "horeston-grange-station-road",
       "name": "Horeston Grange Station Road"
     },
     {
-      "slug": "church-road",
-      "name": "Church Road"
+      "slug": "horeston-grange-church-lane",
+      "name": "Horeston Grange Church Lane"
     },
     {
-      "slug": "victoria-road",
-      "name": "Victoria Road"
+      "slug": "horeston-grange-victoria-road",
+      "name": "Horeston Grange Victoria Road"
     },
     {
-      "slug": "london-road",
-      "name": "London Road"
+      "slug": "horeston-grange-the-avenue",
+      "name": "Horeston Grange The Avenue"
     },
     {
-      "slug": "main-street",
-      "name": "Main Street"
-    },
-    {
-      "slug": "park-road",
-      "name": "Park Road"
-    },
-    {
-      "slug": "church-street",
-      "name": "Church Street"
-    },
-    {
-      "slug": "queens-road",
-      "name": "Queens Road"
-    },
-    {
-      "slug": "new-road",
-      "name": "New Road"
-    },
-    {
-      "slug": "grange-road",
-      "name": "Grange Road"
-    },
-    {
-      "slug": "horeston-grange-kings-road",
-      "name": "Horeston Grange Kings Road"
-    },
-    {
-      "slug": "windsor-avenue",
-      "name": "Windsor Avenue"
-    },
-    {
-      "slug": "horeston-grange-chester-road",
-      "name": "Horeston Grange Chester Road"
-    },
-    {
-      "slug": "albert-road",
-      "name": "Albert Road"
-    },
-    {
-      "slug": "wellington-street",
-      "name": "Wellington Street"
-    },
-    {
-      "slug": "mill-lane",
-      "name": "Mill Lane"
-    },
-    {
-      "slug": "highfield-road",
-      "name": "Highfield Road"
-    },
-    {
-      "slug": "horeston-grange-george-street",
-      "name": "Horeston Grange George Street"
-    },
-    {
-      "slug": "north-street",
-      "name": "North Street"
-    },
-    {
-      "slug": "south-street",
-      "name": "South Street"
-    },
-    {
-      "slug": "west-street",
-      "name": "West Street"
-    },
-    {
-      "slug": "horeston-grange-east-street",
-      "name": "Horeston Grange East Street"
-    },
-    {
-      "slug": "horeston-grange-broad-street",
-      "name": "Horeston Grange Broad Street"
-    },
-    {
-      "slug": "springfield-road",
-      "name": "Springfield Road"
-    },
-    {
-      "slug": "richmond-road",
-      "name": "Richmond Road"
-    },
-    {
-      "slug": "boundary-road",
-      "name": "Boundary Road"
-    },
-    {
-      "slug": "stanley-road",
-      "name": "Stanley Road"
-    },
-    {
-      "slug": "green-lane",
-      "name": "Green Lane"
-    },
-    {
-      "slug": "manor-road",
-      "name": "Manor Road"
-    },
-    {
-      "slug": "park-avenue",
-      "name": "Park Avenue"
-    },
-    {
-      "slug": "york-road",
-      "name": "York Road"
-    },
-    {
-      "slug": "school-lane",
-      "name": "School Lane"
-    },
-    {
-      "slug": "meadow-way",
-      "name": "Meadow Way"
-    },
-    {
-      "slug": "orchard-close",
-      "name": "Orchard Close"
-    },
-    {
-      "slug": "horeston-grange-cedar-avenue",
-      "name": "Horeston Grange Cedar Avenue"
-    },
-    {
-      "slug": "oak-lane",
-      "name": "Oak Lane"
-    },
-    {
-      "slug": "horeston-grange-elm-grove",
-      "name": "Horeston Grange Elm Grove"
-    },
-    {
-      "slug": "pine-close",
-      "name": "Pine Close"
-    },
-    {
-      "slug": "ash-grove",
-      "name": "Ash Grove"
-    },
-    {
-      "slug": "willow-avenue",
-      "name": "Willow Avenue"
-    },
-    {
-      "slug": "birch-road",
-      "name": "Birch Road"
-    },
-    {
-      "slug": "maple-drive",
-      "name": "Maple Drive"
-    },
-    {
-      "slug": "horeston-grange-hawthorn-close",
-      "name": "Horeston Grange Hawthorn Close"
-    },
-    {
-      "slug": "chestnut-avenue",
-      "name": "Chestnut Avenue"
-    },
-    {
-      "slug": "horeston-grange-coventry-road",
-      "name": "Horeston Grange Coventry Road"
-    },
-    {
-      "slug": "warwick-road",
-      "name": "Warwick Road"
-    },
-    {
-      "slug": "kenilworth-road",
-      "name": "Kenilworth Road"
-    },
-    {
-      "slug": "holyhead-road",
-      "name": "Holyhead Road"
-    },
-    {
-      "slug": "foleshill-road",
-      "name": "Foleshill Road"
-    },
-    {
-      "slug": "stoney-stanton-road",
-      "name": "Stoney Stanton Road"
-    },
-    {
-      "slug": "radford-road",
-      "name": "Radford Road"
-    },
-    {
-      "slug": "coundon-road",
-      "name": "Coundon Road"
-    },
-    {
-      "slug": "barkers-butts-lane",
-      "name": "Barkers Butts Lane"
-    },
-    {
-      "slug": "binley-road",
-      "name": "Binley Road"
+      "slug": "horeston-grange-park-road",
+      "name": "Horeston Grange Park Road"
     }
   ]
 }

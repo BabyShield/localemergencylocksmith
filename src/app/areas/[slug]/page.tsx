@@ -350,6 +350,43 @@ export default async function AreaPage({ params }: Props) {
         </section>
       )}
 
+      {/* Programmatic Streets Linking */}
+      <section className="py-10 px-4 bg-[#F7F7F5]">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-xl font-black text-gray-900 mb-4">
+            Streets I Cover in {area.name}
+          </h2>
+          <p className="text-gray-700 mb-6 text-sm">
+            I provide fast emergency response to all residential and commercial addresses down the following local streets in {area.name}:
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 max-h-96 overflow-y-auto pr-2 custom-scrollbar">
+            {(() => {
+              try {
+                const fs = require('fs');
+                const path = require('path');
+                const filePath = path.join(process.cwd(), 'src', 'data', 'streets', `${slug}.json`);
+                const data = fs.readFileSync(filePath, 'utf-8');
+                const streetsData = JSON.parse(data);
+                
+                if (!streetsData.streets || streetsData.streets.length === 0) return <p>Fully covering {area.name}</p>;
+
+                return streetsData.streets.map((street: any) => (
+                  <Link
+                    key={street.slug}
+                    href={`/areas/${slug}/streets/${street.slug}`}
+                    className="text-sm text-gray-600 hover:text-[#FFB800] hover:underline"
+                  >
+                    Locksmith on {street.name}
+                  </Link>
+                ));
+              } catch (e) {
+                return <p className="text-sm text-gray-500">Covering all main roads and avenues in {area.name}.</p>;
+              }
+            })()}
+          </div>
+        </div>
+      </section>
+
       {/* Area Facts */}
       {facts.length > 0 && (
         <AreaFacts areaName={area.name} facts={facts} postcode={area.postcode} />

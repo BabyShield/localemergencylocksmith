@@ -3,224 +3,124 @@
   "areaName": "Bilton",
   "streets": [
     {
-      "slug": "bilton-high-street",
-      "name": "Bilton High Street"
+      "slug": "main-road",
+      "name": "Main Road"
     },
     {
-      "slug": "bilton-station-road",
-      "name": "Bilton Station Road"
+      "slug": "preston-lane",
+      "name": "Preston Lane"
     },
     {
-      "slug": "church-road",
-      "name": "Church Road"
+      "slug": "holmes-lane",
+      "name": "Holmes Lane"
     },
     {
-      "slug": "bilton-victoria-road",
-      "name": "Bilton Victoria Road"
+      "slug": "dawnay-road",
+      "name": "Dawnay Road"
     },
     {
-      "slug": "london-road",
-      "name": "London Road"
+      "slug": "ganstead-lane",
+      "name": "Ganstead Lane"
     },
     {
-      "slug": "main-street",
-      "name": "Main Street"
+      "slug": "low-farm-road",
+      "name": "Low Farm Road"
     },
     {
-      "slug": "park-road",
-      "name": "Park Road"
+      "slug": "longdales-lane",
+      "name": "Longdales Lane"
     },
     {
-      "slug": "church-street",
-      "name": "Church Street"
+      "slug": "lime-tree-lane",
+      "name": "Lime Tree Lane"
     },
     {
-      "slug": "queens-road",
-      "name": "Queens Road"
+      "slug": "highfield-crescent",
+      "name": "Highfield Crescent"
     },
     {
-      "slug": "new-road",
-      "name": "New Road"
+      "slug": "ward-avenue",
+      "name": "Ward Avenue"
     },
     {
-      "slug": "grange-road",
-      "name": "Grange Road"
+      "slug": "abbey-road",
+      "name": "Abbey Road"
     },
     {
-      "slug": "kings-road",
-      "name": "Kings Road"
+      "slug": "high-farm-court",
+      "name": "High Farm Court"
     },
     {
-      "slug": "bilton-windsor-avenue",
-      "name": "Bilton Windsor Avenue"
+      "slug": "st-peters-view",
+      "name": "St Peters View"
     },
     {
-      "slug": "chester-road",
-      "name": "Chester Road"
+      "slug": "albemarle-road",
+      "name": "Albemarle Road"
     },
     {
-      "slug": "albert-road",
-      "name": "Albert Road"
+      "slug": "cherry-tree-close",
+      "name": "Cherry Tree Close"
     },
     {
-      "slug": "wellington-street",
-      "name": "Wellington Street"
+      "slug": "galfrid-road",
+      "name": "Galfrid Road"
     },
     {
-      "slug": "mill-lane",
-      "name": "Mill Lane"
+      "slug": "maulson-drive",
+      "name": "Maulson Drive"
     },
     {
-      "slug": "bilton-highfield-road",
-      "name": "Bilton Highfield Road"
+      "slug": "garth-avenue",
+      "name": "Garth Avenue"
     },
     {
-      "slug": "george-street",
-      "name": "George Street"
+      "slug": "glebe-drive",
+      "name": "Glebe Drive"
     },
     {
-      "slug": "north-street",
-      "name": "North Street"
+      "slug": "ingram-avenue",
+      "name": "Ingram Avenue"
     },
     {
-      "slug": "south-street",
-      "name": "South Street"
+      "slug": "beech-avenue",
+      "name": "Beech Avenue"
     },
     {
-      "slug": "west-street",
-      "name": "West Street"
+      "slug": "quilter-drive",
+      "name": "Quilter Drive"
     },
     {
-      "slug": "east-street",
-      "name": "East Street"
+      "slug": "constable-avenue",
+      "name": "Constable Avenue"
     },
     {
-      "slug": "broad-street",
-      "name": "Broad Street"
+      "slug": "england-road",
+      "name": "England Road"
     },
     {
-      "slug": "springfield-road",
-      "name": "Springfield Road"
+      "slug": "hungerhills-drive",
+      "name": "Hungerhills Drive"
     },
     {
-      "slug": "richmond-road",
-      "name": "Richmond Road"
+      "slug": "turmar-view",
+      "name": "Turmar View"
     },
     {
-      "slug": "boundary-road",
-      "name": "Boundary Road"
+      "slug": "ravenspur-road",
+      "name": "Ravenspur Road"
     },
     {
-      "slug": "stanley-road",
-      "name": "Stanley Road"
+      "slug": "weeton-close",
+      "name": "Weeton Close"
     },
     {
-      "slug": "green-lane",
-      "name": "Green Lane"
+      "slug": "paddock-view",
+      "name": "Paddock View"
     },
     {
-      "slug": "manor-road",
-      "name": "Manor Road"
-    },
-    {
-      "slug": "park-avenue",
-      "name": "Park Avenue"
-    },
-    {
-      "slug": "york-road",
-      "name": "York Road"
-    },
-    {
-      "slug": "school-lane",
-      "name": "School Lane"
-    },
-    {
-      "slug": "bilton-meadow-way",
-      "name": "Bilton Meadow Way"
-    },
-    {
-      "slug": "orchard-close",
-      "name": "Orchard Close"
-    },
-    {
-      "slug": "cedar-avenue",
-      "name": "Cedar Avenue"
-    },
-    {
-      "slug": "oak-lane",
-      "name": "Oak Lane"
-    },
-    {
-      "slug": "elm-grove",
-      "name": "Elm Grove"
-    },
-    {
-      "slug": "pine-close",
-      "name": "Pine Close"
-    },
-    {
-      "slug": "ash-grove",
-      "name": "Ash Grove"
-    },
-    {
-      "slug": "willow-avenue",
-      "name": "Willow Avenue"
-    },
-    {
-      "slug": "birch-road",
-      "name": "Birch Road"
-    },
-    {
-      "slug": "maple-drive",
-      "name": "Maple Drive"
-    },
-    {
-      "slug": "hawthorn-close",
-      "name": "Hawthorn Close"
-    },
-    {
-      "slug": "chestnut-avenue",
-      "name": "Chestnut Avenue"
-    },
-    {
-      "slug": "coventry-road",
-      "name": "Coventry Road"
-    },
-    {
-      "slug": "warwick-road",
-      "name": "Warwick Road"
-    },
-    {
-      "slug": "kenilworth-road",
-      "name": "Kenilworth Road"
-    },
-    {
-      "slug": "holyhead-road",
-      "name": "Holyhead Road"
-    },
-    {
-      "slug": "bilton-foleshill-road",
-      "name": "Bilton Foleshill Road"
-    },
-    {
-      "slug": "stoney-stanton-road",
-      "name": "Stoney Stanton Road"
-    },
-    {
-      "slug": "bilton-radford-road",
-      "name": "Bilton Radford Road"
-    },
-    {
-      "slug": "coundon-road",
-      "name": "Coundon Road"
-    },
-    {
-      "slug": "barkers-butts-lane",
-      "name": "Barkers Butts Lane"
-    },
-    {
-      "slug": "bilton-binley-road",
-      "name": "Bilton Binley Road"
+      "slug": "wyton-road",
+      "name": "Wyton Road"
     }
   ]
 }

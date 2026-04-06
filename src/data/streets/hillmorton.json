@@ -3,224 +3,28 @@
   "areaName": "Hillmorton",
   "streets": [
     {
-      "slug": "high-street",
-      "name": "High Street"
+      "slug": "hillmorton-high-street",
+      "name": "Hillmorton High Street"
     },
     {
-      "slug": "station-road",
-      "name": "Station Road"
+      "slug": "hillmorton-station-road",
+      "name": "Hillmorton Station Road"
     },
     {
-      "slug": "church-road",
-      "name": "Church Road"
+      "slug": "hillmorton-church-lane",
+      "name": "Hillmorton Church Lane"
     },
     {
       "slug": "hillmorton-victoria-road",
       "name": "Hillmorton Victoria Road"
     },
     {
-      "slug": "london-road",
-      "name": "London Road"
+      "slug": "hillmorton-the-avenue",
+      "name": "Hillmorton The Avenue"
     },
     {
-      "slug": "main-street",
-      "name": "Main Street"
-    },
-    {
-      "slug": "park-road",
-      "name": "Park Road"
-    },
-    {
-      "slug": "church-street",
-      "name": "Church Street"
-    },
-    {
-      "slug": "queens-road",
-      "name": "Queens Road"
-    },
-    {
-      "slug": "new-road",
-      "name": "New Road"
-    },
-    {
-      "slug": "grange-road",
-      "name": "Grange Road"
-    },
-    {
-      "slug": "kings-road",
-      "name": "Kings Road"
-    },
-    {
-      "slug": "windsor-avenue",
-      "name": "Windsor Avenue"
-    },
-    {
-      "slug": "chester-road",
-      "name": "Chester Road"
-    },
-    {
-      "slug": "albert-road",
-      "name": "Albert Road"
-    },
-    {
-      "slug": "hillmorton-wellington-street",
-      "name": "Hillmorton Wellington Street"
-    },
-    {
-      "slug": "mill-lane",
-      "name": "Mill Lane"
-    },
-    {
-      "slug": "highfield-road",
-      "name": "Highfield Road"
-    },
-    {
-      "slug": "george-street",
-      "name": "George Street"
-    },
-    {
-      "slug": "north-street",
-      "name": "North Street"
-    },
-    {
-      "slug": "hillmorton-south-street",
-      "name": "Hillmorton South Street"
-    },
-    {
-      "slug": "hillmorton-west-street",
-      "name": "Hillmorton West Street"
-    },
-    {
-      "slug": "east-street",
-      "name": "East Street"
-    },
-    {
-      "slug": "broad-street",
-      "name": "Broad Street"
-    },
-    {
-      "slug": "hillmorton-springfield-road",
-      "name": "Hillmorton Springfield Road"
-    },
-    {
-      "slug": "richmond-road",
-      "name": "Richmond Road"
-    },
-    {
-      "slug": "hillmorton-boundary-road",
-      "name": "Hillmorton Boundary Road"
-    },
-    {
-      "slug": "hillmorton-stanley-road",
-      "name": "Hillmorton Stanley Road"
-    },
-    {
-      "slug": "green-lane",
-      "name": "Green Lane"
-    },
-    {
-      "slug": "manor-road",
-      "name": "Manor Road"
-    },
-    {
-      "slug": "park-avenue",
-      "name": "Park Avenue"
-    },
-    {
-      "slug": "york-road",
-      "name": "York Road"
-    },
-    {
-      "slug": "hillmorton-school-lane",
-      "name": "Hillmorton School Lane"
-    },
-    {
-      "slug": "meadow-way",
-      "name": "Meadow Way"
-    },
-    {
-      "slug": "orchard-close",
-      "name": "Orchard Close"
-    },
-    {
-      "slug": "hillmorton-cedar-avenue",
-      "name": "Hillmorton Cedar Avenue"
-    },
-    {
-      "slug": "oak-lane",
-      "name": "Oak Lane"
-    },
-    {
-      "slug": "elm-grove",
-      "name": "Elm Grove"
-    },
-    {
-      "slug": "pine-close",
-      "name": "Pine Close"
-    },
-    {
-      "slug": "ash-grove",
-      "name": "Ash Grove"
-    },
-    {
-      "slug": "willow-avenue",
-      "name": "Willow Avenue"
-    },
-    {
-      "slug": "birch-road",
-      "name": "Birch Road"
-    },
-    {
-      "slug": "maple-drive",
-      "name": "Maple Drive"
-    },
-    {
-      "slug": "hawthorn-close",
-      "name": "Hawthorn Close"
-    },
-    {
-      "slug": "chestnut-avenue",
-      "name": "Chestnut Avenue"
-    },
-    {
-      "slug": "coventry-road",
-      "name": "Coventry Road"
-    },
-    {
-      "slug": "warwick-road",
-      "name": "Warwick Road"
-    },
-    {
-      "slug": "kenilworth-road",
-      "name": "Kenilworth Road"
-    },
-    {
-      "slug": "holyhead-road",
-      "name": "Holyhead Road"
-    },
-    {
-      "slug": "foleshill-road",
-      "name": "Foleshill Road"
-    },
-    {
-      "slug": "stoney-stanton-road",
-      "name": "Stoney Stanton Road"
-    },
-    {
-      "slug": "radford-road",
-      "name": "Radford Road"
-    },
-    {
-      "slug": "coundon-road",
-      "name": "Coundon Road"
-    },
-    {
-      "slug": "barkers-butts-lane",
-      "name": "Barkers Butts Lane"
-    },
-    {
-      "slug": "hillmorton-binley-road",
-      "name": "Hillmorton Binley Road"
+      "slug": "hillmorton-park-road",
+      "name": "Hillmorton Park Road"
     }
   ]
 }

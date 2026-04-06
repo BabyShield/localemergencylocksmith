@@ -1,0 +1,68 @@
+
+> locksmith-build@0.1.0 build
+> next build
+
+Γû▓ Next.js 16.1.6 (Turbopack)
+
+  Creating an optimized production build ...
+Γ£ô Compiled successfully in 2.5s
+  Running TypeScript ...
+  Collecting page data using 21 workers ...
+  Generating static pages using 21 workers (0/934) ...
+  Generating static pages using 21 workers (233/934) 
+  Generating static pages using 21 workers (466/934) 
+  Generating static pages using 21 workers (700/934) 
+Γ£ô Generating static pages using 21 workers (934/934) in 4.8s
+  Finalizing page optimization ...
+
+Route (app)
+Γöî Γùï /
+Γö£ Γùï /_not-found
+Γö£ Γùï /about
+Γö£ ╞Æ /api/contact
+Γö£ Γùï /areas
+Γö£ ΓùÅ /areas/[slug]
+Γöé Γö£ /areas/coventry-city-centre
+Γöé Γö£ /areas/earlsdon
+Γöé Γö£ /areas/tile-hill
+Γöé Γöö [+75 more paths]
+Γö£ ΓùÅ /areas/[slug]/[serviceSlug]
+Γöé Γö£ /areas/coventry-city-centre/emergency-lockout
+Γöé Γö£ /areas/coventry-city-centre/lock-change
+Γöé Γö£ /areas/coventry-city-centre/upvc-lock-repair
+Γöé Γöö [+387 more paths]
+Γö£ ╞Æ /areas/[slug]/streets/[streetSlug]
+Γö£ Γùï /blog
+Γö£ ΓùÅ /blog/[areaSlug]/[articleSlug]
+Γöé Γö£ /blog/coventry-city-centre/locked-out-at-night
+Γöé Γö£ /blog/coventry-city-centre/how-much-does-emergency-locksmith-cost
+Γöé Γö£ /blog/coventry-city-centre/upvc-door-lock-problems
+Γöé Γöö [+387 more paths]
+Γö£ ΓùÅ /blog/[slug]
+Γöé Γö£ /blog/what-is-lock-snapping
+Γöé Γö£ /blog/euro-cylinder-locks-explained
+Γöé Γö£ /blog/bs3621-vs-anti-snap-vs-smart-lock
+Γöé Γöö [+49 more paths]
+Γö£ Γùï /contact
+Γö£ Γùï /faq
+Γö£ Γùï /near-me
+Γö£ ╞Æ /near-me/[keyword]/[areaSlug]
+Γö£ Γùï /prices
+Γö£ Γùï /privacy
+Γö£ Γùï /review
+Γö£ Γùï /robots.txt
+Γö£ Γùï /services
+Γö£ ΓùÅ /services/[slug]
+Γöé Γö£ /services/emergency-lockout
+Γöé Γö£ /services/lock-change
+Γöé Γö£ /services/upvc-lock-repair
+Γöé Γöö [+2 more paths]
+Γö£ Γùï /sitemap.xml
+Γö£ Γùï /terms
+Γöö Γùï /testimonials
+
+
+Γùï  (Static)   prerendered as static content
+ΓùÅ  (SSG)      prerendered as static HTML (uses generateStaticParams)
+╞Æ  (Dynamic)  server-rendered on demand
+

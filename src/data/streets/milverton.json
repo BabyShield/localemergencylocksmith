@@ -3,224 +3,200 @@
   "areaName": "Milverton",
   "streets": [
     {
+      "slug": "wiveliscombe-road",
+      "name": "Wiveliscombe Road"
+    },
+    {
+      "slug": "wood-street",
+      "name": "Wood Street"
+    },
+    {
+      "slug": "meadows-way",
+      "name": "Meadows Way"
+    },
+    {
+      "slug": "weekmore-lane",
+      "name": "Weekmore Lane"
+    },
+    {
+      "slug": "tougher-hill",
+      "name": "Tougher Hill"
+    },
+    {
+      "slug": "st-michael-s-hill",
+      "name": "St Michael's Hill"
+    },
+    {
+      "slug": "creedwell-orchard",
+      "name": "Creedwell Orchard"
+    },
+    {
+      "slug": "parsonage-lane",
+      "name": "Parsonage Lane"
+    },
+    {
       "slug": "high-street",
       "name": "High Street"
     },
     {
-      "slug": "station-road",
-      "name": "Station Road"
+      "slug": "rosebank-road",
+      "name": "Rosebank Road"
     },
     {
-      "slug": "church-road",
-      "name": "Church Road"
+      "slug": "ashford-close",
+      "name": "Ashford Close"
     },
     {
-      "slug": "victoria-road",
-      "name": "Victoria Road"
+      "slug": "stone-hill-lane",
+      "name": "Stone Hill Lane"
     },
     {
-      "slug": "london-road",
-      "name": "London Road"
+      "slug": "courtfield",
+      "name": "Courtfield"
     },
     {
-      "slug": "main-street",
-      "name": "Main Street"
+      "slug": "woodbarton",
+      "name": "Woodbarton"
     },
     {
-      "slug": "park-road",
-      "name": "Park Road"
+      "slug": "turnpike",
+      "name": "Turnpike"
     },
     {
-      "slug": "church-street",
-      "name": "Church Street"
+      "slug": "colesmore",
+      "name": "Colesmore"
     },
     {
-      "slug": "queens-road",
-      "name": "Queens Road"
+      "slug": "bartletts-lane",
+      "name": "Bartletts Lane"
     },
     {
-      "slug": "new-road",
-      "name": "New Road"
+      "slug": "burgage-lane",
+      "name": "Burgage Lane"
     },
     {
-      "slug": "grange-road",
-      "name": "Grange Road"
+      "slug": "butts-way",
+      "name": "Butts Way"
     },
     {
-      "slug": "kings-road",
-      "name": "Kings Road"
+      "slug": "fore-street",
+      "name": "Fore Street"
     },
     {
-      "slug": "windsor-avenue",
-      "name": "Windsor Avenue"
+      "slug": "herons-lane",
+      "name": "Herons Lane"
     },
     {
-      "slug": "chester-road",
-      "name": "Chester Road"
+      "slug": "houndsmoor-lane",
+      "name": "Houndsmoor Lane"
     },
     {
-      "slug": "milverton-albert-road",
-      "name": "Milverton Albert Road"
+      "slug": "huntash-lane",
+      "name": "Huntash Lane"
     },
     {
-      "slug": "wellington-street",
-      "name": "Wellington Street"
-    },
-    {
-      "slug": "milverton-mill-lane",
-      "name": "Milverton Mill Lane"
-    },
-    {
-      "slug": "highfield-road",
-      "name": "Highfield Road"
-    },
-    {
-      "slug": "george-street",
-      "name": "George Street"
+      "slug": "mill-lane",
+      "name": "Mill Lane"
     },
     {
       "slug": "north-street",
       "name": "North Street"
     },
     {
-      "slug": "milverton-south-street",
-      "name": "Milverton South Street"
+      "slug": "sand-street",
+      "name": "Sand Street"
     },
     {
-      "slug": "west-street",
-      "name": "West Street"
+      "slug": "silver-street",
+      "name": "Silver Street"
     },
     {
-      "slug": "east-street",
-      "name": "East Street"
+      "slug": "station-road",
+      "name": "Station Road"
     },
     {
-      "slug": "broad-street",
-      "name": "Broad Street"
+      "slug": "luckham-bridge",
+      "name": "Luckham Bridge"
     },
     {
-      "slug": "springfield-road",
-      "name": "Springfield Road"
+      "slug": "baghay-farm-lane",
+      "name": "Baghay Farm Lane"
     },
     {
-      "slug": "richmond-road",
-      "name": "Richmond Road"
+      "slug": "nynehead-road",
+      "name": "Nynehead Road"
     },
     {
-      "slug": "boundary-road",
-      "name": "Boundary Road"
+      "slug": "bindon-lane",
+      "name": "Bindon Lane"
     },
     {
-      "slug": "stanley-road",
-      "name": "Stanley Road"
+      "slug": "mousie-lane",
+      "name": "Mousie Lane"
     },
     {
-      "slug": "green-lane",
-      "name": "Green Lane"
+      "slug": "burn-hill",
+      "name": "Burn Hill"
     },
     {
-      "slug": "manor-road",
-      "name": "Manor Road"
+      "slug": "pix-lane",
+      "name": "Pix Lane"
     },
     {
-      "slug": "park-avenue",
-      "name": "Park Avenue"
+      "slug": "quakinghouse-lane",
+      "name": "Quakinghouse Lane"
     },
     {
-      "slug": "milverton-york-road",
-      "name": "Milverton York Road"
+      "slug": "tuckersmead",
+      "name": "Tuckersmead"
     },
     {
-      "slug": "school-lane",
-      "name": "School Lane"
+      "slug": "skerries-road",
+      "name": "Skerries Road"
     },
     {
-      "slug": "meadow-way",
-      "name": "Meadow Way"
+      "slug": "bindon-home-farm-lane",
+      "name": "Bindon Home Farm Lane"
     },
     {
-      "slug": "orchard-close",
-      "name": "Orchard Close"
+      "slug": "old-railway-line",
+      "name": "Old Railway Line"
     },
     {
-      "slug": "cedar-avenue",
-      "name": "Cedar Avenue"
+      "slug": "fairfield-terrace",
+      "name": "Fairfield Terrace"
     },
     {
-      "slug": "oak-lane",
-      "name": "Oak Lane"
+      "slug": "lower-fairfield",
+      "name": "Lower Fairfield"
     },
     {
-      "slug": "elm-grove",
-      "name": "Elm Grove"
+      "slug": "creedwell-court",
+      "name": "Creedwell Court"
     },
     {
-      "slug": "pine-close",
-      "name": "Pine Close"
+      "slug": "luckham-bridge-road",
+      "name": "Luckham Bridge Road"
     },
     {
-      "slug": "milverton-ash-grove",
-      "name": "Milverton Ash Grove"
+      "slug": "creedwell-close",
+      "name": "Creedwell Close"
     },
     {
-      "slug": "milverton-willow-avenue",
-      "name": "Milverton Willow Avenue"
+      "slug": "jubilee-gardens",
+      "name": "Jubilee Gardens"
     },
     {
-      "slug": "birch-road",
-      "name": "Birch Road"
+      "slug": "barnstaple-branch",
+      "name": "Barnstaple Branch"
     },
     {
-      "slug": "maple-drive",
-      "name": "Maple Drive"
+      "slug": "dublin-road",
+      "name": "Dublin Road"
     },
     {
-      "slug": "milverton-hawthorn-close",
-      "name": "Milverton Hawthorn Close"
-    },
-    {
-      "slug": "chestnut-avenue",
-      "name": "Chestnut Avenue"
-    },
-    {
-      "slug": "coventry-road",
-      "name": "Coventry Road"
-    },
-    {
-      "slug": "warwick-road",
-      "name": "Warwick Road"
-    },
-    {
-      "slug": "kenilworth-road",
-      "name": "Kenilworth Road"
-    },
-    {
-      "slug": "holyhead-road",
-      "name": "Holyhead Road"
-    },
-    {
-      "slug": "foleshill-road",
-      "name": "Foleshill Road"
-    },
-    {
-      "slug": "stoney-stanton-road",
-      "name": "Stoney Stanton Road"
-    },
-    {
-      "slug": "radford-road",
-      "name": "Radford Road"
-    },
-    {
-      "slug": "milverton-coundon-road",
-      "name": "Milverton Coundon Road"
-    },
-    {
-      "slug": "barkers-butts-lane",
-      "name": "Barkers Butts Lane"
-    },
-    {
-      "slug": "binley-road",
-      "name": "Binley Road"
+      "slug": "new-buildings",
+      "name": "New Buildings"
     }
   ]
 }

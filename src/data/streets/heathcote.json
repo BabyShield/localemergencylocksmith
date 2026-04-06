@@ -3,224 +3,604 @@
   "areaName": "Heathcote",
   "streets": [
     {
+      "slug": "whitton-street",
+      "name": "Whitton Street"
+    },
+    {
+      "slug": "heathcote-nagambie-road",
+      "name": "Heathcote - Nagambie Road"
+    },
+    {
+      "slug": "northern-highway",
+      "name": "Northern Highway"
+    },
+    {
+      "slug": "the-avenue",
+      "name": "The Avenue"
+    },
+    {
+      "slug": "nirimba-crescent",
+      "name": "Nirimba Crescent"
+    },
+    {
+      "slug": "viola-place",
+      "name": "Viola Place"
+    },
+    {
+      "slug": "bottle-forest-road",
+      "name": "Bottle Forest Road"
+    },
+    {
+      "slug": "woodford-crescent",
+      "name": "Woodford Crescent"
+    },
+    {
+      "slug": "eltham-place",
+      "name": "Eltham Place"
+    },
+    {
+      "slug": "mimosa-street",
+      "name": "Mimosa Street"
+    },
+    {
+      "slug": "forest-road",
+      "name": "Forest Road"
+    },
+    {
+      "slug": "tecoma-street",
+      "name": "Tecoma Street"
+    },
+    {
+      "slug": "dillwynnia-grove",
+      "name": "Dillwynnia Grove"
+    },
+    {
+      "slug": "boronia-grove",
+      "name": "Boronia Grove"
+    },
+    {
+      "slug": "grevillea-grove",
+      "name": "Grevillea Grove"
+    },
+    {
+      "slug": "oliver-street",
+      "name": "Oliver Street"
+    },
+    {
+      "slug": "creek-drive",
+      "name": "Creek Drive"
+    },
+    {
+      "slug": "bennett-street",
+      "name": "Bennett Street"
+    },
+    {
+      "slug": "routledge-street",
+      "name": "Routledge Street"
+    },
+    {
+      "slug": "wright-street",
+      "name": "Wright Street"
+    },
+    {
+      "slug": "last-street",
+      "name": "Last Street"
+    },
+    {
+      "slug": "mitchell-street",
+      "name": "Mitchell Street"
+    },
+    {
+      "slug": "jennings-street",
+      "name": "Jennings Street"
+    },
+    {
+      "slug": "kemps-lane",
+      "name": "Kemps Lane"
+    },
+    {
+      "slug": "patterson-street",
+      "name": "Patterson Street"
+    },
+    {
+      "slug": "boomerang-place",
+      "name": "Boomerang Place"
+    },
+    {
+      "slug": "kilroy-street",
+      "name": "Kilroy Street"
+    },
+    {
+      "slug": "kilmore-road",
+      "name": "Kilmore Road"
+    },
+    {
+      "slug": "grant-street",
+      "name": "Grant Street"
+    },
+    {
+      "slug": "joes-road",
+      "name": "Joes Road"
+    },
+    {
+      "slug": "mears-lane",
+      "name": "Mears Lane"
+    },
+    {
+      "slug": "spring-flat-road",
+      "name": "Spring Flat Road"
+    },
+    {
       "slug": "high-street",
       "name": "High Street"
     },
     {
-      "slug": "station-road",
-      "name": "Station Road"
+      "slug": "buglers-lane",
+      "name": "Buglers Lane"
     },
     {
-      "slug": "church-road",
-      "name": "Church Road"
+      "slug": "heathcote-redesdale-road",
+      "name": "Heathcote-Redesdale Road"
     },
     {
-      "slug": "victoria-road",
-      "name": "Victoria Road"
+      "slug": "tuscan-court",
+      "name": "Tuscan Court"
     },
     {
-      "slug": "heathcote-london-road",
-      "name": "Heathcote London Road"
+      "slug": "wilson-parade",
+      "name": "Wilson Parade"
     },
     {
-      "slug": "main-street",
-      "name": "Main Street"
+      "slug": "chapmans-lane",
+      "name": "Chapmans Lane"
     },
     {
-      "slug": "park-road",
-      "name": "Park Road"
+      "slug": "hookes-lane",
+      "name": "Hookes Lane"
     },
     {
-      "slug": "heathcote-church-street",
-      "name": "Heathcote Church Street"
+      "slug": "marshall-crescent",
+      "name": "Marshall Crescent"
     },
     {
-      "slug": "queens-road",
-      "name": "Queens Road"
+      "slug": "sailors-gully-court",
+      "name": "Sailors Gully Court"
     },
     {
-      "slug": "new-road",
-      "name": "New Road"
+      "slug": "tehan-court",
+      "name": "Tehan Court"
     },
     {
-      "slug": "heathcote-grange-road",
-      "name": "Heathcote Grange Road"
+      "slug": "back-kyneton-road",
+      "name": "Back Kyneton Road"
     },
     {
-      "slug": "kings-road",
-      "name": "Kings Road"
+      "slug": "craven-crescent",
+      "name": "Craven Crescent"
     },
     {
-      "slug": "windsor-avenue",
-      "name": "Windsor Avenue"
+      "slug": "jennings-road",
+      "name": "Jennings Road"
     },
     {
-      "slug": "chester-road",
-      "name": "Chester Road"
+      "slug": "jacana-grove",
+      "name": "Jacana Grove"
     },
     {
-      "slug": "heathcote-albert-road",
-      "name": "Heathcote Albert Road"
+      "slug": "junction-road",
+      "name": "Junction Road"
     },
     {
-      "slug": "wellington-street",
-      "name": "Wellington Street"
+      "slug": "cassandra-crescent",
+      "name": "Cassandra Crescent"
     },
     {
-      "slug": "heathcote-mill-lane",
-      "name": "Heathcote Mill Lane"
+      "slug": "dalley-road",
+      "name": "Dalley Road"
     },
     {
-      "slug": "heathcote-highfield-road",
-      "name": "Heathcote Highfield Road"
+      "slug": "electra-street",
+      "name": "Electra Street"
     },
     {
-      "slug": "george-street",
-      "name": "George Street"
+      "slug": "copeland-road",
+      "name": "Copeland Road"
     },
     {
-      "slug": "north-street",
-      "name": "North Street"
+      "slug": "parklands-avenue",
+      "name": "Parklands Avenue"
     },
     {
-      "slug": "south-street",
-      "name": "South Street"
+      "slug": "hollings-crescent",
+      "name": "Hollings Crescent"
     },
     {
-      "slug": "west-street",
-      "name": "West Street"
+      "slug": "rialto-place",
+      "name": "Rialto Place"
     },
     {
-      "slug": "east-street",
-      "name": "East Street"
+      "slug": "willandra-parade",
+      "name": "Willandra Parade"
     },
     {
-      "slug": "broad-street",
-      "name": "Broad Street"
+      "slug": "heath-place",
+      "name": "Heath Place"
     },
     {
-      "slug": "springfield-road",
-      "name": "Springfield Road"
+      "slug": "strickland-street",
+      "name": "Strickland Street"
     },
     {
-      "slug": "richmond-road",
-      "name": "Richmond Road"
+      "slug": "veno-street",
+      "name": "Veno Street"
+    },
+    {
+      "slug": "tiber-place",
+      "name": "Tiber Place"
+    },
+    {
+      "slug": "rosebery-street",
+      "name": "Rosebery Street"
+    },
+    {
+      "slug": "forum-drive",
+      "name": "Forum Drive"
+    },
+    {
+      "slug": "capri-close",
+      "name": "Capri Close"
+    },
+    {
+      "slug": "corinth-road",
+      "name": "Corinth Road"
+    },
+    {
+      "slug": "troy-road",
+      "name": "Troy Road"
+    },
+    {
+      "slug": "jane-place",
+      "name": "Jane Place"
+    },
+    {
+      "slug": "chauncey-street",
+      "name": "Chauncey Street"
+    },
+    {
+      "slug": "barrack-street",
+      "name": "Barrack Street"
+    },
+    {
+      "slug": "robinson-street",
+      "name": "Robinson Street"
+    },
+    {
+      "slug": "armstrong-street",
+      "name": "Armstrong Street"
+    },
+    {
+      "slug": "pohlman-street",
+      "name": "Pohlman Street"
+    },
+    {
+      "slug": "blacket-street",
+      "name": "Blacket Street"
+    },
+    {
+      "slug": "garvan-road",
+      "name": "Garvan Road"
+    },
+    {
+      "slug": "short-street",
+      "name": "Short Street"
+    },
+    {
+      "slug": "freeman-road",
+      "name": "Freeman Road"
+    },
+    {
+      "slug": "patterson-road",
+      "name": "Patterson Road"
+    },
+    {
+      "slug": "byrnes-lane",
+      "name": "Byrnes Lane"
+    },
+    {
+      "slug": "karree-place",
+      "name": "Karree Place"
     },
     {
       "slug": "boundary-road",
       "name": "Boundary Road"
     },
     {
-      "slug": "stanley-road",
-      "name": "Stanley Road"
+      "slug": "wright-close",
+      "name": "Wright Close"
     },
     {
-      "slug": "green-lane",
-      "name": "Green Lane"
+      "slug": "jack-lane",
+      "name": "Jack Lane"
     },
     {
-      "slug": "manor-road",
-      "name": "Manor Road"
+      "slug": "surveyor-avenue",
+      "name": "Surveyor Avenue"
     },
     {
-      "slug": "park-avenue",
-      "name": "Park Avenue"
+      "slug": "mcauley-close",
+      "name": "McAuley Close"
     },
     {
-      "slug": "york-road",
-      "name": "York Road"
+      "slug": "henry-kendall-close",
+      "name": "Henry Kendall Close"
     },
     {
-      "slug": "school-lane",
-      "name": "School Lane"
+      "slug": "banjo-street",
+      "name": "Banjo Street"
     },
     {
-      "slug": "meadow-way",
-      "name": "Meadow Way"
+      "slug": "blue-bell-place",
+      "name": "Blue Bell Place"
     },
     {
-      "slug": "heathcote-orchard-close",
-      "name": "Heathcote Orchard Close"
+      "slug": "keats-place",
+      "name": "Keats Place"
     },
     {
-      "slug": "heathcote-cedar-avenue",
-      "name": "Heathcote Cedar Avenue"
+      "slug": "hunter-street",
+      "name": "Hunter Street"
     },
     {
-      "slug": "oak-lane",
-      "name": "Oak Lane"
+      "slug": "martin-street",
+      "name": "Martin Street"
     },
     {
-      "slug": "elm-grove",
-      "name": "Elm Grove"
+      "slug": "kent-place",
+      "name": "Kent Place"
     },
     {
-      "slug": "pine-close",
-      "name": "Pine Close"
+      "slug": "oliver-lane",
+      "name": "Oliver Lane"
     },
     {
-      "slug": "ash-grove",
-      "name": "Ash Grove"
+      "slug": "parkes-street",
+      "name": "Parkes Street"
     },
     {
-      "slug": "willow-avenue",
-      "name": "Willow Avenue"
+      "slug": "mary-gilmore-place",
+      "name": "Mary Gilmore Place"
     },
     {
-      "slug": "birch-road",
-      "name": "Birch Road"
+      "slug": "lunar-avenue",
+      "name": "Lunar Avenue"
     },
     {
-      "slug": "maple-drive",
-      "name": "Maple Drive"
+      "slug": "king-street",
+      "name": "King Street"
     },
     {
-      "slug": "hawthorn-close",
-      "name": "Hawthorn Close"
+      "slug": "heath-lane",
+      "name": "Heath Lane"
     },
     {
-      "slug": "chestnut-avenue",
-      "name": "Chestnut Avenue"
+      "slug": "mirrabook-place",
+      "name": "Mirrabook Place"
     },
     {
-      "slug": "heathcote-coventry-road",
-      "name": "Heathcote Coventry Road"
+      "slug": "berrima-street",
+      "name": "Berrima Street"
     },
     {
-      "slug": "warwick-road",
-      "name": "Warwick Road"
+      "slug": "dorset-road",
+      "name": "Dorset Road"
     },
     {
-      "slug": "kenilworth-road",
-      "name": "Kenilworth Road"
+      "slug": "lindsay-gordon-place",
+      "name": "Lindsay Gordon Place"
     },
     {
-      "slug": "holyhead-road",
-      "name": "Holyhead Road"
+      "slug": "blue-bell-road",
+      "name": "Blue Bell Road"
     },
     {
-      "slug": "foleshill-road",
-      "name": "Foleshill Road"
+      "slug": "larkspur-place",
+      "name": "Larkspur Place"
     },
     {
-      "slug": "heathcote-stoney-stanton-road",
-      "name": "Heathcote Stoney Stanton Road"
+      "slug": "abbott-road",
+      "name": "Abbott Road"
     },
     {
-      "slug": "radford-road",
-      "name": "Radford Road"
+      "slug": "slessor-place",
+      "name": "Slessor Place"
     },
     {
-      "slug": "coundon-road",
-      "name": "Coundon Road"
+      "slug": "hospital-street",
+      "name": "Hospital Street"
     },
     {
-      "slug": "barkers-butts-lane",
-      "name": "Barkers Butts Lane"
+      "slug": "caldwell-street",
+      "name": "Caldwell Street"
     },
     {
-      "slug": "heathcote-binley-road",
-      "name": "Heathcote Binley Road"
+      "slug": "playne-street",
+      "name": "Playne Street"
+    },
+    {
+      "slug": "hall-road",
+      "name": "Hall Road"
+    },
+    {
+      "slug": "beauchamp-street",
+      "name": "Beauchamp Street"
+    },
+    {
+      "slug": "burns-court",
+      "name": "Burns Court"
+    },
+    {
+      "slug": "shakespere-street",
+      "name": "Shakespere Street"
+    },
+    {
+      "slug": "redleaf-close",
+      "name": "Redleaf Close"
+    },
+    {
+      "slug": "redgum-court",
+      "name": "Redgum Court"
+    },
+    {
+      "slug": "ross-street",
+      "name": "Ross Street"
+    },
+    {
+      "slug": "scullys-lane",
+      "name": "Scullys Lane"
+    },
+    {
+      "slug": "wattle-drive",
+      "name": "Wattle Drive"
+    },
+    {
+      "slug": "tranter-street",
+      "name": "Tranter Street"
+    },
+    {
+      "slug": "morris-street",
+      "name": "Morris Street"
+    },
+    {
+      "slug": "depot-road",
+      "name": "Depot Road"
+    },
+    {
+      "slug": "fasso-street",
+      "name": "Fasso Street"
+    },
+    {
+      "slug": "valli-street",
+      "name": "Valli Street"
+    },
+    {
+      "slug": "hunter-place",
+      "name": "Hunter Place"
+    },
+    {
+      "slug": "mcivor-street",
+      "name": "McIvor Street"
+    },
+    {
+      "slug": "ryans-lane",
+      "name": "Ryans Lane"
+    },
+    {
+      "slug": "heathcote-north-costerfield-road",
+      "name": "Heathcote-North Costerfield Road"
+    },
+    {
+      "slug": "herriot-street",
+      "name": "Herriot Street"
+    },
+    {
+      "slug": "fairy-dell-court",
+      "name": "Fairy Dell Court"
+    },
+    {
+      "slug": "thomas-street",
+      "name": "Thomas Street"
+    },
+    {
+      "slug": "scotts-crescent",
+      "name": "Scotts Crescent"
+    },
+    {
+      "slug": "thompsons-lane",
+      "name": "Thompsons Lane"
+    },
+    {
+      "slug": "plantation-road",
+      "name": "Plantation Road"
+    },
+    {
+      "slug": "odeon-place",
+      "name": "Odeon Place"
+    },
+    {
+      "slug": "speed-street",
+      "name": "Speed Street"
+    },
+    {
+      "slug": "stephenson-street",
+      "name": "Stephenson Street"
+    },
+    {
+      "slug": "warren-road",
+      "name": "Warren Road"
+    },
+    {
+      "slug": "mount-ida-lane",
+      "name": "Mount Ida Lane"
+    },
+    {
+      "slug": "bella-vista-street",
+      "name": "Bella Vista Street"
+    },
+    {
+      "slug": "broodie-street",
+      "name": "Broodie Street"
+    },
+    {
+      "slug": "milhaven-lane",
+      "name": "Milhaven Lane"
+    },
+    {
+      "slug": "anderson-court",
+      "name": "Anderson Court"
+    },
+    {
+      "slug": "cook-court",
+      "name": "Cook Court"
+    },
+    {
+      "slug": "bonneys-lane",
+      "name": "Bonneys Lane"
+    },
+    {
+      "slug": "nicholsons-lane",
+      "name": "Nicholsons Lane"
+    },
+    {
+      "slug": "parkinson-court",
+      "name": "Parkinson Court"
+    },
+    {
+      "slug": "hansen-street",
+      "name": "Hansen Street"
+    },
+    {
+      "slug": "travers-lane",
+      "name": "Travers Lane"
+    },
+    {
+      "slug": "clouston-court",
+      "name": "Clouston Court"
+    },
+    {
+      "slug": "ebden-street",
+      "name": "Ebden Street"
+    },
+    {
+      "slug": "baynton-street",
+      "name": "Baynton Street"
+    },
+    {
+      "slug": "flea-street",
+      "name": "Flea Street"
+    },
+    {
+      "slug": "sangsters-lane",
+      "name": "Sangsters Lane"
     }
   ]
 }

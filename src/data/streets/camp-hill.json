@@ -3,224 +3,604 @@
   "areaName": "Camp Hill",
   "streets": [
     {
-      "slug": "high-street",
-      "name": "High Street"
+      "slug": "railroad-avenue",
+      "name": "Railroad Avenue"
     },
     {
-      "slug": "station-road",
-      "name": "Station Road"
+      "slug": "thompson-street",
+      "name": "Thompson Street"
     },
     {
-      "slug": "camp-hill-church-road",
-      "name": "Camp Hill Church Road"
+      "slug": "spring-street",
+      "name": "Spring Street"
     },
     {
-      "slug": "victoria-road",
-      "name": "Victoria Road"
+      "slug": "rogers-street",
+      "name": "Rogers Street"
     },
     {
-      "slug": "london-road",
-      "name": "London Road"
+      "slug": "brumnitt-street",
+      "name": "Brumnitt Street"
+    },
+    {
+      "slug": "pittman-avenue",
+      "name": "Pittman Avenue"
+    },
+    {
+      "slug": "wilson-street",
+      "name": "Wilson Street"
+    },
+    {
+      "slug": "alberta-street",
+      "name": "Alberta Street"
+    },
+    {
+      "slug": "curtis-street",
+      "name": "Curtis Street"
+    },
+    {
+      "slug": "county-road-89-north",
+      "name": "County Road 89 North"
+    },
+    {
+      "slug": "oak-street",
+      "name": "Oak Street"
+    },
+    {
+      "slug": "oliver-drive",
+      "name": "Oliver Drive"
+    },
+    {
+      "slug": "county-road-89-south",
+      "name": "County Road 89 South"
+    },
+    {
+      "slug": "summer-avenue",
+      "name": "Summer Avenue"
+    },
+    {
+      "slug": "henderson-drive",
+      "name": "Henderson Drive"
+    },
+    {
+      "slug": "pecan-alley",
+      "name": "Pecan Alley"
+    },
+    {
+      "slug": "airport-road",
+      "name": "Airport Road"
+    },
+    {
+      "slug": "wilson-avenue",
+      "name": "Wilson Avenue"
+    },
+    {
+      "slug": "connie-street",
+      "name": "Connie Street"
+    },
+    {
+      "slug": "church-avenue",
+      "name": "Church Avenue"
+    },
+    {
+      "slug": "piedmont-drive",
+      "name": "Piedmont Drive"
+    },
+    {
+      "slug": "weed-street",
+      "name": "Weed Street"
+    },
+    {
+      "slug": "south-main-street",
+      "name": "South Main Street"
+    },
+    {
+      "slug": "williams-avenue",
+      "name": "Williams Avenue"
     },
     {
       "slug": "main-street",
       "name": "Main Street"
     },
     {
-      "slug": "camp-hill-park-road",
-      "name": "Camp Hill Park Road"
+      "slug": "mayton-street",
+      "name": "Mayton Street"
     },
     {
-      "slug": "church-street",
-      "name": "Church Street"
+      "slug": "holley-avenue",
+      "name": "Holley Avenue"
     },
     {
-      "slug": "camp-hill-queens-road",
-      "name": "Camp Hill Queens Road"
+      "slug": "ward-circle",
+      "name": "Ward Circle"
     },
     {
-      "slug": "new-road",
-      "name": "New Road"
+      "slug": "burton-avenue",
+      "name": "Burton Avenue"
     },
     {
-      "slug": "camp-hill-grange-road",
-      "name": "Camp Hill Grange Road"
+      "slug": "jay-avenue",
+      "name": "Jay Avenue"
     },
     {
-      "slug": "kings-road",
-      "name": "Kings Road"
+      "slug": "morgan-street",
+      "name": "Morgan Street"
     },
     {
-      "slug": "camp-hill-windsor-avenue",
-      "name": "Camp Hill Windsor Avenue"
+      "slug": "senator-claude-pepper-drive",
+      "name": "Senator Claude Pepper Drive"
     },
     {
-      "slug": "chester-road",
-      "name": "Chester Road"
+      "slug": "sullivan-lane",
+      "name": "Sullivan Lane"
     },
     {
-      "slug": "albert-road",
-      "name": "Albert Road"
+      "slug": "daniel-avenue",
+      "name": "Daniel Avenue"
     },
     {
-      "slug": "wellington-street",
-      "name": "Wellington Street"
+      "slug": "north-main-street",
+      "name": "North Main Street"
     },
     {
-      "slug": "mill-lane",
-      "name": "Mill Lane"
+      "slug": "high-school-avenue",
+      "name": "High School Avenue"
     },
     {
-      "slug": "highfield-road",
-      "name": "Highfield Road"
+      "slug": "tolbert-road",
+      "name": "Tolbert Road"
     },
     {
-      "slug": "camp-hill-george-street",
-      "name": "Camp Hill George Street"
+      "slug": "rowe-street",
+      "name": "Rowe Street"
     },
     {
-      "slug": "north-street",
-      "name": "North Street"
+      "slug": "lee-avenue",
+      "name": "Lee Avenue"
     },
     {
-      "slug": "camp-hill-south-street",
-      "name": "Camp Hill South Street"
+      "slug": "hotel-avenue",
+      "name": "Hotel Avenue"
     },
     {
-      "slug": "west-street",
-      "name": "West Street"
+      "slug": "tucker-avenue",
+      "name": "Tucker Avenue"
     },
     {
-      "slug": "east-street",
-      "name": "East Street"
+      "slug": "church-court",
+      "name": "Church Court"
     },
     {
-      "slug": "broad-street",
-      "name": "Broad Street"
+      "slug": "pine-avenue",
+      "name": "Pine Avenue"
     },
     {
-      "slug": "springfield-road",
-      "name": "Springfield Road"
+      "slug": "newell-street",
+      "name": "Newell Street"
     },
     {
-      "slug": "camp-hill-richmond-road",
-      "name": "Camp Hill Richmond Road"
+      "slug": "godfrey-road",
+      "name": "Godfrey Road"
     },
     {
-      "slug": "camp-hill-boundary-road",
-      "name": "Camp Hill Boundary Road"
+      "slug": "oliver-street",
+      "name": "Oliver Street"
+    },
+    {
+      "slug": "crenshaw-street",
+      "name": "Crenshaw Street"
+    },
+    {
+      "slug": "allgood-street",
+      "name": "Allgood Street"
+    },
+    {
+      "slug": "davis-street",
+      "name": "Davis Street"
+    },
+    {
+      "slug": "heard-street",
+      "name": "Heard Street"
+    },
+    {
+      "slug": "herren-avenue",
+      "name": "Herren Avenue"
+    },
+    {
+      "slug": "sherman-drive",
+      "name": "Sherman Drive"
+    },
+    {
+      "slug": "martin-luther-king-street",
+      "name": "Martin Luther King Street"
+    },
+    {
+      "slug": "slaughter-avenue",
+      "name": "Slaughter Avenue"
+    },
+    {
+      "slug": "old-cleveland-road",
+      "name": "Old Cleveland Road"
+    },
+    {
+      "slug": "boundary-road",
+      "name": "Boundary Road"
+    },
+    {
+      "slug": "ferguson-road",
+      "name": "Ferguson Road"
+    },
+    {
+      "slug": "perth-street",
+      "name": "Perth Street"
+    },
+    {
+      "slug": "nestor-lane",
+      "name": "Nestor Lane"
+    },
+    {
+      "slug": "bennetts-road",
+      "name": "Bennetts Road"
+    },
+    {
+      "slug": "temple-street",
+      "name": "Temple Street"
+    },
+    {
+      "slug": "wiles-street",
+      "name": "Wiles Street"
+    },
+    {
+      "slug": "joseph-street",
+      "name": "Joseph Street"
     },
     {
       "slug": "stanley-road",
       "name": "Stanley Road"
     },
     {
-      "slug": "green-lane",
-      "name": "Green Lane"
+      "slug": "stephen-street",
+      "name": "Stephen Street"
     },
     {
-      "slug": "manor-road",
-      "name": "Manor Road"
+      "slug": "bruce-street",
+      "name": "Bruce Street"
     },
     {
-      "slug": "park-avenue",
-      "name": "Park Avenue"
+      "slug": "clara-street",
+      "name": "Clara Street"
     },
     {
-      "slug": "york-road",
-      "name": "York Road"
+      "slug": "lincoln-street",
+      "name": "Lincoln Street"
     },
     {
-      "slug": "school-lane",
-      "name": "School Lane"
+      "slug": "fairview-road",
+      "name": "Fairview Road"
     },
     {
-      "slug": "camp-hill-meadow-way",
-      "name": "Camp Hill Meadow Way"
-    },
-    {
-      "slug": "orchard-close",
-      "name": "Orchard Close"
-    },
-    {
-      "slug": "cedar-avenue",
-      "name": "Cedar Avenue"
-    },
-    {
-      "slug": "oak-lane",
-      "name": "Oak Lane"
-    },
-    {
-      "slug": "elm-grove",
-      "name": "Elm Grove"
-    },
-    {
-      "slug": "pine-close",
-      "name": "Pine Close"
-    },
-    {
-      "slug": "ash-grove",
-      "name": "Ash Grove"
+      "slug": "south-28th-street",
+      "name": "South 28th Street"
     },
     {
       "slug": "willow-avenue",
       "name": "Willow Avenue"
     },
     {
-      "slug": "birch-road",
-      "name": "Birch Road"
+      "slug": "market-street",
+      "name": "Market Street"
     },
     {
-      "slug": "maple-drive",
-      "name": "Maple Drive"
+      "slug": "pennsylvania-avenue",
+      "name": "Pennsylvania Avenue"
     },
     {
-      "slug": "hawthorn-close",
-      "name": "Hawthorn Close"
+      "slug": "columbia-avenue",
+      "name": "Columbia Avenue"
     },
     {
-      "slug": "chestnut-avenue",
-      "name": "Chestnut Avenue"
+      "slug": "cooper-circle",
+      "name": "Cooper Circle"
     },
     {
-      "slug": "coventry-road",
-      "name": "Coventry Road"
+      "slug": "circle-place",
+      "name": "Circle Place"
     },
     {
-      "slug": "camp-hill-warwick-road",
-      "name": "Camp Hill Warwick Road"
+      "slug": "high-street",
+      "name": "High Street"
     },
     {
-      "slug": "kenilworth-road",
-      "name": "Kenilworth Road"
+      "slug": "trindle-road",
+      "name": "Trindle Road"
     },
     {
-      "slug": "holyhead-road",
-      "name": "Holyhead Road"
+      "slug": "parkside-road",
+      "name": "Parkside Road"
     },
     {
-      "slug": "camp-hill-foleshill-road",
-      "name": "Camp Hill Foleshill Road"
+      "slug": "dickinson-avenue",
+      "name": "Dickinson Avenue"
     },
     {
-      "slug": "stoney-stanton-road",
-      "name": "Stoney Stanton Road"
+      "slug": "hawthorne-drive",
+      "name": "Hawthorne Drive"
     },
     {
-      "slug": "camp-hill-radford-road",
-      "name": "Camp Hill Radford Road"
+      "slug": "chestnut-street",
+      "name": "Chestnut Street"
     },
     {
-      "slug": "coundon-road",
-      "name": "Coundon Road"
+      "slug": "bedford-drive",
+      "name": "Bedford Drive"
     },
     {
-      "slug": "barkers-butts-lane",
-      "name": "Barkers Butts Lane"
+      "slug": "november-drive",
+      "name": "November Drive"
     },
     {
-      "slug": "binley-road",
-      "name": "Binley Road"
+      "slug": "vista-circle",
+      "name": "Vista Circle"
+    },
+    {
+      "slug": "hollywood-circle",
+      "name": "Hollywood Circle"
+    },
+    {
+      "slug": "harvard-avenue",
+      "name": "Harvard Avenue"
+    },
+    {
+      "slug": "cornell-road",
+      "name": "Cornell Road"
+    },
+    {
+      "slug": "north-27th-street",
+      "name": "North 27th Street"
+    },
+    {
+      "slug": "lenox-street",
+      "name": "Lenox Street"
+    },
+    {
+      "slug": "avon-road",
+      "name": "Avon Road"
+    },
+    {
+      "slug": "north-28th-street",
+      "name": "North 28th Street"
+    },
+    {
+      "slug": "walnut-street",
+      "name": "Walnut Street"
+    },
+    {
+      "slug": "summit-avenue",
+      "name": "Summit Avenue"
+    },
+    {
+      "slug": "central-street",
+      "name": "Central Street"
+    },
+    {
+      "slug": "south-15th-street",
+      "name": "South 15th Street"
+    },
+    {
+      "slug": "north-29th-street",
+      "name": "North 29th Street"
+    },
+    {
+      "slug": "south-16th-street",
+      "name": "South 16th Street"
+    },
+    {
+      "slug": "deanhurst-avenue",
+      "name": "Deanhurst Avenue"
+    },
+    {
+      "slug": "south-17th-street",
+      "name": "South 17th Street"
+    },
+    {
+      "slug": "north-33rd-street",
+      "name": "North 33rd Street"
+    },
+    {
+      "slug": "south-18th-street",
+      "name": "South 18th Street"
+    },
+    {
+      "slug": "west-state-street",
+      "name": "West State Street"
+    },
+    {
+      "slug": "south-19th-street",
+      "name": "South 19th Street"
+    },
+    {
+      "slug": "south-30th-street",
+      "name": "South 30th Street"
+    },
+    {
+      "slug": "bramer-road",
+      "name": "Bramer Road"
+    },
+    {
+      "slug": "north-20th-street",
+      "name": "North 20th Street"
+    },
+    {
+      "slug": "june-drive",
+      "name": "June Drive"
+    },
+    {
+      "slug": "north-31st-street",
+      "name": "North 31st Street"
+    },
+    {
+      "slug": "apple-tree-road",
+      "name": "Apple Tree Road"
+    },
+    {
+      "slug": "north-24th-street",
+      "name": "North 24th Street"
+    },
+    {
+      "slug": "ridgewood-drive",
+      "name": "Ridgewood Drive"
+    },
+    {
+      "slug": "south-21st-street",
+      "name": "South 21st Street"
+    },
+    {
+      "slug": "north-25th-street",
+      "name": "North 25th Street"
+    },
+    {
+      "slug": "south-36th-street",
+      "name": "South 36th Street"
+    },
+    {
+      "slug": "north-26th-street",
+      "name": "North 26th Street"
+    },
+    {
+      "slug": "green-street",
+      "name": "Green Street"
+    },
+    {
+      "slug": "linewood-street",
+      "name": "Linewood Street"
+    },
+    {
+      "slug": "industrial-park-road",
+      "name": "Industrial Park Road"
+    },
+    {
+      "slug": "laurel-lane",
+      "name": "Laurel Lane"
+    },
+    {
+      "slug": "wynnewood-road",
+      "name": "Wynnewood Road"
+    },
+    {
+      "slug": "north-32nd-street",
+      "name": "North 32nd Street"
+    },
+    {
+      "slug": "arlington-road",
+      "name": "Arlington Road"
+    },
+    {
+      "slug": "princeton-avenue",
+      "name": "Princeton Avenue"
+    },
+    {
+      "slug": "runson-road",
+      "name": "Runson Road"
+    },
+    {
+      "slug": "athol-street",
+      "name": "Athol Street"
+    },
+    {
+      "slug": "clarendon-street",
+      "name": "Clarendon Street"
+    },
+    {
+      "slug": "myrtle-avenue",
+      "name": "Myrtle Avenue"
+    },
+    {
+      "slug": "september-drive",
+      "name": "September Drive"
+    },
+    {
+      "slug": "south-22nd-street",
+      "name": "South 22nd Street"
+    },
+    {
+      "slug": "merion-road",
+      "name": "Merion Road"
+    },
+    {
+      "slug": "country-club-road",
+      "name": "Country Club Road"
+    },
+    {
+      "slug": "dartmouth-street",
+      "name": "Dartmouth Street"
+    },
+    {
+      "slug": "vista-drive",
+      "name": "Vista Drive"
+    },
+    {
+      "slug": "country-club-place",
+      "name": "Country Club Place"
+    },
+    {
+      "slug": "sycamore-circle",
+      "name": "Sycamore Circle"
+    },
+    {
+      "slug": "cumberland-boulevard",
+      "name": "Cumberland Boulevard"
+    },
+    {
+      "slug": "garden-alley",
+      "name": "Garden Alley"
+    },
+    {
+      "slug": "faulkner-street",
+      "name": "Faulkner Street"
+    },
+    {
+      "slug": "november-court",
+      "name": "November Court"
+    },
+    {
+      "slug": "white-hall-alley",
+      "name": "White Hall Alley"
+    },
+    {
+      "slug": "page-street",
+      "name": "Page Street"
+    },
+    {
+      "slug": "devon-road",
+      "name": "Devon Road"
+    },
+    {
+      "slug": "lincoln-drive",
+      "name": "Lincoln Drive"
+    },
+    {
+      "slug": "north-15th-street",
+      "name": "North 15th Street"
+    },
+    {
+      "slug": "south-26th-street",
+      "name": "South 26th Street"
+    },
+    {
+      "slug": "logan-street",
+      "name": "Logan Street"
+    },
+    {
+      "slug": "crestview-court",
+      "name": "Crestview Court"
+    },
+    {
+      "slug": "south-27th-street",
+      "name": "South 27th Street"
+    },
+    {
+      "slug": "beverly-road",
+      "name": "Beverly Road"
     }
   ]
 }

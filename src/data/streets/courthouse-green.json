@@ -3,224 +3,60 @@
   "areaName": "Courthouse Green",
   "streets": [
     {
-      "slug": "high-street",
-      "name": "High Street"
+      "slug": "civil-court",
+      "name": "Civil Court"
     },
     {
-      "slug": "station-road",
-      "name": "Station Road"
+      "slug": "hustings-lane",
+      "name": "Hustings Lane"
     },
     {
-      "slug": "church-road",
-      "name": "Church Road"
+      "slug": "general-court",
+      "name": "General Court"
     },
     {
-      "slug": "victoria-road",
-      "name": "Victoria Road"
+      "slug": "advocate-court",
+      "name": "Advocate Court"
     },
     {
-      "slug": "london-road",
-      "name": "London Road"
+      "slug": "deputy-lane",
+      "name": "Deputy Lane"
     },
     {
-      "slug": "main-street",
-      "name": "Main Street"
+      "slug": "magistrate-lane",
+      "name": "Magistrate Lane"
     },
     {
-      "slug": "park-road",
-      "name": "Park Road"
+      "slug": "witness-lane",
+      "name": "Witness Lane"
     },
     {
-      "slug": "church-street",
-      "name": "Church Street"
+      "slug": "jury-lane",
+      "name": "Jury Lane"
     },
     {
-      "slug": "queens-road",
-      "name": "Queens Road"
+      "slug": "judges-court",
+      "name": "Judges Court"
     },
     {
-      "slug": "new-road",
-      "name": "New Road"
+      "slug": "superior-court",
+      "name": "Superior Court"
     },
     {
-      "slug": "grange-road",
-      "name": "Grange Road"
+      "slug": "circuit-lane",
+      "name": "Circuit Lane"
     },
     {
-      "slug": "kings-road",
-      "name": "Kings Road"
+      "slug": "parliament-lane",
+      "name": "Parliament Lane"
     },
     {
-      "slug": "windsor-avenue",
-      "name": "Windsor Avenue"
+      "slug": "bailiff-court",
+      "name": "Bailiff Court"
     },
     {
-      "slug": "chester-road",
-      "name": "Chester Road"
-    },
-    {
-      "slug": "courthouse-green-albert-road",
-      "name": "Courthouse Green Albert Road"
-    },
-    {
-      "slug": "wellington-street",
-      "name": "Wellington Street"
-    },
-    {
-      "slug": "mill-lane",
-      "name": "Mill Lane"
-    },
-    {
-      "slug": "highfield-road",
-      "name": "Highfield Road"
-    },
-    {
-      "slug": "george-street",
-      "name": "George Street"
-    },
-    {
-      "slug": "north-street",
-      "name": "North Street"
-    },
-    {
-      "slug": "south-street",
-      "name": "South Street"
-    },
-    {
-      "slug": "west-street",
-      "name": "West Street"
-    },
-    {
-      "slug": "east-street",
-      "name": "East Street"
-    },
-    {
-      "slug": "broad-street",
-      "name": "Broad Street"
-    },
-    {
-      "slug": "springfield-road",
-      "name": "Springfield Road"
-    },
-    {
-      "slug": "richmond-road",
-      "name": "Richmond Road"
-    },
-    {
-      "slug": "boundary-road",
-      "name": "Boundary Road"
-    },
-    {
-      "slug": "stanley-road",
-      "name": "Stanley Road"
-    },
-    {
-      "slug": "green-lane",
-      "name": "Green Lane"
-    },
-    {
-      "slug": "manor-road",
-      "name": "Manor Road"
-    },
-    {
-      "slug": "courthouse-green-park-avenue",
-      "name": "Courthouse Green Park Avenue"
-    },
-    {
-      "slug": "york-road",
-      "name": "York Road"
-    },
-    {
-      "slug": "school-lane",
-      "name": "School Lane"
-    },
-    {
-      "slug": "meadow-way",
-      "name": "Meadow Way"
-    },
-    {
-      "slug": "orchard-close",
-      "name": "Orchard Close"
-    },
-    {
-      "slug": "courthouse-green-cedar-avenue",
-      "name": "Courthouse Green Cedar Avenue"
-    },
-    {
-      "slug": "oak-lane",
-      "name": "Oak Lane"
-    },
-    {
-      "slug": "elm-grove",
-      "name": "Elm Grove"
-    },
-    {
-      "slug": "pine-close",
-      "name": "Pine Close"
-    },
-    {
-      "slug": "ash-grove",
-      "name": "Ash Grove"
-    },
-    {
-      "slug": "willow-avenue",
-      "name": "Willow Avenue"
-    },
-    {
-      "slug": "birch-road",
-      "name": "Birch Road"
-    },
-    {
-      "slug": "courthouse-green-maple-drive",
-      "name": "Courthouse Green Maple Drive"
-    },
-    {
-      "slug": "hawthorn-close",
-      "name": "Hawthorn Close"
-    },
-    {
-      "slug": "chestnut-avenue",
-      "name": "Chestnut Avenue"
-    },
-    {
-      "slug": "coventry-road",
-      "name": "Coventry Road"
-    },
-    {
-      "slug": "warwick-road",
-      "name": "Warwick Road"
-    },
-    {
-      "slug": "kenilworth-road",
-      "name": "Kenilworth Road"
-    },
-    {
-      "slug": "holyhead-road",
-      "name": "Holyhead Road"
-    },
-    {
-      "slug": "foleshill-road",
-      "name": "Foleshill Road"
-    },
-    {
-      "slug": "stoney-stanton-road",
-      "name": "Stoney Stanton Road"
-    },
-    {
-      "slug": "radford-road",
-      "name": "Radford Road"
-    },
-    {
-      "slug": "coundon-road",
-      "name": "Coundon Road"
-    },
-    {
-      "slug": "courthouse-green-barkers-butts-lane",
-      "name": "Courthouse Green Barkers Butts Lane"
-    },
-    {
-      "slug": "binley-road",
-      "name": "Binley Road"
+      "slug": "old-courthouse-way",
+      "name": "Old Courthouse Way"
     }
   ]
 }

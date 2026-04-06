@@ -3,224 +3,604 @@
   "areaName": "Royal Leamington Spa",
   "streets": [
     {
-      "slug": "royal-leamington-spa-high-street",
-      "name": "Royal Leamington Spa High Street"
+      "slug": "old-warwick-road",
+      "name": "Old Warwick Road"
     },
     {
-      "slug": "station-road",
-      "name": "Station Road"
+      "slug": "high-street",
+      "name": "High Street"
     },
     {
-      "slug": "church-road",
-      "name": "Church Road"
+      "slug": "lillington-road",
+      "name": "Lillington Road"
     },
     {
-      "slug": "victoria-road",
-      "name": "Victoria Road"
+      "slug": "warwick-street",
+      "name": "Warwick Street"
     },
     {
-      "slug": "london-road",
-      "name": "London Road"
+      "slug": "avenue-road",
+      "name": "Avenue Road"
     },
     {
-      "slug": "royal-leamington-spa-main-street",
-      "name": "Royal Leamington Spa Main Street"
+      "slug": "hamilton-terrace",
+      "name": "Hamilton Terrace"
     },
     {
-      "slug": "park-road",
-      "name": "Park Road"
+      "slug": "spencer-street",
+      "name": "Spencer Street"
     },
     {
-      "slug": "church-street",
-      "name": "Church Street"
+      "slug": "lower-avenue",
+      "name": "Lower Avenue"
     },
     {
-      "slug": "royal-leamington-spa-queens-road",
-      "name": "Royal Leamington Spa Queens Road"
+      "slug": "regent-street",
+      "name": "Regent Street"
     },
     {
-      "slug": "new-road",
-      "name": "New Road"
-    },
-    {
-      "slug": "royal-leamington-spa-grange-road",
-      "name": "Royal Leamington Spa Grange Road"
-    },
-    {
-      "slug": "royal-leamington-spa-kings-road",
-      "name": "Royal Leamington Spa Kings Road"
-    },
-    {
-      "slug": "royal-leamington-spa-windsor-avenue",
-      "name": "Royal Leamington Spa Windsor Avenue"
-    },
-    {
-      "slug": "chester-road",
-      "name": "Chester Road"
-    },
-    {
-      "slug": "albert-road",
-      "name": "Albert Road"
-    },
-    {
-      "slug": "wellington-street",
-      "name": "Wellington Street"
-    },
-    {
-      "slug": "mill-lane",
-      "name": "Mill Lane"
-    },
-    {
-      "slug": "highfield-road",
-      "name": "Highfield Road"
-    },
-    {
-      "slug": "george-street",
-      "name": "George Street"
-    },
-    {
-      "slug": "north-street",
-      "name": "North Street"
-    },
-    {
-      "slug": "royal-leamington-spa-south-street",
-      "name": "Royal Leamington Spa South Street"
-    },
-    {
-      "slug": "west-street",
-      "name": "West Street"
-    },
-    {
-      "slug": "east-street",
-      "name": "East Street"
-    },
-    {
-      "slug": "royal-leamington-spa-broad-street",
-      "name": "Royal Leamington Spa Broad Street"
-    },
-    {
-      "slug": "springfield-road",
-      "name": "Springfield Road"
-    },
-    {
-      "slug": "richmond-road",
-      "name": "Richmond Road"
-    },
-    {
-      "slug": "boundary-road",
-      "name": "Boundary Road"
-    },
-    {
-      "slug": "stanley-road",
-      "name": "Stanley Road"
-    },
-    {
-      "slug": "green-lane",
-      "name": "Green Lane"
-    },
-    {
-      "slug": "manor-road",
-      "name": "Manor Road"
-    },
-    {
-      "slug": "park-avenue",
-      "name": "Park Avenue"
-    },
-    {
-      "slug": "york-road",
-      "name": "York Road"
-    },
-    {
-      "slug": "royal-leamington-spa-school-lane",
-      "name": "Royal Leamington Spa School Lane"
-    },
-    {
-      "slug": "meadow-way",
-      "name": "Meadow Way"
-    },
-    {
-      "slug": "orchard-close",
-      "name": "Orchard Close"
-    },
-    {
-      "slug": "cedar-avenue",
-      "name": "Cedar Avenue"
-    },
-    {
-      "slug": "oak-lane",
-      "name": "Oak Lane"
-    },
-    {
-      "slug": "elm-grove",
-      "name": "Elm Grove"
-    },
-    {
-      "slug": "royal-leamington-spa-pine-close",
-      "name": "Royal Leamington Spa Pine Close"
-    },
-    {
-      "slug": "royal-leamington-spa-ash-grove",
-      "name": "Royal Leamington Spa Ash Grove"
-    },
-    {
-      "slug": "willow-avenue",
-      "name": "Willow Avenue"
-    },
-    {
-      "slug": "royal-leamington-spa-birch-road",
-      "name": "Royal Leamington Spa Birch Road"
-    },
-    {
-      "slug": "maple-drive",
-      "name": "Maple Drive"
-    },
-    {
-      "slug": "royal-leamington-spa-hawthorn-close",
-      "name": "Royal Leamington Spa Hawthorn Close"
-    },
-    {
-      "slug": "chestnut-avenue",
-      "name": "Chestnut Avenue"
-    },
-    {
-      "slug": "coventry-road",
-      "name": "Coventry Road"
-    },
-    {
-      "slug": "warwick-road",
-      "name": "Warwick Road"
+      "slug": "clarendon-avenue",
+      "name": "Clarendon Avenue"
     },
     {
       "slug": "kenilworth-road",
       "name": "Kenilworth Road"
     },
     {
-      "slug": "holyhead-road",
-      "name": "Holyhead Road"
+      "slug": "lillington-avenue",
+      "name": "Lillington Avenue"
     },
     {
-      "slug": "foleshill-road",
-      "name": "Foleshill Road"
+      "slug": "willes-road",
+      "name": "Willes Road"
     },
     {
-      "slug": "stoney-stanton-road",
-      "name": "Stoney Stanton Road"
+      "slug": "victoria-terrace",
+      "name": "Victoria Terrace"
+    },
+    {
+      "slug": "dormer-place",
+      "name": "Dormer Place"
+    },
+    {
+      "slug": "brunswick-street",
+      "name": "Brunswick Street"
+    },
+    {
+      "slug": "bath-street",
+      "name": "Bath Street"
+    },
+    {
+      "slug": "parade",
+      "name": "Parade"
+    },
+    {
+      "slug": "st-helen-s-road",
+      "name": "St Helen's Road"
+    },
+    {
+      "slug": "prospect-road",
+      "name": "Prospect Road"
+    },
+    {
+      "slug": "tachbrook-street",
+      "name": "Tachbrook Street"
+    },
+    {
+      "slug": "ranelagh-terrace",
+      "name": "Ranelagh Terrace"
+    },
+    {
+      "slug": "charlotte-street",
+      "name": "Charlotte Street"
+    },
+    {
+      "slug": "hitchman-road",
+      "name": "Hitchman Road"
+    },
+    {
+      "slug": "llewellyn-road",
+      "name": "Llewellyn Road"
+    },
+    {
+      "slug": "alexandra-road",
+      "name": "Alexandra Road"
+    },
+    {
+      "slug": "aylesford-street",
+      "name": "Aylesford Street"
+    },
+    {
+      "slug": "clemens-street",
+      "name": "Clemens Street"
+    },
+    {
+      "slug": "waverley-road",
+      "name": "Waverley Road"
+    },
+    {
+      "slug": "grosvenor-road",
+      "name": "Grosvenor Road"
+    },
+    {
+      "slug": "northway",
+      "name": "Northway"
+    },
+    {
+      "slug": "scott-road",
+      "name": "Scott Road"
+    },
+    {
+      "slug": "clarendon-square",
+      "name": "Clarendon Square"
+    },
+    {
+      "slug": "offa-road",
+      "name": "Offa Road"
+    },
+    {
+      "slug": "sydenham-drive",
+      "name": "Sydenham Drive"
+    },
+    {
+      "slug": "leicester-street",
+      "name": "Leicester Street"
+    },
+    {
+      "slug": "lansdowne-street",
+      "name": "Lansdowne Street"
+    },
+    {
+      "slug": "shrubland-street",
+      "name": "Shrubland Street"
+    },
+    {
+      "slug": "st-george-s-road",
+      "name": "St George's Road"
+    },
+    {
+      "slug": "claremont-road",
+      "name": "Claremont Road"
+    },
+    {
+      "slug": "the-close",
+      "name": "The Close"
+    },
+    {
+      "slug": "grove-place",
+      "name": "Grove Place"
+    },
+    {
+      "slug": "east-grove",
+      "name": "East Grove"
+    },
+    {
+      "slug": "clarence-street",
+      "name": "Clarence Street"
+    },
+    {
+      "slug": "emscote-road",
+      "name": "Emscote Road"
+    },
+    {
+      "slug": "regent-grove",
+      "name": "Regent Grove"
+    },
+    {
+      "slug": "newbold-terrace",
+      "name": "Newbold Terrace"
+    },
+    {
+      "slug": "leicester-lane",
+      "name": "Leicester Lane"
+    },
+    {
+      "slug": "binswood-avenue",
+      "name": "Binswood Avenue"
+    },
+    {
+      "slug": "gainsborough-drive",
+      "name": "Gainsborough Drive"
+    },
+    {
+      "slug": "kelvin-road",
+      "name": "Kelvin Road"
+    },
+    {
+      "slug": "stirling-avenue",
+      "name": "Stirling Avenue"
+    },
+    {
+      "slug": "telford-avenue",
+      "name": "Telford Avenue"
+    },
+    {
+      "slug": "lime-avenue",
+      "name": "Lime Avenue"
+    },
+    {
+      "slug": "kinross-road",
+      "name": "Kinross Road"
+    },
+    {
+      "slug": "portland-street",
+      "name": "Portland Street"
+    },
+    {
+      "slug": "waterloo-place",
+      "name": "Waterloo Place"
+    },
+    {
+      "slug": "beauchamp-road",
+      "name": "Beauchamp Road"
+    },
+    {
+      "slug": "hall-road",
+      "name": "Hall Road"
+    },
+    {
+      "slug": "augusta-place",
+      "name": "Augusta Place"
+    },
+    {
+      "slug": "windsor-street",
+      "name": "Windsor Street"
+    },
+    {
+      "slug": "kingsway",
+      "name": "Kingsway"
+    },
+    {
+      "slug": "princes-drive",
+      "name": "Princes Drive"
+    },
+    {
+      "slug": "warwick-new-road",
+      "name": "Warwick New Road"
+    },
+    {
+      "slug": "wise-street",
+      "name": "Wise Street"
+    },
+    {
+      "slug": "wise-terrace",
+      "name": "Wise Terrace"
+    },
+    {
+      "slug": "church-hill",
+      "name": "Church Hill"
+    },
+    {
+      "slug": "wathen-road",
+      "name": "Wathen Road"
+    },
+    {
+      "slug": "campion-road",
+      "name": "Campion Road"
+    },
+    {
+      "slug": "brownlow-street",
+      "name": "Brownlow Street"
+    },
+    {
+      "slug": "villiers-street",
+      "name": "Villiers Street"
+    },
+    {
+      "slug": "tachbrook-road",
+      "name": "Tachbrook Road"
+    },
+    {
+      "slug": "newbold-street",
+      "name": "Newbold Street"
+    },
+    {
+      "slug": "arlington-avenue",
+      "name": "Arlington Avenue"
+    },
+    {
+      "slug": "dereham-court",
+      "name": "Dereham Court"
+    },
+    {
+      "slug": "denville-road",
+      "name": "Denville Road"
+    },
+    {
+      "slug": "oxford-street",
+      "name": "Oxford Street"
+    },
+    {
+      "slug": "morrell-street",
+      "name": "Morrell Street"
+    },
+    {
+      "slug": "bordesley-court",
+      "name": "Bordesley Court"
+    },
+    {
+      "slug": "church-lane",
+      "name": "Church Lane"
+    },
+    {
+      "slug": "vicarage-road",
+      "name": "Vicarage Road"
+    },
+    {
+      "slug": "warren-close",
+      "name": "Warren Close"
+    },
+    {
+      "slug": "woodcote-road",
+      "name": "Woodcote Road"
+    },
+    {
+      "slug": "farm-road",
+      "name": "Farm Road"
+    },
+    {
+      "slug": "highland-road",
+      "name": "Highland Road"
+    },
+    {
+      "slug": "manor-road",
+      "name": "Manor Road"
+    },
+    {
+      "slug": "elm-road",
+      "name": "Elm Road"
+    },
+    {
+      "slug": "parklands-avenue",
+      "name": "Parklands Avenue"
+    },
+    {
+      "slug": "cumberland-crescent",
+      "name": "Cumberland Crescent"
+    },
+    {
+      "slug": "valley-road",
+      "name": "Valley Road"
+    },
+    {
+      "slug": "pound-lane",
+      "name": "Pound Lane"
+    },
+    {
+      "slug": "melton-road",
+      "name": "Melton Road"
+    },
+    {
+      "slug": "braemar-road",
+      "name": "Braemar Road"
+    },
+    {
+      "slug": "helmsdale-road",
+      "name": "Helmsdale Road"
+    },
+    {
+      "slug": "st-andrew-s-road",
+      "name": "St Andrew's Road"
+    },
+    {
+      "slug": "montrose-avenue",
+      "name": "Montrose Avenue"
+    },
+    {
+      "slug": "crown-way",
+      "name": "Crown Way"
+    },
+    {
+      "slug": "gresham-avenue",
+      "name": "Gresham Avenue"
+    },
+    {
+      "slug": "leam-terrace",
+      "name": "Leam Terrace"
+    },
+    {
+      "slug": "mason-avenue",
+      "name": "Mason Avenue"
+    },
+    {
+      "slug": "lonsdale-road",
+      "name": "Lonsdale Road"
+    },
+    {
+      "slug": "buckley-road",
+      "name": "Buckley Road"
+    },
+    {
+      "slug": "rawlinson-road",
+      "name": "Rawlinson Road"
+    },
+    {
+      "slug": "haddon-road",
+      "name": "Haddon Road"
+    },
+    {
+      "slug": "wellington-road",
+      "name": "Wellington Road"
+    },
+    {
+      "slug": "morton-street",
+      "name": "Morton Street"
+    },
+    {
+      "slug": "holly-walk",
+      "name": "Holly Walk"
+    },
+    {
+      "slug": "portland-place-east",
+      "name": "Portland Place East"
+    },
+    {
+      "slug": "clapham-terrace",
+      "name": "Clapham Terrace"
+    },
+    {
+      "slug": "rushmore-street",
+      "name": "Rushmore Street"
+    },
+    {
+      "slug": "st-mary-s-road",
+      "name": "St Mary's Road"
     },
     {
       "slug": "radford-road",
       "name": "Radford Road"
     },
     {
-      "slug": "coundon-road",
-      "name": "Coundon Road"
+      "slug": "inglewood-close",
+      "name": "Inglewood Close"
     },
     {
-      "slug": "barkers-butts-lane",
-      "name": "Barkers Butts Lane"
+      "slug": "lillington-close",
+      "name": "Lillington Close"
     },
     {
-      "slug": "royal-leamington-spa-binley-road",
-      "name": "Royal Leamington Spa Binley Road"
+      "slug": "cedar-close",
+      "name": "Cedar Close"
+    },
+    {
+      "slug": "old-school-mews",
+      "name": "Old School Mews"
+    },
+    {
+      "slug": "waller-street",
+      "name": "Waller Street"
+    },
+    {
+      "slug": "hill-street",
+      "name": "Hill Street"
+    },
+    {
+      "slug": "guy-place-west",
+      "name": "Guy Place West"
+    },
+    {
+      "slug": "guy-place-east",
+      "name": "Guy Place East"
+    },
+    {
+      "slug": "norfolk-street",
+      "name": "Norfolk Street"
+    },
+    {
+      "slug": "suffolk-street",
+      "name": "Suffolk Street"
+    },
+    {
+      "slug": "campion-terrace",
+      "name": "Campion Terrace"
+    },
+    {
+      "slug": "prince-s-street",
+      "name": "Prince's Street"
+    },
+    {
+      "slug": "holly-street",
+      "name": "Holly Street"
+    },
+    {
+      "slug": "north-villiers-street",
+      "name": "North Villiers Street"
+    },
+    {
+      "slug": "aldwick-close",
+      "name": "Aldwick Close"
+    },
+    {
+      "slug": "elm-bank-close",
+      "name": "Elm Bank Close"
+    },
+    {
+      "slug": "park-road",
+      "name": "Park Road"
+    },
+    {
+      "slug": "belmont-drive",
+      "name": "Belmont Drive"
+    },
+    {
+      "slug": "garway-close",
+      "name": "Garway Close"
+    },
+    {
+      "slug": "mill-street",
+      "name": "Mill Street"
+    },
+    {
+      "slug": "keir-close",
+      "name": "Keir Close"
+    },
+    {
+      "slug": "crowden-drive",
+      "name": "Crowden Drive"
+    },
+    {
+      "slug": "granville-street",
+      "name": "Granville Street"
+    },
+    {
+      "slug": "oak-tree-close",
+      "name": "Oak Tree Close"
+    },
+    {
+      "slug": "berenska-drive",
+      "name": "Berenska Drive"
+    },
+    {
+      "slug": "payne-close",
+      "name": "Payne Close"
+    },
+    {
+      "slug": "hurley-close",
+      "name": "Hurley Close"
+    },
+    {
+      "slug": "pleasant-way",
+      "name": "Pleasant Way"
+    },
+    {
+      "slug": "campion-green",
+      "name": "Campion Green"
+    },
+    {
+      "slug": "hazel-close",
+      "name": "Hazel Close"
+    },
+    {
+      "slug": "jasmine-grove",
+      "name": "Jasmine Grove"
+    },
+    {
+      "slug": "kiln-close",
+      "name": "Kiln Close"
+    },
+    {
+      "slug": "sheepcote-close",
+      "name": "Sheepcote Close"
+    },
+    {
+      "slug": "priory-terrace",
+      "name": "Priory Terrace"
+    },
+    {
+      "slug": "mill-road",
+      "name": "Mill Road"
+    },
+    {
+      "slug": "bowers-croft",
+      "name": "Bowers Croft"
+    },
+    {
+      "slug": "burman-close",
+      "name": "Burman Close"
+    },
+    {
+      "slug": "cloister-way",
+      "name": "Cloister Way"
     }
   ]
 }

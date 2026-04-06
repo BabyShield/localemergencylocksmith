@@ -3,224 +3,28 @@
   "areaName": "Kenilworth",
   "streets": [
     {
-      "slug": "high-street",
-      "name": "High Street"
+      "slug": "kenilworth-high-street",
+      "name": "Kenilworth High Street"
     },
     {
-      "slug": "station-road",
-      "name": "Station Road"
+      "slug": "kenilworth-station-road",
+      "name": "Kenilworth Station Road"
     },
     {
-      "slug": "church-road",
-      "name": "Church Road"
+      "slug": "kenilworth-church-lane",
+      "name": "Kenilworth Church Lane"
     },
     {
-      "slug": "victoria-road",
-      "name": "Victoria Road"
+      "slug": "kenilworth-victoria-road",
+      "name": "Kenilworth Victoria Road"
     },
     {
-      "slug": "london-road",
-      "name": "London Road"
+      "slug": "kenilworth-the-avenue",
+      "name": "Kenilworth The Avenue"
     },
     {
-      "slug": "main-street",
-      "name": "Main Street"
-    },
-    {
-      "slug": "park-road",
-      "name": "Park Road"
-    },
-    {
-      "slug": "kenilworth-church-street",
-      "name": "Kenilworth Church Street"
-    },
-    {
-      "slug": "kenilworth-queens-road",
-      "name": "Kenilworth Queens Road"
-    },
-    {
-      "slug": "new-road",
-      "name": "New Road"
-    },
-    {
-      "slug": "grange-road",
-      "name": "Grange Road"
-    },
-    {
-      "slug": "kings-road",
-      "name": "Kings Road"
-    },
-    {
-      "slug": "windsor-avenue",
-      "name": "Windsor Avenue"
-    },
-    {
-      "slug": "chester-road",
-      "name": "Chester Road"
-    },
-    {
-      "slug": "kenilworth-albert-road",
-      "name": "Kenilworth Albert Road"
-    },
-    {
-      "slug": "wellington-street",
-      "name": "Wellington Street"
-    },
-    {
-      "slug": "mill-lane",
-      "name": "Mill Lane"
-    },
-    {
-      "slug": "highfield-road",
-      "name": "Highfield Road"
-    },
-    {
-      "slug": "kenilworth-george-street",
-      "name": "Kenilworth George Street"
-    },
-    {
-      "slug": "north-street",
-      "name": "North Street"
-    },
-    {
-      "slug": "south-street",
-      "name": "South Street"
-    },
-    {
-      "slug": "west-street",
-      "name": "West Street"
-    },
-    {
-      "slug": "kenilworth-east-street",
-      "name": "Kenilworth East Street"
-    },
-    {
-      "slug": "kenilworth-broad-street",
-      "name": "Kenilworth Broad Street"
-    },
-    {
-      "slug": "springfield-road",
-      "name": "Springfield Road"
-    },
-    {
-      "slug": "richmond-road",
-      "name": "Richmond Road"
-    },
-    {
-      "slug": "boundary-road",
-      "name": "Boundary Road"
-    },
-    {
-      "slug": "stanley-road",
-      "name": "Stanley Road"
-    },
-    {
-      "slug": "green-lane",
-      "name": "Green Lane"
-    },
-    {
-      "slug": "manor-road",
-      "name": "Manor Road"
-    },
-    {
-      "slug": "park-avenue",
-      "name": "Park Avenue"
-    },
-    {
-      "slug": "york-road",
-      "name": "York Road"
-    },
-    {
-      "slug": "school-lane",
-      "name": "School Lane"
-    },
-    {
-      "slug": "kenilworth-meadow-way",
-      "name": "Kenilworth Meadow Way"
-    },
-    {
-      "slug": "orchard-close",
-      "name": "Orchard Close"
-    },
-    {
-      "slug": "cedar-avenue",
-      "name": "Cedar Avenue"
-    },
-    {
-      "slug": "oak-lane",
-      "name": "Oak Lane"
-    },
-    {
-      "slug": "elm-grove",
-      "name": "Elm Grove"
-    },
-    {
-      "slug": "pine-close",
-      "name": "Pine Close"
-    },
-    {
-      "slug": "ash-grove",
-      "name": "Ash Grove"
-    },
-    {
-      "slug": "willow-avenue",
-      "name": "Willow Avenue"
-    },
-    {
-      "slug": "kenilworth-birch-road",
-      "name": "Kenilworth Birch Road"
-    },
-    {
-      "slug": "kenilworth-maple-drive",
-      "name": "Kenilworth Maple Drive"
-    },
-    {
-      "slug": "kenilworth-hawthorn-close",
-      "name": "Kenilworth Hawthorn Close"
-    },
-    {
-      "slug": "chestnut-avenue",
-      "name": "Chestnut Avenue"
-    },
-    {
-      "slug": "coventry-road",
-      "name": "Coventry Road"
-    },
-    {
-      "slug": "warwick-road",
-      "name": "Warwick Road"
-    },
-    {
-      "slug": "kenilworth-road",
-      "name": "Kenilworth Road"
-    },
-    {
-      "slug": "kenilworth-holyhead-road",
-      "name": "Kenilworth Holyhead Road"
-    },
-    {
-      "slug": "foleshill-road",
-      "name": "Foleshill Road"
-    },
-    {
-      "slug": "kenilworth-stoney-stanton-road",
-      "name": "Kenilworth Stoney Stanton Road"
-    },
-    {
-      "slug": "radford-road",
-      "name": "Radford Road"
-    },
-    {
-      "slug": "coundon-road",
-      "name": "Coundon Road"
-    },
-    {
-      "slug": "barkers-butts-lane",
-      "name": "Barkers Butts Lane"
-    },
-    {
-      "slug": "kenilworth-binley-road",
-      "name": "Kenilworth Binley Road"
+      "slug": "kenilworth-park-road",
+      "name": "Kenilworth Park Road"
     }
   ]
 }

@@ -3,224 +3,28 @@
   "areaName": "Tile Hill",
   "streets": [
     {
-      "slug": "high-street",
-      "name": "High Street"
+      "slug": "tile-hill-high-street",
+      "name": "Tile Hill High Street"
     },
     {
-      "slug": "station-road",
-      "name": "Station Road"
+      "slug": "tile-hill-station-road",
+      "name": "Tile Hill Station Road"
     },
     {
-      "slug": "church-road",
-      "name": "Church Road"
+      "slug": "tile-hill-church-lane",
+      "name": "Tile Hill Church Lane"
     },
     {
       "slug": "tile-hill-victoria-road",
       "name": "Tile Hill Victoria Road"
     },
     {
-      "slug": "london-road",
-      "name": "London Road"
+      "slug": "tile-hill-the-avenue",
+      "name": "Tile Hill The Avenue"
     },
     {
-      "slug": "main-street",
-      "name": "Main Street"
-    },
-    {
-      "slug": "park-road",
-      "name": "Park Road"
-    },
-    {
-      "slug": "church-street",
-      "name": "Church Street"
-    },
-    {
-      "slug": "queens-road",
-      "name": "Queens Road"
-    },
-    {
-      "slug": "new-road",
-      "name": "New Road"
-    },
-    {
-      "slug": "grange-road",
-      "name": "Grange Road"
-    },
-    {
-      "slug": "kings-road",
-      "name": "Kings Road"
-    },
-    {
-      "slug": "windsor-avenue",
-      "name": "Windsor Avenue"
-    },
-    {
-      "slug": "chester-road",
-      "name": "Chester Road"
-    },
-    {
-      "slug": "tile-hill-albert-road",
-      "name": "Tile Hill Albert Road"
-    },
-    {
-      "slug": "wellington-street",
-      "name": "Wellington Street"
-    },
-    {
-      "slug": "mill-lane",
-      "name": "Mill Lane"
-    },
-    {
-      "slug": "highfield-road",
-      "name": "Highfield Road"
-    },
-    {
-      "slug": "george-street",
-      "name": "George Street"
-    },
-    {
-      "slug": "north-street",
-      "name": "North Street"
-    },
-    {
-      "slug": "tile-hill-south-street",
-      "name": "Tile Hill South Street"
-    },
-    {
-      "slug": "west-street",
-      "name": "West Street"
-    },
-    {
-      "slug": "east-street",
-      "name": "East Street"
-    },
-    {
-      "slug": "broad-street",
-      "name": "Broad Street"
-    },
-    {
-      "slug": "springfield-road",
-      "name": "Springfield Road"
-    },
-    {
-      "slug": "richmond-road",
-      "name": "Richmond Road"
-    },
-    {
-      "slug": "boundary-road",
-      "name": "Boundary Road"
-    },
-    {
-      "slug": "stanley-road",
-      "name": "Stanley Road"
-    },
-    {
-      "slug": "green-lane",
-      "name": "Green Lane"
-    },
-    {
-      "slug": "manor-road",
-      "name": "Manor Road"
-    },
-    {
-      "slug": "park-avenue",
-      "name": "Park Avenue"
-    },
-    {
-      "slug": "york-road",
-      "name": "York Road"
-    },
-    {
-      "slug": "school-lane",
-      "name": "School Lane"
-    },
-    {
-      "slug": "meadow-way",
-      "name": "Meadow Way"
-    },
-    {
-      "slug": "orchard-close",
-      "name": "Orchard Close"
-    },
-    {
-      "slug": "cedar-avenue",
-      "name": "Cedar Avenue"
-    },
-    {
-      "slug": "tile-hill-oak-lane",
-      "name": "Tile Hill Oak Lane"
-    },
-    {
-      "slug": "elm-grove",
-      "name": "Elm Grove"
-    },
-    {
-      "slug": "pine-close",
-      "name": "Pine Close"
-    },
-    {
-      "slug": "ash-grove",
-      "name": "Ash Grove"
-    },
-    {
-      "slug": "willow-avenue",
-      "name": "Willow Avenue"
-    },
-    {
-      "slug": "tile-hill-birch-road",
-      "name": "Tile Hill Birch Road"
-    },
-    {
-      "slug": "maple-drive",
-      "name": "Maple Drive"
-    },
-    {
-      "slug": "tile-hill-hawthorn-close",
-      "name": "Tile Hill Hawthorn Close"
-    },
-    {
-      "slug": "tile-hill-chestnut-avenue",
-      "name": "Tile Hill Chestnut Avenue"
-    },
-    {
-      "slug": "tile-hill-coventry-road",
-      "name": "Tile Hill Coventry Road"
-    },
-    {
-      "slug": "warwick-road",
-      "name": "Warwick Road"
-    },
-    {
-      "slug": "tile-hill-kenilworth-road",
-      "name": "Tile Hill Kenilworth Road"
-    },
-    {
-      "slug": "holyhead-road",
-      "name": "Holyhead Road"
-    },
-    {
-      "slug": "foleshill-road",
-      "name": "Foleshill Road"
-    },
-    {
-      "slug": "tile-hill-stoney-stanton-road",
-      "name": "Tile Hill Stoney Stanton Road"
-    },
-    {
-      "slug": "radford-road",
-      "name": "Radford Road"
-    },
-    {
-      "slug": "coundon-road",
-      "name": "Coundon Road"
-    },
-    {
-      "slug": "tile-hill-barkers-butts-lane",
-      "name": "Tile Hill Barkers Butts Lane"
-    },
-    {
-      "slug": "binley-road",
-      "name": "Binley Road"
+      "slug": "tile-hill-park-road",
+      "name": "Tile Hill Park Road"
     }
   ]
 }

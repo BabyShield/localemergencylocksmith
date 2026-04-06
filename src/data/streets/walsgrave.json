@@ -3,224 +3,28 @@
   "areaName": "Walsgrave",
   "streets": [
     {
-      "slug": "high-street",
-      "name": "High Street"
+      "slug": "walsgrave-high-street",
+      "name": "Walsgrave High Street"
     },
     {
       "slug": "walsgrave-station-road",
       "name": "Walsgrave Station Road"
     },
     {
-      "slug": "church-road",
-      "name": "Church Road"
+      "slug": "walsgrave-church-lane",
+      "name": "Walsgrave Church Lane"
     },
     {
       "slug": "walsgrave-victoria-road",
       "name": "Walsgrave Victoria Road"
     },
     {
-      "slug": "walsgrave-london-road",
-      "name": "Walsgrave London Road"
+      "slug": "walsgrave-the-avenue",
+      "name": "Walsgrave The Avenue"
     },
     {
-      "slug": "main-street",
-      "name": "Main Street"
-    },
-    {
-      "slug": "park-road",
-      "name": "Park Road"
-    },
-    {
-      "slug": "walsgrave-church-street",
-      "name": "Walsgrave Church Street"
-    },
-    {
-      "slug": "queens-road",
-      "name": "Queens Road"
-    },
-    {
-      "slug": "walsgrave-new-road",
-      "name": "Walsgrave New Road"
-    },
-    {
-      "slug": "grange-road",
-      "name": "Grange Road"
-    },
-    {
-      "slug": "kings-road",
-      "name": "Kings Road"
-    },
-    {
-      "slug": "windsor-avenue",
-      "name": "Windsor Avenue"
-    },
-    {
-      "slug": "chester-road",
-      "name": "Chester Road"
-    },
-    {
-      "slug": "albert-road",
-      "name": "Albert Road"
-    },
-    {
-      "slug": "wellington-street",
-      "name": "Wellington Street"
-    },
-    {
-      "slug": "mill-lane",
-      "name": "Mill Lane"
-    },
-    {
-      "slug": "walsgrave-highfield-road",
-      "name": "Walsgrave Highfield Road"
-    },
-    {
-      "slug": "george-street",
-      "name": "George Street"
-    },
-    {
-      "slug": "north-street",
-      "name": "North Street"
-    },
-    {
-      "slug": "south-street",
-      "name": "South Street"
-    },
-    {
-      "slug": "west-street",
-      "name": "West Street"
-    },
-    {
-      "slug": "walsgrave-east-street",
-      "name": "Walsgrave East Street"
-    },
-    {
-      "slug": "walsgrave-broad-street",
-      "name": "Walsgrave Broad Street"
-    },
-    {
-      "slug": "walsgrave-springfield-road",
-      "name": "Walsgrave Springfield Road"
-    },
-    {
-      "slug": "richmond-road",
-      "name": "Richmond Road"
-    },
-    {
-      "slug": "boundary-road",
-      "name": "Boundary Road"
-    },
-    {
-      "slug": "stanley-road",
-      "name": "Stanley Road"
-    },
-    {
-      "slug": "walsgrave-green-lane",
-      "name": "Walsgrave Green Lane"
-    },
-    {
-      "slug": "manor-road",
-      "name": "Manor Road"
-    },
-    {
-      "slug": "park-avenue",
-      "name": "Park Avenue"
-    },
-    {
-      "slug": "walsgrave-york-road",
-      "name": "Walsgrave York Road"
-    },
-    {
-      "slug": "school-lane",
-      "name": "School Lane"
-    },
-    {
-      "slug": "meadow-way",
-      "name": "Meadow Way"
-    },
-    {
-      "slug": "orchard-close",
-      "name": "Orchard Close"
-    },
-    {
-      "slug": "cedar-avenue",
-      "name": "Cedar Avenue"
-    },
-    {
-      "slug": "oak-lane",
-      "name": "Oak Lane"
-    },
-    {
-      "slug": "walsgrave-elm-grove",
-      "name": "Walsgrave Elm Grove"
-    },
-    {
-      "slug": "pine-close",
-      "name": "Pine Close"
-    },
-    {
-      "slug": "walsgrave-ash-grove",
-      "name": "Walsgrave Ash Grove"
-    },
-    {
-      "slug": "willow-avenue",
-      "name": "Willow Avenue"
-    },
-    {
-      "slug": "birch-road",
-      "name": "Birch Road"
-    },
-    {
-      "slug": "maple-drive",
-      "name": "Maple Drive"
-    },
-    {
-      "slug": "hawthorn-close",
-      "name": "Hawthorn Close"
-    },
-    {
-      "slug": "chestnut-avenue",
-      "name": "Chestnut Avenue"
-    },
-    {
-      "slug": "walsgrave-coventry-road",
-      "name": "Walsgrave Coventry Road"
-    },
-    {
-      "slug": "warwick-road",
-      "name": "Warwick Road"
-    },
-    {
-      "slug": "kenilworth-road",
-      "name": "Kenilworth Road"
-    },
-    {
-      "slug": "walsgrave-holyhead-road",
-      "name": "Walsgrave Holyhead Road"
-    },
-    {
-      "slug": "foleshill-road",
-      "name": "Foleshill Road"
-    },
-    {
-      "slug": "stoney-stanton-road",
-      "name": "Stoney Stanton Road"
-    },
-    {
-      "slug": "radford-road",
-      "name": "Radford Road"
-    },
-    {
-      "slug": "walsgrave-coundon-road",
-      "name": "Walsgrave Coundon Road"
-    },
-    {
-      "slug": "barkers-butts-lane",
-      "name": "Barkers Butts Lane"
-    },
-    {
-      "slug": "binley-road",
-      "name": "Binley Road"
+      "slug": "walsgrave-park-road",
+      "name": "Walsgrave Park Road"
     }
   ]
 }
