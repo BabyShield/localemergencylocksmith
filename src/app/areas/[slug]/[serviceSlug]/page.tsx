@@ -53,6 +53,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title,
       description,
       url: `${SITE_CONFIG.domain}/areas/${slug}/${serviceSlug}`,
+      images: [
+        {
+          url: `${SITE_CONFIG.domain}/api/og?title=${encodeURIComponent(`${service.shortName} in ${area.name}`)}`,
+          width: 1200,
+          height: 630,
+        },
+      ],
     },
   }
 }

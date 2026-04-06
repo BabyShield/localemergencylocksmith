@@ -9,6 +9,7 @@ import WhatsAppButton from '@/components/WhatsAppButton'
 import ScrollCTA from '@/components/ScrollCTA'
 import SchemaMarkup from '@/components/SchemaMarkup'
 import { SITE_CONFIG } from '@/data/config'
+import { AREAS } from '@/data/areas'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -79,19 +80,17 @@ const globalSchema = {
     opens: '00:00',
     closes: '23:59',
   },
-  areaServed: [
-    { '@type': 'City', name: 'Coventry' },
-    { '@type': 'City', name: 'Nuneaton' },
-    { '@type': 'City', name: 'Bedworth' },
-    { '@type': 'City', name: 'Rugby' },
-    { '@type': 'City', name: 'Leamington Spa' },
-    { '@type': 'City', name: 'Warwick' },
-    { '@type': 'City', name: 'Stratford-upon-Avon' },
-    { '@type': 'City', name: 'Kenilworth' },
-    { '@type': 'City', name: 'Solihull' },
-    { '@type': 'City', name: 'Southam' },
-    { '@type': 'City', name: 'Atherstone' },
-  ],
+  areaServed: AREAS.map(area => ({
+    '@type': 'City',
+    name: area.name,
+    ...(area.lat && area.lng ? {
+      geo: {
+        '@type': 'GeoCoordinates',
+        latitude: area.lat,
+        longitude: area.lng
+      }
+    } : {})
+  })),
   hasOfferCatalog: {
     '@type': 'OfferCatalog',
     name: 'Locksmith Services',

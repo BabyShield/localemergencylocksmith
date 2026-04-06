@@ -114,6 +114,14 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
      }
   })
 
+  // 10. Reviews Directory
+  const reviewPages: MetadataRoute.Sitemap = AREAS.map((a) => ({
+    url: `${base}/reviews/${a.slug}`,
+    lastModified: buildDate,
+    changeFrequency: 'monthly',
+    priority: 0.8,
+  }))
+
   return [
     ...staticPages,
     ...servicePages,
@@ -124,5 +132,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     ...areaArticlePages,
     ...blogPostPages,
     ...algorithmicPages,
+    ...reviewPages,
   ]
 }

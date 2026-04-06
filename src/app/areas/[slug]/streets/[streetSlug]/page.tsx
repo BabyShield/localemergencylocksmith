@@ -50,6 +50,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title,
       description,
       url: `${SITE_CONFIG.domain}/areas/${slug}/streets/${streetSlug}`,
+      images: [
+        {
+          url: `${SITE_CONFIG.domain}/api/og?title=${encodeURIComponent(`Locksmith on ${street.name}`)}`,
+          width: 1200,
+          height: 630,
+        },
+      ],
     },
   }
 }

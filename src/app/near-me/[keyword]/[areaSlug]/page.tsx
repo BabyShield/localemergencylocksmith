@@ -42,6 +42,18 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     alternates: {
       canonical: `${SITE_CONFIG.domain}/near-me/${keyword}/${areaSlug}`,
     },
+    openGraph: {
+      title,
+      description: `Looking for a ${kwMatch.keyword} around ${area.name}? Local independent locksmith. No VAT, no call-out fee. Call ${SITE_CONFIG.phone} now.`,
+      url: `${SITE_CONFIG.domain}/near-me/${keyword}/${areaSlug}`,
+      images: [
+        {
+          url: `${SITE_CONFIG.domain}/api/og?title=${encodeURIComponent(titleText.charAt(0).toUpperCase() + titleText.slice(1))}`,
+          width: 1200,
+          height: 630,
+        },
+      ],
+    },
   }
 }
 
