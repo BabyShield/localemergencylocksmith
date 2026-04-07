@@ -58,14 +58,39 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     }))
   )
 
+  // 4a. Locksmith EMK Base
+  const locksmithPages: MetadataRoute.Sitemap = AREAS.map((a) => ({
+    url: `${base}/locksmith/${a.slug}`,
+    lastModified: buildDate,
+    changeFrequency: 'monthly',
+    priority: 0.9,
+  }))
+
+  // 4b. Locksmith EMK x Service Matrix
+  const locksmithServicePages: MetadataRoute.Sitemap = AREAS.flatMap((a) =>
+    SERVICES.map((s) => ({
+      url: `${base}/locksmith/${a.slug}/${s.slug}`,
+      lastModified: buildDate,
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    }))
+  )
+
   // 5. Street Data Generator (Programmatic)
   const streetDataPages: MetadataRoute.Sitemap = []
+  const locksmithStreetPages: MetadataRoute.Sitemap = []
   AREAS.forEach((area) => {
     const areaJson = getJsonSafe(`src/data/streets/${area.slug}.json`)
     const streets = areaJson.streets || []
     streets.forEach((street: any) => {
       streetDataPages.push({
         url: `${base}/areas/${area.slug}/streets/${street.slug}`,
+        lastModified: buildDate,
+        changeFrequency: 'yearly',
+        priority: 0.5,
+      })
+      locksmithStreetPages.push({
+        url: `${base}/locksmith/${area.slug}/streets/${street.slug}`,
         lastModified: buildDate,
         changeFrequency: 'yearly',
         priority: 0.5,
@@ -136,7 +161,10 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     ...servicePages,
     ...areaPages,
     ...areaServicePages,
+    ...locksmithPages,
+    ...locksmithServicePages,
     ...streetDataPages,
+    ...locksmithStreetPages,
     ...nearMePages,
     ...areaArticlePages,
     ...blogPostPages,
