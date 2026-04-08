@@ -10,6 +10,7 @@ import CTABlock from '@/components/CTABlock'
 import FAQSection from '@/components/FAQSection'
 import AreaFacts from '@/components/AreaFacts'
 import SchemaMarkup from '@/components/SchemaMarkup'
+import InternalLinkingMatrix from '@/components/InternalLinkingMatrix'
 import { getAreaFacts } from '@/data/area-facts'
 
 export const dynamic = 'force-static'
@@ -397,6 +398,12 @@ export default async function AreaPage({ params }: Props) {
       <FAQSection
         faqs={area.faqs}
         heading={`Frequently Asked Questions — ${area.name} Locksmith`}
+      />
+
+      <InternalLinkingMatrix 
+        areaSlug={slug} 
+        areaName={area.name} 
+        parentHierarchy="locksmith" 
       />
 
       <CTABlock

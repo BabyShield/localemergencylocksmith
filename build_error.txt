@@ -6,16 +6,16 @@
 - Environments: .env.local
 
   Creating an optimized production build ...
-✓ Compiled successfully in 2.0s
+✓ Compiled successfully in 2.3s
   Running TypeScript ...
   Collecting page data using 21 workers ...
 ⚠ Using edge runtime on a page currently disables static generation for that page
-  Generating static pages using 21 workers (0/1001) ...
-Error occurred prerendering page "/postcodes/cv1". Read more: https://nextjs.org/docs/messages/prerender-error
-TypeError: Cannot read properties of undefined (reading 'toUpperCase')
-    at s (C:\Users\rossd\OneDrive\localemergencylocksmith\.next\server\chunks\ssr\[root-of-the-server]__f0ce746f._.js:1:3164)
-    at stringify (<anonymous>) {
-  digest: '2046549234'
-}
-Export encountered an error on /postcodes/[postcode]/page: /postcodes/cv1, exiting the build.
+  Generating static pages using 21 workers (0/1500) ...
+  Generating static pages using 21 workers (375/1500) 
+  Generating static pages using 21 workers (750/1500) 
+  Generating static pages using 21 workers (1125/1500) 
+Error occurred prerendering page "/sitemap/areas-and-hubs.xml". Read more: https://nextjs.org/docs/messages/prerender-error
+TypeError: e.startsWith is not a function
+    at ignore-listed frames
+Export encountered an error on /sitemap/[__metadata_id__]/route: /sitemap/areas-and-hubs.xml, exiting the build.
 ⨯ Next.js build worker exited with code: 1 and signal: null
