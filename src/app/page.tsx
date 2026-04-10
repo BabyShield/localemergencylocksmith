@@ -22,6 +22,7 @@ export const metadata: Metadata = {
     canonical: SITE_CONFIG.domain,
   },
   openGraph: {
+    type: 'website',
     title: 'Emergency Locksmith Coventry | 24/7 | No VAT | From £59',
     description: 'Locked out in Coventry? Local independent locksmith, 15-30 min response. No VAT, no call-out fee. Call 07735 336175.',
     url: SITE_CONFIG.domain,

@@ -32,6 +32,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       canonical: `${SITE_CONFIG.domain}/postcodes/${postcode}`,
     },
     openGraph: {
+      type: 'website',
       title: `Locksmith ${upper} | Emergency 24/7 | No VAT`,
       description: `Emergency locksmith covering all of ${upper}. 15-30 min response. No VAT, no call-out fee.`,
       url: `${SITE_CONFIG.domain}/postcodes/${postcode}`,

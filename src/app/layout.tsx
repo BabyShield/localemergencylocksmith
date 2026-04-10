@@ -152,6 +152,27 @@ const websiteSchema = {
   inLanguage: 'en-GB',
 }
 
+const navigationSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'SiteNavigationElement',
+  name: [
+    'Services',
+    'Areas',
+    'Prices',
+    'Blog',
+    'About',
+    'Contact',
+  ],
+  url: [
+    `${SITE_CONFIG.domain}/services`,
+    `${SITE_CONFIG.domain}/areas`,
+    `${SITE_CONFIG.domain}/prices`,
+    `${SITE_CONFIG.domain}/blog`,
+    `${SITE_CONFIG.domain}/about`,
+    `${SITE_CONFIG.domain}/contact`,
+  ],
+}
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -168,10 +189,13 @@ export default function RootLayout({
         <meta name="geo.placename" content="Coventry, Warwickshire" />
         <meta name="geo.position" content="52.4068;-1.5197" />
         <meta name="ICBM" content="52.4068, -1.5197" />
+        <link rel="manifest" href="/manifest.json" />
+        <meta name="theme-color" content="#0F1B2D" />
         <link rel="preconnect" href="https://www.googletagmanager.com" />
         <link rel="dns-prefetch" href="https://maps.googleapis.com" />
         <SchemaMarkup schema={globalSchema} />
         <SchemaMarkup schema={websiteSchema} />
+        <SchemaMarkup schema={navigationSchema} />
         {/* Google Tag Manager (Placeholder) */}
         <script
           dangerouslySetInnerHTML={{
