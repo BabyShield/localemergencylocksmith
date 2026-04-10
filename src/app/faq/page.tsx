@@ -188,7 +188,7 @@ export default function FAQPage() {
             Frequently Asked Questions
           </h1>
           <p className="text-gray-600 text-lg max-w-xl mx-auto mb-2">
-            Everything you need to know about our locksmith services in Coventry and Warwickshire.
+            Everything you need to know about my locksmith services in Coventry and Warwickshire.
           </p>
           <p className="text-gray-500 text-sm">
             Can&apos;t find your answer? Call{' '}

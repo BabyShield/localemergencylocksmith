@@ -47,10 +47,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     alternates: {
       canonical: `${SITE_CONFIG.domain}/areas/${slug}/streets/${streetSlug}`,
     },
+    robots: { index: false, follow: true },
     openGraph: {
       title,
       description,
-      url: `${SITE_CONFIG.domain}/locksmith/${slug}/streets/${streetSlug}`,
+      url: `${SITE_CONFIG.domain}/areas/${slug}/streets/${streetSlug}`,
       images: [
         {
           url: `${SITE_CONFIG.domain}/api/og?title=${encodeURIComponent(`Locksmith on ${street.name}`)}`,

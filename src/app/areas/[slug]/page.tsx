@@ -40,6 +40,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       canonical: `${SITE_CONFIG.domain}/areas/${slug}`,
     },
     openGraph: {
+      type: 'website',
       title,
       description,
       url: `${SITE_CONFIG.domain}/areas/${slug}`,

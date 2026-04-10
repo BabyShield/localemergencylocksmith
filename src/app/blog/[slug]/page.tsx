@@ -107,7 +107,7 @@ export default async function BlogPostPage({ params }: Props) {
     description: post.excerpt,
     url: `${SITE_CONFIG.domain}/blog/${slug}`,
     datePublished: post.date,
-    dateModified: '2026-03-17',
+    dateModified: new Date().toISOString().split('T')[0],
     image: { '@type': 'ImageObject', url: `${SITE_CONFIG.domain}/api/og?title=${encodeURIComponent(post.title)}`, width: 1200, height: 630 },
     author: {
       '@type': 'Person',

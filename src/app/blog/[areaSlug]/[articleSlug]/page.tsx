@@ -99,7 +99,7 @@ export default async function ArticlePage({ params }: Props) {
     headline: pageTitle,
     url: pageUrl,
     datePublished: dateStr,
-    dateModified: '2026-03-17',
+    dateModified: new Date().toISOString().split('T')[0],
     author: {
       '@type': 'Person',
       name: 'Ross',

@@ -12,6 +12,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: `${SITE_CONFIG.domain}/areas`,
   },
+  robots: { index: false, follow: true },
 }
 
 const breadcrumbSchema = {

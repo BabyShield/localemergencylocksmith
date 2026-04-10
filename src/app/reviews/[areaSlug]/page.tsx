@@ -26,7 +26,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!area) return {}
 
   const title = `Locksmith ${area.name} Reviews | 5-Star Rated Emergency Service`
-  const description = `Read genuine customer reviews for our locksmith service in ${area.name}. Fast 15-30m response, no VAT and zero call-out charges. See why locals rate us 5 stars.`
+  const description = `Read genuine customer reviews for my locksmith service in ${area.name}. Fast 15-30m response, no VAT and zero call-out charges. See why locals rate me 5 stars.`
 
   return {
     title,
@@ -35,6 +35,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       canonical: `${SITE_CONFIG.domain}/reviews/${areaSlug}`,
     },
     openGraph: {
+      type: 'website',
       title,
       description,
       url: `${SITE_CONFIG.domain}/reviews/${areaSlug}`,
@@ -125,7 +126,7 @@ export default async function AreaReviewsPage({ params }: Props) {
 
       <HeroSection
         heading={`Locksmith Reviews for ${area.name}`}
-        subheading={`See what local residents in ${area.name} (${area.postcode}) are saying about our rapid emergency locksmith services.`}
+        subheading={`See what local residents in ${area.name} (${area.postcode}) are saying about my rapid emergency locksmith service.`}
         areaName={area.name}
       />
 
@@ -171,7 +172,7 @@ export default async function AreaReviewsPage({ params }: Props) {
       </section>
 
       <CTABlock
-        heading={`Join our satisfied customers in ${area.name}`}
+        heading={`Join my satisfied customers in ${area.name}`}
         subtext={`Emergency service with transparent pricing.`}
       />
     </>

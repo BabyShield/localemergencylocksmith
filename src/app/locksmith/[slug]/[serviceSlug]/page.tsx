@@ -49,6 +49,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     alternates: {
       canonical: `${SITE_CONFIG.domain}/areas/${slug}/${serviceSlug}`,
     },
+    robots: { index: false, follow: true },
     openGraph: {
       title,
       description,

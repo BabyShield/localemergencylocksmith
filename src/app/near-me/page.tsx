@@ -67,7 +67,7 @@ export default function NearMeIndex() {
             Locksmith Services Near You
           </h1>
           <p className="text-xl text-gray-300">
-            Browse our hyper-local directory to find fast emergency response in your specific area.
+            Browse my hyper-local directory to find fast emergency response in your specific area.
           </p>
         </div>
       </div>

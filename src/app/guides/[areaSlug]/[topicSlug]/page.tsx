@@ -83,7 +83,7 @@ export default async function GuidesPage({ params }: Props) {
     description: `${article.intro} Local expert guide for ${area.name} residents.`,
     url: `${SITE_CONFIG.domain}/guides/${areaSlug}/${topicSlug}`,
     datePublished: '2025-10-01',
-    dateModified: '2026-03-17',
+    dateModified: new Date().toISOString().split('T')[0],
     author: {
       '@type': 'Person',
       name: 'Ross',
