@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   title: 'Contact — Local Emergency Locksmith Coventry | 07735 336175',
   description:
     'Contact Local Emergency Locksmith in Coventry. Available 24/7 — call 07735 336175 for immediate help or use the contact form.',
+  keywords: 'contact locksmith coventry, locksmith phone number coventry, locksmith coventry 24/7, emergency locksmith contact warwickshire, call locksmith coventry',
   alternates: {
     canonical: `${SITE_CONFIG.domain}/contact`,
   },
@@ -15,6 +16,7 @@ export const metadata: Metadata = {
     description:
       'Contact Local Emergency Locksmith in Coventry. Available 24/7 — call 07735 336175 for immediate help or use the contact form.',
     url: `${SITE_CONFIG.domain}/contact`,
+    images: [{ url: `${SITE_CONFIG.domain}/api/og?title=${encodeURIComponent('Contact Local Emergency Locksmith')}`, width: 1200, height: 630 }],
   },
 }
 
@@ -40,10 +42,18 @@ export default function ContactPage() {
       <SchemaMarkup schema={breadcrumbSchema} />
       <SchemaMarkup schema={contactSchema} />
 
-      <nav className="max-w-6xl mx-auto px-4 py-3 text-sm text-gray-500">
-        <Link href="/" className="hover:text-[#FFB800]">Home</Link>
-        <span className="mx-2">›</span>
-        <span className="text-gray-800 font-medium">Contact</span>
+      <nav aria-label="Breadcrumb" className="max-w-6xl mx-auto px-4 py-3 text-sm text-gray-500">
+        <ol className="flex flex-wrap items-center gap-0" itemScope itemType="https://schema.org/BreadcrumbList">
+          <li itemScope itemType="https://schema.org/ListItem" itemProp="itemListElement">
+            <Link href="/" itemProp="item" className="hover:text-[#FFB800]"><span itemProp="name">Home</span></Link>
+            <meta itemProp="position" content="1" />
+          </li>
+          <span className="mx-2" aria-hidden="true">›</span>
+          <li itemScope itemType="https://schema.org/ListItem" itemProp="itemListElement">
+            <span itemProp="item"><span itemProp="name" className="text-gray-800 font-medium">Contact</span></span>
+            <meta itemProp="position" content="2" />
+          </li>
+        </ol>
       </nav>
 
       <section className="py-12 px-4 text-white" style={{ background: '#0F1B2D' }}>

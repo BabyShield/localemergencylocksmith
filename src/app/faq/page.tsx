@@ -17,6 +17,7 @@ export const metadata: Metadata = {
     title: 'Locksmith FAQ Coventry — Prices, Response Times & Areas Covered',
     description: 'Everything you need to know about emergency locksmith pricing, response times, and areas covered in Coventry.',
     url: `${SITE_CONFIG.domain}/faq`,
+    images: [{ url: `${SITE_CONFIG.domain}/api/og?title=${encodeURIComponent('Locksmith FAQ — Prices, Response Times & Areas')}`, width: 1200, height: 630 }],
   },
 }
 

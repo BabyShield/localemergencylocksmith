@@ -44,14 +44,18 @@ export default function PrivacyPage() {
       <SchemaMarkup schema={breadcrumbSchema} />
 
       {/* Breadcrumb */}
-      <nav className="bg-[#F7F7F5] py-3 px-4 border-b border-gray-200">
-        <div className="max-w-3xl mx-auto text-sm text-gray-500">
-          <Link href="/" className="hover:text-[#0F1B2D] transition-colors">
-            Home
-          </Link>
-          <span className="mx-2">&gt;</span>
-          <span className="text-[#0F1B2D] font-medium">Privacy Policy</span>
-        </div>
+      <nav aria-label="Breadcrumb" className="bg-[#F7F7F5] py-3 px-4 border-b border-gray-200">
+        <ol className="max-w-3xl mx-auto text-sm text-gray-500 flex flex-wrap items-center gap-0" itemScope itemType="https://schema.org/BreadcrumbList">
+          <li itemScope itemType="https://schema.org/ListItem" itemProp="itemListElement">
+            <Link href="/" itemProp="item" className="hover:text-[#0F1B2D] transition-colors"><span itemProp="name">Home</span></Link>
+            <meta itemProp="position" content="1" />
+          </li>
+          <span className="mx-2" aria-hidden="true">›</span>
+          <li itemScope itemType="https://schema.org/ListItem" itemProp="itemListElement">
+            <span itemProp="item"><span itemProp="name" className="text-[#0F1B2D] font-medium">Privacy Policy</span></span>
+            <meta itemProp="position" content="2" />
+          </li>
+        </ol>
       </nav>
 
       {/* Main content */}

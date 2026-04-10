@@ -85,12 +85,23 @@ export default async function KeywordAreaPage({ params }: Props) {
     <>
       <SchemaMarkup schema={breadcrumbSchema} />
 
-      <nav className="max-w-6xl mx-auto px-4 py-3 text-sm text-gray-500">
-        <Link href="/" className="hover:text-[#FFB800]">Home</Link>
-        <span className="mx-2">›</span>
-        <Link href="/near-me" className="hover:text-[#FFB800]">Services Near Me</Link>
-        <span className="mx-2">›</span>
-        <span className="text-gray-800 font-medium capitalize">{prettyKeyword}</span>
+      <nav aria-label="Breadcrumb" className="max-w-6xl mx-auto px-4 py-3 text-sm text-gray-500">
+        <ol className="flex flex-wrap items-center gap-0" itemScope itemType="https://schema.org/BreadcrumbList">
+          <li itemScope itemType="https://schema.org/ListItem" itemProp="itemListElement">
+            <Link href="/" itemProp="item" className="hover:text-[#FFB800]"><span itemProp="name">Home</span></Link>
+            <meta itemProp="position" content="1" />
+          </li>
+          <span className="mx-2" aria-hidden="true">›</span>
+          <li itemScope itemType="https://schema.org/ListItem" itemProp="itemListElement">
+            <Link href="/near-me" itemProp="item" className="hover:text-[#FFB800]"><span itemProp="name">Near Me</span></Link>
+            <meta itemProp="position" content="2" />
+          </li>
+          <span className="mx-2" aria-hidden="true">›</span>
+          <li itemScope itemType="https://schema.org/ListItem" itemProp="itemListElement">
+            <span itemProp="item"><span itemProp="name" className="text-gray-800 font-medium capitalize">{prettyKeyword}</span></span>
+            <meta itemProp="position" content="3" />
+          </li>
+        </ol>
       </nav>
 
       <HeroSection

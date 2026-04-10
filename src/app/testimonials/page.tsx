@@ -8,6 +8,7 @@ export const metadata: Metadata = {
   title: 'Reviews & Testimonials | Local Emergency Locksmith Coventry',
   description:
     'Read 15 genuine reviews from customers across Coventry, Nuneaton, Rugby, Leamington Spa, and Warwickshire. Rated 4.8/5. Call 07735 336175.',
+  keywords: 'locksmith reviews coventry, locksmith testimonials, coventry locksmith reviews, local locksmith reviews warwickshire, trusted locksmith coventry, 5 star locksmith coventry',
   alternates: {
     canonical: `${SITE_CONFIG.domain}/testimonials`,
   },
@@ -16,6 +17,7 @@ export const metadata: Metadata = {
     description:
       'Read genuine reviews from customers across Coventry and Warwickshire. Rated 4.8/5 from 15 reviews.',
     url: `${SITE_CONFIG.domain}/testimonials`,
+    images: [{ url: `${SITE_CONFIG.domain}/api/og?title=${encodeURIComponent('Customer Reviews — 4.8/5 Rating')}`, width: 1200, height: 630 }],
   },
 }
 
@@ -254,14 +256,18 @@ export default function TestimonialsPage() {
       <SchemaMarkup schema={breadcrumbSchema} />
 
       {/* Breadcrumb */}
-      <nav className="bg-[#F7F7F5] py-3 px-4 border-b border-gray-200">
-        <div className="max-w-3xl mx-auto text-sm text-gray-500">
-          <Link href="/" className="hover:text-[#0F1B2D] transition-colors">
-            Home
-          </Link>
-          <span className="mx-2">&gt;</span>
-          <span className="text-[#0F1B2D] font-medium">Testimonials</span>
-        </div>
+      <nav aria-label="Breadcrumb" className="bg-[#F7F7F5] py-3 px-4 border-b border-gray-200">
+        <ol className="max-w-3xl mx-auto text-sm text-gray-500 flex flex-wrap items-center gap-0" itemScope itemType="https://schema.org/BreadcrumbList">
+          <li itemScope itemType="https://schema.org/ListItem" itemProp="itemListElement">
+            <Link href="/" itemProp="item" className="hover:text-[#0F1B2D] transition-colors"><span itemProp="name">Home</span></Link>
+            <meta itemProp="position" content="1" />
+          </li>
+          <span className="mx-2" aria-hidden="true">›</span>
+          <li itemScope itemType="https://schema.org/ListItem" itemProp="itemListElement">
+            <span itemProp="item"><span itemProp="name" className="text-[#0F1B2D] font-medium">Testimonials</span></span>
+            <meta itemProp="position" content="2" />
+          </li>
+        </ol>
       </nav>
 
       {/* Hero */}

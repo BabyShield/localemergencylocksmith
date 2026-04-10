@@ -10,7 +10,14 @@ export const metadata: Metadata = {
   title: 'Locksmith Services Coventry | Emergency, Lock Change, uPVC | No VAT',
   description:
     'Full range of locksmith services in Coventry and Warwickshire. Emergency lockout, lock change, uPVC repair, boarding up, security upgrades. No VAT, no call-out fee.',
+  keywords: 'locksmith services coventry, emergency locksmith coventry, lock change coventry, upvc lock repair coventry, boarding up coventry, lock upgrade warwickshire, locksmith services warwickshire',
   alternates: { canonical: `${SITE_CONFIG.domain}/services` },
+  openGraph: {
+    title: 'Locksmith Services — Coventry & Warwickshire',
+    description: 'Emergency lockout, lock change, uPVC repair, boarding up, security upgrades. No VAT, no call-out fee.',
+    url: `${SITE_CONFIG.domain}/services`,
+    images: [{ url: `${SITE_CONFIG.domain}/api/og?title=${encodeURIComponent('Locksmith Services — Coventry & Warwickshire')}`, width: 1200, height: 630 }],
+  },
 }
 
 const breadcrumbSchema = {
@@ -27,10 +34,18 @@ export default function ServicesPage() {
     <>
       <SchemaMarkup schema={breadcrumbSchema} />
 
-      <nav className="max-w-6xl mx-auto px-4 py-3 text-sm text-gray-500">
-        <Link href="/" className="hover:text-[#FFB800]">Home</Link>
-        <span className="mx-2">›</span>
-        <span className="text-gray-800 font-medium">Services</span>
+      <nav aria-label="Breadcrumb" className="max-w-6xl mx-auto px-4 py-3 text-sm text-gray-500">
+        <ol className="flex flex-wrap items-center gap-0" itemScope itemType="https://schema.org/BreadcrumbList">
+          <li itemScope itemType="https://schema.org/ListItem" itemProp="itemListElement">
+            <Link href="/" itemProp="item" className="hover:text-[#FFB800]"><span itemProp="name">Home</span></Link>
+            <meta itemProp="position" content="1" />
+          </li>
+          <span className="mx-2" aria-hidden="true">›</span>
+          <li itemScope itemType="https://schema.org/ListItem" itemProp="itemListElement">
+            <span itemProp="item"><span itemProp="name" className="text-gray-800 font-medium">Services</span></span>
+            <meta itemProp="position" content="2" />
+          </li>
+        </ol>
       </nav>
 
       <section className="py-12 px-4 text-white" style={{ background: '#0F1B2D' }}>

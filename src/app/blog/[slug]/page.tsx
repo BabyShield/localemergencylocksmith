@@ -27,12 +27,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: `${post.title} | Local Emergency Locksmith`,
     description: post.excerpt,
+    keywords: post.keywords.join(', '),
     alternates: { canonical: `${SITE_CONFIG.domain}/blog/${slug}` },
     openGraph: {
       title: post.title,
       description: post.excerpt,
       type: 'article',
       publishedTime: post.date,
+      url: `${SITE_CONFIG.domain}/blog/${slug}`,
+      images: [{ url: `${SITE_CONFIG.domain}/api/og?title=${encodeURIComponent(post.title)}`, width: 1200, height: 630 }],
     },
   }
 }
@@ -99,27 +102,28 @@ export default async function BlogPostPage({ params }: Props) {
 
   const articleSchema = {
     '@context': 'https://schema.org',
-    '@type': 'Article',
+    '@type': 'BlogPosting',
     headline: post.title,
     description: post.excerpt,
+    url: `${SITE_CONFIG.domain}/blog/${slug}`,
     datePublished: post.date,
     dateModified: '2026-03-17',
-    image: 'https://localemergencylocksmith.co.uk/og-image.jpg',
+    image: { '@type': 'ImageObject', url: `${SITE_CONFIG.domain}/api/og?title=${encodeURIComponent(post.title)}`, width: 1200, height: 630 },
     author: {
       '@type': 'Person',
       name: 'Ross',
       jobTitle: 'Locksmith',
-      worksFor: {
-        '@type': 'LocalBusiness',
-        name: 'Local Emergency Locksmith',
-      },
+      worksFor: { '@type': 'LocalBusiness', '@id': `${SITE_CONFIG.domain}/#business` },
     },
     publisher: {
       '@type': 'Organization',
       name: 'Local Emergency Locksmith',
       url: SITE_CONFIG.domain,
+      logo: { '@type': 'ImageObject', url: `${SITE_CONFIG.domain}/og-image.png` },
     },
+    articleSection: pillar?.name || 'Locksmith Advice',
     keywords: post.keywords.join(', '),
+    mainEntityOfPage: { '@type': 'WebPage', '@id': `${SITE_CONFIG.domain}/blog/${slug}` },
   }
 
   const faqSchema = content.faqs.length > 0 ? {
@@ -154,18 +158,23 @@ export default async function BlogPostPage({ params }: Props) {
       {faqSchema && <SchemaMarkup schema={faqSchema} />}
       <SchemaMarkup schema={breadcrumbSchema} />
 
-      <nav className="max-w-4xl mx-auto px-4 py-3 text-sm text-gray-500">
-        <Link href="/" className="hover:text-[#FFB800]">Home</Link>
-        <span className="mx-2">&rsaquo;</span>
-        <Link href="/blog" className="hover:text-[#FFB800]">Blog</Link>
-        <span className="mx-2">&rsaquo;</span>
-        {pillar && (
-          <>
-            <Link href={`/blog#${pillar.slug}`} className="hover:text-[#FFB800]">{pillar.name}</Link>
-            <span className="mx-2">&rsaquo;</span>
-          </>
-        )}
-        <span className="text-gray-800 font-medium truncate max-w-xs inline-block align-bottom">{post.title}</span>
+      <nav aria-label="Breadcrumb" className="max-w-4xl mx-auto px-4 py-3 text-sm text-gray-500">
+        <ol className="flex flex-wrap items-center gap-0" itemScope itemType="https://schema.org/BreadcrumbList">
+          <li itemScope itemType="https://schema.org/ListItem" itemProp="itemListElement">
+            <Link href="/" itemProp="item" className="hover:text-[#FFB800]"><span itemProp="name">Home</span></Link>
+            <meta itemProp="position" content="1" />
+          </li>
+          <span className="mx-2" aria-hidden="true">›</span>
+          <li itemScope itemType="https://schema.org/ListItem" itemProp="itemListElement">
+            <Link href="/blog" itemProp="item" className="hover:text-[#FFB800]"><span itemProp="name">Blog</span></Link>
+            <meta itemProp="position" content="2" />
+          </li>
+          <span className="mx-2" aria-hidden="true">›</span>
+          <li itemScope itemType="https://schema.org/ListItem" itemProp="itemListElement">
+            <span itemProp="item"><span itemProp="name" className="text-gray-800 font-medium truncate max-w-xs inline-block align-bottom">{post.title}</span></span>
+            <meta itemProp="position" content="3" />
+          </li>
+        </ol>
       </nav>
 
       <article className="py-12 px-4">

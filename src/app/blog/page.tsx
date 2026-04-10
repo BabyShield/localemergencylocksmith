@@ -3,23 +3,50 @@ import Link from 'next/link'
 import { SITE_CONFIG } from '@/data/config'
 import { ARTICLE_TEMPLATES } from '@/data/articles'
 import { ALL_BLOG_POSTS, PILLARS } from '@/data/blog-posts'
+import SchemaMarkup from '@/components/SchemaMarkup'
 
 export const metadata: Metadata = {
   title: 'Locksmith Blog — Tips, Security Advice & Guides | Local Emergency Locksmith Coventry',
   description:
     'Expert locksmith advice for Coventry and Warwickshire homeowners. Lock types, security guides, honest pricing, uPVC door help, and seasonal tips — from a working locksmith.',
+  keywords: 'locksmith blog, locksmith tips coventry, home security advice, lock buying guide, upvc door repair guide, locksmith advice warwickshire',
   alternates: {
     canonical: `${SITE_CONFIG.domain}/blog`,
   },
+  openGraph: {
+    title: 'Locksmith Blog — Tips, Security Advice & Guides',
+    description: 'Expert locksmith advice for Coventry and Warwickshire homeowners — from a working locksmith.',
+    url: `${SITE_CONFIG.domain}/blog`,
+    images: [{ url: `${SITE_CONFIG.domain}/api/og?title=${encodeURIComponent('Locksmith Tips & Security Advice')}`, width: 1200, height: 630 }],
+  },
+}
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_CONFIG.domain },
+    { '@type': 'ListItem', position: 2, name: 'Blog', item: `${SITE_CONFIG.domain}/blog` },
+  ],
 }
 
 export default function BlogPage() {
   return (
     <>
-      <nav className="max-w-6xl mx-auto px-4 py-3 text-sm text-gray-500">
-        <Link href="/" className="hover:text-[#FFB800]">Home</Link>
-        <span className="mx-2">&rsaquo;</span>
-        <span className="text-gray-800 font-medium">Blog</span>
+      <SchemaMarkup schema={breadcrumbSchema} />
+
+      <nav aria-label="Breadcrumb" className="max-w-6xl mx-auto px-4 py-3 text-sm text-gray-500">
+        <ol className="flex flex-wrap items-center gap-0" itemScope itemType="https://schema.org/BreadcrumbList">
+          <li itemScope itemType="https://schema.org/ListItem" itemProp="itemListElement">
+            <Link href="/" itemProp="item" className="hover:text-[#FFB800]"><span itemProp="name">Home</span></Link>
+            <meta itemProp="position" content="1" />
+          </li>
+          <span className="mx-2" aria-hidden="true">›</span>
+          <li itemScope itemType="https://schema.org/ListItem" itemProp="itemListElement">
+            <span itemProp="item"><span itemProp="name" className="text-gray-800 font-medium">Blog</span></span>
+            <meta itemProp="position" content="2" />
+          </li>
+        </ol>
       </nav>
 
       <section className="py-12 px-4 text-white" style={{ background: '#0F1B2D' }}>

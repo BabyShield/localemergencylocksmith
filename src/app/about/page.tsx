@@ -8,6 +8,7 @@ export const metadata: Metadata = {
   title: 'About Local Emergency Locksmith | Ross — Your Coventry Locksmith',
   description:
     "I'm Ross, your local independent locksmith covering Coventry and all of Warwickshire. No VAT, no call-out fee, 15-30 minute response. Call 07735 336175.",
+  keywords: 'about locksmith coventry, local locksmith coventry, independent locksmith warwickshire, ross locksmith coventry, coventry locksmith no vat, trusted locksmith coventry',
   alternates: {
     canonical: `${SITE_CONFIG.domain}/about`,
   },
@@ -16,6 +17,7 @@ export const metadata: Metadata = {
     description:
       "Independent emergency locksmith serving Coventry and Warwickshire. No VAT, no call-out fee, 15-30 minute response. Available 24/7.",
     url: `${SITE_CONFIG.domain}/about`,
+    images: [{ url: `${SITE_CONFIG.domain}/api/og?title=${encodeURIComponent('About Local Emergency Locksmith')}`, width: 1200, height: 630 }],
   },
 }
 
@@ -81,14 +83,18 @@ export default function AboutPage() {
       <SchemaMarkup schema={aboutSchema} />
 
       {/* Breadcrumb */}
-      <nav className="bg-[#F7F7F5] py-3 px-4 border-b border-gray-200">
-        <div className="max-w-3xl mx-auto text-sm text-gray-500">
-          <Link href="/" className="hover:text-[#0F1B2D] transition-colors">
-            Home
-          </Link>
-          <span className="mx-2">&gt;</span>
-          <span className="text-[#0F1B2D] font-medium">About</span>
-        </div>
+      <nav aria-label="Breadcrumb" className="bg-[#F7F7F5] py-3 px-4 border-b border-gray-200">
+        <ol className="max-w-3xl mx-auto text-sm text-gray-500 flex flex-wrap items-center gap-0" itemScope itemType="https://schema.org/BreadcrumbList">
+          <li itemScope itemType="https://schema.org/ListItem" itemProp="itemListElement">
+            <Link href="/" itemProp="item" className="hover:text-[#0F1B2D] transition-colors"><span itemProp="name">Home</span></Link>
+            <meta itemProp="position" content="1" />
+          </li>
+          <span className="mx-2" aria-hidden="true">›</span>
+          <li itemScope itemType="https://schema.org/ListItem" itemProp="itemListElement">
+            <span itemProp="item"><span itemProp="name" className="text-[#0F1B2D] font-medium">About</span></span>
+            <meta itemProp="position" content="2" />
+          </li>
+        </ol>
       </nav>
 
       {/* Main content */}
