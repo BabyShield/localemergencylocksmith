@@ -42,8 +42,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title,
     description,
+    keywords: `locksmith ${area.name}, ${area.postcode} locksmith, ${article.slug.replace(/-/g, ' ')} ${area.name}, emergency locksmith ${area.name}`,
     alternates: { canonical: url },
-    openGraph: { title, description, url },
+    openGraph: {
+      title,
+      description,
+      url,
+      type: 'article',
+      images: [{ url: `${SITE_CONFIG.domain}/api/og?title=${encodeURIComponent(title)}`, width: 1200, height: 630 }],
+    },
   }
 }
 
@@ -97,17 +104,19 @@ export default async function ArticlePage({ params }: Props) {
       '@type': 'Person',
       name: 'Ross',
       jobTitle: 'Locksmith',
-      worksFor: {
-        '@type': 'LocalBusiness',
-        name: 'Local Emergency Locksmith',
-      },
+      worksFor: { '@type': 'LocalBusiness', '@id': `${SITE_CONFIG.domain}/#business` },
     },
     publisher: {
       '@type': 'Organization',
       name: 'Local Emergency Locksmith',
       url: SITE_CONFIG.domain,
+      logo: { '@type': 'ImageObject', url: `${SITE_CONFIG.domain}/og-image.png` },
     },
+    image: { '@type': 'ImageObject', url: `${SITE_CONFIG.domain}/api/og?title=${encodeURIComponent(pageTitle)}`, width: 1200, height: 630 },
     description: renderTemplate(article.metaTemplate, area),
+    articleSection: 'Locksmith Advice',
+    keywords: `locksmith ${area.name}, ${area.postcode} locksmith, ${article.slug.replace(/-/g, ' ')}`,
+    about: { '@type': 'Place', name: area.name, address: { '@type': 'PostalAddress', postalCode: area.postcode, addressCountry: 'GB' } },
     mainEntityOfPage: { '@type': 'WebPage', '@id': pageUrl },
   }
 
@@ -131,23 +140,28 @@ export default async function ArticlePage({ params }: Props) {
       <SchemaMarkup schema={faqSchema} />
 
       {/* Breadcrumb */}
-      <nav className="max-w-6xl mx-auto px-4 py-3 text-sm text-gray-500">
-        <Link href="/" className="hover:text-[#FFB800]">
-          Home
-        </Link>
-        <span className="mx-2">›</span>
-        <Link href="/blog" className="hover:text-[#FFB800]">
-          Blog
-        </Link>
-        <span className="mx-2">›</span>
-        <Link
-          href={`/areas/${areaSlug}`}
-          className="hover:text-[#FFB800]"
-        >
-          {area.name}
-        </Link>
-        <span className="mx-2">›</span>
-        <span className="text-gray-800 font-medium">{pageTitle}</span>
+      <nav aria-label="Breadcrumb" className="max-w-6xl mx-auto px-4 py-3 text-sm text-gray-500">
+        <ol className="flex flex-wrap items-center gap-0" itemScope itemType="https://schema.org/BreadcrumbList">
+          <li itemScope itemType="https://schema.org/ListItem" itemProp="itemListElement">
+            <Link href="/" itemProp="item" className="hover:text-[#FFB800]"><span itemProp="name">Home</span></Link>
+            <meta itemProp="position" content="1" />
+          </li>
+          <span className="mx-2" aria-hidden="true">›</span>
+          <li itemScope itemType="https://schema.org/ListItem" itemProp="itemListElement">
+            <Link href="/blog" itemProp="item" className="hover:text-[#FFB800]"><span itemProp="name">Blog</span></Link>
+            <meta itemProp="position" content="2" />
+          </li>
+          <span className="mx-2" aria-hidden="true">›</span>
+          <li itemScope itemType="https://schema.org/ListItem" itemProp="itemListElement">
+            <Link href={`/areas/${areaSlug}`} itemProp="item" className="hover:text-[#FFB800]"><span itemProp="name">{area.name}</span></Link>
+            <meta itemProp="position" content="3" />
+          </li>
+          <span className="mx-2" aria-hidden="true">›</span>
+          <li itemScope itemType="https://schema.org/ListItem" itemProp="itemListElement">
+            <span itemProp="item"><span itemProp="name" className="text-gray-800 font-medium">{pageTitle}</span></span>
+            <meta itemProp="position" content="4" />
+          </li>
+        </ol>
       </nav>
 
       {/* Hero */}

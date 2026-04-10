@@ -6,16 +6,16 @@ import CTABlock from '@/components/CTABlock'
 import FAQSection from '@/components/FAQSection'
 
 export const metadata: Metadata = {
-  title: 'FAQ | Local Emergency Locksmith Coventry — Your Questions Answered',
+  title: 'Locksmith FAQ Coventry — Prices, Response Times & Areas Covered',
   description:
-    'Frequently asked questions about Local Emergency Locksmith Coventry. Pricing, response times, services, trust & safety, and coverage areas. Call 07735 336175.',
+    'Locksmith questions answered: How much does an emergency locksmith cost in Coventry? How fast? Which areas? No VAT, no call-out fee. Call 07735 336175.',
+  keywords: 'locksmith faq coventry, how much does a locksmith cost coventry, emergency locksmith price coventry, locksmith response time coventry, coventry locksmith questions',
   alternates: {
     canonical: `${SITE_CONFIG.domain}/faq`,
   },
   openGraph: {
-    title: 'FAQ | Local Emergency Locksmith Coventry — Your Questions Answered',
-    description:
-      'Frequently asked questions about Local Emergency Locksmith Coventry. Pricing, response times, services, and coverage areas.',
+    title: 'Locksmith FAQ Coventry — Prices, Response Times & Areas Covered',
+    description: 'Everything you need to know about emergency locksmith pricing, response times, and areas covered in Coventry.',
     url: `${SITE_CONFIG.domain}/faq`,
   },
 }
@@ -166,14 +166,18 @@ export default function FAQPage() {
       <SchemaMarkup schema={breadcrumbSchema} />
 
       {/* Breadcrumb */}
-      <nav className="bg-[#F7F7F5] py-3 px-4 border-b border-gray-200">
-        <div className="max-w-3xl mx-auto text-sm text-gray-500">
-          <Link href="/" className="hover:text-[#0F1B2D] transition-colors">
-            Home
-          </Link>
-          <span className="mx-2">&gt;</span>
-          <span className="text-[#0F1B2D] font-medium">FAQ</span>
-        </div>
+      <nav aria-label="Breadcrumb" className="bg-[#F7F7F5] py-3 px-4 border-b border-gray-200">
+        <ol className="max-w-3xl mx-auto text-sm text-gray-500 flex flex-wrap items-center gap-0" itemScope itemType="https://schema.org/BreadcrumbList">
+          <li itemScope itemType="https://schema.org/ListItem" itemProp="itemListElement">
+            <Link href="/" itemProp="item" className="hover:text-[#0F1B2D] transition-colors"><span itemProp="name">Home</span></Link>
+            <meta itemProp="position" content="1" />
+          </li>
+          <span className="mx-2" aria-hidden="true">›</span>
+          <li itemScope itemType="https://schema.org/ListItem" itemProp="itemListElement">
+            <span itemProp="item"><span itemProp="name" className="text-[#0F1B2D] font-medium">FAQ</span></span>
+            <meta itemProp="position" content="2" />
+          </li>
+        </ol>
       </nav>
 
       {/* Hero */}
@@ -243,7 +247,7 @@ export default function FAQPage() {
 
       {/* Areas FAQs */}
       <div id="areas">
-        <FAQSection faqs={areasFaqs} heading="Areas We Cover" />
+        <FAQSection faqs={areasFaqs} heading="Areas I Cover" />
       </div>
 
       {/* Click-to-Call CTA */}

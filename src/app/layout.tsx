@@ -160,6 +160,14 @@ export default function RootLayout({
   return (
     <html lang="en-GB" className={inter.variable}>
       <head>
+        {/* hreflang — UK English targeting */}
+        <link rel="alternate" hrefLang="en-gb" href={SITE_CONFIG.domain} />
+        <link rel="alternate" hrefLang="en" href={SITE_CONFIG.domain} />
+        {/* Geo meta — tells local search crawlers this is a Coventry/Warwickshire business */}
+        <meta name="geo.region" content="GB-WAR" />
+        <meta name="geo.placename" content="Coventry, Warwickshire" />
+        <meta name="geo.position" content="52.4068;-1.5197" />
+        <meta name="ICBM" content="52.4068, -1.5197" />
         <link rel="preconnect" href="https://www.googletagmanager.com" />
         <link rel="dns-prefetch" href="https://maps.googleapis.com" />
         <SchemaMarkup schema={globalSchema} />

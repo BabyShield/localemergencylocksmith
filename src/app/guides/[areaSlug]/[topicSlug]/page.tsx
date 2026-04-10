@@ -9,6 +9,9 @@ import HeroSection from '@/components/HeroSection'
 import CTABlock from '@/components/CTABlock'
 import SchemaMarkup from '@/components/SchemaMarkup'
 
+export const dynamic = 'force-static'
+export const revalidate = false
+
 interface Props {
   params: Promise<{ areaSlug: string; topicSlug: string }>
 }
@@ -33,25 +36,21 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   if (!area || !article) return {}
 
-  const description = `${article.title}. Local expert guide to security and locksmithing in ${area.name}. Fast, VAT-free response.`
+  const description = `${article.title} — expert locksmith guide for ${area.name} residents. Local independent locksmith covering ${area.postcode}. No VAT, no call-out fee.`
 
   return {
-    title: `${article.title} | ${SITE_CONFIG.domain}`,
+    title: `${article.title} | Locksmith ${area.name}`,
     description,
+    keywords: `locksmith ${area.name}, ${article.title.toLowerCase()}, ${area.postcode} locksmith, security guide ${area.name}`,
     alternates: {
       canonical: `${SITE_CONFIG.domain}/guides/${areaSlug}/${topicSlug}`,
     },
     openGraph: {
-      title: article.title,
+      title: `${article.title} | Locksmith ${area.name}`,
       description,
       url: `${SITE_CONFIG.domain}/guides/${areaSlug}/${topicSlug}`,
-      images: [
-        {
-          url: `${SITE_CONFIG.domain}/api/og?title=${encodeURIComponent(article.title)}`,
-          width: 1200,
-          height: 630,
-        },
-      ],
+      type: 'article',
+      images: [{ url: `${SITE_CONFIG.domain}/api/og?title=${encodeURIComponent(article.title)}`, width: 1200, height: 630 }],
     },
   }
 }
@@ -79,16 +78,25 @@ export default async function GuidesPage({ params }: Props) {
 
   const articleSchema = {
     '@context': 'https://schema.org',
-    '@type': 'Article',
+    '@type': 'BlogPosting',
     headline: article.title,
+    description: `${article.intro} Local expert guide for ${area.name} residents.`,
+    url: `${SITE_CONFIG.domain}/guides/${areaSlug}/${topicSlug}`,
+    datePublished: '2025-10-01',
+    dateModified: '2026-03-17',
     author: {
-        '@type': 'Organization',
-        name: 'Local Emergency Locksmith'
+      '@type': 'Person',
+      name: 'Ross',
+      jobTitle: 'Locksmith',
+      worksFor: { '@type': 'LocalBusiness', '@id': `${SITE_CONFIG.domain}/#business` },
     },
     publisher: {
-        '@type': 'Organization',
-        name: 'Local Emergency Locksmith'
-    }
+      '@type': 'Organization',
+      name: 'Local Emergency Locksmith',
+      url: SITE_CONFIG.domain,
+    },
+    mainEntityOfPage: { '@type': 'WebPage', '@id': `${SITE_CONFIG.domain}/guides/${areaSlug}/${topicSlug}` },
+    about: { '@type': 'Place', name: area.name, address: { '@type': 'PostalAddress', postalCode: area.postcode, addressCountry: 'GB' } },
   }
 
   return (
@@ -96,12 +104,23 @@ export default async function GuidesPage({ params }: Props) {
       <SchemaMarkup schema={breadcrumbSchema} />
       <SchemaMarkup schema={articleSchema} />
 
-      <nav className="max-w-6xl mx-auto px-4 py-3 text-sm text-gray-500">
-        <Link href="/" className="hover:text-[#FFB800]">Home</Link>
-        <span className="mx-2">›</span>
-        <Link href={`/areas/${areaSlug}`} className="hover:text-[#FFB800]">{area.name}</Link>
-        <span className="mx-2">›</span>
-        <span className="text-gray-800 font-medium">{article.title}</span>
+      <nav aria-label="Breadcrumb" className="max-w-6xl mx-auto px-4 py-3 text-sm text-gray-500">
+        <ol className="flex flex-wrap items-center gap-0" itemScope itemType="https://schema.org/BreadcrumbList">
+          <li itemScope itemType="https://schema.org/ListItem" itemProp="itemListElement">
+            <Link href="/" itemProp="item" className="hover:text-[#FFB800]"><span itemProp="name">Home</span></Link>
+            <meta itemProp="position" content="1" />
+          </li>
+          <span className="mx-2" aria-hidden="true">›</span>
+          <li itemScope itemType="https://schema.org/ListItem" itemProp="itemListElement">
+            <Link href={`/areas/${areaSlug}`} itemProp="item" className="hover:text-[#FFB800]"><span itemProp="name">{area.name}</span></Link>
+            <meta itemProp="position" content="2" />
+          </li>
+          <span className="mx-2" aria-hidden="true">›</span>
+          <li itemScope itemType="https://schema.org/ListItem" itemProp="itemListElement">
+            <span itemProp="item"><span itemProp="name" className="text-gray-800 font-medium">{article.title}</span></span>
+            <meta itemProp="position" content="3" />
+          </li>
+        </ol>
       </nav>
 
       <HeroSection

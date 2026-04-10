@@ -101,24 +101,60 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="max-w-6xl mx-auto mt-8 pt-6 border-t border-gray-700 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-500">
-        <p>&copy; {year} Local Emergency Locksmith. All rights reserved.</p>
-        <div className="flex flex-wrap justify-center gap-4">
-          <Link href="/about" className="hover:text-gray-300 transition-colors">About</Link>
-          <Link href="/blog" className="hover:text-gray-300 transition-colors">Blog</Link>
-          <Link href="/contact" className="hover:text-gray-300 transition-colors">Contact</Link>
-          <Link href="/areas" className="hover:text-gray-300 transition-colors">Areas</Link>
-          <Link href="/near-me" className="hover:text-gray-300 transition-colors">Local Directory</Link>
-          <Link href="/postcodes/cv1" className="hover:text-gray-300 transition-colors">CV1</Link>
-          <Link href="/postcodes/cv31" className="hover:text-gray-300 transition-colors">CV31</Link>
-          <Link href="/postcodes/cv32" className="hover:text-gray-300 transition-colors">CV32</Link>
-          <Link href="/postcodes/cv34" className="hover:text-gray-300 transition-colors">CV34</Link>
-          <Link href="/postcodes/cv37" className="hover:text-gray-300 transition-colors">CV37</Link>
-          <Link href="/prices" className="hover:text-gray-300 transition-colors">Pricing</Link>
-          <Link href="/testimonials" className="hover:text-gray-300 transition-colors">Reviews</Link>
-          <Link href="/faq" className="hover:text-gray-300 transition-colors">FAQ</Link>
-          <Link href="/privacy" className="hover:text-gray-300 transition-colors">Privacy Policy</Link>
-          <Link href="/terms" className="hover:text-gray-300 transition-colors">Terms</Link>
+      {/* Postcode + service cross-links — crawlable internal linking for all CV districts */}
+      <div className="max-w-6xl mx-auto mt-8 pt-6 border-t border-gray-700">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+          <div>
+            <h4 className="text-gray-400 text-xs font-bold uppercase tracking-widest mb-3">Postcodes Covered</h4>
+            <div className="flex flex-wrap gap-x-4 gap-y-1 text-xs text-gray-500">
+              {[
+                'cv1','cv2','cv3','cv4','cv5','cv6','cv7','cv8',
+                'cv9','cv10','cv11','cv12','cv21','cv22','cv23',
+                'cv31','cv32','cv33','cv34','cv35','cv36','cv37',
+              ].map((pc) => (
+                <Link key={pc} href={`/postcodes/${pc}`} className="hover:text-gray-300 transition-colors uppercase">
+                  {pc.toUpperCase()}
+                </Link>
+              ))}
+            </div>
+          </div>
+          <div>
+            <h4 className="text-gray-400 text-xs font-bold uppercase tracking-widest mb-3">Key Services by Area</h4>
+            <div className="flex flex-wrap gap-x-4 gap-y-1 text-xs text-gray-500">
+              {[
+                { href: '/areas/coventry-city-centre/emergency-lockout', label: 'Emergency Lockout Coventry' },
+                { href: '/areas/nuneaton/emergency-lockout', label: 'Emergency Lockout Nuneaton' },
+                { href: '/areas/rugby/lock-change', label: 'Lock Change Rugby' },
+                { href: '/areas/leamington-spa/lock-change', label: 'Lock Change Leamington Spa' },
+                { href: '/areas/warwick/upvc-lock-repair', label: 'uPVC Repair Warwick' },
+                { href: '/areas/kenilworth/upvc-lock-repair', label: 'uPVC Repair Kenilworth' },
+                { href: '/areas/bedworth/emergency-lockout', label: 'Emergency Lockout Bedworth' },
+                { href: '/areas/stratford-upon-avon/lock-change', label: 'Lock Change Stratford' },
+                { href: '/areas/coventry-city-centre/lock-change', label: 'Lock Change Coventry' },
+                { href: '/areas/nuneaton/upvc-lock-repair', label: 'uPVC Repair Nuneaton' },
+              ].map((link) => (
+                <Link key={link.href} href={link.href} className="hover:text-gray-300 transition-colors">
+                  {link.label}
+                </Link>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-500 pt-4 border-t border-gray-800">
+          <p>&copy; {year} Local Emergency Locksmith. All rights reserved.</p>
+          <div className="flex flex-wrap justify-center gap-4">
+            <Link href="/about" className="hover:text-gray-300 transition-colors">About</Link>
+            <Link href="/blog" className="hover:text-gray-300 transition-colors">Blog</Link>
+            <Link href="/contact" className="hover:text-gray-300 transition-colors">Contact</Link>
+            <Link href="/areas" className="hover:text-gray-300 transition-colors">Areas</Link>
+            <Link href="/near-me" className="hover:text-gray-300 transition-colors">Local Directory</Link>
+            <Link href="/prices" className="hover:text-gray-300 transition-colors">Pricing</Link>
+            <Link href="/testimonials" className="hover:text-gray-300 transition-colors">Reviews</Link>
+            <Link href="/faq" className="hover:text-gray-300 transition-colors">FAQ</Link>
+            <Link href="/privacy" className="hover:text-gray-300 transition-colors">Privacy Policy</Link>
+            <Link href="/terms" className="hover:text-gray-300 transition-colors">Terms</Link>
+          </div>
         </div>
       </div>
     </footer>

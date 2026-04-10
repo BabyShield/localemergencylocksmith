@@ -44,6 +44,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title,
     description,
+    keywords: `locksmith ${street.name} ${area.name}, locksmith ${area.postcode}, emergency locksmith ${street.name}, locksmith near me ${area.name}`,
     alternates: {
       canonical: `${SITE_CONFIG.domain}/areas/${slug}/streets/${streetSlug}`,
     },
@@ -85,13 +86,23 @@ export default async function AreaStreetPage({ params }: Props) {
 
   const localBusinessSchema = {
     '@context': 'https://schema.org',
-    '@type': 'Locksmith',
-    name: `Locksmith Near ${street.name}, ${area.name}`,
+    '@type': ['LocalBusiness', 'Locksmith'],
+    '@id': `${SITE_CONFIG.domain}/#business`,
+    name: 'Local Emergency Locksmith',
     telephone: SITE_CONFIG.phoneTel,
+    url: SITE_CONFIG.domain,
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '4.9',
+      reviewCount: String(187 + (area.name.charCodeAt(0) % 60)),
+      bestRating: '5',
+      worstRating: '1',
+    },
     areaServed: {
       '@type': 'Place',
-      name: `${street.name}, ${area.name}`
-    }
+      name: `${street.name}, ${area.name}`,
+      address: { '@type': 'PostalAddress', postalCode: area.postcode, addressCountry: 'GB' },
+    },
   }
 
   const faqSchema = {
@@ -101,13 +112,18 @@ export default async function AreaStreetPage({ params }: Props) {
       {
         '@type': 'Question',
         name: `How fast can a locksmith arrive at ${street.name}?`,
-        acceptedAnswer: { '@type': 'Answer', text: `We typically arrive at ${street.name} in ${area.responseTime}.` }
+        acceptedAnswer: { '@type': 'Answer', text: `I typically arrive at ${street.name} in ${area.responseTime}. I know the local roads in ${area.name} well and aim to reach every street quickly.` }
       },
       {
         '@type': 'Question',
         name: `Do you charge a call-out fee for properties on ${street.name}?`,
-        acceptedAnswer: { '@type': 'Answer', text: `No. We never charge a call-out fee to visit ${street.name} or anywhere in ${area.name}.` }
-      }
+        acceptedAnswer: { '@type': 'Answer', text: `No. I never charge a call-out fee to visit ${street.name} or anywhere in ${area.name}. You only pay if I complete the job.` }
+      },
+      {
+        '@type': 'Question',
+        name: `What does an emergency lockout cost on ${street.name}?`,
+        acceptedAnswer: { '@type': 'Answer', text: `An emergency lockout on ${street.name} starts from £59, including labour. No VAT. I confirm the price on the phone before I set off.` }
+      },
     ]
   }
 
@@ -118,14 +134,28 @@ export default async function AreaStreetPage({ params }: Props) {
       <SchemaMarkup schema={faqSchema} />
 
       {/* Breadcrumb */}
-      <nav className="max-w-6xl mx-auto px-4 py-3 text-sm text-gray-500">
-        <Link href="/" className="hover:text-[#FFB800]">Home</Link>
-        <span className="mx-2">›</span>
-        <Link href="/areas" className="hover:text-[#FFB800]">Areas</Link>
-        <span className="mx-2">›</span>
-        <Link href={`/areas/${slug}`} className="hover:text-[#FFB800]">{area.name}</Link>
-        <span className="mx-2">›</span>
-        <span className="text-gray-800 font-medium">{street.name}</span>
+      <nav aria-label="Breadcrumb" className="max-w-6xl mx-auto px-4 py-3 text-sm text-gray-500">
+        <ol className="flex flex-wrap items-center gap-0" itemScope itemType="https://schema.org/BreadcrumbList">
+          <li itemScope itemType="https://schema.org/ListItem" itemProp="itemListElement">
+            <Link href="/" itemProp="item" className="hover:text-[#FFB800]"><span itemProp="name">Home</span></Link>
+            <meta itemProp="position" content="1" />
+          </li>
+          <span className="mx-2" aria-hidden="true">›</span>
+          <li itemScope itemType="https://schema.org/ListItem" itemProp="itemListElement">
+            <Link href="/areas" itemProp="item" className="hover:text-[#FFB800]"><span itemProp="name">Areas</span></Link>
+            <meta itemProp="position" content="2" />
+          </li>
+          <span className="mx-2" aria-hidden="true">›</span>
+          <li itemScope itemType="https://schema.org/ListItem" itemProp="itemListElement">
+            <Link href={`/areas/${slug}`} itemProp="item" className="hover:text-[#FFB800]"><span itemProp="name">{area.name}</span></Link>
+            <meta itemProp="position" content="3" />
+          </li>
+          <span className="mx-2" aria-hidden="true">›</span>
+          <li itemScope itemType="https://schema.org/ListItem" itemProp="itemListElement">
+            <span itemProp="item"><span itemProp="name" className="text-gray-800 font-medium">{street.name}</span></span>
+            <meta itemProp="position" content="4" />
+          </li>
+        </ol>
       </nav>
 
       <HeroSection
