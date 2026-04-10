@@ -36,12 +36,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title,
     description,
     alternates: {
-      canonical: `${SITE_CONFIG.domain}/locksmith/${slug}`,
+      canonical: `${SITE_CONFIG.domain}/areas/${slug}`,
     },
     openGraph: {
       title,
       description,
-      url: `${SITE_CONFIG.domain}/locksmith/${slug}`,
+      url: `${SITE_CONFIG.domain}/areas/${slug}`,
       images: [
         {
           url: `${SITE_CONFIG.domain}/api/og?title=${encodeURIComponent(`Locksmith in ${area.name}`)}`,
@@ -120,12 +120,23 @@ export default async function AreaPage({ params }: Props) {
       <SchemaMarkup schema={faqSchema} />
 
       {/* Breadcrumb */}
-      <nav className="max-w-6xl mx-auto px-4 py-3 text-sm text-gray-500">
-        <Link href="/" className="hover:text-[#FFB800]">Home</Link>
-        <span className="mx-2">›</span>
-        <Link href="/areas" className="hover:text-[#FFB800]">Areas</Link>
-        <span className="mx-2">›</span>
-        <span className="text-gray-800 font-medium">{area.name}</span>
+      <nav aria-label="Breadcrumb" className="max-w-6xl mx-auto px-4 py-3 text-sm text-gray-500">
+        <ol className="flex flex-wrap items-center gap-0" itemScope itemType="https://schema.org/BreadcrumbList">
+          <li itemScope itemType="https://schema.org/ListItem" itemProp="itemListElement">
+            <Link href="/" itemProp="item" className="hover:text-[#FFB800]"><span itemProp="name">Home</span></Link>
+            <meta itemProp="position" content="1" />
+          </li>
+          <span className="mx-2" aria-hidden="true">›</span>
+          <li itemScope itemType="https://schema.org/ListItem" itemProp="itemListElement">
+            <Link href="/areas" itemProp="item" className="hover:text-[#FFB800]"><span itemProp="name">Areas</span></Link>
+            <meta itemProp="position" content="2" />
+          </li>
+          <span className="mx-2" aria-hidden="true">›</span>
+          <li itemScope itemType="https://schema.org/ListItem" itemProp="itemListElement">
+            <Link href={`/areas/${slug}`} itemProp="item" className="text-gray-800 font-medium hover:text-[#FFB800]"><span itemProp="name">{area.name}</span></Link>
+            <meta itemProp="position" content="3" />
+          </li>
+        </ol>
       </nav>
 
       <HeroSection

@@ -47,12 +47,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title,
     description,
     alternates: {
-      canonical: `${SITE_CONFIG.domain}/locksmith/${slug}/${serviceSlug}`,
+      canonical: `${SITE_CONFIG.domain}/areas/${slug}/${serviceSlug}`,
     },
     openGraph: {
       title,
       description,
-      url: `${SITE_CONFIG.domain}/locksmith/${slug}/${serviceSlug}`,
+      url: `${SITE_CONFIG.domain}/areas/${slug}/${serviceSlug}`,
       images: [
         {
           url: `${SITE_CONFIG.domain}/api/og?title=${encodeURIComponent(`${service.shortName} in ${area.name}`)}`,

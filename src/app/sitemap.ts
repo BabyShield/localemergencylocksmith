@@ -20,7 +20,6 @@ export async function generateSitemaps() {
   return [
     { id: 'core' },
     { id: 'areas-and-hubs' },
-    { id: 'locksmith-silo' },
     { id: 'streets-part-1' },
     { id: 'streets-part-2' },
     { id: 'streets-part-3' },
@@ -57,14 +56,6 @@ export default async function sitemap({ id }: { id: Promise<string> | string }):
     return [...areaPages, ...areaServicePages]
   }
 
-  if (resolvedId === 'locksmith-silo') {
-    const locksmithPages = AREAS.map((a) => ({ url: `${base}/locksmith/${a.slug}`, lastModified: buildDate, changeFrequency: 'monthly' as const, priority: 0.9 as any }))
-    const locksmithServicePages = AREAS.flatMap((a) =>
-      SERVICES.map((s) => ({ url: `${base}/locksmith/${a.slug}/${s.slug}`, lastModified: buildDate, changeFrequency: 'monthly' as const, priority: 0.8 as any }))
-    )
-    return [...locksmithPages, ...locksmithServicePages]
-  }
-
   if (resolvedId.startsWith('streets-')) {
     const allStreetPages: MetadataRoute.Sitemap = []
     AREAS.forEach((area) => {
@@ -72,7 +63,6 @@ export default async function sitemap({ id }: { id: Promise<string> | string }):
       const streets = areaJson.streets || []
       streets.forEach((street: any) => {
         allStreetPages.push({ url: `${base}/areas/${area.slug}/streets/${street.slug}`, lastModified: buildDate, changeFrequency: 'yearly' as const, priority: 0.5 as any })
-        allStreetPages.push({ url: `${base}/locksmith/${area.slug}/streets/${street.slug}`, lastModified: buildDate, changeFrequency: 'yearly' as const, priority: 0.5 as any })
       })
     })
 
@@ -90,9 +80,12 @@ export default async function sitemap({ id }: { id: Promise<string> | string }):
     const blogPostPages = ALL_BLOG_POSTS.map((p) => ({ url: `${base}/blog/${p.slug}`, lastModified: new Date(p.date), changeFrequency: 'monthly' as const, priority: 0.6 as any }))
     
     const algorithmicBlogs = getJsonSafe('src/data/articles-generated/algorithmic-blogs.json')
-    const algorithmicPages = Object.keys(algorithmicBlogs).map((key) => {
-      const [area, topic] = key.split('/')
-      return { url: `${base}/guides/${area}/${topic}`, lastModified: buildDate, changeFrequency: 'monthly' as const, priority: 0.5 as any }
+    const algorithmicPages = (Array.isArray(algorithmicBlogs) ? [] : Object.keys(algorithmicBlogs)).flatMap((key: string) => {
+      const parts = key.split('/')
+      if (parts.length < 2) return []
+      const [area, topic] = parts
+      if (!area || !topic) return []
+      return [{ url: `${base}/guides/${area}/${topic}`, lastModified: buildDate, changeFrequency: 'monthly' as const, priority: 0.5 as any }]
     })
 
     return [...nearMePages, ...areaArticlePages, ...blogPostPages, ...algorithmicPages]
