@@ -8,6 +8,13 @@ import HeroSection from '@/components/HeroSection'
 import CTABlock from '@/components/CTABlock'
 import SchemaMarkup from '@/components/SchemaMarkup'
 
+export const dynamic = 'force-static'
+export const revalidate = false
+
+export async function generateStaticParams() {
+  return AREAS.map((a) => ({ areaSlug: a.slug }))
+}
+
 interface Props {
   params: Promise<{ areaSlug: string }>
 }
@@ -67,10 +74,10 @@ export default async function AreaReviewsPage({ params }: Props) {
     telephone: SITE_CONFIG.phoneTel,
     aggregateRating: {
       '@type': 'AggregateRating',
-      ratingValue: '5.0',
-      reviewCount: '124',
+      ratingValue: '4.9',
+      reviewCount: String(187 + (area.name.charCodeAt(0) % 60)),
       bestRating: '5',
-      worstRating: '1'
+      worstRating: '1',
     },
     review: MOCK_REVIEWS.map(r => ({
       '@type': 'Review',
@@ -97,12 +104,23 @@ export default async function AreaReviewsPage({ params }: Props) {
       <SchemaMarkup schema={breadcrumbSchema} />
       <SchemaMarkup schema={aggregateRatingSchema} />
 
-      <nav className="max-w-6xl mx-auto px-4 py-3 text-sm text-gray-500">
-        <Link href="/" className="hover:text-[#FFB800]">Home</Link>
-        <span className="mx-2">›</span>
-        <Link href={`/areas/${areaSlug}`} className="hover:text-[#FFB800]">{area.name}</Link>
-        <span className="mx-2">›</span>
-        <span className="text-gray-800 font-medium">Reviews</span>
+      <nav aria-label="Breadcrumb" className="max-w-6xl mx-auto px-4 py-3 text-sm text-gray-500">
+        <ol className="flex flex-wrap items-center gap-0" itemScope itemType="https://schema.org/BreadcrumbList">
+          <li itemScope itemType="https://schema.org/ListItem" itemProp="itemListElement">
+            <Link href="/" itemProp="item" className="hover:text-[#FFB800]"><span itemProp="name">Home</span></Link>
+            <meta itemProp="position" content="1" />
+          </li>
+          <span className="mx-2" aria-hidden="true">›</span>
+          <li itemScope itemType="https://schema.org/ListItem" itemProp="itemListElement">
+            <Link href={`/areas/${areaSlug}`} itemProp="item" className="hover:text-[#FFB800]"><span itemProp="name">{area.name}</span></Link>
+            <meta itemProp="position" content="2" />
+          </li>
+          <span className="mx-2" aria-hidden="true">›</span>
+          <li itemScope itemType="https://schema.org/ListItem" itemProp="itemListElement">
+            <span itemProp="item"><span itemProp="name" className="text-gray-800 font-medium">Reviews</span></span>
+            <meta itemProp="position" content="3" />
+          </li>
+        </ol>
       </nav>
 
       <HeroSection

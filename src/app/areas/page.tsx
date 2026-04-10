@@ -6,11 +6,17 @@ import CTABlock from '@/components/CTABlock'
 import SchemaMarkup from '@/components/SchemaMarkup'
 
 export const metadata: Metadata = {
-  title: 'Areas Covered — Emergency Locksmith Coventry & Warwickshire',
+  title: 'Locksmith Areas Covered | Coventry & Warwickshire | 90+ Locations',
   description:
-    'Emergency locksmith covering Coventry, Nuneaton, Rugby, Leamington Spa, Warwick, Stratford-upon-Avon and 90+ surrounding areas. No VAT, no call-out fee.',
+    'Local locksmith covering Coventry, Nuneaton, Rugby, Leamington Spa, Warwick, Stratford-upon-Avon and 90+ surrounding areas. Emergency 24/7, no VAT, no call-out fee.',
+  keywords: 'locksmith coventry areas, locksmith warwickshire, locksmith near me, emergency locksmith coventry, locksmith nuneaton, locksmith rugby, locksmith leamington spa',
   alternates: {
     canonical: `${SITE_CONFIG.domain}/areas`,
+  },
+  openGraph: {
+    title: 'Locksmith Areas Covered | Coventry & Warwickshire | 90+ Locations',
+    description: 'Local locksmith covering 90+ towns and villages across Coventry and Warwickshire. Emergency 24/7.',
+    url: `${SITE_CONFIG.domain}/areas`,
   },
 }
 
@@ -30,10 +36,18 @@ export default function AreasPage() {
     <>
       <SchemaMarkup schema={breadcrumbSchema} />
 
-      <nav className="max-w-6xl mx-auto px-4 py-3 text-sm text-gray-500">
-        <Link href="/" className="hover:text-[#FFB800]">Home</Link>
-        <span className="mx-2">›</span>
-        <span className="text-gray-800 font-medium">All Areas</span>
+      <nav aria-label="Breadcrumb" className="max-w-6xl mx-auto px-4 py-3 text-sm text-gray-500">
+        <ol className="flex flex-wrap items-center gap-0" itemScope itemType="https://schema.org/BreadcrumbList">
+          <li itemScope itemType="https://schema.org/ListItem" itemProp="itemListElement">
+            <Link href="/" itemProp="item" className="hover:text-[#FFB800]"><span itemProp="name">Home</span></Link>
+            <meta itemProp="position" content="1" />
+          </li>
+          <span className="mx-2" aria-hidden="true">›</span>
+          <li itemScope itemType="https://schema.org/ListItem" itemProp="itemListElement">
+            <span itemProp="item"><span itemProp="name" className="text-gray-800 font-medium">All Areas</span></span>
+            <meta itemProp="position" content="2" />
+          </li>
+        </ol>
       </nav>
 
       <section className="py-12 px-4 text-white" style={{ background: '#0F1B2D' }}>
@@ -69,8 +83,8 @@ export default function AreasPage() {
                     href={`/areas/${area.slug}`}
                     className="block bg-gray-50 hover:bg-white border border-gray-200 hover:border-[#FFB800] rounded-xl p-4 transition-all group"
                   >
-                    <p className="font-bold text-gray-900 group-hover:text-[#0F1B2D]">
-                      {area.name}
+                    <p className="font-bold text-gray-900 group-hover:text-[#FFB800]">
+                      Locksmith {area.name}
                     </p>
                     <p className="text-sm text-gray-500 mt-1">{area.postcode}</p>
                     <p className="text-xs text-[#FFB800] mt-1">{area.responseTime}</p>

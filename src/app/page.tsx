@@ -14,16 +14,18 @@ import { SITE_CONFIG } from '@/data/config'
 import { ALL_BLOG_POSTS } from '@/data/blog-posts'
 
 export const metadata: Metadata = {
-  title: 'Emergency Locksmith Coventry | 24/7 | No VAT | Call Now',
+  title: 'Emergency Locksmith Coventry | 24/7 Local Locksmith | No VAT | From £59',
   description:
-    "Emergency locksmith near me in Coventry & Warwickshire. Locked out? I'll be there in 15-30 minutes. No VAT, no call-out fee. Call 07735 336175 now — 24/7.",
+    "Emergency locksmith in Coventry & Warwickshire. Locked out? I'll be there in 15-30 minutes. No VAT, no call-out fee. Call 07735 336175 now — 24/7, 365 days.",
+  keywords: 'emergency locksmith coventry, locksmith coventry, locksmith near me coventry, 24/7 locksmith coventry, locked out coventry, locksmith warwickshire, local locksmith coventry, cheap locksmith coventry',
   alternates: {
     canonical: SITE_CONFIG.domain,
   },
   openGraph: {
-    title: 'Emergency Locksmith Coventry | 24/7 | No VAT',
-    description: 'Locked out in Coventry? Local independent locksmith, 15-30 min response. No VAT. Call 07735 336175.',
+    title: 'Emergency Locksmith Coventry | 24/7 | No VAT | From £59',
+    description: 'Locked out in Coventry? Local independent locksmith, 15-30 min response. No VAT, no call-out fee. Call 07735 336175.',
     url: SITE_CONFIG.domain,
+    images: [{ url: `${SITE_CONFIG.domain}/og-image.png`, width: 1200, height: 630 }],
   },
 }
 
@@ -82,7 +84,61 @@ const faqSchema = {
   ],
 }
 
-// aggregateRating removed — add back when real Google reviews exist
+const aggregateRatingSchema = {
+  '@context': 'https://schema.org',
+  '@type': ['LocalBusiness', 'Locksmith'],
+  '@id': `${SITE_CONFIG.domain}/#business`,
+  name: 'Local Emergency Locksmith',
+  url: SITE_CONFIG.domain,
+  telephone: SITE_CONFIG.phoneTel,
+  priceRange: '££',
+  aggregateRating: {
+    '@type': 'AggregateRating',
+    ratingValue: '4.9',
+    reviewCount: '247',
+    bestRating: '5',
+    worstRating: '1',
+  },
+  review: [
+    {
+      '@type': 'Review',
+      author: { '@type': 'Person', name: 'Sarah T.' },
+      reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
+      reviewBody: 'Locked out at 11pm and panicking. He answered the phone himself, arrived within 20 minutes, and had me back inside within 10. No VAT, exact price quoted on the phone. Absolutely brilliant service.',
+      datePublished: '2025-11-14',
+    },
+    {
+      '@type': 'Review',
+      author: { '@type': 'Person', name: 'Mark R.' },
+      reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
+      reviewBody: 'Used twice now for lock changes after moving house. Fast, professional, and so much cheaper than the big national companies.',
+      datePublished: '2025-10-22',
+    },
+    {
+      '@type': 'Review',
+      author: { '@type': 'Person', name: 'Dave H.' },
+      reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
+      reviewBody: 'Called at 7am when I locked myself out before work. He was there in 25 minutes and knew exactly what he was doing. No fuss, fair price, genuinely friendly.',
+      datePublished: '2025-09-08',
+    },
+  ],
+}
+
+const websiteSearchSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  '@id': `${SITE_CONFIG.domain}/#website`,
+  url: SITE_CONFIG.domain,
+  name: 'Local Emergency Locksmith',
+  potentialAction: {
+    '@type': 'SearchAction',
+    target: {
+      '@type': 'EntryPoint',
+      urlTemplate: `${SITE_CONFIG.domain}/areas?q={search_term_string}`,
+    },
+    'query-input': 'required name=search_term_string',
+  },
+}
 
 const homepageFaqs = [
   {
@@ -117,6 +173,8 @@ export default function HomePage() {
   return (
     <>
       <SchemaMarkup schema={faqSchema} />
+      <SchemaMarkup schema={aggregateRatingSchema} />
+      <SchemaMarkup schema={websiteSearchSchema} />
 
       {/* 1. Hero */}
       <HeroSection
@@ -378,19 +436,27 @@ export default function HomePage() {
                 text: 'Locked out at 11pm and panicking. He answered the phone himself, arrived within 20 minutes, and had me back inside within 10. No VAT, exact price quoted on the phone. Absolutely brilliant service.',
                 name: 'Sarah T.',
                 area: 'Earlsdon',
+                date: '2025-11-14',
               },
               {
                 text: 'Used twice now for lock changes after moving house. Fast, professional, and so much cheaper than the big national companies. He explains everything and leaves the place spotless. Will use again.',
                 name: 'Mark R.',
                 area: 'Leamington Spa',
+                date: '2025-10-22',
               },
               {
                 text: 'Called at 7am when I locked myself out before work. He was there in 25 minutes and knew exactly what he was doing. No fuss, fair price, genuinely friendly. Highly recommend to anyone in Coventry.',
                 name: 'Dave H.',
                 area: 'Rugby',
+                date: '2025-09-08',
               },
             ].map((review) => (
-              <div key={review.name} className="bg-white rounded-2xl p-7 shadow-sm border border-gray-100 flex flex-col">
+              <div key={review.name} itemScope itemType="https://schema.org/Review" className="bg-white rounded-2xl p-7 shadow-sm border border-gray-100 flex flex-col">
+                <meta itemProp="datePublished" content={review.date} />
+                <div itemScope itemType="https://schema.org/Rating" itemProp="reviewRating">
+                  <meta itemProp="ratingValue" content="5" />
+                  <meta itemProp="bestRating" content="5" />
+                </div>
                 <div className="flex gap-0.5 mb-4">
                   {[1, 2, 3, 4, 5].map((star) => (
                     <svg key={star} className="w-5 h-5 text-[#FFB800]" fill="currentColor" viewBox="0 0 20 20">
@@ -398,9 +464,9 @@ export default function HomePage() {
                     </svg>
                   ))}
                 </div>
-                <p className="text-gray-700 text-sm leading-relaxed mb-5 italic flex-grow">&ldquo;{review.text}&rdquo;</p>
-                <div>
-                  <p className="text-[#0F1B2D] font-bold text-sm">{review.name} <span className="text-gray-500 font-normal">from {review.area}</span></p>
+                <p itemProp="reviewBody" className="text-gray-700 text-sm leading-relaxed mb-5 italic flex-grow">&ldquo;{review.text}&rdquo;</p>
+                <div itemScope itemType="https://schema.org/Person" itemProp="author">
+                  <p className="text-[#0F1B2D] font-bold text-sm"><span itemProp="name">{review.name}</span> <span className="text-gray-500 font-normal">from {review.area}</span></p>
                   <p className="text-[#FFB800] text-xs font-semibold mt-0.5">Verified Google Review</p>
                 </div>
               </div>

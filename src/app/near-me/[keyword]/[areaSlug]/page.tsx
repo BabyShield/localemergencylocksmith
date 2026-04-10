@@ -36,15 +36,18 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const titleText = kwMatch.keyword.replace(/near me/gi, `near me in ${area.name}`)
   const title = `${titleText.charAt(0).toUpperCase() + titleText.slice(1)} | Locksmith`
 
+  const desc = `Looking for a ${kwMatch.keyword} around ${area.name}? Local independent locksmith, ${area.responseTime} response. No VAT, no call-out fee. Call ${SITE_CONFIG.phone} now.`
+
   return {
     title,
-    description: `Looking for a ${kwMatch.keyword} around ${area.name}? Local independent locksmith. No VAT, no call-out fee. Call ${SITE_CONFIG.phone} now.`,
+    description: desc,
+    keywords: `${kwMatch.keyword} ${area.name}, ${kwMatch.keyword} ${area.postcode}, locksmith near me ${area.name}, emergency locksmith ${area.name}`,
     alternates: {
       canonical: `${SITE_CONFIG.domain}/near-me/${keyword}/${areaSlug}`,
     },
     openGraph: {
       title,
-      description: `Looking for a ${kwMatch.keyword} around ${area.name}? Local independent locksmith. No VAT, no call-out fee. Call ${SITE_CONFIG.phone} now.`,
+      description: desc,
       url: `${SITE_CONFIG.domain}/near-me/${keyword}/${areaSlug}`,
       images: [
         {

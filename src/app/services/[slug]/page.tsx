@@ -30,6 +30,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: service.metaTitle,
     description: service.metaDescription,
+    keywords: [...service.keywords, `locksmith coventry ${service.shortName.toLowerCase()}`, `emergency ${service.shortName.toLowerCase()} coventry`, `${service.shortName.toLowerCase()} near me`].join(', '),
     alternates: {
       canonical: `${SITE_CONFIG.domain}/services/${slug}`,
     },
@@ -37,6 +38,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title: service.metaTitle,
       description: service.metaDescription,
       url: `${SITE_CONFIG.domain}/services/${slug}`,
+      images: [{ url: `${SITE_CONFIG.domain}/api/og?title=${encodeURIComponent(service.metaTitle)}`, width: 1200, height: 630 }],
     },
   }
 }
@@ -451,18 +453,21 @@ export default async function ServicePage({ params }: Props) {
       {/* ============================================================ */}
       {/*  1. Breadcrumb                                                */}
       {/* ============================================================ */}
-      <nav className="max-w-6xl mx-auto px-4 py-3 text-sm text-gray-500" aria-label="Breadcrumb">
-        <ol className="flex items-center gap-0">
-          <li>
-            <Link href="/" className="hover:text-[#FFB800] transition-colors">Home</Link>
+      <nav aria-label="Breadcrumb" className="max-w-6xl mx-auto px-4 py-3 text-sm text-gray-500">
+        <ol className="flex flex-wrap items-center gap-0" itemScope itemType="https://schema.org/BreadcrumbList">
+          <li itemScope itemType="https://schema.org/ListItem" itemProp="itemListElement">
+            <Link href="/" itemProp="item" className="hover:text-[#FFB800] transition-colors"><span itemProp="name">Home</span></Link>
+            <meta itemProp="position" content="1" />
           </li>
-          <li><span className="mx-2 text-gray-300">›</span></li>
-          <li>
-            <Link href="/services" className="hover:text-[#FFB800] transition-colors">Services</Link>
+          <span className="mx-2 text-gray-300" aria-hidden="true">›</span>
+          <li itemScope itemType="https://schema.org/ListItem" itemProp="itemListElement">
+            <Link href="/services" itemProp="item" className="hover:text-[#FFB800] transition-colors"><span itemProp="name">Services</span></Link>
+            <meta itemProp="position" content="2" />
           </li>
-          <li><span className="mx-2 text-gray-300">›</span></li>
-          <li>
-            <span className="text-[#0F1B2D] font-semibold">{service.shortName}</span>
+          <span className="mx-2 text-gray-300" aria-hidden="true">›</span>
+          <li itemScope itemType="https://schema.org/ListItem" itemProp="itemListElement">
+            <span itemProp="item"><span itemProp="name" className="text-[#0F1B2D] font-semibold">{service.shortName}</span></span>
+            <meta itemProp="position" content="3" />
           </li>
         </ol>
       </nav>
