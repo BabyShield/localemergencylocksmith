@@ -330,7 +330,7 @@ export default function HomePage() {
                 {
                   step: '3',
                   title: 'Problem Solved',
-                  desc: 'Door open, lock changed, or security upgraded. Pay the price we agreed — nothing more.',
+                  desc: 'Door open, lock changed, or security upgraded. Pay the price I quoted — nothing more.',
                 },
               ].map((item) => (
                 <div key={item.step} className="text-center relative">
@@ -525,7 +525,7 @@ export default function HomePage() {
       <section className="py-8 px-4 bg-white border-t border-gray-100">
         <div className="max-w-3xl mx-auto text-center">
           <h3 className="text-sm font-bold text-gray-400 uppercase tracking-widest mb-4">
-            Emergency? We can help.
+            Emergency? I can help.
           </h3>
           <div className="flex flex-wrap justify-center gap-x-8 gap-y-3 text-sm">
             <p lang="pl" className="text-gray-600">

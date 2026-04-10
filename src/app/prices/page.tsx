@@ -73,6 +73,31 @@ const breadcrumbSchema = {
   ],
 }
 
+const offersSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'LocalBusiness',
+  '@id': `${SITE_CONFIG.domain}/#business`,
+  name: 'Local Emergency Locksmith',
+  hasOfferCatalog: {
+    '@type': 'OfferCatalog',
+    name: 'Locksmith Prices',
+    itemListElement: PRICES.filter((p) => p.price > 0).map((p) => ({
+      '@type': 'Offer',
+      name: p.service,
+      description: p.detail,
+      price: String(p.price),
+      priceCurrency: 'GBP',
+      availability: 'https://schema.org/InStock',
+      priceSpecification: {
+        '@type': 'UnitPriceSpecification',
+        price: String(p.price),
+        priceCurrency: 'GBP',
+        valueAddedTaxIncluded: false,
+      },
+    })),
+  },
+}
+
 const faqSchema = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
@@ -108,6 +133,7 @@ export default function PricesPage() {
   return (
     <>
       <SchemaMarkup schema={breadcrumbSchema} />
+      <SchemaMarkup schema={offersSchema} />
       <SchemaMarkup schema={faqSchema} />
 
       {/* Breadcrumb */}
@@ -195,10 +221,10 @@ export default function PricesPage() {
         </div>
       </section>
 
-      {/* Us vs National Companies */}
+      {/* Me vs National Companies */}
       <section className="py-12 px-4 bg-gray-50">
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-2xl font-black text-gray-900 mb-6 text-center">Us vs National Companies</h2>
+          <h2 className="text-2xl font-black text-gray-900 mb-6 text-center">Me vs National Companies</h2>
           <div className="bg-white rounded-xl border border-gray-200 overflow-hidden shadow-sm">
             <table className="w-full">
               <caption className="px-6 py-3 text-sm text-gray-500 bg-gray-50 text-left">
@@ -207,7 +233,7 @@ export default function PricesPage() {
               <thead>
                 <tr className="bg-[#0F1B2D] text-white">
                   <th className="text-left px-4 py-3 font-bold text-sm">Service</th>
-                  <th className="text-right px-4 py-3 font-bold text-sm">Our Price</th>
+                  <th className="text-right px-4 py-3 font-bold text-sm">My Price</th>
                   <th className="text-right px-4 py-3 font-bold text-sm">National Company</th>
                   <th className="text-right px-4 py-3 font-bold text-sm">You Save</th>
                 </tr>

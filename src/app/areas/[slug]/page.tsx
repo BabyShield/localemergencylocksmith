@@ -481,10 +481,30 @@ export default async function AreaPage({ params }: Props) {
         heading={`Frequently Asked Questions — ${area.name} Locksmith`}
       />
 
-      <InternalLinkingMatrix 
-        areaSlug={slug} 
-        areaName={area.name} 
-        parentHierarchy="areas" 
+      {/* Security Tips — blog cross-links */}
+      <section className="py-10 px-4 bg-white">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-xl font-black text-[#0F1B2D] mb-5">
+            Security Tips for {area.name}
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
+            {ARTICLE_TEMPLATES.slice(0, 6).map((article) => (
+              <Link
+                key={article.slug}
+                href={`/blog/${slug}/${article.slug}`}
+                className="bg-[#F7F7F5] border border-gray-200 rounded-lg px-4 py-3 text-sm font-medium text-gray-700 hover:border-[#FFB800] hover:text-[#0F1B2D] transition-colors"
+              >
+                {article.titleTemplate.replace(/\{area\}/g, area.name)}
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <InternalLinkingMatrix
+        areaSlug={slug}
+        areaName={area.name}
+        parentHierarchy="areas"
       />
 
       <CTABlock

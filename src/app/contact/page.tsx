@@ -58,7 +58,7 @@ export default function ContactPage() {
 
       <section className="py-12 px-4 text-white" style={{ background: '#0F1B2D' }}>
         <div className="max-w-3xl mx-auto text-center">
-          <h1 className="text-3xl md:text-4xl font-black mb-4">Contact Us</h1>
+          <h1 className="text-3xl md:text-4xl font-black mb-4">Contact Me</h1>
           <p className="text-gray-300 text-lg mb-6">
             For emergencies, call now — the fastest response is always by phone.
           </p>

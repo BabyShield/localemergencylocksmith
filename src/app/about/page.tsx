@@ -77,10 +77,20 @@ const aboutSchema = {
   sameAs: ['https://www.facebook.com/localemergencylocksmith'],
 }
 
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_CONFIG.domain },
+    { '@type': 'ListItem', position: 2, name: 'About', item: `${SITE_CONFIG.domain}/about` },
+  ],
+}
+
 export default function AboutPage() {
   return (
     <>
       <SchemaMarkup schema={aboutSchema} />
+      <SchemaMarkup schema={breadcrumbSchema} />
 
       {/* Breadcrumb */}
       <nav aria-label="Breadcrumb" className="bg-[#F7F7F5] py-3 px-4 border-b border-gray-200">

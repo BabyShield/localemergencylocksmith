@@ -29,10 +29,38 @@ const breadcrumbSchema = {
   ],
 }
 
+const servicesCatalogSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  serviceType: 'Locksmith',
+  provider: { '@type': 'LocalBusiness', '@id': `${SITE_CONFIG.domain}/#business` },
+  areaServed: { '@type': 'Place', name: 'Coventry and Warwickshire' },
+  hasOfferCatalog: {
+    '@type': 'OfferCatalog',
+    name: 'Locksmith Services',
+    itemListElement: SERVICES.map((s) => ({
+      '@type': 'Offer',
+      name: s.name,
+      description: s.description,
+      price: String(s.priceFrom),
+      priceCurrency: 'GBP',
+      availability: 'https://schema.org/InStock',
+      url: `${SITE_CONFIG.domain}/services/${s.slug}`,
+      priceSpecification: {
+        '@type': 'UnitPriceSpecification',
+        price: String(s.priceFrom),
+        priceCurrency: 'GBP',
+        valueAddedTaxIncluded: false,
+      },
+    })),
+  },
+}
+
 export default function ServicesPage() {
   return (
     <>
       <SchemaMarkup schema={breadcrumbSchema} />
+      <SchemaMarkup schema={servicesCatalogSchema} />
 
       <nav aria-label="Breadcrumb" className="max-w-6xl mx-auto px-4 py-3 text-sm text-gray-500">
         <ol className="flex flex-wrap items-center gap-0" itemScope itemType="https://schema.org/BreadcrumbList">

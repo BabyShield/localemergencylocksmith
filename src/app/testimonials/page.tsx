@@ -213,22 +213,30 @@ function StarRating({ rating = 5 }: { rating?: number }) {
 
 function ReviewCard({ review }: { review: Review }) {
   return (
-    <div className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+    <div className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm hover:shadow-md transition-shadow" itemScope itemType="https://schema.org/Review">
       <div className="flex items-center justify-between mb-3">
-        <StarRating rating={review.rating} />
+        <div itemProp="reviewRating" itemScope itemType="https://schema.org/Rating">
+          <meta itemProp="ratingValue" content={String(review.rating)} />
+          <meta itemProp="bestRating" content="5" />
+          <StarRating rating={review.rating} />
+        </div>
         <span className="text-xs font-bold text-[#FFB800] bg-[#FFB800]/10 px-2.5 py-1 rounded-full">
           {review.service}
         </span>
       </div>
-      <blockquote className="text-gray-700 leading-relaxed mb-4">
+      <blockquote className="text-gray-700 leading-relaxed mb-4" itemProp="reviewBody">
         &ldquo;{review.quote}&rdquo;
       </blockquote>
+      <meta itemProp="datePublished" content={review.date} />
+      <div itemProp="itemReviewed" itemScope itemType="https://schema.org/LocalBusiness">
+        <meta itemProp="name" content="Local Emergency Locksmith" />
+      </div>
       <div className="flex items-center gap-3">
         <div className="w-10 h-10 rounded-full bg-[#0F1B2D] flex items-center justify-center text-[#FFB800] font-black text-sm">
           {review.name.charAt(0)}
         </div>
-        <div>
-          <p className="font-bold text-[#0F1B2D] text-sm">{review.name}</p>
+        <div itemProp="author" itemScope itemType="https://schema.org/Person">
+          <p className="font-bold text-[#0F1B2D] text-sm" itemProp="name">{review.name}</p>
           <p className="text-gray-500 text-xs">{review.area}</p>
           <p className="text-gray-400 text-xs">{new Date(review.date).toLocaleDateString('en-GB', { month: 'short', year: 'numeric' })}</p>
         </div>
