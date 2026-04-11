@@ -41,6 +41,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: `${article.title} | Locksmith ${area.name}`,
     description,
+    robots: { index: false, follow: true },
     keywords: `locksmith ${area.name}, ${article.title.toLowerCase()}, ${area.postcode} locksmith, security guide ${area.name}`,
     alternates: {
       canonical: `${SITE_CONFIG.domain}/guides/${areaSlug}/${topicSlug}`,

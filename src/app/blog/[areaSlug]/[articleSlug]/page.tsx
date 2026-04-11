@@ -42,6 +42,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title,
     description,
+    robots: { index: false, follow: true },
     keywords: `locksmith ${area.name}, ${area.postcode} locksmith, ${article.slug.replace(/-/g, ' ')} ${area.name}, emergency locksmith ${area.name}`,
     alternates: { canonical: url },
     openGraph: {

@@ -44,6 +44,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title,
     description,
+    robots: { index: false, follow: true },
     keywords: `locksmith ${street.name} ${area.name}, locksmith ${area.postcode}, emergency locksmith ${street.name}, locksmith near me ${area.name}`,
     alternates: {
       canonical: `${SITE_CONFIG.domain}/areas/${slug}/streets/${streetSlug}`,

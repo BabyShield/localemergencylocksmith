@@ -7,9 +7,15 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: '*',
         allow: '/',
-        // Allow /locksmith/ — Google must crawl these to read the canonical → /areas/ tag
-        // Only block routes that should never be indexed
-        disallow: ['/api/', '/admin/', '/_next/image'],
+        disallow: [
+          '/api/',
+          '/admin/',
+          '/_next/image',
+          '/areas/*/streets/',
+          '/near-me/*/*',
+          '/guides/',
+          '/blog/*/*',
+        ],
       },
     ],
     sitemap: `${SITE_CONFIG.domain}/sitemap.xml`,
