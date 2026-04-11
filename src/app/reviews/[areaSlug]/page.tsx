@@ -82,6 +82,7 @@ export default async function AreaReviewsPage({ params }: Props) {
     },
     review: MOCK_REVIEWS.map(r => ({
       '@type': 'Review',
+      itemReviewed: { '@type': 'LocalBusiness', '@id': `${SITE_CONFIG.domain}/#business` },
       author: {
          '@type': 'Person',
          name: r.authorName

@@ -103,6 +103,7 @@ const aggregateRatingSchema = {
   review: [
     {
       '@type': 'Review',
+      itemReviewed: { '@type': 'LocalBusiness', '@id': `${SITE_CONFIG.domain}/#business` },
       author: { '@type': 'Person', name: 'Sarah T.' },
       reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
       reviewBody: 'Locked out at 11pm and panicking. He answered the phone himself, arrived within 20 minutes, and had me back inside within 10. No VAT, exact price quoted on the phone. Absolutely brilliant service.',
@@ -110,6 +111,7 @@ const aggregateRatingSchema = {
     },
     {
       '@type': 'Review',
+      itemReviewed: { '@type': 'LocalBusiness', '@id': `${SITE_CONFIG.domain}/#business` },
       author: { '@type': 'Person', name: 'Mark R.' },
       reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
       reviewBody: 'Used twice now for lock changes after moving house. Fast, professional, and so much cheaper than the big national companies.',
@@ -117,6 +119,7 @@ const aggregateRatingSchema = {
     },
     {
       '@type': 'Review',
+      itemReviewed: { '@type': 'LocalBusiness', '@id': `${SITE_CONFIG.domain}/#business` },
       author: { '@type': 'Person', name: 'Dave H.' },
       reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
       reviewBody: 'Called at 7am when I locked myself out before work. He was there in 25 minutes and knew exactly what he was doing. No fuss, fair price, genuinely friendly.',
@@ -453,6 +456,9 @@ export default function HomePage() {
               },
             ].map((review) => (
               <div key={review.name} itemScope itemType="https://schema.org/Review" className="bg-white rounded-2xl p-7 shadow-sm border border-gray-100 flex flex-col">
+                <div itemScope itemType="https://schema.org/LocalBusiness" itemProp="itemReviewed">
+                  <meta itemProp="name" content="Local Emergency Locksmith" />
+                </div>
                 <meta itemProp="datePublished" content={review.date} />
                 <div itemScope itemType="https://schema.org/Rating" itemProp="reviewRating">
                   <meta itemProp="ratingValue" content="5" />
