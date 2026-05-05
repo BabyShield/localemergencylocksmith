@@ -64,7 +64,7 @@ In practice, I have not seen an insurer reject a claim solely because a lock met
 
 1. Fit a lock that meets **both** standards (most quality 5-lever mortice deadlocks from brands like ERA, Union, and British Standard do)
 2. Call your insurer and ask them to confirm PAS3621 is acceptable
-3. Call me on 07735 336175 and I will check what you have and what you need
+3. Call me on 024 7522 4730 and I will check what you have and what you need
 
 ---
 
@@ -94,7 +94,7 @@ Good BS8621 locks mitigate this with:
 - **Positioning** that makes it hard to reach from a letterbox
 - **Combining with a letterbox restrictor** to prevent fishing attacks
 
-I fit BS8621 locks regularly in Coventry HMOs and always discuss the letterbox security at the same time. If you are a landlord needing HMO-compliant locks, see our [lock change service](/services/lock-change) or call me directly on 07735 336175.
+I fit BS8621 locks regularly in Coventry HMOs and always discuss the letterbox security at the same time. If you are a landlord needing HMO-compliant locks, see our [lock change service](/services/lock-change) or call me directly on 024 7522 4730.
 
 ---
 
@@ -114,7 +114,7 @@ Look for the **BSI Kitemark with BS8621** on the faceplate. The lock will have a
 
 ### Not Sure?
 
-Honestly, the easiest way is to call me. I offer a **free security check** across Coventry and the surrounding areas — I will look at your locks, tell you exactly what standard they meet (or do not meet), and advise on whether you need to upgrade for insurance or legal compliance. No obligation, no hard sell. Call 07735 336175 or check which [areas we cover](/areas).
+Honestly, the easiest way is to call me. I offer a **free security check** across Coventry and the surrounding areas — I will look at your locks, tell you exactly what standard they meet (or do not meet), and advise on whether you need to upgrade for insurance or legal compliance. No obligation, no hard sell. Call 024 7522 4730 or check which [areas we cover](/areas).
 
 ---
 
@@ -130,7 +130,7 @@ Here is my practical advice based on hundreds of jobs across Coventry:
 | Landlord with HMO | BS8621 on final exit doors and individual room doors |
 | Student rental | BS8621 strongly recommended (fire safety) |
 
-If you are a Coventry landlord managing multiple properties, I offer discounted rates for bulk lock changes. Whether it is the September student turnover or a mid-year tenancy change, call me on 07735 336175 and I will give you an honest quote.
+If you are a Coventry landlord managing multiple properties, I offer discounted rates for bulk lock changes. Whether it is the September student turnover or a mid-year tenancy change, call me on 024 7522 4730 and I will give you an honest quote.
 
 For more on the insurance side of lock standards, read our detailed guide on [whether your insurance will pay out with non-compliant locks](/blog/insurance-payout-lock-standards). And if you want to understand your obligations as a landlord around lock changes between tenants, I have covered that in our guide to [changing locks between tenancies](/blog/landlords-change-locks-between-tenants).
 `,
@@ -145,7 +145,7 @@ For more on the insurance side of lock standards, read our detailed guide on [wh
       },
       {
         q: 'How can I tell if my mortice deadlock meets BS3621?',
-        a: 'Look at the faceplate — the metal strip visible on the edge of the door when it is closed. A genuine BS3621 lock will have the BSI Kitemark (a heart-shaped symbol) and the standard number stamped into the metal. If there is no Kitemark, the lock has not been independently certified regardless of what the packaging or seller claimed. If you are unsure, call me on 07735 336175 and I will check it for you for free.',
+        a: 'Look at the faceplate — the metal strip visible on the edge of the door when it is closed. A genuine BS3621 lock will have the BSI Kitemark (a heart-shaped symbol) and the standard number stamped into the metal. If there is no Kitemark, the lock has not been independently certified regardless of what the packaging or seller claimed. If you are unsure, call me on 024 7522 4730 and I will check it for you for free.',
       },
       {
         q: 'Can a lock meet both BS3621 and BS8621?',
@@ -278,7 +278,7 @@ Coventry has a very large number of HMOs — particularly in areas popular with 
 - **Final exit doors must allow keyless egress** — tenants must be able to leave the building without a key in a fire (this is where [BS8621 locks](/blog/pas3621-bs3621-bs8621-differences) come in)
 - **Window restrictors** must be fitted to windows above ground floor level
 
-If you are an HMO landlord in Coventry and need compliant locks fitted, I work with multiple letting agents and property managers across the city. Call me on 07735 336175 for a quote — I offer discounted rates for multiple properties.
+If you are an HMO landlord in Coventry and need compliant locks fitted, I work with multiple letting agents and property managers across the city. Call me on 024 7522 4730 for a quote — I offer discounted rates for multiple properties.
 
 ---
 
@@ -304,7 +304,7 @@ Any locksmith who changes locks knowing it will lock out a tenant is potentially
 | Landlord and tenant agree locks need changing | **Yes** |
 | HMO room door needs individual lock | **Required by law** |
 
-For any lock change in Coventry — whether you are a tenant, landlord, or letting agent — call me on 07735 336175. I will make sure the work is done properly and legally. See our [prices page](/prices) for transparent pricing, or browse our [service areas](/areas) to check we cover your location.
+For any lock change in Coventry — whether you are a tenant, landlord, or letting agent — call me on 024 7522 4730. I will make sure the work is done properly and legally. See our [prices page](/prices) for transparent pricing, or browse our [service areas](/areas) to check we cover your location.
 `,
     faqs: [
       {
@@ -313,7 +313,7 @@ For any lock change in Coventry — whether you are a tenant, landlord, or letti
       },
       {
         q: 'Do I need my landlord\'s permission to change the locks?',
-        a: 'Strictly speaking, no — as a tenant, you have the right to quiet enjoyment of the property, which includes reasonable security. However, most tenancy agreements require you to give the landlord a key to any new locks. I recommend telling your landlord, keeping the original locks to reinstall when you leave, and providing a spare key. A cylinder change on a standard uPVC door costs from £59 — call 07735 336175 for a quote.',
+        a: 'Strictly speaking, no — as a tenant, you have the right to quiet enjoyment of the property, which includes reasonable security. However, most tenancy agreements require you to give the landlord a key to any new locks. I recommend telling your landlord, keeping the original locks to reinstall when you leave, and providing a spare key. A cylinder change on a standard uPVC door costs from £59 — call 024 7522 4730 for a quote.',
       },
       {
         q: 'What if my landlord changed the locks after I moved out but left belongings behind?',
@@ -321,7 +321,7 @@ For any lock change in Coventry — whether you are a tenant, landlord, or letti
       },
       {
         q: 'I am a landlord — can I add an extra lock to my rental property?',
-        a: 'You can add or upgrade locks with the tenant\'s agreement, and the tenant must be given keys immediately. You cannot add a lock that only you have the key to — that would effectively allow you to lock the tenant out. If you want to upgrade security between tenancies, that is the ideal time. I work with many Coventry landlords and letting agents on lock upgrades — call 07735 336175 for competitive rates.',
+        a: 'You can add or upgrade locks with the tenant\'s agreement, and the tenant must be given keys immediately. You cannot add a lock that only you have the key to — that would effectively allow you to lock the tenant out. If you want to upgrade security between tenancies, that is the ideal time. I work with many Coventry landlords and letting agents on lock upgrades — call 024 7522 4730 for competitive rates.',
       },
     ],
   },
@@ -417,7 +417,7 @@ Coventry has a massive student rental market, and the cycle is very predictable:
 - **Early September** — new tenants move in
 - **The gap** — properties are cleaned, inspected, and prepared
 
-This July-to-September window is the perfect time to change locks. I work with several Coventry letting agents who book all their lock changes in one batch during this period. If you manage multiple student lets, call me on 07735 336175 to arrange a bulk booking — I offer discounted rates for multiple properties done in one visit.
+This July-to-September window is the perfect time to change locks. I work with several Coventry letting agents who book all their lock changes in one batch during this period. If you manage multiple student lets, call me on 024 7522 4730 to arrange a bulk booking — I offer discounted rates for multiple properties done in one visit.
 
 ### A Common Problem I See
 
@@ -463,7 +463,7 @@ After years of doing lock changes for Coventry landlords, here is what I recomme
 3. **Keep a record** of what lock was fitted, when, and the key number — useful if a tenant loses their key later
 4. **Upgrade while you are at it** — if the existing locks are standard euro cylinders with no anti-snap protection, spend the extra £10 per door and fit proper anti-snap cylinders. Your tenants and your insurer will thank you
 
-I cover all Coventry areas for landlord lock changes — from city centre flats to suburban houses in Tile Hill, Canley, Eastern Green, and everywhere in between. Check our [coverage areas](/areas) or call me directly on 07735 336175.
+I cover all Coventry areas for landlord lock changes — from city centre flats to suburban houses in Tile Hill, Canley, Eastern Green, and everywhere in between. Check our [coverage areas](/areas) or call me directly on 024 7522 4730.
 
 ---
 
@@ -476,7 +476,7 @@ If you manage multiple rental properties in Coventry, I offer:
 - **Invoicing** — I can invoice your management company or landlord directly
 - **Key records** — I provide a written record of every lock fitted, with key numbers, for your property file
 
-Whether you have 2 properties or 20, call me on 07735 336175 and I will give you an honest quote. No call-out fee, no hidden charges — just straightforward locksmith work at fair prices.
+Whether you have 2 properties or 20, call me on 024 7522 4730 and I will give you an honest quote. No call-out fee, no hidden charges — just straightforward locksmith work at fair prices.
 
 For information on your legal obligations around locks and tenancies, see our guide on [whether landlords can change locks on tenants](/blog/can-landlord-change-locks).
 `,
@@ -487,7 +487,7 @@ For information on your legal obligations around locks and tenancies, see our gu
       },
       {
         q: 'How much does it cost to change all the locks on a rental property?',
-        a: 'For a typical Coventry rental with a uPVC front door and back door, changing both cylinders to anti-snap specification costs between £100 and £150 fitted. For an HMO with individual room locks plus external doors, budget £49 per room lock plus £59-69 per external door. I offer discounted rates for landlords with multiple properties — call 07735 336175 for a quote.',
+        a: 'For a typical Coventry rental with a uPVC front door and back door, changing both cylinders to anti-snap specification costs between £100 and £150 fitted. For an HMO with individual room locks plus external doors, budget £49 per room lock plus £59-69 per external door. I offer discounted rates for landlords with multiple properties — call 024 7522 4730 for a quote.',
       },
       {
         q: 'Should I change locks if the previous tenant returned all their keys?',
@@ -624,7 +624,7 @@ If your locks do not meet the required standard, upgrade them. It is almost alwa
 
 I offer a **free security check** across Coventry and the surrounding areas. I will examine your locks, tell you exactly what standards they meet, and compare them against your policy requirements. No charge, no obligation, no pressure.
 
-Call me on 07735 336175 to book a free check. I cover all areas — see our [coverage map](/areas) for details.
+Call me on 024 7522 4730 to book a free check. I cover all areas — see our [coverage map](/areas) for details.
 
 ---
 
@@ -653,7 +653,7 @@ After fitting locks across Coventry for years, here is what I tell every custome
 4. **Keep proof** — when I fit a new lock, I give you a receipt showing the lock type, standard it meets, and date of installation. Keep this with your insurance documents
 5. **Tell your insurer** — let them know you have upgraded. Some insurers offer lower premiums for homes with higher-security locks
 
-Do not wait until after a burglary to find out your locks are not compliant. A 10-minute, £79 lock upgrade could save you thousands on a claim. Call me on 07735 336175 or visit our [lock upgrade page](/services/lock-upgrade) to get started.
+Do not wait until after a burglary to find out your locks are not compliant. A 10-minute, £79 lock upgrade could save you thousands on a claim. Call me on 024 7522 4730 or visit our [lock upgrade page](/services/lock-upgrade) to get started.
 
 For a detailed explanation of the three main lock standards your insurance might reference, read our guide on [PAS3621 vs BS3621 vs BS8621](/blog/pas3621-bs3621-bs8621-differences). And for practical advice on checking whether your specific locks qualify as "insurance approved", see our post on [insurance-approved locks explained](/blog/insurance-approved-locks-explained).
 `,
@@ -664,7 +664,7 @@ For a detailed explanation of the three main lock standards your insurance might
       },
       {
         q: 'My uPVC door does not have a BS3621 lock — am I uninsured?',
-        a: 'Not necessarily. uPVC and composite doors use multi-point locking systems with euro cylinders, not traditional mortice deadlocks. Most insurers accept these as meeting their requirements, but many now require the euro cylinder to meet TS007 3-star or Sold Secure Diamond standard. The standard cylinder that came with your door almost certainly does not meet these standards. I can upgrade your cylinder to a compliant anti-snap version from £69 fitted — call 07735 336175.',
+        a: 'Not necessarily. uPVC and composite doors use multi-point locking systems with euro cylinders, not traditional mortice deadlocks. Most insurers accept these as meeting their requirements, but many now require the euro cylinder to meet TS007 3-star or Sold Secure Diamond standard. The standard cylinder that came with your door almost certainly does not meet these standards. I can upgrade your cylinder to a compliant anti-snap version from £69 fitted — call 024 7522 4730.',
       },
       {
         q: 'How do I know if my lock meets BS3621?',
@@ -741,7 +741,7 @@ This is the tricky part. Unlike mortice deadlocks, euro cylinders rarely have th
 2. **Check the receipt or invoice** — if a locksmith fitted it, the receipt should state the standard
 3. **Look at the cylinder itself** — some premium brands (like Ultion) stamp a logo on the face of the cylinder
 4. **Check the colour and construction** — most standard (non-rated) cylinders are plain brass. Anti-snap cylinders are typically nickel, chrome, or have visible anti-snap lines
-5. **Ask a locksmith** — honestly, this is often the easiest way. I can identify most cylinders by sight. Call me on 07735 336175 for a free check
+5. **Ask a locksmith** — honestly, this is often the easiest way. I can identify most cylinders by sight. Call me on 024 7522 4730 for a free check
 
 **Euro cylinder brands that typically meet TS007 3-star or Sold Secure Diamond:**
 - Ultion (the market leader — Sold Secure Diamond, SBD)
@@ -807,7 +807,7 @@ I offer a **completely free security check** for homeowners across Coventry and 
 
 There is no charge for the survey, no obligation to book any work, and no hard sell. I would rather you know the truth about your locks and make an informed decision than find out the hard way after a burglary.
 
-Call 07735 336175 to book a free security survey, or check our [areas page](/areas) to confirm we cover your location. I cover all of Coventry and surrounding areas including Kenilworth, Bedworth, Nuneaton, Rugby, Warwick, and Leamington Spa.
+Call 024 7522 4730 to book a free security survey, or check our [areas page](/areas) to confirm we cover your location. I cover all of Coventry and surrounding areas including Kenilworth, Bedworth, Nuneaton, Rugby, Warwick, and Leamington Spa.
 
 ---
 
@@ -827,7 +827,7 @@ Call 07735 336175 to book a free security survey, or check our [areas page](/are
 
 Do not panic. Getting compliant is usually quick, easy, and affordable:
 
-1. **Call me on 07735 336175** — I will check your locks for free
+1. **Call me on 024 7522 4730** — I will check your locks for free
 2. **Get a quote** — I will tell you exactly what needs changing and how much it will cost. See our [prices page](/prices) for published rates
 3. **Book the work** — most lock upgrades take 15-30 minutes per door and can usually be done the same week
 4. **Keep your receipt** — I provide a detailed receipt showing the lock type, standard, and date of fitting. Keep this with your insurance documents as proof of compliance
@@ -835,7 +835,7 @@ Do not panic. Getting compliant is usually quick, easy, and affordable:
 
 For a deeper dive into the three main mortice deadlock standards and when each applies, read our guide on [PAS3621 vs BS3621 vs BS8621](/blog/pas3621-bs3621-bs8621-differences). And for a detailed look at what happens to your insurance claim if your locks are not up to standard, see our post on [insurance payouts and lock standards](/blog/insurance-payout-lock-standards).
 
-Getting your locks right is one of the simplest and cheapest things you can do to protect your home and your insurance cover. A single lock upgrade from £59 could save you thousands on a claim. Call me on 07735 336175 — I am always happy to help.
+Getting your locks right is one of the simplest and cheapest things you can do to protect your home and your insurance cover. A single lock upgrade from £59 could save you thousands on a claim. Call me on 024 7522 4730 — I am always happy to help.
 `,
     faqs: [
       {
@@ -844,7 +844,7 @@ Getting your locks right is one of the simplest and cheapest things you can do t
       },
       {
         q: 'How can I tell if my euro cylinder is insurance compliant?',
-        a: 'Unlike mortice deadlocks, euro cylinders rarely have the standard stamped on the visible part of the lock. Check the original packaging, your locksmith\'s receipt, or the cylinder face for brand markings. Premium brands like Ultion stamp their logo on the cylinder. If your cylinder is plain brass with no markings, it is almost certainly a standard non-rated cylinder. The easiest way to check is to call me on 07735 336175 — I can usually identify a cylinder by sight and will check for free.',
+        a: 'Unlike mortice deadlocks, euro cylinders rarely have the standard stamped on the visible part of the lock. Check the original packaging, your locksmith\'s receipt, or the cylinder face for brand markings. Premium brands like Ultion stamp their logo on the cylinder. If your cylinder is plain brass with no markings, it is almost certainly a standard non-rated cylinder. The easiest way to check is to call me on 024 7522 4730 — I can usually identify a cylinder by sight and will check for free.',
       },
       {
         q: 'Do I need to change my locks if I switch insurance provider?',
@@ -852,7 +852,7 @@ Getting your locks right is one of the simplest and cheapest things you can do t
       },
       {
         q: 'My insurer says I need "Secured by Design" locks — what does this mean?',
-        a: 'Secured by Design (SBD) is a police-backed accreditation for security products. Locks with SBD certification have been tested and approved by the police crime prevention initiative. For euro cylinders, SBD-certified options include Ultion, ABS (Avocet), and some Yale models. For mortice deadlocks, most BS3621 locks from major brands also carry SBD. I fit SBD-certified cylinders from £89 and mortice deadlocks from £79. Call 07735 336175 for details or visit our lock upgrade page at /services/lock-upgrade.',
+        a: 'Secured by Design (SBD) is a police-backed accreditation for security products. Locks with SBD certification have been tested and approved by the police crime prevention initiative. For euro cylinders, SBD-certified options include Ultion, ABS (Avocet), and some Yale models. For mortice deadlocks, most BS3621 locks from major brands also carry SBD. I fit SBD-certified cylinders from £89 and mortice deadlocks from £79. Call 024 7522 4730 for details or visit our lock upgrade page at /services/lock-upgrade.',
       },
     ],
   },

@@ -20,7 +20,7 @@ function getWhatsAppMessage(page: string) {
 export default function WhatsAppButton() {
   const pathname = usePathname()
   const message = encodeURIComponent(getWhatsAppMessage(pathname))
-  const url = `https://wa.me/447735336175?text=${message}`
+  const url = `https://wa.me/442475224730?text=${message}`
 
   return (
     <a

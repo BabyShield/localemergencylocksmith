@@ -73,7 +73,7 @@ Go around every window in the house and test the lock. uPVC window locks frequen
 
 I get calls every November from people who have been burgled and want their locks upgraded. Every single one of them says the same thing: "I wish I had done this sooner." The average insurance excess is £200-500 — plus the stress, the mess, and the feeling of violation. An [anti-snap cylinder upgrade](/services/lock-upgrade) from me costs from £89 and takes 20 minutes.
 
-If you want a quick door security check before the clocks go back, give me a call on 07735 336175. I will tell you honestly what needs doing — and what does not.
+If you want a quick door security check before the clocks go back, give me a call on 024 7522 4730. I will tell you honestly what needs doing — and what does not.
 
 Check my [prices page](/prices) for current rates on lock upgrades and security improvements.
 `,
@@ -182,7 +182,7 @@ I have already mentioned this but it is worth emphasising. Boiling water causes 
 
 ## When to Call a Locksmith
 
-If you have tried de-icer and warm water and the lock still will not turn, call me on 07735 336175. Sometimes the issue is not just ice — the lock mechanism itself may be failing, or internal components may have seized. I carry replacement cylinders on the van, so if your lock is beyond saving I can replace it on the spot.
+If you have tried de-icer and warm water and the lock still will not turn, call me on 024 7522 4730. Sometimes the issue is not just ice — the lock mechanism itself may be failing, or internal components may have seized. I carry replacement cylinders on the van, so if your lock is beyond saving I can replace it on the spot.
 
 If the key has snapped inside a frozen lock, do not try to extract it yourself. Call me for a [lock repair or replacement](/services/lock-change) — I can extract the broken key and replace the cylinder in one visit.
 
@@ -195,7 +195,7 @@ If the key has snapped inside a frozen lock, do not try to extract it yourself. 
 - Test all external locks — if any are stiff, they need servicing before winter
 - Check shed and garage padlocks — cheap padlocks freeze easily, consider upgrading
 
-If you want your external locks checked and lubricated before winter, I offer a quick door security check. Call 07735 336175 or check my [prices page](/prices) for current rates.
+If you want your external locks checked and lubricated before winter, I offer a quick door security check. Call 024 7522 4730 or check my [prices page](/prices) for current rates.
 `,
     faqs: [
       {
@@ -208,7 +208,7 @@ If you want your external locks checked and lubricated before winter, I offer a 
       },
       {
         q: 'What should I do if my key snaps in a frozen lock?',
-        a: 'Do not try to extract it yourself — you risk pushing it further in and making the problem harder to fix. Call a locksmith. I can extract a broken key and replace the cylinder if needed, usually in a single visit. Call me on 07735 336175 and I will come out to you. A broken key extraction typically costs from £59 depending on the situation.',
+        a: 'Do not try to extract it yourself — you risk pushing it further in and making the problem harder to fix. Call a locksmith. I can extract a broken key and replace the cylinder if needed, usually in a single visit. Call me on 024 7522 4730 and I will come out to you. A broken key extraction typically costs from £59 depending on the situation.',
       },
       {
         q: 'How much does it cost to replace a lock that has been damaged by freezing?',
@@ -296,7 +296,7 @@ If you are going out on New Year's Eve:
 - **Give a spare key to someone you trust** — or better yet, fit a [key safe](/services/lock-change)
 - **Check you have your keys before you leave** — pat yourself down at the door
 - **Do not hide a key outside** — burglars know all the hiding spots
-- **Save my number in your phone now**: 07735 336175. I work every New Year's Eve, same prices as any other day
+- **Save my number in your phone now**: 024 7522 4730. I work every New Year's Eve, same prices as any other day
 
 A standard lockout callout with me starts from £59. You will not get a surprise bill for triple the price just because it is a bank holiday.
 
@@ -308,12 +308,12 @@ Boxing Day and the days after Christmas are prime time for parcel theft. Online 
 
 Most of this is common sense, but in the chaos of Christmas it gets forgotten. My advice: do a five-minute security check on Christmas Eve. Lock everything, set timers, close curtains, bring in any valuables from the car. It takes five minutes and it could save you a miserable start to the new year.
 
-If you want your locks checked before Christmas, or you want to upgrade your door security, call me on 07735 336175. I am available right up to Christmas Eve, and I work through the holidays for emergencies. Check my [prices page](/prices) for current rates.
+If you want your locks checked before Christmas, or you want to upgrade your door security, call me on 024 7522 4730. I am available right up to Christmas Eve, and I work through the holidays for emergencies. Check my [prices page](/prices) for current rates.
 `,
     faqs: [
       {
         q: 'Do locksmiths work on Christmas Day and New Year\'s Eve?',
-        a: 'I do. I work every day of the year including Christmas Day, Boxing Day, and New Year\'s Eve. Emergency lockouts do not take holidays, so neither do I. My prices are the same as any other day — no bank holiday surcharges. Lockout callouts start from £59. Call me on 07735 336175 any time.',
+        a: 'I do. I work every day of the year including Christmas Day, Boxing Day, and New Year\'s Eve. Emergency lockouts do not take holidays, so neither do I. My prices are the same as any other day — no bank holiday surcharges. Lockout callouts start from £59. Call me on 024 7522 4730 any time.',
       },
       {
         q: 'How should I dispose of Christmas gift packaging securely?',
@@ -325,7 +325,7 @@ If you want your locks checked before Christmas, or you want to upgrade your doo
       },
       {
         q: 'How can I avoid getting locked out on New Year\'s Eve?',
-        a: 'The three best precautions are: give a spare key to a trusted friend or neighbour, fit a key safe outside your home for emergencies, and physically check you have your keys before you close the front door. Never hide a key under a mat or flowerpot — burglars check all the obvious spots. If the worst happens, save my number now: 07735 336175. I work every New Year\'s Eve at standard prices, starting from £59 for a lockout.',
+        a: 'The three best precautions are: give a spare key to a trusted friend or neighbour, fit a key safe outside your home for emergencies, and physically check you have your keys before you close the front door. Never hide a key under a mat or flowerpot — burglars check all the obvious spots. If the worst happens, save my number now: 024 7522 4730. I work every New Year\'s Eve at standard prices, starting from £59 for a lockout.',
       },
     ],
   },
@@ -431,7 +431,7 @@ Four pints of milk curdling on the doorstep is a neon sign saying "we are not he
 
 Before you go, try this: stand outside your front door. Can you see anything through the windows that would tell a stranger the house is empty? Walk around the back. Is the side gate locked? Is the shed secure? Is there anything left out that could be used to break in?
 
-If you are not sure about the condition of your locks, call me on 07735 336175. I can do a quick door security check and tell you whether your locks are up to scratch. If they are not, I can [upgrade them on the spot](/services/lock-upgrade) — usually in under an hour.
+If you are not sure about the condition of your locks, call me on 024 7522 4730. I can do a quick door security check and tell you whether your locks are up to scratch. If they are not, I can [upgrade them on the spot](/services/lock-upgrade) — usually in under an hour.
 
 Check my [prices page](/prices) for current rates. A lock upgrade before your holiday is a fraction of the cost of dealing with a burglary when you get back.
 `,
@@ -557,7 +557,7 @@ When you call me about a moving-day lock change, I will need to know:
 3. Your moving date and preferred time
 4. Whether you want standard or anti-snap cylinders
 
-I carry a full range of cylinders on the van, so I can usually accommodate same-day or next-day requests. Call me on 07735 336175 to book your moving-day lock change.
+I carry a full range of cylinders on the van, so I can usually accommodate same-day or next-day requests. Call me on 024 7522 4730 to book your moving-day lock change.
 
 ## Do Not Forget the Other Security Basics
 
@@ -571,7 +571,7 @@ While you are thinking about locks, moving day is also a good time to:
 
 A fresh start in a new home should come with fresh security. It is one of those jobs that takes an hour, costs under £200, and gives you complete peace of mind.
 
-Call me on 07735 336175 to arrange your lock change, or check the [prices page](/prices) for full details.
+Call me on 024 7522 4730 to arrange your lock change, or check the [prices page](/prices) for full details.
 `,
     faqs: [
       {
@@ -580,7 +580,7 @@ Call me on 07735 336175 to arrange your lock change, or check the [prices page](
       },
       {
         q: 'How much does it cost to change the locks on a new house?',
-        a: 'A standard euro cylinder replacement starts from £59 per door. Most Coventry homes need front and back door cylinders changed, which typically costs £100-200 total depending on the quality of lock you choose. An anti-snap upgrade adds roughly £20-30 per door over a standard cylinder and is strongly recommended. Call me on 07735 336175 for an exact quote based on your specific doors.',
+        a: 'A standard euro cylinder replacement starts from £59 per door. Most Coventry homes need front and back door cylinders changed, which typically costs £100-200 total depending on the quality of lock you choose. An anti-snap upgrade adds roughly £20-30 per door over a standard cylinder and is strongly recommended. Call me on 024 7522 4730 for an exact quote based on your specific doors.',
       },
       {
         q: 'When should I change the locks — before or after moving in?',
@@ -683,7 +683,7 @@ In all these areas, the basics are the same: check your locks, report problems t
 
 Student lockouts are incredibly common — especially during freshers week and after nights out. Before it happens:
 
-- Save a locksmith's number in your phone. Mine is 07735 336175
+- Save a locksmith's number in your phone. Mine is 024 7522 4730
 - I cover all student areas in Coventry, 24/7, and my [emergency lockout](/services/emergency-lockout) price starts from £59
 - Give a spare key to a trusted housemate
 - Consider a [key safe](/services/lock-change) for the house — everyone can use the code to get in
@@ -701,7 +701,7 @@ Do not try to break into your own house. I have seen students put windows throug
 7. Do not leave valuables visible through windows
 8. Lock your bedroom when you leave
 9. Get renter's insurance
-10. Save 07735 336175 in your phone for emergencies
+10. Save 024 7522 4730 in your phone for emergencies
 
 Welcome to Coventry. Lock your doors.
 `,
@@ -712,7 +712,7 @@ Welcome to Coventry. Lock your doors.
       },
       {
         q: 'How much does a student lockout cost in Coventry?',
-        a: 'My emergency lockout callout starts from £59, and I do not charge extra for unsociable hours, weekends, or bank holidays. I cover all student areas including Earlsdon, Canley, Tile Hill, Stoke, and the city centre. Call me on 07735 336175 any time. Be cautious of locksmiths advertising very low prices online — some charge much more when they arrive.',
+        a: 'My emergency lockout callout starts from £59, and I do not charge extra for unsociable hours, weekends, or bank holidays. I cover all student areas including Earlsdon, Canley, Tile Hill, Stoke, and the city centre. Call me on 024 7522 4730 any time. Be cautious of locksmiths advertising very low prices online — some charge much more when they arrive.',
       },
       {
         q: 'Should I get contents insurance for my student house?',
@@ -720,7 +720,7 @@ Welcome to Coventry. Lock your doors.
       },
       {
         q: 'Can I change the locks in my rented student house myself?',
-        a: 'You should always speak to your landlord before changing locks. In most tenancy agreements, you are not allowed to alter the property without permission. However, most landlords will agree to a lock change if the existing locks are inadequate — especially if you put the request in writing and explain why. If you do change the locks, you must give your landlord a copy of the new key. I can fit a new anti-snap cylinder from £89 — call me on 07735 336175.',
+        a: 'You should always speak to your landlord before changing locks. In most tenancy agreements, you are not allowed to alter the property without permission. However, most landlords will agree to a lock change if the existing locks are inadequate — especially if you put the request in writing and explain why. If you do change the locks, you must give your landlord a copy of the new key. I can fit a new anti-snap cylinder from £89 — call me on 024 7522 4730.',
       },
     ],
   },
@@ -734,7 +734,7 @@ Welcome to Coventry. Lock your doors.
 
 There is something about bank holidays that makes lockouts far more likely. Changed routines, socialising, alcohol, visiting unfamiliar houses, and the general disruption to your normal pattern all contribute. As a locksmith working across Coventry, I can tell you with certainty: bank holiday weekends are my busiest periods.
 
-If you are reading this while locked out on a bank holiday, skip straight to the bottom — my number is 07735 336175 and I work every bank holiday at the same price as any other day.
+If you are reading this while locked out on a bank holiday, skip straight to the bottom — my number is 024 7522 4730 and I work every bank holiday at the same price as any other day.
 
 If you are reading this before a bank holiday (sensible person), here is everything you need to know about avoiding lockouts and what to do if the worst happens.
 
@@ -769,7 +769,7 @@ Before you call anyone:
 - Ask if there is a call-out fee on top of the quoted price
 - Be wary of anyone who will not give you a price until they "assess the job"
 
-If in doubt, call me on 07735 336175. I will give you an honest price upfront with no hidden extras.
+If in doubt, call me on 024 7522 4730. I will give you an honest price upfront with no hidden extras.
 
 ## Bank Holiday by Bank Holiday: What to Expect
 
@@ -800,14 +800,14 @@ Before you close any door behind you — whether it is your own or someone else'
 If you have a uPVC or composite door, understand how it locks. Most have a night latch that engages automatically when the door closes. This means if you step outside without your keys and the door blows shut, you are locked out. Either take your keys or put the door on the latch (the small catch on the inside that stops the latch from engaging).
 
 ### 4. Save a Locksmith's Number Now
-Do not wait until you are locked out to Google "locksmith Coventry" at 1am on a bank holiday. The results you get at that hour, in that state of mind, are not always the best-value options. Save my number now: 07735 336175.
+Do not wait until you are locked out to Google "locksmith Coventry" at 1am on a bank holiday. The results you get at that hour, in that state of mind, are not always the best-value options. Save my number now: 024 7522 4730.
 
 ### 5. Do Not Try to Break In
 Every bank holiday, someone tries to climb through a window, force a door, or "just pop the lock with a card." The results are usually expensive: a broken window (£150-300 to replace), a damaged door frame (£200+), or a trip to A&E. A locksmith callout from me starts at £59. It is always cheaper than the alternatives.
 
 ## What Happens When You Call Me on a Bank Holiday
 
-When you call 07735 336175, here is what to expect:
+When you call 024 7522 4730, here is what to expect:
 
 1. I answer the phone (or call back within minutes if I am on another job)
 2. I ask where you are and what the situation is
@@ -820,7 +820,7 @@ I cover all of Coventry and surrounding areas including Kenilworth, Bedworth, Nu
 
 ## Bank Holiday Lockout: Quick Reference
 
-- **My number:** 07735 336175 (save it now)
+- **My number:** 024 7522 4730 (save it now)
 - **Hours:** 24/7, every day including all bank holidays
 - **Lockout price:** from £59
 - **Bank holiday surcharge:** none — same price every day
@@ -845,7 +845,7 @@ Bank holidays are for relaxing, not for standing outside your house in the cold.
       },
       {
         q: 'What should I do if I am locked out and cannot reach a locksmith?',
-        a: 'Stay calm and do not try to force entry — broken windows and damaged doors cost far more than a locksmith callout. Check all other doors and windows (one may be unlocked). Check whether a neighbour has a spare key. If you are locked out of someone else\'s house, call the homeowner. As a last resort, call 101 (non-emergency police) if you are vulnerable or in danger. My number is 07735 336175 and I aim to answer every call, but if I am on another job I will call back within minutes.',
+        a: 'Stay calm and do not try to force entry — broken windows and damaged doors cost far more than a locksmith callout. Check all other doors and windows (one may be unlocked). Check whether a neighbour has a spare key. If you are locked out of someone else\'s house, call the homeowner. As a last resort, call 101 (non-emergency police) if you are vulnerable or in danger. My number is 024 7522 4730 and I aim to answer every call, but if I am on another job I will call back within minutes.',
       },
     ],
   },
@@ -981,7 +981,7 @@ Add up your scores from all seven sections:
 - **20-25: Excellent.** Your home security is in good shape. Maintain it with annual checks.
 - **15-19: Good but with gaps.** You have the basics right but there are vulnerabilities to address. Prioritise the lowest-scoring sections.
 - **10-14: Needs attention.** Several areas need improvement. Start with the front and back door locks — they make the biggest difference.
-- **Below 10: Urgent.** Your home has significant security weaknesses. Call me on 07735 336175 for a professional assessment and we can prioritise the most impactful upgrades.
+- **Below 10: Urgent.** Your home has significant security weaknesses. Call me on 024 7522 4730 for a professional assessment and we can prioritise the most impactful upgrades.
 
 ## Your New Year Resolution: Upgrade One Thing
 
@@ -996,7 +996,7 @@ Here is a priority order for upgrades:
 5. **Shed padlock upgrade** to closed-shackle with coach-bolted hasp (under £30)
 6. **Key safe** installation (from £50 fitted)
 
-If you want a professional to do this walk-around with you, or you want me to fix the issues we find on the same visit, call me on 07735 336175. I cover all of Coventry and Warwickshire — check my [areas page](/areas/) for full details.
+If you want a professional to do this walk-around with you, or you want me to fix the issues we find on the same visit, call me on 024 7522 4730. I cover all of Coventry and Warwickshire — check my [areas page](/areas/) for full details.
 
 Start the new year secure. It is 30 minutes well spent.
 `,
@@ -1011,7 +1011,7 @@ Start the new year secure. It is 30 minutes well spent.
       },
       {
         q: 'How much would it cost to fix everything in the security audit?',
-        a: 'It depends on what needs doing, but for a typical Coventry home: anti-snap cylinders for front and back doors (around £150-200 for both), a few window handle replacements (£15-20 each), a key safe (from £50 fitted), and a decent shed padlock (under £30). Most homes can get from "needs attention" to "excellent" for under £350 total. I can give you an exact quote based on your specific audit results — call me on 07735 336175.',
+        a: 'It depends on what needs doing, but for a typical Coventry home: anti-snap cylinders for front and back doors (around £150-200 for both), a few window handle replacements (£15-20 each), a key safe (from £50 fitted), and a decent shed padlock (under £30). Most homes can get from "needs attention" to "excellent" for under £350 total. I can give you an exact quote based on your specific audit results — call me on 024 7522 4730.',
       },
       {
         q: 'Can I do the security audit myself or do I need a locksmith?',

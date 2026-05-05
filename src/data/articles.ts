@@ -45,7 +45,7 @@ const ALL_ARTICLE_TEMPLATES: ArticleTemplate[] = [
     slug: 'locked-out-at-night',
     titleTemplate: 'Locked Out of Your Home in {area}? Here\'s What to Do',
     metaTemplate:
-      'Locked out in {area}? Local emergency locksmith, {responseTime} response. From £59, no VAT, no call-out fee. Call 07735 336175.',
+      'Locked out in {area}? Local emergency locksmith, {responseTime} response. From £59, no VAT, no call-out fee. Call 024 7522 4730.',
     keywords: [
       'locked out {area}',
       'locked out of house {area}',
@@ -80,7 +80,7 @@ const ALL_ARTICLE_TEMPLATES: ArticleTemplate[] = [
         headingTemplate: 'Step 3 — Call a Local Locksmith, Not a National Call Centre',
         paragraphs: [
           'When you search online for a locksmith in {area}, many of the results you\'ll see are national call centres that appear local but are not. They advertise with {area} or {postcode} in their listings, but when you call, you\'re speaking to someone in a call centre who dispatches whoever is available — sometimes from an hour away. Their quotes start low on the phone and escalate on arrival, often reaching £150 to £250 or more.',
-          'I\'m a sole trader based locally in {region}. When you call 07735 336175, you speak to me directly — the person who will actually come to your door. I tell you the price on the phone, I tell you honestly when I\'ll arrive, and I do the job at the price I quoted. No surprises, no extra charges for evenings or weekends.',
+          'I\'m a sole trader based locally in {region}. When you call 024 7522 4730, you speak to me directly — the person who will actually come to your door. I tell you the price on the phone, I tell you honestly when I\'ll arrive, and I do the job at the price I quoted. No surprises, no extra charges for evenings or weekends.',
           'I cover {area} and {postcode} as part of my regular patch. You\'re not an inconvenience — you\'re a local customer, and I treat you accordingly.',
         ],
       },
@@ -114,7 +114,7 @@ const ALL_ARTICLE_TEMPLATES: ArticleTemplate[] = [
       { heading: 'Why Lockouts Happen in {area}', areaField: 'commonIssues', prefix: 'Based on my experience working in {area}, here are the most common reasons people get locked out.' },
     ],
     ctaTemplate:
-      'Locked out in {area} right now? Call me on 07735 336175 — I\'ll answer, give you a fixed price, and be with you in {responseTime}.',
+      'Locked out in {area} right now? Call me on 024 7522 4730 — I\'ll answer, give you a fixed price, and be with you in {responseTime}.',
     relatedServiceSlugs: ['emergency-lockout'],
     relatedArticleSlugs: [
       'how-much-does-emergency-locksmith-cost',
@@ -129,7 +129,7 @@ const ALL_ARTICLE_TEMPLATES: ArticleTemplate[] = [
     slug: 'how-much-does-emergency-locksmith-cost',
     titleTemplate: 'How Much Does an Emergency Locksmith Cost in {area}?',
     metaTemplate:
-      'Emergency locksmith prices in {area}. Lockout from £59, lock change from £69. No VAT, no call-out fee. Call 07735 336175.',
+      'Emergency locksmith prices in {area}. Lockout from £59, lock change from £69. No VAT, no call-out fee. Call 024 7522 4730.',
     keywords: [
       'locksmith cost {area}',
       'emergency locksmith price {area}',
@@ -190,7 +190,7 @@ const ALL_ARTICLE_TEMPLATES: ArticleTemplate[] = [
       { heading: 'Common Jobs in {area}', areaField: 'commonIssues', prefix: 'Here are the most common locksmith jobs I do in {area} and what they typically cost.' },
     ],
     ctaTemplate:
-      'Need a locksmith in {area}? Call 07735 336175 for a fixed price, right now. From £59, no VAT, {responseTime} response.',
+      'Need a locksmith in {area}? Call 024 7522 4730 for a fixed price, right now. From £59, no VAT, {responseTime} response.',
     relatedServiceSlugs: ['emergency-lockout', 'lock-change'],
     relatedArticleSlugs: ['locked-out-at-night', 'find-trustworthy-locksmith'],
   },
@@ -202,7 +202,7 @@ const ALL_ARTICLE_TEMPLATES: ArticleTemplate[] = [
     slug: 'upvc-door-lock-problems',
     titleTemplate: 'uPVC Door Lock Problems in {area} — Common Issues & Fixes',
     metaTemplate:
-      'uPVC door lock repair in {area}. Stiff door, won\'t lock, broken handle? Local locksmith, from £59. No VAT. Call 07735 336175.',
+      'uPVC door lock repair in {area}. Stiff door, won\'t lock, broken handle? Local locksmith, from £59. No VAT. Call 024 7522 4730.',
     keywords: [
       'upvc door lock problems {area}',
       'upvc door won\'t lock {area}',
@@ -267,7 +267,7 @@ const ALL_ARTICLE_TEMPLATES: ArticleTemplate[] = [
       },
     ],
     ctaTemplate:
-      'uPVC door problem in {area}? Call 07735 336175 for a free diagnosis and fixed price. Typically {responseTime} response.',
+      'uPVC door problem in {area}? Call 024 7522 4730 for a free diagnosis and fixed price. Typically {responseTime} response.',
     areaContentSections: [
       { heading: 'uPVC Doors in {area}', areaField: 'housingStock', prefix: 'The prevalence and age of uPVC doors varies significantly by area.' },
       { heading: 'Common uPVC Issues in {area}', areaField: 'commonIssues', prefix: 'Here are the uPVC door problems I see most often in {area}.' },
@@ -283,7 +283,7 @@ const ALL_ARTICLE_TEMPLATES: ArticleTemplate[] = [
     slug: 'lock-change-after-burglary',
     titleTemplate: 'Should You Change Your Locks After a Break-In in {area}?',
     metaTemplate:
-      'Change locks after a break-in in {area}? Yes — immediately. Same-day lock change from £69. No VAT. Call 07735 336175 now.',
+      'Change locks after a break-in in {area}? Yes — immediately. Same-day lock change from £69. No VAT. Call 024 7522 4730 now.',
     keywords: [
       'change locks after burglary {area}',
       'lock change after break in {area}',
@@ -311,7 +311,7 @@ const ALL_ARTICLE_TEMPLATES: ArticleTemplate[] = [
         paragraphs: [
           'Step one: call 999 (or 101 if the intruder has left) and report the break-in. Don\'t touch anything in the affected areas until police have attended, as forensic evidence may be compromised. Get a crime reference number — you\'ll need it for your insurer and for any subsequent insurance claim.',
           'Step two: call your home insurer to notify them of the break-in. They\'ll advise on the claims process and may ask you to get a locksmith out before they\'ll process anything. Keep records of every call you make — time, date, who you spoke to.',
-          'Step three: once police have attended and given you the go-ahead to secure the property, call me on 07735 336175. I cover {area} and {postcode} and can typically be with you in {responseTime}. I\'ll assess the damage, recommend appropriate replacements, and carry out the work the same day with full paperwork for your insurer.',
+          'Step three: once police have attended and given you the go-ahead to secure the property, call me on 024 7522 4730. I cover {area} and {postcode} and can typically be with you in {responseTime}. I\'ll assess the damage, recommend appropriate replacements, and carry out the work the same day with full paperwork for your insurer.',
         ],
       },
       {
@@ -344,7 +344,7 @@ const ALL_ARTICLE_TEMPLATES: ArticleTemplate[] = [
       { heading: 'Recommended Lock Upgrades in {area}', areaField: 'commonIssues', prefix: 'After a break-in, here are the lock changes I most commonly recommend for homes in {area}.' },
     ],
     ctaTemplate:
-      'Break-in in {area}? Call 07735 336175 now. Same-day lock change from £69, {responseTime} response, full paperwork for insurers.',
+      'Break-in in {area}? Call 024 7522 4730 now. Same-day lock change from £69, {responseTime} response, full paperwork for insurers.',
     relatedServiceSlugs: ['lock-change', 'lock-upgrade'],
     relatedArticleSlugs: ['bs3621-locks-home-insurance', 'upvc-door-lock-problems'],
   },
@@ -356,7 +356,7 @@ const ALL_ARTICLE_TEMPLATES: ArticleTemplate[] = [
     slug: 'yale-vs-deadlock-which-is-safer',
     titleTemplate: 'Yale vs Deadlock — Which Lock Is Safer for Your Home in {area}?',
     metaTemplate:
-      'Yale vs deadlock — which is safer for {area} homes? A local locksmith explains. BS3621 locks from £79 fitted. Call 07735 336175.',
+      'Yale vs deadlock — which is safer for {area} homes? A local locksmith explains. BS3621 locks from £79 fitted. Call 024 7522 4730.',
     keywords: [
       'best lock for front door {area}',
       'yale vs deadlock {area}',
@@ -406,14 +406,14 @@ const ALL_ARTICLE_TEMPLATES: ArticleTemplate[] = [
       {
         headingTemplate: 'Free Security Check',
         paragraphs: [
-          'If you live in {area} and you\'re not sure whether your locks meet insurance requirements or whether your current setup is as secure as it should be, call me on 07735 336175. When I\'m in {area} doing any other job, I\'ll do a quick check at no charge.',
+          'If you live in {area} and you\'re not sure whether your locks meet insurance requirements or whether your current setup is as secure as it should be, call me on 024 7522 4730. When I\'m in {area} doing any other job, I\'ll do a quick check at no charge.',
           'I\'ll tell you what locks you have, whether they meet BS3621 and TS007 standards, and what — if anything — needs upgrading. I\'ll give you a written quote for any recommended work. There\'s no obligation to book, and I won\'t pressure you. Many people find that their existing locks are actually fine — in which case I\'ll tell you that and be on my way.',
           'If you do need work doing, I carry everything I need in my van and can usually do upgrades on the same visit in {area}. Lock upgrades from £79 including parts and labour, no VAT.',
         ],
       },
     ],
     ctaTemplate:
-      'Want to know if your locks are insurance-approved in {area}? Call 07735 336175 — free check when I\'m in the area. BS3621 locks from £79 fitted.',
+      'Want to know if your locks are insurance-approved in {area}? Call 024 7522 4730 — free check when I\'m in the area. BS3621 locks from £79 fitted.',
     relatedServiceSlugs: ['lock-change', 'lock-upgrade'],
     relatedArticleSlugs: ['lock-change-after-burglary', 'best-door-locks-security-guide'],
   },
@@ -425,7 +425,7 @@ const ALL_ARTICLE_TEMPLATES: ArticleTemplate[] = [
     slug: 'bs3621-locks-home-insurance',
     titleTemplate: 'BS3621 Locks & Home Insurance in {area} — What You Need to Know',
     metaTemplate:
-      'Does your home insurance require a BS3621 lock in {area}? Most do. Local locksmith fits BS3621 locks from £79. Call 07735 336175.',
+      'Does your home insurance require a BS3621 lock in {area}? Most do. Local locksmith fits BS3621 locks from £79. Call 024 7522 4730.',
     keywords: [
       'BS3621 lock {area}',
       'home insurance lock requirement {area}',
@@ -461,7 +461,7 @@ const ALL_ARTICLE_TEMPLATES: ArticleTemplate[] = [
         paragraphs: [
           'The simplest way to check is to look at the faceplate of your mortice lock — that\'s the metal plate you can see in the edge of the door when the door is open. A BS3621 compliant lock will have "BS3621" stamped or engraved on the faceplate. If that marking isn\'t there, the lock doesn\'t meet the standard.',
           'If you have a uPVC door with a euro cylinder, check whether the cylinder is a standard or anti-snap model. Standard cylinders that protrude beyond the door face are not BS3621 compliant on their own — the multipoint mechanism they work with provides additional security, but the cylinder itself needs to be at minimum a 3-star TS007 anti-snap model to meet most insurers\' requirements.',
-          'If you\'re genuinely unsure and you\'re in {area}, call me on 07735 336175. I\'ll check your locks and tell you clearly whether they meet the standard. There\'s no charge for the assessment when I\'m in {postcode} for other work.',
+          'If you\'re genuinely unsure and you\'re in {area}, call me on 024 7522 4730. I\'ll check your locks and tell you clearly whether they meet the standard. There\'s no charge for the assessment when I\'m in {postcode} for other work.',
         ],
       },
       {
@@ -477,7 +477,7 @@ const ALL_ARTICLE_TEMPLATES: ArticleTemplate[] = [
         paragraphs: [
           'Beyond the front and back door locks, some insurance policies in {region} also require window locks on accessible windows. This typically means any window within 2 metres of ground level, or within reach from an outbuilding, fence, or extension roof. Key-operated window locks are what insurers typically specify — not just catches or latches that can be opened without a key.',
           'For uPVC doors specifically, anti-snap euro cylinders (3-star TS007 rated) are the insurance-preferred upgrade. Brands I regularly fit in {area} include Avocet ABS and Yale Platinum. The Avocet ABS comes with a £2,000 insurance guarantee against cylinder snapping attacks, which some insurers recognise specifically.',
-          'If you want a full security review for your {area} property — covering all doors and accessible windows — I\'m happy to do this when I\'m in {postcode}. I\'ll give you a complete picture of what you have, what you need, and exactly what it would cost to bring everything up to insurance standard. Call 07735 336175 to arrange.',
+          'If you want a full security review for your {area} property — covering all doors and accessible windows — I\'m happy to do this when I\'m in {postcode}. I\'ll give you a complete picture of what you have, what you need, and exactly what it would cost to bring everything up to insurance standard. Call 024 7522 4730 to arrange.',
         ],
       },
     ],
@@ -486,7 +486,7 @@ const ALL_ARTICLE_TEMPLATES: ArticleTemplate[] = [
       { heading: 'Insurance Lock Recommendations in {area}', areaField: 'localDetail', prefix: 'Here is what I typically recommend for homes in {area}.' },
     ],
     ctaTemplate:
-      'Need a BS3621 lock in {area}? Call 07735 336175. Supply and fit from £79, no VAT. {responseTime} response.',
+      'Need a BS3621 lock in {area}? Call 024 7522 4730. Supply and fit from £79, no VAT. {responseTime} response.',
     relatedServiceSlugs: ['lock-upgrade', 'lock-change'],
     relatedArticleSlugs: ['locked-out-at-night', 'upvc-door-lock-problems'],
   },
@@ -498,7 +498,7 @@ const ALL_ARTICLE_TEMPLATES: ArticleTemplate[] = [
     slug: 'find-trustworthy-locksmith',
     titleTemplate: 'How to Find a Trustworthy Locksmith in {area} — and Avoid Scams',
     metaTemplate:
-      'How to find a genuine locksmith in {area}. Red flags, scam tactics, and how to check. Local honest locksmith. Call 07735 336175.',
+      'How to find a genuine locksmith in {area}. Red flags, scam tactics, and how to check. Local honest locksmith. Call 024 7522 4730.',
     keywords: [
       'trustworthy locksmith {area}',
       'how to find locksmith {area}',
@@ -548,7 +548,7 @@ const ALL_ARTICLE_TEMPLATES: ArticleTemplate[] = [
       {
         headingTemplate: 'Why I\'m Different',
         paragraphs: [
-          'I live and work in {region}. I\'m a sole trader — not a franchise, not a call centre, not a dispatching service. When you call 07735 336175, you speak to me directly. I know {area} and {postcode} personally. I can tell you immediately which streets I can reach in {responseTime} and which might take a little longer depending on traffic.',
+          'I live and work in {region}. I\'m a sole trader — not a franchise, not a call centre, not a dispatching service. When you call 024 7522 4730, you speak to me directly. I know {area} and {postcode} personally. I can tell you immediately which streets I can reach in {responseTime} and which might take a little longer depending on traffic.',
           'I charge fixed prices. The price I quote on the phone is the price you pay — there are no additions on arrival. No VAT. No call-out fee. No evening or weekend surcharge. No surprise "complexity charge". If the job turns out to require parts that change the cost, I tell you before I start, and you decide whether to proceed.',
           'My Google Reviews are real. They mention specific locations in {region}, mention jobs that I actually do, and are posted by real customers. I don\'t ask for reviews, I don\'t incentivise them, and I don\'t fabricate them. The best thing you can do before calling any locksmith in {area} is read their reviews carefully — genuine reviews tell you a lot.',
         ],
@@ -563,7 +563,7 @@ const ALL_ARTICLE_TEMPLATES: ArticleTemplate[] = [
       },
     ],
     ctaTemplate:
-      'Need an honest, fixed-price locksmith in {area}? Call 07735 336175. I answer, I quote, I come. From £59, no VAT.',
+      'Need an honest, fixed-price locksmith in {area}? Call 024 7522 4730. I answer, I quote, I come. From £59, no VAT.',
     relatedServiceSlugs: ['emergency-lockout'],
     relatedArticleSlugs: [
       'how-much-does-emergency-locksmith-cost',
@@ -578,7 +578,7 @@ const ALL_ARTICLE_TEMPLATES: ArticleTemplate[] = [
     slug: 'best-door-locks-security-guide',
     titleTemplate: 'Best Door Locks for Security in {area} — 2026 Guide',
     metaTemplate:
-      'Best door locks for {area} homes in 2026. Anti-snap cylinders, BS3621 deadlocks, security upgrades. Local locksmith. Call 07735 336175.',
+      'Best door locks for {area} homes in 2026. Anti-snap cylinders, BS3621 deadlocks, security upgrades. Local locksmith. Call 024 7522 4730.',
     keywords: [
       'best door locks {area}',
       'home security locks {area}',
@@ -628,14 +628,14 @@ const ALL_ARTICLE_TEMPLATES: ArticleTemplate[] = [
       {
         headingTemplate: 'Free Security Advice in {area}',
         paragraphs: [
-          'If you\'d like to know exactly where your {area} property\'s security could be improved, call me on 07735 336175. I\'m happy to have a free conversation about your specific situation — what doors and locks you have, what your insurance requires, and what I would and wouldn\'t bother upgrading. I\'ll give you an honest assessment, not a sales pitch.',
+          'If you\'d like to know exactly where your {area} property\'s security could be improved, call me on 024 7522 4730. I\'m happy to have a free conversation about your specific situation — what doors and locks you have, what your insurance requires, and what I would and wouldn\'t bother upgrading. I\'ll give you an honest assessment, not a sales pitch.',
           'When I\'m in {postcode} for any other job, I can also do a quick walk-round check at no charge. I\'ll tell you what looks solid and what needs attention. Many properties in {area} are better secured than their owners realise — and some have one or two specific vulnerabilities that are quick and inexpensive to address.',
           'Everything I fit comes with a written receipt and a 12-month guarantee on the work. Lock upgrades from £79 in {area} and nearby areas. No VAT. No call-out fee. Same-day availability most of the time.',
         ],
       },
     ],
     ctaTemplate:
-      'Want a free security assessment for your {area} home? Call 07735 336175. Lock upgrades from £79, fitted same day.',
+      'Want a free security assessment for your {area} home? Call 024 7522 4730. Lock upgrades from £79, fitted same day.',
     relatedServiceSlugs: ['lock-upgrade', 'lock-change'],
     relatedArticleSlugs: ['yale-vs-deadlock-which-is-safer', 'bs3621-locks-home-insurance'],
   },
@@ -647,7 +647,7 @@ const ALL_ARTICLE_TEMPLATES: ArticleTemplate[] = [
     slug: 'lost-keys-what-to-do',
     titleTemplate: 'Lost Your Keys in {area}? Here\'s What to Do Next',
     metaTemplate:
-      'Lost house keys in {area}? Here\'s what to do — and when to change your locks. Same-day lock change from £69. Call 07735 336175.',
+      'Lost house keys in {area}? Here\'s what to do — and when to change your locks. Same-day lock change from £69. Call 024 7522 4730.',
     keywords: [
       'lost keys {area}',
       'lost house keys {area}',
@@ -665,7 +665,7 @@ const ALL_ARTICLE_TEMPLATES: ArticleTemplate[] = [
       {
         headingTemplate: 'Priority 1 — Can You Get Into Your Home?',
         paragraphs: [
-          'If you\'re currently locked out of your home in {area} because your keys are lost, that\'s the first thing to resolve. Call me on 07735 336175 — I cover {area} and {postcode} with a typical response time of {responseTime}. Emergency lockout starts from £59, no VAT, fixed price on the phone.',
+          'If you\'re currently locked out of your home in {area} because your keys are lost, that\'s the first thing to resolve. Call me on 024 7522 4730 — I cover {area} and {postcode} with a typical response time of {responseTime}. Emergency lockout starts from £59, no VAT, fixed price on the phone.',
           'If you have a spare key — with a trusted neighbour in {area}, a family member nearby, or in a key safe — use that first. If you don\'t, that\'s something to put in place after this situation is resolved. A spare key with a trusted neighbour is the most reliable fallback for future lockouts and costs nothing.',
           'If you\'re not locked out because someone else is home or because you were let in another way, you have more time to deal with the security question calmly. But don\'t delay too long — if the keys are genuinely lost rather than just misplaced, the security situation needs to be addressed today or tomorrow at the latest.',
         ],
@@ -704,7 +704,7 @@ const ALL_ARTICLE_TEMPLATES: ArticleTemplate[] = [
       },
     ],
     ctaTemplate:
-      'Lost keys in {area}? Call 07735 336175. Lock change from £69, {responseTime} response, same-day service.',
+      'Lost keys in {area}? Call 024 7522 4730. Lock change from £69, {responseTime} response, same-day service.',
     relatedServiceSlugs: ['lock-change', 'emergency-lockout'],
     relatedArticleSlugs: [
       'lock-change-after-burglary',
@@ -719,7 +719,7 @@ const ALL_ARTICLE_TEMPLATES: ArticleTemplate[] = [
     slug: 'landlord-lock-change',
     titleTemplate: 'Landlord Lock Change in {area} — Between Tenants',
     metaTemplate:
-      'Landlord lock change in {area} between tenants. Same-day service from £69, all lock types. No VAT. Call 07735 336175.',
+      'Landlord lock change in {area} between tenants. Same-day service from £69, all lock types. No VAT. Call 024 7522 4730.',
     keywords: [
       'landlord lock change {area}',
       'change locks between tenants {area}',
@@ -762,7 +762,7 @@ const ALL_ARTICLE_TEMPLATES: ArticleTemplate[] = [
         headingTemplate: 'Bulk & Regular Work',
         paragraphs: [
           'Many landlords I work with in {area} have a simple arrangement: they call or text me when a tenant moves out, I turn up the same day or the following morning, change the locks, and send them a photo of the new key set along with the receipt. The new keys are ready for the new tenant\'s move-in day. The whole thing takes 30-45 minutes for a standard two-door property.',
-          'If you\'re a letting agent managing multiple properties in {area} or across {region}, I\'m happy to discuss a standing arrangement. I can prioritise call-outs for your properties and maintain consistent pricing across all work. Call 07735 336175 to discuss — I work with several letting agencies across the {region} area and I understand the logistics of managing multiple properties and tenancies.',
+          'If you\'re a letting agent managing multiple properties in {area} or across {region}, I\'m happy to discuss a standing arrangement. I can prioritise call-outs for your properties and maintain consistent pricing across all work. Call 024 7522 4730 to discuss — I work with several letting agencies across the {region} area and I understand the logistics of managing multiple properties and tenancies.',
           'I\'m reliable, on-time, and I do good work. Those are the three things landlords in {area} consistently tell me matter most. Call me and see for yourself.',
         ],
       },
@@ -776,7 +776,7 @@ const ALL_ARTICLE_TEMPLATES: ArticleTemplate[] = [
       },
     ],
     ctaTemplate:
-      'Landlord lock change in {area}? Call 07735 336175. Same-day, from £69, no VAT. I cover {postcode} and surrounding areas.',
+      'Landlord lock change in {area}? Call 024 7522 4730. Same-day, from £69, no VAT. I cover {postcode} and surrounding areas.',
     relatedServiceSlugs: ['lock-change'],
     relatedArticleSlugs: ['bs3621-locks-home-insurance', 'best-door-locks-security-guide'],
   },

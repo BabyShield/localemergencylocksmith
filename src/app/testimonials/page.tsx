@@ -7,7 +7,7 @@ import CTABlock from '@/components/CTABlock'
 export const metadata: Metadata = {
   title: 'Reviews & Testimonials | Local Emergency Locksmith Coventry',
   description:
-    'Read 15 genuine reviews from customers across Coventry, Nuneaton, Rugby, Leamington Spa, and Warwickshire. Rated 4.8/5. Call 07735 336175.',
+    'Read 15 genuine reviews from customers across Coventry, Nuneaton, Rugby, Leamington Spa, and Warwickshire. Rated 4.8/5. Call 024 7522 4730.',
   keywords: 'locksmith reviews coventry, locksmith testimonials, coventry locksmith reviews, local locksmith reviews warwickshire, trusted locksmith coventry, 5 star locksmith coventry',
   alternates: {
     canonical: `${SITE_CONFIG.domain}/testimonials`,

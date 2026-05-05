@@ -38,7 +38,7 @@ If there is broken glass or the property is not secure, tell the police this whe
 
 If a door has been forced or a window smashed, your home is not secure. You need emergency boarding up to protect against further intrusion, weather damage, and to satisfy your insurance company that you took reasonable steps to secure the property.
 
-I offer [emergency boarding up across Coventry](/services/boarding-up) from **£79**. I carry marine-grade plywood in the van and can board up doors and windows within 30 minutes of arrival. Call me on **07735 336175** — I am available 24/7, including evenings and weekends.
+I offer [emergency boarding up across Coventry](/services/boarding-up) from **£79**. I carry marine-grade plywood in the van and can board up doors and windows within 30 minutes of arrival. Call me on **024 7522 4730** — I am available 24/7, including evenings and weekends.
 
 Your insurance company may cover boarding up costs, so keep the receipt.
 
@@ -86,7 +86,7 @@ A burglary is traumatic, but it is also an opportunity to make sure it does not 
 - **Security lighting** with motion sensors for dark areas around the property
 - **A proper deadlock on wooden doors** — BS3621 standard, which your insurance likely requires
 
-I can assess your home security and recommend specific upgrades based on how the burglary happened. Call me on **07735 336175** or visit the [emergency lockout service page](/services/emergency-lockout) for more information.
+I can assess your home security and recommend specific upgrades based on how the burglary happened. Call me on **024 7522 4730** or visit the [emergency lockout service page](/services/emergency-lockout) for more information.
 
 ---
 
@@ -96,7 +96,7 @@ I want to say something that is not in most guides like this. A burglary is not 
 
 Victim Support offers free, confidential help to anyone affected by crime in the UK. You do not need to have reported the crime to the police to use the service. Call them on **0808 168 9111** or visit victimsupport.org.uk.
 
-Changing the locks and upgrading security genuinely helps many people feel safer again. It is a practical step that gives you back some control. If you want to talk through your options, call me on **07735 336175** — I am happy to chat even if you are not ready to book anything yet.
+Changing the locks and upgrading security genuinely helps many people feel safer again. It is a practical step that gives you back some control. If you want to talk through your options, call me on **024 7522 4730** — I am happy to chat even if you are not ready to book anything yet.
 
 ---
 
@@ -120,7 +120,7 @@ You can check the progress of your case using the crime reference number on the 
     faqs: [
       {
         q: 'Should I change the locks even if my keys were not stolen during the burglary?',
-        a: 'Yes, I strongly recommend it. You cannot be certain that keys were not copied or that the burglar did not find spare keys you had forgotten about. If the break-in was through a lock (snapped cylinder, picked lock), that lock has been compromised and needs replacing regardless. The cost of changing locks — from £69 per lock — is small compared to the risk of a repeat burglary. Call me on 07735 336175 and I can usually do it the same day.',
+        a: 'Yes, I strongly recommend it. You cannot be certain that keys were not copied or that the burglar did not find spare keys you had forgotten about. If the break-in was through a lock (snapped cylinder, picked lock), that lock has been compromised and needs replacing regardless. The cost of changing locks — from £69 per lock — is small compared to the risk of a repeat burglary. Call me on 024 7522 4730 and I can usually do it the same day.',
       },
       {
         q: 'Will my home insurance cover the cost of new locks after a burglary?',
@@ -128,7 +128,7 @@ You can check the progress of your case using the crime reference number on the 
       },
       {
         q: 'How quickly can you board up a broken door or window after a burglary in Coventry?',
-        a: 'I carry marine-grade plywood and fixings in my van at all times. For most locations across Coventry and the surrounding areas, I can be with you within 15-30 minutes and have the opening boarded up shortly after. Emergency boarding up starts from £79. Call 07735 336175 any time, day or night.',
+        a: 'I carry marine-grade plywood and fixings in my van at all times. For most locations across Coventry and the surrounding areas, I can be with you within 15-30 minutes and have the opening boarded up shortly after. Emergency boarding up starts from £79. Call 024 7522 4730 any time, day or night.',
       },
       {
         q: 'Do I need to be at home when the police attend after a burglary?',
@@ -186,7 +186,7 @@ If the broken key is **protruding from the lock face** — meaning you can see t
 
 If it comes out, brilliant. Try your spare key in the lock to make sure everything still works smoothly. If the lock feels rough or stiff, it may need replacing — the break may have damaged the pins inside.
 
-If the key does not come out easily, stop. Do not force it. Call me on **07735 336175**.
+If the key does not come out easily, stop. Do not force it. Call me on **024 7522 4730**.
 
 ---
 
@@ -232,7 +232,7 @@ For more information on lock maintenance for uPVC doors, which are the most comm
 
 ### When to Call Me
 
-Call **07735 336175** if:
+Call **024 7522 4730** if:
 
 - The broken key is flush with or inside the lock and you cannot grip it
 - You have tried pliers and the key has not moved
@@ -249,7 +249,7 @@ Visit the [emergency lockout service page](/services/emergency-lockout) for more
       },
       {
         q: 'How much does it cost to remove a broken key from a lock?',
-        a: 'Broken key extraction starts from £49, which includes the call-out and the extraction. If the lock cylinder needs replacing because it has been damaged (either by the break itself or by previous attempts to remove the key), a standard replacement cylinder fitted is from £59, or from £89 if you want to upgrade to an anti-snap cylinder. I give you the exact price on the phone before I come out — no surprises. Call 07735 336175.',
+        a: 'Broken key extraction starts from £49, which includes the call-out and the extraction. If the lock cylinder needs replacing because it has been damaged (either by the break itself or by previous attempts to remove the key), a standard replacement cylinder fitted is from £59, or from £89 if you want to upgrade to an anti-snap cylinder. I give you the exact price on the phone before I come out — no surprises. Call 024 7522 4730.',
       },
       {
         q: 'My key snapped but I can still lock/unlock with the remaining piece. Do I need to do anything?',
@@ -281,7 +281,7 @@ If your keys fell out of your pocket on the street, at the shops, or at a restau
 If your keys were in a bag that was lost or stolen, and that bag contained anything with your address on it — a letter, a driving licence, a bank statement, a prescription, a utility bill — then someone now has your keys and your address. **Change the locks immediately.** This is not an overreaction. This is exactly the scenario that leads to burglaries.
 
 **Highest risk — keys lost with address visible (e.g., stolen handbag, lost wallet with keys):**
-If a handbag or rucksack was snatched or stolen and it contained both keys and identification, treat this as an emergency. The thief has your keys and knows where you live. Call me on **07735 336175** and I will come out to [change your locks](/services/lock-change) as soon as possible. If it is night-time and you feel unsafe, call 101 and report the theft — the police may do a drive-by check on your property.
+If a handbag or rucksack was snatched or stolen and it contained both keys and identification, treat this as an emergency. The thief has your keys and knows where you live. Call me on **024 7522 4730** and I will come out to [change your locks](/services/lock-change) as soon as possible. If it is night-time and you feel unsafe, call 101 and report the theft — the police may do a drive-by check on your property.
 
 ---
 
@@ -348,7 +348,7 @@ These are temporary measures only. If there is a real risk that someone has your
 
 1. **Think about where the keys were lost** and whether your address was with them.
 2. **If stolen:** report it to the police on 101. Get a crime reference number. This protects your insurance position.
-3. **If your address was with the keys:** call me on **07735 336175** to arrange a lock change as soon as possible. I am available 24/7 and can usually be with you within 15-30 minutes in Coventry.
+3. **If your address was with the keys:** call me on **024 7522 4730** to arrange a lock change as soon as possible. I am available 24/7 and can usually be with you within 15-30 minutes in Coventry.
 4. **If low risk (lost at home, no address attached):** give yourself 24-48 hours to find them. If they do not turn up, change the locks for peace of mind.
 5. **Tell your insurance company** if you believe the keys have been stolen. This protects you if anything happens later.
 
@@ -356,7 +356,7 @@ For more on how emergency call-outs work, see my guide on [how emergency locksmi
     faqs: [
       {
         q: 'How quickly should I change the locks after losing my keys?',
-        a: 'It depends on the risk level. If your keys were stolen in a bag that also contained your address (driving licence, bank statement, letter), change them immediately — call 07735 336175 and I can usually be with you within 15-30 minutes. If you dropped them somewhere with no identifying information attached, you have a bit more time, but I would recommend changing within 24-48 hours if they do not turn up. The longer you wait, the higher the risk.',
+        a: 'It depends on the risk level. If your keys were stolen in a bag that also contained your address (driving licence, bank statement, letter), change them immediately — call 024 7522 4730 and I can usually be with you within 15-30 minutes. If you dropped them somewhere with no identifying information attached, you have a bit more time, but I would recommend changing within 24-48 hours if they do not turn up. The longer you wait, the higher the risk.',
       },
       {
         q: 'Will my home insurance cover the cost of changing locks after losing keys?',
@@ -386,7 +386,7 @@ So let me walk you through exactly what happens when you call me, step by step. 
 
 ### Step 1: You Call — I Answer Personally
 
-When you call **07735 336175**, you get me. Not a call centre. Not an answering service. Not a national company who will then try to find a locksmith in your area (and charge you a premium for the referral).
+When you call **024 7522 4730**, you get me. Not a call centre. Not an answering service. Not a national company who will then try to find a locksmith in your area (and charge you a premium for the referral).
 
 I am Ross, a local independent locksmith based in Coventry. I answer my own phone, and if for some reason I cannot answer immediately (because I am elbow-deep in a lock mechanism on another job), I will call you back within minutes.
 
@@ -523,7 +523,7 @@ For more on avoiding locksmith scams, see the blog post on [why you should never
       },
       {
         q: 'Do you charge extra for evening or weekend call-outs?',
-        a: 'I operate the same pricing structure 24/7. The price I quote on the phone is the price you pay, whether it is 2pm on a Tuesday or 2am on a Saturday. Some locksmiths charge premium rates for unsociable hours — I do not, because lockouts do not happen on a schedule. The price depends on the lock type and the work involved, not the time of day. Call 07735 336175 any time.',
+        a: 'I operate the same pricing structure 24/7. The price I quote on the phone is the price you pay, whether it is 2pm on a Tuesday or 2am on a Saturday. Some locksmiths charge premium rates for unsociable hours — I do not, because lockouts do not happen on a schedule. The price depends on the lock type and the work involved, not the time of day. Call 024 7522 4730 any time.',
       },
       {
         q: 'Will you damage my door or lock when opening it?',
@@ -647,7 +647,7 @@ Emergency services are trained in **speed**, not preservation. When someone's li
 Let me run through the most common lockout situations and who to call for each:
 
 **Locked out, keys inside, no one at risk:**
-Call a locksmith. Call me on **07735 336175**. This is what I do every day. I will be with you in 15-30 minutes across Coventry and open the door non-destructively. From £59. See the [emergency lockout page](/services/emergency-lockout) for details.
+Call a locksmith. Call me on **024 7522 4730**. This is what I do every day. I will be with you in 15-30 minutes across Coventry and open the door non-destructively. From £59. See the [emergency lockout page](/services/emergency-lockout) for details.
 
 **Locked out with a young child inside:**
 If the child is a baby or toddler, or if the child is distressed and you cannot communicate with them to open the door, call 999. If the child is old enough to understand instructions (typically 5+), try talking them through unlocking the door. If that fails, call me — I can often get there faster than the fire brigade and open without damage.
@@ -662,7 +662,7 @@ If you believe it is an intruder, call 999. Do not try to enter yourself. If it 
 Call a locksmith. I handle [broken key extractions](/blog/broken-key-stuck-in-lock) and lock failures every week. I carry replacement parts in my van.
 
 **Locked out at night in an unsafe area:**
-Call me first on **07735 336175** — I will prioritise getting to you quickly. If you feel genuinely unsafe while waiting, go to a neighbour's house or a public place, and tell me where you will be when I arrive. If you feel threatened by someone, call 999.
+Call me first on **024 7522 4730** — I will prioritise getting to you quickly. If you feel genuinely unsafe while waiting, go to a neighbour's house or a public place, and tell me where you will be when I arrive. If you feel threatened by someone, call 999.
 
 ---
 
@@ -683,7 +683,7 @@ For more on what to do during a lockout, see my step-by-step guide on [being loc
 
 Unless someone's life is at risk, I am the right call for a lockout in Coventry. I am local, I answer my own phone, I give you a firm price before I set off, and I open your door without damaging it.
 
-**07735 336175** — available 24 hours, 7 days a week, including bank holidays.
+**024 7522 4730** — available 24 hours, 7 days a week, including bank holidays.
 
 I cover all areas across Coventry and Warwickshire, including the city centre, [Earlsdon](/areas/earlsdon), [Stoke](/areas/stoke), [Walsgrave](/areas/walsgrave), [Allesley](/areas/allesley), and everywhere in between. Typical response time: **15-30 minutes**.`,
     faqs: [
@@ -693,11 +693,11 @@ I cover all areas across Coventry and Warwickshire, including the city centre, [
       },
       {
         q: 'I am locked out and my child is inside. Should I call 999 or a locksmith?',
-        a: 'It depends on the child\'s age and the situation. If the child is a baby, toddler, or young child who cannot open the door themselves, call 999 — this is a genuine emergency. If the child is older (roughly 5+) and calm, try talking them through unlocking the door first. If that does not work, call me on 07735 336175 — I can often arrive within 15 minutes and open the door without any damage. The fire brigade will break the door down, which is the right call if the child is in danger, but a locksmith is better if there is no immediate risk.',
+        a: 'It depends on the child\'s age and the situation. If the child is a baby, toddler, or young child who cannot open the door themselves, call 999 — this is a genuine emergency. If the child is older (roughly 5+) and calm, try talking them through unlocking the door first. If that does not work, call me on 024 7522 4730 — I can often arrive within 15 minutes and open the door without any damage. The fire brigade will break the door down, which is the right call if the child is in danger, but a locksmith is better if there is no immediate risk.',
       },
       {
         q: 'Can I call a locksmith at 3am or is that only for emergency services?',
-        a: 'You can absolutely call a locksmith at 3am. I operate 24/7, 365 days a year. Lockouts do not happen during office hours — in fact, late-night lockouts are one of the most common calls I get. The price is the same whether you call at 3pm or 3am. Call 07735 336175 any time. I answer personally and will give you a price and ETA on the phone.',
+        a: 'You can absolutely call a locksmith at 3am. I operate 24/7, 365 days a year. Lockouts do not happen during office hours — in fact, late-night lockouts are one of the most common calls I get. The price is the same whether you call at 3pm or 3am. Call 024 7522 4730 any time. I answer personally and will give you a price and ETA on the phone.',
       },
       {
         q: 'What should I do while waiting for the locksmith to arrive?',

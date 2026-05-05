@@ -33,16 +33,16 @@
 
 ### Sticky Header (all pages)
 ```
-[LOGO]  LOCAL EMERGENCY LOCKSMITH   [CALL NOW: 07735 336175]  ← click-to-call
+[LOGO]  LOCAL EMERGENCY LOCKSMITH   [CALL NOW: 024 7522 4730]  ← click-to-call
         Coventry & Surrounding Areas  [Big green/orange button]
 ```
 - Phone number visible WITHOUT scrolling on mobile
-- Click-to-call `<a href="tel:+447735336175">`
+- Click-to-call `<a href="tel:+442475224730">`
 - No hamburger menu hiding the phone number
 
 ### Sticky Footer CTA (mobile only)
 ```
-Fixed bottom bar: [📞 CALL NOW - 07735 336175]
+Fixed bottom bar: [📞 CALL NOW - 024 7522 4730]
 ```
 - Always visible on mobile
 - Green/orange high-contrast background
@@ -139,7 +139,7 @@ H2: "Nearby Areas"
 SCHEMA: LocalBusiness + areaServed: [Area Name]
 META TITLE: "Emergency Locksmith [Area Name] | 24/7 | No VAT | Call Now"
 META DESC: "Locked out in [Area Name]? Local emergency locksmith, 15-30 min
-            response. No VAT, no call-out fee. Call 07735 336175 now."
+            response. No VAT, no call-out fee. Call 024 7522 4730 now."
 ```
 
 ### 3. SERVICE PAGES (/services/[slug])
@@ -172,7 +172,7 @@ Areas covered (links to area pages)
 
 ### 5. CONTACT PAGE
 ```
-Phone: 07735 336175 (click-to-call)
+Phone: 024 7522 4730 (click-to-call)
 Email: info@localemergencylocksmith.co.uk
 Operating: 24/7 — 365 days
 Areas: Coventry, Nuneaton, Rugby, Leamington Spa, Warwick, Stratford
@@ -326,7 +326,7 @@ const areas = {
 ```html
 <title>Emergency Locksmith [Area] | 24/7 | No VAT | Call Now</title>
 <meta name="description" content="Locked out in [Area]? Local emergency
-  locksmith, 15-30 min response. No VAT, no call-out fee. Call 07735 336175.">
+  locksmith, 15-30 min response. No VAT, no call-out fee. Call 024 7522 4730.">
 <link rel="canonical" href="https://localemergencylocksmith.co.uk/areas/[slug]">
 ```
 
@@ -337,7 +337,7 @@ const areas = {
   "@type": "Locksmith",
   "name": "Local Emergency Locksmith",
   "url": "https://localemergencylocksmith.co.uk",
-  "telephone": "+447735336175",
+  "telephone": "+442475224730",
   "email": "info@localemergencylocksmith.co.uk",
   "areaServed": [
     { "@type": "City", "name": "Coventry" },
@@ -585,7 +585,7 @@ H2: Step 2 — Check Other Entry Points (Safely)
 H2: Step 3 — Call a Local Locksmith, Not a National Call Centre
 - National companies charge £150-250+ (they add VAT + dispatch fees)
 - I'm based locally and cover [Area] and [Postcode] — no middleman
-- "When you call 07735 336175, you speak to me directly"
+- "When you call 024 7522 4730, you speak to me directly"
 
 H2: How Fast Can I Get to [Area]?
 - [Area] is within my core coverage zone
@@ -603,7 +603,7 @@ H2: What If My Lock Needs Replacing?
 - Lock replacement from £69 (includes new lock + fitting)
 - I carry common lock types in my van — Yale, ERA, Avocet, etc.
 
-CTA: Locked out in [Area] right now? Call 07735 336175 — I answer 24/7.
+CTA: Locked out in [Area] right now? Call 024 7522 4730 — I answer 24/7.
 
 INTERNAL LINKS:
 - /areas/[area-slug] (area page)
@@ -660,7 +660,7 @@ H2: How to Avoid Locksmith Scams in [Area]
 - Avoid Google Ads results that show London numbers for [Area]
 - "I'm local to [Region] — you can verify by checking my reviews"
 
-CTA: Need a price right now? Call 07735 336175 — I'll quote over the phone in 30 seconds.
+CTA: Need a price right now? Call 024 7522 4730 — I'll quote over the phone in 30 seconds.
 
 INTERNAL LINKS:
 - /prices
@@ -715,7 +715,7 @@ H2: When to Repair vs Replace Your uPVC Door Lock
 - If you've been burgled: replace + upgrade to anti-snap
 - "I carry all common parts in my van — most repairs done in one visit"
 
-CTA: uPVC door playing up in [Area]? Call 07735 336175 for a quick fix.
+CTA: uPVC door playing up in [Area]? Call 024 7522 4730 for a quick fix.
 
 INTERNAL LINKS:
 - /services/upvc-lock-repair
@@ -767,7 +767,7 @@ H2: Same-Day Lock Change in [Area]
 - Lock change from £69 (standard) or £79 (BS3621)
 - "I provide a receipt and can write a report for your insurer"
 
-CTA: Been burgled in [Area]? Call 07735 336175 — I can be there within 30 minutes to secure your home.
+CTA: Been burgled in [Area]? Call 024 7522 4730 — I can be there within 30 minutes to secure your home.
 
 INTERNAL LINKS:
 - /services/lock-change
@@ -816,7 +816,7 @@ H2: Free Security Check
 - "If you live in [Area] I'll quickly check your locks for free
    when I'm doing any other job nearby — just ask"
 
-CTA: Want to know if your locks are up to standard? Call 07735 336175.
+CTA: Want to know if your locks are up to standard? Call 024 7522 4730.
 
 INTERNAL LINKS:
 - /services/lock-upgrade
@@ -876,7 +876,7 @@ H2: Why I'm Different
 - No VAT, no call-out fee, no hidden charges
 - "Check my Google Reviews — real [Area] customers, real names"
 
-CTA: Need a locksmith you can trust in [Area]? Call 07735 336175.
+CTA: Need a locksmith you can trust in [Area]? Call 024 7522 4730.
 
 INTERNAL LINKS:
 - /areas/[area-slug]
@@ -930,7 +930,7 @@ H2: Free Security Advice
 - "Call me for a free chat about your locks — I'll tell you what
    needs upgrading and what's fine as it is. No sales pressure."
 
-CTA: Want your locks checked or upgraded in [Area]? Call 07735 336175.
+CTA: Want your locks checked or upgraded in [Area]? Call 024 7522 4730.
 
 INTERNAL LINKS:
 - /services/lock-upgrade
@@ -953,7 +953,7 @@ P: Lost your house keys somewhere in [Area]? Here's the priority
    checklist — what to do right now, and what to do tomorrow.
 
 H2: Priority 1 — Can You Get Into Your Home?
-- If locked out: call me on 07735 336175 (emergency lockout from £59)
+- If locked out: call me on 024 7522 4730 (emergency lockout from £59)
 - If you have a spare key / someone can let you in: you have time
 
 H2: Priority 2 — Where Were Your Keys Lost?
@@ -978,7 +978,7 @@ H2: Does Insurance Cover Lost Keys?
 - Check your policy — you may be able to claim my invoice
 - "I provide proper receipts for all work"
 
-CTA: Lost your keys in [Area]? Call 07735 336175 — I can change your locks today.
+CTA: Lost your keys in [Area]? Call 024 7522 4730 — I can change your locks today.
 
 INTERNAL LINKS:
 - /services/lock-change
@@ -1031,7 +1031,7 @@ H2: Insurance Claims
 - Keep my receipt — your insurer will cover boarding up costs
 - "I can provide a written breakdown for your insurer"
 
-CTA: Need emergency boarding up in [Area]? Call 07735 336175 — I'll be there fast.
+CTA: Need emergency boarding up in [Area]? Call 024 7522 4730 — I'll be there fast.
 
 INTERNAL LINKS:
 - /services/boarding-up
@@ -1083,7 +1083,7 @@ H2: Key Management
 - Additional keys cut during the visit
 - Master key systems available for HMOs
 
-CTA: Landlord in [Area]? Call 07735 336175 for a quick lock change quote.
+CTA: Landlord in [Area]? Call 024 7522 4730 for a quick lock change quote.
 
 INTERNAL LINKS:
 - /services/lock-change
@@ -1112,7 +1112,7 @@ export const articleTemplates = [
   {
     slug: "locked-out-at-night",
     titleTemplate: "Locked Out of Your Home in {area}? Here's What to Do",
-    metaTemplate: "Locked out in {area}? Local emergency locksmith, 15-30 min response. No VAT. Call 07735 336175.",
+    metaTemplate: "Locked out in {area}? Local emergency locksmith, 15-30 min response. No VAT. Call 024 7522 4730.",
     // Full content template with {area}, {postcode}, {region}, {neighbours} placeholders
   },
   {
@@ -1199,7 +1199,7 @@ This creates a dense internal link web that Google reads as "this entire site is
   "publisher": {
     "@type": "LocalBusiness",
     "name": "Local Emergency Locksmith",
-    "telephone": "+447735336175"
+    "telephone": "+442475224730"
   },
   "datePublished": "2026-03-16",
   "areaServed": {
@@ -1303,16 +1303,16 @@ The speed depends on:
 
 ### Sticky Header (all pages)
 ```
-[LOGO]  LOCAL EMERGENCY LOCKSMITH   [CALL NOW: 07735 336175]  ← click-to-call
+[LOGO]  LOCAL EMERGENCY LOCKSMITH   [CALL NOW: 024 7522 4730]  ← click-to-call
         Coventry & Surrounding Areas  [Big amber button]
 ```
 - Phone number visible WITHOUT scrolling on mobile
-- Click-to-call `<a href="tel:+447735336175">`
+- Click-to-call `<a href="tel:+442475224730">`
 - No hamburger menu hiding the phone number
 
 ### Sticky Footer CTA (mobile only)
 ```
-Fixed bottom bar: [📞 CALL NOW - 07735 336175]
+Fixed bottom bar: [📞 CALL NOW - 024 7522 4730]
 ```
 - Always visible on mobile
 - Amber background, navy text — maximum contrast and urgency
@@ -1409,7 +1409,7 @@ H2: "Nearby Areas"
 SCHEMA: LocalBusiness + areaServed: [Area Name]
 META TITLE: "Emergency Locksmith [Area Name] | 24/7 | No VAT | Call Now"
 META DESC: "Locked out in [Area Name]? Local emergency locksmith, 15-30 min
-            response. No VAT, no call-out fee. Call 07735 336175 now."
+            response. No VAT, no call-out fee. Call 024 7522 4730 now."
 ```
 
 ### 3. SERVICE PAGES (/services/[slug])
@@ -1442,7 +1442,7 @@ Areas covered (links to area pages)
 
 ### 5. CONTACT PAGE
 ```
-Phone: 07735 336175 (click-to-call)
+Phone: 024 7522 4730 (click-to-call)
 Email: info@localemergencylocksmith.co.uk
 Operating: 24/7 — 365 days
 Areas: Coventry, Nuneaton, Rugby, Leamington Spa, Warwick, Stratford
@@ -1596,7 +1596,7 @@ const areas = {
 ```html
 <title>Emergency Locksmith [Area] | 24/7 | No VAT | Call Now</title>
 <meta name="description" content="Locked out in [Area]? Local emergency
-  locksmith, 15-30 min response. No VAT, no call-out fee. Call 07735 336175.">
+  locksmith, 15-30 min response. No VAT, no call-out fee. Call 024 7522 4730.">
 <link rel="canonical" href="https://localemergencylocksmith.co.uk/areas/[slug]">
 ```
 
@@ -1607,7 +1607,7 @@ const areas = {
   "@type": "Locksmith",
   "name": "Local Emergency Locksmith",
   "url": "https://localemergencylocksmith.co.uk",
-  "telephone": "+447735336175",
+  "telephone": "+442475224730",
   "email": "info@localemergencylocksmith.co.uk",
   "areaServed": [
     { "@type": "City", "name": "Coventry" },

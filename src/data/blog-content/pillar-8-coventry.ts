@@ -134,7 +134,7 @@ Total cost: typically **£120-£200** for front and back door cylinders and hand
 
 ## Which Era Is Your Coventry Home?
 
-If you are not sure what era your house was built or what locks you currently have, I am always happy to take a look and give you honest advice. There is no charge for a quick chat on the phone — call me on 07735 336175 and describe what you have got, and I will tell you what I would recommend.
+If you are not sure what era your house was built or what locks you currently have, I am always happy to take a look and give you honest advice. There is no charge for a quick chat on the phone — call me on 024 7522 4730 and describe what you have got, and I will tell you what I would recommend.
 
 You can also check out my [services page](/services/) for a full list of what I offer, or my [prices page](/prices) for upfront costs on every common job.
 
@@ -142,7 +142,7 @@ Every home in Coventry is different, but the principles are the same: fit the ri
     faqs: [
       {
         q: 'What lock do I need for a Victorian terrace front door in Earlsdon or Chapelfields?',
-        a: 'You need a BS3621 five-lever mortice deadlock. Most Victorian terrace front doors in Earlsdon and Chapelfields still have the original skeleton key lock, which offers no real security. A BS3621 deadlock can be fitted into the existing door without damaging the character of the property. I supply and fit these for £75-£95. Call me on 07735 336175 for a specific quote.',
+        a: 'You need a BS3621 five-lever mortice deadlock. Most Victorian terrace front doors in Earlsdon and Chapelfields still have the original skeleton key lock, which offers no real security. A BS3621 deadlock can be fitted into the existing door without damaging the character of the property. I supply and fit these for £75-£95. Call me on 024 7522 4730 for a specific quote.',
       },
       {
         q: 'Are uPVC doors on Coventry council houses vulnerable to break-ins?',
@@ -275,13 +275,13 @@ Here is what I recommend for every Coventry homeowner, based on the burglary tre
 4. **Fit window locks** on all ground-floor windows. Cost: £15-£25 per window.
 5. **Use your locks**. The best lock in the world is useless if you do not lock the door when you leave. I know that sounds obvious, but a surprising number of burglaries involve unlocked doors.
 
-If you want to talk through the security on your specific property, call me on 07735 336175. I am happy to give advice over the phone, and if you want a full check I can come and assess your home and give you a honest, no-pressure recommendation.
+If you want to talk through the security on your specific property, call me on 024 7522 4730. I am happy to give advice over the phone, and if you want a full check I can come and assess your home and give you a honest, no-pressure recommendation.
 
 You can also visit my [services page](/services/) to see the full range of lock upgrades I offer, or browse security advice by area — for example, my guides for [Earlsdon](/areas/earlsdon), [Tile Hill](/areas/tile-hill), and [Cheylesmore](/areas/cheylesmore) all include area-specific security recommendations.`,
     faqs: [
       {
         q: 'What is the most common burglary method in Coventry?',
-        a: 'Euro cylinder snapping on uPVC and composite front doors. This reflects the large number of uPVC doors across Coventry, many of which have standard cylinders that can be snapped in under 30 seconds. Replacing the cylinder with an anti-snap version costs £59-£89 and completely eliminates this vulnerability. Call me on 07735 336175 for a quote.',
+        a: 'Euro cylinder snapping on uPVC and composite front doors. This reflects the large number of uPVC doors across Coventry, many of which have standard cylinders that can be snapped in under 30 seconds. Replacing the cylinder with an anti-snap version costs £59-£89 and completely eliminates this vulnerability. Call me on 024 7522 4730 for a quote.',
       },
       {
         q: 'When are burglaries most common in Coventry?',
@@ -329,7 +329,7 @@ I replace standard euro cylinders with anti-snap, anti-bump, anti-pick, anti-dri
 
 ### How to Prevent It
 
-Get your cylinder checked. If you can see brass sticking out beyond the handle or escutcheon on either side of your door, it is almost certainly a standard cylinder that is vulnerable to snapping. Call me on 07735 336175 and I will tell you whether it needs replacing. Check my [prices page](/prices) for full details.
+Get your cylinder checked. If you can see brass sticking out beyond the handle or escutcheon on either side of your door, it is almost certainly a standard cylinder that is vulnerable to snapping. Call me on 024 7522 4730 and I will tell you whether it needs replacing. Check my [prices page](/prices) for full details.
 
 ---
 
@@ -383,7 +383,7 @@ The warning signs are there if you know what to look for:
 - You hear a grinding or clicking noise when operating the handle
 - The key turns but the deadbolt does not throw
 
-If you notice any of these, call me on 07735 336175 sooner rather than later. A gearbox that is starting to fail can often be identified before it fails completely, and a planned replacement is always cheaper and less stressful than an emergency one.
+If you notice any of these, call me on 024 7522 4730 sooner rather than later. A gearbox that is starting to fail can often be identified before it fails completely, and a planned replacement is always cheaper and less stressful than an emergency one.
 
 ---
 
@@ -409,7 +409,7 @@ I recommend adding a **BS3621 five-lever mortice deadlock** to every door that o
 
 For the Yale itself, if it is old and worn, I recommend replacing it with a modern BS3621-rated nightlatch that has a proper deadlocking function and is more resistant to forced entry.
 
-Cost: **£75-£95 for a new deadlock supplied and fitted**, or **£65-£85 for a replacement nightlatch**. If you want both, I do them together for a combined price — just call 07735 336175 and I will give you an exact figure.
+Cost: **£75-£95 for a new deadlock supplied and fitted**, or **£65-£85 for a replacement nightlatch**. If you want both, I do them together for a combined price — just call 024 7522 4730 and I will give you an exact figure.
 
 ### A Word on Habits
 
@@ -449,11 +449,11 @@ To apply it, simply puff the graphite into the keyhole and then insert and turn 
 
 All five of these problems share one thing in common: they are cheaper to prevent than to fix in an emergency. A £59-£89 cylinder replacement prevents a burglary and a lockout. A £75-£95 deadlock replacement prevents a lock failure and meets your insurance requirements. A £5 tube of graphite prevents a frozen lock callout.
 
-If you recognise any of these problems in your own home — or if you are not sure whether your locks are in good condition — give me a call on 07735 336175. I am always happy to talk through your situation on the phone, and if you need a visit, I will give you a firm price before I come out. You can also check my [services page](/services/) or [prices page](/prices) for full details on every job I offer.`,
+If you recognise any of these problems in your own home — or if you are not sure whether your locks are in good condition — give me a call on 024 7522 4730. I am always happy to talk through your situation on the phone, and if you need a visit, I will give you a firm price before I come out. You can also check my [services page](/services/) or [prices page](/prices) for full details on every job I offer.`,
     faqs: [
       {
         q: 'How do I know if my euro cylinder is vulnerable to snapping?',
-        a: 'Look at your door from the outside. If you can see the brass cylinder sticking out beyond the handle or escutcheon plate by more than a few millimetres, it is almost certainly a standard cylinder that can be snapped. Most uPVC doors in Coventry — especially those in Tile Hill, Canley, and Willenhall — were fitted with standard cylinders. I can replace it with an anti-snap cylinder for £59-£89. Call 07735 336175 to check.',
+        a: 'Look at your door from the outside. If you can see the brass cylinder sticking out beyond the handle or escutcheon plate by more than a few millimetres, it is almost certainly a standard cylinder that can be snapped. Most uPVC doors in Coventry — especially those in Tile Hill, Canley, and Willenhall — were fitted with standard cylinders. I can replace it with an anti-snap cylinder for £59-£89. Call 024 7522 4730 to check.',
       },
       {
         q: 'Why is my uPVC door handle floppy and not locking properly?',
@@ -581,7 +581,7 @@ You can see my full price list on my [prices page](/prices) — every common job
 
 ## My Approach — Because You Are Going to Ask
 
-When you call 07735 336175, you speak to me directly. Not a call centre, not a receptionist, not a dispatcher. Me. I answer the phone, I give you a price, I tell you how long I will be, and I stick to both.
+When you call 024 7522 4730, you speak to me directly. Not a call centre, not a receptionist, not a dispatcher. Me. I answer the phone, I give you a price, I tell you how long I will be, and I stick to both.
 
 Here is what I offer:
 
@@ -610,7 +610,7 @@ The locksmiths to avoid are the ones who:
 
 If you find someone who passes all those tests and is not me, hire them with confidence.
 
-But if you want to keep it simple, call 07735 336175. I will answer, I will give you a straight answer, and I will get the job done properly at a fair price.
+But if you want to keep it simple, call 024 7522 4730. I will answer, I will give you a straight answer, and I will get the job done properly at a fair price.
 
 ---
 
@@ -642,7 +642,7 @@ Visit my [services page](/services/) for a full list of what I can help with, or
       },
       {
         q: 'What should I do if I am locked out in Coventry right now?',
-        a: 'First, do not try to force the door — you will cause expensive damage. Check all other entry points. Then call a local locksmith — ask for their postcode and a firm price before they come out. A good Coventry locksmith can usually reach you within 15-30 minutes. If you call me on 07735 336175, I will give you a price on the phone and tell you exactly how long I will be.',
+        a: 'First, do not try to force the door — you will cause expensive damage. Check all other entry points. Then call a local locksmith — ask for their postcode and a firm price before they come out. A good Coventry locksmith can usually reach you within 15-30 minutes. If you call me on 024 7522 4730, I will give you a price on the phone and tell you exactly how long I will be.',
       },
     ],
   },

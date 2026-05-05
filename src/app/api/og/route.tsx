@@ -10,7 +10,7 @@ export async function GET(req: NextRequest) {
     // Dynamic values passed via query
     const title = searchParams.get('title')?.slice(0, 70) || 'Local Emergency Locksmith'
     const subtitle = searchParams.get('subtitle')?.slice(0, 100) || '24/7 Response • No VAT • No Call-Out Fee'
-    const phone = searchParams.get('phone') || '07735 336175'
+    const phone = searchParams.get('phone') || '024 7522 4730'
 
     return new ImageResponse(
       (

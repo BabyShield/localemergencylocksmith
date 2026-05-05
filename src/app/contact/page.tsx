@@ -4,17 +4,17 @@ import { SITE_CONFIG } from '@/data/config'
 import SchemaMarkup from '@/components/SchemaMarkup'
 
 export const metadata: Metadata = {
-  title: 'Contact — Local Emergency Locksmith Coventry | 07735 336175',
+  title: 'Contact — Local Emergency Locksmith Coventry | 024 7522 4730',
   description:
-    'Contact Local Emergency Locksmith in Coventry. Available 24/7 — call 07735 336175 for immediate help or use the contact form.',
+    'Contact Local Emergency Locksmith in Coventry. Available 24/7 — call 024 7522 4730 for immediate help or use the contact form.',
   keywords: 'contact locksmith coventry, locksmith phone number coventry, locksmith coventry 24/7, emergency locksmith contact warwickshire, call locksmith coventry',
   alternates: {
     canonical: `${SITE_CONFIG.domain}/contact`,
   },
   openGraph: {
-    title: 'Contact — Local Emergency Locksmith Coventry | 07735 336175',
+    title: 'Contact — Local Emergency Locksmith Coventry | 024 7522 4730',
     description:
-      'Contact Local Emergency Locksmith in Coventry. Available 24/7 — call 07735 336175 for immediate help or use the contact form.',
+      'Contact Local Emergency Locksmith in Coventry. Available 24/7 — call 024 7522 4730 for immediate help or use the contact form.',
     url: `${SITE_CONFIG.domain}/contact`,
     images: [{ url: `${SITE_CONFIG.domain}/api/og?title=${encodeURIComponent('Contact Local Emergency Locksmith')}`, width: 1200, height: 630 }],
   },

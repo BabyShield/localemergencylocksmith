@@ -74,7 +74,7 @@ export async function POST(request: Request) {
     return NextResponse.json({ success: true })
   } catch {
     return NextResponse.json(
-      { error: 'Something went wrong. Please call 07735 336175 instead.' },
+      { error: 'Something went wrong. Please call 024 7522 4730 instead.' },
       { status: 500 }
     )
   }

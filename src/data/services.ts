@@ -20,7 +20,7 @@ export const SERVICES: Service[] = [
     icon: '🔓',
     keywords: ['emergency lockout coventry', 'locked out coventry', 'emergency door opening coventry', 'non destructive entry coventry'],
     metaTitle: 'Emergency Lockout Service Coventry | 24/7 | From £59 | No VAT',
-    metaDescription: 'Locked out in Coventry? Emergency lockout service, 15-30 min response. Non-destructive entry, from £59. No VAT, no call-out fee. Call 07735 336175 now.',
+    metaDescription: 'Locked out in Coventry? Emergency lockout service, 15-30 min response. Non-destructive entry, from £59. No VAT, no call-out fee. Call 024 7522 4730 now.',
   },
   {
     slug: 'lock-change',
@@ -31,7 +31,7 @@ export const SERVICES: Service[] = [
     icon: '🔑',
     keywords: ['lock change coventry', 'lock replacement coventry', 'new lock fitting coventry', 'bs3621 lock coventry'],
     metaTitle: 'Lock Change Coventry | BS3621 Insurance Locks | From £69 | No VAT',
-    metaDescription: 'Lock change and replacement in Coventry. BS3621 insurance-approved locks fitted from £69. No VAT, no call-out fee. Call 07735 336175.',
+    metaDescription: 'Lock change and replacement in Coventry. BS3621 insurance-approved locks fitted from £69. No VAT, no call-out fee. Call 024 7522 4730.',
   },
   {
     slug: 'upvc-lock-repair',
@@ -42,7 +42,7 @@ export const SERVICES: Service[] = [
     icon: '🚪',
     keywords: ['upvc lock repair coventry', 'upvc door lock replacement coventry', 'upvc window lock coventry', 'multipoint lock coventry'],
     metaTitle: 'uPVC Lock Repair Coventry | Door & Window Locks | From £59 | No VAT',
-    metaDescription: 'uPVC door and window lock repair in Coventry. Multipoint lock repairs from £59. No VAT, no call-out fee. Fast response. Call 07735 336175.',
+    metaDescription: 'uPVC door and window lock repair in Coventry. Multipoint lock repairs from £59. No VAT, no call-out fee. Fast response. Call 024 7522 4730.',
   },
   {
     slug: 'boarding-up',
@@ -53,7 +53,7 @@ export const SERVICES: Service[] = [
     icon: '🪟',
     keywords: ['emergency boarding up coventry', 'broken window boarding coventry', 'board up service coventry'],
     metaTitle: 'Emergency Boarding Up Coventry | 24/7 | From £79 | No VAT',
-    metaDescription: 'Emergency boarding up in Coventry after break-ins or damage. Available 24/7, from £79. No VAT, no call-out fee. Call 07735 336175 now.',
+    metaDescription: 'Emergency boarding up in Coventry after break-ins or damage. Available 24/7, from £79. No VAT, no call-out fee. Call 024 7522 4730 now.',
   },
   {
     slug: 'lock-upgrade',
@@ -64,7 +64,7 @@ export const SERVICES: Service[] = [
     icon: '🛡️',
     keywords: ['lock upgrade coventry', 'bs3621 lock upgrade', 'insurance approved lock coventry', 'anti snap lock coventry'],
     metaTitle: 'Lock Upgrade Coventry | BS3621 Security Locks | From £79 | No VAT',
-    metaDescription: 'Lock security upgrades in Coventry. BS3621 and anti-snap locks from £79. Insurance-compliant. No VAT, no call-out fee. Call 07735 336175.',
+    metaDescription: 'Lock security upgrades in Coventry. BS3621 and anti-snap locks from £79. Insurance-compliant. No VAT, no call-out fee. Call 024 7522 4730.',
   },
 ]
 

@@ -8,7 +8,7 @@ import FAQSection from '@/components/FAQSection'
 export const metadata: Metadata = {
   title: 'Locksmith FAQ Coventry — Prices, Response Times & Areas Covered',
   description:
-    'Locksmith questions answered: How much does an emergency locksmith cost in Coventry? How fast? Which areas? No VAT, no call-out fee. Call 07735 336175.',
+    'Locksmith questions answered: How much does an emergency locksmith cost in Coventry? How fast? Which areas? No VAT, no call-out fee. Call 024 7522 4730.',
   keywords: 'locksmith faq coventry, how much does a locksmith cost coventry, emergency locksmith price coventry, locksmith response time coventry, coventry locksmith questions',
   alternates: {
     canonical: `${SITE_CONFIG.domain}/faq`,
@@ -97,7 +97,7 @@ const trustFaqs = [
   },
   {
     q: 'Will you show ID when you arrive?',
-    a: 'Yes. I always carry identification and will show it when I arrive. I\'ll also arrive in a clearly marked vehicle. If you\'re ever unsure, call me back on 07735 336175 to confirm it\'s me at your door.',
+    a: 'Yes. I always carry identification and will show it when I arrive. I\'ll also arrive in a clearly marked vehicle. If you\'re ever unsure, call me back on 024 7522 4730 to confirm it\'s me at your door.',
   },
   {
     q: 'How do I spot a rogue locksmith?',

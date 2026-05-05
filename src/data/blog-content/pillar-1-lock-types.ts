@@ -55,7 +55,7 @@ If you have a uPVC or composite door with a euro cylinder, check it now. Go outs
 
 The fix is straightforward: replace the cylinder with a quality anti-snap unit. I fit anti-snap cylinders across Coventry from £69 for a [lock change](/services/lock-change), and it's genuinely the best value security upgrade you can make. A decent anti-snap cylinder like the [Avocet ABS or Ultion](/blog/anti-snap-locks-compared) costs a fraction of what a burglary costs you in money, stress, and lost sense of security.
 
-If you've already been a victim of lock snapping or you're concerned about your locks, give me a call on 07735 336175. I can assess your doors and recommend the right cylinder for your specific setup. I carry stock of all the main anti-snap brands, so most jobs are done in a single visit.
+If you've already been a victim of lock snapping or you're concerned about your locks, give me a call on 024 7522 4730. I can assess your doors and recommend the right cylinder for your specific setup. I carry stock of all the main anti-snap brands, so most jobs are done in a single visit.
 
 ## Coventry-Specific Advice
 
@@ -67,7 +67,7 @@ Coventry's housing stock makes it particularly susceptible. The city has a huge 
 
 I'd especially recommend checking your locks if you live in areas like [Stoke](/areas/stoke), [Bell Green](/areas/bell-green), [Willenhall](/areas/willenhall), or [Radford](/areas/radford), where I attend a higher volume of break-in related calls.
 
-Don't wait until it happens to you. A [lock upgrade](/services/lock-upgrade) is quick, affordable, and gives you genuine peace of mind. Check the [prices page](/prices) for current rates or call 07735 336175 for a free quote.`,
+Don't wait until it happens to you. A [lock upgrade](/services/lock-upgrade) is quick, affordable, and gives you genuine peace of mind. Check the [prices page](/prices) for current rates or call 024 7522 4730 for a free quote.`,
     faqs: [
       {
         q: 'How do I know if my lock can be snapped?',
@@ -75,7 +75,7 @@ Don't wait until it happens to you. A [lock upgrade](/services/lock-upgrade) is 
       },
       {
         q: 'How much does it cost to replace a snappable lock?',
-        a: 'I fit anti-snap euro cylinders from £69 for a straightforward lock change. Higher-end options like Ultion or Avocet ABS cost more but offer additional features like insurance-backed guarantees. The price depends on the cylinder length and brand you choose — check the prices page or call 07735 336175 for an exact quote.',
+        a: 'I fit anti-snap euro cylinders from £69 for a straightforward lock change. Higher-end options like Ultion or Avocet ABS cost more but offer additional features like insurance-backed guarantees. The price depends on the cylinder length and brand you choose — check the prices page or call 024 7522 4730 for an exact quote.',
       },
       {
         q: 'Will my insurance cover a burglary if my lock was snapped?',
@@ -128,7 +128,7 @@ Here's how to measure yours step by step:
 
 **Important:** measure from the centre of the screw hole to each end. And measure the actual cylinder, not the key.
 
-If you're not confident measuring it yourself, call me on 07735 336175 and I'll come out and measure it as part of the job. I carry a wide range of sizes in the van, so I can almost always fit the right one on the first visit.
+If you're not confident measuring it yourself, call me on 024 7522 4730 and I'll come out and measure it as part of the job. I carry a wide range of sizes in the van, so I can almost always fit the right one on the first visit.
 
 ## Common Sizes in Coventry
 
@@ -171,7 +171,7 @@ You should consider a [lock change](/services/lock-change) or [upgrade](/service
 - You've had a break-in or attempted break-in
 - Your insurance company requires a higher-security lock
 
-I change euro cylinders across Coventry from £69. Give me a call on 07735 336175 or check the [prices page](/prices) for full details.
+I change euro cylinders across Coventry from £69. Give me a call on 024 7522 4730 or check the [prices page](/prices) for full details.
 
 ## A Note on Quality
 
@@ -183,7 +183,7 @@ I've lost count of the number of times I've turned up to a job and found a £5 e
       },
       {
         q: 'What size euro cylinder do I need?',
-        a: 'The size depends on your specific door. You need to measure from the centre of the fixing screw hole to each end of the cylinder. Most residential doors in Coventry use cylinders between 70mm and 100mm total length, but the split between inside and outside measurements varies. Call 07735 336175 and I will measure it as part of the job.',
+        a: 'The size depends on your specific door. You need to measure from the centre of the fixing screw hole to each end of the cylinder. Most residential doors in Coventry use cylinders between 70mm and 100mm total length, but the split between inside and outside measurements varies. Call 024 7522 4730 and I will measure it as part of the job.',
       },
       {
         q: 'Should I get a thumbturn or double cylinder?',
@@ -272,7 +272,7 @@ Anti-snap cylinders are for **uPVC and composite doors**. If your door has a eur
 
 ### Cost
 
-I fit anti-snap euro cylinders from £69 for a standard [lock change](/services/lock-change). Premium options like Ultion are more. Call 07735 336175 for a quote on your specific door.
+I fit anti-snap euro cylinders from £69 for a standard [lock change](/services/lock-change). Premium options like Ultion are more. Call 024 7522 4730 for a quote on your specific door.
 
 ## Smart Locks
 
@@ -329,7 +329,7 @@ This is where it gets important:
 - **Anti-snap cylinders** — most insurers don't specifically require them (yet), but having one fitted shows due diligence and can support a claim.
 - **Smart locks** — check with your insurer before relying on one. Many policies still reference BS3621 or equivalent mechanical locks. A smart lock might not meet the wording of your policy.
 
-My advice? Meet your insurance requirements first, then add any extras you want on top. If you're unsure what your policy requires, call your insurer and ask. Then call me on 07735 336175 and I'll make sure your doors are up to standard.
+My advice? Meet your insurance requirements first, then add any extras you want on top. If you're unsure what your policy requires, call your insurer and ask. Then call me on 024 7522 4730 and I'll make sure your doors are up to standard.
 
 ## My Recommendation for Most Coventry Homes
 
@@ -340,7 +340,7 @@ Most homes in [Coventry](/areas/coventry-city-centre) have a combination of door
 - **Back door (uPVC):** Anti-snap euro cylinder
 - **Back door (wooden):** BS3621 deadlock at minimum
 
-For a full assessment of your home's locks, call 07735 336175 or check the [services](/services/lock-upgrade) I offer. I cover all areas of Coventry and can usually attend the same day.`,
+For a full assessment of your home's locks, call 024 7522 4730 or check the [services](/services/lock-upgrade) I offer. I cover all areas of Coventry and can usually attend the same day.`,
     faqs: [
       {
         q: 'Which lock does my insurance company require?',
@@ -467,13 +467,13 @@ Here's what I charge for the most common jobs:
 - **Upgrading a nightlatch** — from £59 fitted
 - **Both locks fitted to a new door** — I'll quote on-site depending on the door
 
-I carry stock of all the main brands — Union, ERA, Yale — in my van, so most jobs are completed in a single visit. Call 07735 336175 for a quote or check the [prices page](/prices).
+I carry stock of all the main brands — Union, ERA, Yale — in my van, so most jobs are completed in a single visit. Call 024 7522 4730 for a quote or check the [prices page](/prices).
 
 ## The Bottom Line
 
 If you have a wooden front door, you need both a nightlatch and a BS3621 mortice deadlock. The nightlatch gives you everyday convenience. The mortice deadlock gives you security and keeps your insurance valid. One without the other is a compromise, and door security is not something you want to compromise on.
 
-If you're not sure what locks you have, or whether they meet the required standards, I'm happy to take a look. Call 07735 336175 — I cover the whole of Coventry and I'll give you an honest assessment with no obligation.`,
+If you're not sure what locks you have, or whether they meet the required standards, I'm happy to take a look. Call 024 7522 4730 — I cover the whole of Coventry and I'll give you an honest assessment with no obligation.`,
     faqs: [
       {
         q: 'Do I need both a Yale and a mortice lock on my front door?',
@@ -632,7 +632,7 @@ If you're on a tight budget, the **Yale Platinum** is a perfectly good anti-snap
 
 All four of these cylinders need to be the correct size for your door. The size varies depending on your door profile, handle position, and whether you want a thumbturn or double cylinder. I measure on-site and carry stock of the most common sizes for all four brands.
 
-If you want to upgrade your euro cylinder, call me on 07735 336175. I'll recommend the right product for your door, your budget, and your security needs. I cover all areas of Coventry — from [Allesley](/areas/allesley) to [Wyken](/areas/wyken) — and most jobs are done in under 30 minutes.
+If you want to upgrade your euro cylinder, call me on 024 7522 4730. I'll recommend the right product for your door, your budget, and your security needs. I cover all areas of Coventry — from [Allesley](/areas/allesley) to [Wyken](/areas/wyken) — and most jobs are done in under 30 minutes.
 
 For a full breakdown of what each [lock change](/services/lock-change) or [upgrade](/services/lock-upgrade) costs, check the [prices page](/prices).`,
     faqs: [
@@ -777,7 +777,7 @@ If you want a smart lock on your uPVC or composite door in Coventry, go with the
 
 But — and this is important — don't treat it as your security solution. Treat it as a convenience feature. Make sure the underlying lock mechanism is sound, your door and frame are solid, and you have a physical key backup.
 
-If you want to discuss smart lock options or need one fitted, call me on 07735 336175. I can also upgrade your existing locks at the same time — an anti-snap cylinder [lock change](/services/lock-change) alongside a smart lock gives you the best of both worlds. Check [prices](/prices) for details on all lock fitting services.`,
+If you want to discuss smart lock options or need one fitted, call me on 024 7522 4730. I can also upgrade your existing locks at the same time — an anti-snap cylinder [lock change](/services/lock-change) alongside a smart lock gives you the best of both worlds. Check [prices](/prices) for details on all lock fitting services.`,
     faqs: [
       {
         q: 'Will my insurance cover me if I have a smart lock?',
@@ -934,7 +934,7 @@ Five-lever mortice locks are low-maintenance but not zero-maintenance:
 - **Check the faceplate screws** — make sure they're tight
 - **Look for rust** — especially on doors exposed to weather
 
-If your mortice lock needs attention, call me on 07735 336175. Whether it's a replacement, a new fitting, or just a service, I carry all the main brands and sizes in my van. Check the [prices page](/prices) for current rates, or see my [Yale vs mortice deadlock guide](/blog/yale-vs-mortice-deadlock) for advice on which locks your wooden door needs.`,
+If your mortice lock needs attention, call me on 024 7522 4730. Whether it's a replacement, a new fitting, or just a service, I carry all the main brands and sizes in my van. Check the [prices page](/prices) for current rates, or see my [Yale vs mortice deadlock guide](/blog/yale-vs-mortice-deadlock) for advice on which locks your wooden door needs.`,
     faqs: [
       {
         q: 'How do I know if my mortice lock is a 3-lever or 5-lever?',
@@ -946,7 +946,7 @@ If your mortice lock needs attention, call me on 07735 336175. Whether it's a re
       },
       {
         q: 'How much does it cost to fit a five-lever mortice deadlock?',
-        a: 'I fit BS3621 five-lever mortice deadlocks from £79 including the lock and fitting. If the door already has a mortice pocket from an existing lock, it is a straightforward swap. If I need to cut a new mortice from scratch, the job takes longer and costs more. Call 07735 336175 for an exact quote based on your situation.',
+        a: 'I fit BS3621 five-lever mortice deadlocks from £79 including the lock and fitting. If the door already has a mortice pocket from an existing lock, it is a straightforward swap. If I need to cut a new mortice from scratch, the job takes longer and costs more. Call 024 7522 4730 for an exact quote based on your situation.',
       },
       {
         q: 'What should I do if my mortice lock is stiff or hard to turn?',
@@ -1108,7 +1108,7 @@ For a uPVC or composite door in Coventry, fit a euro cylinder that is:
 
 That's it. Don't get lost in the alphabet soup of standards. If a cylinder meets those two criteria, it's providing genuine, independently tested protection for your home.
 
-If you want advice on which certified lock is right for your door, call me on 07735 336175. I carry stock of all the main certified cylinders and can fit one the same day in most cases. See the [prices page](/prices) for current rates on [lock changes](/services/lock-change) and [upgrades](/services/lock-upgrade).`,
+If you want advice on which certified lock is right for your door, call me on 024 7522 4730. I carry stock of all the main certified cylinders and can fit one the same day in most cases. See the [prices page](/prices) for current rates on [lock changes](/services/lock-change) and [upgrades](/services/lock-upgrade).`,
     faqs: [
       {
         q: 'What is the difference between TS007 and SS312?',

@@ -7,7 +7,7 @@ import SchemaMarkup from '@/components/SchemaMarkup'
 export const metadata: Metadata = {
   title: 'Locksmith Prices Coventry | Transparent Pricing | No VAT | No Call-Out Fee',
   description:
-    'Clear locksmith prices for Coventry and Warwickshire. Emergency lockout from £59. No VAT, no call-out fee, no hidden charges. Call 07735 336175.',
+    'Clear locksmith prices for Coventry and Warwickshire. Emergency lockout from £59. No VAT, no call-out fee, no hidden charges. Call 024 7522 4730.',
   keywords: 'locksmith prices coventry, how much does a locksmith cost, emergency locksmith price coventry, lock change cost coventry, locksmith cost warwickshire, cheap locksmith coventry, locksmith no vat',
   alternates: {
     canonical: `${SITE_CONFIG.domain}/prices`,
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Locksmith Prices Coventry | Transparent Pricing | No VAT | No Call-Out Fee',
     description:
-      'Clear locksmith prices for Coventry and Warwickshire. Emergency lockout from £59. No VAT, no call-out fee, no hidden charges. Call 07735 336175.',
+      'Clear locksmith prices for Coventry and Warwickshire. Emergency lockout from £59. No VAT, no call-out fee, no hidden charges. Call 024 7522 4730.',
     url: `${SITE_CONFIG.domain}/prices`,
     images: [{ url: `${SITE_CONFIG.domain}/api/og?title=${encodeURIComponent('Locksmith Prices — No VAT, No Call-Out Fee')}`, width: 1200, height: 630 }],
   },

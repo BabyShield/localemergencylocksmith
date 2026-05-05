@@ -93,7 +93,7 @@ Not a directory. Not "locksmith near me" on Google where the top results are oft
 
 Call a local independent locksmith directly. Ask for a firm price before they come. Ask for their name. Confirm no call-out fee and no VAT.
 
-My number is 07735 336175 — I answer 24/7 and I'll tell you exactly how long I'll be and exactly what it will cost.
+My number is 024 7522 4730 — I answer 24/7 and I'll tell you exactly how long I'll be and exactly what it will cost.
 
 ## Step 5: While You Wait
 
@@ -163,7 +163,7 @@ If your uPVC door has a standard cheap euro cylinder, it is likely not meeting t
 
 I supply and fit BS3621 mortice deadlocks to all types of wooden and composite doors across Coventry and Warwickshire. Price from £79 including the lock and fitting. No VAT. No call-out fee.
 
-Call 07735 336175 to book.
+Call 024 7522 4730 to book.
     `.trim(),
     faqs: [
       { q: 'Is one BS3621 lock enough or do I need two?', a: 'Most insurance policies specify a BS3621 lock on the main front door and a similar standard on the back door. Some policies require it on all final exit doors. Check your specific policy wording — or call me and I will advise.' },
@@ -226,7 +226,7 @@ If your uPVC door is getting stiffer year on year, the mechanism is wearing. Get
     `.trim(),
     faqs: [
       { q: 'Can you repair a uPVC lock on the same day?', a: "In most cases yes — I carry the most common uPVC lock mechanisms and cylinders in my van. Call me and describe the symptoms and I'll tell you whether I'm likely to be able to fix it same day." },
-      { q: 'My uPVC door lock failed in the locked position — what do I do?', a: 'This is an emergency situation — you are either locked in or locked out. Call me immediately on 07735 336175. Do not attempt to force the door.' },
+      { q: 'My uPVC door lock failed in the locked position — what do I do?', a: 'This is an emergency situation — you are either locked in or locked out. Call me immediately on 024 7522 4730. Do not attempt to force the door.' },
       { q: 'How long does a uPVC lock last?', a: 'A quality uPVC multipoint mechanism should last 15-20 years with normal use. Budget mechanisms on cheaper doors can fail in 5-8 years. Regular lubrication and door alignment maintenance extends the life significantly.' },
     ],
   },
@@ -278,7 +278,7 @@ You never pay more than the price we agreed. No exceptions.
 - Get the price confirmed before they arrive
 - Pay by card where possible — it is harder to dispute a cash payment
 
-For Coventry and Warwickshire, you can call me directly on 07735 336175. I'll give you a firm price on the phone, every time.
+For Coventry and Warwickshire, you can call me directly on 024 7522 4730. I'll give you a firm price on the phone, every time.
     `.trim(),
     faqs: [
       { q: 'Can I report a rogue locksmith?', a: 'Yes — report to Trading Standards via the Citizens Advice consumer helpline (0808 223 1133). If you were overcharged significantly, you may also have a claim through your bank via chargeback if you paid by card.' },

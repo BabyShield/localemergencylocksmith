@@ -1,7 +1,7 @@
 export const SITE_CONFIG = {
   businessName: 'Local Emergency Locksmith',
-  phone: '07735 336175',
-  phoneTel: '+447735336175',
+  phone: '024 7522 4730',
+  phoneTel: '+442475224730',
   email: 'info@localemergencylocksmith.co.uk',
   domain: 'https://localemergencylocksmith.co.uk',
   tagline: 'Coventry & Surrounding Areas',

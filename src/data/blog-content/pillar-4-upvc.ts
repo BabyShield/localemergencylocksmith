@@ -78,7 +78,7 @@ If you need a replacement, you will need three measurements:
 
 You will also need to note the shape of the faceplate (flat, rounded, or U-shaped) and the positions of the locking points.
 
-If this sounds complicated, that is because it can be. I carry a range of common mechanisms in my van and can identify yours on site. Give me a call on 07735 336175 and I can usually tell you the brand from a photo of the faceplate markings.
+If this sounds complicated, that is because it can be. I carry a range of common mechanisms in my van and can identify yours on site. Give me a call on 024 7522 4730 and I can usually tell you the brand from a photo of the faceplate markings.
 
 ## What Fails First
 
@@ -101,7 +101,7 @@ If your uPVC door is showing any of these symptoms, it is time to get it looked 
 - You can hear grinding or clicking when operating the handle
 - The door does not seal properly against the frame
 
-Do not wait until the mechanism fails completely — you could end up locked out, or worse, locked in. A mechanism replacement typically costs between £89 and £200 depending on the brand, and I can usually complete the job within an hour. Call me on 07735 336175 or check our [prices page](/prices) for current rates.
+Do not wait until the mechanism fails completely — you could end up locked out, or worse, locked in. A mechanism replacement typically costs between £89 and £200 depending on the brand, and I can usually complete the job within an hour. Call me on 024 7522 4730 or check our [prices page](/prices) for current rates.
 
 For more on whether your lock needs replacing or just repairing, see our guide on [how to tell if your uPVC door lock needs replacing](/blog/upvc-door-lock-needs-replacing). And if you are thinking about upgrading your cylinder at the same time, take a look at our [best euro cylinder upgrades for 2026](/blog/best-euro-cylinder-upgrades-2026).
 
@@ -110,7 +110,7 @@ If you are in the Coventry area and need a uPVC door mechanism replaced, I cover
     faqs: [
       {
         q: 'How do I know which multipoint mechanism my uPVC door has?',
-        a: 'You can identify your mechanism by measuring three things: the PZ distance (spindle hole centre to keyhole centre), the backset (faceplate edge to keyhole centre), and the overall length. The brand name is usually stamped on the metal faceplate visible on the door edge. Common brands include Mila, GU, Yale, Fuhr, and Winkhaus. If you are unsure, send me a photo of the faceplate on 07735 336175 and I can usually identify it.',
+        a: 'You can identify your mechanism by measuring three things: the PZ distance (spindle hole centre to keyhole centre), the backset (faceplate edge to keyhole centre), and the overall length. The brand name is usually stamped on the metal faceplate visible on the door edge. Common brands include Mila, GU, Yale, Fuhr, and Winkhaus. If you are unsure, send me a photo of the faceplate on 024 7522 4730 and I can usually identify it.',
       },
       {
         q: 'How long does a uPVC door lock mechanism last?',
@@ -133,7 +133,7 @@ If you are in the Coventry area and need a uPVC door mechanism replaced, I cover
 
 If you need to replace the euro cylinder on your uPVC door — whether it has been snapped, is getting stiff, or you simply want to upgrade to an anti-snap model — the first thing you need is the correct size. Buy the wrong cylinder and it either will not fit, will stick out dangerously from the door (making it easier to snap), or will sit too far recessed for the key to turn properly.
 
-I replace euro cylinders across Coventry every week, and the most common problem I see with DIY attempts is people buying the wrong size. This guide will walk you through exactly how to measure yours, step by step. If you would rather skip the measuring and have me supply and fit the right one, call 07735 336175 — I carry a range of sizes in my van.
+I replace euro cylinders across Coventry every week, and the most common problem I see with DIY attempts is people buying the wrong size. This guide will walk you through exactly how to measure yours, step by step. If you would rather skip the measuring and have me supply and fit the right one, call 024 7522 4730 — I carry a range of sizes in my van.
 
 ## What You Will Need
 
@@ -208,7 +208,7 @@ You have several options:
 
 - **Online** — sites like eBay, Amazon, and specialist lock shops stock a huge range. Make sure you buy a branded, anti-snap cylinder (see our [best euro cylinder upgrades for 2026](/blog/best-euro-cylinder-upgrades-2026) for recommendations).
 - **Local hardware shops** — B&Q and Screwfix carry basic cylinders but the anti-snap range is limited.
-- **Call me** — I supply and fit quality anti-snap cylinders (Ultion, ABS, Yale Superior) at competitive prices, and I guarantee the correct size. One call to 07735 336175 and the job is done, usually within the hour.
+- **Call me** — I supply and fit quality anti-snap cylinders (Ultion, ABS, Yale Superior) at competitive prices, and I guarantee the correct size. One call to 024 7522 4730 and the job is done, usually within the hour.
 
 ## A Word on Security When Measuring
 
@@ -225,14 +225,14 @@ All of the cylinders I fit as standard meet these criteria. For a detailed compa
 
 If you are comfortable with a screwdriver and a tape measure, measuring your own cylinder is straightforward. The steps above are all you need. Where it gets complicated is sourcing the right replacement — making sure the brand is genuinely anti-snap, the size is exactly right, and the quality is decent.
 
-If you would rather not risk it, give me a call on 07735 336175. I cover all of Coventry and the surrounding areas — Kenilworth, Warwick, Leamington, and everywhere in between. Check our [areas page](/areas/) for full coverage. I will measure, supply, and fit the correct cylinder in one visit, and the total cost including a quality anti-snap cylinder is typically between £59 and £89 depending on the brand and size.
+If you would rather not risk it, give me a call on 024 7522 4730. I cover all of Coventry and the surrounding areas — Kenilworth, Warwick, Leamington, and everywhere in between. Check our [areas page](/areas/) for full coverage. I will measure, supply, and fit the correct cylinder in one visit, and the total cost including a quality anti-snap cylinder is typically between £59 and £89 depending on the brand and size.
 
 For more on uPVC door locks and maintenance, see our [uPVC door maintenance guide](/blog/upvc-door-maintenance-guide) and our [uPVC lock repair service page](/services/upvc-lock-repair).
 `,
     faqs: [
       {
         q: 'What is the most common euro cylinder size for uPVC doors in Coventry?',
-        a: 'The most common size I encounter across Coventry is 40/40 (80mm overall). This fits the majority of standard uPVC doors on estates built from the late 1990s to the 2010s. Older doors may use 35/35, and thicker composite doors often need 45/45. The only way to be certain is to measure your existing cylinder using the steps in this guide, or call me on 07735 336175 and I will measure it for you.',
+        a: 'The most common size I encounter across Coventry is 40/40 (80mm overall). This fits the majority of standard uPVC doors on estates built from the late 1990s to the 2010s. Older doors may use 35/35, and thicker composite doors often need 45/45. The only way to be certain is to measure your existing cylinder using the steps in this guide, or call me on 024 7522 4730 and I will measure it for you.',
       },
       {
         q: 'Can I measure my euro cylinder without removing it from the door?',
@@ -240,7 +240,7 @@ For more on uPVC door locks and maintenance, see our [uPVC door maintenance guid
       },
       {
         q: 'What happens if my euro cylinder sticks out past the handle?',
-        a: 'If the cylinder protrudes more than 3mm beyond the handle or escutcheon on the outside of your door, it is vulnerable to lock snapping. A burglar can grip the protruding section with pliers, snap it off, and then manipulate the remaining mechanism to open the door — often in under 30 seconds. If your cylinder sticks out, you need a shorter replacement or a proper anti-snap cylinder urgently. Call 07735 336175 for a same-day upgrade.',
+        a: 'If the cylinder protrudes more than 3mm beyond the handle or escutcheon on the outside of your door, it is vulnerable to lock snapping. A burglar can grip the protruding section with pliers, snap it off, and then manipulate the remaining mechanism to open the door — often in under 30 seconds. If your cylinder sticks out, you need a shorter replacement or a proper anti-snap cylinder urgently. Call 024 7522 4730 for a same-day upgrade.',
       },
       {
         q: 'Do I need to buy the same brand of euro cylinder as my current one?',
@@ -389,7 +389,7 @@ For most Coventry homeowners, my recommendation is simple: **fit an Ultion**. Th
 
 If you are on a tight budget, the ABS Avocet MK3 at £45 to £60 is an excellent alternative. And if you need the absolute cheapest anti-snap option, the ERA range will still protect you from the most common attack.
 
-Whatever you choose, anything is better than the standard cylinder that came with your door. If your cylinder does not say "anti-snap" on it — or if you are not sure — it almost certainly is not. Call me on 07735 336175 and I will check it for you free of charge.
+Whatever you choose, anything is better than the standard cylinder that came with your door. If your cylinder does not say "anti-snap" on it — or if you are not sure — it almost certainly is not. Call me on 024 7522 4730 and I will check it for you free of charge.
 
 For help measuring your cylinder for the right size, see our [euro cylinder measuring guide](/blog/how-to-measure-euro-cylinder-upvc). For a broader look at how your uPVC door mechanism works, read our [mechanism explained guide](/blog/upvc-door-lock-mechanisms-explained). And check our [prices page](/prices) or [lock change service](/services/lock-change) for current fitting costs across all of Coventry and surrounding areas.
 `,
@@ -404,7 +404,7 @@ For help measuring your cylinder for the right size, see our [euro cylinder meas
       },
       {
         q: 'Do I need to change my door handles when upgrading my euro cylinder?',
-        a: 'Not necessarily. If you choose a 3-star rated cylinder like the Ultion or ABS Avocet MK3, it meets the full security standard on its own regardless of your handle. If you choose a 1-star cylinder like the Yale Superior, you will need a 2-star handle and escutcheon to achieve the 3-star threshold. I can advise on your specific setup when I visit — call 07735 336175.',
+        a: 'Not necessarily. If you choose a 3-star rated cylinder like the Ultion or ABS Avocet MK3, it meets the full security standard on its own regardless of your handle. If you choose a 1-star cylinder like the Yale Superior, you will need a 2-star handle and escutcheon to achieve the 3-star threshold. I can advise on your specific setup when I visit — call 024 7522 4730.',
       },
       {
         q: 'How long does it take to upgrade a euro cylinder?',
@@ -421,7 +421,7 @@ Your uPVC door is probably the hardest-working door in your home. It gets opened
 
 I see the consequences of neglected uPVC doors across Coventry every week. Mechanisms that should last 15 to 20 years failing after 8. Cylinders seizing up because they have never been lubricated. Doors dropping because the hinges have been ignored for a decade. The repair bills add up, and most of it is preventable.
 
-This guide gives you a simple, seasonal maintenance routine that takes about 10 minutes per quarter. Follow it and your uPVC door will work smoothly for 20 years or more. Ignore it and you will be calling me sooner than you think — though of course I am always happy to help on 07735 336175.
+This guide gives you a simple, seasonal maintenance routine that takes about 10 minutes per quarter. Follow it and your uPVC door will work smoothly for 20 years or more. Ignore it and you will be calling me sooner than you think — though of course I am always happy to help on 024 7522 4730.
 
 ## Spring Maintenance (March to May)
 
@@ -455,7 +455,7 @@ uPVC expands in hot weather. On a south-facing door in direct sunlight, this exp
 
 If your door becomes harder to lock in summer, do not force it. The mechanism is fighting against the expanded frame. Check that the door closes squarely in the frame — there should be an even gap all the way around. If the gap is uneven, the hinges may need adjusting.
 
-I carry hinge adjustment tools and can realign a dropped or expanded door in about 15 minutes. Give me a call on 07735 336175 if your door is playing up in the heat.
+I carry hinge adjustment tools and can realign a dropped or expanded door in about 15 minutes. Give me a call on 024 7522 4730 if your door is playing up in the heat.
 
 ### Clean the Tracks and Threshold
 
@@ -503,7 +503,7 @@ Make it a habit: handle up, key turn, every single time you lock the door. It ke
 
 If the lock feels stiff in cold weather, do not force the key. Forcing a stiff lock can snap the key, strip the gearbox teeth, or damage the cylinder. Instead, try warming the key slightly (hold it in your hand for 30 seconds), apply graphite lubricant if you have some, and turn gently but firmly.
 
-If the lock is genuinely stuck, call me on 07735 336175 rather than risking further damage. A frozen or seized lock is a quick fix if caught early — and an expensive one if you have broken the key off inside the cylinder.
+If the lock is genuinely stuck, call me on 024 7522 4730 rather than risking further damage. A frozen or seized lock is a quick fix if caught early — and an expensive one if you have broken the key off inside the cylinder.
 
 ### Check for Condensation
 
@@ -528,7 +528,7 @@ Ten minutes of maintenance four times a year saves you a £150 mechanism replace
 
 For more on how your uPVC door mechanism works and what can go wrong, see our [mechanisms explained guide](/blog/upvc-door-lock-mechanisms-explained). If your door is already showing problems, check our guide on [how to tell if your uPVC door lock needs replacing](/blog/upvc-door-lock-needs-replacing). And for handle-specific issues, see our [uPVC door handle problems guide](/blog/upvc-door-handle-problems).
 
-I cover all of Coventry and the surrounding Warwickshire area. See our [areas page](/areas/) or call 07735 336175 for advice or to book a maintenance check. You can also visit our [uPVC lock repair service page](/services/upvc-lock-repair) for details on our repair and maintenance services, or check our [prices page](/prices) for current rates.
+I cover all of Coventry and the surrounding Warwickshire area. See our [areas page](/areas/) or call 024 7522 4730 for advice or to book a maintenance check. You can also visit our [uPVC lock repair service page](/services/upvc-lock-repair) for details on our repair and maintenance services, or check our [prices page](/prices) for current rates.
 `,
     faqs: [
       {
@@ -545,7 +545,7 @@ I cover all of Coventry and the surrounding Warwickshire area. See our [areas pa
       },
       {
         q: 'My uPVC door is hard to lock in summer — is it broken?',
-        a: 'Probably not. uPVC expands in hot weather, and a south-facing door in direct sunlight can expand enough to make the locking points misalign with the frame keeps. If the door becomes stiff to lock only in warm weather and works fine when it cools down, it is almost certainly heat expansion rather than a broken mechanism. A locksmith can adjust the hinges and keeps to accommodate seasonal movement. Call me on 07735 336175 if it is causing problems.',
+        a: 'Probably not. uPVC expands in hot weather, and a south-facing door in direct sunlight can expand enough to make the locking points misalign with the frame keeps. If the door becomes stiff to lock only in warm weather and works fine when it cools down, it is almost certainly heat expansion rather than a broken mechanism. A locksmith can adjust the hinges and keeps to accommodate seasonal movement. Call me on 024 7522 4730 if it is causing problems.',
       },
     ],
   },
@@ -616,7 +616,7 @@ For seized locking points: sometimes lubrication and working the mechanism frees
 
 **Cost: Door realignment from £49. Mechanism replacement from £89 to £200+** depending on brand and complexity. See our [prices page](/prices) for current rates.
 
-**DIY potential:** Low. This is a job for a locksmith. Attempting to force a jammed mechanism can cause further damage and increase the repair cost. If your handle will not lift to lock, call 07735 336175.
+**DIY potential:** Low. This is a job for a locksmith. Attempting to force a jammed mechanism can cause further damage and increase the repair cost. If your handle will not lift to lock, call 024 7522 4730.
 
 ## Problem 4: Handle Has Snapped Off
 
@@ -658,7 +658,7 @@ As a general rule:
 - Any issue combined with difficulty locking or unlocking the door
 - Any situation where you are unsure of the cause
 
-I would rather you call me for a quick check on 07735 336175 than attempt a fix that makes things worse. A diagnosis visit is quick, and I will always tell you honestly whether it is something you can handle yourself.
+I would rather you call me for a quick check on 024 7522 4730 than attempt a fix that makes things worse. A diagnosis visit is quick, and I will always tell you honestly whether it is something you can handle yourself.
 
 For more on the mechanism behind your handle, see our [uPVC door lock mechanisms explained](/blog/upvc-door-lock-mechanisms-explained) guide. For maintenance tips that prevent handle problems, read our [uPVC door maintenance guide](/blog/upvc-door-maintenance-guide). And for a full overview of our repair services, visit our [uPVC lock repair service page](/services/upvc-lock-repair) or check our [prices page](/prices).
 
@@ -671,7 +671,7 @@ I cover all of Coventry and surrounding areas — see our [areas page](/areas/) 
       },
       {
         q: 'Can I replace a uPVC door handle myself?',
-        a: 'Yes, replacing a uPVC door handle is a realistic DIY job. Remove the two screws on the inside backplate, pull off both handles (they are connected by a spindle through the door), and fit the new set. The critical thing is matching the PZ distance — the measurement from the spindle hole centre to the keyhole centre. Common PZ distances are 70mm and 92mm. Measure yours before buying the replacement. If you are not confident, call 07735 336175 and I will fit it for you.',
+        a: 'Yes, replacing a uPVC door handle is a realistic DIY job. Remove the two screws on the inside backplate, pull off both handles (they are connected by a spindle through the door), and fit the new set. The critical thing is matching the PZ distance — the measurement from the spindle hole centre to the keyhole centre. Common PZ distances are 70mm and 92mm. Measure yours before buying the replacement. If you are not confident, call 024 7522 4730 and I will fit it for you.',
       },
       {
         q: 'Why does my uPVC door handle keep coming loose?',
@@ -679,7 +679,7 @@ I cover all of Coventry and surrounding areas — see our [areas page](/areas/) 
       },
       {
         q: 'My uPVC door handle will not lift up to lock — what is wrong?',
-        a: 'A handle that will not lift to lock usually indicates a problem beyond the handle itself. The most common cause is a dropped or misaligned door — the locking points no longer line up with the keeps in the frame, so the mechanism jams when you try to engage it. Less commonly, the gearbox inside the mechanism has worn or stripped teeth. This is not a DIY fix. Call a locksmith on 07735 336175 to diagnose and repair the issue before it gets worse.',
+        a: 'A handle that will not lift to lock usually indicates a problem beyond the handle itself. The most common cause is a dropped or misaligned door — the locking points no longer line up with the keeps in the frame, so the mechanism jams when you try to engage it. Less commonly, the gearbox inside the mechanism has worn or stripped teeth. This is not a DIY fix. Call a locksmith on 024 7522 4730 to diagnose and repair the issue before it gets worse.',
       },
     ],
   },
@@ -854,7 +854,7 @@ These prices include the mechanism, labour, and testing. If the euro cylinder al
 
 If your multipoint mechanism is playing up, the most important step is getting the right diagnosis. A stiff door could be a mechanism issue, a hinge issue, a cylinder issue, or simply an alignment issue caused by seasonal temperature changes.
 
-I offer free diagnosis — call me on 07735 336175 and describe the symptoms. In many cases, I can give you a good idea of the problem over the phone. If I need to visit, I will diagnose the issue on site and give you an exact quote before starting any work.
+I offer free diagnosis — call me on 024 7522 4730 and describe the symptoms. In many cases, I can give you a good idea of the problem over the phone. If I need to visit, I will diagnose the issue on site and give you an exact quote before starting any work.
 
 For more on how the individual components work, see our [uPVC door lock mechanisms explained guide](/blog/upvc-door-lock-mechanisms-explained). For cylinder-specific issues, check our [euro cylinder measuring guide](/blog/how-to-measure-euro-cylinder-upvc). And for routine maintenance that prevents mechanism failures, read our [uPVC door maintenance guide](/blog/upvc-door-maintenance-guide).
 

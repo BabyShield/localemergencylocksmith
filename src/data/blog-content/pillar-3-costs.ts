@@ -69,7 +69,7 @@ Some franchise models charge the locksmith a flat fee per lead (£30-£50 per ca
 
 ## Why I Charge the Same 24/7
 
-I am a one-man operation based in Coventry. No call centre. No franchise fee. No dispatch team. When you ring 07735 336175, you get me. I answer my own phone, I drive my own van, and I do the work myself.
+I am a one-man operation based in Coventry. No call centre. No franchise fee. No dispatch team. When you ring 024 7522 4730, you get me. I answer my own phone, I drive my own van, and I do the work myself.
 
 Because I do not have those overheads, I do not need to charge extra at night. My costs are the same at 3am as they are at 3pm — fuel, lock parts, insurance, and my time.
 
@@ -119,7 +119,7 @@ If a locksmith will not give you a straight answer to any of these questions, th
 
 ## What You Should Expect to Pay in Coventry
 
-For honest, no-hidden-extras pricing on any locksmith job in the Coventry and Warwickshire area, check our full [price list](/prices). Or call me directly on 07735 336175 — I will give you a firm price on the phone before I set off, day or night.
+For honest, no-hidden-extras pricing on any locksmith job in the Coventry and Warwickshire area, check our full [price list](/prices). Or call me directly on 024 7522 4730 — I will give you a firm price on the phone before I set off, day or night.
 
 If you are locked out right now, head to our [emergency lockout](/services/emergency-lockout) page for immediate help.`,
     faqs: [
@@ -274,7 +274,7 @@ Wooden doors, uPVC doors, and composite doors all have different lock systems. O
 A straightforward cylinder swap takes 10-15 minutes. A new mortice lock installation on a hardwood door can take over an hour. My prices reflect the typical time for each job, but I will let you know if your specific situation is likely to take longer.
 
 ### Number of Locks
-If you are changing multiple locks at the same time (common when moving house), I offer a discount on the second and subsequent locks. Call 07735 336175 for a quote on multiple locks.
+If you are changing multiple locks at the same time (common when moving house), I offer a discount on the second and subsequent locks. Call 024 7522 4730 for a quote on multiple locks.
 
 ## What Is Included in My Price
 
@@ -290,7 +290,7 @@ There is no call-out fee, no VAT, and no hidden extras. The price I quote on the
 
 ## Ready to Get a Quote?
 
-For a firm price on any lock change, call me on 07735 336175. I will ask a couple of questions about your door and lock, give you a price, and book a time that works for you. Same price day or night, weekday or weekend.
+For a firm price on any lock change, call me on 024 7522 4730. I will ask a couple of questions about your door and lock, give you a price, and book a time that works for you. Same price day or night, weekday or weekend.
 
 You can also check our full [price list](/prices) or browse our [lock change service page](/services/lock-change) for more information.`,
     faqs: [
@@ -413,7 +413,7 @@ Before you call, you can check the brand of your mechanism yourself:
 
 1. **Look at the faceplate** — the thin metal strip visible on the edge of the door when it is open. The brand name is usually stamped on it
 2. **Check the handle** — some brands stamp their name on the handle backplate
-3. **Take a photo** — if you cannot read the markings, take a photo of the door edge with the faceplate visible and send it to me on 07735 336175. I can usually identify the mechanism from a photo
+3. **Take a photo** — if you cannot read the markings, take a photo of the door edge with the faceplate visible and send it to me on 024 7522 4730. I can usually identify the mechanism from a photo
 
 ### Full Multipoint Lock Swap: From £150 - £250
 
@@ -497,7 +497,7 @@ This is the question I get asked most often. Here is a simple way to think about
 - The mechanism failure has damaged the cylinder
 - You are doing a full security upgrade
 
-When you call me on 07735 336175, I will ask you a few questions about the symptoms and give you my best assessment of what is needed — and the likely cost — before I set off. If I arrive and find it is a different problem to what we discussed, I will explain and get your approval before doing anything.
+When you call me on 024 7522 4730, I will ask you a few questions about the symptoms and give you my best assessment of what is needed — and the likely cost — before I set off. If I arrive and find it is a different problem to what we discussed, I will explain and get your approval before doing anything.
 
 ## Getting the Best Value on uPVC Door Lock Work
 
@@ -508,7 +508,7 @@ When you call me on 07735 336175, I will ask you a few questions about the sympt
 
 ## Book a uPVC Door Lock Repair or Replacement
 
-Call 07735 336175 for a firm price on any uPVC door lock job. I cover the whole of Coventry and surrounding Warwickshire areas, and I charge the same price day or night — no call-out fee, no VAT.
+Call 024 7522 4730 for a firm price on any uPVC door lock job. I cover the whole of Coventry and surrounding Warwickshire areas, and I charge the same price day or night — no call-out fee, no VAT.
 
 For all our lock services, visit the [lock change](/services/lock-change) page or check our full [price list](/prices). If your uPVC door is jammed and you cannot get in or out, visit our [emergency lockout](/services/emergency-lockout) page.`,
     faqs: [
@@ -518,7 +518,7 @@ For all our lock services, visit the [lock change](/services/lock-change) page o
       },
       {
         q: 'How do I know if I need a new mechanism or just a new cylinder?',
-        a: 'If your key is stiff but the handle and locking points work normally, you probably just need a new cylinder (from £59). If the handle lifts but nothing engages, or you hear grinding when you operate the lock, the mechanism has likely failed (from £89-£200). A stiff door that is hard to lock could be an alignment issue (from £39-£49 for adjustment) rather than a lock problem at all. Call me on 07735 336175 and I will help you diagnose it over the phone.',
+        a: 'If your key is stiff but the handle and locking points work normally, you probably just need a new cylinder (from £59). If the handle lifts but nothing engages, or you hear grinding when you operate the lock, the mechanism has likely failed (from £89-£200). A stiff door that is hard to lock could be an alignment issue (from £39-£49 for adjustment) rather than a lock problem at all. Call me on 024 7522 4730 and I will help you diagnose it over the phone.',
       },
       {
         q: 'Can I replace the uPVC door lock mechanism myself?',
@@ -672,7 +672,7 @@ For a typical Coventry home with one uPVC front door and one uPVC back door, exp
 
 ## Getting the Right Advice
 
-If you are not sure whether to rekey or replace, call me on 07735 336175. I will ask about your locks, your situation, and what you are trying to achieve — and give you an honest recommendation. No pressure, no upselling.
+If you are not sure whether to rekey or replace, call me on 024 7522 4730. I will ask about your locks, your situation, and what you are trying to achieve — and give you an honest recommendation. No pressure, no upselling.
 
 I cover the whole Coventry and Warwickshire area, same price 24/7. Check our [lock change service page](/services/lock-change) for more details, or see the full [price list](/prices) for every job we do.`,
     faqs: [

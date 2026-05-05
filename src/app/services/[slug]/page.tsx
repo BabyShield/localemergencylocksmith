@@ -71,7 +71,7 @@ const SERVICE_CONTENT: Record<string, {
       "In most cases I can open your door using non-destructive entry techniques, meaning your lock and door frame stay intact. Where a lock does need replacing, I'll explain why and give you a quote before I do anything.",
     ],
     steps: [
-      "Call 07735 336175 — I answer 24/7",
+      "Call 024 7522 4730 — I answer 24/7",
       "Tell me your location and a brief description of your door",
       "I confirm the price upfront — from £59, no VAT",
       "I arrive within 15-30 minutes",
@@ -124,7 +124,7 @@ const SERVICE_CONTENT: Record<string, {
       "Lock change prices start from £69 including the new lock and all labour. No VAT. No call-out fee.",
     ],
     steps: [
-      "Call 07735 336175 and describe your current door and lock",
+      "Call 024 7522 4730 and describe your current door and lock",
       "I recommend the right lock for your door type and insurance requirements",
       "I confirm the full price including the lock and fitting",
       "I arrive and remove the old lock",
@@ -177,7 +177,7 @@ const SERVICE_CONTENT: Record<string, {
       "uPVC lock repair starts from £59. No VAT. No call-out fee.",
     ],
     steps: [
-      "Call 07735 336175 and describe the problem with your uPVC door or window",
+      "Call 024 7522 4730 and describe the problem with your uPVC door or window",
       "I diagnose the issue — usually a worn mechanism, misaligned door, or failed cylinder",
       "I confirm the repair or replacement cost upfront",
       "I carry out the repair or fit the replacement part",
@@ -230,7 +230,7 @@ const SERVICE_CONTENT: Record<string, {
       "Emergency boarding up starts from £79. No VAT. No call-out fee.",
     ],
     steps: [
-      "Call 07735 336175 immediately — do not delay after a break-in",
+      "Call 024 7522 4730 immediately — do not delay after a break-in",
       "I arrive as quickly as possible, usually within 15-30 minutes of central Coventry",
       "I assess the damage and identify the best boarding solution",
       "I secure the opening with solid boarding material",
@@ -282,7 +282,7 @@ const SERVICE_CONTENT: Record<string, {
       "Lock upgrade prices start from £79 including the lock and fitting. No VAT. No call-out fee.",
     ],
     steps: [
-      "Call 07735 336175 for a free phone consultation on your security needs",
+      "Call 024 7522 4730 for a free phone consultation on your security needs",
       "I visit and assess your current locks and door security",
       "I recommend the most appropriate upgrade for your insurance requirements and budget",
       "I confirm the full price before any work starts",

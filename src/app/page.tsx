@@ -16,7 +16,7 @@ import { ALL_BLOG_POSTS } from '@/data/blog-posts'
 export const metadata: Metadata = {
   title: 'Emergency Locksmith Coventry | 24/7 Local Locksmith | No VAT | From £59',
   description:
-    "Emergency locksmith in Coventry & Warwickshire. Locked out? I'll be there in 15-30 minutes. No VAT, no call-out fee. Call 07735 336175 now — 24/7, 365 days.",
+    "Emergency locksmith in Coventry & Warwickshire. Locked out? I'll be there in 15-30 minutes. No VAT, no call-out fee. Call 024 7522 4730 now — 24/7, 365 days.",
   keywords: 'emergency locksmith coventry, locksmith coventry, locksmith near me coventry, 24/7 locksmith coventry, locked out coventry, locksmith warwickshire, local locksmith coventry, cheap locksmith coventry',
   alternates: {
     canonical: SITE_CONFIG.domain,
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     title: 'Emergency Locksmith Coventry | 24/7 | No VAT | From £59',
-    description: 'Locked out in Coventry? Local independent locksmith, 15-30 min response. No VAT, no call-out fee. Call 07735 336175.',
+    description: 'Locked out in Coventry? Local independent locksmith, 15-30 min response. No VAT, no call-out fee. Call 024 7522 4730.',
     url: SITE_CONFIG.domain,
     images: [{ url: `${SITE_CONFIG.domain}/og-image.png`, width: 1200, height: 630 }],
   },
@@ -209,10 +209,10 @@ export default function HomePage() {
             <span className="font-semibold text-sm">I answer personally — no call centre</span>
           </div>
           <a
-            href="tel:+447735336175"
+            href="tel:+442475224730"
             className="bg-[#FFB800] text-[#0F1B2D] font-black text-lg px-6 py-2.5 rounded-full hover:bg-amber-400 transition-colors shadow-md"
           >
-            07735 336175
+            024 7522 4730
           </a>
         </div>
       </div>
@@ -324,7 +324,7 @@ export default function HomePage() {
                 {
                   step: '1',
                   title: 'Call Me',
-                  desc: 'Call 07735 336175. I answer personally — day or night, 365 days a year.',
+                  desc: 'Call 024 7522 4730. I answer personally — day or night, 365 days a year.',
                 },
                 {
                   step: '2',
@@ -349,10 +349,10 @@ export default function HomePage() {
           </div>
           <div className="text-center mt-10">
             <a
-              href="tel:+447735336175"
+              href="tel:+442475224730"
               className="inline-block bg-[#FFB800] text-[#0F1B2D] font-black text-lg px-8 py-3.5 rounded-full hover:bg-amber-400 transition-colors shadow-lg"
             >
-              Call 07735 336175 Now
+              Call 024 7522 4730 Now
             </a>
           </div>
         </div>
@@ -381,10 +381,10 @@ export default function HomePage() {
             No extra charge for weekends or bank holidays. Same price, always.
           </p>
           <a
-            href="tel:+447735336175"
+            href="tel:+442475224730"
             className="inline-block mb-8 text-2xl font-black text-[#FFB800] hover:text-amber-300 transition-colors"
           >
-            07735 336175
+            024 7522 4730
           </a>
           <p className="text-white/70 font-medium mb-4 text-sm">Covering all Coventry and Warwickshire postcodes:</p>
           <div className="flex flex-wrap justify-center gap-2 mb-8">
@@ -537,19 +537,19 @@ export default function HomePage() {
           <div className="flex flex-wrap justify-center gap-x-8 gap-y-3 text-sm">
             <p lang="pl" className="text-gray-600">
               <span className="font-bold text-gray-800">Zamknięty?</span> Zadzwoń teraz:{' '}
-              <a href="tel:+447735336175" className="font-black text-[#0F1B2D]">07735 336175</a>
+              <a href="tel:+442475224730" className="font-black text-[#0F1B2D]">024 7522 4730</a>
             </p>
             <p lang="ro" className="text-gray-600">
               <span className="font-bold text-gray-800">Blocat afară?</span> Sunați acum:{' '}
-              <a href="tel:+447735336175" className="font-black text-[#0F1B2D]">07735 336175</a>
+              <a href="tel:+442475224730" className="font-black text-[#0F1B2D]">024 7522 4730</a>
             </p>
             <p lang="ur" dir="rtl" className="text-gray-600">
               <span className="font-bold text-gray-800">ایمرجنسی؟</span> ابھی کال کریں:{' '}
-              <a href="tel:+447735336175" className="font-black text-[#0F1B2D]">07735 336175</a>
+              <a href="tel:+442475224730" className="font-black text-[#0F1B2D]">024 7522 4730</a>
             </p>
             <p lang="hi" className="text-gray-600">
               <span className="font-bold text-gray-800">बंद हो गए?</span> अभी कॉल करें:{' '}
-              <a href="tel:+447735336175" className="font-black text-[#0F1B2D]">07735 336175</a>
+              <a href="tel:+442475224730" className="font-black text-[#0F1B2D]">024 7522 4730</a>
             </p>
           </div>
         </div>

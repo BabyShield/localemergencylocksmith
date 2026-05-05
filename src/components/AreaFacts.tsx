@@ -57,8 +57,8 @@ export default function AreaFacts({ areaName, facts, postcode }: AreaFactsProps)
           <p className="text-gray-600 text-sm leading-relaxed">
             We&apos;re proud to serve {areaName} and the surrounding {postcode} area.
             If you need an emergency locksmith, call{' '}
-            <a href="tel:+447735336175" className="font-black text-[#0F1B2D] hover:text-[#FFB800] transition-colors">
-              07735 336175
+            <a href="tel:+442475224730" className="font-black text-[#0F1B2D] hover:text-[#FFB800] transition-colors">
+              024 7522 4730
             </a>
             {' '}&mdash; available 24/7, no VAT, no call-out fee.
           </p>

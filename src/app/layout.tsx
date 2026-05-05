@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     template: '%s | Local Emergency Locksmith',
   },
   description:
-    'Emergency locksmith in Coventry & Warwickshire. 15-30 min response, no VAT, no call-out fee. Call 07735 336175 now — available 24/7, 365 days.',
+    'Emergency locksmith in Coventry & Warwickshire. 15-30 min response, no VAT, no call-out fee. Call 024 7522 4730 now — available 24/7, 365 days.',
   metadataBase: new URL(SITE_CONFIG.domain),
   openGraph: {
     siteName: 'Local Emergency Locksmith',

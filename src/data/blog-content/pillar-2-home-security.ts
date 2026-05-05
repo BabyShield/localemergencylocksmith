@@ -105,7 +105,7 @@ If you are reading this and wondering where to start, here is my honest recommen
 3. **Walk around the outside of your home** — look at it like a burglar would. Where are the hidden spots? Where could someone work on a lock without being seen?
 4. **Read the full [home security checklist](/blog/home-security-checklist-2026)** — it covers every room and every potential weak point
 
-If you want a professional assessment, I offer security checks across Coventry and the surrounding areas. Call me on 07735 336175 and I will walk round your property, identify the weak points, and give you an honest quote for the upgrades that will make the biggest difference. No pressure, no scare tactics — just practical advice from someone who sees this every week.
+If you want a professional assessment, I offer security checks across Coventry and the surrounding areas. Call me on 024 7522 4730 and I will walk round your property, identify the weak points, and give you an honest quote for the upgrades that will make the biggest difference. No pressure, no scare tactics — just practical advice from someone who sees this every week.
 `,
     faqs: [
       {
@@ -122,7 +122,7 @@ If you want a professional assessment, I offer security checks across Coventry a
       },
       {
         q: 'Is my Coventry home at risk of lock snapping?',
-        a: 'If you have a uPVC or composite door with a standard euro cylinder (the type of lock with a keyhole on both sides of the door), then yes. Most homes in Coventry built or refurbished in the last 20 years have this type of door. An anti-snap cylinder upgrade typically costs £90-£120 fitted and eliminates the risk. Call 07735 336175 for a free check.',
+        a: 'If you have a uPVC or composite door with a standard euro cylinder (the type of lock with a keyhole on both sides of the door), then yes. Most homes in Coventry built or refurbished in the last 20 years have this type of door. An anti-snap cylinder upgrade typically costs £90-£120 fitted and eliminates the risk. Call 024 7522 4730 for a free check.',
       },
     ],
   },
@@ -228,12 +228,12 @@ If your budget or time is limited, focus on these five things first:
 4. **Lock all ground-floor windows** with key-operated locks
 5. **Start the habit** of checking doors and windows every night
 
-For a professional security assessment of your Coventry home, call me on 07735 336175. I will walk round your property, work through this checklist with you, and give you honest advice on what needs doing — and what can wait. You can also check our full [price list](/prices) to see what each upgrade costs.
+For a professional security assessment of your Coventry home, call me on 024 7522 4730. I will walk round your property, work through this checklist with you, and give you honest advice on what needs doing — and what can wait. You can also check our full [price list](/prices) to see what each upgrade costs.
 `,
     faqs: [
       {
         q: 'How much does it cost to secure a whole house?',
-        a: 'It depends on the current state of your security, but a typical Coventry home can be significantly improved for £200-£500. That usually covers an anti-snap cylinder for the front door (from £90), window locks for ground-floor windows (from £15 each), and a couple of motion-sensor lights. Call 07735 336175 for a specific quote.',
+        a: 'It depends on the current state of your security, but a typical Coventry home can be significantly improved for £200-£500. That usually covers an anti-snap cylinder for the front door (from £90), window locks for ground-floor windows (from £15 each), and a couple of motion-sensor lights. Call 024 7522 4730 for a specific quote.',
       },
       {
         q: 'What is the single most important home security upgrade?',
@@ -364,7 +364,7 @@ If you have a standard euro cylinder on your front door and no window locks, fit
 
 Start with the locks. Then add the visible deterrents. That is the order that makes sense.
 
-For honest advice on the right security setup for your Coventry home, call me on 07735 336175. I will tell you what you actually need — and what you can skip.
+For honest advice on the right security setup for your Coventry home, call me on 024 7522 4730. I will tell you what you actually need — and what you can skip.
 `,
     faqs: [
       {
@@ -525,14 +525,14 @@ The exceptions are if your frames are rotten (wooden windows), severely warped, 
 
 Walk around your home and check every window. Can you lock each one with a key? Do the locks actually engage? Are any ground-floor windows especially vulnerable?
 
-If you are in Coventry or the surrounding areas and want me to check your windows and give you an honest assessment, call 07735 336175. I carry the most common window lock types in my van, so in most cases I can upgrade your windows on the spot during a single visit.
+If you are in Coventry or the surrounding areas and want me to check your windows and give you an honest assessment, call 024 7522 4730. I carry the most common window lock types in my van, so in most cases I can upgrade your windows on the spot during a single visit.
 
 You can also read the full [home security checklist](/blog/home-security-checklist-2026) for everything else to check while you are at it.
 `,
     faqs: [
       {
         q: 'How much does it cost to fit window locks?',
-        a: 'Replacement locking handles for uPVC windows cost from £15-£25 per window fitted. Sash jammers cost £10-£15 per window. For a typical 3-bed semi with 4-5 ground-floor windows, a full upgrade costs around £100-£175 total including parts and fitting. Call 07735 336175 for a specific quote.',
+        a: 'Replacement locking handles for uPVC windows cost from £15-£25 per window fitted. Sash jammers cost £10-£15 per window. For a typical 3-bed semi with 4-5 ground-floor windows, a full upgrade costs around £100-£175 total including parts and fitting. Call 024 7522 4730 for a specific quote.',
       },
       {
         q: 'What are sash jammers and should I fit them?',
@@ -645,7 +645,7 @@ Most of the patio and French doors I see in Coventry fall into two categories:
 
 **2. Doors from 2010 onward** — These usually have multipoint locks and better glass, but may still lack anti-lift devices and often have standard (snappable) euro cylinders. Upgrading the cylinder and adding anti-lift devices is usually sufficient.
 
-If you are not sure which category yours falls into, or you want me to check the current security of your patio or French doors, call me on 07735 336175. I cover all areas of Coventry and Warwickshire, and I can usually give you an assessment and fit the upgrades in a single visit.
+If you are not sure which category yours falls into, or you want me to check the current security of your patio or French doors, call me on 024 7522 4730. I cover all areas of Coventry and Warwickshire, and I can usually give you an assessment and fit the upgrades in a single visit.
 
 See the full [home security checklist](/blog/home-security-checklist-2026) for everything else to check while you are securing your home, or visit the [prices page](/prices) for our complete list of services and costs.
 `,
@@ -656,7 +656,7 @@ See the full [home security checklist](/blog/home-security-checklist-2026) for e
       },
       {
         q: 'How much does it cost to secure French doors?',
-        a: 'A comprehensive French door security upgrade — including rack bolts, hinge bolts, and an anti-snap cylinder — typically costs £150-£250 total fitted. Individual upgrades like rack bolts start from £15-£25 per bolt. Call 07735 336175 for a specific quote.',
+        a: 'A comprehensive French door security upgrade — including rack bolts, hinge bolts, and an anti-snap cylinder — typically costs £150-£250 total fitted. Individual upgrades like rack bolts start from £15-£25 per bolt. Call 024 7522 4730 for a specific quote.',
       },
       {
         q: 'Is laminated glass worth the cost for patio doors?',
@@ -806,7 +806,7 @@ Many policies specify a minimum of a "CEN grade 3 closed-shackle padlock" for ou
 
 Walk out to your garage and shed right now. Can you see what is inside? How easy would the locks be to force? Would you bet your possessions on the current security?
 
-If the answer is no, call me on 07735 336175 and I will come out and give you an honest assessment. I carry defender locks, padlocks, hasps, and ground anchors in my van, so I can usually upgrade your outbuilding security in a single visit.
+If the answer is no, call me on 024 7522 4730 and I will come out and give you an honest assessment. I carry defender locks, padlocks, hasps, and ground anchors in my van, so I can usually upgrade your outbuilding security in a single visit.
 
 For the full picture of home security including doors and windows, read the [complete home security checklist](/blog/home-security-checklist-2026), or check the [prices page](/prices) for our full range of services. If you are in [Coventry](/areas/coventry) or the surrounding [Warwickshire areas](/areas/), I cover everywhere locally.
 `,
@@ -966,7 +966,7 @@ If you want to know whether your existing locks meet SBD standards:
 3. **Check the mortice lock** — look for "BS3621" stamped on the faceplate (the visible edge when the door is open)
 4. **Search the SBD catalogue** — the Secured by Design website has a searchable database of all certified products
 
-If you are unsure, I can check your existing hardware during a visit and tell you exactly what standard your locks meet. Call 07735 336175 to arrange a check.
+If you are unsure, I can check your existing hardware during a visit and tell you exactly what standard your locks meet. Call 024 7522 4730 to arrange a check.
 
 ## Is It Worth Specifically Seeking SBD Products?
 
@@ -989,7 +989,7 @@ Where it matters less:
 
 For most homeowners in Coventry, my recommendation is simple: focus on the standards (TS007 3-star, SS312 Diamond, BS3621) and you will naturally end up with products that meet or exceed SBD requirements.
 
-If you want advice on which products are right for your home, or you want me to check what standards your current locks meet, call me on 07735 336175. I am happy to take a look and give you honest guidance — no sales pitch, just practical advice based on what I see every day.
+If you want advice on which products are right for your home, or you want me to check what standards your current locks meet, call me on 024 7522 4730. I am happy to take a look and give you honest guidance — no sales pitch, just practical advice based on what I see every day.
 
 For more on lock standards, read my posts on [TS007 vs SS312](/blog/ts007-vs-ss312-lock-standards) and [BS3621 vs anti-snap vs smart locks](/blog/bs3621-vs-anti-snap-vs-smart-lock). For a full security assessment of your home, start with the [home security checklist](/blog/home-security-checklist-2026).
 `,
@@ -1000,7 +1000,7 @@ For more on lock standards, read my posts on [TS007 vs SS312](/blog/ts007-vs-ss3
       },
       {
         q: 'How do I know if my lock is Secured by Design approved?',
-        a: 'Check for certification markings on the lock itself (TS007 3-star or BS3621 stamped on the faceplate or cylinder edge). You can also search the Secured by Design website catalogue for your specific product. If you are unsure, a locksmith can check during a visit — call 07735 336175.',
+        a: 'Check for certification markings on the lock itself (TS007 3-star or BS3621 stamped on the faceplate or cylinder edge). You can also search the Secured by Design website catalogue for your specific product. If you are unsure, a locksmith can check during a visit — call 024 7522 4730.',
       },
       {
         q: 'What is PAS 24 and do my doors need it?',

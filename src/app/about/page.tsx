@@ -7,7 +7,7 @@ import CTABlock from '@/components/CTABlock'
 export const metadata: Metadata = {
   title: 'About Local Emergency Locksmith | Ross — Your Coventry Locksmith',
   description:
-    "I'm Ross, your local independent locksmith covering Coventry and all of Warwickshire. No VAT, no call-out fee, 15-30 minute response. Call 07735 336175.",
+    "I'm Ross, your local independent locksmith covering Coventry and all of Warwickshire. No VAT, no call-out fee, 15-30 minute response. Call 024 7522 4730.",
   keywords: 'about locksmith coventry, local locksmith coventry, independent locksmith warwickshire, ross locksmith coventry, coventry locksmith no vat, trusted locksmith coventry',
   alternates: {
     canonical: `${SITE_CONFIG.domain}/about`,
@@ -27,7 +27,7 @@ const aboutSchema = {
   '@id': 'https://localemergencylocksmith.co.uk/#business',
   name: 'Local Emergency Locksmith',
   url: 'https://localemergencylocksmith.co.uk',
-  telephone: '+447735336175',
+  telephone: '+442475224730',
   email: 'info@localemergencylocksmith.co.uk',
   description:
     'Independent emergency locksmith serving Coventry and Warwickshire. No VAT, no call-out fee, 15-30 minute response. Available 24/7.',

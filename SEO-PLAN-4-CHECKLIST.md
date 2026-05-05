@@ -10,8 +10,8 @@
 
 ```
 Business Name:  Local Emergency Locksmith
-Phone:          07735 336175
-Phone (intl):   +447735336175
+Phone:          024 7522 4730
+Phone (intl):   +442475224730
 Email:          info@localemergencylocksmith.co.uk
 Website:        https://localemergencylocksmith.co.uk
 Address:        Coventry, West Midlands, UK
@@ -22,7 +22,7 @@ Hours:          24/7 — 365 days a year
 - Never use "Local Emergency Locksmiths" (no plural)
 - Never abbreviate to "L.E.L." or any variant
 - Always include "Coventry" in the address
-- Phone format: always "07735 336175" (with space after 07735)
+- Phone format: always "024 7522 4730" (with spaces as shown)
 - URL: always "https://localemergencylocksmith.co.uk" (no www)
 
 ---

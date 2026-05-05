@@ -7,7 +7,7 @@ import CTABlock from '@/components/CTABlock'
 export const metadata: Metadata = {
   title: 'Terms of Service | Local Emergency Locksmith Coventry',
   description:
-    'Terms of service for Local Emergency Locksmith Coventry. Covers pricing, payment, liability, cancellation, guarantees, and complaints. Call 07735 336175.',
+    'Terms of service for Local Emergency Locksmith Coventry. Covers pricing, payment, liability, cancellation, guarantees, and complaints. Call 024 7522 4730.',
   alternates: {
     canonical: `${SITE_CONFIG.domain}/terms`,
   },
