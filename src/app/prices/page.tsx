@@ -13,6 +13,9 @@ export const metadata: Metadata = {
     canonical: `${SITE_CONFIG.domain}/prices`,
   },
   openGraph: {
+    type: 'website',
+    siteName: 'Local Emergency Locksmith',
+    locale: 'en_GB',
     title: 'Locksmith Prices Coventry | Transparent Pricing | No VAT | No Call-Out Fee',
     description:
       'Clear locksmith prices for Coventry and Warwickshire. Emergency lockout from £59. No VAT, no call-out fee, no hidden charges. Call 024 7522 4730.',
@@ -73,11 +76,12 @@ const breadcrumbSchema = {
   ],
 }
 
+// Extends the canonical /#business entity (defined in layout.tsx) with the
+// detailed price catalogue — same @id and type, so consumers merge the nodes.
 const offersSchema = {
   '@context': 'https://schema.org',
-  '@type': 'LocalBusiness',
+  '@type': 'Locksmith',
   '@id': `${SITE_CONFIG.domain}/#business`,
-  name: 'Local Emergency Locksmith',
   hasOfferCatalog: {
     '@type': 'OfferCatalog',
     name: 'Locksmith Prices',
@@ -145,7 +149,7 @@ export default function PricesPage() {
           </li>
           <span className="mx-2" aria-hidden="true">›</span>
           <li itemScope itemType="https://schema.org/ListItem" itemProp="itemListElement">
-            <span itemProp="item"><span itemProp="name" className="text-gray-800 font-medium">Prices</span></span>
+            <span><span itemProp="name" className="text-gray-800 font-medium">Prices</span></span>
             <meta itemProp="position" content="2" />
           </li>
         </ol>

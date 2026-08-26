@@ -36,25 +36,27 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
-  alternates: {
-    canonical: SITE_CONFIG.domain,
-  },
 }
 
 const globalSchema = {
   '@context': 'https://schema.org',
-  '@type': ['LocalBusiness', 'Locksmith'],
+  '@type': 'Locksmith',
   '@id': `${SITE_CONFIG.domain}/#business`,
   name: 'Local Emergency Locksmith',
   url: SITE_CONFIG.domain,
   telephone: SITE_CONFIG.phoneTel,
   email: SITE_CONFIG.email,
   description:
-    'Emergency locksmith serving Coventry and Warwickshire. No VAT, no call-out fee, 15-30 minute response. Available 24/7, 365 days a year.',
+    'Emergency locksmith serving Coventry and Warwickshire. No VAT, no call-out fee, 15-30 minute response across Coventry. Available 24/7, 365 days a year.',
   priceRange: '££',
   currenciesAccepted: 'GBP',
   paymentAccepted: 'Cash, Credit Card, Debit Card',
   image: `${SITE_CONFIG.domain}/og-image.png`,
+  founder: {
+    '@type': 'Person',
+    name: 'Ross',
+    jobTitle: 'Locksmith',
+  },
   geo: {
     '@type': 'GeoCoordinates',
     latitude: 52.4068,
@@ -80,7 +82,7 @@ const globalSchema = {
     opens: '00:00',
     closes: '23:59',
   },
-  areaServed: AREAS.map(area => ({
+  areaServed: [...new Map(AREAS.map(area => [area.slug, area])).values()].map(area => ({
     '@type': 'City',
     name: area.name,
     ...(area.lat && area.lng ? {
@@ -152,27 +154,6 @@ const websiteSchema = {
   inLanguage: 'en-GB',
 }
 
-const navigationSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'SiteNavigationElement',
-  name: [
-    'Services',
-    'Areas',
-    'Prices',
-    'Blog',
-    'About',
-    'Contact',
-  ],
-  url: [
-    `${SITE_CONFIG.domain}/services`,
-    `${SITE_CONFIG.domain}/areas`,
-    `${SITE_CONFIG.domain}/prices`,
-    `${SITE_CONFIG.domain}/blog`,
-    `${SITE_CONFIG.domain}/about`,
-    `${SITE_CONFIG.domain}/contact`,
-  ],
-}
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -181,9 +162,6 @@ export default function RootLayout({
   return (
     <html lang="en-GB" className={inter.variable}>
       <head>
-        {/* hreflang — UK English targeting */}
-        <link rel="alternate" hrefLang="en-gb" href={SITE_CONFIG.domain} />
-        <link rel="alternate" hrefLang="en" href={SITE_CONFIG.domain} />
         {/* Geo meta — tells local search crawlers this is a Coventry/Warwickshire business */}
         <meta name="geo.region" content="GB-WAR" />
         <meta name="geo.placename" content="Coventry, Warwickshire" />
@@ -191,23 +169,25 @@ export default function RootLayout({
         <meta name="ICBM" content="52.4068, -1.5197" />
         <link rel="manifest" href="/manifest.json" />
         <meta name="theme-color" content="#0F1B2D" />
-        <link rel="preconnect" href="https://www.googletagmanager.com" />
+        {process.env.NEXT_PUBLIC_GTM_ID && (
+          <link rel="preconnect" href="https://www.googletagmanager.com" />
+        )}
         <link rel="dns-prefetch" href="https://maps.googleapis.com" />
         <SchemaMarkup schema={globalSchema} />
         <SchemaMarkup schema={websiteSchema} />
-        <SchemaMarkup schema={navigationSchema} />
-        {/* Google Tag Manager (Placeholder) */}
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-              new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-              j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-              'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-              })(window,document,'script','dataLayer','GTM-XXXXXXX');
-            `,
-          }}
-        />
+        {process.env.NEXT_PUBLIC_GTM_ID && (
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+                (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+                j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+                'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+                })(window,document,'script','dataLayer','${process.env.NEXT_PUBLIC_GTM_ID}');
+              `,
+            }}
+          />
+        )}
       </head>
       <body className="font-[var(--font-inter)] antialiased bg-white text-gray-900">
         <a href="#main-content" className="skip-link">Skip to main content</a>

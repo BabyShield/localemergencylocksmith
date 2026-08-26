@@ -1,23 +1,26 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { SITE_CONFIG } from '@/data/config'
+import { SITE_CONFIG, GOOGLE_REVIEWS } from '@/data/config'
 import SchemaMarkup from '@/components/SchemaMarkup'
 import CTABlock from '@/components/CTABlock'
 
 export const metadata: Metadata = {
   title: 'Reviews & Testimonials | Local Emergency Locksmith Coventry',
   description:
-    'Read 15 genuine reviews from customers across Coventry, Nuneaton, Rugby, Leamington Spa, and Warwickshire. Rated 4.8/5. Call 024 7522 4730.',
+    'Read reviews from customers across Coventry, Nuneaton, Rugby, Leamington Spa, and Warwickshire. Call 024 7522 4730.',
   keywords: 'locksmith reviews coventry, locksmith testimonials, coventry locksmith reviews, local locksmith reviews warwickshire, trusted locksmith coventry, 5 star locksmith coventry',
   alternates: {
     canonical: `${SITE_CONFIG.domain}/testimonials`,
   },
   openGraph: {
+    type: 'website',
+    siteName: 'Local Emergency Locksmith',
+    locale: 'en_GB',
     title: 'Reviews & Testimonials | Local Emergency Locksmith Coventry',
     description:
-      'Read genuine reviews from customers across Coventry and Warwickshire. Rated 4.8/5 from 15 reviews.',
+      'Read reviews from customers across Coventry and Warwickshire.',
     url: `${SITE_CONFIG.domain}/testimonials`,
-    images: [{ url: `${SITE_CONFIG.domain}/api/og?title=${encodeURIComponent('Customer Reviews — 4.8/5 Rating')}`, width: 1200, height: 630 }],
+    images: [{ url: `${SITE_CONFIG.domain}/api/og?title=${encodeURIComponent('Customer Reviews')}`, width: 1200, height: 630 }],
   },
 }
 
@@ -165,15 +168,8 @@ const otherReviews: Review[] = [
   },
 ]
 
-const allReviews = [
-  ...coventryReviews,
-  ...nuneatonBedworthReviews,
-  ...rugbyLeamingtonReviews,
-  ...warwickStratfordReviews,
-  ...otherReviews,
-]
-
-// aggregateRating schema removed — add back when real Google reviews exist
+// No aggregateRating/Review schema here — self-serving review markup violates
+// Google's policy; real GBP figures render visually via GOOGLE_REVIEWS only.
 
 const breadcrumbSchema = {
   '@context': 'https://schema.org',
@@ -211,34 +207,27 @@ function StarRating({ rating = 5 }: { rating?: number }) {
   )
 }
 
+// No schema.org Review markup here — self-serving review markup on the
+// business's own pages violates Google's review-snippet policy. Plain content only.
 function ReviewCard({ review }: { review: Review }) {
   return (
-    <div className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm hover:shadow-md transition-shadow" itemScope itemType="https://schema.org/Review">
+    <div className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
       <div className="flex items-center justify-between mb-3">
-        <div itemProp="reviewRating" itemScope itemType="https://schema.org/Rating">
-          <meta itemProp="ratingValue" content={String(review.rating)} />
-          <meta itemProp="bestRating" content="5" />
-          <StarRating rating={review.rating} />
-        </div>
+        <StarRating rating={review.rating} />
         <span className="text-xs font-bold text-[#FFB800] bg-[#FFB800]/10 px-2.5 py-1 rounded-full">
           {review.service}
         </span>
       </div>
-      <blockquote className="text-gray-700 leading-relaxed mb-4" itemProp="reviewBody">
+      <blockquote className="text-gray-700 leading-relaxed mb-4">
         &ldquo;{review.quote}&rdquo;
       </blockquote>
-      <meta itemProp="datePublished" content={review.date} />
-      <div itemProp="itemReviewed" itemScope itemType="https://schema.org/LocalBusiness">
-        <meta itemProp="name" content="Local Emergency Locksmith" />
-      </div>
       <div className="flex items-center gap-3">
         <div className="w-10 h-10 rounded-full bg-[#0F1B2D] flex items-center justify-center text-[#FFB800] font-black text-sm">
           {review.name.charAt(0)}
         </div>
-        <div itemProp="author" itemScope itemType="https://schema.org/Person">
-          <p className="font-bold text-[#0F1B2D] text-sm" itemProp="name">{review.name}</p>
+        <div>
+          <p className="font-bold text-[#0F1B2D] text-sm">{review.name}</p>
           <p className="text-gray-500 text-xs">{review.area}</p>
-          <p className="text-gray-400 text-xs">{new Date(review.date).toLocaleDateString('en-GB', { month: 'short', year: 'numeric' })}</p>
         </div>
       </div>
     </div>
@@ -272,7 +261,7 @@ export default function TestimonialsPage() {
           </li>
           <span className="mx-2" aria-hidden="true">›</span>
           <li itemScope itemType="https://schema.org/ListItem" itemProp="itemListElement">
-            <span itemProp="item"><span itemProp="name" className="text-[#0F1B2D] font-medium">Testimonials</span></span>
+            <span><span itemProp="name" className="text-[#0F1B2D] font-medium">Testimonials</span></span>
             <meta itemProp="position" content="2" />
           </li>
         </ol>
@@ -285,28 +274,36 @@ export default function TestimonialsPage() {
             Customer Reviews &amp; Testimonials
           </h1>
           <p className="text-gray-600 text-lg max-w-xl mx-auto mb-6">
-            Real reviews from real customers across Coventry and Warwickshire.
+            What customers say about my work across Coventry and Warwickshire.
           </p>
 
-          {/* Aggregate Rating */}
-          <div className="inline-flex flex-col items-center bg-[#0F1B2D] rounded-2xl px-8 py-6 border border-white/10">
-            <div className="flex gap-1 mb-2">
-              {[1, 2, 3, 4, 5].map((star) => (
-                <svg
-                  key={star}
-                  className="w-7 h-7 text-[#FFB800]"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                >
-                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                </svg>
-              ))}
+          {/* Aggregate rating — real GBP figures only, hidden until configured */}
+          {GOOGLE_REVIEWS.rating != null && GOOGLE_REVIEWS.count != null && (
+            <div className="inline-flex flex-col items-center bg-[#0F1B2D] rounded-2xl px-8 py-6 border border-white/10">
+              <div className="flex gap-1 mb-2">
+                {[1, 2, 3, 4, 5].map((star) => (
+                  <svg
+                    key={star}
+                    className="w-7 h-7 text-[#FFB800]"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                ))}
+              </div>
+              <p className="text-white font-black text-2xl">
+                {GOOGLE_REVIEWS.rating}<span className="text-white/50 text-lg font-normal">/5</span>
+              </p>
+              {GOOGLE_REVIEWS.profileUrl ? (
+                <a href={GOOGLE_REVIEWS.profileUrl} target="_blank" rel="noopener noreferrer" className="text-white/60 text-sm mt-1 hover:text-white underline">
+                  Based on {GOOGLE_REVIEWS.count} Google reviews
+                </a>
+              ) : (
+                <p className="text-white/60 text-sm mt-1">Based on {GOOGLE_REVIEWS.count} Google reviews</p>
+              )}
             </div>
-            <p className="text-white font-black text-2xl">
-              4.8<span className="text-white/50 text-lg font-normal">/5</span>
-            </p>
-            <p className="text-white/60 text-sm mt-1">Based on 15 reviews</p>
-          </div>
+          )}
         </div>
       </section>
 

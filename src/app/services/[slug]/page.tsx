@@ -3,7 +3,7 @@ import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { SERVICES, getServiceBySlug } from '@/data/services'
 import { AREAS, getAllAreasByRegion } from '@/data/areas'
-import { SITE_CONFIG } from '@/data/config'
+import { SITE_CONFIG, CONTENT_UPDATED } from '@/data/config'
 import { ALL_BLOG_POSTS, getBlogPostBySlug } from '@/data/blog-posts'
 import HeroSection from '@/components/HeroSection'
 import CTABlock from '@/components/CTABlock'
@@ -375,12 +375,7 @@ export default async function ServicePage({ params }: Props) {
     name: service.name,
     description: service.description,
     serviceType: service.shortName,
-    provider: {
-      '@type': 'Locksmith',
-      name: 'Local Emergency Locksmith',
-      telephone: SITE_CONFIG.phoneTel,
-      url: SITE_CONFIG.domain,
-    },
+    provider: { '@id': `${SITE_CONFIG.domain}/#business` },
     areaServed: [
       { '@type': 'City', name: 'Coventry' },
       { '@type': 'City', name: 'Nuneaton' },
@@ -400,37 +395,23 @@ export default async function ServicePage({ params }: Props) {
     },
   }
 
-  const howToSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'HowTo',
-    name: content.howToName,
-    totalTime: 'PT30M',
-    step: content.steps.map((text, i) => ({
-      '@type': 'HowToStep',
-      position: i + 1,
-      name: `Step ${i + 1}`,
-      text,
-    })),
-  }
+  // voiceFaqs and faqs overlap on some services — keep the first occurrence of
+  // each question so the FAQPage never asserts one question with two answers.
+  const seenQuestions = new Set<string>()
+  const allFaqs = [...content.voiceFaqs, ...content.faqs].filter((faq) => {
+    if (seenQuestions.has(faq.q)) return false
+    seenQuestions.add(faq.q)
+    return true
+  })
 
   const faqSchema = {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
-    mainEntity: [...content.voiceFaqs, ...content.faqs].map((faq) => ({
+    mainEntity: allFaqs.map((faq) => ({
       '@type': 'Question',
       name: faq.q,
       acceptedAnswer: { '@type': 'Answer', text: faq.a },
     })),
-  }
-
-  const speakableSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'WebPage',
-    speakable: {
-      '@type': 'SpeakableSpecification',
-      cssSelector: ['.direct-answer', '.hero-subtitle'],
-    },
-    url: `${SITE_CONFIG.domain}/services/${slug}`,
   }
 
   /* ---- Data ---- */
@@ -447,9 +428,7 @@ export default async function ServicePage({ params }: Props) {
     <>
       <SchemaMarkup schema={breadcrumbSchema} />
       <SchemaMarkup schema={serviceSchema} />
-      <SchemaMarkup schema={howToSchema} />
       <SchemaMarkup schema={faqSchema} />
-      <SchemaMarkup schema={speakableSchema} />
 
       {/* ============================================================ */}
       {/*  1. Breadcrumb                                                */}
@@ -467,7 +446,7 @@ export default async function ServicePage({ params }: Props) {
           </li>
           <span className="mx-2 text-gray-300" aria-hidden="true">›</span>
           <li itemScope itemType="https://schema.org/ListItem" itemProp="itemListElement">
-            <span itemProp="item"><span itemProp="name" className="text-[#0F1B2D] font-semibold">{service.shortName}</span></span>
+            <span><span itemProp="name" className="text-[#0F1B2D] font-semibold">{service.shortName}</span></span>
             <meta itemProp="position" content="3" />
           </li>
         </ol>
@@ -549,7 +528,7 @@ export default async function ServicePage({ params }: Props) {
             </p>
           ))}
 
-          <LastUpdated date="2026-03-17" />
+          <LastUpdated date={CONTENT_UPDATED} />
         </div>
       </section>
 
@@ -679,41 +658,23 @@ export default async function ServicePage({ params }: Props) {
           </h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
 
-            {/* Testimonial card */}
+            {/* Why-us card */}
             <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-200 relative">
-              {/* Quote mark */}
               <div className="absolute -top-4 left-8 w-10 h-10 bg-[#FFB800] rounded-full flex items-center justify-center">
                 <svg className="w-5 h-5 text-[#0F1B2D]" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10H14.017zM0 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151C7.546 6.068 5.983 8.789 5.983 11h4v10H0z" /></svg>
               </div>
 
-              {/* Stars */}
-              <div className="flex gap-1 mb-4 mt-2">
-                {[...Array(5)].map((_, i) => (
-                  <svg key={i} className="w-5 h-5 text-[#FFB800]" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                  </svg>
-                ))}
-              </div>
+              <p className="text-gray-600 leading-relaxed mt-2">
+                {content.whyUs}
+              </p>
 
-              <blockquote className="text-gray-700 text-lg leading-relaxed italic mb-6">
-                &ldquo;{content.testimonial.text}&rdquo;
-              </blockquote>
-
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-[#0F1B2D] text-white flex items-center justify-center font-bold text-sm">
-                  {content.testimonial.name.charAt(0)}
-                </div>
-                <div>
-                  <p className="font-bold text-[#0F1B2D] text-sm">{content.testimonial.name}</p>
-                  <p className="text-gray-500 text-xs">{content.testimonial.area}, Coventry</p>
-                </div>
-              </div>
-
-              {/* Why-us paragraph */}
               <div className="mt-6 pt-6 border-t border-gray-100">
-                <p className="text-gray-600 leading-relaxed text-sm">
-                  {content.whyUs}
-                </p>
+                <Link
+                  href="/testimonials"
+                  className="text-[#0F1B2D] font-bold text-sm hover:text-[#FFB800] transition-colors"
+                >
+                  Read customer reviews &rarr;
+                </Link>
               </div>
             </div>
 
@@ -815,7 +776,7 @@ export default async function ServicePage({ params }: Props) {
       {/*  11. FAQ section                                              */}
       {/* ============================================================ */}
       <FAQSection
-        faqs={[...content.voiceFaqs, ...content.faqs]}
+        faqs={allFaqs}
         heading={`Frequently Asked Questions — ${service.shortName}`}
       />
 

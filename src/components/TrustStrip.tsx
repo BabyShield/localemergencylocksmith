@@ -3,7 +3,7 @@ const TRUST_ITEMS = [
   { icon: '🚫', text: 'No Call-Out Fee' },
   { icon: '📍', text: 'Local Independent' },
   { icon: '🕐', text: '24/7 Emergency' },
-  { icon: '⚡', text: '15-30 Min Response' },
+  { icon: '⚡', text: 'Fast Local Response' },
   { icon: '✅', text: 'No Hidden Charges' },
 ]
 

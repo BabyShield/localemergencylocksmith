@@ -13,6 +13,9 @@ export const metadata: Metadata = {
   keywords: 'locksmith services coventry, emergency locksmith coventry, lock change coventry, upvc lock repair coventry, boarding up coventry, lock upgrade warwickshire, locksmith services warwickshire',
   alternates: { canonical: `${SITE_CONFIG.domain}/services` },
   openGraph: {
+    type: 'website',
+    siteName: 'Local Emergency Locksmith',
+    locale: 'en_GB',
     title: 'Locksmith Services — Coventry & Warwickshire',
     description: 'Emergency lockout, lock change, uPVC repair, boarding up, security upgrades. No VAT, no call-out fee.',
     url: `${SITE_CONFIG.domain}/services`,
@@ -70,7 +73,7 @@ export default function ServicesPage() {
           </li>
           <span className="mx-2" aria-hidden="true">›</span>
           <li itemScope itemType="https://schema.org/ListItem" itemProp="itemListElement">
-            <span itemProp="item"><span itemProp="name" className="text-gray-800 font-medium">Services</span></span>
+            <span><span itemProp="name" className="text-gray-800 font-medium">Services</span></span>
             <meta itemProp="position" content="2" />
           </li>
         </ol>

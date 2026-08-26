@@ -13,6 +13,9 @@ export const metadata: Metadata = {
     canonical: `${SITE_CONFIG.domain}/about`,
   },
   openGraph: {
+    type: 'website',
+    siteName: 'Local Emergency Locksmith',
+    locale: 'en_GB',
     title: 'About Local Emergency Locksmith | Ross — Your Coventry Locksmith',
     description:
       "Independent emergency locksmith serving Coventry and Warwickshire. No VAT, no call-out fee, 15-30 minute response. Available 24/7.",
@@ -21,60 +24,13 @@ export const metadata: Metadata = {
   },
 }
 
+// The business entity is defined once in layout.tsx — this page just declares
+// itself as the about page for that entity.
 const aboutSchema = {
   '@context': 'https://schema.org',
-  '@type': 'Locksmith',
-  '@id': 'https://localemergencylocksmith.co.uk/#business',
-  name: 'Local Emergency Locksmith',
-  url: 'https://localemergencylocksmith.co.uk',
-  telephone: '+442475224730',
-  email: 'info@localemergencylocksmith.co.uk',
-  description:
-    'Independent emergency locksmith serving Coventry and Warwickshire. No VAT, no call-out fee, 15-30 minute response. Available 24/7.',
-  founder: {
-    '@type': 'Person',
-    name: 'Ross',
-    jobTitle: 'Locksmith',
-  },
-  address: {
-    '@type': 'PostalAddress',
-    addressLocality: 'Coventry',
-    addressRegion: 'West Midlands',
-    addressCountry: 'GB',
-  },
-  geo: {
-    '@type': 'GeoCoordinates',
-    latitude: 52.4068,
-    longitude: -1.5197,
-  },
-  areaServed: [
-    { '@type': 'City', name: 'Coventry' },
-    { '@type': 'City', name: 'Nuneaton' },
-    { '@type': 'City', name: 'Rugby' },
-    { '@type': 'City', name: 'Leamington Spa' },
-    { '@type': 'City', name: 'Warwick' },
-    { '@type': 'City', name: 'Stratford-upon-Avon' },
-    { '@type': 'City', name: 'Kenilworth' },
-    { '@type': 'City', name: 'Bedworth' },
-  ],
-  openingHoursSpecification: {
-    '@type': 'OpeningHoursSpecification',
-    dayOfWeek: [
-      'Monday',
-      'Tuesday',
-      'Wednesday',
-      'Thursday',
-      'Friday',
-      'Saturday',
-      'Sunday',
-    ],
-    opens: '00:00',
-    closes: '23:59',
-  },
-  priceRange: '££',
-  currenciesAccepted: 'GBP',
-  paymentAccepted: 'Cash, Credit Card, Debit Card',
-  sameAs: ['https://www.facebook.com/localemergencylocksmith'],
+  '@type': 'AboutPage',
+  url: `${SITE_CONFIG.domain}/about`,
+  mainEntity: { '@id': `${SITE_CONFIG.domain}/#business` },
 }
 
 const breadcrumbSchema = {
@@ -101,7 +57,7 @@ export default function AboutPage() {
           </li>
           <span className="mx-2" aria-hidden="true">›</span>
           <li itemScope itemType="https://schema.org/ListItem" itemProp="itemListElement">
-            <span itemProp="item"><span itemProp="name" className="text-[#0F1B2D] font-medium">About</span></span>
+            <span><span itemProp="name" className="text-[#0F1B2D] font-medium">About</span></span>
             <meta itemProp="position" content="2" />
           </li>
         </ol>

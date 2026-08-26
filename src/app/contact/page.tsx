@@ -12,6 +12,9 @@ export const metadata: Metadata = {
     canonical: `${SITE_CONFIG.domain}/contact`,
   },
   openGraph: {
+    type: 'website',
+    siteName: 'Local Emergency Locksmith',
+    locale: 'en_GB',
     title: 'Contact — Local Emergency Locksmith Coventry | 024 7522 4730',
     description:
       'Contact Local Emergency Locksmith in Coventry. Available 24/7 — call 024 7522 4730 for immediate help or use the contact form.',
@@ -50,7 +53,7 @@ export default function ContactPage() {
           </li>
           <span className="mx-2" aria-hidden="true">›</span>
           <li itemScope itemType="https://schema.org/ListItem" itemProp="itemListElement">
-            <span itemProp="item"><span itemProp="name" className="text-gray-800 font-medium">Contact</span></span>
+            <span><span itemProp="name" className="text-gray-800 font-medium">Contact</span></span>
             <meta itemProp="position" content="2" />
           </li>
         </ol>

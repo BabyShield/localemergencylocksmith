@@ -7,9 +7,12 @@ interface HeroSectionProps {
   subheading: string
   areaName?: string
   compact?: boolean
+  // Per-area honest response window — pass area.responseTime on area pages so
+  // outlying areas never inherit the Coventry-wide claim.
+  responseTime?: string
 }
 
-export default function HeroSection({ heading, subheading, areaName, compact }: HeroSectionProps) {
+export default function HeroSection({ heading, subheading, areaName, compact, responseTime }: HeroSectionProps) {
   return (
     <section className={`relative overflow-hidden ${compact ? 'py-10 md:py-14' : 'py-14 md:py-24'} px-4 text-white`}>
       <Suspense fallback={null}>
@@ -66,7 +69,7 @@ export default function HeroSection({ heading, subheading, areaName, compact }: 
           </span>
           <span className="flex items-center gap-1.5">
             <svg className="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" /></svg>
-            {SITE_CONFIG.responseTime} Response{areaName ? ` in ${areaName}` : ''}
+            {responseTime ?? SITE_CONFIG.responseTime} Response{areaName ? ` in ${areaName}` : ''}
           </span>
         </div>
       </div>

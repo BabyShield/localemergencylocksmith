@@ -107,7 +107,7 @@ export default async function BlogPostPage({ params }: Props) {
     description: post.excerpt,
     url: `${SITE_CONFIG.domain}/blog/${slug}`,
     datePublished: post.date,
-    dateModified: new Date().toISOString().split('T')[0],
+    dateModified: post.date,
     image: { '@type': 'ImageObject', url: `${SITE_CONFIG.domain}/api/og?title=${encodeURIComponent(post.title)}`, width: 1200, height: 630 },
     author: {
       '@type': 'Person',
@@ -171,7 +171,7 @@ export default async function BlogPostPage({ params }: Props) {
           </li>
           <span className="mx-2" aria-hidden="true">›</span>
           <li itemScope itemType="https://schema.org/ListItem" itemProp="itemListElement">
-            <span itemProp="item"><span itemProp="name" className="text-gray-800 font-medium truncate max-w-xs inline-block align-bottom">{post.title}</span></span>
+            <span><span itemProp="name" className="text-gray-800 font-medium truncate max-w-xs inline-block align-bottom">{post.title}</span></span>
             <meta itemProp="position" content="3" />
           </li>
         </ol>

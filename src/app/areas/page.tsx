@@ -6,16 +6,19 @@ import CTABlock from '@/components/CTABlock'
 import SchemaMarkup from '@/components/SchemaMarkup'
 
 export const metadata: Metadata = {
-  title: 'Locksmith Areas Covered | Coventry & Warwickshire | 90+ Locations',
+  title: 'Locksmith Areas Covered | Coventry & Warwickshire | 78 Locations',
   description:
-    'Local locksmith covering Coventry, Nuneaton, Rugby, Leamington Spa, Warwick, Stratford-upon-Avon and 90+ surrounding areas. Emergency 24/7, no VAT, no call-out fee.',
+    'Local locksmith covering Coventry, Nuneaton, Rugby, Leamington Spa, Warwick, Stratford-upon-Avon and 78 surrounding areas. Emergency 24/7, no VAT, no call-out fee.',
   keywords: 'locksmith coventry areas, locksmith warwickshire, locksmith near me, emergency locksmith coventry, locksmith nuneaton, locksmith rugby, locksmith leamington spa',
   alternates: {
     canonical: `${SITE_CONFIG.domain}/areas`,
   },
   openGraph: {
-    title: 'Locksmith Areas Covered | Coventry & Warwickshire | 90+ Locations',
-    description: 'Local locksmith covering 90+ towns and villages across Coventry and Warwickshire. Emergency 24/7.',
+    type: 'website',
+    siteName: 'Local Emergency Locksmith',
+    locale: 'en_GB',
+    title: 'Locksmith Areas Covered | Coventry & Warwickshire | 78 Locations',
+    description: 'Local locksmith covering 78 towns and villages across Coventry and Warwickshire. Emergency 24/7.',
     url: `${SITE_CONFIG.domain}/areas`,
   },
 }
@@ -44,7 +47,7 @@ export default function AreasPage() {
           </li>
           <span className="mx-2" aria-hidden="true">›</span>
           <li itemScope itemType="https://schema.org/ListItem" itemProp="itemListElement">
-            <span itemProp="item"><span itemProp="name" className="text-gray-800 font-medium">All Areas</span></span>
+            <span><span itemProp="name" className="text-gray-800 font-medium">All Areas</span></span>
             <meta itemProp="position" content="2" />
           </li>
         </ol>
@@ -56,7 +59,7 @@ export default function AreasPage() {
             Emergency Locksmith — All Areas Covered
           </h1>
           <p className="text-gray-300 text-lg mb-6 max-w-2xl mx-auto">
-            I cover Coventry and the whole of Warwickshire — over 90 towns, villages, and suburbs.
+            I cover Coventry and the whole of Warwickshire — 78 towns, villages, and suburbs.
             No VAT, no call-out fee, 15-30 minute response for most areas.
           </p>
           <a

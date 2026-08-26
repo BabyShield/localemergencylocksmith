@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { SITE_CONFIG } from '@/data/config'
+import { SITE_CONFIG, GOOGLE_REVIEWS } from '@/data/config'
 
 export const metadata: Metadata = {
   title: 'Leave a Review | Local Emergency Locksmith',
@@ -8,8 +8,12 @@ export const metadata: Metadata = {
 }
 
 export default function ReviewPage() {
-  // Replace YOUR_PLACE_ID with the actual Google Place ID once GBP is set up
-  const googleReviewUrl = 'https://search.google.com/local/writereview?placeid=YOUR_PLACE_ID'
+  // Prefers the write-review deep link (needs the real Place ID in config);
+  // falls back to the profile URL, then a branded search.
+  const googleReviewUrl = GOOGLE_REVIEWS.placeId
+    ? `https://search.google.com/local/writereview?placeid=${GOOGLE_REVIEWS.placeId}`
+    : GOOGLE_REVIEWS.profileUrl ||
+      'https://www.google.com/search?q=Local+Emergency+Locksmith+Coventry'
 
   return (
     <section className="py-16 px-4">

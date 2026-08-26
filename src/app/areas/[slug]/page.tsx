@@ -3,14 +3,13 @@ import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { AREAS, getAreaBySlug, getAreaNeighbours } from '@/data/areas'
 import { SERVICES } from '@/data/services'
-import { ARTICLE_TEMPLATES } from '@/data/articles'
 import { SITE_CONFIG } from '@/data/config'
+import { ALL_BLOG_POSTS } from '@/data/blog-posts'
 import HeroSection from '@/components/HeroSection'
 import CTABlock from '@/components/CTABlock'
 import FAQSection from '@/components/FAQSection'
 import AreaFacts from '@/components/AreaFacts'
 import SchemaMarkup from '@/components/SchemaMarkup'
-import InternalLinkingMatrix from '@/components/InternalLinkingMatrix'
 import { getAreaFacts } from '@/data/area-facts'
 
 export const dynamic = 'force-static'
@@ -63,6 +62,14 @@ export default async function AreaPage({ params }: Props) {
   const neighbours = getAreaNeighbours(area)
   const facts = getAreaFacts(slug)
 
+  // 4 hand-written posts, rotated by area index so every post gets area-page
+  // links and each area links a different set.
+  const areaIdx = Math.max(0, AREAS.findIndex((a) => a.slug === slug))
+  const relatedPosts = Array.from(
+    { length: 4 },
+    (_, i) => ALL_BLOG_POSTS[(areaIdx * 4 + i) % ALL_BLOG_POSTS.length]
+  )
+
   const breadcrumbSchema = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
@@ -73,33 +80,16 @@ export default async function AreaPage({ params }: Props) {
     ],
   }
 
+  // Service offered in this area, provided by the single canonical business
+  // entity defined in layout.tsx — never redefines /#business properties.
   const areaSchema = {
     '@context': 'https://schema.org',
-    '@type': ['LocalBusiness', 'Locksmith'],
-    '@id': `${SITE_CONFIG.domain}/#business`,
-    name: `Local Emergency Locksmith — ${area.name}`,
+    '@type': 'Service',
+    serviceType: 'Emergency locksmith',
+    name: `Emergency Locksmith in ${area.name}`,
     url: `${SITE_CONFIG.domain}/areas/${slug}`,
-    telephone: SITE_CONFIG.phoneTel,
-    email: SITE_CONFIG.email,
     description: `Emergency locksmith serving ${area.name} and the ${area.postcode} postcode. ${area.responseTime} response, 24/7, 365 days. No VAT, no call-out fee.`,
-    priceRange: '££',
-    currenciesAccepted: 'GBP',
-    paymentAccepted: 'Cash, Credit Card, Debit Card',
-    image: `${SITE_CONFIG.domain}/og-image.png`,
-    ...(area.lat && area.lng ? {
-      geo: {
-        '@type': 'GeoCoordinates',
-        latitude: area.lat,
-        longitude: area.lng,
-      },
-    } : {}),
-    address: {
-      '@type': 'PostalAddress',
-      addressLocality: area.name,
-      postalCode: area.postcode,
-      addressRegion: area.region,
-      addressCountry: 'GB',
-    },
+    provider: { '@id': `${SITE_CONFIG.domain}/#business` },
     areaServed: [
       {
         '@type': 'Place',
@@ -121,13 +111,6 @@ export default async function AreaPage({ params }: Props) {
         },
       })),
     ],
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.9',
-      reviewCount: String(187 + (area.name.charCodeAt(0) % 60)),
-      bestRating: '5',
-      worstRating: '1',
-    },
     hasOfferCatalog: {
       '@type': 'OfferCatalog',
       name: `Locksmith Services in ${area.name}`,
@@ -141,13 +124,6 @@ export default async function AreaPage({ params }: Props) {
         areaServed: { '@type': 'Place', name: area.name },
       })),
     },
-    openingHoursSpecification: {
-      '@type': 'OpeningHoursSpecification',
-      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
-      opens: '00:00',
-      closes: '23:59',
-    },
-    sameAs: ['https://www.facebook.com/localemergencylocksmith'],
   }
 
   const faqSchema = {
@@ -180,7 +156,7 @@ export default async function AreaPage({ params }: Props) {
           </li>
           <span className="mx-2" aria-hidden="true">›</span>
           <li itemScope itemType="https://schema.org/ListItem" itemProp="itemListElement">
-            <span itemProp="item"><span itemProp="name" className="text-gray-800 font-medium">{area.name}</span></span>
+            <span><span itemProp="name" className="text-gray-800 font-medium">{area.name}</span></span>
             <meta itemProp="position" content="3" />
           </li>
         </ol>
@@ -190,6 +166,7 @@ export default async function AreaPage({ params }: Props) {
         heading={`Locksmith ${area.name} — Emergency 24/7`}
         subheading={`Locked out in ${area.name}? Local locksmith — ${area.responseTime} response. No VAT, no call-out fee, no hidden charges.`}
         areaName={area.name}
+        responseTime={area.responseTime}
       />
 
       {/* Intro */}
@@ -320,7 +297,7 @@ export default async function AreaPage({ params }: Props) {
               <div key={s.slug} className="flex justify-between items-center py-3 border-b border-gray-100">
                 <div>
                   <Link
-                    href={`/areas/${slug}/${s.slug}`}
+                    href={`/services/${s.slug}`}
                     className="font-semibold text-gray-900 hover:text-[#FFB800] hover:underline"
                   >
                     {s.shortName} in {area.name}
@@ -367,26 +344,26 @@ export default async function AreaPage({ params }: Props) {
         </section>
       )}
 
-      {/* Helpful guides for this area — links to area-specific blog articles */}
+      {/* Helpful guides — hand-written blog posts, rotated per area to spread link equity */}
       <section className="py-10 px-4 bg-white">
         <div className="max-w-3xl mx-auto">
           <h2 className="text-xl font-black text-[#0F1B2D] mb-2">
-            Helpful Guides for {area.name}
+            Helpful Locksmith Guides
           </h2>
           <p className="text-gray-500 text-sm mb-5">
-            Locksmith advice tailored to {area.name} and the {area.postcode} area
+            Practical advice from the locksmith who covers {area.name} and {area.postcode}
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-            {ARTICLE_TEMPLATES.map((article) => (
+            {relatedPosts.map((post) => (
               <Link
-                key={article.slug}
-                href={`/blog/${slug}/${article.slug}`}
+                key={post.slug}
+                href={`/blog/${post.slug}`}
                 className="bg-[#F7F7F5] hover:bg-white border border-gray-100 hover:border-[#FFB800]/50 rounded-xl p-4 transition-all hover:shadow-sm group"
               >
                 <p className="font-bold text-[#0F1B2D] text-sm group-hover:text-[#FFB800] transition-colors leading-snug">
-                  {article.titleTemplate.replace(/\{area\}/g, area.name)}
+                  {post.title}
                 </p>
-                <p className="text-xs text-gray-400 mt-1">5 min read</p>
+                <p className="text-xs text-gray-400 mt-1">{post.readTime}</p>
               </Link>
             ))}
           </div>
@@ -440,37 +417,6 @@ export default async function AreaPage({ params }: Props) {
         </section>
       )}
 
-      {/* Programmatic Streets Linking */}
-      <section className="py-10 px-4 bg-[#F7F7F5]">
-        <div className="max-w-3xl mx-auto">
-          <h2 className="text-xl font-black text-gray-900 mb-4">
-            Streets I Cover in {area.name}
-          </h2>
-          <p className="text-gray-700 text-sm">
-            I provide fast emergency response to all residential and commercial addresses down the following local streets in {area.name}:
-          </p>
-          
-          {(() => {
-            try {
-              const fs = require('fs');
-              const path = require('path');
-              const filePath = path.join(process.cwd(), 'src', 'data', 'streets', `${slug}.json`);
-              const data = fs.readFileSync(filePath, 'utf-8');
-              const streetsData = JSON.parse(data);
-              
-              if (!streetsData.streets || streetsData.streets.length === 0) return <p className="mt-4">Fully covering {area.name}</p>;
-
-              // Requires the new Client Component to handle parsing the array
-              const LocalStreetSearch = require('@/components/LocalStreetSearch').default;
-
-              return <LocalStreetSearch areaSlug={slug} areaName={area.name} streets={streetsData.streets} />;
-            } catch (e) {
-              return <p className="text-sm text-gray-500 mt-4">Covering all main roads and avenues in {area.name}.</p>;
-            }
-          })()}
-        </div>
-      </section>
-
       {/* Area Facts */}
       {facts.length > 0 && (
         <AreaFacts areaName={area.name} facts={facts} postcode={area.postcode} />
@@ -480,32 +426,6 @@ export default async function AreaPage({ params }: Props) {
       <FAQSection
         faqs={area.faqs}
         heading={`Frequently Asked Questions — ${area.name} Locksmith`}
-      />
-
-      {/* Security Tips — blog cross-links */}
-      <section className="py-10 px-4 bg-white">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-xl font-black text-[#0F1B2D] mb-5">
-            Security Tips for {area.name}
-          </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
-            {ARTICLE_TEMPLATES.slice(0, 6).map((article) => (
-              <Link
-                key={article.slug}
-                href={`/blog/${slug}/${article.slug}`}
-                className="bg-[#F7F7F5] border border-gray-200 rounded-lg px-4 py-3 text-sm font-medium text-gray-700 hover:border-[#FFB800] hover:text-[#0F1B2D] transition-colors"
-              >
-                {article.titleTemplate.replace(/\{area\}/g, area.name)}
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <InternalLinkingMatrix
-        areaSlug={slug}
-        areaName={area.name}
-        parentHierarchy="areas"
       />
 
       <CTABlock

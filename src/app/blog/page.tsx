@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { SITE_CONFIG } from '@/data/config'
-import { ARTICLE_TEMPLATES } from '@/data/articles'
 import { ALL_BLOG_POSTS, PILLARS } from '@/data/blog-posts'
 import SchemaMarkup from '@/components/SchemaMarkup'
 
@@ -14,6 +13,9 @@ export const metadata: Metadata = {
     canonical: `${SITE_CONFIG.domain}/blog`,
   },
   openGraph: {
+    type: 'website',
+    siteName: 'Local Emergency Locksmith',
+    locale: 'en_GB',
     title: 'Locksmith Blog — Tips, Security Advice & Guides',
     description: 'Expert locksmith advice for Coventry and Warwickshire homeowners — from a working locksmith.',
     url: `${SITE_CONFIG.domain}/blog`,
@@ -43,7 +45,7 @@ export default function BlogPage() {
           </li>
           <span className="mx-2" aria-hidden="true">›</span>
           <li itemScope itemType="https://schema.org/ListItem" itemProp="itemListElement">
-            <span itemProp="item"><span itemProp="name" className="text-gray-800 font-medium">Blog</span></span>
+            <span><span itemProp="name" className="text-gray-800 font-medium">Blog</span></span>
             <meta itemProp="position" content="2" />
           </li>
         </ol>
@@ -127,77 +129,43 @@ export default function BlogPage() {
         </div>
       </section>
 
-      {/* Browse by area (Plan 2 articles) */}
+      {/* Need a locksmith now? — links to money pages */}
       <section className="py-12 px-4 bg-gray-50">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-2xl font-black text-gray-900 mb-2">
-            Browse Local Area Guides
+            Need a Locksmith Right Now?
           </h2>
           <p className="text-gray-600 mb-8">
-            Every area guide is tailored to your specific location — with local response times, postcodes, and pricing.
+            I cover Coventry and the surrounding Warwickshire towns 24/7 — no VAT, no call-out fee.
           </p>
-
-          {/* Major area quick links */}
-          <div className="mb-10">
-            <h3 className="text-sm font-black text-gray-500 uppercase tracking-wide mb-4">
-              Popular Areas
-            </h3>
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
-              {[
-                { slug: 'coventry-city-centre', name: 'Coventry City Centre' },
-                { slug: 'earlsdon', name: 'Earlsdon' },
-                { slug: 'kenilworth', name: 'Kenilworth' },
-                { slug: 'leamington-spa', name: 'Leamington Spa' },
-                { slug: 'nuneaton', name: 'Nuneaton' },
-                { slug: 'rugby', name: 'Rugby' },
-                { slug: 'stratford-upon-avon', name: 'Stratford-upon-Avon' },
-                { slug: 'bedworth', name: 'Bedworth' },
-                { slug: 'warwick', name: 'Warwick' },
-                { slug: 'tile-hill', name: 'Tile Hill' },
-                { slug: 'canley', name: 'Canley' },
-                { slug: 'binley', name: 'Binley' },
-              ].map((area) => (
-                <Link
-                  key={area.slug}
-                  href={`/blog/${area.slug}/locked-out-at-night`}
-                  className="bg-white border border-gray-200 rounded-lg px-4 py-3 text-sm font-medium text-gray-700 hover:border-[#FFB800] hover:text-[#0F1B2D] transition-colors text-center"
-                >
-                  {area.name}
-                </Link>
-              ))}
-            </div>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
+            {[
+              { slug: 'coventry-city-centre', name: 'Coventry City Centre' },
+              { slug: 'earlsdon', name: 'Earlsdon' },
+              { slug: 'kenilworth', name: 'Kenilworth' },
+              { slug: 'leamington-spa', name: 'Leamington Spa' },
+              { slug: 'nuneaton', name: 'Nuneaton' },
+              { slug: 'rugby', name: 'Rugby' },
+              { slug: 'stratford-upon-avon', name: 'Stratford-upon-Avon' },
+              { slug: 'bedworth', name: 'Bedworth' },
+              { slug: 'warwick', name: 'Warwick' },
+              { slug: 'tile-hill', name: 'Tile Hill' },
+              { slug: 'canley', name: 'Canley' },
+              { slug: 'binley', name: 'Binley' },
+            ].map((area) => (
+              <Link
+                key={area.slug}
+                href={`/areas/${area.slug}`}
+                className="bg-white border border-gray-200 rounded-lg px-4 py-3 text-sm font-medium text-gray-700 hover:border-[#FFB800] hover:text-[#0F1B2D] transition-colors text-center"
+              >
+                Locksmith {area.name}
+              </Link>
+            ))}
           </div>
-
-          {/* Article topics */}
-          <div>
-            <h3 className="text-sm font-black text-gray-500 uppercase tracking-wide mb-4">
-              Area Article Topics
-            </h3>
-            <div className="space-y-3">
-              {ARTICLE_TEMPLATES.map((article) => (
-                <div
-                  key={article.slug}
-                  className="bg-white border border-gray-200 rounded-xl p-4 hover:border-[#FFB800] hover:shadow-sm transition-all"
-                >
-                  <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
-                    <div>
-                      <p className="font-bold text-gray-900">
-                        {article.titleTemplate.replace(/\{area\}/g, '[Your Area]')}
-                      </p>
-                      <p className="text-xs text-gray-500 mt-1">
-                        Available for all 78 covered areas
-                      </p>
-                    </div>
-                    <Link
-                      href={`/blog/coventry-city-centre/${article.slug}`}
-                      className="text-[#0F1B2D] font-semibold hover:underline text-sm whitespace-nowrap"
-                    >
-                      Read example &rarr;
-                    </Link>
-                  </div>
-                </div>
-              ))}
-            </div>
+          <div className="text-center mt-8">
+            <Link href="/areas" className="text-[#0F1B2D] font-bold hover:text-[#FFB800] transition-colors text-sm">
+              View all areas I cover &rarr;
+            </Link>
           </div>
         </div>
       </section>

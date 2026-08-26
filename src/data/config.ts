@@ -13,3 +13,22 @@ export const SITE_CONFIG = {
     accent: '#FFB800',
   },
 } as const
+
+// Bump only when page content genuinely changes — drives visible "last updated"
+// dates and sitemap lastModified, so it must never be a build timestamp.
+export const CONTENT_UPDATED = '2026-08-26'
+
+// Real Google Business Profile figures, maintained by hand to exactly match the
+// live profile. All-null until real values are supplied — UI must render nothing
+// (no rating, no count) rather than a placeholder when these are null/empty.
+export const GOOGLE_REVIEWS: {
+  rating: number | null
+  count: number | null
+  profileUrl: string
+  placeId: string
+} = {
+  rating: null,
+  count: null,
+  profileUrl: '',
+  placeId: '',
+}

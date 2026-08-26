@@ -19,14 +19,23 @@ interface Props {
   params: Promise<{ postcode: string }>
 }
 
+// Honest response window derived from the postcode's actual areas — outlying
+// districts must never inherit the Coventry "15-30 minutes" claim.
+function responseRange(areas: { responseTime: string }[]): string {
+  const nums = areas.flatMap((a) => (a.responseTime.match(/\d+/g) ?? []).map(Number))
+  if (nums.length === 0) return SITE_CONFIG.responseTime
+  return `${Math.min(...nums)}-${Math.max(...nums)} minutes`
+}
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { postcode } = await params
   if (!postcode) return {}
   const upper = postcode.toUpperCase()
+  const response = responseRange(AREAS.filter((a) => a.postcode.toLowerCase() === postcode))
 
   return {
     title: `Locksmith ${upper} | Emergency 24/7 | No VAT | No Call-Out Fee`,
-    description: `Emergency locksmith covering all of ${upper}. Locked out? I can be with you in 15-30 minutes. No VAT, no call-out fee. Call ${SITE_CONFIG.phone} now — available 24/7.`,
+    description: `Emergency locksmith covering all of ${upper}. Locked out? I can be with you in ${response}. No VAT, no call-out fee. Call ${SITE_CONFIG.phone} now — available 24/7.`,
     keywords: `locksmith ${upper}, emergency locksmith ${upper}, locksmith near me ${upper}, 24/7 locksmith ${upper}, locked out ${upper}`,
     alternates: {
       canonical: `${SITE_CONFIG.domain}/postcodes/${postcode}`,
@@ -34,7 +43,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     openGraph: {
       type: 'website',
       title: `Locksmith ${upper} | Emergency 24/7 | No VAT`,
-      description: `Emergency locksmith covering all of ${upper}. 15-30 min response. No VAT, no call-out fee.`,
+      description: `Emergency locksmith covering all of ${upper}. ${response} response. No VAT, no call-out fee.`,
       url: `${SITE_CONFIG.domain}/postcodes/${postcode}`,
       images: [{ url: `${SITE_CONFIG.domain}/api/og?title=${encodeURIComponent(`Locksmith ${upper}`)}`, width: 1200, height: 630 }],
     },
@@ -48,33 +57,28 @@ export default async function PostcodePage({ params }: Props) {
 
   const relevantAreas = AREAS.filter(a => a.postcode.toLowerCase() === postcode)
   if (relevantAreas.length === 0) notFound()
+  const response = responseRange(relevantAreas)
 
+  // Two items in both JSON-LD and microdata — there is no /postcodes hub page.
   const breadcrumbSchema = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_CONFIG.domain },
-      { '@type': 'ListItem', position: 2, name: 'Postcodes', item: `${SITE_CONFIG.domain}/postcodes` },
-      { '@type': 'ListItem', position: 3, name: `Locksmith ${upper}`, item: `${SITE_CONFIG.domain}/postcodes/${postcode}` },
+      { '@type': 'ListItem', position: 2, name: `Locksmith ${upper}`, item: `${SITE_CONFIG.domain}/postcodes/${postcode}` },
     ],
   }
 
+  // Service offered in this postcode, provided by the canonical business
+  // entity from layout.tsx — no rating markup, no entity redefinition.
   const serviceSchema = {
     '@context': 'https://schema.org',
-    '@type': ['LocalBusiness', 'Locksmith'],
-    '@id': `${SITE_CONFIG.domain}/#business`,
-    name: 'Local Emergency Locksmith',
-    url: SITE_CONFIG.domain,
-    telephone: SITE_CONFIG.phoneTel,
-    description: `Emergency locksmith serving all of ${upper}. ${relevantAreas[0]?.responseTime ?? '15-30 minute'} response, 24/7, 365 days. No VAT, no call-out fee.`,
-    priceRange: '££',
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.9',
-      reviewCount: '247',
-      bestRating: '5',
-      worstRating: '1',
-    },
+    '@type': 'Service',
+    serviceType: 'Emergency locksmith',
+    name: `Emergency Locksmith in ${upper}`,
+    url: `${SITE_CONFIG.domain}/postcodes/${postcode}`,
+    description: `Emergency locksmith serving all of ${upper}. ${response} response, 24/7, 365 days. No VAT, no call-out fee.`,
+    provider: { '@id': `${SITE_CONFIG.domain}/#business` },
     areaServed: relevantAreas.map(area => ({
       '@type': 'Place',
       name: area.name,
@@ -84,12 +88,6 @@ export default async function PostcodePage({ params }: Props) {
         addressCountry: 'GB',
       },
     })),
-    openingHoursSpecification: {
-      '@type': 'OpeningHoursSpecification',
-      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
-      opens: '00:00',
-      closes: '23:59',
-    },
   }
 
   return (
@@ -106,7 +104,7 @@ export default async function PostcodePage({ params }: Props) {
           </li>
           <span className="mx-2" aria-hidden="true">›</span>
           <li itemScope itemType="https://schema.org/ListItem" itemProp="itemListElement">
-            <span itemProp="item"><span itemProp="name" className="text-gray-800 font-medium">Locksmith {upper}</span></span>
+            <span><span itemProp="name" className="text-gray-800 font-medium">Locksmith {upper}</span></span>
             <meta itemProp="position" content="2" />
           </li>
         </ol>
@@ -129,7 +127,7 @@ export default async function PostcodePage({ params }: Props) {
             </h1>
 
             <p className="text-lg text-gray-300 max-w-xl leading-relaxed">
-              I provide rapid emergency locksmith services across all {upper} locations. Locked out? I can be with you in 15-30 minutes — no VAT, no call-out fee, same price 24/7.
+              I provide rapid emergency locksmith services across all {upper} locations. Locked out? I can be with you in {response} — no VAT, no call-out fee, same price 24/7.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-3">
@@ -164,7 +162,7 @@ export default async function PostcodePage({ params }: Props) {
                 {SITE_CONFIG.phone}
               </a>
               <p className="text-xs text-center text-gray-500 mt-3 uppercase tracking-wider">
-                No VAT · No Call-Out Fee · 15-30 Min
+                No VAT · No Call-Out Fee · {response.replace(' minutes', ' min')}
               </p>
             </div>
           </div>
@@ -213,7 +211,7 @@ export default async function PostcodePage({ params }: Props) {
             Why Choose a Local Locksmith in {upper}?
           </h2>
           <p className="text-gray-700 mb-6">
-            I&apos;m a local independent locksmith — not a national call centre that sub-contracts to whoever is nearest. When you call me for the {upper} area, I answer personally, give you a fixed price on the phone, and I&apos;m at your door in 15-30 minutes.
+            I&apos;m a local independent locksmith — not a national call centre that sub-contracts to whoever is nearest. When you call me for the {upper} area, I answer personally, give you a fixed price on the phone, and I&apos;m at your door in {response}.
           </p>
           <ul className="space-y-4">
             {[
@@ -234,7 +232,7 @@ export default async function PostcodePage({ params }: Props) {
 
       <CTABlock
         heading={`Locked out in ${upper}? Call me now.`}
-        subtext={`Available 24/7 — 15-30 minute response across ${upper}. No VAT, no call-out fee.`}
+        subtext={`Available 24/7 — ${response} response across ${upper}. No VAT, no call-out fee.`}
       />
     </>
   )

@@ -10,7 +10,7 @@ import SchemaMarkup from '@/components/SchemaMarkup'
 import DirectAnswer from '@/components/DirectAnswer'
 import LastUpdated from '@/components/LastUpdated'
 import { SERVICES } from '@/data/services'
-import { SITE_CONFIG } from '@/data/config'
+import { SITE_CONFIG, CONTENT_UPDATED, GOOGLE_REVIEWS } from '@/data/config'
 import { ALL_BLOG_POSTS } from '@/data/blog-posts'
 
 export const metadata: Metadata = {
@@ -85,65 +85,6 @@ const faqSchema = {
   ],
 }
 
-const aggregateRatingSchema = {
-  '@context': 'https://schema.org',
-  '@type': ['LocalBusiness', 'Locksmith'],
-  '@id': `${SITE_CONFIG.domain}/#business`,
-  name: 'Local Emergency Locksmith',
-  url: SITE_CONFIG.domain,
-  telephone: SITE_CONFIG.phoneTel,
-  priceRange: '££',
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: '4.9',
-    reviewCount: '247',
-    bestRating: '5',
-    worstRating: '1',
-  },
-  review: [
-    {
-      '@type': 'Review',
-      itemReviewed: { '@type': 'LocalBusiness', '@id': `${SITE_CONFIG.domain}/#business` },
-      author: { '@type': 'Person', name: 'Sarah T.' },
-      reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
-      reviewBody: 'Locked out at 11pm and panicking. He answered the phone himself, arrived within 20 minutes, and had me back inside within 10. No VAT, exact price quoted on the phone. Absolutely brilliant service.',
-      datePublished: '2025-11-14',
-    },
-    {
-      '@type': 'Review',
-      itemReviewed: { '@type': 'LocalBusiness', '@id': `${SITE_CONFIG.domain}/#business` },
-      author: { '@type': 'Person', name: 'Mark R.' },
-      reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
-      reviewBody: 'Used twice now for lock changes after moving house. Fast, professional, and so much cheaper than the big national companies.',
-      datePublished: '2025-10-22',
-    },
-    {
-      '@type': 'Review',
-      itemReviewed: { '@type': 'LocalBusiness', '@id': `${SITE_CONFIG.domain}/#business` },
-      author: { '@type': 'Person', name: 'Dave H.' },
-      reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
-      reviewBody: 'Called at 7am when I locked myself out before work. He was there in 25 minutes and knew exactly what he was doing. No fuss, fair price, genuinely friendly.',
-      datePublished: '2025-09-08',
-    },
-  ],
-}
-
-const websiteSearchSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'WebSite',
-  '@id': `${SITE_CONFIG.domain}/#website`,
-  url: SITE_CONFIG.domain,
-  name: 'Local Emergency Locksmith',
-  potentialAction: {
-    '@type': 'SearchAction',
-    target: {
-      '@type': 'EntryPoint',
-      urlTemplate: `${SITE_CONFIG.domain}/areas?q={search_term_string}`,
-    },
-    'query-input': 'required name=search_term_string',
-  },
-}
-
 const homepageFaqs = [
   {
     q: 'How quickly can a locksmith arrive in Coventry?',
@@ -177,8 +118,6 @@ export default function HomePage() {
   return (
     <>
       <SchemaMarkup schema={faqSchema} />
-      <SchemaMarkup schema={aggregateRatingSchema} />
-      <SchemaMarkup schema={websiteSearchSchema} />
 
       {/* 1. Hero */}
       <HeroSection
@@ -190,17 +129,23 @@ export default function HomePage() {
       <div className="bg-[#F7F7F5] border-l-4 border-[#FFB800] py-5 px-4">
         <div className="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-3">
-            <div className="flex gap-0.5">
-              {[1, 2, 3, 4, 5].map((star) => (
-                <svg key={star} className="w-6 h-6 text-[#FFB800]" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                </svg>
-              ))}
-            </div>
-            <div>
-              <span className="font-bold text-[#0F1B2D] text-sm">4.9 out of 5</span>
-              <span className="text-gray-500 text-sm ml-1">(47 Google Reviews)</span>
-            </div>
+            {GOOGLE_REVIEWS.rating != null && GOOGLE_REVIEWS.count != null ? (
+              <>
+                <div className="flex gap-0.5">
+                  {[1, 2, 3, 4, 5].map((star) => (
+                    <svg key={star} className="w-6 h-6 text-[#FFB800]" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                    </svg>
+                  ))}
+                </div>
+                <div>
+                  <span className="font-bold text-[#0F1B2D] text-sm">{GOOGLE_REVIEWS.rating} out of 5</span>
+                  <span className="text-gray-500 text-sm ml-1">({GOOGLE_REVIEWS.count} Google Reviews)</span>
+                </div>
+              </>
+            ) : (
+              <span className="font-bold text-[#0F1B2D] text-sm">Local independent locksmith — established in Coventry</span>
+            )}
           </div>
           <div className="flex items-center gap-2 text-[#0F1B2D]">
             <svg className="w-5 h-5 text-[#FFB800]" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
@@ -417,67 +362,54 @@ export default function HomePage() {
       {/* 10. Reviews / testimonials */}
       <section className="py-16 px-4 bg-[#F7F7F5]">
         <div className="max-w-5xl mx-auto">
-          {/* Aggregate rating badge */}
-          <div className="text-center mb-10">
-            <div className="inline-flex flex-col items-center bg-white rounded-2xl px-8 py-5 shadow-sm border border-gray-100">
-              <div className="flex gap-1 mb-2">
-                {[1, 2, 3, 4, 5].map((star) => (
-                  <svg key={star} className="w-7 h-7 text-[#FFB800]" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                  </svg>
-                ))}
-              </div>
-              <span className="text-[#0F1B2D] font-black text-xl">4.9 out of 5 stars</span>
-              <span className="text-gray-500 text-sm">Based on 47 verified Google reviews</span>
-            </div>
-          </div>
-          <h2 className="text-2xl md:text-3xl font-black text-[#0F1B2D] mb-8 text-center">
-            What Coventry Customers Say
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {[
-              {
-                text: 'Locked out at 11pm and panicking. He answered the phone himself, arrived within 20 minutes, and had me back inside within 10. No VAT, exact price quoted on the phone. Absolutely brilliant service.',
-                name: 'Sarah T.',
-                area: 'Earlsdon',
-                date: '2025-11-14',
-              },
-              {
-                text: 'Used twice now for lock changes after moving house. Fast, professional, and so much cheaper than the big national companies. He explains everything and leaves the place spotless. Will use again.',
-                name: 'Mark R.',
-                area: 'Leamington Spa',
-                date: '2025-10-22',
-              },
-              {
-                text: 'Called at 7am when I locked myself out before work. He was there in 25 minutes and knew exactly what he was doing. No fuss, fair price, genuinely friendly. Highly recommend to anyone in Coventry.',
-                name: 'Dave H.',
-                area: 'Rugby',
-                date: '2025-09-08',
-              },
-            ].map((review) => (
-              <div key={review.name} itemScope itemType="https://schema.org/Review" className="bg-white rounded-2xl p-7 shadow-sm border border-gray-100 flex flex-col">
-                <div itemScope itemType="https://schema.org/LocalBusiness" itemProp="itemReviewed">
-                  <meta itemProp="name" content="Local Emergency Locksmith" />
-                </div>
-                <meta itemProp="datePublished" content={review.date} />
-                <div itemScope itemType="https://schema.org/Rating" itemProp="reviewRating">
-                  <meta itemProp="ratingValue" content="5" />
-                  <meta itemProp="bestRating" content="5" />
-                </div>
-                <div className="flex gap-0.5 mb-4">
+          {/* Aggregate rating badge — renders only when real GBP figures are configured */}
+          {GOOGLE_REVIEWS.rating != null && GOOGLE_REVIEWS.count != null && (
+            <div className="text-center mb-10">
+              <div className="inline-flex flex-col items-center bg-white rounded-2xl px-8 py-5 shadow-sm border border-gray-100">
+                <div className="flex gap-1 mb-2">
                   {[1, 2, 3, 4, 5].map((star) => (
-                    <svg key={star} className="w-5 h-5 text-[#FFB800]" fill="currentColor" viewBox="0 0 20 20">
+                    <svg key={star} className="w-7 h-7 text-[#FFB800]" fill="currentColor" viewBox="0 0 20 20">
                       <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                     </svg>
                   ))}
                 </div>
-                <p itemProp="reviewBody" className="text-gray-700 text-sm leading-relaxed mb-5 italic flex-grow">&ldquo;{review.text}&rdquo;</p>
-                <div itemScope itemType="https://schema.org/Person" itemProp="author">
-                  <p className="text-[#0F1B2D] font-bold text-sm"><span itemProp="name">{review.name}</span> <span className="text-gray-500 font-normal">from {review.area}</span></p>
-                  <p className="text-[#FFB800] text-xs font-semibold mt-0.5">Verified Google Review</p>
-                </div>
+                <span className="text-[#0F1B2D] font-black text-xl">{GOOGLE_REVIEWS.rating} out of 5 stars</span>
+                {GOOGLE_REVIEWS.profileUrl ? (
+                  <a href={GOOGLE_REVIEWS.profileUrl} target="_blank" rel="noopener noreferrer" className="text-gray-500 text-sm hover:text-[#0F1B2D] underline">
+                    Based on {GOOGLE_REVIEWS.count} Google reviews
+                  </a>
+                ) : (
+                  <span className="text-gray-500 text-sm">Based on {GOOGLE_REVIEWS.count} Google reviews</span>
+                )}
               </div>
-            ))}
+            </div>
+          )}
+          <h2 className="text-2xl md:text-3xl font-black text-[#0F1B2D] mb-4 text-center">
+            What Coventry Customers Say
+          </h2>
+          <p className="text-gray-600 text-center max-w-xl mx-auto mb-8">
+            Every job is done personally by me — read what customers across Coventry
+            and Warwickshire say about the service.
+          </p>
+          <div className="text-center">
+            <Link
+              href="/testimonials"
+              className="inline-block bg-[#0F1B2D] text-white font-bold px-8 py-3.5 rounded-full hover:bg-[#162438] transition-colors"
+            >
+              Read Customer Reviews
+            </Link>
+            {GOOGLE_REVIEWS.profileUrl && (
+              <p className="mt-4">
+                <a
+                  href={GOOGLE_REVIEWS.profileUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#0F1B2D] text-sm font-semibold underline hover:text-[#FFB800]"
+                >
+                  See all reviews on Google
+                </a>
+              </p>
+            )}
           </div>
         </div>
       </section>
@@ -557,7 +489,7 @@ export default function HomePage() {
 
       {/* Last updated */}
       <div className="text-center py-4 px-4 bg-white">
-        <LastUpdated date="2026-03-17" />
+        <LastUpdated date={CONTENT_UPDATED} />
       </div>
 
       {/* 13. Quick area links */}

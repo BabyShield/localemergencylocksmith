@@ -1,9 +1,13 @@
 import Link from 'next/link'
 import { SITE_CONFIG } from '@/data/config'
 import { SERVICES } from '@/data/services'
+import { AREAS } from '@/data/areas'
 
 export default function Footer() {
   const year = new Date().getFullYear()
+  const postcodes = Array.from(new Set(AREAS.map((a) => a.postcode.toLowerCase()))).sort(
+    (a, b) => a.localeCompare(b, 'en', { numeric: true })
+  )
 
   return (
     <footer className="bg-[#0F1B2D] text-gray-300 py-12 px-4 pb-24 md:pb-12">
@@ -107,11 +111,7 @@ export default function Footer() {
           <div>
             <h4 className="text-gray-400 text-xs font-bold uppercase tracking-widest mb-3">Postcodes Covered</h4>
             <div className="flex flex-wrap gap-x-4 gap-y-1 text-xs text-gray-500">
-              {[
-                'cv1','cv2','cv3','cv4','cv5','cv6','cv7','cv8',
-                'cv9','cv10','cv11','cv12','cv21','cv22','cv23',
-                'cv31','cv32','cv33','cv34','cv35','cv36','cv37',
-              ].map((pc) => (
+              {postcodes.map((pc) => (
                 <Link key={pc} href={`/postcodes/${pc}`} className="hover:text-gray-300 transition-colors uppercase">
                   {pc.toUpperCase()}
                 </Link>
@@ -119,19 +119,15 @@ export default function Footer() {
             </div>
           </div>
           <div>
-            <h4 className="text-gray-400 text-xs font-bold uppercase tracking-widest mb-3">Key Services by Area</h4>
+            <h4 className="text-gray-400 text-xs font-bold uppercase tracking-widest mb-3">Popular Services</h4>
             <div className="flex flex-wrap gap-x-4 gap-y-1 text-xs text-gray-500">
               {[
-                { href: '/areas/coventry-city-centre/emergency-lockout', label: 'Emergency Lockout Coventry' },
-                { href: '/areas/nuneaton/emergency-lockout', label: 'Emergency Lockout Nuneaton' },
-                { href: '/areas/rugby/lock-change', label: 'Lock Change Rugby' },
-                { href: '/areas/leamington-spa/lock-change', label: 'Lock Change Leamington Spa' },
-                { href: '/areas/warwick/upvc-lock-repair', label: 'uPVC Repair Warwick' },
-                { href: '/areas/kenilworth/upvc-lock-repair', label: 'uPVC Repair Kenilworth' },
-                { href: '/areas/bedworth/emergency-lockout', label: 'Emergency Lockout Bedworth' },
-                { href: '/areas/stratford-upon-avon/lock-change', label: 'Lock Change Stratford' },
-                { href: '/areas/coventry-city-centre/lock-change', label: 'Lock Change Coventry' },
-                { href: '/areas/nuneaton/upvc-lock-repair', label: 'uPVC Repair Nuneaton' },
+                { href: '/services/emergency-lockout', label: 'Emergency Lockout Coventry' },
+                { href: '/services/lock-change', label: 'Lock Change Coventry' },
+                { href: '/services/upvc-lock-repair', label: 'uPVC Door Lock Repair' },
+                { href: '/services/boarding-up', label: 'Emergency Boarding Up' },
+                { href: '/services/lock-upgrade', label: 'BS3621 & Anti-Snap Upgrades' },
+                { href: '/prices', label: 'Locksmith Prices' },
               ].map((link) => (
                 <Link key={link.href} href={link.href} className="hover:text-gray-300 transition-colors">
                   {link.label}
@@ -148,7 +144,6 @@ export default function Footer() {
             <Link href="/blog" className="hover:text-gray-300 transition-colors">Blog</Link>
             <Link href="/contact" className="hover:text-gray-300 transition-colors">Contact</Link>
             <Link href="/areas" className="hover:text-gray-300 transition-colors">Areas</Link>
-            <Link href="/near-me" className="hover:text-gray-300 transition-colors">Local Directory</Link>
             <Link href="/prices" className="hover:text-gray-300 transition-colors">Pricing</Link>
             <Link href="/testimonials" className="hover:text-gray-300 transition-colors">Reviews</Link>
             <Link href="/faq" className="hover:text-gray-300 transition-colors">FAQ</Link>

@@ -12,6 +12,9 @@ export const metadata: Metadata = {
     canonical: `${SITE_CONFIG.domain}/privacy`,
   },
   openGraph: {
+    type: 'website',
+    siteName: 'Local Emergency Locksmith',
+    locale: 'en_GB',
     title: 'Privacy Policy | Local Emergency Locksmith Coventry',
     description:
       'Privacy policy for Local Emergency Locksmith. Learn how we collect, use, and protect your personal data.',
@@ -52,7 +55,7 @@ export default function PrivacyPage() {
           </li>
           <span className="mx-2" aria-hidden="true">›</span>
           <li itemScope itemType="https://schema.org/ListItem" itemProp="itemListElement">
-            <span itemProp="item"><span itemProp="name" className="text-[#0F1B2D] font-medium">Privacy Policy</span></span>
+            <span><span itemProp="name" className="text-[#0F1B2D] font-medium">Privacy Policy</span></span>
             <meta itemProp="position" content="2" />
           </li>
         </ol>

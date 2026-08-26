@@ -14,6 +14,9 @@ export const metadata: Metadata = {
     canonical: `${SITE_CONFIG.domain}/faq`,
   },
   openGraph: {
+    type: 'website',
+    siteName: 'Local Emergency Locksmith',
+    locale: 'en_GB',
     title: 'Locksmith FAQ Coventry — Prices, Response Times & Areas Covered',
     description: 'Everything you need to know about emergency locksmith pricing, response times, and areas covered in Coventry.',
     url: `${SITE_CONFIG.domain}/faq`,
@@ -175,7 +178,7 @@ export default function FAQPage() {
           </li>
           <span className="mx-2" aria-hidden="true">›</span>
           <li itemScope itemType="https://schema.org/ListItem" itemProp="itemListElement">
-            <span itemProp="item"><span itemProp="name" className="text-[#0F1B2D] font-medium">FAQ</span></span>
+            <span><span itemProp="name" className="text-[#0F1B2D] font-medium">FAQ</span></span>
             <meta itemProp="position" content="2" />
           </li>
         </ol>
