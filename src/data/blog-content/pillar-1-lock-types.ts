@@ -916,7 +916,7 @@ I've seen all three happen to customers in [Coventry](/areas/coventry-city-centr
 
 ## Common Issues I See in Coventry
 
-Working across areas like [Chapelfields](/areas/chapelfields), [Coundon](/areas/coundon), and [Binley](/areas/binley), the most common mortice lock problems I encounter are:
+Working across areas like [Earlsdon](/areas/earlsdon), [Coundon](/areas/coundon), and [Binley](/areas/binley), the most common mortice lock problems I encounter are:
 
 - **3-lever locks on front doors** — these need upgrading to 5-lever BS3621
 - **Stiff or seized locks** — often caused by age, rust, or lack of lubrication. Sometimes a service and lubrication fixes this; sometimes the lock needs replacing

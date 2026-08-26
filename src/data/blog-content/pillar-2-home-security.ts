@@ -808,7 +808,7 @@ Walk out to your garage and shed right now. Can you see what is inside? How easy
 
 If the answer is no, call me on 024 7522 4730 and I will come out and give you an honest assessment. I carry defender locks, padlocks, hasps, and ground anchors in my van, so I can usually upgrade your outbuilding security in a single visit.
 
-For the full picture of home security including doors and windows, read the [complete home security checklist](/blog/home-security-checklist-2026), or check the [prices page](/prices) for our full range of services. If you are in [Coventry](/areas/coventry) or the surrounding [Warwickshire areas](/areas/), I cover everywhere locally.
+For the full picture of home security including doors and windows, read the [complete home security checklist](/blog/home-security-checklist-2026), or check the [prices page](/prices) for our full range of services. If you are in [Coventry](/areas/coventry-city-centre) or the surrounding [Warwickshire areas](/areas), I cover everywhere locally.
 `,
     faqs: [
       {
