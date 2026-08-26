@@ -27,22 +27,48 @@ const securityHeaders = [
   },
 ]
 
-// Cut article templates — redirect to parent area page (preserves link equity)
-const cutArticleSlugs = [
-  'yale-vs-deadlock-which-is-safer',
-  'find-trustworthy-locksmith',
-  'best-door-locks-security-guide',
-  'lost-keys-what-to-do',
-  'landlord-lock-change',
+// The 5 service slugs — used to constrain redirect patterns so nothing else is swallowed
+const SERVICE_SLUGS = 'emergency-lockout|lock-change|upvc-lock-repair|boarding-up|lock-upgrade'
+
+// Boilerplate town-centre areas consolidated into their rich siblings
+const TOWN_CENTRE_REDIRECTS = [
+  ['rugby-town-centre', 'rugby'],
+  ['royal-leamington-spa-town-centre', 'leamington-spa'],
+  ['warwick-town-centre', 'warwick'],
+  ['stratford-upon-avon-town-centre', 'stratford-upon-avon'],
 ]
 
 const nextConfig: NextConfig = {
   async redirects() {
-    return cutArticleSlugs.map((slug) => ({
-      source: `/blog/:area/${slug}`,
-      destination: '/areas/:area',
-      permanent: true,
-    }))
+    return [
+      // ── Removed doorway surfaces → canonical pages (most specific first) ──
+      { source: '/areas/:slug/streets/:street', destination: '/areas/:slug', permanent: true },
+      { source: `/areas/:slug/:service(${SERVICE_SLUGS})`, destination: '/areas/:slug', permanent: true },
+      { source: '/locksmith/:slug/streets/:street', destination: '/areas/:slug', permanent: true },
+      { source: `/locksmith/:slug/:service(${SERVICE_SLUGS})`, destination: '/areas/:slug', permanent: true },
+      { source: '/locksmith/:slug', destination: '/areas/:slug', permanent: true },
+      { source: '/locksmith', destination: '/areas', permanent: true },
+      { source: '/reviews/:areaSlug', destination: '/areas/:areaSlug', permanent: true },
+      { source: '/reviews', destination: '/testimonials', permanent: true },
+      // Covers all templated area articles, incl. the 5 previously cut slugs
+      { source: '/blog/:areaSlug/:articleSlug', destination: '/areas/:areaSlug', permanent: true },
+      { source: '/guides/:path*', destination: '/blog', permanent: true },
+      { source: '/near-me/:keyword/:areaSlug', destination: '/areas/:areaSlug', permanent: true },
+      { source: '/near-me/:keyword', destination: '/', permanent: true },
+      { source: '/near-me', destination: '/', permanent: true },
+      // ── Consolidated boilerplate areas → rich siblings ──
+      ...TOWN_CENTRE_REDIRECTS.map(([from, to]) => ({
+        source: `/areas/${from}`,
+        destination: `/areas/${to}`,
+        permanent: true,
+      })),
+      // ── Stale URLs from the domain's previous owner, still in Google's index ──
+      { source: '/local-emergency-locksmith/:path*', destination: '/', permanent: true },
+      { source: '/local-emergency-locksmith', destination: '/', permanent: true },
+      { source: '/locksmith-windsor-and-maidenhead', destination: '/', permanent: true },
+      { source: '/collections/lock-replacement-services', destination: '/services/lock-change', permanent: true },
+      { source: '/collections/:path*', destination: '/services', permanent: true },
+    ]
   },
   async headers() {
     return [
@@ -52,18 +78,6 @@ const nextConfig: NextConfig = {
       },
       {
         source: '/areas/:path*',
-        headers: [
-          { key: 'Cache-Control', value: 's-maxage=86400, stale-while-revalidate=2592000' }
-        ],
-      },
-      {
-        source: '/guides/:path*',
-        headers: [
-          { key: 'Cache-Control', value: 's-maxage=86400, stale-while-revalidate=2592000' }
-        ],
-      },
-      {
-        source: '/near-me/:path*',
         headers: [
           { key: 'Cache-Control', value: 's-maxage=86400, stale-while-revalidate=2592000' }
         ],
