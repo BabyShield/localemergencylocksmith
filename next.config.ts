@@ -30,6 +30,11 @@ const securityHeaders = [
 // The 5 service slugs — used to constrain redirect patterns so nothing else is swallowed
 const SERVICE_SLUGS = 'emergency-lockout|lock-change|upvc-lock-repair|boarding-up|lock-upgrade'
 
+// The 7 towns with hand-written town×service pages — excluded (via lookahead)
+// from the area×service redirect so their real pages serve. Keep in sync with
+// src/data/town-services.ts.
+const TOWN_SLUGS = 'nuneaton|bedworth|rugby|leamington-spa|warwick|kenilworth|stratford-upon-avon'
+
 // Boilerplate town-centre areas consolidated into their rich siblings
 const TOWN_CENTRE_REDIRECTS = [
   ['rugby-town-centre', 'rugby'],
@@ -43,7 +48,7 @@ const nextConfig: NextConfig = {
     return [
       // ── Removed doorway surfaces → canonical pages (most specific first) ──
       { source: '/areas/:slug/streets/:street', destination: '/areas/:slug', permanent: true },
-      { source: `/areas/:slug/:service(${SERVICE_SLUGS})`, destination: '/areas/:slug', permanent: true },
+      { source: `/areas/:slug((?!(?:${TOWN_SLUGS})/)[a-z0-9-]+)/:service(${SERVICE_SLUGS})`, destination: '/areas/:slug', permanent: true },
       { source: '/locksmith/:slug/streets/:street', destination: '/areas/:slug', permanent: true },
       { source: `/locksmith/:slug/:service(${SERVICE_SLUGS})`, destination: '/areas/:slug', permanent: true },
       { source: '/locksmith/:slug', destination: '/areas/:slug', permanent: true },

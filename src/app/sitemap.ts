@@ -3,6 +3,7 @@ import { AREAS } from '@/data/areas'
 import { SERVICES } from '@/data/services'
 import { SITE_CONFIG, CONTENT_UPDATED } from '@/data/config'
 import { ALL_BLOG_POSTS } from '@/data/blog-posts'
+import { TOWN_SERVICE_PARAMS } from '@/data/town-services'
 
 // Exactly the canonical indexable set — every URL here returns 200 with a
 // self-canonical and no noindex. lastModified comes from CONTENT_UPDATED
@@ -34,6 +35,14 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     // Area pages (AREAS is deduped at the source)
     ...AREAS.map((a) => ({
       url: `${base}/areas/${a.slug}`,
+      lastModified: contentDate,
+      changeFrequency: 'monthly' as const,
+      priority: 0.8,
+    })),
+
+    // Hand-written town × service pages (7 towns × 5 services)
+    ...TOWN_SERVICE_PARAMS.map((p) => ({
+      url: `${base}/areas/${p.slug}/${p.serviceSlug}`,
       lastModified: contentDate,
       changeFrequency: 'monthly' as const,
       priority: 0.8,

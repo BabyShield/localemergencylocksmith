@@ -29,6 +29,8 @@ export const GOOGLE_REVIEWS: {
 } = {
   rating: null,
   count: null,
-  profileUrl: '',
+  // GBP: "Coventry 24/7 Locksmith" (kgmid /g/11z204xvk1) — owner's share link.
+  // Fill rating/count/placeId with the live profile's real values only.
+  profileUrl: 'https://share.google/bdboAzi1gJOpOjPck',
   placeId: '',
 }

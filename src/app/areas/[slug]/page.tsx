@@ -5,6 +5,7 @@ import { AREAS, getAreaBySlug, getAreaNeighbours } from '@/data/areas'
 import { SERVICES } from '@/data/services'
 import { SITE_CONFIG } from '@/data/config'
 import { ALL_BLOG_POSTS } from '@/data/blog-posts'
+import { hasTownService } from '@/data/town-services'
 import HeroSection from '@/components/HeroSection'
 import CTABlock from '@/components/CTABlock'
 import FAQSection from '@/components/FAQSection'
@@ -297,7 +298,7 @@ export default async function AreaPage({ params }: Props) {
               <div key={s.slug} className="flex justify-between items-center py-3 border-b border-gray-100">
                 <div>
                   <Link
-                    href={`/services/${s.slug}`}
+                    href={hasTownService(slug, s.slug) ? `/areas/${slug}/${s.slug}` : `/services/${s.slug}`}
                     className="font-semibold text-gray-900 hover:text-[#FFB800] hover:underline"
                   >
                     {s.shortName} in {area.name}

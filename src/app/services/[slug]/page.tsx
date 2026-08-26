@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { SERVICES, getServiceBySlug } from '@/data/services'
 import { AREAS, getAllAreasByRegion } from '@/data/areas'
+import { TOWN_SLUGS } from '@/data/town-services'
 import { SITE_CONFIG, CONTENT_UPDATED } from '@/data/config'
 import { ALL_BLOG_POSTS, getBlogPostBySlug } from '@/data/blog-posts'
 import HeroSection from '@/components/HeroSection'
@@ -706,6 +707,24 @@ export default async function ServicePage({ params }: Props) {
           <p className="text-gray-500 text-center mb-8 max-w-lg mx-auto">
             I cover Coventry, Warwickshire, and surrounding areas. Here are some of the locations I serve.
           </p>
+
+          {/* Town-specific service pages */}
+          <div className="mb-10">
+            <h3 className="text-sm font-bold text-gray-400 uppercase tracking-wide mb-3 text-center">
+              {service.shortName} by Town
+            </h3>
+            <div className="flex flex-wrap justify-center gap-2">
+              {TOWN_SLUGS.map((town) => (
+                <Link
+                  key={town.slug}
+                  href={`/areas/${town.slug}/${slug}`}
+                  className="text-sm font-semibold text-[#0F1B2D] bg-[#F7F7F5] hover:bg-white px-4 py-2 rounded-full border border-gray-200 hover:border-[#FFB800] transition-all"
+                >
+                  {service.shortName} {town.name}
+                </Link>
+              ))}
+            </div>
+          </div>
 
           {/* All areas grouped by region */}
           <div className="space-y-6">
