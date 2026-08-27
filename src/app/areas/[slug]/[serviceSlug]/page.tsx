@@ -24,6 +24,32 @@ interface Props {
   params: Promise<{ slug: string; serviceSlug: string }>
 }
 
+const SERVICE_SEARCH_INTENT_COPY: Record<string, {
+  heading: (areaName: string) => string
+  body: (areaName: string) => string
+}> = {
+  'emergency-lockout': {
+    heading: (areaName) => `Locked Out of Your House in ${areaName}?`,
+    body: (areaName) => `This emergency lockout service covers calls in ${areaName} when you are locked out of the house, have lost your keys, or need a 24-hour emergency locksmith.`,
+  },
+  'lock-change': {
+    heading: (areaName) => `Front Door Lock Replacement in ${areaName}`,
+    body: (areaName) => `This service covers front door lock replacement, door lock changes, cylinder replacement, and Yale lock replacement in ${areaName}.`,
+  },
+  'upvc-lock-repair': {
+    heading: (areaName) => `uPVC Door Lock Repair & Replacement in ${areaName}`,
+    body: (areaName) => `This service covers uPVC door lock repair, uPVC door lock replacement, failed lock mechanisms, multipoint locks, window locks, and composite door locks in ${areaName}.`,
+  },
+  'boarding-up': {
+    heading: (areaName) => `Emergency Boarding Up Service in ${areaName}`,
+    body: (areaName) => `This service covers emergency boarding up for damaged doors and windows in ${areaName}, including break-in damage, storm damage, and accidental breakage.`,
+  },
+  'lock-upgrade': {
+    heading: (areaName) => `Anti-Snap & BS3621 Locks in ${areaName}`,
+    body: (areaName) => `This service covers anti-snap door locks, anti-snap euro cylinders, BS3621 locks, and targeted lock upgrades in ${areaName}.`,
+  },
+}
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug, serviceSlug } = await params
   const content = getTownService(slug, serviceSlug)
@@ -60,6 +86,7 @@ export default async function TownServicePage({ params }: Props) {
 
   const neighbours = getAreaNeighbours(area)
   const otherServices = SERVICES.filter((s) => s.slug !== serviceSlug)
+  const searchIntentCopy = SERVICE_SEARCH_INTENT_COPY[serviceSlug]
 
   const breadcrumbSchema = {
     '@context': 'https://schema.org',
@@ -163,6 +190,17 @@ export default async function TownServicePage({ params }: Props) {
               {para}
             </p>
           ))}
+
+          {searchIntentCopy && (
+            <div className="my-8 rounded-xl border border-[#FFB800]/40 bg-[#FFF9E8] p-6">
+              <h2 className="text-xl font-black text-[#0F1B2D] mb-3">
+                {searchIntentCopy.heading(area.name)}
+              </h2>
+              <p className="text-gray-700 leading-relaxed">
+                {searchIntentCopy.body(area.name)}
+              </p>
+            </div>
+          )}
 
           {/* Quick info boxes */}
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 my-8">

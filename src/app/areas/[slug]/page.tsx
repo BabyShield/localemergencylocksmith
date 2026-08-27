@@ -30,12 +30,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!area) return {}
 
   const title = `Locksmith ${area.name} | Emergency 24/7 | No VAT | From £59`
-  const description = `Locksmith in ${area.name} — ${area.responseTime} emergency response, 24/7. No VAT, no call-out fee. Locked out? Call ${SITE_CONFIG.phone} now. ${area.postcode} covered.`
+  const description = `Need a local or emergency locksmith in ${area.name}? ${area.responseTime} response, 24 hours a day. No VAT or call-out fee. Locked out? Call ${SITE_CONFIG.phone}.`
 
   return {
     title,
     description,
-    keywords: `locksmith ${area.name}, emergency locksmith ${area.name}, locksmith near me ${area.name}, 24/7 locksmith ${area.postcode}, locksmith ${area.postcode}, local locksmith ${area.name}, locksmith locked out ${area.name}`,
+    keywords: `locksmith ${area.name}, locksmiths ${area.name}, emergency locksmith ${area.name}, locksmith near me ${area.name}, 24 hour locksmith ${area.name}, locksmith ${area.postcode}, local locksmith ${area.name}, locked out of house ${area.name}`,
     alternates: {
       canonical: `${SITE_CONFIG.domain}/areas/${slug}`,
     },
@@ -165,7 +165,7 @@ export default async function AreaPage({ params }: Props) {
 
       <HeroSection
         heading={`Locksmith ${area.name} — Emergency 24/7`}
-        subheading={`Locked out in ${area.name}? Local locksmith — ${area.responseTime} response. No VAT, no call-out fee, no hidden charges.`}
+        subheading={`Locked out of your house in ${area.name}? Local 24-hour locksmith — ${area.responseTime} response. No VAT, no call-out fee.`}
         areaName={area.name}
         responseTime={area.responseTime}
       />
@@ -215,27 +215,32 @@ export default async function AreaPage({ params }: Props) {
         </div>
       </section>
 
-      {/* Keyword-targeted service summary */}
+      {/* Semrush-aligned service summary; canonical ownership stays on this area hub. */}
       <section className="py-8 px-4 bg-[#0F1B2D] text-white">
         <div className="max-w-3xl mx-auto">
           <h2 className="text-xl font-black mb-4">
-            Locksmith Services in {area.name} — What I Offer
+            Need a Local or Emergency Locksmith in {area.name}?
           </h2>
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 text-sm">
+          <p className="text-gray-200 leading-relaxed mb-5">
+            If you are locked out of your house, need a 24-hour emergency locksmith, or are
+            looking for a locksmith near you in {area.postcode}, call for a price and an honest
+            arrival time. I also cover the following residential lock services in {area.name}.
+          </p>
+          <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
             {[
-              `Emergency lockout ${area.name}`,
-              `Lock change ${area.name}`,
-              `uPVC door repair ${area.name}`,
-              `Anti-snap cylinder ${area.postcode}`,
-              `24/7 locksmith ${area.name}`,
-              `Locksmith near me ${area.postcode}`,
-            ].map((kw) => (
-              <div key={kw} className="flex items-center gap-2">
+              `Emergency lockout service in ${area.name}`,
+              `Front door lock replacement in ${area.name}`,
+              `uPVC door lock repair and replacement in ${area.name}`,
+              `Emergency boarding up service in ${area.name}`,
+              `Anti-snap door locks in ${area.postcode}`,
+              `BS3621 lock upgrades in ${area.postcode}`,
+            ].map((serviceLabel) => (
+              <li key={serviceLabel} className="flex items-center gap-2">
                 <span className="text-[#FFB800] font-bold flex-shrink-0">✓</span>
-                <span className="text-gray-200">{kw}</span>
-              </div>
+                <span className="text-gray-200">{serviceLabel}</span>
+              </li>
             ))}
-          </div>
+          </ul>
         </div>
       </section>
 

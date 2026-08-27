@@ -65,9 +65,9 @@ const SERVICE_CONTENT: Record<string, {
   voiceFaqs: { q: string; a: string }[]
 }> = {
   'emergency-lockout': {
-    h1: 'Emergency Locksmith Coventry — Locked Out?',
+    h1: 'Emergency Locksmith for House Lockouts in Coventry',
     intro: [
-      "Being locked out of your home is stressful — especially late at night or in bad weather. I provide fast, professional emergency lockout services across Coventry and Warwickshire, available 24 hours a day, 7 days a week, 365 days a year.",
+      "Being locked out of your house is stressful — especially late at night or in bad weather. I provide a professional emergency lockout service across Coventry and Warwickshire, available 24 hours a day, 7 days a week, 365 days a year.",
       "When you call me, I'll ask you for your address and a brief description of your door and lock type. I'll give you an honest price upfront — from £59 — and an honest arrival time. No call-out fee. No VAT.",
       "In most cases I can open your door using non-destructive entry techniques, meaning your lock and door frame stay intact. Where a lock does need replacing, I'll explain why and give you a quote before I do anything.",
     ],
@@ -118,9 +118,9 @@ const SERVICE_CONTENT: Record<string, {
     ],
   },
   'lock-change': {
-    h1: 'Lock Change Coventry — Same Day Service',
+    h1: 'Front Door Lock Replacement Coventry — Lock Change Service',
     intro: [
-      "Whether you've moved into a new property, lost a key, had a break-in, or simply want to upgrade your security, I supply and fit replacement locks across Coventry and Warwickshire the same day you call.",
+      "Whether you've moved into a new property, lost a key, had a break-in, or simply want to upgrade your security, I provide front door lock replacement and door lock changes across Coventry and Warwickshire.",
       "I carry a full range of lock types including British Standard BS3621 five-lever mortice deadlocks, high-security cylinder locks, anti-snap cylinders, and Yale nightlatches. If your insurance requires a specific lock type, I'll make sure you get the right one.",
       "Lock change prices start from £69 including the new lock and all labour. No VAT. No call-out fee.",
     ],
@@ -171,10 +171,10 @@ const SERVICE_CONTENT: Record<string, {
     ],
   },
   'upvc-lock-repair': {
-    h1: 'uPVC Door Lock Repair Coventry — Fast & Affordable',
+    h1: 'uPVC Door Lock Repair & Replacement Coventry',
     intro: [
-      "uPVC door and window locks are the most common lock type in UK homes built since the 1990s, and they are also the most common source of repair calls I receive. A stiff, sticky, or misaligned uPVC lock is not just annoying — it is a security risk.",
-      "I repair and replace uPVC door multipoint locking mechanisms, euro cylinders, window espagnolette locks, and door handles across Coventry and Warwickshire. In most cases I can repair the existing lock; where replacement is necessary I carry the most common lock types in my van.",
+      "A stiff, sticky, or misaligned uPVC door lock is not just annoying — it can leave the door difficult to secure. I diagnose uPVC door lock repairs and replacements across Coventry and Warwickshire.",
+      "I repair and replace uPVC door lock mechanisms, multipoint locks, euro cylinders, window locks, composite door locks, and door handles. Where a repair is possible I will explain it; where replacement is necessary I will quote before fitting the part.",
       "uPVC lock repair starts from £59. No VAT. No call-out fee.",
     ],
     steps: [
@@ -224,9 +224,9 @@ const SERVICE_CONTENT: Record<string, {
     ],
   },
   'boarding-up': {
-    h1: 'Emergency Boarding Up Coventry — 24/7 Service',
+    h1: 'Emergency Boarding Up Service Coventry — 24/7',
     intro: [
-      "After a break-in, storm damage, or accidental breakage, a smashed window or damaged door needs securing immediately. I provide emergency boarding-up services across Coventry and Warwickshire, available 24 hours a day.",
+      "After a break-in, storm damage, or accidental breakage, a smashed window or damaged door needs securing immediately. I provide an emergency boarding up service across Coventry and Warwickshire, available 24 hours a day.",
       "I use heavy-duty boarding materials to secure your property against weather and further intrusion until a permanent repair can be arranged. Where possible I will also advise on the most secure temporary solution for your specific situation.",
       "Emergency boarding up starts from £79. No VAT. No call-out fee.",
     ],
@@ -276,10 +276,10 @@ const SERVICE_CONTENT: Record<string, {
     ],
   },
   'lock-upgrade': {
-    h1: 'Lock Upgrade Coventry — BS3621 & Anti-Snap Cylinders',
+    h1: 'Anti-Snap Locks & BS3621 Lock Upgrades Coventry',
     intro: [
-      "Upgrading your locks is one of the most cost-effective security improvements you can make. Whether you want to comply with home insurance requirements, improve resistance to forced entry, or simply feel more secure, I supply and fit a full range of security-approved locks.",
-      "I fit British Standard BS3621 mortice deadlocks, Secured by Design cylinders, anti-snap euro cylinders, and high-security mortice locks. I can also carry out a free security assessment of your property and advise on any weak points.",
+      "Anti-snap locks and BS3621 locks are two of the most commonly requested home-security upgrades. Whether you are following your insurer's stated requirements, improving resistance to forced entry, or replacing an older lock, I can assess the door and explain the suitable options.",
+      "I fit anti-snap door locks, anti-snap euro cylinders, British Standard BS3621 mortice deadlocks, Secured by Design cylinders, and high-security mortice locks. I can also assess the property's existing locks and identify weak points.",
       "Lock upgrade prices start from £79 including the lock and fitting. No VAT. No call-out fee.",
     ],
     steps: [
@@ -738,7 +738,7 @@ export default async function ServicePage({ params }: Props) {
                       href={`/areas/${area.slug}`}
                       className="text-sm text-gray-600 hover:text-[#0F1B2D] bg-white hover:bg-white px-3 py-1.5 rounded-lg border border-gray-200 hover:border-[#FFB800] transition-all duration-200"
                     >
-                      {area.name}
+                      Locksmith {area.name}
                     </Link>
                   ))}
                 </div>
