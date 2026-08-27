@@ -12,6 +12,7 @@ import FAQSection from '@/components/FAQSection'
 import SchemaMarkup from '@/components/SchemaMarkup'
 import DirectAnswer from '@/components/DirectAnswer'
 import LastUpdated from '@/components/LastUpdated'
+import ServiceIcon from '@/components/ServiceIcon'
 
 export const dynamic = 'force-static'
 export const revalidate = false
@@ -338,17 +339,6 @@ const mainAreaLinks = [
   { slug: 'warwick', name: 'Warwick' },
   { slug: 'kenilworth', name: 'Kenilworth' },
 ]
-
-/* ------------------------------------------------------------------ */
-/*  Service icons for the "Other Services" section                     */
-/* ------------------------------------------------------------------ */
-const SERVICE_ICONS: Record<string, string> = {
-  'emergency-lockout': '🔓',
-  'lock-change': '🔑',
-  'upvc-lock-repair': '🚪',
-  'boarding-up': '🪟',
-  'lock-upgrade': '🛡️',
-}
 
 export default async function ServicePage({ params }: Props) {
   const { slug } = await params
@@ -819,8 +809,8 @@ export default async function ServicePage({ params }: Props) {
                 className="group bg-white border border-gray-200 hover:border-[#FFB800] rounded-2xl p-5 transition-all duration-200 hover:shadow-md flex gap-4 items-start"
               >
                 {/* Icon */}
-                <span className="flex-shrink-0 w-12 h-12 bg-[#0F1B2D] rounded-xl flex items-center justify-center text-xl group-hover:bg-[#162438] transition-colors">
-                  {SERVICE_ICONS[s.slug] || '🔧'}
+                <span className="flex-shrink-0 w-12 h-12 bg-[#0F1B2D] rounded-xl flex items-center justify-center group-hover:bg-[#162438] transition-colors">
+                  <ServiceIcon slug={s.slug} className="w-6 h-6 text-[#FFB800]" />
                 </span>
 
                 <div className="flex-1 min-w-0">

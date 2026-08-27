@@ -1,5 +1,6 @@
 import { SITE_CONFIG } from '@/data/config'
 import { Suspense } from 'react'
+import { ShieldCheck, Umbrella, Clock } from 'lucide-react'
 import PPCHandler from './PPCHandler'
 
 interface HeroSectionProps {
@@ -57,18 +58,18 @@ export default function HeroSection({ heading, subheading, areaName, compact, re
           </a>
         </div>
 
-        {/* Trust indicators */}
+        {/* Trust indicators — credentials, not a repeat of the USP strip */}
         <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm text-gray-400">
           <span className="flex items-center gap-1.5">
-            <svg className="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" /></svg>
-            No VAT
+            <ShieldCheck className="w-4 h-4 text-green-500" aria-hidden="true" />
+            DBS-Checked
           </span>
           <span className="flex items-center gap-1.5">
-            <svg className="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" /></svg>
-            No Call-Out Fee
+            <Umbrella className="w-4 h-4 text-green-500" aria-hidden="true" />
+            Fully Insured
           </span>
           <span className="flex items-center gap-1.5">
-            <svg className="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" /></svg>
+            <Clock className="w-4 h-4 text-green-500" aria-hidden="true" />
             {responseTime ?? SITE_CONFIG.responseTime} Response{areaName ? ` in ${areaName}` : ''}
           </span>
         </div>

@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import type { Service } from '@/data/services'
+import ServiceIcon from './ServiceIcon'
 
 interface ServiceCardProps {
   service: Service
@@ -16,7 +17,9 @@ export default function ServiceCard({ service }: ServiceCardProps) {
         from &pound;{service.priceFrom}
       </div>
 
-      <div className="text-4xl mb-4">{service.icon}</div>
+      <div className="mb-4 inline-flex items-center justify-center w-14 h-14 rounded-xl bg-[#0F1B2D]/5 text-[#0F1B2D] group-hover:bg-[#FFB800]/15 group-hover:text-[#0F1B2D] transition-colors">
+        <ServiceIcon slug={service.slug} className="w-7 h-7" />
+      </div>
 
       <h3 className="text-lg font-black text-[#0F1B2D] mb-2 pr-20">
         {service.shortName}

@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { SITE_CONFIG } from '@/data/config'
+import { DoorOpen, KeyRound, MapPin, PoundSterling } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Page Not Found',
@@ -60,7 +61,7 @@ export default function NotFound() {
             href="/services/emergency-lockout"
             className="bg-white border border-gray-200 hover:border-[#FFB800] rounded-xl p-4 text-left transition-all hover:shadow-sm"
           >
-            <span className="text-2xl">🔓</span>
+            <DoorOpen className="w-6 h-6 text-[#0F1B2D]" aria-hidden="true" />
             <p className="font-bold text-[#0F1B2D] text-sm mt-2">Emergency Lockout</p>
             <p className="text-[#FFB800] font-black text-sm">From &pound;59</p>
           </Link>
@@ -68,7 +69,7 @@ export default function NotFound() {
             href="/services/lock-change"
             className="bg-white border border-gray-200 hover:border-[#FFB800] rounded-xl p-4 text-left transition-all hover:shadow-sm"
           >
-            <span className="text-2xl">🔑</span>
+            <KeyRound className="w-6 h-6 text-[#0F1B2D]" aria-hidden="true" />
             <p className="font-bold text-[#0F1B2D] text-sm mt-2">Lock Change</p>
             <p className="text-[#FFB800] font-black text-sm">From &pound;69</p>
           </Link>
@@ -76,7 +77,7 @@ export default function NotFound() {
             href="/areas"
             className="bg-white border border-gray-200 hover:border-[#FFB800] rounded-xl p-4 text-left transition-all hover:shadow-sm"
           >
-            <span className="text-2xl">📍</span>
+            <MapPin className="w-6 h-6 text-[#0F1B2D]" aria-hidden="true" />
             <p className="font-bold text-[#0F1B2D] text-sm mt-2">Areas I Cover</p>
             <p className="text-gray-500 text-xs">78 areas across Coventry</p>
           </Link>
@@ -84,7 +85,7 @@ export default function NotFound() {
             href="/prices"
             className="bg-white border border-gray-200 hover:border-[#FFB800] rounded-xl p-4 text-left transition-all hover:shadow-sm"
           >
-            <span className="text-2xl">💷</span>
+            <PoundSterling className="w-6 h-6 text-[#0F1B2D]" aria-hidden="true" />
             <p className="font-bold text-[#0F1B2D] text-sm mt-2">Pricing</p>
             <p className="text-gray-500 text-xs">No VAT, no hidden charges</p>
           </Link>

@@ -1,21 +1,22 @@
+import { PoundSterling, Ban, MapPin, Clock } from 'lucide-react'
+
+// Calm, static trust row — no marquee, no emoji. Four claims, stated once.
 const TRUST_ITEMS = [
-  { icon: '💷', text: 'No VAT — Save 20%' },
-  { icon: '🚫', text: 'No Call-Out Fee' },
-  { icon: '📍', text: 'Local Independent' },
-  { icon: '🕐', text: '24/7 Emergency' },
-  { icon: '⚡', text: 'Fast Local Response' },
-  { icon: '✅', text: 'No Hidden Charges' },
+  { Icon: PoundSterling, text: 'No VAT — save 20%' },
+  { Icon: Ban, text: 'No call-out fee' },
+  { Icon: MapPin, text: 'Local & independent' },
+  { Icon: Clock, text: '24/7 — 365 days' },
 ]
 
 export default function TrustStrip() {
   return (
-    <div className="bg-[#FFB800] text-[#0F1B2D] py-2.5 overflow-hidden">
-      <div className="max-w-6xl mx-auto px-4">
-        <div className="flex gap-6 md:gap-0 md:justify-between overflow-x-auto md:overflow-visible scrollbar-hide">
-          {TRUST_ITEMS.map((item) => (
-            <span key={item.text} className="flex items-center gap-2 whitespace-nowrap text-sm md:text-[13px] font-bold">
-              <span className="text-base">{item.icon}</span>
-              <span>{item.text}</span>
+    <div className="bg-white border-b border-gray-200">
+      <div className="max-w-6xl mx-auto px-4 py-2.5">
+        <div className="grid grid-cols-2 md:flex md:justify-between gap-y-1.5 gap-x-4">
+          {TRUST_ITEMS.map(({ Icon, text }) => (
+            <span key={text} className="flex items-center gap-2 text-[13px] font-semibold text-[#0F1B2D]">
+              <Icon className="w-4 h-4 text-[#FFB800] flex-shrink-0" aria-hidden="true" />
+              <span>{text}</span>
             </span>
           ))}
         </div>

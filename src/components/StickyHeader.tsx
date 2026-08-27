@@ -38,11 +38,20 @@ export default function StickyHeader() {
         </button>
 
         {/* Logo */}
-        <Link href="/" className="flex flex-col" onClick={() => setMenuOpen(false)}>
-          <span className="text-white font-black text-base md:text-lg leading-tight tracking-tight">
-            Local Emergency Locksmith
+        <Link href="/" className="flex items-center gap-2.5" onClick={() => setMenuOpen(false)}>
+          {/* Padlock mark — matches the PWA icon */}
+          <svg className="w-7 h-7 md:w-8 md:h-8 flex-shrink-0" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+            <path d="M15 22v-6a9 9 0 0 1 18 0v6" stroke="#FFB800" strokeWidth="4" strokeLinecap="round" fill="none" />
+            <rect x="10" y="21" width="28" height="20" rx="3" fill="#FFB800" />
+            <circle cx="24" cy="29" r="3" fill="#0F1B2D" />
+            <rect x="22.5" y="30" width="3" height="6.5" rx="1.5" fill="#0F1B2D" />
+          </svg>
+          <span className="flex flex-col">
+            <span className="text-white font-black text-base md:text-lg leading-tight tracking-tight">
+              Local Emergency Locksmith
+            </span>
+            <span className="text-gray-400 text-[11px] md:text-xs tracking-wide">{SITE_CONFIG.tagline}</span>
           </span>
-          <span className="text-gray-400 text-[11px] md:text-xs tracking-wide">{SITE_CONFIG.tagline}</span>
         </Link>
 
         {/* Desktop nav */}

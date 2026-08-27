@@ -12,6 +12,7 @@ import FAQSection from '@/components/FAQSection'
 import AreaFacts from '@/components/AreaFacts'
 import SchemaMarkup from '@/components/SchemaMarkup'
 import { getAreaFacts } from '@/data/area-facts'
+import { MapPin, PoundSterling, CheckCircle, Lock, Clock, Home } from 'lucide-react'
 
 export const dynamic = 'force-static'
 export const revalidate = false
@@ -253,38 +254,40 @@ export default async function AreaPage({ params }: Props) {
           <ul className="space-y-4">
             {[
               {
-                icon: '📍',
+                Icon: MapPin,
                 text: area.localDetail
                   ? `I'm based locally and know ${area.name} well — ${area.localDetail.split('.')[0]}.`
                   : `I'm based locally, not a national call centre. I know ${area.name} and I respond fast.`,
               },
               {
-                icon: '💷',
+                Icon: PoundSterling,
                 text: 'No VAT — you save 20% compared to bigger companies. The price I quote is the price you pay.',
               },
               {
-                icon: '✅',
+                Icon: CheckCircle,
                 text: 'Transparent pricing — I always confirm the price on the phone before I come out. No hidden charges.',
               },
               {
-                icon: '🔒',
+                Icon: Lock,
                 text: area.commonIssues
                   ? `${area.commonIssues.split('.')[0]}. I always try non-destructive entry first.`
                   : 'No lock drilling unless absolutely necessary — I always try non-destructive entry first.',
               },
               {
-                icon: '⏱️',
+                Icon: Clock,
                 text: `${area.responseTime} response for ${area.name} — I cover the entire ${area.postcode} postcode area.`,
               },
               {
-                icon: '🏠',
+                Icon: Home,
                 text: area.housingStock
                   ? `${area.housingStock.split('.')[0]}.`
                   : `I work on all lock types found in ${area.name} — Yale, mortice, uPVC multipoint, and euro cylinders.`,
               },
             ].map((item) => (
               <li key={item.text} className="flex gap-3 items-start">
-                <span className="text-2xl flex-shrink-0 mt-1">{item.icon}</span>
+                <span className="flex-shrink-0 mt-0.5 flex items-center justify-center w-8 h-8 rounded-lg bg-[#0F1B2D]/5">
+                  <item.Icon className="w-4.5 h-4.5 text-[#0F1B2D]" aria-hidden="true" />
+                </span>
                 <span className="text-gray-700">{item.text}</span>
               </li>
             ))}

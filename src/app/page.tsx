@@ -9,6 +9,7 @@ import PriceTable from '@/components/PriceTable'
 import SchemaMarkup from '@/components/SchemaMarkup'
 import DirectAnswer from '@/components/DirectAnswer'
 import LastUpdated from '@/components/LastUpdated'
+import CredentialsStrip from '@/components/CredentialsStrip'
 import { SERVICES } from '@/data/services'
 import { SITE_CONFIG, CONTENT_UPDATED, GOOGLE_REVIEWS } from '@/data/config'
 import { ALL_BLOG_POSTS } from '@/data/blog-posts'
@@ -189,51 +190,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 4. Why choose a local locksmith */}
-      <section className="py-14 px-4 bg-white">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-2xl md:text-3xl font-black text-[#0F1B2D] mb-3 text-center">
-            Why Choose a Local Locksmith Over a Call Centre?
-          </h2>
-          <p className="text-gray-600 text-center mb-10 max-w-2xl mx-auto leading-relaxed">
-            When you call me, I answer. Not a call centre. Not a middleman. I&apos;m your local Coventry
-            locksmith — I&apos;ll be at your door, not a stranger dispatched from a database.
-          </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[
-              {
-                icon: '💷',
-                title: 'No VAT',
-                desc: 'You save 20% compared to bigger companies. The price I quote is the price you pay — no surprises at the door.',
-              },
-              {
-                icon: '🚗',
-                title: 'No Call-Out Fee',
-                desc: 'Ever. I come to you, assess the job, and only charge if I complete it. Zero risk to you.',
-              },
-              {
-                icon: '📍',
-                title: "I'm Local",
-                desc: "I'm based in Coventry, not a national call centre. I know the streets, the housing stock, and I respond fast.",
-              },
-              {
-                icon: '⏱️',
-                title: '15-30 Min Response',
-                desc: 'For most of Coventry I can be with you in 15-30 minutes. No van driving across from Birmingham.',
-              },
-            ].map((item) => (
-              <div
-                key={item.title}
-                className="bg-[#162438] rounded-2xl p-7 text-center border border-white/10 hover:border-[#FFB800]/30 transition-colors"
-              >
-                <div className="text-5xl mb-4">{item.icon}</div>
-                <h3 className="font-bold text-[#FFB800] text-lg mb-3">{item.title}</h3>
-                <p className="text-white/90 text-sm leading-relaxed">{item.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* 4. Credentials */}
+      <CredentialsStrip />
 
       {/* 5. Services grid */}
       <section className="py-14 px-4 bg-[#F7F7F5]">
@@ -327,32 +285,10 @@ export default function HomePage() {
           </p>
           <a
             href="tel:+442475224730"
-            className="inline-block mb-8 text-2xl font-black text-[#FFB800] hover:text-amber-300 transition-colors"
+            className="inline-block text-2xl font-black text-[#FFB800] hover:text-amber-300 transition-colors"
           >
             024 7522 4730
           </a>
-          <p className="text-white/70 font-medium mb-4 text-sm">Covering all Coventry and Warwickshire postcodes:</p>
-          <div className="flex flex-wrap justify-center gap-2 mb-8">
-            {['CV1', 'CV2', 'CV3', 'CV4', 'CV5', 'CV6', 'CV7'].map((code) => (
-              <span key={code} className="bg-[#FFB800]/15 text-[#FFB800] border border-[#FFB800]/30 px-4 py-1.5 rounded-full font-bold text-sm">
-                {code}
-              </span>
-            ))}
-          </div>
-          <div className="flex flex-wrap justify-center gap-2 text-sm">
-            {[
-              'Midnight lockouts',
-              'Bank holidays',
-              'Christmas & New Year',
-              'Early morning',
-              'Sunday evenings',
-              'Any weather',
-            ].map((item) => (
-              <span key={item} className="bg-white/10 text-white px-4 py-1.5 rounded-full font-medium">
-                {item}
-              </span>
-            ))}
-          </div>
         </div>
       </section>
 
@@ -459,33 +395,6 @@ export default function HomePage() {
 
       {/* 12. FAQ */}
       <FAQSection faqs={homepageFaqs} />
-
-      {/* Multi-language emergency */}
-      <section className="py-8 px-4 bg-white border-t border-gray-100">
-        <div className="max-w-3xl mx-auto text-center">
-          <h3 className="text-sm font-bold text-gray-400 uppercase tracking-widest mb-4">
-            Emergency? I can help.
-          </h3>
-          <div className="flex flex-wrap justify-center gap-x-8 gap-y-3 text-sm">
-            <p lang="pl" className="text-gray-600">
-              <span className="font-bold text-gray-800">Zamknięty?</span> Zadzwoń teraz:{' '}
-              <a href="tel:+442475224730" className="font-black text-[#0F1B2D]">024 7522 4730</a>
-            </p>
-            <p lang="ro" className="text-gray-600">
-              <span className="font-bold text-gray-800">Blocat afară?</span> Sunați acum:{' '}
-              <a href="tel:+442475224730" className="font-black text-[#0F1B2D]">024 7522 4730</a>
-            </p>
-            <p lang="ur" dir="rtl" className="text-gray-600">
-              <span className="font-bold text-gray-800">ایمرجنسی؟</span> ابھی کال کریں:{' '}
-              <a href="tel:+442475224730" className="font-black text-[#0F1B2D]">024 7522 4730</a>
-            </p>
-            <p lang="hi" className="text-gray-600">
-              <span className="font-bold text-gray-800">बंद हो गए?</span> अभी कॉल करें:{' '}
-              <a href="tel:+442475224730" className="font-black text-[#0F1B2D]">024 7522 4730</a>
-            </p>
-          </div>
-        </div>
-      </section>
 
       {/* Last updated */}
       <div className="text-center py-4 px-4 bg-white">

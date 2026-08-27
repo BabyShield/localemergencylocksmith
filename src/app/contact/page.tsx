@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { SITE_CONFIG } from '@/data/config'
 import SchemaMarkup from '@/components/SchemaMarkup'
+import { Phone, Mail, MapPin, Clock } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Contact — Local Emergency Locksmith Coventry | 024 7522 4730',
@@ -83,7 +84,7 @@ export default function ContactPage() {
             <h2 className="text-2xl font-black text-gray-900 mb-6">Get In Touch</h2>
             <div className="space-y-5">
               <div className="flex gap-4">
-                <span className="text-2xl">📞</span>
+                <span className="flex-shrink-0 flex items-center justify-center w-10 h-10 rounded-lg bg-[#0F1B2D]/5"><Phone className="w-5 h-5 text-[#0F1B2D]" aria-hidden="true" /></span>
                 <div>
                   <p className="font-bold text-gray-900">Phone (emergencies)</p>
                   <a href={`tel:${SITE_CONFIG.phoneTel}`} className="text-[#0F1B2D] font-black text-xl hover:underline">
@@ -93,7 +94,7 @@ export default function ContactPage() {
                 </div>
               </div>
               <div className="flex gap-4">
-                <span className="text-2xl">✉️</span>
+                <span className="flex-shrink-0 flex items-center justify-center w-10 h-10 rounded-lg bg-[#0F1B2D]/5"><Mail className="w-5 h-5 text-[#0F1B2D]" aria-hidden="true" /></span>
                 <div>
                   <p className="font-bold text-gray-900">Email</p>
                   <a href={`mailto:${SITE_CONFIG.email}`} className="text-[#0F1B2D] hover:underline">
@@ -103,7 +104,7 @@ export default function ContactPage() {
                 </div>
               </div>
               <div className="flex gap-4">
-                <span className="text-2xl">📍</span>
+                <span className="flex-shrink-0 flex items-center justify-center w-10 h-10 rounded-lg bg-[#0F1B2D]/5"><MapPin className="w-5 h-5 text-[#0F1B2D]" aria-hidden="true" /></span>
                 <div>
                   <p className="font-bold text-gray-900">Service Area</p>
                   <p className="text-gray-700">Coventry, Nuneaton, Rugby, Leamington Spa, Warwick, Stratford-upon-Avon and all surrounding areas</p>
@@ -113,7 +114,7 @@ export default function ContactPage() {
                 </div>
               </div>
               <div className="flex gap-4">
-                <span className="text-2xl">🕐</span>
+                <span className="flex-shrink-0 flex items-center justify-center w-10 h-10 rounded-lg bg-[#0F1B2D]/5"><Clock className="w-5 h-5 text-[#0F1B2D]" aria-hidden="true" /></span>
                 <div>
                   <p className="font-bold text-gray-900">Opening Hours</p>
                   <p className="text-gray-700 font-semibold">{SITE_CONFIG.hours}</p>
@@ -124,7 +125,7 @@ export default function ContactPage() {
 
             <div className="mt-8 bg-[#F7F7F5] rounded-xl p-5 border border-gray-200">
               <p className="text-[#0F1B2D] font-semibold text-sm">
-                ⚠️ <strong>For emergencies — please call, don&apos;t email.</strong> I check email
+                <strong>For emergencies — please call, don&apos;t email.</strong> I check email
                 during normal hours but I may not see it immediately if you are locked out at 2am.
                 Call {SITE_CONFIG.phone} for an instant response.
               </p>

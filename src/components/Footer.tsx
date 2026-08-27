@@ -33,6 +33,20 @@ export default function Footer() {
             <span className="text-[#FFB800] font-semibold">Hours: </span>
             {SITE_CONFIG.hours}
           </p>
+          <p className="text-sm mt-1">
+            <span className="text-[#FFB800] font-semibold">WhatsApp: </span>
+            <a
+              href={`https://wa.me/442475224730?text=${encodeURIComponent('Hi, I need a locksmith. Can you help?')}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-white transition-colors"
+            >
+              Message me
+            </a>
+          </p>
+          <p className="text-xs mt-3 text-gray-400">
+            DBS-checked &bull; Fully insured (public liability) &bull; ID shown on arrival
+          </p>
         </div>
 
         <div>
@@ -135,6 +149,14 @@ export default function Footer() {
               ))}
             </div>
           </div>
+        </div>
+
+        {/* Multi-language emergency line */}
+        <div className="flex flex-wrap justify-center gap-x-6 gap-y-1.5 text-xs text-gray-500 pb-4">
+          <span lang="pl"><span className="font-semibold text-gray-400">Zamknięty?</span> Zadzwoń: <a href={`tel:${SITE_CONFIG.phoneTel}`} className="text-gray-300 hover:text-white">{SITE_CONFIG.phone}</a></span>
+          <span lang="ro"><span className="font-semibold text-gray-400">Blocat afară?</span> Sunați: <a href={`tel:${SITE_CONFIG.phoneTel}`} className="text-gray-300 hover:text-white">{SITE_CONFIG.phone}</a></span>
+          <span lang="ur" dir="rtl"><span className="font-semibold text-gray-400">ایمرجنسی؟</span> کال کریں: <a href={`tel:${SITE_CONFIG.phoneTel}`} className="text-gray-300 hover:text-white">{SITE_CONFIG.phone}</a></span>
+          <span lang="hi"><span className="font-semibold text-gray-400">बंद हो गए?</span> कॉल करें: <a href={`tel:${SITE_CONFIG.phoneTel}`} className="text-gray-300 hover:text-white">{SITE_CONFIG.phone}</a></span>
         </div>
 
         <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-500 pt-4 border-t border-gray-800">
