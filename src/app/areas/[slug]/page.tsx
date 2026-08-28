@@ -30,7 +30,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const area = getAreaBySlug(slug)
   if (!area) return {}
 
-  const title = `Locksmith ${area.name} | Emergency 24/7 | No VAT | From £59`
+  const title = `Locksmith ${area.name} | 24/7 | From £59`
   const description = `Need a local or emergency locksmith in ${area.name}? ${area.responseTime} response, 24 hours a day. No VAT or call-out fee. Locked out? Call ${SITE_CONFIG.phone}.`
 
   return {
@@ -305,13 +305,16 @@ export default async function AreaPage({ params }: Props) {
             {SERVICES.map((s) => (
               <div key={s.slug} className="flex justify-between items-center py-3 border-b border-gray-100">
                 <div>
+                  <p className="font-semibold text-gray-900">{s.shortName} in {area.name}</p>
+                  <p className="text-sm text-gray-600">{s.description}</p>
                   <Link
                     href={hasTownService(slug, s.slug) ? `/areas/${slug}/${s.slug}` : `/services/${s.slug}`}
-                    className="font-semibold text-gray-900 hover:text-[#FFB800] hover:underline"
+                    className="inline-block mt-1 text-sm font-semibold text-[#0F1B2D] hover:text-[#FFB800] hover:underline"
                   >
-                    {s.shortName} in {area.name}
+                    {hasTownService(slug, s.slug)
+                      ? `View ${s.shortName.toLowerCase()} in ${area.name}`
+                      : `View ${s.shortName.toLowerCase()} service details`}
                   </Link>
-                  <p className="text-sm text-gray-600">{s.description}</p>
                 </div>
                 <span className="text-[#FFB800] font-black text-lg ml-4 flex-shrink-0">
                   From £{s.priceFrom}

@@ -166,14 +166,14 @@ I am Ross, and I have been called to lock-related disputes between landlords and
 
 ## The Short Answer
 
-**No, a landlord cannot change the locks to keep a tenant out.** This is true even if:
+**A landlord must not change the locks to unlawfully exclude a protected residential occupier.** Rent arrears, damage or an expired fixed term do not by themselves authorise a lockout; the correct notice and possession process must be followed.
 
 - The tenant is behind on rent
 - The tenant has damaged the property
 - The tenancy agreement has expired
 - The landlord wants the tenant to leave
 
-Locking a tenant out is a **criminal offence** under the Protection from Eviction Act 1977. It does not matter what reason the landlord gives — if someone is living in the property as their home, the landlord cannot change the locks to prevent them from getting in.
+Unlawfully depriving a residential occupier of the premises can be a **criminal offence** under the Protection from Eviction Act 1977. Occupier type matters: lodgers living with a resident landlord and some other excluded occupiers can have different rules, so anyone facing a lockout should get housing advice for their circumstances.
 
 ---
 
@@ -206,7 +206,7 @@ Coventry City Council has a dedicated team that investigates illegal eviction co
 
 ## Can a Tenant Change the Locks?
 
-Yes, generally a tenant **can** change the locks during their tenancy. However, there are some conditions:
+A tenant's ability to change locks depends on the tenancy agreement, the reason for the change and the circumstances. Do not assume permission is never needed; check the agreement and get housing advice where safety or a dispute is involved.
 
 ### Check Your Tenancy Agreement
 
@@ -220,7 +220,7 @@ Many tenancy agreements include a clause requiring the tenant to:
 
 If you are a tenant wanting to change your locks — whether for safety, after a breakup, or because you have lost your keys — here is what I recommend:
 
-1. **Tell your landlord** — you do not necessarily need permission, but communication avoids disputes
+1. **Check the agreement and tell your landlord** — written permission may be required, and communication avoids disputes
 2. **Keep the original locks and keys** — put them in a labelled bag and store them safely so you can reinstall them when you leave
 3. **Give your landlord a key** if your tenancy agreement requires it (and most do)
 4. **Use a proper locksmith** — do not fit cheap locks from a hardware shop yourself. If something goes wrong with the door, you could be liable for the damage
@@ -274,9 +274,9 @@ Citizens Advice Coventry and Shelter can both help you access legal representati
 Coventry has a very large number of HMOs — particularly in areas popular with students and young professionals like Stoke, Gosford Green, Hillfields, and Radford. HMOs have additional rules around locks:
 
 - **Individual room doors must have locks** — tenants must be able to lock their own room
-- **The landlord must hold a master key** or have access arrangements for emergencies
+- **Key control must be managed safely** — the council guidance sets requirements for suitable locks and emergency access arrangements
 - **Final exit doors must allow keyless egress** — tenants must be able to leave the building without a key in a fire (this is where [BS8621 locks](/blog/pas3621-bs3621-bs8621-differences) come in)
-- **Window restrictors** must be fitted to windows above ground floor level
+- **Window restrictors may be required** in the circumstances set out by the council, including relevant sill-height and fall-risk conditions
 
 If you are an HMO landlord in Coventry and need compliant locks fitted, I work with multiple letting agents and property managers across the city. Call me on 024 7522 4730 for a quote — I offer discounted rates for multiple properties.
 
@@ -300,11 +300,16 @@ Any locksmith who changes locks knowing it will lock out a tenant is potentially
 |---|---|
 | Landlord wants to lock tenant out | **No — criminal offence** |
 | Landlord wants to change locks between tenancies | **Yes — strongly recommended** |
-| Tenant wants to change their own locks | **Yes — but keep originals and give landlord a key** |
+| Tenant wants to change their own locks | **Check the tenancy agreement and circumstances first** |
 | Landlord and tenant agree locks need changing | **Yes** |
 | HMO room door needs individual lock | **Required by law** |
 
-For any lock change in Coventry — whether you are a tenant, landlord, or letting agent — call me on 024 7522 4730. I will make sure the work is done properly and legally. See our [prices page](/prices) for transparent pricing, or browse our [service areas](/areas) to check we cover your location.
+For a physical lock change in Coventry — whether you are a tenant, landlord, or letting agent — call me on 024 7522 4730. I can fit the agreed hardware, but Shelter, the council or a solicitor should advise on legal rights in a disputed occupancy. See our [prices page](/prices) for transparent pricing, or browse our [service areas](/areas) to check we cover your location.
+
+## Authoritative Sources
+
+- [GOV.UK — illegal eviction and rent repayment order guidance](https://www.gov.uk/guidance/rent-repayment-orders-offences-guidance-for-tenants)
+- [Coventry City Council — HMO amenities and facilities guide](https://www.coventry.gov.uk/downloads/file/27566/room-size-and-amenity-provision-standards)
 `,
     faqs: [
       {
@@ -313,7 +318,7 @@ For any lock change in Coventry — whether you are a tenant, landlord, or letti
       },
       {
         q: 'Do I need my landlord\'s permission to change the locks?',
-        a: 'Strictly speaking, no — as a tenant, you have the right to quiet enjoyment of the property, which includes reasonable security. However, most tenancy agreements require you to give the landlord a key to any new locks. I recommend telling your landlord, keeping the original locks to reinstall when you leave, and providing a spare key. A cylinder change on a standard uPVC door costs from £59 — call 024 7522 4730 for a quote.',
+        a: 'It depends on your tenancy agreement and circumstances. Check the agreement and tell the landlord in writing; permission or a replacement key may be required. If safety or an occupancy dispute is involved, get advice from Shelter, the council or a solicitor before changing anything.',
       },
       {
         q: 'What if my landlord changed the locks after I moved out but left belongings behind?',
@@ -358,13 +363,13 @@ This is not a hypothetical risk. It happens.
 
 English law does not require landlords to change locks between tenancies. However:
 
-- **You have a duty of care** to your tenants under the Homes (Fitness for Human Habitation) Act 2018 — providing a home where unknown people have keys could arguably breach this
+- **Key uncertainty creates a practical security risk** — previous occupants or third parties may still have copies
 - **Your landlord insurance** may have security requirements — some policies require you to ensure only authorised people have access to the property
 - **If a break-in occurs** using a previous tenant's key and you did not change the locks, you could face difficult questions from your insurer and potentially from your tenant
 
 ### What Best Practice Looks Like
 
-The Association of Residential Letting Agents (ARLA) and most professional letting agent bodies recommend changing locks between every tenancy. It is included in many letting agents' standard checkout procedures.
+Professional practice varies. The evidence-based decision is whether every key can be accounted for, what the insurance policy says, and whether the existing locks remain suitable for the property and occupiers.
 
 ---
 
@@ -448,7 +453,7 @@ Some landlord insurance policies include requirements about key security. Common
 - "Locks should be changed if there is any doubt about key security"
 - "External door locks must meet BS3621 or equivalent standard"
 
-If you cannot guarantee that every copy of every key has been returned — and realistically, you never can — then changing the locks is the safest approach for maintaining your insurance coverage.
+If you cannot account for every key, changing or rekeying the affected locks is a practical risk-reduction step. Check the landlord policy wording rather than assuming a universal insurance rule.
 
 For more on how lock standards affect insurance claims, read our detailed guide on [insurance payouts and lock standards](/blog/insurance-payout-lock-standards).
 
@@ -478,12 +483,12 @@ If you manage multiple rental properties in Coventry, I offer:
 
 Whether you have 2 properties or 20, call me on 024 7522 4730 and I will give you an honest quote. No call-out fee, no hidden charges — just straightforward locksmith work at fair prices.
 
-For information on your legal obligations around locks and tenancies, see our guide on [whether landlords can change locks on tenants](/blog/can-landlord-change-locks).
+For information on lockouts and occupancy, see our guide on [whether landlords can change locks on tenants](/blog/can-landlord-change-locks). Coventry HMO owners should also use the council's [HMO amenities and facilities guide](https://www.coventry.gov.uk/downloads/file/27566/room-size-and-amenity-provision-standards) for property-specific requirements.
 `,
     faqs: [
       {
         q: 'Is it a legal requirement to change locks between tenants in the UK?',
-        a: 'No, there is no specific law requiring landlords to change locks between tenancies in England and Wales. However, it is strongly recommended as best practice by ARLA and most professional letting bodies. You have a duty of care to your tenants, and if a previous tenant or someone with a copy of their key gains entry, you could face questions about negligence. The cost is typically £59-150 depending on how many doors need doing — far less than the potential liability.',
+        a: 'There is no general rule requiring every landlord to change every lock between tenancies in England and Wales. The practical decision depends on whether all keys are accounted for, the existing hardware, HMO requirements and the landlord insurance wording.',
       },
       {
         q: 'How much does it cost to change all the locks on a rental property?',
@@ -703,7 +708,7 @@ While every policy is different, there are only a handful of standards that UK h
 
 ### For Wooden and Composite Doors (Mortice Deadlocks)
 
-**BS3621** — This is the big one. The British Standard for thief-resistant locks. About 90% of UK home insurance policies that specify a lock standard will reference BS3621 for mortice deadlocks on wooden doors.
+**BS3621** — the British Standard for thief-resistant lock assemblies operated by key from both sides. Some home insurance policies reference it for mortice deadlocks on wooden doors, but there is no reliable universal percentage: check your own policy wording.
 
 What to look for:
 - A **BSI Kitemark** stamped on the faceplate (the metal plate on the edge of the door)
@@ -730,9 +735,9 @@ Common cylinder standards insurers require:
 
 **TS007 (3-star)** — the most commonly referenced. A 3-star rating means the cylinder alone provides maximum resistance to attack (snapping, picking, drilling, bumping). Note: you can also achieve 3-star by combining a 1-star cylinder with a 2-star handle, but this is being phased out in some policies.
 
-**SS312 / Sold Secure Diamond** — a more rigorous independent test by the Sold Secure organisation. Any cylinder with this rating also meets TS007.
+**SS312 / Sold Secure Diamond** — an independent high-security cylinder grade administered by Sold Secure. It is separate from TS007; a product holding one certification does not automatically hold the other.
 
-**Secured by Design (SBD)** — a police-backed accreditation. Locks with this rating have been tested and approved by the police. Many insurers specifically reference SBD as an acceptable standard.
+**Secured by Design (SBD)** — a police-backed accreditation scheme. SBD accredits products that meet its Police Preferred Specification and required independent certification; the police do not perform the underlying product laboratory test.
 
 **How to check your euro cylinder:**
 This is the tricky part. Unlike mortice deadlocks, euro cylinders rarely have the standard stamped on the visible part of the lock. Here is how to check:
@@ -835,12 +840,19 @@ Do not panic. Getting compliant is usually quick, easy, and affordable:
 
 For a deeper dive into the three main mortice deadlock standards and when each applies, read our guide on [PAS3621 vs BS3621 vs BS8621](/blog/pas3621-bs3621-bs8621-differences). And for a detailed look at what happens to your insurance claim if your locks are not up to standard, see our post on [insurance payouts and lock standards](/blog/insurance-payout-lock-standards).
 
-Getting your locks right is one of the simplest and cheapest things you can do to protect your home and your insurance cover. A single lock upgrade from £59 could save you thousands on a claim. Call me on 024 7522 4730 — I am always happy to help.
+Getting your locks right is one of the simplest things you can do to protect your home and meet any security condition your own insurer has specified. Call me on 024 7522 4730 if you want the existing locks identified before deciding whether an upgrade is needed.
+
+## Authoritative Sources
+
+- [Association of British Insurers — home insurance guidance](https://www.abi.org.uk/policy-and-guidance/general-insurance/personal-insurance/home-insurance)
+- [BSI — BS 3621:2017+A1:2024](https://landingpage.bsigroup.com/LandingPage/Undated?UPI=000000000000084380)
+- [Sold Secure — Approved Product Catalogue 2025](https://www.soldsecure.com/files/downloads/Sold%20Secure%20Approved%20Product%20Catalogue%202025%20Web.pdf)
+- [Secured by Design — crime prevention handbook](https://crimeprevention.securedbydesign.com/introduction)
 `,
     faqs: [
       {
         q: 'What does "insurance approved" actually mean for a lock?',
-        a: '"Insurance approved" is not a formal certification or standard — it is a marketing term used by lock manufacturers. What actually matters is whether your lock meets the specific standard named in your individual insurance policy. Most policies require BS3621 for mortice deadlocks on wooden doors, and TS007 3-star or Sold Secure Diamond for euro cylinders on uPVC and composite doors. Always check your own policy wording rather than relying on a lock being labelled "insurance approved."',
+        a: '"Insurance approved" is not a formal certification or standard. What matters is whether a lock meets any standard named in your individual policy. Requirements differ, so check your own wording or ask your insurer rather than relying on a marketing label.',
       },
       {
         q: 'How can I tell if my euro cylinder is insurance compliant?',
@@ -852,7 +864,7 @@ Getting your locks right is one of the simplest and cheapest things you can do t
       },
       {
         q: 'My insurer says I need "Secured by Design" locks — what does this mean?',
-        a: 'Secured by Design (SBD) is a police-backed accreditation for security products. Locks with SBD certification have been tested and approved by the police crime prevention initiative. For euro cylinders, SBD-certified options include Ultion, ABS (Avocet), and some Yale models. For mortice deadlocks, most BS3621 locks from major brands also carry SBD. I fit SBD-certified cylinders from £89 and mortice deadlocks from £79. Call 024 7522 4730 for details or visit our lock upgrade page at /services/lock-upgrade.',
+        a: 'Secured by Design is a police-backed accreditation scheme for products meeting its Police Preferred Specification and required independent certification. Check the scheme\'s current product catalogue for the exact model rather than assuming every product from a brand qualifies.',
       },
     ],
   },

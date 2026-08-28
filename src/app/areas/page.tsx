@@ -6,9 +6,9 @@ import CTABlock from '@/components/CTABlock'
 import SchemaMarkup from '@/components/SchemaMarkup'
 
 export const metadata: Metadata = {
-  title: 'Locksmith Areas Covered | Coventry & Warwickshire | 78 Locations',
+  title: 'Locksmith Areas | Coventry & Warwickshire',
   description:
-    'Local locksmith covering Coventry, Nuneaton, Rugby, Leamington Spa, Warwick, Stratford-upon-Avon and 78 surrounding areas. Emergency 24/7, no VAT, no call-out fee.',
+    'Local 24/7 locksmith covering 78 areas across Coventry and Warwickshire. Check your area, response time and postcode. No VAT or call-out fee.',
   keywords: 'locksmith coventry areas, locksmith warwickshire, locksmith near me, emergency locksmith coventry, locksmith nuneaton, locksmith rugby, locksmith leamington spa',
   alternates: {
     canonical: `${SITE_CONFIG.domain}/areas`,
@@ -17,9 +17,10 @@ export const metadata: Metadata = {
     type: 'website',
     siteName: 'Local Emergency Locksmith',
     locale: 'en_GB',
-    title: 'Locksmith Areas Covered | Coventry & Warwickshire | 78 Locations',
+    title: 'Locksmith Areas | Coventry & Warwickshire',
     description: 'Local locksmith covering 78 towns and villages across Coventry and Warwickshire. Emergency 24/7.',
     url: `${SITE_CONFIG.domain}/areas`,
+    images: [{ url: `${SITE_CONFIG.domain}/api/og?title=${encodeURIComponent('Locksmith Areas — Coventry & Warwickshire')}`, width: 1200, height: 630 }],
   },
 }
 

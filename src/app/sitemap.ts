@@ -4,6 +4,7 @@ import { SERVICES } from '@/data/services'
 import { SITE_CONFIG, CONTENT_UPDATED } from '@/data/config'
 import { ALL_BLOG_POSTS } from '@/data/blog-posts'
 import { TOWN_SERVICE_PARAMS } from '@/data/town-services'
+import { BLOG_CONTENT_UPDATED } from '@/data/blog-seo'
 
 // Exactly the canonical indexable set — every URL here returns 200 with a
 // self-canonical and no noindex. lastModified comes from CONTENT_UPDATED
@@ -59,7 +60,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     // Hand-written blog posts only
     ...ALL_BLOG_POSTS.map((p) => ({
       url: `${base}/blog/${p.slug}`,
-      lastModified: new Date(p.date),
+      lastModified: new Date(BLOG_CONTENT_UPDATED[p.slug] ?? p.date),
       changeFrequency: 'monthly' as const,
       priority: 0.6,
     })),

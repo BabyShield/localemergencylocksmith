@@ -34,7 +34,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const response = responseRange(AREAS.filter((a) => a.postcode.toLowerCase() === postcode))
 
   return {
-    title: `Locksmith ${upper} | Emergency 24/7 | No VAT | No Call-Out Fee`,
+    title: `Locksmith ${upper} | 24/7 | From £59`,
     description: `Emergency locksmith covering all of ${upper}. Locked out? I can be with you in ${response}. No VAT, no call-out fee. Call ${SITE_CONFIG.phone} now — available 24/7.`,
     keywords: `locksmith ${upper}, emergency locksmith ${upper}, locksmith near me ${upper}, 24/7 locksmith ${upper}, locked out ${upper}`,
     alternates: {

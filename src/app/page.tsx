@@ -15,7 +15,7 @@ import { SITE_CONFIG, CONTENT_UPDATED, GOOGLE_REVIEWS } from '@/data/config'
 import { ALL_BLOG_POSTS } from '@/data/blog-posts'
 
 export const metadata: Metadata = {
-  title: 'Emergency Locksmith Coventry | 24/7 Local Locksmith | No VAT | From £59',
+  title: 'Emergency Locksmith Coventry | 24/7 | From £59',
   description:
     "Emergency locksmith in Coventry & Warwickshire. Locked out? I'll be there in 15-30 minutes. No VAT, no call-out fee. Call 024 7522 4730 now — 24/7, 365 days.",
   keywords: 'emergency locksmith coventry, locksmith coventry, locksmith near me coventry, 24/7 locksmith coventry, locked out coventry, locksmith warwickshire, local locksmith coventry, cheap locksmith coventry',

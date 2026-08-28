@@ -7,9 +7,9 @@ import CTABlock from '@/components/CTABlock'
 import SchemaMarkup from '@/components/SchemaMarkup'
 
 export const metadata: Metadata = {
-  title: 'Locksmith Services Coventry | Emergency, Lock Change, uPVC | No VAT',
+  title: 'Locksmith Services Coventry | 24/7 | From £59',
   description:
-    'Full range of locksmith services in Coventry and Warwickshire. Emergency lockout, lock change, uPVC repair, boarding up, security upgrades. No VAT, no call-out fee.',
+    'Coventry locksmith services: emergency lockouts, lock changes, uPVC repairs, boarding up and security upgrades. From £59, with no VAT or call-out fee.',
   keywords: 'locksmith services coventry, emergency locksmith coventry, lock change coventry, upvc lock repair coventry, boarding up coventry, lock upgrade warwickshire, locksmith services warwickshire',
   alternates: { canonical: `${SITE_CONFIG.domain}/services` },
   openGraph: {

@@ -24,13 +24,13 @@ Go to a neighbour's house or sit in your car. Take a breath. Then make the calls
 
 If you believe the burglary is **still in progress** — you can hear someone inside, or you have just seen someone leaving — call **999** immediately. Do not confront them. Get somewhere safe and call.
 
-If the burglary has already happened and the intruder is gone, call **101** (the non-emergency line). In Coventry, West Midlands Police will log the crime and arrange for an officer to attend. Response times vary — during busy periods it can take several hours for a non-emergency burglary attendance, but they will come.
+If the burglary has already happened and the intruder is gone, report it through **101** or the police's online reporting route. The police will decide whether and how to attend based on the circumstances and available evidence; do not promise yourself a particular response time.
 
-**You need a crime reference number.** This is essential for your insurance claim. The police will give you one either over the phone or when they attend. Write it down and keep it safe.
+Record the crime reference number the police provide. Your insurer may ask for it, so write it down and keep it safe.
 
 ### Step 3: Do Not Clean Up Until Police Have Attended
 
-I know it feels wrong to leave your home in a mess, but the police may want to dust for fingerprints, check for DNA evidence, or photograph the scene. Do not tidy up, hoover, or wipe surfaces until they have finished.
+I know it feels wrong to leave your home in a mess, but the police may want to recover fingerprints, DNA or other evidence. Follow the [Police.uk forensic-evidence guidance](https://www.police.uk/advice/advice-and-information/victim-support/what-happens-after-you-report-crime/forensic-evidence/): avoid disturbed areas, smooth surfaces and likely points of entry, and ask the police what you can safely move.
 
 If there is broken glass or the property is not secure, tell the police this when you call — they may prioritise attendance or advise you on what you can safely touch.
 
@@ -42,9 +42,9 @@ I offer [emergency boarding up across Coventry](/services/boarding-up) from **£
 
 Your insurance company may cover boarding up costs, so keep the receipt.
 
-### Step 5: Call Your Insurance Company Within 24 Hours
+### Step 5: Contact Your Insurer as Soon as Possible
 
-Most home insurance policies require you to report a burglary within **24 hours**. Some give you longer, but do not risk it — call as soon as you can.
+Reporting requirements vary. Contact your insurer as soon as possible and follow the deadline and repair instructions in your own policy. Where possible, ask before non-urgent repairs and keep receipts for necessary emergency securing work.
 
 Have the following ready when you call:
 
@@ -55,13 +55,13 @@ Have the following ready when you call:
 
 Your insurer will talk you through their claims process. Many will appoint a loss adjuster for larger claims. Keep every receipt from this point forward — boarding up, lock changes, replacement items.
 
-### Step 6: Change All the Locks
+### Step 6: Secure Compromised Locks and Missing Keys
 
 This is critical, and it is the step many people overlook in the chaos.
 
 Burglars frequently **take keys** they find inside the property. House keys left on a hook by the door, car keys on the kitchen counter, spare keys in a drawer — if they are gone, the burglar can come back any time they like. They also sometimes copy keys and return them, so even if your keys appear untouched, you cannot be certain.
 
-**Change every external lock.** Front door, back door, side door, garage. I recommend upgrading to [anti-snap cylinders](/services/lock-change) at the same time — if the burglar got in by snapping your euro cylinder, replacing it with the same type is just inviting them back.
+Repair or replace any lock damaged at the point of entry, and change locks for which keys are missing or may have been compromised. An undamaged lock with fully accounted-for keys does not automatically need replacing; assess the actual entry route and key risk first. If a euro cylinder was snapped, this is a sensible time to consider a certified anti-snap replacement through the [lock change service](/services/lock-change).
 
 A full lock change on all external doors typically costs from **£69 per lock** depending on the type. I carry the most common locks and cylinders in my van, so this can usually be done the same day. See my full [pricing page](/prices) for details.
 
@@ -104,27 +104,33 @@ Changing the locks and upgrading security genuinely helps many people feel safer
 
 - **Not changing the locks** — the single biggest mistake. If keys were taken, the burglar has a free pass back in.
 - **Replacing locks with the same standard** — if a cheap euro cylinder was snapped, upgrade to anti-snap. Do not just fit another cheap one.
-- **Not reporting to police** — without a crime reference number, most insurers will not process your claim.
-- **Posting about it on social media** — do not announce that your home has been burgled, that items are missing, or that you are staying elsewhere. Burglars do check social media.
+- **Not reporting to police** — report the crime and keep the reference number because your insurer may request it.
+- **Publishing sensitive details** — avoid public posts that reveal an empty property, missing keys or where you are staying.
 - **Throwing away damaged items before photographing them** — your insurer needs evidence.
 
 ---
 
 ### What to Expect From the Police in Coventry
 
-West Midlands Police will attend most residential burglaries, though response times for non-emergency calls can vary. A Scene of Crime Officer (SOCO) may attend to dust for fingerprints and collect evidence. The investigation will be handled by your local policing team.
+West Midlands Police decides the response to each report. Depending on the circumstances, an officer or forensic practitioner may attend, or the police may provide other instructions for recording evidence and progressing the report.
 
-Be realistic about outcomes — detection rates for burglary in the UK are low. But reporting is still essential for insurance, crime statistics (which affect local policing priorities), and in case evidence links your burglary to a wider pattern.
+Reporting remains important because evidence may link offences and your insurer may ask for the police reference. Keep expectations evidence-based and use the contact route the police provide for updates.
 
-You can check the progress of your case using the crime reference number on the West Midlands Police website.`,
+You can check the progress of your case using the contact details and crime reference number supplied by the police.
+
+### Authoritative Sources
+
+- [GOV.UK — report a crime: when to use 999, 101 or online reporting](https://www.gov.uk/report-crime)
+- [Police.uk — preserving forensic evidence](https://www.police.uk/advice/advice-and-information/victim-support/what-happens-after-you-report-crime/forensic-evidence/)
+- [Association of British Insurers — home insurance guidance](https://www.abi.org.uk/policy-and-guidance/general-insurance/personal-insurance/home-insurance)`,
     faqs: [
       {
         q: 'Should I change the locks even if my keys were not stolen during the burglary?',
-        a: 'Yes, I strongly recommend it. You cannot be certain that keys were not copied or that the burglar did not find spare keys you had forgotten about. If the break-in was through a lock (snapped cylinder, picked lock), that lock has been compromised and needs replacing regardless. The cost of changing locks — from £69 per lock — is small compared to the risk of a repeat burglary. Call me on 024 7522 4730 and I can usually do it the same day.',
+        a: 'Replace a lock that was damaged or defeated, and change locks if keys are missing or may have been compromised. If another entry point was used and every key is accounted for, assess the doors and locks before deciding that every external lock needs replacement.',
       },
       {
         q: 'Will my home insurance cover the cost of new locks after a burglary?',
-        a: 'Most home insurance policies cover lock replacement after a burglary as part of the claim. Some policies also cover lock changes if keys are stolen even without a break-in. Check your policy wording or ask your insurer when you report the claim. Keep the locksmith receipt — your insurer will need it. I provide a full itemised receipt for every job.',
+        a: 'Cover varies by policy. Ask your insurer whether emergency securing, damaged-lock replacement or stolen-key cover applies before non-urgent work where possible, and keep an itemised receipt for any work completed.',
       },
       {
         q: 'How quickly can you board up a broken door or window after a burglary in Coventry?',

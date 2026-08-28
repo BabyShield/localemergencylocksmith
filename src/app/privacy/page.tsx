@@ -5,9 +5,10 @@ import SchemaMarkup from '@/components/SchemaMarkup'
 import CTABlock from '@/components/CTABlock'
 
 export const metadata: Metadata = {
-  title: 'Privacy Policy | Local Emergency Locksmith Coventry',
+  title: 'Privacy Policy | Local Emergency Locksmith',
   description:
-    'Privacy policy for Local Emergency Locksmith. Learn how we collect, use, and protect your personal data. GDPR compliant. Contact info@localemergencylocksmith.co.uk.',
+    'How Local Emergency Locksmith collects, uses and protects personal data, including contact forms, analytics, retention and your UK GDPR rights.',
+  robots: { index: false, follow: true },
   alternates: {
     canonical: `${SITE_CONFIG.domain}/privacy`,
   },
@@ -15,10 +16,11 @@ export const metadata: Metadata = {
     type: 'website',
     siteName: 'Local Emergency Locksmith',
     locale: 'en_GB',
-    title: 'Privacy Policy | Local Emergency Locksmith Coventry',
+    title: 'Privacy Policy | Local Emergency Locksmith',
     description:
       'Privacy policy for Local Emergency Locksmith. Learn how we collect, use, and protect your personal data.',
     url: `${SITE_CONFIG.domain}/privacy`,
+    images: [{ url: `${SITE_CONFIG.domain}/og-image.png`, width: 1200, height: 630 }],
   },
 }
 

@@ -5,7 +5,7 @@ import SchemaMarkup from '@/components/SchemaMarkup'
 import CTABlock from '@/components/CTABlock'
 
 export const metadata: Metadata = {
-  title: 'About Local Emergency Locksmith | Ross — Your Coventry Locksmith',
+  title: 'About Ross | Local Emergency Locksmith Coventry',
   description:
     "I'm Ross, your local independent locksmith covering Coventry and all of Warwickshire. No VAT, no call-out fee, 15-30 minute response. Call 024 7522 4730.",
   keywords: 'about locksmith coventry, local locksmith coventry, independent locksmith warwickshire, ross locksmith coventry, coventry locksmith no vat, trusted locksmith coventry',
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     type: 'website',
     siteName: 'Local Emergency Locksmith',
     locale: 'en_GB',
-    title: 'About Local Emergency Locksmith | Ross — Your Coventry Locksmith',
+    title: 'About Ross | Local Emergency Locksmith Coventry',
     description:
       "Independent emergency locksmith serving Coventry and Warwickshire. No VAT, no call-out fee, 15-30 minute response. Available 24/7.",
     url: `${SITE_CONFIG.domain}/about`,

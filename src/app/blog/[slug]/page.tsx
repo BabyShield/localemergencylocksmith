@@ -5,7 +5,7 @@ import Link from 'next/link'
 import { SITE_CONFIG } from '@/data/config'
 import { ALL_BLOG_POSTS, getBlogPostBySlug, getRelatedPosts, PILLARS } from '@/data/blog-posts'
 import { ALL_BLOG_CONTENT } from '@/data/blog-content'
-import { getAllAreasByRegion } from '@/data/areas'
+import { BLOG_CONTENT_UPDATED, BLOG_CTA_BY_PILLAR, BLOG_META_DESCRIPTIONS, BLOG_SEARCH_TITLES } from '@/data/blog-seo'
 import CTABlock from '@/components/CTABlock'
 import SchemaMarkup from '@/components/SchemaMarkup'
 
@@ -24,14 +24,16 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params
   const post = getBlogPostBySlug(slug)
   if (!post) return {}
+  const searchTitle = BLOG_SEARCH_TITLES[slug] ?? post.title
+  const metaDescription = BLOG_META_DESCRIPTIONS[slug] ?? post.excerpt
   return {
-    title: `${post.title} | Local Emergency Locksmith`,
-    description: post.excerpt,
+    title: searchTitle,
+    description: metaDescription,
     keywords: post.keywords.join(', '),
     alternates: { canonical: `${SITE_CONFIG.domain}/blog/${slug}` },
     openGraph: {
-      title: post.title,
-      description: post.excerpt,
+      title: searchTitle,
+      description: metaDescription,
       type: 'article',
       publishedTime: post.date,
       url: `${SITE_CONFIG.domain}/blog/${slug}`,
@@ -99,6 +101,10 @@ export default async function BlogPostPage({ params }: Props) {
 
   const related = getRelatedPosts(slug, 4)
   const pillar = PILLARS.find((p) => p.slug === post.pillarSlug)
+  const serviceCta = BLOG_CTA_BY_PILLAR[post.pillarSlug]
+  const citations = Array.from(
+    new Set(Array.from(content.body.matchAll(/\[[^\]]+\]\((https?:\/\/[^)]+)\)/g), match => match[1]))
+  )
 
   const articleSchema = {
     '@context': 'https://schema.org',
@@ -107,7 +113,7 @@ export default async function BlogPostPage({ params }: Props) {
     description: post.excerpt,
     url: `${SITE_CONFIG.domain}/blog/${slug}`,
     datePublished: post.date,
-    dateModified: post.date,
+    dateModified: BLOG_CONTENT_UPDATED[slug] ?? post.date,
     image: { '@type': 'ImageObject', url: `${SITE_CONFIG.domain}/api/og?title=${encodeURIComponent(post.title)}`, width: 1200, height: 630 },
     author: {
       '@type': 'Person',
@@ -124,6 +130,7 @@ export default async function BlogPostPage({ params }: Props) {
     articleSection: pillar?.name || 'Locksmith Advice',
     keywords: post.keywords.join(', '),
     mainEntityOfPage: { '@type': 'WebPage', '@id': `${SITE_CONFIG.domain}/blog/${slug}` },
+    ...(citations.length > 0 ? { citation: citations } : {}),
   }
 
   const faqSchema = content.faqs.length > 0 ? {
@@ -309,34 +316,24 @@ export default async function BlogPostPage({ params }: Props) {
               ))}
             </div>
           </div>
-          {/* Find a locksmith near you */}
-          {(() => {
-            const areasByRegion = getAllAreasByRegion()
-            return (
-              <div className="mt-10 bg-[#0F1B2D] rounded-2xl p-6">
-                <h3 className="text-lg font-bold text-white mb-4">Find a Locksmith Near You</h3>
-                {Object.entries(areasByRegion).map(([region, areas]) => (
-                  <div key={region} className="mb-4">
-                    <h4 className="text-[#FFB800] font-bold text-sm mb-2">{region}</h4>
-                    <div className="grid grid-cols-2 sm:grid-cols-4 gap-1.5">
-                      {areas.map((area) => (
-                        <Link
-                          key={area.slug}
-                          href={`/areas/${area.slug}`}
-                          className="text-gray-300 hover:text-[#FFB800] text-xs transition-colors"
-                        >
-                          {area.name} &rarr;
-                        </Link>
-                      ))}
-                    </div>
-                  </div>
-                ))}
-                <Link href="/areas" className="text-[#FFB800] text-sm font-bold hover:underline mt-3 inline-block">
-                  View all 78 areas &rarr;
+          {/* One contextual commercial destination plus the area directory.
+              This avoids repeating all 78 area links on every article. */}
+          {serviceCta && (
+            <div className="mt-10 bg-[#0F1B2D] rounded-2xl p-6">
+              <h3 className="text-lg font-bold text-white mb-2">{serviceCta.heading}</h3>
+              <p className="text-gray-300 text-sm leading-relaxed mb-4">
+                {serviceCta.description}
+              </p>
+              <div className="flex flex-wrap gap-4">
+                <Link href={serviceCta.href} className="text-[#FFB800] text-sm font-bold hover:underline">
+                  {serviceCta.label} &rarr;
+                </Link>
+                <Link href="/areas" className="text-white text-sm font-bold hover:underline">
+                  Check all areas covered &rarr;
                 </Link>
               </div>
-            )
-          })()}
+            </div>
+          )}
         </div>
       </article>
 

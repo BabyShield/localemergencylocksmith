@@ -964,7 +964,7 @@ I'm Ross, a locksmith in [Coventry](/areas/coventry-city-centre), and I'm going 
 
 ## TS007: The Star Rating System
 
-TS007 is a British Standard (formally BSI Kitemark KM597443) that rates the security of euro cylinders and their associated door hardware. It uses a **star rating system from 1 to 3 stars**, and it's the standard you'll see referenced most often when looking at [anti-snap cylinders](/blog/anti-snap-locks-compared) for uPVC and composite doors.
+[TS 007-1:2024+A1:2026](https://www.dhfonline.org.uk/pg/publications/105.htm) is a Door & Hardware Federation technical specification for replacement cylinders and associated security hardware. It uses a star-rating system and is commonly referenced when comparing [anti-snap cylinders](/blog/anti-snap-locks-compared) for uPVC and composite doors. A product-specific BSI Kitemark certificate number is not the name of the standard.
 
 ### How the Star System Works
 
@@ -982,8 +982,6 @@ Here's what trips people up: **you need the components to add up to 3 stars tota
 
 - **3-star cylinder alone** — the cylinder achieves all 3 stars by itself. Currently, the Ultion is the most well-known cylinder that does this. No additional security handle or escutcheon required.
 - **1-star cylinder + 2-star handle** — the handle provides the extra protection (usually by protecting the cylinder from being gripped or attacked)
-- **2-star cylinder + 1-star handle** — the cylinder carries more of the security burden
-- **1-star cylinder + 1-star handle + 1-star escutcheon** — three components each contributing one star
 
 ### What Attacks Does TS007 Test For?
 
@@ -1012,11 +1010,11 @@ I fit a 1-star anti-snap cylinder. This is significantly better than no anti-sna
 
 ## SS312: Sold Secure Diamond
 
-SS312 is a standard administered by **Sold Secure**, an independent testing organisation. The SS312 Diamond standard specifically tests euro cylinders against lock snapping.
+SS312 is a specification administered by **Sold Secure**, an independent testing organisation. Its Diamond grade is for standalone high-security cylinders. The current SS312:2024 specification includes cylinder attack tests beyond snapping, so it should not be described as a snap-only test.
 
 ### What SS312 Tests For
 
-The SS312 test is focused specifically on the **snap attack** — the most common method of attacking [euro cylinders](/blog/euro-cylinder-locks-explained) in the UK. The cylinder is mounted in a test rig and subjected to:
+The SS312 test includes attack resistance for the standalone [euro cylinder](/blog/euro-cylinder-locks-explained), including:
 
 - **Snap attacks** using pliers, wrenches, and dedicated snapping tools
 - **Post-snap manipulation** — after the cylinder is snapped, the tester attempts to turn the cam and open the lock
@@ -1026,14 +1024,14 @@ A cylinder that passes receives the **Sold Secure Diamond** standard (sometimes 
 
 ### How SS312 Relates to TS007
 
-The two standards overlap but test different things:
+The two specifications overlap but certify products independently:
 
-- **TS007** tests the complete door lock assembly against multiple attack types (snap, bump, pick, drill, extraction)
-- **SS312** specifically tests the cylinder against snap attacks
+- **TS007** covers replacement cylinders and associated security hardware, using star ratings
+- **SS312 Diamond** grades a standalone cylinder against the Sold Secure test specification
 
-A cylinder can hold both certifications. For example, the [Ultion](/blog/anti-snap-locks-compared) carries both TS007 3-star and SS312 Diamond. The Avocet ABS carries TS007 1-star (achieving 3-star with a security handle) and SS312 Diamond.
+A cylinder can hold both certifications, but passing one does not mean it automatically holds the other. Check the exact model in the current certification catalogue rather than relying on a brand-wide claim.
 
-**If you could only have one standard,** I'd prioritise SS312 Diamond because lock snapping is by far the most common attack method in the real world. TS007 3-star is the gold standard, but SS312 addresses the biggest actual threat.
+Both are useful independent signals. The right choice depends on whether you are replacing the cylinder alone or assessing the cylinder together with protective door hardware.
 
 ## Secured by Design
 
@@ -1072,7 +1070,7 @@ If your wooden door does have a euro cylinder (some modern wooden doors do), the
 
 ### If You're Insurance-Conscious
 
-Most insurance policies reference **BS3621** for wooden doors. For uPVC doors, the requirements are less specific, but fitting a TS007 3-star certified euro cylinder demonstrates due diligence and can support any future claim.
+Some insurance policies reference **BS3621** for wooden doors, while others use different security wording. For uPVC doors, check the exact policy requirements before treating any star rating as mandatory.
 
 **Secured by Design** accreditation can be useful when dealing with insurers because it's a police-backed scheme — it carries weight.
 
@@ -1108,11 +1106,17 @@ For a uPVC or composite door in Coventry, fit a euro cylinder that is:
 
 That's it. Don't get lost in the alphabet soup of standards. If a cylinder meets those two criteria, it's providing genuine, independently tested protection for your home.
 
-If you want advice on which certified lock is right for your door, call me on 024 7522 4730. I carry stock of all the main certified cylinders and can fit one the same day in most cases. See the [prices page](/prices) for current rates on [lock changes](/services/lock-change) and [upgrades](/services/lock-upgrade).`,
+If you want advice on which certified lock is right for your door, call me on 024 7522 4730. I carry stock of the main certified cylinders and can fit one the same day in most cases. See the [prices page](/prices) for current rates on [lock changes](/services/lock-change) and [upgrades](/services/lock-upgrade).
+
+## Authoritative Sources
+
+- [Door & Hardware Federation — TS 007-1:2024+A1:2026](https://www.dhfonline.org.uk/pg/publications/105.htm)
+- [Sold Secure — Approved Product Catalogue 2025](https://www.soldsecure.com/files/downloads/Sold%20Secure%20Approved%20Product%20Catalogue%202025%20Web.pdf)
+- [Secured by Design — crime prevention handbook](https://crimeprevention.securedbydesign.com/introduction)`,
     faqs: [
       {
         q: 'What is the difference between TS007 and SS312?',
-        a: 'TS007 tests euro cylinders and door hardware against multiple attacks including snapping, bumping, picking, and drilling, and uses a 1 to 3-star rating system. SS312 is a Sold Secure standard that specifically tests cylinders against snap attacks. A quality anti-snap cylinder should ideally carry both certifications, but if you had to choose one, SS312 Diamond addresses the most common real-world attack method.',
+        a: 'TS007 covers replacement cylinders and associated security hardware using star ratings. SS312 Diamond is Sold Secure\'s standalone high-security cylinder grade. They are separate certifications, and holding one does not automatically mean a product holds the other.',
       },
       {
         q: 'Do I need a 3-star rated lock for insurance?',
@@ -1124,7 +1128,7 @@ If you want advice on which certified lock is right for your door, call me on 02
       },
       {
         q: 'How do I achieve a 3-star TS007 rating on my door?',
-        a: 'You need the components to add up to 3 stars total. The simplest way is to fit a cylinder that achieves 3 stars on its own, such as the Ultion. Alternatively, combine a 1-star cylinder with a 2-star security handle, or a 2-star cylinder with a 1-star handle. I can advise on the most cost-effective combination for your specific door when I visit.',
+        a: 'Use either a certified 3-star cylinder or a certified 1-star cylinder with 2-star protective security hardware. Check the exact product certificates and compatibility rather than adding together unverified component claims.',
       },
     ],
   },

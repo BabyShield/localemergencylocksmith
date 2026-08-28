@@ -6,7 +6,7 @@ import CTABlock from '@/components/CTABlock'
 import FAQSection from '@/components/FAQSection'
 
 export const metadata: Metadata = {
-  title: 'Locksmith FAQ Coventry — Prices, Response Times & Areas Covered',
+  title: 'Coventry Locksmith FAQ | Prices, Response & Areas',
   description:
     'Locksmith questions answered: How much does an emergency locksmith cost in Coventry? How fast? Which areas? No VAT, no call-out fee. Call 024 7522 4730.',
   keywords: 'locksmith faq coventry, how much does a locksmith cost coventry, emergency locksmith price coventry, locksmith response time coventry, coventry locksmith questions',
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     type: 'website',
     siteName: 'Local Emergency Locksmith',
     locale: 'en_GB',
-    title: 'Locksmith FAQ Coventry — Prices, Response Times & Areas Covered',
+    title: 'Coventry Locksmith FAQ | Prices, Response & Areas',
     description: 'Everything you need to know about emergency locksmith pricing, response times, and areas covered in Coventry.',
     url: `${SITE_CONFIG.domain}/faq`,
     images: [{ url: `${SITE_CONFIG.domain}/api/og?title=${encodeURIComponent('Locksmith FAQ — Prices, Response Times & Areas')}`, width: 1200, height: 630 }],

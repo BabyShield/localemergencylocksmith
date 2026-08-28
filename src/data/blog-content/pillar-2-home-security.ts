@@ -842,8 +842,8 @@ Secured by Design (SBD) is a police crime prevention initiative owned and manage
 
 In practical terms, SBD does two things:
 
-1. **Tests and certifies products** — locks, doors, windows, lighting, and other security products that meet police-recommended security standards can carry the SBD mark
-2. **Certifies new developments** — new housing developments can achieve SBD accreditation if they incorporate approved products and design principles (like natural surveillance, defensible space, and quality lighting)
+1. **Accredits qualifying products** — locks, doors, windows, lighting, and other security products can carry the Police Preferred Specification mark when they meet SBD requirements backed by independent certification
+2. **Accredits qualifying developments** — housing developments can achieve SBD recognition when they incorporate approved products and crime-prevention design principles
 
 It is backed by the UK police service, but it is **not a legal requirement** for existing homes. New-build developments may have SBD requirements written into their planning conditions, but there is no law requiring homeowners to retrofit SBD-certified products.
 
@@ -860,13 +860,13 @@ PAS 24 is the enhanced security standard for doors and windows. It tests the ent
 - Cylinder attacks (snapping, pulling, drilling)
 - Impact testing
 
-PAS 24 is the minimum standard for doors to achieve SBD certification. It is also the standard required by Part Q of the Building Regulations for new-build properties and certain renovation projects.
+PAS 24 is one route used for doorsets seeking SBD accreditation. [Approved Document Q](https://www.gov.uk/government/publications/security-in-dwellings-approved-document-q) applies its security requirement to new dwellings; it should not be treated as a blanket requirement for renovation projects or existing homes.
 
 ### Cylinders: TS007 and SS312
 
 For euro cylinders (the most common lock type on uPVC and composite doors), two standards are relevant:
 
-**TS007** — the British Standard for euro cylinder security. It has three star ratings:
+**TS007** — a Door & Hardware Federation technical specification for replacement cylinders and associated security hardware. It uses star ratings:
 - 1-star: basic security
 - 2-star: moderate security
 - 3-star: high security (resistant to snapping, bumping, picking, and drilling)
@@ -972,7 +972,7 @@ If you are unsure, I can check your existing hardware during a visit and tell yo
 
 My honest answer: **yes, but do not overthink it**.
 
-The SBD certification gives you confidence that a product has been independently tested to a recognised standard. When you buy an SBD-certified lock, you know it has passed genuine security testing — you are not relying on marketing claims.
+SBD accreditation gives you evidence that a product meets the scheme's Police Preferred Specification and holds the required independent certification. SBD accredits qualifying products; the underlying laboratory testing is carried out against the relevant standard.
 
 That said, a good anti-snap cylinder that meets TS007 3-star provides excellent security whether or not it also carries the separate SBD logo. The testing standards (TS007, SS312, BS3621, PAS 24) are the substance. SBD is a badge that confirms those standards are met.
 
@@ -980,7 +980,7 @@ Where SBD certification matters most:
 
 - **If your insurer requires it** — some policies reference SBD-approved products specifically
 - **If you are selling your home** — SBD certification is a recognised quality mark
-- **If you want the reassurance** of police-backed testing rather than manufacturer claims
+- **If you want the reassurance** of police-backed accreditation supported by independent certification rather than a manufacturer claim alone
 
 Where it matters less:
 
@@ -992,6 +992,12 @@ For most homeowners in Coventry, my recommendation is simple: focus on the stand
 If you want advice on which products are right for your home, or you want me to check what standards your current locks meet, call me on 024 7522 4730. I am happy to take a look and give you honest guidance — no sales pitch, just practical advice based on what I see every day.
 
 For more on lock standards, read my posts on [TS007 vs SS312](/blog/ts007-vs-ss312-lock-standards) and [BS3621 vs anti-snap vs smart locks](/blog/bs3621-vs-anti-snap-vs-smart-lock). For a full security assessment of your home, start with the [home security checklist](/blog/home-security-checklist-2026).
+
+## Authoritative Sources
+
+- [Secured by Design — crime prevention handbook](https://crimeprevention.securedbydesign.com/introduction)
+- [GOV.UK — Security in dwellings: Approved Document Q](https://www.gov.uk/government/publications/security-in-dwellings-approved-document-q)
+- [Door & Hardware Federation — TS 007 publications](https://www.dhfonline.org.uk/pg/publications/105.htm)
 `,
     faqs: [
       {
@@ -1004,7 +1010,7 @@ For more on lock standards, read my posts on [TS007 vs SS312](/blog/ts007-vs-ss3
       },
       {
         q: 'What is PAS 24 and do my doors need it?',
-        a: 'PAS 24 is the enhanced security standard for doors and windows, testing the complete doorset against forced entry. New-build homes must meet PAS 24 under Building Regulations Part Q. Existing homes have no legal requirement, but upgrading to PAS 24-equivalent security significantly improves your protection against break-ins.',
+        a: 'PAS 24 tests the enhanced security performance of complete doorsets and windowsets. Approved Document Q applies security requirements to new dwellings; existing homes are not subject to that same blanket requirement.',
       },
       {
         q: 'Are SBD products more expensive than non-SBD alternatives?',

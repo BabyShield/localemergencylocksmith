@@ -571,8 +571,20 @@ export function getBlogPostsByPillar(pillarSlug: string): BlogPost[] {
 export function getRelatedPosts(slug: string, limit = 3): BlogPost[] {
   const post = getBlogPostBySlug(slug)
   if (!post) return ALL_BLOG_POSTS.slice(0, limit)
-  // Same pillar first, then other posts
-  const samePillar = ALL_BLOG_POSTS.filter((p) => p.pillarSlug === post.pillarSlug && p.slug !== slug)
+
+  // Rotate within the current pillar so later articles receive contextual
+  // inbound links too; a fixed "first four" list stranded part of the corpus.
+  const pillarPosts = ALL_BLOG_POSTS.filter((p) => p.pillarSlug === post.pillarSlug)
+  const currentIndex = pillarPosts.findIndex((p) => p.slug === slug)
+  const samePillar = Array.from(
+    { length: Math.max(0, pillarPosts.length - 1) },
+    (_, offset) => pillarPosts[(currentIndex + offset + 1) % pillarPosts.length]
+  )
+
+  if (samePillar.length >= limit) return samePillar.slice(0, limit)
+
   const others = ALL_BLOG_POSTS.filter((p) => p.pillarSlug !== post.pillarSlug)
-  return [...samePillar, ...others].slice(0, limit)
+  const otherStart = ALL_BLOG_POSTS.findIndex((p) => p.slug === slug) % Math.max(1, others.length)
+  const rotatedOthers = [...others.slice(otherStart), ...others.slice(0, otherStart)]
+  return [...samePillar, ...rotatedOthers].slice(0, limit)
 }

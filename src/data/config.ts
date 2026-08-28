@@ -3,7 +3,7 @@ export const SITE_CONFIG = {
   phone: '024 7522 4730',
   phoneTel: '+442475224730',
   email: 'info@localemergencylocksmith.co.uk',
-  domain: 'https://localemergencylocksmith.co.uk',
+  domain: 'https://www.localemergencylocksmith.co.uk',
   tagline: 'Coventry & Surrounding Areas',
   hours: '24/7 — 365 days a year',
   responseTime: '15-30 minutes',
@@ -16,7 +16,7 @@ export const SITE_CONFIG = {
 
 // Bump only when page content genuinely changes — drives visible "last updated"
 // dates and sitemap lastModified, so it must never be a build timestamp.
-export const CONTENT_UPDATED = '2026-08-27'
+export const CONTENT_UPDATED = '2026-08-28'
 
 // Real Google Business Profile figures, maintained by hand to exactly match the
 // live profile. All-null until real values are supplied — UI must render nothing

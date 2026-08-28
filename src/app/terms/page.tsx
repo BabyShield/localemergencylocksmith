@@ -5,9 +5,10 @@ import SchemaMarkup from '@/components/SchemaMarkup'
 import CTABlock from '@/components/CTABlock'
 
 export const metadata: Metadata = {
-  title: 'Terms of Service | Local Emergency Locksmith Coventry',
+  title: 'Terms of Service | Local Emergency Locksmith',
   description:
     'Terms of service for Local Emergency Locksmith Coventry. Covers pricing, payment, liability, cancellation, guarantees, and complaints. Call 024 7522 4730.',
+  robots: { index: false, follow: true },
   alternates: {
     canonical: `${SITE_CONFIG.domain}/terms`,
   },
@@ -15,10 +16,11 @@ export const metadata: Metadata = {
     type: 'website',
     siteName: 'Local Emergency Locksmith',
     locale: 'en_GB',
-    title: 'Terms of Service | Local Emergency Locksmith Coventry',
+    title: 'Terms of Service | Local Emergency Locksmith',
     description:
       'Terms of service for Local Emergency Locksmith Coventry. Covers pricing, payment, liability, cancellation, and guarantees.',
     url: `${SITE_CONFIG.domain}/terms`,
+    images: [{ url: `${SITE_CONFIG.domain}/og-image.png`, width: 1200, height: 630 }],
   },
 }
 

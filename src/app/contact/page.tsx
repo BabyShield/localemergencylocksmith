@@ -5,7 +5,7 @@ import SchemaMarkup from '@/components/SchemaMarkup'
 import { Phone, Mail, MapPin, Clock } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Contact — Local Emergency Locksmith Coventry | 024 7522 4730',
+  title: 'Contact Coventry Locksmith | 024 7522 4730',
   description:
     'Contact Local Emergency Locksmith in Coventry. Available 24/7 — call 024 7522 4730 for immediate help or use the contact form.',
   keywords: 'contact locksmith coventry, locksmith phone number coventry, locksmith coventry 24/7, emergency locksmith contact warwickshire, call locksmith coventry',
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     type: 'website',
     siteName: 'Local Emergency Locksmith',
     locale: 'en_GB',
-    title: 'Contact — Local Emergency Locksmith Coventry | 024 7522 4730',
+    title: 'Contact Coventry Locksmith | 024 7522 4730',
     description:
       'Contact Local Emergency Locksmith in Coventry. Available 24/7 — call 024 7522 4730 for immediate help or use the contact form.',
     url: `${SITE_CONFIG.domain}/contact`,

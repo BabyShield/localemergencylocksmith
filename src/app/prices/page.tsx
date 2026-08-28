@@ -5,7 +5,7 @@ import CTABlock from '@/components/CTABlock'
 import SchemaMarkup from '@/components/SchemaMarkup'
 
 export const metadata: Metadata = {
-  title: 'Locksmith Prices Coventry | Transparent Pricing | No VAT | No Call-Out Fee',
+  title: 'Locksmith Prices Coventry | No VAT or Call-Out Fee',
   description:
     'Clear locksmith prices for Coventry and Warwickshire. Emergency lockout from £59. No VAT, no call-out fee, no hidden charges. Call 024 7522 4730.',
   keywords: 'locksmith prices coventry, how much does a locksmith cost, emergency locksmith price coventry, lock change cost coventry, locksmith cost warwickshire, cheap locksmith coventry, locksmith no vat',
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     type: 'website',
     siteName: 'Local Emergency Locksmith',
     locale: 'en_GB',
-    title: 'Locksmith Prices Coventry | Transparent Pricing | No VAT | No Call-Out Fee',
+    title: 'Locksmith Prices Coventry | No VAT or Call-Out Fee',
     description:
       'Clear locksmith prices for Coventry and Warwickshire. Emergency lockout from £59. No VAT, no call-out fee, no hidden charges. Call 024 7522 4730.',
     url: `${SITE_CONFIG.domain}/prices`,

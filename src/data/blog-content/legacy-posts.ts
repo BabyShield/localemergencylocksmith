@@ -124,7 +124,7 @@ If the lock needs replacing after the opening (rare, but possible with very old 
     body: `
 ## What Is BS3621?
 
-BS3621 is the British Standard specification for thief-resistant locks. It was developed by the British Standards Institution (BSI) and has become the benchmark for residential lock security in the UK.
+[BS 3621:2017+A1:2024](https://landingpage.bsigroup.com/LandingPage/Undated?UPI=000000000000084380) is the current British Standard for thief-resistant lock assemblies operated by key from both the inside and outside. It is published by the British Standards Institution (BSI) and is widely referenced for residential door security in the UK.
 
 A BS3621 lock has been independently tested to resist common attack methods including:
 - Picking
@@ -133,15 +133,15 @@ A BS3621 lock has been independently tested to resist common attack methods incl
 - Wrenching
 - Manipulation
 
-It is also a five-lever lock — meaning it has five levers that must align correctly before the key turns, compared to the two levers in a standard budget lock.
+Many familiar BS3621 mortice deadlocks use a five-lever mechanism, but the certification is the important evidence: look for the BSI Kitemark and standard number rather than relying on the lever count alone.
 
 ## Why Does Your Home Insurance Care?
 
-Most standard UK home insurance policies contain a condition requiring a "five-lever mortice deadlock to BS3621 standard" on all final exit doors. If your door does not have a qualifying lock and you are burgled, your insurance company may reject the claim.
+Some UK home insurance policies specify BS3621 or another minimum lock standard on final exit doors; others use different wording. A claim is not automatically rejected because a door lacks one particular lock. Check the security conditions in your own policy or ask your insurer to confirm them in writing.
 
 This is written into the small print. Many homeowners do not discover this until after a break-in.
 
-The good news: a BS3621 lock costs £79 fitted (my price, no VAT, no call-out fee). That is a small amount compared to the risk of an invalidated insurance claim.
+The good news: a BS3621 lock costs from £79 fitted (my price, no VAT, no call-out fee). If your policy names that standard, upgrading gives you clear evidence that the fitted lock meets it.
 
 ## How to Check If You Have One
 
@@ -164,11 +164,16 @@ If your uPVC door has a standard cheap euro cylinder, it is likely not meeting t
 I supply and fit BS3621 mortice deadlocks to all types of wooden and composite doors across Coventry and Warwickshire. Price from £79 including the lock and fitting. No VAT. No call-out fee.
 
 Call 024 7522 4730 to book.
+
+## Authoritative Sources
+
+- [BSI — BS 3621:2017+A1:2024](https://landingpage.bsigroup.com/LandingPage/Undated?UPI=000000000000084380)
+- [Association of British Insurers — home insurance guidance](https://www.abi.org.uk/policy-and-guidance/general-insurance/personal-insurance/home-insurance)
     `.trim(),
     faqs: [
-      { q: 'Is one BS3621 lock enough or do I need two?', a: 'Most insurance policies specify a BS3621 lock on the main front door and a similar standard on the back door. Some policies require it on all final exit doors. Check your specific policy wording — or call me and I will advise.' },
+      { q: 'Is one BS3621 lock enough or do I need two?', a: 'Requirements vary by insurer and policy. Some policies specify a standard for every final exit door, while others use broader security wording. Check your own policy or ask your insurer before deciding which doors need an upgrade.' },
       { q: 'Can I fit a BS3621 lock myself?', a: 'Technically yes — they are sold in DIY stores. However, fitting a mortice lock correctly requires chiselling a precise pocket into the door stile, which is easy to get wrong. An incorrectly fitted lock is less secure and may not meet the insurance standard. I recommend having it professionally fitted.' },
-      { q: 'Does a BS3621 lock make my home more secure?', a: 'Yes, significantly. A five-lever BS3621 lock is substantially more resistant to picking and drilling than a standard two-lever or cheap cylinder lock. Combined with an anti-snap cylinder on your secondary lock, it provides a meaningful deterrent to most burglars.' },
+      { q: 'Does a BS3621 lock make my home more secure?', a: 'A correctly fitted, certified BS3621 lock has passed a recognised thief-resistance standard. Its value depends on the door, frame and other hardware too, so the whole doorset should be considered rather than the lock in isolation.' },
     ],
   },
   'upvc-door-lock-needs-replacing': {

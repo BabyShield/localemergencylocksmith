@@ -6,8 +6,7 @@ import MobileCallBar from '@/components/MobileCallBar'
 import TrustStrip from '@/components/TrustStrip'
 import Footer from '@/components/Footer'
 import SchemaMarkup from '@/components/SchemaMarkup'
-import { SITE_CONFIG } from '@/data/config'
-import { AREAS } from '@/data/areas'
+import { GOOGLE_REVIEWS, SITE_CONFIG } from '@/data/config'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -18,10 +17,7 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: {
-    default: 'Emergency Locksmith Coventry | 24/7 | No VAT | Call Now',
-    template: '%s | Local Emergency Locksmith',
-  },
+  title: 'Emergency Locksmith Coventry | 24/7 | From £59',
   description:
     'Emergency locksmith in Coventry & Warwickshire. 15-30 min response, no VAT, no call-out fee. Call 024 7522 4730 now — available 24/7, 365 days.',
   metadataBase: new URL(SITE_CONFIG.domain),
@@ -41,6 +37,7 @@ const globalSchema = {
   '@type': 'Locksmith',
   '@id': `${SITE_CONFIG.domain}/#business`,
   name: 'Local Emergency Locksmith',
+  alternateName: 'Coventry 24/7 Locksmith',
   url: SITE_CONFIG.domain,
   telephone: SITE_CONFIG.phoneTel,
   email: SITE_CONFIG.email,
@@ -54,11 +51,6 @@ const globalSchema = {
     '@type': 'Person',
     name: 'Ross',
     jobTitle: 'Locksmith',
-  },
-  geo: {
-    '@type': 'GeoCoordinates',
-    latitude: 52.4068,
-    longitude: -1.5197,
   },
   address: {
     '@type': 'PostalAddress',
@@ -80,17 +72,18 @@ const globalSchema = {
     opens: '00:00',
     closes: '23:59',
   },
-  areaServed: [...new Map(AREAS.map(area => [area.slug, area])).values()].map(area => ({
-    '@type': 'City',
-    name: area.name,
-    ...(area.lat && area.lng ? {
-      geo: {
-        '@type': 'GeoCoordinates',
-        latitude: area.lat,
-        longitude: area.lng
-      }
-    } : {})
-  })),
+  // Keep the global business entity concise. Individual area pages describe
+  // the full 78-location coverage with their own Place-based Service schema.
+  areaServed: [
+    'Coventry',
+    'Nuneaton',
+    'Bedworth',
+    'Rugby',
+    'Leamington Spa',
+    'Warwick',
+    'Kenilworth',
+    'Stratford-upon-Avon',
+  ].map(name => ({ '@type': 'Place', name })),
   hasOfferCatalog: {
     '@type': 'OfferCatalog',
     name: 'Locksmith Services',
@@ -137,9 +130,7 @@ const globalSchema = {
       },
     ],
   },
-  sameAs: [
-    'https://www.facebook.com/localemergencylocksmith',
-  ],
+  sameAs: [GOOGLE_REVIEWS.profileUrl],
 }
 
 const websiteSchema = {
@@ -160,11 +151,6 @@ export default function RootLayout({
   return (
     <html lang="en-GB" className={inter.variable}>
       <head>
-        {/* Geo meta — tells local search crawlers this is a Coventry/Warwickshire business */}
-        <meta name="geo.region" content="GB-WAR" />
-        <meta name="geo.placename" content="Coventry, Warwickshire" />
-        <meta name="geo.position" content="52.4068;-1.5197" />
-        <meta name="ICBM" content="52.4068, -1.5197" />
         <link rel="manifest" href="/manifest.json" />
         <meta name="theme-color" content="#0F1B2D" />
         {process.env.NEXT_PUBLIC_GTM_ID && (

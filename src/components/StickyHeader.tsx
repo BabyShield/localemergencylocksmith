@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Link from 'next/link'
 import { SITE_CONFIG } from '@/data/config'
 
@@ -16,6 +16,15 @@ const NAV_LINKS = [
 export default function StickyHeader() {
   const [menuOpen, setMenuOpen] = useState(false)
 
+  useEffect(() => {
+    if (!menuOpen) return
+    const closeOnEscape = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') setMenuOpen(false)
+    }
+    window.addEventListener('keydown', closeOnEscape)
+    return () => window.removeEventListener('keydown', closeOnEscape)
+  }, [menuOpen])
+
   return (
     <header className="sticky top-0 z-50 bg-[#0F1B2D]/95 backdrop-blur-md shadow-lg shadow-black/10 border-b border-white/5">
       <div className="max-w-6xl mx-auto px-4 py-2.5 flex items-center justify-between">
@@ -23,15 +32,16 @@ export default function StickyHeader() {
         <button
           onClick={() => setMenuOpen(!menuOpen)}
           className="lg:hidden flex items-center justify-center w-10 h-10 -ml-2 text-white"
-          aria-label="Toggle menu"
+          aria-label={menuOpen ? 'Close menu' : 'Open menu'}
           aria-expanded={menuOpen}
+          aria-controls="mobile-navigation"
         >
           {menuOpen ? (
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
             </svg>
           ) : (
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
             </svg>
           )}
@@ -80,7 +90,7 @@ export default function StickyHeader() {
 
       {/* Mobile menu dropdown */}
       {menuOpen && (
-        <nav className="lg:hidden bg-[#0F1B2D] border-t border-white/10 px-4 pb-4">
+        <nav id="mobile-navigation" className="lg:hidden bg-[#0F1B2D] border-t border-white/10 px-4 pb-4">
           {NAV_LINKS.map((link) => (
             <Link
               key={link.href}

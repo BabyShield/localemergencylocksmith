@@ -5,9 +5,9 @@ import { ALL_BLOG_POSTS, PILLARS } from '@/data/blog-posts'
 import SchemaMarkup from '@/components/SchemaMarkup'
 
 export const metadata: Metadata = {
-  title: 'Locksmith Blog — Tips, Security Advice & Guides | Local Emergency Locksmith Coventry',
+  title: 'Locksmith Advice & Security Guides | Coventry',
   description:
-    'Expert locksmith advice for Coventry and Warwickshire homeowners. Lock types, security guides, honest pricing, uPVC door help, and seasonal tips — from a working locksmith.',
+    'Practical Coventry locksmith advice on lock standards, costs, uPVC doors, home security and emergencies, written by a working local locksmith.',
   keywords: 'locksmith blog, locksmith tips coventry, home security advice, lock buying guide, upvc door repair guide, locksmith advice warwickshire',
   alternates: {
     canonical: `${SITE_CONFIG.domain}/blog`,
