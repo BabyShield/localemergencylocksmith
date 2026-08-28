@@ -112,7 +112,7 @@ const faqSchema = {
       name: 'Do locksmith prices include VAT?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'No — all prices listed are the final price with no VAT added. This saves you 20% compared to companies that charge VAT on top.',
+        text: 'No — all prices listed are the final price with no VAT added. I confirm the scope and total before work proceeds.',
       },
     },
     {

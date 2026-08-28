@@ -5,7 +5,8 @@ import { AREAS, getAreaBySlug, getAreaNeighbours } from '@/data/areas'
 import { SERVICES } from '@/data/services'
 import { SITE_CONFIG } from '@/data/config'
 import { getBlogPostBySlug } from '@/data/blog-posts'
-import { hasTownService } from '@/data/town-services'
+import { hasTownService } from '@/data/governed-town-services'
+import { getAreaAuthority } from '@/data/area-authorities'
 import HeroSection from '@/components/HeroSection'
 import CTABlock from '@/components/CTABlock'
 import FAQSection from '@/components/FAQSection'
@@ -96,6 +97,7 @@ export default async function AreaPage({ params }: Props) {
 
   const neighbours = getAreaNeighbours(area)
   const facts = getAreaFacts(slug)
+  const areaAuthority = getAreaAuthority(area.slug)
 
   const relatedPosts = getRelevantAreaGuideSlugs(area.housingStock, area.commonIssues)
     .map((guideSlug) => getBlogPostBySlug(guideSlug))
@@ -119,7 +121,7 @@ export default async function AreaPage({ params }: Props) {
     serviceType: 'Emergency locksmith',
     name: `Emergency Locksmith in ${area.name}`,
     url: `${SITE_CONFIG.domain}/areas/${slug}`,
-    description: `Emergency locksmith serving ${area.name} and the ${area.postcode} postcode. ${area.responseTime} response, 24/7, 365 days. No VAT, no call-out fee.`,
+    description: `Emergency locksmith serving ${area.name}. ${area.responseTime} response, 24/7, 365 days. Call with the full postcode to confirm coverage. No VAT, no call-out fee.`,
     provider: { '@id': `${SITE_CONFIG.domain}/#business` },
     areaServed: [
       {
@@ -128,7 +130,7 @@ export default async function AreaPage({ params }: Props) {
         address: {
           '@type': 'PostalAddress',
           postalCode: area.postcode,
-          addressRegion: area.region,
+          addressRegion: areaAuthority.addressRegion,
           addressCountry: 'GB',
         },
       },
@@ -290,7 +292,7 @@ export default async function AreaPage({ params }: Props) {
               },
               {
                 Icon: PoundSterling,
-                text: 'No VAT — you save 20% compared to bigger companies. The price I quote is the price you pay.',
+                text: 'No VAT is added. The price agreed is the price you pay.',
               },
               {
                 Icon: CheckCircle,
@@ -304,7 +306,7 @@ export default async function AreaPage({ params }: Props) {
               },
               {
                 Icon: Clock,
-                text: `${area.responseTime} response for ${area.name} — I cover the entire ${area.postcode} postcode area.`,
+                text: `${area.responseTime} response for ${area.name}. Call with the full postcode to confirm coverage and the current arrival estimate.`,
               },
               {
                 Icon: Home,
@@ -415,12 +417,12 @@ export default async function AreaPage({ params }: Props) {
       <section className="py-8 px-4 bg-gray-50">
         <div className="max-w-3xl mx-auto">
           <h2 className="text-xl font-black text-gray-900 mb-4">
-            {area.name} and {area.postcode} Postcodes I Cover
+            {area.name} Coverage and the {area.postcode} Outward Code
           </h2>
           <p className="text-gray-700">
-            I cover all of {area.name} and the {area.postcode} postcode area. Whether you are in the
-            town centre, on an estate, or in a rural lane — if you&apos;re in {area.postcode}, call me
-            and I&apos;ll come.
+            I serve addresses in and around {area.name}. {area.postcode} is the outward-code
+            reference for this page, but coverage depends on the exact address. Call with your full
+            postcode to confirm coverage and the current arrival estimate.
           </p>
           <div className="flex flex-wrap gap-2 mt-4">
             <span className="bg-[#0F1B2D] text-white px-3 py-1 rounded-full text-sm font-semibold">

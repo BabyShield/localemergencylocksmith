@@ -2,7 +2,7 @@ import { PoundSterling, Ban, MapPin, Clock } from 'lucide-react'
 
 // Calm, static trust row — no marquee, no emoji. Four claims, stated once.
 const TRUST_ITEMS = [
-  { Icon: PoundSterling, text: 'No VAT — save 20%' },
+  { Icon: PoundSterling, text: 'No VAT added' },
   { Icon: Ban, text: 'No call-out fee' },
   { Icon: MapPin, text: 'Local & independent' },
   { Icon: Clock, text: '24/7 — 365 days' },

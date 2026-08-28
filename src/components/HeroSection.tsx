@@ -11,9 +11,18 @@ interface HeroSectionProps {
   // Per-area honest response window — pass area.responseTime on area pages so
   // outlying areas never inherit the Coventry-wide claim.
   responseTime?: string
+  // Governed area×service pages deliberately confirm the current ETA by phone.
+  showResponseTime?: boolean
 }
 
-export default function HeroSection({ heading, subheading, areaName, compact, responseTime }: HeroSectionProps) {
+export default function HeroSection({
+  heading,
+  subheading,
+  areaName,
+  compact,
+  responseTime,
+  showResponseTime = true,
+}: HeroSectionProps) {
   return (
     <section className={`relative overflow-hidden ${compact ? 'py-10 md:py-14' : 'py-14 md:py-24'} px-4 text-white`}>
       <Suspense fallback={null}>
@@ -68,10 +77,12 @@ export default function HeroSection({ heading, subheading, areaName, compact, re
             <Umbrella className="w-4 h-4 text-green-500" aria-hidden="true" />
             Fully Insured
           </span>
-          <span className="flex items-center gap-1.5">
-            <Clock className="w-4 h-4 text-green-500" aria-hidden="true" />
-            {responseTime ?? SITE_CONFIG.responseTime} Response{areaName ? ` in ${areaName}` : ''}
-          </span>
+          {showResponseTime && (
+            <span className="flex items-center gap-1.5">
+              <Clock className="w-4 h-4 text-green-500" aria-hidden="true" />
+              {responseTime ?? SITE_CONFIG.responseTime} Response{areaName ? ` in ${areaName}` : ''}
+            </span>
+          )}
         </div>
       </div>
     </section>

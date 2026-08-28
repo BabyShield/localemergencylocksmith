@@ -3,7 +3,7 @@ import { AREAS } from '@/data/areas'
 import { SERVICES } from '@/data/services'
 import { SITE_CONFIG, CONTENT_UPDATED } from '@/data/config'
 import { ALL_BLOG_POSTS } from '@/data/blog-posts'
-import { TOWN_SERVICE_PARAMS } from '@/data/town-services'
+import { TOWN_SERVICE_PARAMS } from '@/data/governed-town-services'
 import { BLOG_CONTENT_UPDATED } from '@/data/blog-seo'
 
 // Exactly the canonical indexable set — every URL here returns 200 with a

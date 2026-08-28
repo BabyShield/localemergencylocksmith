@@ -1,11 +1,14 @@
+import type { AreaSlug } from './area-authorities'
+
 export interface Area {
-  slug: string
+  slug: AreaSlug
   name: string
   postcode: string
+  // Navigation/merchandising cluster only. Use getAreaAuthority() for address metadata.
   region: string
   lat?: number
   lng?: number
-  neighbours: string[]
+  neighbours: AreaSlug[]
   uniqueContent: string
   housingStock: string
   commonIssues: string
@@ -52,7 +55,7 @@ const RAW_AREAS: Area[] = [
     localDetail: 'Earlsdon has a village feel despite being so close to the city centre, centred around the shops and cafes on Earlsdon Street itself. The area is bounded by the Warwick Road to the east, the railway line to the north, and Hearsall Common to the south — a popular green space. Key streets I attend frequently include Albany Road, Moor Street, Spencer Avenue, Berkeley Road, and the roads off Beechwood Avenue. The Earlsdon Cottage pub and the local Tesco Express on Earlsdon Street are useful landmarks for directing me. Parking on the terraced streets can be tight, but I know where to pull up for quick access.',
     faqs: [
       { q: 'How fast can you reach Earlsdon?', a: 'I can typically be in Earlsdon within 15-25 minutes, approaching via Earlsdon Street or Charter Avenue depending on traffic.' },
-      { q: 'Which postcodes near Earlsdon do you cover?', a: 'I cover all of CV5 including Earlsdon, Allesley Park, Eastern Green, and the CV4 area just to the west including Tile Hill and Canley.' },
+      { q: 'Which postcodes near Earlsdon do you cover?', a: 'I cover listed locations including Earlsdon, Allesley Park, Eastern Green, Tile Hill, and Canley. Call with the full postcode to confirm the exact address and current ETA.' },
       { q: 'Is it expensive to get locked out in Earlsdon?', a: 'Emergency lockout from £59 including labour — no VAT, no call-out fee. The price I quote when you call is the final price.' },
       { q: 'Do you replace locks in Earlsdon?', a: 'Yes, I replace all lock types across Earlsdon including BS3621 mortice locks, uPVC multipoint locks, and Yale nightlatches.' },
       { q: 'Can you work on the original Victorian mortice locks in Earlsdon houses?', a: 'Absolutely — many Earlsdon terraces still have older five-lever mortice locks. I can service, repair, or replace these with a BS3621-rated mortice lock suited to a period door. Check the exact written policy and ask your insurer to confirm whether it requires that standard.' },
@@ -140,7 +143,7 @@ const RAW_AREAS: Area[] = [
     localDetail: 'Coundon lies between the Holyhead Road to the south and Brownshill Green to the north, with Coundon Road running through its centre. Key streets include Barkers Butts Lane (home to Coventry RFC), Moseley Avenue, Norman Place Road, Scots Lane, and the roads around Barras Heath. The Coundon Road shops and the Holyhead pub are useful local landmarks. The area connects easily to the ring road via Holyhead Road, and I can also approach from Allesley via Brownshill Green Road for addresses on the northern edge.',
     faqs: [
       { q: 'How quickly can you reach Coundon?', a: '15-25 minutes — I\'m regularly in the Coundon Road and Barras Heath area.' },
-      { q: 'Do you cover all of CV6?', a: 'Yes — all of CV6 including Coundon, Radford, Holbrooks, Foleshill, Longford, and Bell Green.' },
+      { q: 'Which CV6 locations do you cover?', a: 'Listed locations include Coundon, Radford, Holbrooks, Foleshill, Longford, and Bell Green. Call with the full postcode to confirm the exact address and current ETA.' },
       { q: 'What does a lockout cost in Coundon?', a: 'From £59 including labour — no VAT, no call-out fee.' },
       { q: 'Do you fit new locks in Coundon?', a: 'Yes — I supply and fit all lock types same day across Coundon and surrounding areas.' },
       { q: 'Can you fit anti-snap locks on my 1930s Coundon semi?', a: 'Yes — if your door has a euro cylinder I can upgrade it to an anti-snap version same day. For traditional mortice locks on the older Coundon semis, I can fit modern BS3621-rated replacements that maintain the period look. Call 024 7522 4730 for advice.' },
@@ -448,7 +451,7 @@ const RAW_AREAS: Area[] = [
     localDetail: 'Allesley Park estate is accessed primarily via Brownshill Green Road from the north and Remembrance Road from the east. The estate is bounded by Allesley village to the west and Coundon to the east. Key streets include Brownshill Green Road, Remembrance Road, Windmill Road, and the numerous crescents and closes that branch off them. The local shops on Brownshill Green Road serve the estate. I know the estate layout well and can navigate the winding roads and cul-de-sacs directly to any address.',
     faqs: [
       { q: 'How quickly can you reach Allesley Park?', a: '20-30 minutes — I know the estate layout well and can access it via Brownshill Green Road or Remembrance Road.' },
-      { q: 'Do you cover all of Allesley Park?', a: 'Yes — all streets within the Allesley Park estate and the wider CV5 postcode area.' },
+      { q: 'Do you cover Allesley Park?', a: 'Allesley Park is a listed service area. Call with the full postcode to confirm the exact address and current ETA; the CV5 outward code alone does not establish coverage.' },
       { q: 'What does an emergency lockout cost in Allesley Park?', a: 'From £59 — no VAT, no call-out fee, same price any time of day.' },
       { q: 'Do you replace locks in Allesley Park?', a: 'Yes — I supply and fit replacement locks the same day across Allesley Park.' },
       { q: 'Do you know the Allesley Park estate layout?', a: 'Yes — I\'ve been attending calls on the estate for years and know the crescents, cul-de-sacs, and through-roads. This means faster response when you need a locksmith urgently.' },
@@ -896,7 +899,7 @@ const RAW_AREAS: Area[] = [
       { q: 'What does a lockout cost in Hartshill?', a: 'From £59 — no VAT, no call-out fee, same price day or night.' },
       { q: 'Can you work on older locks in Hartshill properties?', a: 'Yes — I work on all lock types including older mortice locks common in period properties.' },
       { q: 'Can you work on locks in the stone cottages in Hartshill?', a: 'Yes — the stone cottages in Hartshill can have thicker doors and non-standard lock fittings. I carry a range of lock types to suit these properties and have experience working on character homes in the village.' },
-      { q: 'Do you cover Hartshill Hayes and the surrounding area?', a: 'Yes — I cover all of Hartshill village and the surrounding CV10 area, including properties near Hartshill Hayes Country Park.' },
+      { q: 'Do you cover Hartshill Hayes and the surrounding area?', a: 'Hartshill is a listed service area. Call with the full postcode to confirm the exact address and current ETA; a CV10 outward code can cover places beyond this page.' },
     ],
   },
   {
@@ -1476,7 +1479,7 @@ const RAW_AREAS: Area[] = [
       { q: 'What does a lockout cost in Wolston?', a: 'From £59 — no VAT, no call-out fee.' },
       { q: 'Can you replace locks in Wolston?', a: 'Yes — all types, same day where possible.' },
       { q: 'Do you work on locks in Wolston\'s older village properties?', a: 'Yes — I work on all traditional lock types found in the village\'s period cottages and older homes. I can service, repair, or upgrade while maintaining character.' },
-      { q: 'Do you cover the rural area between Wolston, Brandon, and Ryton?', a: 'Yes — I cover all three villages and the surrounding CV8 area as part of my regular service coverage.' },
+      { q: 'Do you cover Wolston, Brandon, and Ryton-on-Dunsmore?', a: 'All three villages are listed service areas. Call with the full postcode to confirm the exact address and current ETA; the wider CV8 outward code is not a coverage guarantee.' },
     ],
   },
   {
@@ -1588,7 +1591,7 @@ const RAW_AREAS: Area[] = [
     responseTime: '35-45 minutes',
     uniqueContent: 'Southam is a historic market town in south Warwickshire between Leamington Spa and Rugby, with an attractive town centre along Market Hill and High Street. The town has a variety of housing from period properties in the centre — including some fine Georgian and Victorian buildings — to modern estates on the outskirts near the Southam bypass. I cover Southam at the edge of my service area, reaching most addresses within 35-45 minutes. The town generates mixed locksmith calls from the older period properties in the centre through to modern composite door issues on the newer estates.',
     housingStock: 'Southam town centre has Georgian and Victorian properties along Market Hill and High Street with traditional lock systems. The residential streets have a mix of interwar and post-war housing, while the newer estates near the bypass have modern composite and uPVC doors. The Southam College area has some student and rental accommodation.',
-    commonIssues: 'Period lock repairs on Stratford town-centre properties are specialist calls in my work. Lockouts and lock changes feature across all property types, while composite and uPVC multipoint issues appear on newer estates. I also receive BS3621 upgrade requests from customers who have checked exact written policy wording; the insurer must confirm any requirement.',
+    commonIssues: 'Period lock repairs on Southam\'s older town-centre properties are specialist calls in my work. Lockouts and lock changes feature across all property types, while composite and uPVC multipoint issues appear on newer estates. I also receive BS3621 upgrade requests from customers who have checked exact written policy wording; the insurer must confirm any requirement.',
     localDetail: 'Southam is centred around Market Hill and High Street with the town\'s shops, pubs, and Holy Well. The town sits on the A423 with the Southam bypass providing good road access. The area connects to Leamington via the A425 and to Rugby via the A426. I approach from the Leamington or Rugby direction depending on my location at the time of the call.',
     faqs: [
       { q: 'How quickly can you reach Southam?', a: '35-45 minutes — Southam is at the southern edge of my service area but I cover it.' },

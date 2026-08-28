@@ -159,7 +159,7 @@ export default function AboutPage() {
             <ul className="space-y-3">
               {[
                 'You speak directly to the person who will do the work — no call centre, no middleman.',
-                'No VAT — you save 20% compared to larger companies.',
+                'No VAT is added to the agreed price.',
                 'No call-out fee, ever. You only pay if I complete the job.',
                 'Same price 24/7 — no premium for evenings, weekends, or bank holidays.',
                 'I know Coventry streets, housing stock, and common lock types. I arrive prepared.',

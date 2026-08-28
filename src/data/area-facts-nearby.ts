@@ -17,7 +17,8 @@ export const NEARBY_FACTS: Record<string, AreaFact[]> = {
       text: 'Kenilworth is one of Warwickshire\'s most affluent commuter towns, with direct road links to both Coventry and Leamington Spa via the A46 and A452.',
     },
     {
-      text: 'The town gained its own railway station in 2016 on the Coventry-to-Leamington line, the first new station to open in Warwickshire in over 50 years.',
+      text: 'Kenilworth\'s new railway station began serving passengers in April 2018 on the Coventry-to-Leamington line and was officially opened in July 2018.',
+      source: { label: 'Warwickshire County Council', url: 'https://www.warwickshire.gov.uk/news/article/313/kenilworth-station-officially-opened' },
     },
   ],
 

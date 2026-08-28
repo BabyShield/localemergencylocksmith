@@ -198,9 +198,47 @@ try {
   check(robotsResult.response.status === 200, `robots.txt returned ${robotsResult.response.status}`)
   check(robotsResult.html.includes(`Sitemap: ${CANONICAL_ORIGIN}/sitemap.xml`), 'robots.txt does not declare the canonical sitemap URL')
 
-  const redirectResult = await fetchLocal('/areas/earlsdon/emergency-lockout')
-  check([301, 308].includes(redirectResult.response.status), `non-owner service-area route returned ${redirectResult.response.status}; expected permanent redirect`)
-  check(redirectResult.response.headers.get('location')?.endsWith('/areas/earlsdon'), 'non-owner service-area route redirects to the wrong owner')
+  // Every valid area x service pair must have exactly one outcome: a published
+  // self-canonical 200 in the sitemap, or a permanent redirect to the area hub.
+  const areaPaths = sitemapUrls
+    .map(loc => new URL(loc).pathname)
+    .filter(path => /^\/areas\/[^/]+$/.test(path))
+  const serviceSlugs = sitemapUrls
+    .map(loc => new URL(loc).pathname.match(/^\/services\/([^/]+)$/)?.[1])
+    .filter(Boolean)
+  const publishedPairPaths = new Set(
+    sitemapUrls
+      .map(loc => new URL(loc).pathname)
+      .filter(path => /^\/areas\/[^/]+\/[^/]+$/.test(path))
+  )
+
+  check(areaPaths.length === 78, `service-area contract found ${areaPaths.length} area hubs; expected 78`)
+  check(serviceSlugs.length === 5, `service-area contract found ${serviceSlugs.length} services; expected 5`)
+  check(publishedPairPaths.size === 35, `service-area contract found ${publishedPairPaths.size} published pairs; expected 35`)
+
+  await mapLimit(
+    areaPaths.flatMap(areaPath => serviceSlugs.map(serviceSlug => ({
+      areaPath,
+      pairPath: `${areaPath}/${serviceSlug}`,
+    }))),
+    12,
+    async ({ areaPath, pairPath }) => {
+      const { response, html } = await fetchLocal(pairPath)
+      if (publishedPairPaths.has(pairPath)) {
+        check(response.status === 200, `${pairPath} returned ${response.status}; expected published 200`)
+        check(!response.headers.get('location'), `${pairPath} unexpectedly redirects to ${response.headers.get('location')}`)
+        check(getCanonical(html) === `${CANONICAL_ORIGIN}${pairPath}`, `${pairPath} does not self-canonicalise`)
+      } else {
+        check(response.status === 308, `${pairPath} returned ${response.status}; expected permanent 308`)
+        check(response.headers.get('location')?.endsWith(areaPath), `${pairPath} redirects to ${response.headers.get('location') || 'nowhere'}; expected ${areaPath}`)
+      }
+    }
+  )
+
+  for (const invalidPath of ['/areas/not-a-real-place/emergency-lockout', '/areas/nuneaton/not-a-real-service']) {
+    const { response } = await fetchLocal(invalidPath)
+    check(response.status === 404, `${invalidPath} returned ${response.status}; expected 404`)
+  }
 
   if (warnings.length > 0) console.warn(warnings.join('\n'))
   if (failures.length > 0) {

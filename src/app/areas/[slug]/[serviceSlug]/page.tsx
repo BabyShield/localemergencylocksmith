@@ -1,10 +1,15 @@
 import type { Metadata } from 'next'
-import { notFound } from 'next/navigation'
+import { notFound, permanentRedirect } from 'next/navigation'
 import Link from 'next/link'
 import { getAreaBySlug, getAreaNeighbours } from '@/data/areas'
 import { SERVICES, getServiceBySlug } from '@/data/services'
 import { SITE_CONFIG } from '@/data/config'
-import { getTownService, TOWN_SERVICE_PARAMS } from '@/data/town-services'
+import {
+  getTownService,
+  hasTownService,
+  TOWN_SERVICE_PARAMS,
+} from '@/data/governed-town-services'
+import { getAreaAuthority } from '@/data/area-authorities'
 import { getBlogPostBySlug } from '@/data/blog-posts'
 import { SERVICE_GUIDE_SLUGS } from '@/data/blog-seo'
 import HeroSection from '@/components/HeroSection'
@@ -13,11 +18,11 @@ import FAQSection from '@/components/FAQSection'
 import SchemaMarkup from '@/components/SchemaMarkup'
 
 export const dynamic = 'force-static'
+export const dynamicParams = true
 export const revalidate = false
 
-// Only the 7 towns with hand-written town×service content get pages here —
-// every other area×service combination 301s to its parent area page via
-// next.config.ts. Do not widen this without writing real content first.
+// Only explicit, evidence-governed pairs are pre-rendered. A valid but
+// unpublished pair is handled below and permanently redirected to its area hub.
 export async function generateStaticParams() {
   return TOWN_SERVICE_PARAMS
 }
@@ -54,21 +59,15 @@ const SERVICE_SEARCH_INTENT_COPY: Record<string, {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug, serviceSlug } = await params
-  const content = getTownService(slug, serviceSlug)
   const area = getAreaBySlug(slug)
   const service = getServiceBySlug(serviceSlug)
-  if (!content || !area || !service) return {}
+  if (!area || !service) return {}
 
-  const intentTitle = serviceSlug === 'lock-change'
-    ? `Lock Repair & Replacement in ${area.name} | From £${service.priceFrom}`
-    : serviceSlug === 'boarding-up'
-      ? `Boarding & Burglary Repairs ${area.name} | From £${service.priceFrom}`
-      : content.metaTitle
-  const intentDescription = serviceSlug === 'lock-change'
-    ? `Door lock repair, replacement and planned lock changes in ${area.name}. From £${service.priceFrom}, with no VAT or call-out fee. ${area.responseTime} response.`
-    : serviceSlug === 'boarding-up'
-      ? `Emergency boarding up and immediate burglary repairs in ${area.name} for damaged doors, locks and windows. From £${service.priceFrom}, no VAT or call-out fee.`
-      : content.metaDescription
+  const content = getTownService(slug, serviceSlug)
+  if (!content) return {}
+
+  const intentTitle = content.metaTitle
+  const intentDescription = content.metaDescription
 
   return {
     title: intentTitle,
@@ -94,13 +93,18 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function TownServicePage({ params }: Props) {
   const { slug, serviceSlug } = await params
-  const content = getTownService(slug, serviceSlug)
   const area = getAreaBySlug(slug)
   const service = getServiceBySlug(serviceSlug)
-  if (!content || !area || !service) notFound()
+  if (!area || !service) notFound()
+
+  const content = getTownService(slug, serviceSlug)
+  if (!content) permanentRedirect(`/areas/${slug}`)
 
   const neighbours = getAreaNeighbours(area)
-  const otherServices = SERVICES.filter((s) => s.slug !== serviceSlug)
+  const areaAuthority = getAreaAuthority(area.slug)
+  const otherServices = SERVICES.filter(
+    (candidate) => candidate.slug !== serviceSlug && hasTownService(slug, candidate.slug),
+  )
   const searchIntentCopy = SERVICE_SEARCH_INTENT_COPY[serviceSlug]
   const pageHeading = serviceSlug === 'lock-change'
     ? `Door Lock Repair & Replacement in ${area.name}`
@@ -130,11 +134,7 @@ export default async function TownServicePage({ params }: Props) {
     serviceType: service.shortName,
     name: pageHeading,
     url: `${SITE_CONFIG.domain}/areas/${slug}/${serviceSlug}`,
-    description: serviceSlug === 'lock-change'
-      ? `Door lock repair, replacement and planned lock changes in ${area.name}.`
-      : serviceSlug === 'boarding-up'
-        ? `Emergency boarding up and immediate burglary repairs in ${area.name}.`
-        : content.metaDescription,
+    description: content.metaDescription,
     provider: { '@id': `${SITE_CONFIG.domain}/#business` },
     areaServed: {
       '@type': 'Place',
@@ -142,7 +142,7 @@ export default async function TownServicePage({ params }: Props) {
       address: {
         '@type': 'PostalAddress',
         postalCode: area.postcode,
-        addressRegion: area.region,
+        addressRegion: areaAuthority.addressRegion,
         addressCountry: 'GB',
       },
     },
@@ -203,9 +203,9 @@ export default async function TownServicePage({ params }: Props) {
 
       <HeroSection
         heading={pageHeading}
-        subheading={`${service.description} ${area.responseTime} response in ${area.name}. No VAT, no call-out fee.`}
+        subheading={`${service.description} Call for the current ETA and price basis before attendance in ${area.name}. No VAT or separate call-out fee.`}
         areaName={area.name}
-        responseTime={area.responseTime}
+        showResponseTime={false}
         compact
       />
 
@@ -232,7 +232,7 @@ export default async function TownServicePage({ params }: Props) {
           {/* Quick info boxes */}
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 my-8">
             {[
-              { label: 'Response Time', value: area.responseTime },
+              { label: 'Current ETA', value: 'Confirmed by phone' },
               { label: service.shortName, value: `From £${service.priceFrom}` },
               { label: 'VAT', value: 'None' },
               { label: 'Call-Out Fee', value: 'None' },
@@ -264,11 +264,42 @@ export default async function TownServicePage({ params }: Props) {
         </div>
       </section>
 
-      {/* Common jobs */}
+      {/* Source-bounded locality guidance shared by this town's service records. */}
+      <section className="py-12 px-4 bg-white">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-2xl font-black text-[#0F1B2D] mb-4">
+            What the Local Evidence Changes in {area.name}
+          </h2>
+          {content.contextGuidance.map((paragraph) => (
+            <p key={paragraph.slice(0, 48)} className="text-gray-700 leading-relaxed mb-4 last:mb-0">
+              {paragraph}
+            </p>
+          ))}
+        </div>
+      </section>
+
+      {/* Preparation */}
+      <section className="py-12 px-4 bg-[#F7F7F5]">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-2xl font-black text-[#0F1B2D] mb-6">
+            What to Prepare Before You Call
+          </h2>
+          <ul className="space-y-4">
+            {content.preparationSteps.map((step) => (
+              <li key={step} className="flex gap-3 items-start">
+                <span className="text-[#FFB800] font-bold flex-shrink-0 mt-0.5">✓</span>
+                <span className="text-gray-700">{step}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      {/* Relevant checks and situations */}
       <section className="py-12 px-4 bg-white">
         <div className="max-w-3xl mx-auto">
           <h2 className="text-2xl font-black text-[#0F1B2D] mb-6">
-            {service.shortName} Jobs I Attend in {area.name}
+            Checks and Situations for {service.shortName} in {area.name}
           </h2>
           <ul className="space-y-4">
             {content.commonJobs.map((job) => (
@@ -279,6 +310,38 @@ export default async function TownServicePage({ params }: Props) {
             ))}
           </ul>
           <p className="text-gray-600 text-sm mt-6">{content.priceNote}</p>
+        </div>
+      </section>
+
+      {/* Evidence and primary sources */}
+      <section className="py-12 px-4 bg-[#F7F7F5]" aria-labelledby="evidence-heading">
+        <div className="max-w-3xl mx-auto">
+          <h2 id="evidence-heading" className="text-2xl font-black text-[#0F1B2D] mb-4">
+            Evidence Behind This {area.name} Guide
+          </h2>
+          <p className="text-gray-700 leading-relaxed">{content.evidenceSummary}</p>
+          <p className="text-sm text-gray-500 mt-3">
+            Content reviewed <time dateTime={content.reviewedOn}>{content.reviewedOn}</time>.
+          </p>
+          <ul className="space-y-4 mt-6">
+            {content.sources.map((source) => (
+              <li key={source.id} className="rounded-xl border border-gray-200 p-4">
+                <a
+                  href={source.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-bold text-[#0F1B2D] underline decoration-[#FFB800] underline-offset-4 hover:text-[#8A5A00]"
+                >
+                  {source.title}
+                </a>
+                <p className="text-sm text-gray-600 mt-1">{source.publisher}</p>
+                <p className="text-sm text-gray-700 mt-2">{source.supports}</p>
+                <p className="text-xs text-gray-500 mt-2">
+                  Source checked <time dateTime={source.checkedOn}>{source.checkedOn}</time>.
+                </p>
+              </li>
+            ))}
+          </ul>
         </div>
       </section>
 
@@ -362,7 +425,7 @@ export default async function TownServicePage({ params }: Props) {
 
       <CTABlock
         heading={`Need ${service.shortName.toLowerCase()} in ${area.name}?`}
-        subtext={`Available 24/7 — ${area.responseTime} response for ${area.name}. From £${service.priceFrom}, no VAT, no call-out fee.`}
+        subtext={`Available 24/7 — call for the current ETA and agreed price basis in ${area.name}. From £${service.priceFrom}, no VAT or separate call-out fee.`}
       />
     </>
   )

@@ -39,7 +39,7 @@ const pricingFaqs = [
   },
   {
     q: 'Do you charge VAT?',
-    a: 'No. I\'m a sole trader below the VAT threshold, so you save 20% compared to larger locksmith companies. The price I quote is the price you pay.',
+    a: 'No. I\'m a sole trader below the VAT threshold, so no VAT is added. The price I quote is the price you pay.',
   },
   {
     q: 'Is there a call-out fee?',
@@ -58,7 +58,7 @@ const responseTimeFaqs = [
   },
   {
     q: 'What areas do you cover?',
-    a: 'I cover all of Coventry and Warwickshire, including Nuneaton, Bedworth, Rugby, Leamington Spa, Warwick, Kenilworth, Stratford-upon-Avon, and over 70 surrounding towns and villages. If you\'re not sure whether I cover your area, just call and ask.',
+    a: 'I cover the locations listed on this site across Coventry and nearby parts of Warwickshire and Solihull, including Nuneaton, Bedworth, Rugby, Leamington Spa, Warwick, Kenilworth, and Stratford-upon-Avon. Call with your full postcode to confirm the exact address and current ETA.',
   },
   {
     q: 'Are you really available 24/7?',
@@ -119,7 +119,7 @@ const areasFaqs = [
   },
   {
     q: 'Do you cover student areas like Canley and Earlsdon?',
-    a: 'Yes. I cover all Coventry student areas including Canley, Earlsdon, Stoke, Spon End, Tile Hill, and the city centre. I\'m very familiar with the housing stock in these areas and carry the right locks for student properties.',
+    a: 'I cover listed Coventry locations including Canley, Earlsdon, Stoke, Tile Hill, and the city centre. Call with the full postcode and describe the private or communal entrance so I can confirm coverage, authority requirements, and the current ETA.',
   },
 ]
 

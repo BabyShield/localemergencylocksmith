@@ -48,7 +48,7 @@ const faqSchema = {
       name: 'Do you charge VAT on locksmith services?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'No — I do not charge VAT. This saves you 20% compared to larger companies. The price I quote is the total price, nothing added on top.',
+        text: 'No — I do not charge VAT. The price I quote is the total price, with nothing added on top.',
       },
     },
     {
@@ -93,7 +93,7 @@ const homepageFaqs = [
   },
   {
     q: 'Do you charge VAT on locksmith services?',
-    a: 'No — I do not charge VAT. This saves you 20% compared to larger companies. The price I quote is the total price, nothing added on top.',
+    a: 'No — I do not charge VAT. The price I quote is the total price, with nothing added on top.',
   },
   {
     q: 'Is there a call-out fee?',

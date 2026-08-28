@@ -7,6 +7,7 @@ import TrustStrip from '@/components/TrustStrip'
 import Footer from '@/components/Footer'
 import SchemaMarkup from '@/components/SchemaMarkup'
 import { GOOGLE_REVIEWS, SITE_CONFIG } from '@/data/config'
+import { SERVICES } from '@/data/services'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -86,48 +87,15 @@ const globalSchema = {
   hasOfferCatalog: {
     '@type': 'OfferCatalog',
     name: 'Locksmith Services',
-    itemListElement: [
-      {
-        '@type': 'Offer',
-        name: 'Emergency Lockout',
-        description: 'Emergency door opening — non-destructive entry when possible. Available 24/7.',
-        price: '59',
-        priceCurrency: 'GBP',
-        availability: 'https://schema.org/InStock',
-      },
-      {
-        '@type': 'Offer',
-        name: 'Door Lock Repair & Replacement',
-        description: 'Repair or replace broken, worn or unreliable residential locks, including Yale nightlatches, mortice locks and cylinders.',
-        price: '69',
-        priceCurrency: 'GBP',
-        availability: 'https://schema.org/InStock',
-      },
-      {
-        '@type': 'Offer',
-        name: 'uPVC Door Lock Repair',
-        description: 'Repair or replace uPVC door lock mechanisms, cylinders, and handles.',
-        price: '59',
-        priceCurrency: 'GBP',
-        availability: 'https://schema.org/InStock',
-      },
-      {
-        '@type': 'Offer',
-        name: 'Emergency Boarding Up & Burglary Repairs',
-        description: 'Emergency boarding and immediate repairs for damaged residential doors, locks or windows after a break-in or other damage.',
-        price: '79',
-        priceCurrency: 'GBP',
-        availability: 'https://schema.org/InStock',
-      },
-      {
-        '@type': 'Offer',
-        name: 'Lock Upgrade (BS3621 / Anti-Snap)',
-        description: 'Upgrade to BS3621-rated deadlocks or anti-snap euro cylinders after checking the door and any written policy requirement.',
-        price: '79',
-        priceCurrency: 'GBP',
-        availability: 'https://schema.org/InStock',
-      },
-    ],
+    itemListElement: SERVICES.map(service => ({
+      '@type': 'Offer',
+      name: service.name,
+      description: service.description,
+      price: String(service.priceFrom),
+      priceCurrency: 'GBP',
+      availability: 'https://schema.org/InStock',
+      url: `${SITE_CONFIG.domain}/services/${service.slug}`,
+    })),
   },
   sameAs: [GOOGLE_REVIEWS.profileUrl],
 }

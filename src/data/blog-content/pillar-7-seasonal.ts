@@ -817,7 +817,7 @@ I cover all of Coventry and surrounding areas including Kenilworth, Bedworth, Nu
 - **Hours:** 24/7, every day including all bank holidays
 - **Lockout price:** from £59
 - **Bank holiday surcharge:** none — same price every day
-- **Coverage:** all Coventry postcodes plus Warwickshire
+- **Coverage:** the Coventry and nearby Warwickshire locations listed on this site; confirm the full postcode when calling
 - **Arrival time:** typically 20-40 minutes
 - **Full pricing:** [prices page](/prices)
 
@@ -989,7 +989,7 @@ Here is a priority order for upgrades:
 5. **Shed padlock upgrade** to closed-shackle with coach-bolted hasp (under £30)
 6. **Key safe** installation (from £50 fitted)
 
-If you want a professional to do this walk-around with you, or you want me to fix the issues we find on the same visit, call me on 024 7522 4730. I cover all of Coventry and Warwickshire — check my [areas page](/areas/) for full details.
+If you want a professional to do this walk-around with you, or you want me to fix the issues we find on the same visit, call me on 024 7522 4730. I cover the Coventry and nearby Warwickshire locations listed on my [areas page](/areas/); call with the full postcode to confirm the exact address.
 
 Start the new year secure. It is 30 minutes well spent.
 `,

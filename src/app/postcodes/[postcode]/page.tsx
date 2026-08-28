@@ -176,7 +176,8 @@ export default async function PostcodePage({ params }: Props) {
             Areas I Cover in {upper}
           </h2>
           <p className="text-gray-600 text-center mb-10 max-w-xl mx-auto">
-            I serve every neighbourhood, estate, and street within the {upper} postcode area.
+            I serve the listed locations associated with the {upper} outward code. Call with your
+            full postcode to confirm the exact address and current ETA.
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -216,7 +217,7 @@ export default async function PostcodePage({ params }: Props) {
           <ul className="space-y-4">
             {[
               'No call-out fee — ever. You only pay if I complete the job.',
-              'No VAT — save 20% compared to VAT-registered national firms.',
+              'No VAT is added to the agreed price.',
               'Insurance-approved BS3621 locks available on request.',
               'Non-destructive entry — I always try to save your lock first.',
               '24/7 availability — same price at 3am as at 3pm.',
