@@ -37,7 +37,7 @@ export const TOWN_SERVICES: Record<string, TownServiceContent[]> = {
       "h1": "Emergency Lockout Locksmith in Nuneaton",
       "intro": [
         "If you're stood outside your front door in Nuneaton with no way in, call me on 024 7522 4730 and I'll head straight over. I'm an independent locksmith based in Coventry, and the A444 brings me into town quickly — I reach most CV11 addresses within 20-30 minutes, whether you're in a terrace off Abbey Street or out on one of the newer estates. I answer the phone myself, day or night.",
-        "Non-destructive entry always comes first. Most lockouts — a slammed door on a nightlatch, keys lost on a night out, a key snapped off in a worn mortice lock — can be opened without damaging the door or the lock. I carry the tools for snapped key extraction and can usually leave your existing lock working exactly as it was. If a lock genuinely has to be drilled, I'll tell you before I touch it and fit a replacement on the same visit.",
+        "I try non-destructive entry first where the lock and circumstances allow. In many lockouts I attend — a slammed door on a nightlatch, keys lost on a night out, or a key snapped in a worn mortice lock — picking, bypass, or extraction is possible without damaging the door. The outcome depends on the lock and any existing fault. If drilling is necessary, I'll explain why before I start and can fit a replacement on the same visit.",
         "Pricing is straightforward: lockouts start from £59, there's no VAT on top and no call-out fee, and I'll confirm the price on the phone before I set off so there are no surprises when I arrive."
       ],
       "localAngleHeading": "Lockouts in Nuneaton's Town Centre Terraces",
@@ -52,7 +52,7 @@ export const TOWN_SERVICES: Record<string, TownServiceContent[]> = {
       "faqs": [
         {
           "q": "Will you damage my door getting me back in?",
-          "a": "Almost never. Non-destructive entry is always my first approach, and most Nuneaton lockouts — slammed nightlatches, locked uPVC doors — are opened with no damage at all. If a lock is genuinely beyond picking or bypassing, I'll explain why before drilling and fit a working replacement on the same visit, so you're never left unsecured."
+          "a": "I try non-destructive entry first where the lock and circumstances allow. In many Nuneaton lockouts I attend, picking or bypass may be possible without damaging the door, but the outcome depends on the lock and any existing fault. If drilling is necessary, I'll explain why before I start and can fit a replacement on the same visit."
         },
         {
           "q": "My key has snapped off in the lock — can you get it out?",
@@ -76,11 +76,11 @@ export const TOWN_SERVICES: Record<string, TownServiceContent[]> = {
       "h1": "Lock Change & Replacement in Nuneaton",
       "intro": [
         "Moving into a new house in Nuneaton? Taking a rental property back at the end of a tenancy? A lock change is the only way to be certain who can open your door, and I fit new locks across the whole of CV11 and the CV10 suburbs, usually on the same day you call. From my base in Coventry it's a straightforward run up the A444, and I typically reach Nuneaton addresses within 20-30 minutes.",
-        "I fit BS3621 five-lever mortice locks on timber doors — the standard most home insurance policies ask for — and replacement euro cylinders on uPVC and composite doors. Whether it's one front door or every lock in the house after a burglary or a lost set of keys, I carry the stock to finish the job in a single visit.",
+        "I fit BS3621-rated five-lever mortice locks on timber doors where a customer's written policy specifies that standard, and replacement euro cylinders on uPVC and composite doors. Whether it's one front door or every lock in the house after a burglary or a lost set of keys, I carry the stock to finish the job in a single visit.",
         "Lock changes start from £69. The final price depends on the lock type and how many doors need doing, so I'll ask a couple of questions and confirm the cost on the phone before I travel — no VAT added, no call-out fee."
       ],
       "localAngleHeading": "Lock Changes for Nuneaton's Rental Market and Older Terraces",
-      "localAngleBody": "Nuneaton has a significant rental market, and lock changes between tenancies make up a steady share of my work here — landlords and letting agents across the town centre, Attleborough, and Stockingford call me when keys change hands. The housing stock shapes what I fit: the red-brick terraces around Abbey Street and Queen's Road mostly have solid wood doors that take five-lever mortice locks, and where the existing lock isn't BS3621 rated I'll fit one that is, so the property meets insurance requirements. The 1950s and 1960s semis in Attleborough and Whitestone carry a real mix of original and replacement doors, so I bring both mortice locks and euro cylinders to every job. On Horeston Grange and the newer estates it's almost always a euro cylinder swap in a composite door.",
+      "localAngleBody": "Lock changes between tenancies make up a steady share of my Nuneaton work — landlords and letting agents across the town centre, Attleborough, and Stockingford call me when keys change hands. The housing stock shapes what I fit: the red-brick terraces around Abbey Street and Queen's Road mostly have solid wood doors that take five-lever mortice locks, and where a customer's written policy specifies BS3621 I can fit a lock carrying that rating. The 1950s and 1960s semis in Attleborough and Whitestone carry a real mix of original and replacement doors, so I bring both mortice locks and euro cylinders to every job. On Horeston Grange and the newer estates, the calls I attend often involve euro cylinders in composite doors.",
       "commonJobs": [
         "Full lock changes for buyers moving into 1950s and 1960s semis in Attleborough and Whitestone",
         "Between-tenancy lock changes for landlords with terraces in the town centre",
@@ -99,7 +99,7 @@ export const TOWN_SERVICES: Record<string, TownServiceContent[]> = {
         },
         {
           "q": "Will my new locks satisfy my home insurance?",
-          "a": "If you ask for it, yes. Most policies specify BS3621 five-lever mortice locks on final exit timber doors, and I fit locks that carry the kitemark and the standard number so you can point your insurer to them. Check your own policy wording, as requirements do vary between insurers."
+          "a": "I can fit a BS3621-rated five-lever mortice lock if that is what your written policy specifies, and show you the kitemark and standard number. Check the exact wording and ask your insurer to confirm what it accepts, because a locksmith cannot approve your cover."
         },
         {
           "q": "How long does a lock change take?",
@@ -154,11 +154,11 @@ export const TOWN_SERVICES: Record<string, TownServiceContent[]> = {
       "h1": "Emergency Boarding Up in Nuneaton",
       "intro": [
         "When a window's been put through or a door forced, the priority is simple: make the property secure before you do anything else. I provide emergency boarding up across Nuneaton around the clock, and because I'm based in Coventry with a quick run up the A444, I can be with most CV11 addresses within 20-30 minutes of your call — which matters when your home is standing open at 2am.",
-        "I board broken windows and damaged doors with properly fixed boards, secure damaged frames, and leave the property weathertight and safe until permanent repairs can be arranged. If the break-in has compromised your locks, I can change them on the same visit rather than leaving you to book a second appointment. I attend homes and businesses alike — Nuneaton's commercial premises along Stratford Street and Bond Gate included.",
+        "I board broken windows and damaged doors with fixed timber intended to deter access and reduce weather exposure until permanent repairs can be arranged. Temporary boarding cannot guarantee against determined entry. If the break-in has compromised your locks, I can change them on the same visit rather than leaving you to book a second appointment. I attend homes and businesses alike — Nuneaton's commercial premises along Stratford Street and Bond Gate included.",
         "Boarding up starts from £79. The price depends on the size and number of openings, so tell me what's been damaged when you call and I'll confirm the cost before I set off — no VAT, no call-out fee."
       ],
       "localAngleHeading": "Securing Nuneaton Homes and Shops After Break-Ins",
-      "localAngleBody": "Boarding up work in Nuneaton splits between homes and businesses. The commercial premises along Stratford Street and Bond Gate need glazing boarded quickly after break-ins or accidental damage — an unsecured shopfront left overnight is an open invitation. On the residential side, the Victorian terraces around Abbey Street and Queen's Road have original solid wood doors that splinter around the lock when forced, and I can board the damaged section, secure the frame, and fit a new lock in one visit. On estates like Horeston Grange, a forced composite door often means the multipoint mechanism and frame keeps are damaged too, so I check and secure the whole door rather than just the visible hole. Whatever the property, I don't leave until it's genuinely secure.",
+      "localAngleBody": "Boarding-up work in Nuneaton includes homes and businesses. At commercial premises along Stratford Street and Bond Gate, I attend damaged glazing after break-ins or accidents. On residential terraces around Abbey Street and Queen's Road, I can board the damaged section, assess the frame, and fit a new lock where needed. On estates such as Horeston Grange, I also check the multipoint mechanism and frame keeps on a forced composite door rather than only covering the visible opening. I aim to leave the opening firmly boarded and weather-resistant, while making clear that temporary boarding cannot prevent every entry attempt.",
       "commonJobs": [
         "Boarding broken shopfront glazing along Stratford Street and Bond Gate",
         "Securing forced solid wood doors on the terraces around Abbey Street and Queen's Road",
@@ -169,11 +169,11 @@ export const TOWN_SERVICES: Record<string, TownServiceContent[]> = {
       "faqs": [
         {
           "q": "Can you change the locks and board up in the same visit?",
-          "a": "Yes — that's exactly how I prefer to work after a break-in. If the door lock has been forced or keys taken, I'll board the damaged opening and fit new locks in one visit, so the property is fully secure without waiting for a second appointment. It also keeps the total cost down."
+          "a": "Yes — that's exactly how I prefer to work after a break-in. If the door lock has been forced or keys taken, I can board the damaged opening and fit new locks in one visit rather than making you wait for a second appointment. The result is temporary boarding plus replacement of the compromised lock; no boarding or lock can guarantee against further entry."
         },
         {
           "q": "Is boarding up secure enough to leave the property overnight?",
-          "a": "Yes. I fix boards properly to the frame rather than resting them in the opening, leaving windows and doors solid, weathertight, and secure until a glazier or joiner completes the permanent repair. It's a temporary measure by design, but it will do its job for as long as you need it to."
+          "a": "I fix timber boarding to sound frame or masonry where the condition allows, rather than resting a loose sheet in the opening. This is intended to deter access and reduce weather exposure overnight while permanent repairs are arranged, but temporary boarding cannot guarantee against determined entry."
         },
         {
           "q": "Do you board up shops and commercial premises in Nuneaton?",
@@ -181,7 +181,7 @@ export const TOWN_SERVICES: Record<string, TownServiceContent[]> = {
         },
         {
           "q": "Should I call the police before I call you?",
-          "a": "If there's been a break-in, yes — report it and get a crime reference number, which your insurer will ask for, and photograph the damage before anything is moved. I can usually board up as soon as the police are done with the scene, and I'll work around whatever they need."
+          "a": "If there's been a break-in, report it to the police and follow their instructions. Keep the crime reference number and photographs because your insurer may ask for them; check its exact claim instructions. I can usually board up as soon as the police are done with the scene, and I'll work around whatever they need."
         }
       ],
       "priceNote": "Emergency boarding up in Nuneaton starts from £79 with no VAT and no call-out fee, and I'll confirm the price on the phone once you've described the damage."
@@ -189,30 +189,30 @@ export const TOWN_SERVICES: Record<string, TownServiceContent[]> = {
     {
       "service": "lock-upgrade",
       "metaTitle": "Lock Upgrade Nuneaton | From £79 | No VAT | BS3621",
-      "metaDescription": "Lock upgrades in Nuneaton from £79 — BS3621 deadlocks and anti-snap cylinders fitted, insurance compliant. 20-30 minutes away. Call 024 7522 4730.",
-      "h1": "Insurance-Approved Lock Upgrades in Nuneaton",
+      "metaDescription": "Lock upgrades in Nuneaton from £79 — BS3621-rated deadlocks and anti-snap cylinders fitted. 20-30 minutes away. Call 024 7522 4730.",
+      "h1": "BS3621 & Anti-Snap Lock Upgrades in Nuneaton",
       "intro": [
-        "Plenty of Nuneaton homes are still secured by locks their insurer no longer accepts. Lock upgrades are one of the highest-volume jobs I do in the town — often prompted by a renewal document mentioning BS3621 for the first time — and I fit insurance-approved deadlocks and anti-snap cylinders across CV11 and the CV10 suburbs. I'm based in Coventry, 20-30 minutes from most Nuneaton addresses via the A444, and upgrade work can be booked for a time that suits you rather than treated as an emergency.",
-        "On timber doors the upgrade is a BS3621 five-lever mortice deadlock, the standard most insurers name in their policy wording. On uPVC and composite doors it's an anti-snap euro cylinder, and I carry premium options including Ultion and ABS for anyone who wants the strongest protection available. If you'd like the whole house brought up to standard, I'll survey every door and price the lot in one go.",
+        "Lock upgrades are one of the higher-volume jobs I do in Nuneaton, including visits prompted by a customer's renewal document naming BS3621. I fit BS3621-rated deadlocks and anti-snap cylinders across CV11 and the CV10 suburbs. I'm based in Coventry, 20-30 minutes from most Nuneaton addresses via the A444, and upgrade work can be booked for a time that suits you rather than treated as an emergency.",
+        "On timber doors I can fit a BS3621 five-lever mortice deadlock where the door and your written policy call for it. On uPVC and composite doors I fit euro cylinders, including anti-snap and independently certified higher-resistance options such as Ultion and ABS. These can improve resistance to cylinder attacks but no lock eliminates risk. If you'd like the whole house reviewed, I'll survey every door and price the work in one go.",
         "Upgrades start from £79. Tell me what doors and locks you have when you call and I'll confirm the price before booking you in — with no VAT and no call-out fee on top."
       ],
-      "localAngleHeading": "Bringing Nuneaton's Older Locks Up to Insurance Standard",
-      "localAngleBody": "Upgrade work is one of my biggest call types in Nuneaton, and the housing explains why. The Victorian and Edwardian terraces around Abbey Street, Queen's Road, and the streets off Bond Gate still have solid wood doors, and while many carry five-lever mortice locks, a large number of those locks pre-date the BS3621 standard that insurers now ask for — the lock works, but it wouldn't satisfy a claims assessor. The 1950s and 1960s semis in Attleborough and Whitestone are similar, with a mix of original and replacement locks of varying quality. On Horeston Grange and the newer estates the doors are modern, but factory-fitted euro cylinders are often the basic type, and swapping them for anti-snap versions is a quick, worthwhile upgrade. I'll always tell you honestly which of your locks are fine as they are.",
+      "localAngleHeading": "BS3621 and Cylinder Upgrades for Nuneaton's Older Locks",
+      "localAngleBody": "Upgrade work is one of my biggest call types in Nuneaton, and the housing explains why. On the Victorian and Edwardian terraces around Abbey Street, Queen's Road, and the streets off Bond Gate, some of the five-lever mortice locks I inspect pre-date BS3621. Where a customer's exact written policy specifies that standard, I can fit a kitemarked option and show them the marking, while their insurer remains responsible for confirming cover. The 1950s and 1960s semis in Attleborough and Whitestone carry a mix of original and replacement locks. On Horeston Grange and the newer estates I also replace basic euro cylinders with anti-snap options designed to improve resistance to cylinder attacks, without claiming that any cylinder removes all risk. I'll always tell you honestly which locks are fine as they are.",
       "commonJobs": [
         "Fitting BS3621 deadlocks to solid wood doors on the Abbey Street and Queen's Road terraces",
         "Swapping basic euro cylinders for anti-snap versions on the newer estates",
         "Whole-house upgrades ahead of home insurance renewals across CV11",
-        "Bringing rental properties up to insurance standard for Nuneaton landlords",
+        "Fitting lock standards named in written policies for Nuneaton landlords",
         "Fitting Ultion and ABS premium cylinders for homeowners wanting the best protection"
       ],
       "faqs": [
         {
           "q": "How do I know whether my locks already meet BS3621?",
-          "a": "Look at the faceplate on the edge of the door — a compliant lock is stamped with BS3621 and a kitemark. Many locks in Nuneaton's older terraces carry neither, because they pre-date the standard. If you're unsure, I can check every lock in the house during a single visit and tell you which ones pass."
+          "a": "Look at the faceplate on the edge of the door — a BS3621-rated lock carries the standard number and a kitemark. Some older locks carry neither because they pre-date the standard. I can identify the markings during a visit; check your exact written policy and ask your insurer to confirm whether that is what it requires."
         },
         {
           "q": "What is an anti-snap cylinder, and does my door need one?",
-          "a": "Snapping the euro cylinder is one of the most widely used ways of forcing uPVC and composite doors nationally. Anti-snap cylinders have sacrificial sections that break away and leave the mechanism secure. If your door has a basic cylinder — as many on Nuneaton's newer estates do — it's one of the most worthwhile upgrades available."
+          "a": "Cylinder snapping is one forced-entry method used against some uPVC and composite doors. Anti-snap cylinders use features intended to improve resistance, and independently certified options provide a useful benchmark, but no cylinder eliminates forced-entry risk. If your door has a basic cylinder, I can inspect it and explain the available upgrades."
         },
         {
           "q": "Can you upgrade my locks without spoiling my Victorian door?",
@@ -234,7 +234,7 @@ export const TOWN_SERVICES: Record<string, TownServiceContent[]> = {
       "h1": "Emergency Lockout Locksmith in Bedworth",
       "intro": [
         "Locked out of your house in Bedworth? I'm Ross, an independent locksmith based in Coventry, and I cover the whole CV12 area — from the terraces around Newdigate Road to the estates towards Bedworth Heath and out to Bulkington. I come straight up the A444, which puts most Bedworth addresses 25-35 minutes away from the moment you call, day or night.",
-        "I always try non-destructive entry first. Most lockouts — a slammed door on a nightlatch, keys left inside, a key snapped off in the cylinder — can be opened without damaging the lock or the door, so you're back inside with nothing to replace. If a lock genuinely has to be drilled because it has failed internally, I'll tell you before I start and fit a replacement on the same visit.",
+        "I try non-destructive entry first where the lock and circumstances allow. In many lockouts I attend — a slammed door on a nightlatch, keys left inside, or a key snapped in the cylinder — picking, bypass, or extraction is possible without damaging the door. The outcome depends on the lock and any internal fault. If drilling is necessary, I'll explain why before I start and can fit a replacement on the same visit.",
         "Pricing is simple: lockouts start from £59, there's no VAT and no call-out fee, and I'll confirm the price on the phone before I set off. Call me on 024 7522 4730 and I'll tell you exactly how soon I can be with you."
       ],
       "localAngleHeading": "Getting Into Bedworth's Older Terraces Without Damage",
@@ -292,7 +292,7 @@ export const TOWN_SERVICES: Record<string, TownServiceContent[]> = {
         },
         {
           "q": "Can you fit locks that meet my home insurance requirements?",
-          "a": "Yes. Most policies ask for BS3621 five-lever mortice deadlocks on final exit timber doors, and I fit these as standard. Check the exact wording of your policy — I can look at what's currently on the door and tell you whether it complies before you decide anything."
+          "a": "Yes. I fit BS3621-rated five-lever mortice deadlocks where a customer's exact written policy specifies them. I can identify the markings on your current lock and explain replacement options, but your insurer must confirm whether a particular lock satisfies your cover."
         },
         {
           "q": "Do I need to buy the locks before you arrive?",
@@ -316,7 +316,7 @@ export const TOWN_SERVICES: Record<string, TownServiceContent[]> = {
         "Repairs start from £59 with no VAT and no call-out fee. Describe the fault on the phone and I'll give you a price and confirm it before any work begins."
       ],
       "localAngleHeading": "Why Bedworth's 1990s uPVC Doors Are Failing Now",
-      "localAngleBody": "A large share of Bedworth's uPVC doors went in during the 1990s and 2000s, when older timber doors across the terraces and the post-war estates were replaced. Those multipoint mechanisms are now twenty to thirty years old and reaching the end of their working lives — which is exactly why gearbox failures are a growing part of my Bedworth workload. Gearboxes wear internally, doors drop on their hinges so the hooks no longer meet the keeps, and handles that once lifted smoothly start to grind and stick. Almost all of it is repairable: a matching or adapted gearbox restores the door without replacing it. The composite doors on the newer developments near the Tesco superstore are younger, but even there I attend cylinder and alignment problems from time to time.",
+      "localAngleBody": "Many of the uPVC doors I repair in Bedworth were installed during the 1990s and 2000s as replacements for older timber doors. Ageing multipoint mechanisms are therefore a regular part of my Bedworth workload. Gearboxes wear internally, doors can drop on their hinges so the hooks no longer meet the keeps, and handles that once lifted smoothly can start to grind and stick. Depending on the parts and condition, a matching or adapted gearbox may restore the door without replacing it. On newer composite doors near the Tesco superstore, I also attend cylinder and alignment problems from time to time.",
       "commonJobs": [
         "Replacing failed multipoint gearboxes in uPVC doors fitted during the 1990s and 2000s",
         "Releasing and repairing doors jammed shut by a seized mechanism",
@@ -351,11 +351,11 @@ export const TOWN_SERVICES: Record<string, TownServiceContent[]> = {
       "h1": "Emergency Boarding Up in Bedworth",
       "intro": [
         "After a break-in or a smashed window, the first job is making the property secure — everything else can wait until morning. I provide emergency boarding up across Bedworth and the wider CV12 area, 24 hours a day, for houses, flats, and commercial premises alike. I'm typically 25-35 minutes away via the A444 when you call 024 7522 4730.",
-        "I cut boards to size on site and fix them properly, so a broken window or forced door is weather-tight and can't be used to get back in. Where a door has been forced and the lock compromised, I can change the locks in the same visit — one trade, one bill, and the house is fully secure before I leave.",
+        "I cut boards to size on site and fix them firmly to reduce weather exposure and deter access until a permanent repair is made. Boarding is temporary protection rather than a guarantee against determined entry. Where a door has been forced and the lock compromised, I can change the locks in the same visit — one trade and one bill.",
         "Boarding up starts from £79 with no VAT and no call-out fee. Describe the damage over the phone and I'll confirm the price before I head over."
       ],
       "localAngleHeading": "Securing Bedworth Homes and Shops After Damage",
-      "localAngleBody": "Bedworth's older terraces have solid wood doors, and when one of those is forced the timber usually splits around the lock — the door itself often survives, but it needs boarding or bracing and a new lock before the house is secure again. On the estates, a forced uPVC door frequently jams with the mechanism destroyed, so I make the door safe and can replace the gearbox or cylinder on the same visit. The town centre adds a commercial side to the work: the Victorian and Edwardian buildings around All Saints Square and High Street have shopfront glazing that occasionally needs securing after damage, whatever the hour. In every case the aim is the same — cut, fit, and fix boards properly on site so the property is weather-tight and can't be entered until repairs are done.",
+      "localAngleBody": "Bedworth's older terraces have solid wood doors, and when one of those is forced the timber usually splits around the lock — the door itself often survives, but it needs boarding or bracing and a new lock before the house is usable again. On the estates, a forced uPVC door frequently jams with the mechanism destroyed, so I make the door safe and can replace the gearbox or cylinder on the same visit. The town centre adds a commercial side to the work: the Victorian and Edwardian buildings around All Saints Square and High Street have shopfront glazing that occasionally needs securing after damage, whatever the hour. In every case the aim is the same — cut, fit, and fix boards firmly on site to reduce weather exposure and deter access until permanent repairs are done.",
       "commonJobs": [
         "Boarding a forced front door on an older terrace, with a lock change in the same visit",
         "Securing broken glazing at commercial premises around All Saints Square and High Street",
@@ -366,7 +366,7 @@ export const TOWN_SERVICES: Record<string, TownServiceContent[]> = {
       "faqs": [
         {
           "q": "Can you change the locks at the same time as boarding up?",
-          "a": "Yes — that's usually the right call after a break-in. I board the damaged window or door and change any compromised locks in the same visit, so the property is fully secure again with one visit rather than two separate trades."
+          "a": "Yes — I can board the damaged window or door and change compromised locks in the same visit rather than requiring two separate trades. Boarding and upgraded locks improve protection while permanent repairs are arranged, but they do not make a property attack-proof."
         },
         {
           "q": "Do you board up in Bedworth at night?",
@@ -374,7 +374,7 @@ export const TOWN_SERVICES: Record<string, TownServiceContent[]> = {
         },
         {
           "q": "Will boarding up satisfy my insurance company after a break-in?",
-          "a": "Insurers generally expect you to take reasonable steps to secure the property promptly, and professional boarding with a lock change is the standard way to do that. I can't speak for your individual policy, so keep photographs of the damage and your receipt from me for the claim."
+          "a": "Check your exact written policy and claim instructions, because only your insurer can confirm what action or evidence it requires. I can provide an invoice describing the boarding and any lock work; keep photographs and any crime reference number if your insurer asks for them."
         },
         {
           "q": "Do you board up shops and commercial premises in Bedworth?",
@@ -386,15 +386,15 @@ export const TOWN_SERVICES: Record<string, TownServiceContent[]> = {
     {
       "service": "lock-upgrade",
       "metaTitle": "Lock Upgrade Bedworth | From £79 | No VAT | Anti-Snap",
-      "metaDescription": "Insurance-approved lock upgrades in Bedworth from £79 — BS3621 deadlocks and anti-snap cylinders fitted, 25-35 minutes away. Call 024 7522 4730.",
+      "metaDescription": "BS3621-rated lock upgrades in Bedworth from £79 — deadlocks and anti-snap cylinders fitted, 25-35 minutes away. Call 024 7522 4730.",
       "h1": "Lock Upgrades for Bedworth Homes",
       "intro": [
-        "Plenty of the locks I inspect in Bedworth wouldn't satisfy a modern insurance policy. Across CV12 there are still a lot of doors carrying locks that fall short of BS3621 — the standard most insurers now expect on final exit doors — and a lot of uPVC and composite doors fitted with basic euro cylinders that have no snap protection at all.",
-        "I fit BS3621 insurance-approved five-lever mortice deadlocks on timber doors and anti-snap euro cylinders — including premium brands such as Ultion and ABS — on uPVC and composite doors. If you'd like the whole house reviewed, I'll walk round every external door with you, tell you honestly which locks are worth upgrading and which are fine as they are, and price the job before any work starts.",
+        "In my Bedworth visits I inspect a mix of older mortice locks without a BS3621 marking and uPVC or composite doors fitted with basic euro cylinders. If your exact written policy names a lock standard, check it with your insurer and I can identify the markings on what is already fitted.",
+        "I fit BS3621-rated five-lever mortice deadlocks on timber doors and anti-snap euro cylinders — including independently certified options from brands such as Ultion and ABS — on uPVC and composite doors. These products can improve resistance but cannot eliminate forced-entry risk. If you'd like the whole house reviewed, I'll walk round every external door with you, explain the options, and price the job before any work starts.",
         "Upgrades are planned work rather than emergencies, so I'll book a time that suits you — Bedworth is a 25-35 minute trip for me via the A444. Prices start from £79 with no VAT and no call-out fee, confirmed on the phone."
       ],
-      "localAngleHeading": "Bringing Bedworth's Older Locks Up to Insurance Standard",
-      "localAngleBody": "A striking number of Bedworth properties are still secured by locks that don't meet BS3621, the standard most insurers now expect. The former miners' cottages around Newdigate Road and Coalpit Field Road often carry lock setups that predate any modern standard, and the post-war estate houses commonly still have the basic Yale-and-mortice pairing fitted when they were built. On timber doors like these, the fix is an insurance-approved five-lever deadlock fitted to the existing door. On the uPVC doors installed across town in the 1990s and 2000s, the weak point is the basic euro cylinder — swapping it for an anti-snap version is quick and removes the most common method of forced entry. The composite doors on the newer developments off the Coventry Road usually only need a cylinder check to confirm what's fitted.",
+      "localAngleHeading": "BS3621 and Cylinder Upgrades for Bedworth's Older Locks",
+      "localAngleBody": "Among the Bedworth doors I inspect are older locks without a BS3621 marking. The former miners' cottages around Newdigate Road and Coalpit Field Road often carry lock setups that predate modern standards, and the post-war estate houses can still have older Yale-and-mortice pairings. On a suitable timber door I can fit a BS3621-rated five-lever deadlock, including where a customer has checked that this is named in their written policy. On uPVC doors, replacing a basic euro cylinder with an anti-snap version can improve resistance to cylinder attack but does not eliminate forced-entry risk. Composite doors on the newer developments off Coventry Road usually only need a cylinder check to confirm what is fitted.",
       "commonJobs": [
         "Fitting BS3621 five-lever deadlocks to timber doors on the terraces around Newdigate Road",
         "Swapping basic euro cylinders for anti-snap versions on 1990s and 2000s uPVC doors",
@@ -405,7 +405,7 @@ export const TOWN_SERVICES: Record<string, TownServiceContent[]> = {
       "faqs": [
         {
           "q": "What is an anti-snap euro cylinder and do I need one in Bedworth?",
-          "a": "Cylinder snapping is a forced-entry method that targets basic euro cylinders — the type fitted to most of the uPVC doors installed in Bedworth through the 1990s and 2000s. An anti-snap cylinder is built with sacrificial sections and reinforcement so that attack fails. If your uPVC or composite door still has its original cylinder, it's the single most worthwhile upgrade you can make."
+          "a": "Cylinder snapping is a forced-entry method that targets some basic euro cylinders. Anti-snap designs use sacrificial sections and reinforcement intended to improve resistance, and independently certified options provide a useful benchmark, but no cylinder makes a door attack-proof. I can inspect the cylinder and door furniture before recommending whether an upgrade is worthwhile."
         },
         {
           "q": "Are Ultion and ABS cylinders worth the extra money?",
@@ -413,7 +413,7 @@ export const TOWN_SERVICES: Record<string, TownServiceContent[]> = {
         },
         {
           "q": "Will upgrading my locks reduce my home insurance premium?",
-          "a": "I can't promise savings — that's between you and your insurer. What I can say is that many policies require BS3621 locks on final exit doors, and a claim can be challenged if the locks don't comply. Upgrading makes sure you actually have the cover you're paying for."
+          "a": "I can't promise a lower premium or any claim outcome — those decisions belong to your insurer. Check the exact written policy to see whether it specifies BS3621 or another standard, and ask the insurer to confirm what evidence it needs. I can fit a correctly marked product and document the work, but that does not guarantee cover."
         },
         {
           "q": "Can you upgrade all the locks in my house in one visit?",
@@ -431,7 +431,7 @@ export const TOWN_SERVICES: Record<string, TownServiceContent[]> = {
       "h1": "Emergency Lockout Locksmith in Rugby",
       "intro": [
         "Locked out in Rugby? I'm Ross, an independent locksmith based in Coventry, and I attend lockouts across CV21 and CV22 around the clock — the town centre, Hillmorton, Brownsover, New Bilton, Bilton and Cawston. Coming up the M6 to Junction 1 and in on the A426, I can typically be with you in 25-35 minutes, day or night.",
-        "I always try non-destructive entry first. Most Rugby lockouts — a nightlatch that's slammed shut behind you, a key snapped off in a worn cylinder, keys lost on a night out — can be opened without damaging the door or the lock. If a lock does have to be drilled, I'll tell you before I start, not after, and I carry replacements on the van so you're never left unsecured.",
+        "I try non-destructive entry first where the lock and circumstances allow. In many Rugby lockouts I attend — a slammed nightlatch, a snapped key, or lost keys — picking, bypass, or extraction may be possible without damaging the door. The outcome depends on the lock and any existing fault. If drilling is necessary, I'll explain why before I start and can fit a replacement on the same visit.",
         "Pricing is straightforward: lockouts start from £59, and I'll confirm the price on the phone before I set off. What you're quoted is what you pay — no surprises added at the door."
       ],
       "localAngleHeading": "Getting You Back Into Rugby's Converted Flats and Terraces",
@@ -446,7 +446,7 @@ export const TOWN_SERVICES: Record<string, TownServiceContent[]> = {
       "faqs": [
         {
           "q": "Can you open my door in Rugby without drilling the lock?",
-          "a": "In most cases, yes. Non-destructive entry is always my first approach, and the majority of Rugby lockouts — nightlatches, euro cylinders, mortice locks — open without damage. If drilling turns out to be the only option, I'll explain why first and fit a replacement lock on the same visit."
+          "a": "I try non-destructive entry first where the lock and circumstances allow. Picking or bypass may be possible, but the method and outcome depend on the lock, door, and any existing damage. If drilling is necessary, I'll explain why before I start and can fit a replacement lock on the same visit."
         },
         {
           "q": "Do you ask for proof of address before opening a door?",
@@ -497,7 +497,7 @@ export const TOWN_SERVICES: Record<string, TownServiceContent[]> = {
         },
         {
           "q": "Will my new locks meet my home insurance requirements?",
-          "a": "If your policy asks for BS3621 — most do for timber doors — I'll fit a five-lever mortice deadlock that carries the kitemark and point it out to you on the faceplate. For uPVC and composite doors, I can fit cylinders that satisfy insurers too. Just mention insurance when you call."
+          "a": "If your exact written policy specifies BS3621, I can fit a five-lever mortice deadlock carrying the kitemark and show you the marking on the faceplate. For uPVC and composite doors, I can explain rated cylinder options. Ask your insurer to confirm what it accepts, because I cannot approve the policy."
         }
       ],
       "priceNote": "Lock changes in Rugby start from £69 with no VAT and no call-out fee — I'll confirm an exact price on the phone once I know what's fitted to your door."
@@ -547,8 +547,8 @@ export const TOWN_SERVICES: Record<string, TownServiceContent[]> = {
       "metaDescription": "Emergency boarding up in Rugby after break-ins or damage. Doors and windows made safe, typically 25-35 minutes away. From £79 with no VAT. Phone 024 7522 4730.",
       "h1": "Emergency Boarding Up in Rugby",
       "intro": [
-        "After a break-in, the priority is making the property safe again — fast. I provide 24/7 emergency boarding up across Rugby, securing broken windows, damaged doors and smashed panels so the property can't be entered again that night. From my base in Coventry I'm typically on site in 25-35 minutes via the M6 and A426.",
-        "It isn't only burglaries. I board up after accidental damage, storm damage, and for landlords needing an empty rental secured between tenants — a regular request given the size of Rugby's lettings market. Everything is cut to size on site and fixed properly: solid timber boarding that genuinely resists a second attempt, not a token sheet tacked over the gap.",
+        "After a break-in, the priority is making the opening safe quickly. I provide 24/7 emergency boarding up across Rugby, fixing boards over broken windows, damaged doors and smashed panels to deter access and reduce exposure until permanent repairs are made. Boarding is temporary protection, not a guarantee against determined entry. From my base in Coventry I'm typically on site in 25-35 minutes via the M6 and A426.",
+        "It isn't only burglaries. I board up after accidental damage, storm damage, and for landlords needing an empty rental secured between tenants. Everything is cut to size on site and fixed firmly: solid timber boarding designed to improve resistance and weather protection until a permanent repair, rather than a token sheet tacked over the gap.",
         "Boarding up starts from £79, and because I'm a locksmith first, I can change or repair any damaged locks on the same visit — one call-out covers both, and I'll confirm the full price on the phone before travelling."
       ],
       "localAngleHeading": "Securing Rugby Homes After Break-Ins and Damage",
@@ -571,7 +571,7 @@ export const TOWN_SERVICES: Record<string, TownServiceContent[]> = {
         },
         {
           "q": "Will the boarding be good enough for my insurance claim?",
-          "a": "Insurers expect you to take reasonable steps to secure the property after damage, and professional boarding does exactly that. I fix boards securely rather than resting them in place, and I'm happy to provide an invoice describing the work, which most insurers ask for with a claim."
+          "a": "Securing a damaged opening promptly is prudent, but check your exact policy and claim instructions rather than assuming what is covered. I fix boards firmly and can provide an invoice describing the work; your insurer decides what evidence it needs and whether the cost is covered."
         },
         {
           "q": "Can you secure a damaged communal door on a converted Rugby property?",
@@ -586,12 +586,12 @@ export const TOWN_SERVICES: Record<string, TownServiceContent[]> = {
       "metaDescription": "Lock upgrades in Rugby — BS3621 deadlocks and anti-snap cylinders fitted, typically 25-35 minutes away. From £79, no VAT. Ring Ross on 024 7522 4730.",
       "h1": "Lock Upgrades in Rugby",
       "intro": [
-        "Plenty of Rugby homes are secured by locks that wouldn't satisfy a modern insurance policy — or a determined burglar. I upgrade locks across CV21 and CV22: BS3621 insurance-approved mortice deadlocks for timber doors, anti-snap euro cylinders for uPVC and composite doors, and full whole-house packages where every entry point is brought up to standard in one visit.",
-        "For higher-security cylinder work I fit premium brands including Ultion and ABS — cylinders designed to defeat lock snapping, which targets the standard euro cylinders fitted to so many modern doors. On older timber doors, a kitemarked five-lever deadlock is usually the single most worthwhile improvement you can make.",
+        "Across my Rugby visits I see older mortice locks without a BS3621 marking and basic euro cylinders on uPVC and composite doors. I fit BS3621-rated mortice deadlocks, anti-snap euro cylinders, and whole-house packages after assessing each entry point. Check any written policy requirement with your insurer before relying on a particular standard.",
+        "For higher-resistance cylinder work I fit options from brands including Ultion and ABS, designed to improve resistance to cylinder attacks. On a suitable older timber door, a kitemarked five-lever deadlock can be a practical improvement, including where the customer's exact written policy specifies BS3621. No lock makes a property attack-proof.",
         "Upgrades start from £79. This is planned rather than emergency work, so I'll usually book a time that suits you — and as I'm typically 25-35 minutes from Rugby, fitting around your day is straightforward. I'll price the exact locks with you on the phone first, so you know the cost before I arrive."
       ],
-      "localAngleHeading": "Bringing Rugby's Older Locks Up to Insurance Standard",
-      "localAngleBody": "The upgrade work Rugby generates splits neatly by area. In Hillmorton and Bilton, the 1930s semis and interwar houses often still carry worn mortice locks and old Yale nightlatches — the exact locks insurers now expect to see replaced with BS3621-rated equivalents. Around the town centre, landlords of converted flats and HMOs upgrade to keep policies valid and tenants secure, and a communal door is only as good as its weakest lock. On the modern estates, the risk is different: Brownsover and Cawston doors mostly rely on euro cylinders, and where cheaper door furniture was fitted, those cylinders are vulnerable to snapping. Swapping them for anti-snap versions — Ultion or ABS at the top end — is a quick, relatively inexpensive fix that closes off the most common attack on a modern door.",
+      "localAngleHeading": "BS3621 and Cylinder Upgrades for Rugby's Older Doors",
+      "localAngleBody": "The upgrade work I attend in Rugby splits by area. In Hillmorton and Bilton, I inspect 1930s semis and interwar houses with worn mortice locks and old Yale nightlatches; where a customer's written policy specifies BS3621, I can fit a marked equivalent and document it while the insurer confirms cover. Around the town centre, landlords of converted flats and HMOs often ask for a review of shared and individual locks. On modern estates, Brownsover and Cawston doors mostly rely on euro cylinders, and basic cylinders can be vulnerable to snapping. Anti-snap options, including independently certified choices, can improve resistance but cannot remove every route of forced entry.",
       "commonJobs": [
         "Fitting anti-snap euro cylinders to a composite door at Cawston",
         "Upgrading a Hillmorton semi to BS3621 deadlocks for a new insurance policy",
@@ -602,7 +602,7 @@ export const TOWN_SERVICES: Record<string, TownServiceContent[]> = {
       "faqs": [
         {
           "q": "What is lock snapping and are Rugby doors at risk?",
-          "a": "Snapping is a forced-entry method that breaks a standard euro cylinder in seconds using basic tools. Any uPVC or composite door with an ordinary cylinder is potentially vulnerable — which covers a lot of Brownsover and Cawston. An anti-snap cylinder is engineered to break in a controlled way that keeps the door locked."
+          "a": "Snapping is a forced-entry method used against some basic euro cylinders. An anti-snap cylinder is designed to improve resistance, sometimes by breaking in a controlled way intended to protect the mechanism. Independently certified options provide useful evidence of testing, but no cylinder eliminates forced-entry risk."
         },
         {
           "q": "How do I know if my current locks meet BS3621?",
@@ -628,7 +628,7 @@ export const TOWN_SERVICES: Record<string, TownServiceContent[]> = {
       "h1": "Emergency Lockout Service in Leamington Spa",
       "intro": [
         "Locked out in Leamington Spa? I'm Ross, an independent locksmith based in Coventry, and I answer my own phone day or night. I cover the whole of CV31 and CV32 — the town centre, Milverton, Lillington, Sydenham, Whitnash and Heathcote — travelling in via the A46 or the A425, and I can honestly reach most Leamington addresses in 25-35 minutes.",
-        "Non-destructive entry always comes first. Most lockouts, whether it's a nightlatch on a Victorian terrace or a euro cylinder on a composite door, can be opened with picking and bypass techniques rather than drilling, so your lock survives and you don't end up paying for a replacement you never needed. If a key has snapped in the lock I can extract it, and if your keys are lost altogether I can get you in and change the locks in the same visit.",
+        "I try non-destructive entry first where the lock and circumstances allow. In many lockouts I attend, whether the door has a nightlatch or a euro cylinder, picking or bypass may be possible without drilling. The method and outcome depend on the lock, any existing damage, and the door. If a key has snapped I can assess whether extraction is possible; if the keys are lost, I can open the door and change the locks where needed.",
         "Pricing is straightforward: lockouts start from £59 with no VAT and no call-out fee, and I'll give you a clear price on the phone before I start driving, so there are no surprises at the door."
       ],
       "localAngleHeading": "Opening Doors in Leamington's Converted Georgian Flats",
@@ -643,7 +643,7 @@ export const TOWN_SERVICES: Record<string, TownServiceContent[]> = {
       "faqs": [
         {
           "q": "Will you have to drill my lock to get me in?",
-          "a": "Rarely. Non-destructive entry is always my first approach — picking and bypass techniques open the majority of doors without damage, including nightlatches on Leamington's older terraces and euro cylinders on modern doors. Drilling is a last resort, and if it's ever genuinely needed I'll explain why first and fit a replacement lock straight away."
+          "a": "I try non-destructive entry first where the lock and circumstances allow. Picking or bypass may be possible on nightlatches and euro cylinders, but the outcome depends on the specific lock, door, and fault. If drilling is necessary, I'll explain why before I start and can fit a replacement lock."
         },
         {
           "q": "My key has snapped off inside an old mortice lock — can it be saved?",
@@ -690,7 +690,7 @@ export const TOWN_SERVICES: Record<string, TownServiceContent[]> = {
         },
         {
           "q": "Will the new locks satisfy my home insurance?",
-          "a": "If you ask for insurance-rated locks, yes. Most policies specify a BS3621 five-lever mortice deadlock on timber final-exit doors, and I fit these as standard when required. For uPVC and composite doors, insurers generally accept the multipoint lock with a sound euro cylinder. Check your policy wording and I'll match the locks to it."
+          "a": "Check the exact written policy first. If it specifies BS3621 on a timber final-exit door, I can fit a five-lever mortice deadlock carrying that rating and document it. For uPVC and composite doors I can assess the multipoint lock and cylinder, but your insurer must confirm what it accepts."
         },
         {
           "q": "How long does a lock change take in practice?",
@@ -733,7 +733,7 @@ export const TOWN_SERVICES: Record<string, TownServiceContent[]> = {
         },
         {
           "q": "Can you just replace the cylinder on my uPVC door in Leamington?",
-          "a": "Yes — if the cylinder is stiff, worn or you want it keyed differently, I can swap it without touching the rest of the mechanism. It's also a good moment to fit an anti-snap cylinder, which resists the forcing method used in many uPVC door burglaries. I carry a full range of sizes."
+          "a": "Yes — if the cylinder is stiff, worn or you want it keyed differently, I can swap it without touching the rest of the mechanism. It can also be a good time to consider an anti-snap cylinder designed to improve resistance to cylinder-forcing methods. No cylinder eliminates every forced-entry risk, and I carry a range of sizes and rated options."
         }
       ],
       "priceNote": "uPVC lock repairs in Leamington Spa start from £59 — no VAT, no call-out fee, and I'll confirm the price on the phone once you've described the fault."
@@ -745,7 +745,7 @@ export const TOWN_SERVICES: Record<string, TownServiceContent[]> = {
       "h1": "Emergency Boarding Up in Leamington Spa — 24 Hours",
       "intro": [
         "After a break-in, the first job is making the property safe — and that's what my emergency boarding service is for. I board up broken windows, damaged doors and smashed glazing panels across Leamington Spa 24 hours a day, reaching most CV31 and CV32 addresses in 25-35 minutes via the A46 or A425.",
-        "I fix strong timber sheeting over the opening, screwed and secured so the property can't simply be pushed back open — solid enough to leave overnight or over a weekend while you arrange a glazier or a new door. If a lock was forced during the break-in, I can change it in the same visit, so the house is properly secured before I leave rather than just patched.",
+        "I fix strong timber sheeting over the opening with screws and suitable bracing to deter access and reduce weather exposure while you arrange a glazier or a new door. If a lock was forced during the break-in, I can change it in the same visit. This is temporary protection rather than a guarantee against determined entry.",
         "Boarding up starts from £79 with no VAT and no call-out fee — I'll price the job on the phone based on the size of the opening, so you know the cost before I set off."
       ],
       "localAngleHeading": "Securing Homes and Shops Across Leamington Spa",
@@ -764,11 +764,11 @@ export const TOWN_SERVICES: Record<string, TownServiceContent[]> = {
         },
         {
           "q": "Can you change the locks as well as boarding up?",
-          "a": "Yes, and it's usually the right call. If a door was forced, its lock has often been damaged or can no longer be trusted, so I carry replacement locks on the van and can fit them during the same visit. One visit, one bill, and the property is fully secured rather than half-done."
+          "a": "Yes. If a door was forced, its lock may have been damaged or compromised, so I carry replacement locks and can fit them during the same visit. That leaves the opening boarded and the compromised lock dealt with in one visit, while permanent repairs and any wider security work remain separate."
         },
         {
           "q": "Is the boarding strong enough to leave the property empty afterwards?",
-          "a": "Yes — I fit solid timber sheeting screwed firmly into the surrounding frame or structure, not tacked on. It's designed to resist someone trying to pull it off and to stay weathertight until your glazier or door fitter arrives. Insurers generally expect a property to be secured promptly after damage, and proper boarding does exactly that."
+          "a": "Yes — I fit solid timber sheeting screwed firmly into the surrounding frame or structure, not tacked on. It is designed to improve resistance and weather protection until your glazier or door fitter arrives. Check your exact policy and claim instructions; your insurer decides what work and evidence it accepts."
         },
         {
           "q": "Do you board up shops and commercial premises in Leamington town centre?",
@@ -783,23 +783,23 @@ export const TOWN_SERVICES: Record<string, TownServiceContent[]> = {
       "metaDescription": "Lock upgrades in Leamington Spa from £79 — BS3621 deadlocks and anti-snap cylinders inc. Ultion. Independent, 25-35 minutes away. Call 024 7522 4730.",
       "h1": "Lock Upgrades for Leamington Spa Homes",
       "intro": [
-        "A lot of my Leamington Spa work is planned rather than emergency: homeowners and landlords upgrading locks that are decades old, don't meet insurance requirements, or simply aren't up to the standard the property deserves. I fit BS3621 insurance-approved deadlocks, anti-snap euro cylinders — including premium brands like Ultion and ABS — and complete whole-house security upgrades across CV31 and CV32.",
-        "Because I'm based in Coventry, appointments are easy to arrange — I'm typically 25-35 minutes from Leamington, so same-day and next-day slots are usually available. I'll look at every external door, tell you plainly which locks are fine, which are weak, and which your insurer would take issue with, then quote for only what's actually worth doing. There's no pressure and no upselling — if a lock is doing its job, I'll say so.",
+        "A lot of my Leamington Spa work is planned rather than emergency: homeowners and landlords upgrading locks that are decades old, worn, or different from a standard named in their written policy. I fit BS3621-rated deadlocks, anti-snap euro cylinders — including independently certified options from brands such as Ultion and ABS — and complete whole-house security upgrades across CV31 and CV32.",
+        "Because I'm based in Coventry, appointments are easy to arrange — I'm typically 25-35 minutes from Leamington, so same-day and next-day slots are usually available. I'll look at every external door, explain which locks are serviceable and which could benefit from an upgrade, and compare visible markings with any policy wording you provide. Your insurer remains responsible for confirming cover. There's no pressure and no upselling — if a lock is doing its job, I'll say so.",
         "Upgrades start from £79 with no VAT and no call-out fee, and I'll confirm the price for your specific doors and choice of locks on the phone before anything is booked in."
       ],
       "localAngleHeading": "Upgrading Security Without Spoiling Leamington's Period Doors",
-      "localAngleBody": "Leamington presents two very different upgrade jobs. On the Georgian and Regency terraces along the Parade, Clarendon Avenue and Newbold Terrace, the challenge is bringing security up to modern insurance standards without ruining an original door — I fit BS3621 deadlocks sized and positioned to suit period timber, and I'll always discuss placement before cutting anything. Milverton's Edwardian and 1930s semis are similar territory: solid doors that deserve a proper five-lever mortice rather than the tired locks many still carry. In Sydenham, Whitnash and Heathcote, the weak point is usually the euro cylinder on a composite or uPVC door — a standard cylinder can be snapped by force in seconds, and swapping it for an anti-snap version such as Ultion or ABS is the single most effective upgrade those doors can have.",
+      "localAngleBody": "Leamington presents two different upgrade jobs. On the Georgian and Regency terraces along the Parade, Clarendon Avenue and Newbold Terrace, the challenge is fitting a BS3621-rated deadlock where the door and a customer's written policy call for it without ruining original timber; I'll always discuss placement before cutting anything. Milverton's Edwardian and 1930s semis have similar solid doors and a mix of older mortice locks. In Sydenham, Whitnash and Heathcote, I often inspect basic euro cylinders on composite or uPVC doors. Anti-snap and independently certified options can improve resistance to cylinder attacks, but no cylinder eliminates forced-entry risk.",
       "commonJobs": [
         "Fitting Ultion anti-snap cylinders to composite doors in Sydenham and Heathcote",
         "Adding a BS3621 deadlock to a Georgian front door while keeping the original furniture",
-        "Whole-house lock upgrades on Milverton and Lillington semis to meet insurance wording",
+        "Whole-house lock upgrades where a written policy names a lock standard",
         "Bringing student lets around Portland Street and Clemens Street up to standard for landlords",
         "Replacing older euro cylinders that predate anti-snap standards on estate uPVC doors"
       ],
       "faqs": [
         {
           "q": "My insurer has asked for BS3621 locks — what does that actually involve?",
-          "a": "BS3621 is the British Standard for thief-resistant locks, and insurers commonly require it on final-exit doors. On a timber door it usually means fitting a five-lever mortice deadlock carrying the kitemark. I fit BS3621 locks across Leamington from £79, and I'll show you the kitemark on the faceplate so you can evidence it to your insurer."
+          "a": "BS3621 is a British Standard for thief-resistant locks. If your exact written policy specifies it for a timber final-exit door, that usually means a five-lever mortice deadlock carrying the kitemark. I fit BS3621-rated locks across Leamington from £79 and can show you the marking; ask your insurer to confirm what evidence it requires."
         },
         {
           "q": "Are premium cylinders like Ultion really worth it over a standard anti-snap?",
@@ -825,7 +825,7 @@ export const TOWN_SERVICES: Record<string, TownServiceContent[]> = {
       "h1": "Emergency Lockout Locksmith in Warwick",
       "intro": [
         "Locked out in Warwick? I'm Ross, an independent locksmith based in Coventry, and I attend lockouts across the whole CV34 area day and night — from the period houses around Jury Street and Smith Street to the modern estates at Woodloes Park, Chase Meadow and Warwick Gates. I travel via the A46 and can typically reach Warwick addresses in 25-35 minutes.",
-        "My approach is always non-destructive first. Most doors can be opened by picking or slipping the lock without any damage, which matters everywhere but especially in a town like Warwick, where so many front doors are old, listed or simply irreplaceable. If a lock genuinely has to be drilled as a last resort, I'll tell you before I start and fit a replacement on the same visit. I also extract snapped keys — a common failure on the older mortice locks found in the town centre.",
+        "I try non-destructive entry first where the lock and circumstances allow. Picking, slipping, or extraction may be possible without damaging the door, which matters on Warwick's period doors, but the method and outcome depend on the lock and any existing fault. If drilling is necessary, I'll explain why before I start and can fit a replacement on the same visit. Snapped-key extraction also features in my Warwick work.",
         "Pricing is straightforward: lockouts start from £59 with no VAT and no call-out fee, and I'll give you a clear price on the phone before I head over. Call 024 7522 4730 whenever you're stuck."
       ],
       "localAngleHeading": "Opening Doors in Warwick's Medieval Centre Without Damage",
@@ -840,7 +840,7 @@ export const TOWN_SERVICES: Record<string, TownServiceContent[]> = {
       "faqs": [
         {
           "q": "Will you have to drill my lock to get back into my Warwick home?",
-          "a": "Almost never as a first resort. I pick or slip most locks open without damage, which matters in a town with as many listed and period doors as Warwick. If drilling ever is the only option, I'll explain why before I start and fit a replacement lock on the same visit."
+          "a": "I try picking or slipping the lock first where the lock and circumstances allow, but the method and outcome depend on the specific door, lock, and fault. If drilling is necessary, I'll explain why before I start and can fit a replacement lock on the same visit."
         },
         {
           "q": "My key has snapped off inside the lock — can you get it out?",
@@ -942,11 +942,11 @@ export const TOWN_SERVICES: Record<string, TownServiceContent[]> = {
       "h1": "Emergency Boarding Up in Warwick",
       "intro": [
         "After a break-in or damage to a door or window, the priority is simple: make the property secure again, fast. I provide 24/7 emergency boarding up across Warwick — homes and business premises alike — and I can typically be with you in 25-35 minutes via the A46.",
-        "I board over broken glazing and damaged doors with securely fixed timber sheeting, leaving the property weathertight and protected until proper repairs can be arranged. If the lock was forced or the intruder took keys, I can change the locks in the same visit rather than leaving you waiting for a second appointment. I work cleanly, and even a badly damaged opening can usually be made safe within the hour.",
+        "I board over broken glazing and damaged doors with fixed timber sheeting intended to deter access and reduce weather exposure until permanent repairs can be arranged. Temporary boarding cannot guarantee against determined entry. If the lock was forced or keys were taken, I can change the locks in the same visit rather than leaving you waiting for a second appointment.",
         "Boarding up starts from £79 with no VAT and no call-out fee — the final price depends on the size and number of openings, and I'll confirm it on the phone. Call 024 7522 4730, any hour."
       ],
       "localAngleHeading": "Securing Warwick Homes and Shops After Break-Ins",
-      "localAngleBody": "Boarding work in Warwick splits between the historic centre and the estates. Around the Market Place, Smith Street and Jury Street, many buildings have period frontages and a good number are listed, so I fix boarding in ways that secure the opening without doing avoidable damage to old timber and historic fabric. Residential period properties need the same considered approach — a broken sash or a forced timber door on a Georgian or Victorian house shouldn't be treated like a modern one. Out at Woodloes Park, Chase Meadow and Warwick Gates, the typical job is a forced uPVC or composite door or a broken double-glazed unit; there the boarding is usually a stopgap while a replacement panel or glass unit is ordered, and a same-visit lock or cylinder change gets the household properly secure overnight.",
+      "localAngleBody": "Boarding work in Warwick splits between the historic centre and the estates. Around the Market Place, Smith Street and Jury Street, many buildings have period frontages and a good number are listed, so I fix boarding in ways that cover the opening without doing avoidable damage to old timber and historic fabric. Residential period properties need the same considered approach — a broken sash or a forced timber door on a Georgian or Victorian house shouldn't be treated like a modern one. Out at Woodloes Park, Chase Meadow and Warwick Gates, the typical job is a forced uPVC or composite door or a broken double-glazed unit; there the boarding is a temporary barrier while a replacement panel or glass unit is ordered, and I can change a compromised lock or cylinder in the same visit.",
       "commonJobs": [
         "Boarding forced front doors after break-ins, with a same-visit lock change",
         "Securing broken shop windows around the Market Place and Smith Street",
@@ -957,15 +957,15 @@ export const TOWN_SERVICES: Record<string, TownServiceContent[]> = {
       "faqs": [
         {
           "q": "Can you change the locks at the same time as boarding up?",
-          "a": "Yes, and after a burglary I'd recommend it — locks are often damaged in a forced entry, and sometimes keys are taken. Doing both in one visit means the property is properly secure before I leave, with no need for a second appointment."
+          "a": "Yes — locks may be damaged in a forced entry and keys may have been taken. I can board the opening and replace a compromised lock in one visit, avoiding a second appointment. Those measures improve protection but do not make the property immune to further entry."
         },
         {
           "q": "Should I wait for the police before anything is boarded up?",
-          "a": "Report the break-in and get a crime reference number first, and photograph the damage for your insurer. If the police want to examine the scene, I can board around the affected area or wait until they've finished — but don't leave the property open overnight; securing it promptly is reasonable and expected."
+          "a": "Report the break-in, follow police instructions, and keep the crime reference number and photographs. If the police want to examine the scene, I can board around the affected area or wait until they have finished. Securing an exposed opening promptly is prudent; check your exact policy and claim instructions rather than assuming what your insurer requires."
         },
         {
           "q": "How long can the boarding stay in place?",
-          "a": "It's a temporary measure, but a solid one — securely fixed timber sheeting will keep the property weathertight and secure for the days or weeks it takes to arrange a glazier or a replacement door. I fix it so it can be removed cleanly when the repair happens."
+          "a": "It is a temporary measure. I fix timber sheeting to sound frame or masonry where the condition allows, intending to deter access and reduce weather exposure until a glazier or replacement door is arranged. It cannot guarantee against determined entry, and I fit it so it can be removed when the permanent repair happens."
         },
         {
           "q": "Do you board up commercial premises in Warwick as well as homes?",
@@ -980,12 +980,12 @@ export const TOWN_SERVICES: Record<string, TownServiceContent[]> = {
       "metaDescription": "Lock upgrades in Warwick from £79 — BS3621 deadlocks and anti-snap cylinders incl. Ultion, fitted across CV34. 25-35 min response. Call 024 7522 4730.",
       "h1": "Lock Upgrades in Warwick",
       "intro": [
-        "Warwick homeowners have good reason to take security seriously — many of the town's properties are valuable, characterful and, in the centre, centuries old. I upgrade locks across CV34: BS3621 insurance-approved mortice deadlocks for timber doors, anti-snap euro cylinders for uPVC and composite doors, and whole-house packages where you want every external door brought up to standard in one visit.",
-        "I carry premium cylinders including Ultion and ABS alongside solid mid-range options, and I recommend based on your doors and your insurance requirements rather than pushing the dearest product. Upgrades are usually planned work, so I'll book a time that suits you — though being 25-35 minutes from Warwick via the A46, I can often fit urgent requests in quickly.",
+        "Warwick homeowners have good reason to take security seriously — many of the town's properties are valuable, characterful and, in the centre, centuries old. I upgrade locks across CV34: BS3621-rated mortice deadlocks for timber doors, anti-snap euro cylinders for uPVC and composite doors, and whole-house packages after assessing every external door.",
+        "I carry independently certified cylinder options including Ultion and ABS alongside solid mid-range choices, and I recommend based on the door and any exact written policy wording you provide rather than pushing the dearest product. These products can improve resistance but cannot eliminate forced-entry risk, and your insurer must confirm its requirements. Upgrades are usually planned work, so I'll book a time that suits you — though being 25-35 minutes from Warwick via the A46, I can often fit urgent requests in quickly.",
         "Upgrades start from £79 with no VAT and no call-out fee. Tell me what's currently on your doors when you call 024 7522 4730 and I'll price the work honestly before I attend."
       ],
       "localAngleHeading": "Modern Security for a Town of Listed Buildings",
-      "localAngleBody": "Upgrading locks in Warwick's centre takes judgement. The Tudor, Georgian and Victorian houses along Jury Street, Castle Street, Church Street and the High Street — many of them Grade II listed — often carry original rim locks, Georgian lever locks or ageing mortice deadlocks that fall short of what insurers expect today. The upgrade has to add real security without damaging historic fabric, which usually means a carefully positioned BS3621 mortice deadlock or a discreet additional lock, fitted with respect for the door. It's exactly the kind of request I get from Warwick owners wanting to protect a valuable period property without spoiling its character. On the newer estates the job is simpler but just as worthwhile: many builder-fitted euro cylinders at Woodloes Park, Chase Meadow and Warwick Gates aren't anti-snap, and swapping them is a quick, meaningful improvement.",
+      "localAngleBody": "Upgrading locks in Warwick's centre takes judgement. The Tudor, Georgian and Victorian houses along Jury Street, Castle Street, Church Street and the High Street — many of them Grade II listed — often carry original rim locks, Georgian lever locks or ageing mortice deadlocks that pre-date current independent standards. Where the door and a customer's exact written policy call for it, I can fit a carefully positioned BS3621-rated mortice deadlock or a discreet additional lock with respect for historic fabric. It's the kind of request I get from Warwick owners wanting to improve resistance without spoiling a period property's character. On the newer estates I also replace basic builder-fitted euro cylinders at Woodloes Park, Chase Meadow and Warwick Gates with anti-snap options, while making clear that no cylinder removes all risk.",
       "commonJobs": [
         "BS3621 mortice deadlocks fitted to timber doors on period houses in the town centre",
         "Anti-snap cylinder upgrades, including Ultion and ABS, on estate composite doors",
@@ -996,11 +996,11 @@ export const TOWN_SERVICES: Record<string, TownServiceContent[]> = {
       "faqs": [
         {
           "q": "My insurer requires BS3621 locks — what does that actually mean?",
-          "a": "BS3621 is the British Standard for thief-resistant locks — typically a five-lever mortice deadlock carrying the kitemark. Many older Warwick doors have five-lever locks that look similar but were never tested to the standard. I can check what you have and fit compliant locks where needed."
+          "a": "BS3621 is a British Standard for thief-resistant locks — typically a five-lever mortice deadlock carrying the kitemark. Some older Warwick doors have five-lever locks without that marking. I can identify what you have and fit a BS3621-rated option where the door is suitable; check your exact written policy and ask your insurer to confirm its requirement."
         },
         {
           "q": "Is it worth upgrading the cylinders on a newer house at Warwick Gates or Chase Meadow?",
-          "a": "Usually, yes. Builder-fitted euro cylinders on 1990s-2010s doors are often not anti-snap, and cylinder snapping is a well-known burglary method on uPVC and composite doors. Swapping to an anti-snap cylinder is a quick job that removes the door's most obvious weakness."
+          "a": "It can be worth considering after I inspect the existing cylinder, handle, and door. Some basic euro cylinders are vulnerable to snapping attacks. An anti-snap or independently certified option can improve resistance but cannot eliminate forced-entry risk."
         },
         {
           "q": "Do you fit Ultion and ABS cylinders in Warwick?",
@@ -1022,11 +1022,11 @@ export const TOWN_SERVICES: Record<string, TownServiceContent[]> = {
       "h1": "Emergency Lockout Locksmith in Kenilworth",
       "intro": [
         "Locked out in Kenilworth? I'm Ross, an independent locksmith based in Coventry, and I cover the whole CV8 area day and night. I come down the A429, and from a call I can usually be at your door in 25-35 minutes — whether you're in a terrace on Station Road, a detached house on Castle Road, or one of the newer homes off Farmer Ward Road.",
-        "I always try non-destructive entry first. Most lockouts — a slammed door, a jammed mortice, a key snapped off in the cylinder — can be opened without damaging the lock or the door, which matters when the door is a quality piece of hardwood or a modern composite. If a lock genuinely has to be drilled, I'll tell you before I start, not after.",
+        "I try non-destructive entry first where the lock and circumstances allow. In many lockouts I attend — a slammed door, a jammed mortice lock, or a key snapped in the cylinder — picking, bypass, or extraction may be possible without damaging the door. The outcome depends on the lock and fault. If drilling is necessary, I'll explain why before I start.",
         "Pricing is straightforward: lockouts start from £59 with no VAT and no call-out fee, and I'll confirm the price on the phone before I set off. It's the same price at 3am as it is at 3pm. Call 024 7522 4730 and I'll get moving."
       ],
       "localAngleHeading": "Getting Into Kenilworth's Better-Quality Doors Without Damage",
-      "localAngleBody": "Kenilworth locks are, on the whole, better than the average I see around Coventry — and that changes how a lockout should be handled. The Victorian and Edwardian terraces along Station Road and the lower end of Warwick Road still have solid wood doors with traditional mortice locks, and a jammed or seized mortice is one of the most common reasons I'm called out here. The substantial period and interwar homes around Abbey Fields, Castle Road, and Abbey Hill usually have quality hardwood doors with high-specification locks — exactly the doors you don't want attacked with a drill. On the newer developments at Castle Fields and off Farmer Ward Road, lockouts tend to involve euro cylinders on composite doors. In every case my approach is the same: pick, manipulate, and open cleanly first; drill only as a last resort, and only with your say-so.",
+      "localAngleBody": "In the Kenilworth jobs I attend, I often encounter solid doors and well-specified locks, which calls for a careful lockout approach. The Victorian and Edwardian terraces along Station Road and the lower end of Warwick Road include solid wood doors with traditional mortice locks, and jammed or seized mortice locks are a regular reason I'm called out here. Period and interwar homes around Abbey Fields, Castle Road, and Abbey Hill can have hardwood doors where avoiding unnecessary damage matters. On the newer developments at Castle Fields and off Farmer Ward Road, the lockouts I attend often involve euro cylinders on composite doors. I try picking or manipulation first where the lock and circumstances allow, and only drill when necessary and with the customer's agreement.",
       "commonJobs": [
         "Opening a jammed mortice lock on a Victorian terrace on Station Road",
         "Non-destructive entry to a composite door on the estates off Farmer Ward Road after lost keys",
@@ -1037,7 +1037,7 @@ export const TOWN_SERVICES: Record<string, TownServiceContent[]> = {
       "faqs": [
         {
           "q": "Will you damage my door getting me back into my Kenilworth home?",
-          "a": "Almost never. I open the vast majority of doors non-destructively by picking or manipulating the lock, which matters on Kenilworth's hardwood and composite doors. If a lock is beyond saving and has to be drilled, I'll explain why before I start and can usually fit a replacement in the same visit."
+          "a": "I try picking or manipulation first where the lock and circumstances allow, but the method and outcome depend on the lock, door, and any existing fault. If drilling is necessary, I'll explain why before I start and can usually fit a replacement in the same visit."
         },
         {
           "q": "Can you open high-security and anti-snap cylinders if I'm locked out?",
@@ -1138,12 +1138,12 @@ export const TOWN_SERVICES: Record<string, TownServiceContent[]> = {
       "metaDescription": "24/7 boarding up in Kenilworth after break-ins or damage. From £79, no VAT, usually with you in 25-35 minutes. Same-visit lock change. Call 024 7522 4730.",
       "h1": "Emergency Boarding Up in Kenilworth",
       "intro": [
-        "After a break-in or accidental damage, the priority is simple: make the property secure before anything else. I provide 24-hour emergency boarding up across Kenilworth and the wider CV8 area, securing broken windows, damaged doors, and smashed glazing with solid timber boarding that holds until permanent repairs are arranged.",
-        "I'm based in Coventry and come down the A429, typically reaching Kenilworth in 25-35 minutes. Because I'm a locksmith first, I can deal with the whole problem in one visit — board the broken window or door, then change or repair any locks that were forced at the same time, so you're not left waiting for a second trade before the house is properly secure.",
+        "After a break-in or accidental damage, promptly reducing exposure can be important. I provide 24-hour emergency boarding up across Kenilworth and the wider CV8 area, using fixed timber intended to deter access and reduce weather exposure until permanent repairs are arranged. Temporary boarding cannot guarantee against determined entry.",
+        "I'm based in Coventry and come down the A429, typically reaching Kenilworth in 25-35 minutes. Because I'm a locksmith first, I can board the broken window or door, then change or repair compromised locks in the same visit so you're not left waiting for a second trade. Boarding is temporary protection and cannot guarantee against determined entry.",
         "Boarding up starts from £79 with no VAT and no call-out fee. Call 024 7522 4730, tell me what's been damaged, and I'll confirm the price and get on the road."
       ],
       "localAngleHeading": "Securing Kenilworth Homes After Break-Ins and Damage",
-      "localAngleBody": "Kenilworth's housing puts a particular slant on boarding-up work. The substantial detached homes around Castle Road, Abbey Hill, and Abbey Fields are exactly the properties where a forced door or broken window feels most exposed — and where owners want the place properly secured the same night, not patched with a bin bag and tape. Period properties here often have glazed panels in and around quality hardwood doors, which need careful boarding that protects the opening without wrecking the surrounding joinery. On the newer developments at Castle Fields and off Farmer Ward Road, damage usually involves composite doors and their frames — sometimes the door still functions and only needs the lock replaced, sometimes it needs boarding until a replacement door arrives. Either way, I won't leave until the property is secure, weathertight, and lockable.",
+      "localAngleBody": "Kenilworth's housing puts a particular slant on boarding-up work. The substantial detached homes around Castle Road, Abbey Hill, and Abbey Fields are properties where a forced door or broken window feels especially exposed. Period properties here often have glazed panels in and around quality hardwood doors, which need careful boarding that covers the opening without avoidable damage to surrounding joinery. On the newer developments at Castle Fields and off Farmer Ward Road, damage usually involves composite doors and their frames — sometimes the door still functions and only needs the lock replaced, sometimes it needs boarding until a replacement door arrives. I aim to leave the opening firmly boarded, weather-resistant, and lockable where the damage allows, without claiming that temporary boarding prevents every entry attempt.",
       "commonJobs": [
         "Boarding a smashed glazed panel beside a hardwood front door near Abbey Fields",
         "Securing a forced rear door at a detached home on Castle Road after an attempted burglary",
@@ -1158,7 +1158,7 @@ export const TOWN_SERVICES: Record<string, TownServiceContent[]> = {
         },
         {
           "q": "Is boarding up secure enough to leave the house overnight?",
-          "a": "Yes. I fix solid timber boarding into sound frame or masonry rather than tacking on a loose sheet, so a boarded window or door is a genuine barrier — often harder to get through quietly than the glass it replaced. It's temporary, but it's something you can safely sleep behind or leave unattended."
+          "a": "I fix solid timber boarding into sound frame or masonry where the condition allows, rather than tacking on a loose sheet. It is intended to deter access and reduce weather exposure overnight, but temporary boarding cannot guarantee against determined entry."
         },
         {
           "q": "Will you come out to Kenilworth for boarding up in the middle of the night?",
@@ -1177,12 +1177,12 @@ export const TOWN_SERVICES: Record<string, TownServiceContent[]> = {
       "metaDescription": "Anti-snap cylinders and BS3621 locks fitted across Kenilworth from £79, no VAT. Independent locksmith, 25-35 minutes away. Call Ross on 024 7522 4730.",
       "h1": "Lock Upgrades & High-Security Locks in Kenilworth",
       "intro": [
-        "Upgrade work makes up more of my Kenilworth diary than any other job — it's the most security-conscious town I cover, and understandably so given the value of the housing here. I fit BS3621 insurance-approved mortice deadlocks, anti-snap euro cylinders including premium brands like Ultion and ABS, and complete whole-house security upgrades across the CV8 area.",
-        "Most upgrades are planned visits booked at a time that suits you, though I can attend quickly when something has prompted the change — typically 25-35 minutes from Coventry via the A429. I'll walk the house with you, look at every external door, and tell you plainly which locks are fine, which fall short of your insurance small print, and which would be the weak point a burglar goes for.",
+        "Upgrade work makes up more of my Kenilworth diary than any other job. I fit BS3621-rated mortice deadlocks, anti-snap euro cylinders including independently certified options from brands such as Ultion and ABS, and complete whole-house security upgrades across the CV8 area.",
+        "Most upgrades are planned visits booked at a time that suits you, though I can attend quickly when something has prompted the change — typically 25-35 minutes from Coventry via the A429. I'll walk the house with you, look at every external door, explain which locks are serviceable and which could benefit from improved resistance, and compare visible markings with any written policy wording you provide. Your insurer remains responsible for confirming cover.",
         "Upgrades start from £79 with no VAT and no call-out fee. Call 024 7522 4730, tell me what doors you have, and I'll price the work before I arrive."
       ],
       "localAngleHeading": "Whole-House Security for Kenilworth's Higher-Value Homes",
-      "localAngleBody": "Security upgrades are the most requested job in Kenilworth for a straightforward reason: the homes here are worth protecting properly. The substantial period and interwar houses around Castle Road, Abbey Hill, and Abbey Fields usually have quality hardwood doors already — the upgrade is making sure the locks match the door, with BS3621 five-lever mortice deadlocks and, where there's a cylinder, one that resists snapping. On the executive homes at Castle Fields and off Farmer Ward Road, the composite doors themselves are sound, but the factory-fitted euro cylinders are often standard grade — the single component that snapping attacks target, and the first thing I'd swap for an Ultion or ABS. Even the Victorian terraces on Station Road benefit: many still carry older mortice locks that a modern insurance-rated replacement improves at modest cost.",
+      "localAngleBody": "Security upgrades are the most requested job in my Kenilworth diary. The substantial period and interwar houses around Castle Road, Abbey Hill, and Abbey Fields often have quality hardwood doors, where I assess whether an older mortice lock is serviceable or whether a BS3621-rated option would improve resistance. On executive homes at Castle Fields and off Farmer Ward Road, I inspect the euro cylinder and door furniture together before suggesting an anti-snap or independently certified option such as Ultion or ABS. These products can improve resistance to cylinder attack but cannot eliminate forced-entry risk. On Victorian terraces along Station Road, I can fit a marked BS3621 option where the door is suitable and the customer's exact written policy specifies it; the insurer must confirm cover.",
       "commonJobs": [
         "Fitting Ultion or ABS anti-snap cylinders to the front and back doors of a Castle Fields home",
         "Upgrading an ageing mortice to a BS3621 deadlock on a Victorian terrace on Station Road",
@@ -1193,11 +1193,11 @@ export const TOWN_SERVICES: Record<string, TownServiceContent[]> = {
       "faqs": [
         {
           "q": "How do I know if my current euro cylinder is anti-snap?",
-          "a": "Look at the face of the cylinder around the keyhole: genuine anti-snap cylinders usually carry a kitemark with a star rating, and brands like Ultion are clearly stamped. Plain, unbranded cylinders are almost certainly standard grade. If you're unsure, describe or photograph it and ask when you call 024 7522 4730."
+          "a": "Look for a clear product marking and any independent certification around the keyway, but do not infer the cylinder's resistance from branding or appearance alone. If you're unsure, describe or photograph the cylinder and door furniture when you call 024 7522 4730 and I can inspect them before recommending an option."
         },
         {
           "q": "Do I need new locks or just new cylinders to upgrade a composite door?",
-          "a": "Usually just the cylinder. On composite and uPVC doors the multipoint mechanism is generally sound — the vulnerability is the standard euro cylinder, and swapping it for an anti-snap version transforms the door's security in around twenty minutes. If the mechanism itself is worn I'll say so, but I won't sell you parts you don't need."
+          "a": "Sometimes only the cylinder needs changing, but I inspect the multipoint mechanism, handle and cylinder before deciding. An anti-snap or independently certified cylinder can improve resistance to cylinder attacks, not eliminate every risk. If the mechanism itself is worn I'll say so, and I won't sell you parts you don't need."
         },
         {
           "q": "Can you upgrade every door in the house in one visit?",
@@ -1205,7 +1205,7 @@ export const TOWN_SERVICES: Record<string, TownServiceContent[]> = {
         },
         {
           "q": "Is lock snapping really a risk on Kenilworth homes?",
-          "a": "Lock snapping is a well-documented burglary method that targets standard euro cylinders — the type factory-fitted to many composite and uPVC doors, including on Kenilworth's newer estates. I can't give you street-by-street crime figures, but the fix is inexpensive and permanent: an accredited anti-snap cylinder removes that attack route altogether."
+          "a": "Lock snapping is a forced-entry method used against some euro cylinders. I do not have street-level evidence showing how often it occurs in Kenilworth. An anti-snap or independently certified cylinder can improve resistance to that method, but it does not remove every attack route or make the door burglar-proof."
         }
       ],
       "priceNote": "Lock upgrades in Kenilworth start from £79 — no VAT, no call-out fee, and I'll confirm the full price on the phone once I know how many doors you want upgraded."
@@ -1219,7 +1219,7 @@ export const TOWN_SERVICES: Record<string, TownServiceContent[]> = {
       "h1": "Emergency Lockout Service in Stratford-upon-Avon",
       "intro": [
         "Locked out in Stratford-upon-Avon? I'm Ross, an independent locksmith based in Coventry, and I attend lockouts across the whole CV37 area day and night. Stratford sits at the southern edge of my patch, so I'll be honest with you upfront: my typical response time is 35-45 minutes, travelling down via the A46 and A422. If I'm on another job when you ring, I'll tell you exactly how long you'll wait — no promises I can't keep.",
-        "Non-destructive entry always comes first. Most lockouts — a slammed door, a lost key, a key snapped off in the cylinder — can be resolved by picking or bypassing the lock, which means you keep your existing lock and keys. Snapped key extraction is a routine part of the job here, particularly on the older mortice locks found throughout Stratford's period housing.",
+        "I try non-destructive entry first where the lock and circumstances allow. In many lockouts I attend — a slammed door, a lost key, or a key snapped in the cylinder — picking, bypass, or extraction may be possible without damaging the door. The method and outcome depend on the lock and any existing fault. Snapped-key extraction is a regular part of my Stratford work, including on older mortice locks.",
         "Pricing starts from £59 and I'll confirm the exact figure on the phone before I set off, so there are no surprises at the door. Call 024 7522 4730 any time."
       ],
       "localAngleHeading": "Gaining Entry to Stratford's Period Doors",
@@ -1258,7 +1258,7 @@ export const TOWN_SERVICES: Record<string, TownServiceContent[]> = {
       "h1": "Lock Change & Replacement in Stratford-upon-Avon",
       "intro": [
         "New house, new locks — it's the one security job I'd urge every mover in Stratford-upon-Avon to sort in the first week. You've no idea how many copies of the old keys are floating about, and the same logic applies after a lost handbag, a burglary, or a tenant moving on. I change locks across the whole CV37 area, from the town centre out to Shottery, Bishopton, and the estates on the southern fringe.",
-        "I fit BS3621 five-lever mortice locks for timber doors — the standard most home insurance policies ask for — and euro cylinders for uPVC and composite doors, including anti-snap options. Working from Coventry, I'm typically 35-45 minutes away, and most lock changes are completed in a single visit with the new keys handed over on the spot.",
+        "I fit BS3621-rated five-lever mortice locks for suitable timber doors, including where a customer's exact written policy specifies that standard, and euro cylinders for uPVC and composite doors, including anti-snap options. Working from Coventry, I'm typically 35-45 minutes away, and most lock changes are completed in a single visit with the new keys handed over on the spot.",
         "Prices start from £69 per lock and I'll give you a clear figure on the phone before anything is booked in. Call 024 7522 4730."
       ],
       "localAngleHeading": "Lock Changes for Stratford's Georgian Townhouses and Victorian Terraces",
@@ -1281,11 +1281,11 @@ export const TOWN_SERVICES: Record<string, TownServiceContent[]> = {
         },
         {
           "q": "What lock does my insurer mean by a five-lever mortice to BS3621?",
-          "a": "It's a deadlock tested to British Standard 3621, with a kitemark stamped on the faceplate, and it's what many policies require on final exit doors. Plenty of Stratford homes still have older five-lever locks without the kitemark — I can check yours in seconds and swap it if needed."
+          "a": "It's a deadlock tested to British Standard 3621, with a kitemark stamped on the faceplate. If your exact written policy specifies that standard on a final-exit door, I can identify whether your lock carries the marking and fit a rated option if the door is suitable; ask your insurer to confirm its requirement."
         },
         {
           "q": "How fast can you change locks after a burglary in Stratford?",
-          "a": "I treat burglaries as emergencies, so usually the same day — realistically I'm 35-45 minutes from Stratford once I'm free to travel. If a door or window has been damaged beyond locking, I can board it up on the same visit so the property is left properly secure."
+          "a": "I treat burglaries as emergencies, so usually the same day — realistically I'm 35-45 minutes from Stratford once I'm free to travel. If a door or window has been damaged beyond locking, I can fit temporary boarding on the same visit to cover the opening and deter access while permanent repairs are arranged."
         }
       ],
       "priceNote": "Lock changes in Stratford-upon-Avon start from £69 per lock, with no VAT and no call-out fee — the exact price is confirmed on the phone before I travel."
@@ -1301,7 +1301,7 @@ export const TOWN_SERVICES: Record<string, TownServiceContent[]> = {
         "I come down from Coventry via the A46, typically reaching Stratford in 35-45 minutes for an emergency and by appointment for planned repairs. Prices start from £59, confirmed on the phone before I set off. Ring 024 7522 4730."
       ],
       "localAngleHeading": "Multipoint Lock Failures on Stratford's Modern Estates",
-      "localAngleBody": "Stratford's town centre may be famous for its timber-doored period buildings, but a large share of the town's housing is far more ordinary — and that's where the uPVC work is. The newer developments on the southern fringe were built with uPVC and composite doors and multipoint locks as standard, and those mechanisms have a working life; once the gearbox wears, the handle stiffens and eventually jams altogether. Around Shottery and Bishopton, the mix of village character properties and modern estates produces the same steady run of gearbox failures and dropped doors. I also see uPVC replacement doors fitted to older houses on the residential streets, where movement over the years means the door no longer meets its keeps — an alignment fix that's far cheaper than the new door people fear they need.",
+      "localAngleBody": "Much of my Stratford uPVC work comes from newer developments on the southern fringe, where I attend composite and uPVC doors with multipoint locks. Those mechanisms wear: the handle can stiffen and the gearbox can eventually jam. Around Shottery and Bishopton, I attend a mix of gearbox failures and dropped doors on village and modern properties. I also see uPVC replacement doors fitted to older houses on residential streets, where movement over time can mean the door no longer meets its keeps. Depending on the condition, adjustment may resolve that without replacing the whole door.",
       "commonJobs": [
         "Replacing failed multipoint gearboxes on composite doors on the southern estates",
         "Freeing seized mechanisms where the handle has jammed and the door won't open",
@@ -1320,7 +1320,7 @@ export const TOWN_SERVICES: Record<string, TownServiceContent[]> = {
         },
         {
           "q": "Is it worth fitting an anti-snap cylinder while you're repairing the door?",
-          "a": "Often, yes. If your euro cylinder is a basic unprotected one, snapping is the most common forced-entry method on uPVC and composite doors. Since the door furniture is already apart during a repair, upgrading the cylinder at the same time keeps the overall cost down."
+          "a": "It can be worth considering. Some basic euro cylinders are vulnerable to snapping attacks. An anti-snap or independently certified option can improve resistance but cannot eliminate forced-entry risk. Since the door furniture is already apart during a repair, I can explain the compatible options and any additional cost before you decide."
         },
         {
           "q": "My uPVC door mechanism is old — can you still get parts?",
@@ -1335,7 +1335,7 @@ export const TOWN_SERVICES: Record<string, TownServiceContent[]> = {
       "metaDescription": "Emergency boarding up in Stratford-upon-Avon from £79 — broken windows and doors secured, 35-45 minute response, locks changed same visit. 024 7522 4730.",
       "h1": "Emergency Boarding Up in Stratford-upon-Avon",
       "intro": [
-        "After a break-in, a smashed window, or storm damage, the priority is simple: make the property secure before you deal with anything else. I provide emergency boarding up across Stratford-upon-Avon, cutting and fixing solid timber boards over broken windows and doors so your home or business can't be entered again that night.",
+        "After a break-in, a smashed window, or storm damage, the priority is to make the opening safe. I provide emergency boarding up across Stratford-upon-Avon, cutting and fixing solid timber boards over broken windows and doors to deter access and reduce weather exposure until permanent repairs are made. Boarding is temporary protection, not a guarantee against determined entry.",
         "Because I'm a locksmith first, I can do what a boarding-only service can't — change or repair the damaged locks on the same visit. If intruders forced the door, snapped the cylinder, or took keys with them, you get the boarding and the new locks sorted in one trip rather than waiting on two separate trades.",
         "Stratford is at the southern end of my coverage, so I'm honest about timing: typically 35-45 minutes from Coventry via the A46. Boarding starts from £79 and I'll confirm the price when you call 024 7522 4730 — any hour, any night."
       ],
@@ -1355,11 +1355,11 @@ export const TOWN_SERVICES: Record<string, TownServiceContent[]> = {
         },
         {
           "q": "Is emergency boarding strong enough to leave the property overnight?",
-          "a": "Yes — I use solid timber boarding cut to size and fixed securely, not a sheet leant against the frame. It's designed to resist another entry attempt and keep the weather out until your glazier or insurer arranges the permanent repair. The property is left genuinely secure, however late the job finishes."
+          "a": "I use solid timber boarding cut to size and fixed to sound frame or masonry where the condition allows, rather than leaning a loose sheet against the opening. It is intended to deter access and reduce weather exposure until permanent repair, but it cannot guarantee against determined entry."
         },
         {
           "q": "Will boarding up affect my insurance claim after a break-in?",
-          "a": "It usually helps it. Most policies require you to take reasonable steps to secure the property after damage, and boarding is exactly that. Keep my invoice — emergency securing costs are often recoverable as part of the claim, though your insurer will confirm what your particular policy covers."
+          "a": "Securing a damaged opening promptly is prudent, but do not assume that boarding or its cost is covered. Check your exact written policy and claim instructions. I can provide an invoice describing the work; your insurer decides what evidence it requires and whether any cost is payable."
         },
         {
           "q": "Do you board up listed and period buildings in Stratford town centre?",
@@ -1374,27 +1374,27 @@ export const TOWN_SERVICES: Record<string, TownServiceContent[]> = {
       "metaDescription": "Lock upgrades in Stratford-upon-Avon — BS3621 deadlocks and anti-snap cylinders fitted from £79. Typically 35-45 minutes away. Call me on 024 7522 4730.",
       "h1": "Lock Upgrades in Stratford-upon-Avon",
       "intro": [
-        "Plenty of Stratford-upon-Avon homes are secured by locks that are decades older than the insurance policies covering them. I upgrade locks across CV37 — BS3621 insurance-approved mortice deadlocks for timber doors, anti-snap euro cylinders for uPVC and composite doors, and whole-house upgrades where every external door is brought up to standard in one visit.",
-        "This is planned work rather than emergency work, so I'll book a time that suits you; travelling from Coventry, I'm typically 35-45 minutes away. I carry premium cylinders including Ultion and ABS for anyone who wants the strongest widely available protection, and I'll always tell you honestly when a mid-range lock is all a particular door needs.",
+        "Across my Stratford-upon-Avon visits I inspect older mortice locks without a BS3621 marking and basic euro cylinders on uPVC and composite doors. I fit BS3621-rated mortice deadlocks, anti-snap euro cylinders, and whole-house upgrades after assessing each external door. Check any written policy requirement with your insurer before relying on a particular standard.",
+        "This is planned work rather than emergency work, so I'll book a time that suits you; travelling from Coventry, I'm typically 35-45 minutes away. I carry higher-resistance and independently certified cylinder options including Ultion and ABS, while making clear that no lock eliminates forced-entry risk. I'll always tell you honestly when a mid-range lock is appropriate for a particular door.",
         "Upgrades start from £79 and I'll price the full job on the phone once I know what doors and locks you have. Call 024 7522 4730 for straightforward advice."
       ],
       "localAngleHeading": "Bringing Period Security Up to Standard on Tiddington Road and Banbury Road",
-      "localAngleBody": "Security upgrades are a regular request in Stratford, and the housing explains why. The substantial Edwardian and 1930s homes along Tiddington Road and the Banbury Road are exactly the properties where an original or mid-century mortice lock is still doing all the work — solid doors, but locks that predate BS3621 and wouldn't satisfy a modern insurer. The Victorian terraces around Scholars Lane and Arden Street often rely on an ageing nightlatch alone. In the conservation streets of the town centre, I fit upgrades that keep the door's appearance intact — a kitemarked deadlock in the existing position, with no new visible hardware where it isn't wanted. And for the holiday lets and B&Bs trading on the tourist season, upgraded locks and properly accounted-for keys protect both guests and bookings.",
+      "localAngleBody": "Security upgrades are a regular request in my Stratford work, and the housing shapes the job. Some Edwardian and 1930s homes along Tiddington Road and Banbury Road have solid doors with mortice locks that pre-date BS3621, while Victorian terraces around Scholars Lane and Arden Street can rely on an ageing nightlatch alone. Where a customer's exact written policy specifies a standard, I can fit a marked option and document it, while the insurer confirms cover. In the conservation streets of the town centre, I fit upgrades that keep the door's appearance intact. For holiday lets and B&Bs, I also help owners improve key control and lock resistance without claiming that any product removes all risk.",
       "commonJobs": [
         "Upgrading pre-BS3621 mortice locks on Edwardian homes along Tiddington Road and the Banbury Road",
         "Fitting anti-snap cylinders, including Ultion and ABS, to composite doors on the newer estates",
         "Adding kitemarked deadlocks to Victorian terraces relying on a nightlatch alone",
-        "Whole-house upgrades bringing every external door up to insurance standard in one visit",
+        "Whole-house upgrades where a written policy names a lock standard",
         "Discreet security upgrades on conservation area doors in the town centre"
       ],
       "faqs": [
         {
           "q": "How do I know if my current locks meet my insurance requirements?",
-          "a": "Check the faceplate of your mortice lock for a British Standard kitemark and the marking BS3621. No kitemark usually means no compliance, however solid the lock feels. Send me a photo or ask me to look when I'm with you — identifying a lock takes moments and the advice costs nothing."
+          "a": "Check the faceplate for a British Standard kitemark and the marking BS3621. I can identify whether the lock carries that marking from a clear photo or during a visit, but only your insurer can confirm whether it satisfies your exact written policy."
         },
         {
           "q": "What is an anti-snap cylinder and does my Stratford home need one?",
-          "a": "Euro cylinders on uPVC and composite doors can be snapped in seconds unless they're built to resist it. If your cylinder protrudes from the handle and carries no security rating, it's the weakest point of the house. Anti-snap cylinders, from solid rated units up to Ultion and ABS, remove that vulnerability."
+          "a": "Some basic or protruding euro cylinders on uPVC and composite doors can be vulnerable to snapping attacks. Anti-snap and independently certified cylinder options, including products from Ultion and ABS, are designed to improve resistance. They do not remove every forced-entry risk, so I assess the cylinder, handle and door together."
         },
         {
           "q": "Do you do whole-house security upgrades in Stratford?",
@@ -1402,7 +1402,7 @@ export const TOWN_SERVICES: Record<string, TownServiceContent[]> = {
         },
         {
           "q": "I run a holiday let in Stratford — which locks do you recommend?",
-          "a": "For short lets, the priorities are key control and locks guests can operate easily. I typically fit anti-snap cylinders that are cheap to swap when keys go astray, alongside insurance-compliant deadlocks where your policy requires them. Across several properties, I can keep the cylinders on a consistent platform to simplify management."
+          "a": "For short lets, the priorities are key control and locks guests can operate easily. I typically fit anti-snap cylinders that are straightforward to replace when keys go astray, alongside BS3621-rated deadlocks where the exact written policy specifies them. Across several properties, I can keep the cylinders on a consistent platform to simplify management; the insurer must confirm its requirements."
         }
       ],
       "priceNote": "Lock upgrades in Stratford-upon-Avon start from £79 with no VAT and no call-out fee, and I'll confirm a full price on the phone once I know your doors and locks."

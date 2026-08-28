@@ -1,8 +1,39 @@
 import Link from 'next/link'
 import { getAllAreasByRegion } from '@/data/areas'
 
+// Keep the homepage focused on the main towns and closest Coventry suburbs.
+// The complete 78-area inventory remains available on /areas.
+const HOMEPAGE_PRIORITY_AREA_SLUGS = new Set<string>([
+  'coventry-city-centre',
+  'earlsdon',
+  'tile-hill',
+  'canley',
+  'radford',
+  'coundon',
+  'foleshill',
+  'stoke',
+  'wyken',
+  'binley',
+  'cheylesmore',
+  'finham',
+  'longford',
+  'allesley',
+  'nuneaton',
+  'bedworth',
+  'rugby',
+  'leamington-spa',
+  'warwick',
+  'kenilworth',
+  'stratford-upon-avon',
+])
+
 export default function AreaGrid() {
-  const areasByRegion = getAllAreasByRegion()
+  const priorityAreasByRegion = Object.entries(getAllAreasByRegion())
+    .map(([region, areas]) => ({
+      region,
+      areas: areas.filter((area) => HOMEPAGE_PRIORITY_AREA_SLUGS.has(area.slug)),
+    }))
+    .filter(({ areas }) => areas.length > 0)
 
   return (
     <section className="py-14 px-4 bg-[#F7F7F5]">
@@ -17,12 +48,12 @@ export default function AreaGrid() {
         </div>
 
         <div className="space-y-8">
-          {Object.entries(areasByRegion).map(([region, areas]) => (
+          {priorityAreasByRegion.map(({ region, areas }) => (
             <div key={region}>
               <div className="flex items-center gap-3 mb-4">
                 <h3 className="text-lg font-black text-[#0F1B2D]">{region}</h3>
                 <div className="flex-1 h-px bg-gradient-to-r from-[#FFB800]/30 to-transparent" />
-                <span className="text-xs text-gray-400 font-medium">{areas.length} areas</span>
+                <span className="text-xs text-gray-600 font-medium">{areas.length} areas</span>
               </div>
               <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2">
                 {areas.map((area) => (
@@ -34,7 +65,7 @@ export default function AreaGrid() {
                     <span className="text-sm text-gray-700 group-hover:text-[#0F1B2D] font-medium leading-tight truncate">
                       {area.name}
                     </span>
-                    <span className="text-[10px] bg-gray-100 group-hover:bg-[#FFB800]/10 group-hover:text-[#0F1B2D] text-gray-400 font-bold px-1.5 py-0.5 rounded ml-1.5 flex-shrink-0">
+                    <span className="text-[10px] bg-gray-100 group-hover:bg-[#FFB800]/10 group-hover:text-[#0F1B2D] text-gray-600 font-bold px-1.5 py-0.5 rounded ml-1.5 flex-shrink-0">
                       {area.postcode}
                     </span>
                   </Link>

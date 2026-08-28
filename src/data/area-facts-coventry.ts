@@ -348,7 +348,7 @@ export const COVENTRY_FACTS: Record<
       text: 'Willenhall\'s 1950s housing was built during Coventry\'s post-war reconstruction, and most properties share a uniform design that makes lock fitting predictable.',
     },
     {
-      text: 'The A46 and A45 junction near Willenhall creates a significant transport node, and the area experiences higher-than-average vehicle lockout calls.',
+      text: 'The A46 and A45 junction near Willenhall provides direct road access towards the wider Coventry area.',
     },
     {
       text: 'Willenhall Community Primary School is a local landmark, and the surrounding streets see increased pedestrian activity during school drop-off and pick-up times.',
@@ -405,7 +405,7 @@ export const COVENTRY_FACTS: Record<
       text: 'Whitley Abbey, a former Cistercian priory site, gives the southern part of the neighbourhood a historic character not found elsewhere in CV3.',
     },
     {
-      text: 'The London Road corridor through Whitley carries heavy commuter traffic, and roadside vehicle lockouts are a regular occurrence along this route.',
+      text: 'The London Road corridor connects Whitley with Coventry city centre and provides a direct approach for local call-outs.',
     },
     {
       text: 'Coventry City Council has approved several residential developments in Whitley South, all required to meet current building regulation security standards.',

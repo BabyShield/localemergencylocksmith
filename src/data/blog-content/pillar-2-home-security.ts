@@ -4,498 +4,413 @@ export const PILLAR_2_CONTENT: Record<string, { body: string; faqs: { q: string;
 
   'how-burglars-break-into-uk-homes': {
     body: `
-Nobody wants to think about a break-in happening to them. But understanding how burglaries actually work — not Hollywood-style heists, but the real thing — is the single best way to stop one happening to your home.
+Burglary prevention is more useful when it starts with the actual doors, windows and access points at a property, rather than an unsupported national percentage or a fixed claim about how long an offence takes. This guide separates published prevention advice from the observations that can only be made during an individual home assessment.
 
-I have been fitting locks and securing homes across Coventry and Warwickshire for years. I have seen the aftermath of hundreds of burglaries. The patterns are remarkably consistent, and the good news is that most break-ins are preventable with straightforward upgrades that do not cost a fortune.
+## What the Published Evidence Shows
 
-## How Do Burglars Get In? The Numbers
+The [Office for National Statistics Nature of crime: burglary dataset](https://www.ons.gov.uk/peoplepopulationandcommunity/crimeandjustice/datasets/natureofcrimeburglary) contains national survey tables for particular publication periods. It should not be converted into a timeless Coventry statistic. For practical prevention, [Police.uk's residential burglary facts](https://www.police.uk/cp/crime-prevention/protect-home-crime/residential-burglary-facts/) say burglars are often opportunistic and may look for doors or windows that are open, unlocked or easy to force.
 
-The data from the Office for National Statistics (ONS) and police forces across the UK paints a clear picture:
+That evidence supports checking every accessible opening. It does not support turning figures from an unspecified table or publication period into timeless national or Coventry percentages.
 
-- **76% of burglars enter through a door** — not a window, not the roof, not some elaborate entry point
-- **62% use the front door** — the one you walk through every day
-- **Around 24% come through the back door** — usually less visible to neighbours
-- **Only about 22% enter through a window** — and most of those are ground-floor windows left open or unlocked
+## Entry Risks Worth Checking
 
-These numbers matter because they tell you exactly where to focus your security budget. If you are spending money on window alarms but your front door has a standard euro cylinder that can be snapped in 20 seconds, you are solving the wrong problem.
+### Euro-cylinder attacks
 
-## The Most Common Techniques
+[Police.uk's door and window lock advice](https://www.police.uk/cp/crime-prevention/protect-home-crime/door-window-lock-advice/) recommends a 3-star TS007 euro cylinder when a cylinder is changed and says this standard is designed to resist snapping, drilling, picking and bumping. That establishes snapping as a risk to assess; it does not establish that it is the UK's number-one entry method or that every attack takes a fixed number of seconds. Read the detailed guide to [lock snapping and certified protection](/blog/what-is-lock-snapping).
 
-### Lock Snapping
+### Weak doors, frames and fittings
 
-This is the number one burglary method in the UK, full stop. If your home has a uPVC or composite door with a standard euro cylinder, it is vulnerable. The technique involves gripping the cylinder with mole grips or pliers, snapping it at the weak point, and using a screwdriver to operate the lock mechanism. It takes 10-30 seconds and makes surprisingly little noise.
+[Police.uk's door-security guidance](https://www.police.uk/cp/crime-prevention/protect-home-crime/door-security-advice/) advises checking the door, frame, locks, hinges and letterplate as a complete system. A certified lock cannot compensate for a badly fitted or damaged door and frame.
 
-I have written a detailed guide on [what lock snapping is and how to prevent it](/blog/what-is-lock-snapping) — it is worth reading if you have a euro cylinder door.
+### Letterplates and accessible keys
 
-### Lock Bumping
+Police.uk recommends keeping keys out of sight and away from the letterbox, and says a letterplate guard can help stop someone reaching through. A guard must suit the door and be fitted correctly; it should not be described as eliminating every possible risk.
 
-A bump key is a specially cut key that exploits the pin-tumbler mechanism in most standard locks. The key is inserted, tapped with a screwdriver handle, and the pins jump to the shear line. It works on a frightening number of standard cylinders and leaves almost no trace.
+### Open, unlocked or accessible windows
 
-### Forced Entry
-
-Some burglars skip the subtlety entirely. A firm kick to a poorly fitted door, a shoulder charge against a weak frame, or a screwdriver jammed into a gap beside the lock. Wooden doors with shallow mortice locks and weak frames are particularly vulnerable. I regularly see doors that have been kicked in where the frame has simply split because the screws holding the strike plate were only 15mm long.
-
-### Reaching Through Letterboxes
-
-A surprising number of burglars use tools — or just their hand — to reach through a letterbox and turn a thumb-turn lock, pull a door chain, or hook keys left on a hall table. A [letterbox guard](/services/lock-upgrade) is a cheap fix that eliminates this risk entirely.
+[Police.uk's window-security advice](https://www.police.uk/cp/crime-prevention/protect-home-crime/window-security/) recommends locking windows, using suitable restrictors where appropriate, and considering how easily accessible windows can be reached. Ground-floor openings are not the only ones to inspect if a roof, wall, bin or outbuilding creates access.
 
 ## How Long Does a Burglary Take?
 
-Most residential burglaries in the UK take **between 2 and 10 minutes** from entry to exit. The average is closer to 5 minutes. They are not spending hours searching your home. They grab what is visible and easy to carry — phones, laptops, jewellery, car keys, cash — and leave.
-
-This means anything that slows them down by even 2-3 minutes dramatically changes the equation. Research by police forces consistently shows that if a burglar cannot get in within 2-3 minutes, most will give up and move to an easier target.
+There is no single reliable duration that applies to every residential burglary, and the official sources cited here do not support an average of five minutes or a claim that most offenders give up after two or three minutes. The sound conclusion is to reduce avoidable opportunities and use appropriately tested products, not to rely on a countdown.
 
 ## Opportunistic vs Targeted Burglaries
 
-Understanding this distinction changes how you think about security.
+Police.uk describes burglars as often opportunistic, but the cited material does not give a Coventry split between opportunistic and targeted offences. Improving your own openings, access control and routines is sensible; comparing a home with its neighbours or trying to look like the less attractive target is neither measurable nor responsible advice.
 
-### Opportunistic Burglars (the majority)
+## Use Layered, Evidence-Based Security
 
-Most burglaries are opportunistic. A burglar walks or drives through an area, spots a vulnerability — an open window, a flimsy door, no visible security — and takes the opportunity. These burglars are looking for the path of least resistance. They are not planning for weeks. They might not even know which street they will hit until they see an opportunity.
+### Visibility and boundaries
 
-This is actually good news. It means that **anything you do to look harder than your neighbours' homes makes a difference**. You do not need to build a fortress. You need to not be the easiest option on the street.
+Police.uk advises using boundaries and planting without creating concealed areas around doors and windows. The right balance depends on the property, so review sightlines, gates and side access together.
 
-### Targeted Burglaries
+### Certified locks and compatible hardware
 
-A smaller percentage of burglaries are targeted — someone has identified your home specifically, perhaps because they know you have valuable items, or they have observed your routine. These are harder to prevent with locks alone, but layered security (locks, alarms, CCTV, lighting, and good habits) makes even targeted attempts significantly harder.
+[DHF's TS007 guidance](https://www.dhfonline.org.uk/pg/ts-007/335.htm) explains the independently tested options for euro cylinders: a TS007 Kitemarked 3-star cylinder, or a 1-star cylinder combined with 2-star security furniture. Product certification, correct sizing and compatible installation matter more than an unsupported "anti-snap" label. See the [lock upgrade service](/services/lock-upgrade), the [anti-snap cylinder comparison](/blog/anti-snap-locks-compared) and current [prices](/prices).
 
-## What Actually Deters Burglars?
+### Occupancy routines, lighting and alarms
 
-Forget the myths. Here is what the evidence and experience actually shows:
+[Police.uk's leaving-home checklist](https://www.police.uk/cp/crime-prevention/protect-home-crime/leaving-your-home-checklist/) recommends closing and locking windows and doors, double-locking suitable doors, using timer switches, setting an alarm and securing gates and outbuildings. Follow the device manufacturer's instructions and make routines realistic for the household.
 
-### Dogs
+[Police.uk's alarm and CCTV guidance](https://www.police.uk/cp/crime-prevention/protect-home-crime/keep-burglars-out-property/) says CCTV can be useful but does not prevent crime and is not a substitute for good physical security. It also distinguishes active alarms from dummy or non-functioning equipment. This is why no single camera, alarm box, light, sign, pet or lock should be presented as a guaranteed deterrent.
 
-Research consistently ranks dogs as one of the top deterrents. It is not about the size of the dog — it is about the noise. A barking dog alerts neighbours and draws attention, which is the last thing a burglar wants. Even a "Beware of the Dog" sign has some deterrent value, though a real dog is obviously better.
+## A Practical First Check
 
-### Visibility and Sightlines
+Start with the property rather than a generic product list:
 
-Burglars hate being seen. If your front door is clearly visible from the street, from neighbours' windows, or from a busy path, it is a much less attractive target. High hedges, solid walls, and recessed doorways all provide cover for someone trying to force a lock. If you have a recessed porch, consider whether it provides too much concealment.
+1. Close and test each accessible door and window.
+2. Identify the lock, cylinder and door furniture actually fitted; do not infer the standard from the property's age.
+3. Check frames, hinges, letterplates, side gates and outbuildings as part of the same assessment.
+4. Verify visible product certification and ask your insurer about any policy-specific lock requirement.
+5. Use the full [home security checklist](/blog/home-security-checklist-2026) to record what needs attention.
 
-### Quality Locks
-
-This is my area, obviously, but the data backs it up. Homes with [anti-snap cylinders](/blog/anti-snap-locks-compared), BS3621 mortice deadlocks, and properly fitted multipoint locking systems are significantly harder to break into. A quality anti-snap lock like an Ultion or ABS cylinder costs from around £90-£120 fitted — that is the price of a meal out for two to protect everything you own.
-
-Check our [lock upgrade service](/services/lock-upgrade) or see the full [price list](/prices) for what different upgrades cost.
-
-### Signs of Occupancy
-
-Burglars prefer empty homes. Anything that makes your home look occupied reduces the risk: lights on timers, a radio playing, a car on the drive, post collected, bins brought in. When you go on holiday, these small things matter enormously.
-
-### Alarm Systems and CCTV
-
-Visible alarm boxes and CCTV cameras do deter opportunistic burglars. The key word is "visible" — a hidden camera might help police afterwards, but it does nothing to stop someone trying. I have covered this in detail in my post on [whether alarms and CCTV actually deter burglars](/blog/do-burglar-alarms-cctv-deter-burglars).
-
-### Good Lighting
-
-Motion-sensor lights on approach paths, driveways, and around doors are effective and cheap. A well-lit house is an unattractive target. You can get decent solar-powered motion sensor lights for under £20.
-
-## What Does NOT Work as Well as People Think
-
-- **Dummy alarm boxes** — experienced burglars can spot them, and they give you a false sense of security
-- **Leaving a light on in the same room 24/7** — this actually signals you are away. Use timers that vary
-- **Hiding a spare key under a mat or plant pot** — burglars know every hiding spot. Use a [key safe](/services/lock-change) instead
-- **Relying solely on insurance** — insurance pays out after the fact, but it does not replace the feeling of violation that comes with a break-in, and it will not cover sentimental items
-
-## What to Do Right Now
-
-If you are reading this and wondering where to start, here is my honest recommendation as a Coventry locksmith who sees this every day:
-
-1. **Check your front door lock first** — if it is a standard euro cylinder on a uPVC or composite door, [replace it with an anti-snap cylinder](/services/lock-change). This is the single most impactful upgrade you can make
-2. **Check your back door** — make sure it has key-operated bolts, not just a handle you can open from inside
-3. **Walk around the outside of your home** — look at it like a burglar would. Where are the hidden spots? Where could someone work on a lock without being seen?
-4. **Read the full [home security checklist](/blog/home-security-checklist-2026)** — it covers every room and every potential weak point
-
-If you want a professional assessment, I offer security checks across Coventry and the surrounding areas. Call me on 024 7522 4730 and I will walk round your property, identify the weak points, and give you an honest quote for the upgrades that will make the biggest difference. No pressure, no scare tactics — just practical advice from someone who sees this every week.
+If you want a professional assessment, call 024 7522 4730. Any recommendation should be based on the actual door, window and access arrangement, with current prices confirmed before work begins.
 `,
     faqs: [
       {
         q: 'What is the most common way burglars break into UK homes?',
-        a: 'The most common method is through a door, with 76% of burglars entering this way. The front door accounts for 62% of all entries, with lock snapping being the most widely used technique on homes with uPVC or composite doors fitted with standard euro cylinders.',
+        a: 'The official sources cited in this guide do not support one timeless percentage or a claim that lock snapping is the most common UK method. Police.uk says burglars are often opportunistic and advises checking doors and windows that may be open, unlocked or easy to force.',
       },
       {
         q: 'How long does the average burglary take?',
-        a: 'Most residential burglaries take between 2 and 10 minutes, with the average closer to 5 minutes. This is why slowing a burglar down by even 2-3 minutes is so effective — most will abandon the attempt and move on to an easier target.',
+        a: 'There is no single duration that applies to every burglary, and the official sources cited here do not establish a five-minute average. Focus on locking accessible openings, maintaining the complete door and frame, and selecting independently tested products where an upgrade is needed.',
       },
       {
         q: 'Do dogs really deter burglars?',
-        a: 'Yes, research consistently shows dogs are one of the most effective deterrents. It is the noise rather than the size that matters — barking draws attention from neighbours and passers-by, which burglars want to avoid. Even a small, noisy dog is a genuine deterrent.',
+        a: 'This guide has no primary source that ranks dogs as a deterrent, so a pet or warning sign should not replace physical security. Police.uk recommends layered measures including secure doors and windows, suitable lighting, active alarms where chosen, and safe occupancy routines.',
       },
       {
         q: 'Is my Coventry home at risk of lock snapping?',
-        a: 'If you have a uPVC or composite door with a standard euro cylinder (the type of lock with a keyhole on both sides of the door), then yes. Most homes in Coventry built or refurbished in the last 20 years have this type of door. An anti-snap cylinder upgrade typically costs £90-£120 fitted and eliminates the risk. Call 024 7522 4730 for a free check.',
+        a: 'A uPVC or composite door may use a euro-profile cylinder, but the door material and age do not establish its attack resistance. Check the actual cylinder and furniture for verifiable certification and correct fit. If unsure, call 024 7522 4730 for an assessment and a current quote.',
       },
     ],
   },
 
   'home-security-checklist-2026': {
     body: `
-I put this checklist together because I kept giving the same advice on every job. Whether I am fitting a new lock in Earlsdon or securing a door after a break-in in Tile Hill, the conversation always comes back to: "What else should I be doing?"
+Homeowners often ask what else they should check after a lock repair, replacement or break-in. The answer depends on the complete property rather than one product.
 
-This is everything. A room-by-room, point-by-point checklist you can print out, walk around your home with, and tick off each item. Some are free changes to your habits. Some cost a few pounds. A few require a locksmith. But together, they make a genuine difference.
+This is a practical starting checklist you can print, use while walking around your home, and adapt to the construction of each opening. Some checks concern everyday routines; others may require a locksmith, door specialist, glazier or alarm installer.
 
 ## Front Door Security
 
-Your front door is where 62% of burglars enter. It deserves the most attention.
+[Police.uk advises securing both doors and windows](https://www.police.uk/cp/crime-prevention/protect-home-crime/door-window-lock-advice/). Start with the front door because it is a final exit door you use every day, then check every other accessible opening too.
 
-- [ ] **Lock type** — Is your main lock a BS3621 5-lever mortice deadlock (wooden door) or an anti-snap euro cylinder (uPVC/composite door)? If not, this is your priority upgrade. See our [lock change service](/services/lock-change) for options
-- [ ] **Anti-snap cylinder** — If you have a uPVC or composite door, is the cylinder anti-snap, anti-bump, and anti-pick? Look for brands like Ultion, ABS, or Yale Platinum. I have compared them in detail in my [anti-snap lock comparison](/blog/anti-snap-locks-compared)
-- [ ] **Letterbox guard** — Can someone reach through your letterbox and access the lock or grab keys from a hook? Fit an internal letterbox guard (around £15-£25 fitted)
-- [ ] **Door chain or limiter** — Allows you to partially open the door to check who is there. Essential for vulnerable residents
+- [ ] **Lock type** — Is your main lock a BS3621-rated mortice deadlock (wooden door) or an independently certified anti-snap euro cylinder (uPVC/composite door)? Check the complete doorset and any written policy requirement before choosing. See the [lock upgrade service](/services/lock-upgrade) for options
+- [ ] **Euro cylinder** — If you have a uPVC or composite door, identify the exact cylinder and its current certification rather than relying on a brand name. Police.uk recommends a TS007 3-star cylinder when a euro cylinder is changed. I explain the options in the [anti-snap lock comparison](/blog/anti-snap-locks-compared)
+- [ ] **Letterbox position** — Can someone reach keys or the inside release through the opening? If so, move keys and ask whether a compatible internal guard is appropriate for the complete doorset
+- [ ] **Door chain or limiter** — A suitable device can let you check a caller without opening the door fully. Choose one that is compatible with the door and the resident's access and escape needs
 - [ ] **Door viewer (peephole)** — Can you see who is at your door without opening it? A wide-angle viewer costs about £10-£15 fitted
-- [ ] **Door reinforcer plate** — A metal plate around the lock area that prevents the door being forced. Particularly important for wooden doors. Around £25-£40 fitted
-- [ ] **Hinge bolts** — If your door opens outward, hinge bolts prevent the door being lifted off its hinges. Around £10-£15 per pair fitted
-- [ ] **Frame condition** — Is the door frame solid? Rotten or split frames are easy to force. If your frame is soft, no lock in the world will keep someone out
-- [ ] **Strike plate screws** — The strike plate (the metal plate the bolt goes into on the frame) should be secured with 75mm screws that go into the structural timber, not 15mm screws into the frame lining
+- [ ] **Door reinforcer plate** — On a compatible timber door, a correctly fitted plate may reinforce the lock area. The door and frame need checking before one is specified
+- [ ] **Hinge-side security** — If your door opens outward, check the exposed hinges and ask whether compatible hinge bolts would add support on that side
+- [ ] **Frame condition** — Is the door frame sound and is the lock aligned with its keep? A stronger lock cannot compensate for a badly damaged door or frame
+- [ ] **Strike plate fixings** — Check that the strike plate or keep is secure. The correct fixing type and length depend on the doorset, frame and surrounding construction
 
 ## Back Door Security
 
-Back doors are often less visible to neighbours, making them an attractive entry point.
+Back doors need the same complete-door check as front doors, including the lock, cylinder, hinges, frame, glazing and daily locking routine.
 
-- [ ] **Key-operated bolts** — Your back door should lock with a key, not just a thumb-turn or handle. If it has a thumb-turn, consider replacing it with a key-operated cylinder
-- [ ] **Top and bottom bolts** — Shoot bolts or rack bolts at the top and bottom of the door add significant resistance to forced entry. Around £15-£25 per bolt fitted
-- [ ] **Anti-lift devices** — If you have a sliding back door, check that it cannot be lifted off its track. Anti-lift pins or blocks cost very little and are effective
+- [ ] **Inside release** — Identify whether the door uses a key, thumb-turn or another release. Do not change it without considering household access, emergency escape and any fire-safety requirement
+- [ ] **Top and bottom bolts** — On a compatible door, correctly fitted shoot bolts or rack bolts can add locking points. Check that each one engages without damaging the door or frame
+- [ ] **Sliding-door retention** — Check the condition and adjustment of a sliding door and ask whether a compatible anti-lift device is appropriate
 - [ ] **Visibility** — Can neighbours see your back door? If not, consider cutting back high hedges or adding a motion-sensor light
 - [ ] **Key storage** — Never leave the back door key in the lock. Store it nearby but out of sight and out of reach from windows or cat flaps
 
 ## Window Security
 
-Windows account for around 22% of burglary entries. Ground-floor windows are the priority.
+[Police.uk's window-security guidance](https://www.police.uk/cp/crime-prevention/protect-home-crime/window-security/) advises locking windows and paying particular attention to openings that are easy to reach. It does not establish one timeless entry percentage, so inspect accessible windows first and then check every other window.
 
-- [ ] **Window locks** — Are all ground-floor windows fitted with key-operated locks? Many older uPVC windows have cockspur handles that offer no real security. Upgrading to lockable handles costs [from £15-£30 per window](/blog/window-security-overlooked-weak-point) fitted
-- [ ] **Sash jammers** — For uPVC windows, sash jammers add a second point of locking for about £10-£15 per window fitted. They are visible from outside, which acts as a deterrent
-- [ ] **Window restrictors** — Particularly important for upper floors if you have children, but also useful for ground-floor windows in summer — lets you ventilate without leaving the window wide open
-- [ ] **Basement and cellar windows** — Often forgotten but easily accessible. Ensure they have locks, and consider window bars or grilles if they lead to a vulnerable area
-- [ ] **Bathroom and kitchen windows** — These are commonly left open. Make sure they lock, and get into the habit of closing them when you leave the house or go to bed
+- [ ] **Window locks** — Do the handles and locking points engage correctly? The suitable repair or upgrade depends on the window type and condition; see the [window-security guide](/blog/window-security-overlooked-weak-point)
+- [ ] **Sash jammers** — On compatible uPVC frames, a correctly fitted sash jammer can add a separate locking point. It is not a substitute for repairing a failed main mechanism
+- [ ] **Window restrictors** — Choose a restrictor for the intended safety and ventilation use, follow its instructions, and do not assume that a partially open window is secure
+- [ ] **Basement and cellar windows** — Include low or otherwise accessible openings in the assessment. Bars or grilles need specialist advice so they do not compromise an escape route
+- [ ] **Bathroom and kitchen windows** — Check that each one closes and locks, and follow the Police.uk advice to secure accessible windows when the home is unattended
 
 ## Patio and French Doors
 
-These are a known weak point. I have written a full guide on [patio and French door security](/blog/patio-doors-french-doors-security), but here are the essentials.
+Patio and French doors have their own tracks, passive leaves, glazing and multipoint hardware to check. I cover those parts in the full guide to [patio and French door security](/blog/patio-doors-french-doors-security).
 
 - [ ] **Multipoint lock** — Is the multipoint locking system working properly? Lift the handle and check that all the bolts engage
-- [ ] **Anti-lift devices** — Patio doors can often be lifted off their tracks. Anti-lift pins or a track-mounted anti-lift block are cheap and effective
+- [ ] **Anti-lift devices** — Check whether a sliding panel has excessive movement and whether a compatible anti-lift pin or block is appropriate
 - [ ] **Auxiliary lock** — A separate keyed patio door lock adds another layer. Around £30-£50 fitted
 - [ ] **French door bolts** — French doors should have flush bolts or rack bolts top and bottom on the passive leaf (the door that stays closed)
-- [ ] **Glazing** — Is it laminated glass or standard float glass? Laminated glass is significantly harder to break through. If replacing glass, specify laminated
+- [ ] **Glazing** — Identify the existing safety and security glazing specification. If it is being replaced, ask a competent glazier which documented product is suitable for that doorset and location
 
 ## Garage Security
 
-Your garage often contains valuable items and may provide a hidden route into your house. See my full guide on [garage and shed security](/blog/garage-shed-security).
+Record what is stored in the garage and, if it is attached to the home, include the connecting door in the assessment. See the full guide on [garage and shed security](/blog/garage-shed-security).
 
-- [ ] **Garage door lock** — Fit a defender lock (the T-shaped lock that sits over the handle) to prevent the door being forced. Around £30-£50 fitted
+- [ ] **Garage door lock** — Identify the door type, existing lock and emergency-release arrangement before choosing an additional lock such as a compatible defender
 - [ ] **Garage door bolts** — Additional bolts inside the garage door, top and bottom
-- [ ] **Internal door** — If your garage connects to your house via an internal door, that door needs to be as secure as an external door. Many are hollow-core doors with a basic latch — essentially no security at all
+- [ ] **Internal door** — If the garage connects to the house, assess the complete connecting doorset and any required fire-resisting or self-closing performance before changing its lock or construction
 - [ ] **Window covering** — If your garage has windows, consider covering them so thieves cannot see what is inside
 
 ## Shed and Outbuilding Security
 
-- [ ] **Padlock quality** — Use a closed-shackle padlock (CEN grade 3 or above). Open-shackle padlocks can be cut with basic bolt croppers
+- [ ] **Padlock quality** — Compare current independent certification and choose a padlock compatible with the hasp, door, frame and any written policy requirement. A shrouded shackle can reduce exposed tool access
 - [ ] **Hasp and staple** — The hasp (the plate the padlock goes through) should be heavy-duty and coach-bolted through the door, not just screwed on
-- [ ] **Shed bar** — A metal bar across the full width of the shed door, secured with padlocks at both ends. The most effective shed security for about £20-£30
+- [ ] **Shed bar** — A compatible bar across the door is one way to distribute locking points rather than relying on a small hasp alone
 - [ ] **Ground anchor** — For bikes and power tools, a ground anchor bolted to the shed floor or a concrete base lets you chain items down. From £25 fitted
-- [ ] **Mark your tools** — Use UV marking pens or property marking kits. Register valuables at immobilise.com
+- [ ] **Record your tools** — Keep an inventory, photographs and serial numbers, and follow current police or insurer guidance for property marking or registration
 
 ## Lighting and Visibility
 
-- [ ] **Motion-sensor lights** — Fit motion-activated lights at the front door, back door, side passages, and any approach to the house. Solar-powered options cost from £15 and need no wiring
-- [ ] **Timer lights** — When you are out or on holiday, use timer plugs (from £5) to turn lights on and off in different rooms at different times
+- [ ] **Motion-sensor lights** — Consider lighting at relevant approaches after checking coverage, glare, neighbours, power, maintenance and the manufacturer's instructions
+- [ ] **Timer lights** — If using timer switches while away, set and test them safely in accordance with the device instructions
 - [ ] **Garden visibility** — Keep hedges below 1 metre at the front to maintain sightlines from the street. Cut back any bushes that provide cover near doors or windows
 
 ## Alarms and CCTV
 
-- [ ] **Alarm system** — Even a basic alarm with a visible external bell box deters opportunistic burglars. Check my post on [whether alarms and CCTV actually deter burglars](/blog/do-burglar-alarms-cctv-deter-burglars) for what works
-- [ ] **CCTV / video doorbell** — A visible camera at the front door deters casual callers and records evidence. Smart doorbells like Ring start from around £80
-- [ ] **Alarm maintenance** — If you have an alarm, is it working? Expired alarm systems with flashing fault lights actually signal poor security
+- [ ] **Alarm system** — If you choose an alarm, keep it active, maintained and appropriate to the property. See the evidence-bounded guide to [alarms and CCTV](/blog/do-burglar-alarms-cctv-deter-burglars)
+- [ ] **CCTV / video doorbell** — A camera may record activity within its actual field of view, but it does not prevent crime or replace physical security. Check positioning, privacy, image quality, retention and export before relying on footage
+- [ ] **Alarm maintenance** — Test and service an existing alarm in accordance with its instructions and contract; do not rely on a disconnected or faulty system
 
 ## Habits and Routines
 
-These cost nothing but make a real difference.
+These are practical routines that do not require new hardware.
 
 - [ ] **Lock up every night** — Check all doors and windows before bed. Make it a routine
-- [ ] **Keys away from doors** — Never leave keys in locks, on hooks by the door, or on a hall table visible through glass. A key hook behind a closed interior door is fine
+- [ ] **Keys away from doors** — Keep keys out of sight and out of reach from doors, windows, letterboxes and pet flaps while preserving safe household access and escape
 - [ ] **Valuables out of sight** — Do not leave laptops, phones, or tablets visible through windows
 - [ ] **Post and deliveries** — Ask a neighbour to collect post and parcels when you are away. Piled-up post signals an empty house
 - [ ] **Social media** — Avoid posting holiday plans or live holiday updates publicly. Wait until you are home
-- [ ] **Spare keys** — Never hide a key under a mat, in a plant pot, or above a door frame. Use a police-approved [key safe](/services/lock-change) instead (from £45 fitted)
-- [ ] **Bins** — Bring bins in promptly after collection. Packaging for expensive items (TVs, consoles) left outside advertises what is inside
+- [ ] **Spare keys** — Do not leave a spare in an obvious outdoor hiding place. If considering a key safe or changing who has access, ask about suitable [lock-change options](/services/lock-change) and check any insurer or care-provider requirement
+- [ ] **Bins and packaging** — Keep access routes clear and avoid leaving packaging that unnecessarily displays newly purchased items
 
 ## What to Prioritise If You Cannot Do Everything
 
-If your budget or time is limited, focus on these five things first:
+If your budget or time is limited, use the inspection findings to order the work. A sensible starting sequence is:
 
-1. **Upgrade your front door lock** — anti-snap cylinder or BS3621 deadlock depending on your door type
-2. **Fit a letterbox guard** if you have a thumb-turn lock
-3. **Install motion-sensor lights** at the front and back
-4. **Lock all ground-floor windows** with key-operated locks
+1. **Identify and repair faults** in any door, frame, window or lock that does not close and engage correctly
+2. **Check the front-door specification** — the suitable cylinder or mortice lock depends on the complete doorset
+3. **Consider suitable lighting** after checking the approaches, coverage and neighbouring properties
+4. **Make accessible windows close and lock correctly** using hardware suited to each window and any escape requirement
 5. **Start the habit** of checking doors and windows every night
 
-For a professional security assessment of your Coventry home, call me on 024 7522 4730. I will walk round your property, work through this checklist with you, and give you honest advice on what needs doing — and what can wait. You can also check our full [price list](/prices) to see what each upgrade costs.
+For a professional security assessment of your Coventry home, call 024 7522 4730. I can record the observed condition, identify items that need specialist input and provide property-specific options. You can also check the current [price list](/prices) for listed work.
 `,
     faqs: [
       {
         q: 'How much does it cost to secure a whole house?',
-        a: 'It depends on the current state of your security, but a typical Coventry home can be significantly improved for £200-£500. That usually covers an anti-snap cylinder for the front door (from £90), window locks for ground-floor windows (from £15 each), and a couple of motion-sensor lights. Call 024 7522 4730 for a specific quote.',
+        a: 'It depends on the current doors, windows, locks, and agreed work. An anti-snap cylinder starts from £59 fitted, while other parts are quoted after the opening is assessed. Call 024 7522 4730 for a property-specific quote.',
       },
       {
         q: 'What is the single most important home security upgrade?',
-        a: 'For most homes in Coventry and Warwickshire, upgrading the front door cylinder to an anti-snap lock is the single most impactful change. The front door is where the majority of burglars enter, and a standard euro cylinder can be snapped in under 30 seconds. An anti-snap upgrade typically costs £90-£120 fitted.',
+        a: 'There is no universal single best upgrade. If a uPVC or composite door has an uncertified or poorly fitted euro cylinder, a correctly sized TS007 3-star or SS312 Diamond option may be a sensible priority. It is designed to improve resistance to recognised attacks, not eliminate risk, and starts from £59 fitted.',
       },
       {
         q: 'Should I get a professional security survey?',
-        a: 'If you are unsure about the state of your home security, a professional walk-round is worth doing. I offer security assessments across Coventry and surrounding areas. I will identify the genuine weak points and give you an honest, prioritised list of upgrades rather than trying to sell you things you do not need.',
+        a: 'If you are unsure about the doors, windows and access points, a scoped professional walk-round can document their observed condition and help prioritise further checks or compatible work. Some glazing, doorset, alarm or fire-safety questions may require the relevant specialist.',
       },
     ],
   },
 
   'do-burglar-alarms-cctv-deter-burglars': {
     body: `
-"Get an alarm fitted." "Put up some cameras." It is the most common advice people give about home security. But does the evidence actually support it? Or are you better off spending that money on better locks?
+"Get an alarm fitted." "Put up some cameras." Both are common suggestions, but neither is a complete security plan. The useful question is what each device can do at the actual property and which physical weaknesses still need attention.
 
-As a locksmith working across Coventry and Warwickshire, I see homes with alarms, homes with CCTV, and homes with neither. I have also seen plenty of burglaries at homes that had all three. So here is my honest, evidence-based take on what works, what does not, and where your money is best spent.
+This guide does not assign an unsupported deterrence percentage or rank a particular consumer brand. It uses current Police.uk guidance to separate alarms, cameras and physical door or window security.
 
 ## What the Research Says About Burglar Alarms
 
-Several UK studies have looked at the relationship between alarm systems and burglary rates:
-
-- The University of North Carolina surveyed convicted burglars and found that **60% said the presence of an alarm would cause them to choose a different target**
-- Home Office research suggests that homes with active alarm systems experience **between 20% and 50% fewer burglary attempts** than comparable homes without
-- A study by the Building Research Establishment found that burglar alarms were the second most effective deterrent after dogs
-
-The evidence is clear: alarms do deter burglars. But there are important caveats.
+[Police.uk's guidance on alarms and CCTV](https://www.police.uk/cp/crime-prevention/protect-home-crime/keep-burglars-out-property/) recommends an active alarm as one possible layer and explains that CCTV can be useful but does not prevent crime or replace good physical security. The source does not support the previous uncited percentages or a universal ranking of alarms, dogs, cameras and locks.
 
 ### What Works: Visible Alarm Boxes
 
-The deterrent value of an alarm is almost entirely in its **visibility**. A bright, clearly branded alarm box on the front of your house tells a passing burglar that this home has a working system. Most opportunistic burglars — and remember, the majority are opportunistic — will simply move on.
-
-The box does not even need to be the newest model. It needs to look maintained and active. A clean box with a steady indicator light signals a working system.
+An external box can show that an alarm may be present, but appearance alone does not prove that a system is active, correctly installed or maintained. Choose and use an alarm for its actual operation, not just the box.
 
 ### What Does Not Work: Neglected Systems
 
-Here is the flip side. An alarm box with:
-
-- A faded, cracked casing
-- A flashing fault light
-- Cobwebs around the sensors
-- A reputation in the neighbourhood for going off at random
-
-These actually **signal poor security** rather than good security. They tell a burglar that the homeowner has stopped maintaining their system and probably does not arm it regularly.
-
-If you have an old alarm that you never use, either get it serviced and start using it, or remove the box entirely. A dead alarm box is arguably worse than no box at all.
+An alarm that is not armed, has unresolved faults or is not maintained cannot be assumed to provide the intended alert. Follow the manufacturer's instructions, test it safely and arrange qualified servicing where required.
 
 ### Monitored vs Unmonitored Alarms
 
 There are three broad categories:
 
-**Bells-only alarms** — The siren goes off, and that is it. Relies on neighbours hearing it and calling police. These cost from £150-£400 installed. They work well as deterrents but response depends entirely on someone hearing and caring. In urban areas of Coventry, alarm fatigue is real — people hear alarms constantly and ignore them.
+**Bells-only alarms** — Sound locally when triggered. Check how the system is armed, silenced, tested and maintained, and do not assume that a neighbour or police response will follow.
 
-**Self-monitored alarms** — Smart alarm systems (like Yale Sync, Ring Alarm, SimpliSafe) that send alerts to your phone. You decide whether to call the police, check your cameras, or ignore it. These cost from £200-£500 for the system, with no monthly fees. The downside is that you need to be awake, have your phone, and have signal to respond.
+**Self-monitored alarms** — Can send an alert to a nominated device, depending on the product and connection. Check subscriptions, connectivity, battery backup, notification settings and what action the household can realistically take.
 
-**Professionally monitored alarms** — A monitoring centre receives the alert and contacts you and/or the police. These provide the highest level of protection but cost £20-£50 per month on top of the installation cost (typically £500-£1,500+). For most residential properties in Coventry, this is overkill, but it is worth considering if you have particularly high-value contents or are away frequently.
+**Professionally monitored alarms** — Send defined events to a monitoring service under a contract. Response arrangements, police eligibility, installation requirements and fees vary, so obtain the current terms rather than assuming that monitoring guarantees attendance.
 
 ## What About CCTV?
 
-CCTV is slightly different from alarms because it serves two purposes: **deterrence** and **evidence**.
+CCTV can record activity within its field of view. It is one layer and must be planned around lawful positioning, usable coverage, storage and household privacy.
 
 ### CCTV as a Deterrent
 
-Visible cameras do deter burglars, but the effect is less pronounced than alarms according to most studies. The same University of North Carolina research found that CCTV cameras ranked lower than alarms, dogs, and occupancy as deterrents. Burglars know that:
-
-- Many home CCTV systems record poor-quality footage
-- They can cover their face with a hood or balaclava
-- Police often do not have the resources to investigate CCTV footage from residential burglaries
-
-That said, a visible camera at your front door is still worth having. It changes the risk calculation for a burglar, even if only slightly.
+The Police.uk source does not assign a reliable deterrence percentage or rank CCTV against other measures. A visible camera must not be presented as a guarantee that an offence will not happen.
 
 ### CCTV as an Evidence Tool
 
-Where CCTV truly earns its keep is in evidence gathering. If a burglary does occur, good-quality footage can help police identify the perpetrator and increases the chance of conviction and recovery of your property. It also helps with insurance claims.
-
-The key word is "good-quality." Grainy, low-resolution footage of someone in a hoodie is close to useless. If you are fitting CCTV for evidence purposes, invest in:
-
-- At least 1080p resolution (2K or 4K is better)
-- Night vision with infrared
-- A wide enough angle to capture faces, not just the tops of heads
-- Cloud or local storage that overwrites on a sensible schedule (not after 24 hours)
+CCTV may provide footage after an incident, but usefulness depends on positioning, lighting, image quality, time settings, retention and whether the relevant activity is actually captured. It does not guarantee identification, recovery, conviction or an insurance outcome. Know how to preserve and export footage before an incident occurs.
 
 ### Smart Doorbells
 
-Smart video doorbells — Ring, Nest/Google, Eufy — have become enormously popular, and for good reason. They combine a visible camera, motion detection, two-way audio, and phone alerts in one device. Starting from around £80 for a basic Ring, they are the most cost-effective entry point into home CCTV.
-
-For a front door, a smart doorbell is often more useful than a standalone CCTV camera because it captures everyone who approaches your door, not just intruders. Package theft, suspicious callers, and cold callers are all recorded.
-
-I would recommend a smart doorbell as a solid addition to a home that already has good locks. But — and I say this consistently — **do not buy a smart doorbell instead of upgrading a vulnerable lock**. A camera records a crime happening. A good lock prevents it.
+A video doorbell may provide motion alerts, audio or recorded footage, depending on the exact product, subscription, connection and settings. Compare those terms and privacy implications rather than treating one named brand as the best-value choice. It does not replace a suitable door, frame and locks.
 
 ## What About Dummy Cameras and Fake Alarm Boxes?
 
-I understand the appeal — they cost a fraction of the real thing. But I would advise against them for two reasons:
+A dummy device is not an active alarm or working camera. Do not count it as detection, notification or recorded evidence. If the budget is limited, first assess open, unlocked, damaged or easy-to-force doors and windows. See the [lock upgrade](/services/lock-upgrade) and [prices page](/prices) for current physical-security options.
 
-1. **Experienced burglars can spot them.** Dummy cameras often have a single blinking LED, no wiring, plastic housings that look different from real units, and are positioned in places where a real camera would not be practical. Fake alarm boxes lack the wiring entry points, aerials, and branding of real systems.
+## A Layered Security Checklist
 
-2. **They give you a false sense of security.** If you think your dummy camera is protecting you, you might not bother with the upgrades that actually work — like better locks, proper lighting, and good habits.
+There is no universal spending order for every property. Start with the actual weaknesses and household needs:
 
-If you cannot afford a real system right now, spend the money on a [lock upgrade](/services/lock-upgrade) instead. An anti-snap cylinder on your front door (from £90 fitted) does more for your security than a £15 dummy camera. Check our [prices page](/prices) for the full range of lock upgrades.
+### Priority 1: Doors, Windows and Locks
+Check the door, frame, hinges, furniture, accessible windows and suitable locks together. The guide to [BS3621 deadlocks](/blog/bs3621-vs-anti-snap-vs-smart-lock) explains why the exact door and certification matter.
 
-## The Real Deterrent Stack: What I Recommend
+### Priority 2: Lighting and Sightlines
+Consider lighting and visibility without creating glare, nuisance or concealed areas. Follow the product instructions and assess the actual approaches to the property.
 
-Based on the evidence, my experience as a locksmith, and conversations with West Midlands Police officers, here is the order in which I would invest in home security:
+### Priority 3: An Active Alarm
+If chosen, use and maintain the alarm. Select bells-only, self-monitored or professional monitoring according to the household and written service terms.
 
-### Priority 1: Good Locks (from £90)
-Anti-snap cylinders, [BS3621 deadlocks](/blog/bs3621-vs-anti-snap-vs-smart-lock), window locks. These physically prevent entry. Everything else just makes entry less likely — locks make it harder.
+### Priority 4: Doorbell Camera
+Check the field of view, notification, storage, subscription, connection and privacy implications. It may not record every approach or event.
 
-### Priority 2: Lighting (from £15)
-Motion-sensor lights at all approach points. Cheap, effective, zero maintenance if solar-powered.
+### Priority 5: CCTV
+Choose lawful positions and test day and night coverage, timestamps, retention and export. CCTV remains a supplement to physical security.
 
-### Priority 3: Visible Alarm Box (from £150)
-Even a basic bells-only system with a prominent external box deters the majority of opportunistic burglars.
-
-### Priority 4: Smart Doorbell (from £80)
-Records everyone who approaches, deters casual intruders, helps with deliveries and unexpected callers.
-
-### Priority 5: CCTV System (from £200)
-Additional cameras covering the back garden, side passage, and driveway. Useful for evidence if anything does happen.
-
-### Priority 6: Professional Monitoring (from £20/month)
-Only really necessary for high-value properties, frequent travellers, or people who want the peace of mind of knowing someone is always watching.
+### Priority 6: Monitoring
+Compare current contracts, response arrangements and eligibility requirements. Monitoring does not guarantee police attendance or prevent entry.
 
 ## The Bottom Line
 
-Alarms and CCTV do reduce burglary risk, and the evidence supports that. But they are **supplements to good physical security, not replacements for it**.
+Police.uk treats alarms and CCTV as useful layers while warning that CCTV does not prevent crime or replace good physical security. Check physical openings, then decide which alerting and recording layers suit the property. No device or lock guarantees prevention.
 
-If you have a standard euro cylinder on your front door and no window locks, fitting a Ring doorbell will not keep you safe. It will just give you a video of someone breaking in through your front door in 20 seconds.
-
-Start with the locks. Then add the visible deterrents. That is the order that makes sense.
-
-For honest advice on the right security setup for your Coventry home, call me on 024 7522 4730. I will tell you what you actually need — and what you can skip.
+For a property-specific alarm, CCTV and physical-security discussion in Coventry, call 024 7522 4730. The recommendations should follow the observed openings, coverage needs and any written service terms.
 `,
     faqs: [
       {
         q: 'Are dummy CCTV cameras worth buying?',
-        a: 'I would not recommend them. Experienced burglars can often spot dummy cameras from the housing, LED pattern, and lack of proper wiring. They also give you a false sense of security and may lead you to skip more effective upgrades like better locks and proper lighting.',
+        a: 'A dummy camera is not a working recording system and cannot provide alerts or footage. Do not count it as a substitute for suitable physical security, an active alarm or properly configured CCTV.',
       },
       {
         q: 'What is the best home alarm system for the money?',
-        a: 'For most homes in Coventry, a self-monitored smart alarm system like Yale Sync or Ring Alarm offers the best balance of cost and effectiveness. They typically cost £200-£400 with no monthly fees, send alerts to your phone, and include a visible external siren box that acts as a deterrent.',
+        a: 'There is no single best system for every home. Compare the property, detection coverage, connectivity, battery backup, monitoring or subscription terms, maintenance, notification route and the action your household can take after an alert.',
       },
       {
         q: 'Do I need CCTV if I already have good locks?',
-        a: 'Good locks should always be the foundation. CCTV adds a deterrent layer and provides evidence if something does happen, but it does not physically prevent entry. If your budget is limited, always prioritise locks over cameras. A smart doorbell at the front door is a good compromise starting from around £80.',
+        a: 'CCTV is optional and serves a different role from doors, frames and locks. Police.uk says it can be useful but does not prevent crime or replace good physical security. Decide based on coverage, privacy, storage and how the footage would be used.',
       },
       {
         q: 'Will my insurance premium go down if I fit an alarm?',
-        a: 'Some insurers offer small discounts (typically 5-15%) for homes with monitored alarm systems. However, the discount rarely covers the cost of professional monitoring fees. The real insurance benefit of good security is ensuring your claim is valid — some policies require minimum lock standards like BS3621, and failing to meet them can void your cover.',
+        a: 'Premiums, security conditions and claim decisions vary by insurer, policy and circumstances. Ask the insurer whether a particular alarm, installer, monitoring arrangement or lock standard affects your own policy, and obtain the answer in writing before relying on it.',
       },
     ],
   },
 
   'window-security-overlooked-weak-point': {
     body: `
-Here is something I see all the time: someone calls me out to fit a brand-new anti-snap cylinder on their front door — a proper upgrade, good lock, well fitted. Then I walk round the back of the house and find ground-floor windows with cockspur handles from 1998 that a child could open with a butter knife.
+Improving a front-door cylinder does not address a window that is open, does not lock, or has damaged hardware. Window security therefore needs its own opening-by-opening check.
 
-Your front door might have the best lock money can buy, but if your windows are easy to open, you have left the burglar a perfectly good alternative route in. Windows account for around 22% of residential burglary entries in the UK, and in most of those cases, the window was either unlocked, poorly locked, or had a lock so weak it might as well have been unlocked.
+[Police.uk's window-security advice](https://www.police.uk/cp/crime-prevention/protect-home-crime/window-security/) recommends locking windows and paying particular attention to openings that are easy to reach. The source does not establish one timeless entry percentage or a universal split between unlocked and forced windows, so use the practical checks below rather than a fixed statistic.
 
 ## Window Lock Types: What Is on Your Windows?
 
 ### Cockspur Handles
 
-These are the T-shaped handles found on older uPVC windows. You turn the handle to close the window, and that is it — no key, no additional locking point. They are held closed by a small spur that hooks over a receiver on the frame.
+Cockspur handles use a spur that closes over a receiver on the frame. Some are key-locking and some are not, so identify the exact handle and check that its spur engages correctly.
 
-The problem: they can be forced open with a flat tool inserted between the window and frame. On older windows where the frames have warped slightly, they sometimes do not even engage properly.
+Problems arise when the handle, receiver, frame or alignment is damaged and the spur no longer engages as intended.
 
-**Verdict:** Replace with locking handles or add sash jammers.
+**Check:** Repair failed parts first, then consider a compatible locking handle or additional locking point if the complete window is sound.
 
 ### Espagnolette Handles (Locking Handles)
 
-These are the standard locking handles on modern uPVC windows. Turn the handle to close, then lock with a key. They operate an espagnolette bar — a metal rod that extends up and down to engage locking points at multiple positions in the frame.
+Many uPVC windows use a handle connected to an espagnolette mechanism, which engages locking points around the opening. Operation varies, so check the manufacturer's instructions for the exact window.
 
-When working properly, these are decent. The issue is that the mechanisms wear out. If you turn the handle and it feels loose, or the key turns but does not feel like it is locking anything, the mechanism may have failed.
+If the handle feels loose, the key does not operate normally, or the locking points fail to engage, the handle, gearbox, alignment or another part may need attention.
 
-**Verdict:** Good when working. Get the mechanism checked if the handle feels loose or the lock does not engage. I repair and replace these regularly across Coventry — see our [uPVC lock repair service](/services/upvc-lock-repair).
+**Check:** Have the mechanism assessed if the handle feels loose or the locking points do not engage. See the [uPVC lock repair service](/services/upvc-lock-repair) for repair and replacement options.
 
 ### Sash Jammers
 
-A sash jammer is a small swivelling bolt that mounts on the inside of the window frame and flips up to block the window from opening. They are simple, cheap, and surprisingly effective as an additional locking point.
+A sash jammer is an additional device fitted to a compatible frame to restrict the sash from opening. Its contribution depends on the window, fixings, position and installation.
 
-They work on uPVC casement windows and tilt-and-turn windows. Crucially, they are visible from outside, which tells a potential burglar that the window has an extra lock they will need to deal with.
+Not every jammer is compatible with every uPVC casement or tilt-and-turn window. Check clearances, reinforcement, operation and any escape requirement before fitting one.
 
-**Verdict:** Excellent as a secondary lock. Fit them to all ground-floor windows and any first-floor windows accessible from a flat roof, extension, or bin. Around £10-£15 per window fitted.
+**Check:** Consider one as a secondary locking point on a suitable accessible window; it must not substitute for a failed main mechanism. The fitted price depends on the device, frame and fixings.
 
 ### Window Restrictors
 
-Window restrictors limit how far a window can open — usually to about 100mm. They are primarily a child safety device, but they also have a security benefit: they allow ventilation in warm weather without leaving the window wide enough for someone to climb through.
+Window restrictors limit how far a window opens. Select and install one for its documented purpose, and do not assume a restricted or partially open window is secured against entry.
 
-**Verdict:** Useful for upstairs windows and for ground-floor ventilation in summer. Not a substitute for a proper window lock.
+**Check:** Follow the product instructions and any applicable safety or escape requirement. A restrictor is not a substitute for a functioning window lock.
 
 ### Cable Window Restrictors
 
-A more robust version of the basic restrictor. A steel cable limits the opening distance and requires a key to release. More secure than plastic restrictors.
+A cable restrictor uses a cable to limit opening; some versions require a key to release. Performance and suitability depend on the exact product, fixings and window.
 
-**Verdict:** Good for windows you want to leave partially open regularly.
+**Check:** Confirm that the chosen product is suitable for the intended ventilation, child-safety and escape arrangements.
 
-## How Old Windows Are Vulnerable
+## Condition Matters More Than an Age Cut-Off
 
-Older uPVC windows (pre-2004 or thereabouts) have several weaknesses:
+Do not assume that a window is secure or insecure from its installation year alone. Check the actual condition and documented specification:
 
-- **Single-point locking** — many only lock at the handle, not at multiple points around the frame
-- **Worn mechanisms** — 20+ years of use wears out the espagnolette bars and locking cams
-- **Weakened frames** — older uPVC becomes brittle and can be prised apart more easily
-- **No reinforcing steel** — some cheaper older windows lack the steel reinforcement inside the uPVC profile, making them easier to force
+- **Locking points** — identify which points engage and whether they align with their keeps
+- **Mechanism condition** — check handles, gearboxes, bars and locking cams for looseness, damage or failed operation
+- **Frame and sash condition** — inspect for distortion, cracks, decay or loose fixings
+- **Product specification** — use documentation or a competent assessment rather than guessing whether reinforcement or tested security features are present
 
-If your windows are from the early 2000s or before, they deserve a careful check even if the locks seem to work.
+Any accessible window deserves a careful check if it does not close, align and lock positively, regardless of age.
 
 ## uPVC Window Lock Upgrades
 
-Upgrading the locks on your existing uPVC windows is significantly cheaper than replacing the windows themselves. Here is what I typically recommend and fit:
+If the frame, sash and glazing remain serviceable, repairing or changing compatible hardware may avoid replacing the complete window. Compare a repair quote with any replacement option after the cause of the fault is identified.
 
 ### Replacement Locking Handles
 
-If your cockspur handles are old, replace them with modern locking handles. These are key-operated and provide a positive lock. From £15-£25 per window fitted, depending on the type.
+If a cockspur handle or receiver is faulty, replace it with compatible hardware that engages correctly. Key-locking options are available; the fitted price depends on the type and frame.
 
 ### Sash Jammers
 
-As described above — about £10-£15 per window fitted. I usually recommend fitting these alongside new handles for a two-point locking setup.
+As described above, a compatible sash jammer may provide another locking point. Whether it is appropriate alongside a new handle depends on the complete window and its intended use.
 
 ### Window Lock Bolts
 
-Small key-operated bolts that fit into the frame of the window. They provide an additional locking point independent of the main handle mechanism. About £10-£15 each fitted.
+These are separate key-operated bolts fitted to compatible window and frame construction. Confirm positioning, fixings, operation and any escape implications before installation.
 
 ### Espagnolette Gearbox Replacement
 
-If your locking handle works but the mechanism inside the window does not engage properly, the espagnolette gearbox may need replacing. This is the metal unit inside the window edge that the handle operates. Replacement costs from £45-£75 per window fitted, which is far cheaper than a new window.
+If the handle moves but the locking points do not engage, the espagnolette gearbox, alignment or another component may be at fault. Diagnose the mechanism before replacing parts; the current fitted price depends on the exact replacement and condition.
 
 ## Sash Window Security
 
-Traditional sash windows in older Coventry homes (particularly in areas like Earlsdon, Chapelfields, and Stivichall with Victorian and Edwardian housing) present their own security challenges.
+Traditional sash windows require checks suited to their timber, fasteners, cords, alignment, ventilation and any conservation constraints.
 
-### Common Sash Window Vulnerabilities
+### Sash Window Checks
 
-- **No locks at all** — many sash windows rely solely on the sash catch (the crescent-shaped clasp), which can be slipped with a thin blade
-- **Loose frames** — old sash windows in wooden frames can rattle, creating gaps that allow tools to be inserted
-- **Accessible from outside** — sash windows at the front of Victorian terraces are often at waist height
+- **Locking hardware** — identify whether the catch or lock engages correctly and whether another compatible locking point is needed
+- **Frame condition** — check timber, joints, cords, fasteners and alignment for damage or excessive movement
+- **Accessibility** — give priority to openings that can be reached from ground level, a roof or another climbing aid
 
 ### Sash Window Lock Options
 
 - **Sash locks** — bolt through both sashes to lock them together. About £15-£20 per window fitted
-- **Dual screws** — a barrel bolt that screws through the inner sash into the outer sash. Discreet and effective. From £10-£15 per window
+- **Dual screws** — a barrel bolt that connects the two sashes. Suitability depends on the sash construction and intended ventilation
 - **Sash stops** — limit how far the sash can be raised, similar to a restrictor. About £10 per window
 
 For period properties, these locks can be fitted sympathetically without damaging the character of the windows.
 
 ## Which Windows to Prioritise
 
-Not all windows carry the same risk. Here is how to prioritise:
+Start with windows that are easy to reach, as Police.uk advises, while still checking that every window closes and locks.
 
 ### High Priority
 - **Ground-floor windows** — any window a person can reach from standing on the ground
 - **Windows next to flat roofs** — a flat roof on a kitchen extension or garage gives easy access to first-floor windows
 - **Windows near drainpipes or bins** — anything that can be climbed
-- **Windows hidden from view** — side passages, rear of the property, windows behind high fences
+- **Windows with limited natural surveillance** — side passages, rear openings or windows screened by high boundaries
 
 ### Medium Priority
 - **First-floor windows accessible from climbing aids** — wheelie bins left near walls, garden furniture, low garage roofs
-- **Bathroom and kitchen windows** — often left open and forgotten
+- **Bathroom and kitchen windows** — include these in the locking routine rather than assuming a small opening is secure
 
-### Lower Priority
-- **Second-floor windows and above** — still worth locking, but lower risk
-- **Windows overlooking busy streets** — high visibility reduces risk
+### Complete the Check
+- **Upper-floor windows** — check them too, particularly where building features or movable items make them reachable
+- **Visible windows** — visibility is not a substitute for a functioning lock and a consistent locking routine
 
 ## Cost of Window Lock Upgrades
 
@@ -511,112 +426,112 @@ Here are typical costs for window security upgrades across Coventry. These inclu
 | Cable restrictor | £15-£20 |
 | Espagnolette gearbox | £45-£75 |
 
-For a typical 3-bedroom semi in Coventry with 4-5 ground-floor windows, a full window lock upgrade with locking handles and sash jammers costs around £100-£175 total. That is a fraction of the cost of one new window, and it makes a genuine difference to your security.
+The total for several windows depends on the number and type of openings, the faults found and the parts that are compatible. Obtain a property-specific quote rather than extrapolating from a model house.
 
 Check the full [price list](/prices) for our complete range, or combine a window lock upgrade with a [front door lock change](/services/lock-change) for a full home security improvement.
 
 ## Do I Need to Replace My Windows?
 
-In most cases, no. If the frames are structurally sound, the seals are intact, and the glass is not cracked, upgrading the locks is far more cost-effective than replacing the whole window. New uPVC windows cost £300-£600 each fitted — upgrading the locks on your existing windows costs a fraction of that.
+Not necessarily. If the complete window is structurally sound and compatible replacement hardware is available, a repair may be possible. Compare documented repair and replacement options rather than relying on a universal cost comparison.
 
-The exceptions are if your frames are rotten (wooden windows), severely warped, or the sealed units have blown (condensation between the glass panes). In those cases, new windows make sense for thermal and security reasons.
+Rotten timber, severe distortion, damaged glazing or failed sealed units may require work beyond a lock change. Ask the relevant window or glazing specialist to assess the complete unit.
 
 ## What to Do Next
 
-Walk around your home and check every window. Can you lock each one with a key? Do the locks actually engage? Are any ground-floor windows especially vulnerable?
+Walk around your home and check every window. Does each one close and lock as designed? Do its locking points engage, and is it reachable from ground level, a roof or another climbing aid?
 
-If you are in Coventry or the surrounding areas and want me to check your windows and give you an honest assessment, call 024 7522 4730. I carry the most common window lock types in my van, so in most cases I can upgrade your windows on the spot during a single visit.
+If you are in Coventry or the surrounding areas and want me to check your windows, call 024 7522 4730. Share photographs or hardware details when booking so parts availability and whether a repair may need more than one visit can be confirmed.
 
 You can also read the full [home security checklist](/blog/home-security-checklist-2026) for everything else to check while you are at it.
 `,
     faqs: [
       {
         q: 'How much does it cost to fit window locks?',
-        a: 'Replacement locking handles for uPVC windows cost from £15-£25 per window fitted. Sash jammers cost £10-£15 per window. For a typical 3-bed semi with 4-5 ground-floor windows, a full upgrade costs around £100-£175 total including parts and fitting. Call 024 7522 4730 for a specific quote.',
+        a: 'The fitted price depends on the window, fault, compatible handle or mechanism, fixings and number of openings. Call 024 7522 4730 with photographs or hardware details for a current property-specific quote.',
       },
       {
         q: 'What are sash jammers and should I fit them?',
-        a: 'Sash jammers are small swivelling bolts that mount inside the window frame and block the window from opening. They cost £10-£15 per window fitted and are visible from outside, which acts as a deterrent. I recommend them on all ground-floor uPVC windows as a secondary lock alongside the main handle.',
+        a: 'A sash jammer is an additional device fitted to a compatible frame to restrict the sash from opening. It is not suitable for every window and does not replace a failed main mechanism; check the frame, fixings, clearances and any escape requirement before fitting one.',
       },
       {
         q: 'Are my old uPVC windows a security risk?',
-        a: 'Windows fitted before around 2004 often have weaker locking mechanisms, single-point locking, and frames that have become brittle with age. If your window handles feel loose or do not lock positively with a key, they are worth upgrading. The good news is that fitting new locks is much cheaper than replacing the whole window.',
+        a: 'Age alone does not establish a window\'s security. Check whether the sash, frame, handles and locking points are sound, aligned and operating correctly, and use documentation or a competent assessment for the exact specification. Repair may be possible if compatible parts are available.',
       },
     ],
   },
 
   'patio-doors-french-doors-security': {
     body: `
-Patio doors and French doors are one of the most common weak points I deal with across Coventry. They look great, they let light in, and they give you easy access to the garden. They also give burglars easy access to your house if they are not properly secured.
+Patio and French doors need a complete check of their lock, cylinder, tracks or hinges, passive leaf, frame and glazing. Their construction differs from a single front door, so the appropriate work is property-specific.
 
-The problem is not that these doors are inherently insecure — modern ones with good multipoint locks are decent. The problem is that many homes in Coventry have older patio or French doors with basic locks, worn mechanisms, or design vulnerabilities that make them relatively easy to defeat.
+Do not infer security from the door's age or appearance. A multipoint mechanism may be sound, worn or misaligned, and additional devices only help when they are compatible and correctly fitted.
 
-Here is what I see on the job, the specific weaknesses to look for, and the upgrades that actually make a difference.
+Here are the components to inspect and the types of remedial work that may be considered after the fault and existing specification are confirmed.
 
 ## Patio Door Vulnerabilities
 
 ### Lifting Off Tracks
 
-Older sliding patio doors can often be lifted straight up and off their bottom track. The rollers sit in a channel, and if there is enough clearance at the top, the entire door can be raised and pulled inward. I have demonstrated this to shocked homeowners more times than I can count — it takes about 5 seconds with no tools.
+A sliding door with excessive vertical movement, damaged guides or poor adjustment may not be retained in its track as intended. There is no fixed attack time that applies to every door, so check the actual clearances and hardware rather than relying on an age-based assumption.
 
-**The fix:** Anti-lift devices. These are pins, blocks, or strips that sit in the top track and prevent the door being raised high enough to clear the bottom rail. Cost: about £15-£25 fitted. It is one of the cheapest and most effective security upgrades you can make.
+**Possible work:** A compatible anti-lift pin, block or strip is designed to restrict upward movement. Suitability, positioning and fitted cost depend on the particular track, panel and manufacturer instructions.
 
 ### Weak Standard Locks
 
-Many patio doors come with a simple latch lock — a hook or claw that engages when you push the handle down. These are designed to keep the door closed, not to resist forced entry. A firm tug or a screwdriver levered into the gap can defeat them.
+Some patio doors use a hook, claw or latch operated by the handle. Identify whether it is merely a closing latch or part of a tested locking system, and check its alignment and engagement with the keep.
 
-**The fix:** Fit a dedicated patio door lock. These are key-operated locks that bolt through the frame, independent of the main latch. Brands like Yale and ERA make purpose-designed patio door locks. Cost: about £30-£50 fitted.
+**Possible work:** A compatible key-operated auxiliary lock may add a locking point independent of the main latch. Confirm the door construction, glazing clearances and current fitted price before selecting a product.
 
 ### Track Manipulation
 
-On some sliding doors, the track can be bent or deformed with a pry bar, creating enough room to slide the door past the lock engagement point. Older aluminium tracks are particularly vulnerable.
+Inspect a sliding door for a distorted track, damaged guides, excessive movement and a lock that fails to engage fully. The material or age alone does not establish its resistance.
 
-**The fix:** A foot bolt or drop bolt at the base of the sliding panel adds an anchor point independent of the track. Security bars that sit in the track behind the sliding panel are another option — the door simply cannot be opened far enough to allow entry. Cost: £20-£40.
+**Possible work:** A compatible foot bolt, drop bolt or track bar may add another restriction point. Check that the device is correctly sized, does not damage the doorset and does not interfere with normal or emergency use.
 
 ### Glass Panel Attacks
 
-Most patio doors have large single or double-glazed panels. Standard float glass breaks easily and relatively quietly (a spark plug fragment can silently shatter toughened glass, and standard float glass can be broken with a simple tool wrapped in a cloth).
+Large glazed panels need an assessment of the existing glass type, bead arrangement, frame and any required safety classification. Do not assume that double glazing or a visual inspection establishes its security performance.
 
-**The fix:** If you are replacing the glass for any reason, specify laminated glass. Unlike toughened glass (which shatters into small pieces), laminated glass holds together when broken — the interlayer keeps the fragments in place, making it much harder to create an opening large enough to climb through. For existing glass, security film can be applied to the inside surface. It is not as good as laminated glass but significantly better than nothing. Laminated glass replacement starts from around £150-£250 per panel depending on size.
+**Possible work:** Ask a competent glazier to identify the glass and specify a documented replacement suitable for the location. Laminated products use an interlayer intended to hold fragments together; retrofit film is a different product whose performance depends on its certification, installation and attachment to the frame.
 
 ## French Door Vulnerabilities
 
 ### The Passive Leaf Problem
 
-French doors have two doors, but typically only one is used daily (the active leaf). The other (the passive leaf) is held in place by flush bolts or shoot bolts at the top and bottom. If these bolts are missing, broken, or not engaged, a burglar only needs to force one bolt point instead of dealing with the full multipoint lock.
+Many French-door sets have an active leaf and a passive leaf retained by flush bolts or shoot bolts. Identify the actual configuration and check whether each specified bolt is present, aligned and engaged.
 
-**The fix:** Ensure the passive leaf has working flush bolts or rack bolts at the top and bottom. Key-operated rack bolts are more secure than simple flush bolts because they cannot be vibrated open. Cost: £15-£25 per bolt fitted, so about £30-£50 for top and bottom.
+**Possible work:** Ensure the passive leaf's top and bottom bolts engage correctly. Whether a key-operated rack bolt or another replacement is suitable depends on the leaf, frame, clearances and escape arrangements.
 
 ### Multipoint Lock Failure
 
-French doors typically have a multipoint locking system operated by lifting the handle. Over time, the hooks, bolts, and compression points can wear, misalign, or break. If the handle lifts but feels loose or does not click into a positive lock at multiple points, the mechanism needs attention.
+A French-door set may use a multipoint system operated by the handle. Hooks, bolts and compression points can wear, misalign or fail; have the mechanism checked if the handle is loose or the locking points do not engage positively.
 
-**The fix:** The multipoint lock gearbox or individual locking points can be replaced without changing the door. This is a specialist job and costs from £95-£175 depending on the mechanism. Much cheaper than a new set of French doors. Check our [uPVC lock repair service](/services/upvc-lock-repair) for more details.
+**Possible work:** A failed gearbox or compatible locking strip may be repairable without changing the complete door. Diagnose the mechanism and obtain a current quote before comparing repair with replacement; see the [uPVC lock repair service](/services/upvc-lock-repair).
 
 ### Hinge Vulnerability
 
-If French doors open outward, the hinges are exposed on the outside. Standard hinges can be unbolted, allowing the door to be removed entirely even if the lock is engaged.
+If French doors open outward, include the exposed hinges and their fixings in the complete-door assessment.
 
-**The fix:** Hinge bolts (also called dog bolts) — fixed pins on the hinge side of the door that engage with holes in the frame when the door is closed. Even if someone removes the hinge pins, the door cannot be pulled away from the frame. Cost: about £10-£15 per pair fitted.
+**Possible work:** Compatible hinge bolts, also called dog bolts, engage with the frame when the door is closed and are designed to restrict movement on the hinge side. Confirm the construction, position and fitted price first.
 
 ### Cylinder Attacks
 
-If your French doors have a euro cylinder (the standard keyhole found on uPVC and composite doors), it is vulnerable to the same [lock snapping attacks](/blog/what-is-lock-snapping) as any front door with a standard cylinder. An anti-snap cylinder is essential.
+If your French doors use a euro cylinder, identify the exact product, size and projection. Police.uk advises a TS007 3-star replacement when a euro cylinder is changed; the guide to [lock snapping attacks](/blog/what-is-lock-snapping) explains the relevant certification without claiming that every cylinder or door has the same vulnerability.
 
-**The fix:** Replace with an anti-snap, anti-bump, anti-pick cylinder. I recommend Ultion, ABS, or Yale Platinum. Cost: from £90-£120 fitted. See my [anti-snap lock comparison](/blog/anti-snap-locks-compared) for a detailed breakdown.
+**Possible work:** Where replacement is justified, use a correctly sized, independently certified cylinder suited to the doorset. Anti-snap options start from £59 fitted, depending on product and fit. See the [anti-snap lock comparison](/blog/anti-snap-locks-compared) for the standards to verify.
 
 ## Glazing Upgrades
 
 For both patio and French doors, the glass is a potential entry point. Here are the options from least to most expensive:
 
 ### Security Film (from £50 per panel)
-A thick polyester film applied to the inside of the glass. It holds the glass together when smashed, making it much harder to create an entry hole. Not as effective as laminated glass but a good retrofit option.
+A retrofit film applied to compatible glass is intended to retain fragments. Its tested performance depends on the exact film, glass, frame-attachment system and installation, and should not be presented as equivalent to laminated glazing.
 
 ### Laminated Glass (from £150-£250 per panel)
-The gold standard. Two layers of glass bonded with a tough plastic interlayer. When struck, the glass cracks but stays in the frame. It takes sustained, noisy effort to break through — exactly the kind of time and noise a burglar wants to avoid. If you are replacing glass for any reason, always specify laminated.
+Laminated glass incorporates an interlayer intended to retain fragments when the pane is broken. Ask a competent glazier to specify the correct documented safety and security performance for the doorset rather than treating one generic product as universally suitable.
 
 ### Toughened Glass
-Often assumed to be "security glass," but it is not. Toughened glass is stronger than float glass, but when it breaks it shatters completely into small pieces, creating an immediate opening. It is required by building regulations in doors for safety reasons (the pieces are not sharp), but it provides minimal security against forced entry.
+Toughened and laminated glass are different product types with different test classifications and breakage behaviour. Ask a competent glazier to identify the existing pane and explain which documented specification is required for safety and any security objective.
 
 ## Specific Upgrades: Summary and Costs
 
@@ -630,163 +545,165 @@ Here is a quick reference for what each upgrade costs, supplied and fitted, in t
 | Foot bolt / drop bolt | £15-£25 |
 | Rack bolts for French doors (pair) | £30-£50 |
 | Hinge bolts (pair) | £10-£15 |
-| Anti-snap cylinder | £90-£120 |
+| Anti-snap cylinder | From £59 |
 | Multipoint lock gearbox replacement | £95-£175 |
 | Security film (per panel) | from £50 |
 | Laminated glass (per panel) | £150-£250 |
 
-For a typical set of patio or French doors, a comprehensive security upgrade — anti-lift, auxiliary lock, rack bolts, and an anti-snap cylinder — costs in the region of £150-£250 total. That is a significant improvement for a modest outlay.
+Do not add every item automatically. The appropriate combination and total price depend on the door type, existing hardware, faults, compatibility and agreed work; use the table as an indicative menu only and obtain a current quote.
 
 ## What I Recommend for Coventry Homes
 
-Most of the patio and French doors I see in Coventry fall into two categories:
+Use condition and documented specification rather than an age category:
 
-**1. Doors from the 1990s-2000s** — These typically have basic locks, no anti-lift devices, and standard euro cylinders. They need the full set of upgrades listed above. The doors themselves are usually fine structurally, so replacing them is unnecessary.
+**1. Doors that do not close or lock correctly** — Diagnose alignment, tracks or hinges, the multipoint mechanism, keeps, cylinder, passive-leaf bolts and frame before selecting repairs.
 
-**2. Doors from 2010 onward** — These usually have multipoint locks and better glass, but may still lack anti-lift devices and often have standard (snappable) euro cylinders. Upgrading the cylinder and adding anti-lift devices is usually sufficient.
+**2. Doors that operate correctly but have an unknown specification** — Identify certification and component compatibility before deciding whether any cylinder, anti-lift device, auxiliary lock or glazing work is justified.
 
-If you are not sure which category yours falls into, or you want me to check the current security of your patio or French doors, call me on 024 7522 4730. I cover all areas of Coventry and Warwickshire, and I can usually give you an assessment and fit the upgrades in a single visit.
+If you want the current condition and specification of your patio or French doors checked, call 024 7522 4730. Share photographs or hardware details when booking so likely parts and whether more than one visit may be needed can be discussed.
 
 See the full [home security checklist](/blog/home-security-checklist-2026) for everything else to check while you are securing your home, or visit the [prices page](/prices) for our complete list of services and costs.
 `,
     faqs: [
       {
         q: 'Can patio doors be lifted off their tracks?',
-        a: 'Yes, many older sliding patio doors can be lifted up and off the bottom track with no tools at all. Anti-lift devices prevent this and cost around £15-£25 fitted. It is one of the cheapest and most effective security upgrades for patio doors.',
+        a: 'A sliding door with excessive vertical movement, damaged guides or poor adjustment may not be retained in its track as intended. A compatible anti-lift device is designed to restrict that movement, but suitability and fitted cost depend on the exact door and track.',
       },
       {
         q: 'How much does it cost to secure French doors?',
-        a: 'A comprehensive French door security upgrade — including rack bolts, hinge bolts, and an anti-snap cylinder — typically costs £150-£250 total fitted. Individual upgrades like rack bolts start from £15-£25 per bolt. Call 024 7522 4730 for a specific quote.',
+        a: 'The required work may involve alignment, passive-leaf bolts, hinge-side security, a cylinder or the multipoint mechanism, but not every door needs every item. Call 024 7522 4730 for an assessment and current itemised quote.',
       },
       {
         q: 'Is laminated glass worth the cost for patio doors?',
-        a: 'If you are replacing glass for any reason, laminated glass is absolutely worth specifying. It holds together when struck, making it extremely difficult to break through quickly. For existing glass, security film is a cheaper alternative that provides a meaningful improvement over standard glass.',
+        a: 'Laminated glass uses an interlayer intended to retain fragments, while retrofit film is a separate system with performance that depends on the film, glass, frame attachment and installation. Ask a competent glazier for the documented specification appropriate to the doorset and location.',
       },
       {
         q: 'Do I need to replace my patio doors to make them secure?',
-        a: 'In most cases, no. Upgrading the locks, adding anti-lift devices, and fitting an auxiliary keyed lock is far more cost-effective than replacing the entire door. I see plenty of 20-year-old patio doors in Coventry that are structurally fine but just need better locking hardware.',
+        a: 'Not necessarily. A sound doorset may be repairable if compatible parts are available, while structural, glazing or obsolete-component problems may change the decision. Diagnose the complete door and compare itemised repair and replacement quotes.',
       },
     ],
   },
 
   'garage-shed-security': {
     body: `
-Garages and sheds are a burglar's favourite target, and most people do not give them anywhere near enough thought. I would estimate that fewer than one in five of the garages I see across Coventry has anything close to adequate security.
+Garages and sheds need a separate security check because their doors, frames and stored contents differ from the main house. There is no cited Coventry percentage that establishes how many are adequately secured.
 
 Here is why that matters, and what you can do about it without spending a fortune.
 
-## Why Thieves Target Outbuildings
+## Why Outbuilding Security Matters
 
-There are three reasons burglars love garages and sheds:
+Consider three practical issues when assessing a garage or shed:
 
 ### 1. Valuable Contents
 
-Think about what is in your garage or shed right now. Bikes, power tools, garden equipment, golf clubs, fishing gear, camping equipment. A typical garage might contain £2,000-£5,000 worth of easily portable, easily sold items. Some contain much more — e-bikes alone can be worth £3,000-£8,000.
+List what is stored in the building, including bikes, tools and garden or leisure equipment. Keep purchase records, serial numbers and photographs, and check the policy's current item and outbuilding limits rather than assuming a typical value.
 
 ### 2. Tools to Break Into the House
 
-This one surprises people, but it is common. A burglar breaks into your shed, finds a crowbar, a hammer, or a heavy screwdriver, and then uses your own tools to force entry into the house. You have effectively provided them with a toolbox for breaking into your home.
+Consider whether tools stored in an outbuilding would be accessible after its door was opened. Locking or anchoring valuable tools and securing the connecting route can reduce that avoidable exposure; the available sources do not establish how frequently tools are then used against the house.
 
-### 3. They Are Usually Poorly Secured
+### 3. Door and Frame Condition
 
-Most garage doors have a basic latch or a cheap padlock. Most sheds have a hasp and staple with a £5 padlock from a DIY store. These can be defeated in seconds with basic tools. By contrast, the house itself usually has at least a reasonable lock on the front door. The outbuilding is the path of least resistance.
+Inspect the door, frame, hinges, hasp, padlock and fixings as one system. Do not assume that a low-cost padlock, a visibly heavy lock or comparison with the front door establishes resistance, and do not rely on a fixed attack-time claim.
 
 ## Garage Door Security
 
 ### Up-and-Over Garage Doors
 
-The most common type in Coventry. They have a handle in the centre with a basic lock mechanism behind it. On many, the lock can be forced with a large screwdriver, or the panel can be bent at the top to create enough gap to reach in and release the mechanism from inside.
+Up-and-over doors commonly use a central handle and internal mechanism, but construction varies. Check the panel, handle, lock, frame, guides and any internal or emergency release for damage and accessible gaps.
 
 **Defender Lock (£30-£50 fitted)**
 
-A defender lock is the most effective upgrade for an up-and-over garage door. It is a heavy-duty, T-shaped lock that sits over the existing handle, covering it completely and preventing access to the lock mechanism underneath. The defender lock itself is resistant to picking and drilling. This is the single upgrade I recommend for every garage — it is affordable and immediately effective.
+A defender is one possible additional lock for a compatible up-and-over door. It covers the handle area and adds a separate locking point, but its contribution depends on its certification, fixings, installation and the condition of the complete door. It is not suitable for every door.
 
 **Garage Door Bolts (£15-£25 per pair fitted)**
 
-Bolts fitted inside the garage door, top and bottom, that slide into receivers in the frame. They provide anchor points that prevent the door being forced or bent. Used in combination with a defender lock, they make an up-and-over door significantly harder to defeat.
+Compatible internal bolts can add locking points into suitable receivers. Check the door, frame and operation before combining them with another lock; no combination should be described as preventing every forced-entry attempt.
 
 ### Roller Garage Doors
 
-Generally more secure than up-and-over doors because they sit in channels on both sides and cannot be easily bent or lifted. Most have built-in locking mechanisms. The main vulnerability is the motor unit — ensure any override is not accessible from outside.
+Roller doors use side channels and may have manual or powered locking arrangements. Inspect the curtain, guides, bottom edge, controls, override and emergency operation rather than assuming that the door type is inherently more secure.
 
 ### Side-Hinged Garage Doors
 
-Treat these like any other external door. They need a good deadlock, proper hinges, and a solid frame. A [BS3621 mortice deadlock](/blog/five-lever-mortice-deadlock-guide) or a rim deadlock is appropriate depending on the door construction.
+Assess side-hinged doors as a complete doorset, including the leaves, frame, hinges, meeting stile and lock. A [BS3621 mortice deadlock](/blog/five-lever-mortice-deadlock-guide) may suit some timber constructions; the appropriate lock depends on the door and any access, escape or policy requirement.
 
-## The Internal Door: The Weak Point Nobody Thinks About
+## The Internal Door Between Garage and Home
 
-If your garage is attached to your house, there is almost certainly a door connecting the two. In my experience, this is one of the weakest security points in most Coventry homes.
+If an attached garage has a door into the home, include that complete doorset in the assessment. Do not change it without checking any required fire-resisting, self-closing, access and escape performance.
 
-Here is the typical scenario: the internal door between the garage and the house is a lightweight, hollow-core interior door with a basic bathroom-style privacy lock or even just a handle with no lock at all. If someone gets into your garage, they can walk straight into your house.
+Identify the door leaf, frame, hinges, closer, seals and lock that are actually present. A visual assumption about the leaf or a lock change alone cannot establish the performance of the doorset.
 
 **What the internal garage door needs:**
 
-- **A solid-core or external-grade door** — not a hollow-core interior door. If it connects to the living space, it should be treated as an external door
-- **A proper lock** — a deadlock or at minimum a key-operated nightlatch. Not a privacy turn or a basic latch
-- **75mm hinge screws** — screwed into the structural timber, not 15mm screws into the frame lining
-- **A strong frame** — the same frame requirements as any external door
+- **Documented door construction** — confirm the required fire and security specification before replacing a leaf
+- **A suitable lock and release** — select hardware for the doorset, household access and safe escape rather than prescribing one lock universally
+- **Suitable hinge and frame fixings** — type and length depend on the leaf, frame and surrounding construction
+- **A sound frame and correct alignment** — include the keeps, closer and seals in the check
 
-Replacing a hollow internal door with a solid-core door and fitting a deadlock costs from about £150-£250 total (door and lock). Given that it is often the easiest route from the garage into the house, it is one of the most worthwhile security investments you can make.
+If the connecting doorset is unsuitable or damaged, obtain a specification and itemised quote from a competent installer. The scope and price depend on the required fire performance, construction, frame and hardware, so a universal package price or outcome would be misleading.
 
 ## Shed Security
 
-Sheds are inherently less secure than garages — they are typically thin timber construction, and no amount of locking hardware will stop someone who is determined to go through the wall. But good security significantly reduces opportunistic theft, which accounts for the majority of shed break-ins.
+Shed construction varies, and stronger hardware on a weak leaf or frame may simply move the point of failure. Use layers suited to the building and contents; the cited sources do not establish that a particular share of shed break-ins is opportunistic or promise a reduction from one product.
 
 ### Hasp and Padlock
 
-The hasp (also called a hasp and staple) is the metal plate that the padlock passes through. Most sheds come with a cheap, pressed-steel hasp that can be unscrewed or levered off with a screwdriver.
+The hasp, also called a hasp and staple, is the fitting through which the padlock closes. Some are thin or use exposed screws, so inspect the exact fitting, door, frame and fixings rather than judging the padlock alone.
 
 **What you need:**
 
-- A **heavy-duty hasp and staple** — look for one with concealed fixings (the screws are hidden when the padlock is in place) and a hardened steel construction. Expect to pay £8-£15 for a decent one
+- A **compatible hasp and staple** — compare independent certification, construction and whether the fixings are protected when locked
 - **Coach bolts** — the hasp should be bolted through the door with coach bolts (smooth, rounded heads) rather than screwed in with wood screws. Screws can be unscrewed; coach bolts cannot be easily removed from the outside
-- A **closed-shackle padlock** — the shackle (the curved bar) is shrouded by the padlock body, preventing bolt croppers from getting a grip. CEN grade 3 or above. A good one costs £15-£30. Squire, Abus, and Master Lock all make suitable options
+- A **shrouded-shackle padlock** — reduced shackle exposure may restrict tool access, but select the exact certification and grade required by the use or written policy rather than relying on a brand name
 
-An open-shackle padlock — the standard type most people buy — can be cut through with £15 bolt croppers in about 3 seconds. Do not waste your money on one.
+An exposed shackle may give cutting tools easier access. Compare independently certified padlocks and make sure the hasp, fixings, door and frame provide a compatible level of resistance.
 
 ### Shed Bar
 
 A shed bar is a flat metal bar that runs the full width of the shed door, with a padlock at each end. To open the door, both padlocks need to be removed. This distributes the force across the entire door width rather than concentrating it at a single lock point.
 
-Cost: about £20-£30 for the bar plus two padlocks. It is the single most effective shed security upgrade and can be fitted in 20 minutes.
+A shed bar can spread resistance across the door rather than relying on one small hasp. Check the door construction, fixings and padlock certification before choosing a system; the full installed cost depends on those parts.
 
 ### Shed Alarm
 
-Battery-powered shed alarms cost from £10-£20 and emit a loud siren when the door is opened. They are not sophisticated, but the noise alone is enough to scare off most opportunistic thieves and alert you or your neighbours.
+Battery-powered shed alarms can add an audible alert when the door is opened. They are one layer and should not replace suitable doors, fixings, locks and anchored storage for valuable items.
 
 ### Ground Anchors
 
-For high-value items like bikes, e-bikes, motorbikes, and power tools, a ground anchor is essential. It is a heavy steel anchor bolted to the shed floor or a concrete base. You chain your items to the anchor, so even if someone gets into the shed, they cannot easily remove the most valuable contents.
+For items such as bikes or power tools, a compatible ground or wall anchor may form one part of the storage system. The anchor, substrate, chain, padlock, item and installation need to be assessed together.
 
-Cost: from £25 for the anchor plus a good-quality hardened chain and padlock (expect to spend £30-£60 for a decent chain set). For bikes worth hundreds or thousands, this is essential.
+Check the policy for any specified anchor, chain, padlock, certification and storage condition before buying. Obtain a current quote that includes suitable fixings for the actual substrate.
 
 ### Mark and Register Your Property
 
-Use a UV property marking pen or a forensic marking kit (like SmartWater) to mark your tools and equipment. Register serial numbers at immobilise.com — it is free and used by UK police forces. This does not prevent theft, but it significantly increases the chance of recovery and conviction.
+Keep an inventory, photographs and serial numbers for tools and equipment. If considering a property-marking or registration scheme, follow current police and insurer guidance; do not promise that a named commercial product will produce recovery or conviction.
 
 ### Shed Windows
 
-If your shed has windows, consider whether they are advertising your contents. A thief who can see a £1,500 e-bike through the shed window is far more motivated than one who does not know what is inside. Internal curtains, frosted film, or simply stacking items to obscure the view from outside all help.
+If the shed has windows, consider whether stored items are visible from outside. A suitable internal covering may reduce visibility, but it does not replace sound doors, frames, fixings, locks and anchored storage.
 
 ## Insurance Implications
 
-This is the part many people miss. Your home insurance policy almost certainly has requirements about outbuilding security. Common conditions include:
+Insurance cover, limits, exclusions and security conditions vary. Read the current policy wording for garages, sheds, bikes and other high-value items, and ask the insurer to clarify in writing whether it specifies:
 
-- **Minimum lock standards** for sheds and garages
-- **Maximum claim values** for items stored in outbuildings (often £1,000-£3,000 — check your policy, as that e-bike might not be fully covered)
-- **Requirements to lock** the outbuilding at all times when unattended
-- **Ground anchoring requirements** for bikes and high-value items
+- **A named lock or certification standard** for the relevant outbuilding
+- **Item, category or location limits** for property stored outside the main home
+- **Locking or occupancy conditions** that apply when the building is unattended
+- **An anchoring, chain or storage requirement** for a bike or other specified item
 
-If you make a claim for items stolen from a shed or garage, and the insurer finds that the lock was inadequate or the door was left unlocked, they can reduce or refuse the claim. Check your policy wording — it is usually in the "security requirements" or "protections" section.
+A claim decision depends on the policy wording and circumstances. Do not promise cover or predict refusal; retain documents and ask the insurer or broker how a condition applies before selecting hardware.
 
-Many policies specify a minimum of a "CEN grade 3 closed-shackle padlock" for outbuildings. If you are using a basic open-shackle padlock from the supermarket, you may not be covered.
+Do not assume that one padlock grade is required by every policy. If the wording names a standard, grade or lock type, match the exact current requirement and keep evidence of the installed product.
 
-## Recommended Security Setup by Budget
+## Example Scopes to Price
+
+These are combinations to discuss, not universal packages or evidence that a stated budget will satisfy a policy or secure every outbuilding.
 
 ### Basic (£50-£80)
 - Closed-shackle padlock and heavy-duty hasp for shed
 - Defender lock for garage door
-- This covers the minimum for most insurance requirements
+- Confirm any insurance requirement before treating this example as sufficient
 
 ### Intermediate (£100-£180)
 - Everything above, plus:
@@ -799,33 +716,33 @@ Many policies specify a minimum of a "CEN grade 3 closed-shackle padlock" for ou
 - Everything above, plus:
 - Solid-core internal door between garage and house with deadlock
 - Motion-sensor light covering the garage and shed area
-- Property marking kit for all items
+- Property marking or inventory records for appropriate items
 - Security screws on hinges
 
 ## What to Do Next
 
-Walk out to your garage and shed right now. Can you see what is inside? How easy would the locks be to force? Would you bet your possessions on the current security?
+Walk around the garage or shed and record the door, frame, hinges, lock, fixings, windows, lighting and how valuable items are stored. Note faults without attempting to force or attack the hardware.
 
-If the answer is no, call me on 024 7522 4730 and I will come out and give you an honest assessment. I carry defender locks, padlocks, hasps, and ground anchors in my van, so I can usually upgrade your outbuilding security in a single visit.
+For an assessment, call 024 7522 4730 and share the door type, photographs and existing hardware when booking. Parts availability, compatibility and whether the work needs more than one visit can then be discussed.
 
-For the full picture of home security including doors and windows, read the [complete home security checklist](/blog/home-security-checklist-2026), or check the [prices page](/prices) for our full range of services. If you are in [Coventry](/areas/coventry-city-centre) or the surrounding [Warwickshire areas](/areas), I cover everywhere locally.
+For the full picture of home security including doors and windows, read the [complete home security checklist](/blog/home-security-checklist-2026), or check the [prices page](/prices) for our full range of services. If you are in [Coventry](/) or the surrounding [Warwickshire areas](/areas), I cover everywhere locally.
 `,
     faqs: [
       {
         q: 'What is the best padlock for a shed?',
-        a: 'A closed-shackle padlock rated CEN grade 3 or above. Brands like Squire, Abus, and Master Lock make suitable options costing £15-£30. Avoid standard open-shackle padlocks — they can be cut with basic bolt croppers in seconds. Make sure the hasp is also heavy-duty with concealed fixings and coach bolts.',
+        a: 'Choose an independently certified, closed-shackle padlock that is compatible with a strong hasp, concealed or through-bolted fixings, and the shed door and frame. An exposed shackle may give cutting tools easier access; compare the exact current certification rather than relying on a brand name alone.',
       },
       {
         q: 'Will my insurance cover items stolen from my garage or shed?',
-        a: 'Most policies cover outbuilding contents, but with conditions — usually a maximum claim value (often £1,000-£3,000) and minimum lock requirements. If your security does not meet the policy requirements, the claim may be reduced or refused. Check your policy for specific wording about outbuilding locks and storage.',
+        a: 'Cover, item limits, security conditions and claim decisions vary by policy and circumstances. Check the current wording for garages, sheds, bikes and high-value items, and ask the insurer to clarify any lock or anchoring requirement in writing.',
       },
       {
         q: 'How do I secure the internal door between my garage and house?',
-        a: 'Replace any hollow-core door with a solid-core or external-grade door, and fit a proper deadlock rather than a basic latch. Use 75mm screws in the hinges and strike plate. This typically costs £150-£250 total and addresses one of the most commonly overlooked security weak points in UK homes.',
+        a: 'Assess the complete internal doorset, including the door leaf, frame, hinges, lock and fire-safety requirements. The suitable specification and cost depend on the construction and whether it forms part of a required fire-resisting separation.',
       },
       {
         q: 'How much does a ground anchor cost for bikes?',
-        a: 'A ground anchor costs from about £25 fitted, plus £30-£60 for a quality hardened chain and closed-shackle padlock. For bikes and e-bikes worth hundreds or thousands of pounds, this is essential — and most insurance policies require bikes to be anchored to claim for outbuilding theft.',
+        a: 'Ground-anchor, chain and padlock costs depend on their certification, substrate and installation. Check the bike policy for any required Sold Secure rating, anchor type and storage condition before buying the system.',
       },
     ],
   },
@@ -834,7 +751,7 @@ For the full picture of home security including doors and windows, read the [com
     body: `
 You might have seen the "Secured by Design" logo on lock packaging, heard it mentioned by a builder, or seen it referenced in a planning application. But what does it actually mean? Is it a legal requirement? And should you specifically seek out SBD products when upgrading your home security?
 
-As a locksmith working across Coventry and Warwickshire, I fit SBD-approved products regularly, but I also fit plenty of products that are not SBD-certified yet still provide excellent security. Here is the honest explanation.
+Product accreditation belongs to an exact current listing, not to a broad brand or everything a locksmith may fit. Here is how to verify the scheme and the underlying standards without turning either into a guarantee.
 
 ## What Is Secured by Design?
 
@@ -845,7 +762,7 @@ In practical terms, SBD does two things:
 1. **Accredits qualifying products** — locks, doors, windows, lighting, and other security products can carry the Police Preferred Specification mark when they meet SBD requirements backed by independent certification
 2. **Accredits qualifying developments** — housing developments can achieve SBD recognition when they incorporate approved products and crime-prevention design principles
 
-It is backed by the UK police service, but it is **not a legal requirement** for existing homes. New-build developments may have SBD requirements written into their planning conditions, but there is no law requiring homeowners to retrofit SBD-certified products.
+The [Secured by Design crime-prevention handbook](https://crimeprevention.securedbydesign.com/introduction) describes SBD as the official police security initiative. SBD accreditation is **not a blanket legal requirement** for existing homes. A particular project may separately have planning, building-control, contract or policy requirements, which must be checked from its own documents.
 
 ## How Products Get SBD Certification
 
@@ -864,14 +781,14 @@ PAS 24 is one route used for doorsets seeking SBD accreditation. [Approved Docum
 
 ### Cylinders: TS007 and SS312
 
-For euro cylinders (the most common lock type on uPVC and composite doors), two standards are relevant:
+For doors that use euro cylinders, two specifications often appear in product documentation:
 
-**TS007** — a Door & Hardware Federation technical specification for replacement cylinders and associated security hardware. It uses star ratings:
-- 1-star: basic security
-- 2-star: moderate security
-- 3-star: high security (resistant to snapping, bumping, picking, and drilling)
+**TS007** — a Door & Hardware Federation technical specification for replacement cylinders and associated security hardware. Its star markings belong to the exact certified product:
+- 1-star: a cylinder rating used within the TS007 scheme
+- 2-star: a rating used for compatible security hardware such as door furniture within the scheme
+- 3-star: a cylinder rating intended to meet the scheme's three-star requirement without relying on separate protective furniture
 
-**SS312 (Sold Secure Diamond)** — an independent testing scheme run by the Master Locksmiths Association. A cylinder with SS312 Diamond accreditation has been tested to a very high standard of attack resistance.
+**SS312 Sold Secure Diamond** — another accreditation that may appear on an exact cylinder. Verify the current certificate and scope rather than inferring performance from a logo, old listing or manufacturer name.
 
 To achieve the SBD requirement for euro cylinders, you need **either**:
 - A 3-star TS007 cylinder, **or**
@@ -882,14 +799,7 @@ I have explained these standards in detail in my post on [TS007 vs SS312 lock st
 
 ### Mortice Locks: BS3621
 
-For traditional mortice deadlocks (the type fitted into the edge of wooden doors), [BS3621](/blog/bs3621-vs-anti-snap-vs-smart-lock) is the standard. A BS3621 lock has been tested against:
-
-- Picking resistance (at least 5 minutes)
-- Drilling resistance
-- Key security (at least 1,000 key variations)
-- Bolt strength
-
-BS3621 has been the insurance industry standard for decades, and most home insurance policies require it for wooden front doors. It is also the SBD-approved standard for mortice locks.
+For suitable traditional mortice deadlocks fitted into timber doors, [BS3621](/blog/bs3621-vs-anti-snap-vs-smart-lock) defines requirements that include resistance to specified attacks, key security and bolt performance. Certification belongs to the exact product. Some policies may name BS3621, so check the current wording; Secured by Design accreditation also belongs to listed products rather than to every product that references the standard.
 
 ### Windows: PAS 24
 
@@ -907,52 +817,52 @@ SBD also certifies:
 
 ## Which Products Carry the SBD Mark?
 
-Hundreds of products from dozens of manufacturers. Some familiar names:
+The catalogue changes as products and certifications change. Do not treat an old article or a manufacturer's brand as proof that a current product is listed.
 
-**Cylinders:** Ultion, ABS (Avocet), Yale Platinum, Brisant Ultion Plus — all have SBD-approved products in their range. The Ultion cylinder I fit most often carries both TS007 3-star and Sold Secure Diamond SS312 certification.
+**Cylinders:** Search by the exact product reference, then verify its current TS007 or SS312 evidence and its dimensions for the doorset.
 
-**Doors:** Most major composite door manufacturers (Solidor, Endurance, Rockdoor, Door-Stop) offer SBD-approved doorsets that include PAS 24 testing.
+**Doors:** Check the complete doorset listing and certificate. Accreditation of one model does not extend to every door from the same manufacturer or to a doorset assembled from different components.
 
-**Windows:** Major window manufacturers like REHAU, Deceuninck, and VEKA offer SBD-approved window systems, though these are typically specified at the point of manufacture rather than retrofitted.
+**Windows:** Check the complete window-system listing and certificate; changing one handle or lock does not make an existing window an accredited complete system.
 
-**Mortice Locks:** ERA, Yale, Union, and British Standard-compliant locks from established manufacturers.
+**Mortice locks:** Verify the exact product's current listing and standard marking rather than relying on the manufacturer or a generic "British Standard" description.
 
-You can check whether a specific product has SBD certification on the [Secured by Design website](https://www.securedbydesign.com) — they maintain a searchable catalogue of all approved products.
+Check whether a specific product appears in the current catalogue on the [Secured by Design website](https://www.securedbydesign.com), and match the exact model and certification scope.
 
 ## New-Build Requirements
 
-Since 2015, Part Q of the Building Regulations (England) has required all new homes to have doors and windows that meet PAS 24 or an equivalent security standard. This effectively aligns new-build requirements with SBD standards.
+[Approved Document Q](https://www.gov.uk/government/publications/security-in-dwellings-approved-document-q) gives guidance on meeting the security requirement for new dwellings. It should not be paraphrased as a requirement that every door and window in every new or altered property carries SBD accreditation or one named product certificate.
 
-Many local authorities go further and include SBD certification as a planning condition for new developments. In the Coventry and Warwickshire area, new-build estates frequently have SBD requirements written into their planning approvals.
+A development may have project-specific planning conditions or specifications. Check the actual approval and construction documents; this article has no evidence for a general Coventry or Warwickshire frequency claim.
 
-If you have bought a new-build home, your doors and windows should already meet PAS 24 as a minimum. However, I would still recommend checking the cylinder — some new-build doors come with PAS 24-certified doorsets but have basic cylinders that technically meet the minimum standard but are not the best available. An upgrade to an Ultion or ABS cylinder is often worth doing even on a new-build door.
+If you have bought a new-build home, retain the doorset and window documentation and compare it with the project's requirements. Do not replace a cylinder merely because it lacks a preferred brand name: identify its exact certification, size, projection and compatibility first.
 
 ## Retrofitting SBD-Equivalent Security
 
-If you live in an existing home — which covers the vast majority of homes in Coventry — you are not required to have SBD-certified products. But you can achieve the same level of security by retrofitting products that meet the same testing standards.
+An existing home is not subject to a blanket SBD retrofit requirement. Retrofitted components can have their own certification, but changing one component does not reproduce a complete PAS24 doorset or window test.
 
-Here is how to bring your existing home up to SBD-equivalent security:
+Here is how to use the standards as an evidence check without describing an untested retrofit as "SBD-equivalent":
 
 ### Front Door (uPVC or Composite)
 
-- **Replace the euro cylinder** with a TS007 3-star or SS312 Diamond certified anti-snap cylinder. Ultion and ABS are my recommendations. From £90-£120 fitted. See my [anti-snap lock comparison](/blog/anti-snap-locks-compared)
+- **Assess the euro cylinder** and, where replacement is justified, select a correctly sized TS007 3-star or SS312 Diamond certified option. Options start from £59 fitted. See the [anti-snap lock comparison](/blog/anti-snap-locks-compared)
 - **Check the multipoint lock** is working correctly and all bolts engage when the handle is lifted
-- **Check the door meets PAS 24** — if it is a modern composite or uPVC door from a reputable manufacturer, it probably does. Older doors may not, but the lock upgrade alone makes a significant difference
+- **Check the complete doorset evidence** — use the exact certificate or project documentation rather than inferring PAS24 status from age, material or manufacturer. A cylinder change does not certify the complete doorset
 
 ### Front Door (Wooden)
 
-- **Fit a BS3621 5-lever mortice deadlock** if you do not already have one. From £89 fitted. See my guide on [five-lever mortice deadlocks](/blog/five-lever-mortice-deadlock-guide)
+- **Identify the existing lock and doorset** before selecting a replacement. A compatible BS3621-certified mortice deadlock may be appropriate for some timber doors; see the guide to [five-lever mortice deadlocks](/blog/five-lever-mortice-deadlock-guide)
 - **Add a door reinforcer plate** if the door is softwood
-- **Ensure the frame is solid** and the strike plate has 75mm screws
+- **Ensure the frame and keep are sound** and use fixings suited to the frame and surrounding construction rather than prescribing one screw length universally
 
 ### Windows
 
-- **Fit locking handles** and [sash jammers on ground-floor windows](/blog/window-security-overlooked-weak-point)
-- Modern PAS 24 windows are tested as complete units, so replacing individual locks does not achieve the full PAS 24 standard. But in practical terms, good locking hardware on a sound window provides strong security
+- **Repair failed window hardware** and consider compatible locking handles or [sash jammers on accessible windows](/blog/window-security-overlooked-weak-point) where appropriate
+- PAS24 testing applies to the complete window unit, so replacing individual hardware does not establish that the altered window meets the complete-unit standard
 
 ### Patio and French Doors
 
-- **Fit an anti-snap cylinder** if the door has a euro cylinder
+- **Check any euro cylinder** and replace it only where the assessment and exact certification justify doing so
 - **Add anti-lift devices** for sliding doors
 - **Ensure rack bolts** are fitted top and bottom on French doors
 - Read the full guide on [patio and French door security](/blog/patio-doors-french-doors-security)
@@ -961,33 +871,33 @@ Here is how to bring your existing home up to SBD-equivalent security:
 
 If you want to know whether your existing locks meet SBD standards:
 
-1. **Check the cylinder** — look for a TS007 3-star marking (usually stamped on the edge of the cylinder) or check the manufacturer's website for certification
-2. **Check the door** — the doorset (door + frame + hardware) should have a PAS 24 test certificate. New composite and uPVC doors usually come with documentation confirming this
+1. **Check the cylinder** — look for its exact marking and match the model to current certification evidence; do not infer status from a similar product or brand page
+2. **Check the door** — look for the exact doorset certificate or project documentation; do not infer PAS24 status from a new appearance, composite material or uPVC construction
 3. **Check the mortice lock** — look for "BS3621" stamped on the faceplate (the visible edge when the door is open)
-4. **Search the SBD catalogue** — the Secured by Design website has a searchable database of all certified products
+4. **Search the SBD catalogue** — match the exact model to the current Secured by Design listing and scope
 
-If you are unsure, I can check your existing hardware during a visit and tell you exactly what standard your locks meet. Call 024 7522 4730 to arrange a check.
+If you are unsure, I can record visible markings and available product details during a visit; certification still needs to be matched to current scheme evidence. Call 024 7522 4730 to arrange a check.
 
 ## Is It Worth Specifically Seeking SBD Products?
 
-My honest answer: **yes, but do not overthink it**.
+My answer: use SBD accreditation when the exact listing is relevant, while also checking fit and the underlying certification.
 
 SBD accreditation gives you evidence that a product meets the scheme's Police Preferred Specification and holds the required independent certification. SBD accredits qualifying products; the underlying laboratory testing is carried out against the relevant standard.
 
-That said, a good anti-snap cylinder that meets TS007 3-star provides excellent security whether or not it also carries the separate SBD logo. The testing standards (TS007, SS312, BS3621, PAS 24) are the substance. SBD is a badge that confirms those standards are met.
+A TS007, SS312, BS3621 or PAS24 claim must be checked against the exact product or complete doorset certificate. SBD then adds scheme-specific accreditation for a listed product; neither the standard nor the mark guarantees that a product is suitable, correctly sized or correctly installed at a particular home.
 
 Where SBD certification matters most:
 
-- **If your insurer requires it** — some policies reference SBD-approved products specifically
-- **If you are selling your home** — SBD certification is a recognised quality mark
-- **If you want the reassurance** of police-backed accreditation supported by independent certification rather than a manufacturer claim alone
+- **If a policy, contract or project document requires it** — match the exact wording and current product listing
+- **If product evidence matters to the decision** — retain the certificate, listing, invoice and installation details
+- **If you want scheme-specific accreditation** — use the current SBD catalogue rather than a manufacturer claim alone
 
 Where it matters less:
 
-- **If the underlying standard is already met** — a TS007 3-star cylinder provides the same protection whether or not the manufacturer has also applied for SBD membership
-- **If cost is a factor** — SBD-certified products sometimes carry a premium. A non-SBD lock that meets the same testing standard is just as secure in practice
+- **When comparing different scopes** — a cylinder certificate, a hardware combination and a complete PAS24 doorset test are not interchangeable
+- **When comparing quotes** — price alone does not establish certification, suitability, installation quality or equivalent performance
 
-For most homeowners in Coventry, my recommendation is simple: focus on the standards (TS007 3-star, SS312 Diamond, BS3621) and you will naturally end up with products that meet or exceed SBD requirements.
+For a particular home, first identify the doorset and fault, then verify the exact certification and any written requirement. Do not assume that naming several standards means a product meets SBD requirements or is the right repair.
 
 If you want advice on which products are right for your home, or you want me to check what standards your current locks meet, call me on 024 7522 4730. I am happy to take a look and give you honest guidance — no sales pitch, just practical advice based on what I see every day.
 
@@ -1002,11 +912,11 @@ For more on lock standards, read my posts on [TS007 vs SS312](/blog/ts007-vs-ss3
     faqs: [
       {
         q: 'Is Secured by Design a legal requirement?',
-        a: 'No, SBD is not a legal requirement for existing homes. However, Part Q of the Building Regulations requires new-build homes to meet PAS 24 door and window standards, which aligns with SBD requirements. Some local planning authorities also include SBD as a condition for new housing developments.',
+        a: 'SBD is not a blanket legal requirement for existing homes. Approved Document Q gives guidance on the security requirement for new dwellings, while a particular development may also have its own planning conditions or specification. Check the actual project documents rather than assuming that every opening requires SBD accreditation.',
       },
       {
         q: 'How do I know if my lock is Secured by Design approved?',
-        a: 'Check for certification markings on the lock itself (TS007 3-star or BS3621 stamped on the faceplate or cylinder edge). You can also search the Secured by Design website catalogue for your specific product. If you are unsure, a locksmith can check during a visit — call 024 7522 4730.',
+        a: 'Record the exact product reference and visible markings, then match them to the current Secured by Design catalogue entry and underlying certificate. A similar brand or marking alone is not proof of a current SBD listing; call 024 7522 4730 if you need help recording the hardware details.',
       },
       {
         q: 'What is PAS 24 and do my doors need it?',
@@ -1014,7 +924,7 @@ For more on lock standards, read my posts on [TS007 vs SS312](/blog/ts007-vs-ss3
       },
       {
         q: 'Are SBD products more expensive than non-SBD alternatives?',
-        a: 'Sometimes, but not always. Many of the best anti-snap cylinders like Ultion and ABS carry SBD certification without a significant price premium. The cost of an SBD-certified anti-snap cylinder fitted in Coventry is typically £90-£120 — about the same as other quality cylinders that meet TS007 3-star standards.',
+        a: 'Sometimes, but not always. Price depends on the certified product, size, doorset, and fitting. Anti-snap cylinder options start from £59 fitted; check the product listing and quote rather than assuming every SBD-accredited option costs the same.',
       },
     ],
   },

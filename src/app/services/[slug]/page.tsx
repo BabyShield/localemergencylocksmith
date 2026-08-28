@@ -5,7 +5,8 @@ import { SERVICES, getServiceBySlug } from '@/data/services'
 import { AREAS, getAllAreasByRegion } from '@/data/areas'
 import { hasTownService } from '@/data/town-services'
 import { SITE_CONFIG, CONTENT_UPDATED } from '@/data/config'
-import { ALL_BLOG_POSTS, getBlogPostBySlug } from '@/data/blog-posts'
+import { getBlogPostBySlug } from '@/data/blog-posts'
+import { SERVICE_GUIDE_SLUGS } from '@/data/blog-seo'
 import HeroSection from '@/components/HeroSection'
 import CTABlock from '@/components/CTABlock'
 import FAQSection from '@/components/FAQSection'
@@ -59,7 +60,6 @@ const SERVICE_CONTENT: Record<string, {
   benefits: string[]
   whyUs: string
   scenarios: { title: string; desc: string }[]
-  relatedSlugs: string[]
   priceDetails: { item: string; price: string }[]
   testimonial: { text: string; name: string; area: string }
   directAnswer: { question: string; answer: string }
@@ -100,7 +100,6 @@ const SERVICE_CONTENT: Record<string, {
       { title: "Keys Lost or Stolen", desc: "Can't find your keys and worried about security? I'll get you in and replace the lock on the same visit." },
       { title: "Door Slammed Shut", desc: "A gust of wind or force of habit — Yale latches lock automatically. I'll open it quickly and advise on a deadlock to prevent it happening again." },
     ],
-    relatedSlugs: ["locked-out-late-night-coventry", "how-emergency-locksmith-callouts-work", "can-fire-brigade-police-help-locked-out"],
     priceDetails: [
       { item: "Standard lockout (Yale/cylinder)", price: "From £59" },
       { item: "Multipoint lock lockout (uPVC)", price: "From £69" },
@@ -119,56 +118,55 @@ const SERVICE_CONTENT: Record<string, {
     ],
   },
   'lock-change': {
-    h1: 'Front Door Lock Replacement Coventry — Lock Change Service',
+    h1: 'Door Lock Repair & Replacement Coventry',
     intro: [
-      "Whether you've moved into a new property, lost a key, had a break-in, or simply want to upgrade your security, I provide front door lock replacement and door lock changes across Coventry and Warwickshire.",
-      "I carry a full range of lock types including British Standard BS3621 five-lever mortice deadlocks, high-security cylinder locks, anti-snap cylinders, and Yale nightlatches. If your insurance requires a specific lock type, I'll make sure you get the right one.",
-      "Lock change prices start from £69 including the new lock and all labour. No VAT. No call-out fee.",
+      "A stiff, broken, or unreliable door lock does not always need a full security upgrade. I diagnose door lock faults across Coventry and repair the existing lock where that is practical, or replace it when wear or damage makes replacement the better option.",
+      "This service covers Yale nightlatches, mortice locks, euro cylinders, broken front-door locks, and planned lock changes after lost keys or a house move. I explain the repair and replacement options before any work starts.",
+      "Door lock repair or replacement starts from £69 including labour and any standard part stated in the quote. No VAT. No call-out fee.",
     ],
     steps: [
-      "Call 024 7522 4730 and describe your current door and lock",
-      "I recommend the right lock for your door type and insurance requirements",
-      "I confirm the full price including the lock and fitting",
-      "I arrive and remove the old lock",
-      "I fit and test the new lock and provide you with the new keys",
-      "I advise on any other security improvements if relevant",
+      "Call 024 7522 4730 and describe the door, lock, and fault",
+      "I inspect the lock and establish whether a repair is practical",
+      "I explain the repair or replacement options and confirm the full price",
+      "I repair the mechanism or remove and replace the failed lock",
+      "I test the door from both sides and provide new keys where a lock was replaced",
+      "I explain any maintenance or separate security-upgrade options that are relevant",
     ],
     faqs: [
-      { q: 'What is a BS3621 lock and do I need one?', a: 'BS3621 is the British Standard for deadlocks — it is the minimum lock standard required by most UK home insurance policies for front doors. If your policy specifies a BS3621 lock, or a five-lever mortice, and you don\'t have one, your insurance could be invalidated after a break-in. I can check and advise.' },
-      { q: 'How long does a lock change take?', a: 'A standard lock change typically takes 30-60 minutes. Fitting a new mortice lock into a door that previously only had a cylinder lock takes longer as it requires drilling a new mortice pocket.' },
-      { q: 'What is an anti-snap cylinder?', a: 'Anti-snap cylinders are designed to resist snap attacks — a common burglary technique where the visible part of a euro cylinder is snapped off with brute force to expose the mechanism. I recommend anti-snap cylinders for all uPVC and composite doors.' },
-      { q: 'Can I choose the brand of lock?', a: 'Yes — I carry and can order locks from all major UK brands including Yale, Union, Mul-T-Lock, ERA, and Avocet. I\'ll advise you on the best option for your security needs and budget.' },
+      { q: 'Can a broken door lock be repaired?', a: 'Often, yes. Stiffness, alignment, a worn latch, or a replaceable cylinder may be repairable without changing the complete lock. I inspect the fault first and explain whether repair or replacement is the more practical option.' },
+      { q: 'When should a door lock be replaced instead of repaired?', a: 'Replacement may be appropriate when the mechanism is badly worn, parts are unavailable, the lock has been damaged, keys are lost, or you need a fresh set of keys after moving. I confirm the reason and price before replacing it.' },
+      { q: 'How long does a lock repair or replacement take?', a: 'Many standard residential lock jobs are completed in one visit. The time depends on the fault, door type, and whether the existing opening accepts the replacement without alteration.' },
+      { q: 'Can I choose the brand of replacement lock?', a: 'Yes. I carry common Yale, Union, ERA, Avocet, and other residential lock types, and can discuss the suitable options for the door and budget.' },
     ],
-    howToName: 'How to Get a Lock Changed in Coventry',
+    howToName: 'How to Get a Door Lock Repaired or Replaced in Coventry',
     benefits: [
-      "All major lock brands carried in the van — fitted same day",
-      "BS3621 insurance-approved locks always available",
-      "Old lock safely removed and disposed of",
-      "New keys provided and tested before I leave",
-      "Written confirmation of lock standard for your insurer",
+      "Repair considered before a complete replacement",
+      "Common residential lock types carried for same-day work",
+      "Replacement options and full price explained first",
+      "New keys supplied and tested when a lock is replaced",
+      "Door and lock operation checked before I leave",
     ],
-    whyUs: "I carry a full range of locks in my van — Yale, Union, ERA, Avocet, Mul-T-Lock, and more. That means same-day fitting, not a return visit. I'll also check your insurance requirements and make sure the new lock meets the standard.",
+    whyUs: "I diagnose the cause before recommending a replacement. Common Yale, mortice, and cylinder lock types are carried for same-day work, and I explain the available repair or replacement routes and price before starting.",
     scenarios: [
-      { title: "Moving Into a New Home", desc: "You don't know who has a copy of the existing keys. I'll change all external locks on the day you move in." },
-      { title: "After a Break-In", desc: "Your existing locks are compromised. I'll replace them with insurance-approved BS3621 locks and upgrade your security." },
-      { title: "Insurance Compliance", desc: "Your insurer requires BS3621 locks but yours don't meet the standard. I'll upgrade them and provide documentation." },
+      { title: "Broken or Stiff Door Lock", desc: "The key will not turn smoothly, the latch sticks, or the lock has stopped working. I inspect whether the existing lock can be repaired." },
+      { title: "Lost Keys or House Move", desc: "You need a fresh lock and key set because keys are missing or you do not know who still has copies." },
+      { title: "Worn Lock Needs Replacing", desc: "An older lock is unreliable or its parts are no longer practical to repair. I fit and test a suitable replacement." },
     ],
-    relatedSlugs: ["lock-change-costs-by-type", "yale-vs-mortice-deadlock", "five-lever-mortice-deadlock-guide"],
     priceDetails: [
-      { item: "Yale nightlatch change", price: "From £69" },
+      { item: "Yale nightlatch repair or replacement", price: "From £69" },
       { item: "Euro cylinder replacement", price: "From £59" },
-      { item: "BS3621 mortice deadlock", price: "From £79" },
-      { item: "Anti-snap cylinder upgrade", price: "From £59" },
+      { item: "Mortice lock replacement", price: "From £79" },
+      { item: "Multiple lock changes", price: "Quoted before work" },
     ],
     testimonial: { text: "Used twice now for lock changes after moving house. Fast, professional, and so much cheaper than the big national companies.", name: "Mark R.", area: "Leamington Spa" },
     directAnswer: {
-      question: 'How much does it cost to change a lock in Coventry?',
-      answer: 'A lock change in Coventry costs from £69 for a standard Yale or cylinder lock, including the new lock and fitting. A BS3621 insurance-approved deadlock costs from £79 fitted. No VAT is charged and there is no call-out fee.',
+      question: 'How much does door lock repair or replacement cost in Coventry?',
+      answer: 'Door lock repair or replacement in Coventry starts from £69 for many standard residential locks. The final price depends on the fault, lock type, and replacement part. I confirm it before work starts, with no VAT or call-out fee.',
     },
     voiceFaqs: [
-      { q: 'What type of lock does my home insurance require?', a: 'Most UK home insurance policies require a five-lever mortice deadlock to British Standard BS3621 on all final exit doors. If your front door only has a Yale nightlatch, it likely does not meet the insurance requirement.' },
-      { q: 'Can a locksmith change my locks on the same day?', a: 'Yes. A local locksmith carries common lock types in the van and can change most locks on the same day you call. I carry Yale, Union, ERA, Avocet, and Mul-T-Lock brands.' },
-      { q: 'Should I change the locks when I move house?', a: 'Yes. You have no way of knowing how many copies of the existing keys are in circulation. Previous owners, estate agents, cleaners, and builders may all have copies. Changing the locks on moving day is strongly recommended.' },
+      { q: 'Can a locksmith repair a door lock instead of replacing it?', a: 'Often, yes. Alignment, latch, cylinder, and some mechanism faults can be repaired. The locksmith should inspect the cause and explain both options before replacing the complete lock.' },
+      { q: 'Can a locksmith replace my lock on the same day?', a: 'Common residential Yale, mortice, and euro-cylinder replacements can usually be completed in one visit when the suitable part is carried. I confirm availability and price when you call.' },
+      { q: 'Should I change the locks when I move house?', a: 'Changing the external locks gives you control over the new key set when you cannot confirm how many old copies remain. The appropriate work depends on the existing door and lock type.' },
     ],
   },
   'upvc-lock-repair': {
@@ -206,7 +204,6 @@ const SERVICE_CONTENT: Record<string, {
       { title: "Mechanism Failed", desc: "The gearbox has seized and the door won't lock at all. I carry the most common replacement mechanisms in my van." },
       { title: "Euro Cylinder Snapped", desc: "Someone tried to break in, or the cylinder just failed. I'll replace it with an anti-snap cylinder so it can't happen again." },
     ],
-    relatedSlugs: ["upvc-door-lock-needs-replacing", "upvc-door-lock-mechanisms-explained", "best-euro-cylinder-upgrades-2026"],
     priceDetails: [
       { item: "Euro cylinder replacement", price: "From £59" },
       { item: "Mechanism/gearbox replacement", price: "From £89" },
@@ -225,10 +222,10 @@ const SERVICE_CONTENT: Record<string, {
     ],
   },
   'boarding-up': {
-    h1: 'Emergency Boarding Up Service Coventry — 24/7',
+    h1: 'Emergency Boarding Up & Burglary Repairs Coventry',
     intro: [
-      "After a break-in, storm damage, or accidental breakage, a smashed window or damaged door needs securing immediately. I provide an emergency boarding up service across Coventry and Warwickshire, available 24 hours a day.",
-      "I use heavy-duty boarding materials to secure your property against weather and further intrusion until a permanent repair can be arranged. Where possible I will also advise on the most secure temporary solution for your specific situation.",
+      "After a break-in, storm damage, or accidental breakage, a damaged door, lock, or window needs securing promptly. I provide emergency boarding up and immediate burglary repairs across Coventry and Warwickshire, 24 hours a day.",
+      "I board damaged openings and can replace compromised residential locks on the same visit when the suitable part is available. Permanent glazing, joinery, or structural repairs remain separate work, and I explain the temporary security scope before starting.",
       "Emergency boarding up starts from £79. No VAT. No call-out fee.",
     ],
     steps: [
@@ -258,7 +255,6 @@ const SERVICE_CONTENT: Record<string, {
       { title: "Storm Damage", desc: "A window has blown in or a door has been damaged by high winds. I'll secure it against weather and intruders." },
       { title: "Accidental Breakage", desc: "Glass door or window broken accidentally. I'll board it safely while you arrange glazing repair." },
     ],
-    relatedSlugs: ["what-to-do-after-burglary", "how-burglars-break-into-uk-homes", "home-security-checklist-2026"],
     priceDetails: [
       { item: "Single window board-up", price: "From £79" },
       { item: "Door board-up", price: "From £89" },
@@ -268,11 +264,11 @@ const SERVICE_CONTENT: Record<string, {
     testimonial: { text: "Called at 3am after a break-in. Ross arrived, boarded the window, and changed the front door lock. Felt safe again within the hour.", name: "Paul K.", area: "Stoke" },
     directAnswer: {
       question: 'How much does emergency boarding up cost in Coventry?',
-      answer: 'Emergency boarding up in Coventry costs from £79 for a single window or door. The service is available 24 hours a day, 7 days a week. Lock changes can be done on the same visit if needed. No VAT is charged.',
+      answer: 'Emergency boarding up and immediate burglary repairs in Coventry cost from £79 for a single damaged opening. The service is available 24 hours a day. Compromised residential locks can be replaced on the same visit when the suitable part is available. No VAT is charged.',
     },
     voiceFaqs: [
       { q: 'Should I call the police before calling a locksmith after a break-in?', a: 'Yes. Call 999 if the break-in is still in progress, or 101 to report it after the fact. Get a crime reference number first as you will need it for your insurance claim. Then call a locksmith to secure the property.' },
-      { q: 'How long will boarding hold before I need a permanent repair?', a: 'Proper boarding using heavy-duty materials is secure and weatherproof. It will hold indefinitely until you arrange permanent glazing or joinery repair. I use solid boarding material, not thin plywood.' },
+      { q: 'How long will boarding hold before I need a permanent repair?', a: 'Boarding is a temporary way to secure a damaged opening while permanent glazing or joinery is arranged. The appropriate duration depends on the opening, material, weather exposure, and insurer requirements.' },
       { q: 'Can you change the locks after boarding up?', a: 'Yes. If a break-in has compromised your locks, I can change them on the same visit. I always carry replacement locks in the van so there is no need for a return visit.' },
     ],
   },
@@ -292,9 +288,9 @@ const SERVICE_CONTENT: Record<string, {
       "I provide documentation of the lock standard fitted for your insurance records",
     ],
     faqs: [
-      { q: 'What lock does my home insurance require?', a: 'Most UK home insurance policies require a five-lever mortice deadlock to BS3621 standard on front and back doors, and key-operated window locks. Check your policy schedule for the exact requirements — or call me and I can advise.' },
-      { q: 'What is a Secured by Design cylinder?', a: 'Secured by Design is a police-endorsed security standard. Cylinders meeting this standard are tested to resist all common attack methods including snapping, picking, drilling, and bumping. I recommend these for all external doors.' },
-      { q: 'Is a lock upgrade worth it?', a: 'Yes. A quality lock upgrade typically costs £79-£150 and significantly reduces your risk of burglary, keeps your insurance valid, and gives you peace of mind. It is one of the best value security investments you can make.' },
+      { q: 'What lock does my home insurance require?', a: 'Requirements vary by policy and door. Check the security section of your own policy or ask the insurer to confirm the standard in writing before choosing an upgrade.' },
+      { q: 'What is a Secured by Design cylinder?', a: 'Secured by Design is a police security initiative with an accredited-product scheme. When comparing a cylinder, check its current product listing, independent certification, star rating, and correct fit for the door.' },
+      { q: 'Is a lock upgrade worth it?', a: 'A correctly fitted, independently certified lock can improve resistance to recognised attack methods. It does not eliminate burglary risk or guarantee insurance cover, so the choice should match the door and any written policy requirement.' },
       { q: 'Do you offer a free security survey?', a: 'Yes — I offer a free security survey as part of any lock upgrade job. I will check all external doors and windows and advise on any weak points at no extra cost.' },
     ],
     howToName: 'How to Upgrade Your Home Security Locks in Coventry',
@@ -305,13 +301,12 @@ const SERVICE_CONTENT: Record<string, {
       "All work completed in a single visit",
       "Honest advice — I'll tell you what you need and what you don't",
     ],
-    whyUs: "A lock upgrade is the single most cost-effective improvement you can make to your home security. I'll assess every external door, recommend the right upgrades for your insurance requirements, and fit everything in one visit.",
+    whyUs: "I assess the existing door and lock, explain the relevant certified options, and fit only the agreed upgrade. For insurance requirements, I recommend checking the exact policy wording rather than assuming one standard applies to every home.",
     scenarios: [
       { title: "Insurance Non-Compliance", desc: "Your insurer says you need BS3621 locks and your current ones don't qualify. I'll fit compliant locks and give you the documentation." },
-      { title: "Post-Burglary Upgrade", desc: "After a break-in, you want to ensure it never happens again. Anti-snap cylinders and reinforced strikes make a real difference." },
+      { title: "Post-Burglary Review", desc: "After a break-in, you want damaged or unsuitable locks assessed and replaced with correctly fitted, independently certified options." },
       { title: "General Security Improvement", desc: "You want better peace of mind. I'll survey your property and recommend targeted upgrades based on the weak points." },
     ],
-    relatedSlugs: ["bs3621-locks-explained", "anti-snap-locks-compared", "insurance-approved-locks-explained"],
     priceDetails: [
       { item: "Anti-snap euro cylinder", price: "From £59" },
       { item: "BS3621 mortice deadlock", price: "From £79" },
@@ -321,11 +316,11 @@ const SERVICE_CONTENT: Record<string, {
     testimonial: { text: "Had all external locks upgraded after a neighbour was burgled. Ross checked everything, recommended only what was needed, and the price was exactly what he quoted.", name: "Lisa W.", area: "Cheylesmore" },
     directAnswer: {
       question: 'How much does a lock upgrade cost in Coventry?',
-      answer: 'A lock upgrade in Coventry costs from £79 for a BS3621 insurance-approved mortice deadlock or from £59 for an anti-snap euro cylinder. The price includes the lock and fitting. A free security survey is included with every upgrade.',
+      answer: 'A lock upgrade in Coventry costs from £79 for a BS3621-rated mortice deadlock or from £59 for an anti-snap euro cylinder. The price includes the lock and fitting. Check any insurance requirement in your own policy before choosing a standard.',
     },
     voiceFaqs: [
       { q: 'What is the difference between a Yale lock and a deadlock?', a: 'A Yale nightlatch is a spring-loaded latch that locks automatically when the door closes. A deadlock is a separate lock with a solid bolt that can only be opened with a key. Most secure front doors have both.' },
-      { q: 'Is a lock upgrade worth the money?', a: 'Yes. A quality lock upgrade costing seventy-nine to one hundred and fifty pounds significantly reduces burglary risk, keeps your home insurance valid, and gives you peace of mind. It is one of the best value security investments available.' },
+      { q: 'Is a lock upgrade worth the money?', a: 'A correctly fitted, independently certified lock can improve resistance to recognised attack methods. It cannot eliminate risk or guarantee insurance cover, so check the door and your own policy requirements first.' },
       { q: 'Do you offer a free security survey?', a: 'Yes. I offer a free security assessment as part of any lock upgrade. I check all external doors and windows and advise on any weak points, with no obligation to proceed.' },
     ],
   },
@@ -400,7 +395,7 @@ export default async function ServicePage({ params }: Props) {
 
   const areasByRegion = getAllAreasByRegion()
 
-  const relatedPosts = content.relatedSlugs
+  const relatedPosts = (SERVICE_GUIDE_SLUGS[slug] ?? [])
     .map((s) => getBlogPostBySlug(s))
     .filter((p): p is NonNullable<typeof p> => p != null)
 
@@ -509,6 +504,16 @@ export default async function ServicePage({ params }: Props) {
               {para}
             </p>
           ))}
+
+          {slug === 'lock-change' && (
+            <div className="mb-6 rounded-xl border border-[#FFB800]/40 bg-[#FFF9E8] p-5 text-gray-700">
+              Looking specifically for a BS3621, TS007, or anti-snap security improvement? See the{' '}
+              <Link href="/services/lock-upgrade" className="font-bold text-[#0F1B2D] underline decoration-[#FFB800] underline-offset-4">
+                Coventry lock upgrade service
+              </Link>
+              . This page is focused on repairing and replacing faulty or unwanted locks.
+            </div>
+          )}
 
           <LastUpdated date={CONTENT_UPDATED} />
         </div>

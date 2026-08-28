@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { AREAS, getAreaBySlug, getAreaNeighbours } from '@/data/areas'
 import { SERVICES } from '@/data/services'
 import { SITE_CONFIG } from '@/data/config'
-import { ALL_BLOG_POSTS } from '@/data/blog-posts'
+import { getBlogPostBySlug } from '@/data/blog-posts'
 import { hasTownService } from '@/data/town-services'
 import HeroSection from '@/components/HeroSection'
 import CTABlock from '@/components/CTABlock'
@@ -23,6 +23,39 @@ export async function generateStaticParams() {
 
 interface Props {
   params: Promise<{ slug: string }>
+}
+
+function getRelevantAreaGuideSlugs(housingStock: string, commonIssues: string) {
+  const context = `${housingStock} ${commonIssues}`.toLowerCase()
+  const slugs: string[] = []
+  const add = (...items: string[]) => {
+    for (const item of items) {
+      if (!slugs.includes(item)) slugs.push(item)
+    }
+  }
+
+  if (/upvc|composite|multipoint|euro cylinder/.test(context)) {
+    add('upvc-door-lock-needs-replacing', 'upvc-door-lock-mechanisms-explained', 'upvc-door-maintenance-guide')
+  }
+  if (/victorian|edwardian|1930|period|mortice|solid wood/.test(context)) {
+    add('yale-vs-mortice-deadlock', 'five-lever-mortice-deadlock-guide', 'bs3621-locks-explained')
+  }
+  if (/student|hmo|landlord|tenant|rental/.test(context)) {
+    add('lost-keys-should-you-change-locks', 'landlords-change-locks-between-tenants', 'student-move-in-security-guide')
+  }
+  if (/lockout|snapped key|broken key|lost key|nightlatch/.test(context)) {
+    add('broken-key-stuck-in-lock', 'locked-out-late-night-coventry', 'how-emergency-locksmith-callouts-work')
+  }
+  if (/anti-snap|security|insurance|bs3621|break-in|burgl/.test(context)) {
+    add('anti-snap-locks-compared', 'insurance-approved-locks-explained', 'home-security-checklist-2026')
+  }
+
+  add(
+    'common-lock-problems-coventry-homes',
+    'lock-change-costs-by-type',
+    'choosing-locksmith-coventry'
+  )
+  return slugs.slice(0, 4)
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -64,13 +97,9 @@ export default async function AreaPage({ params }: Props) {
   const neighbours = getAreaNeighbours(area)
   const facts = getAreaFacts(slug)
 
-  // 4 hand-written posts, rotated by area index so every post gets area-page
-  // links and each area links a different set.
-  const areaIdx = Math.max(0, AREAS.findIndex((a) => a.slug === slug))
-  const relatedPosts = Array.from(
-    { length: 4 },
-    (_, i) => ALL_BLOG_POSTS[(areaIdx * 4 + i) % ALL_BLOG_POSTS.length]
-  )
+  const relatedPosts = getRelevantAreaGuideSlugs(area.housingStock, area.commonIssues)
+    .map((guideSlug) => getBlogPostBySlug(guideSlug))
+    .filter((post): post is NonNullable<typeof post> => post != null)
 
   const breadcrumbSchema = {
     '@context': 'https://schema.org',
@@ -199,7 +228,7 @@ export default async function AreaPage({ params }: Props) {
             ].map((item) => (
               <div key={item.label} className="bg-gray-50 rounded-xl p-4 text-center border border-gray-100">
                 <p className="text-xs text-gray-500 uppercase tracking-wide mb-1">{item.label}</p>
-                <p className="font-black text-[#FFB800] text-lg">{item.value}</p>
+                <p className="font-black text-[#8A5A00] text-lg">{item.value}</p>
               </div>
             ))}
           </div>
@@ -316,7 +345,7 @@ export default async function AreaPage({ params }: Props) {
                       : `View ${s.shortName.toLowerCase()} service details`}
                   </Link>
                 </div>
-                <span className="text-[#FFB800] font-black text-lg ml-4 flex-shrink-0">
+                <span className="text-[#8A5A00] font-black text-lg ml-4 flex-shrink-0">
                   From £{s.priceFrom}
                 </span>
               </div>
@@ -356,7 +385,7 @@ export default async function AreaPage({ params }: Props) {
         </section>
       )}
 
-      {/* Helpful guides — hand-written blog posts, rotated per area to spread link equity */}
+      {/* Helpful guides selected from the area's housing and lock issues. */}
       <section className="py-10 px-4 bg-white">
         <div className="max-w-3xl mx-auto">
           <h2 className="text-xl font-black text-[#0F1B2D] mb-2">
@@ -375,7 +404,7 @@ export default async function AreaPage({ params }: Props) {
                 <p className="font-bold text-[#0F1B2D] text-sm group-hover:text-[#FFB800] transition-colors leading-snug">
                   {post.title}
                 </p>
-                <p className="text-xs text-gray-400 mt-1">{post.readTime}</p>
+                <p className="text-xs text-gray-600 mt-1">{post.readTime}</p>
               </Link>
             ))}
           </div>

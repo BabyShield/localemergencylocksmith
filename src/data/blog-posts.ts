@@ -19,7 +19,7 @@ export const PILLARS = [
   { slug: 'emergency-situations', name: 'Emergency Situations', description: 'Step-by-step guides for when things go wrong — lockouts, break-ins, broken keys, and lost keys.' },
   { slug: 'legal-insurance', name: 'Legal & Insurance Requirements', description: 'Lock standards, insurance requirements, landlord obligations — the legal side of home security explained clearly.' },
   { slug: 'seasonal-security', name: 'Seasonal Security Guides', description: 'Security advice that changes with the seasons — from frozen locks in winter to dark evenings in autumn.' },
-  { slug: 'coventry-local', name: 'Coventry & Warwickshire', description: 'Security advice specific to Coventry homes, Warwickshire crime trends, and local housing stock.' },
+  { slug: 'coventry-local', name: 'Coventry & Warwickshire', description: 'Security advice for Coventry homes, local housing stock, and responsible use of official crime-data sources.' },
 ] as const
 
 export const ALL_BLOG_POSTS: BlogPost[] = [
@@ -27,7 +27,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
   {
     slug: 'what-is-lock-snapping',
     title: 'What Is Lock Snapping and Does Your Coventry Home Have Vulnerable Locks?',
-    excerpt: 'Lock snapping is the most common burglary technique in the UK — and most standard euro cylinders can be snapped in under 30 seconds. Here is how it works and how to stop it.',
+    excerpt: 'Lock snapping is a recognised attack on some euro-profile cylinders. Learn what Police.uk and TS007 guidance establish, how to check the fitted system, and which certified upgrades may improve resistance.',
     date: '2026-03-17',
     readTime: '8 min read',
     pillar: 'Lock Types & Security Ratings',
@@ -109,7 +109,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
   {
     slug: 'how-burglars-break-into-uk-homes',
     title: 'How Burglars Actually Break Into UK Homes (and How to Stop Them)',
-    excerpt: '76% of burglars enter through a door. 62% use the front door. Here is what the data says about how break-ins happen — and the practical steps that actually prevent them.',
+    excerpt: 'Official burglary guidance highlights open, unlocked, or easy-to-force doors and windows. Learn how to assess access points and use layered, evidence-based security.',
     date: '2026-04-02',
     readTime: '10 min read',
     pillar: 'Home Security & Burglary Prevention',
@@ -530,13 +530,13 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
   },
   {
     slug: 'burglary-trends-coventry-warwickshire',
-    title: 'Burglary Trends in Coventry and Warwickshire: What the Data Tells Us',
-    excerpt: 'Using police.uk crime data and local trends, here is where burglaries are happening in Coventry and Warwickshire — and what the patterns tell us about prevention.',
+    title: 'Burglary Data for Coventry and Warwickshire: What Current Sources Can Show',
+    excerpt: 'Learn how to read dated police-recorded crime data responsibly, understand its geographic limits, and turn official prevention advice into a property-specific security check.',
     date: '2026-06-13',
     readTime: '10 min read',
     pillar: 'Coventry & Warwickshire',
     pillarSlug: 'coventry-local',
-    keywords: ['Coventry burglary statistics', 'Warwickshire crime data', 'burglary hotspots Coventry'],
+    keywords: ['Coventry burglary statistics', 'Warwickshire crime data', 'how to read Coventry crime data'],
   },
   {
     slug: 'common-lock-problems-coventry-homes',

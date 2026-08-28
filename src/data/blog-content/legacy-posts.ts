@@ -10,7 +10,7 @@ Let me give you what you actually came here for.
 
 **Emergency lockout (locked out of home):** From £59
 **Lock change (standard cylinder or Yale):** From £69
-**Lock change (BS3621 insurance-approved deadlock):** From £79
+**Lock change (BS3621-certified deadlock):** From £79
 **uPVC door lock repair:** From £59
 **uPVC door lock replacement:** From £89
 **Emergency boarding up:** From £79
@@ -139,7 +139,7 @@ Many familiar BS3621 mortice deadlocks use a five-lever mechanism, but the certi
 
 Some UK home insurance policies specify BS3621 or another minimum lock standard on final exit doors; others use different wording. A claim is not automatically rejected because a door lacks one particular lock. Check the security conditions in your own policy or ask your insurer to confirm them in writing.
 
-This is written into the small print. Many homeowners do not discover this until after a break-in.
+Because policy conditions vary, check the wording before relying on a particular lock standard for cover.
 
 The good news: a BS3621 lock costs from £79 fitted (my price, no VAT, no call-out fee). If your policy names that standard, upgrading gives you clear evidence that the fitted lock meets it.
 
@@ -155,9 +155,9 @@ If you are not sure, call me and I will check it for you.
 
 uPVC doors almost never have a traditional mortice lock. They use a multipoint locking system — multiple bolts that lock into the door frame simultaneously.
 
-Home insurance policies have evolved to recognise this. Most policies now accept a uPVC door with a multipoint lock and a cylinder meeting the TS007 three-star standard or Sold Secure accreditation as equivalent to a BS3621 lock.
+Policies describe uPVC and composite door security in different ways. Do not assume that a multipoint lock, TS007 rating, Sold Secure rating, or BS3621 product automatically satisfies your policy; ask the insurer to confirm its requirement for the actual door in writing.
 
-If your uPVC door has a standard cheap euro cylinder, it is likely not meeting the standard. I can replace it with a TS007-rated anti-snap cylinder for around £59.
+If you want the cylinder assessed or your policy names a particular standard, I can identify the fitted products and explain the suitable certified options. Anti-snap upgrades start from £59; see the [lock upgrade service](/services/lock-upgrade) and current [prices](/prices).
 
 ## Getting a BS3621 Lock Fitted
 
@@ -172,7 +172,7 @@ Call 024 7522 4730 to book.
     `.trim(),
     faqs: [
       { q: 'Is one BS3621 lock enough or do I need two?', a: 'Requirements vary by insurer and policy. Some policies specify a standard for every final exit door, while others use broader security wording. Check your own policy or ask your insurer before deciding which doors need an upgrade.' },
-      { q: 'Can I fit a BS3621 lock myself?', a: 'Technically yes — they are sold in DIY stores. However, fitting a mortice lock correctly requires chiselling a precise pocket into the door stile, which is easy to get wrong. An incorrectly fitted lock is less secure and may not meet the insurance standard. I recommend having it professionally fitted.' },
+      { q: 'Can I fit a BS3621 lock myself?', a: 'BS3621 locks are available to buy directly, but fitting a mortice lock requires a correctly sized pocket and accurate alignment with the frame. Poor fitting can weaken the door or stop the certified product performing as intended. If a policy names a lock standard, also ask the insurer whether it has any installation or evidence requirements.' },
       { q: 'Does a BS3621 lock make my home more secure?', a: 'A correctly fitted, certified BS3621 lock has passed a recognised thief-resistance standard. Its value depends on the door, frame and other hardware too, so the whole doorset should be considered rather than the lock in isolation.' },
     ],
   },
@@ -215,11 +215,11 @@ This is an emergency — call me immediately if this happens.
 
 ## Anti-Snap Cylinders — Worth the Upgrade?
 
-If your uPVC door has a standard euro cylinder, I always recommend upgrading to an anti-snap cylinder at the same time as any other repair.
+If your uPVC door has a euro cylinder, a repair visit is a useful time to identify its certification, size, protective furniture, and condition. An upgrade should be based on that assessment rather than the age or appearance of the door.
 
-Snap attacks — where the exposed part of the cylinder is snapped off with channel-lock pliers — take under 30 seconds and bypass a standard cylinder completely. An anti-snap cylinder has a sacrificial break point that activates the lock rather than defeating it.
+[Police.uk's door and window lock advice](https://www.police.uk/cp/crime-prevention/protect-home-crime/door-window-lock-advice/) recognises snapping as an attack method and recommends a 3-star TS007 cylinder when a euro cylinder is changed. [DHF's TS007 guidance](https://www.dhfonline.org.uk/pg/ts-007/335.htm) explains that the tested options are a Kitemarked 3-star cylinder or a 1-star cylinder combined with 2-star security furniture. These products are designed to improve resistance; they do not eliminate every attack.
 
-They cost around £20-30 more than a standard cylinder. The security difference is significant.
+Certified anti-snap upgrades start from £59. See the [lock upgrade service](/services/lock-upgrade) and current [prices](/prices). For a mechanism fault or other uPVC repair, use the [uPVC lock repair service](/services/upvc-lock-repair).
 
 ## Preventive Maintenance
 
@@ -232,14 +232,14 @@ If your uPVC door is getting stiffer year on year, the mechanism is wearing. Get
     faqs: [
       { q: 'Can you repair a uPVC lock on the same day?', a: "In most cases yes — I carry the most common uPVC lock mechanisms and cylinders in my van. Call me and describe the symptoms and I'll tell you whether I'm likely to be able to fix it same day." },
       { q: 'My uPVC door lock failed in the locked position — what do I do?', a: 'This is an emergency situation — you are either locked in or locked out. Call me immediately on 024 7522 4730. Do not attempt to force the door.' },
-      { q: 'How long does a uPVC lock last?', a: 'A quality uPVC multipoint mechanism should last 15-20 years with normal use. Budget mechanisms on cheaper doors can fail in 5-8 years. Regular lubrication and door alignment maintenance extends the life significantly.' },
+      { q: 'How long does a uPVC lock last?', a: 'There is no universal lifespan. Use, alignment, maintenance, weather exposure, product quality, and existing wear all affect a multipoint mechanism. Stiffness, grinding, incomplete locking, or a handle that no longer returns normally are reasons to have it assessed.' },
     ],
   },
   'locksmith-wont-give-price-on-phone': {
     body: `
 ## The Rogue Locksmith Problem
 
-According to Which? and the Trading Standards Institute, rogue locksmiths cost UK consumers an estimated £40 million per year. The pattern is always the same:
+Rogue-trader complaints can involve low initial quotes followed by much higher charges. The details vary, so treat the following as warning signs rather than a claim that every disputed job follows one identical pattern:
 
 1. Homeowner in a panic searches for a locksmith online
 2. Finds a "local" number (often a call centre posing as a local business)
@@ -251,15 +251,15 @@ The person is charged for parts at massively inflated prices, labour per 15 minu
 
 ## Why They Drill When They Don't Need To
 
-Drilling a lock is the fastest technique. It is also the most profitable — because it means you need a new lock, which the rogue locksmith supplies and installs at a huge markup.
+Drilling can make a replacement lock necessary. That does not prove a locksmith's motive, so ask why drilling is required, whether a non-destructive method is suitable, and what the replacement would cost before authorising it.
 
-A skilled locksmith can open the majority of standard residential locks without drilling. The technique is called non-destructive entry. It takes longer to learn but results in a better outcome for the customer.
+A non-destructive opening may be possible, depending on the lock, fault, door, and circumstances. It should be considered before destructive work where it is safe and practical.
 
-When a locksmith drills without trying non-destructive entry first, it is almost always about profit.
+Going straight to drilling is a reason to ask for an explanation and price, but it does not by itself establish dishonesty or motive.
 
 ## The Warning Signs
 
-**No firm price on the phone.** A professional locksmith can quote you a firm price for a standard job. "It depends on the lock" is a red flag — it always depends on the lock, but a skilled locksmith can tell you the price range for your lock type.
+**No clear pricing basis on the phone.** The exact total may depend on the lock and fault, but ask for the likely total, assumptions, possible extras, VAT status, and call-out fee before booking.
 
 **No local landline or company name.** Many rogue locksmiths advertise with made-up local names and mobile numbers. They are not based locally — they drive to wherever calls come from.
 
@@ -267,7 +267,7 @@ When a locksmith drills without trying non-destructive entry first, it is almost
 
 **Pressure to make a decision quickly.** No legitimate locksmith pressures you to decide on the spot.
 
-**They go straight to drilling.** Always ask: "Can you try non-destructive entry first?" Any competent locksmith will.
+**They go straight to drilling without explanation.** Ask whether non-destructive entry is suitable and require the reason and replacement cost before authorising destructive work.
 
 ## What a Professional Locksmith Does
 

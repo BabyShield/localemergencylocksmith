@@ -17,9 +17,9 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: 'Emergency Locksmith Coventry | 24/7 | From £59',
+  title: 'Locksmith Coventry | Local 24/7 Service | From £59',
   description:
-    'Emergency locksmith in Coventry & Warwickshire. 15-30 min response, no VAT, no call-out fee. Call 024 7522 4730 now — available 24/7, 365 days.',
+    'Local locksmith in Coventry for lockouts, door lock repairs, replacements, uPVC locks and security upgrades. Available 24/7 from £59; no VAT or call-out fee.',
   metadataBase: new URL(SITE_CONFIG.domain),
   openGraph: {
     siteName: 'Local Emergency Locksmith',
@@ -37,12 +37,11 @@ const globalSchema = {
   '@type': 'Locksmith',
   '@id': `${SITE_CONFIG.domain}/#business`,
   name: 'Local Emergency Locksmith',
-  alternateName: 'Coventry 24/7 Locksmith',
   url: SITE_CONFIG.domain,
   telephone: SITE_CONFIG.phoneTel,
   email: SITE_CONFIG.email,
   description:
-    'Emergency locksmith serving Coventry and Warwickshire. No VAT, no call-out fee, 15-30 minute response across Coventry. Available 24/7, 365 days a year.',
+    'Local locksmith serving Coventry and Warwickshire for lockouts, door lock repairs, replacements, uPVC locks, boarding up and security upgrades. Available 24/7.',
   priceRange: '££',
   currenciesAccepted: 'GBP',
   paymentAccepted: 'Cash, Credit Card, Debit Card',
@@ -98,8 +97,8 @@ const globalSchema = {
       },
       {
         '@type': 'Offer',
-        name: 'Lock Change & Replacement',
-        description: 'Replace any lock type — Yale, mortice, euro cylinder, multipoint. Includes new lock and fitting.',
+        name: 'Door Lock Repair & Replacement',
+        description: 'Repair or replace broken, worn or unreliable residential locks, including Yale nightlatches, mortice locks and cylinders.',
         price: '69',
         priceCurrency: 'GBP',
         availability: 'https://schema.org/InStock',
@@ -114,8 +113,8 @@ const globalSchema = {
       },
       {
         '@type': 'Offer',
-        name: 'Emergency Boarding Up',
-        description: 'Emergency board-up service after break-ins or damage. Same-day response.',
+        name: 'Emergency Boarding Up & Burglary Repairs',
+        description: 'Emergency boarding and immediate repairs for damaged residential doors, locks or windows after a break-in or other damage.',
         price: '79',
         priceCurrency: 'GBP',
         availability: 'https://schema.org/InStock',
@@ -123,7 +122,7 @@ const globalSchema = {
       {
         '@type': 'Offer',
         name: 'Lock Upgrade (BS3621 / Anti-Snap)',
-        description: 'Upgrade to insurance-approved BS3621 deadlocks or anti-snap euro cylinders.',
+        description: 'Upgrade to BS3621-rated deadlocks or anti-snap euro cylinders after checking the door and any written policy requirement.',
         price: '79',
         priceCurrency: 'GBP',
         availability: 'https://schema.org/InStock',

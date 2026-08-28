@@ -10,7 +10,7 @@ export default function LastUpdated({ date }: LastUpdatedProps) {
   })
 
   return (
-    <p className="text-xs text-gray-400 mt-2">
+    <p className="text-xs text-gray-600 mt-2">
       This page was last reviewed and updated on {formatted}
     </p>
   )

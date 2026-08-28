@@ -1,31 +1,31 @@
 export const PILLAR_8_CONTENT: Record<string, { body: string; faqs: { q: string; a: string }[] }> = {
 
   'coventry-victorian-terraces-security': {
-    body: `# Coventry's Housing Stock by Era: A Locksmith's Security Guide to Every Type of Home
+    body: `# Coventry's Housing Stock by Era: A Practical Locksmith's Guide
 
-I have been working as a locksmith across Coventry for years now, and one thing I can tell you with absolute certainty is that the age of your house determines almost everything about your locks — the type, the condition, and the vulnerabilities. Every week I drive from a Victorian terrace in Earlsdon to a 1960s council house in Tile Hill to a new-build in Finham, and the lock problems are completely different at each one.
+Coventry includes Victorian terraces, inter-war semis, post-war housing and newer estates. Age can provide useful context, but it does not determine the locks, their condition or a home's vulnerability. Assess the hardware and complete door or window actually present.
 
-This guide breaks down Coventry's housing stock era by era, with the specific security issues I see on the ground and the upgrades that actually make a difference. If you can find your type of home here, you will know exactly what to prioritise.
+This guide uses housing eras as starting points for inspection. It does not claim that every Coventry property from an era shares the same construction or security issue.
 
 ---
 
 ## Victorian Terraces (Pre-1914): Earlsdon CV5, Chapelfields CV5, Spon End CV1
 
-Coventry has some beautiful Victorian terraces, and I genuinely love working on them. The streets around Earlsdon high street, the rows through Chapelfields, and the older properties around Spon End — these houses have character that newer builds simply do not have. But they also have security problems that most homeowners do not realise until something goes wrong.
+Victorian terraces can be found around Earlsdon, Chapelfields and Spon End. Alterations over more than a century mean two outwardly similar homes may have very different doors, frames, windows and locks.
 
 ### What I Typically Find
 
-The original front doors on Victorian terraces are solid wood — usually 44mm to 55mm thick — with a single mortice lock that is often 80 to 100 years old. These old locks use skeleton keys, the classic long-stemmed keys with a simple bit at the end. They look lovely on a keyring but they offer virtually zero security. A skeleton key lock can be opened with a bent piece of wire in about ten seconds.
+Some terraces retain older timber doors, mortice locks or long-stemmed keys; others have replacement doors and modern hardware. Do not infer attack resistance or a fixed opening time from appearance or property age. Inspect the exact lock, markings, fit, frame and operation.
 
-Many of these homes still have the original sash windows too. The latches on Victorian sash windows are usually a simple crescent catch that can be forced open with a flat blade from outside. I have seen this in Earlsdon more times than I can count.
+Where sash windows remain, check the actual catches, frame condition and any secondary locks. A basic catch may provide less resistance than suitable additional hardware, but window age alone does not establish vulnerability.
 
 The doors themselves are often in decent condition — Victorian joinery was built to last — but the frames can be worn, and the gaps around the door make it easier to lever or force.
 
 ### Common Security Issues
 
-- **Skeleton key mortice locks** with no real security mechanism — anyone with a blank key or pick can open them
+- **Older or unverified mortice locks** — identify the exact product and condition rather than assuming resistance from the key style
 - **No deadlock fitted** — many Victorian front doors only have the one original lock
-- **Sash windows with basic catches** that offer no resistance to forced entry
+- **Sash windows with basic catches** that may benefit from suitable secondary security after inspection
 - **No door viewer or letterbox security** — original letterboxes are often wide enough to reach through and access the latch
 - **Rear doors with even less security** — back doors on terraces often have a basic rim lock or bolt
 
@@ -33,32 +33,32 @@ The doors themselves are often in decent condition — Victorian joinery was bui
 
 For Victorian terraces in [Earlsdon](/areas/earlsdon), Chapelfields, and [Spon End](/areas/coventry-city-centre), I typically recommend:
 
-1. **BS3621 five-lever mortice deadlock** — fitted into the existing door without damaging the character. This is the British Standard that insurers require. Cost: **£75-£95 supplied and fitted**.
-2. **Sash window jammers** — simple devices that lock the sash in place. They cost about £6-£8 per window and I can fit a full house in under an hour. Cost: **£15-£25 per window supplied and fitted**.
+1. **Certified mortice deadlock, where suitable** — check the door and exact written policy wording; some policies name BS3621. Cost: **£75-£95 supplied and fitted**.
+2. **Suitable sash-window security** — product and fitting depend on the window construction and condition. Cost: **£15-£25 per window supplied and fitted**.
 3. **Door viewer (peephole)** — lets you see who is at the door before opening. Cost: **£15-£20 fitted**.
 4. **Letterbox guard** — an internal cage or restrictor that stops anyone reaching through to the latch. Cost: **£25-£35 fitted**.
 5. **Hinge bolts** — fitted to the hinge side of the door to prevent it being forced off the hinges. Cost: **£20-£30 for a pair, fitted**.
 
-Total cost to properly secure a Victorian terrace front door and downstairs windows: typically **£150-£250**. That is genuinely one of the best investments you can make in a house worth £250,000 or more.
+An example package for a front door and accessible windows may cost **£150-£250**, but the scope must follow the inspection. No package guarantees that a property is secure.
 
 ---
 
 ## 1930s Semi-Detached Houses: Cheylesmore CV3, Stoke CV2, Coundon CV6
 
-The 1930s semis are everywhere in Coventry. Solid, well-built houses with bay windows, front and back gardens, and a side gate leading to the rear. [Cheylesmore](/areas/cheylesmore), Stoke, and Coundon are packed with them.
+Inter-war semis are part of the housing mix in [Cheylesmore](/areas/cheylesmore), Stoke and Coundon. Door, window, garden and side-access arrangements vary by property and later alteration.
 
 ### What I Typically Find
 
-These houses were built to a better standard than you might expect. The front doors are usually solid hardwood, often with stained glass panels. The original locks are five-lever mortice locks — a big step up from the Victorian skeleton key type — but after 90 years, they are well past their working lifespan.
+Some retain timber doors, glazed panels or older mortice locks, while others have been replaced. There is no universal lifespan based on the build year alone; inspect operation, damage, fit and certification.
 
-The bigger issue with 1930s semis is the back door. Almost every one I attend has a back door with nothing more than a Yale nightlatch. No deadlock, no bolts, just a spring latch that can be opened with a credit card or a strip of plastic.
+Give the back door the same attention as the front. If it has only a basic nightlatch, assess the door, frame, gaps and whether the latch deadlocks before deciding on additional hardware.
 
-And then there is the side gate. 1930s semis almost always have a passage down the side of the house leading to the back garden. If that gate is not secured, a burglar has a private, hidden route to your back door and rear windows.
+Where a side passage leads to less visible doors or windows, assess the gate and access route without assuming every semi has the same layout.
 
 ### Common Security Issues
 
-- **Original five-lever mortice lock** still fitted but worn smooth — keys often do not turn properly, and the mechanism can be manipulated
-- **Back door with only a Yale nightlatch** — no deadlock, no security
+- **Older mortice lock** — check operation, wear and exact certification rather than inferring condition from age
+- **Back door with only a basic nightlatch** — assess the latch, door, frame and whether suitable additional hardware is needed
 - **Side gate with no lock** — providing hidden access to the rear of the property
 - **Original Crittall-style metal windows** with simple catches (on some properties)
 - **Garage doors with basic locks** — often connected to the house via an internal door
@@ -67,8 +67,8 @@ And then there is the side gate. 1930s semis almost always have a passage down t
 
 For 1930s semis in [Cheylesmore](/areas/cheylesmore), Stoke, and Coundon:
 
-1. **Replace the front door mortice lock** with a new BS3621 five-lever deadlock. The existing cutout in the door usually takes a modern lock without modification. Cost: **£75-£95 supplied and fitted**.
-2. **Add a BS3621 deadlock to the back door** alongside the existing Yale. This is probably the single most important upgrade for a 1930s semi. Cost: **£75-£95 supplied and fitted**.
+1. **Assess the front-door mortice lock** and, where replacement is suitable, select an exact certified product compatible with the door. Cost: **£75-£95 supplied and fitted**.
+2. **Assess the back-door lock and doorset** alongside the existing nightlatch. A BS3621-rated deadlock may be suitable for a compatible timber door; check the door and any written policy requirement first. Current fitted options start from **£79**.
 3. **Fit a proper lock to the side gate** — a long-throw gate lock or heavy-duty padlock and hasp. Cost: **£35-£55 fitted**.
 4. **Window locks on all accessible windows** — especially the rear and side windows that are hidden from the street. Cost: **£15-£25 per window fitted**.
 
@@ -78,18 +78,18 @@ Total cost: typically **£200-£320** for the full package.
 
 ## 1960s-1980s Council-Built Housing: Tile Hill CV4, Willenhall CV3, Wood End CV2, Bell Green CV6
 
-A huge portion of Coventry's housing stock comes from the post-war building boom. [Tile Hill](/areas/tile-hill), Willenhall, Wood End, and Bell Green have thousands of homes built during this period, and I work in these areas every single day.
+Post-war housing forms part of the mix in [Tile Hill](/areas/tile-hill), Willenhall, Wood End and Bell Green. This section describes inspection points, not an inventory or frequency claim for those neighbourhoods.
 
 ### What I Typically Find
 
-This is where things get interesting because there is a real mix. Some properties still have the original council-fitted doors — usually a lightweight hardboard-faced door with a basic mortice lock that was never high-security even when new. Others have had replacement uPVC doors fitted over the years, often as part of council upgrades or by homeowners after Right to Buy.
+There is a mix of older doors and later uPVC replacements. Identify the actual door leaf, frame, mechanism and certification instead of inferring them from tenure or building era.
 
-The problem with the original doors is that they are physically weak. Even a good lock is only as strong as the door it is fitted in, and a 1970s hardboard-faced door can be kicked through. The problem with the replacement uPVC doors is that they were often fitted with the cheapest available euro cylinder — a standard brass cylinder with no anti-snap, anti-bump, or anti-pick features.
+An older lightweight door may have weaknesses that a new lock cannot correct. A replacement uPVC door may have basic or certified hardware; colour, age and neighbourhood do not establish which. Inspect the whole doorset and exact cylinder.
 
 ### Common Security Issues
 
 - **Original doors**: physically weak construction, basic locks, often warped or ill-fitting after decades
-- **Replacement uPVC doors**: basic euro cylinders that are **vulnerable to snapping** — this is the number one burglary method I see in these areas
+- **Replacement uPVC doors**: some use basic euro cylinders without independently verified resistance to snapping and related attacks
 - **Patio and sliding doors** with basic locking mechanisms
 - **Communal areas** (on some ex-council blocks) with shared entry points
 
@@ -97,21 +97,21 @@ The problem with the original doors is that they are physically weak. Even a goo
 
 For post-war housing in [Tile Hill](/areas/tile-hill), Willenhall, Wood End, and Bell Green:
 
-**If you still have the original door**: honestly consider replacing it. A new composite door with a multipoint locking system and anti-snap cylinder will transform your security. I can advise on options, though I focus on the lock side rather than door supply. If budget is tight, fit the best lock the door can take and add hinge bolts and a London bar (a metal strip that reinforces the lock area). Cost for lock upgrades on an original door: **£65-£120**.
+**If you still have an older door**: assess the leaf, frame, hinges and lock together. Replacement may be appropriate if the structure is unsuitable for a secure repair; otherwise compatible reinforcement and lock work may improve resistance. Cost for lock upgrades on a suitable older door: **£65-£120**.
 
-**If you have a uPVC or composite door**: replace the euro cylinder with an **anti-snap, anti-bump, anti-pick, anti-drill cylinder** rated to at least TS007 3-star or Sold Secure Diamond. This is a straightforward job that takes about 15 minutes. Cost: **£59-£89 supplied and fitted**. This single upgrade eliminates the most common break-in method in Coventry.
+**If you have a uPVC or composite door**: check the complete doorset and cylinder fit. If an upgrade is appropriate, choose a correctly sized cylinder with independently verified attack resistance, such as TS007 3-star or SS312 Diamond. Options start from **£59 supplied and fitted**. This can improve resistance to recognised cylinder attacks but cannot eliminate burglary risk.
 
 ---
 
 ## 2000s-2020s New-Build Estates: Finham, Eastern Green, Canley Gardens
 
-The newer estates across Coventry — and there have been plenty built in the last 20 years — come with uPVC or composite doors as standard. The good news is that these doors have multipoint locking systems. The bad news is that the cylinders fitted by developers are almost always the cheapest available.
+Newer Coventry estates may use uPVC or composite doors with multipoint locking systems. The exact cylinder and certification vary, so inspect the installed product rather than assuming developer-supplied hardware is basic or high security.
 
 ### What I Typically Find
 
-New-build developers fit doors that meet building regulations, but building regulations set a minimum standard, not a good standard. The euro cylinders on most new-builds are basic, non-anti-snap cylinders. They pass the tick-box requirements but offer minimal resistance to a burglar who knows what they are doing — and most burglars do.
+Building-regulation compliance and product security certification are separate questions. Record the exact doorset, cylinder and protective furniture, then verify current certification for the model and configuration.
 
-The most common call I get from new-build estates is a euro cylinder replacement, either after a break-in or because the homeowner has read about lock snapping and wants to upgrade before it happens to them. This is a smart move.
+Euro-cylinder checks and replacements are among the jobs requested on newer estates. Whether replacement is appropriate depends on the existing model, fit and complete doorset.
 
 ### Common Security Issues
 
@@ -124,7 +124,7 @@ The most common call I get from new-build estates is a euro cylinder replacement
 
 For new-build homes in [Canley](/areas/canley) and across Coventry:
 
-1. **Replace front and back door euro cylinders** with anti-snap, anti-bump cylinders. Cost: **£59-£89 per cylinder supplied and fitted**.
+1. **Check front and back door euro cylinders** and, where appropriate, select correctly sized products with current independent certification. Cost: **£59-£89 per cylinder supplied and fitted**.
 2. **Upgrade to secure door handles** that prevent the handle being used as a leverage point. Cost: **£35-£55 supplied and fitted**.
 3. **Check and upgrade window locks** — especially on ground floor and accessible first-floor windows.
 
@@ -138,232 +138,182 @@ If you are not sure what era your house was built or what locks you currently ha
 
 You can also check out my [services page](/services/) for a full list of what I offer, or my [prices page](/prices) for upfront costs on every common job.
 
-Every home in Coventry is different, but the principles are the same: fit the right lock for your door type, meet BS3621 where your insurance requires it, and eliminate the easy entry points that opportunistic burglars look for. Whatever era your house is, there is always a cost-effective way to bring it up to a proper standard of security.`,
+Every home in Coventry is different. Fit hardware to the actual door, compare certification with any standard named in the written policy, and address defects found in the complete property assessment. Upgrades improve resistance but do not guarantee security.`,
     faqs: [
       {
         q: 'What lock do I need for a Victorian terrace front door in Earlsdon or Chapelfields?',
-        a: 'You need a BS3621 five-lever mortice deadlock. Most Victorian terrace front doors in Earlsdon and Chapelfields still have the original skeleton key lock, which offers no real security. A BS3621 deadlock can be fitted into the existing door without damaging the character of the property. I supply and fit these for £75-£95. Call me on 024 7522 4730 for a specific quote.',
+        a: 'Inspect the actual timber door, frame and installed lock first. If a compatible certified mortice deadlock is appropriate or the written policy names BS3621, fitted options cost £75-£95. The property era alone does not establish the required lock or guarantee a damage-free installation. Call 024 7522 4730 for a door-specific quote.',
       },
       {
         q: 'Are uPVC doors on Coventry council houses vulnerable to break-ins?',
-        a: 'Many are, yes. Replacement uPVC doors fitted on ex-council houses in areas like Tile Hill, Willenhall, and Wood End often have basic euro cylinders that are vulnerable to lock snapping — the most common burglary method in the West Midlands. Replacing the cylinder with an anti-snap version costs £59-£89 and takes about 15 minutes. It is the single most effective security upgrade for these properties.',
+        a: 'The property type or area cannot establish whether a uPVC door is vulnerable. Check the actual cylinder, protective furniture, multipoint mechanism, certification and fit. If an independently certified anti-snap upgrade is appropriate, fitted options start from £59 and are designed to improve resistance to recognised attacks.',
       },
       {
         q: 'How much does it cost to fully secure a 1930s semi-detached house in Coventry?',
-        a: 'For a typical 1930s semi in Cheylesmore, Stoke, or Coundon, a full security upgrade — new front door deadlock, back door deadlock, side gate lock, and window locks — costs between £200 and £320. The most important single upgrade is adding a BS3621 deadlock to the back door, which most 1930s semis are missing.',
+        a: 'An example package covering suitable door, gate and accessible-window work may cost £200-£320, but the actual priority depends on the inspection. Fix any door or window that does not lock correctly first; do not assume every 1930s semi is missing the same back-door hardware.',
       },
       {
         q: 'Do new-build homes in Coventry need their locks upgrading?',
-        a: 'Almost always, yes. Developers fit locks that meet minimum building regulations but not much more. The euro cylinders on most new-builds are not anti-snap, which means they are vulnerable to the most common break-in technique. I recommend replacing front and back door cylinders with anti-snap versions. For a typical new-build, this costs £120-£200 for both doors.',
+        a: 'Not automatically. Identify the exact cylinder, protective furniture, multipoint mechanism and current certification on each door. If a correctly sized certified anti-snap upgrade is appropriate, an example front-and-back-door scope costs £120-£200. Certified hardware improves tested resistance but does not eliminate burglary risk.',
       },
     ],
   },
 
   'burglary-trends-coventry-warwickshire': {
-    body: `# Burglary Trends in Coventry and Warwickshire: What the Data Tells Us and How to Protect Your Home
+    body: `# Burglary Trends in Coventry and Warwickshire: What Current Sources Can and Cannot Show
 
-As a locksmith working across Coventry every day, I see the aftermath of burglaries regularly. I get called to secure properties after break-ins, replace locks that have been snapped or forced, and advise homeowners who are shaken and want to make sure it does not happen again. Over the years, I have built up a detailed picture of how burglary actually works in this city — not from statistics alone, but from real jobs, real doors, and real conversations with people who have been affected.
+This article separates three different kinds of evidence: national survey tables, local police-recorded crime data and observations from individual locksmith call-outs. They are not interchangeable. A damaged lock seen on one job cannot establish the most common method across Coventry, and a national trend cannot be presented as a Coventry rate without a matching local dataset and period.
 
-This article combines publicly available data from police.uk, West Midlands Police publications, and my own on-the-ground experience. My aim is to give you a realistic, responsible picture of burglary in Coventry so you can make informed decisions about your home security.
+## Source and Area Boundaries
 
----
+The [Office for National Statistics Nature of crime: burglary dataset](https://www.ons.gov.uk/peoplepopulationandcommunity/crimeandjustice/datasets/natureofcrimeburglary) contains national survey tables tied to specific releases. For local police-recorded crime, [data.police.uk provides dated downloads](https://data.police.uk/data/) that can be filtered by police force and month.
 
-## Coventry's Burglary Picture: The Overall Trend
+Coventry is policed by West Midlands Police, while Warwickshire is a different force area. Figures should therefore be labelled with the force, geography, crime category and date range used; the two areas should not be merged into a single unsupported trend.
 
-Domestic burglary in Coventry has followed the national trend of gradually declining over the past decade, but it remains a significant issue. Coventry, like other West Midlands cities, has higher rates of domestic burglary than the national average. West Midlands Police consistently records thousands of residential burglary offences across the force area each year, and Coventry accounts for a notable proportion of those.
+The [data.police.uk street-data methodology](https://data.police.uk/docs/method/crime-street/) also explains that published locations are approximate and anonymised. A map point must not be treated as an exact address, and raw street points should not be used to rank Coventry neighbourhoods as safer or more dangerous.
 
-However, the headline numbers can be misleading. A huge proportion of burglaries are concentrated in certain types of property, at certain times of year, using certain methods. Understanding those patterns is far more useful than the raw numbers.
+## What Is the Current Coventry Trend?
 
----
+This article does not currently embed a saved, dated local export that would substantiate the previous claims that Coventry burglary was declining, above the national average, or concentrated in named property types. Those claims have therefore been removed. A future trend section should state the selected police category and exact start and end months, retain the export, and distinguish recorded offences from prevalence measured by the national survey.
 
-## Seasonal Patterns: When Burglaries Peak
+[Police.uk's Coventry comparison page](https://www.police.uk/pu/your-area/west-midlands-police/performance/compare-your-area/?tc=CV013) is interactive: its result depends on the local area, crime type and period selected. It is useful for a dated check, not as evidence for an undated citywide statement.
 
-One of the clearest patterns in the data — and something I see directly in my work — is the seasonal variation.
+## Does Coventry Have a Seasonal Burglary Peak?
 
-### The Autumn and Winter Peak (October to February)
+No month-by-month Coventry export is cited here, so this guide does not claim an October-to-February peak or a second July-to-August spike. Those patterns would need to be recalculated from a defined, current series and reported with its dates.
 
-Burglary rates in Coventry rise sharply from October onwards and stay elevated through to February. The reason is simple: the clocks go back, and it gets dark by 4:30pm. A house that is visibly unoccupied — no lights on, curtains open, dark windows — is a target. Burglars can approach properties under cover of darkness while residents are still at work or on the school run.
+Seasonal prevention advice can still be practical without being described as a measured local trend. [Police.uk's leaving-home checklist](https://www.police.uk/cp/crime-prevention/protect-home-crime/leaving-your-home-checklist/) recommends closing and locking doors and windows, double-locking suitable doors, using timer switches, setting an alarm and securing gates and outbuildings whenever a home is left.
 
-During these months, I see a clear increase in emergency lock replacement calls. Properties where the front door euro cylinder has been snapped, back doors that have been forced, and windows that have been levered. The pattern is consistent year on year.
+## Entry Risks Worth Assessing
 
-### The Summer Holiday Spike (July to August)
+### Euro cylinders and protective furniture
 
-There is a secondary peak during the summer holidays. Homes left empty while families are on holiday are vulnerable, especially if there are obvious signs of absence — piled-up post, bins left out, no car on the drive. This spike is smaller than the winter peak but it is real and it is consistent.
+In individual locksmith call-outs, I sometimes see damaged euro cylinders on uPVC and composite doors. That is practitioner experience, not a citywide frequency measure. [Police.uk's door and window lock advice](https://www.police.uk/cp/crime-prevention/protect-home-crime/door-window-lock-advice/) recognises snapping as an attack method and recommends a 3-star TS007 euro cylinder when a cylinder is changed.
 
-### What This Means for You
+The standard, size and complete fitted system matter. An upgrade can improve tested resistance, but no cylinder should be described as eliminating burglary risk. Read the [lock-snapping guide](/blog/what-is-lock-snapping), see the Coventry [lock upgrade service](/services/lock-upgrade), and check current [prices](/prices).
 
-If you are going to invest in your home security at any point in the year, do it in September before the clocks change. Getting your locks upgraded, fitting timer switches to your lights, and asking a neighbour to keep an eye out will cover you through the highest-risk period. And if you are going on holiday in summer, do not advertise it — cancel visible deliveries, arrange for someone to open and close your curtains, and make sure every door and window lock is in good working order before you leave.
+### Doors, frames, letterplates and side access
 
----
+[Police.uk's door-security guidance](https://www.police.uk/cp/crime-prevention/protect-home-crime/door-security-advice/) treats the door, frame, locks, hinges and letterplate as a system. A certified lock cannot correct a weak, damaged or badly fitted door. Side gates and rear access should be assessed on the actual property rather than inferred from its age, style or Coventry neighbourhood.
 
-## How Burglars Get In: Common Entry Methods in Coventry
+### Accessible windows
 
-This is where my direct experience is particularly relevant, because I see the physical evidence of how break-ins happen.
+[Police.uk's window-security guidance](https://www.police.uk/cp/crime-prevention/protect-home-crime/window-security/) recommends locking windows and considering how accessible each opening is. Ground-floor windows deserve attention, but so do upper openings that can be reached from a flat roof, wall, bin or outbuilding.
 
-### Front Door Euro Cylinder Snapping — The Dominant Method
+## What the Prevention Evidence Supports
 
-In Coventry, the most common burglary entry method I encounter is **euro cylinder snapping on uPVC and composite front doors**. This reflects the city's housing stock: a huge proportion of homes have uPVC doors fitted with standard euro cylinders that can be snapped in under 30 seconds with basic tools.
+[Police.uk's residential burglary facts](https://www.police.uk/cp/crime-prevention/protect-home-crime/residential-burglary-facts/) say burglars are often opportunistic and may look for doors or windows that are open, unlocked or easy to force. The responsible conclusion is to remove avoidable opportunities at your own home. It is not to claim that one property only needs to look harder to enter than a neighbour's.
 
-The technique is simple. The burglar grips the exposed part of the cylinder with mole grips or pliers, applies force, and snaps the cylinder at its weakest point. The broken cylinder is pulled out, and the locking mechanism can then be operated from outside. It is fast, it is quiet, and it requires no specialist skill.
+The cited sources support these practical checks:
 
-I have written in detail about lock snapping in my [services guide](/services/) and on my [prices page](/prices), but the key point here is that **this is preventable**. An anti-snap euro cylinder — which I supply and fit for £59-£89 — eliminates this vulnerability entirely.
+- Close and lock accessible doors and windows, including when leaving briefly.
+- Keep keys out of sight and away from letterplates.
+- Assess the complete door, frame, hinges, lock and furniture.
+- Verify product certification rather than relying on an "anti-snap" marketing label.
+- Secure gates and outbuildings, and use occupancy routines consistently.
+- Treat CCTV and alarms as layers rather than substitutes for physical security.
 
-### Rear and Side Entry
+[Police.uk's CCTV and alarm guidance](https://www.police.uk/cp/crime-prevention/protect-home-crime/keep-burglars-out-property/) says CCTV can be useful but does not prevent crime and is not a replacement for good physical security. It also distinguishes an active alarm from dummy or non-functioning equipment.
 
-After front door snapping, the next most common entry points I see are rear doors and side windows. Properties with unsecured side gates (very common on 1930s semis in [Cheylesmore](/areas/cheylesmore) and Coundon) give burglars hidden access to the back of the house. Back doors with only a Yale nightlatch, or with old, worn locks, are easy to force.
+## Local Police Information
 
-Ground-floor windows — especially those hidden from the street or from neighbours — are also targeted. Older wooden-framed windows with basic catches are particularly vulnerable.
+Use the [West Midlands Police Coventry page](https://www.westmidlands.police.uk/area/your-area/west-midlands/coventry/) to find current local policing information and contact routes. This article does not claim that a free home-security survey or any other specific programme is available unless the current police page confirms it.
 
-### Forced Entry Through Weak Doors
+## A Property-Specific Security Check
 
-On older properties, particularly ex-council houses with original lightweight doors, I occasionally see cases where the door itself has been kicked in. A good lock is only as strong as the door and frame it is fitted in. This is why I always assess the whole door system, not just the lock.
+There is no sourced citywide correlation here that allows one lock type, housing era or Coventry area to predict whether a home will be burgled. A useful assessment instead records what is present now:
 
----
+1. Identify every exterior door and accessible window.
+2. Record the lock, cylinder, furniture and visible certification actually fitted.
+3. Check operation, fit, damage, frame strength, hinges and letterplate access.
+4. Review gates, outbuildings, lighting, alarms and household locking routines.
+5. Prioritise repair or upgrade recommendations against the findings and confirm current prices before work.
 
-## What the Data Tells Us About Prevention
-
-The single most important thing the burglary data tells us is this: **most burglaries are opportunistic, not targeted**. The typical burglar in Coventry is not planning a heist. They are walking or cycling around looking for easy targets — a door with a cheap lock, a window left open, a house that is obviously empty.
-
-This is actually good news for homeowners, because it means that **making your home slightly harder to break into than your neighbour's is genuinely effective**. Burglars do not want a challenge. They want to be in and out in under five minutes. If your locks are good, your doors are solid, and your property looks occupied, most opportunistic burglars will move on.
-
-### Specific Findings
-
-- **Properties with BS3621 deadlocks or anti-snap euro cylinders are significantly less likely to be burgled** through their doors. The data is clear on this.
-- **Homes with visible security measures** (alarm boxes, security lights, good locks) are less likely to be targeted. Even a visible alarm box that is not connected has a deterrent effect, though I would always recommend a working system.
-- **Corner properties and end-of-terrace houses** have slightly higher burglary rates because they have more access points and less overlooking from neighbours.
-- **Properties near alleyways, footpaths, or open green spaces** can be more vulnerable because of easy escape routes.
-
----
-
-## West Midlands Police Prevention Initiatives
-
-West Midlands Police run several burglary prevention programmes that are worth knowing about. Their community safety teams offer free home security surveys in some areas, and they regularly publish advice during the autumn and winter peak period.
-
-The force's advice consistently emphasises the same points I make to every customer:
-
-1. **Lock all doors and windows every time you leave** — even if you are just popping to the shop
-2. **Upgrade to BS3621 deadlocks and anti-snap euro cylinders** where possible
-3. **Use timer switches on lights** during darker months
-4. **Do not leave keys in or near doors** — lock snapping often relies on the key being left in the cylinder from the inside
-5. **Secure side gates and rear access points**
-6. **Mark your valuables** and register them on the national property register
-
-I would add one more: **get to know your neighbours**. A community where people look out for each other is the single most effective crime prevention tool. If your neighbour sees someone acting suspiciously around your front door at 3pm on a Tuesday, a quick phone call to the police can prevent a break-in.
-
----
-
-## How Lock Quality Correlates With Burglary Risk
-
-From what I see in my work, the correlation between lock quality and burglary risk is very strong. The properties I attend after a break-in almost always have one or more of the following:
-
-- A standard (non-anti-snap) euro cylinder on a uPVC door
-- A single Yale nightlatch with no deadlock
-- An old, worn mortice lock that is no longer functioning properly
-- Back doors or patio doors with basic or broken locks
-
-Conversely, I very rarely attend a post-burglary job where the homeowner had good, modern locks. It does happen — no security is absolute — but it is rare. When it does happen, the entry method is almost always a window rather than a door, because a well-locked door is simply not worth a burglar's time.
-
----
-
-## Practical Recommendations Based on the Data
-
-Here is what I recommend for every Coventry homeowner, based on the burglary trends I see:
-
-1. **Replace any standard euro cylinder** with an anti-snap version. Cost: £59-£89 per door. This single step eliminates the most common break-in method. [See my prices](/prices) for details.
-2. **Add a BS3621 deadlock** to any door that only has a Yale nightlatch. Cost: £75-£95.
-3. **Secure your side gate** if you have one. A £35-£55 gate lock removes hidden access to the rear of your property.
-4. **Fit window locks** on all ground-floor windows. Cost: £15-£25 per window.
-5. **Use your locks**. The best lock in the world is useless if you do not lock the door when you leave. I know that sounds obvious, but a surprising number of burglaries involve unlocked doors.
-
-If you want to talk through the security on your specific property, call me on 024 7522 4730. I am happy to give advice over the phone, and if you want a full check I can come and assess your home and give you a honest, no-pressure recommendation.
-
-You can also visit my [services page](/services/) to see the full range of lock upgrades I offer, or browse security advice by area — for example, my guides for [Earlsdon](/areas/earlsdon), [Tile Hill](/areas/tile-hill), and [Cheylesmore](/areas/cheylesmore) all include area-specific security recommendations.`,
+For an assessment in Coventry or the stated surrounding service area, call 024 7522 4730. You can also review the [services page](/services/) and area information for [Earlsdon](/areas/earlsdon), [Tile Hill](/areas/tile-hill), and [Cheylesmore](/areas/cheylesmore).`,
     faqs: [
       {
         q: 'What is the most common burglary method in Coventry?',
-        a: 'Euro cylinder snapping on uPVC and composite front doors. This reflects the large number of uPVC doors across Coventry, many of which have standard cylinders that can be snapped in under 30 seconds. Replacing the cylinder with an anti-snap version costs £59-£89 and completely eliminates this vulnerability. Call me on 024 7522 4730 for a quote.',
+        a: 'The sources cited here do not provide a current Coventry-wide ranking of entry methods, so this article does not name one. Police.uk recognises cylinder snapping as a risk and also advises checking doors, frames, letterplates and accessible windows as a complete property assessment.',
       },
       {
         q: 'When are burglaries most common in Coventry?',
-        a: 'The peak period is October to February, driven by shorter daylight hours. Burglars target homes that are visibly unoccupied in the early evening darkness. There is a smaller secondary peak in July and August when families are away on holiday. September is the ideal time to get your locks checked and upgraded before the high-risk period begins.',
+        a: 'This article does not claim a seasonal peak because it does not embed a dated month-by-month Coventry export. Any answer should name the police category and exact period analysed. Secure doors, windows, gates and outbuildings whenever the home is left, regardless of month.',
       },
       {
         q: 'Are certain types of home more vulnerable to burglary in Coventry?',
-        a: 'Properties with standard (non-anti-snap) euro cylinders are the most commonly targeted because the entry method is so quick and easy. Corner properties and end-of-terrace homes have slightly higher rates due to more access points. Homes with unsecured side gates — very common on 1930s semis — are also at greater risk because burglars can access the rear of the property unseen.',
+        a: 'The cited data does not support ranking Coventry homes by era, tenure or whether they are corner or end-of-terrace properties. Assess the actual doors, windows, frames, locks and access routes at the property instead of inferring risk from the house type or postcode.',
       },
       {
         q: 'Does having good locks actually prevent burglary?',
-        a: 'Yes, strongly. Most burglaries in Coventry are opportunistic — the burglar is looking for an easy target, not a challenge. Properties with anti-snap cylinders, BS3621 deadlocks, and secured windows are significantly less likely to be targeted. I very rarely attend a post-burglary job where the homeowner had quality, modern locks fitted. Making your home harder to break into than the next one is genuinely effective.',
+        a: 'No lock can guarantee prevention. Independently tested, correctly sized and properly fitted locks can improve resistance as part of layered security, but the door, frame, hinges, windows, access control and household routines must also be considered.',
       },
     ],
   },
 
   'common-lock-problems-coventry-homes': {
-    body: `# The 5 Lock Problems I See Most Often in Coventry Homes
+    body: `# Five Lock Problems to Check in Coventry Homes
 
-I have been a locksmith in Coventry long enough to know that certain lock problems come up again and again. The phone calls, the symptoms, the areas — there are clear patterns. If you live in Coventry, there is a very good chance your home has one of these five issues right now.
+These five issues are useful inspection prompts from locksmith work in Coventry. This article does not include a retained job log or citywide dataset that would establish their frequency by area or across all homes.
 
-This is not a scare piece. Most of these problems are cheap and quick to fix. But they are also the problems that lead to lockouts, break-ins, and emergency calls at 11pm on a Sunday night. If you can identify and fix them before they become an emergency, you will save yourself stress, time, and money.
+Some findings may need maintenance, while others need parts or a full replacement. Early inspection can identify options before a failure, but it does not guarantee a lockout, burglary or emergency cost will be prevented.
 
-Here are the five lock problems I see most often in Coventry homes, in order of frequency.
+They are not presented in a measured order of frequency.
 
 ---
 
 ## 1. Snapped Euro Cylinders on uPVC Doors
 
-I get called to snapped euro cylinders almost every day. It is by far the most common lock problem in Coventry, and it breaks down into two categories: cylinders snapped by burglars, and cylinders that snap due to wear and age.
+A euro cylinder can be damaged in an attack or fail through wear, misalignment or force. This page does not claim that snapped cylinders are Coventry's most frequent lock problem.
 
-### Where I See It Most
+### Check the Actual Door
 
-The estate houses in [Tile Hill](/areas/tile-hill), [Canley](/areas/canley), and the Willenhall area are particularly affected because they were built with cheap standard cylinders. But it is not limited to those areas — any uPVC or composite door in Coventry could have a vulnerable cylinder, including properties in [Cheylesmore](/areas/cheylesmore), Stoke, and the [city centre](/areas/coventry-city-centre).
+Across [Tile Hill](/areas/tile-hill), [Canley](/areas/canley), Willenhall, [Cheylesmore](/areas/cheylesmore), Stoke and the [city centre](/areas/coventry-city-centre), vulnerability must be assessed from the exact cylinder, fit, protective furniture and complete doorset rather than the neighbourhood or estate type.
 
 ### What Happens
 
-A standard euro cylinder has a weak point in the middle where the cam (the rotating piece that operates the lock) sits. If the cylinder extends more than about 3mm beyond the door furniture, it can be gripped with mole grips and snapped. One sharp sideways force, the cylinder breaks in half, and the lock can be operated from outside.
+Excess projection beyond protective door furniture can increase exposure to cylinder attack. The result and resistance depend on the exact product, dimensions and complete fitted system; no fixed attack outcome should be inferred from projection alone.
 
-Even when it is not a burglary, old euro cylinders can snap simply from age and use. The internal pins wear down, the housing becomes brittle, and one day the key just does not turn — or snaps inside the lock.
+Wear, damage, door misalignment or forcing a stiff mechanism can contribute to cylinder or key failure. Age alone does not establish when a failure will occur.
 
 ### What It Costs
 
-I replace standard euro cylinders with anti-snap, anti-bump, anti-pick, anti-drill cylinders for **£59-£89 supplied and fitted**, depending on the size and brand. The job takes about 15 minutes. For the cost of a couple of takeaways, you eliminate the most common burglary method in the city and the most common cause of door lockouts.
+Independently certified anti-snap cylinder options start from **£59 supplied and fitted**, depending on the size, product and complete doorset. The upgrade is designed to improve resistance to recognised cylinder attacks; it does not eliminate burglary risk or establish the most common cause of a Coventry lockout.
 
 ### How to Prevent It
 
-Get your cylinder checked. If you can see brass sticking out beyond the handle or escutcheon on either side of your door, it is almost certainly a standard cylinder that is vulnerable to snapping. Call me on 024 7522 4730 and I will tell you whether it needs replacing. Check my [prices page](/prices) for full details.
+Get the cylinder and complete doorset checked if it protrudes, operates poorly or cannot be identified. Colour and appearance do not prove certification. Call 024 7522 4730 for an assessment and see the [prices page](/prices) for published starting prices.
 
 ---
 
 ## 2. Worn-Out 5-Lever Mortice Locks on Victorian Terraces
 
-[Earlsdon](/areas/earlsdon) and Chapelfields have beautiful old houses with locks that are decades past their lifespan. I love these properties — the solid wooden doors, the stained glass fanlights, the original ironmongery — but the locks are often a serious liability.
+[Earlsdon](/areas/earlsdon) and Chapelfields include older timber doors and ironmongery, but lock age and condition vary after decades of alteration. Inspect the actual mechanism rather than assigning a fixed lifespan from the property era.
 
 ### What Happens
 
-A five-lever mortice lock is a mechanical device with moving parts. Over decades, the levers wear smooth, the springs lose tension, and the bolt becomes loose in the mechanism. At first, the key becomes harder to turn. Then it starts to stick. Then one day it either will not lock at all or will not unlock — and you are either locked out or locked in.
+A mortice lock is a mechanical device with moving parts. Wear can cause stiffness, sticking or incomplete bolt movement, but age alone does not predict whether or when it will fail.
 
-The other issue is that many of these old locks are not BS3621 standard. They were made before the standard existed, and they do not meet the security requirements that modern insurers expect. If your home insurance policy requires BS3621 locks (and most do), an old Victorian mortice lock almost certainly does not qualify.
+Do not infer BS3621 certification from age, key shape or lever count. Check the exact product marking and current certification record. If the written policy names a standard, ask the insurer to confirm how it applies to the actual door; requirements and claims depend on the policy wording and circumstances.
 
-### A Typical Job
+### What a Replacement Involves
 
-I had a call from a homeowner on one of the streets off Albany Road in Earlsdon. Their front door mortice lock had been getting stiffer for months, and they had been using WD-40 to keep it turning (WD-40 is actually not great for locks — it attracts dust and gums up the mechanism over time). Eventually the key turned but the bolt would not throw. The internal mechanism had worn to the point where the levers could not lift the bolt.
-
-I replaced the lock with a new BS3621 five-lever deadlock. The existing mortice cutout in the door was the correct size for a modern lock, so the job took about 40 minutes and required no modifications to the door. Cost: **£85 supplied and fitted**.
+A stiff key, incomplete bolt throw or loose mechanism warrants inspection. If replacement is needed, compatibility with the existing mortice cutout and door condition determines the work. A fitted certified mortice-lock option costs **£85** in the example price; timing and modifications depend on the actual door.
 
 ### How to Prevent It
 
-If your mortice lock is more than 20 years old and the key is getting harder to turn, do not wait for it to fail. A planned replacement during working hours costs £75-£95. An emergency replacement on a Sunday evening will cost more because of the urgency. Planned maintenance always saves money.
+If a mortice lock is getting harder to operate, arrange an inspection rather than forcing it. A planned replacement costs £75-£95 under the published scope. Emergency cost and timing depend on the diagnosed work; maintenance does not guarantee that failure or expense will be avoided.
 
 ---
 
 ## 3. uPVC Multipoint Lock Mechanism Failures
 
-When the gearbox fails on a 15-year-old uPVC door, the door either will not lock or will not open. I see this constantly in houses built during the 2000s building boom — [Canley](/areas/canley) Gardens, parts of Tile Hill, the newer estates around Eastern Green.
+A uPVC multipoint gearbox can fail at different ages and may leave a door unable to lock or unlock. Property age or location in [Canley](/areas/canley), Tile Hill or Eastern Green does not predict the condition of the installed mechanism.
 
 ### What Happens
 
 A uPVC door multipoint lock has a central gearbox that drives multiple locking points — typically hooks and rollers at the top and bottom of the door, plus a central latch and deadbolt. The gearbox is a metal mechanism inside the door edge that is operated by the handle and the euro cylinder.
 
-Over time — usually 12 to 20 years — the gearbox wears out. The internal components fatigue, the springs weaken, and eventually the handle either spins without engaging the lock, or the door locks but will not unlock, or the locking points engage but do not retract when you lift the handle.
+Wear, misalignment and operating force can affect the gearbox. Symptoms may include a handle spinning without engagement, locking points failing to retract or a door that will not lock or unlock; there is no universal 12-to-20-year lifespan.
 
 When this happens, you are often in a difficult situation: the door is either stuck locked (you cannot get in or out through that door) or stuck unlocked (you cannot secure your home).
 
@@ -383,29 +333,29 @@ The warning signs are there if you know what to look for:
 - You hear a grinding or clicking noise when operating the handle
 - The key turns but the deadbolt does not throw
 
-If you notice any of these, call me on 024 7522 4730 sooner rather than later. A gearbox that is starting to fail can often be identified before it fails completely, and a planned replacement is always cheaper and less stressful than an emergency one.
+If you notice any of these, call 024 7522 4730 for an assessment. Some developing faults can be identified before complete failure, but repairability, timing and cost depend on the mechanism and door condition.
 
 ---
 
 ## 4. Yale Nightlatch Lock Problems
 
-Many Coventry homes only have a Yale nightlatch on the front door. It is the classic spring-loaded latch — you pull the door shut and it clicks locked. The problem is that this is the most common cause of lockouts in the city, and it is also very poor security.
+A nightlatch is a spring-loaded latch that can engage when the door closes. That creates a lockout risk if the key is left inside, but this page does not claim it is Coventry's most frequent lockout cause or that every nightlatch has the same resistance.
 
 ### The Lockout Problem
 
 A Yale nightlatch locks automatically when the door closes. Step outside to put the bins out, check the post, or wave the kids off to school, and the door swings shut behind you — and you are locked out. No keys, no phone sometimes, standing on your doorstep in your slippers.
 
-I get these calls multiple times a week. The call usually starts with "I feel so stupid" — and I always say the same thing: you are not stupid, the lock is badly designed for everyday use. A lock that locks you out when you are not expecting it is a lock that is working against you.
+Before stepping outside, understand whether the installed latch engages automatically and keep the key with you. The appropriate hardware depends on the door, household and escape requirements.
 
 ### The Security Problem
 
-A Yale nightlatch on its own is not secure. The spring latch can be opened from outside using a technique called loiding — sliding a thin plastic strip (like a credit card) between the door and frame to push back the latch. It is embarrassingly easy, and it is a known burglary method.
+A basic spring latch may be exposed to loiding where the door gap and latch configuration allow it. Deadlocking features, fit, frame and additional certified hardware affect resistance, so inspect the exact installation.
 
-Even if the nightlatch has a deadlocking function (where you turn the key from outside to lock the latch in place), many people do not use it because they are in a hurry or do not have their keys in hand when they leave.
+If the nightlatch has a deadlocking function, check how the manufacturer says it should be operated and build that step into the leaving routine.
 
 ### What I Recommend
 
-I recommend adding a **BS3621 five-lever mortice deadlock** to every door that only has a Yale. This gives you a proper deadlock that can only be opened with a key, meets insurance requirements, and does not accidentally lock you out.
+For a suitable timber door with only a basic nightlatch, a certified mortice deadlock may be one option. Check the door, escape needs and any exact standard named in the written insurance policy; fitting one does not guarantee security or insurance acceptance.
 
 For the Yale itself, if it is old and worn, I recommend replacing it with a modern BS3621-rated nightlatch that has a proper deadlocking function and is more resistant to forced entry.
 
@@ -413,23 +363,23 @@ Cost: **£75-£95 for a new deadlock supplied and fitted**, or **£65-£85 for a
 
 ### A Word on Habits
 
-Even after fitting a deadlock, I always remind customers to actually use it. A deadlock only works when it is locked. Get into the habit of deadlocking the door every time you leave the house, even for five minutes. It takes three seconds and it makes a genuine difference.
+Use each lock as designed when leaving the property, while preserving any required escape arrangement. Hardware that is not engaged cannot provide its tested resistance.
 
 ---
 
 ## 5. Frozen and Stiff Locks in Winter
 
-Every December through February, I get a spike in calls for locks that have seized up. Coventry is not the coldest city in the UK, but we get enough frost and damp to cause real problems with locks that have not been maintained.
+Cold and moisture can affect some locks, but this article does not include a retained dated callout dataset proving a Coventry winter spike.
 
 ### What Happens
 
-Moisture gets into the lock mechanism — through the keyhole, through gaps in the door, or through condensation — and when the temperature drops below zero, it freezes. The internal pins or levers are stuck in place by ice, and the key will not turn. Forcing the key risks snapping it in the lock, which turns a simple problem into an expensive one.
+Moisture can enter through the keyway, door gaps or condensation and may freeze in sufficiently cold conditions. If the key will not turn, do not force it because that can damage the key or mechanism.
 
 Even when it is not freezing, damp and cold weather causes metal components to contract and lubricant to thicken. Locks that have not been maintained for years gradually get stiffer until one cold morning they refuse to budge.
 
-### Where I See It Most
+### What to Inspect
 
-Exposed front doors — properties where the front door faces north or is not sheltered by a porch — are most affected. Euro cylinders on uPVC doors are particularly vulnerable because the keyway is exposed to the elements. Older mortice locks on wooden doors can also freeze, especially if the door has gaps that allow moisture in.
+Check weather-exposed doors, gaps that admit moisture and any lock that has become stiff. Orientation, door material and age alone do not establish which lock will be affected.
 
 ### What It Costs to Fix
 
@@ -437,35 +387,35 @@ If I need to come out and free a frozen lock, the cost is my standard callout: *
 
 ### How to Prevent It — And Save Yourself £59
 
-This is genuinely one of the easiest problems to prevent. A **£5 tube of graphite lubricant** applied to your locks twice a year — once in autumn before the cold weather arrives and once in spring — will keep them operating smoothly through the worst of winter.
+Use only a lubricant approved by the lock manufacturer. A product may cost about **£5**, but the correct type and maintenance interval depend on the mechanism; lubrication cannot guarantee trouble-free winter operation.
 
 **Do not use WD-40**. I know everyone reaches for it, but WD-40 is a water displacer, not a lubricant. It will free a stuck lock temporarily, but it attracts dust and moisture over time, making the problem worse. Use graphite powder or a PTFE-based lock lubricant.
 
-To apply it, simply puff the graphite into the keyhole and then insert and turn the key several times to distribute it through the mechanism. That is it. Five minutes of prevention saves a £59 emergency callout.
+Follow the lock and lubricant manufacturer's directions. Stop if the key or mechanism remains stiff rather than forcing it; maintenance does not guarantee that a callout will be avoided.
 
 ---
 
 ## The Common Thread
 
-All five of these problems share one thing in common: they are cheaper to prevent than to fix in an emergency. A £59-£89 cylinder replacement prevents a burglary and a lockout. A £75-£95 deadlock replacement prevents a lock failure and meets your insurance requirements. A £5 tube of graphite prevents a frozen lock callout.
+Inspection and planned maintenance can reveal options before an emergency, but no cylinder, deadlock or lubricant guarantees prevention of burglary, lockout or mechanical failure. Insurance requirements and claims depend on the written policy and circumstances. Published prices describe the quoted work, not a guaranteed saving.
 
 If you recognise any of these problems in your own home — or if you are not sure whether your locks are in good condition — give me a call on 024 7522 4730. I am always happy to talk through your situation on the phone, and if you need a visit, I will give you a firm price before I come out. You can also check my [services page](/services/) or [prices page](/prices) for full details on every job I offer.`,
     faqs: [
       {
         q: 'How do I know if my euro cylinder is vulnerable to snapping?',
-        a: 'Look at your door from the outside. If you can see the brass cylinder sticking out beyond the handle or escutcheon plate by more than a few millimetres, it is almost certainly a standard cylinder that can be snapped. Most uPVC doors in Coventry — especially those in Tile Hill, Canley, and Willenhall — were fitted with standard cylinders. I can replace it with an anti-snap cylinder for £59-£89. Call 024 7522 4730 to check.',
+        a: 'Excess projection beyond protective furniture can increase exposure, but colour, appearance and postcode do not establish certification or attack resistance. Check the exact model, dimensions and complete doorset. If replacement is appropriate, certified anti-snap options cost £59-£89; call 024 7522 4730 for an assessment.',
       },
       {
         q: 'Why is my uPVC door handle floppy and not locking properly?',
-        a: 'This is usually a sign that the multipoint lock gearbox inside your door is wearing out. The internal mechanism fatigues over 12-20 years and eventually fails. Warning signs include a loose handle, difficulty lifting the handle to lock, and grinding noises. Do not ignore it — a gearbox that is starting to fail will eventually lock you in or out. Replacement costs £120-£180 supplied and fitted.',
+        a: 'A loose handle, difficulty lifting it or grinding can indicate gearbox wear, door misalignment or another mechanism fault. There is no universal service life or certain outcome, so diagnose the complete door before replacing parts. A gearbox replacement costs £120-£180 supplied and fitted under the stated scope.',
       },
       {
         q: 'What should I use to lubricate my door locks?',
-        a: 'Use graphite powder or a PTFE-based lock lubricant, not WD-40. WD-40 is a water displacer that attracts dust and gums up lock mechanisms over time. A £5 tube of graphite lubricant applied twice a year — in autumn and spring — keeps your locks operating smoothly and prevents frozen lock callouts in winter. Puff it into the keyhole and turn the key several times to distribute it.',
+        a: 'Use only a lubricant and method approved by the lock manufacturer; requirements differ by mechanism. Lubrication may improve operation but does not guarantee prevention of freezing or a callout. If the lock stays stiff, stop forcing the key and arrange an inspection.',
       },
       {
         q: 'Is a Yale nightlatch enough security for my front door?',
-        a: 'No. A Yale nightlatch on its own is not secure — the spring latch can be opened with a plastic strip slid between the door and frame. It also locks automatically, which is the most common cause of lockouts in Coventry. I recommend adding a BS3621 mortice deadlock below the Yale, which costs £75-£95 supplied and fitted. This meets insurance requirements and provides genuine security.',
+        a: 'It depends on the exact nightlatch, door, frame, gaps and required escape arrangement. A basic spring latch may be exposed to loiding, while deadlocking features and additional certified hardware can improve resistance. A suitable BS3621 mortice deadlock costs £75-£95 supplied and fitted, but insurance acceptance depends on the written policy and no lock provides guaranteed security.',
       },
     ],
   },
@@ -475,22 +425,22 @@ If you recognise any of these problems in your own home — or if you are not su
 
 I am going to level with you. Writing a "how to choose a locksmith" article as a locksmith is a bit like a barber writing "how to choose a barber" — there is an obvious conflict of interest. So I want to be upfront: I am Ross, I am an independent locksmith based in Coventry, and yes, I would like you to choose me. But this article is genuinely intended to help you make a good decision, whether that is me or someone else.
 
-The locksmith industry in the UK has a serious problem with pricing transparency, fake local companies, and overcharging. Coventry is not immune to this. If you search "locksmith Coventry" right now, you will see a mix of genuine local tradespeople, national call centres pretending to be local, and outright scam operations. Knowing the difference can save you hundreds of pounds and a huge amount of stress.
+Locksmith listings can represent local independents, dispatch services or wider-area businesses, and advertised prices may not describe the same scope. Verify identity, location, total price and who will attend rather than assuming a listing is local or dishonest.
 
 ---
 
 ## How Many "Coventry Locksmiths" Are Actually Local?
 
-This might surprise you: a significant number of the locksmith listings you see for Coventry are not based in Coventry at all. They are national call centre operations that buy local phone numbers and set up Google listings with Coventry addresses. When you call, you speak to a call handler in an office somewhere — often London or Birmingham — who then dispatches the nearest available subcontractor.
+Some businesses serving Coventry dispatch subcontractors rather than sending a named local locksmith. A local phone number or service-area listing alone does not prove where the attending person is based.
 
-That subcontractor might be in Coventry. Or they might be in Birmingham, Solihull, or Warwick. You do not know until they arrive, and by that point you are locked out and not in a position to send them away.
+Before booking, ask who will attend, which business will invoice you and what current ETA applies to your location.
 
 ### Why This Matters
 
-- **Response time**: A locksmith based in Coventry can reach most parts of the city in 15-30 minutes. A locksmith dispatched from Birmingham could take an hour or more.
-- **Local knowledge**: I know the housing stock in [Tile Hill](/areas/tile-hill) is different from [Earlsdon](/areas/earlsdon). I know which locks are common in which areas. I carry the right stock for Coventry's homes. A non-local locksmith may turn up without the right parts and either charge you to come back or fit something inappropriate.
+- **Response time**: ask for a live ETA based on the locksmith's current location and workload. No fixed 15-30-minute Coventry arrival applies to every job.
+- **Local knowledge**: familiarity with housing in [Tile Hill](/areas/tile-hill) and [Earlsdon](/areas/earlsdon) can help with diagnosis, but the exact lock and part must still be identified.
 - **Pricing**: National companies have overheads — call centres, marketing, management, franchisee fees — that local independents do not. Those costs get passed to you.
-- **Accountability**: If something goes wrong with a job done by a local independent, you know where to find them. If a national company's subcontractor does a poor job, good luck getting it resolved through their call centre.
+- **Accountability**: establish the contracting business, invoice details, written scope and complaint route before work.
 
 ---
 
@@ -500,23 +450,23 @@ Here are the red flags I would look for if I were hiring a locksmith in Coventry
 
 ### 1. They Will Not Tell You Their Postcode
 
-Ask: "What postcode are you based in?" A genuine Coventry locksmith will give you a CV postcode without hesitation — CV1 through CV6. If they dodge the question, give a vague answer like "we cover the Coventry area," or claim to be based somewhere they are clearly not, walk away.
+Ask for the trading address or service base and verify it independently. A postcode can help, but it does not by itself prove who will attend or the quality of the work.
 
 ### 2. Their Phone Number Does Not Match
 
-A 024 landline or an 07 mobile number starting with a West Midlands area code is a reasonable sign, but it is not definitive — national companies buy local numbers specifically to appear local. The phone number alone is not enough to verify.
+A phone number does not verify a business location. Check the trading identity, address, written quote and invoice details.
 
 ### 3. No Local Reviews
 
-Check their Google reviews carefully. Do the reviews mention Coventry specifically? Do they mention specific areas, streets, or local details? A company with 500 five-star reviews but none of them mentioning Coventry is almost certainly a national operation with reviews from across the country.
+Reviews can provide context, but a lack of Coventry detail does not prove that a business is national or fraudulent. Cross-check the business identity and treat reviews as one signal rather than conclusive evidence.
 
 ### 4. They Cannot Give You a Firm Price
 
-A good locksmith should be able to give you a price — or at least a tight range — over the phone for most standard jobs. "It depends" or "we will assess on arrival" are warning signs. Yes, some jobs genuinely cannot be quoted without seeing the door, but a simple lock change or lockout has a predictable price.
+Ask for the price or range, what assumptions it uses and which findings could change it. Some work can be quoted remotely; other work requires inspection. Uncertainty should be explained rather than treated as proof of poor practice.
 
 ### 5. They Charge a Call-Out Fee on Top of the Job Price
 
-Some companies quote a low job price but then add a call-out fee, a parts surcharge, a VAT charge, and sundry extras. By the time the invoice arrives, the "£49 lock change" has become a £180 bill. Always ask: "Is that the total price, including everything?"
+Clarify whether callout, labour, parts, VAT and any time-based surcharge are included. Ask for the authorised total or pricing basis in writing before work begins.
 
 ---
 
@@ -525,12 +475,12 @@ Some companies quote a low job price but then add a call-out fee, a parts surcha
 Here are the questions I would ask any locksmith before letting them come to my home:
 
 1. **"What is your postcode?"** — Confirms they are genuinely local.
-2. **"Can you give me a firm price for this job?"** — A professional can quote most standard jobs.
+2. **"Can you give me a price or range for this job?"** — Ask what assumptions it uses and what could change it.
 3. **"Does that price include parts, labour, and VAT?"** — Eliminates hidden extras.
 4. **"Do you charge a separate call-out fee?"** — Some do, some do not, but you need to know upfront.
-5. **"Do you charge VAT?"** — Many local independents are below the VAT threshold, which saves you 20%. National companies almost always charge VAT.
+5. **"Does the quoted total include VAT where applicable?"** — Compare totals on the same basis.
 6. **"How long will you be?"** — A local locksmith should give you a realistic ETA.
-7. **"Can I see ID when you arrive?"** — Any legitimate locksmith will show identification.
+7. **"Can I see ID when you arrive?"** — Check that the attending person matches the booked business.
 
 ---
 
@@ -538,13 +488,13 @@ Here are the questions I would ask any locksmith before letting them come to my 
 
 ### MLA Membership
 
-The Master Locksmiths Association (MLA) is the main trade body for locksmiths in the UK. MLA members are vetted, insured, and subject to a code of conduct. It is a good indicator of professionalism, but it is not the only one — there are plenty of excellent locksmiths who are not MLA members, either because the fees are prohibitive for a small business or because they have chosen not to join.
+The Master Locksmiths Association is a UK trade body with its own membership criteria and directory. Check current membership directly with the organisation. Membership can be one signal, but it does not guarantee the outcome of an individual job and non-membership alone does not establish poor practice.
 
 I would treat MLA membership as a positive signal, not an absolute requirement.
 
 ### Google Reviews
 
-Google reviews are one of the best ways to assess a local locksmith. Look for:
+Reviews are one source to cross-check alongside business identity, written pricing and credentials. Look for:
 
 - **Volume and recency** — a steady stream of reviews over months and years, not a sudden burst
 - **Specific local mentions** — reviews that mention Coventry areas, streets, or postcodes
@@ -553,27 +503,27 @@ Google reviews are one of the best ways to assess a local locksmith. Look for:
 
 ### DBS Check
 
-A DBS (Disclosure and Barring Service) check confirms that the locksmith has been checked for criminal records. This is particularly important because a locksmith is coming into your home and has knowledge of your security setup. A reputable locksmith should be happy to confirm they are DBS checked.
+A DBS certificate is point-in-time information issued at a stated level; it is not a licence or guarantee of trustworthiness. If a business claims a check, ask what certificate or update-service evidence supports the claim and consider it alongside identity and other checks.
 
 ### Insurance
 
-Any professional locksmith should have public liability insurance. If they damage your door during a lock change (it happens, even to experienced locksmiths), their insurance covers the repair. Ask if they are insured. If they hesitate, find someone else.
+Ask whether the business has relevant public-liability cover and request evidence if it matters to the job. Whether a policy responds to damage depends on its terms and the circumstances; insurance does not guarantee a repair or claim outcome.
 
 ---
 
-## Price Comparison: Local Independent vs National Franchise
+## Compare the Same Scope
 
-Here is a realistic comparison for common jobs in Coventry:
+This site's published prices can be compared with an itemised quote from any other provider:
 
-| Job | Local Independent | National Franchise |
+| Job | This Site's Published Price | What to Confirm Elsewhere |
 |---|---|---|
-| Emergency lockout (uPVC door) | £59-£79 (no VAT) | £100-£180 (+ VAT) |
-| Euro cylinder replacement | £59-£89 (no VAT) | £120-£200 (+ VAT) |
-| Mortice deadlock replacement | £75-£95 (no VAT) | £150-£250 (+ VAT) |
-| Lock change after burglary | £59-£89 (no VAT) | £120-£200 (+ VAT) |
-| uPVC multipoint gearbox replacement | £120-£180 (no VAT) | £200-£350 (+ VAT) |
+| Emergency lockout (uPVC door) | £59-£79 (no VAT) | Callout, labour, parts and destructive-entry terms |
+| Euro cylinder replacement | £59-£89 (no VAT) | Exact cylinder, size, certification, labour and VAT |
+| Mortice deadlock replacement | £75-£95 (no VAT) | Exact product, door modifications, labour and VAT |
+| Lock change after burglary | £59-£89 (no VAT) | Emergency securing, parts, labour and VAT |
+| uPVC multipoint gearbox replacement | £120-£180 (no VAT) | Exact gearbox, availability, labour and VAT |
 
-The difference is significant. On a typical emergency lockout, you could pay double or more with a national company compared to a local independent. And the job is identical — the lock does not know who is fitting it.
+Do not compare a headline advert with an all-inclusive quote. Confirm the diagnosed work and total authorised price on the same basis.
 
 You can see my full price list on my [prices page](/prices) — every common job is listed with an honest price range.
 
@@ -581,18 +531,18 @@ You can see my full price list on my [prices page](/prices) — every common job
 
 ## My Approach — Because You Are Going to Ask
 
-When you call 024 7522 4730, you speak to me directly. Not a call centre, not a receptionist, not a dispatcher. Me. I answer the phone, I give you a price, I tell you how long I will be, and I stick to both.
+When you call 024 7522 4730, you speak to me directly. I explain the quoted scope and give a current ETA based on my location and workload.
 
 Here is what I offer:
 
-- **Based in Coventry** — I live and work here. CV postcode. Local knowledge of every area from [Earlsdon](/areas/earlsdon) to [Tile Hill](/areas/tile-hill) to [Cheylesmore](/areas/cheylesmore) to [the city centre](/areas/coventry-city-centre).
+- **Based in Coventry** — I live and work here, serving areas from [Earlsdon](/areas/earlsdon) to [Tile Hill](/areas/tile-hill), [Cheylesmore](/areas/cheylesmore) and [the city centre](/areas/coventry-city-centre).
 - **No VAT** — I am a sole trader below the VAT threshold. The price I quote is the price you pay.
-- **No call-out fee** — the price I give you covers everything.
-- **Firm prices on the phone** — for standard jobs, I give you an exact price before I leave. No surprises on arrival.
-- **Fast response** — I can usually reach anywhere in Coventry within 15-30 minutes during working hours.
-- **Genuine Google reviews** — from real Coventry customers who mention specific areas and jobs.
+- **No separate call-out fee** — the quoted price covers the stated scope; any newly diagnosed work is explained and authorised first.
+- **Phone pricing** — where the job can be identified remotely, I state the price and assumptions before setting off.
+- **Live ETA** — I confirm the current estimate when you call rather than promising a fixed citywide arrival time.
+- **Review profile** — you can inspect its dates, details and responses as one part of your checks.
 
-I am not the cheapest locksmith you will find online — some national companies advertise very low prices and then add fees on arrival. But I am consistently cheaper than the final invoice from those companies, and you will never get a surprise bill from me.
+Compare my [published prices](/prices) with any other provider's itemised total. If the diagnosed scope changes on site, I explain the additional work and price before proceeding.
 
 ---
 
@@ -608,9 +558,9 @@ The locksmiths to avoid are the ones who:
 - Have no local reviews
 - Pressure you into unnecessary work on site ("while I am here, your other locks need changing too")
 
-If you find someone who passes all those tests and is not me, hire them with confidence.
+If another provider meets your checks, review the written scope and make your own booking decision.
 
-But if you want to keep it simple, call 024 7522 4730. I will answer, I will give you a straight answer, and I will get the job done properly at a fair price.
+If you want to discuss the job, call 024 7522 4730. I will explain the likely scope, published price where applicable and current ETA.
 
 ---
 
@@ -618,31 +568,31 @@ But if you want to keep it simple, call 024 7522 4730. I will answer, I will giv
 
 If you are locked out right now, here is my practical advice:
 
-1. **Do not try to force the door** — you will cause damage that costs more to fix
+1. **Do not try to force the door** — you could be injured or damage the door and frame
 2. **Check all other entry points** — back door, windows, garage
 3. **Call a local locksmith** — use this guide to check they are genuine
-4. **Ask for a firm price before they come out** — even in an emergency, a good locksmith will quote you
+4. **Ask for a price or pricing basis before they come out** — confirm what could change after inspection
 5. **Ask for ID when they arrive** — protect yourself
 
-If you cannot get through to your first choice, try another local locksmith rather than defaulting to a national call centre. The few extra minutes of searching can save you £100 or more.
+If you cannot get through to your first choice, compare another provider's identity, ETA and total pricing basis before booking.
 
 Visit my [services page](/services/) for a full list of what I can help with, or check the [area guides](/areas/earlsdon) for security advice specific to your part of Coventry.`,
     faqs: [
       {
         q: 'How can I tell if a Coventry locksmith is actually based in Coventry?',
-        a: 'Ask them directly: "What postcode are you based in?" A genuine Coventry locksmith will give you a CV postcode without hesitation. Also check their Google reviews — do customers mention Coventry areas specifically? A company with hundreds of reviews but no local detail is likely a national call centre. Local independents will have reviews mentioning specific areas like Earlsdon, Tile Hill, or Cheylesmore.',
+        a: 'Ask for the trading address or service base, who will attend and which business will invoice you, then verify those details independently. A postcode, local phone number or review wording alone does not prove location. Treat reviews as one signal alongside business identity and the written quote.',
       },
       {
         q: 'How much should a locksmith charge in Coventry?',
-        a: 'A local independent locksmith in Coventry should charge roughly £59-£79 for an emergency lockout and £59-£89 for a euro cylinder replacement, with no VAT and no separate call-out fee. National franchises typically charge £100-£250 for the same jobs, often with VAT on top. Always ask for a firm, all-inclusive price before the locksmith comes out. See my full price list at localemergencylocksmith.co.uk/prices.',
+        a: 'This site publishes £59-£79 for an emergency lockout and £59-£89 for a euro cylinder replacement under the stated scopes, with no VAT or separate call-out fee. Other providers set their own prices. Ask for an itemised total or pricing basis covering callout, labour, parts, VAT and possible destructive entry, and compare it with /prices.',
       },
       {
         q: 'Does a locksmith need to be MLA registered?',
-        a: 'MLA (Master Locksmiths Association) membership is a good sign of professionalism, but it is not essential. Many excellent independent locksmiths are not MLA members because the fees are significant for a small business. More important indicators are: genuine local Google reviews, willingness to give firm prices, DBS checked status, public liability insurance, and a verifiable local address.',
+        a: 'MLA membership is one signal, not a guarantee of an individual job outcome. Verify any claimed membership in the organisation\'s current directory, then also check the contracting business, attending person, written scope, total pricing basis, relevant insurance evidence and complaint route. Non-membership alone does not establish poor practice.',
       },
       {
         q: 'What should I do if I am locked out in Coventry right now?',
-        a: 'First, do not try to force the door — you will cause expensive damage. Check all other entry points. Then call a local locksmith — ask for their postcode and a firm price before they come out. A good Coventry locksmith can usually reach you within 15-30 minutes. If you call me on 024 7522 4730, I will give you a price on the phone and tell you exactly how long I will be.',
+        a: 'Do not force the door; you could be injured or cause damage. Check whether an authorised safe entry route or trusted spare key is available, then call a locksmith and confirm identity, price assumptions and a live ETA. If you call 024 7522 4730, I will explain the likely scope, published price where applicable and current ETA.',
       },
     ],
   },

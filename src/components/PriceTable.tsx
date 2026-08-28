@@ -45,9 +45,9 @@ export default function PriceTable() {
                 >
                   <td className="px-5 py-3.5">
                     <span className="font-bold text-[#0F1B2D] text-sm block">{row.service}</span>
-                    <span className="text-xs text-gray-400 sm:hidden">{row.desc}</span>
+                    <span className="text-xs text-gray-600 sm:hidden">{row.desc}</span>
                   </td>
-                  <td className={`px-5 py-3.5 text-right font-black text-lg whitespace-nowrap ${row.price === 'FREE' ? 'text-green-600' : 'text-[#FFB800]'}`}>
+                  <td className={`px-5 py-3.5 text-right font-black text-lg whitespace-nowrap ${row.price === 'FREE' ? 'text-green-700' : 'text-[#8A5A00]'}`}>
                     {row.price}
                   </td>
                   <td className="px-5 py-3.5 text-gray-500 text-sm hidden sm:table-cell">{row.includes}</td>
@@ -58,7 +58,7 @@ export default function PriceTable() {
         </div>
 
         {/* Footer notes */}
-        <div className="flex flex-wrap justify-center gap-x-4 gap-y-1 mt-6 text-xs text-gray-400">
+        <div className="flex flex-wrap justify-center gap-x-4 gap-y-1 mt-6 text-xs text-gray-600">
           <span>No VAT on any price</span>
           <span>&bull;</span>
           <span>No call-out fee</span>

@@ -71,7 +71,7 @@ export default function Footer() {
           <h3 className="text-white font-bold mb-4">Main Towns</h3>
           <ul className="space-y-2 text-sm">
             {[
-              { slug: 'coventry-city-centre', name: 'Coventry' },
+              { slug: 'coventry-city-centre', name: 'Coventry City Centre' },
               { slug: 'nuneaton', name: 'Nuneaton' },
               { slug: 'rugby', name: 'Rugby' },
               { slug: 'leamington-spa', name: 'Leamington Spa' },
@@ -124,9 +124,13 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
           <div>
             <h4 className="text-gray-400 text-xs font-bold uppercase tracking-widest mb-3">Postcodes Covered</h4>
-            <div className="flex flex-wrap gap-x-4 gap-y-1 text-xs text-gray-500">
+            <div className="flex flex-wrap gap-x-4 gap-y-2 text-xs text-gray-400">
               {postcodes.map((pc) => (
-                <Link key={pc} href={`/postcodes/${pc}`} className="hover:text-gray-300 transition-colors uppercase">
+                <Link
+                  key={pc}
+                  href={`/postcodes/${pc}`}
+                  className="inline-flex min-h-6 min-w-6 items-center justify-center px-1 hover:text-white transition-colors uppercase"
+                >
                   {pc.toUpperCase()}
                 </Link>
               ))}
@@ -134,16 +138,16 @@ export default function Footer() {
           </div>
           <div>
             <h4 className="text-gray-400 text-xs font-bold uppercase tracking-widest mb-3">Popular Services</h4>
-            <div className="flex flex-wrap gap-x-4 gap-y-1 text-xs text-gray-500">
+            <div className="flex flex-wrap gap-x-4 gap-y-2 text-xs text-gray-400">
               {[
                 { href: '/services/emergency-lockout', label: 'Emergency Lockout Coventry' },
-                { href: '/services/lock-change', label: 'Lock Change Coventry' },
+                { href: '/services/lock-change', label: 'Door Lock Repair & Replacement' },
                 { href: '/services/upvc-lock-repair', label: 'uPVC Door Lock Repair' },
-                { href: '/services/boarding-up', label: 'Emergency Boarding Up' },
+                { href: '/services/boarding-up', label: 'Boarding Up & Burglary Repairs' },
                 { href: '/services/lock-upgrade', label: 'BS3621 & Anti-Snap Upgrades' },
                 { href: '/prices', label: 'Locksmith Prices' },
               ].map((link) => (
-                <Link key={link.href} href={link.href} className="hover:text-gray-300 transition-colors">
+                <Link key={link.href} href={link.href} className="inline-flex min-h-6 items-center hover:text-white transition-colors">
                   {link.label}
                 </Link>
               ))}
@@ -152,14 +156,17 @@ export default function Footer() {
         </div>
 
         {/* Multi-language emergency line */}
-        <div className="flex flex-wrap justify-center gap-x-6 gap-y-1.5 text-xs text-gray-500 pb-4">
+        <div
+          className="flex flex-wrap justify-center gap-x-6 gap-y-1.5 text-xs text-gray-400 pb-4"
+          style={{ fontFamily: 'Arial, Helvetica, sans-serif' }}
+        >
           <span lang="pl"><span className="font-semibold text-gray-400">Zamknięty?</span> Zadzwoń: <a href={`tel:${SITE_CONFIG.phoneTel}`} className="text-gray-300 hover:text-white">{SITE_CONFIG.phone}</a></span>
           <span lang="ro"><span className="font-semibold text-gray-400">Blocat afară?</span> Sunați: <a href={`tel:${SITE_CONFIG.phoneTel}`} className="text-gray-300 hover:text-white">{SITE_CONFIG.phone}</a></span>
           <span lang="ur" dir="rtl"><span className="font-semibold text-gray-400">ایمرجنسی؟</span> کال کریں: <a href={`tel:${SITE_CONFIG.phoneTel}`} className="text-gray-300 hover:text-white">{SITE_CONFIG.phone}</a></span>
           <span lang="hi"><span className="font-semibold text-gray-400">बंद हो गए?</span> कॉल करें: <a href={`tel:${SITE_CONFIG.phoneTel}`} className="text-gray-300 hover:text-white">{SITE_CONFIG.phone}</a></span>
         </div>
 
-        <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-500 pt-4 border-t border-gray-800">
+        <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-400 pt-4 border-t border-gray-800">
           <p>&copy; {year} Local Emergency Locksmith. All rights reserved.</p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link href="/about" className="hover:text-gray-300 transition-colors">About</Link>

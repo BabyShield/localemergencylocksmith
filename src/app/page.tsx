@@ -15,17 +15,17 @@ import { SITE_CONFIG, CONTENT_UPDATED, GOOGLE_REVIEWS } from '@/data/config'
 import { ALL_BLOG_POSTS } from '@/data/blog-posts'
 
 export const metadata: Metadata = {
-  title: 'Emergency Locksmith Coventry | 24/7 | From £59',
+  title: 'Locksmith Coventry | Local 24/7 Service | From £59',
   description:
-    "Emergency locksmith in Coventry & Warwickshire. Locked out? I'll be there in 15-30 minutes. No VAT, no call-out fee. Call 024 7522 4730 now — 24/7, 365 days.",
-  keywords: 'emergency locksmith coventry, locksmith coventry, locksmith near me coventry, 24/7 locksmith coventry, locked out coventry, locksmith warwickshire, local locksmith coventry, cheap locksmith coventry',
+    'Local locksmith in Coventry for lockouts, door lock repairs, replacements, uPVC locks and security upgrades. Available 24/7 from £59; no VAT or call-out fee.',
+  keywords: 'locksmith coventry, local locksmith coventry, locksmith near me coventry, emergency locksmith coventry, 24 hour locksmith coventry, door lock repair coventry, lock replacement coventry, locksmith warwickshire',
   alternates: {
     canonical: SITE_CONFIG.domain,
   },
   openGraph: {
     type: 'website',
-    title: 'Emergency Locksmith Coventry | 24/7 | No VAT | From £59',
-    description: 'Locked out in Coventry? Local independent locksmith, 15-30 min response. No VAT, no call-out fee. Call 024 7522 4730.',
+    title: 'Locksmith Coventry | Local 24/7 Service | From £59',
+    description: 'Local Coventry locksmith for lockouts, door lock repairs, replacements and security upgrades. Available 24/7; no VAT or call-out fee.',
     url: SITE_CONFIG.domain,
     images: [{ url: `${SITE_CONFIG.domain}/og-image.png`, width: 1200, height: 630 }],
   },
@@ -122,8 +122,8 @@ export default function HomePage() {
 
       {/* 1. Hero */}
       <HeroSection
-        heading="Emergency Locksmith Coventry"
-        subheading="Locked out? I'll be there in 15-30 minutes. Local, independent — no VAT, no call-out fee, no hidden charges."
+        heading="Local Locksmith Coventry — Available 24/7"
+        subheading="Lockouts, door lock repairs and replacements handled personally. I aim to arrive in 15-30 minutes across most of Coventry — no VAT or call-out fee."
       />
 
       {/* 2. Personal trust bar */}
@@ -370,7 +370,7 @@ export default function HomePage() {
                   <span className="bg-[#0F1B2D] text-white text-xs font-semibold px-2.5 py-0.5 rounded-full">
                     {post.pillar}
                   </span>
-                  <span className="text-gray-400 text-xs">{post.readTime}</span>
+                  <span className="text-gray-600 text-xs">{post.readTime}</span>
                 </div>
                 <h3 className="font-bold text-[#0F1B2D] text-base mb-2 group-hover:text-[#FFB800] transition-colors leading-snug">
                   {post.title}
@@ -409,7 +409,7 @@ export default function HomePage() {
           </h3>
           <div className="flex flex-wrap justify-center gap-2.5">
             {[
-              { href: '/areas/coventry-city-centre', label: 'Locksmith Coventry' },
+              { href: '/areas/coventry-city-centre', label: 'Locksmith Coventry City Centre' },
               { href: '/areas/nuneaton', label: 'Locksmith Nuneaton' },
               { href: '/areas/rugby', label: 'Locksmith Rugby' },
               { href: '/areas/leamington-spa', label: 'Locksmith Leamington Spa' },

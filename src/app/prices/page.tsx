@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { SITE_CONFIG } from '@/data/config'
 import CTABlock from '@/components/CTABlock'
 import SchemaMarkup from '@/components/SchemaMarkup'
+import DirectAnswer from '@/components/DirectAnswer'
 
 export const metadata: Metadata = {
   title: 'Locksmith Prices Coventry | No VAT or Call-Out Fee',
@@ -36,9 +37,9 @@ const PRICES = [
     detail: 'Supply and fit a new cylinder or Yale lock. Includes one set of keys.',
   },
   {
-    service: 'Lock change (BS3621 insurance-approved)',
+    service: 'Lock change (BS3621-rated)',
     price: 79,
-    detail: 'British Standard five-lever mortice deadlock — required by most home insurance policies.',
+    detail: 'British Standard five-lever mortice deadlock. Check your own policy for the exact lock requirement.',
   },
   {
     service: 'uPVC lock repair',
@@ -159,7 +160,7 @@ export default function PricesPage() {
       <section className="py-12 px-4 text-white" style={{ background: '#0F1B2D' }}>
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-3xl md:text-5xl font-black mb-4">
-            Transparent Locksmith Prices
+            Locksmith Prices in Coventry
           </h1>
           <p className="text-gray-300 text-lg mb-6 max-w-2xl mx-auto">
             No VAT. No call-out fee. No &ldquo;call for a quote&rdquo; — just real prices. The price you see
@@ -172,6 +173,15 @@ export default function PricesPage() {
             <span className="text-sm font-bold uppercase tracking-widest text-[#0F1B2D]/70">Get a Quote Now</span>
             <span className="text-2xl">{SITE_CONFIG.phone}</span>
           </a>
+        </div>
+      </section>
+
+      <section className="py-6 px-4 bg-white">
+        <div className="max-w-3xl mx-auto">
+          <DirectAnswer
+            question="How much does a locksmith cost in Coventry?"
+            answer="A standard residential lockout starts from £59, a standard lock change from £69, and emergency boarding from £79. The final quote depends on the lock, fault, and parts required. I confirm the price before work starts, with no VAT or call-out fee."
+          />
         </div>
       </section>
 
@@ -191,9 +201,9 @@ export default function PricesPage() {
                   <tr key={row.service} className={`border-b border-gray-100 ${i % 2 === 0 ? 'bg-white' : 'bg-gray-50'}`}>
                     <td className="px-6 py-4">
                       <p className="font-semibold text-gray-900">{row.service}</p>
-                      <p className="text-sm text-gray-500 mt-1">{row.detail}</p>
+                      <p className="text-sm text-gray-600 mt-1">{row.detail}</p>
                     </td>
-                    <td className={`px-6 py-4 text-right font-black text-xl align-top pt-5 text-[#FFB800]`}>
+                    <td className={`px-6 py-4 text-right font-black text-xl align-top pt-5 ${row.price === 0 ? 'text-green-700' : 'text-[#8A5A00]'}`}>
                       {row.price === 0 ? 'FREE' : `£${row.price}`}
                     </td>
                   </tr>
@@ -218,70 +228,31 @@ export default function PricesPage() {
             <h3 className="font-bold text-[#FFB800] text-lg mb-2">Why no VAT?</h3>
             <p className="text-gray-300 text-sm leading-relaxed">
               As an independent sole trader, I am not VAT registered. This means I do not add 20% VAT to
-              my prices. A national company charging £59 + VAT is actually charging you £70.80. My £59 is
-              £59 — no additions, no surprises.
+              my prices. The published from-prices are shown without VAT additions; any part or scope that
+              changes the quote is discussed before work begins.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Me vs National Companies */}
+      {/* Pricing factors */}
       <section className="py-12 px-4 bg-gray-50">
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-2xl font-black text-gray-900 mb-6 text-center">Me vs National Companies</h2>
-          <div className="bg-white rounded-xl border border-gray-200 overflow-hidden shadow-sm">
-            <table className="w-full">
-              <caption className="px-6 py-3 text-sm text-gray-500 bg-gray-50 text-left">
-                Price comparison: Local Emergency Locksmith vs national locksmith companies (2026)
-              </caption>
-              <thead>
-                <tr className="bg-[#0F1B2D] text-white">
-                  <th className="text-left px-4 py-3 font-bold text-sm">Service</th>
-                  <th className="text-right px-4 py-3 font-bold text-sm">My Price</th>
-                  <th className="text-right px-4 py-3 font-bold text-sm">National Company</th>
-                  <th className="text-right px-4 py-3 font-bold text-sm">You Save</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr className="border-b border-gray-100 bg-white">
-                  <td className="px-4 py-3 font-semibold text-gray-900 text-sm">Emergency lockout</td>
-                  <td className="px-4 py-3 text-right font-black text-[#FFB800]">£59</td>
-                  <td className="px-4 py-3 text-right text-gray-500 text-sm">£150–£250</td>
-                  <td className="px-4 py-3 text-right font-bold text-green-600 text-sm">£91–£191</td>
-                </tr>
-                <tr className="border-b border-gray-100 bg-gray-50">
-                  <td className="px-4 py-3 font-semibold text-gray-900 text-sm">Lock change</td>
-                  <td className="px-4 py-3 text-right font-black text-[#FFB800]">£69</td>
-                  <td className="px-4 py-3 text-right text-gray-500 text-sm">£120–£200</td>
-                  <td className="px-4 py-3 text-right font-bold text-green-600 text-sm">£51–£131</td>
-                </tr>
-                <tr className="border-b border-gray-100 bg-white">
-                  <td className="px-4 py-3 font-semibold text-gray-900 text-sm">uPVC repair</td>
-                  <td className="px-4 py-3 text-right font-black text-[#FFB800]">£59</td>
-                  <td className="px-4 py-3 text-right text-gray-500 text-sm">£100–£180</td>
-                  <td className="px-4 py-3 text-right font-bold text-green-600 text-sm">£41–£121</td>
-                </tr>
-                <tr className="border-b border-gray-100 bg-gray-50">
-                  <td className="px-4 py-3 font-semibold text-gray-900 text-sm">Boarding up</td>
-                  <td className="px-4 py-3 text-right font-black text-[#FFB800]">£79</td>
-                  <td className="px-4 py-3 text-right text-gray-500 text-sm">£150–£300</td>
-                  <td className="px-4 py-3 text-right font-bold text-green-600 text-sm">£71–£221</td>
-                </tr>
-                <tr className="bg-white">
-                  <td className="px-4 py-3 font-semibold text-gray-900 text-sm">Lock upgrade</td>
-                  <td className="px-4 py-3 text-right font-black text-[#FFB800]">£79</td>
-                  <td className="px-4 py-3 text-right text-gray-500 text-sm">£130–£220</td>
-                  <td className="px-4 py-3 text-right font-bold text-green-600 text-sm">£51–£141</td>
-                </tr>
-              </tbody>
-              <tfoot>
-                <tr className="bg-gray-50 border-t border-gray-200">
-                  <td colSpan={4} className="px-4 py-3 text-xs text-gray-500">
-                    National company prices include VAT and typical call-out fees
-                  </td>
-                </tr>
-              </tfoot>
-            </table>
+          <h2 className="text-2xl font-black text-gray-900 mb-3 text-center">What Affects the Final Locksmith Price?</h2>
+          <p className="text-gray-600 text-center mb-6">
+            Published prices are starting points. The quote depends on the actual fault and agreed work, not an unsupported comparison with another company.
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            {[
+              { title: 'Lock and fault', text: 'The lock type, access method, wear, alignment, and damage determine what work is needed.' },
+              { title: 'Parts required', text: 'A repair may need no replacement part; a new cylinder, mechanism, or complete lock changes the total.' },
+              { title: 'Agreed scope', text: 'I explain what is included and confirm any change before carrying out extra work.' },
+            ].map((item) => (
+              <div key={item.title} className="bg-white rounded-xl border border-gray-200 p-5">
+                <h3 className="font-bold text-[#0F1B2D] mb-2">{item.title}</h3>
+                <p className="text-sm text-gray-600 leading-relaxed">{item.text}</p>
+              </div>
+            ))}
           </div>
 
           <div className="mt-8 space-y-4 text-gray-700 leading-relaxed">

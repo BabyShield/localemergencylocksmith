@@ -31,7 +31,7 @@ export const BLOG_SEARCH_TITLES: Record<string, string> = {
   'multipoint-locking-systems-explained': 'Multipoint Locking Systems: How They Work and Fail',
   'locked-out-late-night-coventry': 'Locked Out of Your House? What to Do Safely',
   'what-to-do-after-burglary': 'What to Do After a Burglary: UK Step-by-Step Guide',
-  'broken-key-stuck-in-lock': 'Broken Key Stuck in a Lock? What to Do Next',
+  'broken-key-stuck-in-lock': 'Key Snapped in Lock? How to Remove a Broken Key',
   'lost-keys-should-you-change-locks': 'Lost House Keys: Should You Change the Locks?',
   'how-emergency-locksmith-callouts-work': 'How Emergency Locksmith Call-Outs Work',
   'can-fire-brigade-police-help-locked-out': "Can Police or Fire Brigade Help When You're Locked Out?",
@@ -50,7 +50,7 @@ export const BLOG_SEARCH_TITLES: Record<string, string> = {
   'bank-holiday-lockout-guide': 'Locked Out on a Bank Holiday? What to Do',
   'new-year-home-security-audit': 'New Year Home Security Audit: Doors, Windows and Locks',
   'coventry-victorian-terraces-security': 'Security for Coventry Victorian Terraces and 1930s Semis',
-  'burglary-trends-coventry-warwickshire': 'Coventry and Warwickshire Burglary Trends',
+  'burglary-trends-coventry-warwickshire': 'Coventry Burglary Data: What Official Sources Show',
   'common-lock-problems-coventry-homes': 'Common Lock Problems in Coventry Homes',
   'choosing-locksmith-coventry': 'How to Choose a Trusted Locksmith in Coventry',
 }
@@ -87,20 +87,62 @@ export const BLOG_META_DESCRIPTIONS: Record<string, string> = {
   'student-move-in-security-guide': 'A Coventry student move-in security guide covering shared homes, HMOs, door locks and questions to raise with your landlord.',
   'new-year-home-security-audit': 'Complete a 30-minute home security audit covering doors, windows and locks, with clear priorities for any upgrades you find.',
   'coventry-victorian-terraces-security': 'Security advice for Coventry Victorian terraces and 1930s semis, covering common door, window and lock weak points.',
-  'burglary-trends-coventry-warwickshire': 'Explore burglary patterns in Coventry and Warwickshire using local crime data, with practical lessons for improving home security.',
+  'burglary-trends-coventry-warwickshire': 'Learn what current national and local burglary sources can show, their geographic limits and practical steps for a property-specific security check.',
   'common-lock-problems-coventry-homes': 'Discover common lock problems in Coventry homes, from uPVC multipoint faults and euro cylinders to ageing mortice locks.',
   'choosing-locksmith-coventry': 'Learn how to compare Coventry locksmiths, check local credentials, spot warning signs and ask for clear pricing before booking.',
 }
 
 // Only bump dates for articles whose editorial body was materially reviewed.
 export const BLOG_CONTENT_UPDATED: Record<string, string> = {
+  'what-is-lock-snapping': '2026-08-28',
+  'euro-cylinder-locks-explained': '2026-08-28',
+  'bs3621-vs-anti-snap-vs-smart-lock': '2026-08-28',
+  'yale-vs-mortice-deadlock': '2026-08-28',
+  'anti-snap-locks-compared': '2026-08-28',
+  'smart-locks-2026-are-they-secure': '2026-08-28',
+  'five-lever-mortice-deadlock-guide': '2026-08-28',
+  'how-burglars-break-into-uk-homes': '2026-08-28',
+  'home-security-checklist-2026': '2026-08-28',
+  'patio-doors-french-doors-security': '2026-08-28',
+  'garage-shed-security': '2026-08-28',
+  'do-burglar-alarms-cctv-deter-burglars': '2026-08-28',
+  'window-security-overlooked-weak-point': '2026-08-28',
+  'emergency-locksmith-cost-coventry-2026': '2026-08-28',
+  'emergency-locksmith-charges-explained': '2026-08-28',
+  'lock-change-costs-by-type': '2026-08-28',
+  'upvc-door-lock-replacement-costs': '2026-08-28',
+  'rekey-or-replace-locks': '2026-08-28',
+  'upvc-door-lock-needs-replacing': '2026-08-28',
+  'upvc-door-lock-mechanisms-explained': '2026-08-28',
+  'how-to-measure-euro-cylinder-upvc': '2026-08-28',
+  'best-euro-cylinder-upgrades-2026': '2026-08-28',
+  'multipoint-locking-systems-explained': '2026-08-28',
+  'locksmith-wont-give-price-on-phone': '2026-08-28',
+  'burglary-trends-coventry-warwickshire': '2026-08-28',
+  'coventry-victorian-terraces-security': '2026-08-28',
+  'common-lock-problems-coventry-homes': '2026-08-28',
   'ts007-vs-ss312-lock-standards': '2026-08-28',
   'secured-by-design-explained': '2026-08-28',
   'what-to-do-after-burglary': '2026-08-28',
+  'broken-key-stuck-in-lock': '2026-08-28',
+  'lost-keys-should-you-change-locks': '2026-08-28',
+  'how-emergency-locksmith-callouts-work': '2026-08-28',
+  'can-fire-brigade-police-help-locked-out': '2026-08-28',
+  'bank-holiday-lockout-guide': '2026-08-28',
   'bs3621-locks-explained': '2026-08-28',
+  'pas3621-bs3621-bs8621-differences': '2026-08-28',
   'can-landlord-change-locks': '2026-08-28',
   'landlords-change-locks-between-tenants': '2026-08-28',
+  'insurance-payout-lock-standards': '2026-08-28',
   'insurance-approved-locks-explained': '2026-08-28',
+  'dark-evenings-burglary-october': '2026-08-28',
+  'how-to-stop-locks-freezing-winter': '2026-08-28',
+  'christmas-home-security': '2026-08-28',
+  'summer-holiday-security-checklist': '2026-08-28',
+  'student-move-in-security-guide': '2026-08-28',
+  'new-year-home-security-audit': '2026-08-28',
+  'moving-house-change-locks': '2026-08-28',
+  'choosing-locksmith-coventry': '2026-08-28',
 }
 
 export interface BlogServiceCta {
@@ -159,4 +201,66 @@ export const BLOG_CTA_BY_PILLAR: Record<string, BlogServiceCta> = {
     heading: 'Need a locksmith in Coventry or Warwickshire?',
     description: 'Compare the five residential locksmith services, prices and the areas covered.',
   },
+}
+
+const LOCK_REPAIR_REPLACEMENT_CTA: BlogServiceCta = {
+  href: '/services/lock-change',
+  label: 'View lock repair and replacement',
+  heading: 'Need a door lock repaired or replaced?',
+  description: 'See the Coventry door lock repair and replacement service, common lock types and current from-price.',
+}
+
+const BOARDING_BURGLARY_REPAIR_CTA: BlogServiceCta = {
+  href: '/services/boarding-up',
+  label: 'View boarding and burglary repairs',
+  heading: 'Need to secure burglary damage now?',
+  description: 'See the 24/7 boarding and immediate burglary-repair service for damaged doors, locks and windows.',
+}
+
+// Specific article intent wins over the broader editorial pillar. This keeps
+// each guide connected to the closest service instead of sending every article
+// in a broad topic cluster to the same commercial page.
+export const BLOG_CTA_BY_SLUG: Record<string, BlogServiceCta> = {
+  'what-to-do-after-burglary': BOARDING_BURGLARY_REPAIR_CTA,
+  'burglary-trends-coventry-warwickshire': BLOG_CTA_BY_PILLAR['home-security'],
+  'lost-keys-should-you-change-locks': LOCK_REPAIR_REPLACEMENT_CTA,
+  'moving-house-change-locks': LOCK_REPAIR_REPLACEMENT_CTA,
+  'lock-change-costs-by-type': LOCK_REPAIR_REPLACEMENT_CTA,
+  'rekey-or-replace-locks': LOCK_REPAIR_REPLACEMENT_CTA,
+  'broken-key-stuck-in-lock': BLOG_CTA_BY_PILLAR['emergency-situations'],
+  'locked-out-late-night-coventry': BLOG_CTA_BY_PILLAR['emergency-situations'],
+  'bank-holiday-lockout-guide': BLOG_CTA_BY_PILLAR['emergency-situations'],
+  'what-is-lock-snapping': BLOG_CTA_BY_PILLAR['lock-types-security'],
+  'anti-snap-locks-compared': BLOG_CTA_BY_PILLAR['lock-types-security'],
+  'bs3621-locks-explained': BLOG_CTA_BY_PILLAR['legal-insurance'],
+}
+
+// One canonical guide set per service, reused by service pages and every
+// hand-written town×service page.
+export const SERVICE_GUIDE_SLUGS: Record<string, readonly string[]> = {
+  'emergency-lockout': [
+    'locked-out-late-night-coventry',
+    'broken-key-stuck-in-lock',
+    'can-fire-brigade-police-help-locked-out',
+  ],
+  'lock-change': [
+    'lock-change-costs-by-type',
+    'lost-keys-should-you-change-locks',
+    'moving-house-change-locks',
+  ],
+  'upvc-lock-repair': [
+    'upvc-door-lock-needs-replacing',
+    'upvc-door-lock-mechanisms-explained',
+    'upvc-door-maintenance-guide',
+  ],
+  'boarding-up': [
+    'what-to-do-after-burglary',
+    'how-burglars-break-into-uk-homes',
+    'home-security-checklist-2026',
+  ],
+  'lock-upgrade': [
+    'bs3621-locks-explained',
+    'anti-snap-locks-compared',
+    'insurance-approved-locks-explained',
+  ],
 }

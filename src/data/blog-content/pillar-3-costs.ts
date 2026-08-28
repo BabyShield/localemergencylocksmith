@@ -3,69 +3,31 @@ export const PILLAR_3_CONTENT: Record<string, { body: string; faqs: { q: string;
   'emergency-locksmith-charges-explained': {
     body: `## Why Does It Cost More to Call a Locksmith at 2am?
 
-If you have ever been locked out late at night and Googled "emergency locksmith," you have probably noticed the prices vary wildly. Some companies quote £65. Others quote £200 or more — for the exact same job.
+If you are comparing emergency locksmith prices, ask for the total for your specific door and time slot. A headline figure is not comparable unless it states whether labour, parts, travel, VAT, time premiums and any call-out charge are included.
 
-So what is going on? Why does the same lockout that costs £75 during the day suddenly cost £180 at midnight?
+I am Ross, a local independent locksmith based in Coventry. My published standard residential lockout price starts from £59, with no VAT or separate call-out fee. I confirm the specific quote before work starts.
 
-I am Ross, a local independent locksmith based in Coventry. I have been doing this long enough to know exactly how the pricing works across the industry — and why I choose to do things differently. Let me break it all down.
+## Why Quotes Can Differ
 
-## Day Rate vs Night Rate: The Standard UK Pricing
+There is no single verified UK market rate that applies to every locksmith or door. A quote can change with:
 
-Most locksmiths in the UK operate on a tiered pricing structure. Here is what is typical across the industry:
+- The door, lock and fault
+- Whether non-destructive entry is possible
+- Replacement parts, keys or door repairs required
+- Distance and the requested time slot
+- The provider's VAT status and any separately disclosed fee
 
-**Daytime rates (8am - 6pm):**
-- Hourly rate: £65 - £85
-- Most residential jobs take 15-45 minutes, so you are usually paying for one hour
-
-**Evening rates (6pm - 11pm):**
-- Hourly rate: £80 - £120
-- A 50-75% markup on the day rate
-
-**Night rates (11pm - 8am):**
-- Hourly rate: £100 - £200
-- Some companies charge double or even triple the day rate
-
-**Weekends and bank holidays:**
-- Typically match evening or night rates regardless of the time of day
-
-The justification you will hear is that locksmiths need to be compensated for unsocial hours. And for employed locksmiths working shifts, that makes sense. But for a self-employed locksmith who chooses to offer 24/7 service? The overheads are the same whether I am working at 2pm or 2am.
+Compare like with like and get the total in writing or by message where possible.
 
 ## Call-Out Fees: The Hidden Extra
 
-On top of the hourly rate, many locksmiths charge a separate call-out fee. This is supposed to cover the cost of travelling to you. Typical call-out fees in the Coventry and Warwickshire area:
+Some providers use a separate call-out fee and others include travel in the job price. Ask for the complete total before the visit, including the conditions that could change it.
 
-- Local call-out (within 5 miles): £30 - £50
-- Extended call-out (5-15 miles): £50 - £80
-- After-hours call-out: £50 - £100 on top of the after-hours rate
-
-Some companies bury the call-out fee in the small print. You phone up, they quote you £85 for the job, and then when they arrive you find out there is a £45 call-out fee on top. Suddenly your £85 job is £130.
-
-**I do not charge a call-out fee.** The price I quote on the phone is the price you pay. If I say a lockout will cost £75, that is the total. No call-out fee added at the door.
+**I do not charge a separate call-out fee.** A standard residential lockout starts from £59, and I confirm the price for the described job before setting off and again before any additional work.
 
 ## VAT: The 20% Most People Forget
 
-Here is a detail that catches a lot of people out. If a locksmith company is VAT-registered (which they must be if their turnover exceeds the VAT threshold), they add 20% VAT on top of the quoted price.
-
-So when a company quotes you £100 + VAT, the actual price is £120.
-
-As a small independent locksmith, I am not VAT-registered. That means the price I quote is the price you pay — no 20% added on top.
-
-This single difference can make a significant impact. On a £150 lock change, VAT adds £30. On an emergency call-out quoted at £120, VAT adds £24. It adds up fast.
-
-## How National Franchises Add Dispatch Fees
-
-The national locksmith companies — the ones that dominate Google Ads when you search "locksmith near me" — have an additional layer of cost that most people do not know about.
-
-Here is how they work:
-
-1. You call a national number (often a call centre, sometimes overseas)
-2. They take your details and dispatch a local locksmith
-3. That local locksmith pays the franchise a commission — typically 20-40% of the job value
-4. The locksmith has to inflate their prices to cover that commission
-
-So when you pay £180 for a nighttime lockout with a national company, a significant chunk of that is going to the call centre and the franchise — not to the person actually doing the work.
-
-Some franchise models charge the locksmith a flat fee per lead (£30-£50 per call-out) regardless of whether they complete the job. Others take a percentage of every job. Either way, you — the customer — are paying for that overhead.
+Ask whether a quoted price includes any applicable VAT. The prices published on this site have no VAT added; the confirmed quote is the amount due for the agreed scope.
 
 ## Why I Charge the Same 24/7
 
@@ -78,44 +40,23 @@ Here is what I do not charge:
 - **No night premium** — same price 24/7, 365 days a year
 - **No call-out fee** — the quoted price is the total price
 - **No VAT** — I am not VAT-registered, so the price stays as quoted
-- **No dispatch fee** — there is no middleman taking a cut
+- **No dispatch fee** — you speak directly with the locksmith doing the work
 
-## Real Price Comparison: Same Job, Different Locksmith
+## Current Starting Price
 
-Let me put real numbers on this. Take a standard nighttime lockout — you are locked out of your uPVC door at 11pm on a Saturday. The lock is not damaged, it just needs picking open.
-
-| Cost Element | National Franchise | Local Competitor (VAT-registered) | My Price |
-|---|---|---|---|
-| Base job price | £120 | £100 | £75 |
-| Night premium | £40 | £30 | £0 |
-| Call-out fee | £50 | £40 | £0 |
-| VAT (20%) | £42 | £34 | £0 |
-| **Total** | **£252** | **£204** | **£75** |
-
-That is not an exaggeration. I have spoken to customers who have been quoted over £250 for a straightforward lockout by national companies. Some have been charged even more after the locksmith arrived and found "additional problems."
-
-Now take a daytime lock change — replacing a euro cylinder on a uPVC front door:
-
-| Cost Element | National Franchise | Local Competitor (VAT-registered) | My Price |
-|---|---|---|---|
-| Base job price | £90 | £75 | £59 |
-| Call-out fee | £40 | £30 | £0 |
-| VAT (20%) | £26 | £21 | £0 |
-| **Total** | **£156** | **£126** | **£59** |
-
-The difference is significant — and it is entirely down to overheads, not the quality of the work.
+A standard residential lockout starts from **£59**, including the first 30 minutes of labour. The final quote depends on the door, lock, access method, parts and any repair required. See the current [price list](/prices) rather than relying on a competitor estimate or an old industry average.
 
 ## How to Avoid Overpaying for an Emergency Locksmith
 
 Whether you call me or someone else, here are the questions to ask before you agree to anything:
 
-1. **"What is the total price, including any call-out fee?"** — If they will not give you a total, hang up
+1. **"What is the total price, including any call-out fee?"** — Ask what facts could change the quote
 2. **"Is that price including VAT?"** — If they are VAT-registered, add 20%
 3. **"Is there a night/weekend surcharge?"** — Get the actual number, not just "there may be an additional charge"
 4. **"Are you a local locksmith or a national call centre?"** — Ask where they are based
-5. **"Can you confirm the price before you start work?"** — A legitimate locksmith will always confirm before touching the lock
+5. **"Can you confirm the price before you start work?"** — Ask the provider to record the agreed scope and total
 
-If a locksmith will not give you a straight answer to any of these questions, that is a red flag. Read more about spotting rogue operators in our guide on [why you should never use a locksmith who will not give a price on the phone](/blog/locksmith-wont-give-price-on-phone).
+If the scope is uncertain, ask for the starting price, the variables and approval before extra work. Read the guide to [getting a useful locksmith quote by phone](/blog/locksmith-wont-give-price-on-phone).
 
 ## What You Should Expect to Pay in Coventry
 
@@ -125,19 +66,19 @@ If you are locked out right now, head to our [emergency lockout](/services/emerg
     faqs: [
       {
         q: 'Why do some locksmiths charge more at night?',
-        a: 'Most locksmiths use tiered pricing with higher rates for evenings, nights, weekends, and bank holidays. The standard justification is compensation for unsocial hours. Night rates in the UK typically range from £100 to £200 per hour compared to £65-£85 during the day. However, for a self-employed locksmith with no shift patterns, the actual cost of doing the job is identical regardless of the time. I charge the same rate 24/7 because my overheads do not change at midnight.',
+        a: 'Providers set their own pricing and may use different rates by time slot. Ask for the total for your specific door and time, including labour, parts, travel, VAT and any call-out fee. My published starting prices are the same 24/7.',
       },
       {
         q: 'What is a locksmith call-out fee and do I have to pay one?',
-        a: 'A call-out fee is a separate charge for the locksmith travelling to your location, typically £30-£100 depending on distance and time of day. It is added on top of the job price. Not all locksmiths charge one — I do not. Always ask "what is the total price including any call-out fee" before agreeing to anything. If a locksmith quotes you a job price and then adds a call-out fee when they arrive, that is a tactic to avoid.',
+        a: 'A call-out fee is a separate charge some providers use for attending. I do not charge one. Ask every provider for the complete total, what it includes, and which facts could change it before agreeing to the visit.',
       },
       {
         q: 'How much should I pay for an emergency lockout in Coventry?',
-        a: 'For a standard lockout on a uPVC or wooden door in the Coventry area, you should expect to pay between £65 and £100 from a local independent locksmith during the day, and potentially more at night from companies that charge night premiums. My price is £75 for a standard lockout regardless of the time — no call-out fee, no VAT, no night surcharge. If you are being quoted over £150 for a straightforward lockout, you are likely dealing with a national franchise or a company with significant hidden extras.',
+        a: 'My standard residential lockout starts from £59, with no VAT, separate call-out fee or night surcharge. The specific quote depends on the door, lock, access method, parts and repair required, and I confirm it before work starts.',
       },
       {
         q: 'Do national locksmith companies charge more than local ones?',
-        a: 'Yes, almost always. National locksmith franchises operate call centres that dispatch local locksmiths but take a commission of 20-40% per job. That commission gets passed on to you through higher prices. They also tend to charge call-out fees, night premiums, and VAT. A straightforward nighttime lockout that costs £75 with me can easily cost £200-£250 through a national company. Always check whether you are calling a local locksmith or a national call centre by asking where they are based.',
+        a: 'There is no evidence here for a universal price difference. Compare the total written quote for the same door, time and scope, and ask whether you are speaking directly with the locksmith who will attend.',
       },
     ],
   },
@@ -145,7 +86,7 @@ If you are locked out right now, head to our [emergency lockout](/services/emerg
   'lock-change-costs-by-type': {
     body: `## How Much Does It Cost to Change a Lock? Every Type, Every Door
 
-If you are looking for a straight answer on lock change costs, you are in the right place. I am Ross, a local locksmith in Coventry, and I am going to give you the actual prices I charge — not vague ranges, not "from £XX" with small print, and definitely not "call for a quote."
+If you are looking for a straight answer on lock-change costs, this guide lists my current starting prices and the specific factors that can change the quote.
 
 Every price on this page includes the lock, the fitting, and the removal and disposal of the old lock. No call-out fee. No VAT. No surprises.
 
@@ -157,31 +98,27 @@ The Yale nightlatch is the spring-loaded lock you slam shut. It is fitted to mos
 
 That includes a quality replacement nightlatch (I typically fit ERA or Yale brand), fitting, and disposal of the old one. The price can increase if:
 
-- You want a British Standard (BS3621) nightlatch — these are more expensive but meet insurance requirements
+- You want a British Standard (BS3621) nightlatch — this may match a policy that explicitly names the standard, but the policy wording still needs checking
 - The existing cutout does not match the new lock (rare, but it happens with very old doors)
 - You want a high-security model with anti-pick, anti-bump features
 
-**National company price: £100 - £150+ including call-out and VAT**
-
-A Yale nightlatch swap is one of the simplest lock changes. It takes about 20-30 minutes. If anyone is quoting you significantly more than this, ask why.
+A like-for-like nightlatch replacement can be simpler than cutting a new opening, but the door, existing cutout, product and alignment determine the work. Ask what the quote includes.
 
 For more on whether you need a Yale, a mortice deadlock, or both, see our guide on [Yale locks vs mortice deadlocks](/blog/yale-vs-mortice-deadlock).
 
 ## Euro Cylinder Replacement: From £59
 
-The euro cylinder is the lock inside your uPVC or composite door. It is the most common lock type in the UK by a wide margin, and it is also the most frequently replaced.
+The euro cylinder is the keyed cylinder used in many uPVC and composite doors, and it can be replaced independently of a compatible multipoint mechanism.
 
 **My price: from £59 fitted**
 
-That gets you a quality anti-snap euro cylinder, measured and fitted to your door. I carry a range of sizes in the van, so in most cases I can do this on the spot.
-
-**National company price: £90 - £156+ including call-out and VAT**
+That covers an anti-snap euro cylinder measured and fitted to your door. I explain the available certification, size, and configuration before fitting.
 
 The price varies based on:
 
 - **Cylinder length** — euro cylinders come in different sizes (typically 35/35, 40/40, 45/45, or offset). The cylinder must match your door exactly
 - **Security rating** — a basic euro cylinder costs less than a TS007 3-star rated one
-- **Brand** — budget brands start lower, but I recommend at least a mid-range anti-snap cylinder for security
+- **Certification and brand** — compare the exact product's independent certification, compatibility, and price rather than assuming one price tier is suitable for every door
 
 If you want a premium brand like Ultion, ABS, or Avocet ATS, expect to pay more for the cylinder itself. See our [anti-snap locks comparison](/blog/anti-snap-locks-compared) for a detailed brand breakdown.
 
@@ -189,13 +126,11 @@ For help measuring your existing cylinder, check our guide on [how to measure a 
 
 ## 5-Lever Mortice Deadlock (BS3621): From £79 Fitted
 
-The 5-lever mortice deadlock is the lock that sits inside a wooden door — you turn the key and a bolt shoots into the frame. It is the lock most home insurance policies require on external doors.
+The 5-lever mortice deadlock sits inside a suitable timber door — turning the key extends a bolt into the frame. Some home-insurance policies name BS3621 for particular final-exit doors, while others use different security wording.
 
 **My price: from £79 fitted (BS3621 certified)**
 
-This includes a British Standard BS3621 deadlock, fitting, and the old lock disposal. BS3621 is the standard most insurance companies require, so make sure any mortice lock you have fitted carries this certification. More on that in our [BS3621 guide](/blog/bs3621-locks-explained).
-
-**National company price: £120 - £180+ including call-out and VAT**
+This includes a British Standard BS3621 deadlock, fitting, and the old lock disposal. If your policy names BS3621, check the exact door and evidence requirements with the insurer before booking. More on that in our [BS3621 guide](/blog/bs3621-locks-explained).
 
 The price can vary depending on:
 
@@ -203,7 +138,7 @@ The price can vary depending on:
 - **Door material and condition** — hardwood doors are straightforward. Old, soft, or thin doors may need reinforcement
 - **Keep alignment** — if the keep (the plate in the frame) needs repositioning, that adds time
 
-A straightforward like-for-like replacement takes about 30-45 minutes. A new installation on a door that has never had a mortice lock can take an hour or more.
+A like-for-like replacement can take less time than a new mortice cut. Door condition, case size, alignment and any repair determine the actual duration.
 
 ## Multipoint Mechanism (uPVC/Composite Door): From £89 - £150
 
@@ -219,59 +154,36 @@ The wide price range is because there are dozens of different multipoint mechani
 
 I carry the most common mechanisms in the van, but unusual or discontinued models sometimes need ordering. I will always tell you on the phone if that is likely.
 
-**National company price: £150 - £300+ including call-out and VAT**
-
 For a full breakdown of uPVC door lock costs specifically, see our detailed [uPVC door lock replacement costs](/blog/upvc-door-lock-replacement-costs) guide.
 
 ## Anti-Snap Cylinder Upgrade: From £59
 
-An anti-snap cylinder is a euro cylinder with a built-in sacrifice line. If someone tries to snap it (the most common burglary technique for uPVC doors in the UK), the front section breaks off cleanly but the remaining cylinder stays locked in place.
+Anti-snap cylinders are designed to improve resistance to snapping attacks. [Police.uk's door and window lock advice](https://www.police.uk/cp/crime-prevention/protect-home-crime/door-window-lock-advice/) recommends a 3-star TS007 cylinder when a euro cylinder is changed.
 
 **My price: from £59 fitted**
 
-This is the single most cost-effective security upgrade for any uPVC or composite door. If your door currently has a standard euro cylinder, it can probably be snapped in under 30 seconds. An anti-snap cylinder stops that.
+[DHF's TS007 guidance](https://www.dhfonline.org.uk/pg/ts-007/335.htm) explains the independently tested options: a Kitemarked 3-star cylinder, or a 1-star cylinder used with 2-star security furniture. Certification, correct sizing, compatible furniture, and fitting all matter. An upgrade can improve tested resistance but cannot guarantee that an attack will fail.
 
-The price varies by brand:
+Anti-snap cylinder fitting starts from £59. The exact quote depends on the certified product, size, configuration, surrounding furniture, and work required; check the current [prices](/prices).
 
-- **Budget anti-snap** (e.g., UAP+): from £59
-- **Mid-range** (e.g., ABS, Yale Platinum): from £69
-- **Premium** (e.g., Ultion, Avocet ATS): from £89
+All prices include fitting. The suitable option depends on the complete door set and any written policy requirement. For more detail, read the [anti-snap locks comparison](/blog/anti-snap-locks-compared), the guide to [lock snapping](/blog/what-is-lock-snapping), or the [lock upgrade service](/services/lock-upgrade).
 
-All prices include fitting. I recommend at least a mid-range option for most homes. For more detail, read our [anti-snap locks comparison](/blog/anti-snap-locks-compared) or our guide on [what lock snapping is and whether your home is vulnerable](/blog/what-is-lock-snapping).
+## Smart-Lock Compatibility and Quotes
 
-## Smart Lock Installation: From £120
-
-Smart locks let you unlock your door with your phone, a code, a fingerprint, or a fob — no physical key needed (though most have a key override).
-
-**My price: from £120 fitted (lock not included)**
-
-Smart lock installation is more involved than a standard lock change because it typically requires:
-
-- Removing the existing lock and handle hardware
-- Fitting the smart lock body and any associated strike plates
-- Setting up the electronics, pairing with your phone, and programming codes or fingerprints
-- Testing thoroughly, including the manual override
-
-If you supply the smart lock yourself, my fitting price starts at £120. If you want me to supply the lock as well, the total depends on which model you choose:
-
-- **Yale Conexis L2**: from £200 total (lock + fitting)
-- **Nuki Smart Lock**: from £220 total (lock + fitting)
-- **Yale Linus**: from £230 total (lock + fitting)
-
-For more on whether a smart lock is right for your front door, see our [smart locks guide](/blog/smart-locks-2026-are-they-secure).
+Smart-lock supply and fitting are not part of the published core-service price table. Compatibility depends on the exact product, doorset, multipoint mechanism, dimensions, escape requirements and backup-entry method. Ask for a compatibility check and full quote before buying a device. For the assessment checklist, see the [smart-lock guide](/blog/smart-locks-2026-are-they-secure).
 
 ## What Affects the Cost of a Lock Change?
 
 Beyond the lock type itself, several factors can influence the final price:
 
 ### Lock Brand and Quality
-A budget lock costs less than a premium one, but the difference in security can be significant. I always recommend at least a mid-range option and will explain the trade-offs so you can decide.
+A budget product costs less than a premium one, but price alone does not establish certified attack resistance or suitability. I will explain the available certifications, fit, and trade-offs so you can decide.
 
 ### Door Type and Condition
 Wooden doors, uPVC doors, and composite doors all have different lock systems. Older doors sometimes need additional work — a worn mortice pocket may need packing, or a misaligned uPVC door may need adjusting before a new mechanism works properly.
 
 ### Time Required
-A straightforward cylinder swap takes 10-15 minutes. A new mortice lock installation on a hardwood door can take over an hour. My prices reflect the typical time for each job, but I will let you know if your specific situation is likely to take longer.
+A like-for-like cylinder swap can be quicker than cutting a new mortice. The product, fit, alignment, door condition and any repair determine the actual time; I give a job-specific estimate after the door and lock are identified.
 
 ### Number of Locks
 If you are changing multiple locks at the same time (common when moving house), I offer a discount on the second and subsequent locks. Call 024 7522 4730 for a quote on multiple locks.
@@ -296,7 +208,7 @@ You can also check our full [price list](/prices) or browse our [lock change ser
     faqs: [
       {
         q: 'How much does it cost to change the locks on a front door?',
-        a: 'It depends on the lock type and door type. For a wooden front door with a Yale nightlatch, from £69 fitted. For a 5-lever mortice deadlock (BS3621), from £79 fitted. For a uPVC or composite door euro cylinder, from £59 fitted. All my prices include the lock, fitting, keys, and old lock disposal — no call-out fee and no VAT. National companies typically charge 50-100% more once you add call-out fees and VAT.',
+        a: 'It depends on the lock and door. A Yale nightlatch starts from £69 fitted, a BS3621-rated five-lever mortice deadlock from £79, and an anti-snap euro-cylinder option from £59. The specific quote depends on the product, size, keys and fitting required. I confirm the price before work starts, with no VAT or call-out fee.',
       },
       {
         q: 'Is it cheaper to change locks yourself or hire a locksmith?',
@@ -304,11 +216,11 @@ You can also check our full [price list](/prices) or browse our [lock change ser
       },
       {
         q: 'How long does it take to change a lock?',
-        a: 'A euro cylinder replacement takes 10-15 minutes. A Yale nightlatch change takes 20-30 minutes. A like-for-like mortice deadlock replacement takes 30-45 minutes. A new mortice lock installation (cutting the door) takes 45-90 minutes. A multipoint mechanism swap takes 30-60 minutes depending on the type. I will give you a time estimate when you call.',
+        a: 'It depends on whether the work is a like-for-like cylinder or nightlatch change, a new mortice cut, or a multipoint-mechanism repair. Door condition, alignment and parts also matter. I give a job-specific time estimate once the lock and scope are identified.',
       },
       {
         q: 'Do you carry locks in the van or do I need to buy one?',
-        a: 'I carry a full range of euro cylinders, Yale nightlatches, mortice deadlocks, and the most common multipoint mechanisms in my van. In most cases I can do the job on the spot without a second visit. For unusual multipoint mechanisms or specific smart locks, I may need to order the part — but I will tell you that upfront on the phone. You never need to buy a lock yourself unless you want to.',
+        a: 'I carry common residential cylinders, nightlatches and mortice-lock options, but exact sizes and multipoint mechanisms vary. I confirm stock after the product is identified and tell you before the visit if a part may need ordering. Ask before buying a product yourself so compatibility can be checked.',
       },
     ],
   },
@@ -316,7 +228,7 @@ You can also check our full [price list](/prices) or browse our [lock change ser
   'upvc-door-lock-replacement-costs': {
     body: `## uPVC Door Lock Replacement Costs: What You Will Actually Pay
 
-uPVC doors are the most common external door in Coventry — and across the UK. They are also the most common reason people call me. Whether your door will not lock, the handle is floppy, or you just want to upgrade the security, this guide covers every cost involved.
+uPVC doors are widely used in Coventry and across the UK. Whether your door will not lock, the handle is floppy, or you want its security assessed, this guide covers the relevant repair, replacement, and upgrade costs.
 
 I am Ross, a local locksmith based in Coventry. Every price below is what I actually charge — including the part, the fitting, and any disposal. No call-out fee. No VAT. No hidden extras.
 
@@ -350,7 +262,7 @@ uPVC doors use flag hinges that allow the door to be adjusted up, down, in, and 
 
 ### Euro Cylinder Only: From £59
 
-This is the most common job I do. The euro cylinder is the part most likely to need replacing, and it is also the simplest and cheapest.
+Euro-cylinder replacement is one of the uPVC door jobs I carry out. It is a separate component from the multipoint mechanism, so an assessment should establish which part is actually faulty or due for replacement.
 
 **What is included:**
 - Anti-snap euro cylinder (correct size for your door)
@@ -369,7 +281,7 @@ This is the most common job I do. The euro cylinder is the part most likely to n
 - Security level (basic anti-snap vs premium brands like Ultion or ABS)
 - Thumbturn option (key on outside, thumbturn on inside — popular for fire safety)
 
-A basic anti-snap cylinder starts at £59. A premium Ultion or ABS cylinder starts at £89. Both prices include fitting.
+Anti-snap cylinder fitting starts from £59. The exact quote depends on the product, size, configuration, and any compatible furniture required; check the current [prices](/prices).
 
 ### Gearbox / Mechanism Replacement: From £89 - £200
 
@@ -510,7 +422,7 @@ When you call me on 024 7522 4730, I will ask you a few questions about the symp
 
 Call 024 7522 4730 for a firm price on any uPVC door lock job. I cover the whole of Coventry and surrounding Warwickshire areas, and I charge the same price day or night — no call-out fee, no VAT.
 
-For all our lock services, visit the [lock change](/services/lock-change) page or check our full [price list](/prices). If your uPVC door is jammed and you cannot get in or out, visit our [emergency lockout](/services/emergency-lockout) page.`,
+For uPVC mechanism repairs and replacements, visit the [uPVC lock repair service](/services/upvc-lock-repair) or check the full [price list](/prices). If your uPVC door is jammed and you cannot get in or out, visit the [emergency lockout service](/services/emergency-lockout).`,
     faqs: [
       {
         q: 'How much does it cost to replace a uPVC door lock mechanism?',
@@ -536,7 +448,7 @@ For all our lock services, visit the [lock change](/services/lock-change) page o
 
 You have moved into a new home, lost your keys, or split up with someone who has a copy. You want to make sure old keys no longer work. The question is: should you rekey the existing locks or replace them entirely?
 
-I am Ross, a local locksmith based in Coventry. I handle these calls every week, and the honest answer is that for most residential properties in the Coventry and Warwickshire area, I recommend replacement over rekeying. Let me explain why — and when rekeying does make sense.
+I am Ross, a local locksmith based in Coventry. Whether rekeying or replacement is practical depends on the exact lock, available parts, certification, condition and key-control objective. This guide explains the assessment rather than assuming one route is always cheaper.
 
 ## What Is Rekeying?
 
@@ -560,34 +472,22 @@ Lock replacement means removing the entire lock — housing, cylinder, everythin
 
 ## Cost Comparison: Rekey vs Replace
 
-Here is what each option typically costs for the most common lock types:
+There is no published flat rekeying price on this site because the exact cylinder or lock and available parts must be identified first. Compare a job-specific rekey quote with the published replacement starting price.
 
 ### Euro Cylinder (uPVC and Composite Doors)
 
-| Option | Cost |
-|---|---|
-| Rekey existing cylinder | £40 - £60 |
-| Replace with new anti-snap cylinder | From £59 |
-
-Look at those numbers. For a euro cylinder, the cost difference between rekeying and replacing is minimal — sometimes replacement is actually the same price or cheaper. And with replacement, you get a brand new lock with full lifespan ahead of it.
+- Rekeying: quoted after the exact cylinder and parts are identified
+- Anti-snap cylinder replacement: from £59, subject to product, size and fit
 
 ### Yale Nightlatch (Wooden Front Doors)
 
-| Option | Cost |
-|---|---|
-| Rekey existing Yale | £40 - £55 |
-| Replace with new Yale nightlatch | From £69 |
-
-Again, the price gap is small. A new Yale nightlatch costs only £10-£25 more than rekeying the old one.
+- Rekeying: quoted after the exact nightlatch and available parts are identified
+- Yale nightlatch replacement: from £69, subject to product and fit
 
 ### 5-Lever Mortice Deadlock (Wooden Front Doors)
 
-| Option | Cost |
-|---|---|
-| Rekey existing mortice lock | £50 - £70 |
-| Replace with new BS3621 mortice lock | From £79 |
-
-Mortice locks are more complex to rekey than cylinder locks, which brings the rekeying cost up closer to the replacement cost.
+- Rekeying: quoted only after the exact mortice lock and viable parts are identified
+- BS3621-rated mortice replacement: from £79 on a suitable timber door
 
 ## When Rekeying Makes Sense
 
@@ -595,7 +495,7 @@ There are specific situations where rekeying is genuinely the better option:
 
 ### 1. High-Quality Locks That Are in Good Condition
 
-If you have expensive, high-quality locks that are relatively new and in perfect working order — for example, an Ultion cylinder that is only a year old — rekeying saves you from replacing something that does not need replacing. You keep the premium lock and just change the key configuration.
+If a serviceable lock supports an authorised rekeying process and the required parts are available, rekeying may preserve suitable hardware while establishing a new key set. Check manufacturer key-control rules first.
 
 ### 2. Decorative or Custom Hardware
 
@@ -615,48 +515,42 @@ For most standard residential locks in Coventry, I recommend replacement. Here i
 
 ### 1. The Anti-Snap Upgrade Opportunity
 
-If your uPVC or composite door has a standard euro cylinder (not anti-snap), replacing it gives you a security upgrade at virtually no extra cost compared to rekeying. Lock snapping is the [most common burglary method](/blog/what-is-lock-snapping) for uPVC doors in the UK. Replacing a standard cylinder with an anti-snap one is one of the best security investments you can make — and it costs the same as rekeying would.
+If your uPVC or composite door has an uncertified euro cylinder, replacement may provide an opportunity to select a product with independently tested attack resistance. Police.uk recommends a 3-star TS007 cylinder when a euro cylinder is changed, while DHF also recognises a 1-star cylinder combined with 2-star security furniture. Read the [lock-snapping guide](/blog/what-is-lock-snapping) and use the [lock upgrade service](/services/lock-upgrade) for a security-standard assessment.
 
-Why would you pay £40-£60 to rekey a vulnerable standard cylinder when you can pay £59 for a brand new anti-snap one?
+Compare the actual rekeying quote with replacement, which starts from £59 for an anti-snap cylinder. The existing cylinder's condition, certification, compatibility, and key-control options determine which route is more practical.
 
 ### 2. Worn or Aging Locks
 
-Locks wear out. Pins get rounded, springs weaken, and the mechanism becomes stiffer over time. Rekeying a worn lock gives you new keys but the same worn internals. Within a year or two, you will probably need to replace it anyway.
-
-If your key has been getting stiffer over the last few months, or if the lock is more than 10 years old, replacement makes more sense than rekeying.
+Locks and doors can wear or move out of alignment. Rekeying changes key operation but does not repair unrelated wear, damage or alignment. If operation has become stiff, stop forcing the key and have the complete lock and door assessed before choosing either route.
 
 ### 3. Cheap or Low-Security Locks
 
-Many UK homes — especially those with uPVC doors — have the cheapest euro cylinder the door manufacturer could find. These budget cylinders have poor pin quality, no anti-pick features, and no anti-snap protection.
+Some doors have cylinders whose certification, condition, or key control cannot be confirmed. Inspect the actual product rather than inferring its security from the age, appearance, or manufacturer of the door.
 
-Rekeying a cheap lock gives you new keys for a cheap lock. Replacing it gives you new keys for a good lock. The cost difference is minimal.
+If certification, key control or condition cannot be confirmed, compare the rekey quote and outcome with a compatible, currently certified replacement. Price alone does not establish quality.
 
 ### 4. Peace of Mind
 
 There is something psychologically reassuring about a completely new lock. When you move into a new home and want to know that nobody else has a working key, a new lock provides that certainty. Yes, a rekeyed lock achieves the same practical result — old keys will not work. But a new lock removes any doubt.
 
-### 5. The Cost Difference Is Not Significant
-
-For standard residential locks, the price difference between rekeying and replacing is typically £10-£25. That is a small amount to pay for a brand new lock with a full lifespan, potentially better security features, and complete peace of mind.
-
 ## My Honest Recommendation
 
-For the vast majority of residential lock jobs in Coventry, I recommend replacement over rekeying. Here is my reasoning:
+For many standard residential locks, replacement may be more practical than rekeying, but the decision depends on the existing product, condition, certification, key-control needs, and available parts. Here is how I assess it:
 
-1. **Most residential euro cylinders are not worth rekeying.** They are standard, non-anti-snap cylinders that should be upgraded anyway. Replacing them with anti-snap cylinders costs virtually the same as rekeying.
+1. **Assess the existing euro cylinder before choosing.** If it is worn, unsuitable, or lacks the certification you want, replacement may be more practical than rekeying. A serviceable certified cylinder may justify a different decision.
 
-2. **Most residential mortice locks and Yale nightlatches are old enough that they benefit from replacement.** A new BS3621 mortice lock or a new Yale nightlatch will work better and last longer than a rekeyed old one.
+2. **Assess mortice locks and nightlatches individually.** Condition, markings, parts, door fit and the required key-control outcome matter more than age or brand alone.
 
-3. **The cost difference does not justify keeping old hardware.** When replacement costs only £10-£25 more than rekeying, the value proposition is clear.
+3. **Compare complete quotes and outcomes.** Include parts, keys, certification, compatibility and fitting rather than assuming a fixed price gap.
 
-The exception is if you have premium locks (Ultion, ABS, Avocet) that are in good condition and only a few years old. In that case, rekeying saves you from replacing expensive hardware unnecessarily.
+A serviceable product with an authorised rekey route may justify keeping the hardware. A worn, damaged, incompatible or unsuitable lock may make replacement more practical.
 
 ## Common Scenarios and My Recommendation
 
 ### Moving House
 **Recommendation: Replace.** You do not know the history of the existing locks, their age, or their quality. Start fresh with new locks. I do a lot of [moving house lock changes](/blog/moving-house-change-locks) across Coventry — it is one of the most popular jobs.
 
-For a typical Coventry home with one uPVC front door and one uPVC back door, expect to pay from £100-£130 for both cylinders replaced with anti-snap upgrades. A wooden front door with a Yale and mortice deadlock runs from £130-£150 for both locks replaced.
+Anti-snap cylinder fitting starts from £59 per door, so two separate cylinder replacements start from £118. Other lock combinations depend on the actual products and fitting required; check the current [prices](/prices) or request a quote.
 
 ### Lost Keys
 **Recommendation: Replace** (for standard locks) or **Rekey** (for premium locks in good condition). If you have lost your keys and there is a risk someone could use them, you need to act. Replacing standard cylinders is fast, affordable, and gives you a security upgrade. If you have premium locks, rekeying preserves your investment. Either way, read our guide on [what to do if you have lost your keys](/blog/lost-keys-should-you-change-locks).
@@ -665,10 +559,10 @@ For a typical Coventry home with one uPVC front door and one uPVC back door, exp
 **Recommendation: Replace.** When someone who should no longer have access has keys to your home, a complete lock change provides both security and peace of mind. This is a job where the psychological reassurance of new locks matters as much as the practical security.
 
 ### Landlord — Between Tenants
-**Recommendation: Replace.** As a landlord, you do not know how many key copies the previous tenant made or who they gave them to. A new cylinder for each external door is cheap insurance. See our guide on [landlord lock change obligations](/blog/landlords-change-locks-between-tenants).
+**Recommendation: Assess key control and the existing locks.** If previous keys cannot be accounted for, replacement or rekeying can establish a new key set. Tenancy rights and authority still matter; see the guide on [locks between tenancies](/blog/landlords-change-locks-between-tenants).
 
 ### After a Break-In
-**Recommendation: Replace and upgrade.** After a burglary, you want the best locks you can get — not the same locks with different keys. This is the time to upgrade to [anti-snap cylinders](/services/lock-upgrade), add a deadlock if you do not have one, and review your overall security. Our guide on [what to do after a burglary](/blog/what-to-do-after-burglary) covers the full process.
+**Recommendation: Replace damaged or compromised components and assess the full doorset.** A certified [lock upgrade](/services/lock-upgrade) may be appropriate, but the cylinder, door, frame, furniture, and insurer instructions should be reviewed together. The guide on [what to do after a burglary](/blog/what-to-do-after-burglary) covers the wider process.
 
 ## Getting the Right Advice
 
@@ -678,19 +572,19 @@ I cover the whole Coventry and Warwickshire area, same price 24/7. Check our [lo
     faqs: [
       {
         q: 'What is cheaper, rekeying or replacing a lock?',
-        a: 'Rekeying is slightly cheaper upfront — typically £40-£60 for a euro cylinder versus £59 for a new anti-snap replacement. But the difference is only £10-£25 in most cases. For that small extra cost, you get a brand new lock with a full lifespan and potentially better security features. For standard residential locks, I usually recommend replacement because the value is significantly better for a minimal price difference.',
+        a: 'The cheaper route depends on the existing lock, parts, and work required. Anti-snap cylinder replacement starts from £59; rekeying needs a separate quote after the cylinder is identified. Compare the totals, certification, condition, compatibility, and key-control outcome before deciding.',
       },
       {
         q: 'Can all locks be rekeyed?',
-        a: 'Most pin tumbler locks (euro cylinders, Yale nightlatches) and lever locks (mortice deadlocks) can be rekeyed. However, not all locks are worth rekeying. Very cheap cylinders, worn-out locks, and locks with proprietary internal systems may not be practical to rekey. Some high-security locks like Ultion have restricted key profiles that require authorisation to rekey or cut new keys. I can advise whether your specific lock is suitable for rekeying when you call.',
+        a: 'No. Rekeying depends on the exact mechanism, available parts, condition and manufacturer key-control rules. Identify the model and any authorisation requirements before treating rekeying as an available option.',
       },
       {
         q: 'Should I rekey or replace locks when moving house?',
-        a: 'I recommend replacing locks when moving house. You do not know the age, quality, or history of the existing locks, and there is no way to know how many key copies exist. For a typical Coventry home, replacing euro cylinders on the front and back door with anti-snap upgrades costs from £100-£130 total. That is a small price for the certainty that you are the only person with working keys to your new home.',
+        a: 'When moving house, assess the condition and certification of each exterior lock and whether old keys can be accounted for. Replacing or rekeying can establish a new key set. Anti-snap cylinder fitting starts from £59 per door, so two separate cylinder replacements start from £118; check the current prices page for other lock types.',
       },
       {
         q: 'How long does rekeying take compared to replacing a lock?',
-        a: 'Rekeying a euro cylinder takes about 15-20 minutes including disassembly, pin replacement, and testing. Replacing a euro cylinder takes about 10-15 minutes. So replacement is actually quicker in most cases. For mortice deadlocks, rekeying takes 20-30 minutes while a like-for-like replacement takes 30-45 minutes. The time difference is not significant enough to be a deciding factor for most people.',
+        a: 'The time depends on the exact lock, parts, condition, access and whether replacement is like for like. Get a job-specific time and price comparison after the product is identified rather than relying on a universal duration.',
       },
     ],
   },

@@ -7,31 +7,25 @@ export const PILLAR_7_CONTENT: Record<string, { body: string; faqs: { q: string;
   // ──────────────────────────────────────────────
   'dark-evenings-burglary-october': {
     body: `
-## Why Burglary Rates Spike Every October in Coventry
+## Dark Evenings and Coventry Home Security: What the Data Can Show
 
-Every year, without fail, the last weekend of October triggers a measurable surge in burglary across Coventry and the rest of the UK. When the clocks go back, sunset shifts from around 6pm to before 5pm almost overnight. That single hour of lost daylight changes everything.
+The clocks changing brings earlier darkness, which is a sensible prompt to check doors, windows, lighting and routines. It does **not** by itself prove that burglary rises by a fixed percentage in Coventry every October.
 
-Insurance data consistently shows that theft claims increase by roughly 35% in the weeks following the clock change. West Midlands Police report a similar pattern — and Coventry is no exception. Areas like Tile Hill, Holbrooks, and Longford see noticeable upticks every autumn.
-
-I have been fitting locks across Coventry for years, and October is always one of my busiest months. Homeowners suddenly realise their security is not where it should be. The trouble is, by the time you notice, opportunist burglars have already noticed too.
+An exact seasonal or neighbourhood claim needs a retained, dated dataset, a defined boundary and a reproducible comparison across equivalent periods. This page does not currently hold evidence for a "35%" Coventry increase or for ranking named areas by autumn burglary. Use the [Police.uk dated data downloads](https://data.police.uk/data/) and the [ONS burglary datasets](https://www.ons.gov.uk/peoplepopulationandcommunity/crimeandjustice/datasets/natureofcrimeburglary) for current analysis rather than repeating an unsourced statistic.
 
 ## Why Darkness Makes Your Home a Target
 
-It is not just that burglars prefer the dark (although they do). The real issue is what darkness does to the appearance of your home.
+Earlier darkness can change how an occupied or empty home appears from outside. That is a practical reason to review lighting and closing routines, not evidence that every dark home will be targeted.
 
 At 5pm in September, your house looks lived-in. Lights are on, people are moving around, cars are on the drive. At 5pm in late October, that same house can look completely empty — dark windows, no sign of life, curtains still open showing an unlit interior.
 
-Most burglaries in Coventry are opportunistic. A burglar walks or drives down a street looking for the easiest target. A dark, apparently empty house with a standard euro cylinder on the front door is an invitation. They are not looking for a challenge — they are looking for a house that looks unoccupied and has weak locks.
+Police prevention guidance recommends making the home appear occupied when it is empty and checking that doors and windows are secured. Follow that advice as layered risk reduction; no lighting or lock measure guarantees that a burglary will be prevented.
 
-The cover of darkness also gives them more time. In summer, there are maybe four or five hours of real darkness. In November, it is dark from 4:30pm to 7:30am — over 15 hours of cover. That is a massive window of opportunity.
+## How to Check a Local Seasonal Pattern Properly
 
-## Coventry Crime Patterns After the Clocks Go Back
+Download dated Police.uk records, define the same Coventry boundary for every period and compare like-for-like months across multiple years. Record the download date, filters, geography and method so the result can be reproduced. Police-recorded crime data has limitations and should not be used to label a neighbourhood or predict what will happen at an individual home.
 
-Coventry has specific patterns worth knowing about. Terraced streets in areas like Stoke (CV1/CV2), Radford (CV6), and Foleshill (CV6) tend to see more sneak-in burglaries — where someone tries the back door and finds it unlocked, or pops a cheap euro cylinder.
-
-Semi-detached homes in Cheylesmore (CV3), Earlsdon (CV5), and Eastern Green (CV5) are more likely to be targeted when they look empty during early evening hours. Side gates left unlocked and poor rear lighting are the two things I see most often on these properties.
-
-Newer estates in Walsgrave, Binley, and around the Ricoh Arena area tend to have uPVC doors with standard (non-anti-snap) cylinders. These are the locks that can be snapped in under 30 seconds — and after dark, nobody is watching.
+For a physical check, assess the actual property: whether each door locks correctly, whether a euro cylinder protrudes, whether the exact product has current independent certification, and whether windows and side access are secured. Certified products improve resistance to the attacks covered by their tests, but do not eliminate risk.
 
 ## 8 Practical Steps Before October
 
@@ -39,7 +33,7 @@ Here is what I tell every customer who calls me in autumn. Ideally, you want to 
 
 ### 1. Upgrade to Anti-Snap Cylinders
 
-If you have a uPVC or composite door with a standard euro cylinder, this is the single most important thing you can do. An [anti-snap lock upgrade](/services/lock-upgrade) costs from £89 fitted and takes me about 20 minutes. It is the difference between a 30-second break-in and a burglar moving on to the next house.
+If you have a uPVC or composite door, identify the complete locking system and exact cylinder before deciding what to change. A certified [anti-snap lock upgrade](/services/lock-upgrade) starts from £59 fitted and can improve resistance to cylinder-snapping attacks; it cannot guarantee that an attacker will fail or move elsewhere.
 
 ### 2. Put Lights on Timers
 
@@ -55,7 +49,7 @@ This sounds obvious but most people forget. If you leave for work at 8am with th
 
 ### 5. Leave a Radio On
 
-A radio on a timer, set to a talk station, makes your house sound occupied from outside. It is an old trick but it works. Burglars do not want to risk confrontation — if there is any doubt that someone is home, they will move on.
+A radio on a timer can form part of an occupancy routine. Combine it with appropriate lighting, secure doors and windows, and a trusted-neighbour plan rather than relying on it as a guaranteed deterrent.
 
 ### 6. Check Your Door Security
 
@@ -63,7 +57,7 @@ Do a proper check of all external doors. Is the [front door deadlock](/services/
 
 ### 7. Secure Side Gates
 
-A huge number of Coventry burglaries happen via the back of the property. If your side gate does not have a lock on it, fit a padlockable bolt. It costs under £15 and adds a genuine layer of security. Burglars do not want to climb over a locked gate when the house three doors down has an open one.
+If side access leads to less visible doors or windows, check whether the gate can be secured without obstructing a required escape route. A suitable gate lock can add a layer of resistance, but it does not guarantee the property will be bypassed.
 
 ### 8. Check Window Locks
 
@@ -71,16 +65,23 @@ Go around every window in the house and test the lock. uPVC window locks frequen
 
 ## Do Not Wait Until You Have Been Burgled
 
-I get calls every November from people who have been burgled and want their locks upgraded. Every single one of them says the same thing: "I wish I had done this sooner." The average insurance excess is £200-500 — plus the stress, the mess, and the feeling of violation. An [anti-snap cylinder upgrade](/services/lock-upgrade) from me costs from £89 and takes 20 minutes.
+Do not wait for a seasonal headline to inspect a door that is damaged, failing to lock or fitted with unverified hardware. Current certified [anti-snap cylinder options](/services/lock-upgrade) start from £59; suitability and the final quote depend on the door and mechanism.
 
 If you want a quick door security check before the clocks go back, give me a call on 024 7522 4730. I will tell you honestly what needs doing — and what does not.
 
 Check my [prices page](/prices) for current rates on lock upgrades and security improvements.
+
+## Official Data and Prevention Sources
+
+- [Police.uk — dated open-data downloads](https://data.police.uk/data/)
+- [ONS — Nature of crime: burglary datasets](https://www.ons.gov.uk/peoplepopulationandcommunity/crimeandjustice/datasets/natureofcrimeburglary)
+- [Police.uk — advice for leaving your home](https://www.police.uk/cp/crime-prevention/protect-home-crime/leaving-your-home-checklist/)
+- [Police.uk — door and window lock advice](https://www.police.uk/cp/crime-prevention/protect-home-crime/door-window-lock-advice/)
 `,
     faqs: [
       {
         q: 'Why do burglaries increase when the clocks go back?',
-        a: 'The main reason is that homes look empty much earlier in the evening. At 5pm in October, most houses are dark because people have not come home from work yet — but it is now pitch dark outside. Burglars look for homes that appear unoccupied, and the sudden shift to earlier darkness gives them more targets and more hours of cover. Insurance data shows theft claims rise by approximately 35% in the weeks after the clocks change.',
+        a: 'Earlier darkness can change how occupancy appears, but this page does not hold a retained dataset proving a fixed Coventry increase after the clock change. Any percentage claim should state the dated source, geography, offence definition and comparison period. Use Police.uk downloads and ONS burglary datasets for a current, reproducible analysis.',
       },
       {
         q: 'What is the cheapest way to make my home look occupied during dark evenings?',
@@ -88,11 +89,11 @@ Check my [prices page](/prices) for current rates on lock upgrades and security 
       },
       {
         q: 'Are anti-snap locks worth fitting before winter?',
-        a: 'Absolutely. Standard euro cylinders — the type fitted to most uPVC and composite doors in Coventry — can be snapped open in under 30 seconds with basic tools. An anti-snap cylinder resists this attack completely. I fit them from £89 and it takes about 20 minutes. Given that burglary rates spike from October onwards, fitting one before the clocks go back is the single best thing you can do for your home security.',
+        a: 'A certified anti-snap cylinder can improve resistance to the snapping attacks covered by its test, but it does not completely resist every attack or eliminate burglary risk. The right choice depends on the full door set and exact product certification. Options start from £59 fitted; see /services/lock-upgrade and /prices.',
       },
       {
         q: 'Which areas of Coventry are most affected by autumn burglaries?',
-        a: 'Burglary can happen anywhere, but historically areas like Tile Hill, Holbrooks, Longford, Radford, and Foleshill tend to see higher rates during the darker months. Newer estates with standard uPVC door cylinders are also vulnerable because the locks are easier to snap. Wherever you live in Coventry, the basics — good locks, good lighting, and making your home look occupied — make a real difference.',
+        a: 'This page does not hold a retained, dated dataset that supports ranking Coventry neighbourhoods for autumn burglary. To compare areas, define the boundaries and periods, retain the Police.uk download and document the method. Do not use an undated area label to predict risk at an individual home; assess the actual doors, windows, lighting and access instead.',
       },
     ],
   },
@@ -200,7 +201,7 @@ If you want your external locks checked and lubricated before winter, I offer a 
     faqs: [
       {
         q: 'Can I use WD-40 to stop my locks freezing?',
-        a: 'No — and this is one of the most common mistakes I see. WD-40 is a water displacement spray, not a lubricant. It will free a frozen lock temporarily, but it leaves a residue that attracts and holds moisture inside the mechanism. This means your lock is more likely to freeze again, and worse than before. Use graphite powder for prevention and alcohol-based de-icer or hand sanitiser for emergencies.',
+        a: 'Do not assume a general-purpose water-displacement spray is the correct long-term lubricant for your lock. Use a product approved by the lock manufacturer, because the wrong residue can attract contamination or affect the mechanism. For a frozen lock, follow manufacturer guidance or call a locksmith rather than forcing the key.',
       },
       {
         q: 'Is it safe to pour boiling water on a frozen lock?',
@@ -212,7 +213,7 @@ If you want your external locks checked and lubricated before winter, I offer a 
       },
       {
         q: 'How much does it cost to replace a lock that has been damaged by freezing?',
-        a: 'A standard euro cylinder replacement starts from £59 fitted. If you want to upgrade to an anti-snap cylinder at the same time (which I would always recommend), that starts from £89 fitted. I carry a range of cylinders on the van so I can usually replace a damaged lock in one visit. Check my prices page at /prices for full details.',
+        a: 'A standard euro cylinder replacement starts from £59 fitted. If the door assessment supports an anti-snap upgrade, certified options also start from £59; the exact price depends on size, specification and the existing mechanism. Check /prices and /services/lock-upgrade for current details.',
       },
     ],
   },
@@ -222,11 +223,11 @@ If you want your external locks checked and lubricated before winter, I offer a 
   // ──────────────────────────────────────────────
   'christmas-home-security': {
     body: `
-## Christmas Is a Burglar's Favourite Season
+## A Practical Christmas Home-Security Checklist
 
-I do not want to dampen your festive spirit, but Christmas is one of the highest-risk periods for burglary, theft, and lockouts in Coventry. The combination of expensive gifts in the house, predictable routines, social media oversharing, and empty homes creates the perfect conditions for opportunist criminals.
+Christmas can change normal occupancy, delivery and key routines. That makes it a useful time to check avoidable exposures, but this page does not claim a fixed Coventry seasonal burglary or lockout spike without a retained, dated dataset.
 
-Every December I see the same problems repeated. Presents visible through windows. Empty boxes left on the kerb advertising what is inside. Families away visiting relatives with no security measures in place. And every New Year's Eve, my phone rings non-stop with lockouts.
+Examples worth checking include gifts visible through windows, branded packaging left outside, travel plans shared publicly and keys being misplaced during changed routines.
 
 Here is how to protect your home this Christmas — practical advice based on what I actually see happening across Coventry.
 
@@ -234,7 +235,7 @@ Here is how to protect your home this Christmas — practical advice based on wh
 
 ### Do Not Leave Presents Visible Through Windows
 
-This is the most common mistake I see. People put their Christmas tree by the front window (fair enough — it looks lovely) and then pile presents underneath it. From the street, anyone walking past can see a stack of wrapped gifts. After dark, with the tree lights on and the room lit up, it is like a shop window display.
+Avoid displaying gifts next to a street-facing window. With the room lit after dark, items close to the glass may be visible from outside.
 
 Put your tree wherever you like, but keep presents away from windows. Stack them behind furniture, in another room, or do not put them under the tree until Christmas morning.
 
@@ -246,13 +247,13 @@ Set your profiles to private, and if you must post, do it after you get back. At
 
 ### Use Timer Lights
 
-If you are spending Christmas Day elsewhere, set timer lights in at least two rooms. A dark house on Christmas Day — when every other house on the street has lights on — stands out. Timer switches cost under £5 each and they are one of the most effective deterrents there is.
+If you are spending Christmas Day elsewhere, timer lights can support a realistic occupancy routine. Combine them with correctly locked doors and windows, managed deliveries and a trusted neighbour; no timer guarantees deterrence.
 
 ## Christmas Eve and Christmas Day
 
 ### Secure Deliveries
 
-December is peak delivery season and porch piracy is a real problem. If you are not going to be home, arrange delivery to a neighbour, use a click-and-collect point, or install a [key safe](/services/lock-change) so a trusted person can put parcels inside for you.
+If you will not be home for a delivery, use the carrier's authorised diversion, collection-point or nominated-neighbour option. Do not share a home key or key-safe code with a courier unless you have deliberately assessed and accepted that access risk.
 
 ### Lock Up Properly on Christmas Eve
 
@@ -283,17 +284,17 @@ If you are leaving your home empty over the Christmas period, here is a checklis
 - **Ask a neighbour** to collect post and parcels (a pile of post visible through the letterbox is a giveaway)
 - **Cancel or redirect deliveries** you are expecting
 - **Ask someone to park on your drive** if you are taking your car
-- **Key safe for pet sitters** — if someone is coming to feed the cat, do not leave a key under the mat or in a fake rock. Invest in a [proper key safe](/services/lock-change) mounted to the wall. They cost from £50 fitted
+- **Managed access for pet sitters** — hand a key directly to the authorised person or assess a suitable key safe, installation and code-control process; a key safe does not guarantee security
 - **Set bins out and bring them back in** — bins left out for days are a sign nobody is home
 - **Do not change your voicemail** to say you are away — and do not put it on social media
 
-## New Year's Eve: The Lockout Capital of the Year
+## New Year's Eve: Plan for Changed Key Routines
 
-New Year's Eve is consistently my busiest night of the year for [emergency lockouts](/services/emergency-lockout). The combination of alcohol, unfamiliar doors (at parties), changed routines, and lost keys means my phone barely stops ringing from about 11pm on the 31st to 3am on the 1st.
+Parties, travel and changed routines can make it easier to misplace keys or close an unfamiliar self-locking door. That is a practical planning point, not a measured claim that New Year's Eve is Coventry's busiest lockout period.
 
 If you are going out on New Year's Eve:
 
-- **Give a spare key to someone you trust** — or better yet, fit a [key safe](/services/lock-change)
+- **Give a spare key to someone you trust** — or assess whether a suitably specified key safe is appropriate for your access plan
 - **Check you have your keys before you leave** — pat yourself down at the door
 - **Do not hide a key outside** — burglars know all the hiding spots
 - **Save my number in your phone now**: 024 7522 4730. I work every New Year's Eve, same prices as any other day
@@ -302,11 +303,11 @@ A standard lockout callout with me starts from £59. You will not get a surprise
 
 ## Boxing Day Delivery Theft
 
-Boxing Day and the days after Christmas are prime time for parcel theft. Online returns are being collected, sale purchases are being delivered, and many people are away visiting family. If you are expecting deliveries between Christmas and New Year, arrange collection from a safe place or ask a neighbour to take them in.
+If you expect deliveries or returns between Christmas and New Year, use an authorised collection point, in-person handover or a trusted neighbour rather than leaving parcels unattended.
 
 ## Make Security Part of Your Christmas Routine
 
-Most of this is common sense, but in the chaos of Christmas it gets forgotten. My advice: do a five-minute security check on Christmas Eve. Lock everything, set timers, close curtains, bring in any valuables from the car. It takes five minutes and it could save you a miserable start to the new year.
+Build a brief security check into your Christmas routine: operate each lock as intended, close accessible windows, manage deliveries and remove visible valuables from the car. These steps reduce avoidable exposure but do not guarantee security.
 
 If you want your locks checked before Christmas, or you want to upgrade your door security, call me on 024 7522 4730. I am available right up to Christmas Eve, and I work through the holidays for emergencies. Check my [prices page](/prices) for current rates.
 `,
@@ -325,7 +326,7 @@ If you want your locks checked before Christmas, or you want to upgrade your doo
       },
       {
         q: 'How can I avoid getting locked out on New Year\'s Eve?',
-        a: 'The three best precautions are: give a spare key to a trusted friend or neighbour, fit a key safe outside your home for emergencies, and physically check you have your keys before you close the front door. Never hide a key under a mat or flowerpot — burglars check all the obvious spots. If the worst happens, save my number now: 024 7522 4730. I work every New Year\'s Eve at standard prices, starting from £59 for a lockout.',
+        a: 'Check that you have your keys before closing the door and consider a spare held by a trusted person. If you assess a key safe, choose and manage it carefully because it stores a route to entry and cannot guarantee access. Do not leave a key in an obvious hiding place. My lockout price starts from £59; call 024 7522 4730 for the current scope and ETA.',
       },
     ],
   },
@@ -335,11 +336,11 @@ If you want your locks checked before Christmas, or you want to upgrade your doo
   // ──────────────────────────────────────────────
   'summer-holiday-security-checklist': {
     body: `
-## Your Home Is Most Vulnerable When You Are on Holiday
+## A Pre-Holiday Home-Security Checklist
 
 You have booked the flights, packed the bags, and you are counting down the days to two weeks of sunshine. But before you head to the airport, there is one thing that can ruin your entire holiday faster than a flight delay: coming home to find you have been burgled.
 
-Summer is peak season for holiday burglaries in Coventry. Homes are left empty for one or two weeks at a time, and the signs of absence are often obvious to anyone who bothers to look. A pile of post on the doormat. Bins left out. No lights on for days. An overgrown lawn.
+An extended absence changes normal occupancy signals: post may accumulate, bins may remain out and routine lighting or vehicle movements stop. This page does not claim a Coventry summer burglary spike without a retained, dated local dataset.
 
 I have put together this checklist based on what I see as a locksmith working across Coventry and Warwickshire. Every item on this list comes from a real problem I have dealt with.
 
@@ -347,11 +348,11 @@ I have put together this checklist based on what I see as a locksmith working ac
 
 ### Double-Lock All Doors
 
-This is the most important item on this list, and the one people get wrong most often.
+Start by operating every external-door lock exactly as the manufacturer intends.
 
 If you have a uPVC or composite door, you **must** lift the handle and turn the key to fully engage the multi-point locking system. If you just pull the door shut, only the centre latch engages — and a uPVC door on the latch can be opened with a plastic card or a firm shove.
 
-I cannot tell you how many burglary callouts I attend where the door was simply not locked properly. The homeowner assumed pulling it shut was enough. It is not.
+Do not assume that pulling a door shut engages every part of its locking mechanism. Check each door before leaving.
 
 Do this for every external door: front, back, side, and any door from the garage into the house.
 
@@ -389,7 +390,7 @@ In return, do the same for them when they go away.
 
 ### Lock the Back Door Properly
 
-Back doors are the most common entry point for burglars in Coventry. Many people focus on the front door and forget that the back door — often less visible to neighbours and passersby — is the one most likely to be targeted.
+Do not neglect the back door. Its visibility, construction and access route differ by property, so inspect it to the same standard as the front door rather than making an unsupported Coventry-wide entry-point claim.
 
 If your back door is a uPVC or composite door, the same rule applies: lift the handle and turn the key. If it is an older wooden door, make sure the [deadlock is engaged](/services/lock-change) — not just the Yale-type latch.
 
@@ -407,8 +408,8 @@ Your own tools can be used against you. A spade or a crowbar left in an unlocked
 Before you leave, think about who has access.
 
 - Never hide a key under a doormat, flowerpot, fake rock, or inside a meter box. Burglars know every hiding spot
-- If someone needs access while you are away (pet sitter, plant waterer, house checker), give them a key in person or install a wall-mounted [key safe](/services/lock-change)
-- A properly installed key safe is far more secure than a hidden key. I fit them from £50
+- If someone needs access while you are away, give the authorised person a key in person or assess whether a suitably specified wall-mounted key safe is appropriate
+- A key safe can avoid an exposed hiding place, but security depends on the product, installation, code control and location; it cannot guarantee controlled access
 
 ### Cancel Milk and Regular Deliveries
 
@@ -431,14 +432,16 @@ Four pints of milk curdling on the doorstep is a neon sign saying "we are not he
 
 Before you go, try this: stand outside your front door. Can you see anything through the windows that would tell a stranger the house is empty? Walk around the back. Is the side gate locked? Is the shed secure? Is there anything left out that could be used to break in?
 
-If you are not sure about the condition of your locks, call me on 024 7522 4730. I can do a quick door security check and tell you whether your locks are up to scratch. If they are not, I can [upgrade them on the spot](/services/lock-upgrade) — usually in under an hour.
+If you are not sure about the condition of your locks, call me on 024 7522 4730. I can inspect the doors and visible product markings, then quote for a suitable [lock upgrade](/services/lock-upgrade) where needed. Timing depends on the existing hardware and parts required.
 
-Check my [prices page](/prices) for current rates. A lock upgrade before your holiday is a fraction of the cost of dealing with a burglary when you get back.
+Check my [prices page](/prices) for current rates. A certified upgrade can improve resistance, but it does not eliminate burglary risk.
+
+For wider preparation advice, use the official [Police.uk leaving-home checklist](https://www.police.uk/cp/crime-prevention/protect-home-crime/leaving-your-home-checklist/).
 `,
     faqs: [
       {
         q: 'Is pulling my uPVC door shut enough to lock it when I go on holiday?',
-        a: 'No, and this is the most common security mistake I see. Pulling a uPVC or composite door shut only engages the central latch — which can be bypassed with a plastic card or a firm shove. You must lift the handle upward and then turn the key to engage all the deadbolts in the multi-point locking system. This applies to front doors, back doors, and any side doors.',
+        a: 'Do not assume so. Many uPVC and composite doors require you to lift the handle and turn the key to engage the multi-point system, but mechanisms differ. Follow the instructions for your actual door and verify that every locking point engages before leaving.',
       },
       {
         q: 'How can I make my home look occupied while I am on holiday?',
@@ -446,7 +449,7 @@ Check my [prices page](/prices) for current rates. A lock upgrade before your ho
       },
       {
         q: 'Should I hide a spare key outside for emergencies while I am away?',
-        a: 'Never hide a key under a doormat, flowerpot, fake rock, or meter box. Burglars know every common hiding spot. If someone needs access while you are away — a pet sitter, neighbour, or family member — either give them a key in person or install a wall-mounted key safe. I fit key safes from around £50 and they are far more secure than any hiding spot.',
+        a: 'Do not leave a key in an obvious or accessible hiding place. Give it directly to an authorised person, or assess a suitably specified and installed key safe with careful code control. A key safe can reduce exposure compared with an obvious hiding place, but it does not guarantee security or access control.',
       },
       {
         q: 'What should I do about garden tools and ladders before going on holiday?',
@@ -489,17 +492,17 @@ That is potentially a dozen or more people who have, or have had, a key to your 
 
 ## "They Gave Us All the Keys" Is Not Enough
 
-When I explain this to new homeowners, the most common response is "but they gave us all the keys." Here is the problem: there is no way to verify that.
+A frequent response is "but they gave us all the keys." The remaining question is whether every historic copy can actually be accounted for.
 
 Keys can be copied at any high-street key cutter, most supermarkets, and even some petrol stations. It costs under £5 and takes two minutes. Anyone who ever had access to a key could have cut a copy — and the previous owners may never have known.
 
 And it is not about trust. The previous owners might be perfectly honest people. But the cleaner they fired three years ago, or the builder who did a dodgy job and left under a cloud, or the ex-partner who moved out acrimoniously — those are the keys you need to worry about.
 
-The only way to guarantee that you control who has access to your home is to [change the locks](/services/lock-change).
+Changing or rekeying affected locks can remove access through unreturned copies of the old keys. It does not guarantee total access control or security, because other doors, windows, codes and newly issued keys still need to be managed.
 
 ## What to Change
 
-At minimum, change the front door cylinder. This is the most common entry point and the lock most likely to have had copies made.
+Start by identifying every external door operated by a key handed over at completion. Prioritise any lock for which copies cannot be accounted for, rather than assuming the front door is always the entry point.
 
 Ideally, change every external door:
 - **Front door** — euro cylinder, mortice lock, or both
@@ -523,21 +526,21 @@ Do not put it off. Every night you sleep in your new house with the old locks is
 Changing the locks on your new home is one of the cheapest and most impactful things you can do on moving day. Here are my current rates:
 
 - **Standard euro cylinder replacement**: from £59 per door
-- **Anti-snap euro cylinder upgrade**: from £89 per door
+- **Certified anti-snap euro cylinder upgrade**: from £59 per door
 - **Full house (front + back door)**: typically £100-200 depending on the locks you choose
 - **Premium anti-snap (Ultion/ABS)**: from £120 per door fitted
 
-For most houses in Coventry, a front and back door cylinder change with quality anti-snap locks comes in around £150-200 total. That is less than the cost of a locksmith callout after a burglary, and far less than the insurance excess plus stress.
+The final total depends on the number of doors, cylinder sizes, mechanism condition and exact products selected. Use the published starting prices and obtain a door-specific quote.
 
 Check my full [prices page](/prices) for current rates.
 
 ## An Opportunity to Upgrade
 
-Moving house is the perfect time to upgrade your security, not just replace like for like. If the existing locks are standard euro cylinders (which they probably are on any Coventry home built or refurbished in the last 20 years), you can upgrade to [anti-snap cylinders](/services/lock-upgrade) for a relatively small extra cost.
+Moving house is a practical time to inspect security rather than replacing like for like automatically. If an exact-model check shows that the existing euro cylinder lacks the certification you want, compare suitable [anti-snap cylinders](/services/lock-upgrade) for the complete door set.
 
-Anti-snap cylinders resist the most common burglary technique in the UK — lock snapping — where a burglar breaks the cylinder using basic tools in under 30 seconds. Standard cylinders offer almost no resistance. Anti-snap versions are designed to sacrifice a small section while keeping the lock functional and secure.
+Certified anti-snap cylinders are tested to improve resistance to specified cylinder attacks. The design and tested configuration vary by product; certification does not eliminate attack risk or guarantee that the door remains secure.
 
-If you are already paying for a lock change, upgrading from standard to anti-snap typically adds £20-30 per door. It is genuinely the best value security upgrade you can make.
+If you are already changing a compatible cylinder, compare certified anti-snap options on the [prices page](/prices). Choose against the complete door assessment rather than treating one product as the best upgrade for every home.
 
 ## Coventry's Housing Market and Lock Security
 
@@ -545,7 +548,7 @@ Coventry has a mix of housing stock, and the security implications vary:
 
 - **Victorian terraces** (Earlsdon, Stoke, Chapelfields): Often have original mortice locks that may be worn. Worth replacing with modern BS3621 mortice deadlocks
 - **1930s-1960s semis** (Cheylesmore, Finham, Green Lane): Mix of original and replacement doors. Many now have uPVC doors with standard cylinders — prime candidates for anti-snap upgrades
-- **New builds** (Canley, Westwood Heath, Keresley): uPVC doors with basic cylinders as standard. Developers fit the cheapest lock that meets building regulations. Always upgrade
+- **New builds** (Canley, Westwood Heath, Keresley): inspect the exact cylinder and door-set certification rather than assuming new or basic-looking hardware passes or fails a standard
 - **Rental properties**: If you are renting, speak to your landlord about changing the locks. Many are happy to do so — or happy for you to arrange it at your own cost
 
 ## What to Tell Your Locksmith
@@ -569,14 +572,14 @@ While you are thinking about locks, moving day is also a good time to:
 - Check external lighting — fit sensor lights if there are none
 - Identify any other security weak points while the house is empty and you can see everything clearly
 
-A fresh start in a new home should come with fresh security. It is one of those jobs that takes an hour, costs under £200, and gives you complete peace of mind.
+Reviewing locks, keys and codes early in a move can improve key control. The time and price depend on the property, and no lock change provides complete security or peace of mind for every risk.
 
 Call me on 024 7522 4730 to arrange your lock change, or check the [prices page](/prices) for full details.
 `,
     faqs: [
       {
         q: 'Do I really need to change the locks when I move house?',
-        a: 'Yes. There is no way to know how many copies of the existing keys are in circulation. Previous owners, estate agents, cleaners, builders, dog walkers, neighbours, and former tenants may all have had copies. Even if the previous owners gave you every key they had, they cannot account for copies made by other people over the years. Changing the locks is the only way to guarantee that you control who has access to your new home.',
+        a: 'It is worth assessing every external lock and whether old keys are fully accounted for. Changing or rekeying affected locks removes access through copies of those old keys, but does not guarantee total access control or security. Continue to manage windows, other doors, key-safe and alarm codes, and every new key issued.',
       },
       {
         q: 'How much does it cost to change the locks on a new house?',
@@ -584,11 +587,11 @@ Call me on 024 7522 4730 to arrange your lock change, or check the [prices page]
       },
       {
         q: 'When should I change the locks — before or after moving in?',
-        a: 'Ideally on the morning of completion day, before you start moving furniture in. This way you begin moving into a home that only you have keys to. If that is not practical, the first full day in the property works too — but do not leave it longer than that. Every night you sleep in a home with the old locks is a night where unknown keyholders could potentially access your property.',
+        a: 'Completion day is a practical time to inspect keys and locks because access is available and responsibility has transferred. If old keys cannot be accounted for, arrange the agreed work promptly. A new cylinder prevents old copies from operating that lock, but you still need to manage every other access route and newly issued key.',
       },
       {
         q: 'Should I change the locks if I am renting a new property?',
-        a: 'Speak to your landlord first. Many landlords are happy to arrange a lock change between tenancies, or will allow you to do it at your own cost provided you give them a copy of the new key. Under the Homes (Fitness for Human Habitation) Act 2018, landlords must ensure the property is secure. If you feel the locks are inadequate, raise it with your landlord in writing.',
+        a: 'Speak to the landlord first and check the tenancy agreement before changing anything. Put a safety or key-control concern in writing and ask for the proposed response. Legal obligations depend on the property and circumstances; if there is a dispute, seek advice from the council, Shelter or a solicitor rather than relying on a universal lock rule.',
       },
     ],
   },
@@ -598,9 +601,9 @@ Call me on 024 7522 4730 to arrange your lock change, or check the [prices page]
   // ──────────────────────────────────────────────
   'student-move-in-security-guide': {
     body: `
-## Freshers Week Is Exciting — But Your Shared House Security Probably Is Not
+## A Student Shared-House Move-In Security Check
 
-Every September, thousands of students descend on Coventry for the start of term at Coventry University and the University of Warwick. Most second and third-year students move into shared houses — and most of those houses have security that ranges from "adequate" to "genuinely terrible."
+Moving into student accommodation brings new doors, keys, housemates and tenancy rules. Inspect the actual property rather than assuming a shared house is secure or insecure from its age or area.
 
 I work across all the main student areas in Coventry — Earlsdon (CV5), Canley (CV4), Tile Hill (CV4), Stoke (CV2), Spon End, Gosford Street, and the streets around Far Gosford Street. I see the same security problems in student houses year after year. Here is what you need to know to protect yourself and your stuff.
 
@@ -625,27 +628,25 @@ The moment you get the keys to your student house, before you unpack a single bo
 - Ground floor windows are the most important but check upstairs too
 
 ### Your Bedroom Door
-- In an HMO (House in Multiple Occupation — which most student houses are), you should have a lock on your bedroom door
+- In an HMO, bedroom-door and escape arrangements depend on the licence, council guidance and fire-risk assessment
 - Check it works and you have all the keys
 - If there is no bedroom lock, ask your landlord to fit one
 
-## Your Landlord Must Fix Broken Locks
+## Report Broken or Unsafe Locks in Writing
 
-Under the Homes (Fitness for Human Habitation) Act 2018, your landlord is legally required to ensure the property is fit to live in. This includes security. If locks are broken, missing, or inadequate, your landlord must fix them.
+Landlord duties and the appropriate remedy depend on the defect, property, tenancy and circumstances. Report a broken or unsafe external lock to the landlord or agent in writing and keep the record. If there is disagreement or an urgent safety issue, seek advice from Coventry City Council, Shelter or a solicitor rather than relying on a universal repair deadline.
 
-Do not just put up with a broken back door lock or a front door that does not deadlock. Report it to your landlord or letting agent in writing (email is fine — you want a record). They are legally obliged to fix it within a reasonable timeframe.
-
-If your landlord refuses or drags their feet, you have options. Contact Coventry City Council's housing team, or speak to your university's student union for advice. You should not have to pay to fix security issues that are your landlord's responsibility.
+If the issue is not addressed, contact Coventry City Council's housing team or your university's student union for advice before arranging or paying for alterations yourself.
 
 ## Common Security Problems I See in Coventry Student Houses
 
 Here are the issues I deal with most often in student properties:
 
 ### Cheap Euro Cylinders
-Most student house doors have the cheapest possible euro cylinder — often the one that came with the door when it was installed years ago. These can be snapped open in under 30 seconds. A lock [upgrade to anti-snap](/services/lock-upgrade) costs from £89 and is worth every penny.
+Do not infer a cylinder's resistance from a house being student accommodation, its colour or its age. Check the exact model and current certification. Certified [anti-snap upgrades](/services/lock-upgrade) start from £59 and improve resistance to tested attacks without eliminating risk.
 
 ### Back Doors That Do Not Lock Properly
-The back door is the number one entry point for burglars in student areas. Many back doors in older terraces (the type common in Stoke and Earlsdon) have worn-out mortice locks or uPVC mechanisms that do not fully engage. Test it thoroughly.
+Inspect the back door as carefully as the front. Test that the actual mortice lock or uPVC mechanism engages fully; do not rely on an unsupported area-wide claim about the number-one entry point.
 
 ### Shared Key Discipline
 In a house of four or five students, key discipline is a nightmare. People leave doors unlocked because their housemate "will be back in a minute." People lose keys and do not tell anyone. People lend keys to partners or friends.
@@ -667,7 +668,7 @@ If your bedroom has a lock, use it every time you leave — even if you are just
 Register expensive items on Immobilise (a free national property register) and keep a note of serial numbers. If something is stolen, this makes it much easier for police to identify and return your property.
 
 ### Get Renter's Insurance
-Student contents insurance is cheap — often £50-100 per year for a decent policy. Check whether your parents' home insurance covers your belongings at university (some policies do, some do not). If not, get a separate student policy. It is not worth losing £1,000+ of electronics over a £50 insurance policy.
+If you are considering contents insurance, compare current cover, exclusions, excesses and premiums. Do not assume a parent's policy extends to university accommodation or that a claim will cover a particular item; confirm the written terms with the insurer.
 
 ## Areas Near the Universities
 
@@ -686,7 +687,7 @@ Student lockouts are incredibly common — especially during freshers week and a
 - Save a locksmith's number in your phone. Mine is 024 7522 4730
 - I cover all student areas in Coventry, 24/7, and my [emergency lockout](/services/emergency-lockout) price starts from £59
 - Give a spare key to a trusted housemate
-- Consider a [key safe](/services/lock-change) for the house — everyone can use the code to get in
+- If considering a key safe, agree it with the landlord and restrict the code to authorised people; shared codes create their own access-control risk
 
 Do not try to break into your own house. I have seen students put windows through, climb on roofs, and try to kick doors in. All of these are more expensive to fix than calling a locksmith, and you could hurt yourself or damage the property (which your landlord will charge you for).
 
@@ -708,7 +709,7 @@ Welcome to Coventry. Lock your doors.
     faqs: [
       {
         q: 'Does my landlord have to fix broken locks in my student house?',
-        a: 'Yes. Under the Homes (Fitness for Human Habitation) Act 2018, landlords are legally obliged to ensure their rental properties are secure and fit to live in. This includes working locks on all external doors and windows. Report any broken or missing locks to your landlord or letting agent in writing (email creates a record). If they refuse to act, contact Coventry City Council\'s housing team or your university student union for advice.',
+        a: 'Report a broken or unsafe lock to the landlord or agent in writing and keep the evidence. The legal duty and remedy depend on the defect, tenancy, property and circumstances. If it is not addressed, contact Coventry City Council, Shelter or a student advice service rather than relying on a universal rule.',
       },
       {
         q: 'How much does a student lockout cost in Coventry?',
@@ -716,11 +717,11 @@ Welcome to Coventry. Lock your doors.
       },
       {
         q: 'Should I get contents insurance for my student house?',
-        a: 'Absolutely. Student contents insurance typically costs £50-100 per year and covers laptops, phones, tablets, and other valuables against theft and accidental damage. First, check whether your parents\' home insurance policy covers your belongings while you are at university — some do. If not, get a separate student policy. Losing a £1,000 laptop to theft when a £50 insurance policy would have covered it is a painful lesson.',
+        a: 'Compare current policies and read the written cover, exclusions, single-item limits and excess. Ask whether any parent or family policy extends to your accommodation rather than assuming it does. Premiums and claim outcomes depend on the chosen policy and circumstances.',
       },
       {
         q: 'Can I change the locks in my rented student house myself?',
-        a: 'You should always speak to your landlord before changing locks. In most tenancy agreements, you are not allowed to alter the property without permission. However, most landlords will agree to a lock change if the existing locks are inadequate — especially if you put the request in writing and explain why. If you do change the locks, you must give your landlord a copy of the new key. I can fit a new anti-snap cylinder from £89 — call me on 024 7522 4730.',
+        a: 'Check the tenancy agreement and speak to the landlord in writing before changing a lock. Permission, key provision and reinstatement obligations depend on the agreement and circumstances. If an anti-snap upgrade is agreed and suitable for the door, certified options start from £59; see /services/lock-upgrade and /prices.',
       },
     ],
   },
@@ -730,21 +731,21 @@ Welcome to Coventry. Lock your doors.
   // ──────────────────────────────────────────────
   'bank-holiday-lockout-guide': {
     body: `
-## Bank Holidays: The UK's Peak Lockout Season
+## A Practical Bank-Holiday Lockout Guide
 
-There is something about bank holidays that makes lockouts far more likely. Changed routines, socialising, alcohol, visiting unfamiliar houses, and the general disruption to your normal pattern all contribute. As a locksmith working across Coventry, I can tell you with certainty: bank holiday weekends are my busiest periods.
+Bank holidays can involve changed routines, travel and unfamiliar doors. Those are useful scenarios to plan for, but this page does not hold a retained, dated callout dataset proving that UK or Coventry lockouts spike on bank holidays.
 
 If you are reading this while locked out on a bank holiday, skip straight to the bottom — my number is 024 7522 4730 and I work every bank holiday at the same price as any other day.
 
 If you are reading this before a bank holiday (sensible person), here is everything you need to know about avoiding lockouts and what to do if the worst happens.
 
-## Why Lockouts Spike on Bank Holidays
+## Why Changed Routines Matter
 
 ### Alcohol and Changed Routines
-Let's be honest — most bank holiday lockouts involve alcohol. A few drinks at a barbecue, a trip to the pub that goes on longer than planned, or a house party where you set your keys down somewhere and cannot find them. Add in changed routines (you are not doing your normal "keys, wallet, phone" pat-down because it is not a work day) and you have a recipe for being stuck outside at midnight.
+Socialising can disrupt a normal "keys, wallet, phone" check. Alcohol may add impairment in some situations, but there is no retained dataset here supporting a claim about the cause of most bank-holiday lockouts.
 
 ### Unfamiliar Doors
-Visiting friends or family for a bank holiday gathering often means dealing with doors you are not used to. uPVC doors that need lifting and turning. Night latches that lock automatically behind you when you pop out to the car. Back doors with a knack to them. I get calls every bank holiday from people locked out of houses that are not even theirs.
+Visiting friends or family may mean dealing with an unfamiliar door: a uPVC mechanism that needs lifting and turning, or a night latch that engages when the door closes. Ask the occupier how it operates and keep the key with you.
 
 ### Distraction and Rush
 The excitement of a long weekend means people are less careful with the small routines that keep them secure. Running out to the car, stepping outside to check the weather, popping to the shop "for five minutes" — all without checking they have their keys. The door closes, the latch clicks, and that is that.
@@ -761,7 +762,7 @@ Here is my honest advice about bank holiday pricing:
 
 **My prices are the same every day of the year.** A standard [emergency lockout](/services/emergency-lockout) with me starts from £59, whether it is a Tuesday afternoon in March or midnight on Christmas Day. I do not charge bank holiday surcharges, unsociable hours fees, or weekend premiums. The price I quote on the phone is the price you pay.
 
-**But not all locksmiths are the same.** Some operators — particularly the large national call centres that advertise heavily on Google — charge double or even triple on bank holidays. I have heard of customers being charged £200-300 for a basic lockout on a bank holiday, for a job that should cost under £100.
+**Other businesses set their own prices.** Ask for the total callout, labour, parts and surcharge terms before authorising work rather than relying on an advertised headline price.
 
 Before you call anyone:
 - Ask for a firm price on the phone, not an estimate
@@ -771,27 +772,19 @@ Before you call anyone:
 
 If in doubt, call me on 024 7522 4730. I will give you an honest price upfront with no hidden extras.
 
-## Bank Holiday by Bank Holiday: What to Expect
+## Bank-Holiday Scenarios to Plan For
 
-### Easter (Good Friday to Easter Monday)
-Easter is a four-day weekend for most people, which means four days of changed routines. Good Friday and Easter Saturday are busy for lockouts as people visit family. Easter Sunday barbecues (weather permitting in Coventry — optimistic, I know) lead to evening lockouts. Easter Monday is quieter.
+- **Travel or overnight stays:** keep the home key separate from luggage that could be misplaced
+- **Garden or social events:** carry the key if a night latch can engage behind you
+- **Visiting another property:** ask how unfamiliar doors lock before stepping outside
+- **Christmas and New Year:** use the same key check described in the [Christmas home security guide](/blog/christmas-home-security)
 
-### Early May Bank Holiday (First Monday in May)
-The first genuinely warm bank holiday of the year means garden parties, pub gardens, and people spending more time outdoors. Keys get left inside while you are in the garden. Back doors get locked by a housemate who does not know you are outside.
-
-### Spring Bank Holiday (Last Monday in May)
-Similar to the early May bank holiday but warmer. More likely to involve travel and overnight stays, so more "locked out of a house I do not normally stay in" calls.
-
-### August Bank Holiday
-The big one for barbecues and outdoor socialising. Late-night lockouts peak on August bank holiday Saturday and Sunday. Also common: people returning from a weekend away to find they have lost their keys somewhere between Friday and Monday.
-
-### Christmas and New Year
-Already covered in detail in my [Christmas home security guide](/blog/christmas-home-security), but in short: Christmas Day lockouts happen when people pop out to visit neighbours, and New Year's Eve is the single busiest night of the year for lockouts. I work all of it.
+These are planning examples, not measured rankings of which holiday or night produces the most lockouts.
 
 ## How to Avoid a Bank Holiday Lockout
 
 ### 1. Spare Key Strategy
-Do not rely on a single set of keys. Have a spare with a trusted neighbour, family member, or in a [key safe](/services/lock-change). A wall-mounted key safe costs from £50 fitted and means you will never be truly locked out — even at 2am on a bank holiday.
+Do not rely on a single set of keys. A spare held by a trusted person may help. If you consider a key safe, assess the exact product, installation, location and code-control risk; it cannot guarantee access or prevent a lockout.
 
 ### 2. The Pre-Exit Pat-Down
 Before you close any door behind you — whether it is your own or someone else's — do the pat-down: keys, wallet, phone. Make it a habit. Every time. Even if you are "just popping out for a second."
@@ -803,7 +796,7 @@ If you have a uPVC or composite door, understand how it locks. Most have a night
 Do not wait until you are locked out to Google "locksmith Coventry" at 1am on a bank holiday. The results you get at that hour, in that state of mind, are not always the best-value options. Save my number now: 024 7522 4730.
 
 ### 5. Do Not Try to Break In
-Every bank holiday, someone tries to climb through a window, force a door, or "just pop the lock with a card." The results are usually expensive: a broken window (£150-300 to replace), a damaged door frame (£200+), or a trip to A&E. A locksmith callout from me starts at £59. It is always cheaper than the alternatives.
+Do not climb through a window or force a door: you could be injured and damage the property. A locksmith callout starts from £59, but the exact cost of any option depends on the door, lock and damage, so no universal "always cheaper" comparison is made here.
 
 ## What Happens When You Call Me on a Bank Holiday
 
@@ -833,15 +826,15 @@ Bank holidays are for relaxing, not for standing outside your house in the cold.
     faqs: [
       {
         q: 'Do locksmiths charge more on bank holidays?',
-        a: 'It depends on the locksmith. I charge the same price every day of the year — no bank holiday surcharges, no unsociable hours fees, no weekend premiums. My standard lockout price starts from £59 whether it is a Tuesday afternoon or midnight on Christmas Day. However, some locksmiths (particularly large national call centres) do charge double or triple on bank holidays. Always ask for a firm price before agreeing to any work.',
+        a: 'It depends on the business. My published lockout price starts from £59 and I do not add a bank-holiday, weekend or unsociable-hours surcharge. For any provider, ask for the total callout, labour, parts and surcharge terms before authorising work.',
       },
       {
-        q: 'What is the most common cause of bank holiday lockouts?',
-        a: 'Changed routines and alcohol are the two biggest factors. On a normal weekday, you have a set routine — keys, wallet, phone — that you do automatically. On a bank holiday, that routine is disrupted. Add in socialising, visiting unfamiliar houses, and uPVC doors that lock automatically when they close, and lockouts become far more likely. The simple fix is to do a "pat-down" check every time you close a door behind you.',
+        q: 'Why can changed routines contribute to a lockout?',
+        a: 'This page does not hold a retained callout dataset that ranks causes. Changed routines, unfamiliar self-locking doors and misplaced keys are useful scenarios to plan for. Check for keys before closing a door and ask the occupier how an unfamiliar mechanism works.',
       },
       {
         q: 'Should I fit a key safe to avoid bank holiday lockouts?',
-        a: 'A wall-mounted key safe is one of the best investments you can make if you are prone to lockouts or want peace of mind for the whole family. I fit them from around £50 and they give you a secure backup way to get in at any time. They are also useful for letting pet sitters, cleaners, or family members in when you are not there. They are far more secure than hiding a key under a mat or flowerpot.',
+        a: 'A key safe may provide a backup for authorised people, but it also stores a route to entry. Choose a suitable tested product, installation location and code-control process, and obtain any required landlord or insurer approval. It does not guarantee access or security and should not be described as universally best.',
       },
       {
         q: 'What should I do if I am locked out and cannot reach a locksmith?',
@@ -859,11 +852,11 @@ Bank holidays are for relaxing, not for standing outside your house in the cold.
 
 January is the perfect time to take a proper look at your home security. The Christmas rush is over, the decorations are coming down, and you are in that "new year, fresh start" mindset. So before you sign up for a gym membership you will not use, spend 30 minutes doing something that will actually make a difference: a room-by-room home security audit.
 
-I have designed this walk-around audit based on the most common problems I find when I visit homes across Coventry. Grab a pen and paper (or your phone), and work through each section. At the end, you will have a clear picture of where your home security stands — and a prioritised list of what to fix.
+This walk-around audit covers recurring door, window, key and lighting checks. It is a screening tool, not a measured ranking of Coventry burglary methods or a guarantee that a property is secure.
 
 ## Section 1: Front Door (Score out of 5)
 
-Your front door is the first thing a burglar assesses. Stand outside and look at it critically.
+Start at the front door and look at it critically as part of the whole property assessment.
 
 ### Test the Deadlock
 Lock and unlock the door. Does the deadbolt (the square bolt operated by the key) engage and retract smoothly? If it is stiff, sticking, or does not throw fully, the lock needs attention. A deadbolt that only throws halfway is barely better than no deadbolt at all.
@@ -871,9 +864,9 @@ Lock and unlock the door. Does the deadbolt (the square bolt operated by the key
 If your front door is uPVC or composite, lift the handle and turn the key. You should feel multiple bolts engage (top, bottom, and centre). If only the centre latch engages, the multi-point mechanism may be faulty.
 
 ### Check the Cylinder Condition
-Look at the euro cylinder (the round lock barrel where the key goes in). Is it flush with the handle or door furniture? Or does it protrude beyond it? A cylinder that sticks out more than 3mm is vulnerable to lock snapping — the most common break-in method in the UK.
+Look at the euro cylinder where the key enters. Is it correctly sized for the handle and door furniture, or does it protrude? Excess projection can increase exposure to attack, but the actual risk depends on the complete door hardware.
 
-Is the cylinder an anti-snap type? If you are not sure, it probably is not. Standard euro cylinders can be snapped open in under 30 seconds. An [anti-snap upgrade](/services/lock-upgrade) starts from £89 fitted.
+Do not infer anti-snap certification from appearance alone. Record the exact model and check a current certification catalogue. Certified [anti-snap upgrades](/services/lock-upgrade) start from £59 and improve resistance to tested attacks without eliminating risk.
 
 ### Test the Handle
 Does the handle feel solid? Or is it wobbly, loose, or difficult to operate? A worn handle can prevent the multi-point lock from engaging fully.
@@ -886,7 +879,7 @@ Does the handle feel solid? Or is it wobbly, loose, or difficult to operate? A w
 
 ## Section 2: Back Door (Score out of 5)
 
-Back doors are the most common entry point for burglars in Coventry. Walk around to the back and give it the same treatment.
+Give the back door the same inspection. This audit does not hold a retained Coventry dataset that establishes one universal entry point.
 
 ### Test All Locks
 Lock and unlock the back door fully. If it is a uPVC/composite door, does it lift-and-lock? If it is an older wooden door, does it have both a latch and a separate deadlock?
@@ -949,7 +942,7 @@ Are there tools in the shed that could be used to break into the house? Crowbars
 ## Section 6: Lighting (Score out of 2)
 
 ### Check Sensor Lights
-Do your external motion-sensor lights work? Test them by walking past. Check bulbs, sensor alignment, and battery condition (if battery-powered). A sensor light covering the front door and another covering the back garden are minimum requirements.
+Do your external motion-sensor lights work? Test them by walking past. Check bulbs, sensor alignment, and battery condition if applicable. Suitable coverage depends on the property, neighbours, access routes and any electrical constraints.
 
 ### Replace Bulbs
 Dead bulbs are useless. Check and replace any that have failed. LED sensor lights last years and cost pennies to run.
@@ -967,7 +960,7 @@ Do you know where every copy of your house keys is? Who has them? Are there copi
 If you cannot account for all copies, consider a [lock change](/services/lock-change).
 
 ### Consider a Key Safe
-If you do not have a key safe, January is a great time to fit one. It provides secure access for emergencies, trusted visitors, and means you will never face a [lockout](/services/emergency-lockout) again. I fit them from around £50.
+If you are considering a key safe, assess the exact product, installation, position and code management. It may provide a backup route for authorised people, but cannot guarantee access, prevent every [lockout](/services/emergency-lockout) or eliminate security risk.
 
 ### Scoring
 - All key copies accounted for, key safe fitted: **2/2**
@@ -976,7 +969,7 @@ If you do not have a key safe, January is a great time to fit one. It provides s
 
 ## Your Total Score (Out of 25)
 
-Add up your scores from all seven sections:
+Add up your scores from all seven sections. The result is a maintenance prompt, not a security certification or prediction of burglary risk:
 
 - **20-25: Excellent.** Your home security is in good shape. Maintain it with annual checks.
 - **15-19: Good but with gaps.** You have the basics right but there are vulnerabilities to address. Prioritise the lowest-scoring sections.
@@ -985,11 +978,11 @@ Add up your scores from all seven sections:
 
 ## Your New Year Resolution: Upgrade One Thing
 
-You do not need to fix everything at once. Pick the single lowest-scoring area and fix that first. For most Coventry homes, the best single upgrade is an [anti-snap cylinder on the front door](/services/lock-upgrade) — it addresses the most common burglary technique and costs from £89 fitted.
+You do not need to fix everything at once. Start with any door or window that does not lock correctly, then assess protruding or unverified cylinders and other access points. Where suitable, a certified [anti-snap cylinder](/services/lock-upgrade) starts from £59 and improves resistance to tested attacks; it is not automatically the best first step for every property.
 
 Here is a priority order for upgrades:
 
-1. **Anti-snap cylinders** on front and back doors (from £89 each)
+1. **Certified anti-snap cylinders**, where suitable for the assessed doors (from £59 each)
 2. **Deadlock on back door** if it only has a latch (from £79 fitted)
 3. **Window lock replacements** on any that are broken (from £15 each)
 4. **External sensor lights** front and back (£15-25 each, DIY or electrician)
@@ -1006,12 +999,12 @@ Start the new year secure. It is 30 minutes well spent.
         a: 'Once a year is a good minimum — January is an ideal time because it gives you a clear action plan for the year ahead. You should also do a quick check before any extended absence (holidays, work trips) and after any break-in attempt on your street. Locks, handles, and window mechanisms wear over time, so what was fine last year may not be fine this year.',
       },
       {
-        q: 'What is the single most impactful security upgrade for a Coventry home?',
-        a: 'For most homes in Coventry, upgrading the front door euro cylinder to an anti-snap version is the single best thing you can do. Lock snapping is the most common burglary technique in the UK, and standard euro cylinders can be snapped in under 30 seconds. An anti-snap cylinder resists this attack completely. I fit them from £89 and it takes about 20 minutes. If you can only do one thing, do this.',
+        q: 'Which security issue should I fix first?',
+        a: 'Fix any external door or window that does not lock correctly first. After that, prioritise from the actual property assessment: key control, cylinder fit and certification, frame condition, other access routes and lighting. A certified anti-snap cylinder starts from £59 and can improve resistance to tested attacks, but it does not completely resist every attack or suit every door.',
       },
       {
         q: 'How much would it cost to fix everything in the security audit?',
-        a: 'It depends on what needs doing, but for a typical Coventry home: anti-snap cylinders for front and back doors (around £150-200 for both), a few window handle replacements (£15-20 each), a key safe (from £50 fitted), and a decent shed padlock (under £30). Most homes can get from "needs attention" to "excellent" for under £350 total. I can give you an exact quote based on your specific audit results — call me on 024 7522 4730.',
+        a: 'It depends on the number and type of defects, door dimensions, mechanism condition and exact products selected. The score does not define a universal package or budget. Use /prices for published starting prices and obtain an itemised quote for the work identified at your property.',
       },
       {
         q: 'Can I do the security audit myself or do I need a locksmith?',

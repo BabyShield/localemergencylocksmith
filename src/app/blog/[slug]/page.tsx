@@ -5,7 +5,7 @@ import Link from 'next/link'
 import { SITE_CONFIG } from '@/data/config'
 import { ALL_BLOG_POSTS, getBlogPostBySlug, getRelatedPosts, PILLARS } from '@/data/blog-posts'
 import { ALL_BLOG_CONTENT } from '@/data/blog-content'
-import { BLOG_CONTENT_UPDATED, BLOG_CTA_BY_PILLAR, BLOG_META_DESCRIPTIONS, BLOG_SEARCH_TITLES } from '@/data/blog-seo'
+import { BLOG_CONTENT_UPDATED, BLOG_CTA_BY_PILLAR, BLOG_CTA_BY_SLUG, BLOG_META_DESCRIPTIONS, BLOG_SEARCH_TITLES } from '@/data/blog-seo'
 import CTABlock from '@/components/CTABlock'
 import SchemaMarkup from '@/components/SchemaMarkup'
 
@@ -101,7 +101,7 @@ export default async function BlogPostPage({ params }: Props) {
 
   const related = getRelatedPosts(slug, 4)
   const pillar = PILLARS.find((p) => p.slug === post.pillarSlug)
-  const serviceCta = BLOG_CTA_BY_PILLAR[post.pillarSlug]
+  const serviceCta = BLOG_CTA_BY_SLUG[slug] ?? BLOG_CTA_BY_PILLAR[post.pillarSlug]
   const citations = Array.from(
     new Set(Array.from(content.body.matchAll(/\[[^\]]+\]\((https?:\/\/[^)]+)\)/g), match => match[1]))
   )

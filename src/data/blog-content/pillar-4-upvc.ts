@@ -7,7 +7,7 @@ export const PILLAR_4_CONTENT: Record<string, { body: string; faqs: { q: string;
     body: `
 ## What Is Inside Your uPVC Door?
 
-If you have a uPVC door — and if you live in Coventry, there is a very good chance you do — then behind that handle and cylinder sits a multipoint locking mechanism. It is the single most important security component in your door, and most people have never seen one.
+If you have a uPVC door with a multipoint system, a mechanism sits behind the handle and cylinder and operates locking points along the door edge. It is one part of the complete doorset, alongside the cylinder, furniture, frame, hinges, and keeps.
 
 I have been replacing these mechanisms across Coventry for years, from the 1990s-era estates in Canley and Tile Hill to the newer builds around Walsgrave and Binley. In this post, I will explain exactly how your uPVC door lock works, what each component does, and what to look out for when things start to fail.
 
@@ -27,7 +27,7 @@ The gearbox houses the keyway (where the cylinder sits), the handle spindle conn
 
 When you lift the handle, the gearbox pushes rods upward and downward simultaneously. When you turn the key, it engages the deadbolt within the gearbox itself.
 
-The gearbox is also the component that fails most often. After 10 to 15 years of daily use — and that covers a huge number of Coventry homes built in the late 1990s and 2000s — the internal gears start to strip. You will notice the handle feeling sloppy, or the key not turning smoothly. That is the gearbox telling you it is on the way out.
+Gearboxes can wear or fail over time. A loose handle, grinding, incomplete locking, or a key that no longer turns normally can justify an assessment, but those symptoms can also come from alignment, the cylinder, or another component.
 
 ### Hooks
 
@@ -114,7 +114,7 @@ If you are in the Coventry area and need a uPVC door mechanism replaced, I cover
       },
       {
         q: 'How long does a uPVC door lock mechanism last?',
-        a: 'A typical multipoint locking mechanism lasts 10 to 15 years with normal use. With proper maintenance — regular lubrication, not slamming the door, keeping a light key ring — you can extend this to 15 to 20 years. The gearbox is usually the first component to fail. Most Coventry homes built in the late 1990s and 2000s are now reaching the point where mechanism replacement is needed.',
+        a: 'There is no universal lifespan for a multipoint mechanism. Use, alignment, maintenance, weather exposure, product quality, and existing wear all affect it. Have the door assessed if the handle becomes loose, the mechanism grinds, locking points fail to engage, or the key no longer turns normally.',
       },
       {
         q: 'Can I replace a uPVC door lock mechanism myself?',
@@ -174,19 +174,19 @@ Your cylinder size is expressed as two numbers: outside measurement / inside mea
 
 Check whether your cylinder is:
 
-- **Key/Key** — a keyhole on both sides (most common for front doors)
-- **Key/Thumbturn** — a keyhole on the outside and a thumbturn on the inside (increasingly popular, and I recommend these for most homes — see our [lock change service](/services/lock-change) for fitting options)
+- **Key/Key** — a keyhole on both sides
+- **Key/Thumbturn** — a keyhole on the outside and a thumbturn on the inside; suitability depends on the door, household, and access requirements, so see the [lock upgrade service](/services/lock-upgrade) for an assessment
 
 ## Common Euro Cylinder Sizes for Coventry Doors
 
-Having fitted cylinders in thousands of Coventry homes, these are the sizes I encounter most often:
+Euro cylinders come in many symmetric and offset sizes. Examples you may encounter include:
 
 - **35/35 (70mm overall)** — common in older uPVC doors from the 1990s and early 2000s, typical in areas like Tile Hill and Canley
-- **40/40 (80mm overall)** — the most common size in standard uPVC doors across Coventry estates
+- **40/40 (80mm overall)** — another common symmetric size
 - **45/45 (90mm overall)** — found in thicker composite doors and some newer uPVC doors
 - **35/45 (80mm overall)** — asymmetric size, common where the door is thicker on one side or has a decorative panel
 
-The most important thing is that the cylinder sits flush with the door furniture (handles and escutcheons) on both sides. If the cylinder sticks out beyond the handle or escutcheon by more than 3mm on the outside, it is vulnerable to lock snapping. This is a serious security risk — read our guide on [what is lock snapping](/blog/what-is-lock-snapping) to understand why.
+The cylinder should be correctly sized for the door and protective furniture. Noticeable external protrusion is a reason to have the fitted system assessed because it can expose more of the cylinder to attack. Read the guide to [lock snapping](/blog/what-is-lock-snapping) for the evidence and certified protection options.
 
 ## What Happens If You Buy the Wrong Size
 
@@ -206,33 +206,27 @@ This is not the end of the world — the cylinder will still fit — but a thumb
 
 You have several options:
 
-- **Online** — sites like eBay, Amazon, and specialist lock shops stock a huge range. Make sure you buy a branded, anti-snap cylinder (see our [best euro cylinder upgrades for 2026](/blog/best-euro-cylinder-upgrades-2026) for recommendations).
-- **Local hardware shops** — B&Q and Screwfix carry basic cylinders but the anti-snap range is limited.
-- **Call me** — I supply and fit quality anti-snap cylinders (Ultion, ABS, Yale Superior) at competitive prices, and I guarantee the correct size. One call to 024 7522 4730 and the job is done, usually within the hour.
+- **Online or local retailers** — verify the exact size and current certification of the product rather than relying only on an "anti-snap" label.
+- **Professional supply and fitting** — I can measure the door, identify the surrounding furniture, and quote for a compatible certified option before work starts.
 
 ## A Word on Security When Measuring
 
-If you are measuring your cylinder because you want to upgrade to an anti-snap model, make sure the new cylinder meets at least these criteria:
+If you are measuring because you want a security upgrade, check independent certification as well as size. [Police.uk's door and window lock advice](https://www.police.uk/cp/crime-prevention/protect-home-crime/door-window-lock-advice/) recommends a 3-star TS007 cylinder when a euro cylinder is changed. [DHF's TS007 guidance](https://www.dhfonline.org.uk/pg/ts-007/335.htm) also explains the tested 1-star cylinder plus 2-star furniture combination. These standards address recognised attacks, but no product eliminates every risk.
 
-- **Anti-snap** — the cylinder has a sacrificial cut line so that if someone tries to snap it, the front section breaks away without exposing the locking mechanism
-- **Anti-drill** — hardened steel pins resist drilling
-- **Anti-bump** — internal design prevents bump key attacks
-- **Anti-pick** — complex pin configurations resist picking
-
-All of the cylinders I fit as standard meet these criteria. For a detailed comparison of the best options, see our [euro cylinder upgrade guide](/blog/best-euro-cylinder-upgrades-2026).
+For a practical comparison of selection criteria, see the [euro cylinder upgrade guide](/blog/best-euro-cylinder-upgrades-2026).
 
 ## Should You Measure Yourself or Call a Locksmith?
 
 If you are comfortable with a screwdriver and a tape measure, measuring your own cylinder is straightforward. The steps above are all you need. Where it gets complicated is sourcing the right replacement — making sure the brand is genuinely anti-snap, the size is exactly right, and the quality is decent.
 
-If you would rather not risk it, give me a call on 024 7522 4730. I cover all of Coventry and the surrounding areas — Kenilworth, Warwick, Leamington, and everywhere in between. Check our [areas page](/areas/) for full coverage. I will measure, supply, and fit the correct cylinder in one visit, and the total cost including a quality anti-snap cylinder is typically between £59 and £89 depending on the brand and size.
+If you would rather have the door assessed, call 024 7522 4730. I cover Coventry and the stated surrounding [areas](/areas/). Anti-snap cylinder fitting starts from £59; the exact quote depends on the size, certified product, furniture, and work required. See current [prices](/prices) and the [lock upgrade service](/services/lock-upgrade).
 
 For more on uPVC door locks and maintenance, see our [uPVC door maintenance guide](/blog/upvc-door-maintenance-guide) and our [uPVC lock repair service page](/services/upvc-lock-repair).
 `,
     faqs: [
       {
-        q: 'What is the most common euro cylinder size for uPVC doors in Coventry?',
-        a: 'The most common size I encounter across Coventry is 40/40 (80mm overall). This fits the majority of standard uPVC doors on estates built from the late 1990s to the 2010s. Older doors may use 35/35, and thicker composite doors often need 45/45. The only way to be certain is to measure your existing cylinder using the steps in this guide, or call me on 024 7522 4730 and I will measure it for you.',
+        q: 'Is there a standard euro cylinder size for uPVC doors in Coventry?',
+        a: 'There is no single size that can safely be assumed from a door type, property age, or Coventry area. Measure separately from the fixing-screw centre to the outside and inside ends, or call 024 7522 4730 for an assessment before ordering a replacement.',
       },
       {
         q: 'Can I measure my euro cylinder without removing it from the door?',
@@ -240,11 +234,11 @@ For more on uPVC door locks and maintenance, see our [uPVC door maintenance guid
       },
       {
         q: 'What happens if my euro cylinder sticks out past the handle?',
-        a: 'If the cylinder protrudes more than 3mm beyond the handle or escutcheon on the outside of your door, it is vulnerable to lock snapping. A burglar can grip the protruding section with pliers, snap it off, and then manipulate the remaining mechanism to open the door — often in under 30 seconds. If your cylinder sticks out, you need a shorter replacement or a proper anti-snap cylinder urgently. Call 024 7522 4730 for a same-day upgrade.',
+        a: 'Noticeable external protrusion is a reason to assess the cylinder size and protective furniture because it can expose more of the cylinder to attack. It does not establish a fixed attack time. Police.uk recommends a 3-star TS007 cylinder when changing a euro cylinder; call 024 7522 4730 if you want the complete fitted system checked.',
       },
       {
         q: 'Do I need to buy the same brand of euro cylinder as my current one?',
-        a: 'No. Euro cylinders are standardised, so any correctly sized cylinder will fit your door regardless of the original brand. What matters is the measurements (outside length, inside length, and type) and the security rating. I recommend upgrading to an anti-snap cylinder like the Ultion or ABS Avocet regardless of what brand you currently have. See our euro cylinder upgrade guide for detailed comparisons and prices.',
+        a: 'Do not assume that size alone guarantees compatibility. Check the outside and inside measurements, cylinder type, cam, surrounding furniture, and current certification. A locksmith can identify the complete fitted system and explain suitable options before replacement.',
       },
     ],
   },
@@ -253,158 +247,113 @@ For more on uPVC door locks and maintenance, see our [uPVC door maintenance guid
     body: `
 ## Why You Should Upgrade Your Euro Cylinder
 
-If your uPVC or composite door still has the euro cylinder that came with it when it was first installed, there is a very good chance it is not anti-snap. Standard euro cylinders — the type fitted to most doors in the UK before around 2015 — can be snapped in under 30 seconds using basic tools. No skill required. It is the most common method of burglary in the UK, and Coventry is no exception.
+The age of a uPVC or composite door does not establish which cylinder is fitted today or how it performs. Check the actual cylinder, surrounding furniture, size, and visible certification rather than assuming that an original or replacement product has a particular level of resistance.
 
-I upgrade euro cylinders across Coventry every week, and the difference between a standard cylinder and a quality anti-snap model is night and day. In this guide, I will give you honest reviews of the best euro cylinder upgrades available in 2026, with real prices I charge on the job — not inflated RRP figures.
+[Police.uk's door and window lock advice](https://www.police.uk/cp/crime-prevention/protect-home-crime/door-window-lock-advice/) recognises snapping, drilling, picking, and bumping as attacks that a 3-star TS007 cylinder is designed to resist, and recommends that standard when a euro cylinder is changed. It does not rank one brand as universally best or assign a fixed attack time.
 
 ## What Makes a Good Euro Cylinder?
 
-Before we get into specific products, here is what to look for. A quality euro cylinder should have all four of these features:
+Start with independent certification and compatibility with the complete doorset. [DHF's TS007 guidance](https://www.dhfonline.org.uk/pg/ts-007/335.htm) explains the tested options: a Kitemarked 3-star cylinder, or a Kitemarked 1-star cylinder combined with 2-star security furniture. It also recognises SS312 Diamond cylinders as an alternative route to this level of protection.
 
 ### Anti-Snap
 
-The most important feature. An anti-snap cylinder has a deliberately weakened sacrificial section near the front. If someone tries to snap it, this section breaks away cleanly — but the remaining cylinder stays intact and the lock remains engaged. The attacker cannot reach the mechanism.
+Product designs vary. Treat "anti-snap" as a description of intended resistance, not a guarantee that every attack will fail. Verify the exact model's current independent certification.
 
 ### Anti-Drill
 
-Hardened steel pins are positioned within the cylinder to resist drill attacks. A drill is the second most common attack method after snapping. Without anti-drill protection, a standard cylinder can be drilled through in under a minute.
+Certified products may include features designed to improve drilling resistance. This guide does not rank drilling against other attack methods or claim that an uncertified cylinder fails within a stated time.
 
 ### Anti-Bump
 
-Bump keys are specially cut keys that exploit the pin mechanism in standard cylinders. A sharp tap with a bump key can open a vulnerable lock in seconds. Anti-bump cylinders use complex pin configurations (such as serrated or mushroom pins) that resist this technique.
+Anti-bump features are designed to improve resistance to bump-key attacks. Use the product's certification rather than a fixed opening-time claim or marketing label.
 
 ### Anti-Pick
 
-Lock picking is actually quite rare in residential burglaries — it takes skill and time — but a quality cylinder should still resist it. Anti-pick features include complex keyways, multiple pin rows, and tight manufacturing tolerances.
+Anti-pick features are designed to improve resistance to manipulation. The official sources cited here do not establish how frequently picking is used in Coventry burglaries.
 
-Look for cylinders that carry a **3-star rating** under the TS007 standard, or are **Sold Secure Diamond** rated. A 1-star cylinder with a 2-star handle and escutcheon also achieves the 3-star threshold, but a cylinder that is 3-star on its own is always the safest option.
+The complete installation still matters: correct sizing, compatible handles or escutcheons, a sound door and frame, and accurate fitting. No cylinder eliminates burglary risk or guarantees insurance cover.
 
-## My Top Euro Cylinder Picks for 2026
+## Euro Cylinder Products to Compare in 2026
 
-### 1. Ultion — My Default Recommendation
+### 1. Ultion — Check the Exact Model
 
-**Price fitted: £50 to £70** (depending on size and key/thumbturn configuration)
+Ultion is one product family customers may ask about. Model names, specifications, certification, key-control terms, and promotional guarantees can change, so verify the exact current product and written terms before choosing it.
 
-The Ultion is, in my opinion, the best all-round euro cylinder on the market. It is what I fit as standard unless a customer specifically requests something different.
+**Current fitted pricing:** anti-snap cylinder fitting starts from £59. The quote depends on the model, size, configuration, and any furniture required; see [current prices](/prices).
 
-**Why I recommend it:**
+**What to verify:**
 
-- Genuine 3-star rating on the cylinder alone — no need for special handles or escutcheons
-- **£2,000 break-in guarantee** — if someone gets past an Ultion cylinder, the manufacturer pays out £2,000. In years of fitting them, I have never had a claim.
-- Lockdown Mode — if the cylinder detects an attack (snapping, drilling, picking), it activates an internal lockdown that makes the lock completely inoperable from outside
-- 11 anti-attack features in total
-- Excellent key control — keys can only be cut by authorised dealers
-- Available in a wide range of sizes and finishes
+- The certification attached to the exact model and configuration
+- Whether the size and cam suit the existing mechanism
+- Whether other door furniture is required
+- Current key-control and guarantee terms supplied in writing
 
 **Any downsides?**
 
-It is not the cheapest option, but the price difference between an Ultion and a budget cylinder is £15 to £25 — negligible when you are protecting your home. It is also slightly longer than some cylinders due to the lockdown mechanism, so check your door measurements.
+Do not choose from the brand name alone. A premium product in the wrong size or configuration is not a sound installation, and a promotional guarantee is not a substitute for checking its exclusions and eligibility.
 
-For the vast majority of Coventry homes, the Ultion is the one I recommend. It is what I have on my own front door.
+### 2. ABS Avocet MK3 — Compare Certification and Fit
 
-### 2. ABS Avocet MK3 — Excellent Alternative
+ABS Avocet is another product family that may be considered. Verify the exact current model's certification, sizing, furniture requirements, key-control terms, and availability before comparing it with alternatives.
 
-**Price fitted: £45 to £60**
-
-The ABS (Avocet Branded Security) MK3 is a superb cylinder and the one I recommend when a customer wants a slightly more affordable option without compromising on security.
-
-**Highlights:**
-
-- 3-star rated on the cylinder alone
-- Excellent snap resistance with a dual sacrificial section
-- Anti-drill, anti-bump, anti-pick as standard
-- Snap-secure design that is independently tested
-- Good range of sizes available
+**Current fitted pricing:** anti-snap cylinder fitting starts from £59; confirm the exact quote after the door is measured.
 
 **Any downsides?**
 
-The key control is not quite as tight as the Ultion — keys are more widely available for cutting. But in terms of physical security against forced entry, it is neck and neck with the Ultion.
+This article does not make an unsupported head-to-head security ranking. Compare current certificates and the complete fitted system, not historical or model-family claims.
 
-### 3. Yale Superior — Strong Mid-Range Choice
+### 3. Yale Superior — Check the Complete TS007 System
 
-**Price fitted: £35 to £50**
+Where a cylinder relies on compatible security furniture to reach a stated TS007 level, both components need to be identified and verified. Do not assume that an existing handle or escutcheon carries the required rating.
 
-The Yale Superior achieves a 3-star rating when paired with a compatible handle and escutcheon (it is 1-star on its own). For homes that already have TS007 2-star handles fitted, this is an excellent and cost-effective upgrade.
-
-**Highlights:**
-
-- Well-known brand with good availability
-- Anti-snap, anti-drill, anti-bump, anti-pick
-- Patented key profile with restricted copying
-- Comes with a key card for ordering additional keys
-- Competitive pricing
+**Current fitted pricing:** anti-snap cylinder fitting starts from £59. Additional furniture, if needed, is quoted after inspection.
 
 **Any downsides?**
 
-You need the matching handle and escutcheon to achieve the full 3-star rating. If your existing door furniture is not 2-star rated, factor in the additional cost of replacing it (typically £15 to £25 for a handle set). On its own, the cylinder is 1-star — secure, but not at the same level as the Ultion or ABS.
+System-dependent ratings are easy to misunderstand. Verify the exact cylinder and furniture combination instead of comparing only the cylinder brand.
 
-### 4. Brisant Ultion Plus — Top of the Range
+### 4. Brisant Ultion Plus — Assess Premium Features
 
-**Price fitted: £60 to £80**
+Premium variants may offer different specifications or commercial terms, but this guide does not claim that one is the most attack-resistant option. Ask for the exact current certificate and product documentation.
 
-The Ultion Plus takes everything good about the standard Ultion and adds even more features. This is the top-of-the-range option for homeowners who want the absolute best.
-
-**Highlights:**
-
-- Everything the standard Ultion offers, plus enhanced features
-- Improved lockdown mechanism
-- Premium build quality and finish
-- Extended guarantee
-- The most attack-resistant cylinder I have fitted
+**Current fitted pricing:** anti-snap cylinder fitting starts from £59; premium products are quoted for the required size and configuration.
 
 **Any downsides?**
 
-The price. At £60 to £80 fitted, it is the most expensive cylinder on this list. For most Coventry homes, the standard Ultion provides more than enough protection. I recommend the Plus for high-value properties or homes that have been previously targeted.
+Extra features and price do not remove the need to assess the door, frame, furniture, installation, and household requirements.
 
-### 5. ERA Fortress / Invincible — Budget Anti-Snap Option
+### 5. ERA Fortress / Invincible — Verify the Exact Product
 
-**Price fitted: £30 to £45**
+Budget-focused products still need current, independently verifiable certification and correct fit. Do not infer the certification or attack resistance of one exact model from its family or marketing name.
 
-If budget is a genuine concern, the ERA range offers basic anti-snap protection at the lowest price point. The ERA Fortress and ERA Invincible are solid entry-level anti-snap cylinders.
-
-**Highlights:**
-
-- Genuine anti-snap protection at the lowest cost
-- Anti-drill and anti-bump features
-- Widely available
-- Good option for landlords needing to secure multiple properties cost-effectively
+**Current fitted pricing:** anti-snap cylinder fitting starts from £59. Check [current prices](/prices) rather than relying on an old product-specific range.
 
 **Any downsides?**
 
-The security level is noticeably lower than the Ultion or ABS. The anti-snap mechanism is less sophisticated, the key control is basic (keys can be cut at any key cutting machine), and there is no break-in guarantee. I fit these when asked, but I always make sure customers understand the trade-off.
+The lowest initial price is not the only selection factor. Check current certification, key control, correct sizing, compatible furniture, and written warranty terms.
 
 ## When a Cheaper Option Is Fine
 
-Not every door needs a top-of-the-range cylinder. Here is when I think a budget option is perfectly acceptable:
-
-- **Back doors and side doors** that are not easily accessible from the street — the ERA Fortress is a sensible choice here
-- **Rental properties** where the landlord needs to meet insurance requirements without spending £70 per door across multiple properties
-- **Temporary situations** — if you have just moved in and plan to replace the entire door within a year, a budget anti-snap cylinder bridges the gap
-
-For front doors and any door visible from the street, I always recommend the Ultion or ABS as a minimum. The front door is the first point of attack in the vast majority of burglaries.
+There is no universal rule based only on whether a door is at the front, side, rear, owner-occupied, or rented. Set a budget after identifying the door, cylinder, furniture, access, certification, and any written insurer requirement. A lower-cost product should still have verifiable certification appropriate to the chosen system.
 
 ## My Honest Recommendation
 
-For most Coventry homeowners, my recommendation is simple: **fit an Ultion**. The price difference between an Ultion at £50 to £70 and a budget cylinder at £30 to £45 is £20 to £25. For that small difference, you get a dramatically better product with a £2,000 break-in guarantee.
+There is no evidence-backed single best cylinder for every Coventry home. Identify the current installation, compare independently certified options that fit it, and confirm any key-control, warranty, and policy requirements before choosing.
 
-If you are on a tight budget, the ABS Avocet MK3 at £45 to £60 is an excellent alternative. And if you need the absolute cheapest anti-snap option, the ERA range will still protect you from the most common attack.
-
-Whatever you choose, anything is better than the standard cylinder that came with your door. If your cylinder does not say "anti-snap" on it — or if you are not sure — it almost certainly is not. Call me on 024 7522 4730 and I will check it for you free of charge.
-
-For help measuring your cylinder for the right size, see our [euro cylinder measuring guide](/blog/how-to-measure-euro-cylinder-upvc). For a broader look at how your uPVC door mechanism works, read our [mechanism explained guide](/blog/upvc-door-lock-mechanisms-explained). And check our [prices page](/prices) or [lock change service](/services/lock-change) for current fitting costs across all of Coventry and surrounding areas.
+Anti-snap cylinder fitting starts from £59. For help measuring the required size, see the [euro cylinder measuring guide](/blog/how-to-measure-euro-cylinder-upvc). For a broader look at the door mechanism, read the [mechanism guide](/blog/upvc-door-lock-mechanisms-explained). Check [current prices](/prices) or the [lock upgrade service](/services/lock-upgrade) for an assessment and quote.
 `,
     faqs: [
       {
         q: 'What is the best euro cylinder for a uPVC door in 2026?',
-        a: 'In my professional opinion, the Ultion is the best euro cylinder for most homes in 2026. It carries a 3-star TS007 rating on the cylinder alone, has 11 anti-attack features including Lockdown Mode, and comes with a £2,000 break-in guarantee. I fit it as my default recommendation for all front doors. Fitted price is typically £50 to £70 depending on size.',
+        a: 'There is no single best model for every door. Check the exact product certification, cylinder size, cam, protective furniture, key-control needs, written warranty terms, and any policy wording. Police.uk recommends a 3-star TS007 cylinder when a euro cylinder is changed.',
       },
       {
         q: 'Is it worth paying more for an Ultion over a cheaper anti-snap lock?',
-        a: 'Yes, for a front door. The price difference between an Ultion at around £60 fitted and a budget anti-snap cylinder at around £35 is only £25. For that, you get a significantly more secure cylinder with Lockdown Mode, better key control, and a £2,000 guarantee. For back doors or side doors that are not street-facing, a budget anti-snap cylinder is often a perfectly reasonable choice.',
+        a: 'That depends on the exact models, their current certification, compatible installation, key-control terms, written warranty, and your budget. Do not rely on an unverified guarantee amount or assume that a brand name alone establishes better resistance. Fitted anti-snap options start from £59.',
       },
       {
         q: 'Do I need to change my door handles when upgrading my euro cylinder?',
-        a: 'Not necessarily. If you choose a 3-star rated cylinder like the Ultion or ABS Avocet MK3, it meets the full security standard on its own regardless of your handle. If you choose a 1-star cylinder like the Yale Superior, you will need a 2-star handle and escutcheon to achieve the 3-star threshold. I can advise on your specific setup when I visit — call 024 7522 4730.',
+        a: 'Not always. DHF explains that TS007 protection can come from a Kitemarked 3-star cylinder or a 1-star cylinder combined with 2-star security furniture. The exact current ratings and compatibility of both components need to be verified for your door.',
       },
       {
         q: 'How long does it take to upgrade a euro cylinder?',
@@ -720,7 +669,7 @@ Mushroom cams provide significantly better resistance to levering attacks than s
 
 The deadbolt is the final locking action, engaged by turning the key after lifting the handle. It is a solid rectangular bolt that extends from the gearbox into the frame keep. The deadbolt is what differentiates a fully locked door from one that is merely latched.
 
-A deadbolt must be directly operated by the key — it cannot be sprung back by force like a latch. This makes it the most resistant locking point to attack, which is why I always stress: lift the handle AND turn the key, every time.
+A deadbolt is directly operated by the key rather than acting as a spring latch. This is why lifting the handle and then turning the key matters on a system designed to operate that way: the locking points and deadbolt need to be fully engaged.
 
 ## How Many Locking Points?
 
@@ -800,7 +749,7 @@ I carry a range of common mechanisms in my van, and for unusual specifications I
 
 ### Stripped Gearbox Teeth
 
-The most common failure. The internal gears in the gearbox strip over time, causing the handle to feel sloppy or the mechanism to fail to engage fully. This is the result of normal wear — typically after 10 to 15 years — and is accelerated by forcing stiff locks, slamming the door, or lack of lubrication.
+One possible failure is wear to the internal gearbox, which can make the handle feel loose or stop the mechanism engaging fully. There is no universal failure age; use, alignment, maintenance, product quality, and existing wear all affect the mechanism.
 
 Symptoms: handle feels loose, key does not turn smoothly, mechanism does not fully engage on handle lift.
 
@@ -846,7 +795,7 @@ Here is what you can expect to pay for mechanism work in 2026:
 - **Basic mechanism replacement (standard brands like Lockmaster or Yale):** £89 to £130
 - **Mid-range mechanism replacement (Mila, Fuhr):** £120 to £170
 - **Specialist mechanism replacement (GU, Winkhaus):** £150 to £200+
-- **Emergency mechanism replacement (out of hours):** add £30 to £50
+- **Out-of-hours mechanism replacement:** quoted for the required work; no automatic night premium
 
 These prices include the mechanism, labour, and testing. If the euro cylinder also needs replacing (which I recommend doing at the same time if it is more than 5 years old), add the cylinder cost — see our [euro cylinder upgrade guide](/blog/best-euro-cylinder-upgrades-2026) for prices.
 
@@ -858,7 +807,7 @@ I offer free diagnosis — call me on 024 7522 4730 and describe the symptoms. I
 
 For more on how the individual components work, see our [uPVC door lock mechanisms explained guide](/blog/upvc-door-lock-mechanisms-explained). For cylinder-specific issues, check our [euro cylinder measuring guide](/blog/how-to-measure-euro-cylinder-upvc). And for routine maintenance that prevents mechanism failures, read our [uPVC door maintenance guide](/blog/upvc-door-maintenance-guide).
 
-I cover all of Coventry and the surrounding Warwickshire area — see our [areas page](/areas/) for coverage details. Visit our [uPVC lock repair service page](/services/upvc-lock-repair) or [lock change service page](/services/lock-change) for more information on our services, or check our [prices page](/prices) for current rates.
+I cover Coventry and the stated surrounding Warwickshire [areas](/areas/). Visit the [uPVC lock repair service](/services/upvc-lock-repair) for mechanism diagnosis, repair, or replacement, or check the [prices page](/prices) for current rates.
 `,
     faqs: [
       {
@@ -871,7 +820,7 @@ I cover all of Coventry and the surrounding Warwickshire area — see our [areas
       },
       {
         q: 'How much does it cost to replace a multipoint locking mechanism?',
-        a: 'Mechanism replacement costs depend on the brand and specification. Basic mechanisms (Lockmaster, Yale) cost £89 to £130 fitted. Mid-range brands (Mila, Fuhr) cost £120 to £170. Specialist brands (GU, Winkhaus) cost £150 to £200 or more. These prices include the mechanism, labour, and testing. If you also need a new euro cylinder, that is an additional £35 to £70 depending on the cylinder brand. I always give a fixed quote before starting work.',
+        a: 'Mechanism replacement costs depend on the exact specification, compatibility, availability, and fitting required. The current service prices include the mechanism, labour, and testing as stated in the quote. If a certified anti-snap cylinder is also required, fitting starts from £59. I confirm the total before work starts.',
       },
       {
         q: 'What is the difference between active and passive locking points?',
