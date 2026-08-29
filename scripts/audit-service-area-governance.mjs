@@ -113,6 +113,60 @@ const REQUIRED_SECTION_TECHNICAL_SOURCE_IDS = {
   ),
 }
 
+// Independent, hand-reviewed preparation attribution. Production must not
+// broaden these citations by assigning every town source to every list.
+const EXPECTED_PREPARATION_LOCALITY_SOURCE_IDS = {
+  nuneaton: {
+    'emergency-lockout': ['visit-nuneaton'],
+    'lock-change': ['visit-nuneaton'],
+    'upvc-lock-repair': ['visit-nuneaton'],
+    'boarding-up': ['visit-nuneaton', 'nbbc-conservation'],
+    'lock-upgrade': ['visit-nuneaton'],
+  },
+  bedworth: {
+    'emergency-lockout': ['visit-warwickshire-bedworth'],
+    'lock-change': ['visit-warwickshire-bedworth', 'nbbc-bedworth-conservation-2022'],
+    'upvc-lock-repair': ['visit-warwickshire-bedworth'],
+    'boarding-up': ['visit-warwickshire-bedworth', 'nbbc-bedworth-conservation-2022'],
+    'lock-upgrade': ['visit-warwickshire-bedworth'],
+  },
+  rugby: {
+    'emergency-lockout': ['visit-rugby', 'rugby-conservation'],
+    'lock-change': ['visit-rugby', 'rugby-conservation'],
+    'upvc-lock-repair': ['visit-rugby'],
+    'boarding-up': ['visit-rugby'],
+    'lock-upgrade': ['visit-rugby'],
+  },
+  'leamington-spa': {
+    'emergency-lockout': ['visit-leamington', 'warwick-district-conservation'],
+    'lock-change': ['visit-leamington', 'warwick-district-conservation'],
+    'upvc-lock-repair': ['visit-leamington'],
+    'boarding-up': ['visit-leamington', 'warwick-district-conservation'],
+    'lock-upgrade': ['visit-leamington', 'warwick-district-conservation'],
+  },
+  warwick: {
+    'emergency-lockout': ['visit-warwick', 'warwick-district-conservation'],
+    'lock-change': ['visit-warwick', 'warwick-district-conservation'],
+    'upvc-lock-repair': ['visit-warwick'],
+    'boarding-up': ['visit-warwick', 'warwick-district-conservation'],
+    'lock-upgrade': ['visit-warwick', 'warwick-district-conservation'],
+  },
+  kenilworth: {
+    'emergency-lockout': ['visit-kenilworth', 'warwick-district-conservation'],
+    'lock-change': ['visit-kenilworth', 'warwick-district-conservation'],
+    'upvc-lock-repair': ['visit-kenilworth'],
+    'boarding-up': ['visit-kenilworth', 'warwick-district-conservation'],
+    'lock-upgrade': ['visit-kenilworth'],
+  },
+  'stratford-upon-avon': {
+    'emergency-lockout': ['visit-stratford', 'sdc-conservation-h-z'],
+    'lock-change': ['visit-stratford'],
+    'upvc-lock-repair': ['visit-stratford', 'sdc-conservation-h-z'],
+    'boarding-up': ['visit-stratford', 'sdc-conservation-h-z'],
+    'lock-upgrade': ['visit-stratford', 'sdc-conservation-h-z'],
+  },
+}
+
 function independentlyRequiredSupplementalSourceIds(text) {
   const required = []
 
@@ -223,7 +277,8 @@ function localityEditorialText(content) {
     content.localAngleHeading,
     content.localAngleBody,
     ...(Array.isArray(content.contextGuidance) ? content.contextGuidance : []),
-    ...(Array.isArray(content.commonJobs) ? content.commonJobs.slice(0, 3) : []),
+    ...(Array.isArray(content.commonJobs) ? content.commonJobs.slice(0, 1) : []),
+    ...(Array.isArray(content.preparationSteps) ? content.preparationSteps.slice(-3) : []),
     ...(Array.isArray(content.faqs) && content.faqs[0]
       ? [content.faqs[0].q, content.faqs[0].a]
       : []),
@@ -237,7 +292,8 @@ function pairSpecificCoreText(content) {
     content.localAngleHeading,
     content.localAngleBody,
     ...(Array.isArray(content.contextGuidance) ? content.contextGuidance.slice(-2) : []),
-    ...(Array.isArray(content.commonJobs) ? content.commonJobs.slice(0, 3) : []),
+    ...(Array.isArray(content.commonJobs) ? content.commonJobs.slice(0, 1) : []),
+    ...(Array.isArray(content.preparationSteps) ? content.preparationSteps.slice(-2) : []),
     ...(Array.isArray(content.faqs) && content.faqs[0]
       ? [content.faqs[0].q, content.faqs[0].a]
       : []),
@@ -658,8 +714,15 @@ for (const [areaSlug, records] of Object.entries(TOWN_SERVICES)) {
         `${key} evidence section ${section} has technical sources ${actualTechnicalIds.join(', ') || 'none'}; expected ${expectedTechnicalIds.join(', ') || 'none'}`,
       )
       const actualLocalityIds = ids.filter(sourceId => !TECHNICAL_SOURCE_IDS.has(sourceId))
-      if (section === 'preparation' || section === 'checks') {
+      if (section === 'checks') {
         check(actualLocalityIds.length === 0, `${key} evidence section ${section} includes locality source ${actualLocalityIds.join(', ')}`)
+      } else if (section === 'preparation') {
+        const expectedLocalityIds = EXPECTED_PREPARATION_LOCALITY_SOURCE_IDS[areaSlug]?.[serviceSlug] ?? []
+        check(
+          actualLocalityIds.length === expectedLocalityIds.length
+            && actualLocalityIds.every(sourceId => expectedLocalityIds.includes(sourceId)),
+          `${key} evidence section preparation has locality sources ${actualLocalityIds.join(', ') || 'none'}; expected ${expectedLocalityIds.join(', ') || 'none'}`,
+        )
       } else {
         check(actualLocalityIds.length > 0, `${key} evidence section ${section} has no locality source`)
       }

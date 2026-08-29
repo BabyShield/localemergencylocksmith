@@ -6,9 +6,9 @@ import CTABlock from '@/components/CTABlock'
 import SchemaMarkup from '@/components/SchemaMarkup'
 
 export const metadata: Metadata = {
-  title: 'Locksmith Areas | Coventry & Warwickshire',
+  title: 'Locksmith Areas | Coventry, Warwickshire & Solihull Borough',
   description:
-    'Browse 78 locksmith area guides across Coventry and Warwickshire, with outward codes, services, source-reviewed guidance and a live ETA by phone.',
+    'Browse 78 locksmith area guides across Coventry, Warwickshire and listed Solihull borough locations, with source-reviewed guidance and a live ETA by phone.',
   keywords: 'locksmith coventry areas, locksmith warwickshire, locksmith near me, emergency locksmith coventry, locksmith nuneaton, locksmith rugby, locksmith leamington spa',
   alternates: {
     canonical: `${SITE_CONFIG.domain}/areas`,
@@ -17,10 +17,10 @@ export const metadata: Metadata = {
     type: 'website',
     siteName: 'Local Emergency Locksmith',
     locale: 'en_GB',
-    title: 'Locksmith Areas | Coventry & Warwickshire',
-    description: 'Local locksmith covering 78 towns and villages across Coventry and Warwickshire. Emergency 24/7.',
+    title: 'Locksmith Areas | Coventry, Warwickshire & Solihull Borough',
+    description: 'Local locksmith covering 78 listed locations across Coventry, Warwickshire and the Solihull borough. Emergency service is available 24/7.',
     url: `${SITE_CONFIG.domain}/areas`,
-    images: [{ url: `${SITE_CONFIG.domain}/api/og?title=${encodeURIComponent('Locksmith Areas — Coventry & Warwickshire')}`, width: 1200, height: 630 }],
+    images: [{ url: `${SITE_CONFIG.domain}/api/og?title=${encodeURIComponent('Locksmith Areas — Coventry, Warwickshire & Solihull Borough')}`, width: 1200, height: 630 }],
   },
 }
 
@@ -39,7 +39,7 @@ export default function AreasPage() {
   const areaListSchema = {
     '@context': 'https://schema.org',
     '@type': 'ItemList',
-    name: 'Locksmith area guides across Coventry and Warwickshire',
+    name: 'Locksmith area guides across Coventry, Warwickshire and the Solihull borough',
     numberOfItems: allAreas.length,
     itemListElement: allAreas.map((area, index) => ({
       '@type': 'ListItem',
@@ -69,12 +69,13 @@ export default function AreasPage() {
       <section className="py-12 px-4 text-white" style={{ background: '#0F1B2D' }}>
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-3xl md:text-4xl font-black mb-4">
-            Locksmith Areas Across Coventry &amp; Warwickshire
+            Locksmith Areas Across Coventry, Warwickshire &amp; Solihull Borough
           </h1>
           <p className="text-gray-300 text-lg mb-6 max-w-2xl mx-auto">
-            I cover the 78 listed towns, villages, and suburbs across Coventry and Warwickshire.
-            Each area has a source-reviewed local guide. Call with the full postcode for the
-            current ETA; no VAT or separate call-out fee.
+            I cover the 78 listed towns, villages, and suburbs across Coventry, Warwickshire and
+            the listed Solihull borough locations in the West Midlands. Each area has a
+            source-reviewed local guide. Call with the full postcode for the current ETA; no VAT
+            or separate call-out fee.
           </p>
           <a
             href={`tel:${SITE_CONFIG.phoneTel}`}

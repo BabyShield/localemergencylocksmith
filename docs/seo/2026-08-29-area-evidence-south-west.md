@@ -360,9 +360,9 @@ Source rule: primary official sources only (district/borough/county councils and
    **Conditional service use:** Use river/rail references only for address orientation after verification; do not infer travel route, delay, coverage or the conservation status of the whole village.
    **Checked:** 2026-08-29.
 
-2. **Claim:** Rugby Borough Council maintains an official Wolston Neighbourhood Plan record with a neighbourhood-area decision statement and a November 2024 SEA/HRA screening determination, but the page does not state that a plan has been made.
+2. **Claim:** Rugby Borough Council maintains an official Wolston Neighbourhood Plan record with a neighbourhood-area decision statement, Call for Sites documents and a November 2024 SEA/HRA screening determination, but the page does not state that a plan has been made.
    **Publisher / title / deep URL:** Rugby Borough Council — [Wolston Neighbourhood Plan](https://www.rugby.gov.uk/w/wolston-neighbourhood-plan).
-   **Supports:** Official parish-level plan activity and the `settlement/local-plan` and `official-parish` tags, while preserving the unresolved adoption status.
+   **Supports:** Official parish-level plan activity, including the Call for Sites and November 2024 screening stage, and the `settlement/local-plan` and `official-parish` tags, while preserving the unresolved adoption status.
    **Conditional service use:** It is acceptable to say that neighbourhood planning documents exist; do not call the Wolston plan adopted or part of the development plan without later official evidence.
    **Checked:** 2026-08-29.
 

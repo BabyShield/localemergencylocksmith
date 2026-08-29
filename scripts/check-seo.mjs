@@ -76,6 +76,17 @@ const TOWN_CENTRE_ALIASES = {
 const GOVERNED_TOWNS = ['nuneaton', 'bedworth', 'rugby', 'leamington-spa', 'warwick', 'kenilworth', 'stratford-upon-avon']
 const HUB_CONTEXT_ONLY_AREAS = ['attleborough', 'stockingford', 'weddington', 'horeston-grange', 'camp-hill', 'bermuda-park', 'cawston', 'new-bilton']
 const TOWN_SERVICE_EVIDENCE_SECTIONS = ['intro', 'local-angle', 'local-evidence', 'preparation', 'checks', 'faqs']
+// These are regression caps established from the complete rendered-main crawl
+// on 2026-08-29 at release 7d30302. They include a small amount of headroom
+// above that measured corpus; they are not Google or duplicate-content limits.
+const RENDERED_MAIN_SIMILARITY_CAPS = Object.freeze({
+  hubOwnedAreas: { p95: 0.46, max: 0.55 },
+  dedicatedParents: { p95: 0.57, max: 0.59 },
+  dedicatedChildrenWithinService: { p95: 0.53, max: 0.54 },
+})
+const RENDERED_AREA_NAME_ALIASES = Object.freeze({
+  'leamington-spa': ['royal leamington spa'],
+})
 const SINGLE_AREA_POSTCODES = {
   cv1: 'coventry-city-centre',
   cv47: 'southam',
@@ -310,6 +321,122 @@ function markedVisibleTexts(html, attribute) {
 
 function mainContent(html) {
   return html.match(/<main\b[^>]*>([\s\S]*?)<\/main>/i)?.[1] ?? ''
+}
+
+function escapeRegExp(value) {
+  return String(value).replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
+}
+
+function normaliseRenderedTokens(value) {
+  return String(value ?? '')
+    .toLowerCase()
+    .normalize('NFKD')
+    .replace(/\p{M}/gu, '')
+    .replace(/([a-z0-9])[’']s\b/g, '$1')
+    .replace(/[’']/g, '')
+    .replace(/[^a-z0-9]+/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim()
+}
+
+function normaliseRenderedMain(value, areaSlug) {
+  let normalised = normaliseRenderedTokens(value)
+
+  // A place name or postcode is not information gain by itself. Replace only
+  // the current route's place aliases, then replace UK postcodes everywhere so
+  // superficial token substitutions cannot make two page shells look unique.
+  const aliases = [
+    ...(RENDERED_AREA_NAME_ALIASES[areaSlug] ?? []),
+    areaSlug.replaceAll('-', ' '),
+  ]
+    .map(normaliseRenderedTokens)
+    .filter(Boolean)
+    .sort((left, right) => right.length - left.length)
+
+  for (const alias of aliases) {
+    normalised = normalised.replace(new RegExp(`\\b${escapeRegExp(alias)}\\b`, 'g'), ' area ')
+  }
+
+  normalised = normalised
+    .replace(/\b[a-z]{1,2}\d[a-z\d]?\s+\d[a-z]{2}\b/g, ' postcode ')
+    .replace(/\b(?:cv\d{1,2}|b\d{1,2})\b/g, ' postcode ')
+    .replace(/\s+/g, ' ')
+    .trim()
+
+  return normalised
+}
+
+check(
+  normaliseRenderedMain("Nuneaton's Nuneaton’s", 'nuneaton') === 'area area',
+  'rendered-main normalization does not neutralize straight and curly possessive area names',
+)
+
+function renderedMainShingles(value, areaSlug, width = 5) {
+  const tokens = normaliseRenderedMain(value, areaSlug).split(' ').filter(Boolean)
+  const shingles = new Set()
+  for (let index = 0; index <= tokens.length - width; index += 1) {
+    shingles.add(tokens.slice(index, index + width).join(' '))
+  }
+  return shingles
+}
+
+function overlapCoefficient(left, right) {
+  const denominator = Math.min(left.size, right.size)
+  if (denominator === 0) return 0
+  const smaller = left.size <= right.size ? left : right
+  const larger = left.size <= right.size ? right : left
+  let shared = 0
+  for (const shingle of smaller) if (larger.has(shingle)) shared += 1
+  return shared / denominator
+}
+
+function nearestRankPercentile(values, fraction) {
+  if (values.length === 0) return 0
+  const sorted = [...values].sort((left, right) => left - right)
+  return sorted[Math.min(sorted.length - 1, Math.ceil(sorted.length * fraction) - 1)]
+}
+
+function renderedMainSimilarityReport(records, includePair = () => true) {
+  const pairs = []
+  for (let leftIndex = 0; leftIndex < records.length; leftIndex += 1) {
+    for (let rightIndex = leftIndex + 1; rightIndex < records.length; rightIndex += 1) {
+      const left = records[leftIndex]
+      const right = records[rightIndex]
+      if (!includePair(left, right)) continue
+      pairs.push({
+        left: left.path,
+        right: right.path,
+        overlap: overlapCoefficient(left.shingles, right.shingles),
+      })
+    }
+  }
+
+  const highestPair = [...pairs].sort((left, right) => right.overlap - left.overlap)[0]
+  return {
+    pageCount: records.length,
+    pairCount: pairs.length,
+    p95: nearestRankPercentile(pairs.map(pair => pair.overlap), 0.95),
+    max: highestPair?.overlap ?? 0,
+    highestPair,
+  }
+}
+
+function checkRenderedMainSimilarity(label, report, caps) {
+  check(
+    report.p95 <= caps.p95,
+    `${label} rendered-main 5-word-shingle p95 overlap is ${(report.p95 * 100).toFixed(2)}%; regression cap is ${(caps.p95 * 100).toFixed(0)}%`,
+  )
+  check(
+    report.max <= caps.max,
+    `${label} rendered-main highest overlap is ${(report.max * 100).toFixed(2)}% on ${report.highestPair?.left ?? 'none'} vs ${report.highestPair?.right ?? 'none'}; regression cap is ${(caps.max * 100).toFixed(0)}%`,
+  )
+}
+
+function renderedMainSimilarityLine(label, report, caps) {
+  const pairLabel = report.highestPair
+    ? `${report.highestPair.left} vs ${report.highestPair.right}`
+    : 'no comparable pair'
+  return `- ${label}: ${report.pageCount} pages, ${report.pairCount} pairs, p95 ${(report.p95 * 100).toFixed(2)}% (cap ${(caps.p95 * 100).toFixed(0)}%), max ${(report.max * 100).toFixed(2)}% (cap ${(caps.max * 100).toFixed(0)}%; ${pairLabel})`
 }
 
 function headingOutline(html) {
@@ -723,6 +850,18 @@ try {
         checkEvidenceBlockContract(fact.block, `${productionUrl.pathname} local fact ${fact.index}`)
       }
       const hasDedicatedOwnerPages = GOVERNED_TOWNS.includes(areaSlug)
+      const areaDirectoryLinks = mainHtml.match(
+        /<section\b(?=[^>]*data-service-directory-links=["']true["'])[^>]*>[\s\S]*?<\/section>/i,
+      )?.[0] ?? ''
+      check(Boolean(areaDirectoryLinks), `${productionUrl.pathname} is missing its marked service-directory cross-links`)
+      check(
+        visibleText(areaDirectoryLinks).includes('Other Area Guides in the Service Directory'),
+        `${productionUrl.pathname} does not label its curated links as other service-directory areas`,
+      )
+      check(
+        !visibleText(areaDirectoryLinks).includes('Nearby Area Guides'),
+        `${productionUrl.pathname} still presents unverified service-directory links as nearby`,
+      )
       const sourceRegisterScope = mainHtml.match(/<section\b[^>]*\bdata-source-register-scope=["']([^"']+)["'][^>]*>/i)?.[1] ?? ''
       const renderedSourceKinds = Array.from(
         mainHtml.matchAll(/<li\b[^>]*\bdata-source-kind=["']([^"']+)["'][^>]*>/gi),
@@ -777,6 +916,26 @@ try {
         }
       } else {
         const expectsPairLinkedLocalFacts = !HUB_CONTEXT_ONLY_AREAS.includes(areaSlug)
+        const expectedEvidenceMode = expectsPairLinkedLocalFacts ? 'pair-linked' : 'hub-context-only'
+        const pairLinkedDisclosure = 'Each locality-specific point remains linked to its source.'
+        const hubContextDisclosure = 'These five service sections provide operational and technical checks only.'
+        const renderedEvidenceModes = Array.from(
+          mainHtml.matchAll(/<article\b[^>]*data-service-evidence-mode=["']([^"']+)["'][^>]*>/gi),
+          match => match[1],
+        )
+        check(
+          renderedEvidenceModes.length === SERVICE_SLUGS.length
+            && renderedEvidenceModes.every(mode => mode === expectedEvidenceMode),
+          `${productionUrl.pathname} renders evidence modes ${renderedEvidenceModes.join(', ') || 'none'}; expected five ${expectedEvidenceMode} articles`,
+        )
+        check(
+          pageText.includes(expectsPairLinkedLocalFacts ? pairLinkedDisclosure : hubContextDisclosure),
+          `${productionUrl.pathname} is missing its ${expectedEvidenceMode} disclosure`,
+        )
+        check(
+          !pageText.includes(expectsPairLinkedLocalFacts ? hubContextDisclosure : pairLinkedDisclosure),
+          `${productionUrl.pathname} renders the wrong service-evidence disclosure for ${expectedEvidenceMode}`,
+        )
         check(sourceRegisterScope === 'locality-and-technical', `${productionUrl.pathname} source register scope is ${sourceRegisterScope || 'missing'}; expected locality-and-technical`)
         check(renderedSourceKinds.includes('technical'), `${productionUrl.pathname} combined source register renders no technical source`)
         check(
@@ -799,6 +958,10 @@ try {
               match => match[1],
             )
             const openingTag = block.match(/^<article\b[^>]*>/i)?.[0] ?? ''
+            check(
+              getAttribute(openingTag, 'data-service-evidence-mode') === expectedEvidenceMode,
+              `${productionUrl.pathname} ${serviceSlug} evidence mode is ${getAttribute(openingTag, 'data-service-evidence-mode') || 'missing'}; expected ${expectedEvidenceMode}`,
+            )
             const declaredLocalFactIndexes = (getAttribute(openingTag, 'data-local-fact-indexes') ?? '')
               .trim()
               .split(/\s+/)
@@ -849,6 +1012,18 @@ try {
     }
 
     if (/^\/areas\/[^/]+\/[^/]+$/.test(productionUrl.pathname)) {
+      const serviceDirectoryLinks = mainHtml.match(
+        /<p\b(?=[^>]*data-service-directory-links=["']true["'])[^>]*>[\s\S]*?<\/p>/i,
+      )?.[0] ?? ''
+      check(Boolean(serviceDirectoryLinks), `${productionUrl.pathname} is missing its marked service-directory cross-links`)
+      check(
+        visibleText(serviceDirectoryLinks).includes('Other areas served:'),
+        `${productionUrl.pathname} does not label its curated service-directory links accurately`,
+      )
+      check(
+        !visibleText(serviceDirectoryLinks).includes('Nearby:'),
+        `${productionUrl.pathname} still presents unverified service-directory links as nearby`,
+      )
       const renderedSections = Array.from(
         mainHtml.matchAll(/data-evidence-section=["']([^"']+)["']/gi),
         match => match[1],
@@ -920,6 +1095,17 @@ try {
     const websiteNodes = parsedSchemaNodes.filter(node => hasSchemaType(node, 'WebSite'))
     check(websiteNodes.length === (productionUrl.pathname === '/' ? 1 : 0), `${productionUrl.pathname} has ${websiteNodes.length} WebSite nodes`)
 
+    if (productionUrl.pathname === '/areas') {
+      const areaDirectoryLists = parsedSchemaNodes.filter(node => hasSchemaType(node, 'ItemList'))
+      check(areaDirectoryLists.length === 1, `/areas has ${areaDirectoryLists.length} ItemList nodes; expected one`)
+      const areaDirectoryList = areaDirectoryLists[0]
+      check(areaDirectoryList?.numberOfItems === 78, '/areas ItemList numberOfItems is not 78')
+      check(
+        areaDirectoryList?.name === 'Locksmith area guides across Coventry, Warwickshire and the Solihull borough',
+        `/areas ItemList has an inaccurate territory name: ${JSON.stringify(areaDirectoryList?.name)}`,
+      )
+    }
+
     const breadcrumbNodes = parsedSchemaNodes.filter(node => hasSchemaType(node, 'BreadcrumbList'))
     const microdataBreadcrumbNodes = Array.from(
       html.matchAll(/<[^>]+\bitemtype=["']https:\/\/schema\.org\/BreadcrumbList["'][^>]*>/gi),
@@ -945,6 +1131,7 @@ try {
         node => hasSchemaType(node, 'Organization') && node?.['@id'] === `${CANONICAL_ORIGIN}/#business`,
       )
       check(Boolean(business), '/ has no canonical business Organization node')
+      check(!Object.hasOwn(business ?? {}, 'founder'), '/ business Organization contains an unverified founder relationship')
       check(Array.isArray(business?.areaServed) && business.areaServed.length === 78, '/ business areaServed does not contain 78 governed places')
       check(business?.areaServed?.every(place => place?.['@type'] === 'Place'), '/ business areaServed contains a non-Place entry')
       check(business?.contactPoint?.['@type'] === 'ContactPoint', '/ business has no ContactPoint')
@@ -1152,7 +1339,7 @@ try {
       check(directAreaLinks.length <= 25, `${productionUrl.pathname} has ${directAreaLinks.length} direct area links; expected a focused article CTA`)
     }
 
-    return { path: productionUrl.pathname, title, description, links, mainLinks, mainHrefs }
+    return { path: productionUrl.pathname, title, description, links, mainLinks, mainHrefs, mainText }
   })
 
   const titleOwners = new Map()
@@ -1233,6 +1420,91 @@ try {
   check(publishedPairPaths.size === 35, `service-area contract found ${publishedPairPaths.size} published pairs; expected 35`)
 
   const pageByPath = new Map(pages.map(page => [page.path, page]))
+  const similarityRecord = path => {
+    const page = pageByPath.get(path)
+    const match = path.match(/^\/areas\/([^/]+)(?:\/([^/]+))?$/)
+    if (!page || !match) return null
+    const areaSlug = match[1]
+    return {
+      path,
+      areaSlug,
+      serviceSlug: match[2] ?? null,
+      shingles: renderedMainShingles(page.mainText, areaSlug),
+    }
+  }
+  const areaSimilarityRecords = areaPaths.map(similarityRecord).filter(Boolean)
+  const hubOwnedAreaRecords = areaSimilarityRecords.filter(record => !GOVERNED_TOWNS.includes(record.areaSlug))
+  const dedicatedParentRecords = areaSimilarityRecords.filter(record => GOVERNED_TOWNS.includes(record.areaSlug))
+  const dedicatedChildRecords = [...publishedPairPaths].map(similarityRecord).filter(Boolean)
+
+  check(hubOwnedAreaRecords.length === 71, `rendered-main uniqueness audit found ${hubOwnedAreaRecords.length} hub-owned area pages; expected 71`)
+  check(dedicatedParentRecords.length === 7, `rendered-main uniqueness audit found ${dedicatedParentRecords.length} dedicated parent pages; expected 7`)
+  check(dedicatedChildRecords.length === 35, `rendered-main uniqueness audit found ${dedicatedChildRecords.length} dedicated child pages; expected 35`)
+
+  const hubOwnedAreaSimilarity = renderedMainSimilarityReport(hubOwnedAreaRecords)
+  const dedicatedParentSimilarity = renderedMainSimilarityReport(dedicatedParentRecords)
+  const dedicatedChildSimilarity = renderedMainSimilarityReport(
+    dedicatedChildRecords,
+    (left, right) => left.serviceSlug === right.serviceSlug,
+  )
+  const dedicatedChildSimilarityByService = SERVICE_SLUGS.map(serviceSlug => {
+    const records = dedicatedChildRecords.filter(record => record.serviceSlug === serviceSlug)
+    check(records.length === 7, `rendered-main uniqueness audit found ${records.length} ${serviceSlug} child pages; expected 7`)
+    return {
+      serviceSlug,
+      report: renderedMainSimilarityReport(records),
+    }
+  })
+
+  checkRenderedMainSimilarity(
+    'hub-owned area pages',
+    hubOwnedAreaSimilarity,
+    RENDERED_MAIN_SIMILARITY_CAPS.hubOwnedAreas,
+  )
+  checkRenderedMainSimilarity(
+    'dedicated parent pages',
+    dedicatedParentSimilarity,
+    RENDERED_MAIN_SIMILARITY_CAPS.dedicatedParents,
+  )
+  checkRenderedMainSimilarity(
+    'dedicated child pages within service',
+    dedicatedChildSimilarity,
+    RENDERED_MAIN_SIMILARITY_CAPS.dedicatedChildrenWithinService,
+  )
+  for (const { serviceSlug, report } of dedicatedChildSimilarityByService) {
+    checkRenderedMainSimilarity(
+      `${serviceSlug} dedicated child pages`,
+      report,
+      RENDERED_MAIN_SIMILARITY_CAPS.dedicatedChildrenWithinService,
+    )
+  }
+
+  console.log('Rendered-main uniqueness regression audit')
+  console.log('Normalization: lowercase NFKD text, punctuation collapsed, current route area aliases and UK postcodes replaced; unique 5-word shingles compared with the overlap coefficient.')
+  console.log('Caps preserve the measured 2026-08-29 corpus with small regression headroom; they are not search-engine thresholds.')
+  console.log(renderedMainSimilarityLine(
+    'hub-owned area pages',
+    hubOwnedAreaSimilarity,
+    RENDERED_MAIN_SIMILARITY_CAPS.hubOwnedAreas,
+  ))
+  console.log(renderedMainSimilarityLine(
+    'dedicated parent pages',
+    dedicatedParentSimilarity,
+    RENDERED_MAIN_SIMILARITY_CAPS.dedicatedParents,
+  ))
+  console.log(renderedMainSimilarityLine(
+    'dedicated child pages within service',
+    dedicatedChildSimilarity,
+    RENDERED_MAIN_SIMILARITY_CAPS.dedicatedChildrenWithinService,
+  ))
+  for (const { serviceSlug, report } of dedicatedChildSimilarityByService) {
+    console.log(renderedMainSimilarityLine(
+      `  ${serviceSlug}`,
+      report,
+      RENDERED_MAIN_SIMILARITY_CAPS.dedicatedChildrenWithinService,
+    ))
+  }
+
   const clickDepth = new Map([['/', 0]])
   const crawlQueue = ['/']
   while (crawlQueue.length > 0) {

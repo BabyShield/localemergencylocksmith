@@ -82,6 +82,7 @@ export default async function AreaPage({ params }: Props) {
 
   const guide = areaGuideOrThrow(slug)
   const hasDedicatedServicePages = hasTownService(area.slug, 'emergency-lockout')
+  const hasPairLinkedServiceEvidence = guide.serviceEvidenceMode !== 'hub-context-only'
   const neighbours = getAreaNeighbours(area)
   const areaAuthority = getAreaAuthority(area.slug)
   const relatedPosts = getRelatedGuides()
@@ -376,8 +377,9 @@ export default async function AreaPage({ params }: Props) {
           <div className="max-w-4xl mx-auto">
             <h2 id="service-guidance-heading" className="text-2xl md:text-3xl font-black text-[#0F1B2D] mb-3 text-center">Service-by-Service Guidance for {area.name}</h2>
             <p className="text-gray-600 text-center max-w-3xl mx-auto mb-10">
-              Five separate guides explain what can be checked remotely and what still requires
-              inspection at the exact address. Each local point remains linked to its source.
+              {hasPairLinkedServiceEvidence
+                ? 'Five separate guides explain what can be checked remotely and what still requires inspection at the exact address. Each locality-specific point remains linked to its source.'
+                : `These five service sections provide operational and technical checks only. They are not presented as locally evidenced diagnoses for ${area.name}; the separately cited area facts are not used to infer any property's lock, access, demand or condition.`}
             </p>
             <div className="space-y-8">
               {serviceGuidance.map(({ service, guidance, detailsHref }) => (
@@ -387,6 +389,7 @@ export default async function AreaPage({ params }: Props) {
                   data-evidence-section={service.slug}
                   data-evidence-source-ids={guidance.sourceIds.join(' ')}
                   data-local-fact-indexes={guidance.localFactIndexes.map(factIndex => factIndex + 1).join(' ')}
+                  data-service-evidence-mode={guide.serviceEvidenceMode ?? 'pair-linked'}
                   className="scroll-mt-28 rounded-2xl border border-gray-200 bg-white p-6 md:p-8 shadow-sm"
                 >
                   <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between mb-5">
@@ -509,9 +512,9 @@ export default async function AreaPage({ params }: Props) {
       </section>
 
       {neighbours.length > 0 && (
-        <section className="py-9 px-4 bg-gray-50">
+        <section className="py-9 px-4 bg-gray-50" data-service-directory-links="true">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-xl font-black text-gray-900 mb-4">Nearby Area Guides</h2>
+            <h2 className="text-xl font-black text-gray-900 mb-4">Other Area Guides in the Service Directory</h2>
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
               {neighbours.map(neighbour => (
                 <Link key={neighbour.slug} href={`/areas/${neighbour.slug}`} className="bg-white hover:bg-gray-50 border border-gray-200 hover:border-[#FFB800] text-gray-700 hover:text-[#0F1B2D] px-4 py-3 rounded-lg text-sm font-medium transition-colors">

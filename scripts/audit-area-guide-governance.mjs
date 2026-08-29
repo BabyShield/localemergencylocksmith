@@ -1,5 +1,6 @@
 import { existsSync } from 'node:fs'
 import { AREAS } from '../src/data/areas.ts'
+import { getAreaAuthority } from '../src/data/area-authorities.ts'
 import { SERVICES } from '../src/data/services.ts'
 import { AREA_GUIDES } from '../src/data/area-guides.ts'
 import { COVENTRY_AREA_GUIDES } from '../src/data/area-guides-coventry.ts'
@@ -74,6 +75,11 @@ const AUDIT_HUB_CONTEXT_ONLY_SLUGS = new Set([
   'bermuda-park',
   'cawston',
   'new-bilton',
+])
+const AUDIT_SOLIHULL_REGION_SLUGS = new Set([
+  'balsall-common',
+  'meriden',
+  'hampton-in-arden',
 ])
 
 // This is an independent release contract. Do not import the production role
@@ -555,6 +561,29 @@ for (const area of AREAS) {
   }
   const inboundNeighbourCount = AREAS.filter(candidate => candidate.neighbours.includes(area.slug)).length
   check(inboundNeighbourCount > 0, `${area.slug} receives no reviewed neighbour link`)
+  if (AUDIT_SOLIHULL_REGION_SLUGS.has(area.slug)) {
+    check(
+      area.region === 'Solihull / West Midlands',
+      `${area.slug} navigation region is ${JSON.stringify(area.region)}; expected Solihull / West Midlands`,
+    )
+  }
+}
+
+const solihullRegionMembers = AREAS
+  .filter(area => area.region === 'Solihull / West Midlands')
+  .map(area => area.slug)
+check(
+  solihullRegionMembers.length === AUDIT_SOLIHULL_REGION_SLUGS.size
+    && solihullRegionMembers.every(slug => AUDIT_SOLIHULL_REGION_SLUGS.has(slug)),
+  `Solihull / West Midlands navigation region contains ${solihullRegionMembers.join(', ') || 'no areas'}; expected exactly ${[...AUDIT_SOLIHULL_REGION_SLUGS].join(', ')}`,
+)
+for (const slug of AUDIT_SOLIHULL_REGION_SLUGS) {
+  const authority = getAreaAuthority(slug)
+  check(
+    authority.addressRegion === 'West Midlands'
+      && authority.localAuthority === 'Solihull Metropolitan Borough Council',
+    `${slug} authority is ${authority.addressRegion} / ${authority.localAuthority}; expected West Midlands / Solihull Metropolitan Borough Council`,
+  )
 }
 
 for (const relativePath of RETIRED_UNGOVERNED_FILES) {
@@ -614,6 +643,35 @@ for (const area of AREAS) {
     `${label} has ${guide.facts?.length ?? 0} facts; expected ${MIN_AREA_FACTS}-${MAX_AREA_FACTS}`,
   )
   check(Array.isArray(guide.sources) && guide.sources.length >= 2, `${label} has ${guide.sources?.length ?? 0} sources; expected at least 2`)
+  if (area.slug === 'wolston') {
+    const wolstonPlanSource = (guide.sources ?? []).find(source => source?.id === 'rbc-wolston-plan-page')
+    const wolstonEvidenceText = [
+      ...(guide.summary ?? []),
+      ...(guide.facts ?? []).map(fact => fact?.text),
+    ].filter(Boolean).join(' ')
+    check(Boolean(wolstonPlanSource), 'wolston must retain the rbc-wolston-plan-page source')
+    check(
+      wolstonPlanSource?.publisher === 'Rugby Borough Council'
+        && wolstonPlanSource?.url === 'https://www.rugby.gov.uk/w/wolston-neighbourhood-plan',
+      'wolston plan evidence must retain the verified Rugby Borough Council source and URL',
+    )
+    check(
+      wolstonPlanSource?.supports === 'The neighbourhood-area designation, Call for Sites and November 2024 screening determination records published by the council.',
+      'wolston plan source must retain its bounded support statement',
+    )
+    check(
+      wolstonEvidenceText.includes('neighbourhood-area designation, Call for Sites and November 2024 screening determination records'),
+      'wolston evidence must retain the verified designation, Call for Sites and November 2024 screening wording',
+    )
+    check(
+      !/later consultation-stage documents/i.test(wolstonEvidenceText),
+      'wolston evidence must not claim unverified later consultation-stage documents',
+    )
+    check(
+      !/\b(?:plan|it)\s+(?:is|was|has been)\s+(?:made|adopted)\b/i.test(wolstonEvidenceText),
+      'wolston evidence must not state that the plan is made or adopted',
+    )
+  }
   check(Array.isArray(guide.faqs) && guide.faqs.length >= 2, `${label} needs at least two evidence or booking FAQs`)
   for (const [index, faq] of (guide.faqs ?? []).entries()) {
     check(wordCount(faq?.q) >= 6, `${label} FAQ ${index + 1} question is too short`)

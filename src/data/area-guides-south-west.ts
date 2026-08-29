@@ -90,7 +90,7 @@ const LOCALITY_SOURCES: Record<string, AreaGuideSource> = {
   'solihull-hampton-plan-page': localitySource('solihull-hampton-plan-page', 'Hampton-in-Arden neighbourhood plan', 'Solihull Metropolitan Borough Council', 'https://www.solihull.gov.uk/planning-and-building-control/hampton-arden-neighbourhood-plan', 'The continuing scope of the 2017 plan and withdrawal of the newer submission draft.'),
   'solihull-hampton-history': localitySource('solihull-hampton-history', 'Hampton in Arden history', 'Solihull Metropolitan Borough Council', 'https://www.solihull.gov.uk/about-solihull/hampton-arden-history', 'The council statement that central Hampton-in-Arden was designated a conservation area in 1968.', 'property-status'),
   'rbc-wolston-conservation': localitySource('rbc-wolston-conservation', 'Wolston Conservation Area Character Appraisal', 'Rugby Borough Council', 'https://www.rugby.gov.uk/documents/20124/6569677/Wolston_Character_Appraisal.pdf/bc559f87-8d33-e741-9b96-c4797248699b?t=1750866416447', 'The limited conservation area, River Avon relationship and railway bridge separating Wolston and Brandon.', 'property-status'),
-  'rbc-wolston-plan-page': localitySource('rbc-wolston-plan-page', 'Wolston Neighbourhood Plan', 'Rugby Borough Council', 'https://www.rugby.gov.uk/w/wolston-neighbourhood-plan', 'The neighbourhood-area designation and current screening and consultation-stage records published by the council.'),
+  'rbc-wolston-plan-page': localitySource('rbc-wolston-plan-page', 'Wolston Neighbourhood Plan', 'Rugby Borough Council', 'https://www.rugby.gov.uk/w/wolston-neighbourhood-plan', 'The neighbourhood-area designation, Call for Sites and November 2024 screening determination records published by the council.'),
   'rbc-ryton-plan-page': localitySource('rbc-ryton-plan-page', 'Ryton-on-Dunsmore Neighbourhood Plan: plan adoption', 'Rugby Borough Council', 'https://www.rugby.gov.uk/pl/w/ryton-on-dunsmore-neighbourhood-plan-1', 'The made date and development-plan status of the Ryton-on-Dunsmore neighbourhood plan.'),
   'rbc-ryton-made-plan': localitySource('rbc-ryton-made-plan', 'Ryton-on-Dunsmore Neighbourhood Plan, adopted July 2021', 'Rugby Borough Council (host; Ryton-on-Dunsmore Parish Council plan)', 'https://www.rugby.gov.uk/documents/20124/6578033/Ryton_on_Dunsmore_Neighbourhood_Plan__adopted_version___July_2021_.pdf/e2fd154b-c7a7-2df7-ef14-5850fa003c6b?t=1750863717054', 'The civil-parish plan boundary, River Avon valley edges and Main Rural Settlement classification.'),
   'wdc-baginton-plan-page': localitySource('wdc-baginton-plan-page', 'Baginton and Bubbenhall neighbourhood plan', 'Warwick District Council', 'https://www.warwickdc.gov.uk/info/20444/neighbourhood_plans/1129/baginton_and_bubbenhall_neighbourhood_plan', 'The joint parish preparation and referendum result for the made Baginton and Bubbenhall plan.'),
@@ -1790,7 +1790,7 @@ const AREA_SEEDS: AreaGuideSeed[] = [
     region: 'Warwickshire',
     summary: [
       `Rugby Borough Council's appraisal says Wolston Conservation Area covers only a limited village section, mostly south of the River Avon, with a railway bridge at its northern tip separating Wolston from Brandon.`,
-      `The council also hosts neighbourhood-area, screening and consultation-stage records for Wolston. These records establish the documented stage reviewed here; any later adoption status must be checked against a newer explicit council statement.`,
+      `The council also hosts neighbourhood-area designation, Call for Sites and November 2024 screening determination records for Wolston. These records establish the documented stage reviewed here; any later adoption status must be checked against a newer explicit council statement.`,
     ],
     accessGuidance: `Use the full Wolston address and treat the River Avon and railway bridge only as verified orientation. Check the current conservation boundary, distinguish Wolston from Brandon, and describe the neighbourhood-plan stage only from the latest council record.`,
     evidenceLimits: `The appraisal covers a limited area and the reviewed council record documents planning stages rather than property facts. Neither proves a building's designation, use, access, material, lock, condition, route, coverage or response; river and rail references are not travel claims.`,
@@ -1801,7 +1801,7 @@ const AREA_SEEDS: AreaGuideSeed[] = [
         serviceRelevance: `Use river and railway references only for address clarification and boundary checks, never route or coverage claims.`,
       },
       {
-        text: `Rugby Borough Council's Wolston Neighbourhood Plan page hosts the neighbourhood-area record, a November 2024 screening opinion and later consultation-stage documents.`,
+        text: `Rugby Borough Council's Wolston Neighbourhood Plan page hosts neighbourhood-area designation, Call for Sites and November 2024 screening determination records.`,
         sourceIds: ['rbc-wolston-plan-page'],
         serviceRelevance: `Do not describe Wolston's neighbourhood plan as adopted or made without a newer explicit council statement.`,
       },

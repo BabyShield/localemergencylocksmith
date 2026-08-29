@@ -451,8 +451,8 @@ export default async function TownServicePage({ params }: Props) {
             </Link>
           </div>
           {neighbours.length > 0 && (
-            <p className="text-sm text-gray-500 mt-4">
-              Nearby:{' '}
+            <p className="text-sm text-gray-500 mt-4" data-service-directory-links="true">
+              Other areas served:{' '}
               {neighbours.slice(0, 4).map((n, i) => (
                 <span key={n.slug}>
                   {i > 0 && ' · '}

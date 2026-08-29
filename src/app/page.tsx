@@ -11,7 +11,7 @@ import DirectAnswer from '@/components/DirectAnswer'
 import LastUpdated from '@/components/LastUpdated'
 import CredentialsStrip from '@/components/CredentialsStrip'
 import { SERVICES } from '@/data/services'
-import { SITE_CONFIG, CONTENT_UPDATED, GOOGLE_REVIEWS, LOCKSMITH_AUTHOR_SCHEMA } from '@/data/config'
+import { SITE_CONFIG, CONTENT_UPDATED, GOOGLE_REVIEWS } from '@/data/config'
 import { AREA_SERVED_SCHEMA } from '@/data/areas'
 import { ALL_BLOG_POSTS } from '@/data/blog-posts'
 
@@ -58,7 +58,6 @@ const organizationSchema = {
     height: 512,
   },
   image: `${SITE_CONFIG.domain}/og-image.png`,
-  founder: LOCKSMITH_AUTHOR_SCHEMA,
   areaServed: AREA_SERVED_SCHEMA,
   hasOfferCatalog: {
     '@type': 'OfferCatalog',

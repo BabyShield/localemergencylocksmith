@@ -206,7 +206,7 @@ const AREA_PROFILES: Record<string, AreaEvidenceProfile> = {
     name: 'Nuneaton',
     summary: 'Warwickshire County Council describes Nuneaton as a north-Warwickshire market town shaped by ribbon weaving, coal mining and brickmaking. Its official guide identifies the town centre, River Anker, Coventry Canal and railway junction as distinct parts of the local setting.',
     planningNote: 'Nuneaton and Bedworth Borough Council separately lists an adopted Nuneaton Town Centre Conservation Area appraisal. That status applies to the defined area, not every CV11 address, so the exact property and proposed work must be checked before assuming planning or heritage constraints.',
-    contactPrep: 'For a town-centre or station-side address, give the exact entrance, floor and any controlled-access instructions when calling. For a house, a clear photo of the outside handle and door edge usually identifies more than the postcode alone.',
+    contactPrep: 'For a town-centre address, give the exact entrance, floor and any controlled-access instructions when calling. For a house, a clear photo of the outside handle and door edge usually identifies more than the postcode alone.',
     contextGuidance: [
       'The county guide places Nuneaton around the River Anker, Coventry Canal and a rail junction, with a town centre and neighbourhoods extending beyond it. Those features are useful for confirming which entrance and access route a caller means, particularly where a building has street, rear or shared access. They are not evidence that a locksmith is already nearby, so the live ETA is confirmed from the actual starting point before a booking is accepted.',
       'The borough council lists a specific Nuneaton Town Centre Conservation Area appraisal. A central address should therefore be checked against the council record before visible historic fabric is altered, but work on a lock component is not automatically the same as replacing a door or changing a frontage. The decision depends on the mapped address, property status and proposed work, with council advice used where those facts make it relevant.',
@@ -276,7 +276,7 @@ const AREA_PROFILES: Record<string, AreaEvidenceProfile> = {
           `If police issue instructions for the scene, follow them before temporary work. Independently, record observations including damage to a pane, door leaf, frame or shopfront and identify what would be covered; other damage may remain unobserved. If the condition of surrounding material cannot be established safely, leave the temporary scope provisional and refer the glazing, joinery or structural question rather than making a suitability claim from photographs or locality.`,
           `The handover should say what the board covers, how it is attached, which lock or frame damage remains visible and who controls the follow-on work. For a mapped Nuneaton frontage, identify the surviving external material recorded before coverage and whether council or owner advice is still required. This makes the temporary limit clear without presenting boarding as a completed glazing, joinery or structural repair.`,
         ],
-        checks: ['Follow police instructions before moving broken glass or touching the entry point', 'Record whether the opening is a window, door panel, full door or shopfront', 'Tell the locksmith if the property is listed, managed or within the mapped conservation area'],
+        checks: ['Follow police instructions before moving broken glass or touching the entry point', 'Record whether the opening is a window, door panel, full door or shopfront', 'Check whether the council-listed Nuneaton Town Centre Conservation Area appraisal is relevant to the address, and report any separately verified listed or management status'],
         faq: { q: 'Should a broken Nuneaton shopfront be boarded before police attend?', a: 'Follow the police instructions for the incident. Warwickshire Police advises photographing damage and preserving possible evidence; when another person secures the property, it advises working carefully and securing doors or windows from outside. Emergency danger always comes before property work.' },
       },
       {
@@ -300,7 +300,7 @@ const AREA_PROFILES: Record<string, AreaEvidenceProfile> = {
     name: 'Bedworth',
     summary: 'Warwickshire County Council describes Bedworth as a town between Coventry and Nuneaton with rail links, the Coventry Canal, Miners\' Welfare Park and an industrial history in ribbon weaving and mining. Those are verified place facts; they do not establish the lock fitted at any particular address.',
     planningNote: 'Nuneaton and Bedworth Borough Council has an adopted 2022 Bedworth Conservation Area appraisal and management plan. Check the mapped boundary and the property itself before treating heritage guidance as relevant to a repair or replacement.',
-    contactPrep: 'Bedworth addresses can have canal-side, town-centre, estate or managed-building access. Give the complete address and explain whether the affected entrance is private, communal, front, rear or reached from a service yard.',
+    contactPrep: 'The county source identifies the Coventry Canal and railway station as Bedworth reference points. Give the complete address rather than either landmark, then explain whether the affected entrance is private, communal, front, rear or reached from a service yard.',
     contextGuidance: [
       'The official Bedworth guide records the town\'s position between Coventry and Nuneaton, together with its railway, Coventry Canal and Miners\' Welfare Park context. For a service call, the safe operational use of that information is address confirmation: give the full postcode, building name where applicable, correct entrance and any access instructions. It should never be converted into a guaranteed journey time; current traffic, the locksmith\'s starting point and site access all matter.',
       'Bedworth has a council-published conservation appraisal dated 2022. The document concerns a defined conservation area and its character, not every property in CV12. If proposed work would affect an external door, shopfront or older material within that boundary, property status and the alteration should be checked. A cylinder, lock case, frame repair and full-door replacement are materially different scopes and should not be described as interchangeable.',
@@ -370,7 +370,7 @@ const AREA_PROFILES: Record<string, AreaEvidenceProfile> = {
           `If police issue scene instructions, follow them before temporary work. Record observations including a damaged pane, door surround or shared frontage, together with opening dimensions, loose material and any unsafe edge visible without disturbing the scene; other damage may remain unobserved. These records do not establish structural suitability. If surrounding condition remains uncertain, record that limit and refer it instead of implying that a board has been approved for the opening.`,
           `For a Bedworth conservation-area or rented property, identify who controls the frontage and what address-level or owner requirements apply. The completion note should show board dimensions, attachment points, damage concealed and the permanent glazing, door or frame work outstanding. That record helps an owner, insurer or repairer understand the temporary intervention and avoids implying that the opening is restored merely because immediate access has been reduced.`,
         ],
-        checks: ['Report criminal damage and preserve evidence as police direct', 'Measure the opening and record visible damage to the surrounding frame', 'Flag conservation, listed or landlord control before temporary work is agreed'],
+        checks: ['Report criminal damage and preserve evidence as police direct', 'Measure the opening and record visible damage to the surrounding frame', 'Check the exact address against the Bedworth Conservation Area appraisal, and separately flag any verified listed status or landlord control before temporary work is agreed'],
         faq: { q: 'Is boarding the permanent repair for a damaged Bedworth door?', a: 'No. It is a temporary measure intended to secure and protect the opening. The door, frame, glazing and locks still need a separate permanent-repair decision.' },
       },
       {
@@ -422,7 +422,7 @@ const AREA_PROFILES: Record<string, AreaEvidenceProfile> = {
           `Resolve the building boundary before diagnosing the lock. A caller outside a shared street door, inside a common area but outside a flat, or at a private house is requesting access through a different threshold and may need different supporting authority. In Rugby's centre, a building name or nearby landmark can help locate the address, but the booking should still name the exact threshold and any concierge or manager responsible for it.`,
           `Next separate the immediate entry decision from follow-on hardware work. Key position, deadlocking and earlier damage determine what can be assessed on arrival; property appearance does not. If a proportionate opening would require drilling or affect a frontage that may be protected, explain that boundary and obtain agreement before proceeding. Replacement, additional keys and council or management questions should remain separately described outcomes.`,
         ],
-        checks: ['Name the precise entrance and any concierge or managing-agent contact', 'Explain whether the key is lost, trapped, turning, or snapped', 'Check the Rugby Borough map if the door forms part of a protected frontage'],
+        checks: ['Name the precise entrance and any concierge or managing-agent contact', 'Explain whether the key is lost, trapped, turning, or snapped', 'Check whether one of Rugby Borough Council\'s listed conservation areas is relevant before visible frontage work is considered'],
         faq: { q: 'Are all older doors near Rugby School in the same conservation area?', a: 'No assumption should be made from proximity alone. Rugby Borough Council publishes separate mapped conservation areas, and the exact address and work need checking.' },
       },
       {
@@ -436,7 +436,7 @@ const AREA_PROFILES: Record<string, AreaEvidenceProfile> = {
           `Record the requested outcome and reported observations before committing to replacement. They may include lost keys, binding, visible damage or another symptom, but the cause and affected component remain unconfirmed until inspection. Note what was observed, which components were inspected, what was not tested and any adjustment considered. Compare repair with replacement only when the on-site evidence supports both scopes, keeping product cost distinct from diagnosis and labour.`,
           `For an address covered by one of Rugby Borough's mapped conservation areas, identify whether work remains inside the existing door or alters visible external material. A retained door with compatible internal hardware is a different proposition from cutting, changing furniture or replacing the leaf. The quote should flag the exact property-status check, responsible owner and any unanswered consent point instead of applying a town-wide heritage rule.`,
         ],
-        checks: ['Read the lock faceplate and measure only after the door is safely open', 'Check whether a repair or adjustment resolves the fault before replacing parts', 'Confirm conservation or listed status for work that changes external fabric'],
+        checks: ['Read the lock faceplate and measure only after the door is safely open', 'Check whether a repair or adjustment resolves the fault before replacing parts', 'Check the council conservation-area register for external-fabric work, and verify any listed status separately'],
         faq: { q: 'Does a Rugby conservation area prevent a lock replacement?', a: 'Not automatically. Controls depend on the exact property and work. A like-for-like internal mechanism change is different from replacing or materially altering a protected external door, so check the council when the fabric or appearance may change.' },
       },
       {
@@ -572,7 +572,7 @@ const AREA_PROFILES: Record<string, AreaEvidenceProfile> = {
           `Start with the entrance observations, not a preferred product or assumed building category. Record frame condition, hinge support, lock engagement and cylinder fit as observed, not inspected, not applicable or needing follow-up. Treat a customer description of a protected, shared or managed threshold as unconfirmed until the exact address, status and proposed alteration are checked; do not describe all Leamington flats as needing the same upgrade.`,
           `The proposal should name the selected item, dimensions, exact visible product mark or accreditation evidence, retained hardware and excluded door or frame work. A council record or customer-supplied shared-building description is only a prompt for further checking, not a specification. Keep any affected element conditional until the exact property evidence and proposed alteration are established, without interpreting accreditation beyond the selected marked item.`,
         ],
-        checks: ['Identify whether the door is historic, managed, fire-rated or privately controlled', 'Measure and inspect before choosing a standard or product', 'Ask the council or manager where the change affects protected or shared fabric'],
+        checks: ['Identify whether the door is historic, managed, fire-rated or privately controlled', 'Measure and inspect before choosing a standard or product', 'Check the council property-status record where a change may affect protected fabric, and ask the responsible manager separately about shared fabric'],
         faq: { q: 'What is the best lock for a Leamington flat?', a: 'There is no single answer. The flat entrance may be a fire door or part of a managed building, and the existing lock, door certification and escape requirements must be checked before an upgrade.' },
       },
     ),
@@ -652,7 +652,7 @@ const AREA_PROFILES: Record<string, AreaEvidenceProfile> = {
           `If police issue instructions for the scene, follow them before temporary work. Independently, record observations including loose glazing, split timber, displaced masonry, damaged locks and any condition that cannot be checked safely; other damage may remain unobserved. Do not describe the opening as suitable for a particular temporary cover from that record alone. Where support or structural condition is uncertain, keep the scope provisional and refer the next decision.`,
           `Treat the property search as a prompt only. Heritage relevance depends on the exact Warwick address and verified status together with the proposed temporary alteration. Where those facts establish relevance, record surviving material as well as damage. Document the completed board and attachment details from each side that is safe and accessible, together with unresolved conditions and work still outstanding, without certifying the frame or describing temporary coverage as permanent repair.`,
         ],
-        checks: ['Follow police directions on evidence and scene access', 'Tell the contractor about listed, conservation or landlord control', 'Photograph both the opening and the completed temporary board'],
+        checks: ['Follow police directions on evidence and scene access', 'Check the council conservation or property-status record where relevant, and tell the contractor separately about any verified listed status or landlord control', 'Photograph both the opening and the completed temporary board'],
         faq: { q: 'Can boarding be fixed to a historic Warwick frontage?', a: 'A temporary solution may be possible only after the actual opening is inspected. Record the proposal and seek council or owner advice when it may affect protected fabric; do not infer suitability from the historic-centre location.' },
       },
       {
@@ -666,7 +666,7 @@ const AREA_PROFILES: Record<string, AreaEvidenceProfile> = {
           `Separate the observed weakness from the product category. A projecting cylinder, worn mortice case, loose keep and weak frame require different remedies, and improving one does not prove the complete entrance is resolved. Record how the Warwick door closes and locks, which components are sound and the customer's priority, then rank proposed work by the evidence it addresses.`,
           `For visible older fabric, record a retained-hardware option separately from any alteration. Treat a customer description of a shared or managed door as an unconfirmed constraint; for an insurance objective, retain the current policy wording as customer-supplied evidence. The final schedule should state dimensions, exact visible product marks or accreditation for the selected item, fitting scope and exclusions without interpreting that evidence as blanket approval or whole-entrance performance.`,
         ],
-        checks: ['Assess the door and frame before selecting the lock', 'Check marked standards and current certification for the exact product', 'Respect property-status, fire-door and insurer-specific constraints'],
+        checks: ['Assess the door and frame before selecting the lock', 'Check marked standards and current certification for the exact product', 'Check the council property-status record where relevant, and verify fire-door and insurer requirements separately'],
         faq: { q: 'Can one high-security cylinder secure every Warwick entrance?', a: 'No. A cylinder is only one part of some door systems, and many doors use different lock types. The complete entrance and its constraints must be inspected.' },
       },
     ),
@@ -802,7 +802,7 @@ const AREA_PROFILES: Record<string, AreaEvidenceProfile> = {
           `In the visitor centre, a landmark or business name can still leave several possible thresholds. Record the postal address, street-facing or rear route, unit and the person controlling any communal or commercial entrance. That description supports lawful access to the right door; it does not turn proximity to a historic building into evidence of property status or of the lock fitted there.`,
           `Record whether the caller reports a latched door, deadlocking, interrupted key movement or another symptom, and mark each point as reported until inspected. If on-site findings support drilling or other destructive work, explain that proposed scope and obtain agreement before altering hardware. Where visible repair may affect a Stratford frontage, keep it separate from entry and check the exact address, status and proposed alteration before drawing a property-control conclusion.`,
         ],
-        checks: ['Give the full address and correct entrance rather than only a landmark', 'Confirm whether the door is private, communal, commercial or managed', 'Check property status if the door or frontage appears historic'],
+        checks: ['Give the full address and correct entrance rather than only a landmark', 'Confirm whether the door is private, communal, commercial or managed', 'Check the council conservation record for the exact address if the door or frontage appears historic, and verify any other property status separately'],
         faq: { q: 'Can a Stratford conservation-area lock always be picked open?', a: 'No. Conservation status concerns place and character, not the internal design or condition of a lock. The actual hardware determines the options, and any destructive step should be discussed first.' },
       },
       {
@@ -844,7 +844,7 @@ const AREA_PROFILES: Record<string, AreaEvidenceProfile> = {
           `If police issue instructions for the scene, follow them before temporary work. Record observations including glazing, panel, frame, door-leaf, shopfront or lock damage; other affected areas and causes may remain unconfirmed. Measure and photograph the exposed opening and record any material condition that cannot be checked safely. Do not claim from that record alone that timber or masonry is suitable for temporary attachment; keep unresolved support or structural questions provisional.`,
           `Treat the Stratford conservation record as a prompt: relevance depends on the exact address and verified status together with the proposed temporary alteration. Where relevant, document surviving external material and the proposed attachment area. The handover should include photographs, dimensions, attachment details, areas covered or condition not established, and outstanding glazing, joinery, door or frame work, while describing the board only as temporary access and weather reduction.`,
         ],
-        checks: ['Prioritise personal safety and police scene directions', 'Flag listed or conservation status before fixings are selected', 'Record the opening, damaged lock, frame and completed temporary work'],
+        checks: ['Prioritise personal safety and police scene directions', 'Check the council conservation record before fixings are selected, and verify any listed status separately', 'Record the opening, damaged lock, frame and completed temporary work'],
         faq: { q: 'Can a damaged Stratford historic frontage be boarded?', a: 'A temporary solution may be possible after the actual opening is inspected. Record the proposal and seek owner or council input where it may affect protected fabric; do not infer suitability from the conservation-area location.' },
       },
       {
@@ -858,11 +858,79 @@ const AREA_PROFILES: Record<string, AreaEvidenceProfile> = {
           `Convert the entrance survey into individual observations rather than one upgrade label. Record cylinder projection, handle protection, lock engagement, hinge support and frame condition as observed, not inspected, not applicable or needing follow-up; do not declare a condition that was not checked. Link a proposed item only to the measured observation it addresses, without choosing hardware from central Stratford's appearance or assuming how a later door performs.`,
           `Treat the conservation record and any customer description of a shared or managed entrance as prompts only. Relevance depends on the exact Stratford address and verified status together with the proposed alteration; policy relevance depends on current wording supplied for that property. State dimensions, retained fabric, excluded work and the exact visible mark or accreditation for the selected item, without interpreting it as permission, insurance acceptance or whole-entrance performance.`,
         ],
-        checks: ['Inspect and measure the complete entrance', 'Verify exact product certification and correct fit', 'Check insurer, fire-door, management and conservation requirements independently'],
+        checks: ['Inspect and measure the complete entrance', 'Verify exact product certification and correct fit', 'Check the council conservation record where relevant, and verify insurer, fire-door and management requirements separately'],
         faq: { q: 'Do Stratford conservation properties need a special lock standard?', a: 'Conservation status does not create one universal lock standard. The door, protected fabric, product evidence and any written policy or building-management requirement must all be considered.' },
       },
     ),
   },
+}
+
+const preparationSources = (
+  emergency: string[],
+  change: string[],
+  upvc: string[],
+  boarding: string[],
+  upgrade: string[],
+): Record<ServiceAreaSlug, string[]> => ({
+  'emergency-lockout': emergency,
+  'lock-change': change,
+  'upvc-lock-repair': upvc,
+  'boarding-up': boarding,
+  'lock-upgrade': upgrade,
+})
+
+// Hand-reviewed attribution for the locality-dependent preparation items.
+// Keep this explicit: source selection must not be inferred from keywords.
+const PREPARATION_LOCALITY_SOURCE_IDS: Record<string, Record<ServiceAreaSlug, string[]>> = {
+  nuneaton: preparationSources(
+    ['visit-nuneaton'],
+    ['visit-nuneaton'],
+    ['visit-nuneaton'],
+    ['visit-nuneaton', 'nbbc-conservation'],
+    ['visit-nuneaton'],
+  ),
+  bedworth: preparationSources(
+    ['visit-warwickshire-bedworth'],
+    ['visit-warwickshire-bedworth', 'nbbc-bedworth-conservation-2022'],
+    ['visit-warwickshire-bedworth'],
+    ['visit-warwickshire-bedworth', 'nbbc-bedworth-conservation-2022'],
+    ['visit-warwickshire-bedworth'],
+  ),
+  rugby: preparationSources(
+    ['visit-rugby', 'rugby-conservation'],
+    ['visit-rugby', 'rugby-conservation'],
+    ['visit-rugby'],
+    ['visit-rugby'],
+    ['visit-rugby'],
+  ),
+  'leamington-spa': preparationSources(
+    ['visit-leamington', 'warwick-district-conservation'],
+    ['visit-leamington', 'warwick-district-conservation'],
+    ['visit-leamington'],
+    ['visit-leamington', 'warwick-district-conservation'],
+    ['visit-leamington', 'warwick-district-conservation'],
+  ),
+  warwick: preparationSources(
+    ['visit-warwick', 'warwick-district-conservation'],
+    ['visit-warwick', 'warwick-district-conservation'],
+    ['visit-warwick'],
+    ['visit-warwick', 'warwick-district-conservation'],
+    ['visit-warwick', 'warwick-district-conservation'],
+  ),
+  kenilworth: preparationSources(
+    ['visit-kenilworth', 'warwick-district-conservation'],
+    ['visit-kenilworth', 'warwick-district-conservation'],
+    ['visit-kenilworth'],
+    ['visit-kenilworth', 'warwick-district-conservation'],
+    ['visit-kenilworth'],
+  ),
+  'stratford-upon-avon': preparationSources(
+    ['visit-stratford', 'sdc-conservation-h-z'],
+    ['visit-stratford'],
+    ['visit-stratford', 'sdc-conservation-h-z'],
+    ['visit-stratford', 'sdc-conservation-h-z'],
+    ['visit-stratford', 'sdc-conservation-h-z'],
+  ),
 }
 
 interface ServiceBlueprint {
@@ -1023,7 +1091,15 @@ function localitySourceIdsForSection(
   service: ServiceAreaSlug,
   section: TownServiceEvidenceSection,
 ): string[] {
-  if (section === 'preparation' || section === 'checks') return []
+  // The remaining situations-list lead is operational and conditional; it
+  // does not rely on a town source. Preparation carries the explicit local
+  // address/property checks and therefore retains locality citations.
+  if (section === 'checks') return []
+  if (section === 'preparation') {
+    const sourceIds = PREPARATION_LOCALITY_SOURCE_IDS[area.slug]?.[service]
+    if (!sourceIds) throw new Error(`Missing preparation locality-source map for ${area.slug}/${service}`)
+    return sourceIds
+  }
 
   // The 2026 Stratford review is discussed in the overview and the
   // lock-change evidence analysis only. The published H-Z map/report register
@@ -1052,7 +1128,11 @@ function buildContent(area: AreaEvidenceProfile, service: ServiceAreaSlug): Town
     blueprint.intro(area.name),
     `The advertised starting price is £${blueprint.priceFrom}. I confirm the current ETA and price basis from the actual symptoms and access details before travelling; there is no VAT or separate call-out fee.`,
   ]
-  const commonJobs = [...local.checks, ...blueprint.scenarios]
+  // Keep the visible lists useful without repeating an identical preparation
+  // block across all seven town pages for a service. Two pair-specific checks
+  // move into call preparation; the remaining check leads the technical
+  // situations list.
+  const commonJobs = [local.checks[0], ...blueprint.scenarios]
   const faqs = [
     local.faq,
     ...blueprint.faqs(area.name).map((faq, index) => ({
@@ -1064,7 +1144,11 @@ function buildContent(area: AreaEvidenceProfile, service: ServiceAreaSlug): Town
     ...serviceContext,
     ...local.details.map((detail, index) => `${detail} ${local.decisionGuidance[index]}`),
   ]
-  const preparationSteps = blueprint.preparation
+  const preparationSteps = [
+    ...blueprint.preparation.slice(0, 2),
+    area.contactPrep,
+    ...local.checks.slice(1),
+  ]
   const sectionText: Record<TownServiceEvidenceSection, string> = {
     intro: intro.join(' '),
     localAngle: `${local.heading} ${local.body}`,
@@ -1098,7 +1182,7 @@ function buildContent(area: AreaEvidenceProfile, service: ServiceAreaSlug): Town
     commonJobs,
     faqs,
     priceNote: `${blueprint.shortName} in ${area.name} starts from £${blueprint.priceFrom}. The agreed price depends on the diagnosed work and parts, with no VAT or separate call-out fee. ${area.priceScope}`,
-    evidenceSummary: `${area.contactPrep} Local context was checked against the sources below on ${REVIEWED_ON}. The sources support place, planning and general technical guidance; they do not prove the lock type or job history at an individual address.`,
+    evidenceSummary: `Local context was checked against the sources below on ${REVIEWED_ON}. The sources support place, planning and general technical guidance; they do not prove the lock type or job history at an individual address. The separate "${local.heading}" section explains which address-level facts still require direct verification.`,
     contextGuidance,
     preparationSteps,
     sources: uniqueSources([
