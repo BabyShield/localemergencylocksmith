@@ -100,8 +100,9 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      <section className="py-12 px-4 bg-white">
+      <section className="py-12 px-4 bg-white" aria-labelledby="services-list-heading">
         <div className="max-w-6xl mx-auto">
+          <h2 id="services-list-heading" className="sr-only">Available Locksmith Services</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {SERVICES.map((service) => (
               <ServiceCard key={service.slug} service={service} />

@@ -718,6 +718,9 @@ try {
     const unsupportedFreeAssessment = pageText.match(/\b(?:offer|book|arrange)\s+(?:a\s+)?free\s+(?:visual\s+)?(?:security|lock|home[- ]security)\s+(?:survey|check|assessment)\b|\bsecurity\s+survey\s+free\b/i)
     check(!unsupportedFreeAssessment, `${productionUrl.pathname} contains an unsupported free-assessment offer: ${JSON.stringify(unsupportedFreeAssessment?.[0])}`)
 
+    const unsupportedLiveAvailability = pageText.match(/\bavailable\s+now\b/i)
+    check(!unsupportedLiveAvailability, `${productionUrl.pathname} presents a static page as a live availability signal: ${JSON.stringify(unsupportedLiveAvailability?.[0])}`)
+
     const ungovernedPriceRange = pageText.match(/£\d+(?:\.\d+)?\s*(?:-|–|—|to)\s*£?\d+(?:\.\d+)?/i)
     check(!ungovernedPriceRange, `${productionUrl.pathname} contains an ungoverned price range: ${JSON.stringify(ungovernedPriceRange?.[0])}`)
 

@@ -19,6 +19,15 @@ const LOCAL_SOURCES = {
     checkedOn: REVIEWED_ON,
     kind: 'locality',
   },
+  'gazette-nuneaton-conservation-2022': {
+    id: 'gazette-nuneaton-conservation-2022',
+    title: 'Notice of Variation of Nuneaton Town Centre Conservation Area',
+    publisher: 'The Gazette, published by authority',
+    url: 'https://www.thegazette.co.uk/notice/4289465',
+    supports: 'The 15 February 2022 confirmation of defined Nuneaton Town Centre Conservation Area boundary additions.',
+    checkedOn: REVIEWED_ON,
+    kind: 'property-status',
+  },
   'warwickshire-her-attleborough-medieval': {
     id: 'warwickshire-her-attleborough-medieval',
     title: 'Attleborough Medieval Settlement, record MWA9489',
@@ -153,6 +162,15 @@ const LOCAL_SOURCES = {
     supports: 'The limited Hillmorton Locks designation, canal setting and appraisal-dated industrial history.',
     checkedOn: REVIEWED_ON,
     kind: 'property-status',
+  },
+  'crt-hillmorton-locks-2026': {
+    id: 'crt-hillmorton-locks-2026',
+    title: 'Volunteers help spruce up Hillmorton Locks',
+    publisher: 'Canal & River Trust',
+    url: 'https://canalrivertrust.org.uk/news-and-views/news/volunteers-help-spruce-up-hillmorton-locks-the-busiest-lock-flight-in-the-country',
+    supports: 'The May 2026 description of six historic lock pairs on the Oxford Canal and their current managed visitor setting.',
+    checkedOn: REVIEWED_ON,
+    kind: 'locality',
   },
   'rbc-bilton-appraisal': {
     id: 'rbc-bilton-appraisal',
@@ -499,10 +517,10 @@ export const NORTH_EAST_AREA_GUIDES = {
     slug: 'nuneaton',
     summary: [
       `Nuneaton and Bedworth Borough Council traces Nuneaton's name to a twelfth-century Benedictine nunnery and records that its market was established in 1247. These are attributed town-history facts, not evidence about a present building or entrance.`,
-      `The council's current town-centre page describes a pedestrian core served by bus and train stations, with Riversley Park a short walk away. Those public landmarks provide orientation only; they do not identify a particular property or entrance.`,
+      `The council's current town-centre page describes a pedestrian core served by bus and train stations, with Riversley Park a short walk away. A 2022 Gazette notice separately confirms defined additions to the town-centre conservation boundary; neither record identifies a particular property or entrance without the full address.`,
     ],
     accessGuidance: `Give the complete Nuneaton address, building name where relevant, floor and exact affected threshold. The stations, pedestrian core and Riversley Park are orientation context only and do not establish access to a property.`,
-    evidenceLimits: `The council page establishes attributed town history and current public town-centre orientation. It does not identify an individual property's status, construction, controller, door material, lock type, fault, access route or service circumstances.`,
+    evidenceLimits: `The council page establishes attributed town history and public town-centre orientation, while the Gazette notice records defined 2022 conservation-boundary changes. Neither identifies an individual property's current status, construction, controller, door material, lock type, fault, access route or service circumstances without an address-level check.`,
     facts: [
       {
         text: `The borough council derives Nuneaton's name from a twelfth-century Benedictine nunnery and dates the market's establishment to 1247.`,
@@ -514,8 +532,16 @@ export const NORTH_EAST_AREA_GUIDES = {
         sourceIds: ['nbbc-nuneaton-town-centre'],
         serviceRelevance: `These landmarks can assist orientation but cannot identify the customer's building, threshold, property status or access arrangements.`,
       },
+      {
+        text: `A Gazette notice records that Nuneaton Town Centre Conservation Area boundary additions were confirmed on 15 February 2022, including defined properties west of Queens Road and east of Newdegate and Bridge Streets.`,
+        sourceIds: ['gazette-nuneaton-conservation-2022'],
+        serviceRelevance: `Use the exact street and building to check current status before visible alterations; the boundary does not establish authority or hardware.`,
+      },
     ],
-    sources: [LOCAL_SOURCES['nbbc-nuneaton-town-centre']],
+    sources: [
+      LOCAL_SOURCES['nbbc-nuneaton-town-centre'],
+      LOCAL_SOURCES['gazette-nuneaton-conservation-2022'],
+    ],
     serviceGuidance: {
       'emergency-lockout': {
         heading: 'Preparing for a Nuneaton lockout at the correct threshold',
@@ -1395,7 +1421,7 @@ export const NORTH_EAST_AREA_GUIDES = {
     slug: 'hillmorton',
     summary: [
       `Rugby Borough Council's appraisal describes Hillmorton Locks as a small canal-centred settlement about two miles south-east of Rugby, separated from Hillmorton housing by a railway embankment and narrow tunnel within that assessment.`,
-      `The document records development around canal-company workshops, a dry dock and housing, and says original canal buildings and the dock remained in industrial use when appraised. That use statement is appraisal-dated.`,
+      `The document records development around canal-company workshops, a dry dock and housing. Canal & River Trust reported in May 2026 that the Oxford Canal site contains six historic pairs of locks; both records concern the Locks complex, not every Hillmorton address.`,
     ],
     accessGuidance: `Give the exact Hillmorton address and entrance. The canal, railway embankment and tunnel describe Hillmorton Locks context only and must not be converted into vehicle-access, route or property claims.`,
     evidenceLimits: `The appraisal concerns a small mapped Hillmorton Locks conservation area, not the whole Hillmorton route. It does not identify another property's designation, construction, ownership, door system, lock condition or access.`,
@@ -1410,8 +1436,16 @@ export const NORTH_EAST_AREA_GUIDES = {
         sourceIds: ['rbc-hillmorton-locks-appraisal'],
         serviceRelevance: `The canal-industrial history may be attributed but does not date or describe a customer's building or entrance.`,
       },
+      {
+        text: `Canal & River Trust reported in May 2026 that Hillmorton Locks consists of six historic pairs of locks on the Oxford Canal.`,
+        sourceIds: ['crt-hillmorton-locks-2026'],
+        serviceRelevance: `For a call at the Locks complex, record the exact land-side entrance and authorised site contact; the landmark does not identify a private doorway or access method.`,
+      },
     ],
-    sources: [LOCAL_SOURCES['rbc-hillmorton-locks-appraisal']],
+    sources: [
+      LOCAL_SOURCES['rbc-hillmorton-locks-appraisal'],
+      LOCAL_SOURCES['crt-hillmorton-locks-2026'],
+    ],
     serviceGuidance: {
       'emergency-lockout': {
         heading: 'Hillmorton lockouts with Locks context kept within its map',

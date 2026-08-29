@@ -22,15 +22,16 @@ Excluded throughout: inferred lock types, locksmith job history or frequency, cr
 
 ## `earlsdon`
 
-- **Context tags:** `historic-landscape-report`, `conservation-area-present-in-wider-character-area`, `rail`, `watchmaking-history`.
+- **Context tags:** `historic-landscape-report`, `conservation-area`, `article-4-direction`, `rail`, `watchmaking-history`.
 - **Supported claims:**
   1. The Earlsdon and Chapelfields character area lies south-west of the city centre and is bisected by the Coventry–Birmingham railway line.
   2. The report identifies the original Earlsdon development as Earlsdon Street, Poplar Road, Providence Street, Cromwell Street, Warwick Street, Clarendon Street and Moor Street, developed through the Freehold Land Society movement.
-  3. The report explicitly distinguishes the two historic cores: Chapelfields is a conservation area, while the original Earlsdon area has no statutory status as a whole.
-- **Source:**
-  - Coventry City Council — [Earlsdon and Chapelfields Character Area, HLC Area 17](https://www.coventry.gov.uk/downloads/file/17430/hlc-area-17-earlsdon-and-chapelfields-character-area) — supports all three claims and the need to distinguish Earlsdon from adjacent Chapelfields. Checked 2026-08-29.
-- **Conditional service implication:** For visible door or hardware changes, use the full address to establish whether the property is in Chapelfields or another designated/listed location before treating conservation controls as relevant.
-- **Access/property-status caveat:** The combined character-area report does not make every Earlsdon address part of a conservation area or establish an individual building's age, construction or entrance arrangement.
+  3. The later Earlsdon Conservation Area Appraisal supports the area's designation and identifies an Article 4 direction used in its management.
+- **Sources:**
+  - Coventry City Council — [Earlsdon and Chapelfields Character Area, HLC Area 17](https://www.coventry.gov.uk/downloads/file/17430/hlc-area-17-earlsdon-and-chapelfields-character-area) — supports claims 1 and 2 and records the historic-landscape status at the time of that report. Checked 2026-08-29.
+  - Coventry City Council — [Earlsdon Conservation Area Appraisal](https://www.coventry.gov.uk/downloads/file/39167/earlsdon-conservation-area-appraisal) — supports claim 3, maps the designation and identifies the Article 4 management document. Checked 2026-08-29.
+- **Conditional service implication:** For visible door or hardware changes, use the full address and current boundary to establish whether conservation or Article 4 controls apply before agreeing the work.
+- **Access/property-status caveat:** The historic-landscape character area and current conservation boundary are different records; neither establishes an individual building's status, construction or entrance arrangement without an exact-address check.
 
 ## `tile-hill`
 

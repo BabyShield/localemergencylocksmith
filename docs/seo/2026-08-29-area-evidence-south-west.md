@@ -420,15 +420,21 @@ Source rule: primary official sources only (district/borough/county councils and
 ### `shilton`
 
 **Context tags:** `settlement/local-plan`, `official-parish`
-**Access/property-status caveat:** Shilton is part of the Shilton and Barnacle civil parish, while transport schedules are time-sensitive; neither source defines a service boundary or establishes private-property access.
+**Access/property-status caveat:** ONS lists Shilton and Barnacle as a Rugby parish, while transport schedules are time-sensitive; none of these sources defines a service boundary or establishes private-property access.
 
-1. **Claim:** Rugby Borough Council's 2024 Rural Sustainability Study classifies Shilton as a Rural Village in the adopted-plan settlement set and records it within Shilton and Barnacle civil parish.
+1. **Claim:** Rugby Borough Council's 2024 Rural Sustainability Study classifies Shilton as a Rural Village in the adopted-plan settlement set.
    **Publisher / title / deep URL:** Rugby Borough Council — [Rugby Borough Council Rural Sustainability Study 2024](https://www.rugby.gov.uk/documents/20124/62894537/CD.3.10%2BAppendix%2B10%2BRugby%2BBorough%2BCouncil%2BRural%2BSustainability%2BStudy%2B2024.pdf/6837df18-54d6-0146-1910-37307fb4a34f?t=1774451299803), scope and settlement tables.
-   **Supports:** Formal settlement/parish context and the `settlement/local-plan` and `official-parish` tags.
+   **Supports:** Formal settlement context and the `settlement/local-plan` tag.
    **Conditional service use:** Use “Rural Village” only as official planning classification; do not infer property type, low/high demand or operational reach.
    **Checked:** 2026-08-29.
 
-2. **Claim:** Warwickshire County Council's live bus register lists Shilton as a stop served by routes 74/74A/74B/74C between the Nuneaton and Coventry corridor.
+2. **Claim:** The Office for National Statistics' Rugby area profile lists Shilton and Barnacle among the district's parishes.
+   **Publisher / title / deep URL:** Office for National Statistics — [Rugby area profile](https://www.ons.gov.uk/explore-local-statistics/areas/E07000220-rugby), “Parishes”.
+   **Supports:** The official parish name and the `official-parish` tag.
+   **Conditional service use:** Use the parish name only to clarify the caller's address; it does not identify the individual settlement, street or doorway.
+   **Checked:** 2026-08-29.
+
+3. **Claim:** Warwickshire County Council's live bus register lists Shilton as a stop served by routes 74/74A/74B/74C between the Nuneaton and Coventry corridor.
    **Publisher / title / deep URL:** Warwickshire County Council — [Bus service 74/74A/74B/74C](https://apps.warwickshire.gov.uk/BusTimetable/services/1379).
    **Supports:** A current official-transport reference that distinguishes Shilton from similarly named places.
    **Conditional service use:** If retained as orientation copy, label it as current at the checked date and recheck the timetable; do not infer that a service address is near a stop or accessible by that route.

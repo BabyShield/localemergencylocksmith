@@ -292,7 +292,8 @@ const LOCALITY_SOURCES: Record<string, AreaGuideSource> = {
   'wdc-baginton-plan-page': localitySource('wdc-baginton-plan-page', 'Baginton and Bubbenhall neighbourhood plan', 'Warwick District Council', 'https://www.warwickdc.gov.uk/info/20444/neighbourhood_plans/1129/baginton_and_bubbenhall_neighbourhood_plan', 'The joint parish preparation and referendum result for the made Baginton and Bubbenhall plan.'),
   'rbc-brandon-plan-page': localitySource('rbc-brandon-plan-page', 'Brandon and Bretford Neighbourhood Plan', 'Rugby Borough Council', 'https://www.rugby.gov.uk/w/brandon-and-bretford-neighbourhood-plan', 'The made date and development-plan status of the joint Brandon and Bretford neighbourhood plan.'),
   'rbc-brandon-conservation': localitySource('rbc-brandon-conservation', 'Brandon Conservation Area Character Appraisal', 'Rugby Borough Council', 'https://www.rugby.gov.uk/documents/20124/6569677/Brandon_Character_Appraisal.pdf/9c7d8630-4654-dcde-6287-650846002cb2?t=1750866416443', 'The bounded Brandon conservation context north of Avondale Road and railway-viaduct approach.', 'property-status'),
-  'rbc-rural-study-2024': localitySource('rbc-rural-study-2024', 'Rugby Borough Council Rural Sustainability Study 2024', 'Rugby Borough Council', 'https://www.rugby.gov.uk/documents/20124/62894537/CD.3.10%2BAppendix%2B10%2BRugby%2BBorough%2BCouncil%2BRural%2BSustainability%2BStudy%2B2024.pdf/6837df18-54d6-0146-1910-37307fb4a34f?t=1774451299803', 'Shilton Rural Village classification and its place within Shilton and Barnacle civil parish.'),
+  'rbc-rural-study-2024': localitySource('rbc-rural-study-2024', 'Rugby Borough Council Rural Sustainability Study 2024', 'Rugby Borough Council', 'https://www.rugby.gov.uk/documents/20124/62894537/CD.3.10%2BAppendix%2B10%2BRugby%2BBorough%2BCouncil%2BRural%2BSustainability%2BStudy%2B2024.pdf/6837df18-54d6-0146-1910-37307fb4a34f?t=1774451299803', 'The council study classifies Shilton as a Rural Village.'),
+  'ons-rugby-area-profile': localitySource('ons-rugby-area-profile', 'Rugby area profile', 'Office for National Statistics', 'https://www.ons.gov.uk/explore-local-statistics/areas/E07000220-rugby', 'The official Rugby area profile lists Shilton and Barnacle among the district\'s parishes.'),
   'wcc-shilton-bus': localitySource('wcc-shilton-bus', 'Bus service 74/74A/74B/74C', 'Warwickshire County Council', 'https://apps.warwickshire.gov.uk/BusTimetable/services/1379', 'The live county timetable listing Shilton on the Nuneaton and Coventry corridor.'),
   'rbc-brinklow-plan-page': localitySource('rbc-brinklow-plan-page', 'Brinklow Neighbourhood Plan', 'Rugby Borough Council', 'https://www.rugby.gov.uk/w/brinklow-neighbourhood-plan', 'The made date and development-plan status of the Brinklow neighbourhood plan.'),
   'rbc-brinklow-conservation': localitySource('rbc-brinklow-conservation', 'Brinklow Conservation Area Character Appraisal', 'Rugby Borough Council', 'https://www.rugby.gov.uk/documents/20124/6569677/Brinklow_Character_Appraisal.pdf/701c66c7-5596-39a8-e538-ab8daa4f699f?t=1750866416443', 'The partial-village conservation boundary and its inclusion of part of Ell Lane.', 'property-status'),
@@ -2019,16 +2020,21 @@ const AREA_SEEDS: AreaGuideSeed[] = [
     name: 'Shilton',
     region: 'Warwickshire',
     summary: [
-      `Rugby Borough Council's 2024 Rural Sustainability Study classifies Shilton as a Rural Village and places it within Shilton and Barnacle civil parish. Warwickshire County Council's live register lists Shilton on bus services 74/74A/74B/74C.`,
-      `The planning classification, joint parish name and timetable entry are context rather than property evidence. The transport record is time-sensitive and must be rechecked before publication; neither source establishes private access, hardware or service coverage.`,
+      `The council's 2024 study places Shilton in its Rural Village settlement category. The Office for National Statistics lists Shilton and Barnacle among Rugby's parishes, and Warwickshire County Council's live register lists Shilton on bus services 74/74A/74B/74C.`,
+      `The planning classification, parish name and timetable entry are context rather than property evidence. The transport record is time-sensitive and must be rechecked before publication; none of the sources establishes private access, hardware or service coverage.`,
     ],
-    accessGuidance: `Use the complete Shilton address, keep the Shilton and Barnacle parish context distinct from the individual settlement, and recheck the live county timetable before mentioning service 74 variants. Never assume a stop is near the property.`,
+    accessGuidance: `Use the complete Shilton address rather than the broader Shilton and Barnacle parish name, and recheck the live county timetable before mentioning service 74 variants. Never assume a stop is near the property.`,
     evidenceLimits: `Rural Village status and a bus-stop listing do not prove property type, ownership, access, route suitability, timetable permanence, parking, door material, lock type, condition, locksmith availability, coverage, response time or local demand.`,
     facts: [
       {
-        text: `Rugby Borough Council's 2024 Rural Sustainability Study classifies Shilton as a Rural Village and records it within Shilton and Barnacle civil parish.`,
+        text: `Rugby Borough Council's 2024 Rural Sustainability Study classifies Shilton as a Rural Village.`,
         sourceIds: ['rbc-rural-study-2024'],
-        serviceRelevance: `Use Rural Village only as official planning classification and keep Shilton distinct within the joint parish.`,
+        serviceRelevance: `Use Rural Village only as an official planning classification, not as evidence about an individual property or access route.`,
+      },
+      {
+        text: `The Office for National Statistics' Rugby area profile lists Shilton and Barnacle among the district's parishes.`,
+        sourceIds: ['ons-rugby-area-profile'],
+        serviceRelevance: `The parish name can help clarify an address, but it does not identify the individual settlement, street or doorway.`,
       },
       {
         text: `Warwickshire County Council's live bus register lists Shilton on routes 74, 74A, 74B and 74C in the Nuneaton and Coventry corridor.`,
@@ -2036,26 +2042,26 @@ const AREA_SEEDS: AreaGuideSeed[] = [
         serviceRelevance: `Recheck the timetable before publication and never infer that an address is close to or reachable from a stop.`,
       },
     ],
-    sourceIds: ['rbc-rural-study-2024', 'wcc-shilton-bus'],
+    sourceIds: ['rbc-rural-study-2024', 'ons-rugby-area-profile', 'wcc-shilton-bus'],
     contexts: {
       'emergency-lockout': {
-        local: `Shilton is recorded within the Shilton and Barnacle civil parish, so the parish name does not identify the settlement, street or doorway. Require the full Shilton address and do not use Rural Village classification as an access instruction.`,
+        local: `The Office for National Statistics lists Shilton and Barnacle as a Rugby parish, but that parish name does not identify the settlement, street or doorway. Require the full Shilton address and do not use Rural Village classification as an access instruction.`,
         decision: `The county bus entry is live and time-sensitive; even while routes 74 variants list Shilton, that does not show a stop is near the premises or provide an approach. Verify the requester and exact opening independently.`,
         checks: [
-          `Require the full Shilton address and doorway and keep Barnacle distinct from the joint civil-parish name.`,
+          `Require the full Shilton address and doorway rather than treating the ONS parish name as an entrance identifier.`,
           `Recheck the live bus record and never use a listed stop as an approach; verify the requester independently.`,
         ],
       },
       'lock-change': {
         local: `Rural Village is a planning category, not evidence of a Shilton property's construction or fitted lock. Name the individual entrance and obtain the authorised owner, occupier or manager's objective before any replacement is specified.`,
-        decision: `Neither the Shilton and Barnacle parish grouping nor the current bus corridor supplies a hardware requirement or property permission. If transport is mentioned for orientation, recheck the live timetable and keep it outside the technical decision.`,
+        decision: `Neither the ONS parish listing nor the current bus corridor supplies a hardware requirement or property permission. If transport is mentioned for orientation, recheck the live timetable and keep it outside the technical decision.`,
         checks: [
           `Name the individual entrance and obtain the authorised owner, occupier or manager's replacement objective.`,
           `Keep civil-parish and bus-corridor context outside specification and recheck transport before using it for orientation.`,
         ],
       },
       'upvc-lock-repair': {
-        local: `Shilton's Rural Village classification and parish membership do not show that a door is uPVC, composite or multipoint. Ask for direct evidence from the stated opening, including handle, key, frame and open-or-closed behaviour.`,
+        local: `Shilton's Rural Village classification and the ONS parish name do not show that a door is uPVC, composite or multipoint. Ask for direct evidence from the stated opening, including handle, key, frame and open-or-closed behaviour.`,
         decision: `A service 74 stop listing can help distinguish the place only after it is rechecked; it cannot diagnose a mechanism or prove access to a property. Keep the time-sensitive transport record separate from the repair assessment.`,
         checks: [
           `Collect handle, key, frame and open-or-closed behaviour directly from the stated Shilton opening.`,
@@ -2063,7 +2069,7 @@ const AREA_SEEDS: AreaGuideSeed[] = [
         ],
       },
       'boarding-up': {
-        local: `A damaged opening in Shilton must be identified by address and responsible controller, not Rural Village status or the broader Shilton and Barnacle parish name. The study provides no structural or boundary information for a property.`,
+        local: `A damaged opening in Shilton must be identified by address and responsible controller, not Rural Village status or the broader parish name listed by ONS. The study and area profile provide no structural or boundary information for a property.`,
         decision: `After any evidence-preservation requirement, inspect the actual door or window and agree temporary work. Bus routes 74/74A/74B/74C are volatile orientation data and establish neither safe access, dimensions nor attachment permission.`,
         checks: [
           `Identify the Shilton address and responsible controller without relying on Rural Village or joint-parish labels.`,
@@ -2072,7 +2078,7 @@ const AREA_SEEDS: AreaGuideSeed[] = [
       },
       'lock-upgrade': {
         local: `Planning classification as a Rural Village cannot demonstrate security need or a current lock standard in Shilton. An upgrade requires the exact entrance, observed assembly and a documented objective from its authorised controller.`,
-        decision: `Keep the joint civil-parish record and live bus timetable out of product selection. If the transport reference is retained as locality context, verify it again and avoid implying that any address is near a stop or covered.`,
+        decision: `Keep the ONS parish listing and live bus timetable out of product selection. If the transport reference is retained as locality context, verify it again and avoid implying that any address is near a stop or covered.`,
         checks: [
           `Document the exact entrance, observed assembly and authorised objective without deriving need from Rural Village status.`,
           `Exclude parish and bus records from product selection and recheck any transport detail retained solely for locality.`,

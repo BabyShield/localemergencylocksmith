@@ -23,13 +23,10 @@ export default function NotFound() {
         <div className="relative overflow-hidden bg-gradient-to-br from-[#0A1628] via-[#0F1B2D] to-[#162438] text-white rounded-2xl p-8 mb-8">
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[200px] bg-[#FFB800]/5 rounded-full blur-3xl" />
           <div className="relative">
-            {/* Availability badge */}
+            {/* Service-hours badge — not a live availability indicator. */}
             <div className="inline-flex items-center gap-2 bg-white/10 rounded-full px-3 py-1 mb-4">
-              <span className="relative flex h-2.5 w-2.5">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75" />
-                <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-green-500" />
-              </span>
-              <span className="text-sm font-medium text-gray-200">Available Now &mdash; 24/7</span>
+              <span className="h-2.5 w-2.5 rounded-full bg-[#FFB800]" aria-hidden="true" />
+              <span className="text-sm font-medium text-gray-200">24/7 service &mdash; call to confirm availability</span>
             </div>
 
             <p className="text-gray-300 mb-6">

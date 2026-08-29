@@ -16,7 +16,7 @@ Status: research only. This file is a claim-level evidence register, not publish
 
 ### `nuneaton` — Nuneaton
 
-**Context tags:** `rail`
+**Context tags:** `rail`, `conservation-area-present`
 
 1. **Fact:** The council says Nuneaton's name derives from a 12th-century Benedictine nunnery and that the town's market was established in 1247.
    - **Publisher / title / deep URL:** [Nuneaton and Bedworth Borough Council — Nuneaton town centre](https://www.nuneatonandbedworth.gov.uk/markets-town-centres/town-centres)
@@ -28,8 +28,13 @@ Status: research only. This file is a claim-level evidence register, not publish
    - **Direct support:** The live town-centre description names the pedestrian core, both stations and Riversley Park's relationship to the centre.
    - **Checked:** 2026-08-29.
    - **Conditional service-use implication:** The public landmarks may be used for orientation only; they must not become a travel-time, parking, access or service-coverage claim.
+3. **Fact:** A published-by-authority notice says defined additions to Nuneaton Town Centre Conservation Area were confirmed on 15 February 2022, including properties west of Queens Road and east of Newdegate and Bridge Streets.
+   - **Publisher / title / deep URL:** [The Gazette — Notice of Variation of Nuneaton Town Centre Conservation Area](https://www.thegazette.co.uk/notice/4289465)
+   - **Direct support:** The notice gives the confirmation date, boundary directions and listed additional properties.
+   - **Checked:** 2026-08-29.
+   - **Conditional service-use implication:** Use the exact street and building before applying the boundary to visible work; the notice proves neither caller authority nor installed hardware.
 
-**Access/property-status caveat:** The page is not a route, property or designation map. A station or park reference proves neither road access, property status nor service coverage.
+**Access/property-status caveat:** The town-centre page is not a route or property map, while the Gazette notice applies only to defined boundary changes. Neither proves road access, authority, hardware or service coverage.
 
 ### `attleborough` — Attleborough
 
@@ -268,6 +273,11 @@ Status: research only. This file is a claim-level evidence register, not publish
    - **Direct support:** The introductory settlement history directly lists those canal functions and the appraisal-time use.
    - **Checked:** 2026-08-29.
    - **Conditional service-use implication:** Canal-industrial history may be attributed, but the continuation-of-use statement must be treated as appraisal-dated rather than verified current use.
+3. **Fact:** Canal & River Trust reported in May 2026 that Hillmorton Locks contains six historic pairs of locks on the Oxford Canal.
+   - **Publisher / title / deep URL:** [Canal & River Trust — Volunteers help spruce up Hillmorton Locks](https://canalrivertrust.org.uk/news-and-views/news/volunteers-help-spruce-up-hillmorton-locks-the-busiest-lock-flight-in-the-country)
+   - **Direct support:** The Trust's current article names the Oxford Canal site and six historic lock pairs.
+   - **Checked:** 2026-08-29.
+   - **Conditional service-use implication:** For a call at the Locks complex, record the exact land-side entrance and authorised site contact; the canal landmark does not identify a private doorway or access method.
 
 **Access/property-status caveat:** “Hillmorton Locks” is a small mapped designation, not all Hillmorton. The tunnel and canal do not support a claim about vehicle access to an address.
 

@@ -245,7 +245,7 @@ export default async function TownServicePage({ params }: Props) {
             ].map((item) => (
               <div key={item.label} className="bg-gray-50 rounded-xl p-4 text-center border border-gray-100">
                 <p className="text-xs text-gray-500 uppercase tracking-wide mb-1">{item.label}</p>
-                <p className="font-black text-[#FFB800] text-lg">{item.value}</p>
+                <p className="font-black text-[#8A5A00] text-lg">{item.value}</p>
               </div>
             ))}
           </div>

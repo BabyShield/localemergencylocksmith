@@ -505,10 +505,10 @@ const AREA_SEEDS: AreaGuideSeed[] = [
     region: 'West Midlands',
     summary: [
       'Coventry City Council\'s combined Earlsdon and Chapelfields character-area report places the area south-west of the city centre, bisected by the Coventry–Birmingham railway, and identifies the streets of the original Earlsdon development.',
-      'The report draws an important designation distinction: Chapelfields is a conservation area, while original Earlsdon has no statutory status as a whole. Only the full address can establish which context and controls apply.',
+      'A later council appraisal supports the designation of an Earlsdon Conservation Area and identifies an Article 4 direction used in its management. Only the current boundary and full address can establish whether those controls are relevant.',
     ],
     accessGuidance: 'Use the complete address to distinguish Earlsdon from adjacent Chapelfields and to identify the exact entrance. Confirm authority for the property and check address-level listed or conservation status before any visible change.',
-    evidenceLimits: 'The combined character-area report does not make every Earlsdon address part of a conservation area and does not establish an individual building\'s age, construction, entrance arrangement, lock type or condition.',
+    evidenceLimits: 'The historic-landscape area and the later conservation-area boundary are different records. Neither establishes an individual building\'s status, age, construction, entrance arrangement, lock type or condition without an address-level check.',
     facts: [
       {
         text: 'The Earlsdon and Chapelfields character area lies south-west of Coventry city centre and is bisected by the Coventry–Birmingham railway line.',
@@ -521,13 +521,14 @@ const AREA_SEEDS: AreaGuideSeed[] = [
         serviceRelevance: 'Historic-development context should trigger address-level checks, not assumptions about the fabric or hardware at a building.',
       },
       {
-        text: 'The council report states that Chapelfields is a conservation area, while the original Earlsdon area has no statutory status as a whole.',
-        sourceIds: ['earlsdon-chapelfields-hlc'],
-        serviceRelevance: 'Verify whether the exact address is within a designation before planning an externally visible alteration.',
+        text: 'Coventry City Council\'s Earlsdon Conservation Area Appraisal supports the area\'s designation and identifies an Article 4 direction that removes specified permitted-development rights within its management.',
+        sourceIds: ['earlsdon-conservation-appraisal'],
+        serviceRelevance: 'Check the current boundary and any applicable Article 4 control for the exact address before planning an externally visible alteration.',
       },
     ],
     sources: [
-      localitySource('earlsdon-chapelfields-hlc', 'Earlsdon and Chapelfields Character Area, HLC Area 17', 'Coventry City Council', 'https://www.coventry.gov.uk/downloads/file/17430/hlc-area-17-earlsdon-and-chapelfields-character-area', 'The combined character-area geography, original Earlsdon streets, railway division and different statutory status of the two historic cores.', 'property-status'),
+      localitySource('earlsdon-chapelfields-hlc', 'Earlsdon and Chapelfields Character Area, HLC Area 17', 'Coventry City Council', 'https://www.coventry.gov.uk/downloads/file/17430/hlc-area-17-earlsdon-and-chapelfields-character-area', 'The combined character-area geography, original Earlsdon streets, railway division and the status recorded when the HLC was published.', 'property-status'),
+      localitySource('earlsdon-conservation-appraisal', 'Earlsdon Conservation Area Appraisal', 'Coventry City Council', 'https://www.coventry.gov.uk/downloads/file/39167/earlsdon-conservation-area-appraisal', 'The Earlsdon Conservation Area designation, mapped boundary and Article 4 management context.', 'property-status'),
     ],
     contexts: {
       'emergency-lockout': {
@@ -539,10 +540,10 @@ const AREA_SEEDS: AreaGuideSeed[] = [
         ],
       },
       'lock-change': {
-        local: 'Chapelfields is identified as a conservation area, whereas original Earlsdon has no statutory status as a whole. A proposed visible change should therefore be checked against the exact address rather than applying one status across the combined report area.',
+        local: 'The later council appraisal supports an Earlsdon Conservation Area and Article 4 direction, superseding the older HLC as the current status reference. A proposed visible change should be checked against the current boundary and exact address.',
         decision: 'Even on Earlsdon Street, Poplar Road or another street named in the original development, the report does not identify the current door or lock. Inspect the individual opening and obtain any relevant property approval.',
         checks: [
-          'Check the exact address before visible work: Chapelfields is a conservation area, while original Earlsdon lacks area-wide statutory status.',
+          'Check the exact address against the current Earlsdon boundary and any applicable Article 4 control before visible work.',
           'Inspect the individual opening and obtain relevant property approval, even on a street named in the original Earlsdon development.',
         ],
       },
@@ -555,18 +556,18 @@ const AREA_SEEDS: AreaGuideSeed[] = [
         ],
       },
       'boarding-up': {
-        local: 'A damaged opening in the combined Earlsdon and Chapelfields area needs precise property identification, particularly because Chapelfields has conservation status that does not extend automatically to all of original Earlsdon.',
+        local: 'A damaged opening in the combined Earlsdon and Chapelfields character area needs precise property identification because the current conservation boundaries do not follow every wider historic-landscape reference.',
         decision: 'If a temporary external fixing could affect protected fabric, confirm the address-level designation and the responsible owner or manager before proceeding. The character-area report cannot supply either permission for the premises or a construction detail.',
         checks: [
-          'Identify the precise property and damaged opening; Chapelfields conservation status does not automatically extend to original Earlsdon.',
+          'Identify the precise property and damaged opening and verify which current conservation boundary, if any, contains it.',
           'Before external temporary work on protected fabric, confirm address-level designation and the responsible owner or manager.',
         ],
       },
       'lock-upgrade': {
-        local: 'The report\'s distinction between Chapelfields conservation status and original Earlsdon\'s lack of area-wide statutory status should shape the questions, not the product choice. Check the building itself before treating heritage controls as relevant.',
+        local: 'The current Earlsdon conservation appraisal and Article 4 direction should shape address-level permission questions, not the product choice. Check the building and boundary before treating a control as relevant.',
         decision: 'For an entrance on one of the original Earlsdon streets, request the actual door-set details and any written requirements. Historic association with the Freehold Land Society movement does not establish current security hardware or an upgrade standard.',
         checks: [
-          'Check the building itself before treating heritage controls as relevant; the two historic cores have different statutory status.',
+          'Check the building and current boundary before treating conservation or Article 4 controls as relevant.',
           'Request actual door-set details and written requirements; Freehold Land Society history does not establish current hardware or an upgrade standard.',
         ],
       },

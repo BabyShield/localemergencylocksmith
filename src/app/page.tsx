@@ -337,16 +337,17 @@ export default function HomePage() {
         </div>
         <div className="max-w-4xl mx-auto text-center relative z-10">
           <div className="inline-flex items-center gap-2 bg-white/10 rounded-full px-4 py-1.5 mb-6">
-            <span className="w-2.5 h-2.5 bg-green-400 rounded-full animate-pulse" />
-            <span className="text-green-400 font-semibold text-sm">Available Now</span>
+            <span className="w-2.5 h-2.5 bg-[#FFB800] rounded-full" aria-hidden="true" />
+            <span className="text-[#FFB800] font-semibold text-sm">24/7 service — call to confirm availability</span>
           </div>
           <div className="text-[#FFB800] text-7xl md:text-8xl font-black mb-4">24/7</div>
           <h2 className="text-2xl md:text-3xl font-black text-white mb-4">
             Emergency Locksmith Coventry — Any Time, Any Day
           </h2>
           <p className="text-white/80 leading-relaxed text-lg max-w-2xl mx-auto mb-6">
-            Locked out at 2am on Christmas morning? I&apos;ll answer. No premium for unsociable hours.
-            No extra charge for weekends or bank holidays. Same price, always.
+            Call with the full postcode to confirm the exact address, current availability and ETA.
+            The published starting-price basis does not add a night, weekend or bank-holiday
+            premium; the itemised total still depends on the diagnosed scope and any parts.
           </p>
           <a
             href="tel:+442475224730"

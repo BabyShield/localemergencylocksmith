@@ -29,13 +29,10 @@ export default function HeroSection({
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-[#FFB800]/5 rounded-full blur-3xl" />
 
       <div className="relative max-w-4xl mx-auto text-center">
-        {/* Availability badge */}
+        {/* Service-hours badge — not a live availability indicator. */}
         <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/10 rounded-full px-4 py-1.5 mb-6">
-          <span className="relative flex h-2.5 w-2.5">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75" />
-            <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-green-500" />
-          </span>
-          <span className="text-sm font-medium text-gray-200">Available Now — 24/7</span>
+          <Clock className="h-4 w-4 text-[#FFB800]" aria-hidden="true" />
+          <span className="text-sm font-medium text-gray-200">24/7 service — call to confirm availability</span>
         </div>
 
         <h1 className={`font-black leading-[1.1] mb-5 ${compact ? 'text-3xl md:text-4xl' : 'text-4xl md:text-6xl'}`}>
