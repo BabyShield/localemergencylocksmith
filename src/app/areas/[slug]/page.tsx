@@ -271,7 +271,12 @@ export default async function AreaPage({ params }: Props) {
           <p className="text-gray-600 leading-relaxed mb-7">{guide.evidenceLimits}</p>
           <div className="space-y-5">
             {guide.facts.map((fact, index) => (
-              <article key={fact.text} className="rounded-xl border border-gray-200 p-5">
+              <article
+                key={fact.text}
+                data-evidence-section={`local-fact-${index + 1}`}
+                data-evidence-source-ids={fact.sourceIds.join(' ')}
+                className="rounded-xl border border-gray-200 p-5"
+              >
                 <h3 className="font-black text-[#0F1B2D] mb-2">Local fact {index + 1}</h3>
                 <p className="text-gray-700 leading-relaxed">{fact.text}</p>
                 <p className="text-sm text-gray-600 mt-3"><strong>Why it matters here:</strong> {fact.serviceRelevance}</p>
@@ -282,7 +287,7 @@ export default async function AreaPage({ params }: Props) {
                     return source ? (
                       <span key={sourceId}>
                         {sourceIndex > 0 && ' · '}
-                        <a href={source.url} target="_blank" rel="noopener noreferrer" className="underline decoration-[#FFB800] underline-offset-2 hover:text-[#8A5A00]">
+                        <a href={`#evidence-source-${source.id}`} className="underline decoration-[#FFB800] underline-offset-2 hover:text-[#8A5A00]">
                           {source.publisher}: {source.title}
                         </a>
                       </span>

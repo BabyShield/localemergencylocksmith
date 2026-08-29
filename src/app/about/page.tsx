@@ -172,7 +172,7 @@ export default function AboutPage() {
                 'You speak directly to the person who will do the work — no call centre, no middleman.',
                 'No VAT is added to the agreed price.',
                 'No separate call-out fee is added to the agreed work price.',
-                'Same price 24/7 — no premium for evenings, weekends, or bank holidays.',
+                'No time-of-day surcharge — evenings, weekends, and bank holidays use the published starting-price basis.',
                 'The full address and door symptoms are recorded before attendance so the actual job can be assessed.',
                 'The price basis is confirmed for the described scope before I set off.',
               ].map((point) => (

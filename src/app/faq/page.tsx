@@ -47,7 +47,7 @@ const pricingFaqs = [
   },
   {
     q: 'Do you charge extra for evenings, weekends, or bank holidays?',
-    a: 'No. My prices are the same 24 hours a day, 7 days a week, 365 days a year. There\'s no premium for unsociable hours — a lockout at 3am costs the same as one at 3pm.',
+    a: 'The published starting-price basis has no separate night, weekend or bank-holiday surcharge. The agreed total still depends on the diagnosed work, required parts and approved scope, so confirm it when you call.',
   },
 ]
 
@@ -230,7 +230,7 @@ export default function FAQPage() {
       </section>
 
       {/* Pricing FAQs */}
-      <div id="pricing">
+      <div id="pricing" className="scroll-mt-28">
         <FAQSection faqs={pricingFaqs} heading="Pricing" />
       </div>
 
@@ -240,7 +240,7 @@ export default function FAQPage() {
       </div>
 
       {/* Services FAQs */}
-      <div id="services">
+      <div id="services" className="scroll-mt-28">
         <FAQSection faqs={servicesFaqs} heading="Services" />
       </div>
 

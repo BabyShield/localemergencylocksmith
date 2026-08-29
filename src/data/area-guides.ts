@@ -67,11 +67,13 @@ function sourceIdsForGuidance(
   serviceSlug: ServiceAreaSlug,
 ): string[] {
   const sourceById = new Map(guide.sources.map(source => [source.id, source]))
+  const factOnlySourceIds = new Set(guide.factOnlySourceIds ?? [])
   const localitySourceIds = guide.facts
     .flatMap(fact => fact.sourceIds)
     .filter(sourceId => {
       const kind = sourceById.get(sourceId)?.kind
-      return kind === 'locality' || kind === 'property-status'
+      return !factOnlySourceIds.has(sourceId)
+        && (kind === 'locality' || kind === 'property-status')
     })
 
   const roles = [...SERVICE_TECHNICAL_SOURCE_ROLES[serviceSlug]]

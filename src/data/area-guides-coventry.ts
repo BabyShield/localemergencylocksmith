@@ -52,6 +52,7 @@ interface AreaGuideSeed {
   accessGuidance: string
   evidenceLimits: string
   facts: AreaGuideFact[]
+  factOnlySourceIds?: string[]
   sources: AreaGuideSource[]
   contexts: Record<ServiceAreaSlug, PairContext>
 }
@@ -346,6 +347,7 @@ function buildGuide(seed: AreaGuideSeed, variant: number): GovernedAreaGuide {
     accessGuidance: seed.accessGuidance,
     evidenceLimits: seed.evidenceLimits,
     facts: seed.facts,
+    factOnlySourceIds: seed.factOnlySourceIds,
     sources: [...seed.sources, ...technicalSources(seed.region)],
     serviceGuidance,
     faqs: guideFaqs,
@@ -422,6 +424,15 @@ function localitySource(
     kind: override?.kind ?? kind,
   }
 }
+
+const COVENTRY_LOCAL_LIST_SOURCE = localitySource(
+  'coventry-local-list',
+  'Local list of buildings of architectural or historic interest',
+  'Coventry City Council',
+  'https://www.coventry.gov.uk/downloads/file/17245/local-list-of-buildings-of-architectural-or-historic-interest',
+  'The official locally listed heritage-asset entries, including the cited DCT635 and DCT673 records.',
+  'property-status',
+)
 
 const AREA_SEEDS: AreaGuideSeed[] = [
   {
@@ -747,9 +758,16 @@ const AREA_SEEDS: AreaGuideSeed[] = [
         sourceIds: ['coundon-radford-hlc'],
         serviceRelevance: 'Check the individual building before externally visible work; an area total does not prove designation.',
       },
+      {
+        text: 'Coventry City Council\'s local list records DCT635, Radford public house (formerly Radford House), as a Locally Listed Building.',
+        sourceIds: ['coventry-local-list'],
+        serviceRelevance: 'This identifies the named local-list asset only; confirm the exact address, current status and relevant approval before visible work.',
+      },
     ],
+    factOnlySourceIds: ['coventry-local-list'],
     sources: [
       localitySource('coundon-radford-hlc', 'Coundon and Radford Character Area, HLC Area 40', 'Coventry City Council', 'https://www.coventry.gov.uk/downloads/file/17412/hlc-area-40-coundon-and-radford-character-area', 'Predominant area use, northern light-industry, Radford hamlet and road history, and character-area designation totals.', 'property-status'),
+      COVENTRY_LOCAL_LIST_SOURCE,
     ],
     contexts: {
       'emergency-lockout': {
@@ -820,9 +838,16 @@ const AREA_SEEDS: AreaGuideSeed[] = [
         sourceIds: ['coundon-radford-hlc'],
         serviceRelevance: 'Mixed development periods mean hardware and door construction must be identified at the individual opening.',
       },
+      {
+        text: 'Coventry City Council\'s local list records DCT673, Coundon Court School \'Old House\' and Coundon Court Lodge (also known as Holly Lodge), as a Locally Listed Building.',
+        sourceIds: ['coventry-local-list'],
+        serviceRelevance: 'This identifies the named local-list asset only; confirm the exact address, current status and relevant approval before visible work.',
+      },
     ],
+    factOnlySourceIds: ['coventry-local-list'],
     sources: [
       localitySource('coundon-radford-hlc', 'Coundon and Radford Character Area, HLC Area 40', 'Coventry City Council', 'https://www.coventry.gov.uk/downloads/file/17412/hlc-area-40-coundon-and-radford-character-area', 'Coundon Green and Norman Place Road history, the agricultural western edge, and broad development phases.'),
+      COVENTRY_LOCAL_LIST_SOURCE,
     ],
     contexts: {
       'emergency-lockout': {

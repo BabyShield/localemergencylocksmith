@@ -558,6 +558,19 @@ for (const area of AREAS) {
     `${label} search description has no locality or property-status source`,
   )
 
+  check(
+    guide.factOnlySourceIds === undefined || Array.isArray(guide.factOnlySourceIds),
+    `${label} fact-only source IDs must be an array when provided`,
+  )
+  const factOnlySourceIds = Array.isArray(guide.factOnlySourceIds) ? guide.factOnlySourceIds : []
+  const factOnlySourceIdSet = new Set(factOnlySourceIds)
+  check(factOnlySourceIdSet.size === factOnlySourceIds.length, `${label} repeats a fact-only source ID`)
+  for (const sourceId of factOnlySourceIds) {
+    check(localSourceIds.has(sourceId), `${label} fact-only source ${sourceId} is missing from sources`)
+    check(factSourceIds.has(sourceId), `${label} fact-only source ${sourceId} is not attached to a visible local fact`)
+    check(!technicalIds.has(sourceId), `${label} fact-only source ${sourceId} cannot be a technical source`)
+  }
+
   for (const [index, fact] of (guide.facts ?? []).entries()) {
     const factLabel = `${label} fact ${index + 1}`
     check(wordCount(fact?.text) >= 10, `${factLabel} has ${wordCount(fact?.text)} words; expected at least 10`)
@@ -610,6 +623,7 @@ for (const area of AREAS) {
     check(guidanceSourceIds.size === (guidance.sourceIds ?? []).length, `${guidanceLabel} repeats a source ID`)
     for (const sourceId of guidance.sourceIds ?? []) {
       check(localSourceIds.has(sourceId), `${guidanceLabel} references missing source ${sourceId}`)
+      check(!factOnlySourceIdSet.has(sourceId), `${guidanceLabel} cites fact-only source ${sourceId}`)
     }
     check(
       sources.some(source => guidanceSourceIds.has(source.id) && (source.kind === 'locality' || source.kind === 'property-status')),

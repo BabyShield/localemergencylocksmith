@@ -73,6 +73,21 @@ const PRICES = [
   },
 ]
 
+const PRICE_FAQS = [
+  {
+    q: 'What if the job takes longer than expected?',
+    a: 'I agree the price for the diagnosed scope before work starts. If inspection or work exposes a different fault, part or additional scope, I stop, explain it and seek approval for the revised price before continuing.',
+  },
+  {
+    q: 'Do you charge more for more expensive properties?',
+    a: 'The property value is not a pricing factor. The quote depends on the actual lock, fault, access, agreed work and parts; different entrances can require different scopes regardless of property type.',
+  },
+  {
+    q: 'Do prices include parts?',
+    a: 'A replacement part is included only where the quote states it. A lockout may need no part, while a diagnosed repair or replacement may need one; I identify exactly what is included before work starts.',
+  },
+]
+
 const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
@@ -107,32 +122,14 @@ const offersSchema = {
 const faqSchema = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
-  mainEntity: [
-    {
-      '@type': 'Question',
-      name: 'Do locksmith prices include VAT?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'No VAT is added. The listed amounts are from-prices; I confirm the applicable scope and total before work proceeds.',
-      },
+  mainEntity: PRICE_FAQS.map(faq => ({
+    '@type': 'Question',
+    name: faq.q,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: faq.a,
     },
-    {
-      '@type': 'Question',
-      name: 'Is there a call-out fee?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'No separate call-out fee is added to the agreed job price. I confirm the price basis by phone and agree any change in diagnosed scope before additional work proceeds.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Do prices change at night or on weekends?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'No — the prices listed apply 24 hours a day, 7 days a week, including bank holidays and Christmas Day. No premium for unsociable hours.',
-      },
-    },
-  ],
+  })),
 }
 
 export default function PricesPage() {
@@ -187,8 +184,11 @@ export default function PricesPage() {
       </section>
 
       {/* Price table */}
-      <section className="py-12 px-4 bg-white">
+      <section className="py-12 px-4 bg-white" aria-labelledby="published-prices-heading">
         <div className="max-w-3xl mx-auto">
+          <h2 id="published-prices-heading" className="text-2xl md:text-3xl font-black text-[#0F1B2D] mb-6 text-center">
+            Published Locksmith Starting Prices
+          </h2>
           <div className="bg-white rounded-xl border border-gray-200 overflow-hidden shadow-sm">
             <table className="w-full">
               <thead>
@@ -220,7 +220,7 @@ export default function PricesPage() {
               <li>✓ No separate call-out fee added</li>
               <li>✓ Labour included within each stated starting scope</li>
               <li>✓ Parts included where stated</li>
-              <li>✓ Same price 24/7 — no evening or weekend premium</li>
+              <li>✓ No separate night, weekend or bank-holiday surcharge</li>
               <li>✓ Price basis confirmed on the phone before I come out</li>
             </ul>
           </div>
@@ -268,9 +268,9 @@ export default function PricesPage() {
               the guarantee terms.
             </p>
             <p>
-              There are <strong>no evening or weekend surcharges</strong> — the price is the same whether you
-              call at 2pm on a Tuesday or 2am on Christmas Day. I do not charge extra for unsociable hours
-              because emergencies do not wait for office hours.
+              The published starting-price basis has <strong>no separate night, weekend or bank-holiday
+              surcharge</strong>. The agreed total for an individual job still depends on the diagnosed work,
+              required parts and approved scope.
             </p>
             <p>
               Every job has its <strong>price basis confirmed on the phone before I come out</strong>. The
@@ -286,25 +286,21 @@ export default function PricesPage() {
         <div className="max-w-3xl mx-auto">
           <h2 className="text-2xl font-black text-gray-900 mb-6 text-center">Price FAQs</h2>
           <div className="space-y-4">
-            {[
-              {
-                q: 'What if the job takes longer than expected?',
-                a: 'I agree the price for the diagnosed scope before work starts. If inspection or work exposes a different fault, part or additional scope, I stop, explain it and seek approval for the revised price before continuing.',
-              },
-              {
-                q: 'Do you charge more for more expensive properties?',
-                a: 'The property value is not a pricing factor. The quote depends on the actual lock, fault, access, agreed work and parts; different entrances can require different scopes regardless of property type.',
-              },
-              {
-                q: 'Do prices include parts?',
-                a: 'A replacement part is included only where the quote states it. A lockout may need no part, while a diagnosed repair or replacement may need one; I identify exactly what is included before work starts.',
-              },
-            ].map((faq) => (
+            {PRICE_FAQS.map((faq) => (
               <div key={faq.q} className="bg-white rounded-lg border border-gray-200 p-6">
                 <p className="font-semibold text-gray-900 mb-2">{faq.q}</p>
                 <p className="text-gray-600 text-sm leading-relaxed">{faq.a}</p>
               </div>
             ))}
+          </div>
+          <div className="mt-8 text-center">
+            <Link
+              href="/faq#pricing"
+              prefetch={false}
+              className="font-bold text-[#0F1B2D] underline decoration-[#FFB800] underline-offset-4 hover:text-[#8A5A00]"
+            >
+              Read all pricing FAQs
+            </Link>
           </div>
         </div>
       </section>

@@ -32,61 +32,6 @@ export const metadata: Metadata = {
   },
 }
 
-const faqSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: [
-    {
-      '@type': 'Question',
-      name: 'How quickly can a locksmith arrive in Coventry?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: "I confirm the current arrival estimate from my actual starting point and your full address when you call. A static page cannot reliably promise a journey time.",
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Do you charge VAT on locksmith services?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'No — I am not VAT-registered, so VAT is not added. If inspection changes the scope, I explain and agree any revised price before work proceeds.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Is there a call-out fee?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'No separate call-out fee is added. I explain the price basis for the described scope before travelling and agree any inspection-led revision before additional work.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What does an emergency locksmith cost in Coventry?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'A standard emergency lockout and a compatible euro-cylinder replacement each start from £59. Yale nightlatches start from £69 and BS3621-rated mortice options from £79. No VAT or separate call-out fee is added, and the published starting prices do not add an evening or weekend premium.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Do you work on weekends and bank holidays?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Yes — 24 hours a day, 7 days a week, 365 days a year including Christmas Day. The price is always the same.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'How is locksmith work agreed?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'The attending name, authority check, proposed method, scope and price basis are confirmed before work starts. Ask to see any current credentials or cover evidence relevant to your decision.',
-      },
-    },
-  ],
-}
-
 // Google requires a real physical address for LocalBusiness rich-result
 // eligibility. No public street/postcode has been supplied, so the homepage
 // declares the verified site identity as an Organization without inventing NAP.
@@ -159,17 +104,30 @@ const homepageFaqs = [
   },
   {
     q: 'What does an emergency locksmith cost in Coventry?',
-    a: 'A standard emergency lockout and a compatible euro-cylinder replacement each start from £59. Yale nightlatches start from £69 and BS3621-rated mortice options from £79. No VAT or separate call-out fee is added, and the published starting prices do not add an evening or weekend premium.',
+    a: 'A standard emergency lockout and a compatible euro-cylinder replacement each start from £59. Yale nightlatches start from £69 and BS3621-rated mortice options from £79. No VAT or separate call-out fee is added. The published starting-price basis has no separate time-of-day surcharge; the agreed total still depends on the diagnosed scope and any parts.',
   },
   {
     q: 'Do you work on weekends and bank holidays?',
-    a: 'Yes — 24 hours a day, 7 days a week, 365 days a year including Christmas Day. The price is always the same.',
+    a: 'Yes — I take calls 24 hours a day, 7 days a week, including weekends and bank holidays. The published starting-price basis has no separate night, weekend or bank-holiday surcharge; the agreed total still depends on the diagnosed scope and any parts.',
   },
   {
     q: 'How is locksmith work agreed?',
     a: 'The attending name, authority check, proposed method, scope and price basis are confirmed before work starts. Ask to see any current credentials or cover evidence relevant to your decision.',
   },
 ]
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: homepageFaqs.map(faq => ({
+    '@type': 'Question',
+    name: faq.q,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: faq.a,
+    },
+  })),
+}
 
 const latestPosts = [...ALL_BLOG_POSTS]
   .sort((left, right) => right.date.localeCompare(left.date))
@@ -467,7 +425,20 @@ export default function HomePage() {
 
       {/* 12. FAQ */}
       <div className="defer-render">
-        <FAQSection faqs={homepageFaqs} />
+        <FAQSection
+          faqs={homepageFaqs}
+          footer={(
+            <div className="text-center">
+              <Link
+                href="/faq"
+                prefetch={false}
+                className="font-bold text-[#0F1B2D] underline decoration-[#FFB800] underline-offset-4 hover:text-[#8A5A00]"
+              >
+                Read all locksmith FAQs
+              </Link>
+            </div>
+          )}
+        />
       </div>
 
       {/* Last updated */}

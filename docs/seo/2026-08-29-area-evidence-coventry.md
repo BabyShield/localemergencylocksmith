@@ -61,27 +61,31 @@ Excluded throughout: inferred lock types, locksmith job history or frequency, cr
 
 ## `radford`
 
-- **Context tags:** `historic-landscape-report`, `ancient-hamlet`, `historic-route`, `area-scale-designations`.
+- **Context tags:** `historic-landscape-report`, `ancient-hamlet`, `historic-route`, `area-scale-designations`, `locally-listed-specific-asset`.
 - **Supported claims:**
   1. Coventry's Coundon and Radford character area is west of the city centre and predominantly residential, with a small light-industrial area in the north.
   2. The report identifies part of the ancient hamlet of Radford on both sides of Radford Road, which it describes as a medieval route later turnpiked.
   3. At character-area scale, the report records nine listed buildings, nineteen locally listed buildings and no conservation area.
-- **Source:**
-  - Coventry City Council — [Coundon and Radford Character Area, HLC Area 40](https://www.coventry.gov.uk/downloads/file/17412/hlc-area-40-coundon-and-radford-character-area) — supports all three claims. Checked 2026-08-29.
+  4. Coventry City Council's local list records DCT635, Radford public house (formerly Radford House), as a Locally Listed Building.
+- **Sources:**
+  - Coventry City Council — [Coundon and Radford Character Area, HLC Area 40](https://www.coventry.gov.uk/downloads/file/17412/hlc-area-40-coundon-and-radford-character-area) — supports claims 1 to 3. Checked 2026-08-29.
+  - Coventry City Council — [Local list of buildings of architectural or historic interest](https://www.coventry.gov.uk/downloads/file/17245/local-list-of-buildings-of-architectural-or-historic-interest) — supports claim 4's DCT635 entry only. Checked 2026-08-29.
 - **Conditional service implication:** If visible alterations are proposed at an older or designated building, verify the exact entry and planning status rather than relying on the Radford name.
-- **Access/property-status caveat:** Designation totals and historic-development statements apply to the whole HLC area; they do not identify the status, age or entrance conditions of any address.
+- **Access/property-status caveat:** Designation totals and historic-development statements apply to the whole HLC area. The DCT635 entry identifies only its named asset, not the status, age or entrance conditions of another Radford address.
 
 ## `coundon`
 
-- **Context tags:** `historic-landscape-report`, `Coundon-Green`, `agricultural-edge`, `inter-war-development`.
+- **Context tags:** `historic-landscape-report`, `Coundon-Green`, `agricultural-edge`, `inter-war-development`, `locally-listed-specific-asset`.
 - **Supported claims:**
   1. The council's HLC places present-day Coundon Green and Norman Place Road within an area where medieval assarts and settlement around commons were recorded.
   2. It states that most of the character area's western side borders agricultural fields.
   3. The report describes rapid, extensive inter-war residential development across much of the wider Coundon and Radford character area, while identifying later pockets around Everdon Road, Forland Way and Madeira Croft.
-- **Source:**
-  - Coventry City Council — [Coundon and Radford Character Area, HLC Area 40](https://www.coventry.gov.uk/downloads/file/17412/hlc-area-40-coundon-and-radford-character-area) — supports all three claims. Checked 2026-08-29.
+  4. Coventry City Council's local list records DCT673, Coundon Court School 'Old House' and Coundon Court Lodge (also known as Holly Lodge), as a Locally Listed Building.
+- **Sources:**
+  - Coventry City Council — [Coundon and Radford Character Area, HLC Area 40](https://www.coventry.gov.uk/downloads/file/17412/hlc-area-40-coundon-and-radford-character-area) — supports claims 1 to 3. Checked 2026-08-29.
+  - Coventry City Council — [Local list of buildings of architectural or historic interest](https://www.coventry.gov.uk/downloads/file/17245/local-list-of-buildings-of-architectural-or-historic-interest) — supports claim 4's DCT673 entry only. Checked 2026-08-29.
 - **Conditional service implication:** Ask for the exact street and a clear description or photograph of the relevant entrance; an area development period cannot safely select replacement hardware or establish building status.
-- **Access/property-status caveat:** The HLC boundary is broader than the slug and contains different development periods; it does not prove conditions at a specific property.
+- **Access/property-status caveat:** The HLC boundary is broader than the slug and contains different development periods. The DCT673 entry identifies only its named assets; neither source proves conditions at another Coundon property.
 
 ## `holbrooks`
 

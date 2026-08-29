@@ -38,6 +38,12 @@ export interface GovernedAreaGuideDraft {
   evidenceLimits: string
   facts: AreaGuideFact[]
   sources: AreaGuideSource[]
+  /**
+   * Local sources that support a visible factual profile only. These are kept
+   * off service-guidance citations unless a service paragraph explicitly earns
+   * a narrower claim-to-source relationship in future.
+   */
+  factOnlySourceIds?: string[]
   serviceGuidance: Record<ServiceAreaSlug, AreaServiceGuidanceDraft>
   faqs: { q: string; a: string }[]
 }

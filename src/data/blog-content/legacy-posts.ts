@@ -109,7 +109,7 @@ Opening time depends on the exact lock, door, condition and suitable method. I a
 If the lock needs replacing after the opening (rare, but possible with very old or damaged locks), I will explain why and quote you before I do anything.
     `.trim(),
     faqs: [
-      { q: 'Do locksmiths charge more late at night?', a: "Not all do — I don't. My prices are the same 24/7. Some national companies do charge a night premium. Always ask specifically about the price for your time slot before they come out." },
+      { q: 'Do locksmiths charge more late at night?', a: "Providers set their own rates. I do not add a time-of-day surcharge to my published starting-price basis, but the agreed total still depends on the door, lock, diagnosed scope and any parts. Always ask a provider for the total for your time slot before attendance." },
       { q: 'Can I let a locksmith in without proof of address?', a: 'A reputable locksmith should ask for proof of address before opening a door — it protects both you and them. A valid form is a driving licence, bank statement, or utility bill. If a locksmith does not ask for ID, that is actually a warning sign.' },
       { q: 'What if I cannot pay on the night?', a: 'I take card and cash. If you are in a genuinely difficult situation, call me and we can talk about it. But I cannot leave a door opened without payment — it creates problems for both of us.' },
     ],

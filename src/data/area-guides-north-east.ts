@@ -37,6 +37,15 @@ const LOCAL_SOURCES = {
     checkedOn: REVIEWED_ON,
     kind: 'locality',
   },
+  'nbbc-heritage-spd-2026': {
+    id: 'nbbc-heritage-spd-2026',
+    title: 'Heritage Supplementary Planning Document 2026',
+    publisher: 'Nuneaton and Bedworth Borough Council',
+    url: 'https://www.nuneatonandbedworth.gov.uk/downloads/file/2503/heritage-supplementary-planning-document-2026-',
+    supports: 'The Appendix B entry for Former Albion Works at 64-122 Attleborough Road, Nuneaton CV11 4JJ as a locally listed building outside a conservation area and a landmark.',
+    checkedOn: REVIEWED_ON,
+    kind: 'property-status',
+  },
   'warwickshire-her-stockingford-galley-manor': {
     id: 'warwickshire-her-stockingford-galley-manor',
     title: 'The Manor of Stockingford, Galley Common, record MWA12426',
@@ -82,6 +91,15 @@ const LOCAL_SOURCES = {
     checkedOn: REVIEWED_ON,
     kind: 'locality',
   },
+  'wcc-whitestone-infant-school': {
+    id: 'wcc-whitestone-infant-school',
+    title: 'Whitestone Infant School',
+    publisher: 'Warwickshire County Council',
+    url: 'https://apps.warwickshire.gov.uk/FindASchool/schools/whitestone-infant-school',
+    supports: 'The school directory name, community category and address at Magyar Crescent, Nuneaton, Warwickshire CV11 4SQ.',
+    checkedOn: REVIEWED_ON,
+    kind: 'locality',
+  },
   'nbbc-queen-elizabeth-road-park': {
     id: 'nbbc-queen-elizabeth-road-park',
     title: 'Queen Elizabeth Road park',
@@ -109,6 +127,15 @@ const LOCAL_SOURCES = {
     checkedOn: REVIEWED_ON,
     kind: 'locality',
   },
+  'nbbc-borough-plan-review-2021-2039': {
+    id: 'nbbc-borough-plan-review-2021-2039',
+    title: 'Borough Plan Review 2021-2039',
+    publisher: 'Nuneaton and Bedworth Borough Council',
+    url: 'https://fs-filestore-eu.s3.eu-west-1.amazonaws.com/nuneaton/Documents/Borough%20Plan%20Review%20%282021-2039%29.pdf',
+    supports: 'Strategic Policy DS5 description of the wider Bermuda Park area, including Faultlands and SEA4, as an employment location of regional significance for inward and local investment.',
+    checkedOn: REVIEWED_ON,
+    kind: 'locality',
+  },
   'historic-england-hartshill-castle-1011197': {
     id: 'historic-england-hartshill-castle-1011197',
     title: 'Hartshill Castle, list entry 1011197',
@@ -117,6 +144,15 @@ const LOCAL_SOURCES = {
     supports: 'The scheduled-monument designation, location and recorded development phases of Hartshill Castle.',
     checkedOn: REVIEWED_ON,
     kind: 'property-status',
+  },
+  'nwbc-hartshill-neighbourhood-plan-2017': {
+    id: 'nwbc-hartshill-neighbourhood-plan-2017',
+    title: 'Hartshill Neighbourhood Plan, adopted March 2017',
+    publisher: 'North Warwickshire Borough Council (host; Hartshill Parish Council plan)',
+    url: 'https://www.northwarks.gov.uk/downloads/file/18/hartshill-neighbourhood-plan-adopted-march-2017-',
+    supports: 'Policy H11 identification of the current Society of Friends Meeting House on Castle Road as a community facility to be enhanced and protected.',
+    checkedOn: REVIEWED_ON,
+    kind: 'locality',
   },
   'nbbc-bedworth-conservation-2022': {
     id: 'nbbc-bedworth-conservation-2022',
@@ -308,7 +344,7 @@ const AREA_FAQS: Partial<Record<AreaSlug, [AreaFaq, AreaFaq]>> = {
     { q: 'What present information should a Chapel End caller gather?', a: `Gather the exact address and threshold, controller, door construction, visible lock markings and observable fault rather than using the historic centre boundary or unit count.` },
   ],
   'bermuda-park': [
-    { q: 'What does the Bermuda Park source actually verify?', a: `It verifies the station's opening history and two dated passenger figures. It does not define the wider route, premises, access or current activity.` },
+    { q: 'What does the Bermuda Park railway source actually verify?', a: `It verifies the station's opening history and two dated passenger figures. It does not define the wider route, premises, access or current activity.` },
     { q: 'How should a Bermuda Park property be identified for booking?', a: `Use the complete property and unit address, exact private or shared entrance and responsible person; station proximity alone is not sufficient property information.` },
   ],
   'galley-common': [
@@ -592,7 +628,7 @@ export const NORTH_EAST_AREA_GUIDES = {
       `The same record says Attleborough is absent from Domesday and records a 1243 lease of its manor by the Prioress of Chaise-Dieu to Nuneaton. These are documentary-history facts, not current property-status evidence.`,
     ],
     accessGuidance: `Provide the complete Attleborough address and identify the working entrance without using the medieval-settlement record or its historic map description as an access boundary. Include the threshold controller and any shared-building instructions.`,
-    evidenceLimits: `The cited Historic Environment Record is not a blanket conservation or listing designation, and its map point is expressly illustrative. Current property status, ownership, construction, door system, condition and lawful authority all require separate evidence.`,
+    evidenceLimits: `The Historic Environment Record is not a blanket conservation or listing designation, its map point is expressly illustrative, and the Heritage SPD entry concerns Former Albion Works only. Current status for any other property, ownership, construction, door system, condition and lawful authority require separate evidence.`,
     facts: [
       {
         text: `The Warwickshire record describes the probable Attleborough medieval-settlement extent using the first-edition 1888 Ordnance Survey map.`,
@@ -604,8 +640,14 @@ export const NORTH_EAST_AREA_GUIDES = {
         sourceIds: ['warwickshire-her-attleborough-medieval'],
         serviceRelevance: `The documentary history supplies locality context only and must not be projected onto a modern property, entrance or estate.`,
       },
+      {
+        text: `The council's Heritage SPD 2026 lists Former Albion Works at 64-122 Attleborough Road, Nuneaton CV11 4JJ among locally listed buildings outside conservation areas and marks it as a landmark.`,
+        sourceIds: ['nbbc-heritage-spd-2026'],
+        serviceRelevance: `This identifies that named asset only; confirm the exact number or unit, current status and responsible controller before visible work, and do not infer installed hardware.`,
+      },
     ],
-    sources: [LOCAL_SOURCES['warwickshire-her-attleborough-medieval']],
+    factOnlySourceIds: ['nbbc-heritage-spd-2026'],
+    sources: [LOCAL_SOURCES['warwickshire-her-attleborough-medieval'], LOCAL_SOURCES['nbbc-heritage-spd-2026']],
     serviceGuidance: {
       'emergency-lockout': {
         heading: 'An Attleborough lockout starts with the present entrance',
@@ -848,7 +890,7 @@ export const NORTH_EAST_AREA_GUIDES = {
       `The same current register assigns St Andrews Drive, Whitestone Road and Willowfields Road to Whitestone, Nuneaton. It provides street-to-locality labels rather than evidence about properties, buildings or entrances.`,
     ],
     accessGuidance: `Give the full Whitestone property address and exact entrance. The county register's selected street-to-locality labels may help verify spelling and locality, but they cannot establish a property boundary, unit or access.`,
-    evidenceLimits: `The evidence is a current county highway register, not a complete postcode, ward, route or parcel map. It does not verify property status, tenure, construction, lock type, access control or service circumstances.`,
+    evidenceLimits: `The evidence comprises selected highway entries and one official school directory record, not a complete postcode, ward, route or parcel map. The school record identifies that facility and address only; neither source verifies other properties, tenure, construction, lock type, access control or service circumstances.`,
     facts: [
       {
         text: `The county street register produced on 11 August 2026 assigns Fairway, Falcon Close and Falstaff Close to Whitestone, Nuneaton.`,
@@ -860,8 +902,14 @@ export const NORTH_EAST_AREA_GUIDES = {
         sourceIds: ['wcc-list-of-streets-2026'],
         serviceRelevance: `The highway-locality entries say nothing about the premises, exact entrance, authority or hardware at an address.`,
       },
+      {
+        text: `Warwickshire County Council's school directory identifies Whitestone Infant School as a community school at Magyar Crescent, Nuneaton, Warwickshire CV11 4SQ.`,
+        sourceIds: ['wcc-whitestone-infant-school'],
+        serviceRelevance: `For a booking at the school, identify the named gate or entrance and confirm the person authorised for the site; the directory establishes neither access rights nor hardware.`,
+      },
     ],
-    sources: [LOCAL_SOURCES['wcc-list-of-streets-2026']],
+    factOnlySourceIds: ['wcc-whitestone-infant-school'],
+    sources: [LOCAL_SOURCES['wcc-list-of-streets-2026'], LOCAL_SOURCES['wcc-whitestone-infant-school']],
     serviceGuidance: {
       'emergency-lockout': {
         heading: 'Using the exact address during a Whitestone lockout',
@@ -1040,7 +1088,7 @@ export const NORTH_EAST_AREA_GUIDES = {
       `The same retrospective reports approximately 28,000 station passengers in 2017/18 and just over 38,000 in 2019/20. Those period figures do not establish current usage, local demand or property context.`,
     ],
     accessGuidance: `Provide the full Bermuda Park property address, building or unit and exact affected entrance. The station is a point feature and cannot be used to infer the route boundary, land use or access to premises.`,
-    evidenceLimits: `The sole locality source concerns one railway station and historic passenger periods. It proves no wider-area boundary, present activity, property status, building construction, tenure, entrance arrangement, lock type or service need.`,
+    evidenceLimits: `The railway source concerns one station and historic passenger periods; the adopted plan makes a wider-area employment statement. Neither proves a route boundary, the present use or status of an individual property, construction, tenure, entrance arrangement, lock type or service need.`,
     facts: [
       {
         text: `Bermuda Park station opened on 18 January 2016 after a fifteen-month build on the Nuneaton-Coventry line improvement project.`,
@@ -1052,8 +1100,14 @@ export const NORTH_EAST_AREA_GUIDES = {
         sourceIds: ['wcc-bermuda-park-railway-200'],
         serviceRelevance: `These are period-specific station figures and must not become current usage, footfall, demand or incident claims.`,
       },
+      {
+        text: `The adopted Borough Plan Review's Strategic Policy DS5 describes the wider Bermuda Park area south of Nuneaton, including Faultlands and SEA4, as an employment location of regional significance for inward and local investment.`,
+        sourceIds: ['nbbc-borough-plan-review-2021-2039'],
+        serviceRelevance: `For a business-site booking, confirm the exact organisation, unit, building, entrance and authorised facilities contact; the policy establishes neither individual use, access nor hardware.`,
+      },
     ],
-    sources: [LOCAL_SOURCES['wcc-bermuda-park-railway-200']],
+    factOnlySourceIds: ['nbbc-borough-plan-review-2021-2039'],
+    sources: [LOCAL_SOURCES['wcc-bermuda-park-railway-200'], LOCAL_SOURCES['nbbc-borough-plan-review-2021-2039']],
     serviceGuidance: {
       'emergency-lockout': {
         heading: 'A Bermuda Park lockout needs a property, not a station reference',
@@ -1168,7 +1222,7 @@ export const NORTH_EAST_AREA_GUIDES = {
       `The official list entry describes a motte-and-bailey castle originating during Henry I's reign and alteration into an enclosure castle around 1330. These phases are monument history, not dates for neighbouring buildings.`,
     ],
     accessGuidance: `Provide the exact Hartshill address and entrance without treating the castle, The Green, church or Castle Road as proof of property access. If the address may intersect the monument, consult the official list map.`,
-    evidenceLimits: `The Historic England record establishes one scheduled site and its history. It does not designate nearby premises, confirm public access, identify modern construction, ownership, door material, lock mechanism, incident history or service conditions.`,
+    evidenceLimits: `The Historic England record establishes one scheduled site, while the March 2017 neighbourhood plan identifies one community facility in a dated policy. Neither establishes the current status, controller, public access, construction, door material, lock mechanism, incident history or service conditions at a booking address.`,
     facts: [
       {
         text: `Hartshill Castle is Scheduled Monument 1011197, located between The Green, Holy Trinity church and Castle Road.`,
@@ -1180,8 +1234,14 @@ export const NORTH_EAST_AREA_GUIDES = {
         sourceIds: ['historic-england-hartshill-castle-1011197'],
         serviceRelevance: `These phases support attributed monument history only and say nothing about the age or fabric of customer premises.`,
       },
+      {
+        text: `In the adopted March 2017 Hartshill Neighbourhood Plan, Policy H11 lists the current Society of Friends Meeting House on Castle Road among community facilities to be enhanced and protected.`,
+        sourceIds: ['nwbc-hartshill-neighbourhood-plan-2017'],
+        serviceRelevance: `This identifies one facility in a dated policy; confirm its present identity, responsible controller and exact entrance before booking, and infer nothing about its hardware.`,
+      },
     ],
-    sources: [LOCAL_SOURCES['historic-england-hartshill-castle-1011197']],
+    factOnlySourceIds: ['nwbc-hartshill-neighbourhood-plan-2017'],
+    sources: [LOCAL_SOURCES['historic-england-hartshill-castle-1011197'], LOCAL_SOURCES['nwbc-hartshill-neighbourhood-plan-2017']],
     serviceGuidance: {
       'emergency-lockout': {
         heading: 'Keeping Hartshill Castle status separate from a lockout address',

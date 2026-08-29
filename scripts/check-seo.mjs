@@ -29,6 +29,28 @@ function check(condition, message) {
   if (!condition) failures.push(message)
 }
 
+const ABSOLUTE_SAME_PRICE_PATTERN = /\b(?:same\s+price\s+(?:24\s*\/\s*7|at\b|whether\b)|(?:my|our|the)\s+(?:(?:published|advertised|listed)\s+)?(?:starting\s+)?prices?\s+(?:are|is)\s+(?:always\s+)?the\s+same|(?:the\s+)?price\s+is\s+(?:always\s+)?the\s+same|prices?\s+(?:always\s+)?(?:remain|stay)\s+the\s+same|costs?\s+the\s+same\s+as|(?:the\s+)?prices?\s+(?:listed\s+)?appl(?:y|ies)\s+24\s+hours?|prices?\s+(?:do\s+not|don't|does\s+not|doesn't)\s+change\s+(?:at\s+night|with\s+the\s+time\s+of\s+day))\b/i
+
+function findAbsoluteSamePriceClaim(text) {
+  return String(text).match(ABSOLUTE_SAME_PRICE_PATTERN)
+}
+
+for (const fixture of [
+  'Same price 24/7',
+  'My prices are the same 24 hours a day.',
+  'My published starting prices are the same 24/7.',
+  'Our advertised prices are always the same.',
+  'The price is always the same.',
+  'A 3am lockout costs the same as one at 3pm.',
+  'The listed prices apply 24 hours a day.',
+]) {
+  check(Boolean(findAbsoluteSamePriceClaim(fixture)), `absolute same-price detector misses fixture: ${fixture}`)
+}
+check(
+  !findAbsoluteSamePriceClaim('The published starting-price basis has no night surcharge; the agreed total depends on scope and parts.'),
+  'absolute same-price detector rejects bounded surcharge wording',
+)
+
 function robotsDirectiveTokens(value = '') {
   return new Set(
     String(value)
@@ -215,6 +237,27 @@ function visibleText(html) {
 
 function mainContent(html) {
   return html.match(/<main\b[^>]*>([\s\S]*?)<\/main>/i)?.[1] ?? ''
+}
+
+function headingOutline(html) {
+  const headings = []
+  for (const match of html.matchAll(/<h([1-6])\b([^>]*)>([\s\S]*?)<\/h\1>/gi)) {
+    if (/\baria-hidden=["']true["']/i.test(match[2])) continue
+    headings.push({
+      level: Number(match[1]),
+      text: visibleText(match[3]),
+    })
+  }
+  return headings
+}
+
+function firstHeadingLevelSkip(headings) {
+  for (let index = 1; index < headings.length; index += 1) {
+    if (headings[index].level > headings[index - 1].level + 1) {
+      return { previous: headings[index - 1], current: headings[index] }
+    }
+  }
+  return null
 }
 
 function evidenceBlock(html, tagName, section) {
@@ -477,6 +520,8 @@ try {
     const pageText = visibleText(html)
     const mainHtml = mainContent(html)
     const mainText = visibleText(mainHtml)
+    const mainHeadings = headingOutline(mainHtml)
+    const headingLevelSkip = firstHeadingLevelSkip(mainHeadings)
     const mainHrefs = internalHrefs(mainHtml)
     const claimText = operationalClaimText(html)
     const evidenceReferences = Array.from(
@@ -498,10 +543,19 @@ try {
     check(description.length <= 160, `${productionUrl.pathname} description is ${description.length} characters`)
     checkCanonicalRobots(productionUrl.pathname, robots, response.headers.get('x-robots-tag') ?? '')
     check(h1Count === 1, `${productionUrl.pathname} has ${h1Count} H1 elements`)
+    check(
+      !headingLevelSkip,
+      `${productionUrl.pathname} main heading order jumps from H${headingLevelSkip?.previous.level ?? '?'} to H${headingLevelSkip?.current.level ?? '?'} at ${JSON.stringify(headingLevelSkip?.current.text || 'unnamed heading')}`,
+    )
     check(Boolean(ogImage), `${productionUrl.pathname} has no og:image`)
     check(mainHtml.length > 0, `${productionUrl.pathname} has no main content landmark`)
     check(!html.includes('https://localemergencylocksmith.co.uk'), `${productionUrl.pathname} contains the redirecting apex origin`)
     check(!html.includes(UNVERIFIED_PROFILE_URL), `${productionUrl.pathname} exposes the unverified differently named Google profile`)
+
+    if (productionUrl.pathname === '/faq') {
+      check(/\bid=["']pricing["']/i.test(mainHtml), '/faq is missing its #pricing fragment target')
+      check(/\bid=["']services["']/i.test(mainHtml), '/faq is missing its #services fragment target')
+    }
 
     const futureArrivalPromise = pageText.match(/\b(?:i|we)\s+(?:can|will|aim\s+to|typically|usually|normally)[^.!?]{0,80}\b(?:arrive|reach|be\s+with\s+you)[^.!?]{0,40}\b\d{1,3}\s*(?:-|–|—|to)?\s*\d{0,3}\s*minutes?\b/i)
       ?? pageText.match(/\b\d{1,3}\s*(?:-|–|—|to)\s*\d{1,3}[- ]minute\s+(?:response|arrival)\b/i)
@@ -522,6 +576,18 @@ try {
       check(html.includes('id="local-evidence-heading"'), `${productionUrl.pathname} is missing verified local evidence`)
       check(html.includes('id="service-guidance-heading"'), `${productionUrl.pathname} is missing service-by-service guidance`)
       check(html.includes('id="source-heading"'), `${productionUrl.pathname} is missing its evidence source register`)
+      const localFactBlocks = Array.from(
+        mainHtml.matchAll(/<article\b(?=[^>]*data-evidence-section=["']local-fact-(\d+)["'])[^>]*>[\s\S]*?<\/article>/gi),
+        match => ({ index: match[1], block: match[0] }),
+      )
+      check(localFactBlocks.length >= 2, `${productionUrl.pathname} renders fewer than two source-linked local facts`)
+      check(
+        new Set(localFactBlocks.map(fact => fact.index)).size === localFactBlocks.length,
+        `${productionUrl.pathname} repeats a local-fact evidence marker`,
+      )
+      for (const fact of localFactBlocks) {
+        checkEvidenceBlockContract(fact.block, `${productionUrl.pathname} local fact ${fact.index}`)
+      }
       for (const serviceSlug of SERVICE_SLUGS) {
         check(html.includes(`id="${serviceSlug}"`), `${productionUrl.pathname} is missing ${serviceSlug} guidance`)
       }
@@ -712,6 +778,9 @@ try {
     const fixedFinalPriceClaim = pageText.match(/\b(?:the\s+)?price\s+i\s+quote(?:d)?\s+is\s+the\s+(?:price\s+you\s+pay|final\s+price)|\bpay\s+the\s+price\s+i\s+quoted|\bfirm\s+price\s+on\s+the\s+phone\b/i)
     check(!fixedFinalPriceClaim, `${productionUrl.pathname} contains a fixed final-price claim: ${JSON.stringify(fixedFinalPriceClaim?.[0])}`)
 
+    const absoluteSamePriceClaim = findAbsoluteSamePriceClaim(`${pageText} ${JSON.stringify(parsedSchemaNodes)}`)
+    check(!absoluteSamePriceClaim, `${productionUrl.pathname} contains an absolute same-price claim: ${JSON.stringify(absoluteSamePriceClaim?.[0])}`)
+
     const unsupportedOutcomePaymentClaim = pageText.match(/\byou\s+only\s+pay\s+if\s+i\s+complete\s+the\s+job\b|\bif\s+i\s+can(?:not|'t)\s+fix\s+the\s+problem,?\s+you\s+(?:do\s+not|don't)\s+pay\s+(?:a\s+penny|anything)\b/i)
     check(!unsupportedOutcomePaymentClaim, `${productionUrl.pathname} contains an unsupported outcome-payment claim: ${JSON.stringify(unsupportedOutcomePaymentClaim?.[0])}`)
 
@@ -832,13 +901,22 @@ try {
   check(beyondTwoClicks.length === 0, `canonical pages beyond two clicks from /: ${beyondTwoClicks.join(', ')}`)
 
   const focusPagesWithoutContextualInbound = pages
-    .filter(page => /^\/(?:areas|services|blog)(?:\/|$)/.test(page.path))
+    .filter(page => page.path === '/faq' || /^\/(?:areas|services|blog)(?:\/|$)/.test(page.path))
     .filter(page => !pages.some(source => source.path !== page.path && source.mainLinks.has(page.path)))
     .map(page => page.path)
   check(
     focusPagesWithoutContextualInbound.length === 0,
     `SEO focus pages without a contextual inbound link: ${focusPagesWithoutContextualInbound.join(', ')}`,
   )
+
+  check(pageByPath.get('/')?.mainHrefs.has('/faq'), '/ main content does not link to /faq')
+  check(pageByPath.get('/prices')?.mainHrefs.has('/faq#pricing'), '/prices main content does not link to /faq#pricing')
+  for (const serviceSlug of SERVICE_SLUGS) {
+    check(
+      pageByPath.get(`/services/${serviceSlug}`)?.mainHrefs.has('/faq#services'),
+      `/services/${serviceSlug} main content does not link to /faq#services`,
+    )
+  }
 
   for (const areaPath of areaPaths) {
     const areaSlug = areaPath.split('/')[2]

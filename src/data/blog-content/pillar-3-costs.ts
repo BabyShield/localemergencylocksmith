@@ -66,7 +66,7 @@ If you are locked out right now, head to our [emergency lockout](/services/emerg
     faqs: [
       {
         q: 'Why do some locksmiths charge more at night?',
-        a: 'Providers set their own pricing and may use different rates by time slot. Ask for the total for your specific door and time, including labour, parts, travel, VAT and any call-out fee. My published starting prices are the same 24/7.',
+        a: 'Providers set their own pricing and may use different rates by time slot. Ask for the total for your specific door and time, including labour, parts, travel, VAT and any call-out fee. I do not add a time-of-day surcharge to my published starting-price basis; the itemised total remains scope- and parts-dependent.',
       },
       {
         q: 'What is a locksmith call-out fee and do I have to pay one?',

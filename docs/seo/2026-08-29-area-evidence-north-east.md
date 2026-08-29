@@ -38,7 +38,7 @@ Status: research only. This file is a claim-level evidence register, not publish
 
 ### `attleborough` — Attleborough
 
-**Context tags:** `settlement/local-plan`, `heritage-record`
+**Context tags:** `settlement/local-plan`, `heritage-record`, `local-list-present`
 
 1. **Fact:** Warwickshire Historic Environment Record MWA9489 records the probable extent of Attleborough's medieval settlement using the first-edition 1888 Ordnance Survey map.
    - **Publisher / title / deep URL:** [Warwickshire Historic Environment Record — Attleborough Medieval Settlement, MWA9489](https://timetrail.warwickshire.gov.uk/detail.aspx?monuid=WA9489)
@@ -50,8 +50,13 @@ Status: research only. This file is a claim-level evidence register, not publish
    - **Direct support:** Source notes two and three contain the Domesday statement and the dated manor lease.
    - **Checked:** 2026-08-29.
    - **Conditional service-use implication:** These may be used only as attributed documentary history, not as evidence about a present property, entrance or estate.
+3. **Fact:** The council's Heritage SPD 2026 lists Former Albion Works at 64-122 Attleborough Road, Nuneaton CV11 4JJ in Appendix B's locally listed buildings outside conservation areas and marks it as a landmark.
+   - **Publisher / title / deep URL:** [Nuneaton and Bedworth Borough Council — Heritage Supplementary Planning Document 2026](https://www.nuneatonandbedworth.gov.uk/downloads/file/2503/heritage-supplementary-planning-document-2026-)
+   - **Direct support:** Appendix B's heading and the Albion Works row provide the locally listed context, address, postcode and landmark value.
+   - **Checked:** 2026-08-29.
+   - **Conditional service-use implication:** This identifies one named asset only. Confirm the exact number or unit, current status and responsible controller before visible work; the SPD does not identify installed hardware or grant consent.
 
-**Access/property-status caveat:** The record is not a blanket conservation or listing designation, and its map point is expressly illustrative rather than a complete archaeological boundary. Verify the exact site and current status separately.
+**Access/property-status caveat:** The Historic Environment Record is not a blanket designation, and its map point is illustrative rather than a complete archaeological boundary. The Heritage SPD row concerns Former Albion Works only; verify the exact site, current status, controller and proposed scope separately.
 
 ### `stockingford` — Stockingford
 
@@ -106,7 +111,7 @@ Status: research only. This file is a claim-level evidence register, not publish
 
 ### `whitestone` — Whitestone
 
-**Context tags:** `locality-register`
+**Context tags:** `locality-register`, `school`
 
 1. **Fact:** The county street register produced on 11 August 2026 assigns Fairway, Falcon Close and Falstaff Close to Whitestone, Nuneaton.
    - **Publisher / title / deep URL:** [Warwickshire County Council — List of Streets maintained at public expense](https://api.warwickshire.gov.uk/documents/WCCC-930-12)
@@ -118,8 +123,13 @@ Status: research only. This file is a claim-level evidence register, not publish
    - **Direct support:** The live county register gives Whitestone and Nuneaton alongside each of these entries.
    - **Checked:** 2026-08-29.
    - **Conditional service-use implication:** The street names may be used for locality disambiguation only; no property type, door, access or service condition should be inferred.
+3. **Fact:** Warwickshire County Council's school directory identifies Whitestone Infant School as a community school at Magyar Crescent, Nuneaton, Warwickshire CV11 4SQ.
+   - **Publisher / title / deep URL:** [Warwickshire County Council — Whitestone Infant School](https://apps.warwickshire.gov.uk/FindASchool/schools/whitestone-infant-school)
+   - **Direct support:** The official record gives the school name, displays its category as Community, and lists Magyar Crescent, Nuneaton, Warwickshire CV11 4SQ as the contact address.
+   - **Checked:** 2026-08-29.
+   - **Conditional service-use implication:** If a booking concerns the school, identify the named gate or entrance and the person authorised for the site. The directory establishes neither access rights nor installed hardware.
 
-**Access/property-status caveat:** The highway register is not a complete postcode, ward, parcel or property lookup. Verify the complete current address, threshold and controller separately.
+**Access/property-status caveat:** The highway register is not a complete postcode, ward, parcel or property lookup, and the school directory identifies one facility only. Verify the complete current address, named threshold and responsible controller separately.
 
 ### `camp-hill` — Camp Hill
 
@@ -157,7 +167,7 @@ Status: research only. This file is a claim-level evidence register, not publish
 
 ### `bermuda-park` — Bermuda Park
 
-**Context tags:** `rail`
+**Context tags:** `rail`, `employment/local-plan`
 
 1. **Fact:** Bermuda Park station opened on 18 January 2016 after a 15-month build as part of improvements to the Nuneaton-Coventry line.
    - **Publisher / title / deep URL:** [Warwickshire County Council — Warwickshire County Council joins the Railway 200 celebrations](https://www.warwickshire.gov.uk/news/article/5895/warwickshire-county-council-joins-the-railway-200-celebrations)
@@ -169,8 +179,13 @@ Status: research only. This file is a claim-level evidence register, not publish
    - **Direct support:** Both historical passenger figures appear in the council's station retrospective.
    - **Checked:** 2026-08-29.
    - **Conditional service-use implication:** If included, retain the reporting periods and do not imply current usage or local demand.
+3. **Fact:** The adopted Borough Plan Review's Strategic Policy DS5 describes the wider Bermuda Park area south of Nuneaton, including Faultlands and SEA4, as an employment location of regional significance for inward and local investment.
+   - **Publisher / title / deep URL:** [Nuneaton and Bedworth Borough Council — Borough Plan Review 2021-2039](https://fs-filestore-eu.s3.eu-west-1.amazonaws.com/nuneaton/Documents/Borough%20Plan%20Review%20%282021-2039%29.pdf)
+   - **Direct support:** Strategic Policy DS5 contains the wider-area statement and names Faultlands and SEA4. The council publishes this PDF in its Borough Plan Review adoption collection.
+   - **Checked:** 2026-08-29.
+   - **Conditional service-use implication:** For a business-site booking, confirm the exact organisation, unit, building, entrance and authorised facilities contact. The policy does not establish the use, access arrangements or hardware of any individual premises.
 
-**Access/property-status caveat:** A railway station is a point feature. It does not establish the boundary, land use, vehicle access or property status of the wider Bermuda Park route.
+**Access/property-status caveat:** The railway station is a point feature, while Policy DS5 makes a wider-area employment statement. Neither establishes a service-route boundary, vehicle access, current individual use, property status or entrance conditions for a particular Bermuda Park address.
 
 ### `galley-common` — Galley Common
 
@@ -191,7 +206,7 @@ Status: research only. This file is a claim-level evidence register, not publish
 
 ### `hartshill` — Hartshill
 
-**Context tags:** `scheduled-monument-present`
+**Context tags:** `scheduled-monument-present`, `community-facility`, `neighbourhood-plan`
 
 1. **Fact:** Hartshill Castle is Scheduled Monument 1011197, situated within Hartshill between The Green, Holy Trinity parish church and Castle Road.
    - **Publisher / title / deep URL:** [Historic England — Hartshill Castle, list entry 1011197](https://historicengland.org.uk/listing/the-list/list-entry/1011197)
@@ -203,8 +218,13 @@ Status: research only. This file is a claim-level evidence register, not publish
    - **Direct support:** The official description sets out both development phases.
    - **Checked:** 2026-08-29.
    - **Conditional service-use implication:** These phases may be paraphrased as monument history only; they say nothing about the age or status of a customer's premises.
+3. **Fact:** In the adopted March 2017 Hartshill Neighbourhood Plan, Policy H11 lists the current Society of Friends Meeting House on Castle Road among community facilities to be enhanced and protected.
+   - **Publisher / title / deep URL:** [North Warwickshire Borough Council — Hartshill Neighbourhood Plan, adopted March 2017](https://www.northwarks.gov.uk/downloads/file/18/hartshill-neighbourhood-plan-adopted-march-2017-)
+   - **Direct support:** The adopted-plan cover gives March 2017, and Policy H11 names the current Society of Friends Meeting House, Castle Road in its protected community-facility list.
+   - **Checked:** 2026-08-29.
+   - **Conditional service-use implication:** The word current is part of the 2017 plan wording, not a 2026 status check. Confirm the facility's present identity, exact entrance and responsible controller before booking; the plan says nothing about installed hardware.
 
-**Access/property-status caveat:** The scheduled area is a specific protected site. Check the list map and an exact address; the list entry does not establish public access or designation of surrounding buildings.
+**Access/property-status caveat:** The scheduled area is a specific protected site, and Policy H11 is a dated record of one named community facility. Check the exact address, current status and responsible controller; neither source establishes public access, installed hardware or designation of surrounding buildings.
 
 ### `bedworth` — Bedworth
 

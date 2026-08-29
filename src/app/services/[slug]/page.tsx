@@ -82,13 +82,13 @@ const SERVICE_CONTENT: Record<string, {
     faqs: [
       { q: 'Can you open any type of lock?', a: 'I work with common residential cylinders, nightlatches, mortice locks and multipoint systems. The safe method depends on the exact lock, its condition and proof of authority; I explain any limitation before work proceeds.' },
       { q: 'Will you damage my door or lock?', a: 'I assess whether an appropriate non-destructive method is available first. No method or damage outcome can be guaranteed from a phone description. If drilling or replacement becomes necessary, I explain why and confirm the cost before proceeding.' },
-      { q: 'Do you charge more for late night callouts?', a: 'No — the price is the same at 3am as it is at 3pm. From £59 for a standard lockout, no VAT, no call-out fee, and no premium for unsociable hours.' },
+      { q: 'Do you charge more for late night callouts?', a: 'The published starting-price basis has no separate night, weekend or bank-holiday surcharge. A standard lockout starts from £59 with no VAT or separate call-out fee; the agreed total still depends on the diagnosed work, method, parts and approved scope.' },
       { q: 'How long does it take to open a locked door?', a: 'The time depends on the lock, door, condition and available method. I inspect the entrance and explain the likely method before starting rather than promise a fixed opening time.' },
     ],
     howToName: 'How to Get an Emergency Locksmith in Coventry',
     benefits: [
       "Non-destructive entry — your lock and door stay intact where possible",
-      "Same price 24/7 — no night premium, no weekend surcharge",
+      "No separate time-of-day surcharge — the agreed total still depends on diagnosed scope and parts",
       "Current ETA confirmed from the full address before I set off",
       "Price basis confirmed for the problem described before I set off",
       "Any changed diagnosis, method or parts agreed before work proceeds",
@@ -465,7 +465,7 @@ export default async function ServicePage({ params }: Props) {
             </span>
             <span className="flex items-center gap-1.5">
               <svg className="w-4 h-4 text-[#FFB800]" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" /></svg>
-              Same Price 24/7
+              No Time-of-Day Surcharge
             </span>
           </div>
           <a
@@ -764,6 +764,17 @@ export default async function ServicePage({ params }: Props) {
       <FAQSection
         faqs={allFaqs}
         heading={`Frequently Asked Questions — ${service.shortName}`}
+        footer={(
+          <div className="text-center">
+            <Link
+              href="/faq#services"
+              prefetch={false}
+              className="font-bold text-[#0F1B2D] underline decoration-[#FFB800] underline-offset-4 hover:text-[#8A5A00]"
+            >
+              Read all locksmith service FAQs
+            </Link>
+          </div>
+        )}
       />
 
       {/* ============================================================ */}
