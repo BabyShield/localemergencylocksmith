@@ -1,17 +1,118 @@
 import type { AreaSlug } from './area-authorities'
-import type { GovernedAreaGuide } from './area-guide-types'
+import type {
+  GovernedAreaGuideDraft,
+  PublishedAreaServiceGuidance,
+  PublishedGovernedAreaGuide,
+} from './area-guide-types'
+import {
+  SERVICE_TECHNICAL_SOURCE_ROLES,
+  SUPPLEMENTAL_GUIDANCE_SOURCE_IDS,
+  supplementalGuidanceSourceIds,
+  type TechnicalSourceRole,
+} from './area-guide-evidence-policy.ts'
 import { COVENTRY_AREA_GUIDES } from './area-guides-coventry.ts'
 import { NORTH_EAST_AREA_GUIDES } from './area-guides-north-east.ts'
 import { SOUTH_WEST_AREA_GUIDES } from './area-guides-south-west.ts'
+import { getTechnicalEvidenceSource } from './locksmith-evidence.ts'
+import { SERVICE_AREA_SLUGS, type ServiceAreaSlug } from './service-area-types.ts'
 
-const mergedGuides: Partial<Record<AreaSlug, GovernedAreaGuide>> = {
+const mergedDraftGuides: Partial<Record<AreaSlug, GovernedAreaGuideDraft>> = {
   ...COVENTRY_AREA_GUIDES,
   ...NORTH_EAST_AREA_GUIDES,
   ...SOUTH_WEST_AREA_GUIDES,
 }
 
-export const AREA_GUIDES = mergedGuides as Record<AreaSlug, GovernedAreaGuide>
+function technicalSourceId(
+  guide: GovernedAreaGuideDraft,
+  role: TechnicalSourceRole,
+): string | undefined {
+  if (role === 'mla') {
+    return guide.sources.find(source => source.kind === 'technical' && source.id === 'mla-service-calls')?.id
+  }
 
-export function getAreaGuide(areaSlug: string): GovernedAreaGuide | undefined {
+  const suffixByRole = {
+    lockAdvice: '-lock-advice',
+    doorSecurity: '-door-security',
+    forensics: '-forensics',
+  } as const
+
+  return guide.sources.find(source => (
+    source.kind === 'technical' && source.id.endsWith(suffixByRole[role])
+  ))?.id
+}
+
+function guidanceText(guidance: GovernedAreaGuideDraft['serviceGuidance'][ServiceAreaSlug]): string {
+  return [
+    ...guidance.body,
+    ...guidance.checks,
+    guidance.faq.q,
+    guidance.faq.a,
+  ].join(' ')
+}
+
+function sourceIdsForGuidance(
+  guide: GovernedAreaGuideDraft,
+  serviceSlug: ServiceAreaSlug,
+): string[] {
+  const sourceById = new Map(guide.sources.map(source => [source.id, source]))
+  const localitySourceIds = guide.facts
+    .flatMap(fact => fact.sourceIds)
+    .filter(sourceId => {
+      const kind = sourceById.get(sourceId)?.kind
+      return kind === 'locality' || kind === 'property-status'
+    })
+
+  const roles = [...SERVICE_TECHNICAL_SOURCE_ROLES[serviceSlug]]
+  if (
+    serviceSlug === 'lock-upgrade'
+    && /\bTS\s*007\b/i.test(guidanceText(guide.serviceGuidance[serviceSlug]))
+  ) {
+    roles.push('lockAdvice')
+  }
+
+  const technicalSourceIds = roles
+    .map(role => technicalSourceId(guide, role))
+    .filter((sourceId): sourceId is string => Boolean(sourceId))
+
+  const text = guidanceText(guide.serviceGuidance[serviceSlug])
+  const supplementalSourceIds = supplementalGuidanceSourceIds(text)
+
+  return [...new Set([...localitySourceIds, ...technicalSourceIds, ...supplementalSourceIds])]
+}
+
+function publishGuide(guide: GovernedAreaGuideDraft): PublishedGovernedAreaGuide {
+  const allGuidanceText = SERVICE_AREA_SLUGS
+    .map(serviceSlug => guidanceText(guide.serviceGuidance[serviceSlug]))
+    .join(' ')
+  const sources = [...guide.sources]
+
+  for (const sourceId of SUPPLEMENTAL_GUIDANCE_SOURCE_IDS) {
+    if (
+      supplementalGuidanceSourceIds(allGuidanceText).includes(sourceId)
+      && !sources.some(source => source.id === sourceId)
+    ) {
+      sources.push({ ...getTechnicalEvidenceSource(sourceId), kind: 'technical' })
+    }
+  }
+
+  const augmentedGuide: GovernedAreaGuideDraft = { ...guide, sources }
+  const serviceGuidance = Object.fromEntries(
+    SERVICE_AREA_SLUGS.map(serviceSlug => [
+      serviceSlug,
+      {
+        ...augmentedGuide.serviceGuidance[serviceSlug],
+        sourceIds: sourceIdsForGuidance(augmentedGuide, serviceSlug),
+      },
+    ]),
+  ) as Record<ServiceAreaSlug, PublishedAreaServiceGuidance>
+
+  return { ...augmentedGuide, serviceGuidance }
+}
+
+export const AREA_GUIDES = Object.fromEntries(
+  Object.entries(mergedDraftGuides).map(([slug, guide]) => [slug, publishGuide(guide)]),
+) as Record<AreaSlug, PublishedGovernedAreaGuide>
+
+export function getAreaGuide(areaSlug: string): PublishedGovernedAreaGuide | undefined {
   return AREA_GUIDES[areaSlug as AreaSlug]
 }

@@ -43,7 +43,7 @@ const pricingFaqs = [
   },
   {
     q: 'Is there a call-out fee?',
-    a: 'No. I never charge a call-out fee. You only pay if I complete the job. If I can\'t fix the problem, you don\'t pay a penny.',
+    a: 'No separate call-out fee is added to the agreed work price. I explain the known price basis before travelling; if inspection changes the diagnosis, scope or parts required, I explain and agree the revised work and price before it proceeds.',
   },
   {
     q: 'Do you charge extra for evenings, weekends, or bank holidays?',
@@ -111,7 +111,7 @@ const trustFaqs = [
 const areasFaqs = [
   {
     q: 'Which postcodes do you cover?',
-    a: 'The area directory lists 78 Coventry-area towns, suburbs and villages and links each one to its recorded outward postcode page. An outward postcode alone does not confirm every address in that district, so use the directory or call with the full postcode to confirm coverage.',
+    a: 'The area directory lists 78 towns, suburbs and villages, and each entry shows its recorded outward postcode. An outward postcode alone does not confirm every address in that district, so use the individual area guide or call with the full postcode to confirm coverage.',
   },
   {
     q: 'How far will you travel?',

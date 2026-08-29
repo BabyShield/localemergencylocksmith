@@ -1,19 +1,9 @@
 import Link from 'next/link'
 import { SITE_CONFIG } from '@/data/config'
 import { SERVICES } from '@/data/services'
-import { AREAS } from '@/data/areas'
 
 export default function Footer() {
   const year = new Date().getFullYear()
-  const postcodeGroups = Array.from(
-    AREAS.reduce((groups, area) => {
-      const postcode = area.postcode.toLowerCase()
-      const group = groups.get(postcode) ?? []
-      group.push(area)
-      groups.set(postcode, group)
-      return groups
-    }, new Map<string, typeof AREAS>())
-  ).sort(([a], [b]) => a.localeCompare(b, 'en', { numeric: true }))
 
   return (
     <footer className="bg-[#0F1B2D] text-gray-300 py-12 px-4 pb-24 md:pb-12">
@@ -125,42 +115,7 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* Postcode + service cross-links — crawlable internal linking for all CV districts */}
       <div className="max-w-6xl mx-auto mt-8 pt-6 border-t border-gray-700">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-          <div>
-            <h4 className="text-gray-400 text-xs font-bold uppercase tracking-widest mb-3">Postcodes Covered</h4>
-            <div className="flex flex-wrap gap-x-4 gap-y-2 text-xs text-gray-400">
-              {postcodeGroups.map(([pc, areas]) => (
-                <Link
-                  key={pc}
-                  href={areas.length === 1 ? `/areas/${areas[0].slug}` : `/postcodes/${pc}`}
-                  className="inline-flex min-h-6 min-w-6 items-center justify-center px-1 hover:text-white transition-colors uppercase"
-                >
-                  {pc.toUpperCase()}
-                </Link>
-              ))}
-            </div>
-          </div>
-          <div>
-            <h4 className="text-gray-400 text-xs font-bold uppercase tracking-widest mb-3">Popular Services</h4>
-            <div className="flex flex-wrap gap-x-4 gap-y-2 text-xs text-gray-400">
-              {[
-                { href: '/services/emergency-lockout', label: 'Emergency Lockout Coventry' },
-                { href: '/services/lock-change', label: 'Door Lock Repair & Replacement' },
-                { href: '/services/upvc-lock-repair', label: 'uPVC Door Lock Repair' },
-                { href: '/services/boarding-up', label: 'Boarding Up & Burglary Repairs' },
-                { href: '/services/lock-upgrade', label: 'BS3621 & Anti-Snap Upgrades' },
-                { href: '/prices', label: 'Locksmith Prices' },
-              ].map((link) => (
-                <Link key={link.href} href={link.href} className="inline-flex min-h-6 items-center hover:text-white transition-colors">
-                  {link.label}
-                </Link>
-              ))}
-            </div>
-          </div>
-        </div>
-
         {/* Multi-language emergency line */}
         <div
           className="flex flex-wrap justify-center gap-x-6 gap-y-1.5 text-xs text-gray-400 pb-4"

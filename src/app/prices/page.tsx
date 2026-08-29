@@ -207,7 +207,7 @@ export default function PricesPage() {
             <h3 className="font-bold text-[#0F1B2D] text-lg mb-3">What these prices include:</h3>
             <ul className="space-y-2 text-sm text-gray-700">
               <li>✓ No VAT is added to the agreed price</li>
-              <li>✓ No call-out fee — ever</li>
+              <li>✓ No separate call-out fee added</li>
               <li>✓ Labour included within each stated starting scope</li>
               <li>✓ Parts included where stated</li>
               <li>✓ Same price 24/7 — no evening or weekend premium</li>

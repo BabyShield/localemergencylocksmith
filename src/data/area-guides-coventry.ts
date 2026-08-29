@@ -105,7 +105,7 @@ const TECHNICAL_COPY: Record<ServiceAreaSlug, TechnicalCopy[]> = {
       second: 'Only after that review should an appropriate, correctly dimensioned replacement be proposed. Explain the specification and anticipated price to the authorised person before fitting. If the entrance belongs to a listed, conservation, communal or institutional setting, confirm the applicable permissions rather than assuming them.',
     },
     {
-      first: 'Area evidence can prompt questions, but it cannot specify a replacement lock. Use photographs or an on-site inspection to identify the door, frame, hinges, existing lock and any damage, while confirming the requester\'s authority and the purpose of the proposed change.',
+      first: 'Area evidence can prompt questions, but it cannot specify a replacement lock. Use photographs or an on-site inspection to record the door, frame, hinges, existing lock and any visible damage, while confirming the requester\'s authority and the purpose of the proposed change.',
       second: 'Consider accredited products and correct cylinder projection only where they fit the verified door set. Set out the planned work and price before proceeding. Heritage designations, tenancy duties or site rules must come from the exact property records and responsible party, not the locality name.',
     },
     {
@@ -168,7 +168,7 @@ const TECHNICAL_COPY: Record<ServiceAreaSlug, TechnicalCopy[]> = {
   'lock-upgrade': [
     {
       first: 'An upgrade should answer a verified requirement at a particular entrance. Inspect the door, frame, hinges and existing lock together, and ask for any written insurer, landlord or site-management criterion. Do not translate an area\'s history, land use or perceived risk into a specification.',
-      second: 'Police guidance supports correctly sized cylinders and accredited security products as part of a complete-door review. Present options against the inspected assembly, confirm the authorised choice and price, and resolve any listed-building, conservation, communal-door or fire-safety approval before changing visible hardware.',
+      second: 'Police guidance supports correctly sized cylinders and accredited security products as part of a complete-door review. Present options against the inspected assembly, confirm the authorised choice and price, and resolve any listed-building, conservation, communal-door or building-management approval before changing visible hardware.',
     },
     {
       first: 'Start an upgrade discussion with the actual door set and the customer\'s documented objective. Area-scale heritage counts or development dates are not evidence of the fitted lock and do not establish what an insurer, freeholder or manager will accept.',
@@ -221,16 +221,16 @@ const SERVICE_FAQ_ANSWERS: Record<ServiceAreaSlug, (areaName: string) => string>
   'emergency-lockout': areaName => `For an access request in ${areaName}, provide the complete address, identify the exact entrance, describe what the key and door are doing, and have evidence connecting you to the property. The opening method can only be assessed from the actual lock and circumstances.`,
   'lock-change': areaName => `For a lock change in ${areaName}, explain why control of the old keys or hardware needs to change and send clear photographs of both sides of the furniture and the door edge. Confirm who may authorise replacement and any written requirement that must be checked.`,
   'upvc-lock-repair': areaName => `For a reported uPVC fault in ${areaName}, say whether the door operates differently while open and closed, describe the handle and key symptoms, and photograph the faceplate markings. Measurements, inspection and authority are still required before a compatible component can be specified.`,
-  'boarding-up': areaName => `For damaged premises in ${areaName}, identify every affected opening, the responsible decision-maker and whether police have given evidence-preservation instructions. Photographs taken when safe help define temporary work, but the real structure and permissions determine the fixing method.`,
-  'lock-upgrade': areaName => `For an upgrade enquiry in ${areaName}, provide photographs of the complete door set, the reason for the review and any exact insurer, landlord or manager wording. The inspected fit, marked certification and permission for that entrance determine which options can be compared.`,
+  'boarding-up': areaName => `For damaged premises in ${areaName}, identify every affected opening, the responsible decision-maker and whether police have given evidence-preservation instructions. Photographs taken when safe document the condition, but the temporary scope still requires direct inspection and the relevant property permission.`,
+  'lock-upgrade': areaName => `For an upgrade enquiry in ${areaName}, provide photographs of the complete door set, the reason for the review and any exact insurer, landlord or manager wording. The inspected fit, current manufacturer documentation and permission for that entrance determine which options can be compared.`,
 }
 
 const WHITLEY_SERVICE_FAQ_ANSWERS: Record<ServiceAreaSlug, string> = {
   'emergency-lockout': 'Identify the named Whitley building and the precise doorway, then explain whether it is a private home, industrial premise or managed institutional site. Have evidence linking you to that entrance and describe what the key, latch and door are doing; the river and historic-settlement records establish none of those access facts.',
   'lock-change': 'Send photographs of both faces of the Whitley door furniture and the complete edge, state why key control or the fitted lock needs to change, and name the person who can approve it. An industrial edge, older Abbey Road context or broad development period cannot identify the component or supply permission.',
   'upvc-lock-repair': 'Report how the Whitley door behaves while open and closed, what happens to the handle and key, and every marking visible on the faceplate or cylinder. The area-scale 1925–1955 development statement cannot prove that this entrance uses uPVC, a euro cylinder or any particular multipoint gearbox.',
-  'boarding-up': 'Name every damaged Whitley door or window, the responsible owner or site contact and the police status before temporary work is scoped. Industrial, institutional and older-building contexts need different permission checks, while the River Sowe source cannot reveal the opening material, safe fixing points or evidence requirements.',
-  'lock-upgrade': 'Provide the Whitley entrance photographs, the intended security outcome and any written policy, landlord or facilities criterion. The locality sources combine river-edge, industrial, residential and historic contexts, so they cannot select hardware; compare marked certification, dimensions and complete-door condition only after inspection and property-specific approval.',
+  'boarding-up': 'Name every damaged Whitley door or window, the responsible owner or site contact and the police status before temporary work is scoped. Industrial, institutional and older-building contexts need different permission checks, while the River Sowe source cannot reveal the opening material, scene condition or appropriate temporary scope.',
+  'lock-upgrade': 'Provide the Whitley entrance photographs, the intended security outcome and any written policy, landlord or facilities criterion. The locality sources combine river-edge, industrial, residential and historic contexts, so they cannot select hardware; compare current manufacturer documentation, dimensions and complete-door condition only after inspection and property-specific approval.',
 }
 
 const TECHNICAL_WORDING_STYLES: ReadonlyArray<ReadonlyArray<readonly [string, string]>> = [
@@ -951,7 +951,7 @@ const AREA_SEEDS: AreaGuideSeed[] = [
         decision: 'Scheduled, archaeological and listed assets are counted across the wider HLC, but those totals do not prove a caller\'s property status or entitlement. Confirm both the individual address and the authorised requester.',
       },
       'lock-change': {
-        local: 'A proposed change near the historic Wyken settlement should trigger an exact designation search because the wider character area includes listed and scheduled assets. It should not trigger a blanket heritage assumption for Wyken.',
+        local: 'Before any visible or external change near the historic Wyken settlement, check the exact designation because the wider character area includes listed and scheduled assets. Do not turn those area-wide records into a blanket heritage assumption for Wyken.',
         decision: 'An address near the River Sowe boundary still needs direct inspection of its door and current hardware. River-corridor context cannot select a replacement or show that an external alteration is permitted.',
       },
       'upvc-lock-repair': {
@@ -963,7 +963,7 @@ const AREA_SEEDS: AreaGuideSeed[] = [
         decision: 'For a site on the River Sowe edge, confirm the property boundary and authorised responsible party before temporary securing. The South Sowe corridor source does not establish ownership or access for the affected opening.',
       },
       'lock-upgrade': {
-        local: 'Wyken\'s two scheduled monuments, eleven archaeological constraint areas and eight listed buildings are area totals, not an upgrade specification. Verify whether the individual address has any protected status before visible changes.',
+        local: 'Because Wyken\'s area-wide totals include eight listed buildings, verify whether the individual address has protected status before visible changes. The two scheduled monuments and eleven archaeological constraint areas are also area context, not an upgrade specification.',
         decision: 'At other addresses, the historic settlement and river boundary remain context only. Use the actual door set and the owner\'s documented requirement to compare hardware, without inferring risk or construction from the locality.',
       },
     },
@@ -1394,11 +1394,11 @@ const AREA_SEEDS: AreaGuideSeed[] = [
       },
       'boarding-up': {
         local: 'Damage at a site described by the protected Kenilworth Road woodlands requires identification of the council-managed asset and correct authority. Damage at a private Styvechale address needs a separate property and entrance check.',
-        decision: 'For Stivichall Grange or another verified designated building, confirm consent and fabric constraints before external temporary fixing. The route spelling alone cannot prove that any heritage control applies.',
+        decision: 'For Grade II listed Stivichall Grange, or another building whose listed status is verified, confirm any required consent and fabric constraints before external temporary fixing. The route spelling alone cannot prove that a heritage control applies.',
       },
       'lock-upgrade': {
         local: 'An upgrade near Stivichall Common or the Kenilworth Road conservation area must start with the exact property boundary and proposed visible change. The protected woodland status does not attach automatically to nearby homes.',
-        decision: 'Historic England\'s list entry is confined to Stivichall Grange. Elsewhere, inspect the individual entrance and obtain its owner\'s requirements; search both locality spellings only to ensure accurate address-level verification.',
+        decision: 'Historic England\'s Grade II listed entry is confined to Stivichall Grange. Confirm any listed-building consent required before visible change there; elsewhere, inspect the individual entrance and obtain its owner\'s requirements. Search both locality spellings only to ensure accurate address-level verification.',
       },
     },
   },
@@ -1502,7 +1502,7 @@ const AREA_SEEDS: AreaGuideSeed[] = [
       },
       'boarding-up': {
         local: 'Damage described as “at Allesley Park” needs immediate clarification between the public park, a park building and a surrounding home. The correct council manager or property owner must authorise the specific opening.',
-        decision: 'If temporary work could affect recorded historic earthworks or a verified designated asset, check its status and permissible fixing method. Area-wide heritage counts are not property-specific consent.',
+        decision: 'If temporary work could affect recorded historic earthworks or a verified designated asset, check its status and obtain property-specific guidance before work. Area-wide heritage counts are not property-specific consent.',
       },
       'lock-upgrade': {
         local: 'A council park asset and a residential entrance have different approval routes, even though both may be described as Allesley Park. Obtain the responsible party\'s written requirement for the exact opening.',

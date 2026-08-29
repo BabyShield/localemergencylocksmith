@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { SITE_CONFIG } from '@/data/config'
+import { LOCKSMITH_AUTHOR_SCHEMA, SITE_CONFIG } from '@/data/config'
 import SchemaMarkup from '@/components/SchemaMarkup'
 import CTABlock from '@/components/CTABlock'
 
@@ -24,13 +24,23 @@ export const metadata: Metadata = {
   },
 }
 
-// The business entity is defined once in layout.tsx — this page just declares
-// itself as the about page for that entity.
 const aboutSchema = {
   '@context': 'https://schema.org',
-  '@type': 'AboutPage',
-  url: `${SITE_CONFIG.domain}/about`,
-  mainEntity: { '@id': `${SITE_CONFIG.domain}/#business` },
+  '@graph': [
+    {
+      '@type': 'AboutPage',
+      '@id': `${SITE_CONFIG.domain}/about#webpage`,
+      url: `${SITE_CONFIG.domain}/about`,
+      name: 'About Ross | Local Emergency Locksmith',
+      mainEntity: { '@id': `${SITE_CONFIG.domain}/about#ross` },
+      about: { '@id': `${SITE_CONFIG.domain}/#business` },
+    },
+    {
+      ...LOCKSMITH_AUTHOR_SCHEMA,
+      description:
+        'Independent locksmith behind Local Emergency Locksmith, serving the locations listed on this website.',
+    },
+  ],
 }
 
 const breadcrumbSchema = {
@@ -68,7 +78,7 @@ export default function AboutPage() {
         <div className="max-w-3xl mx-auto">
           {/* H1 */}
           <h1 className="text-3xl md:text-4xl font-black text-[#0F1B2D] mb-6">
-            About Local Emergency Locksmith
+            About Ross and Local Emergency Locksmith
           </h1>
 
           {/* Hero paragraph */}
@@ -161,7 +171,7 @@ export default function AboutPage() {
               {[
                 'You speak directly to the person who will do the work — no call centre, no middleman.',
                 'No VAT is added to the agreed price.',
-                'No call-out fee, ever. You only pay if I complete the job.',
+                'No separate call-out fee is added to the agreed work price.',
                 'Same price 24/7 — no premium for evenings, weekends, or bank holidays.',
                 'The full address and door symptoms are recorded before attendance so the actual job can be assessed.',
                 'The price basis is confirmed for the described scope before I set off.',

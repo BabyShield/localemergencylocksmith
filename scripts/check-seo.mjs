@@ -3,6 +3,7 @@ import { spawn } from 'node:child_process'
 const BASE_URL = process.env.SEO_BASE_URL ?? 'http://127.0.0.1:3000'
 const CANONICAL_ORIGIN = process.env.SEO_CANONICAL_ORIGIN ?? 'https://www.localemergencylocksmith.co.uk'
 const EXPECTED_SITEMAP_URLS = 178
+const UNVERIFIED_PROFILE_URL = 'https://share.google/bdboAzi1gJOpOjPck'
 const failures = []
 const warnings = []
 
@@ -89,6 +90,10 @@ function visibleText(html) {
       .replace(/<style\b[\s\S]*?<\/style>/gi, ' ')
       .replace(/<[^>]+>/g, ' '),
   ).replace(/\s+/g, ' ').trim()
+}
+
+function mainContent(html) {
+  return html.match(/<main\b[^>]*>([\s\S]*?)<\/main>/i)?.[1] ?? ''
 }
 
 function operationalClaimText(html) {
@@ -275,6 +280,8 @@ try {
     const h1Count = (html.match(/<h1\b/gi) ?? []).length
     const ogImage = getMeta(html, 'property', 'og:image')
     const pageText = visibleText(html)
+    const mainHtml = mainContent(html)
+    const mainText = visibleText(mainHtml)
     const claimText = operationalClaimText(html)
 
     check(response.status === 200, `${productionUrl.pathname} returned ${response.status}`)
@@ -288,7 +295,9 @@ try {
     check(/index/i.test(robots) && /follow/i.test(robots) && !/noindex/i.test(robots), `${productionUrl.pathname} robots is ${robots || 'missing'}`)
     check(h1Count === 1, `${productionUrl.pathname} has ${h1Count} H1 elements`)
     check(Boolean(ogImage), `${productionUrl.pathname} has no og:image`)
+    check(mainHtml.length > 0, `${productionUrl.pathname} has no main content landmark`)
     check(!html.includes('https://localemergencylocksmith.co.uk'), `${productionUrl.pathname} contains the redirecting apex origin`)
+    check(!html.includes(UNVERIFIED_PROFILE_URL), `${productionUrl.pathname} exposes the unverified differently named Google profile`)
 
     const futureArrivalPromise = pageText.match(/\b(?:i|we)\s+(?:can|will|aim\s+to|typically|usually|normally)[^.!?]{0,80}\b(?:arrive|reach|be\s+with\s+you)[^.!?]{0,40}\b\d{1,3}\s*(?:-|–|—|to)?\s*\d{0,3}\s*minutes?\b/i)
       ?? pageText.match(/\b\d{1,3}\s*(?:-|–|—|to)\s*\d{1,3}[- ]minute\s+(?:response|arrival)\b/i)
@@ -328,6 +337,25 @@ try {
       check(provider?.telephone === '+442475224730', `${productionUrl.pathname} Service provider has the wrong telephone`)
     }
 
+    if (productionUrl.pathname.startsWith('/blog/')) {
+      const article = parsedSchemaNodes.find(node => hasSchemaType(node, 'BlogPosting'))
+      const author = article?.author
+      check(author?.['@type'] === 'Person', `${productionUrl.pathname} BlogPosting author is not a Person`)
+      check(author?.['@id'] === `${CANONICAL_ORIGIN}/about#ross`, `${productionUrl.pathname} BlogPosting author has the wrong @id`)
+      check(author?.name === 'Ross', `${productionUrl.pathname} BlogPosting author has the wrong name`)
+      check(author?.url === `${CANONICAL_ORIGIN}/about`, `${productionUrl.pathname} BlogPosting author does not link to /about`)
+      check(author?.worksFor?.['@id'] === `${CANONICAL_ORIGIN}/#business`, `${productionUrl.pathname} BlogPosting author has the wrong worksFor reference`)
+    }
+
+    if (productionUrl.pathname === '/about') {
+      const aboutPage = parsedSchemaNodes.find(node => hasSchemaType(node, 'AboutPage'))
+      const person = parsedSchemaNodes.find(node => hasSchemaType(node, 'Person') && node?.['@id'] === `${CANONICAL_ORIGIN}/about#ross`)
+      check(aboutPage?.mainEntity?.['@id'] === `${CANONICAL_ORIGIN}/about#ross`, '/about does not identify Ross as its main entity')
+      check(aboutPage?.about?.['@id'] === `${CANONICAL_ORIGIN}/#business`, '/about does not reference the business it describes')
+      check(person?.url === `${CANONICAL_ORIGIN}/about`, '/about has no stable Person author URL')
+      check(person?.worksFor?.['@id'] === `${CANONICAL_ORIGIN}/#business`, '/about Person has the wrong worksFor reference')
+    }
+
     if (!productionUrl.pathname.startsWith('/blog/')) {
       const unsupportedTrustClaim = pageText.match(/\b(?:DBS[- ]checked|fully insured(?:\s+with)?\s+public liability|full public liability insurance)\b/i)
       check(!unsupportedTrustClaim, `${productionUrl.pathname} contains an unsupported credential claim: ${JSON.stringify(unsupportedTrustClaim?.[0])}`)
@@ -335,19 +363,26 @@ try {
     const fixedFinalPriceClaim = pageText.match(/\b(?:the\s+)?price\s+i\s+quote(?:d)?\s+is\s+the\s+(?:price\s+you\s+pay|final\s+price)|\bpay\s+the\s+price\s+i\s+quoted|\bfirm\s+price\s+on\s+the\s+phone\b/i)
     check(!fixedFinalPriceClaim, `${productionUrl.pathname} contains a fixed final-price claim: ${JSON.stringify(fixedFinalPriceClaim?.[0])}`)
 
+    const unsupportedOutcomePaymentClaim = pageText.match(/\byou\s+only\s+pay\s+if\s+i\s+complete\s+the\s+job\b|\bif\s+i\s+can(?:not|'t)\s+fix\s+the\s+problem,?\s+you\s+(?:do\s+not|don't)\s+pay\s+(?:a\s+penny|anything)\b/i)
+    check(!unsupportedOutcomePaymentClaim, `${productionUrl.pathname} contains an unsupported outcome-payment claim: ${JSON.stringify(unsupportedOutcomePaymentClaim?.[0])}`)
+
     const unsupportedFreeAssessment = pageText.match(/\b(?:offer|book|arrange)\s+(?:a\s+)?free\s+(?:visual\s+)?(?:security|lock|home[- ]security)\s+(?:survey|check|assessment)\b|\bsecurity\s+survey\s+free\b/i)
     check(!unsupportedFreeAssessment, `${productionUrl.pathname} contains an unsupported free-assessment offer: ${JSON.stringify(unsupportedFreeAssessment?.[0])}`)
 
     const ungovernedPriceRange = pageText.match(/£\d+(?:\.\d+)?\s*(?:-|–|—|to)\s*£?\d+(?:\.\d+)?/i)
     check(!ungovernedPriceRange, `${productionUrl.pathname} contains an ungoverned price range: ${JSON.stringify(ungovernedPriceRange?.[0])}`)
 
+    const genericCommercialAnchor = mainText.match(/\b(?:open the full local service page|view full service details)\b/i)
+    check(!genericCommercialAnchor, `${productionUrl.pathname} contains a generic commercial anchor: ${JSON.stringify(genericCommercialAnchor?.[0])}`)
+
     const links = internalPaths(html)
+    const mainLinks = internalPaths(mainHtml)
     if (productionUrl.pathname.startsWith('/blog/')) {
       const directAreaLinks = [...links].filter(path => /^\/areas\/[^/]+$/.test(path))
       check(directAreaLinks.length <= 25, `${productionUrl.pathname} has ${directAreaLinks.length} direct area links; expected a focused article CTA`)
     }
 
-    return { path: productionUrl.pathname, title, description, links }
+    return { path: productionUrl.pathname, title, description, links, mainLinks }
   })
 
   const titleOwners = new Map()
@@ -361,6 +396,10 @@ try {
 
   const knownPaths = new Set(pages.map(page => page.path))
   const allInternalPaths = new Set(pages.flatMap(page => [...page.links]))
+  const linkedNoindexPostcodes = MULTI_AREA_POSTCODES
+    .map(postcode => `/postcodes/${postcode}`)
+    .filter(path => allInternalPaths.has(path))
+  check(linkedNoindexPostcodes.length === 0, `canonical pages link to noindex postcode utilities: ${linkedNoindexPostcodes.join(', ')}`)
   const uncrawledPaths = [...allInternalPaths].filter(path => !knownPaths.has(path) && !path.startsWith('/api/'))
   await mapLimit(uncrawledPaths, 12, async path => {
     const { response } = await fetchLocal(path)
@@ -368,12 +407,25 @@ try {
     check(!response.headers.get('location'), `internal link ${path} redirects to ${response.headers.get('location')}`)
   })
 
-  for (const noindexPath of ['/privacy', '/terms', '/testimonials', ...MULTI_AREA_POSTCODES.map(postcode => `/postcodes/${postcode}`)]) {
+  for (const noindexPath of ['/privacy', '/terms', '/testimonials', '/review', ...MULTI_AREA_POSTCODES.map(postcode => `/postcodes/${postcode}`)]) {
     const { response, html } = await fetchLocal(noindexPath)
     const robots = getMeta(html, 'name', 'robots') ?? ''
     check(response.status === 200, `${noindexPath} returned ${response.status}`)
     check(/noindex/i.test(robots) && /follow/i.test(robots), `${noindexPath} robots is ${robots || 'missing'}; expected noindex, follow`)
     check(!sitemapUrls.some(loc => new URL(loc).pathname === noindexPath), `${noindexPath} is noindex but present in sitemap`)
+  }
+
+  const reviewResult = await fetchLocal('/review')
+  const reviewText = visibleText(reviewResult.html)
+  check(!/if you were happy/i.test(reviewText), '/review selectively asks only happy customers for feedback')
+  check(!/what brought you to call|how quickly i arrived|your area \(e\.g\./i.test(reviewText), '/review requests specified review content')
+  const publishesGoogleReviewLink = /leave a google review/i.test(reviewText)
+  if (publishesGoogleReviewLink) {
+    check(/positive, negative, or mixed feedback is welcome/i.test(reviewText), '/review does not explicitly welcome balanced feedback')
+    check(/must not be exchanged for a discount, payment, or other incentive/i.test(reviewText), '/review does not state the no-incentive policy')
+  } else {
+    check(/not published while its public business details are being verified/i.test(reviewText), '/review hides its Google link without explaining the identity check')
+    check(!/https:\/\/(?:www\.)?(?:google\.|share\.google)/i.test(reviewResult.html), '/review exposes an unverified Google destination')
   }
 
   for (const [postcode, area] of Object.entries(SINGLE_AREA_POSTCODES)) {
@@ -413,6 +465,33 @@ try {
   check(areaPaths.length === 78, `service-area contract found ${areaPaths.length} area hubs; expected 78`)
   check(serviceSlugs.length === 5, `service-area contract found ${serviceSlugs.length} services; expected 5`)
   check(publishedPairPaths.size === 35, `service-area contract found ${publishedPairPaths.size} published pairs; expected 35`)
+
+  const pageByPath = new Map(pages.map(page => [page.path, page]))
+  const clickDepth = new Map([['/', 0]])
+  const crawlQueue = ['/']
+  while (crawlQueue.length > 0) {
+    const currentPath = crawlQueue.shift()
+    const nextDepth = clickDepth.get(currentPath) + 1
+    for (const linkedPath of pageByPath.get(currentPath)?.links ?? []) {
+      if (!pageByPath.has(linkedPath) || clickDepth.has(linkedPath)) continue
+      clickDepth.set(linkedPath, nextDepth)
+      crawlQueue.push(linkedPath)
+    }
+  }
+  const beyondTwoClicks = pages
+    .filter(page => (clickDepth.get(page.path) ?? Number.POSITIVE_INFINITY) > 2)
+    .map(page => `${page.path} (${clickDepth.get(page.path) ?? 'unreachable'})`)
+  check(beyondTwoClicks.length === 0, `canonical pages beyond two clicks from /: ${beyondTwoClicks.join(', ')}`)
+
+  const servicesDirectory = pageByPath.get('/services')
+  for (const pairPath of publishedPairPaths) {
+    const match = pairPath.match(/^\/areas\/([^/]+)\/([^/]+)$/)
+    const areaSlug = match?.[1]
+    const serviceSlug = match?.[2]
+    check(servicesDirectory?.mainLinks.has(pairPath), `/services main content does not link to ${pairPath}`)
+    check(pageByPath.get(`/areas/${areaSlug}`)?.mainLinks.has(pairPath), `/areas/${areaSlug} main content does not link to ${pairPath}`)
+    check(pageByPath.get(`/services/${serviceSlug}`)?.mainLinks.has(pairPath), `/services/${serviceSlug} main content does not link to ${pairPath}`)
+  }
 
   await mapLimit(
     areaPaths.flatMap(areaPath => serviceSlugs.map(serviceSlug => ({

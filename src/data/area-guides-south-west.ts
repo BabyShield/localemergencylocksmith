@@ -122,7 +122,7 @@ const TECHNICAL_COPY: Record<ServiceAreaSlug, TechnicalCopy[]> = {
       second: `A suitable component follows the observed assembly. Consider correctly sized cylinders and accredited products where applicable, provide price and scope before fitting, and verify any consent affecting visible, shared or protected fabric at that particular property.`,
     },
     {
-      first: `Do not infer a standard replacement from an area page. The responsible person should identify the precise opening and objective, while inspection distinguishes lock condition from door, hinge or frame issues and records any written insurer or site-management criterion.`,
+      first: `Do not infer a standard replacement from an area page. The responsible person should identify the precise opening and objective. Lock condition, door movement, hinges and frame alignment remain separate inspection questions, and the reported symptom does not identify which component, if any, requires work. Record any written insurer or site-management criterion.`,
       second: `Use the technical evidence to compare options compatible with the door set, including proper cylinder dimensions and accredited security products when relevant. Secure approval of specification and cost, plus any conservation or building-management permission, before making the change.`,
     },
     {
@@ -203,7 +203,7 @@ const TECHNICAL_COPY: Record<ServiceAreaSlug, TechnicalCopy[]> = {
     },
     {
       first: `A request for temporary securing must distinguish the affected premise from nearby public or managed land. Name the exact opening and authorised party, and ask whether police require photographs or undisturbed forensic evidence before anything is moved or covered.`,
-      second: `Following that check, police advice is to make the damaged opening secure from outside. Inspection and property permission determine the temporary plan; provide cost information in advance and do not infer a fixing method from a settlement's planning description.`,
+      second: `Following that check, police advice is to make the damaged opening secure from outside. Inspection and property permission determine the temporary plan; provide cost information in advance and do not infer the method from a settlement's planning description.`,
     },
     {
       first: `Record the scene before defining the job: full address, damaged door or window, responsible person and investigation status. Where evidence could matter, use photographs and preserve it according to police direction instead of allowing a general area description to drive action.`,
@@ -273,18 +273,19 @@ const LOCALITY_SOURCES: Record<string, AreaGuideSource> = {
   'wdc-community-parks': localitySource('wdc-community-parks', 'Community parks', 'Warwick District Council', 'https://www.warwickdc.gov.uk/info/20245/parks_and_green_spaces/215/community_parks', 'The council park records and named access points for Woodloes Park, Chase Meadow and Warwick Gates.'),
   'sdc-stratford-plan-page': localitySource('sdc-stratford-plan-page', 'Stratford-upon-Avon Neighbourhood Plan', 'Stratford-on-Avon District Council', 'https://www.stratford.gov.uk/planning-building/stratford-upon-avon-neighbourhood-plan.cfm', 'The made date and current development-plan status of the Stratford-upon-Avon neighbourhood plan.'),
   'sdc-stratford-made-plan': localitySource('sdc-stratford-made-plan', 'Stratford-upon-Avon Neighbourhood Development Plan 2011-2031, made version', 'Stratford-on-Avon District Council (host; Stratford-upon-Avon Town Council plan)', 'https://www.stratford.gov.uk/doc/208868/name/Stratford-upon-Avon%20made%20Neighbourhood%20Plan.pdf', 'The River Avon corridor, Tiddington, Bishopton and Shottery policies and site descriptions in the made plan.'),
-  'sdc-conservation-h-z': localitySource('sdc-conservation-h-z', 'Conservation Areas H-Z', 'Stratford-on-Avon District Council', 'https://www.stratford.gov.uk/planning-building/conservation-areas-h-z.cfm', 'Published Stratford-upon-Avon and Southam conservation records and their 2026 appraisal-review status.', 'property-status'),
+  'sdc-conservation-h-z': localitySource('sdc-conservation-h-z', 'Conservation Areas H-Z', 'Stratford-on-Avon District Council', 'https://www.stratford.gov.uk/planning-building/conservation-areas-h-z.cfm', 'Published conservation-area maps, reports and appraisal documents for Stratford-upon-Avon and Southam.', 'property-status'),
+  'sdc-conservation-review-2026': localitySource('sdc-conservation-review-2026', 'Conservation Area Reviews 2026', 'Stratford-on-Avon District Council', 'https://www.stratford.gov.uk/planning-building/conservation-areas.cfm', 'The council-commissioned review of eight conservation-area appraisals, including Stratford-upon-Avon and Southam, with formal consultation in 2026.', 'property-status'),
   'sdc-shottery-conservation': localitySource('sdc-shottery-conservation', 'Shottery Conservation Area report', 'Stratford-on-Avon District Council', 'https://www.stratford.gov.uk/doc/175565/name/Shottery.pdf', 'Shottery Conservation Area designation and formal appraisal dates.', 'property-status'),
   'wdc-kenilworth-plan-page': localitySource('wdc-kenilworth-plan-page', 'Kenilworth neighbourhood plan', 'Warwick District Council', 'https://www.warwickdc.gov.uk/info/20444/neighbourhood_plans/1006/kenilworth_neighbourhood_plan', 'The referendum, made date and planning use of the Kenilworth neighbourhood plan.'),
   'wdc-kenilworth-conservation': localitySource('wdc-kenilworth-conservation', 'A Guide to Conservation Areas: Kenilworth Conservation Area', 'Warwick District Council', 'https://www.warwickdc.gov.uk/download/downloads/id/3080/kenilworth_-_guide_to_conservation_areas.pdf', 'Kenilworth conservation-area designation history and the named 2005 extensions.', 'property-status'),
   'solihull-balsall-plan-page': localitySource('solihull-balsall-plan-page', 'Balsall Neighbourhood Plan', 'Solihull Metropolitan Borough Council', 'https://www.solihull.gov.uk/planning-and-building-control/balsall-neighbourhood-plan', 'The made date and decision-making role of the Balsall Parish neighbourhood plan.'),
   'solihull-balsall-made-plan': localitySource('solihull-balsall-made-plan', 'Balsall Parish Neighbourhood Development Plan 2018-2033', 'Solihull Metropolitan Borough Council (host; Balsall Parish Council plan)', 'https://www.solihull.gov.uk/sites/default/files/2021-06/Balsall-Parish-Neighbourhood-Development-Plan.pdf', 'The cross-parish extent of Balsall Common and the plan limit to the Balsall-parish portion.'),
-  'solihull-meriden-plan-page': localitySource('solihull-meriden-plan-page', 'Meriden Neighbourhood Plan', 'Solihull Metropolitan Borough Council', 'https://www.solihull.gov.uk/Planning-and-building-control/Meriden-neighbourhood-plan', 'The referendum, made date and decision-making role of the Meriden Parish neighbourhood plan.'),
+  'solihull-meriden-plan-page': localitySource('solihull-meriden-plan-page', 'Meriden Neighbourhood Plan', 'Solihull Metropolitan Borough Council', 'https://www.solihull.gov.uk/planning-and-building-control/meriden-neighbourhood-plan', 'The referendum, made date and decision-making role of the Meriden Parish neighbourhood plan.'),
   'solihull-conservation-areas': localitySource('solihull-conservation-areas', 'Conservation Areas', 'Solihull Metropolitan Borough Council', 'https://www.solihull.gov.uk/planning-and-building-control/conservation-areas', 'The council register entries for Meriden Green and Meriden Hill Conservation Areas.', 'property-status'),
   'solihull-hampton-plan-page': localitySource('solihull-hampton-plan-page', 'Hampton-in-Arden neighbourhood plan', 'Solihull Metropolitan Borough Council', 'https://www.solihull.gov.uk/planning-and-building-control/hampton-arden-neighbourhood-plan', 'The continuing scope of the 2017 plan and withdrawal of the newer submission draft.'),
   'solihull-hampton-history': localitySource('solihull-hampton-history', 'Hampton in Arden history', 'Solihull Metropolitan Borough Council', 'https://www.solihull.gov.uk/about-solihull/hampton-arden-history', 'The council statement that central Hampton-in-Arden was designated a conservation area in 1968.', 'property-status'),
   'rbc-wolston-conservation': localitySource('rbc-wolston-conservation', 'Wolston Conservation Area Character Appraisal', 'Rugby Borough Council', 'https://www.rugby.gov.uk/documents/20124/6569677/Wolston_Character_Appraisal.pdf/bc559f87-8d33-e741-9b96-c4797248699b?t=1750866416447', 'The limited conservation area, River Avon relationship and railway bridge separating Wolston and Brandon.', 'property-status'),
-  'rbc-wolston-plan-page': localitySource('rbc-wolston-plan-page', 'Wolston Neighbourhood Plan', 'Rugby Borough Council', 'https://www.rugby.gov.uk/w/wolston-neighbourhood-plan', 'The neighbourhood-area and screening records, without a council statement that a plan has been made.'),
+  'rbc-wolston-plan-page': localitySource('rbc-wolston-plan-page', 'Wolston Neighbourhood Plan', 'Rugby Borough Council', 'https://www.rugby.gov.uk/w/wolston-neighbourhood-plan', 'The neighbourhood-area designation and current screening and consultation-stage records published by the council.'),
   'rbc-ryton-plan-page': localitySource('rbc-ryton-plan-page', 'Ryton-on-Dunsmore Neighbourhood Plan: plan adoption', 'Rugby Borough Council', 'https://www.rugby.gov.uk/pl/w/ryton-on-dunsmore-neighbourhood-plan-1', 'The made date and development-plan status of the Ryton-on-Dunsmore neighbourhood plan.'),
   'rbc-ryton-made-plan': localitySource('rbc-ryton-made-plan', 'Ryton-on-Dunsmore Neighbourhood Plan, adopted July 2021', 'Rugby Borough Council (host; Ryton-on-Dunsmore Parish Council plan)', 'https://www.rugby.gov.uk/documents/20124/6578033/Ryton_on_Dunsmore_Neighbourhood_Plan__adopted_version___July_2021_.pdf/e2fd154b-c7a7-2df7-ef14-5850fa003c6b?t=1750863717054', 'The civil-parish plan boundary, River Avon valley edges and Main Rural Settlement classification.'),
   'wdc-baginton-plan-page': localitySource('wdc-baginton-plan-page', 'Baginton and Bubbenhall neighbourhood plan', 'Warwick District Council', 'https://www.warwickdc.gov.uk/info/20444/neighbourhood_plans/1129/baginton_and_bubbenhall_neighbourhood_plan', 'The joint parish preparation and referendum result for the made Baginton and Bubbenhall plan.'),
@@ -297,7 +298,7 @@ const LOCALITY_SOURCES: Record<string, AreaGuideSource> = {
   'sdc-southam-plan-page': localitySource('sdc-southam-plan-page', 'Southam Neighbourhood Plan', 'Stratford-on-Avon District Council', 'https://www.stratford.gov.uk/planning-building/southam-neighbourhood-plan.cfm', 'The made date and current development-plan role of the Southam neighbourhood plan.'),
   'sdc-parish-plans': localitySource('sdc-parish-plans', 'List of Adopted Parish Plans', 'Stratford-on-Avon District Council', 'https://www.stratford.gov.uk/planning-building/parish-plans-a-m.cfm', 'The February 2017 adoption entry for the Studley Parish Plan and Action Plan.'),
   'sdc-studley-area-report': localitySource('sdc-studley-area-report', 'Studley Neighbourhood Area Report, 17 January 2018', 'Stratford-on-Avon District Council', 'https://www.stratford.gov.uk/doc/207189/name/Studley%20NDP%20area%20report%20Leader%20of%20Council.pdf/', 'The Studley Parish Council application to designate the whole civil parish as its neighbourhood area.'),
-  'sdc-designated-neighbourhood-areas': localitySource('sdc-designated-neighbourhood-areas', 'Designated Neighbourhood Plan Areas', 'Stratford-on-Avon District Council', 'https://www.stratford.gov.uk/planning-building/designated-neighbourhood-plan-areas.cfm', 'The current Studley neighbourhood-area entry and confirmation documents, without a linked made plan.'),
+  'sdc-designated-neighbourhood-areas': localitySource('sdc-designated-neighbourhood-areas', 'Designated Neighbourhood Plan Areas', 'Stratford-on-Avon District Council', 'https://www.stratford.gov.uk/planning-building/designated-neighbourhood-plan-areas.cfm', 'The current Studley neighbourhood-area entry and linked confirmation documents.'),
   'sdc-alcester-plan-page': localitySource('sdc-alcester-plan-page', 'Alcester Neighbourhood Plan', 'Stratford-on-Avon District Council', 'https://www.stratford.gov.uk/planning-building/alcester-neighbourhood-plan.cfm', 'The 2021 made plan and Town Council review consultation recorded from December 2025.'),
   'sdc-conservation-a-g': localitySource('sdc-conservation-a-g', 'Conservation Areas A-G', 'Stratford-on-Avon District Council', 'https://www.stratford.gov.uk/planning-building/conservation-areas-a-g.cfm', 'The published Alcester Conservation Area map, broadsheet and two-part character appraisal.', 'property-status'),
 }
@@ -888,11 +889,11 @@ const AREA_SEEDS: AreaGuideSeed[] = [
       },
       {
         text: `The council provides a Stratford-upon-Avon conservation boundary map and report and includes the area in its current conservation-appraisal review programme.`,
-        sourceIds: ['sdc-conservation-h-z'],
+        sourceIds: ['sdc-conservation-h-z', 'sdc-conservation-review-2026'],
         serviceRelevance: `Use the latest formally published boundary and do not treat review drafts as adopted property-status evidence.`,
       },
     ],
-    sourceIds: ['sdc-stratford-plan-page', 'sdc-stratford-made-plan', 'sdc-conservation-h-z'],
+    sourceIds: ['sdc-stratford-plan-page', 'sdc-stratford-made-plan', 'sdc-conservation-h-z', 'sdc-conservation-review-2026'],
     contexts: {
       'emergency-lockout': {
         local: `The River Avon corridor can orient a Stratford-upon-Avon address, but it does not identify which bank, street, building or entrance the caller controls. Obtain the full location and do not infer a travel route or flood status from Policy NE2.`,
@@ -1244,10 +1245,10 @@ const AREA_SEEDS: AreaGuideSeed[] = [
     region: 'Warwickshire',
     summary: [
       `Rugby Borough Council's appraisal says Wolston Conservation Area covers only a limited village section, mostly south of the River Avon, with a railway bridge at its northern tip separating Wolston from Brandon.`,
-      `The council also hosts neighbourhood-area and screening records for Wolston but does not state that a neighbourhood plan has been made. The plan must therefore remain non-adopted in this evidence set unless later official proof appears.`,
+      `The council also hosts neighbourhood-area, screening and consultation-stage records for Wolston. These records establish the documented stage reviewed here; any later adoption status must be checked against a newer explicit council statement.`,
     ],
-    accessGuidance: `Use the full Wolston address and treat the River Avon and railway bridge only as verified orientation. Check the current conservation boundary, distinguish Wolston from Brandon, and do not describe the neighbourhood-plan record as made or adopted.`,
-    evidenceLimits: `The appraisal covers a limited area and the plan page provides no made statement. Neither proves a building's designation, use, access, material, lock, condition, route, coverage or response; river and rail references are not travel claims.`,
+    accessGuidance: `Use the full Wolston address and treat the River Avon and railway bridge only as verified orientation. Check the current conservation boundary, distinguish Wolston from Brandon, and describe the neighbourhood-plan stage only from the latest council record.`,
+    evidenceLimits: `The appraisal covers a limited area and the reviewed council record documents planning stages rather than property facts. Neither proves a building's designation, use, access, material, lock, condition, route, coverage or response; river and rail references are not travel claims.`,
     facts: [
       {
         text: `The Wolston Conservation Area appraisal says the designation covers only a limited part of the village, mostly south of the River Avon, with a railway bridge separating Wolston from Brandon.`,
@@ -1255,7 +1256,7 @@ const AREA_SEEDS: AreaGuideSeed[] = [
         serviceRelevance: `Use river and railway references only for address clarification and boundary checks, never route or coverage claims.`,
       },
       {
-        text: `Rugby Borough Council's Wolston Neighbourhood Plan page hosts neighbourhood-area and November 2024 screening records but does not state that a plan has been made.`,
+        text: `Rugby Borough Council's Wolston Neighbourhood Plan page hosts the neighbourhood-area record, a November 2024 screening opinion and later consultation-stage documents.`,
         sourceIds: ['rbc-wolston-plan-page'],
         serviceRelevance: `Do not describe Wolston's neighbourhood plan as adopted or made without a newer explicit council statement.`,
       },
@@ -1264,22 +1265,22 @@ const AREA_SEEDS: AreaGuideSeed[] = [
     contexts: {
       'emergency-lockout': {
         local: `The River Avon and northern railway bridge can help distinguish a Wolston address from Brandon, but they do not identify a property or access route. Obtain the complete street location and doorway, especially outside the limited conservation section.`,
-        decision: `The neighbourhood-plan page does not state that a plan has been made and must not be presented as adopted authority. In any event, area planning records cannot verify occupation, so confirm the requester's permission at the specified premises.`,
+        decision: `Use the latest explicit council record before describing the neighbourhood-plan stage. In any event, area planning records cannot verify occupation, so confirm the requester's permission at the specified premises.`,
       },
       'lock-change': {
         local: `Most buildings in the limited conservation designation lie south of the River Avon, but that does not make every southern Wolston address designated. Check the exact current boundary before visible replacement and verify listed status separately.`,
-        decision: `Do not use the Wolston plan record as a made-plan requirement: the council page supplies no such statement. Specify the change from the inspected entrance and property-specific authority, not from an unadopted planning inference.`,
+        decision: `Use the council page only for the planning stage it explicitly records. Specify the change from the inspected entrance and property-specific authority, not from a planning-stage inference.`,
       },
       'upvc-lock-repair': {
         local: `A position south of the River Avon or near the railway bridge does not establish that a Wolston door is uPVC or multipoint. Ask for direct handle, key, locking-point and frame evidence from the exact opening.`,
-        decision: `The conservation appraisal and neighbourhood screening record cannot diagnose hardware, while the latter must not be called a made plan. If visible repair affects controlled fabric, check current property status only after identifying the actual mechanism.`,
+        decision: `The conservation appraisal and neighbourhood screening record cannot diagnose hardware. If visible repair affects controlled fabric, check current property status only after identifying the actual mechanism.`,
       },
       'boarding-up': {
         local: `A damaged opening near the River Avon, railway bridge or Wolston's limited conservation area requires an exact address and responsible person. Neither river nor rail infrastructure establishes access, ownership or the construction to be secured.`,
-        decision: `After preserving possible evidence, check current conservation and property controls before an external attachment. Do not cite the neighbourhood-plan page as adopted support, and do not extend the limited designation across the whole village.`,
+        decision: `After preserving possible evidence, check current conservation and property controls before an external attachment. Cite the neighbourhood-plan page only for its documented stage, and do not extend the limited designation across the whole village.`,
       },
       'lock-upgrade': {
-        local: `River, railway and conservation context do not demonstrate security need at a Wolston entrance. The upgrade objective must come from its authorised controller and observed assembly, without relying on a neighbourhood plan that the council has not recorded as made.`,
+        local: `River, railway and conservation context do not demonstrate security need at a Wolston entrance. The upgrade objective must come from its authorised controller and observed assembly, without relying on neighbourhood-planning stage as a hardware standard.`,
         decision: `Resolve whether the address is inside the limited current conservation boundary and obtain any relevant property consent. Keep separation from Brandon, south-of-river orientation and plan-screening status outside the hardware specification itself.`,
       },
     },
@@ -1532,11 +1533,11 @@ const AREA_SEEDS: AreaGuideSeed[] = [
       },
       {
         text: `The council provides Southam Conservation Area boundary and review documents and includes Southam in a conservation-appraisal review programme with consultation scheduled in 2026.`,
-        sourceIds: ['sdc-conservation-h-z'],
+        sourceIds: ['sdc-conservation-h-z', 'sdc-conservation-review-2026'],
         serviceRelevance: `Use current formally published records and never treat appraisal-review drafts as adopted replacement evidence.`,
       },
     ],
-    sourceIds: ['sdc-southam-plan-page', 'sdc-conservation-h-z'],
+    sourceIds: ['sdc-southam-plan-page', 'sdc-conservation-h-z', 'sdc-conservation-review-2026'],
     contexts: {
       'emergency-lockout': {
         local: `Southam's made neighbourhood plan and conservation-area records operate at different scales, while 2026 appraisal work remains review material. A lockout requires the complete property address and exact doorway rather than either planning label.`,
@@ -1565,10 +1566,10 @@ const AREA_SEEDS: AreaGuideSeed[] = [
     name: 'Studley',
     region: 'Warwickshire',
     summary: [
-      `Stratford-on-Avon District Council lists Studley's Parish Plan and Action Plan as adopted in February 2017. The council also records the whole civil parish as a designated neighbourhood area but provides no linked made neighbourhood development plan.`,
-      `A parish plan and designated neighbourhood area must not be described as a made neighbourhood development plan. They provide locality and process context only, without establishing a building's status, use, access, entrance hardware or service conditions.`,
+      `Stratford-on-Avon District Council lists Studley's Parish Plan and Action Plan as adopted in February 2017. The council also records the whole civil parish as a designated neighbourhood area and publishes the associated confirmation documents.`,
+      `A parish plan and designated neighbourhood area are distinct planning records. They provide locality and process context only, without establishing a building's status, use, access, entrance hardware or service conditions.`,
     ],
-    accessGuidance: `Use the complete Studley address and describe the evidence accurately: a February 2017 Parish Plan and Action Plan plus a designated whole-parish neighbourhood area. Do not claim a made neighbourhood development plan without new council proof.`,
+    accessGuidance: `Use the complete Studley address and describe the evidence accurately: a February 2017 Parish Plan and Action Plan plus a designated whole-parish neighbourhood area. Recheck the latest council record before describing any later planning stage.`,
     evidenceLimits: `Designation of an area for neighbourhood planning is not plan adoption, and a parish plan is a different instrument. The records prove no property status, ownership, access, fabric, hardware, coverage, response, demand or job history.`,
     facts: [
       {
@@ -1577,31 +1578,31 @@ const AREA_SEEDS: AreaGuideSeed[] = [
         serviceRelevance: `Describe the document accurately as a parish plan rather than a made neighbourhood development plan.`,
       },
       {
-        text: `Council records show Studley Parish Council applied to designate the whole civil parish as its neighbourhood area, while the current register links confirmation documents but no made plan.`,
+        text: `Council records show Studley Parish Council applied to designate the whole civil parish as its neighbourhood area, and the current register links the confirmation documents.`,
         sourceIds: ['sdc-studley-area-report', 'sdc-designated-neighbourhood-areas'],
-        serviceRelevance: `A made-plan flag must remain false unless a later explicit council record proves adoption or making.`,
+        serviceRelevance: `Describe only the documented neighbourhood-area stage and recheck the council register before stating any later adoption or making.`,
       },
     ],
     sourceIds: ['sdc-parish-plans', 'sdc-studley-area-report', 'sdc-designated-neighbourhood-areas'],
     contexts: {
       'emergency-lockout': {
         local: `Studley's whole-parish neighbourhood-area designation locates a planning process but does not identify an address or adopted development plan. Obtain the full property and doorway, describing the 2017 document only as a Parish Plan and Action Plan.`,
-        decision: `Neither parish-plan adoption nor area designation verifies occupation or entry authority. Confirm the requester at the stated premises and do not present the absence of a linked made plan as evidence that one exists.`,
+        decision: `Neither parish-plan adoption nor area designation verifies occupation or entry authority. Confirm the requester at the stated premises and keep later plan status outside the access decision.`,
       },
       'lock-change': {
-        local: `A Studley replacement decision must not cite a made neighbourhood development plan because the official register provides no such evidence. The 2017 parish plan and whole-parish area designation cannot identify existing hardware or approve alteration.`,
+        local: `A Studley replacement decision must not turn planning-stage records into a hardware requirement. The 2017 parish plan and whole-parish area designation cannot identify existing hardware or approve alteration.`,
         decision: `Inspect the exact entrance and obtain the responsible customer's objective and any property-specific approval. If a later council record explicitly makes a plan, review it then; until that point the made-plan flag remains false.`,
       },
       'upvc-lock-repair': {
-        local: `A Parish Plan, Action Plan and designated neighbourhood area say nothing about whether a Studley door is uPVC or multipoint. Record the affected opening and direct handle, key and frame symptoms without inventing made-plan status.`,
+        local: `A Parish Plan, Action Plan and designated neighbourhood area say nothing about whether a Studley door is uPVC or multipoint. Record the affected opening and direct handle, key and frame symptoms without turning plan status into a mechanism claim.`,
         decision: `The whole-civil-parish application is boundary-process evidence, not a mechanism diagnosis or property permission. Keep plan status accurate and make the repair decision solely from the observed door and authorised instruction.`,
       },
       'boarding-up': {
-        local: `For a damaged Studley opening, the exact building, scene and controller matter; a whole-parish neighbourhood-area designation supplies none of them. Do not label the 2017 parish documents as a made neighbourhood development plan.`,
+        local: `For a damaged Studley opening, the exact building, scene and controller matter; a whole-parish neighbourhood-area designation supplies none of them. Describe the 2017 parish documents by their published titles.`,
         decision: `After preserving possible evidence, inspect the structure and agree temporary scope with its authorised controller. The designated-area report and register provide no ownership, safe access, construction detail or attachment consent.`,
       },
       'lock-upgrade': {
-        local: `Studley's parish documents and neighbourhood-area designation cannot demonstrate security need or an upgrade standard. Begin with the individual entrance and documented objective, while keeping the unsupported made-plan flag explicitly false.`,
+        local: `Studley's parish documents and neighbourhood-area designation cannot demonstrate security need or an upgrade standard. Begin with the individual entrance and documented objective, keeping planning-stage records outside the specification.`,
         decision: `Any product and permission decision must follow the observed door and exact property controls, not planning-process status. Revisit the evidence only if a later council source clearly records a neighbourhood development plan as made.`,
       },
     },

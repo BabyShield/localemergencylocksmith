@@ -24,6 +24,17 @@ export const SERVICE_PROVIDER_SCHEMA = {
   telephone: SITE_CONFIG.phoneTel,
 } as const
 
+// One stable author identity for the visible Ross byline. Article markup links
+// to the real About page rather than leaving the author as an unconnected name.
+export const LOCKSMITH_AUTHOR_SCHEMA = {
+  '@type': 'Person',
+  '@id': `${SITE_CONFIG.domain}/about#ross`,
+  name: 'Ross',
+  jobTitle: 'Locksmith',
+  url: `${SITE_CONFIG.domain}/about`,
+  worksFor: { '@id': `${SITE_CONFIG.domain}/#business` },
+} as const
+
 // Bump only when page content genuinely changes — drives visible "last updated"
 // dates and sitemap lastModified, so it must never be a build timestamp.
 export const CONTENT_UPDATED = '2026-08-29'
@@ -39,8 +50,10 @@ export const GOOGLE_REVIEWS: {
 } = {
   rating: null,
   count: null,
-  // GBP: "Coventry 24/7 Locksmith" (kgmid /g/11z204xvk1) — owner's share link.
-  // Fill rating/count/placeId with the live profile's real values only.
-  profileUrl: 'https://share.google/bdboAzi1gJOpOjPck',
+  // Keep this blank until the public profile's trading name and relationship to
+  // this website are verified from real-world business evidence. The supplied
+  // profile currently displays a different name, so publishing its link would
+  // create an unsupported identity association.
+  profileUrl: '',
   placeId: '',
 }

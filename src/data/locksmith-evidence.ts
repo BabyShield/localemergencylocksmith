@@ -17,7 +17,7 @@ export const TECHNICAL_EVIDENCE_SOURCES: Record<string, EvidenceSource> = {
     title: 'Customer Charter: Service Calls',
     publisher: 'Master Locksmiths Association',
     url: 'https://admin.locksmiths.co.uk/MLA/customerCharters.asp',
-    supports: 'Proof-of-authority checks, advance cost information, and explaining cost changes before work proceeds.',
+    supports: 'Proof of identity and authority for lockouts, plus advance cost information and agreement before a service-call price changes.',
     checkedOn: EVIDENCE_REVIEWED_ON,
   },
   'warwickshire-lock-advice': {
@@ -66,6 +66,22 @@ export const TECHNICAL_EVIDENCE_SOURCES: Record<string, EvidenceSource> = {
     publisher: 'West Midlands Police',
     url: 'https://www.westmidlands.police.uk/advice/advice-and-information/victim-support/what-happens-after-you-report-crime/forensic-evidence/',
     supports: 'Photographing damage, preserving possible evidence, and securing damaged doors or windows from outside.',
+    checkedOn: EVIDENCE_REVIEWED_ON,
+  },
+  'mila-door-locks-catalogue': {
+    id: 'mila-door-locks-catalogue',
+    title: 'Key 08 product catalogue: choosing a door lock',
+    publisher: 'Mila Hardware',
+    url: 'https://www.milasecure.com/uk/en/documents/product-downloads/full-catalogue/Key-08-Full-Catalogue_Web%20%285%29.pdf',
+    supports: 'Pages 195-196 identify faceplate width, backset and PZ centres as door-lock selection details; product tables from page 201 document locking-point configurations.',
+    checkedOn: EVIDENCE_REVIEWED_ON,
+  },
+  'govuk-listed-building-consent': {
+    id: 'govuk-listed-building-consent',
+    title: 'Historic environment: heritage consent processes',
+    publisher: 'Ministry of Housing, Communities and Local Government',
+    url: 'https://www.gov.uk/guidance/conserving-and-enhancing-the-historic-environment#heritage-consent-processes',
+    supports: 'Listed building consent is required when proposed alteration or extension affects the building\'s special architectural or historic character.',
     checkedOn: EVIDENCE_REVIEWED_ON,
   },
 }

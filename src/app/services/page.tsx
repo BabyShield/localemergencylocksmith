@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { SERVICE_PROVIDER_SCHEMA, SITE_CONFIG } from '@/data/config'
 import { SERVICES } from '@/data/services'
+import { TOWN_SLUGS } from '@/data/governed-town-services'
 import ServiceCard from '@/components/ServiceCard'
 import CTABlock from '@/components/CTABlock'
 import SchemaMarkup from '@/components/SchemaMarkup'
@@ -100,6 +101,37 @@ export default function ServicesPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {SERVICES.map((service) => (
               <ServiceCard key={service.slug} service={service} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-12 px-4 bg-[#F7F7F5]" aria-labelledby="town-service-guides-heading">
+        <div className="max-w-6xl mx-auto">
+          <h2 id="town-service-guides-heading" className="text-2xl md:text-3xl font-black text-[#0F1B2D] mb-3 text-center">
+            Service Guides for the Main Towns
+          </h2>
+          <p className="text-gray-600 text-center max-w-3xl mx-auto mb-9">
+            These seven town directories have a separate local page for each service. Other listed
+            locations keep their five service guides together on one canonical area page.
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5">
+            {SERVICES.map((service) => (
+              <section key={service.slug} className="rounded-xl border border-gray-200 bg-white p-5">
+                <h3 className="font-black text-[#0F1B2D] mb-4">{service.shortName}</h3>
+                <ul className="space-y-2.5 text-sm">
+                  {TOWN_SLUGS.map((town) => (
+                    <li key={town.slug}>
+                      <Link
+                        href={`/areas/${town.slug}/${service.slug}`}
+                        className="text-gray-700 underline decoration-[#FFB800] underline-offset-4 hover:text-[#8A5A00]"
+                      >
+                        {service.shortName} in {town.name}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </section>
             ))}
           </div>
         </div>

@@ -2,7 +2,7 @@ import React from 'react'
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
-import { SITE_CONFIG } from '@/data/config'
+import { LOCKSMITH_AUTHOR_SCHEMA, SITE_CONFIG } from '@/data/config'
 import { ALL_BLOG_POSTS, getBlogPostBySlug, getRelatedPosts, PILLARS } from '@/data/blog-posts'
 import { ALL_BLOG_CONTENT } from '@/data/blog-content'
 import { BLOG_CONTENT_UPDATED, BLOG_CTA_BY_PILLAR, BLOG_CTA_BY_SLUG, BLOG_META_DESCRIPTIONS, BLOG_SEARCH_TITLES } from '@/data/blog-seo'
@@ -115,12 +115,7 @@ export default async function BlogPostPage({ params }: Props) {
     datePublished: post.date,
     dateModified: BLOG_CONTENT_UPDATED[slug] ?? post.date,
     image: { '@type': 'ImageObject', url: `${SITE_CONFIG.domain}/api/og?title=${encodeURIComponent(post.title)}`, width: 1200, height: 630 },
-    author: {
-      '@type': 'Person',
-      name: 'Ross',
-      jobTitle: 'Locksmith',
-      worksFor: { '@id': `${SITE_CONFIG.domain}/#business` },
-    },
+    author: LOCKSMITH_AUTHOR_SCHEMA,
     publisher: {
       '@type': 'Organization',
       name: 'Local Emergency Locksmith',
@@ -288,7 +283,9 @@ export default async function BlogPostPage({ params }: Props) {
 
           {/* Author bio */}
           <div className="mt-12 bg-[#F7F7F5] rounded-xl p-6 border border-gray-200">
-            <p className="font-bold text-[#0F1B2D] mb-2">About the Author</p>
+            <p className="font-bold text-[#0F1B2D] mb-2">
+              <Link href="/about" className="hover:underline">About Ross</Link>
+            </p>
             <p className="text-gray-700 text-sm leading-relaxed">
               I&apos;m Ross, the independent locksmith behind Local Emergency Locksmith. These guides
               separate cited standards and public guidance from the checks that can only be made at

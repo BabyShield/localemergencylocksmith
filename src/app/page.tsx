@@ -11,7 +11,7 @@ import DirectAnswer from '@/components/DirectAnswer'
 import LastUpdated from '@/components/LastUpdated'
 import CredentialsStrip from '@/components/CredentialsStrip'
 import { SERVICES } from '@/data/services'
-import { SITE_CONFIG, CONTENT_UPDATED, GOOGLE_REVIEWS } from '@/data/config'
+import { SITE_CONFIG, CONTENT_UPDATED, GOOGLE_REVIEWS, LOCKSMITH_AUTHOR_SCHEMA } from '@/data/config'
 import { ALL_BLOG_POSTS } from '@/data/blog-posts'
 
 export const metadata: Metadata = {
@@ -106,11 +106,7 @@ const organizationSchema = {
     height: 512,
   },
   image: `${SITE_CONFIG.domain}/og-image.png`,
-  founder: {
-    '@type': 'Person',
-    name: 'Ross',
-    jobTitle: 'Locksmith',
-  },
+  founder: LOCKSMITH_AUTHOR_SCHEMA,
   areaServed: [
     'Coventry',
     'Nuneaton',
@@ -392,7 +388,9 @@ export default function HomePage() {
           </h2>
           <p className="text-gray-600 text-center max-w-xl mx-auto mb-8">
             Ratings and review extracts are not copied onto this site without a source record.
-            Use the linked public profile to check the feedback currently attributed there.
+            {GOOGLE_REVIEWS.profileUrl
+              ? ' Use the linked public profile to check the feedback currently attributed there.'
+              : ' No public profile link is shown while its business identity details are being verified.'}
           </p>
           <div className="text-center">
             <Link

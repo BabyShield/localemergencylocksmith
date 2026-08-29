@@ -28,11 +28,10 @@ interface Props {
 }
 
 function getRelatedGuides() {
-  const slugs = Array.from(new Set(Object.values(SERVICE_GUIDE_SLUGS).flat()))
+  const slugs = Array.from(new Set(Object.values(SERVICE_GUIDE_SLUGS).map(serviceSlugs => serviceSlugs[0])))
   return slugs
     .map(slug => getBlogPostBySlug(slug))
     .filter((post): post is NonNullable<typeof post> => post != null)
-    .slice(0, 6)
 }
 
 function areaGuideOrThrow(slug: string) {
@@ -47,7 +46,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!area) return {}
 
   areaGuideOrThrow(slug)
-  const title = `Locksmith ${area.name} | 24/7 Help | From £59`
+  const hasDedicatedServicePages = hasTownService(area.slug, 'emergency-lockout')
+  const title = hasDedicatedServicePages
+    ? `Locksmith ${area.name} | 5 Local Services | From £59`
+    : `Locksmith ${area.name} | 24/7 Help | From £59`
   const description = `Locksmith in ${area.name} for lockouts, lock repairs, uPVC mechanisms, boarding up and upgrades. Call for today's ETA. From £59; no VAT or call-out fee.`
 
   return {
@@ -74,6 +76,7 @@ export default async function AreaPage({ params }: Props) {
   if (!area) notFound()
 
   const guide = areaGuideOrThrow(slug)
+  const hasDedicatedServicePages = hasTownService(area.slug, 'emergency-lockout')
   const neighbours = getAreaNeighbours(area)
   const areaAuthority = getAreaAuthority(area.slug)
   const relatedPosts = getRelatedGuides()
@@ -175,7 +178,9 @@ export default async function AreaPage({ params }: Props) {
       </nav>
 
       <HeroSection
-        heading={`Locksmith ${area.name} — Emergency Help 24/7`}
+        heading={hasDedicatedServicePages
+          ? `Locksmith Services in ${area.name}`
+          : `Locksmith ${area.name} — Emergency Help 24/7`}
         subheading={`Locked out or dealing with a faulty or damaged lock in ${area.name}? Call for the current ETA, scope and price before attendance. No VAT or separate call-out fee.`}
         areaName={area.name}
         showResponseTime={false}
@@ -303,7 +308,9 @@ export default async function AreaPage({ params }: Props) {
                     <h3 className="text-xl md:text-2xl font-black text-[#0F1B2D]">{guidance.heading}</h3>
                   </div>
                   <Link href={href} className="shrink-0 text-sm font-bold text-[#0F1B2D] underline decoration-[#FFB800] underline-offset-4 hover:text-[#8A5A00]">
-                    {hasDedicatedPage ? 'Open the full local service page' : 'View full service details'}
+                    {hasDedicatedPage
+                      ? `View ${service.shortName} in ${area.name}`
+                      : `View ${service.shortName} service details`}
                   </Link>
                 </div>
                 {guidance.body.map(paragraph => (
@@ -322,6 +329,24 @@ export default async function AreaPage({ params }: Props) {
                   <h4 className="font-black text-[#0F1B2D] mb-2">{guidance.faq.q}</h4>
                   <p className="text-gray-700 leading-relaxed">{guidance.faq.a}</p>
                 </div>
+                <div className="mt-5">
+                  <p className="text-xs font-bold text-gray-600">Sources for this guidance</p>
+                  <ul className="flex flex-wrap gap-2 mt-2" aria-label={`Sources for ${guidance.heading}`}>
+                  {guidance.sourceIds.map(sourceId => {
+                    const source = sourceById.get(sourceId)
+                    return source ? (
+                      <li key={sourceId}>
+                        <a
+                          href={`#evidence-source-${source.id}`}
+                          className="inline-flex rounded-full border border-[#FFB800]/40 bg-white px-3 py-1.5 text-xs leading-snug text-gray-700 underline decoration-[#FFB800] underline-offset-2 hover:border-[#FFB800] hover:text-[#8A5A00]"
+                        >
+                          {source.publisher}: {source.title}
+                        </a>
+                      </li>
+                    ) : null
+                  })}
+                  </ul>
+                </div>
               </article>
             ))}
           </div>
@@ -339,7 +364,7 @@ export default async function AreaPage({ params }: Props) {
           <p className="text-sm text-gray-500 mt-3">Content reviewed <time dateTime={guide.reviewedOn}>{guide.reviewedOn}</time>.</p>
           <ul className="space-y-4 mt-7">
             {guide.sources.map(source => (
-              <li key={source.id} className="rounded-xl border border-gray-200 p-5">
+              <li id={`evidence-source-${source.id}`} key={source.id} className="scroll-mt-28 rounded-xl border border-gray-200 p-5">
                 <p className="text-xs uppercase tracking-wider font-bold text-[#8A5A00] mb-2">{source.kind.replace('-', ' ')}</p>
                 <a href={source.url} target="_blank" rel="noopener noreferrer" className="font-bold text-[#0F1B2D] underline decoration-[#FFB800] underline-offset-4 hover:text-[#8A5A00]">{source.title}</a>
                 <p className="text-sm text-gray-600 mt-1">{source.publisher}</p>

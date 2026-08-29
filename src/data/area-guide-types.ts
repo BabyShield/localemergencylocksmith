@@ -14,14 +14,22 @@ export interface AreaGuideFact {
   serviceRelevance: string
 }
 
-export interface AreaServiceGuidance {
+export interface AreaServiceGuidanceDraft {
   heading: string
   body: string[]
   checks: string[]
   faq: { q: string; a: string }
 }
 
-export interface GovernedAreaGuide {
+// Keep the authored guide modules on the draft shape. The public registry
+// normalises every record before it can be rendered.
+export type AreaServiceGuidance = AreaServiceGuidanceDraft
+
+export interface PublishedAreaServiceGuidance extends AreaServiceGuidanceDraft {
+  sourceIds: string[]
+}
+
+export interface GovernedAreaGuideDraft {
   slug: AreaSlug
   reviewedOn: string
   summary: string[]
@@ -29,6 +37,12 @@ export interface GovernedAreaGuide {
   evidenceLimits: string
   facts: AreaGuideFact[]
   sources: AreaGuideSource[]
-  serviceGuidance: Record<ServiceAreaSlug, AreaServiceGuidance>
+  serviceGuidance: Record<ServiceAreaSlug, AreaServiceGuidanceDraft>
   faqs: { q: string; a: string }[]
+}
+
+export type GovernedAreaGuide = GovernedAreaGuideDraft
+
+export interface PublishedGovernedAreaGuide extends Omit<GovernedAreaGuideDraft, 'serviceGuidance'> {
+  serviceGuidance: Record<ServiceAreaSlug, PublishedAreaServiceGuidance>
 }
