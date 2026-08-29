@@ -6,6 +6,12 @@ import TrustStrip from '@/components/TrustStrip'
 import Footer from '@/components/Footer'
 import { SITE_CONFIG } from '@/data/config'
 
+const CRITICAL_RENDER_CSS = `
+body.site-system-font{font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif}
+.defer-render{content-visibility:auto;contain-intrinsic-size:auto 800px}
+@media print{.defer-render{content-visibility:visible;contain-intrinsic-size:none}}
+`
+
 export const metadata: Metadata = {
   title: 'Locksmith Coventry | Local 24/7 Service | From £59',
   description:
@@ -36,6 +42,12 @@ export default function RootLayout({
           <link rel="preconnect" href="https://www.googletagmanager.com" />
         )}
         <link rel="dns-prefetch" href="https://maps.googleapis.com" />
+        {/* Keep first-paint typography and below-fold rendering independent of
+            the external stylesheet cache. These rules are mirrored globally. */}
+        <style
+          data-critical-render-css="true"
+          dangerouslySetInnerHTML={{ __html: CRITICAL_RENDER_CSS }}
+        />
         {process.env.NEXT_PUBLIC_GTM_ID && (
           <script
             dangerouslySetInnerHTML={{
@@ -50,7 +62,7 @@ export default function RootLayout({
           />
         )}
       </head>
-      <body className="antialiased bg-white text-gray-900">
+      <body className="site-system-font antialiased bg-white text-gray-900">
         <a href="#main-content" className="skip-link">Skip to main content</a>
         <StickyHeader />
         <TrustStrip />

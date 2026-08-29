@@ -554,6 +554,14 @@ try {
     const serviceNodes = parsedSchemaNodes.filter(node => hasSchemaType(node, 'Service'))
 
     if (productionUrl.pathname === '/') {
+      const headHtml = html.match(/<head\b[^>]*>([\s\S]*?)<\/head>/i)?.[1] ?? ''
+      const criticalRenderCss = headHtml.match(
+        /<style\b(?=[^>]*\bdata-critical-render-css=["']true["'])[^>]*>([\s\S]*?)<\/style>/i,
+      )?.[1] ?? ''
+      check(Boolean(criticalRenderCss), '/ head has no inline critical-render style')
+      check(criticalRenderCss.includes('body.site-system-font{font-family:system-ui'), '/ critical style has no system-font override')
+      check(criticalRenderCss.includes('.defer-render{content-visibility:auto'), '/ critical style has no below-fold rendering rule')
+      check(/<body\b[^>]*class=["'][^"']*\bsite-system-font\b/i.test(html), '/ body is missing the scoped system-font class')
       const business = parsedSchemaNodes.find(
         node => hasSchemaType(node, 'Organization') && node?.['@id'] === `${CANONICAL_ORIGIN}/#business`,
       )
