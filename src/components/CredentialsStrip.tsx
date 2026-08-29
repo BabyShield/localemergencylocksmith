@@ -1,11 +1,9 @@
-import { ShieldCheck, Umbrella, BadgeCheck, CreditCard } from 'lucide-react'
+import { Phone, FileCheck2, Clock3, CreditCard } from 'lucide-react'
 
-// Visual proof strip for the claims already made on the about page —
-// credentials land far better as badges than buried in prose.
 const CREDENTIALS = [
-  { Icon: ShieldCheck, title: 'DBS-Checked', sub: 'Background checked' },
-  { Icon: Umbrella, title: 'Fully Insured', sub: 'Public liability cover' },
-  { Icon: BadgeCheck, title: 'ID On Arrival', sub: 'You know who I am' },
+  { Icon: Phone, title: 'Direct Booking', sub: 'Speak to Ross' },
+  { Icon: FileCheck2, title: 'Agreed Scope', sub: 'Before work starts' },
+  { Icon: Clock3, title: 'Current ETA', sub: 'Confirmed by phone' },
   { Icon: CreditCard, title: 'Card Payments', sub: 'Cash or card — your choice' },
 ]
 

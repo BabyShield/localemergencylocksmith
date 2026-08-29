@@ -3,7 +3,7 @@ import { notFound, permanentRedirect } from 'next/navigation'
 import Link from 'next/link'
 import { getAreaBySlug, getAreaNeighbours } from '@/data/areas'
 import { SERVICES, getServiceBySlug } from '@/data/services'
-import { SITE_CONFIG } from '@/data/config'
+import { SERVICE_PROVIDER_SCHEMA, SITE_CONFIG } from '@/data/config'
 import {
   getTownService,
   hasTownService,
@@ -49,7 +49,7 @@ const SERVICE_SEARCH_INTENT_COPY: Record<string, {
   },
   'boarding-up': {
     heading: (areaName) => `Boarding Up & Burglary Repairs in ${areaName}`,
-    body: (areaName) => `This service covers emergency boarding up and immediate burglary repairs for damaged doors, locks, and windows in ${areaName}, including break-in damage, storm damage, and accidental breakage.`,
+    body: (areaName) => `This service covers temporary boarding and burglary-related lock assessment for damaged doors, locks, and windows in ${areaName}, including break-in damage, storm damage, and accidental breakage.`,
   },
   'lock-upgrade': {
     heading: (areaName) => `Anti-Snap & BS3621 Locks in ${areaName}`,
@@ -135,7 +135,7 @@ export default async function TownServicePage({ params }: Props) {
     name: pageHeading,
     url: `${SITE_CONFIG.domain}/areas/${slug}/${serviceSlug}`,
     description: content.metaDescription,
-    provider: { '@id': `${SITE_CONFIG.domain}/#business` },
+    provider: SERVICE_PROVIDER_SCHEMA,
     areaServed: {
       '@type': 'Place',
       name: area.name,
@@ -178,17 +178,17 @@ export default async function TownServicePage({ params }: Props) {
       <nav aria-label="Breadcrumb" className="max-w-6xl mx-auto px-4 py-3 text-sm text-gray-500">
         <ol className="flex flex-wrap items-center gap-0" itemScope itemType="https://schema.org/BreadcrumbList">
           <li itemScope itemType="https://schema.org/ListItem" itemProp="itemListElement">
-            <Link href="/" itemProp="item" className="hover:text-[#FFB800]"><span itemProp="name">Home</span></Link>
+            <Link href="/" prefetch={false} itemProp="item" className="hover:text-[#FFB800]"><span itemProp="name">Home</span></Link>
             <meta itemProp="position" content="1" />
           </li>
           <span className="mx-2" aria-hidden="true">›</span>
           <li itemScope itemType="https://schema.org/ListItem" itemProp="itemListElement">
-            <Link href="/areas" itemProp="item" className="hover:text-[#FFB800]"><span itemProp="name">Areas</span></Link>
+            <Link href="/areas" prefetch={false} itemProp="item" className="hover:text-[#FFB800]"><span itemProp="name">Areas</span></Link>
             <meta itemProp="position" content="2" />
           </li>
           <span className="mx-2" aria-hidden="true">›</span>
           <li itemScope itemType="https://schema.org/ListItem" itemProp="itemListElement">
-            <Link href={`/areas/${slug}`} itemProp="item" className="hover:text-[#FFB800]"><span itemProp="name">{area.name}</span></Link>
+            <Link href={`/areas/${slug}`} prefetch={false} itemProp="item" className="hover:text-[#FFB800]"><span itemProp="name">{area.name}</span></Link>
             <meta itemProp="position" content="3" />
           </li>
           <span className="mx-2" aria-hidden="true">›</span>

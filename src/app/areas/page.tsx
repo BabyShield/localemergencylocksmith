@@ -57,7 +57,7 @@ export default function AreasPage() {
       <nav aria-label="Breadcrumb" className="max-w-6xl mx-auto px-4 py-3 text-sm text-gray-500">
         <ol className="flex flex-wrap items-center gap-0" itemScope itemType="https://schema.org/BreadcrumbList">
           <li itemScope itemType="https://schema.org/ListItem" itemProp="itemListElement">
-            <Link href="/" itemProp="item" className="hover:text-[#FFB800]"><span itemProp="name">Home</span></Link>
+            <Link href="/" prefetch={false} itemProp="item" className="hover:text-[#FFB800]"><span itemProp="name">Home</span></Link>
             <meta itemProp="position" content="1" />
           </li>
           <span className="mx-2" aria-hidden="true">›</span>

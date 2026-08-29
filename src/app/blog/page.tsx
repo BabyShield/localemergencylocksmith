@@ -7,7 +7,7 @@ import SchemaMarkup from '@/components/SchemaMarkup'
 export const metadata: Metadata = {
   title: 'Locksmith Advice & Security Guides | Coventry',
   description:
-    'Practical Coventry locksmith advice on lock standards, costs, uPVC doors, home security and emergencies, written by a working local locksmith.',
+    'Evidence-led Coventry locksmith guides covering lock standards, costs, uPVC doors, home security, emergencies and property-specific checks.',
   keywords: 'locksmith blog, locksmith tips coventry, home security advice, lock buying guide, upvc door repair guide, locksmith advice warwickshire',
   alternates: {
     canonical: `${SITE_CONFIG.domain}/blog`,
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     siteName: 'Local Emergency Locksmith',
     locale: 'en_GB',
     title: 'Locksmith Blog — Tips, Security Advice & Guides',
-    description: 'Expert locksmith advice for Coventry and Warwickshire homeowners — from a working locksmith.',
+    description: 'Evidence-led locksmith guidance for Coventry-area households, with sources and property-specific limitations.',
     url: `${SITE_CONFIG.domain}/blog`,
     images: [{ url: `${SITE_CONFIG.domain}/api/og?title=${encodeURIComponent('Locksmith Tips & Security Advice')}`, width: 1200, height: 630 }],
   },
@@ -40,7 +40,7 @@ export default function BlogPage() {
       <nav aria-label="Breadcrumb" className="max-w-6xl mx-auto px-4 py-3 text-sm text-gray-500">
         <ol className="flex flex-wrap items-center gap-0" itemScope itemType="https://schema.org/BreadcrumbList">
           <li itemScope itemType="https://schema.org/ListItem" itemProp="itemListElement">
-            <Link href="/" itemProp="item" className="hover:text-[#FFB800]"><span itemProp="name">Home</span></Link>
+            <Link href="/" prefetch={false} itemProp="item" className="hover:text-[#FFB800]"><span itemProp="name">Home</span></Link>
             <meta itemProp="position" content="1" />
           </li>
           <span className="mx-2" aria-hidden="true">›</span>
@@ -57,7 +57,7 @@ export default function BlogPage() {
             Locksmith Tips & Security Advice
           </h1>
           <p className="text-gray-300 text-lg mb-2">
-            Honest advice from a Coventry locksmith — no fluff, no corporate waffle.
+            Practical guidance that separates published evidence from property-specific diagnosis.
           </p>
           <p className="text-gray-400 text-sm">
             {ALL_BLOG_POSTS.length} articles across {PILLARS.length} topics
@@ -136,7 +136,7 @@ export default function BlogPage() {
             Need a Locksmith Right Now?
           </h2>
           <p className="text-gray-600 mb-8">
-            I cover Coventry and the surrounding Warwickshire towns 24/7 — no VAT, no call-out fee.
+            I serve the listed Coventry-area locations 24/7. Call for the current ETA and price basis.
           </p>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
             {[

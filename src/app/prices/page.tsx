@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { SITE_CONFIG } from '@/data/config'
+import { SERVICE_PROVIDER_SCHEMA, SITE_CONFIG } from '@/data/config'
 import CTABlock from '@/components/CTABlock'
 import SchemaMarkup from '@/components/SchemaMarkup'
 import DirectAnswer from '@/components/DirectAnswer'
@@ -8,7 +8,7 @@ import DirectAnswer from '@/components/DirectAnswer'
 export const metadata: Metadata = {
   title: 'Locksmith Prices Coventry | No VAT or Call-Out Fee',
   description:
-    'Clear locksmith prices for Coventry and Warwickshire. Emergency lockout from £59. No VAT, no call-out fee, no hidden charges. Call 024 7522 4730.',
+    'Published Coventry locksmith from-prices and the factors that determine the agreed quote. Lockouts from £59; no VAT or separate call-out fee.',
   keywords: 'locksmith prices coventry, how much does a locksmith cost, emergency locksmith price coventry, lock change cost coventry, locksmith cost warwickshire, cheap locksmith coventry, locksmith no vat',
   alternates: {
     canonical: `${SITE_CONFIG.domain}/prices`,
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     locale: 'en_GB',
     title: 'Locksmith Prices Coventry | No VAT or Call-Out Fee',
     description:
-      'Clear locksmith prices for Coventry and Warwickshire. Emergency lockout from £59. No VAT, no call-out fee, no hidden charges. Call 024 7522 4730.',
+      'Published Coventry locksmith from-prices and the factors that determine the agreed quote. Lockouts from £59; no VAT or separate call-out fee.',
     url: `${SITE_CONFIG.domain}/prices`,
     images: [{ url: `${SITE_CONFIG.domain}/api/og?title=${encodeURIComponent('Locksmith Prices — No VAT, No Call-Out Fee')}`, width: 1200, height: 630 }],
   },
@@ -32,9 +32,9 @@ const PRICES = [
     detail: 'Standard residential lockout where the assessed entry method and stated labour scope apply.',
   },
   {
-    service: 'Lock change (standard)',
-    price: 69,
-    detail: 'Supply and fit a new cylinder or Yale lock. Includes one set of keys.',
+    service: 'Euro cylinder replacement',
+    price: 59,
+    detail: 'Supply and fit a compatible euro cylinder where the inspected door, size and stated scope apply.',
   },
   {
     service: 'Lock change (BS3621-rated)',
@@ -47,9 +47,9 @@ const PRICES = [
     detail: 'Repair of multipoint locking mechanism, cylinder, or handle on uPVC door.',
   },
   {
-    service: 'uPVC lock replacement',
+    service: 'uPVC multipoint gearbox replacement',
     price: 89,
-    detail: 'Full replacement of multipoint lock gearbox or new euro cylinder. Includes new keys.',
+    detail: 'Replacement gearbox where the exact mechanism is identified and a compatible part is available.',
   },
   {
     service: 'Boarding up (emergency)',
@@ -60,11 +60,6 @@ const PRICES = [
     service: 'Window lock repair',
     price: 49,
     detail: 'Repair or replace espagnolette or cockspur locks on uPVC or timber windows.',
-  },
-  {
-    service: 'Security survey',
-    price: 0,
-    detail: 'Free assessment of all external doors and windows with security recommendations.',
   },
 ]
 
@@ -77,12 +72,10 @@ const breadcrumbSchema = {
   ],
 }
 
-// Extends the canonical /#business entity (defined in layout.tsx) with the
-// detailed price catalogue — same @id and type, so consumers merge the nodes.
+// Extends the homepage Organization node with the detailed price catalogue.
 const offersSchema = {
   '@context': 'https://schema.org',
-  '@type': 'Locksmith',
-  '@id': `${SITE_CONFIG.domain}/#business`,
+  ...SERVICE_PROVIDER_SCHEMA,
   hasOfferCatalog: {
     '@type': 'OfferCatalog',
     name: 'Locksmith Prices',
@@ -110,7 +103,7 @@ const faqSchema = {
       name: 'Do locksmith prices include VAT?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'No — all prices listed are the final price with no VAT added. I confirm the scope and total before work proceeds.',
+        text: 'No VAT is added. The listed amounts are from-prices; I confirm the applicable scope and total before work proceeds.',
       },
     },
     {
@@ -143,7 +136,7 @@ export default function PricesPage() {
       <nav aria-label="Breadcrumb" className="max-w-6xl mx-auto px-4 py-3 text-sm text-gray-500">
         <ol className="flex flex-wrap items-center gap-0" itemScope itemType="https://schema.org/BreadcrumbList">
           <li itemScope itemType="https://schema.org/ListItem" itemProp="itemListElement">
-            <Link href="/" itemProp="item" className="hover:text-[#FFB800]"><span itemProp="name">Home</span></Link>
+            <Link href="/" prefetch={false} itemProp="item" className="hover:text-[#FFB800]"><span itemProp="name">Home</span></Link>
             <meta itemProp="position" content="1" />
           </li>
           <span className="mx-2" aria-hidden="true">›</span>
@@ -178,7 +171,7 @@ export default function PricesPage() {
         <div className="max-w-3xl mx-auto">
           <DirectAnswer
             question="How much does a locksmith cost in Coventry?"
-            answer="A standard residential lockout starts from £59, a standard lock change from £69, and emergency boarding from £79. The final quote depends on the lock, fault, and parts required. I confirm the price before work starts, with no VAT or call-out fee."
+            answer="A standard residential lockout and a compatible euro-cylinder replacement each start from £59; a Yale nightlatch starts from £69, a BS3621-rated mortice option from £79, and emergency boarding from £79. The final quote depends on the lock, fault, parts and agreed scope. No VAT or separate call-out fee is added."
           />
         </div>
       </section>
@@ -286,7 +279,7 @@ export default function PricesPage() {
             {[
               {
                 q: 'What if the job takes longer than expected?',
-                a: 'I always agree the full price before I start. If an unexpected complication arises mid-job, I will stop and discuss any price change with you before continuing. You are never committed to a higher price without agreeing to it first.',
+                a: 'I agree the price for the diagnosed scope before work starts. If inspection or work exposes a different fault, part or additional scope, I stop, explain it and seek approval for the revised price before continuing.',
               },
               {
                 q: 'Do you charge more for more expensive properties?',

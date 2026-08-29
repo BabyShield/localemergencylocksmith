@@ -7,7 +7,7 @@ import { Phone, Mail, MapPin, Clock } from 'lucide-react'
 export const metadata: Metadata = {
   title: 'Contact Coventry Locksmith | 024 7522 4730',
   description:
-    'Contact Local Emergency Locksmith in Coventry. Available 24/7 — call 024 7522 4730 for immediate help or use the contact form.',
+    'Contact Local Emergency Locksmith in Coventry. Available 24/7 — call 024 7522 4730 for the current ETA and price, or use the non-urgent enquiry form.',
   keywords: 'contact locksmith coventry, locksmith phone number coventry, locksmith coventry 24/7, emergency locksmith contact warwickshire, call locksmith coventry',
   alternates: {
     canonical: `${SITE_CONFIG.domain}/contact`,
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     locale: 'en_GB',
     title: 'Contact Coventry Locksmith | 024 7522 4730',
     description:
-      'Contact Local Emergency Locksmith in Coventry. Available 24/7 — call 024 7522 4730 for immediate help or use the contact form.',
+      'Contact Local Emergency Locksmith in Coventry. Available 24/7 — call for the current ETA and price, or use the non-urgent enquiry form.',
     url: `${SITE_CONFIG.domain}/contact`,
     images: [{ url: `${SITE_CONFIG.domain}/api/og?title=${encodeURIComponent('Contact Local Emergency Locksmith')}`, width: 1200, height: 630 }],
   },
@@ -49,7 +49,7 @@ export default function ContactPage() {
       <nav aria-label="Breadcrumb" className="max-w-6xl mx-auto px-4 py-3 text-sm text-gray-500">
         <ol className="flex flex-wrap items-center gap-0" itemScope itemType="https://schema.org/BreadcrumbList">
           <li itemScope itemType="https://schema.org/ListItem" itemProp="itemListElement">
-            <Link href="/" itemProp="item" className="hover:text-[#FFB800]"><span itemProp="name">Home</span></Link>
+            <Link href="/" prefetch={false} itemProp="item" className="hover:text-[#FFB800]"><span itemProp="name">Home</span></Link>
             <meta itemProp="position" content="1" />
           </li>
           <span className="mx-2" aria-hidden="true">›</span>
@@ -64,7 +64,7 @@ export default function ContactPage() {
         <div className="max-w-3xl mx-auto text-center">
           <h1 className="text-3xl md:text-4xl font-black mb-4">Contact Me</h1>
           <p className="text-gray-300 text-lg mb-6">
-            For emergencies, call now — the fastest response is always by phone.
+            For emergencies, call to confirm current availability, the ETA, and the price basis.
           </p>
           <a
             href={`tel:${SITE_CONFIG.phoneTel}`}
@@ -107,7 +107,7 @@ export default function ContactPage() {
                 <span className="flex-shrink-0 flex items-center justify-center w-10 h-10 rounded-lg bg-[#0F1B2D]/5"><MapPin className="w-5 h-5 text-[#0F1B2D]" aria-hidden="true" /></span>
                 <div>
                   <p className="font-bold text-gray-900">Service Area</p>
-                  <p className="text-gray-700">Coventry, Nuneaton, Rugby, Leamington Spa, Warwick, Stratford-upon-Avon and all surrounding areas</p>
+                  <p className="text-gray-700">78 listed locations across Coventry and nearby parts of Warwickshire, Solihull, and the West Midlands</p>
                   <Link href="/areas" className="text-[#0F1B2D] text-sm hover:underline mt-1 inline-block">
                     View all areas →
                   </Link>
@@ -127,7 +127,7 @@ export default function ContactPage() {
               <p className="text-[#0F1B2D] font-semibold text-sm">
                 <strong>For emergencies — please call, don&apos;t email.</strong> I check email
                 during normal hours but I may not see it immediately if you are locked out at 2am.
-                Call {SITE_CONFIG.phone} for an instant response.
+                Call {SITE_CONFIG.phone} to confirm whether I can attend and the current ETA.
               </p>
             </div>
           </div>
@@ -136,8 +136,8 @@ export default function ContactPage() {
           <div>
             <h2 className="text-2xl font-black text-gray-900 mb-6">Send a Message</h2>
             <p className="text-gray-600 text-sm mb-6">
-              For non-urgent enquiries, quotes, or planned work — fill in the form and I&apos;ll get back
-              to you within a few hours.
+              For non-urgent enquiries, quotes, or planned work, use the form below. For an urgent
+              lock problem, call instead so current availability can be checked.
             </p>
             <form
               action="/api/contact"

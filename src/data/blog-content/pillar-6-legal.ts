@@ -105,7 +105,7 @@ Look for the **BSI Kitemark with BS8621** on the faceplate. The lock will have a
 
 ### Not Sure?
 
-I offer a **free visual lock check** across Coventry and the surrounding areas. I can record the lock type, visible markings and available product documentation, then compare those details with wording you provide. Certification may require catalogue or manufacturer confirmation, and only the insurer, council or responsible fire-safety professional can decide compliance for its purpose. Call 024 7522 4730 or check which [areas we cover](/areas).
+Call 024 7522 4730 if you want to arrange a visual lock assessment. Before booking, confirm the address, scope, price basis and output required. I can record the lock type, visible markings and available product documentation, then compare those details with wording you provide. Certification may require catalogue or manufacturer confirmation, and only the insurer, council or responsible fire-safety professional can decide compliance for its purpose. Check the listed [areas we cover](/areas).
 
 ---
 
@@ -180,7 +180,7 @@ It is an offence for any person to **unlawfully deprive a residential occupier o
 - Changing the locks and refusing to give the tenant a new key
 - Removing the tenant's belongings and changing the locks
 - Changing the locks "for security" without the tenant's agreement
-- Having a locksmith change the locks on your instruction (this puts the locksmith in a difficult position too — which is why I always ask questions before doing a lock change on a rented property)
+- Instructing a locksmith to change access without establishing lawful authority and the occupier's position
 
 ### The Penalties
 
@@ -214,7 +214,7 @@ If you are a tenant wanting to change your locks — whether for safety, after a
 1. **Check the agreement and tell your landlord** — written permission may be required, and communication avoids disputes
 2. **Keep the original locks and keys** — put them in a labelled bag and store them safely so you can reinstall them when you leave
 3. **Give your landlord a key** if your tenancy agreement requires it
-4. **Use a proper locksmith** — do not fit cheap locks from a hardware shop yourself. If something goes wrong with the door, you could be liable for the damage
+4. **Use compatible hardware and competent fitting** — check the tenancy, written permission, doorset, fire-safety requirements and any product specification before altering the lock
 
 I do lock changes for tenants across Coventry regularly. A standard cylinder change on a uPVC or composite door starts from £59. See our [lock change service page](/services/lock-change) for details.
 
@@ -226,7 +226,7 @@ There are situations where a landlord can and should change locks:
 
 ### Between Tenancies
 
-Once a tenant has moved out — properly, with the tenancy ended through correct legal process — the landlord can and absolutely **should** change the locks. The previous tenant may have spare keys, and their friends, partners, or family may have copies. I have written a separate detailed guide on [why landlords should change locks between tenants](/blog/landlords-change-locks-between-tenants).
+Once a tenancy has ended through the correct process and the property is lawfully available, the landlord can assess key control and the existing locks. Replacement or rekeying may be appropriate where issued keys cannot be accounted for, but there is no general rule requiring every lock to be changed. See the separate guide on [assessing locks between tenancies](/blog/landlords-change-locks-between-tenants).
 
 ### With Tenant Agreement
 
@@ -281,7 +281,7 @@ I want to address this because it affects my trade directly. If a landlord calls
 - The landlord can prove the property is empty and between tenancies
 - There is a genuine emergency
 
-Any locksmith who changes locks knowing it will lock out a tenant is potentially complicit in illegal eviction. Reputable locksmiths will ask questions. If a locksmith agrees to do this without checking, that should tell you something about their ethics.
+I ask for enough information to establish authority and will not knowingly carry out work intended to exclude a lawful occupier without the required legal basis. A locksmith should not decide disputed housing rights; landlords and tenants should obtain housing or legal advice for their actual circumstances.
 
 ---
 
@@ -364,24 +364,23 @@ Professional practice varies. The evidence-based decision is whether every key c
 
 ## What Needs Changing?
 
-Not every lock in the property needs replacing. Here is what I recommend:
+Not every lock in the property necessarily needs replacing. Assess the actual key-control and hardware position:
 
-### Must Change
+### External Doors to Assess
 
-- **Front door cylinder** (on uPVC or composite doors) — this is the most important one. A new anti-snap cylinder with 3 keys costs from £59 fitted
-- **Back door cylinder** if it uses a separate key
-- **Any other external door** that a tenant would have had keys to
+- **Front-door lock or cylinder** where previous keys are unaccounted for; compatible anti-snap cylinder options start from £59 fitted
+- **Back and other external-door locks** where separate keys were issued or hardware condition needs attention
 
-### Should Change (HMOs and Shared Houses)
+### HMOs and Shared Houses
 
-- **Individual bedroom door locks** — each room that had a different tenant should get a new lock
-- **Communal entrance door** if it is on a separate key from individual rooms
+- **Individual bedroom-door locks** — assess key control, authorised access, the licence and the fire-risk position when an occupier changes
+- **Communal entrance hardware** — confirm ownership, management authority, escape requirements and who holds each key before altering it
 
-### Usually No Need to Change
+### Other Keys and Openings to Record
 
-- **Window locks** — these are rarely keyed differently and tenants do not typically take window lock keys
-- **Internal doors** (except in HMOs) — standard internal doors in a single-let property do not usually have locks
-- **Garage or shed locks** — unless the tenant had a key to these too
+- **Window locks and keys** — record whether keys were issued and whether any fault or written requirement applies
+- **Internal-door locks** — assess their purpose, authorised access and any fire-door implications
+- **Garage or shed locks** — include them where an occupier held a key or the hardware needs attention
 
 ---
 
@@ -393,9 +392,7 @@ Published starting prices help landlords assess the work against the actual key 
 |---|---|
 | uPVC/composite door cylinder (standard) | From £59 |
 | uPVC/composite door cylinder (certified anti-snap option) | From £59 |
-| Mortice deadlock cylinder change | From £69 |
 | Full mortice deadlock replacement (BS3621) | From £79 |
-| HMO room lock change | From £49 per room |
 
 The total depends on the number of doors, cylinder dimensions, mechanism condition and exact certified products selected. Obtain a property-specific quote before authorising work.
 
@@ -430,7 +427,7 @@ If you use a letting agent to manage your Coventry rental property, check whethe
 3. Is the cost included in your management fee or charged separately?
 4. Do you keep records of key numbers for each lock fitted?
 
-If your agent is not changing locks between tenancies, raise it with them. If they push back on cost, remind them that the liability sits with you as the property owner if something goes wrong.
+If your agent does not automatically change locks, ask how it records returned keys, assesses unaccounted copies and documents the decision. Responsibility depends on the tenancy, management agreement, duties and actual circumstances, so obtain appropriate advice rather than relying on a universal liability statement.
 
 ---
 
@@ -449,24 +446,24 @@ For more on how lock standards affect insurance claims, read our detailed guide 
 After years of doing lock changes for Coventry landlords, here is what I recommend as a minimum:
 
 1. **Assess front and back door cylinders between tenancies** — if keys are unaccounted for or the hardware is unsuitable, consider a model with current, independently verified anti-snap certification
-2. **Change HMO room locks** whenever a tenant in that room changes
+2. **Assess HMO room-lock key control** when an occupier changes, together with licence, management and fire-safety requirements
 3. **Keep a record** of what lock was fitted, when, and the key number — useful if a tenant loses their key later
 4. **Record any upgrade** — retain the exact product, certification, fitting date and invoice. A certified product improves resistance to tested attacks but does not eliminate risk or guarantee an insurance outcome
 
-I cover all Coventry areas for landlord lock changes — from city centre flats to suburban houses in Tile Hill, Canley, Eastern Green, and everywhere in between. Check our [coverage areas](/areas) or call me directly on 024 7522 4730.
+I cover the locations listed in the [areas directory](/areas). Call 024 7522 4730 with the full postcode, property type, authority and required scope to confirm the address and current ETA.
 
 ---
 
-## Bulk Booking for Landlords and Agents
+## Booking Multiple Properties
 
-If you manage multiple rental properties in Coventry, I offer:
+If you manage multiple properties, provide the address, access authority, affected doors, existing hardware and required completion date for each one. Before booking, confirm:
 
-- **Discounted rates** for 3 or more properties in one booking
-- **Priority scheduling** during the July-September student turnover
-- **Invoicing** — I can invoice your management company or landlord directly
-- **Key records** — I provide a written record of every lock fitted, with key numbers, for your property file
+- **The price basis** for each address and whether grouped attendance changes it
+- **Current scheduling** rather than assuming priority availability
+- **Invoice details** and the party authorising and paying for the work
+- **The handover record** required for fitted products and issued keys
 
-Whether you have 2 properties or 20, call me on 024 7522 4730 and I will give you an honest quote. No call-out fee, no hidden charges — just straightforward locksmith work at fair prices.
+Call 024 7522 4730 to discuss the specific portfolio scope. No VAT or separate call-out fee is added; any grouped-work terms must be stated in the quote rather than assumed.
 
 For information on lockouts and occupancy, see our guide on [whether landlords can change locks on tenants](/blog/can-landlord-change-locks). Coventry HMO owners should also use the council's [HMO amenities and facilities guide](https://www.coventry.gov.uk/downloads/file/27566/room-size-and-amenity-provision-standards) for property-specific requirements.
 `,
@@ -477,7 +474,7 @@ For information on lockouts and occupancy, see our guide on [whether landlords c
       },
       {
         q: 'How much does it cost to change all the locks on a rental property?',
-        a: 'For a typical Coventry rental with a uPVC front door and back door, changing both cylinders to anti-snap specification costs between £100 and £150 fitted. For an HMO with individual room locks plus external doors, budget £49 per room lock plus £59-69 per external door. I offer discounted rates for landlords with multiple properties — call 024 7522 4730 for a quote.',
+        a: 'There is no reliable property-wide total without identifying each door, lock, required key quantity, specification and fitting scope. Compatible anti-snap cylinder options start from £59 per stated scope. List every opening and obtain an itemised quote; grouped-work terms, if any, must be confirmed for that booking.',
       },
       {
         q: 'Should I change locks if the previous tenant returned all their keys?',
@@ -585,9 +582,9 @@ If the installed hardware does not match a confirmed requirement, obtain a door-
 
 ### Not Sure? Call Me
 
-I offer a **free visual lock check** across Coventry and the surrounding areas. I can identify the lock type, record visible markings and compare available documentation with policy wording you provide. The insurer must confirm whether it accepts the product and configuration.
+I can arrange a visual lock assessment to identify the lock type, record visible markings and compare available documentation with policy wording you provide. Confirm the assessment scope and price basis before booking. The insurer must decide whether it accepts the product and configuration.
 
-Call me on 024 7522 4730 to book a free check. I cover all areas — see our [coverage map](/areas) for details.
+Call me on 024 7522 4730 with the full address and purpose of the assessment. The [coverage map](/areas) lists the locations served; call to confirm the exact address and current ETA.
 
 ---
 
@@ -600,7 +597,6 @@ These are published starting prices for example lock types; they are not a state
 | Certified mortice lock assembly | BS3621, where confirmed | From £79 |
 | Anti-snap euro cylinder | TS007 1-star | From £59 |
 | Certified anti-snap euro cylinder | Exact model/configuration to verify | From £59 |
-| Premium anti-snap cylinder (Ultion/ABS) | Sold Secure Diamond | From £109 |
 
 The actual total depends on the number of doors, dimensions, existing mechanism and the precise certified configuration required. Confirm the scope and price before work starts.
 
@@ -608,10 +604,10 @@ The actual total depends on the number of doors, dimensions, existing mechanism 
 
 ## My Honest Advice
 
-After fitting locks across Coventry for years, here is what I tell every customer:
+A useful evidence-led checklist is:
 
 1. **Read your policy** — not the summary, the actual policy document. Find the security requirements section
-2. **Check your locks match** — or call me and I will do it for free
+2. **Check the fitted products** — if you want an assessment, confirm its scope and price basis before booking
 3. **Upgrade only against a confirmed specification** — certified products improve resistance but do not eliminate risk
 4. **Keep evidence** — retain the receipt, exact model, certification and fitting date with your insurance documents
 5. **Tell your insurer where required** — ask it to confirm in writing whether the installed product satisfies the policy wording
@@ -652,7 +648,7 @@ For a detailed explanation of the three main lock standards your insurance might
 
 "Are my locks insurance approved?" is a frequent question after a renewal or break-in. The answer cannot be established from a marketing label alone.
 
-I am Ross, and I have spent years helping Coventry homeowners, landlords, and tenants navigate the confusing world of lock standards and insurance requirements. Here is the honest truth: **"insurance approved" is not a formal standard**. It is shorthand for "whatever your specific insurance policy requires." And that varies from insurer to insurer.
+**"Insurance approved" is not a single formal lock standard.** The relevant requirement comes from the actual policy wording, the door and the precise product or configuration. Treat the phrase as marketing shorthand unless the insurer confirms what it requires in writing.
 
 Let me walk you through how to actually check.
 
@@ -743,19 +739,19 @@ Check each relevant door against the wording. If you are unsure what is fitted, 
 
 ---
 
-## The Free Security Survey
+## Arranging a Lock Assessment
 
-I offer a **free visual lock check** for homeowners across Coventry and the surrounding areas. Here is what it includes:
+If you want the fitted locks assessed against written policy wording or a product requirement, first describe the property, relevant doors and purpose of the check. Before booking, confirm the assessment scope, any charge and the output you need. A property-specific assessment may include:
 
 - I examine the relevant external door locks and record the type and visible markings
 - I compare available product documentation with policy wording you provide
 - I flag details that need confirmation from a certification catalogue, manufacturer or insurer
-- I explain upgrade options where a product requirement has been confirmed
-- I provide a written quote for any work needed
+- Suitable upgrade options where a product requirement has been confirmed
+- A separate written quote for any agreed work
 
-There is no charge for the survey, no obligation to book any work, and no hard sell. I would rather you know the truth about your locks and make an informed decision than find out the hard way after a burglary.
+Visible markings alone may not establish certification or policy compliance. Product records, installation details and the insurer's written decision may still be needed; the insurer determines whether the actual doorset meets its policy.
 
-Call 024 7522 4730 to book a free security survey, or check our [areas page](/areas) to confirm we cover your location. I cover all of Coventry and surrounding areas including Kenilworth, Bedworth, Nuneaton, Rugby, Warwick, and Leamington Spa.
+Call 024 7522 4730 with the full address and the requirement you are checking. The [areas page](/areas) lists the locations served; call to confirm the exact address, assessment scope, price basis and current ETA.
 
 ---
 

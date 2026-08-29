@@ -9,13 +9,13 @@ export const PILLAR_4_CONTENT: Record<string, { body: string; faqs: { q: string;
 
 If you have a uPVC door with a multipoint system, a mechanism sits behind the handle and cylinder and operates locking points along the door edge. It is one part of the complete doorset, alongside the cylinder, furniture, frame, hinges, and keeps.
 
-I have been replacing these mechanisms across Coventry for years, from the 1990s-era estates in Canley and Tile Hill to the newer builds around Walsgrave and Binley. In this post, I will explain exactly how your uPVC door lock works, what each component does, and what to look out for when things start to fail.
+This guide explains how a typical uPVC door lock works, what each component does, and what to look out for when operation changes. The exact layout and condition still need to be checked on the installed door.
 
 ## The Multipoint Locking Mechanism: An Overview
 
 A multipoint locking mechanism commonly uses a faceplate and lock case within the door edge to operate more than one locking point. The layout, operating sequence and number of hooks, rollers, cams, bolts or other points depend on the exact mechanism.
 
-This is fundamentally different from a traditional wooden door with a single Yale nightlatch or mortice deadlock. A multipoint system spreads the locking force across the full height of the door, making it far harder to force open.
+This differs from a single-point nightlatch or mortice deadlock because the installed system may engage points at more than one position. Its resistance depends on the complete doorset, certification, frame, keeps, cylinder, furniture, fit and condition; the number of points alone does not establish performance.
 
 ## The Key Components
 
@@ -33,13 +33,13 @@ Gearboxes can wear or fail over time. A loose handle, grinding, incomplete locki
 
 Hooks are locking points that sit at the top and bottom of the mechanism. When you lift the handle, they swing out from the edge of the door and hook into metal keeps (strike plates) fitted in the door frame.
 
-Hooks provide serious resistance to forced entry. They are particularly effective against kick-in attacks because even if the door flexes under impact, the hooks remain engaged in the frame keeps. A door with two or more hooks is significantly harder to force than one relying on rollers alone.
+Hooks are designed to engage with matching frame keeps. Their tested resistance cannot be inferred from shape or quantity alone; check the complete doorset certification, compatible keeps, installation and condition.
 
 ### Rollers (Compression Bolts)
 
 Rollers are mushroom-shaped or cylindrical bolts that push out from the door edge and compress into matching keeps in the frame. Their primary job is to pull the door tight against the frame seals, keeping drafts and rain out.
 
-Rollers provide moderate security but their main function is compression and weatherproofing. On a well-maintained door, the rollers keep the seal tight so you do not get draughts whistling through in winter — a common complaint I hear on jobs across Coventry.
+Rollers primarily provide compression against the seals. Their security and weatherproofing contribution depends on the complete tested doorset, adjustment, condition and compatible keeps.
 
 ### The Deadbolt
 
@@ -61,12 +61,14 @@ To unlock, you reverse the process: key turn retracts the deadbolt, pressing the
 
 Not all multipoint mechanisms are the same. Manufacturer markings can help narrow the search, but models are not universally interchangeable. Brands that may appear on an installed mechanism include:
 
-- **Mila** — very common in UK-manufactured uPVC doors from the 2000s onward
-- **GU (Gretsch-Unitas)** — German-made, found in higher-specification doors
-- **Yale** — widely available and often fitted as replacements
-- **Fuhr** — another German manufacturer, common in commercial and higher-end residential doors
-- **Lockmaster** — a universal replacement brand that covers many common sizes
-- **Winkhaus** — premium German mechanisms, excellent quality
+- **Mila**
+- **GU (Gretsch-Unitas)**
+- **Yale**
+- **Fuhr**
+- **Lockmaster**
+- **Winkhaus**
+
+These names are identification clues only. They do not establish age, quality, price or interchangeability; match the exact model and dimensions.
 
 ### How to Identify Your Mechanism
 
@@ -101,11 +103,11 @@ If your uPVC door is showing any of these symptoms, it is time to get it looked 
 - You can hear grinding or clicking when operating the handle
 - The door does not seal properly against the frame
 
-Do not keep forcing a mechanism that is becoming difficult to operate because that can worsen the fault. A mechanism replacement typically costs between £89 and £200 depending on the brand. Call me on 024 7522 4730 with the symptoms and faceplate details so the likely scope, compatible-part availability and expected work time can be discussed, or check our [prices page](/prices) for current rates.
+Do not keep forcing a mechanism that is becoming difficult to operate because that can worsen the fault. A uPVC multipoint gearbox replacement starts from £89 where the exact mechanism is identified and a compatible part is available. The final quote depends on the diagnosis, part specification and work required; see the [prices page](/prices). Call 024 7522 4730 with the symptoms and faceplate details so the likely scope and current compatible-part availability can be discussed.
 
 For more on whether your lock needs replacing or just repairing, see our guide on [how to tell if your uPVC door lock needs replacing](/blog/upvc-door-lock-needs-replacing). And if you are thinking about upgrading your cylinder at the same time, take a look at our [best euro cylinder upgrades for 2026](/blog/best-euro-cylinder-upgrades-2026).
 
-If you are in the Coventry area and need a uPVC door mechanism replaced, I cover all local areas including Tile Hill, Canley, Earlsdon, Coundon, Binley, Walsgrave, and beyond. See our full [areas covered](/areas/) page for details, or visit our [uPVC lock repair service page](/services/upvc-lock-repair) for more information.
+For a uPVC door mechanism assessment, check the locations listed on the [areas page](/areas/) and call with the full postcode to confirm the exact address, current availability and ETA. Visit the [uPVC lock repair service page](/services/upvc-lock-repair) for more information.
 `,
     faqs: [
       {
@@ -217,9 +219,9 @@ For a practical comparison of selection criteria, see the [euro cylinder upgrade
 
 ## Should You Measure Yourself or Call a Locksmith?
 
-If you are comfortable with a screwdriver and a tape measure, measuring your own cylinder is straightforward. The steps above are all you need. Where it gets complicated is sourcing the right replacement — making sure the brand is genuinely anti-snap, the size is exactly right, and the quality is decent.
+If you are comfortable with a screwdriver and a tape measure, the steps above provide a starting point for measuring your cylinder. Selecting a replacement also requires the exact dimensions, cam, surrounding furniture and current certification to be checked rather than relying on a brand or label alone.
 
-If you would rather have the door assessed, call 024 7522 4730. I cover Coventry and the stated surrounding [areas](/areas/). Anti-snap cylinder fitting starts from £59; the exact quote depends on the size, certified product, furniture, and work required. See current [prices](/prices) and the [lock upgrade service](/services/lock-upgrade).
+If you would rather have the door assessed, call 024 7522 4730 with the full postcode to confirm the exact address, current availability and ETA for a location listed on the [areas page](/areas/). Anti-snap cylinder fitting starts from £59; the exact quote depends on the size, certified product, furniture, and work required. See current [prices](/prices) and the [lock upgrade service](/services/lock-upgrade).
 
 For more on uPVC door locks and maintenance, see our [uPVC door maintenance guide](/blog/upvc-door-maintenance-guide) and our [uPVC lock repair service page](/services/upvc-lock-repair).
 `,
@@ -279,8 +281,6 @@ The complete installation still matters: correct sizing, compatible handles or e
 
 Ultion is one product family customers may ask about. Model names, specifications, certification, key-control terms, and promotional guarantees can change, so verify the exact current product and written terms before choosing it.
 
-**Current fitted pricing:** anti-snap cylinder fitting starts from £59. The quote depends on the model, size, configuration, and any furniture required; see [current prices](/prices).
-
 **What to verify:**
 
 - The certification attached to the exact model and configuration
@@ -296,8 +296,6 @@ Do not choose from the brand name alone. A premium product in the wrong size or 
 
 ABS Avocet is another product family that may be considered. Verify the exact current model's certification, sizing, furniture requirements, key-control terms, and availability before comparing it with alternatives.
 
-**Current fitted pricing:** anti-snap cylinder fitting starts from £59; confirm the exact quote after the door is measured.
-
 **Any downsides?**
 
 This article does not make an unsupported head-to-head security ranking. Compare current certificates and the complete fitted system, not historical or model-family claims.
@@ -305,8 +303,6 @@ This article does not make an unsupported head-to-head security ranking. Compare
 ### 3. Yale Superior — Check the Complete TS007 System
 
 Where a cylinder relies on compatible security furniture to reach a stated TS007 level, both components need to be identified and verified. Do not assume that an existing handle or escutcheon carries the required rating.
-
-**Current fitted pricing:** anti-snap cylinder fitting starts from £59. Additional furniture, if needed, is quoted after inspection.
 
 **Any downsides?**
 
@@ -316,8 +312,6 @@ System-dependent ratings are easy to misunderstand. Verify the exact cylinder an
 
 Premium variants may offer different specifications or commercial terms, but this guide does not claim that one is the most attack-resistant option. Ask for the exact current certificate and product documentation.
 
-**Current fitted pricing:** anti-snap cylinder fitting starts from £59; premium products are quoted for the required size and configuration.
-
 **Any downsides?**
 
 Extra features and price do not remove the need to assess the door, frame, furniture, installation, and household requirements.
@@ -325,8 +319,6 @@ Extra features and price do not remove the need to assess the door, frame, furni
 ### 5. ERA Fortress / Invincible — Verify the Exact Product
 
 Budget-focused products still need current, independently verifiable certification and correct fit. Do not infer the certification or attack resistance of one exact model from its family or marketing name.
-
-**Current fitted pricing:** anti-snap cylinder fitting starts from £59. Check [current prices](/prices) rather than relying on an old product-specific range.
 
 **Any downsides?**
 
@@ -340,7 +332,7 @@ There is no universal rule based only on whether a door is at the front, side, r
 
 There is no evidence-backed single best cylinder for every Coventry home. Identify the current installation, compare independently certified options that fit it, and confirm any key-control, warranty, and policy requirements before choosing.
 
-Anti-snap cylinder fitting starts from £59. For help measuring the required size, see the [euro cylinder measuring guide](/blog/how-to-measure-euro-cylinder-upvc). For a broader look at the door mechanism, read the [mechanism guide](/blog/upvc-door-lock-mechanisms-explained). Check [current prices](/prices) or the [lock upgrade service](/services/lock-upgrade) for an assessment and quote.
+The published starting price for a compatible anti-snap cylinder fitting is £59; it is not a brand-specific quote. The itemised total depends on the inspected door, dimensions, certification, furniture and work required. For help measuring the required size, see the [euro cylinder measuring guide](/blog/how-to-measure-euro-cylinder-upvc). For a broader look at the door mechanism, read the [mechanism guide](/blog/upvc-door-lock-mechanisms-explained). Check [current prices](/prices) or the [lock upgrade service](/services/lock-upgrade) for an assessment and quote.
 `,
     faqs: [
       {
@@ -349,7 +341,7 @@ Anti-snap cylinder fitting starts from £59. For help measuring the required siz
       },
       {
         q: 'Is it worth paying more for an Ultion over a cheaper anti-snap lock?',
-        a: 'That depends on the exact models, their current certification, compatible installation, key-control terms, written warranty, and your budget. Do not rely on an unverified guarantee amount or assume that a brand name alone establishes better resistance. Fitted anti-snap options start from £59.',
+        a: 'That depends on the exact models, their current certification, compatible installation, key-control terms, written warranty, and your budget. Do not rely on an unverified guarantee amount or assume that a brand name alone establishes better resistance. The published anti-snap fitting price starts from £59 where the inspected door and stated scope apply; see /prices for the current basis.',
       },
       {
         q: 'Do I need to change my door handles when upgrading my euro cylinder?',
@@ -380,7 +372,7 @@ Spring is recovery time. Your door has been through a Coventry winter — rain, 
 
 Look at the bottom of your uPVC door frame (the outer sill). You will see small slots or holes — these are drainage holes that let water escape from the track and frame. Over winter, they get clogged with dirt, leaves, and debris. If they are blocked, water pools in the frame and can cause the mechanism and hinges to corrode.
 
-Clear them out with a thin piece of wire, a pipe cleaner, or a blast of compressed air. It takes two minutes and prevents water damage.
+Clear drainage openings only by the method permitted in the doorset instructions. Keeping specified drainage paths clear may reduce retained water, but no universal tool, duration or damage-prevention outcome applies to every design.
 
 ### Check the Seals
 
@@ -390,7 +382,7 @@ Most uPVC door seals are push-fit and can be bought by the metre online. If you 
 
 ### Lubricate the Hinges
 
-Apply a drop of light machine oil (3-in-1 oil or similar) to each hinge pin. Open and close the door a few times to work the oil in. This prevents the hinges from stiffening and reduces wear.
+Use only the hinge lubricant and application method specified by the exact door or hinge manufacturer. Maintenance may reduce avoidable friction, but no generic oil recommendation guarantees performance or service life.
 
 If your door has flag hinges, visually check for looseness or movement without changing the adjustment unless you have the doorset instructions and suitable competence. Hinge movement can contribute to alignment symptoms, but the hinge, keeps, frame and mechanism should be diagnosed together.
 
@@ -408,7 +400,7 @@ I carry hinge adjustment tools and can realign a dropped or expanded door in abo
 
 ### Clean the Tracks and Threshold
 
-The bottom track (the threshold or cill) collects dirt, grit, and debris throughout the year. In summer, when doors are open more often, this accelerates. Clean the track with a vacuum followed by a damp cloth. Grit in the track causes premature wear on the door seals and can prevent the door from closing properly.
+Inspect the bottom track or threshold for debris and clean it by the method permitted in the doorset instructions. Contamination may affect seals or closing, but its effect depends on the installed design and condition.
 
 ### Clean and Check the Door Panel
 
@@ -420,15 +412,15 @@ Autumn is preparation time. Get your door ready for winter before the cold hits.
 
 ### Lubricate the Euro Cylinder
 
-This is the most important single maintenance task. Apply a small amount of **graphite lubricant** (powdered graphite or a graphite spray) into the keyhole. Insert and remove the key a few times to distribute the lubricant through the pins.
+Cylinder maintenance depends on the exact product. Do not put graphite, oil or spray into the keyway unless the cylinder manufacturer specifies that product and application method.
 
 **Use only the lubricant and method specified for the exact product.** A cylinder, gearbox, hook, roller, hinge and seal may have different maintenance instructions, and a generic spray or graphite recommendation is not safe for every design. If the documentation is unavailable, identify the product or ask its manufacturer before applying anything.
 
-You can buy graphite lubricant from any hardware shop or online for about £3 to £5. It is the best investment you will make in your door.
+Use only a lubricant and application method permitted by the exact product instructions. Suitability for the installed components matters more than a generic retail price or universal recommendation.
 
 ### Lubricate the Locking Mechanism
 
-While you have the lubricant out, apply a light spray of silicone-based lubricant (not WD-40) along the moving parts of the multipoint mechanism. You can access these through the door edge — spray along the faceplate where the hooks, rollers, and deadbolt emerge. Operate the handle and key a few times to work the lubricant through the mechanism.
+Follow the exact mechanism manufacturer's maintenance instructions for accessible moving parts. Do not apply a generic spray along the faceplate unless that product and method are expressly permitted for the installed mechanism.
 
 ### Check Weather Seals Before Winter
 
@@ -446,7 +438,7 @@ Winter is survival mode for your door. Cold, rain, and frost all take their toll
 
 Use the operating sequence specified for the installed mechanism. Some lever-operated multipoint systems require lifting the handle and then turning the key, but the exact key rotation and indicators vary. Do not infer full engagement from handle position alone, and do not force a key or handle that will not complete its normal travel.
 
-Make it a habit: handle up, key turn, every single time you lock the door. It keeps the mechanism exercised and your door properly secure.
+Use the operating sequence specified for the installed door each time. Correct operation supports normal engagement, but it does not by itself establish that the complete doorset is secure.
 
 ### Do Not Force Stiff Locks
 
@@ -463,7 +455,7 @@ In cold weather, check for condensation between the door glass panes. Condensati
 Some things apply all year:
 
 - **Do not slam the door.** Every slam sends a shock through the mechanism, loosening internal components and accelerating wear.
-- **Do not hang things on the handle.** Shopping bags, coats, leads — the weight pulls the handle down and stresses the cassette spring. This is the number one cause of dropping handles.
+- **Do not hang things on the handle.** Added weight can strain the lever, spring, fixings, spindle or lock case; this guide does not claim a measured number-one cause of dropping handles.
 - **Keep your key ring light.** A heavy bunch of keys hanging from the cylinder puts lateral pressure on the internal pins and wears them unevenly. Keep your door key on a separate, light ring if possible.
 - **Keep the key slot clean.** If your external keyhole does not have a cover, debris and grit will find their way in. A key cover or escutcheon with a rotating cover helps enormously.
 
@@ -519,7 +511,7 @@ Do not hang weight from a door handle. Added load is outside its intended operat
 
 **The fix:** Replace the cassette spring or, more commonly, replace the entire handle set. A new handle set includes the cassette spring, the handle itself, and the backplate.
 
-**Cost: £39 to £49 fitted**, including the stated handle set and labour. Timing depends on the diagnosed fault, compatible parts, fixings and whether the spindle or multipoint mechanism also needs attention.
+Published uPVC lock repair starts from £59 where the inspected fault and stated scope apply. The itemised quote depends on the diagnosed fault, compatible parts, fixings and whether the spindle or multipoint mechanism also needs attention; see [prices](/prices).
 
 **DIY potential:** This is one of the few uPVC door repairs that a handy homeowner can do themselves. The handles are held on by two screws on the inside backplate. Remove the screws, pull off both handles (inside and outside come off together, connected by the spindle), and fit the new set. The key is buying a handle with the correct PZ distance (spindle hole to keyhole centre) — see our [mechanism guide](/blog/upvc-door-lock-mechanisms-explained) for how to measure this.
 
@@ -537,9 +529,9 @@ Do not hang weight from a door handle. Added load is outside its intended operat
 
 For loose screws: simply tighten the two fixing screws on the inside backplate. Use a screwdriver, not a drill — over-tightening can strip the screw holes in the uPVC.
 
-For a worn spindle: replace the spindle (a standard part, about £3 from any hardware shop) or replace the full handle set if the handle itself is also worn. Spindles come in different lengths, so measure the door thickness or bring the old spindle to the shop.
+For a worn spindle: replace it with a compatible part, or replace the full handle set if the handle itself is also worn. Spindles come in different lengths, so check the door thickness and installed dimensions before selecting one.
 
-**Cost: Free if it is just loose screws.** Spindle replacement is £15 to £25 if I am already on site, or a new handle set fitted is £39 to £49.
+Tightening suitable loose fixings may not require a replacement part. If the spindle, handle, fixings or mechanism need work, published uPVC lock repair starts from £59 where the inspected fault and stated scope apply; see [prices](/prices) and obtain an itemised quote after inspection.
 
 **DIY potential:** Tightening screws is straightforward. Spindle replacement is easy if you are comfortable removing the handles. If the screws will not tighten (the holes are stripped), you may need slightly longer screws or plastic wall plugs inserted into the screw holes — a locksmith trick that works well.
 
@@ -563,7 +555,7 @@ For a failing gearbox: the multipoint mechanism needs replacing. See our [mechan
 
 For seized locking points: sometimes lubrication and working the mechanism frees the seized components. If not, the mechanism may need replacing.
 
-**Cost: Door realignment from £49. Mechanism replacement from £89 to £200+** depending on brand and complexity. See our [prices page](/prices) for current rates.
+Published uPVC multipoint gearbox replacement starts from £89 where the exact mechanism is identified and a compatible part is available. Alignment and any other work are separately diagnosed and quoted; see the [prices page](/prices).
 
 **DIY potential:** Low. This is a job for a locksmith. Attempting to force a jammed mechanism can cause further damage and increase the repair cost. If your handle will not lift to lock, call 024 7522 4730.
 
@@ -575,9 +567,9 @@ For seized locking points: sometimes lubrication and working the mechanism frees
 
 Price alone does not establish durability. Check the replacement's dimensions, material, certification where relevant and compatibility with the installed spindle and mechanism.
 
-**The fix:** Replace the full handle set. Make sure you buy a quality replacement — I recommend handles from established brands like Avocet, Hoppe, or Mila. They cost slightly more but last significantly longer than unbranded budget handles.
+**The fix:** Replace the full handle set where inspection confirms that scope. Select it by exact dimensions, material, compatible fixings and spindle, and any relevant current test evidence or written warranty; brand alone does not establish service life.
 
-**Cost: £39 to £59 fitted**, depending on the handle quality. The dimensions, fixings, spindle and current compatible-handle availability are confirmed before the fitting date or number of visits is agreed.
+Published uPVC lock repair starts from £59 where the inspected fault and stated scope apply. The dimensions, fixings, spindle and current compatible-handle availability determine the itemised quote and whether another visit is needed; see [prices](/prices).
 
 **DIY potential:** Similar to the cassette spring replacement above — remove two screws from the inside backplate, pull off the old handles, and fit the new set. Ensure the PZ distance matches your mechanism.
 
@@ -611,12 +603,12 @@ If the safe checks do not identify the issue, call 024 7522 4730 with the mechan
 
 For more on the mechanism behind your handle, see our [uPVC door lock mechanisms explained](/blog/upvc-door-lock-mechanisms-explained) guide. For maintenance tips that prevent handle problems, read our [uPVC door maintenance guide](/blog/upvc-door-maintenance-guide). And for a full overview of our repair services, visit our [uPVC lock repair service page](/services/upvc-lock-repair) or check our [prices page](/prices).
 
-I cover all of Coventry and surrounding areas — see our [areas page](/areas/) for full coverage details.
+I cover the locations listed on the [areas page](/areas/); call with the full postcode to confirm the exact address and current ETA.
 `,
     faqs: [
       {
         q: 'How much does it cost to fix a dropping uPVC door handle?',
-        a: 'A dropping handle caused by a broken cassette spring starts from the stated handle-replacement price, including the agreed handle set and fitting. If diagnosis finds a spindle, alignment or multipoint-mechanism fault, the work, timing and price can differ and should be confirmed first.',
+        a: 'Published uPVC lock repair starts from £59 where the inspected fault and stated scope apply; see /prices. If diagnosis finds a spindle, alignment or multipoint-mechanism fault, the work, timing and itemised quote can differ and should be confirmed first.',
       },
       {
         q: 'Can I replace a uPVC door handle myself?',
@@ -639,7 +631,7 @@ I cover all of Coventry and surrounding areas — see our [areas page](/areas/) 
 
 A multipoint locking system is the complete locking mechanism fitted inside the edge of a uPVC, composite, or timber door. Unlike a traditional single-point lock (such as a Yale nightlatch or a mortice deadlock), a multipoint system engages multiple locking points along the full height of the door in a single action — lift the handle and turn the key.
 
-If you live in Coventry and your home was built or had new doors fitted any time from the 1990s onward, your front and back doors almost certainly use multipoint locking systems. They are standard on virtually every uPVC and composite door sold in the UK.
+Property age, Coventry location and door material do not establish which locking system is installed. Inspect the door edge, operating sequence, markings and dimensions before identifying it as a multipoint system.
 
 This guide explains the mechanism types, observable symptoms, diagnosis steps and pricing basis relevant to a Coventry or Warwickshire enquiry. The fitted markings, dimensions and door condition still need to be checked before a repair or replacement is specified.
 
@@ -649,7 +641,7 @@ A multipoint mechanism uses a combination of different locking point types. Each
 
 ### Hook Bolts
 
-Hook bolts are the primary security locking points. When you lift the handle, a curved metal hook swings out from the door edge and hooks around a metal keep (strike plate) fitted in the door frame. The hook shape means that even if force is applied to the door, the hook remains engaged — it would have to be physically broken or cut to release.
+Hook bolts are designed to move into matching frame keeps during the specified operating sequence. Their resistance depends on the complete tested doorset, keep, frame, installation and condition; shape alone does not establish how the door will perform under attack.
 
 Hook bolts typically sit at the top and bottom of the mechanism, providing security at the points furthest from the central gearbox. Higher-security doors may have additional hooks at intermediate positions.
 
@@ -661,9 +653,9 @@ While roller bolts do provide some resistance to forced entry, their main job is
 
 ### Mushroom Cams
 
-Mushroom cams are a higher-security variant of roller bolts. Instead of a smooth cylinder, the cam has a mushroom-shaped head that locks into a corresponding keep with a narrow slot. Once engaged, the mushroom head prevents the cam from being pulled back without the handle being operated.
+Mushroom cams have a shaped head intended to engage with a corresponding keep. The exact movement and resistance depend on the mechanism, compatible keep, adjustment and complete doorset evidence.
 
-Mushroom cams provide significantly better resistance to levering attacks than standard rollers. They are commonly found on higher-specification doors and mechanisms.
+Do not infer a fixed improvement over another locking-point type from appearance alone. Compare current test evidence for the complete doorset and verify correct installation and engagement.
 
 ### Deadbolts
 
@@ -679,11 +671,11 @@ Multipoint mechanisms come in three main configurations:
 
 One possible configuration uses a central bolt and two additional locking points above and below. The number of points does not by itself establish certification, compatibility or adequate resistance; check the exact mechanism and complete doorset evidence.
 
-Many older uPVC doors in Coventry — particularly those from the 1990s and early 2000s — have 3-point systems. They are secure enough for most homes but are being superseded by 5-point systems in newer installations.
+Door age and Coventry location do not establish a three-point layout or whether it is adequate. Count the actual operating points and check the complete doorset specification and current requirements.
 
 ### 5-Point Systems
 
-The current standard for most new residential doors: a central deadbolt, two hooks (top and bottom), and two rollers or mushroom cams at intermediate positions. This provides both security (hooks and deadbolt) and compression (rollers) along the full height of the door.
+One five-point configuration combines a central deadbolt, two hooks and two rollers or mushroom cams. Do not describe that layout as a universal current standard; security and compression depend on the exact tested doorset and correct installation.
 
 A replacement mechanism should match the present door, gearbox dimensions, locking-point positions, keeps and relevant product requirements. The number of locking points alone does not establish compatibility, security performance or value.
 
@@ -691,7 +683,7 @@ A replacement mechanism should match the present door, gearbox dimensions, locki
 
 Some mechanisms combine a central bolt, hooks and additional rollers or cams. More points do not automatically make one doorset higher security than another; certification, keeps, frame, hinges, cylinder, furniture, fit and correct operation all matter.
 
-7-point systems provide outstanding security and compression but are more expensive and more complex when repairs are needed.
+A seven-point count does not establish security, compression, price or repair complexity. Those depend on the exact mechanism, doorset evidence, compatible parts, installation and diagnosed fault.
 
 ## Active vs Passive Locking Points
 
@@ -705,7 +697,7 @@ The deadbolt is also active but operates on the key turn rather than the handle 
 
 ### Passive Locking Points
 
-Passive locking points are always extended. They do not move when you operate the handle. Instead, they slide past the keeps in the frame as the door closes and rely on the frame keep shape to hold them in place.
+On the mechanism type described here, passive locking points remain projecting rather than moving with the handle. They engage with shaped keeps as the door closes. Verify the installed design and operating instructions because the label alone does not establish the sequence.
 
 Passive points are less common in modern mechanisms but were used in some older systems. They provide continuous engagement without relying on the user to lift the handle, which can be useful for doors that are frequently left unlocked on the latch.
 
@@ -740,8 +732,8 @@ Manufacturer names can help identify a starting point, but the installed model a
 - A door or handle brand does not reliably identify the installed mechanism
 - Apparent brand matches do not prove that a replacement case or strip is compatible
 - Record the faceplate, case, centres, backset, locking-point layout and current manufacturer data before proposing a part
-- **Yale** and **Lockmaster** are common replacement brands that cover a wide range of door configurations
-- **Winkhaus** mechanisms are premium and tend to require like-for-like replacement
+- A manufacturer family can contain multiple incompatible configurations
+- Price and compatibility must come from the exact identified part, not a premium or budget brand label
 
 Call with the full faceplate markings and measurements so current availability and any ordering lead time for a compatible mechanism can be confirmed before work is scheduled.
 
@@ -787,32 +779,24 @@ Symptoms: stiff operation that worsens over time, visible rust on the faceplate.
 - The mechanism is corroded beyond recovery
 - The door has been forced and the mechanism is physically damaged
 
-### Cost Guide
+### Published Starting Price
 
-Here is what you can expect to pay for mechanism work in 2026:
-
-- **Door realignment (hinge adjustment):** £49 to £69
-- **Basic mechanism replacement (standard brands like Lockmaster or Yale):** £89 to £130
-- **Mid-range mechanism replacement (Mila, Fuhr):** £120 to £170
-- **Specialist mechanism replacement (GU, Winkhaus):** £150 to £200+
-- **Out-of-hours mechanism replacement:** quoted for the required work; no automatic night premium
-
-These prices include the mechanism, labour, and testing. If the euro cylinder also needs replacing (which I recommend doing at the same time if it is more than 5 years old), add the cylinder cost — see our [euro cylinder upgrade guide](/blog/best-euro-cylinder-upgrades-2026) for prices.
+A uPVC multipoint gearbox replacement starts from £89 where the exact mechanism is identified and a compatible part is available. Door alignment, full-strip replacement, cylinder or furniture work, and ordered parts are separate diagnosis-dependent scopes. Manufacturer family alone does not set the price. See [prices](/prices) and obtain an itemised quote for the inspected door before work starts.
 
 ## Getting the Right Diagnosis
 
 If your multipoint mechanism is playing up, the most important step is getting the right diagnosis. A stiff door could be a mechanism issue, a hinge issue, a cylinder issue, or simply an alignment issue caused by seasonal temperature changes.
 
-I offer free diagnosis — call me on 024 7522 4730 and describe the symptoms. In many cases, I can give you a good idea of the problem over the phone. If I need to visit, I will diagnose the issue on site and give you an exact quote before starting any work.
+Call 024 7522 4730 and describe the symptoms. A phone discussion can narrow the initial checks but does not establish the diagnosis. Where an inspection is needed, the exact scope, compatible parts and current availability determine the itemised quote before work starts.
 
 For more on how the individual components work, see our [uPVC door lock mechanisms explained guide](/blog/upvc-door-lock-mechanisms-explained). For cylinder-specific issues, check our [euro cylinder measuring guide](/blog/how-to-measure-euro-cylinder-upvc). And for routine maintenance that prevents mechanism failures, read our [uPVC door maintenance guide](/blog/upvc-door-maintenance-guide).
 
-I cover Coventry and the stated surrounding Warwickshire [areas](/areas/). Visit the [uPVC lock repair service](/services/upvc-lock-repair) for mechanism diagnosis, repair, or replacement, or check the [prices page](/prices) for current rates.
+Check the locations listed on the [areas page](/areas/) and call with the full postcode to confirm the exact address, current availability and ETA. Visit the [uPVC lock repair service](/services/upvc-lock-repair) for mechanism diagnosis, repair, or replacement, or check the [prices page](/prices) for current rates.
 `,
     faqs: [
       {
         q: 'How many locking points does my uPVC door need?',
-        a: 'For most residential doors, a 5-point system (deadbolt, two hooks, and two rollers or mushroom cams) is the current standard and provides an excellent balance of security and weatherproofing. Older doors may have 3-point systems, which are adequate but less secure. Composite doors and high-security installations often have 7-point systems. If you are replacing a mechanism, I recommend upgrading to at least a 5-point system if your door can accommodate it.',
+        a: 'There is no universal number that can be prescribed from the door material alone. Use the exact doorset specification, current certification, frame, keeps and compatible replacement data. More locking points by itself does not prove greater security or weather performance.',
       },
       {
         q: 'Are multipoint lock mechanisms universal — can I use any brand?',
@@ -820,7 +804,7 @@ I cover Coventry and the stated surrounding Warwickshire [areas](/areas/). Visit
       },
       {
         q: 'How much does it cost to replace a multipoint locking mechanism?',
-        a: 'Mechanism replacement costs depend on the exact specification, compatibility, availability, and fitting required. The current service prices include the mechanism, labour, and testing as stated in the quote. If a certified anti-snap cylinder is also required, fitting starts from £59. I confirm the total before work starts.',
+        a: 'A uPVC multipoint gearbox replacement starts from £89 where the exact mechanism is identified and a compatible part is available. The itemised total depends on the diagnosed scope, specification, availability and fitting required. Any cylinder or additional work is separate; see /prices and confirm the quote before work starts.',
       },
       {
         q: 'What is the difference between active and passive locking points?',

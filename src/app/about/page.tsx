@@ -52,7 +52,7 @@ export default function AboutPage() {
       <nav aria-label="Breadcrumb" className="bg-[#F7F7F5] py-3 px-4 border-b border-gray-200">
         <ol className="max-w-3xl mx-auto text-sm text-gray-500 flex flex-wrap items-center gap-0" itemScope itemType="https://schema.org/BreadcrumbList">
           <li itemScope itemType="https://schema.org/ListItem" itemProp="itemListElement">
-            <Link href="/" itemProp="item" className="hover:text-[#0F1B2D] transition-colors"><span itemProp="name">Home</span></Link>
+            <Link href="/" prefetch={false} itemProp="item" className="hover:text-[#0F1B2D] transition-colors"><span itemProp="name">Home</span></Link>
             <meta itemProp="position" content="1" />
           </li>
           <span className="mx-2" aria-hidden="true">›</span>
@@ -73,8 +73,8 @@ export default function AboutPage() {
 
           {/* Hero paragraph */}
           <p className="text-lg text-gray-700 leading-relaxed mb-10">
-            I&apos;m Ross, your local independent locksmith covering Coventry and all of
-            Warwickshire. When you call{' '}
+            I&apos;m Ross, your local independent locksmith serving the locations listed across
+            Coventry and nearby parts of Warwickshire, Solihull, and the West Midlands. When you call{' '}
             <a
               href={`tel:${SITE_CONFIG.phoneTel}`}
               className="font-black text-[#0F1B2D] hover:text-[#FFB800] transition-colors"
@@ -89,17 +89,17 @@ export default function AboutPage() {
           <section className="mb-12">
             <h2 className="text-2xl font-black text-[#0F1B2D] mb-4">What I Do</h2>
             <p className="text-gray-600 mb-5 leading-relaxed">
-              I provide a full range of emergency and non-emergency locksmith services across
-              Coventry and Warwickshire. Every job is handled personally by me — no subcontractors,
-              no middlemen.
+              I provide the five emergency and planned locksmith services shown below across the
+              listed coverage locations. Bookings are handled directly by me, without a call centre
+              or dispatcher.
             </p>
             <div className="space-y-3">
               {[
                 { service: 'Emergency Lockout', price: 'from £59' },
-                { service: 'Lock Change', price: 'from £69' },
+                { service: 'Lock Change', price: 'from £59' },
                 { service: 'uPVC Lock Repair', price: 'from £59' },
                 { service: 'Boarding Up', price: 'from £79' },
-                { service: 'Lock Upgrade', price: 'from £79' },
+                { service: 'Lock Upgrade', price: 'from £59' },
               ].map((item) => (
                 <div
                   key={item.service}
@@ -120,9 +120,9 @@ export default function AboutPage() {
           <section className="mb-12">
             <h2 className="text-2xl font-black text-[#0F1B2D] mb-4">Where I Cover</h2>
             <p className="text-gray-600 leading-relaxed mb-4">
-              I cover Coventry, Nuneaton, Bedworth, Rugby, Leamington Spa, Warwick, Kenilworth,
-              Stratford-upon-Avon, and over 70 surrounding towns and villages across Warwickshire
-              and the West Midlands.
+              The area directory records 78 locations, including Coventry, Nuneaton, Bedworth,
+              Rugby, Leamington Spa, Warwick, Kenilworth, and Stratford-upon-Avon. Call with the
+              full address to confirm address-level coverage.
             </p>
             <p className="text-gray-600 leading-relaxed">
               Travel time depends on my actual starting point, traffic and the full address. I
@@ -163,8 +163,8 @@ export default function AboutPage() {
                 'No VAT is added to the agreed price.',
                 'No call-out fee, ever. You only pay if I complete the job.',
                 'Same price 24/7 — no premium for evenings, weekends, or bank holidays.',
-                'I know Coventry streets, housing stock, and common lock types. I arrive prepared.',
-                'Honest pricing confirmed on the phone before I set off. No surprises at the door.',
+                'The full address and door symptoms are recorded before attendance so the actual job can be assessed.',
+                'The price basis is confirmed for the described scope before I set off.',
               ].map((point) => (
                 <li key={point} className="flex items-start gap-3">
                   <svg
@@ -189,46 +189,44 @@ export default function AboutPage() {
             <h2 className="text-2xl font-black text-[#0F1B2D] mb-4">My Approach</h2>
             <div className="bg-[#F7F7F5] border-l-4 border-[#FFB800] rounded-r-xl p-6">
               <p className="text-gray-700 leading-relaxed mb-4">
-                I started this business because I was fed up with how the locksmith industry
-                treats people. National call centres quote one price on the phone and charge
-                double at the door. They add VAT, call-out fees, and &ldquo;emergency
-                surcharges&rdquo; that don&apos;t exist.
+                This business is structured so the caller speaks directly to the locksmith who
+                will assess the work, rather than a separate call centre or dispatcher.
               </p>
               <p className="text-gray-700 leading-relaxed mb-4">
-                I do things differently. When you call me, I tell you exactly what it will cost.
-                That&apos;s what you pay — nothing more. I don&apos;t charge VAT because I&apos;m
-                a sole trader, and I never charge a call-out fee because it&apos;s not fair to
-                charge someone just for turning up.
+                When you call, I explain the known price basis before setting off. If inspection
+                changes the diagnosed scope or parts required, the revised work and price must be
+                agreed before it proceeds. I am not VAT-registered, so no VAT is added, and there
+                is no separate call-out fee.
               </p>
               <p className="text-gray-700 leading-relaxed">
-                My goal is simple: get to you fast, fix the problem, charge a fair price, and
-                leave you feeling like you called the right person.
+                My aim is to give you a realistic current ETA, assess the actual door and lock,
+                explain the available options, and agree the work before starting.
               </p>
             </div>
           </section>
 
-          {/* Qualifications & Trust */}
+          {/* Booking & trust information */}
           <section className="mb-12">
             <h2 className="text-2xl font-black text-[#0F1B2D] mb-4">
-              Qualifications &amp; Trust
+              What You Can Check Before Booking
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {[
                 {
-                  title: 'DBS Checked',
-                  desc: 'Enhanced Disclosure and Barring Service checked for your peace of mind.',
+                  title: 'Direct Contact',
+                  desc: 'The name of the attending locksmith, current ETA, and phone number can be confirmed when you book.',
                 },
                 {
-                  title: 'Fully Insured',
-                  desc: 'Full public liability insurance covering all work carried out.',
+                  title: 'Scope Before Work',
+                  desc: 'The proposed method, known parts, and price basis are explained before work starts.',
                 },
                 {
-                  title: 'Real Local Business',
-                  desc: 'Based in Coventry, not a national franchise or call centre operation.',
+                  title: 'Listed Coverage',
+                  desc: 'The public directory names all 78 locations; the full address is checked before attendance.',
                 },
                 {
-                  title: 'Transparent Pricing',
-                  desc: 'Every price confirmed on the phone before I set off. No hidden charges.',
+                  title: 'Evidence on Request',
+                  desc: 'Ask to see current identity or cover documents that matter to your booking before granting access.',
                 },
               ].map((item) => (
                 <div

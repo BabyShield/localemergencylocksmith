@@ -6,9 +6,9 @@ import CTABlock from '@/components/CTABlock'
 import FAQSection from '@/components/FAQSection'
 
 export const metadata: Metadata = {
-  title: 'Coventry Locksmith FAQ | Prices, Response & Areas',
+  title: 'Coventry Locksmith FAQ | Prices, ETA & Areas',
   description:
-    'Locksmith questions answered: How much does an emergency locksmith cost in Coventry? How fast? Which areas? No VAT, no call-out fee. Call 024 7522 4730.',
+    'Coventry locksmith questions answered: published from-prices, how the current ETA is confirmed, services and the 78 listed coverage locations.',
   keywords: 'locksmith faq coventry, how much does a locksmith cost coventry, emergency locksmith price coventry, locksmith response time coventry, coventry locksmith questions',
   alternates: {
     canonical: `${SITE_CONFIG.domain}/faq`,
@@ -17,8 +17,8 @@ export const metadata: Metadata = {
     type: 'website',
     siteName: 'Local Emergency Locksmith',
     locale: 'en_GB',
-    title: 'Coventry Locksmith FAQ | Prices, Response & Areas',
-    description: 'Everything you need to know about emergency locksmith pricing, response times, and areas covered in Coventry.',
+    title: 'Coventry Locksmith FAQ | Prices, ETA & Areas',
+    description: 'Published from-prices, current ETA guidance, services and the listed Coventry-area coverage locations.',
     url: `${SITE_CONFIG.domain}/faq`,
     images: [{ url: `${SITE_CONFIG.domain}/api/og?title=${encodeURIComponent('Locksmith FAQ — Prices, Response Times & Areas')}`, width: 1200, height: 630 }],
   },
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
 const pricingFaqs = [
   {
     q: 'How much does it cost if I\'m locked out?',
-    a: 'Emergency lockout starts from £59. This includes non-destructive entry using specialist tools. The exact price is confirmed on the phone before I attend — no surprises at the door. No VAT, no call-out fee.',
+    a: 'Emergency lockout starts from £59. I confirm the price basis for the described scope before attending. If inspection changes the diagnosis, method or parts required, I explain and agree any revised price before work proceeds. No VAT or separate call-out fee is added.',
   },
   {
     q: 'How much does a lock change cost?',
@@ -39,7 +39,7 @@ const pricingFaqs = [
   },
   {
     q: 'Do you charge VAT?',
-    a: 'No. I\'m a sole trader below the VAT threshold, so no VAT is added. The price I quote is the price you pay.',
+    a: 'No. I am not VAT-registered, so no VAT is added. The agreed price can change only if inspection changes the scope and you approve the revised work and price first.',
   },
   {
     q: 'Is there a call-out fee?',
@@ -91,31 +91,31 @@ const servicesFaqs = [
 
 const trustFaqs = [
   {
-    q: 'Are you insured?',
-    a: 'Yes. I carry full public liability insurance covering all work I carry out. This protects you in the unlikely event that any damage occurs during a job.',
+    q: 'What should I check before allowing locksmith work?',
+    a: 'Confirm who is attending, the phone number, the authority needed for the affected entrance, the proposed scope and the price basis. Ask to see any current identity, training or insurance evidence that matters to your decision before granting access.',
   },
   {
-    q: 'Are you DBS checked?',
-    a: 'Yes. I hold an enhanced DBS (Disclosure and Barring Service) check, which means I\'ve been vetted by the government to work in people\'s homes. I\'m happy to show you my DBS certificate on arrival.',
+    q: 'Does a website badge prove a locksmith\'s credentials?',
+    a: 'No. A badge or claim on a website is not evidence by itself. Ask for current documentation relevant to the booking and check that the attending person and agreed business details match.',
   },
   {
-    q: 'Will you show ID when you arrive?',
-    a: 'Yes. I always carry identification and will show it when I arrive. I\'ll also arrive in a clearly marked vehicle. If you\'re ever unsure, call me back on 024 7522 4730 to confirm it\'s me at your door.',
+    q: 'How do I verify who is attending?',
+    a: 'Confirm the attending name and phone number when booking, then ask to see matching identification before granting access. If anything does not match what was agreed, pause and call 024 7522 4730 before work starts.',
   },
   {
     q: 'How do I spot a rogue locksmith?',
-    a: 'Watch out for these warning signs: they won\'t give a fixed price on the phone, they quote one price and charge more at the door, they insist on drilling your lock when it isn\'t necessary, they can\'t show ID or insurance, and their website has no real address. A genuine locksmith will always confirm the price before attending and show ID on arrival.',
+    a: 'Before booking, ask who will attend, how the price is calculated, what identification or insurance evidence is available, and whether any destructive work will need separate approval. Treat unexplained price changes, pressure to proceed, or drilling without a clear reason as warning signs; no single checklist proves that a trader is legitimate.',
   },
 ]
 
 const areasFaqs = [
   {
     q: 'Which postcodes do you cover?',
-    a: 'I cover CV1 through CV37, which includes all of Coventry, Nuneaton, Bedworth, Rugby, Leamington Spa, Warwick, Kenilworth, Stratford-upon-Avon, and surrounding villages. I also cover parts of B46 and B76 on the Coventry/Birmingham border.',
+    a: 'The area directory lists 78 Coventry-area towns, suburbs and villages and links each one to its recorded outward postcode page. An outward postcode alone does not confirm every address in that district, so use the directory or call with the full postcode to confirm coverage.',
   },
   {
     q: 'How far will you travel?',
-    a: 'I cover a roughly 25-mile radius from Coventry city centre. This takes in all of Warwickshire and parts of the West Midlands. If you\'re on the edge of my area, just call and I\'ll let you know if I can reach you.',
+    a: 'Coverage follows the locations listed in the area directory rather than a promised radius or county-wide claim. Call with the full address so I can confirm address-level coverage and the current ETA.',
   },
   {
     q: 'Do you cover student areas like Canley and Earlsdon?',
@@ -173,7 +173,7 @@ export default function FAQPage() {
       <nav aria-label="Breadcrumb" className="bg-[#F7F7F5] py-3 px-4 border-b border-gray-200">
         <ol className="max-w-3xl mx-auto text-sm text-gray-500 flex flex-wrap items-center gap-0" itemScope itemType="https://schema.org/BreadcrumbList">
           <li itemScope itemType="https://schema.org/ListItem" itemProp="itemListElement">
-            <Link href="/" itemProp="item" className="hover:text-[#0F1B2D] transition-colors"><span itemProp="name">Home</span></Link>
+            <Link href="/" prefetch={false} itemProp="item" className="hover:text-[#0F1B2D] transition-colors"><span itemProp="name">Home</span></Link>
             <meta itemProp="position" content="1" />
           </li>
           <span className="mx-2" aria-hidden="true">›</span>

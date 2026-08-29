@@ -5,9 +5,7 @@ import StickyHeader from '@/components/StickyHeader'
 import MobileCallBar from '@/components/MobileCallBar'
 import TrustStrip from '@/components/TrustStrip'
 import Footer from '@/components/Footer'
-import SchemaMarkup from '@/components/SchemaMarkup'
-import { GOOGLE_REVIEWS, SITE_CONFIG } from '@/data/config'
-import { SERVICES } from '@/data/services'
+import { SITE_CONFIG } from '@/data/config'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -33,87 +31,6 @@ export const metadata: Metadata = {
   },
 }
 
-const globalSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'Locksmith',
-  '@id': `${SITE_CONFIG.domain}/#business`,
-  name: 'Local Emergency Locksmith',
-  url: SITE_CONFIG.domain,
-  telephone: SITE_CONFIG.phoneTel,
-  email: SITE_CONFIG.email,
-  description:
-    'Local locksmith serving Coventry and Warwickshire for lockouts, door lock repairs, replacements, uPVC locks, boarding up and security upgrades. Available 24/7.',
-  priceRange: '££',
-  currenciesAccepted: 'GBP',
-  paymentAccepted: 'Cash, Credit Card, Debit Card',
-  image: `${SITE_CONFIG.domain}/og-image.png`,
-  founder: {
-    '@type': 'Person',
-    name: 'Ross',
-    jobTitle: 'Locksmith',
-  },
-  address: {
-    '@type': 'PostalAddress',
-    addressLocality: 'Coventry',
-    addressRegion: 'West Midlands',
-    addressCountry: 'GB',
-  },
-  openingHoursSpecification: {
-    '@type': 'OpeningHoursSpecification',
-    dayOfWeek: [
-      'Monday',
-      'Tuesday',
-      'Wednesday',
-      'Thursday',
-      'Friday',
-      'Saturday',
-      'Sunday',
-    ],
-    opens: '00:00',
-    closes: '23:59',
-  },
-  // Keep the global business entity concise. Individual area pages describe
-  // the full 78-location coverage with their own Place-based Service schema.
-  areaServed: [
-    'Coventry',
-    'Nuneaton',
-    'Bedworth',
-    'Rugby',
-    'Leamington Spa',
-    'Warwick',
-    'Kenilworth',
-    'Stratford-upon-Avon',
-  ].map(name => ({ '@type': 'Place', name })),
-  hasOfferCatalog: {
-    '@type': 'OfferCatalog',
-    name: 'Locksmith Services',
-    itemListElement: SERVICES.map(service => ({
-      '@type': 'Offer',
-      name: service.name,
-      description: service.description,
-      priceSpecification: {
-        '@type': 'PriceSpecification',
-        minPrice: String(service.priceFrom),
-        priceCurrency: 'GBP',
-        valueAddedTaxIncluded: false,
-        description: 'Advertised starting price; the final price depends on the diagnosed scope and agreed parts.',
-      },
-      url: `${SITE_CONFIG.domain}/services/${service.slug}`,
-    })),
-  },
-  sameAs: [GOOGLE_REVIEWS.profileUrl],
-}
-
-const websiteSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'WebSite',
-  '@id': `${SITE_CONFIG.domain}/#website`,
-  name: 'Local Emergency Locksmith',
-  url: SITE_CONFIG.domain,
-  publisher: { '@id': `${SITE_CONFIG.domain}/#business` },
-  inLanguage: 'en-GB',
-}
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -128,8 +45,6 @@ export default function RootLayout({
           <link rel="preconnect" href="https://www.googletagmanager.com" />
         )}
         <link rel="dns-prefetch" href="https://maps.googleapis.com" />
-        <SchemaMarkup schema={globalSchema} />
-        <SchemaMarkup schema={websiteSchema} />
         {process.env.NEXT_PUBLIC_GTM_ID && (
           <script
             dangerouslySetInnerHTML={{

@@ -52,7 +52,7 @@ export default function TermsPage() {
       <nav aria-label="Breadcrumb" className="bg-[#F7F7F5] py-3 px-4 border-b border-gray-200">
         <ol className="max-w-3xl mx-auto text-sm text-gray-500 flex flex-wrap items-center gap-0" itemScope itemType="https://schema.org/BreadcrumbList">
           <li itemScope itemType="https://schema.org/ListItem" itemProp="itemListElement">
-            <Link href="/" itemProp="item" className="hover:text-[#0F1B2D] transition-colors"><span itemProp="name">Home</span></Link>
+            <Link href="/" prefetch={false} itemProp="item" className="hover:text-[#0F1B2D] transition-colors"><span itemProp="name">Home</span></Link>
             <meta itemProp="position" content="1" />
           </li>
           <span className="mx-2" aria-hidden="true">›</span>
@@ -132,7 +132,7 @@ export default function TermsPage() {
                 before we attend, based on the details you provide.
               </p>
               <p className="text-gray-700 leading-relaxed mb-3">
-                We do not charge VAT (we are below the VAT threshold as a sole trader). There is
+                We are not VAT-registered, so VAT is not added. There is
                 no call-out fee, and no additional charge for evenings, weekends, or bank holidays.
               </p>
               <p className="text-gray-700 leading-relaxed">
@@ -165,13 +165,13 @@ export default function TermsPage() {
           <section className="mb-10">
             <h2 className="text-2xl font-black text-[#0F1B2D] mb-4">Liability &amp; Insurance</h2>
             <p className="text-gray-700 leading-relaxed mb-3">
-              We are fully insured with public liability insurance. We exercise reasonable care
-              and skill in all work carried out.
+              Current cover details relevant to a booking can be requested before work starts.
+              We exercise reasonable care and skill in all work carried out.
             </p>
             <p className="text-gray-700 leading-relaxed mb-3">
-              In the rare event that damage occurs during the course of our work, we will assess
-              the situation and, where we are at fault, arrange for repair or compensation through
-              our insurance.
+              If damage is identified during the work, tell us promptly so the cause, existing
+              condition, agreed method and appropriate next steps can be assessed. Nothing on this
+              page guarantees acceptance or payment of an insurance claim.
             </p>
             <p className="text-gray-700 leading-relaxed">
               Our liability is limited to the direct cost of the services provided and any damage

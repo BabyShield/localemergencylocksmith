@@ -1,10 +1,10 @@
 import { AREAS } from '@/data/areas'
-import { SITE_CONFIG } from '@/data/config'
+import { SERVICE_PROVIDER_SCHEMA, SITE_CONFIG } from '@/data/config'
 import { Metadata } from 'next'
 import Link from 'next/link'
 import SchemaMarkup from '@/components/SchemaMarkup'
 import CTABlock from '@/components/CTABlock'
-import { MapPin, ArrowRight, ShieldCheck, Clock, CheckCircle } from 'lucide-react'
+import { MapPin, ArrowRight, Clock, CheckCircle } from 'lucide-react'
 import { notFound } from 'next/navigation'
 import { getAreaAuthority } from '@/data/area-authorities'
 
@@ -31,6 +31,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     keywords: `locksmith ${upper}, emergency locksmith ${upper}, locksmith near me ${upper}, 24/7 locksmith ${upper}, locked out ${upper}`,
     alternates: {
       canonical: `${SITE_CONFIG.domain}/postcodes/${postcode}`,
+    },
+    robots: {
+      index: false,
+      follow: true,
     },
     openGraph: {
       type: 'website',
@@ -69,7 +73,7 @@ export default async function PostcodePage({ params }: Props) {
     name: `Emergency Locksmith in ${upper}`,
     url: `${SITE_CONFIG.domain}/postcodes/${postcode}`,
     description: `Emergency locksmith serving the listed ${upper} locations. Call with the full address to confirm coverage, current ETA and price basis. Available 24/7; no VAT or call-out fee.`,
-    provider: { '@id': `${SITE_CONFIG.domain}/#business` },
+    provider: SERVICE_PROVIDER_SCHEMA,
     areaServed: relevantAreas.map(area => ({
       '@type': 'Place',
       name: area.name,
@@ -91,7 +95,7 @@ export default async function PostcodePage({ params }: Props) {
       <nav aria-label="Breadcrumb" className="max-w-6xl mx-auto px-4 py-3 text-sm text-gray-500">
         <ol className="flex flex-wrap items-center gap-0" itemScope itemType="https://schema.org/BreadcrumbList">
           <li itemScope itemType="https://schema.org/ListItem" itemProp="itemListElement">
-            <Link href="/" itemProp="item" className="hover:text-[#FFB800]"><span itemProp="name">Home</span></Link>
+            <Link href="/" prefetch={false} itemProp="item" className="hover:text-[#FFB800]"><span itemProp="name">Home</span></Link>
             <meta itemProp="position" content="1" />
           </li>
           <span className="mx-2" aria-hidden="true">›</span>
@@ -111,7 +115,7 @@ export default async function PostcodePage({ params }: Props) {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#FFB800] opacity-75" />
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-[#FFB800]" />
               </span>
-              <span className="text-sm font-semibold">Available Now in {upper}</span>
+              <span className="text-sm font-semibold">Listed coverage in {upper}</span>
             </div>
 
             <h1 className="text-4xl md:text-6xl font-black text-white leading-tight">
@@ -134,8 +138,8 @@ export default async function PostcodePage({ params }: Props) {
 
             <div className="flex items-center gap-6 text-sm text-gray-400">
               <div className="flex items-center gap-2">
-                <ShieldCheck className="w-5 h-5 text-[#FFB800]" />
-                <span>DBS-Checked</span>
+                <CheckCircle className="w-5 h-5 text-[#FFB800]" />
+                <span>Address checked by phone</span>
               </div>
               <div className="flex items-center gap-2">
                 <Clock className="w-5 h-5 text-[#FFB800]" />

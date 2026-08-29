@@ -48,7 +48,7 @@ const faqSchema = {
       name: 'Do you charge VAT on locksmith services?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'No — I do not charge VAT. The price I quote is the total price, with nothing added on top.',
+        text: 'No — I am not VAT-registered, so VAT is not added. If inspection changes the scope, I explain and agree any revised price before work proceeds.',
       },
     },
     {
@@ -56,7 +56,7 @@ const faqSchema = {
       name: 'Is there a call-out fee?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'No. There is never a call-out fee. You only pay if I complete the job — and I always confirm the full price before I start.',
+        text: 'No separate call-out fee is added. I explain the price basis for the described scope before travelling and agree any inspection-led revision before additional work.',
       },
     },
     {
@@ -64,7 +64,7 @@ const faqSchema = {
       name: 'What does an emergency locksmith cost in Coventry?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'An emergency lockout starts from £59 including labour. A lock change starts from £69. No VAT, no call-out fee, no extra charge for evenings or weekends.',
+        text: 'A standard emergency lockout and a compatible euro-cylinder replacement each start from £59. Yale nightlatches start from £69 and BS3621-rated mortice options from £79. No VAT or separate call-out fee is added, and the published starting prices do not add an evening or weekend premium.',
       },
     },
     {
@@ -77,13 +77,77 @@ const faqSchema = {
     },
     {
       '@type': 'Question',
-      name: 'Are you insured?',
+      name: 'How is locksmith work agreed?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: "Yes — fully insured for public liability. I'm a local independent locksmith, not a call centre. You know exactly who is coming.",
+        text: 'The attending name, authority check, proposed method, scope and price basis are confirmed before work starts. Ask to see any current credentials or cover evidence relevant to your decision.',
       },
     },
   ],
+}
+
+// Google requires a real physical address for LocalBusiness rich-result
+// eligibility. No public street/postcode has been supplied, so the homepage
+// declares the verified site identity as an Organization without inventing NAP.
+const organizationSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  '@id': `${SITE_CONFIG.domain}/#business`,
+  name: SITE_CONFIG.businessName,
+  url: SITE_CONFIG.domain,
+  telephone: SITE_CONFIG.phoneTel,
+  email: SITE_CONFIG.email,
+  description:
+    'Independent locksmith serving 78 listed locations across Coventry and nearby parts of Warwickshire, Solihull, and the West Midlands.',
+  logo: {
+    '@type': 'ImageObject',
+    url: `${SITE_CONFIG.domain}/icon-512.png`,
+    width: 512,
+    height: 512,
+  },
+  image: `${SITE_CONFIG.domain}/og-image.png`,
+  founder: {
+    '@type': 'Person',
+    name: 'Ross',
+    jobTitle: 'Locksmith',
+  },
+  areaServed: [
+    'Coventry',
+    'Nuneaton',
+    'Bedworth',
+    'Rugby',
+    'Leamington Spa',
+    'Warwick',
+    'Kenilworth',
+    'Stratford-upon-Avon',
+  ].map(name => ({ '@type': 'Place', name })),
+  hasOfferCatalog: {
+    '@type': 'OfferCatalog',
+    name: 'Locksmith Services',
+    itemListElement: SERVICES.map(service => ({
+      '@type': 'Offer',
+      name: service.name,
+      description: service.description,
+      url: `${SITE_CONFIG.domain}/services/${service.slug}`,
+      priceSpecification: {
+        '@type': 'PriceSpecification',
+        minPrice: String(service.priceFrom),
+        priceCurrency: 'GBP',
+        valueAddedTaxIncluded: false,
+        description: 'Advertised starting price; final scope and parts are agreed after diagnosis.',
+      },
+    })),
+  },
+}
+
+const websiteSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  '@id': `${SITE_CONFIG.domain}/#website`,
+  name: SITE_CONFIG.businessName,
+  url: SITE_CONFIG.domain,
+  publisher: { '@id': `${SITE_CONFIG.domain}/#business` },
+  inLanguage: 'en-GB',
 }
 
 const homepageFaqs = [
@@ -93,23 +157,23 @@ const homepageFaqs = [
   },
   {
     q: 'Do you charge VAT on locksmith services?',
-    a: 'No — I do not charge VAT. The price I quote is the total price, with nothing added on top.',
+    a: 'No — I am not VAT-registered, so VAT is not added. If inspection changes the scope, I explain and agree any revised price before work proceeds.',
   },
   {
     q: 'Is there a call-out fee?',
-    a: 'No. There is never a call-out fee. You only pay if I complete the job — and I always confirm the full price before I start.',
+    a: 'No separate call-out fee is added. I explain the price basis for the described scope before travelling and agree any inspection-led revision before additional work.',
   },
   {
     q: 'What does an emergency locksmith cost in Coventry?',
-    a: 'An emergency lockout starts from £59 including labour. A lock change starts from £69. No VAT, no call-out fee, no extra charge for evenings or weekends.',
+    a: 'A standard emergency lockout and a compatible euro-cylinder replacement each start from £59. Yale nightlatches start from £69 and BS3621-rated mortice options from £79. No VAT or separate call-out fee is added, and the published starting prices do not add an evening or weekend premium.',
   },
   {
     q: 'Do you work on weekends and bank holidays?',
     a: 'Yes — 24 hours a day, 7 days a week, 365 days a year including Christmas Day. The price is always the same.',
   },
   {
-    q: 'Are you insured?',
-    a: "Yes — fully insured for public liability. I'm a local independent locksmith, not a call centre. You know exactly who is coming.",
+    q: 'How is locksmith work agreed?',
+    a: 'The attending name, authority check, proposed method, scope and price basis are confirmed before work starts. Ask to see any current credentials or cover evidence relevant to your decision.',
   },
 ]
 
@@ -118,6 +182,8 @@ const latestPosts = ALL_BLOG_POSTS.slice(0, 3)
 export default function HomePage() {
   return (
     <>
+      <SchemaMarkup schema={organizationSchema} />
+      <SchemaMarkup schema={websiteSchema} />
       <SchemaMarkup schema={faqSchema} />
 
       {/* 1. Hero */}
@@ -218,7 +284,7 @@ export default function HomePage() {
             How It Works
           </h2>
           <p className="text-gray-600 text-center mb-12 max-w-lg mx-auto">
-            Three simple steps from locked out to problem solved. No middlemen, no surprises.
+            Three simple steps: speak directly, confirm the scope, then authorise the work.
           </p>
           <div className="relative">
             {/* Connecting line - desktop only */}
@@ -233,12 +299,12 @@ export default function HomePage() {
                 {
                   step: '2',
                   title: "I'm On My Way",
-                  desc: 'I give you a firm price on the phone and an honest arrival time. No surprises.',
+                  desc: 'I confirm the current ETA and the price basis for the problem described on the phone.',
                 },
                 {
                   step: '3',
                   title: 'Problem Solved',
-                  desc: 'Door open, lock changed, or security upgraded. Pay the price I quoted — nothing more.',
+                  desc: 'The inspected scope and price are agreed before work; any change needs your approval first.',
                 },
               ].map((item) => (
                 <div key={item.step} className="text-center relative">
@@ -322,18 +388,18 @@ export default function HomePage() {
             </div>
           )}
           <h2 className="text-2xl md:text-3xl font-black text-[#0F1B2D] mb-4 text-center">
-            What Coventry Customers Say
+            Check Current Public Feedback
           </h2>
           <p className="text-gray-600 text-center max-w-xl mx-auto mb-8">
-            Every job is done personally by me — read what customers across Coventry
-            and Warwickshire say about the service.
+            Ratings and review extracts are not copied onto this site without a source record.
+            Use the linked public profile to check the feedback currently attributed there.
           </p>
           <div className="text-center">
             <Link
               href="/testimonials"
               className="inline-block bg-[#0F1B2D] text-white font-bold px-8 py-3.5 rounded-full hover:bg-[#162438] transition-colors"
             >
-              Read Customer Reviews
+              Review Information
             </Link>
             {GOOGLE_REVIEWS.profileUrl && (
               <p className="mt-4">

@@ -169,7 +169,7 @@ You should consider a [lock change](/services/lock-change) or [upgrade](/service
 - You've had a break-in or attempted break-in
 - Your written insurance policy specifies a lock standard that the current product does not meet
 
-I change euro cylinders across Coventry from £69. Give me a call on 024 7522 4730 or check the [prices page](/prices) for full details.
+Euro-cylinder work is priced against the exact size, certification, door furniture and fitting scope. Check the current [prices page](/prices), then call 024 7522 4730 with the door details for a specific quote.
 
 ## A Note on Quality
 
@@ -235,7 +235,7 @@ BS3621 locks are designed for **wooden doors only**. You'll find them on traditi
 
 ### Cost
 
-I fit BS3621 mortice deadlocks from £79 including the lock and fitting. If there's an existing mortice in the door, it's a straightforward swap. If I need to cut a new mortice, it takes longer and costs more. Check the [prices page](/prices) for details.
+I fit BS3621 mortice deadlocks from £79 including the stated lock and fitting scope. An existing compatible mortice may reduce the door preparation, while a new cut or repair changes the work required. Check the [prices page](/prices) and obtain a door-specific quote.
 
 ## Anti-Snap Euro Cylinders
 
@@ -302,7 +302,7 @@ Smart locks are available for different door types, but compatibility varies by 
 - **Battery dependent** — if the batteries die, you could be locked out
 - **Technology risks** — software bugs, Bluetooth/WiFi interference, potential hacking
 - **Policy compatibility varies** — obtain the insurer's written confirmation before replacing a lock named in the policy
-- **Cost** — quality smart locks start around £150-200 for the unit alone, plus fitting
+- **Cost** — product and fitting prices vary by the exact device, doorset and installer; obtain a current compatible-product quote before buying
 - **Complexity** — more moving parts means more that can go wrong
 
 ### Cost
@@ -458,14 +458,9 @@ If you have a uPVC or composite door rather than a wooden one, this whole discus
 
 ## Prices and What to Expect
 
-Here are the published starting prices for the listed jobs:
+Current starting prices for supported lock work are maintained on the [prices page](/prices). A new mortice cut, a like-for-like replacement, a nightlatch change and a combined scope require different door preparation and products, so they should not share an assumed fixed price.
 
-- **Fitting a BS3621 mortice deadlock** (new mortice cut) — from £79 fitted
-- **Replacing an existing mortice deadlock** with BS3621 — from £69 fitted
-- **Upgrading a nightlatch** — from £59 fitted
-- **Both locks fitted to a new door** — I'll quote on-site depending on the door
-
-The existing lock, dimensions and required certification determine the compatible product. Call 024 7522 4730 so I can confirm the price, current product availability and whether the work is likely to need more than one visit, or check the [prices page](/prices).
+The existing lock, dimensions, door condition and required certification determine the compatible product and fitting scope. Call 024 7522 4730 so I can confirm the price basis, current product availability and whether the work is likely to need more than one visit.
 
 ## The Bottom Line
 
@@ -842,7 +837,7 @@ If your mortice lock needs attention, call me on 024 7522 4730 with its visible 
       },
       {
         q: 'How much does it cost to fit a five-lever mortice deadlock?',
-        a: 'I fit BS3621 five-lever mortice deadlocks from £79 including the lock and fitting. If the door already has a mortice pocket from an existing lock, it is a straightforward swap. If I need to cut a new mortice from scratch, the job takes longer and costs more. Call 024 7522 4730 for an exact quote based on your situation.',
+        a: 'A BS3621-rated five-lever mortice option starts from £79 under the published scope. An existing compatible mortice may reduce preparation, while a new cut, different case size, damage or alignment work changes the quote. Check /prices, then call 024 7522 4730 with the door details for a specific assessment.',
       },
       {
         q: 'What should I do if my mortice lock is stiff or hard to turn?',

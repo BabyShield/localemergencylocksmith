@@ -119,13 +119,13 @@ export default async function BlogPostPage({ params }: Props) {
       '@type': 'Person',
       name: 'Ross',
       jobTitle: 'Locksmith',
-      worksFor: { '@type': 'LocalBusiness', '@id': `${SITE_CONFIG.domain}/#business` },
+      worksFor: { '@id': `${SITE_CONFIG.domain}/#business` },
     },
     publisher: {
       '@type': 'Organization',
       name: 'Local Emergency Locksmith',
       url: SITE_CONFIG.domain,
-      logo: { '@type': 'ImageObject', url: `${SITE_CONFIG.domain}/og-image.png` },
+      logo: { '@type': 'ImageObject', url: `${SITE_CONFIG.domain}/icon-512.png`, width: 512, height: 512 },
     },
     articleSection: pillar?.name || 'Locksmith Advice',
     keywords: post.keywords.join(', '),
@@ -168,12 +168,12 @@ export default async function BlogPostPage({ params }: Props) {
       <nav aria-label="Breadcrumb" className="max-w-4xl mx-auto px-4 py-3 text-sm text-gray-500">
         <ol className="flex flex-wrap items-center gap-0" itemScope itemType="https://schema.org/BreadcrumbList">
           <li itemScope itemType="https://schema.org/ListItem" itemProp="itemListElement">
-            <Link href="/" itemProp="item" className="hover:text-[#FFB800]"><span itemProp="name">Home</span></Link>
+            <Link href="/" prefetch={false} itemProp="item" className="hover:text-[#FFB800]"><span itemProp="name">Home</span></Link>
             <meta itemProp="position" content="1" />
           </li>
           <span className="mx-2" aria-hidden="true">›</span>
           <li itemScope itemType="https://schema.org/ListItem" itemProp="itemListElement">
-            <Link href="/blog" itemProp="item" className="hover:text-[#FFB800]"><span itemProp="name">Blog</span></Link>
+            <Link href="/blog" prefetch={false} itemProp="item" className="hover:text-[#FFB800]"><span itemProp="name">Blog</span></Link>
             <meta itemProp="position" content="2" />
           </li>
           <span className="mx-2" aria-hidden="true">›</span>
@@ -290,10 +290,9 @@ export default async function BlogPostPage({ params }: Props) {
           <div className="mt-12 bg-[#F7F7F5] rounded-xl p-6 border border-gray-200">
             <p className="font-bold text-[#0F1B2D] mb-2">About the Author</p>
             <p className="text-gray-700 text-sm leading-relaxed">
-              I&apos;m Ross, a local independent locksmith covering Coventry, Nuneaton, Rugby, Leamington Spa,
-              Warwick, and all surrounding areas. I&apos;ve been working as a locksmith in the Coventry area
-              for years and I&apos;ve seen every type of lock problem there is. If you need a locksmith, call
-              me on{' '}
+              I&apos;m Ross, the independent locksmith behind Local Emergency Locksmith. These guides
+              separate cited standards and public guidance from the checks that can only be made at
+              the actual door. If you need a locksmith in one of the listed coverage locations, call me on{' '}
               <a href={`tel:${SITE_CONFIG.phoneTel}`} className="font-bold hover:underline">
                 {SITE_CONFIG.phone}
               </a>{' '}

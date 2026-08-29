@@ -1,7 +1,7 @@
 {
   "name": "Local Emergency Locksmith — Coventry & Warwickshire",
   "short_name": "Locksmith 24/7",
-  "description": "Emergency locksmith in Coventry & Warwickshire. 15-30 min response, no VAT, no call-out fee. Available 24/7.",
+  "description": "24/7 locksmith serving listed locations across Coventry and nearby areas. Call for the current ETA and price; no VAT or separate call-out fee.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#0F1B2D",

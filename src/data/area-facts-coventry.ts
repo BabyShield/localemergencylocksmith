@@ -222,7 +222,7 @@ export const COVENTRY_FACTS: Record<
       text: 'University Hospital Coventry is located on the Stoke border, and shift workers there regularly need out-of-hours emergency locksmith services.',
     },
     {
-      text: 'Coventry City Council supports crime reduction initiatives in Stoke, including free home security surveys for eligible residents.',
+      text: 'Coventry City Council publishes current community-safety information and contact routes; check the council page for any programme, eligibility or availability that applies now.',
       source: {
         label: 'Coventry Community Safety',
         url: 'https://www.coventry.gov.uk/community-safety',

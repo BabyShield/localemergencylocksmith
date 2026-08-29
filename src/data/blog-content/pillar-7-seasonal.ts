@@ -29,7 +29,7 @@ For a physical check, assess the actual property: whether each door locks correc
 
 ## 8 Practical Steps Before October
 
-Here is what I tell every customer who calls me in autumn. Ideally, you want to do all of this *before* the clocks go back.
+Use this as a property-specific checklist before the clocks go back; the appropriate measures depend on the actual doors, windows, access and household routine.
 
 ### 1. Upgrade to Anti-Snap Cylinders
 
@@ -37,11 +37,11 @@ If you have a uPVC or composite door, identify the complete locking system and e
 
 ### 2. Put Lights on Timers
 
-Buy two or three plug-in timers (under £10 from any hardware shop). Set them to turn on lights in different rooms at staggered times from around 4pm. A house with lights going on and off in different rooms looks occupied. A house that is completely dark does not.
+If suitable for the appliance and electrical installation, plug-in timers can vary lighting in occupied rooms. Follow the product instructions and use a schedule that reflects the household routine; do not rely on lighting alone as proof of occupancy or security.
 
 ### 3. Fit Dusk-to-Dawn Sensor Lights
 
-These are different from motion-sensor lights. A dusk-to-dawn light comes on automatically when it gets dark and stays on all night. Fit one above your front door and one covering your back garden. They cost around £15-25 each and most are LED so they cost almost nothing to run.
+Dusk-to-dawn and motion-sensor lights operate differently. Select any external lighting for the actual entrance, neighbours, electrical installation and manufacturer instructions. Purchase price, service life and running cost depend on the exact product, usage and energy tariff.
 
 ### 4. Close Curtains Before It Gets Dark
 
@@ -85,7 +85,7 @@ Check my [prices page](/prices) for current rates on lock upgrades and security 
       },
       {
         q: 'What is the cheapest way to make my home look occupied during dark evenings?',
-        a: 'Plug-in timer switches cost under £5 each. Buy three of them and set them to turn on lamps in different rooms at staggered times between 4pm and 10pm. Add a radio on a timer tuned to a talk station. Close curtains before you leave for work. These three things cost under £20 total and make a genuine difference.',
+        a: 'A plug-in timer can be a relatively simple occupancy measure where it is suitable for the appliance and electrical installation. Follow the product instructions, use a schedule that reflects the household routine, close curtains where appropriate, and combine lighting with correctly locked doors and windows. Retail prices vary, and no timer guarantees deterrence.',
       },
       {
         q: 'Are anti-snap locks worth fitting before winter?',
@@ -105,11 +105,11 @@ Check my [prices page](/prices) for current rates on lock upgrades and security 
     body: `
 ## Frozen Locks Are More Common Than You Think
 
-Every winter I get calls from people across Coventry who cannot get into their own homes because the lock is frozen solid. It happens more than you would expect — a sustained cold snap, some condensation inside the lock mechanism, and suddenly your key will not turn.
+Cold weather and moisture can affect some exposed locks, but a key that will not turn does not by itself prove that ice is the cause. The installed cylinder, mechanism, door alignment and manufacturer instructions need to be considered before choosing a remedy.
 
 Coventry winters are not Arctic, but we get enough freezing mornings between November and March to cause problems. It only takes a couple of nights below zero for moisture inside a lock barrel to freeze. And when it does, you are stood on your doorstep at 7:30am wondering what to do.
 
-The good news is that frozen locks are almost entirely preventable. And if it does happen, there are safe fixes — and some very common "fixes" that will make things worse.
+Manufacturer-approved maintenance may reduce moisture-related problems. If a lock stops operating, avoid forcing it and follow the exact product instructions or obtain an assessment rather than assuming a universal remedy.
 
 ## How Locks Freeze
 
@@ -121,21 +121,21 @@ External locks are most vulnerable — front and back door locks, padlocks on sh
 
 ## Prevention: Stop Your Locks Freezing Before Winter Hits
 
-Prevention is far easier than cure. Here is what actually works.
+The correct preventive steps depend on the exact lock and doorset instructions.
 
 ### Graphite Powder in the Keyhole
 
-This is the number one preventative measure. Graphite powder (sometimes sold as lock lubricant) keeps the internal mechanism lubricated without attracting moisture. Squirt a small amount into each external keyhole in October before the first frost. You can buy it from any hardware shop for a few pounds.
+Do not assume graphite powder is suitable for every keyway. Identify the exact cylinder or mechanism and follow its manufacturer-approved lubricant, application method and temperature guidance.
 
 **Important:** Do not choose a product from a generic brand rule. Identify the exact cylinder or mechanism and follow its manufacturer-approved lubricant, application method and temperature guidance. If those instructions are unavailable, do not introduce a spray or powder into the keyway on guesswork.
 
 ### Silicone Spray on Rubber Seals
 
-uPVC doors have rubber seals around the frame. In freezing weather, these seals can stick to the frame and make the door almost impossible to open even after you have turned the key. A light spray of silicone lubricant on the rubber seals in autumn prevents this. It also helps keep the seals in good condition.
+uPVC doors may have seals around the frame. Check the doorset and seal manufacturer's cleaning and maintenance instructions before applying a product; suitability and application vary, and maintenance does not guarantee that a door will open normally in every condition.
 
 ### Magnetic Keyhole Covers
 
-You can buy small magnetic covers that sit over the keyhole and prevent moisture getting in. They cost a couple of pounds and work well on exposed doors. They are particularly useful for padlocks on sheds and garages where the lock is fully exposed to the weather.
+Some products are marketed as keyhole covers. Check compatibility, fitting instructions and the exact lock manufacturer's guidance before using one. A cover cannot guarantee that moisture will not enter or that the lock will not freeze.
 
 ### Keep Spare De-Icer Accessible
 
@@ -147,19 +147,19 @@ If prevention has failed and you are stood outside with a lock that will not tur
 
 ### Hand Sanitiser on the Key
 
-This is my favourite quick fix. Alcohol-based hand sanitiser (the stuff everyone has since 2020) melts ice on contact. Squeeze some onto your key, insert it gently into the lock, and wait 30 seconds. The alcohol lowers the freezing point and melts the ice inside the mechanism. You may need to apply it twice.
+Do not put hand sanitiser into a keyway unless the exact lock manufacturer permits it. Formulations vary and the symptom may have a cause other than ice, so a universal application time or outcome should not be promised.
 
-### Lukewarm Water
+### Avoid Adding Water
 
-If you can access warm (NOT hot) water — perhaps from a neighbour — pour it gently over the lock. This melts the ice and lets you turn the key. **Never use boiling water.** Thermal shock from boiling water can crack a euro cylinder or damage the finish on a uPVC door. Lukewarm — like bath temperature — is what you want.
+Do not pour water into or over a frozen lock unless the exact manufacturer instructions explicitly permit it. Water can enter components or refreeze. Use the product's approved de-icing method, avoid forcing the key and seek an assessment if the cause is unclear.
 
 ### Lock De-Icer Spray
 
-Commercial lock de-icer is cheap and works quickly. Spray it into the keyhole, wait a minute, then try the key. Keep some in your car glovebox every winter.
+Use a de-icer only where the exact lock manufacturer permits it, and follow the stated application and storage instructions. Product price and effectiveness vary, and the symptom may have a cause other than ice.
 
 ### Warm the Key
 
-Hold your key against something warm — a hot water bottle, a warm mug, your car's heater vent — then insert it. The warm metal transfers heat directly to the ice inside the lock. You may need to repeat this several times, working the key a little further in each time.
+Do not heat or repeatedly work a key unless the exact manufacturer guidance permits that method. Avoid an open flame, excessive heat and force; arrange an assessment if normal operation does not return.
 
 ## What Makes Frozen Locks Worse
 
@@ -167,34 +167,34 @@ Just as important as knowing what to do is knowing what NOT to do.
 
 ### Do NOT Use WD-40
 
-I have said this already but it bears repeating. WD-40 will temporarily free a frozen lock, but it leaves behind a residue that attracts moisture. Within a few days, you will have more moisture inside the lock than before — and the next freeze will be worse. Use graphite powder for prevention and de-icer or hand sanitiser for emergencies.
+Do not assume any branded or generic spray is appropriate for the installed lock. Use only a manufacturer-approved product and method; this guide does not claim a fixed short-term result or predict the condition at the next freeze.
 
 ### Do NOT Blow Into the Lock
 
-Your breath contains moisture. Blowing into a frozen lock adds more water, which then freezes, making the problem worse. I know it seems logical but it is counterproductive.
+Avoid introducing breath or other moisture into the keyway. Follow the exact product guidance rather than adding an unapproved substance or forcing the key.
 
 ### Do NOT Force the Key
 
-If the key goes in but will not turn, do not force it. You can shear the key off inside the lock, which turns a five-minute problem into a [locksmith callout](/services/emergency-lockout). A broken key extraction plus new cylinder will cost far more than a can of de-icer. Be patient, apply heat or de-icer, and wait.
+If the key goes in but will not turn, do not force it because the key or lock may be damaged. Follow the exact manufacturer's approved method or arrange an assessment; do not infer the cause or compare repair costs before the lock has been inspected. See the published starting-price basis on [prices](/prices).
 
 ### Do NOT Use Boiling Water
 
-I have already mentioned this but it is worth emphasising. Boiling water causes thermal shock — the rapid temperature change can crack a euro cylinder, damage powder-coated finishes, and even crack glass if it splashes onto a window panel. Lukewarm water only.
+Do not pour boiling or lukewarm water into or over a lock unless the exact manufacturer instructions expressly permit it. Water can enter components or refreeze; use the approved de-icing method instead.
 
 ## When to Call a Locksmith
 
-If you have tried de-icer and warm water and the lock still will not turn, call me on 024 7522 4730. Sometimes the issue is not just ice — the lock mechanism itself may be failing, or internal components may have seized. The cylinder dimensions, security specification and current compatible-part availability determine whether a supported replacement can be completed during that attendance or needs a return visit.
+If an approved de-icing step has not restored normal operation, call 024 7522 4730. The issue may have a cause other than ice. The cylinder dimensions, security specification and current compatible-part availability determine whether a supported replacement can be completed during that attendance or needs a return visit.
 
 If the key has snapped inside a frozen lock, do not try to extract it yourself. Call me for a [lock repair or replacement](/services/lock-change). I assess whether extraction is suitable first; any replacement depends on the cylinder condition, exact dimensions and compatible-part availability.
 
 ## Winter Lock Maintenance Checklist
 
-- Apply graphite powder to all external keyholes in October
-- Spray silicone lubricant on all uPVC rubber seals
-- Fit magnetic keyhole covers on exposed locks
-- Keep lock de-icer in your car and somewhere accessible outside
-- Test all external locks — if any are stiff, they need servicing before winter
-- Check shed and garage padlocks — cheap padlocks freeze easily, consider upgrading
+- Identify each external lock and follow its manufacturer-approved maintenance instructions
+- Use only cleaners or lubricants specified for the exact seals and doorset
+- Assess any keyhole cover for compatibility rather than assuming universal protection
+- Store any approved de-icer according to its label and away from unsafe temperatures or access
+- Test external locks without forcing them and arrange an assessment for abnormal operation
+- Inspect shed and garage padlocks by exact condition, specification and exposure rather than price alone
 
 If you want your external locks checked and lubricated before winter, I offer a quick door security check. Call 024 7522 4730 or check my [prices page](/prices) for current rates.
 `,
@@ -209,7 +209,7 @@ If you want your external locks checked and lubricated before winter, I offer a 
       },
       {
         q: 'What should I do if my key snaps in a frozen lock?',
-        a: 'Do not try to extract it yourself — you risk pushing it further in and making the problem harder to fix. Call a locksmith for an assessment. Extraction suitability, the condition of the cylinder and compatible-part availability determine the work and number of visits. Call 024 7522 4730 to confirm current availability. A broken key extraction typically costs from £59 depending on the situation.',
+        a: 'Do not try to extract it yourself because that may worsen the fault. Call a locksmith for an assessment. Extraction suitability, the condition of the cylinder and compatible-part availability determine the work and number of visits. See /prices for the published starting-price basis, then call 024 7522 4730 with the full postcode to confirm the exact address, current availability and ETA.',
       },
       {
         q: 'How much does it cost to replace a lock that has been damaged by freezing?',
@@ -229,7 +229,7 @@ Christmas can change normal occupancy, delivery and key routines. That makes it 
 
 Examples worth checking include gifts visible through windows, branded packaging left outside, travel plans shared publicly and keys being misplaced during changed routines.
 
-Here is how to protect your home this Christmas — practical advice based on what I actually see happening across Coventry.
+Here is a practical Christmas checklist. Apply it to the actual property and household routine rather than treating it as a measured ranking of Coventry incidents.
 
 ## Before Christmas: Protecting Your Gifts
 
@@ -257,7 +257,7 @@ If you will not be home for a delivery, use the carrier's authorised diversion, 
 
 ### Lock Up Properly on Christmas Eve
 
-Many families go to midnight mass or visit relatives on Christmas Eve. In the excitement, doors get pulled shut but not properly locked. If you have a uPVC door, always lift the handle and turn the key — do not just pull it closed. Pulling it closed only engages the latch, not the deadbolts, and a uPVC door on the latch can be opened with a credit card.
+Changed routines can lead to a door being pulled shut without reaching its intended locked state. Follow the exact doorset instructions; where the installed mechanism requires lifting the handle and turning the key, pulling it closed does not establish that the locking points and deadlocking feature are engaged. The entry resistance of a latch cannot be inferred from a universal credit-card claim.
 
 ### Christmas Day Security
 
@@ -297,9 +297,9 @@ If you are going out on New Year's Eve:
 - **Give a spare key to someone you trust** — or assess whether a suitably specified key safe is appropriate for your access plan
 - **Check you have your keys before you leave** — pat yourself down at the door
 - **Do not hide a key outside** — burglars know all the hiding spots
-- **Save my number in your phone now**: 024 7522 4730. I work every New Year's Eve, same prices as any other day
+- **Save my number in your phone now**: 024 7522 4730. Service is advertised 24/7; call with the full postcode to confirm the exact address, current availability and ETA
 
-A standard lockout callout with me starts from £59. You will not get a surprise bill for triple the price just because it is a bank holiday.
+A standard [emergency lockout](/services/emergency-lockout) starts from £59 where the assessed entry method and stated labour scope apply. The published starting-price basis does not add a bank-holiday premium, while the itemised total still depends on the inspected lock, access method and any parts; see [prices](/prices).
 
 ## Boxing Day Delivery Theft
 
@@ -309,12 +309,12 @@ If you expect deliveries or returns between Christmas and New Year, use an autho
 
 Build a brief security check into your Christmas routine: operate each lock as intended, close accessible windows, manage deliveries and remove visible valuables from the car. These steps reduce avoidable exposure but do not guarantee security.
 
-If you want your locks checked before Christmas, or you want to upgrade your door security, call me on 024 7522 4730. I am available right up to Christmas Eve, and I work through the holidays for emergencies. Check my [prices page](/prices) for current rates.
+If you want your locks checked before Christmas or want to assess a door-security upgrade, call 024 7522 4730 with the full postcode to confirm the exact address, current availability and ETA. Check the [prices page](/prices) for published starting prices and the factors that determine the itemised quote.
 `,
     faqs: [
       {
         q: 'Do locksmiths work on Christmas Day and New Year\'s Eve?',
-        a: 'I do. I work every day of the year including Christmas Day, Boxing Day, and New Year\'s Eve. Emergency lockouts do not take holidays, so neither do I. My prices are the same as any other day — no bank holiday surcharges. Lockout callouts start from £59. Call me on 024 7522 4730 any time.',
+        a: 'Service is advertised 24/7, including Christmas Day, Boxing Day and New Year\'s Eve. The published lockout starting price is £59 and does not add a bank-holiday premium; the itemised total depends on the assessed entry method, stated labour scope and any parts. See /prices, then call 024 7522 4730 with the full postcode to confirm the exact address, current availability and ETA.',
       },
       {
         q: 'How should I dispose of Christmas gift packaging securely?',
@@ -350,7 +350,7 @@ This checklist separates general preparation from property-specific inspection. 
 
 Start by operating every external-door lock exactly as the manufacturer intends.
 
-If you have a uPVC or composite door, you **must** lift the handle and turn the key to fully engage the multi-point locking system. If you just pull the door shut, only the centre latch engages — and a uPVC door on the latch can be opened with a plastic card or a firm shove.
+Follow the exact operating instructions for each uPVC or composite door. Some mechanisms require lifting the handle and turning the key; pulling the door shut does not by itself establish which locking points or deadlocking features are engaged. Do not infer a universal entry method or resistance from the latch position alone.
 
 Do not assume that pulling a door shut engages every part of its locking mechanism. Check each door before leaving.
 
@@ -407,7 +407,7 @@ Your own tools can be used against you. A spade or a crowbar left in an unlocked
 
 Before you leave, think about who has access.
 
-- Never hide a key under a doormat, flowerpot, fake rock, or inside a meter box. Burglars know every hiding spot
+- Do not leave a key in an obvious or accessible hiding place such as a doormat, flowerpot, fake rock or meter box
 - If someone needs access while you are away, give the authorised person a key in person or assess whether a suitably specified wall-mounted key safe is appropriate
 - A key safe can avoid an exposed hiding place, but security depends on the product, installation, code control and location; it cannot guarantee controlled access
 
@@ -494,7 +494,7 @@ That is potentially a dozen or more people who have, or have had, a key to your 
 
 A frequent response is "but they gave us all the keys." The remaining question is whether every historic copy can actually be accounted for.
 
-Keys can be copied at any high-street key cutter, most supermarkets, and even some petrol stations. It costs under £5 and takes two minutes. Anyone who ever had access to a key could have cut a copy — and the previous owners may never have known.
+Some keys can be copied by retailers, while restricted or patented systems may require proof of authority or controlled blanks. Because the historic copy count may be unknown, assess key control instead of assuming every key can be copied at a universal price or speed.
 
 And it is not about trust. The previous owners might be perfectly honest people. But the cleaner they fired three years ago, or the builder who did a dodgy job and left under a cloud, or the ex-partner who moved out acrimoniously — those are the keys you need to worry about.
 
@@ -517,20 +517,18 @@ Do not infer the door or cylinder from a Coventry neighbourhood. Identify each a
 
 Ideally, change the locks on moving day itself. If you can give me access before the removal van arrives, even better — I can have the locks changed before you start moving furniture in.
 
-If moving day is too hectic (and it usually is), the day before completion works well. Some homeowners arrange for me to meet them at the property first thing on the morning of completion, change the locks before the furniture arrives, and hand them brand new keys to their new home.
+Arrange timing only after authority to access the property, the affected doors and current availability are confirmed. Whether work can be completed in one visit depends on the inspected locks, dimensions and compatible-part availability.
 
 Do not put it off. Every night you sleep in your new house with the old locks is a night where someone you do not know potentially has a key.
 
 ## How Much Does It Cost?
 
-Changing the locks on your new home is one of the cheapest and most impactful things you can do on moving day. Here are my current rates:
+Use the published starting-price basis for the exact doors that are assessed:
 
 - **Standard euro cylinder replacement**: from £59 per door
 - **Certified anti-snap euro cylinder upgrade**: from £59 per door
-- **Full house (front + back door)**: typically £100-200 depending on the locks you choose
-- **Premium anti-snap (Ultion/ABS)**: from £120 per door fitted
 
-The final total depends on the number of doors, cylinder sizes, mechanism condition and exact products selected. Use the published starting prices and obtain a door-specific quote.
+Multiple doors, premium products, furniture and mechanism work require an itemised quote after inspection; there is no governed upper range or brand-specific price on this page. The final total depends on the number of doors, cylinder sizes, mechanism condition and exact products selected.
 
 Check my full [prices page](/prices) for current rates.
 
@@ -685,7 +683,7 @@ In all these areas, the basics are the same: check your locks, report problems t
 Student lockouts are incredibly common — especially during freshers week and after nights out. Before it happens:
 
 - Save a locksmith's number in your phone. Mine is 024 7522 4730
-- I cover all student areas in Coventry, 24/7, and my [emergency lockout](/services/emergency-lockout) price starts from £59
+- Check the locations listed on the [areas page](/areas/); call with the full postcode to confirm the exact address, current availability and ETA. The [emergency lockout](/services/emergency-lockout) starting price is £59 where the assessed entry method and stated labour scope apply
 - Give a spare key to a trusted housemate
 - If considering a key safe, agree it with the landlord and restrict the code to authorised people; shared codes create their own access-control risk
 
@@ -713,7 +711,7 @@ Welcome to Coventry. Lock your doors.
       },
       {
         q: 'How much does a student lockout cost in Coventry?',
-        a: 'My emergency lockout callout starts from £59, and I do not charge extra for unsociable hours, weekends, or bank holidays. I cover all student areas including Earlsdon, Canley, Tile Hill, Stoke, and the city centre. Call me on 024 7522 4730 any time. Be cautious of locksmiths advertising very low prices online — some charge much more when they arrive.',
+        a: 'The published emergency-lockout starting price is £59 and does not add a night, weekend or bank-holiday premium; the itemised total still depends on the assessed entry method, stated labour scope and any parts. See /prices. Check the locations listed on /areas and call 024 7522 4730 with the full postcode to confirm the exact address, current availability and ETA.',
       },
       {
         q: 'Should I get contents insurance for my student house?',
@@ -735,7 +733,7 @@ Welcome to Coventry. Lock your doors.
 
 Bank holidays can involve changed routines, travel and unfamiliar doors. Those are useful scenarios to plan for, but this page does not hold a retained, dated callout dataset proving that UK or Coventry lockouts spike on bank holidays.
 
-If you are reading this while locked out on a bank holiday, skip straight to the bottom — my number is 024 7522 4730 and I work every bank holiday at the same price as any other day.
+If you are reading this while locked out on a bank holiday, my number is 024 7522 4730. Service is advertised 24/7; call with the full postcode to confirm the exact address, current availability and ETA. The published starting-price basis does not add a bank-holiday premium, but the itemised total remains scope-dependent.
 
 If you are reading this before a bank holiday (sensible person), here is everything you need to know about avoiding lockouts and what to do if the worst happens.
 
@@ -752,7 +750,7 @@ The excitement of a long weekend means people are less careful with the small ro
 
 ## Do Locksmiths Work on Bank Holidays?
 
-**I do.** I work every single bank holiday — Easter Friday through Monday, the May bank holidays, the August bank holiday, Christmas Day, Boxing Day, New Year's Day, and every other day of the year.
+Service is advertised 24/7, including bank holidays. Current availability and ETA are confirmed when you call with the exact address.
 
 I know the question behind the question, though: "How much more will it cost me?"
 
@@ -760,17 +758,17 @@ I know the question behind the question, though: "How much more will it cost me?
 
 Here is my honest advice about bank holiday pricing:
 
-**My prices are the same every day of the year.** A standard [emergency lockout](/services/emergency-lockout) with me starts from £59, whether it is a Tuesday afternoon in March or midnight on Christmas Day. I do not charge bank holiday surcharges, unsociable hours fees, or weekend premiums. The price I quote on the phone is the price you pay.
+**My published starting prices do not add a bank-holiday, night or weekend premium.** A standard [emergency lockout](/services/emergency-lockout) starts from £59. The total still depends on the fitted lock, its condition, the access method and any parts required.
 
 **Other businesses set their own prices.** Ask for the total callout, labour, parts and surcharge terms before authorising work rather than relying on an advertised headline price.
 
 Before you call anyone:
-- Ask for a firm price on the phone, not an estimate
+- Ask for the price basis, assumptions and possible extras
 - Confirm there are no surcharges for the bank holiday
 - Ask if there is a call-out fee on top of the quoted price
-- Be wary of anyone who will not give you a price until they "assess the job"
+- If inspection is needed, ask how any revised scope and price will be approved
 
-If in doubt, call me on 024 7522 4730. I will give you an honest price upfront with no hidden extras.
+If in doubt, call me on 024 7522 4730. I will explain the most specific supported price basis and the current ETA from the information available.
 
 ## Bank-Holiday Scenarios to Plan For
 
@@ -802,21 +800,21 @@ Do not climb through a window or force a door: you could be injured and damage t
 
 When you call 024 7522 4730, here is what to expect:
 
-1. I answer the phone (or call back within minutes if I am on another job)
+1. I answer directly or return the call as soon as I can
 2. I ask where you are and what the situation is
-3. I give you a firm price — no estimates, no surprises
+3. I explain the supported price basis, assumptions and possible changes
 4. I give you a current arrival estimate from my actual starting point and the full address
-5. I open the door using non-destructive techniques wherever possible
-6. You pay the price I quoted — nothing more
+5. I consider a suitable non-destructive method first where practical
+6. I explain and seek approval before any revised or additional work
 
-I cover all of Coventry and surrounding areas including Kenilworth, Bedworth, Nuneaton, Rugby, Leamington Spa, and Warwick. Check my [areas page](/areas/) for full coverage details.
+I cover the locations listed on the [areas page](/areas/), including Kenilworth, Bedworth, Nuneaton, Rugby, Leamington Spa and Warwick. Call with the full postcode to confirm the address and current ETA.
 
 ## Bank Holiday Lockout: Quick Reference
 
 - **My number:** 024 7522 4730 (save it now)
-- **Hours:** 24/7, every day including all bank holidays
+- **Advertised availability:** 24/7, including bank holidays; confirm current availability and ETA when calling
 - **Lockout price:** from £59
-- **Bank holiday surcharge:** none — same price every day
+- **Published price basis:** no bank-holiday premium; the itemised total remains scope-dependent
 - **Coverage:** the Coventry and nearby Warwickshire locations listed on this site; confirm the full postcode when calling
 - **Arrival time:** confirmed when you call from the current location and full address
 - **Full pricing:** [prices page](/prices)
@@ -838,7 +836,7 @@ Bank holidays are for relaxing, not for standing outside your house in the cold.
       },
       {
         q: 'What should I do if I am locked out and cannot reach a locksmith?',
-        a: 'Stay calm and do not try to force entry — broken windows and damaged doors cost far more than a locksmith callout. Check all other doors and windows (one may be unlocked). Check whether a neighbour has a spare key. If you are locked out of someone else\'s house, call the homeowner. As a last resort, call 101 (non-emergency police) if you are vulnerable or in danger. My number is 024 7522 4730 and I aim to answer every call, but if I am on another job I will call back within minutes.',
+        a: 'Stay somewhere safe and do not force entry. Check other authorised entry routes and whether a trusted person holds a spare key. If you are locked out of someone else\'s property, contact the occupier or owner. Use 999 for an immediate danger or emergency; 101 is for non-emergency police contact. My number is 024 7522 4730 and I return missed calls as soon as I safely can.',
       },
     ],
   },
@@ -903,7 +901,7 @@ Go room by room and test every window lock. Yes, every single one.
 Open and close each window. Does the handle lock securely in the closed position? uPVC window handles should click firmly into the locked position. If the handle is floppy, loose, or does not engage the locking pin, it needs replacing.
 
 ### Check Sash Jammers
-Sash jammers are small additional locks fitted to uPVC windows that prevent them being forced open from the outside. If you have them, check they work. If you do not have them on ground floor windows, consider fitting them — they cost under £10 each and add a genuine extra layer of security.
+Sash jammers are additional devices used on some uPVC windows. If fitted, check their operation against the exact product instructions. If considering them, assess the complete window, compatibility, installation and current test evidence; retail price alone does not establish resistance or suitability.
 
 ### Scoring
 - All windows lock securely, sash jammers fitted on ground floor: **5/5**
@@ -945,7 +943,7 @@ Are there tools in the shed that could be used to break into the house? Crowbars
 Do your external motion-sensor lights work? Test them by walking past. Check bulbs, sensor alignment, and battery condition if applicable. Suitable coverage depends on the property, neighbours, access routes and any electrical constraints.
 
 ### Replace Bulbs
-Dead bulbs are useless. Check and replace any that have failed. LED sensor lights last years and cost pennies to run.
+Check and replace failed bulbs where it is safe and appropriate to do so. Rated life and running cost depend on the exact product, usage, installation and energy tariff.
 
 ### Scoring
 - Working sensor lights front and back: **2/2**
@@ -980,16 +978,17 @@ Add up your scores from all seven sections. The result is a maintenance prompt, 
 
 You do not need to fix everything at once. Start with any door or window that does not lock correctly, then assess protruding or unverified cylinders and other access points. Where suitable, a certified [anti-snap cylinder](/services/lock-upgrade) starts from £59 and improves resistance to tested attacks; it is not automatically the best first step for every property.
 
-Here is a priority order for upgrades:
+Use this property-led order for further assessment:
 
-1. **Certified anti-snap cylinders**, where suitable for the assessed doors (from £59 each)
-2. **Deadlock on back door** if it only has a latch (from £79 fitted)
-3. **Window lock replacements** on any that are broken (from £15 each)
-4. **External sensor lights** front and back (£15-25 each, DIY or electrician)
-5. **Shed padlock upgrade** to closed-shackle with coach-bolted hasp (under £30)
-6. **Key safe** installation (from £50 fitted)
+1. Fix external doors or windows that do not lock correctly
+2. Review key control and any unaccounted-for copies
+3. Assess cylinder fit and current certification where relevant
+4. Repair broken window locks
+5. Assess lighting, outbuilding security and any key safe for the specific property
 
-If you want a professional to do this walk-around with you, or you want me to fix the issues we find on the same visit, call me on 024 7522 4730. I cover the Coventry and nearby Warwickshire locations listed on my [areas page](/areas/); call with the full postcode to confirm the exact address.
+Published starting prices include euro-cylinder replacement from £59, BS3621-rated lock change from £79 and window-lock repair from £49. Other products or scopes require an itemised quote; see [prices](/prices).
+
+For a professional assessment or quote for identified locksmith work, call 024 7522 4730. Check the locations listed on the [areas page](/areas/) and provide the full postcode to confirm the exact address, current availability and ETA. Completion in one visit depends on the diagnosed scope and compatible-part availability.
 
 Start the new year secure. It is 30 minutes well spent.
 `,
@@ -1004,7 +1003,7 @@ Start the new year secure. It is 30 minutes well spent.
       },
       {
         q: 'How much would it cost to fix everything in the security audit?',
-        a: 'It depends on the number and type of defects, door dimensions, mechanism condition and exact products selected. The score does not define a universal package or budget. Use /prices for published starting prices and obtain an itemised quote for the work identified at your property.',
+        a: 'It depends on the number and type of defects, door dimensions, mechanism condition and exact products selected. The score does not define a universal package or budget. Use the [prices page](/prices) for published starting prices and obtain an itemised quote for the work identified at your property.',
       },
       {
         q: 'Can I do the security audit myself or do I need a locksmith?',

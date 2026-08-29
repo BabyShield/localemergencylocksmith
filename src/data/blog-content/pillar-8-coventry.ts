@@ -33,13 +33,13 @@ Inspect the door leaf and frame separately. Sound older joinery may be retained,
 
 For an individual Victorian terrace in [Earlsdon](/areas/earlsdon), Chapelfields, or [Spon End](/areas/coventry-city-centre), inspection may identify options such as:
 
-1. **Certified mortice deadlock, where suitable** — check the door and exact written policy wording; some policies name BS3621. Cost: **£75-£95 supplied and fitted**.
-2. **Suitable sash-window security** — product and fitting depend on the window construction and condition. Cost: **£15-£25 per window supplied and fitted**.
-3. **Door viewer (peephole)** — lets you see who is at the door before opening. Cost: **£15-£20 fitted**.
-4. **Letterbox guard** — an internal cage or restrictor that stops anyone reaching through to the latch. Cost: **£25-£35 fitted**.
-5. **Hinge bolts** — fitted to the hinge side of the door to prevent it being forced off the hinges. Cost: **£20-£30 for a pair, fitted**.
+1. **Certified mortice deadlock, where suitable** — check the door and exact written policy wording; some policies name BS3621. Compatible fitted options start from **£79**.
+2. **Suitable sash-window security** — product and fitting depend on the window construction and condition; obtain a window-specific quote.
+3. **Door viewer (peephole)** — assess position, door construction and viewing needs before selecting a product.
+4. **Letterbox guard** — assess the opening, internal release and compatibility before specifying a guard or restrictor.
+5. **Hinge-side security** — inspect the door, frame, hinges and fixings before deciding whether additional hardware is suitable.
 
-An example package for a front door and accessible windows may cost **£150-£250**, but the scope must follow the inspection. No package guarantees that a property is secure.
+There is no governed package price for this combination. Itemise each diagnosed opening and compare it with the published scopes on the [prices page](/prices); no package guarantees that a property is secure.
 
 ---
 
@@ -67,12 +67,12 @@ Where a side passage leads to less visible doors or windows, assess the gate and
 
 For 1930s semis in [Cheylesmore](/areas/cheylesmore), Stoke, and Coundon:
 
-1. **Assess the front-door mortice lock** and, where replacement is suitable, select an exact certified product compatible with the door. Cost: **£75-£95 supplied and fitted**.
+1. **Assess the front-door mortice lock** and, where replacement is suitable, select an exact certified product compatible with the door. BS3621-rated options start from **£79** under the published scope.
 2. **Assess the back-door lock and doorset** alongside the existing nightlatch. A BS3621-rated deadlock may be suitable for a compatible timber door; check the door and any written policy requirement first. Current fitted options start from **£79**.
-3. **Fit a proper lock to the side gate** — a long-throw gate lock or heavy-duty padlock and hasp. Cost: **£35-£55 fitted**.
-4. **Window locks on all accessible windows** — especially the rear and side windows that are hidden from the street. Cost: **£15-£25 per window fitted**.
+3. **Assess side-gate security** — choose compatible hardware without obstructing any required escape or access route.
+4. **Assess accessible-window locks** — identify the window and fitted hardware before specifying a repair or additional lock.
 
-The displayed item ranges put that example package at **£200-£320**, before any diagnosis-dependent change in product, quantity or fitting scope.
+Gate and window items need a property-specific quote. The [prices page](/prices) lists only the governed starting-price scopes; the total for multiple openings depends on the products, quantity, compatibility and fitting work.
 
 ---
 
@@ -97,7 +97,7 @@ An older lightweight door may have weaknesses that a new lock cannot correct. A 
 
 For post-war housing in [Tile Hill](/areas/tile-hill), Willenhall, Wood End, and Bell Green:
 
-**If you still have an older door**: assess the leaf, frame, hinges and lock together. Replacement may be appropriate if the structure is unsuitable for a secure repair; otherwise compatible reinforcement and lock work may improve resistance. Cost for lock upgrades on a suitable older door: **£65-£120**.
+**If you still have an older door**: assess the leaf, frame, hinges and lock together. Replacement may be appropriate if the structure is unsuitable for a secure repair; otherwise compatible reinforcement and lock work may improve resistance. Use the [published starting prices](/prices) only after the exact lock and scope are identified.
 
 **If you have a uPVC or composite door**: check the complete doorset and cylinder fit. If an upgrade is appropriate, choose a correctly sized cylinder with independently verified attack resistance, such as TS007 3-star or SS312 Diamond. Options start from **£59 supplied and fitted**. This can improve resistance to recognised cylinder attacks but cannot eliminate burglary risk.
 
@@ -124,11 +124,11 @@ Where a newer-estate door uses a euro cylinder, record its model, certification,
 
 For new-build homes in [Canley](/areas/canley) and across Coventry:
 
-1. **Check front and back door euro cylinders** and, where appropriate, select correctly sized products with current independent certification. Cost: **£59-£89 per cylinder supplied and fitted**.
-2. **Upgrade to secure door handles** that prevent the handle being used as a leverage point. Cost: **£35-£55 supplied and fitted**.
+1. **Check front and back door euro cylinders** and, where appropriate, select correctly sized products with current independent certification. Compatible fitted cylinder options start from **£59**.
+2. **Assess protective door furniture** together with the cylinder, door and frame; obtain a product-specific quote where a change is appropriate.
 3. **Check and upgrade window locks** — especially on ground floor and accessible first-floor windows.
 
-The displayed item ranges put an example front-and-back-door cylinder and handle scope at **£120-£200**; exact products, quantities and fitting work are agreed after inspection.
+Multiple cylinders and any handle work are itemised after inspection. Exact products, quantities and fitting work are agreed before proceeding.
 
 ---
 
@@ -142,7 +142,7 @@ Every home in Coventry is different. Fit hardware to the actual door, compare ce
     faqs: [
       {
         q: 'What lock do I need for a Victorian terrace front door in Earlsdon or Chapelfields?',
-        a: 'Inspect the actual timber door, frame and installed lock first. If a compatible certified mortice deadlock is appropriate or the written policy names BS3621, fitted options cost £75-£95. The property era alone does not establish the required lock or guarantee a damage-free installation. Call 024 7522 4730 for a door-specific quote.',
+        a: 'Inspect the actual timber door, frame and installed lock first. If a compatible certified mortice deadlock is appropriate or the written policy names BS3621, fitted options start from £79 under the published scope. The property era alone does not establish the required lock or guarantee a damage-free installation. Call 024 7522 4730 for a door-specific quote.',
       },
       {
         q: 'Are uPVC doors on Coventry council houses vulnerable to break-ins?',
@@ -150,11 +150,11 @@ Every home in Coventry is different. Fit hardware to the actual door, compare ce
       },
       {
         q: 'How much does it cost to fully secure a 1930s semi-detached house in Coventry?',
-        a: 'An example package covering suitable door, gate and accessible-window work may cost £200-£320, but the actual priority depends on the inspection. Fix any door or window that does not lock correctly first; do not assume every 1930s semi is missing the same back-door hardware.',
+        a: 'There is no reliable house-wide package price without inspecting each opening. The actual priority depends on the doors, windows, fitted products and condition; itemise the proposed work and compare governed starting-price scopes on /prices.',
       },
       {
         q: 'Do new-build homes in Coventry need their locks upgrading?',
-        a: 'Not automatically. Identify the exact cylinder, protective furniture, multipoint mechanism and current certification on each door. If a correctly sized certified anti-snap upgrade is appropriate, an example front-and-back-door scope costs £120-£200. Certified hardware improves tested resistance but does not eliminate burglary risk.',
+        a: 'Not automatically. Identify the exact cylinder, protective furniture, multipoint mechanism and current certification on each door. Compatible certified anti-snap options start from £59 per stated scope; multiple openings are itemised. Certified hardware improves tested resistance but does not eliminate burglary risk.',
       },
     ],
   },
@@ -297,11 +297,11 @@ Do not infer BS3621 certification from age, key shape or lever count. Check the 
 
 ### What a Replacement Involves
 
-A stiff key, incomplete bolt throw or loose mechanism warrants inspection. If replacement is needed, compatibility with the existing mortice cutout and door condition determines the work. A fitted certified mortice-lock option costs **£85** in the example price; timing and modifications depend on the actual door.
+A stiff key, incomplete bolt throw or loose mechanism warrants inspection. If replacement is needed, compatibility with the existing mortice cutout and door condition determines the work. A fitted BS3621-rated option starts from **£79** under the published scope; timing and modifications depend on the actual door.
 
 ### How to Prevent It
 
-If a mortice lock is getting harder to operate, arrange an inspection rather than forcing it. A planned replacement costs £75-£95 under the published scope. Emergency cost and timing depend on the diagnosed work; maintenance does not guarantee that failure or expense will be avoided.
+If a mortice lock is getting harder to operate, arrange an inspection rather than forcing it. A compatible BS3621-rated replacement starts from £79 under the published scope. Emergency cost and timing depend on the diagnosed work; maintenance does not guarantee that failure or expense will be avoided.
 
 ---
 
@@ -321,7 +321,7 @@ The symptom may leave the door stuck locked or stuck unlocked, or may appear onl
 
 A multipoint gearbox replacement is more involved than a simple cylinder change. I need to remove the door handle, the cylinder, and the faceplate, then slide out the old gearbox and fit the new one. The gearbox itself needs to match the existing door in terms of backset, centres, and overall length.
 
-Cost: **£120-£180 supplied and fitted**, depending on the specific gearbox required. Some brands are easier and cheaper to source than others.
+The published gearbox-replacement price starts from **£89** where the exact mechanism is identified and a compatible part is available. The actual total depends on the gearbox, door condition and fitting scope.
 
 ### How to Spot It Early
 
@@ -357,9 +357,9 @@ If the nightlatch has a deadlocking function, check how the manufacturer says it
 
 For a suitable timber door with only a basic nightlatch, a certified mortice deadlock may be one option. Check the door, escape needs and any exact standard named in the written insurance policy; fitting one does not guarantee security or insurance acceptance.
 
-For the Yale itself, if it is old and worn, I recommend replacing it with a modern BS3621-rated nightlatch that has a proper deadlocking function and is more resistant to forced entry.
+For an old or worn nightlatch, identify the exact product, door, frame, escape requirements and current certification before selecting a replacement.
 
-Cost: **£75-£95 for a new deadlock supplied and fitted**, or **£65-£85 for a replacement nightlatch**. If you want both, I do them together for a combined price — just call 024 7522 4730 and I will give you an exact figure.
+A compatible BS3621-rated mortice option starts from **£79**, while the published Yale nightlatch scope starts from **£69**. Combined work is itemised after both products and the fitting scope are identified.
 
 ### A Word on Habits
 
@@ -383,11 +383,11 @@ Check weather-exposed doors, gaps that admit moisture and any lock that has beco
 
 ### What It Costs to Fix
 
-If I need to come out and free a frozen lock, the cost is my standard callout: **£59 during normal hours**. If the lock is damaged from forcing or a snapped key, there will be an additional charge for replacement — typically £59-£89 for a euro cylinder or £75-£95 for a mortice lock.
+The standard residential lockout scope starts from **£59**. A damaged lock, snapped key, repair or replacement changes the scope; compatible euro-cylinder replacement starts from £59 and a BS3621-rated mortice option from £79. I explain any revision before additional work.
 
-### How to Prevent It — And Save Yourself £59
+### Manufacturer-Led Maintenance
 
-Use only a lubricant approved by the lock manufacturer. A product may cost about **£5**, but the correct type and maintenance interval depend on the mechanism; lubrication cannot guarantee trouble-free winter operation.
+Use only a lubricant approved by the lock manufacturer. The correct product, amount and maintenance interval depend on the mechanism; lubrication cannot guarantee trouble-free winter operation.
 
 **Do not use WD-40**. I know everyone reaches for it, but WD-40 is a water displacer, not a lubricant. It will free a stuck lock temporarily, but it attracts dust and moisture over time, making the problem worse. Use graphite powder or a PTFE-based lock lubricant.
 
@@ -399,15 +399,15 @@ Follow the lock and lubricant manufacturer's directions. Stop if the key or mech
 
 Inspection and planned maintenance can reveal options before an emergency, but no cylinder, deadlock or lubricant guarantees prevention of burglary, lockout or mechanical failure. Insurance requirements and claims depend on the written policy and circumstances. Published prices describe the quoted work, not a guaranteed saving.
 
-If you recognise any of these problems in your own home — or if you are not sure whether your locks are in good condition — give me a call on 024 7522 4730. I am always happy to talk through your situation on the phone, and if you need a visit, I will give you a firm price before I come out. You can also check my [services page](/services/) or [prices page](/prices) for full details on every job I offer.`,
+If you recognise any of these problems in your own home — or if you are not sure whether your locks are in good condition — call 024 7522 4730 to discuss the symptoms. If a visit is needed, I explain the supported price basis, its assumptions and the current ETA before travelling. You can also check the [services page](/services/) or [prices page](/prices).`,
     faqs: [
       {
         q: 'How do I know if my euro cylinder is vulnerable to snapping?',
-        a: 'Excess projection beyond protective furniture can increase exposure, but colour, appearance and postcode do not establish certification or attack resistance. Check the exact model, dimensions and complete doorset. If replacement is appropriate, certified anti-snap options cost £59-£89; call 024 7522 4730 for an assessment.',
+        a: 'Excess projection beyond protective furniture can increase exposure, but colour, appearance and postcode do not establish certification or attack resistance. Check the exact model, dimensions and complete doorset. If replacement is appropriate, compatible certified anti-snap options start from £59; call 024 7522 4730 for an assessment.',
       },
       {
         q: 'Why is my uPVC door handle floppy and not locking properly?',
-        a: 'A loose handle, difficulty lifting it or grinding can indicate gearbox wear, door misalignment or another mechanism fault. There is no universal service life or certain outcome, so diagnose the complete door before replacing parts. A gearbox replacement costs £120-£180 supplied and fitted under the stated scope.',
+        a: 'A loose handle, difficulty lifting it or grinding can indicate gearbox wear, door misalignment or another mechanism fault. There is no universal service life or certain outcome, so diagnose the complete door before replacing parts. A compatible gearbox replacement starts from £89 under the published scope.',
       },
       {
         q: 'What should I use to lubricate my door locks?',
@@ -415,7 +415,7 @@ If you recognise any of these problems in your own home — or if you are not su
       },
       {
         q: 'Is a Yale nightlatch enough security for my front door?',
-        a: 'It depends on the exact nightlatch, door, frame, gaps and required escape arrangement. A basic spring latch may be exposed to loiding, while deadlocking features and additional certified hardware can improve resistance. A suitable BS3621 mortice deadlock costs £75-£95 supplied and fitted, but insurance acceptance depends on the written policy and no lock provides guaranteed security.',
+        a: 'It depends on the exact nightlatch, door, frame, gaps and required escape arrangement. A basic spring latch may be exposed to loiding, while deadlocking features and additional certified hardware can improve resistance. A suitable BS3621-rated mortice option starts from £79, but insurance acceptance depends on the written policy and no lock provides guaranteed security.',
       },
     ],
   },
@@ -439,7 +439,7 @@ Before booking, ask who will attend, which business will invoice you and what cu
 
 - **Response time**: ask for a live ETA based on the locksmith's current location and workload. No fixed 15-30-minute Coventry arrival applies to every job.
 - **Local knowledge**: familiarity with housing in [Tile Hill](/areas/tile-hill) and [Earlsdon](/areas/earlsdon) can help with diagnosis, but the exact lock and part must still be identified.
-- **Pricing**: National companies have overheads — call centres, marketing, management, franchisee fees — that local independents do not. Those costs get passed to you.
+- **Pricing**: Business models and cost structures vary. Compare the itemised total, included scope, VAT, fees and changed-scope process rather than inferring value from company size.
 - **Accountability**: establish the contracting business, invoice details, written scope and complaint route before work.
 
 ---
@@ -460,7 +460,7 @@ A phone number does not verify a business location. Check the trading identity, 
 
 Reviews can provide context, but a lack of Coventry detail does not prove that a business is national or fraudulent. Cross-check the business identity and treat reviews as one signal rather than conclusive evidence.
 
-### 4. They Cannot Give You a Firm Price
+### 4. They Cannot Explain the Price Basis
 
 Ask for the price or range, what assumptions it uses and which findings could change it. Some work can be quoted remotely; other work requires inspection. Uncertainty should be explained rather than treated as proof of poor practice.
 
@@ -474,7 +474,7 @@ Clarify whether callout, labour, parts, VAT and any time-based surcharge are inc
 
 Here are the questions I would ask any locksmith before letting them come to my home:
 
-1. **"What is your postcode?"** — Confirms they are genuinely local.
+1. **"What is your trading address or service base?"** — Verify it independently; a postcode alone does not prove who will attend.
 2. **"Can you give me a price or range for this job?"** — Ask what assumptions it uses and what could change it.
 3. **"Does that price include parts, labour, and VAT?"** — Eliminates hidden extras.
 4. **"Do you charge a separate call-out fee?"** — Some do, some do not, but you need to know upfront.
@@ -517,15 +517,17 @@ This site's published prices can be compared with an itemised quote from any oth
 
 | Job | This Site's Published Price | What to Confirm Elsewhere |
 |---|---|---|
-| Emergency lockout (uPVC door) | £59-£79 (no VAT) | Callout, labour, parts and destructive-entry terms |
-| Euro cylinder replacement | £59-£89 (no VAT) | Exact cylinder, size, certification, labour and VAT |
-| Mortice deadlock replacement | £75-£95 (no VAT) | Exact product, door modifications, labour and VAT |
-| Lock change after burglary | £59-£89 (no VAT) | Emergency securing, parts, labour and VAT |
-| uPVC multipoint gearbox replacement | £120-£180 (no VAT) | Exact gearbox, availability, labour and VAT |
+| Emergency lockout | From £59 (no VAT) | Callout, labour, access method, parts and destructive-entry terms |
+| Euro cylinder replacement | From £59 (no VAT) | Exact cylinder, size, certification, labour and VAT |
+| BS3621-rated mortice lock change | From £79 (no VAT) | Exact product, door preparation, labour and VAT |
+| uPVC lock repair | From £59 (no VAT) | Diagnosed component, compatibility, labour and VAT |
+| uPVC multipoint gearbox replacement | From £89 (no VAT) | Exact gearbox, availability, labour and VAT |
+| Emergency boarding up | From £79 (no VAT) | Opening, materials, temporary-security scope and labour |
+| Window lock repair | From £49 (no VAT) | Window, fitted hardware, parts and labour |
 
 Do not compare a headline advert with an all-inclusive quote. Confirm the diagnosed work and total authorised price on the same basis.
 
-You can see my full price list on my [prices page](/prices) — every common job is listed with an honest price range.
+See the current [prices page](/prices) for the published scopes and the factors that can change a quote.
 
 ---
 
@@ -536,7 +538,7 @@ When you call 024 7522 4730, you speak to me directly. I explain the quoted scop
 Here is what I offer:
 
 - **Based in Coventry** — I live and work here, serving areas from [Earlsdon](/areas/earlsdon) to [Tile Hill](/areas/tile-hill), [Cheylesmore](/areas/cheylesmore) and [the city centre](/areas/coventry-city-centre).
-- **No VAT** — I am a sole trader below the VAT threshold. The price I quote is the price you pay.
+- **No VAT added** — I am not VAT-registered. The phone quote states its scope and assumptions; any changed diagnosis or parts are explained and agreed before work.
 - **No separate call-out fee** — the quoted price covers the stated scope; any newly diagnosed work is explained and authorised first.
 - **Phone pricing** — where the job can be identified remotely, I state the price and assumptions before setting off.
 - **Live ETA** — I confirm the current estimate when you call rather than promising a fixed citywide arrival time.
@@ -550,13 +552,13 @@ Compare my [published prices](/prices) with any other provider's itemised total.
 
 Genuinely, that is fine. There are other good locksmiths in Coventry. If you use the advice in this article to find one who is local, honest, and transparent on pricing, then this article has done its job regardless of whether you call me.
 
-The locksmiths to avoid are the ones who:
+Pause and ask further questions where a provider:
 
 - Will not tell you where they are based
-- Cannot give you a price
-- Add fees after arrival
-- Have no local reviews
-- Pressure you into unnecessary work on site ("while I am here, your other locks need changing too")
+- Cannot explain a price or pricing basis for the information available
+- Adds unagreed fees or work after arrival
+- Makes identity, location or review claims that cannot be verified
+- Pressures you to authorise additional work without explaining the need, alternatives and price
 
 If another provider meets your checks, review the written scope and make your own booking decision.
 
@@ -584,7 +586,7 @@ Visit my [services page](/services/) for a full list of what I can help with, or
       },
       {
         q: 'How much should a locksmith charge in Coventry?',
-        a: 'This site publishes £59-£79 for an emergency lockout and £59-£89 for a euro cylinder replacement under the stated scopes, with no VAT or separate call-out fee. Other providers set their own prices. Ask for an itemised total or pricing basis covering callout, labour, parts, VAT and possible destructive entry, and compare it with /prices.',
+        a: 'This site publishes starting prices of £59 for a standard emergency lockout and £59 for a compatible euro-cylinder replacement under the stated scopes, with no VAT or separate call-out fee. Other providers set their own prices. Ask for an itemised total or pricing basis covering callout, labour, parts, VAT and possible destructive entry, and compare it with /prices.',
       },
       {
         q: 'Does a locksmith need to be MLA registered?',

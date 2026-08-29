@@ -12,9 +12,9 @@ export interface BlogPost {
 }
 
 export const PILLARS = [
-  { slug: 'lock-types-security', name: 'Lock Types & Security Ratings', description: 'Everything you need to know about the locks on your doors — types, standards, and which ones actually keep you safe.' },
-  { slug: 'home-security', name: 'Home Security & Burglary Prevention', description: 'Practical advice on protecting your home, based on real burglary data and what we see on every job.' },
-  { slug: 'locksmith-costs', name: 'Locksmith Costs & Pricing', description: 'Honest prices for every common locksmith job — no vague ranges, no "call for a quote".' },
+  { slug: 'lock-types-security', name: 'Lock Types & Security Ratings', description: 'Guides to lock types, current standards, product markings and the checks needed at the actual door.' },
+  { slug: 'home-security', name: 'Home Security & Burglary Prevention', description: 'Practical home-security guidance using cited police, standards and public-information sources.' },
+  { slug: 'locksmith-costs', name: 'Locksmith Costs & Pricing', description: 'Published from-prices and the diagnosis, parts and scope factors that can change a locksmith quote.' },
   { slug: 'upvc-door-locks', name: 'uPVC Door Locks', description: 'Practical guidance on uPVC cylinders, handles, alignment and multipoint mechanisms, including what to check before repair or replacement.' },
   { slug: 'emergency-situations', name: 'Emergency Situations', description: 'Step-by-step guides for when things go wrong — lockouts, break-ins, broken keys, and lost keys.' },
   { slug: 'legal-insurance', name: 'Legal & Insurance Requirements', description: 'Lock standards, insurance requirements, landlord obligations — the legal side of home security explained clearly.' },
@@ -37,7 +37,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
   {
     slug: 'euro-cylinder-locks-explained',
     title: 'Euro Cylinder Locks Explained: Sizes, Types, and How to Measure Yours',
-    excerpt: 'Euro cylinders are fitted to almost every uPVC and composite door in Coventry. Here is how they work, how to measure yours for replacement, and which type you should buy.',
+    excerpt: 'Learn how euro-profile cylinders work, how to measure an installed cylinder and which fit, function and certification checks matter before replacement.',
     date: '2026-03-19',
     readTime: '7 min read',
     pillar: 'Lock Types & Security Ratings',
@@ -46,8 +46,8 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
   },
   {
     slug: 'bs3621-vs-anti-snap-vs-smart-lock',
-    title: 'BS3621 vs Anti-Snap vs Smart Lock: Which Security Standard Actually Matters?',
-    excerpt: 'There are dozens of lock standards and security ratings. Here is a plain-English comparison of the three that actually matter for your front door.',
+    title: 'BS3621 vs Anti-Snap vs Smart Lock: How Do They Differ?',
+    excerpt: 'Compare a mortice-lock standard, cylinder attack resistance and smart access features without treating unlike products as interchangeable.',
     date: '2026-03-21',
     readTime: '9 min read',
     pillar: 'Lock Types & Security Ratings',
@@ -57,7 +57,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
   {
     slug: 'yale-vs-mortice-deadlock',
     title: 'Yale Locks vs Mortice Deadlocks: Which Does Your Front Door Need?',
-    excerpt: 'Most UK front doors have a Yale nightlatch on top and a mortice deadlock below. But do you need both? And what if you only have one? Here is the honest answer.',
+    excerpt: 'Compare nightlatches and mortice deadlocks, their different functions, and the door, escape and written-policy checks needed before changing either.',
     date: '2026-03-23',
     readTime: '7 min read',
     pillar: 'Lock Types & Security Ratings',
@@ -67,7 +67,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
   {
     slug: 'anti-snap-locks-compared',
     title: 'Anti-Snap Locks Compared: Ultion vs ABS vs Yale Platinum vs Avocet',
-    excerpt: 'Not all anti-snap locks are equal. Here is an honest comparison of the four most popular brands I fit in Coventry — with prices, pros, cons, and my recommendation.',
+    excerpt: 'Compare named anti-snap cylinders by exact current certification, dimensions, documented features and compatibility with the complete door.',
     date: '2026-03-25',
     readTime: '10 min read',
     pillar: 'Lock Types & Security Ratings',
@@ -77,7 +77,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
   {
     slug: 'smart-locks-2026-are-they-secure',
     title: 'Smart Locks in 2026: Are They Secure Enough for Your Front Door?',
-    excerpt: 'Smart locks are getting better — but are they ready to replace a proper deadlock? Here is what a locksmith thinks about smart locks, from Yale Conexis to Nuki.',
+    excerpt: 'Review smart-lock access, power, override and compatibility questions before replacing or supplementing a mechanical front-door lock.',
     date: '2026-03-27',
     readTime: '8 min read',
     pillar: 'Lock Types & Security Ratings',
@@ -86,8 +86,8 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
   },
   {
     slug: 'five-lever-mortice-deadlock-guide',
-    title: 'The Complete Guide to 5-Lever Mortice Deadlocks',
-    excerpt: 'The 5-lever mortice deadlock is the gold standard for wooden front doors in the UK. Here is everything you need to know — how they work, how to identify one, and why your insurance probably requires it.',
+    title: '5-Lever Mortice Deadlocks: Identification and Standards',
+    excerpt: 'Learn how lever count differs from BS3621 certification, how to inspect visible markings and why only the current written policy can establish an insurance requirement.',
     date: '2026-03-29',
     readTime: '8 min read',
     pillar: 'Lock Types & Security Ratings',
@@ -97,7 +97,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
   {
     slug: 'ts007-vs-ss312-lock-standards',
     title: 'TS007 3-Star vs SS312 Diamond: Lock Security Standards Decoded',
-    excerpt: 'TS007, SS312, Sold Secure Diamond, Secured by Design — the world of lock standards is confusing. Here is what each one actually means and which one you need.',
+    excerpt: 'Compare TS007, SS312, Sold Secure and Secured by Design, then verify the exact product listing, door fit and any written requirement.',
     date: '2026-03-31',
     readTime: '7 min read',
     pillar: 'Lock Types & Security Ratings',
@@ -108,7 +108,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
   // === PILLAR 2: Home Security & Burglary Prevention (7 posts) ===
   {
     slug: 'how-burglars-break-into-uk-homes',
-    title: 'How Burglars Actually Break Into UK Homes (and How to Stop Them)',
+    title: 'UK Home Entry Risks and Burglary Prevention',
     excerpt: 'Official burglary guidance highlights open, unlocked, or easy-to-force doors and windows. Learn how to assess access points and use layered, evidence-based security.',
     date: '2026-04-02',
     readTime: '10 min read',
@@ -118,8 +118,8 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
   },
   {
     slug: 'home-security-checklist-2026',
-    title: 'The Complete Home Security Checklist for 2026',
-    excerpt: 'A room-by-room checklist covering locks, doors, windows, lighting, alarms, and habits. Print it, walk round your house, and tick off each item.',
+    title: 'Home Security Checklist for 2026',
+    excerpt: 'Use a room-by-room checklist to record doors, windows, locks, lighting, alarms and everyday security habits for property-specific follow-up.',
     date: '2026-04-04',
     readTime: '9 min read',
     pillar: 'Home Security & Burglary Prevention',
@@ -138,8 +138,8 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
   },
   {
     slug: 'window-security-overlooked-weak-point',
-    title: 'Window Security: The Overlooked Weak Point in Most Homes',
-    excerpt: 'Your front door might have a BS3621 deadlock, but what about your windows? Here is why window security matters and the upgrades that make a real difference.',
+    title: 'Window Security: What to Check',
+    excerpt: 'Use official guidance to review accessible windows, their locks, frames and opening restrictions before selecting a compatible upgrade.',
     date: '2026-04-08',
     readTime: '7 min read',
     pillar: 'Home Security & Burglary Prevention',
@@ -148,8 +148,8 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
   },
   {
     slug: 'patio-doors-french-doors-security',
-    title: 'Patio Doors and French Doors: The Security Upgrades That Actually Work',
-    excerpt: 'Patio and French doors are a known weak point. Here are the specific upgrades that make them significantly harder to force — without replacing the doors themselves.',
+    title: 'Patio and French Door Security Checks and Upgrades',
+    excerpt: 'Review the exact patio or French door, frame, locking points and compatible reinforcement options rather than assuming one product suits every opening.',
     date: '2026-04-10',
     readTime: '7 min read',
     pillar: 'Home Security & Burglary Prevention',
@@ -158,8 +158,8 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
   },
   {
     slug: 'garage-shed-security',
-    title: 'Garage and Shed Security: Stopping the Easy Route Into Your Home',
-    excerpt: 'Thieves love garages and sheds — they contain tools and often provide a hidden route into the house. Here is how to secure yours properly.',
+    title: 'Garage and Shed Security: Practical Checks',
+    excerpt: 'Apply official outbuilding guidance to doors, windows, fixings, stored tools and any connecting entrance without promising that one measure removes risk.',
     date: '2026-04-12',
     readTime: '7 min read',
     pillar: 'Home Security & Burglary Prevention',
@@ -181,7 +181,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
   {
     slug: 'emergency-locksmith-cost-coventry-2026',
     title: 'How Much Does an Emergency Locksmith Cost in Coventry in 2026?',
-    excerpt: 'Wondering what a locksmith really costs in Coventry? Here are the actual prices — no vague ranges, no "call for a quote". Honest costs for every common job.',
+    excerpt: 'See published Coventry from-prices for five services and the diagnosis, compatible parts and agreed scope that determine the final quote.',
     date: '2026-03-01',
     readTime: '6 min read',
     pillar: 'Locksmith Costs & Pricing',
@@ -191,7 +191,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
   {
     slug: 'emergency-locksmith-charges-explained',
     title: 'Emergency Locksmith Charges Explained: Why It Costs More at 2am',
-    excerpt: 'Some locksmiths charge double at night. Others charge the same 24/7. Here is how emergency locksmith pricing actually works — and how to avoid overpaying.',
+    excerpt: 'Learn which questions to ask about labour, parts, timing, call-out fees, VAT and changed scope before agreeing emergency locksmith work.',
     date: '2026-04-16',
     readTime: '7 min read',
     pillar: 'Locksmith Costs & Pricing',
@@ -201,7 +201,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
   {
     slug: 'lock-change-costs-by-type',
     title: 'Lock Change Costs Broken Down by Lock Type and Door Type',
-    excerpt: 'From a £40 Yale cylinder swap to a £200 multipoint mechanism replacement — here is what every type of lock change actually costs, with no surprises.',
+    excerpt: 'Compare published lock-change from-prices and see why the installed product, measurements, condition and compatible part determine the quote.',
     date: '2026-04-18',
     readTime: '8 min read',
     pillar: 'Locksmith Costs & Pricing',
@@ -211,7 +211,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
   {
     slug: 'upvc-door-lock-replacement-costs',
     title: 'uPVC Door Lock Replacement Costs: Mechanism, Cylinder, and Full Lock',
-    excerpt: 'uPVC door lock repairs range from £59 for a cylinder swap to £200+ for a full mechanism replacement. Here is a breakdown of every cost involved.',
+    excerpt: 'Review published uPVC lock-repair from-prices and the separate cylinder, handle, alignment, gearbox and mechanism factors behind a quote.',
     date: '2026-04-20',
     readTime: '7 min read',
     pillar: 'Locksmith Costs & Pricing',
@@ -221,7 +221,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
   {
     slug: 'rekey-or-replace-locks',
     title: 'Is It Cheaper to Rekey or Replace Your Locks?',
-    excerpt: 'Rekeying costs less upfront but is not always the best option. Here is when to rekey, when to replace, and how to decide for your specific situation.',
+    excerpt: 'Compare rekeying and replacement by identifying the fitted lock, key-control objective, compatible parts and total quoted scope.',
     date: '2026-04-22',
     readTime: '6 min read',
     pillar: 'Locksmith Costs & Pricing',
@@ -231,7 +231,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
   {
     slug: 'locksmith-wont-give-price-on-phone',
     title: "Why You Should Never Use a Locksmith Who Won't Give a Price on the Phone",
-    excerpt: "Rogue locksmith scams cost UK homeowners millions every year. Here's exactly what to look for — and how to avoid being ripped off when you're locked out.",
+    excerpt: 'Use consumer guidance to check identity, price basis, changed scope and destructive-work explanations before authorising an emergency locksmith.',
     date: '2026-03-29',
     readTime: '6 min read',
     pillar: 'Locksmith Costs & Pricing',
@@ -253,7 +253,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
   {
     slug: 'upvc-door-lock-mechanisms-explained',
     title: 'uPVC Door Lock Mechanisms Explained: Gearboxes, Hooks, and Rollers',
-    excerpt: 'Inside every uPVC door is a multipoint locking mechanism with gearboxes, hooks, rollers, and deadbolts. Here is how it all works — and what fails first.',
+    excerpt: 'Learn how common uPVC multipoint components interact and which observations help separate alignment, handle, cylinder and mechanism faults.',
     date: '2026-04-24',
     readTime: '8 min read',
     pillar: 'uPVC Door Locks',
@@ -263,7 +263,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
   {
     slug: 'how-to-measure-euro-cylinder-upvc',
     title: 'How to Measure a Euro Cylinder for Your uPVC Door (with Pictures)',
-    excerpt: 'Buying the wrong size euro cylinder is the number one DIY mistake with uPVC doors. Here is exactly how to measure yours — step by step with pictures.',
+    excerpt: 'Learn how cylinder dimensions are recorded and why projection, door furniture, function and certification must be checked before purchase.',
     date: '2026-04-26',
     readTime: '6 min read',
     pillar: 'uPVC Door Locks',
@@ -273,7 +273,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
   {
     slug: 'best-euro-cylinder-upgrades-2026',
     title: 'The Best Euro Cylinder Upgrades for uPVC Doors in 2026',
-    excerpt: 'If your uPVC door has a standard euro cylinder, it is vulnerable to snapping. Here are the best upgrades available in 2026 — tested and fitted by a working locksmith.',
+    excerpt: 'Compare euro-cylinder upgrade options by current independent certification, size, projection, surrounding furniture and complete-door compatibility.',
     date: '2026-04-28',
     readTime: '9 min read',
     pillar: 'uPVC Door Locks',
@@ -283,7 +283,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
   {
     slug: 'upvc-door-maintenance-guide',
     title: 'uPVC Door Maintenance: The Seasonal Routine That Prevents Lock Failures',
-    excerpt: 'Most uPVC door lock failures are preventable with basic maintenance. Here is a simple seasonal routine that keeps your door working for years longer.',
+    excerpt: 'Use a cautious maintenance routine to observe alignment, operation and manufacturer guidance without promising a particular mechanism lifespan.',
     date: '2026-04-30',
     readTime: '6 min read',
     pillar: 'uPVC Door Locks',
@@ -303,7 +303,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
   {
     slug: 'multipoint-locking-systems-explained',
     title: 'Multipoint Locking Systems: How They Work and When They Fail',
-    excerpt: 'Multipoint locks are the backbone of uPVC and composite door security. Here is how the different types work, what goes wrong, and when you need a replacement.',
+    excerpt: 'Learn how multipoint systems operate, what symptoms to record and why inspection and compatible-part availability determine repair or replacement.',
     date: '2026-05-04',
     readTime: '8 min read',
     pillar: 'uPVC Door Locks',
@@ -325,7 +325,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
   {
     slug: 'what-to-do-after-burglary',
     title: 'What to Do After a Burglary: The Complete UK Step-by-Step Guide',
-    excerpt: 'If your home has been broken into, you need to act quickly but carefully. Here is exactly what to do — from calling 999 to claiming on insurance to changing the locks.',
+    excerpt: 'Follow current police and insurer guidance after a burglary, preserve evidence and separate temporary security from permanent repair.',
     date: '2026-05-06',
     readTime: '10 min read',
     pillar: 'Emergency Situations',
@@ -335,7 +335,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
   {
     slug: 'broken-key-stuck-in-lock',
     title: 'Broken Key Stuck in Your Lock: Why It Happens and What to Do Next',
-    excerpt: 'A key snapping inside the lock is more common than you think — especially in cold weather. Here is why it happens, what to do, and why pliers usually make it worse.',
+    excerpt: 'Review possible causes of a snapped key, safe stop points and the observations needed before extraction or lock replacement is chosen.',
     date: '2026-05-08',
     readTime: '6 min read',
     pillar: 'Emergency Situations',
@@ -345,7 +345,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
   {
     slug: 'lost-keys-should-you-change-locks',
     title: 'Lost Your House Keys: Should You Change the Locks?',
-    excerpt: 'You have lost your keys. Should you change the locks or hope they turn up? Here is how to think about it — including the insurance angle most people miss.',
+    excerpt: 'Assess lost-key risk using key identification, address exposure, access control and any exact insurer, landlord or manager requirement.',
     date: '2026-05-10',
     readTime: '6 min read',
     pillar: 'Emergency Situations',
@@ -355,7 +355,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
   {
     slug: 'how-emergency-locksmith-callouts-work',
     title: 'How Emergency Locksmith Call-Outs Actually Work (What to Expect)',
-    excerpt: 'Never called a locksmith before? Here is exactly what happens — from the phone call to the final payment — so you know what to expect and what to ask.',
+    excerpt: 'See the usual booking, authority, diagnosis, approval and payment stages, with the questions to ask before any changed scope proceeds.',
     date: '2026-05-12',
     readTime: '6 min read',
     pillar: 'Emergency Situations',
@@ -377,7 +377,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
   {
     slug: 'bs3621-locks-explained',
     title: 'BS3621 Locks Explained — Why Your Home Insurance May Require One',
-    excerpt: 'Does your home insurance require a BS3621 lock? Many policies do — and many homeowners don\'t have one. Here\'s what it means and how to check.',
+    excerpt: 'Learn what BS3621 describes, how to check visible markings and why your own current policy or insurer must confirm any requirement.',
     date: '2026-03-15',
     readTime: '7 min read',
     pillar: 'Legal & Insurance Requirements',
@@ -387,7 +387,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
   {
     slug: 'pas3621-bs3621-bs8621-differences',
     title: 'PAS3621, BS3621, and BS8621: Which Lock Standard Applies to Your Door?',
-    excerpt: 'Three British Standards, three different purposes. Here is a plain-English guide to the differences — and which one your insurance policy is actually asking for.',
+    excerpt: 'Compare PAS3621, BS3621 and BS8621 by scope and use, then match only the exact standard named in current written requirements.',
     date: '2026-05-16',
     readTime: '7 min read',
     pillar: 'Legal & Insurance Requirements',
@@ -397,7 +397,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
   {
     slug: 'can-landlord-change-locks',
     title: 'Can a Landlord Change the Locks? UK Tenant and Landlord Rights Explained',
-    excerpt: 'It is illegal for a landlord to lock a tenant out — but tenants can change locks with conditions. Here is the legal position, clearly explained.',
+    excerpt: 'Review current UK guidance on access, eviction and lock changes, then check the tenancy facts and obtain legal advice for a specific dispute.',
     date: '2026-05-18',
     readTime: '8 min read',
     pillar: 'Legal & Insurance Requirements',
@@ -407,7 +407,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
   {
     slug: 'landlords-change-locks-between-tenants',
     title: 'Do Landlords Have to Change Locks Between Tenants? The Legal Position',
-    excerpt: 'There is no legal requirement to change locks between tenants — but there are very good reasons why you should. Here is the full picture for UK landlords.',
+    excerpt: 'Review key-control, tenancy documents, property duties and current legal guidance when deciding whether locks should change between occupancies.',
     date: '2026-05-20',
     readTime: '6 min read',
     pillar: 'Legal & Insurance Requirements',
@@ -417,7 +417,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
   {
     slug: 'insurance-payout-lock-standards',
     title: 'Will Your Insurance Pay Out If Your Locks Don\'t Meet the Standard?',
-    excerpt: 'The short answer: maybe not. Many home insurance claims are reduced or rejected because the locks did not meet the policy requirements. Here is how to check yours.',
+    excerpt: 'Learn how policy security conditions may affect a claim and why only the insurer and current written terms can determine a particular outcome.',
     date: '2026-05-22',
     readTime: '7 min read',
     pillar: 'Legal & Insurance Requirements',
@@ -439,7 +439,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
   {
     slug: 'dark-evenings-burglary-october',
     title: 'Dark Evenings and Burglary: Why October Is the Month to Upgrade Your Locks',
-    excerpt: 'Theft claims increase 35% after the clocks go back. Here is why autumn is the most dangerous time for home security — and what to do before it gets dark.',
+    excerpt: 'Use official seasonal prevention guidance to review lighting, visibility, doors, windows and routines as darker evenings begin.',
     date: '2026-05-26',
     readTime: '7 min read',
     pillar: 'Seasonal Security Guides',
@@ -449,7 +449,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
   {
     slug: 'how-to-stop-locks-freezing-winter',
     title: 'How to Stop Your Locks Freezing This Winter',
-    excerpt: 'Frozen locks are a winter staple in Coventry. Here are the prevention methods that actually work — and the ones that make it worse.',
+    excerpt: 'Review cautious cold-weather lock care, manufacturer guidance and signs that point to moisture, alignment or a mechanical fault.',
     date: '2026-05-28',
     readTime: '5 min read',
     pillar: 'Seasonal Security Guides',
@@ -459,7 +459,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
   {
     slug: 'christmas-home-security',
     title: 'Christmas Home Security: Protecting Your Home (and Presents) Over the Holidays',
-    excerpt: 'Christmas is the peak season for home burglary — empty houses, expensive gifts, and dark evenings. Here is how to protect your home over the festive period.',
+    excerpt: 'Apply current police seasonal guidance to doors, windows, lighting, deliveries and travel plans without treating any measure as a guarantee.',
     date: '2026-05-30',
     readTime: '7 min read',
     pillar: 'Seasonal Security Guides',
@@ -479,7 +479,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
   {
     slug: 'moving-house-change-locks',
     title: 'Moving House? Why Changing the Locks Is the First Thing You Should Do',
-    excerpt: 'You have no idea who has a key to your new home. Previous owners, estate agents, builders, cleaners — any of them could still have a copy. Here is why changing the locks on day one is non-negotiable.',
+    excerpt: 'Consider a lock change after moving when the number and control of existing keys cannot be established, then inspect each actual entrance.',
     date: '2026-06-03',
     readTime: '6 min read',
     pillar: 'Seasonal Security Guides',
@@ -489,7 +489,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
   {
     slug: 'student-move-in-security-guide',
     title: 'Coventry University and Warwick Student Move-In Security Guide',
-    excerpt: 'Moving into student accommodation in Coventry? Here is a security guide written by a local locksmith — covering shared houses, HMOs, and what your landlord should have done before you arrived.',
+    excerpt: 'A Coventry student move-in guide covering shared entrances, private rooms, fire-door considerations, key control and questions for the landlord or manager.',
     date: '2026-06-05',
     readTime: '7 min read',
     pillar: 'Seasonal Security Guides',
@@ -499,7 +499,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
   {
     slug: 'bank-holiday-lockout-guide',
     title: 'Bank Holiday Lockout Survival Guide',
-    excerpt: 'Locked out on a bank holiday? Most businesses are closed — but you still need to get in. Here is how bank holiday lockouts work and what it will cost.',
+    excerpt: 'Review safe bank-holiday lockout steps and ask for current availability, ETA, authority checks and price basis before booking.',
     date: '2026-06-07',
     readTime: '5 min read',
     pillar: 'Seasonal Security Guides',
@@ -509,7 +509,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
   {
     slug: 'new-year-home-security-audit',
     title: 'New Year, New Locks: The January Home Security Audit',
-    excerpt: 'January is the perfect time to check your home security. Here is a 30-minute audit that covers every door, window, and lock — with costs for anything that needs upgrading.',
+    excerpt: 'Use a structured home-security audit to record doors, windows and locks, then prioritise any item that needs property-specific advice.',
     date: '2026-06-09',
     readTime: '7 min read',
     pillar: 'Seasonal Security Guides',
@@ -521,7 +521,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
   {
     slug: 'coventry-victorian-terraces-security',
     title: "Home Security for Coventry's Victorian Terraces and 1930s Semis",
-    excerpt: 'Earlsdon terraces, Chapelfields Victorians, Cheylesmore semis — each era of Coventry housing has specific security weak points. Here is what to check on your type of home.',
+    excerpt: 'Use Coventry housing history as context while checking the actual door, window and lock instead of inferring a security fault from age or area.',
     date: '2026-06-11',
     readTime: '9 min read',
     pillar: 'Coventry & Warwickshire',
@@ -540,7 +540,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
   },
   {
     slug: 'common-lock-problems-coventry-homes',
-    title: 'The Most Common Lock Problems We See in Coventry Homes',
+    title: 'Coventry Door Lock Problems: A Diagnosis Guide',
     excerpt: 'A door-by-door guide to diagnosing cylinders, mortice locks, multipoint mechanisms and other Coventry lock concerns without inferring a fault from postcode or housing age.',
     date: '2026-06-15',
     readTime: '8 min read',
@@ -551,7 +551,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
   {
     slug: 'choosing-locksmith-coventry',
     title: 'Choosing a Locksmith in Coventry: What to Look For (From a Locksmith)',
-    excerpt: 'There are dozens of locksmiths advertising in Coventry — but how many are actually local? Here is an honest guide to finding a legitimate locksmith, written by one.',
+    excerpt: 'Compare Coventry locksmith listings using identity, contact, public-feedback, pricing and changed-scope checks before booking.',
     date: '2026-06-17',
     readTime: '7 min read',
     pillar: 'Coventry & Warwickshire',

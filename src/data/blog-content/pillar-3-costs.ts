@@ -33,13 +33,13 @@ Ask whether a quoted price includes any applicable VAT. The prices published on 
 
 I am a one-man operation based in Coventry. No call centre. No franchise fee. No dispatch team. When you ring 024 7522 4730, you get me. I answer my own phone, I drive my own van, and I do the work myself.
 
-Because I do not have those overheads, I do not need to charge extra at night. My costs are the same at 3am as they are at 3pm — fuel, lock parts, insurance, and my time.
+My published starting prices do not add a night, weekend or bank-holiday premium. The job total still depends on the diagnosed scope, labour and any parts required.
 
 Here is what I do not charge:
 
-- **No night premium** — same price 24/7, 365 days a year
-- **No call-out fee** — the quoted price is the total price
-- **No VAT** — I am not VAT-registered, so the price stays as quoted
+- **No night premium** — the published starting-price policy on the [prices page](/prices) does not add a time-of-day premium; the diagnosed scope and any parts still determine the quote
+- **No separate call-out fee** — the quote covers the described scope and states its assumptions
+- **No VAT** — I am not VAT-registered, so VAT is not added
 - **No dispatch fee** — you speak directly with the locksmith doing the work
 
 ## Current Starting Price
@@ -60,7 +60,7 @@ If the scope is uncertain, ask for the starting price, the variables and approva
 
 ## What You Should Expect to Pay in Coventry
 
-For honest, no-hidden-extras pricing on any locksmith job in the Coventry and Warwickshire area, check our full [price list](/prices). Or call me directly on 024 7522 4730 — I will give you a firm price on the phone before I set off, day or night.
+For current starting prices and inclusions, check the full [price list](/prices). Or call me directly on 024 7522 4730 with the full address, door type, symptoms and photographs if available. I confirm the price basis, assumptions and current ETA before setting off; any changed diagnosis or parts are explained and agreed before additional work.
 
 If you are locked out right now, head to our [emergency lockout](/services/emergency-lockout) page for immediate help.`,
     faqs: [
@@ -88,13 +88,13 @@ If you are locked out right now, head to our [emergency lockout](/services/emerg
 
 If you are looking for a straight answer on lock-change costs, this guide lists my current starting prices and the specific factors that can change the quote.
 
-Every price on this page includes the lock, the fitting, and the removal and disposal of the old lock. No call-out fee. No VAT. No surprises.
+The published from-prices include the stated standard lock, fitting and removal scope. Product choice, dimensions, door preparation, alignment and additional repairs can change the quote. No VAT or separate call-out fee is added.
 
-## Yale Nightlatch Change: From £69
+## Yale Nightlatch Change: Quote After Inspection
 
 The Yale nightlatch is the spring-loaded lock you slam shut. It is fitted to most wooden front doors in the UK, usually mounted on the inside surface of the door with a keep on the frame.
 
-**My price: from £69 fitted**
+Use the current [prices page](/prices) for published lock-change starting prices. A nightlatch quote is confirmed after the exact product, dimensions, door preparation and fitting scope are identified.
 
 That includes a suitable replacement nightlatch, fitting, and disposal of the old one. The exact product is agreed from the door, dimensions, required features and current availability. The price can increase if:
 
@@ -140,11 +140,11 @@ The price can vary depending on:
 
 A like-for-like replacement can take less time than a new mortice cut. Door condition, case size, alignment and any repair determine the actual duration.
 
-## Multipoint Mechanism (uPVC/Composite Door): From £89 - £150
+## Multipoint Mechanism (uPVC/Composite Door): From £89
 
 The multipoint locking mechanism is the long metal strip inside your uPVC or composite door. When you lift the handle and turn the key, it engages hooks, rollers, or deadbolts at multiple points along the door edge. It is the heart of the door's security.
 
-**My price: from £89 - £150 depending on brand and type**
+**Published starting price: from £89 under the stated scope**
 
 The wide price range is because there are dozens of different multipoint mechanisms, and they are not interchangeable. The price depends on:
 
@@ -166,7 +166,7 @@ Anti-snap cylinders are designed to improve resistance to snapping attacks. [Pol
 
 Anti-snap cylinder fitting starts from £59. The exact quote depends on the certified product, size, configuration, surrounding furniture, and work required; check the current [prices](/prices).
 
-All prices include fitting. The suitable option depends on the complete door set and any written policy requirement. For more detail, read the [anti-snap locks comparison](/blog/anti-snap-locks-compared), the guide to [lock snapping](/blog/what-is-lock-snapping), or the [lock upgrade service](/services/lock-upgrade).
+The starting amounts on the [prices page](/prices) include fitting only within their stated scopes. The suitable option and final quote depend on the complete door set and any written policy requirement. For more detail, read the [anti-snap locks comparison](/blog/anti-snap-locks-compared), the guide to [lock snapping](/blog/what-is-lock-snapping), or the [lock upgrade service](/services/lock-upgrade).
 
 ## Smart-Lock Compatibility and Quotes
 
@@ -186,33 +186,27 @@ Wooden doors, uPVC doors, and composite doors all have different lock systems. O
 A like-for-like cylinder swap can be quicker than cutting a new mortice. The product, fit, alignment, door condition and any repair determine the actual time; I give a job-specific estimate after the door and lock are identified.
 
 ### Number of Locks
-If you are changing multiple locks at the same time (common when moving house), I offer a discount on the second and subsequent locks. Call 024 7522 4730 for a quote on multiple locks.
+If you are changing multiple locks, each door, product and fitting scope still needs to be identified. I provide an itemised combined quote rather than promise an automatic discount.
 
 ## What Is Included in My Price
 
-Every price on this page includes:
+Each quote states the exact product, keys, fitting, testing and disposal included. Do not assume that every mechanism repair or component change includes a new lock or a fixed number of keys.
 
-- **The lock itself** — quality brand, correct size for your door
-- **Professional fitting** — properly aligned and tested
-- **All keys** — typically 3 keys per lock
-- **Old lock removal and disposal**
-- **A check of the door and frame** — I will flag any issues I spot while I am there
-
-There is no call-out fee, no VAT, and no hidden extras. The price I quote on the phone is the price you pay.
+There is no VAT or separate call-out fee. I state what the quote includes and agree any changed diagnosis, product or additional work before proceeding.
 
 ## Ready to Get a Quote?
 
-For a firm price on any lock change, call me on 024 7522 4730. I will ask a couple of questions about your door and lock, give you a price, and book a time that works for you. Same price day or night, weekday or weekend.
+For a lock-change quote, call me on 024 7522 4730. I will ask about the door and lock, use photographs where helpful, explain the price basis and book an agreed time. The published starting-price policy does not add a night or weekend premium.
 
 You can also check our full [price list](/prices) or browse our [lock change service page](/services/lock-change) for more information.`,
     faqs: [
       {
         q: 'How much does it cost to change the locks on a front door?',
-        a: 'It depends on the lock and door. A Yale nightlatch starts from £69 fitted, a BS3621-rated five-lever mortice deadlock from £79, and an anti-snap euro-cylinder option from £59. The specific quote depends on the product, size, keys and fitting required. I confirm the price before work starts, with no VAT or call-out fee.',
+        a: 'It depends on the lock and door. Current published starting prices include a BS3621-rated five-lever mortice deadlock from £79 and an anti-snap euro-cylinder option from £59. A nightlatch and any other scope are quoted after the product, dimensions, keys and fitting work are identified. Check /prices for the current list; no VAT or separate call-out fee is added.',
       },
       {
         q: 'Is it cheaper to change locks yourself or hire a locksmith?',
-        a: 'For a simple euro cylinder swap, you can buy a cylinder for £15-£40 and fit it yourself if you are handy — it is a single screw. But if you buy the wrong size (very common), you are stuck with a lock you cannot use. For mortice deadlocks and multipoint mechanisms, I strongly recommend a professional. An incorrectly fitted mortice lock can weaken the door, and a wrong multipoint mechanism simply will not work. My fitting prices are competitive enough that the risk of a DIY mistake usually is not worth the small saving.',
+        a: 'A euro cylinder can be retained by one screw, but safe replacement still depends on the exact internal and external dimensions, cam, door furniture and current certification. Compare a current compatible-product price with the supplied-and-fitted scope on /prices. Mortice and multipoint work can require precise cutting, alignment and mechanism matching, so use a competent installer where those requirements are outside your experience.',
       },
       {
         q: 'How long does it take to change a lock?',
@@ -230,7 +224,7 @@ You can also check our full [price list](/prices) or browse our [lock change ser
 
 uPVC doors are widely used in Coventry and across the UK. Whether your door will not lock, the handle is floppy, or you want its security assessed, this guide covers the relevant repair, replacement, and upgrade costs.
 
-I am Ross, a local locksmith based in Coventry. Every price below is what I actually charge — including the part, the fitting, and any disposal. No call-out fee. No VAT. No hidden extras.
+I am Ross, a local locksmith based in Coventry. The prices below are current starting prices for the described scopes. The exact part, fitting, alignment and any additional repair are confirmed after diagnosis. No VAT or separate call-out fee is added.
 
 ## Understanding Your uPVC Door Lock
 
@@ -283,9 +277,9 @@ Euro-cylinder replacement is one of the uPVC door jobs I carry out. It is a sepa
 
 Anti-snap cylinder fitting starts from £59. The exact quote depends on the product, size, configuration, and any compatible furniture required; check the current [prices](/prices).
 
-### Gearbox / Mechanism Replacement: From £89 - £200
+### Gearbox / Mechanism Replacement: From £89
 
-This is the bigger job. When the multipoint mechanism fails internally, the whole strip needs replacing. You cannot repair a broken gearbox — it has to be swapped for a new one.
+An internal multipoint fault needs diagnosis before repair or replacement is selected. The exact gearbox, full strip, related alignment and current compatible-part availability determine the supported scope.
 
 **What is included:**
 - Replacement multipoint mechanism (matched to your door)
@@ -298,7 +292,7 @@ This is the bigger job. When the multipoint mechanism fails internally, the whol
 - You can hear grinding or crunching when operating the handle
 - The mechanism has jammed and the door will not open (emergency situation)
 
-**Why the price range is wide (£89 - £200):**
+**Why the final quote can vary:**
 
 There are dozens of different multipoint mechanisms made by different manufacturers. They are not interchangeable — the replacement must match the original in several measurements:
 
@@ -327,7 +321,7 @@ Before you call, you can check the brand of your mechanism yourself:
 2. **Check the handle** — some brands stamp their name on the handle backplate
 3. **Take a photo** — if you cannot read the markings, photograph the entire door edge and faceplate. It may narrow the options, but final compatibility still depends on complete measurements and inspection
 
-### Full Multipoint Lock Swap: From £150 - £250
+### Full Multipoint Lock Swap: Quoted After Diagnosis
 
 The mechanism, cylinder and handles may need separate assessment, and a combined replacement can be considered when:
 
@@ -342,9 +336,9 @@ The mechanism, cylinder and handles may need separate assessment, and a combined
 - Full fitting, alignment, and testing
 - All old parts disposal
 
-This scope includes several separately identified components. A quote near the higher end of the published range must state the exact mechanism, cylinder, handles and fitting work included rather than infer cost from a brand label.
+This scope includes several separately identified components. The quote must state the exact mechanism, cylinder, handles and fitting work included rather than infer cost from a brand label.
 
-### Handle Set Replacement: From £39
+### Handle Set Replacement: Quoted After Diagnosis
 
 A loose, floppy or broken handle does not establish which component has failed. Check the handle, spindle, spring cassette and multipoint mechanism separately before deciding whether a handle-only replacement is supported.
 
@@ -354,13 +348,13 @@ A loose, floppy or broken handle does not establish which component has failed. 
 - Old handles disposal
 
 **Common handle problems:**
-- Handle drops down and does not spring back up — usually a broken return spring in the handle or the mechanism
+- Handle drops down and does not spring back up — the cause may be a return spring, spindle, handle or mechanism fault
 - Handle is loose and wobbly — may be a worn spindle or loose fixing screws
 - Handle snapped off — more common with cheaper plastic handles
 
-Note: if the handle drops and the problem is in the mechanism (not the handle itself), you may need a gearbox replacement instead. I will diagnose this when I arrive and always confirm the cost before starting work.
+Note: if the handle drops and the problem is in the mechanism rather than the handle, a gearbox or other mechanism scope may be relevant. I diagnose the fault on arrival and confirm the price basis before any additional work proceeds.
 
-### Hinge Adjustment: From £39
+### Hinge Adjustment: Quoted After Diagnosis
 
 uPVC door hinges can be adjusted to fix alignment problems. Over time, heavy doors sag, and the locking points stop engaging properly because the door is not sitting square in the frame.
 
@@ -375,9 +369,9 @@ uPVC door hinges can be adjusted to fix alignment problems. Over time, heavy doo
 - The door does not sit flush in the frame when closed
 - Draughts around the door edge (the seal is not compressing evenly)
 
-A hinge adjustment often solves "locking problems" that are actually alignment problems. It is worth trying this before replacing the mechanism.
+A hinge adjustment may resolve an alignment fault, but the door and locking points need to be diagnosed before adjustment is chosen instead of mechanism work.
 
-### Door Realignment: From £49
+### Door Realignment: Quoted After Diagnosis
 
 Realignment is a more involved version of hinge adjustment. It may involve:
 
@@ -386,7 +380,7 @@ Realignment is a more involved version of hinge adjustment. It may involve:
 - Shimming hinges to correct a leaning door
 - Adjusting the door's position in the frame to ensure even seal compression
 
-This is common on doors that were fitted a long time ago, or doors that have been affected by building settlement.
+This may be relevant where inspection finds that the door has moved relative to its frame; age or a reported symptom alone does not establish the cause.
 
 ## When You Need the Whole Mechanism vs Just a Cylinder
 
@@ -413,9 +407,9 @@ When you call me on 024 7522 4730, I will ask you a few questions about the symp
 
 ## Getting the Best Value on uPVC Door Lock Work
 
-1. **Do not ignore early warning signs** — a stiff key or a handle that needs extra force are signs of wear. Fixing a small problem early (£39-£59) prevents a bigger failure later (£150+)
-2. **Upgrade the cylinder while I am there** — if I am already working on your door, adding an anti-snap cylinder upgrade is cheaper than a separate visit
-3. **Regular maintenance extends the life of your mechanism** — see our [uPVC door maintenance guide](/blog/upvc-door-maintenance-guide)
+1. **Do not ignore early warning signs** — a stiff key or a handle that needs extra force justifies inspection. Earlier diagnosis may reveal a smaller scope, but it cannot guarantee that later failure or cost will be avoided
+2. **Assess the cylinder separately** — if cylinder work is relevant, I identify and quote the compatible option rather than assume an upgrade belongs in the mechanism scope
+3. **Follow product-specific maintenance guidance** — suitable maintenance may reduce avoidable strain but cannot guarantee a mechanism lifespan; see the [uPVC door maintenance guide](/blog/upvc-door-maintenance-guide)
 4. **Get a price basis before booking** — ask what is included and which inspection findings could change it. I confirm the basis before travelling and agree any revised scope before additional work proceeds
 
 ## Book a uPVC Door Lock Repair or Replacement
@@ -426,15 +420,15 @@ For uPVC mechanism repairs and replacements, visit the [uPVC lock repair service
     faqs: [
       {
         q: 'How much does it cost to replace a uPVC door lock mechanism?',
-        a: 'A uPVC door multipoint mechanism replacement costs from £89 to £200, depending on the brand and type. Common brands like Mila and Yale tend to be at the lower end, while GU and some discontinued mechanisms cost more. My prices include the mechanism, fitting, and testing — no call-out fee and no VAT. If you also need a new cylinder and handles at the same time, a full lock swap runs from £150 to £250.',
+        a: 'A uPVC multipoint mechanism replacement starts from £89 under the published scope. The final quote depends on the exact mechanism, dimensions, locking-point layout, current compatible-part availability, alignment and fitting work. Any cylinder or handle work is diagnosed and quoted separately; see /prices for the current starting price.',
       },
       {
         q: 'How do I know if I need a new mechanism or just a new cylinder?',
-        a: 'If your key is stiff but the handle and locking points work normally, you probably just need a new cylinder (from £59). If the handle lifts but nothing engages, or you hear grinding when you operate the lock, the mechanism has likely failed (from £89-£200). A stiff door that is hard to lock could be an alignment issue (from £39-£49 for adjustment) rather than a lock problem at all. Call me on 024 7522 4730 and I will help you diagnose it over the phone.',
+        a: 'A stiff key, handle movement and locking-point operation are useful symptoms, but they do not establish whether the cylinder, alignment or mechanism is at fault. Cylinder work starts from £59 and multipoint replacement from £89 under the published scopes; adjustments and any combined work are quoted after diagnosis. Call 024 7522 4730 or see /prices.',
       },
       {
         q: 'Can I replace the uPVC door lock mechanism myself?',
-        a: 'Technically yes, but I would not recommend it unless you are experienced with door hardware. The main challenges are: identifying the exact replacement mechanism (there are dozens of types and they are not interchangeable), getting the measurements right (backset, centres, overall length, locking point positions), and fitting it without damaging the door. If you order the wrong mechanism, you cannot return it once you have tried to fit it. The fitting cost with me is modest compared to the risk of buying the wrong part.',
+        a: 'The exact replacement mechanism must match the backset, centres, overall length and locking-point positions, and the door still needs correct alignment. Check the seller\'s current return terms before ordering or attempting a fit. If those identification and fitting requirements are outside your experience, obtain a supplied-and-fitted quote after the mechanism is identified.',
       },
       {
         q: 'Why are some uPVC door mechanisms so much more expensive than others?',
@@ -482,7 +476,7 @@ There is no published flat rekeying price on this site because the exact cylinde
 ### Yale Nightlatch (Wooden Front Doors)
 
 - Rekeying: quoted after the exact nightlatch and available parts are identified
-- Yale nightlatch replacement: from £69, subject to product and fit
+- Yale nightlatch replacement: quoted after the exact product, dimensions and fitting scope are identified; check the current [prices](/prices)
 
 ### 5-Lever Mortice Deadlock (Wooden Front Doors)
 
@@ -550,7 +544,7 @@ A serviceable product with an authorised rekey route may justify keeping the har
 ### Moving House
 **Recommendation: assess key control and the fitted locks.** If old copies cannot be accounted for, an authorised replacement or viable rekeying route can establish a new key set. Inspect condition, markings, compatibility and every external entrance rather than infer a universal answer from the move itself.
 
-Anti-snap cylinder fitting starts from £59 per door, so two separate cylinder replacements start from £118. Other lock combinations depend on the actual products and fitting required; check the current [prices](/prices) or request a quote.
+Anti-snap cylinder fitting starts from £59 per door under the published scope. Multiple doors are itemised separately because sizes, products and fitting can differ; check the current [prices](/prices) or request a combined quote.
 
 ### Lost Keys
 **Recommendation: assess the access risk and available key-control route.** If identifiable keys could be used at the property, replacement or an authorised rekey may remove access through those old copies. Product condition, certification, parts and urgency determine the suitable scope. Read the guide on [what to do if you have lost your keys](/blog/lost-keys-should-you-change-locks).
@@ -568,7 +562,7 @@ Anti-snap cylinder fitting starts from £59 per door, so two separate cylinder r
 
 If you are not sure whether to rekey or replace, call me on 024 7522 4730. I will ask about your locks, your situation, and what you are trying to achieve — and give you an honest recommendation. No pressure, no upselling.
 
-I cover the whole Coventry and Warwickshire area, same price 24/7. Check our [lock change service page](/services/lock-change) for more details, or see the full [price list](/prices) for every job we do.`,
+I cover the locations listed on the [areas page](/areas/); call with the full postcode to confirm the address and current ETA. The published starting-price policy applies 24/7. Check the [lock change service page](/services/lock-change) or the full [price list](/prices) for the available scopes.`,
     faqs: [
       {
         q: 'What is cheaper, rekeying or replacing a lock?',
@@ -580,7 +574,7 @@ I cover the whole Coventry and Warwickshire area, same price 24/7. Check our [lo
       },
       {
         q: 'Should I rekey or replace locks when moving house?',
-        a: 'When moving house, assess the condition and certification of each exterior lock and whether old keys can be accounted for. Replacing or rekeying can establish a new key set. Anti-snap cylinder fitting starts from £59 per door, so two separate cylinder replacements start from £118; check the current prices page for other lock types.',
+        a: 'When moving house, assess the condition and certification of each exterior lock and whether old keys can be accounted for. Replacing or rekeying can establish a new key set. Anti-snap cylinder fitting starts from £59 per door under the published scope; multiple doors require an itemised quote because sizes, products and fitting can differ. Check /prices for current starting prices.',
       },
       {
         q: 'How long does rekeying take compared to replacing a lock?',

@@ -100,7 +100,7 @@ This is a practical starting checklist you can print, use while walking around y
 - [ ] **Euro cylinder** — If you have a uPVC or composite door, identify the exact cylinder and its current certification rather than relying on a brand name. Police.uk recommends a TS007 3-star cylinder when a euro cylinder is changed. I explain the options in the [anti-snap lock comparison](/blog/anti-snap-locks-compared)
 - [ ] **Letterbox position** — Can someone reach keys or the inside release through the opening? If so, move keys and ask whether a compatible internal guard is appropriate for the complete doorset
 - [ ] **Door chain or limiter** — A suitable device can let you check a caller without opening the door fully. Choose one that is compatible with the door and the resident's access and escape needs
-- [ ] **Door viewer (peephole)** — Can you see who is at your door without opening it? A wide-angle viewer costs about £10-£15 fitted
+- [ ] **Door viewer (peephole)** — Can you see who is at your door without opening it? Check compatibility with the door and obtain a current supplied-and-fitted quote for the selected viewer
 - [ ] **Door reinforcer plate** — On a compatible timber door, a correctly fitted plate may reinforce the lock area. The door and frame need checking before one is specified
 - [ ] **Hinge-side security** — If your door opens outward, check the exposed hinges and ask whether compatible hinge bolts would add support on that side
 - [ ] **Frame condition** — Is the door frame sound and is the lock aligned with its keep? A stronger lock cannot compensate for a badly damaged door or frame
@@ -132,7 +132,7 @@ Patio and French doors have their own tracks, passive leaves, glazing and multip
 
 - [ ] **Multipoint lock** — Is the multipoint locking system working properly? Lift the handle and check that all the bolts engage
 - [ ] **Anti-lift devices** — Check whether a sliding panel has excessive movement and whether a compatible anti-lift pin or block is appropriate
-- [ ] **Auxiliary lock** — A separate keyed patio door lock adds another layer. Around £30-£50 fitted
+- [ ] **Auxiliary lock** — A separate keyed patio door lock may add another layer where it is compatible. Obtain a current quote after the door and existing hardware have been assessed
 - [ ] **French door bolts** — French doors should have flush bolts or rack bolts top and bottom on the passive leaf (the door that stays closed)
 - [ ] **Glazing** — Identify the existing safety and security glazing specification. If it is being replaced, ask a competent glazier which documented product is suitable for that doorset and location
 
@@ -150,7 +150,7 @@ Record what is stored in the garage and, if it is attached to the home, include 
 - [ ] **Padlock quality** — Compare current independent certification and choose a padlock compatible with the hasp, door, frame and any written policy requirement. A shrouded shackle can reduce exposed tool access
 - [ ] **Hasp and staple** — The hasp (the plate the padlock goes through) should be heavy-duty and coach-bolted through the door, not just screwed on
 - [ ] **Shed bar** — A compatible bar across the door is one way to distribute locking points rather than relying on a small hasp alone
-- [ ] **Ground anchor** — For bikes and power tools, a ground anchor bolted to the shed floor or a concrete base lets you chain items down. From £25 fitted
+- [ ] **Ground anchor** — For bikes and power tools, a suitable ground anchor may provide a fixing point for a compatible chain. The base, product, installation and current price need checking before work
 - [ ] **Record your tools** — Keep an inventory, photographs and serial numbers, and follow current police or insurer guidance for property marking or registration
 
 ## Lighting and Visibility
@@ -388,9 +388,9 @@ Traditional sash windows require checks suited to their timber, fasteners, cords
 
 ### Sash Window Lock Options
 
-- **Sash locks** — bolt through both sashes to lock them together. About £15-£20 per window fitted
+- **Sash locks** — bolt through both sashes to lock them together. Product and fitting depend on the sash construction, condition and required finish
 - **Dual screws** — a barrel bolt that connects the two sashes. Suitability depends on the sash construction and intended ventilation
-- **Sash stops** — limit how far the sash can be raised, similar to a restrictor. About £10 per window
+- **Sash stops** — limit how far the sash can be raised, similar to a restrictor. Confirm compatibility, intended ventilation and a current quote for the particular window
 
 For period properties, these locks can be fitted sympathetically without damaging the character of the windows.
 
@@ -414,19 +414,7 @@ Start with windows that are easy to reach, as Police.uk advises, while still che
 
 ## Cost of Window Lock Upgrades
 
-Here are typical costs for window security upgrades across Coventry. These include supply and fitting:
-
-| Upgrade | Cost per Window |
-|---------|----------------|
-| Replacement locking handle | £15-£25 |
-| Sash jammer | £10-£15 |
-| Window lock bolt | £10-£15 |
-| Sash window lock | £15-£20 |
-| Dual screw (sash window) | £10-£15 |
-| Cable restrictor | £15-£20 |
-| Espagnolette gearbox | £45-£75 |
-
-The total for several windows depends on the number and type of openings, the faults found and the parts that are compatible. Obtain a property-specific quote rather than extrapolating from a model house.
+This guide does not publish fixed per-window prices. A quote must identify the window type, diagnosed fault, compatible hardware, quantity and fitting work. Use the current [prices page](/prices) for listed locksmith starting prices and obtain a property-specific quote for anything outside those scopes.
 
 Check the full [price list](/prices) for our complete range, or combine a window lock upgrade with a [front door lock change](/services/lock-change) for a full home security improvement.
 
@@ -524,10 +512,10 @@ If your French doors use a euro cylinder, identify the exact product, size and p
 
 For both patio and French doors, the glass is a potential entry point. Here are the options from least to most expensive:
 
-### Security Film (from £50 per panel)
+### Security Film
 A retrofit film applied to compatible glass is intended to retain fragments. Its tested performance depends on the exact film, glass, frame-attachment system and installation, and should not be presented as equivalent to laminated glazing.
 
-### Laminated Glass (from £150-£250 per panel)
+### Laminated Glass
 Laminated glass incorporates an interlayer intended to retain fragments when the pane is broken. Ask a competent glazier to specify the correct documented safety and security performance for the doorset rather than treating one generic product as universally suitable.
 
 ### Toughened Glass
@@ -535,22 +523,7 @@ Toughened and laminated glass are different product types with different test cl
 
 ## Specific Upgrades: Summary and Costs
 
-Here is a quick reference for what each upgrade costs, supplied and fitted, in the Coventry area:
-
-| Upgrade | Typical Cost |
-|---------|-------------|
-| Anti-lift device (patio door) | £15-£25 |
-| Patio door keyed lock | £30-£50 |
-| Security bar for patio track | £20-£40 |
-| Foot bolt / drop bolt | £15-£25 |
-| Rack bolts for French doors (pair) | £30-£50 |
-| Hinge bolts (pair) | £10-£15 |
-| Anti-snap cylinder | From £59 |
-| Multipoint lock gearbox replacement | £95-£175 |
-| Security film (per panel) | from £50 |
-| Laminated glass (per panel) | £150-£250 |
-
-Do not add every item automatically. The appropriate combination and total price depend on the door type, existing hardware, faults, compatibility and agreed work; use the table as an indicative menu only and obtain a current quote.
+The appropriate work and price depend on the door type, existing hardware, diagnosed faults, compatibility and agreed scope. Anti-lift devices, auxiliary locks, bars, bolts and glazing require current product or specialist quotes. For listed cylinder and multipoint-lock work, use the current [prices page](/prices) and obtain a door-specific quote before authorising work.
 
 ## What I Recommend for Coventry Homes
 
@@ -612,11 +585,11 @@ Inspect the door, frame, hinges, hasp, padlock and fixings as one system. Do not
 
 Up-and-over doors commonly use a central handle and internal mechanism, but construction varies. Check the panel, handle, lock, frame, guides and any internal or emergency release for damage and accessible gaps.
 
-**Defender Lock (£30-£50 fitted)**
+**Defender Lock**
 
 A defender is one possible additional lock for a compatible up-and-over door. It covers the handle area and adds a separate locking point, but its contribution depends on its certification, fixings, installation and the condition of the complete door. It is not suitable for every door.
 
-**Garage Door Bolts (£15-£25 per pair fitted)**
+**Garage Door Bolts**
 
 Compatible internal bolts can add locking points into suitable receivers. Check the door, frame and operation before combining them with another lock; no combination should be described as preventing every forced-entry attempt.
 
@@ -700,19 +673,19 @@ Do not assume that one padlock grade is required by every policy. If the wording
 
 These are combinations to discuss, not universal packages or evidence that a stated budget will satisfy a policy or secure every outbuilding.
 
-### Basic (£50-£80)
+### Basic Assessment Scope
 - Closed-shackle padlock and heavy-duty hasp for shed
 - Defender lock for garage door
 - Confirm any insurance requirement before treating this example as sufficient
 
-### Intermediate (£100-£180)
+### Wider Assessment Scope
 - Everything above, plus:
 - Shed bar with two padlocks
 - Ground anchor for bikes
 - Garage door bolts
 - Battery-powered shed alarm
 
-### Comprehensive (£200-£400)
+### Complete Outbuilding Assessment Scope
 - Everything above, plus:
 - Solid-core internal door between garage and house with deadlock
 - Motion-sensor light covering the garage and shed area

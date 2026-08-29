@@ -2,9 +2,26 @@ import { spawn } from 'node:child_process'
 
 const BASE_URL = process.env.SEO_BASE_URL ?? 'http://127.0.0.1:3000'
 const CANONICAL_ORIGIN = process.env.SEO_CANONICAL_ORIGIN ?? 'https://www.localemergencylocksmith.co.uk'
-const EXPECTED_SITEMAP_URLS = 201
+const EXPECTED_SITEMAP_URLS = 178
 const failures = []
 const warnings = []
+
+const SERVICE_SLUGS = ['emergency-lockout', 'lock-change', 'upvc-lock-repair', 'boarding-up', 'lock-upgrade']
+const TOWN_CENTRE_ALIASES = {
+  'rugby-town-centre': 'rugby',
+  'royal-leamington-spa-town-centre': 'leamington-spa',
+  'warwick-town-centre': 'warwick',
+  'stratford-upon-avon-town-centre': 'stratford-upon-avon',
+}
+const GOVERNED_TOWNS = ['nuneaton', 'bedworth', 'rugby', 'leamington-spa', 'warwick', 'kenilworth', 'stratford-upon-avon']
+const SINGLE_AREA_POSTCODES = {
+  cv1: 'coventry-city-centre',
+  cv47: 'southam',
+  b49: 'alcester',
+  b80: 'studley',
+  b92: 'hampton-in-arden',
+}
+const MULTI_AREA_POSTCODES = ['cv2', 'cv3', 'cv4', 'cv5', 'cv6', 'cv7', 'cv8', 'cv10', 'cv11', 'cv12', 'cv21', 'cv22', 'cv23', 'cv31', 'cv32', 'cv34', 'cv37']
 
 function check(condition, message) {
   if (!condition) failures.push(message)
@@ -47,6 +64,22 @@ function getCanonical(html) {
 function getTitle(html) {
   const match = html.match(/<title[^>]*>([\s\S]*?)<\/title>/i)
   return match ? decodeHtml(match[1]).replace(/\s+/g, ' ').trim() : ''
+}
+
+function schemaNodes(value) {
+  if (Array.isArray(value)) return value.flatMap(schemaNodes)
+  if (!value || typeof value !== 'object') return []
+  return [value, ...Object.values(value).flatMap(schemaNodes)]
+}
+
+function hasSchemaType(node, type) {
+  const types = Array.isArray(node?.['@type']) ? node['@type'] : [node?.['@type']]
+  return types.includes(type)
+}
+
+function redirectPath(response) {
+  const location = response.headers.get('location')
+  return location ? new URL(location, BASE_URL).pathname : null
 }
 
 function visibleText(html) {
@@ -268,19 +301,45 @@ try {
       check(html.includes('id="local-evidence-heading"'), `${productionUrl.pathname} is missing verified local evidence`)
       check(html.includes('id="service-guidance-heading"'), `${productionUrl.pathname} is missing service-by-service guidance`)
       check(html.includes('id="source-heading"'), `${productionUrl.pathname} is missing its evidence source register`)
-      for (const serviceSlug of ['emergency-lockout', 'lock-change', 'upvc-lock-repair', 'boarding-up', 'lock-upgrade']) {
+      for (const serviceSlug of SERVICE_SLUGS) {
         check(html.includes(`id="${serviceSlug}"`), `${productionUrl.pathname} is missing ${serviceSlug} guidance`)
       }
       check(!pageText.includes('Common Lock Problems in'), `${productionUrl.pathname} still renders the unsupported legacy common-problems block`)
     }
 
+    const parsedSchemaNodes = []
     for (const match of html.matchAll(/<script\b[^>]*type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/gi)) {
       try {
-        JSON.parse(match[1])
+        parsedSchemaNodes.push(...schemaNodes(JSON.parse(match[1])))
       } catch (error) {
         failures.push(`${productionUrl.pathname} has invalid JSON-LD: ${error.message}`)
       }
     }
+
+    const websiteNodes = parsedSchemaNodes.filter(node => hasSchemaType(node, 'WebSite'))
+    check(websiteNodes.length === (productionUrl.pathname === '/' ? 1 : 0), `${productionUrl.pathname} has ${websiteNodes.length} WebSite nodes`)
+
+    for (const serviceNode of parsedSchemaNodes.filter(node => hasSchemaType(node, 'Service'))) {
+      const provider = serviceNode.provider
+      check(provider?.['@type'] === 'Organization', `${productionUrl.pathname} Service provider is not an Organization`)
+      check(provider?.['@id'] === `${CANONICAL_ORIGIN}/#business`, `${productionUrl.pathname} Service provider has the wrong @id`)
+      check(provider?.name === 'Local Emergency Locksmith', `${productionUrl.pathname} Service provider has the wrong name`)
+      check(provider?.url === CANONICAL_ORIGIN, `${productionUrl.pathname} Service provider has the wrong URL`)
+      check(provider?.telephone === '+442475224730', `${productionUrl.pathname} Service provider has the wrong telephone`)
+    }
+
+    if (!productionUrl.pathname.startsWith('/blog/')) {
+      const unsupportedTrustClaim = pageText.match(/\b(?:DBS[- ]checked|fully insured(?:\s+with)?\s+public liability|full public liability insurance)\b/i)
+      check(!unsupportedTrustClaim, `${productionUrl.pathname} contains an unsupported credential claim: ${JSON.stringify(unsupportedTrustClaim?.[0])}`)
+    }
+    const fixedFinalPriceClaim = pageText.match(/\b(?:the\s+)?price\s+i\s+quote(?:d)?\s+is\s+the\s+(?:price\s+you\s+pay|final\s+price)|\bpay\s+the\s+price\s+i\s+quoted|\bfirm\s+price\s+on\s+the\s+phone\b/i)
+    check(!fixedFinalPriceClaim, `${productionUrl.pathname} contains a fixed final-price claim: ${JSON.stringify(fixedFinalPriceClaim?.[0])}`)
+
+    const unsupportedFreeAssessment = pageText.match(/\b(?:offer|book|arrange)\s+(?:a\s+)?free\s+(?:visual\s+)?(?:security|lock|home[- ]security)\s+(?:survey|check|assessment)\b|\bsecurity\s+survey\s+free\b/i)
+    check(!unsupportedFreeAssessment, `${productionUrl.pathname} contains an unsupported free-assessment offer: ${JSON.stringify(unsupportedFreeAssessment?.[0])}`)
+
+    const ungovernedPriceRange = pageText.match(/£\d+(?:\.\d+)?\s*(?:-|–|—|to)\s*£?\d+(?:\.\d+)?/i)
+    check(!ungovernedPriceRange, `${productionUrl.pathname} contains an ungoverned price range: ${JSON.stringify(ungovernedPriceRange?.[0])}`)
 
     const links = internalPaths(html)
     if (productionUrl.pathname.startsWith('/blog/')) {
@@ -309,17 +368,33 @@ try {
     check(!response.headers.get('location'), `internal link ${path} redirects to ${response.headers.get('location')}`)
   })
 
-  for (const legalPath of ['/privacy', '/terms']) {
-    const { response, html } = await fetchLocal(legalPath)
+  for (const noindexPath of ['/privacy', '/terms', '/testimonials', ...MULTI_AREA_POSTCODES.map(postcode => `/postcodes/${postcode}`)]) {
+    const { response, html } = await fetchLocal(noindexPath)
     const robots = getMeta(html, 'name', 'robots') ?? ''
-    check(response.status === 200, `${legalPath} returned ${response.status}`)
-    check(/noindex/i.test(robots) && /follow/i.test(robots), `${legalPath} robots is ${robots || 'missing'}; expected noindex, follow`)
-    check(!sitemapUrls.some(loc => new URL(loc).pathname === legalPath), `${legalPath} is noindex but present in sitemap`)
+    check(response.status === 200, `${noindexPath} returned ${response.status}`)
+    check(/noindex/i.test(robots) && /follow/i.test(robots), `${noindexPath} robots is ${robots || 'missing'}; expected noindex, follow`)
+    check(!sitemapUrls.some(loc => new URL(loc).pathname === noindexPath), `${noindexPath} is noindex but present in sitemap`)
+  }
+
+  for (const [postcode, area] of Object.entries(SINGLE_AREA_POSTCODES)) {
+    const path = `/postcodes/${postcode}`
+    const { response } = await fetchLocal(path)
+    check(response.status === 308, `${path} returned ${response.status}; expected permanent 308`)
+    check(redirectPath(response) === `/areas/${area}`, `${path} redirects to ${redirectPath(response) || 'nowhere'}; expected /areas/${area}`)
   }
 
   const robotsResult = await fetchLocal('/robots.txt')
   check(robotsResult.response.status === 200, `robots.txt returned ${robotsResult.response.status}`)
   check(robotsResult.html.includes(`Sitemap: ${CANONICAL_ORIGIN}/sitemap.xml`), 'robots.txt does not declare the canonical sitemap URL')
+
+  const manifestResult = await fetchLocal('/manifest.json')
+  check(manifestResult.response.status === 200, `manifest.json returned ${manifestResult.response.status}`)
+  try {
+    const manifest = JSON.parse(manifestResult.html)
+    check(!/\b\d{1,3}\s*(?:-|–|—|to)\s*\d{1,3}\s*(?:minute|min)\s+(?:response|arrival)\b/i.test(manifest.description ?? ''), 'manifest.json contains a fixed response-time promise')
+  } catch (error) {
+    failures.push(`manifest.json is invalid JSON: ${error.message}`)
+  }
 
   // Every valid area x service pair must have exactly one outcome: a published
   // self-canonical 200 in the sitemap, or a permanent redirect to the area hub.
@@ -355,6 +430,30 @@ try {
         check(response.status === 308, `${pairPath} returned ${response.status}; expected permanent 308`)
         check(response.headers.get('location')?.endsWith(areaPath), `${pairPath} redirects to ${response.headers.get('location') || 'nowhere'}; expected ${areaPath}`)
       }
+    }
+  )
+
+  await mapLimit(
+    Object.entries(TOWN_CENTRE_ALIASES).flatMap(([alias, owner]) => SERVICE_SLUGS.map(serviceSlug => ({ alias, owner, serviceSlug }))),
+    12,
+    async ({ alias, owner, serviceSlug }) => {
+      const path = `/areas/${alias}/${serviceSlug}`
+      const expected = `/areas/${owner}/${serviceSlug}`
+      const { response } = await fetchLocal(path)
+      check(response.status === 308, `${path} returned ${response.status}; expected permanent 308`)
+      check(redirectPath(response) === expected, `${path} redirects to ${redirectPath(response) || 'nowhere'}; expected ${expected}`)
+    }
+  )
+
+  await mapLimit(
+    GOVERNED_TOWNS.flatMap(town => SERVICE_SLUGS.map(serviceSlug => ({ town, serviceSlug }))),
+    12,
+    async ({ town, serviceSlug }) => {
+      const path = `/locksmith/${town}/${serviceSlug}`
+      const expected = `/areas/${town}/${serviceSlug}`
+      const { response } = await fetchLocal(path)
+      check(response.status === 308, `${path} returned ${response.status}; expected permanent 308`)
+      check(redirectPath(response) === expected, `${path} redirects to ${redirectPath(response) || 'nowhere'}; expected ${expected}`)
     }
   )
 

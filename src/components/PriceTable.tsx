@@ -2,15 +2,14 @@ import Link from 'next/link'
 import { SITE_CONFIG } from '@/data/config'
 
 const PRICES = [
-  { service: 'Emergency lockout', price: '£59', desc: 'Low-damage method assessed first', includes: 'Labour, no VAT' },
-  { service: 'Lock change (standard)', price: '£69', desc: 'Yale or cylinder replacement', includes: 'New lock + fitting' },
-  { service: 'Lock change (BS3621)', price: '£79', desc: 'Marked British Standard option', includes: 'Lock + fitting' },
-  { service: 'Anti-snap cylinder', price: '£59', desc: 'Snap-resistant euro cylinder', includes: 'Cylinder + fitting' },
-  { service: 'uPVC lock repair', price: '£59', desc: 'Cylinder or mechanism repair', includes: 'Labour, no VAT' },
-  { service: 'uPVC lock replacement', price: '£89', desc: 'Full mechanism swap', includes: 'Mechanism + fitting' },
+  { service: 'Emergency lockout', price: '£59', desc: 'Standard residential lockout scope', includes: 'Stated labour scope' },
+  { service: 'Euro cylinder replacement', price: '£59', desc: 'Compatible cylinder after inspection', includes: 'Cylinder + fitting' },
+  { service: 'Lock change (BS3621)', price: '£79', desc: 'Compatible rated mortice option', includes: 'Lock + fitting' },
+  { service: 'Anti-snap cylinder', price: '£59', desc: 'Compatible certified option', includes: 'Cylinder + fitting' },
+  { service: 'uPVC lock repair', price: '£59', desc: 'Diagnosed cylinder, handle or mechanism work', includes: 'Agreed repair scope' },
+  { service: 'uPVC gearbox replacement', price: '£89', desc: 'Compatible gearbox after identification', includes: 'Gearbox + fitting' },
   { service: 'Boarding up (emergency)', price: '£79', desc: 'Temporary boarding after assessment', includes: 'Materials + labour' },
-  { service: 'Window lock repair', price: '£49', desc: 'Espagnolette or cockspur', includes: 'Labour, no VAT' },
-  { service: 'Security survey', price: 'FREE', desc: 'Full property assessment', includes: 'No obligation' },
+  { service: 'Window lock repair', price: '£49', desc: 'Diagnosed window-lock work', includes: 'Agreed repair scope' },
 ]
 
 export default function PriceTable() {
@@ -19,17 +18,17 @@ export default function PriceTable() {
       <div className="max-w-3xl mx-auto">
         <div className="text-center mb-10">
           <h2 className="text-2xl md:text-3xl font-black text-[#0F1B2D] mb-3">
-            Transparent Pricing — No Surprises
+            Published Starting Prices
           </h2>
           <p className="text-gray-500 max-w-xl mx-auto">
-            Every price includes labour. No VAT. No call-out fee. No extra for evenings, weekends, or bank holidays.
+            These from-prices apply to the stated scopes. The fitted lock, condition, access method, parts and additional work determine the agreed total.
           </p>
         </div>
 
         {/* Semantic HTML table for AI/snippet extraction */}
         <div className="overflow-x-auto">
           <table className="w-full border-collapse bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-200">
-            <caption className="sr-only">Emergency locksmith prices in Coventry — 2026</caption>
+            <caption className="sr-only">Current locksmith starting prices in Coventry</caption>
             <thead>
               <tr className="bg-[#0F1B2D] text-white">
                 <th scope="col" className="text-left px-5 py-3 text-sm font-bold uppercase tracking-wide">Service</th>
@@ -47,7 +46,7 @@ export default function PriceTable() {
                     <span className="font-bold text-[#0F1B2D] text-sm block">{row.service}</span>
                     <span className="text-xs text-gray-600 sm:hidden">{row.desc}</span>
                   </td>
-                  <td className={`px-5 py-3.5 text-right font-black text-lg whitespace-nowrap ${row.price === 'FREE' ? 'text-green-700' : 'text-[#8A5A00]'}`}>
+                  <td className="px-5 py-3.5 text-right font-black text-lg whitespace-nowrap text-[#8A5A00]">
                     {row.price}
                   </td>
                   <td className="px-5 py-3.5 text-gray-500 text-sm hidden sm:table-cell">{row.includes}</td>
@@ -59,13 +58,13 @@ export default function PriceTable() {
 
         {/* Footer notes */}
         <div className="flex flex-wrap justify-center gap-x-4 gap-y-1 mt-6 text-xs text-gray-600">
-          <span>No VAT on any price</span>
+          <span>No VAT added</span>
           <span>&bull;</span>
-          <span>No call-out fee</span>
+          <span>No separate call-out fee</span>
           <span>&bull;</span>
-          <span>Evenings &amp; weekends: same price</span>
+          <span>No evening or weekend premium</span>
           <span>&bull;</span>
-          <span>Price confirmed before work starts</span>
+          <span>Changed scope agreed before work</span>
         </div>
 
         {/* CTA */}

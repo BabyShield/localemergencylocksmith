@@ -1,6 +1,6 @@
 import { SITE_CONFIG } from '@/data/config'
 import { Suspense } from 'react'
-import { ShieldCheck, Umbrella, Clock } from 'lucide-react'
+import { UserRound, FileCheck2, Clock } from 'lucide-react'
 import PPCHandler from './PPCHandler'
 
 interface HeroSectionProps {
@@ -64,15 +64,15 @@ export default function HeroSection({
           </a>
         </div>
 
-        {/* Trust indicators — credentials, not a repeat of the USP strip */}
+        {/* Verifiable booking information, not unproved credential claims. */}
         <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm text-gray-400">
           <span className="flex items-center gap-1.5">
-            <ShieldCheck className="w-4 h-4 text-green-500" aria-hidden="true" />
-            DBS-Checked
+            <UserRound className="w-4 h-4 text-green-500" aria-hidden="true" />
+            Direct Booking
           </span>
           <span className="flex items-center gap-1.5">
-            <Umbrella className="w-4 h-4 text-green-500" aria-hidden="true" />
-            Fully Insured
+            <FileCheck2 className="w-4 h-4 text-green-500" aria-hidden="true" />
+            Scope Agreed Before Work
           </span>
           {showResponseTime && (
             <span className="flex items-center gap-1.5">

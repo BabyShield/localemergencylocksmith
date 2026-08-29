@@ -4,63 +4,59 @@
 export const LEGACY_BLOG_CONTENT: Record<string, { body: string; faqs: { q: string; a: string }[] }> = {
   'emergency-locksmith-cost-coventry-2026': {
     body: `
-## The Actual Prices
+## Current Starting Prices
 
-Let me give you what you actually came here for.
+These are the published starting prices for the common scopes shown below. The exact total depends on the fitted lock, its condition, the access method and any parts required.
 
 **Emergency lockout (locked out of home):** From £59
-**Lock change (standard cylinder or Yale):** From £69
+**Euro-cylinder lock change:** From £59
+**Yale nightlatch change:** From £69
 **Lock change (BS3621-certified deadlock):** From £79
 **uPVC door lock repair:** From £59
 **uPVC door lock replacement:** From £89
 **Emergency boarding up:** From £79
 **Window lock repair:** From £49
-**Security survey:** FREE
 
-These are my prices in March 2026. They include labour. They do not include VAT — because I don't charge VAT. They do not include a call-out fee — because I don't charge one.
+Check the live [price list](/prices) for what each starting price includes. I am not VAT-registered, so VAT is not added, and there is no separate call-out fee. I confirm the price basis and assumptions before travelling; if inspection changes the diagnosis or required parts, I explain and agree any revised scope before work continues.
 
-## Why Other Locksmiths Seem Cheaper (Until They Arrive)
+## How to Compare Locksmith Quotes
 
-The UK locksmith industry has a well-documented problem with rogue traders. The way it works:
+Headline prices are not always directly comparable. Before booking any provider, ask for an itemised price or price basis covering:
 
-1. You search "locksmith coventry" in a panic
-2. You click the first result — often a directory site
-3. The "local" locksmith quoted gives you a low price on the phone (£45, £50)
-4. They arrive and say the job is more complicated than expected
-5. They charge £180-£300 and you have no choice because you're locked out
+1. Any call-out or attendance fee
+2. Included labour time
+3. Likely parts and their specification
+4. VAT and any time-based surcharge
+5. Which inspection findings could change the total
 
-The warning signs: a locksmith who won't give a firm price on the phone, won't give you a name, or has no local phone number.
+Also ask for the attending business or trader's name and written invoice details. A provider may reasonably need to inspect an uncertain fault, but the uncertainty and approval process should be clear before work starts.
 
 ## What Affects the Price
 
-**Time of day:** With me, nothing. I charge the same at 3am as I do at 3pm.
+**Time of day:** My published starting prices do not add a night, weekend or bank-holiday premium.
 
-**Day of week:** Nothing. Christmas Day lockouts are the same price as a Tuesday morning.
+**Day of week:** The same published starting-price policy applies throughout the week.
 
-**Type of lock:** This does affect price. A standard Yale cylinder is quickest to open. A multipoint uPVC lock or a high-security deadlock takes longer and sometimes specialist tools. I'll tell you the price before I come.
+**Type and condition of lock:** The fitted product, fault, access method and parts can affect the price. Photographs and a clear description can support a more useful phone quote.
 
-**Drilling:** If a lock has to be drilled (rare — I always try non-destructive first), the replacement lock cost is added. I will never drill without telling you first.
+**Destructive work:** A non-destructive method is considered where suitable. If drilling or replacement is required, I explain the reason, scope and additional price for approval first.
 
 ## The No VAT Difference
 
-Most locksmith companies are VAT registered. That means they add 20% on top of their quoted price. My prices are already the total price.
-
-So when a VAT-registered locksmith says "£59 plus VAT", they mean £70.80. When I say £59, I mean £59.
-
-Over a year of jobs, this difference adds up significantly. For you, it means knowing what you'll pay before you hang up the phone.
+I am not VAT-registered, so VAT is not added to my published prices. When comparing another provider, ask whether its stated price includes any applicable VAT rather than assuming that it does.
 
 ## How to Get a Fair Price
 
-1. **Call a local independent locksmith** — not a directory that farms calls to whoever picks up
-2. **Ask for a price on the phone** — any professional locksmith can give you a firm quote
-3. **Confirm no VAT and no call-out fee** — both should be zero
-4. **Get the price agreed before they start** — never let anyone begin work without a confirmed price
+1. **Confirm who will attend** — ask for the business or trader's name and contact details
+2. **Describe the door and fault clearly** — photographs can help identify the likely scope
+3. **Ask what the price includes** — check labour, parts, call-out fees, VAT and surcharges
+4. **Ask what could change it** — require approval before any revised or additional work
 
-If a locksmith won't give you a price on the phone, hang up and call someone who will.
+Some faults cannot be priced exactly without inspection. The useful test is whether the provider explains the price basis, uncertainty and approval process clearly.
     `.trim(),
     faqs: [
-      { q: 'Is a £59 lockout price realistic or too good to be true?', a: 'For a local independent locksmith without VAT, yes — £59 is a realistic price for a standard residential lockout. The "too good to be true" scenario is when someone quotes very low on the phone and then dramatically increases the price after arriving. I give you the real price on the phone and stick to it.' },
-      { q: 'Why do prices vary so much between locksmiths?', a: 'VAT, call-out fees, and profit margins vary enormously. A national franchise locksmith with advertising costs and VAT has much higher overheads than a local sole trader. The work is the same — the costs you pay are very different.' },
+      { q: 'What does the £59 lockout price mean?', a: 'It is the published starting price for a standard residential lockout. The fitted lock, its condition, the access method and any replacement parts can change the total. I explain the assumptions before travelling and agree any revised scope before work.' },
+      { q: 'Why do prices vary between locksmiths?', a: 'Providers use different call-out, labour, parts, VAT and time-based pricing. Compare an itemised total for the same diagnosed scope rather than relying on headline prices alone.' },
       { q: 'What if my insurance covers locksmith callouts?', a: 'Some home insurance policies include emergency home cover that covers locksmith callouts. Check your policy before calling — if you are covered, you may be able to claim the cost back. I can provide a receipt and any documentation your insurer requires.' },
     ],
   },
@@ -89,11 +85,9 @@ The one exception: if there is a genuine medical emergency inside and you cannot
 
 ## Step 4: Call a Local Locksmith
 
-Not a directory. Not "locksmith near me" on Google where the top results are often aggregators farming calls out.
+Confirm whether you are speaking to the attending locksmith or a referral service, and ask for the business or trader's name. Request the price basis, assumptions, possible extras, any call-out fee and VAT position before booking.
 
-Call a local independent locksmith directly. Ask for a firm price before they come. Ask for their name. Confirm no call-out fee and no VAT.
-
-My number is 024 7522 4730 — I answer 24/7 and I'll tell you exactly how long I'll be and exactly what it will cost.
+My number is 024 7522 4730. I answer directly 24/7 and confirm the current ETA and price basis from the information available when you call.
 
 ## Step 5: While You Wait
 
@@ -161,7 +155,7 @@ If you want the cylinder assessed or your policy names a particular standard, I 
 
 ## Getting a BS3621 Lock Fitted
 
-I supply and fit BS3621 mortice deadlocks to all types of wooden and composite doors across Coventry and Warwickshire. Price from £79 including the lock and fitting. No VAT. No call-out fee.
+I can assess suitable wooden and composite doors for a BS3621 mortice deadlock and explain compatible options. The service starts from £79 including the stated lock and fitting scope; no VAT or separate call-out fee is added. Check the [areas page](/areas/) and call with the full postcode to confirm coverage.
 
 Call 024 7522 4730 to book.
 
@@ -227,7 +221,7 @@ Certified anti-snap upgrades start from £59. See the [lock upgrade service](/se
 - Do not carry heavy items on your door key ring — the weight causes cylinder wear over time
 - Check door alignment annually — a door that is dropping on its hinges will stress the locking mechanism
 
-If your uPVC door is getting stiffer year on year, the mechanism is wearing. Getting it serviced before it fails completely avoids an emergency callout.
+If a uPVC door is becoming progressively stiffer, stop forcing it and arrange a diagnosis. Alignment, handles, cylinders and multipoint components can produce similar symptoms; timely attention may reduce further wear but cannot guarantee that a failure or callout will be avoided.
     `.trim(),
     faqs: [
       { q: 'Can you repair a uPVC lock on the same day?', a: 'It depends on the diagnosis, mechanism markings, dimensions, door condition and current compatible-part availability. Call with the full address and symptoms; I will explain what can be established before attendance and whether a return visit may be required.' },
@@ -237,17 +231,17 @@ If your uPVC door is getting stiffer year on year, the mechanism is wearing. Get
   },
   'locksmith-wont-give-price-on-phone': {
     body: `
-## The Rogue Locksmith Problem
+## Pricing and Identity Warning Signs
 
-Rogue-trader complaints can involve low initial quotes followed by much higher charges. The details vary, so treat the following as warning signs rather than a claim that every disputed job follows one identical pattern:
+Consumer disputes can involve a difference between an initial quote and the final charge. Do not infer motive from one signal; instead check the contracting identity, written scope, price basis and approval process:
 
-1. Homeowner in a panic searches for a locksmith online
-2. Finds a "local" number (often a call centre posing as a local business)
-3. Gets quoted a low price (£45-60)
-4. Locksmith arrives, drills the lock
-5. Final bill is £250-450
+1. Confirm whether you are speaking to the attending locksmith or a referral service
+2. Ask which business or trader will invoice you and verify the contact details
+3. Request the starting or specific price, its assumptions and possible extras
+4. Require an explanation before destructive entry or replacement is authorised
+5. Ask for any revised scope and total in writing before additional work proceeds
 
-The person is charged for parts at massively inflated prices, labour per 15 minutes, and sometimes for a replacement lock they did not need.
+If a final charge differs from the authorised basis, request an itemised invoice and use the appropriate consumer-advice route for the actual circumstances.
 
 ## Why They Drill When They Don't Need To
 
@@ -261,19 +255,17 @@ Going straight to drilling is a reason to ask for an explanation and price, but 
 
 **No clear pricing basis on the phone.** The exact total may depend on the lock and fault, but ask for the likely total, assumptions, possible extras, VAT status, and call-out fee before booking.
 
-**No local landline or company name.** Many rogue locksmiths advertise with made-up local names and mobile numbers. They are not based locally — they drive to wherever calls come from.
+**No verifiable trading identity.** A landline or mobile number does not prove location or quality. Ask for the business or trader's name, contact details, written quote and invoice information, then verify them independently.
 
-**Huge gap between phone quote and final bill.** If they quoted £45 and the final bill is £200, walk away and report them to Trading Standards.
+**A large unexplained difference from the quote.** Ask for an itemised explanation and do not authorise additional work until you understand and accept the revised scope. Citizens Advice can explain consumer options where there is a dispute.
 
-**Pressure to make a decision quickly.** No legitimate locksmith pressures you to decide on the spot.
+**Pressure to authorise work quickly.** Pause and ask for the scope, price and alternatives in writing before deciding where circumstances allow.
 
 **They go straight to drilling without explanation.** Ask whether non-destructive entry is suitable and require the reason and replacement cost before authorising destructive work.
 
 ## What a Professional Locksmith Does
 
-I give you a firm price on the phone. I tell you exactly how long I'll be. I try non-destructive entry before anything else. If I cannot open the lock without drilling, I tell you before I drill and quote the replacement lock cost separately.
-
-You never pay more than the price we agreed. No exceptions.
+I explain the price basis, its assumptions and the current ETA before travelling. On arrival I inspect the actual door and lock, consider a suitable non-destructive method first, and explain any destructive or replacement work and revised price for approval before proceeding.
 
 ## How to Find a Legitimate Locksmith
 
@@ -283,12 +275,12 @@ You never pay more than the price we agreed. No exceptions.
 - Get the price confirmed before they arrive
 - Pay by card where possible — it is harder to dispute a cash payment
 
-For Coventry and Warwickshire, you can call me directly on 024 7522 4730. I'll give you a firm price on the phone, every time.
+For a location listed on the [areas page](/areas/), call me directly on 024 7522 4730 with the full address, door type, symptoms and photographs if available. I will explain the most specific supported price basis and current ETA.
     `.trim(),
     faqs: [
       { q: 'Can I report a rogue locksmith?', a: 'Yes — report to Trading Standards via the Citizens Advice consumer helpline (0808 223 1133). If you were overcharged significantly, you may also have a claim through your bank via chargeback if you paid by card.' },
-      { q: 'Is the cheapest locksmith always the worst?', a: 'Not necessarily — an independent local locksmith without VAT genuinely can charge less than a national company while still being professional. The danger is locksmiths who quote low and add on extras after arriving. The key is a firm price commitment before they come out.' },
-      { q: 'Do I need to use an MLA locksmith?', a: 'Not necessarily — MLA membership is a good indicator of professionalism and vetting, but many excellent local locksmiths are not MLA members. The important thing is that they give you firm prices, try non-destructive entry, and are transparent about costs.' },
+      { q: 'Is the cheapest locksmith always the worst?', a: 'No. Price alone does not establish quality. Compare the same diagnosed scope, included labour and parts, VAT, fees, business identity, written terms and approval process.' },
+      { q: 'Do I need to use an MLA locksmith?', a: 'MLA membership is one check you can make, but it is not the only information to consider. Verify the attending trader, pricing basis, proposed method, written scope and invoice details before authorising work.' },
     ],
   },
 }

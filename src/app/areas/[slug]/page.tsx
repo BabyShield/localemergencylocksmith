@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { MapPin, PoundSterling, CheckCircle, Lock, Clock, BookOpen } from 'lucide-react'
 import { AREAS, getAreaBySlug, getAreaNeighbours } from '@/data/areas'
 import { SERVICES } from '@/data/services'
-import { SITE_CONFIG } from '@/data/config'
+import { SERVICE_PROVIDER_SCHEMA, SITE_CONFIG } from '@/data/config'
 import { getAreaGuide } from '@/data/area-guides'
 import type { ServiceAreaSlug } from '@/data/service-area-types'
 import { getAreaAuthority } from '@/data/area-authorities'
@@ -109,7 +109,7 @@ export default async function AreaPage({ params }: Props) {
     name: `Locksmith services in ${area.name}`,
     url: `${SITE_CONFIG.domain}/areas/${slug}`,
     description: `Lockout help, lock repair and replacement, uPVC lock repair, boarding up and lock upgrades in ${area.name}. Call to confirm the current ETA and price basis.`,
-    provider: { '@id': `${SITE_CONFIG.domain}/#business` },
+    provider: SERVICE_PROVIDER_SCHEMA,
     areaServed: {
       '@type': 'Place',
       name: area.name,
@@ -158,12 +158,12 @@ export default async function AreaPage({ params }: Props) {
       <nav aria-label="Breadcrumb" className="max-w-6xl mx-auto px-4 py-3 text-sm text-gray-500">
         <ol className="flex flex-wrap items-center gap-0" itemScope itemType="https://schema.org/BreadcrumbList">
           <li itemScope itemType="https://schema.org/ListItem" itemProp="itemListElement">
-            <Link href="/" itemProp="item" className="hover:text-[#FFB800]"><span itemProp="name">Home</span></Link>
+            <Link href="/" prefetch={false} itemProp="item" className="hover:text-[#FFB800]"><span itemProp="name">Home</span></Link>
             <meta itemProp="position" content="1" />
           </li>
           <span className="mx-2" aria-hidden="true">›</span>
           <li itemScope itemType="https://schema.org/ListItem" itemProp="itemListElement">
-            <Link href="/areas" itemProp="item" className="hover:text-[#FFB800]"><span itemProp="name">Areas</span></Link>
+            <Link href="/areas" prefetch={false} itemProp="item" className="hover:text-[#FFB800]"><span itemProp="name">Areas</span></Link>
             <meta itemProp="position" content="2" />
           </li>
           <span className="mx-2" aria-hidden="true">›</span>

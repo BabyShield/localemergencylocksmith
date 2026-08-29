@@ -23,7 +23,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${base}/blog`, lastModified: contentDate, changeFrequency: 'weekly' as const, priority: 0.7 },
     { url: `${base}/about`, lastModified: contentDate, changeFrequency: 'monthly' as const, priority: 0.7 },
     { url: `${base}/faq`, lastModified: contentDate, changeFrequency: 'monthly' as const, priority: 0.6 },
-    { url: `${base}/testimonials`, lastModified: contentDate, changeFrequency: 'monthly' as const, priority: 0.6 },
 
     // Service pages
     ...SERVICES.map((s) => ({
@@ -47,14 +46,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       lastModified: contentDate,
       changeFrequency: 'monthly' as const,
       priority: 0.8,
-    })),
-
-    // Postcode coverage hubs
-    ...Array.from(new Set(AREAS.map((a) => a.postcode.toLowerCase()))).map((pc) => ({
-      url: `${base}/postcodes/${pc}`,
-      lastModified: contentDate,
-      changeFrequency: 'monthly' as const,
-      priority: 0.7,
     })),
 
     // Hand-written blog posts only

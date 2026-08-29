@@ -5,9 +5,15 @@ import { AREAS } from '@/data/areas'
 
 export default function Footer() {
   const year = new Date().getFullYear()
-  const postcodes = Array.from(new Set(AREAS.map((a) => a.postcode.toLowerCase()))).sort(
-    (a, b) => a.localeCompare(b, 'en', { numeric: true })
-  )
+  const postcodeGroups = Array.from(
+    AREAS.reduce((groups, area) => {
+      const postcode = area.postcode.toLowerCase()
+      const group = groups.get(postcode) ?? []
+      group.push(area)
+      groups.set(postcode, group)
+      return groups
+    }, new Map<string, typeof AREAS>())
+  ).sort(([a], [b]) => a.localeCompare(b, 'en', { numeric: true }))
 
   return (
     <footer className="bg-[#0F1B2D] text-gray-300 py-12 px-4 pb-24 md:pb-12">
@@ -15,7 +21,7 @@ export default function Footer() {
         <div className="md:col-span-1">
           <h3 className="text-white font-black text-lg mb-4 uppercase">Local Emergency Locksmith</h3>
           <p className="text-sm leading-relaxed mb-4">
-            Independent emergency locksmith serving Coventry, Nuneaton, Rugby, Leamington Spa, Warwick, and all surrounding areas.
+            Independent emergency locksmith serving 78 listed locations across Coventry and nearby parts of Warwickshire, Solihull, and the West Midlands.
           </p>
           <p className="text-sm">
             <span className="text-[#FFB800] font-semibold">Phone: </span>
@@ -45,7 +51,7 @@ export default function Footer() {
             </a>
           </p>
           <p className="text-xs mt-3 text-gray-400">
-            DBS-checked &bull; Fully insured (public liability) &bull; ID shown on arrival
+            Direct booking &bull; Current ETA confirmed by phone &bull; Cash or card
           </p>
         </div>
 
@@ -125,10 +131,10 @@ export default function Footer() {
           <div>
             <h4 className="text-gray-400 text-xs font-bold uppercase tracking-widest mb-3">Postcodes Covered</h4>
             <div className="flex flex-wrap gap-x-4 gap-y-2 text-xs text-gray-400">
-              {postcodes.map((pc) => (
+              {postcodeGroups.map(([pc, areas]) => (
                 <Link
                   key={pc}
-                  href={`/postcodes/${pc}`}
+                  href={areas.length === 1 ? `/areas/${areas[0].slug}` : `/postcodes/${pc}`}
                   className="inline-flex min-h-6 min-w-6 items-center justify-center px-1 hover:text-white transition-colors uppercase"
                 >
                   {pc.toUpperCase()}

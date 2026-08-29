@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { SERVICES, getServiceBySlug } from '@/data/services'
 import { AREAS, getAllAreasByRegion } from '@/data/areas'
 import { hasTownService } from '@/data/governed-town-services'
-import { SITE_CONFIG, CONTENT_UPDATED } from '@/data/config'
+import { SITE_CONFIG, CONTENT_UPDATED, SERVICE_PROVIDER_SCHEMA } from '@/data/config'
 import { getBlogPostBySlug } from '@/data/blog-posts'
 import { SERVICE_GUIDE_SLUGS } from '@/data/blog-seo'
 import HeroSection from '@/components/HeroSection'
@@ -61,7 +61,6 @@ const SERVICE_CONTENT: Record<string, {
   whyUs: string
   scenarios: { title: string; desc: string }[]
   priceDetails: { item: string; price: string }[]
-  testimonial: { text: string; name: string; area: string }
   directAnswer: { question: string; answer: string }
   voiceFaqs: { q: string; a: string }[]
 }> = {
@@ -69,13 +68,13 @@ const SERVICE_CONTENT: Record<string, {
     h1: 'Emergency Locksmith for House Lockouts in Coventry',
     intro: [
       "Being locked out of your house is stressful — especially late at night or in bad weather. I provide a professional emergency lockout service across Coventry and Warwickshire, available 24 hours a day, 7 days a week, 365 days a year.",
-      "When you call me, I'll ask you for your address and a brief description of your door and lock type. I'll give you an honest price upfront — from £59 — and an honest arrival time. No call-out fee. No VAT.",
+      "When you call me, I'll ask for the full address and a brief description of the door and lock. I confirm the current ETA and the price basis for the described scope — from £59, with no VAT or separate call-out fee.",
       "I try appropriate non-destructive entry methods first where the lock, door and circumstances allow. If a destructive step or replacement becomes necessary, I explain why and confirm the cost before proceeding.",
     ],
     steps: [
       "Call 024 7522 4730 — I answer 24/7",
       "Tell me your location and a brief description of your door",
-      "I confirm the price upfront — from £59, no VAT",
+      "I confirm the price basis — from £59, no VAT",
       "I confirm the current ETA from my actual starting point and your full address",
       "I open your door using non-destructive entry where possible",
       "I advise whether your lock needs replacing and give you an honest quote",
@@ -91,10 +90,10 @@ const SERVICE_CONTENT: Record<string, {
       "Non-destructive entry — your lock and door stay intact where possible",
       "Same price 24/7 — no night premium, no weekend surcharge",
       "Current ETA confirmed from the full address before I set off",
-      "Price confirmed on the phone before I set off",
-      "Fully insured with public liability cover",
+      "Price basis confirmed for the problem described before I set off",
+      "Any changed diagnosis, method or parts agreed before work proceeds",
     ],
-    whyUs: "When you're locked out at midnight, you need someone you can trust — not a call centre dispatching the nearest available stranger. I'm Ross, your local Coventry locksmith. When you call, you speak to me. I give you a firm price and an honest arrival time. No games, no surprises.",
+    whyUs: "When you call, you speak directly to me. I confirm the current ETA and the price basis for the described problem, verify authority at the entrance, and explain any changed diagnosis or method before asking you to approve revised work.",
     scenarios: [
       { title: "Locked Out Late at Night", desc: "Your keys are inside and the door has closed. I confirm the current ETA, check authority, and assess the least destructive suitable entry method at the door." },
       { title: "Keys Lost or Stolen", desc: "Can't find your keys and worried about security? I assess entry and any key-control risk separately, then confirm whether a compatible lock change can be completed during the attendance." },
@@ -106,7 +105,6 @@ const SERVICE_CONTENT: Record<string, {
       { item: "High-security lock lockout", price: "From £79" },
       { item: "Lock replacement after entry (if needed)", price: "From £69" },
     ],
-    testimonial: { text: "Locked out at 11pm — Ross arrived within 20 minutes, had me back in within 10. No VAT, exact price quoted on the phone. Brilliant.", name: "Sarah T.", area: "Earlsdon" },
     directAnswer: {
       question: 'How much does an emergency locksmith cost in Coventry?',
       answer: 'An emergency locksmith in Coventry costs from £59 for a standard lockout. This price includes labour, with no VAT or separate call-out fee. Call with the full address and lock symptoms for the current ETA and price basis.',
@@ -122,7 +120,7 @@ const SERVICE_CONTENT: Record<string, {
     intro: [
       "A stiff, broken, or unreliable door lock does not always need a full security upgrade. I diagnose door lock faults across Coventry and repair the existing lock where that is practical, or replace it when wear or damage makes replacement the better option.",
       "This service covers Yale nightlatches, mortice locks, euro cylinders, broken front-door locks, and planned lock changes after lost keys or a house move. I explain the repair and replacement options before any work starts.",
-      "Door lock repair or replacement starts from £69 including labour and any standard part stated in the quote. No VAT. No call-out fee.",
+      "Door lock repair or replacement starts from £59 including labour and any part explicitly stated in the quote. No VAT. No separate call-out fee.",
     ],
     steps: [
       "Call 024 7522 4730 and describe the door, lock, and fault",
@@ -136,7 +134,7 @@ const SERVICE_CONTENT: Record<string, {
       { q: 'Can a broken door lock be repaired?', a: 'Often, yes. Stiffness, alignment, a worn latch, or a replaceable cylinder may be repairable without changing the complete lock. I inspect the fault first and explain whether repair or replacement is the more practical option.' },
       { q: 'When should a door lock be replaced instead of repaired?', a: 'Replacement may be appropriate when the mechanism is badly worn, parts are unavailable, the lock has been damaged, keys are lost, or you need a fresh set of keys after moving. I confirm the reason and price before replacing it.' },
       { q: 'How long does a lock repair or replacement take?', a: 'The time and number of visits depend on the diagnosed fault, safe access, door type, suitable-part availability and whether the existing opening accepts the replacement without alteration.' },
-      { q: 'Can I choose the brand of replacement lock?', a: 'Yes. I carry common Yale, Union, ERA, Avocet, and other residential lock types, and can discuss the suitable options for the door and budget.' },
+      { q: 'Can I choose the brand of replacement lock?', a: 'Tell me if you prefer a particular brand or certification. The suitable options still depend on the inspected door, measurements, required function and current compatible-part availability.' },
     ],
     howToName: 'How to Get a Door Lock Repaired or Replaced in Coventry',
     benefits: [
@@ -158,10 +156,9 @@ const SERVICE_CONTENT: Record<string, {
       { item: "Mortice lock replacement", price: "From £79" },
       { item: "Multiple lock changes", price: "Quoted before work" },
     ],
-    testimonial: { text: "Used twice now for lock changes after moving house. Fast, professional, and so much cheaper than the big national companies.", name: "Mark R.", area: "Leamington Spa" },
     directAnswer: {
       question: 'How much does door lock repair or replacement cost in Coventry?',
-      answer: 'Door lock repair or replacement in Coventry starts from £69 for many standard residential locks. The final price depends on the fault, lock type, and replacement part. I confirm it before work starts, with no VAT or call-out fee.',
+      answer: 'Door lock repair or replacement in Coventry starts from £59 for a euro-cylinder replacement. The final price depends on the fault, lock type and compatible part. I confirm the price basis before work starts, with no VAT or separate call-out fee.',
     },
     voiceFaqs: [
       { q: 'Can a locksmith repair a door lock instead of replacing it?', a: 'Often, yes. Alignment, latch, cylinder, and some mechanism faults can be repaired. The locksmith should inspect the cause and explain both options before replacing the complete lock.' },
@@ -187,16 +184,16 @@ const SERVICE_CONTENT: Record<string, {
     faqs: [
       { q: 'My uPVC door is stiff to lock — is that a broken lock?', a: 'Not necessarily. In many cases a stiff uPVC door is due to door misalignment, a worn roller, or a failing gearbox. I diagnose the root cause first — in some cases a simple adjustment is all that is needed.' },
       { q: 'Can you replace just the cylinder on a uPVC door?', a: 'Sometimes. A cylinder can be replaced separately when it is the failed or agreed component and the correct size is available. The rest of the multipoint system and door alignment are checked separately.' },
-      { q: 'My uPVC door will not lock at all — is this an emergency?', a: 'Yes — an insecure door is an emergency. I cover this 24/7. Call me and I will attend as soon as possible.' },
+      { q: 'My uPVC door will not lock at all — is this urgent?', a: 'An entrance that cannot be secured needs prompt attention. Call with the full address and observable symptoms so I can confirm current availability, the ETA and the safe next step.' },
       { q: 'Do you repair window locks on uPVC windows?', a: 'Yes — I repair and replace espagnolette window locks and cockspur handles on uPVC and aluminium windows.' },
     ],
     howToName: 'How to Get a uPVC Lock Repaired in Coventry',
     benefits: [
       "Assessment of common uPVC multipoint systems, including identifiable Mila, GU, Yale, Fuhr and Lockmaster parts",
       "Diagnose before quoting — I'll tell you if a repair is possible before recommending replacement",
-      "Common cylinders and mechanisms carried in the van",
+      "Compatible cylinder and mechanism availability checked after identification",
       "Anti-snap cylinder options assessed where the door, fit and certification support one",
-      "Door alignment included at no extra cost",
+      "Door alignment checked as a separate possible cause",
     ],
     whyUs: "I inspect the cylinder, handles, alignment and multipoint mechanism before recommending work. I explain whether an adjustment, repair or replacement is supported by the diagnosis and confirm the price before starting.",
     scenarios: [
@@ -210,7 +207,6 @@ const SERVICE_CONTENT: Record<string, {
       { item: "Handle set replacement", price: "From £39" },
       { item: "Door realignment", price: "From £49" },
     ],
-    testimonial: { text: "uPVC door had been stiff for months. Ross diagnosed a worn gearbox, replaced it in under an hour. Door works like new.", name: "Jenny M.", area: "Tile Hill" },
     directAnswer: {
       question: 'How much does a uPVC door lock repair cost?',
       answer: 'A uPVC door lock repair costs from £59 for a cylinder replacement and from £89 for a multipoint mechanism replacement. The price includes the stated parts and labour with no VAT or separate call-out fee; timing depends on diagnosis and parts.',
@@ -224,7 +220,7 @@ const SERVICE_CONTENT: Record<string, {
   'boarding-up': {
     h1: 'Emergency Boarding Up & Burglary Repairs Coventry',
     intro: [
-      "After a break-in, storm damage, or accidental breakage, a damaged door, lock, or window needs securing promptly. I provide emergency boarding up and immediate burglary repairs across Coventry and Warwickshire, 24 hours a day.",
+      "After a break-in, storm damage, or accidental breakage, a damaged door, lock, or window may need temporary securing. I provide 24/7 boarding and burglary-related lock assessment across the listed coverage locations.",
       "I board damaged openings and can replace compromised residential locks on the same visit when the suitable part is available. Permanent glazing, joinery, or structural repairs remain separate work, and I explain the temporary security scope before starting.",
       "Emergency boarding up starts from £79. No VAT. No call-out fee.",
     ],
@@ -239,7 +235,7 @@ const SERVICE_CONTENT: Record<string, {
       { q: 'Should I call the police before calling a locksmith after a break-in?', a: 'Call 999 if an offender may still be present or anyone is in immediate danger. Otherwise follow the police reporting route and instructions for the scene, then ask your insurer what evidence its written terms require before repair work.' },
       { q: 'How long will boarding hold before I need a permanent repair?', a: 'Boarding is temporary security, not a permanent glazing, joinery or structural repair. Its suitable duration depends on the opening, fixing points, material, exposure and any insurer or property-manager requirement.' },
       { q: 'Can you change the locks after boarding up?', a: 'A compromised residential lock may be replaceable during the attendance when the correct part and authority are available. I confirm the temporary-security scope and any separate follow-on work first.' },
-      { q: 'Do you board up commercial properties?', a: 'Yes — I cover residential and commercial premises across Coventry and Warwickshire.' },
+      { q: 'Do you board commercial openings?', a: 'Call with the exact premises, opening, dimensions and authority details. Safe fixing points, access and the inspected damage determine whether temporary boarding can be agreed.' },
     ],
     howToName: 'How to Get Emergency Boarding Up in Coventry',
     benefits: [
@@ -252,8 +248,8 @@ const SERVICE_CONTENT: Record<string, {
     whyUs: "After damage, I separate evidence preservation, immediate temporary security and permanent repair. I explain the proposed board, fixing points, limitations and current ETA before attendance, without presenting boarding as permanent glazing or joinery.",
     scenarios: [
       { title: "Break-In Damage", desc: "A door or window has been damaged during a burglary. After police evidence instructions are satisfied, I assess temporary boarding and any compromised lock as separate work." },
-      { title: "Storm Damage", desc: "A window has blown in or a door has been damaged by high winds. I'll secure it against weather and intruders." },
-      { title: "Accidental Breakage", desc: "Glass door or window broken accidentally. I'll board it safely while you arrange glazing repair." },
+      { title: "Storm Damage", desc: "A window has blown in or a door has been damaged by high winds. The opening and safe fixing points are assessed before temporary work is agreed." },
+      { title: "Accidental Breakage", desc: "A glass door or window is broken accidentally. Temporary boarding may reduce immediate access and exposure while glazing repair is arranged." },
     ],
     priceDetails: [
       { item: "Single window board-up", price: "From £79" },
@@ -261,10 +257,9 @@ const SERVICE_CONTENT: Record<string, {
       { item: "Multiple openings", price: "From £120" },
       { item: "Board-up + lock change", price: "From £139" },
     ],
-    testimonial: { text: "Called at 3am after a break-in. Ross arrived, boarded the window, and changed the front door lock. Felt safe again within the hour.", name: "Paul K.", area: "Stoke" },
     directAnswer: {
       question: 'How much does emergency boarding up cost in Coventry?',
-      answer: 'Emergency boarding up and immediate burglary repairs in Coventry cost from £79 for a single damaged opening. The service is available 24 hours a day. Compromised residential locks can be replaced on the same visit when the suitable part is available. No VAT is charged.',
+      answer: 'Temporary boarding in Coventry starts from £79 for a single damaged opening. The service is available 24 hours a day. A compromised residential lock may also be replaceable when authority, safe access and a compatible part are available. No VAT is charged.',
     },
     voiceFaqs: [
       { q: 'Should I call the police before calling a locksmith after a break-in?', a: 'Call 999 if an offender may still be present or anyone is in immediate danger. Otherwise use the police reporting route and follow scene-preservation instructions. Ask your insurer separately what evidence its current written terms require.' },
@@ -276,8 +271,8 @@ const SERVICE_CONTENT: Record<string, {
     h1: 'Anti-Snap Locks & BS3621 Lock Upgrades Coventry',
     intro: [
       "Anti-snap cylinders and BS3621-marked locks address different products and tested requirements. If you are following written policy wording, improving resistance to a specified attack method, or replacing a faulty lock, I assess the actual door and explain compatible options.",
-      "I fit anti-snap door locks, anti-snap euro cylinders, British Standard BS3621 mortice deadlocks, Secured by Design cylinders, and high-security mortice locks. I can also assess the property's existing locks and identify weak points.",
-      "Lock upgrade prices start from £79 including the lock and fitting. No VAT. No call-out fee.",
+      "I assess anti-snap euro cylinders, BS3621-marked mortice deadlocks and other independently certified options against the actual entrance, measurements and required function.",
+      "Lock upgrade prices start from £59 for an anti-snap euro cylinder, including the stated lock and fitting. No VAT. No separate call-out fee.",
     ],
     steps: [
       "Call 024 7522 4730 for a free phone consultation on your security needs",
@@ -291,12 +286,12 @@ const SERVICE_CONTENT: Record<string, {
       { q: 'What lock does my home insurance require?', a: 'Requirements vary by policy and door. Check the security section of your own policy or ask the insurer to confirm the standard in writing before choosing an upgrade.' },
       { q: 'What is a Secured by Design cylinder?', a: 'Secured by Design is a police security initiative with an accredited-product scheme. When comparing a cylinder, check its current product listing, independent certification, star rating, and correct fit for the door.' },
       { q: 'Is a lock upgrade worth it?', a: 'A correctly fitted, independently certified lock can improve resistance to recognised attack methods. It does not eliminate burglary risk or guarantee insurance cover, so the choice should match the door and any written policy requirement.' },
-      { q: 'Do you offer a free security survey?', a: 'Yes — I offer a free security survey as part of any lock upgrade job. I will check all external doors and windows and advise on any weak points at no extra cost.' },
+      { q: 'Can you assess more than one entrance?', a: 'The booked upgrade includes assessment of the affected entrance. If you want other doors or windows reviewed, identify them when booking so the additional scope and any price can be agreed first.' },
     ],
     howToName: 'How to Upgrade Your Home Security Locks in Coventry',
     benefits: [
-      "Free security assessment of all external doors",
-      "BS3621, TS007, and Secured by Design products available",
+      "Affected entrance assessed before an upgrade is specified",
+      "Current certification and compatible product availability checked",
       "Written documentation for your insurance company",
       "One-visit completion where the diagnosis, authority and suitable parts allow",
       "Honest advice — I'll tell you what you need and what you don't",
@@ -305,7 +300,7 @@ const SERVICE_CONTENT: Record<string, {
     scenarios: [
       { title: "Written Policy Requirement", desc: "Your policy names a lock standard. I identify the existing marking, assess the door, and document an agreed certified option; the insurer confirms whether it satisfies the policy." },
       { title: "Post-Burglary Review", desc: "After a break-in, you want damaged or unsuitable locks assessed and replaced with correctly fitted, independently certified options." },
-      { title: "General Security Improvement", desc: "You want better peace of mind. I'll survey your property and recommend targeted upgrades based on the weak points." },
+      { title: "General Security Improvement", desc: "You want the inspected entrance reviewed against a clear objective. I record what is fitted and explain compatible, independently certified options." },
     ],
     priceDetails: [
       { item: "Anti-snap euro cylinder", price: "From £59" },
@@ -313,7 +308,6 @@ const SERVICE_CONTENT: Record<string, {
       { item: "Full front door upgrade (deadlock + cylinder)", price: "From £129" },
       { item: "Whole house upgrade (all doors)", price: "From £199" },
     ],
-    testimonial: { text: "Had all external locks upgraded after a neighbour was burgled. Ross checked everything, recommended only what was needed, and the price was exactly what he quoted.", name: "Lisa W.", area: "Cheylesmore" },
     directAnswer: {
       question: 'How much does a lock upgrade cost in Coventry?',
       answer: 'A lock upgrade in Coventry costs from £79 for a BS3621-rated mortice deadlock or from £59 for an anti-snap euro cylinder. The price includes the lock and fitting. Check any insurance requirement in your own policy before choosing a standard.',
@@ -321,7 +315,7 @@ const SERVICE_CONTENT: Record<string, {
     voiceFaqs: [
       { q: 'What is the difference between a Yale lock and a deadlock?', a: '“Yale lock” is commonly used for a nightlatch, while a mortice deadlock uses a bolt operated by a key. The suitable arrangement depends on the actual door, escape needs and any exact written requirement.' },
       { q: 'Is a lock upgrade worth the money?', a: 'A correctly fitted, independently certified lock can improve resistance to recognised attack methods. It cannot eliminate risk or guarantee insurance cover, so check the door and your own policy requirements first.' },
-      { q: 'Do you offer a free security survey?', a: 'Yes. I offer a free security assessment as part of any lock upgrade. I check all external doors and windows and advise on any weak points, with no obligation to proceed.' },
+      { q: 'Can you assess more than one entrance?', a: 'Identify every door or window you want reviewed when booking. The scope, authority, time and any price for additional openings must be agreed rather than assumed from one lock-upgrade attendance.' },
     ],
   },
 }
@@ -352,7 +346,7 @@ export default async function ServicePage({ params }: Props) {
     name: service.name,
     description: service.description,
     serviceType: service.shortName,
-    provider: { '@id': `${SITE_CONFIG.domain}/#business` },
+    provider: SERVICE_PROVIDER_SCHEMA,
     areaServed: [
       { '@type': 'City', name: 'Coventry' },
       { '@type': 'City', name: 'Nuneaton' },
@@ -421,12 +415,12 @@ export default async function ServicePage({ params }: Props) {
       <nav aria-label="Breadcrumb" className="max-w-6xl mx-auto px-4 py-3 text-sm text-gray-500">
         <ol className="flex flex-wrap items-center gap-0" itemScope itemType="https://schema.org/BreadcrumbList">
           <li itemScope itemType="https://schema.org/ListItem" itemProp="itemListElement">
-            <Link href="/" itemProp="item" className="hover:text-[#FFB800] transition-colors"><span itemProp="name">Home</span></Link>
+            <Link href="/" prefetch={false} itemProp="item" className="hover:text-[#FFB800] transition-colors"><span itemProp="name">Home</span></Link>
             <meta itemProp="position" content="1" />
           </li>
           <span className="mx-2 text-gray-300" aria-hidden="true">›</span>
           <li itemScope itemType="https://schema.org/ListItem" itemProp="itemListElement">
-            <Link href="/services" itemProp="item" className="hover:text-[#FFB800] transition-colors"><span itemProp="name">Services</span></Link>
+            <Link href="/services" prefetch={false} itemProp="item" className="hover:text-[#FFB800] transition-colors"><span itemProp="name">Services</span></Link>
             <meta itemProp="position" content="2" />
           </li>
           <span className="mx-2 text-gray-300" aria-hidden="true">›</span>
@@ -700,7 +694,7 @@ export default async function ServicePage({ params }: Props) {
             {service.shortName} Areas Covered
           </h2>
           <p className="text-gray-500 text-center mb-8 max-w-lg mx-auto">
-            I cover Coventry, Warwickshire, and surrounding areas. Here are some of the locations I serve.
+            I serve the locations in the published area directory. Call with the full address to confirm coverage and the current ETA.
           </p>
 
           {/* One canonical owner per area. The seven towns with dedicated
@@ -786,7 +780,7 @@ export default async function ServicePage({ params }: Props) {
             Other Locksmith Services
           </h2>
           <p className="text-gray-500 text-center mb-8 max-w-lg mx-auto">
-            I offer a full range of locksmith services across Coventry and Warwickshire.
+            I offer the five published locksmith services across the listed coverage locations.
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">

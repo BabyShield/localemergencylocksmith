@@ -13,6 +13,17 @@ export const SITE_CONFIG = {
   },
 } as const
 
+// Compact provider node for Service schemas. The full identity graph is on the
+// homepage; this keeps provider references self-contained without inventing an
+// address or a LocalBusiness location.
+export const SERVICE_PROVIDER_SCHEMA = {
+  '@type': 'Organization',
+  '@id': `${SITE_CONFIG.domain}/#business`,
+  name: SITE_CONFIG.businessName,
+  url: SITE_CONFIG.domain,
+  telephone: SITE_CONFIG.phoneTel,
+} as const
+
 // Bump only when page content genuinely changes — drives visible "last updated"
 // dates and sitemap lastModified, so it must never be a build timestamp.
 export const CONTENT_UPDATED = '2026-08-29'

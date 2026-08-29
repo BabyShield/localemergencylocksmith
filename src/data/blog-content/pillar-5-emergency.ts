@@ -6,7 +6,7 @@ export const PILLAR_5_CONTENT: Record<string, { body: string; faqs: { q: string;
   'what-to-do-after-burglary': {
     body: `## What to Do After a Burglary: The Complete UK Step-by-Step Guide
 
-Coming home to find your door forced open or a window smashed is one of the worst feelings imaginable. Your heart drops, your hands shake, and your mind races. I have been called out to hundreds of burglary aftermaths across Coventry and Warwickshire, and I want you to know something straight away: what you are feeling is completely normal.
+Coming home to find a door forced open or a window smashed can be distressing and disorienting. This guide separates immediate safety, police evidence, insurer instructions and temporary security so each decision can follow the actual circumstances.
 
 But right now, you need to act. This guide walks you through exactly what to do, step by step, so you can protect yourself, preserve evidence, and start putting things right.
 
@@ -38,7 +38,7 @@ If there is broken glass or the property is not secure, tell the police this whe
 
 If a door has been forced or a window smashed, temporary boarding or another suitable repair may be needed to reduce further intrusion and weather exposure. Ask the insurer what emergency work and evidence its written terms require; boarding does not guarantee a claim outcome.
 
-I offer [emergency boarding up across Coventry](/services/boarding-up) from **£79**. I carry marine-grade plywood in the van; the safe fixing method and time depend on the damaged opening. Call me on **024 7522 4730** for the current ETA and scope — I am available 24/7, including evenings and weekends.
+I offer [emergency boarding up](/services/boarding-up) in the listed coverage area from **£79**. The suitable material, fixing method and timing depend on the damaged opening and current availability. Call **024 7522 4730** for the current ETA and scope — I am available 24/7, including evenings and weekends.
 
 Your insurance company may cover boarding up costs, so keep the receipt.
 
@@ -63,7 +63,7 @@ Burglars frequently **take keys** they find inside the property. House keys left
 
 Repair or replace any lock damaged at the point of entry, and change locks for which keys are missing or may have been compromised. An undamaged lock with fully accounted-for keys does not automatically need replacing; assess the actual entry route and key risk first. If a euro cylinder was snapped, this is a sensible time to consider a certified anti-snap replacement through the [lock upgrade service](/services/lock-upgrade).
 
-A full lock change on all external doors typically costs from **£69 per lock** depending on the type. I carry a range of regularly used locks and cylinders; same-day completion depends on the exact parts required. See my full [pricing page](/prices) for details.
+Each affected external door needs its lock and fitting scope identified. Compatible euro-cylinder replacements start from **£59**, Yale nightlatches from **£69** and BS3621-rated mortice options from **£79**; multiple openings are itemised. Completion timing depends on compatible-part availability. See the [pricing page](/prices) for the governed scopes.
 
 ### Step 7: Document Everything for Insurance
 
@@ -134,7 +134,7 @@ You can check the progress of your case using the contact details and crime refe
       },
       {
         q: 'How quickly can you board up a broken door or window after a burglary in Coventry?',
-        a: 'I carry marine-grade plywood and fixings in my van. Call with the full address and describe or photograph the opening so I can confirm the current ETA, likely method and price basis. Emergency boarding up starts from £79.',
+        a: 'Call with the full address and describe or photograph the opening so I can confirm coverage, the current ETA, likely material and fixing method, availability and price basis. Emergency boarding up starts from £79.',
       },
       {
         q: 'Do I need to be at home when the police attend after a burglary?',
@@ -158,7 +158,7 @@ Keys are not invincible. They are made of brass or nickel silver, and over time 
 
 **Cold weather and a stiff mechanism.** Metal components can contract in cold conditions and moisture can affect operation. If the lock becomes stiff, forcing a weakened key can cause it to break.
 
-**Cheap key blanks.** If you have had keys cut at a market stall or a cheap key cutting booth, the blanks may be softer metal than the original. They wear faster and are more prone to snapping. A key cut from a cheap blank might last a year before it becomes weak enough to break.
+**Key material, wear and cutting quality.** Key blanks and cuts can differ, but appearance or where a key was cut does not establish its strength or lifespan. Inspect a worn, bent, cracked or poorly operating key and avoid forcing it.
 
 **A worn or stiff lock.** If your lock has not been maintained — no lubrication, internal parts corroded or gummed up with dirt — it takes more force to turn the key. More force means more stress on the key, and eventually it gives way. This is especially common on older mortice locks and euro cylinders that have never been serviced.
 
@@ -172,7 +172,7 @@ Keys are not invincible. They are made of brass or nickel silver, and over time 
 
 I cannot stress this enough: most of the things people try before calling me make the situation significantly worse.
 
-**Do not use pliers to grab a flush or recessed key piece.** If the broken key is sticking out enough to grab, fine-nose pliers might work (more on that below). But if the key is flush with the lock face or has gone further inside, pliers will push it deeper. I have lost count of the number of times I have arrived to find someone has jammed the broken piece further into the cylinder with pliers, turning a 10-minute extraction into a cylinder replacement.
+**Do not insert pliers into the keyway for a flush or recessed fragment.** Tools can push the piece deeper or damage internal components. If the fragment does not protrude far enough for a gentle straight pull, stop and arrange an assessment.
 
 **Do not use superglue.** The glue can run into the mechanism, bond with internal parts and turn a possible extraction into a cylinder replacement. Please do not do this.
 
@@ -200,7 +200,7 @@ If the key does not come out easily, stop. Do not force it. Call me on **024 752
 
 When I arrive, I assess the situation first. Where is the broken piece? How deep is it? What type of lock is it? This determines the approach.
 
-**Specialist extractor tools.** I carry a set of broken key extractors — thin, hooked metal blades designed specifically for this job. They slide into the keyway alongside the broken piece, hook onto the key's serrations (the jagged edge), and allow me to pull the piece out. It is a delicate process but usually takes under 10 minutes.
+**Specialist extractor tools.** Broken-key extractors may allow the fragment to be removed where its position, the keyway and the lock condition make that method suitable. The time and outcome cannot be established from the symptom alone.
 
 **Pick and hook method.** For keys that are deeper inside the cylinder, I use a combination of a hook pick and an extractor. The hook manipulates the pins to release pressure on the broken key, while the extractor pulls it free.
 
@@ -210,13 +210,11 @@ I assess whether a non-destructive extraction is suitable first. The result depe
 
 ---
 
-### What It Costs
+### Price Basis
 
-- **Broken key extraction** (key removed, lock undamaged): from **£49**
-- **Extraction plus cylinder replacement** (if the lock is damaged or the key cannot be removed without disassembly): from **£59** including a new standard cylinder; anti-snap options are listed on the [prices page](/prices)
-- **Extraction from a mortice lock** (wooden door deadlocks): from **£59** as these are more complex to work with
+Broken-key extraction needs a job-specific quote because the fragment position, lock type, condition and any earlier removal attempt determine the method. If a compatible euro cylinder also needs replacing, the published replacement price starts from **£59** under the scope on the [prices page](/prices). Mortice-lock and other repair work is quoted after the actual mechanism is identified.
 
-All prices include my call-out. No hidden charges. I give you the price on the phone before I come out. See the full [pricing page](/prices) for more details.
+There is no VAT or separate call-out fee. I explain the supported price basis and assumptions before travelling and agree any inspection-led revision before additional work.
 
 ---
 
@@ -224,13 +222,13 @@ All prices include my call-out. No hidden charges. I give you the price on the p
 
 **Get spare keys cut from the original.** Copies of copies degrade. Each generation loses a tiny bit of accuracy and the key blank may be lower quality. Always cut from the original if you can.
 
-**Use graphite lubricant in your locks.** A quick spray of graphite powder into the keyway every few months keeps the mechanism smooth and reduces the force needed to turn the key. Do not use WD-40 as a regular lubricant — it attracts dust and gums up over time. Graphite is dry and stays clean.
+**Follow the lock manufacturer's maintenance instructions.** Use only a lubricant and method approved for the exact product; do not assume one product or interval is suitable for every lock.
 
-**Replace visibly worn keys.** If a key is thinning, cracked, or bent, replace it before it breaks at an inconvenient moment. It costs a few pounds at a key cutter versus £49+ for an emergency extraction.
+**Replace visibly worn keys.** If a key is thinning, cracked or bent, stop using it and ask a competent key cutter or locksmith to assess a replacement. A worn copy may not be a suitable source for another copy.
 
 **Lighten your keyring.** Your front door key does not need to share a ring with 15 other keys, a bottle opener, and a torch. The less weight hanging off the key while it is in the lock, the less stress on the blade.
 
-**Maintain your locks.** A stiff lock puts more strain on keys. If you notice your lock getting harder to turn, get it looked at before a key snaps inside it. Sometimes a lock just needs cleaning and lubricating. Other times the mechanism is worn and needs replacing. Either way, it is cheaper to deal with proactively than as an emergency.
+**Respond to stiffness without forcing the key.** Alignment, contamination, wear and component faults can cause similar symptoms. An assessment may identify a maintenance or repair option, but it cannot guarantee prevention of a later failure or establish a saving in advance.
 
 For more information on maintaining uPVC door hardware, see my guide on [uPVC door locks](/services/lock-change).
 
@@ -255,7 +253,7 @@ Visit the [emergency lockout service page](/services/emergency-lockout) for more
       },
       {
         q: 'How much does it cost to remove a broken key from a lock?',
-        a: 'Broken key extraction starts from £49, including the call-out and extraction. If the cylinder is damaged, a standard replacement fitted is from £59; current anti-snap options are shown on the /prices page. I will confirm the price for the diagnosed work before proceeding. Call 024 7522 4730.',
+        a: 'Broken-key extraction needs a job-specific quote because fragment position, lock type, condition and earlier removal attempts determine the method. If a compatible cylinder also needs replacing, the governed replacement scope starts from £59. I explain the price basis and any inspection-led revision before additional work.',
       },
       {
         q: 'My key snapped but I can still lock/unlock with the remaining piece. Do I need to do anything?',
@@ -283,8 +281,8 @@ If you last used your keys to get into the house and now cannot find them, they 
 **Medium risk — dropped somewhere in public:**
 If your keys fell out of your pocket on the street, at the shops, or at a restaurant, the risk is moderate. A stranger has your keys, but they have no idea which door they belong to. Without your address, the keys are useless. However, if your keyring has anything identifying on it — a luggage tag with your address, a gym membership fob, a car key with a trackable signal — the risk goes up significantly.
 
-**High risk — lost or stolen in a bag with your address:**
-If your keys were in a bag that was lost or stolen, and that bag contained anything with your address on it — a letter, a driving licence, a bank statement, a prescription, a utility bill — then someone now has your keys and your address. **Change the locks immediately.** This is not an overreaction. This is exactly the scenario that leads to burglaries.
+**Keys lost or stolen with identifying address information:**
+This creates an identifiable access risk. Move somewhere safe, report any theft through the appropriate police route, contact the property owner or manager where relevant, and assess replacement or rekeying of every affected lock promptly. Call 999 if there is an immediate threat or crime in progress.
 
 **Highest risk — keys lost with address visible (e.g., stolen handbag, lost wallet with keys):**
 If a handbag or rucksack was stolen with both keys and identification, treat the affected locks as urgent. Call me on **024 7522 4730** to discuss a [lock change](/services/lock-change), report the theft through the official police route, and call 999 if there is an immediate threat.
@@ -297,23 +295,20 @@ Policy wording and claims decisions vary. Read the sections on keys, security pr
 
 If the missing keys can be linked to your address, replacing the affected locks is a practical way to reduce the access risk. Keep an itemised receipt and any police reference, and follow the insurer's instructions rather than relying on a general rule.
 
-Keep the locksmith receipt. If you have reported the key loss to the police (which I recommend for stolen keys), keep the crime reference number too. These documents prove you took reasonable steps to secure the property.
+Keep the itemised locksmith receipt and any police reference. An insurer or other authority may ask for these records, but they do not by themselves prove compliance or determine a claim.
 
 ---
 
-### What Should You Change?
+### Which Access Points Should You Assess?
 
-**At minimum: the front door.**
-This is the most likely target if someone does have your keys. Change the lock or cylinder so the old keys no longer work.
+Start with every lock operated by a missing key and record who authorises work at the property. Replacement or rekeying can prevent that key operating the affected lock where compatible and correctly completed.
 
-**Ideally: all external doors.**
-If your lost keyring had keys for the front door, back door, and side door, change all of them. There is no point changing the front door if the back door key was on the same ring.
+If the missing keyring operated front, back, side, garage or outbuilding doors, include each one in the assessment rather than assuming that one changed cylinder addresses the whole risk.
 
 **Consider: any communal or shared doors.**
 If you live in a flat and your lost keys included a communal entrance key, contact your landlord or management company. They may need to change the communal lock or issue new keys to all residents.
 
-**Garage and outbuilding locks:**
-If you had keys to a garage, shed, or outbuilding on the same ring, these should be changed too. Garages often contain tools that could be used to force entry to the main house, and many garages have an internal door into the property.
+For garages and outbuildings, consider what the missing key operated, whether there is internal access to another space and what property-management or insurer instructions apply.
 
 ---
 
@@ -321,12 +316,12 @@ If you had keys to a garage, shed, or outbuilding on the same ring, these should
 
 Lock changes depend on the type of lock and door:
 
-- **Euro cylinder replacement** (uPVC or composite door): certified anti-snap options from **£59** fitted
-- **Mortice deadlock replacement** (wooden door): from **£89** fitted
-- **Yale nightlatch replacement**: from **£69** fitted
-- **Full lock change — front and back doors**: from **£120** depending on lock types
+- **Euro-cylinder replacement:** compatible options from **£59** fitted
+- **BS3621-rated mortice lock change:** compatible options from **£79** fitted
+- **Yale nightlatch replacement:** from **£69** fitted where the stated scope applies
+- **Multiple locks:** itemised after every door, product, dimension, key quantity and fitting scope is identified
 
-I carry a range of locks and cylinders, so same-day work may be possible when the exact compatible part is available. Check the [areas page](/areas/) to confirm that your Coventry location is listed. Starting prices and their scope are on the [prices page](/prices).
+Same-day work may be possible when the exact compatible part is identified and currently available; otherwise I explain the sourcing and return-visit position before you authorise it. Check the [areas page](/areas/) to confirm that your location is listed. Starting prices and their scope are on the [prices page](/prices).
 
 ---
 
@@ -390,11 +385,11 @@ So let me walk you through exactly what happens when you call me, step by step. 
 
 ### Step 1: You Call — I Answer Personally
 
-When you call **024 7522 4730**, you get me. Not a call centre. Not an answering service. Not a national company who will then try to find a locksmith in your area (and charge you a premium for the referral).
+When you call **024 7522 4730**, you speak to me directly rather than an answering or referral service.
 
-I am Ross, a local independent locksmith based in Coventry. I answer my own phone, and if for some reason I cannot answer immediately (because I am elbow-deep in a lock mechanism on another job), I will call you back within minutes.
+I am Ross, a local independent locksmith based in Coventry. I answer my own phone and return missed calls as soon as I can when I am working on another job or driving.
 
-This matters because call centres are one of the biggest sources of locksmith scams in the UK. You call a number, they quote one price, and then a random person turns up and charges double. With me, the person on the phone is the person who turns up. Same person, same price.
+Direct contact lets you confirm who is expected to attend, describe the problem and discuss the price basis without an intermediary. The same locksmith who discusses the job normally attends; if that changes, it should be confirmed with you.
 
 ### Step 2: I Ask What Has Happened and Which Lock Type
 
@@ -403,17 +398,15 @@ I will ask you a few quick questions:
 - **What has happened?** Locked out? Key snapped? Lock not working? Burglary? This tells me what tools and parts I might need.
 - **What type of door is it?** uPVC, composite, wooden? This affects the approach.
 - **What type of lock?** Euro cylinder? Mortice deadlock? Yale nightlatch? Multi-point mechanism? If you do not know, that is absolutely fine — most people do not. I can usually work it out from a photo if you can send one via text or WhatsApp.
-- **Where are you?** I need your address to give you an accurate ETA. I cover all of Coventry and surrounding areas including [Kenilworth](/areas/kenilworth), [Bedworth](/areas/bedworth), [Nuneaton](/areas/nuneaton), and across Warwickshire.
+- **Where are you?** I need the full address to give you a current ETA and confirm coverage. The [areas directory](/areas/) lists the locations served, including [Kenilworth](/areas/kenilworth), [Bedworth](/areas/bedworth) and [Nuneaton](/areas/nuneaton).
 
-### Step 3: I Give You a Firm Price on the Phone
+### Step 3: I Confirm the Price Basis and Assumptions
 
-Before I set off, I tell you exactly what it will cost. Not a range. Not "from" a number. A specific price for the job you have described.
+Before setting off, I explain the starting or specific price supported by your description, what it includes, the assumptions being made and which inspection findings could change it.
 
-For a standard lockout (locked out, no damage, no lock replacement needed), the price is from **£59**. I will tell you the exact figure based on the time of day, your location, and the lock type.
+For a standard residential lockout, the published price starts from **£59**. The exact total depends on the fitted lock, its condition, the suitable access method and whether repair or replacement parts are needed.
 
-This is a **fixed price**. If I arrive and the job takes me 5 minutes or 25 minutes, the price is the same. You agreed to a number, and that is what you pay.
-
-The only time the price changes is if I arrive and discover the situation is different from what was described — for example, if the lock is damaged and needs replacing rather than just opening. If that happens, I will explain what I have found, give you a new price for the additional work, and get your agreement before I do anything. You are never surprised by a bill.
+If inspection matches the described scope and assumptions, the agreed price applies. If the diagnosis, access method or required parts differ, I stop, explain the finding and seek approval for a revised scope and price before additional work.
 
 For a full breakdown of costs for every type of job, see the [prices page](/prices).
 
@@ -423,7 +416,7 @@ I give you a current estimate based on my actual starting point and your full ad
 
 If I am on another job and it will be longer, I tell you upfront. I would rather be honest about a 45-minute wait than promise 15 minutes and leave you standing in the cold wondering where I am.
 
-I will text you when I am on my way so you know I am coming.
+Where practical, I send an update when I am on my way.
 
 ### Step 5: I Arrive and Check Your ID
 
@@ -504,18 +497,18 @@ If a locksmith turns up and does not ask for any identification at all, that sho
 
 ---
 
-### Red Flags: Signs of a Rogue Locksmith
+### Checks to Make Before Authorising Work
 
 While I am on the subject, here are the warning signs that you have called the wrong locksmith:
 
 - **They will not explain the price basis on the phone.** Some locks need an on-site diagnosis, but the locksmith should still explain the callout, labour, likely parts and circumstances that could change the total before you book.
 - **An unexplained price replaces the agreed quote.** If the on-site diagnosis changes the work or price, ask for the reason and revised total before authorising it. Report suspected misleading or unfair trading to the appropriate consumer service.
 - **They do not ask for ID.** As I explained above, this is a red flag.
-- **They arrive in an unmarked van.** Legitimate locksmiths have their details on their vehicle.
-- **They cannot show you any credentials.** I am happy to show my identification and credentials to any customer who asks.
-- **They drill the lock immediately without trying non-destructive entry.** Drilling is a last resort. If they jump straight to it, they may not have the skills for non-destructive entry — and they will charge you for a new lock on top.
+- **The attending identity does not match the booking.** Vehicle markings alone do not prove legitimacy. Check the person's identity, the contracting business and the invoice details.
+- **A claimed credential cannot be verified.** Ask for current evidence of any membership, certificate or insurance claim that matters to the job.
+- **Destructive entry is proposed without explanation.** Ask why a non-destructive method is unsuitable and require the destructive and replacement scope and price before authorising it. The chosen method alone does not establish motive or skill.
 
-For more on avoiding locksmith scams, see the blog post on [why you should never use a locksmith who will not give a price on the phone](/blog/locksmith-wont-give-price-on-phone).`,
+For more on comparing quotes, see the guide to [getting a useful locksmith price basis by phone](/blog/locksmith-wont-give-price-on-phone).`,
     faqs: [
       {
         q: 'How long does it take a locksmith to open a locked door?',
@@ -527,7 +520,7 @@ For more on avoiding locksmith scams, see the blog post on [why you should never
       },
       {
         q: 'Do you charge extra for evening or weekend call-outs?',
-        a: 'I operate the same pricing structure 24/7. The price I quote on the phone is the price you pay, whether it is 2pm on a Tuesday or 2am on a Saturday. Some locksmiths charge premium rates for unsociable hours — I do not, because lockouts do not happen on a schedule. The price depends on the lock type and the work involved, not the time of day. Call 024 7522 4730 any time.',
+        a: 'My published starting prices do not add an evening or weekend premium. The total depends on the lock, door, access method, diagnosed work and any parts—not the time of day. I explain the quote assumptions and seek approval before any changed scope. Call 024 7522 4730 any time.',
       },
       {
         q: 'Will you damage my door or lock when opening it?',
@@ -545,69 +538,19 @@ It is a completely understandable thought. The emergency services exist to help 
 
 ---
 
-### The Police: Will They Help If You Are Locked Out?
+### Decide Whether There Is an Emergency
 
-**In most cases, no.** The police do not attend standard lockouts. It is not part of their remit, and they do not have the training or tools to open locks non-destructively.
+Use **999** where there is an immediate danger to life, a fire, a medical emergency or a crime in progress. Tell the operator what is happening rather than predicting which service or entry method will be used; the emergency services decide the appropriate response.
 
-If you call 101 (non-emergency) and explain that you are locked out, the operator will advise you to call a locksmith. They may be able to recommend one, or they may simply say it is not a police matter.
-
-If you call 999, the operator will assess whether there is a genuine emergency. Being locked out of your own home, while unpleasant, is not a life-threatening emergency.
-
-**When the police WILL attend:**
-
-- **A vulnerable person is trapped inside.** If a child, elderly person, or someone with a disability is locked inside the property and cannot let themselves out, the police will attend and may force entry if necessary.
-- **A domestic situation.** If someone has been locked out by a partner and there are safety concerns, the police will attend.
-- **A medical emergency.** If someone inside the property needs urgent medical attention and cannot open the door, the police and ambulance service will coordinate to gain entry.
-- **Suspicion of a crime in progress.** If you return home and believe someone is inside your property who should not be there, call 999.
-
-For everything else — you forgot your keys, the lock broke, you left them at work — a locksmith is the appropriate professional to call.
+For a routine access problem with no immediate danger, first contact an authorised spare-key holder, responsible occupier, landlord or managing agent where applicable. A locksmith can then assess the door and authority to enter. Do not call an emergency number merely to obtain ordinary lockout assistance.
 
 ---
 
-### The Fire Brigade: Will They Help If You Are Locked Out?
+### Access and Repair Scope
 
-The fire service has the tools to force open pretty much any door. But they will only do it if there is a **risk to life**.
+A standard residential locksmith lockout starts from **£59**, but neither non-destructive entry nor an undamaged outcome can be promised for every lock and door. If emergency access causes damage, the repair cost depends on the actual door, frame, glazing, lock and temporary-security work required. Obtain a property-specific assessment rather than relying on unsourced national replacement ranges or a fixed percentage comparison.
 
-**When the fire brigade WILL attend:**
-
-- **A child locked in a property alone.** Particularly a young child or baby who cannot let themselves out. If you can see the child through a window and they appear distressed or at risk, call 999.
-- **A medical emergency.** If someone inside has collapsed, is having a medical episode, or is not responding and cannot get to the door, the fire brigade may attend alongside the ambulance service.
-- **Risk of fire or gas leak.** If you can smell gas or see smoke and cannot access the property, this is an immediate 999 call.
-- **A person at risk of harm.** If someone inside the property is at risk — for example, a vulnerable adult who has not been seen for days — the fire brigade may assist the police with forced entry.
-
-**What they will NOT attend:**
-
-- A standard lockout where everyone is safe
-- A lockout where you simply forgot your keys
-- A broken lock or jammed door with no one at risk inside
-
-**And here is the important part:** when the fire brigade does force entry, they **break the door down**. They use hydraulic tools, Halligan bars, or brute force. They are not trained in lock picking or non-destructive entry — their job is to get in as fast as possible when life is at risk.
-
-This means the aftermath of fire brigade entry is often a destroyed door, a smashed frame, and a property that is wide open until you can get it repaired. That is entirely appropriate when someone's life is in danger. It is completely disproportionate for a standard lockout.
-
----
-
-### The Cost Comparison
-
-Let me put some numbers on this, because it makes the point clearly:
-
-**Locksmith (non-destructive entry):**
-- Call-out and entry: from **£59**
-- Door and lock undamaged
-- Total cost: **£59-£89** depending on lock type
-- Time: current ETA and opening method confirmed from the actual circumstances
-
-**Fire brigade forced entry (damage repair afterwards):**
-- Fire brigade call-out: free (if they attend — remember, they will only come for genuine emergencies)
-- uPVC door replacement: **£400-£800**
-- Composite door replacement: **£600-£1,200**
-- Wooden door replacement: **£300-£600**
-- Frame repair or replacement: **£200-£500**
-- New lock fitting: **£60-£150**
-- Total cost: **£500-£1,500+** in repair and replacement
-- Plus your home is unsecure until repairs are done — you will need [emergency boarding up](/services/boarding-up) in the meantime
-
-The maths is straightforward. A locksmith costs less than 10% of the repair bill from a forced entry.
+If the property cannot be secured after authorised entry or damage, discuss the actual temporary [boarding-up scope](/services/boarding-up), replacement options and approval route.
 
 ---
 
