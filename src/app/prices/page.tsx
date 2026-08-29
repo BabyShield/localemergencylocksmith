@@ -37,9 +37,19 @@ const PRICES = [
     detail: 'Supply and fit a compatible euro cylinder where the inspected door, size and stated scope apply.',
   },
   {
+    service: 'Yale nightlatch repair or replacement',
+    price: 69,
+    detail: 'Repair or replacement where the inspected door and compatible nightlatch allow the stated scope.',
+  },
+  {
     service: 'Lock change (BS3621-rated)',
     price: 79,
     detail: 'British Standard five-lever mortice deadlock. Check your own policy for the exact lock requirement.',
+  },
+  {
+    service: 'Anti-snap euro cylinder',
+    price: 59,
+    detail: 'Supply and fit a compatible independently certified cylinder after the required size and door fit are checked.',
   },
   {
     service: 'uPVC lock repair',

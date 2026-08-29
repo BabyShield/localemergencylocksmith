@@ -360,6 +360,11 @@ for (const [areaSlug, records] of Object.entries(TOWN_SERVICES)) {
     check(content.metaDescription?.includes(area.name), `${key} meta description does not name ${area.name}`)
     check(content.h1?.includes(area.name), `${key} H1 does not name ${area.name}`)
 
+    const canonicalStartingPrice = `£${serviceBySlug.get(serviceSlug).priceFrom}`
+    check(content.metaDescription?.includes(canonicalStartingPrice), `${key} meta description does not use canonical starting price ${canonicalStartingPrice}`)
+    check(content.intro?.at(-1)?.includes(canonicalStartingPrice), `${key} introduction does not use canonical starting price ${canonicalStartingPrice}`)
+    check(content.priceNote?.includes(canonicalStartingPrice), `${key} price note does not use canonical starting price ${canonicalStartingPrice}`)
+
     const titleLength = typeof content.metaTitle === 'string' ? content.metaTitle.length : 0
     const descriptionLength = typeof content.metaDescription === 'string' ? content.metaDescription.length : 0
     const h1Length = typeof content.h1 === 'string' ? content.h1.length : 0

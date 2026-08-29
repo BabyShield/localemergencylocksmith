@@ -103,7 +103,7 @@ const SERVICE_CONTENT: Record<string, {
       { item: "Standard lockout (Yale/cylinder)", price: "From £59" },
       { item: "Multipoint lock lockout (uPVC)", price: "From £69" },
       { item: "High-security lock lockout", price: "From £79" },
-      { item: "Lock replacement after entry (if needed)", price: "From £69" },
+      { item: "Compatible euro cylinder replacement after entry (if needed)", price: "From £59" },
     ],
     directAnswer: {
       question: 'How much does an emergency locksmith cost in Coventry?',

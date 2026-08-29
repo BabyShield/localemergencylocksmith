@@ -1,3 +1,4 @@
+import { existsSync } from 'node:fs'
 import { AREAS } from '../src/data/areas.ts'
 import { SERVICES } from '../src/data/services.ts'
 import { AREA_GUIDES } from '../src/data/area-guides.ts'
@@ -11,6 +12,16 @@ import { supplementalGuidanceSourceIds } from '../src/data/area-guide-evidence-p
 const EXPECTED_AREA_COUNT = 78
 const EXPECTED_SERVICE_COUNT = 5
 const EXPECTED_GUIDANCE_COUNT = EXPECTED_AREA_COUNT * EXPECTED_SERVICE_COUNT
+const ALLOWED_AREA_FIELDS = new Set(['slug', 'name', 'postcode', 'region', 'lat', 'lng', 'neighbours'])
+const RETIRED_UNGOVERNED_FILES = [
+  '../src/data/area-facts.ts',
+  '../src/data/area-facts-coventry.ts',
+  '../src/data/area-facts-nearby.ts',
+  '../src/data/area-facts-nuneaton.ts',
+  '../src/data/area-facts-south.ts',
+  '../src/components/AreaFacts.tsx',
+  '../src/components/LockBrands.tsx',
+]
 const MIN_AREA_EDITORIAL_WORDS = 900
 const MIN_GUIDANCE_WORDS = 120
 const MAX_EVIDENCE_AGE_DAYS = 366
@@ -349,6 +360,18 @@ check(new Set(areaSlugs).size === areaSlugs.length, 'area registry contains dupl
 check(new Set(serviceSlugs).size === serviceSlugs.length, 'service registry contains duplicate slugs')
 check(serviceSlugs.every(slug => SERVICE_AREA_SLUGS.includes(slug)), 'canonical services and governed service slugs differ')
 check(guideEntries.length === EXPECTED_AREA_COUNT, `area-guide registry has ${guideEntries.length} entries; expected ${EXPECTED_AREA_COUNT}`)
+
+for (const relativePath of RETIRED_UNGOVERNED_FILES) {
+  check(!existsSync(new URL(relativePath, import.meta.url)), `retired ungoverned content file has returned: ${relativePath}`)
+}
+
+for (const area of AREAS) {
+  const unexpectedFields = Object.keys(area).filter(field => !ALLOWED_AREA_FIELDS.has(field))
+  check(
+    unexpectedFields.length === 0,
+    `${area.slug} routing record contains publishable or unsupported fields: ${unexpectedFields.join(', ')}`,
+  )
+}
 
 const clusters = [
   ['coventry', COVENTRY_AREA_GUIDES, 30],

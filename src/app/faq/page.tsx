@@ -31,11 +31,11 @@ const pricingFaqs = [
   },
   {
     q: 'How much does a lock change cost?',
-    a: 'A lock change starts from £69, which includes a quality replacement lock and fitting. If you need a British Standard lock for insurance purposes, I\'ll let you know the cost on the phone before I set off.',
+    a: 'A compatible euro-cylinder replacement starts from £59, a Yale nightlatch from £69 and a BS3621-rated mortice option from £79. These prices include the stated lock and fitting. I confirm the suitable part and agreed scope before work starts; your insurer must confirm any exact policy requirement.',
   },
   {
     q: 'How much does a uPVC lock repair cost?',
-    a: 'uPVC lock repairs start from £59. This covers gearbox replacements, handle repairs, and multipoint locking mechanism issues. The exact cost depends on the parts needed, which I\'ll confirm before starting work.',
+    a: 'uPVC lock repair starts from £59 for an agreed repair scope; a compatible multipoint gearbox replacement starts from £89. Cylinder, handle, alignment and mechanism faults can require different work, so I confirm the diagnosis, included parts and price before starting.',
   },
   {
     q: 'Do you charge VAT?',

@@ -71,7 +71,7 @@ export default function NotFound() {
           >
             <KeyRound className="w-6 h-6 text-[#0F1B2D]" aria-hidden="true" />
             <p className="font-bold text-[#0F1B2D] text-sm mt-2">Lock Change</p>
-            <p className="text-[#FFB800] font-black text-sm">From &pound;69</p>
+            <p className="text-[#FFB800] font-black text-sm">From &pound;59</p>
           </Link>
           <Link
             href="/areas"
