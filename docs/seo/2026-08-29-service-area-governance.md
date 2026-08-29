@@ -10,6 +10,7 @@
 - The area registry contains routing and geographic-navigation fields only. Publishable local facts, service guidance and FAQs must come from the evidence-governed guide registries.
 - Every area×service record explicitly selects the zero-based local fact indexes that inform its guidance. Only sources attached to those selected facts may appear as that service section's local citations.
 - Fact selection is editorial, not automatic: the service prose must directly use the selected fact as a decision, limitation or address-verification point. Merely sharing a town, source or keyword is not enough.
+- Every area hub carries three or four visible, governed local facts supported by at least two distinct fact sources. A facility-specific fact can add useful address context, but its source must be marked fact-only and cannot support a general residential or commercial service claim.
 
 This keeps one canonical owner for each query family and prevents a URL from becoming indexable merely because an area and service slug can be combined. A new combination must be added to the governed registry before it can enter the sitemap or internal-link graph.
 
@@ -24,6 +25,7 @@ npm run audit:pricing
 npm run typecheck
 npm run build
 $env:SEO_BASE_URL='http://127.0.0.1:3101'; npm run check:seo
+npm run check:production-hosts
 ```
 
 The governance audit fails closed on:
@@ -31,6 +33,7 @@ The governance audit fails closed on:
 - an incomplete or duplicated 390-pair policy;
 - drift between the canonical service list, published records and static params;
 - missing locality or technical sources, homepage-only source URLs, missing claim-support notes, stale checks or invalid dates;
+- fewer than three visible local facts, more than four facts, or fewer than two distinct sources attached to those facts;
 - missing, duplicated or out-of-range pair-level fact selections, use of a fact-only source, or any difference between selected-fact sources and rendered service-section citations;
 - reintroduced legacy area fields, orphaned local-fact registries or unverified brand-inventory components;
 - fewer than four FAQs, missing preparation/local-guidance sections, or fewer than 600 editorial words;
@@ -44,7 +47,9 @@ The governance audit fails closed on:
 
 The 35 dedicated pages include two hand-authored decision extensions per town×service pair. Their pair-specific and repeated-sentence measures are release gates at the thresholds above. The 390 area-hub service sections also use manually reviewed, pair-specific bodies instead of rotated protocol copy; the source audit now rejects every cross-record exact body-sentence repeat of eight or more words. Five-word overlap and globally unique-sequence gates remain in place so adding a place name or other metric-only wording cannot substitute for substantive local guidance.
 
-The HTTP SEO audit crawls all 178 canonical sitemap URLs and all 390 area-service combinations. It requires each combination to be either a self-canonical published `200` or a `308` to its parent hub, and checks invalid combinations for `404`.
+The HTTP SEO audit crawls all 178 canonical sitemap URLs and all 390 area-service combinations. It requires each combination to be either a self-canonical published `200` or a `308` to its parent hub, checks invalid combinations for `404`, and requires every area hub to have at least six contextual inbound links from other main-content pages.
+
+The production-host audit checks that HTTP and apex-host variants reach the HTTPS `www` canonical host through permanent redirects, and that the live sitemap and robots file use that canonical origin.
 
 Each area hub displays numbered local facts. Every service section links back to the exact numbered fact or facts it uses, while technical citations remain separately labelled. This makes the local evidence relationship reviewable by users and fail-closed in source and rendered-HTML audits.
 

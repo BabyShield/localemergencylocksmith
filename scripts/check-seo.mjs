@@ -1037,6 +1037,16 @@ try {
     `SEO focus pages without a contextual inbound link: ${focusPagesWithoutContextualInbound.join(', ')}`,
   )
 
+  for (const areaPath of areaPaths) {
+    const contextualInboundCount = pages.filter(source => (
+      source.path !== areaPath && source.mainLinks.has(areaPath)
+    )).length
+    check(
+      contextualInboundCount >= 6,
+      `${areaPath} has ${contextualInboundCount} contextual inbound links; expected at least 6`,
+    )
+  }
+
   check(pageByPath.get('/')?.mainHrefs.has('/faq'), '/ main content does not link to /faq')
   check(pageByPath.get('/prices')?.mainHrefs.has('/faq#pricing'), '/prices main content does not link to /faq#pricing')
   for (const serviceSlug of SERVICE_SLUGS) {

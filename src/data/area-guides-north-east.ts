@@ -298,6 +298,141 @@ const LOCAL_SOURCES = {
     checkedOn: REVIEWED_ON,
     kind: 'property-status',
   },
+  'wcc-stockingford-academy': {
+    id: 'wcc-stockingford-academy',
+    title: 'Stockingford Academy',
+    publisher: 'Warwickshire County Council',
+    url: 'https://apps.warwickshire.gov.uk/FindASchool/schools/stockingford-academy',
+    supports: 'The official school directory name, primary-academy classification and Cross Street address for Stockingford Academy.',
+    checkedOn: REVIEWED_ON,
+    kind: 'locality',
+  },
+  'wcc-weddington-primary-school': {
+    id: 'wcc-weddington-primary-school',
+    title: 'Weddington Primary School',
+    publisher: 'Warwickshire County Council',
+    url: 'https://apps.warwickshire.gov.uk/FindASchool/schools/weddington-primary-school',
+    supports: 'The official school directory name, community-school classification and Winchester Avenue address for Weddington Primary School.',
+    checkedOn: REVIEWED_ON,
+    kind: 'locality',
+  },
+  'warwickshire-her-horeston-grange-house': {
+    id: 'warwickshire-her-horeston-grange-house',
+    title: 'Site of post-medieval or later house at Horeston Grange, record MWA6260',
+    publisher: 'Warwickshire Historic Environment Record',
+    url: 'https://timetrail.warwickshire.gov.uk/detail.aspx?monuid=WA6260',
+    supports: 'The named Horeston Grange historic-environment record, its house-site classification and post-medieval to industrial period.',
+    checkedOn: REVIEWED_ON,
+    kind: 'property-status',
+  },
+  'wcc-camp-hill-primary-school': {
+    id: 'wcc-camp-hill-primary-school',
+    title: 'Camp Hill Primary School',
+    publisher: 'Warwickshire County Council',
+    url: 'https://apps.warwickshire.gov.uk/FindASchool/schools/camp-hill-primary-school',
+    supports: 'The official school directory name, primary-academy classification and Holly Stitches Road address for Camp Hill Primary School.',
+    checkedOn: REVIEWED_ON,
+    kind: 'locality',
+  },
+  'wcc-chapel-end-school-directory': {
+    id: 'wcc-chapel-end-school-directory',
+    title: 'Warwickshire school admissions directory, 2017/18 to 2019/20',
+    publisher: 'Warwickshire County Council',
+    url: 'https://api.warwickshire.gov.uk/documents/WCCC-699-836',
+    supports: 'The dated directory entry naming Nathaniel Newton Infant School and placing its Victoria Road address in Chapel End, Hartshill.',
+    checkedOn: REVIEWED_ON,
+    kind: 'locality',
+  },
+  'wcc-nathaniel-newton-infant-school': {
+    id: 'wcc-nathaniel-newton-infant-school',
+    title: 'Nathaniel Newton Infant School',
+    publisher: 'Warwickshire County Council',
+    url: 'https://apps.warwickshire.gov.uk/FindASchool/schools/nathaniel-newton-infant-school',
+    supports: 'The current official school directory name, community classification and Victoria Road, Nuneaton CV10 0LS address.',
+    checkedOn: REVIEWED_ON,
+    kind: 'locality',
+  },
+  'wcc-galley-common-infant-school': {
+    id: 'wcc-galley-common-infant-school',
+    title: 'Galley Common Infant School',
+    publisher: 'Warwickshire County Council',
+    url: 'https://apps.warwickshire.gov.uk/FindASchool/schools/galley-common-infant-school',
+    supports: 'The official school directory name, community-school classification and Plough Hill Road address for Galley Common Infant School.',
+    checkedOn: REVIEWED_ON,
+    kind: 'locality',
+  },
+  'wcc-bedworth-library': {
+    id: 'wcc-bedworth-library',
+    title: 'Bedworth Library and Information Centre',
+    publisher: 'Warwickshire County Council',
+    url: 'https://www.warwickshire.gov.uk/bedworthlibrary',
+    supports: 'The official library name and location at 18 High Street, Bedworth CV12 8NF.',
+    checkedOn: REVIEWED_ON,
+    kind: 'locality',
+  },
+  'wcc-bulkington-library': {
+    id: 'wcc-bulkington-library',
+    title: 'Bulkington Community Library',
+    publisher: 'Warwickshire County Council',
+    url: 'https://www.warwickshire.gov.uk/bulkingtonlibrary',
+    supports: 'The official library name and location at School Road, Bulkington, Nuneaton CV12 9JB.',
+    checkedOn: REVIEWED_ON,
+    kind: 'locality',
+  },
+  'wcc-rugby-library': {
+    id: 'wcc-rugby-library',
+    title: 'Rugby Library and Information Centre',
+    publisher: 'Warwickshire County Council',
+    url: 'https://www.warwickshire.gov.uk/rugbylibrary',
+    supports: 'The official library name and location at Little Elborow Street, Rugby CV21 3BZ.',
+    checkedOn: REVIEWED_ON,
+    kind: 'locality',
+  },
+  'wcc-bilton-infant-school': {
+    id: 'wcc-bilton-infant-school',
+    title: 'Bilton Infant School',
+    publisher: 'Warwickshire County Council',
+    url: 'https://apps.warwickshire.gov.uk/FindASchool/schools/bilton-infant-school',
+    supports: 'The official school directory name, community-school classification and Magnet Lane address for Bilton Infant School.',
+    checkedOn: REVIEWED_ON,
+    kind: 'locality',
+  },
+  'wcc-brownsover-community-school': {
+    id: 'wcc-brownsover-community-school',
+    title: 'Brownsover Community School',
+    publisher: 'Warwickshire County Council',
+    url: 'https://apps.warwickshire.gov.uk/FindASchool/schools/brownsover-community-school',
+    supports: 'The official school directory name, community-school classification and Webb Drive address for Brownsover Community School.',
+    checkedOn: REVIEWED_ON,
+    kind: 'locality',
+  },
+  'wcc-cawston-grange-primary-school': {
+    id: 'wcc-cawston-grange-primary-school',
+    title: 'Cawston Grange Primary School',
+    publisher: 'Warwickshire County Council',
+    url: 'https://apps.warwickshire.gov.uk/FindASchool/schools/cawston-grange-primary-school',
+    supports: 'The official school directory name, primary-academy classification and Scholars Drive address for Cawston Grange Primary School.',
+    checkedOn: REVIEWED_ON,
+    kind: 'locality',
+  },
+  'warwickshire-her-new-bilton-corn-mill': {
+    id: 'warwickshire-her-new-bilton-corn-mill',
+    title: 'Site of corn mill off Lawford Road, New Bilton, record MWA3634',
+    publisher: 'Warwickshire Historic Environment Record',
+    url: 'https://timetrail.warwickshire.gov.uk/detail.aspx?monuid=WA3634',
+    supports: 'The possible corn-mill site off Lawford Road, New Bilton and its Imperial to Industrial period classification.',
+    checkedOn: REVIEWED_ON,
+    kind: 'property-status',
+  },
+  'wcc-dunchurch-library': {
+    id: 'wcc-dunchurch-library',
+    title: 'Dunchurch Community Library',
+    publisher: 'Warwickshire County Council',
+    url: 'https://www.warwickshire.gov.uk/dunchurchlibrary',
+    supports: 'The official library name, location at The Green, Dunchurch, Rugby CV22 6PA and community-managed status.',
+    checkedOn: REVIEWED_ON,
+    kind: 'locality',
+  },
 } as const satisfies Record<string, AreaGuideSource>
 
 const warwickshireSourceIds = POLICE_SOURCE_IDS.Warwickshire
@@ -720,8 +855,18 @@ export const NORTH_EAST_AREA_GUIDES = {
         sourceIds: ['wcc-list-of-streets-2026'],
         serviceRelevance: `These selected street labels can assist address checking but cannot establish the route boundary, threshold, access or property conditions.`,
       },
+      {
+        text: `Warwickshire County Council's school directory identifies Stockingford Academy as a primary academy at Cross Street, Nuneaton, Warwickshire CV10 8JH.`,
+        sourceIds: ['wcc-stockingford-academy'],
+        serviceRelevance: `This record applies only to the named school site; any booking there still requires the exact entrance and an authorised site contact, and it says nothing about surrounding properties or locks.`,
+      },
     ],
-    sources: [LOCAL_SOURCES['warwickshire-her-stockingford-galley-manor'], LOCAL_SOURCES['wcc-list-of-streets-2026']],
+    factOnlySourceIds: ['wcc-stockingford-academy'],
+    sources: [
+      LOCAL_SOURCES['warwickshire-her-stockingford-galley-manor'],
+      LOCAL_SOURCES['wcc-list-of-streets-2026'],
+      LOCAL_SOURCES['wcc-stockingford-academy'],
+    ],
     serviceGuidance: {
       'emergency-lockout': {
         localFactIndexes: [0, 1],
@@ -789,8 +934,18 @@ export const NORTH_EAST_AREA_GUIDES = {
         sourceIds: ['nbbc-weddington-meadows-walk'],
         serviceRelevance: `The public-space name can aid orientation only; property location, access and entrance conditions need independent checking.`,
       },
+      {
+        text: `Warwickshire County Council's school directory identifies Weddington Primary School as a community school at Winchester Avenue, Nuneaton, Warwickshire CV10 0DR.`,
+        sourceIds: ['wcc-weddington-primary-school'],
+        serviceRelevance: `This facility record applies only to the named school; it does not establish access, authority, construction or hardware at the school or any other Weddington address.`,
+      },
     ],
-    sources: [LOCAL_SOURCES['nbbc-tenant-walkabouts-2026'], LOCAL_SOURCES['nbbc-weddington-meadows-walk']],
+    factOnlySourceIds: ['wcc-weddington-primary-school'],
+    sources: [
+      LOCAL_SOURCES['nbbc-tenant-walkabouts-2026'],
+      LOCAL_SOURCES['nbbc-weddington-meadows-walk'],
+      LOCAL_SOURCES['wcc-weddington-primary-school'],
+    ],
     serviceGuidance: {
       'emergency-lockout': {
         localFactIndexes: [0, 1],
@@ -858,8 +1013,18 @@ export const NORTH_EAST_AREA_GUIDES = {
         sourceIds: ['wcc-list-of-streets-2026'],
         serviceRelevance: `Those selected highway labels can support address checking but supply no evidence about hardware, access or service needs.`,
       },
+      {
+        text: `The Warwickshire Historic Environment Record identifies a named post-medieval or later house site at Horeston Grange, record MWA6260.`,
+        sourceIds: ['warwickshire-her-horeston-grange-house'],
+        serviceRelevance: `This site-specific historic record cannot describe another Horeston Grange property, confer designation or establish present access, construction or hardware.`,
+      },
     ],
-    sources: [LOCAL_SOURCES['nbbc-horestone-grange-woodlands-walk'], LOCAL_SOURCES['wcc-list-of-streets-2026']],
+    factOnlySourceIds: ['warwickshire-her-horeston-grange-house'],
+    sources: [
+      LOCAL_SOURCES['nbbc-horestone-grange-woodlands-walk'],
+      LOCAL_SOURCES['wcc-list-of-streets-2026'],
+      LOCAL_SOURCES['warwickshire-her-horeston-grange-house'],
+    ],
     serviceGuidance: {
       'emergency-lockout': {
         localFactIndexes: [0, 1],
@@ -1002,8 +1167,18 @@ export const NORTH_EAST_AREA_GUIDES = {
         sourceIds: ['nbbc-queen-elizabeth-road-park'],
         serviceRelevance: `The public-space entry supplies orientation only and must not be used to infer a customer's property, entrance or access.`,
       },
+      {
+        text: `Warwickshire County Council's school directory identifies Camp Hill Primary School as a primary academy at Holly Stitches Road, Nuneaton, Warwickshire CV10 9QA.`,
+        sourceIds: ['wcc-camp-hill-primary-school'],
+        serviceRelevance: `This facility record applies only to the named school; it proves no access rights, entrance arrangement, construction or lock details there or at surrounding addresses.`,
+      },
     ],
-    sources: [LOCAL_SOURCES['nbbc-tenant-walkabouts-2026'], LOCAL_SOURCES['nbbc-queen-elizabeth-road-park']],
+    factOnlySourceIds: ['wcc-camp-hill-primary-school'],
+    sources: [
+      LOCAL_SOURCES['nbbc-tenant-walkabouts-2026'],
+      LOCAL_SOURCES['nbbc-queen-elizabeth-road-park'],
+      LOCAL_SOURCES['wcc-camp-hill-primary-school'],
+    ],
     serviceGuidance: {
       'emergency-lockout': {
         localFactIndexes: [0, 1],
@@ -1071,8 +1246,19 @@ export const NORTH_EAST_AREA_GUIDES = {
         sourceIds: ['wcc-list-of-streets-2026'],
         serviceRelevance: `The selected highway labels can aid address checking but prove no property condition, entrance, authority or service need.`,
       },
+      {
+        text: `Warwickshire County Council's current directory lists Nathaniel Newton Infant School as a community primary school at Victoria Road, Nuneaton, Warwickshire CV10 0LS; its 2017/18 to 2019/20 admissions directory placed that address in Chapel End, Hartshill.`,
+        sourceIds: ['wcc-nathaniel-newton-infant-school', 'wcc-chapel-end-school-directory'],
+        serviceRelevance: `These records are limited to the named school and address; they establish no access authority, entrance condition, construction or hardware.`,
+      },
     ],
-    sources: [LOCAL_SOURCES['warwickshire-her-chapel-end-chapel'], LOCAL_SOURCES['wcc-list-of-streets-2026']],
+    factOnlySourceIds: ['wcc-nathaniel-newton-infant-school', 'wcc-chapel-end-school-directory'],
+    sources: [
+      LOCAL_SOURCES['warwickshire-her-chapel-end-chapel'],
+      LOCAL_SOURCES['wcc-list-of-streets-2026'],
+      LOCAL_SOURCES['wcc-nathaniel-newton-infant-school'],
+      LOCAL_SOURCES['wcc-chapel-end-school-directory'],
+    ],
     serviceGuidance: {
       'emergency-lockout': {
         localFactIndexes: [0, 1],
@@ -1215,8 +1401,18 @@ export const NORTH_EAST_AREA_GUIDES = {
         sourceIds: ['wcc-list-of-streets-2026'],
         serviceRelevance: `These selected street labels can help check an address but cannot define the modern route or property boundaries.`,
       },
+      {
+        text: `Warwickshire County Council's school directory identifies Galley Common Infant School as a community school at Plough Hill Road, Nuneaton, Warwickshire CV10 9NZ.`,
+        sourceIds: ['wcc-galley-common-infant-school'],
+        serviceRelevance: `This facility record applies only to the named school; it cannot describe surrounding Galley Common properties, access arrangements, entrances or locks.`,
+      },
     ],
-    sources: [LOCAL_SOURCES['warwickshire-her-stockingford-galley-manor'], LOCAL_SOURCES['wcc-list-of-streets-2026']],
+    factOnlySourceIds: ['wcc-galley-common-infant-school'],
+    sources: [
+      LOCAL_SOURCES['warwickshire-her-stockingford-galley-manor'],
+      LOCAL_SOURCES['wcc-list-of-streets-2026'],
+      LOCAL_SOURCES['wcc-galley-common-infant-school'],
+    ],
     serviceGuidance: {
       'emergency-lockout': {
         localFactIndexes: [0, 1],
@@ -1359,8 +1555,18 @@ export const NORTH_EAST_AREA_GUIDES = {
         sourceIds: ['visit-warwickshire-bedworth'],
         serviceRelevance: `These named features support attributed orientation and heritage context but cannot establish property access or hardware.`,
       },
+      {
+        text: `Warwickshire County Council identifies Bedworth Library and Information Centre at 18 High Street, Bedworth CV12 8NF.`,
+        sourceIds: ['wcc-bedworth-library'],
+        serviceRelevance: `This public-facility record applies only to the named library; a booking there still requires the exact entrance and an authorised site contact, and it says nothing about other properties.`,
+      },
     ],
-    sources: [LOCAL_SOURCES['nbbc-bedworth-conservation-2022'], LOCAL_SOURCES['visit-warwickshire-bedworth']],
+    factOnlySourceIds: ['wcc-bedworth-library'],
+    sources: [
+      LOCAL_SOURCES['nbbc-bedworth-conservation-2022'],
+      LOCAL_SOURCES['visit-warwickshire-bedworth'],
+      LOCAL_SOURCES['wcc-bedworth-library'],
+    ],
     serviceGuidance: {
       'emergency-lockout': {
         localFactIndexes: [0, 1],
@@ -1428,8 +1634,14 @@ export const NORTH_EAST_AREA_GUIDES = {
         sourceIds: ['nbbc-bulkington-conservation-2022'],
         serviceRelevance: `The named dates must remain asset-specific and cannot be transferred to a customer's premises or door.`,
       },
+      {
+        text: `Warwickshire County Council identifies Bulkington Community Library at School Road, Bulkington, Nuneaton CV12 9JB.`,
+        sourceIds: ['wcc-bulkington-library'],
+        serviceRelevance: `This facility record is limited to the named library and address; it cannot establish access, authority, construction or hardware there or at other Bulkington properties.`,
+      },
     ],
-    sources: [LOCAL_SOURCES['nbbc-bulkington-conservation-2022']],
+    factOnlySourceIds: ['wcc-bulkington-library'],
+    sources: [LOCAL_SOURCES['nbbc-bulkington-conservation-2022'], LOCAL_SOURCES['wcc-bulkington-library']],
     serviceGuidance: {
       'emergency-lockout': {
         localFactIndexes: [0, 1],
@@ -1497,8 +1709,14 @@ export const NORTH_EAST_AREA_GUIDES = {
         sourceIds: ['rbc-rugby-town-centre-appraisal'],
         serviceRelevance: `The railway chronology supports attributed history only and cannot imply current access, proximity or service performance.`,
       },
+      {
+        text: `Warwickshire County Council identifies Rugby Library and Information Centre at Little Elborow Street, Rugby CV21 3BZ.`,
+        sourceIds: ['wcc-rugby-library'],
+        serviceRelevance: `This public-facility record applies only to the named library; it cannot describe another Rugby property, its entrance, access control, construction or locks.`,
+      },
     ],
-    sources: [LOCAL_SOURCES['rbc-rugby-town-centre-appraisal']],
+    factOnlySourceIds: ['wcc-rugby-library'],
+    sources: [LOCAL_SOURCES['rbc-rugby-town-centre-appraisal'], LOCAL_SOURCES['wcc-rugby-library']],
     serviceGuidance: {
       'emergency-lockout': {
         localFactIndexes: [0, 1],
@@ -1643,8 +1861,14 @@ export const NORTH_EAST_AREA_GUIDES = {
         sourceIds: ['rbc-bilton-appraisal'],
         serviceRelevance: `Those asset-specific dates provide heritage anchors but cannot characterise a customer's building, door or hardware.`,
       },
+      {
+        text: `Warwickshire County Council's school directory identifies Bilton Infant School as a community school at Magnet Lane, Rugby, Warwickshire CV22 7NH.`,
+        sourceIds: ['wcc-bilton-infant-school'],
+        serviceRelevance: `This facility record applies only to the named school; it proves no access authority, entrance arrangement, construction or lock details there or elsewhere in Bilton.`,
+      },
     ],
-    sources: [LOCAL_SOURCES['rbc-bilton-appraisal']],
+    factOnlySourceIds: ['wcc-bilton-infant-school'],
+    sources: [LOCAL_SOURCES['rbc-bilton-appraisal'], LOCAL_SOURCES['wcc-bilton-infant-school']],
     serviceGuidance: {
       'emergency-lockout': {
         localFactIndexes: [0, 1],
@@ -1712,8 +1936,14 @@ export const NORTH_EAST_AREA_GUIDES = {
         sourceIds: ['rbc-old-brownsover-appraisal'],
         serviceRelevance: `These are attributed Old Brownsover facts and cannot establish present property access, condition or hardware.`,
       },
+      {
+        text: `Warwickshire County Council's school directory identifies Brownsover Community School as a community school at Webb Drive, Rugby, Warwickshire CV23 0UP.`,
+        sourceIds: ['wcc-brownsover-community-school'],
+        serviceRelevance: `This facility record applies only to the named school and cannot describe other Brownsover properties, their access, entrances, construction or hardware.`,
+      },
     ],
-    sources: [LOCAL_SOURCES['rbc-old-brownsover-appraisal']],
+    factOnlySourceIds: ['wcc-brownsover-community-school'],
+    sources: [LOCAL_SOURCES['rbc-old-brownsover-appraisal'], LOCAL_SOURCES['wcc-brownsover-community-school']],
     serviceGuidance: {
       'emergency-lockout': {
         localFactIndexes: [0, 1],
@@ -1781,8 +2011,18 @@ export const NORTH_EAST_AREA_GUIDES = {
         sourceIds: ['rbc-cawston-parish-plan-2010'],
         serviceRelevance: `The dated community-planning process cannot be presented as current property, amenities, development or resident evidence.`,
       },
+      {
+        text: `Warwickshire County Council's school directory identifies Cawston Grange Primary School as a primary academy at Scholars Drive, Rugby, Warwickshire CV22 7GU.`,
+        sourceIds: ['wcc-cawston-grange-primary-school'],
+        serviceRelevance: `This facility record applies only to the named school; it does not define Cawston, prove access authority or describe any entrance or lock.`,
+      },
     ],
-    sources: [LOCAL_SOURCES['rbc-cawston-parish-directory'], LOCAL_SOURCES['rbc-cawston-parish-plan-2010']],
+    factOnlySourceIds: ['wcc-cawston-grange-primary-school'],
+    sources: [
+      LOCAL_SOURCES['rbc-cawston-parish-directory'],
+      LOCAL_SOURCES['rbc-cawston-parish-plan-2010'],
+      LOCAL_SOURCES['wcc-cawston-grange-primary-school'],
+    ],
     serviceGuidance: {
       'emergency-lockout': {
         localFactIndexes: [0, 1],
@@ -1928,8 +2168,18 @@ export const NORTH_EAST_AREA_GUIDES = {
         sourceIds: ['rbc-cabinet-new-bilton-2024'],
         serviceRelevance: `The dated ward programme cannot define the route, describe every address or support service-performance claims.`,
       },
+      {
+        text: `The Warwickshire Historic Environment Record identifies the possible site of a corn mill off Lawford Road, New Bilton, Rugby, record MWA3634.`,
+        sourceIds: ['warwickshire-her-new-bilton-corn-mill'],
+        serviceRelevance: `This site-specific historic record cannot describe another New Bilton property, confer current status or establish present access, construction or hardware.`,
+      },
     ],
-    sources: [LOCAL_SOURCES['rbc-new-bilton-play-consultation-2025'], LOCAL_SOURCES['rbc-cabinet-new-bilton-2024']],
+    factOnlySourceIds: ['warwickshire-her-new-bilton-corn-mill'],
+    sources: [
+      LOCAL_SOURCES['rbc-new-bilton-play-consultation-2025'],
+      LOCAL_SOURCES['rbc-cabinet-new-bilton-2024'],
+      LOCAL_SOURCES['warwickshire-her-new-bilton-corn-mill'],
+    ],
     serviceGuidance: {
       'emergency-lockout': {
         localFactIndexes: [0, 1],
@@ -1997,8 +2247,14 @@ export const NORTH_EAST_AREA_GUIDES = {
         sourceIds: ['rbc-dunchurch-appraisal'],
         serviceRelevance: `The separately bounded assets require their own records and cannot confer status on surrounding buildings.`,
       },
+      {
+        text: `Warwickshire County Council identifies Dunchurch Community Library at The Green, Dunchurch, Rugby CV22 6PA and states that it is run by Dunchurch Parish Council.`,
+        sourceIds: ['wcc-dunchurch-library'],
+        serviceRelevance: `This facility record applies only to the named library; it cannot establish access authority, entrance condition, construction or hardware there or at another Dunchurch property.`,
+      },
     ],
-    sources: [LOCAL_SOURCES['rbc-dunchurch-appraisal']],
+    factOnlySourceIds: ['wcc-dunchurch-library'],
+    sources: [LOCAL_SOURCES['rbc-dunchurch-appraisal'], LOCAL_SOURCES['wcc-dunchurch-library']],
     serviceGuidance: {
       'emergency-lockout': {
         localFactIndexes: [0, 1],

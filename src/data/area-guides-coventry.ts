@@ -1518,9 +1518,16 @@ const AREA_SEEDS: AreaGuideSeed[] = [
         sourceIds: ['foleshill-hlc'],
         serviceRelevance: 'Check whether the individual property lies within a designated boundary before visible changes.',
       },
+      {
+        text: 'Coventry City Council\'s library directory gives Foleshill Library\'s address as Broad Street, Foleshill, Coventry, CV6 5BG.',
+        sourceIds: ['coventry-foleshill-library'],
+        serviceRelevance: 'For an instruction at the library, identify the affected entrance and confirm an authorised site contact; the directory establishes neither access rights nor fitted hardware.',
+      },
     ],
+    factOnlySourceIds: ['coventry-foleshill-library'],
     sources: [
       localitySource('foleshill-hlc', 'Foleshill Character Area, HLC Area 24', 'Coventry City Council', 'https://www.coventry.gov.uk/downloads/file/17449/hlc-area-24-foleshill-character-area', 'Mixed residential/industrial use, railway and canal context, and the Coventry Canal Conservation Area within the HLC.', 'property-status'),
+      localitySource('coventry-foleshill-library', 'Foleshill Library', 'Coventry City Council', 'https://www.coventry.gov.uk/directory-record/50158/foleshill-library', 'The official directory address for Foleshill Library.'),
     ],
     contexts: {
       'emergency-lockout': {
@@ -2073,9 +2080,16 @@ const AREA_SEEDS: AreaGuideSeed[] = [
         sourceIds: ['cheylesmore-stivichall-hlc'],
         serviceRelevance: 'Verify the individual building before external changes; totals neither confer nor remove property-specific controls.',
       },
+      {
+        text: 'The Coventry library catalogue lists Cheylesmore Library at Cheylesmore Community Centre, Poitiers Road, Cheylesmore, Coventry CV3 5JX.',
+        sourceIds: ['coventry-cheylesmore-library'],
+        serviceRelevance: 'For an instruction at the library or community centre, identify the exact entrance and authorised site contact; the catalogue says nothing about access rights or installed hardware.',
+      },
     ],
+    factOnlySourceIds: ['coventry-cheylesmore-library'],
     sources: [
       localitySource('cheylesmore-stivichall-hlc', 'Cheylesmore and Stivichall Character Area, HLC Area 10', 'Coventry City Council', 'https://www.coventry.gov.uk/downloads/file/17423/hlc-area-10-cheylesmore-and-stivichall-character-area', 'Housing development period, former Cheylesmore Manor deer park and character-area heritage totals.', 'property-status'),
+      localitySource('coventry-cheylesmore-library', 'Cheylesmore Library', 'Coventry Libraries', 'https://librarycatalogue.coventry.gov.uk/-/cheylesmore-library-delivered-by-cheylesmore-community-centre-', 'The official catalogue address and delivery location for Cheylesmore Library.'),
     ],
     contexts: {
       'emergency-lockout': {

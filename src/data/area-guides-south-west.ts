@@ -51,6 +51,7 @@ interface AreaGuideSeed {
   evidenceLimits: string
   facts: AreaGuideFact[]
   sourceIds: string[]
+  factOnlySourceIds?: string[]
   contexts: Record<ServiceAreaSlug, PairContext>
 }
 
@@ -106,6 +107,30 @@ const LOCALITY_SOURCES: Record<string, AreaGuideSource> = {
   'sdc-designated-neighbourhood-areas': localitySource('sdc-designated-neighbourhood-areas', 'Designated Neighbourhood Plan Areas', 'Stratford-on-Avon District Council', 'https://www.stratford.gov.uk/planning-building/designated-neighbourhood-plan-areas.cfm', 'The current Studley neighbourhood-area entry and linked confirmation documents.'),
   'sdc-alcester-plan-page': localitySource('sdc-alcester-plan-page', 'Alcester Neighbourhood Plan', 'Stratford-on-Avon District Council', 'https://www.stratford.gov.uk/planning-building/alcester-neighbourhood-plan.cfm', 'The 2021 made plan and Town Council review consultation recorded from December 2025.'),
   'sdc-conservation-a-g': localitySource('sdc-conservation-a-g', 'Conservation Areas A-G', 'Stratford-on-Avon District Council', 'https://www.stratford.gov.uk/planning-building/conservation-areas-a-g.cfm', 'The published Alcester Conservation Area map, broadsheet and two-part character appraisal.', 'property-status'),
+  'dfe-heathcote-primary': localitySource('dfe-heathcote-primary', 'Heathcote Primary School', 'Department for Education', 'https://get-information-schools.service.gov.uk/Establishments/Establishment/Details/144648', 'The official establishment name and Vickers Way, Heathcote address for this specific primary school.'),
+  'dfe-lillington-primary': localitySource('dfe-lillington-primary', 'Lillington Primary School', 'Department for Education', 'https://get-information-schools.service.gov.uk/Establishments/Establishment/Details/147642', 'The official establishment name and Cubbington Road, Lillington address for this specific primary school.'),
+  'dfe-milverton-primary': localitySource('dfe-milverton-primary', 'Milverton Primary School', 'Department for Education', 'https://get-information-schools.service.gov.uk/Establishments/Establishment/Details/125610', 'The official establishment name and Greatheed Road, Leamington Spa address for this specific primary school.'),
+  'dfe-sydenham-primary': localitySource('dfe-sydenham-primary', 'Sydenham Primary School', 'Department for Education', 'https://get-information-schools.service.gov.uk/Establishments/Establishment/Details/130868', 'The official establishment name and Calder Walk, Sydenham address for this specific primary school.'),
+  'dfe-whitnash-primary': localitySource('dfe-whitnash-primary', 'Whitnash Primary School', 'Department for Education', 'https://get-information-schools.service.gov.uk/Establishments/Establishment/Details/125560', 'The official establishment name and Langley Road, Whitnash address for this specific primary school.'),
+  'wdc-chase-meadow-centre-solar': localitySource('wdc-chase-meadow-centre-solar', 'Chase Meadow Community Centre benefits from Council grant', 'Warwick District Council', 'https://www.warwickdc.gov.uk/news/article/1331/chase_meadow_community_centre_benefits_from_council_grant', 'The council report that solar panels were installed on the named Chase Meadow Community Centre in Warwick.'),
+  'dfe-coten-end-primary': localitySource('dfe-coten-end-primary', 'Coten End Primary School', 'Department for Education', 'https://get-information-schools.service.gov.uk/Establishments/Establishment/Details/151505', 'The official establishment name and Coten End, Warwick address for this specific primary school.'),
+  'wdc-warwick-gates-community-centre': localitySource('wdc-warwick-gates-community-centre', 'Warwick Gates Community Centre', 'Warwick District Council', 'https://www.warwickdc.gov.uk/directory_record/3052/warwick_gates_community_centre', 'The council facilities-directory record for the specifically named Warwick Gates Community Centre.'),
+  'dfe-woodloes-primary': localitySource('dfe-woodloes-primary', 'Woodloes Primary School', 'Department for Education', 'https://get-information-schools.service.gov.uk/Establishments/Establishment/Details/141855', 'The official establishment name and Deansway, Woodloes Park Estate address for this specific primary school.'),
+  'dfe-alcester-our-ladys-primary': localitySource('dfe-alcester-our-ladys-primary', "Our Lady's Catholic Primary School", 'Department for Education', 'https://get-information-schools.service.gov.uk/Establishments/Establishment/Details/143632', 'The official establishment name and St Faiths Road, Alcester address for this specific primary school.'),
+  'wcc-baginton-parish-council': localitySource('wcc-baginton-parish-council', 'Baginton - Parish and town councils', 'Warwickshire County Council', 'https://www.warwickshire.gov.uk/directory-record/8616/baginton', 'The county directory entry for Baginton Parish Council and its clerk contact record.'),
+  'dfe-balsall-common-primary': localitySource('dfe-balsall-common-primary', 'Balsall Common Primary School', 'Department for Education', 'https://get-information-schools.service.gov.uk/Establishments/Establishment/Details/138536', 'The official establishment name and Balsall Street East, Balsall Common address for this specific primary school.'),
+  'wcc-brandon-bretford-parish-council': localitySource('wcc-brandon-bretford-parish-council', 'Brandon & Bretford - Parish and town councils', 'Warwickshire County Council', 'https://www.warwickshire.gov.uk/directory-record/8635/brandon-bretford', 'The county directory record titled Brandon & Bretford and its link to Brandon and Bretford Parish Council.'),
+  'wcc-brinklow-parish-council': localitySource('wcc-brinklow-parish-council', 'Brinklow - Parish and town councils', 'Warwickshire County Council', 'https://www.warwickshire.gov.uk/directory-record/8636/brinklow', 'The county directory entry for Brinklow Parish Council and its clerk contact record.'),
+  'dfe-george-fentham-school': localitySource('dfe-george-fentham-school', 'George Fentham Endowed School', 'Department for Education', 'https://get-information-schools.service.gov.uk/Establishments/Establishment/Details/104094', 'The official establishment name and Fentham Road, Hampton-in-Arden address for this specific primary school.'),
+  'dfe-kenilworth-st-nicholas-primary': localitySource('dfe-kenilworth-st-nicholas-primary', 'St Nicholas CofE Primary School', 'Department for Education', 'https://get-information-schools.service.gov.uk/Establishments/Establishment/Details/151107', 'The official establishment name and The Blundells, Kenilworth address for this specific primary school.'),
+  'dfe-meriden-primary': localitySource('dfe-meriden-primary', 'Meriden Church of England Primary School', 'Department for Education', 'https://get-information-schools.service.gov.uk/Establishments/Establishment/Details/104087', 'The official establishment name and Fillongley Road, Meriden address for this specific primary school.'),
+  'dfe-ryton-provost-williams': localitySource('dfe-ryton-provost-williams', 'Ryton-On-Dunsmore Provost Williams Church of England Academy', 'Department for Education', 'https://get-information-schools.service.gov.uk/Establishments/Establishment/Details/149518', 'The official establishment name and Sodens Avenue, Ryton-on-Dunsmore address for this specific primary academy.'),
+  'dfe-southam-primary': localitySource('dfe-southam-primary', 'Southam Primary School', 'Department for Education', 'https://get-information-schools.service.gov.uk/Establishments/Establishment/Details/143906', 'The official establishment name and St James Road, Southam address for this specific primary school.'),
+  'dfe-studley-infants': localitySource('dfe-studley-infants', "Studley Infants' School", 'Department for Education', 'https://get-information-schools.service.gov.uk/Establishments/Establishment/Details/148511', 'The official establishment name and High Street, Studley address for this specific infant school.'),
+  'dfe-wolston-st-margarets': localitySource('dfe-wolston-st-margarets', "Wolston St Margaret's CofE Primary School", 'Department for Education', 'https://get-information-schools.service.gov.uk/Establishments/Establishment/Details/125676', 'The official establishment name and Brookside, Main Street, Wolston address for this specific primary school.'),
+  'dfe-bishopton-primary': localitySource('dfe-bishopton-primary', 'Bishopton Primary School', 'Department for Education', 'https://get-information-schools.service.gov.uk/Establishments/Establishment/Details/125607', 'The official establishment name and Drayton Avenue, Stratford-upon-Avon address for this specific primary school.'),
+  'dfe-shottery-st-andrews': localitySource('dfe-shottery-st-andrews', "Shottery St Andrew's CofE Primary School", 'Department for Education', 'https://get-information-schools.service.gov.uk/Establishments/Establishment/Details/125646', 'The official establishment name and Hathaway Lane, Stratford-upon-Avon address for this specific primary school.'),
+  'dfe-alveston-primary-tiddington': localitySource('dfe-alveston-primary-tiddington', 'Alveston CofE Primary School', 'Department for Education', 'https://get-information-schools.service.gov.uk/Establishments/Establishment/Details/125623', 'The official establishment name and Knights Lane, Tiddington address for this specific primary school.'),
 }
 
 const SERVICE_LABELS: Record<ServiceAreaSlug, string> = {
@@ -338,6 +363,7 @@ function buildGuide(seed: AreaGuideSeed, areaIndex: number): GovernedAreaGuide {
     accessGuidance: seed.accessGuidance,
     evidenceLimits: seed.evidenceLimits,
     facts: seed.facts,
+    factOnlySourceIds: seed.factOnlySourceIds,
     sources: [...seed.sourceIds.map((id) => LOCALITY_SOURCES[id]), ...technicalSources(seed.region)],
     serviceGuidance,
     faqs: [
@@ -451,8 +477,14 @@ const AREA_SEEDS: AreaGuideSeed[] = [
         sourceIds: ['wdc-leamington-plan'],
         serviceRelevance: `Use the named site only as verified locality context, not evidence of proximity, access, property characteristics or work.`,
       },
+      {
+        text: `The Department for Education records Milverton Primary School as a specific establishment at Greatheed Road, Leamington Spa, CV32 6ES.`,
+        sourceIds: ['dfe-milverton-primary'],
+        serviceRelevance: `This identifies one education site only; it does not describe neighbouring properties, access rights, door hardware or service conditions.`,
+      },
     ],
-    sourceIds: ['wdc-leamington-conservation', 'wdc-leamington-plan'],
+    sourceIds: ['wdc-leamington-conservation', 'wdc-leamington-plan', 'dfe-milverton-primary'],
+    factOnlySourceIds: ['dfe-milverton-primary'],
     contexts: {
       'emergency-lockout': {
         localFactIndexes: [0, 1],
@@ -522,8 +554,14 @@ const AREA_SEEDS: AreaGuideSeed[] = [
         sourceIds: ['wdc-local-plan'],
         serviceRelevance: `Use Crown Way only as caller-confirmed orientation; it does not prove a property is nearby or within coverage.`,
       },
+      {
+        text: `The Department for Education records Lillington Primary School at Cubbington Road, Lillington, Leamington Spa, CV32 7AG.`,
+        sourceIds: ['dfe-lillington-primary'],
+        serviceRelevance: `This identifies one education site only; it does not describe neighbouring properties, access rights, door hardware or service conditions.`,
+      },
     ],
-    sourceIds: ['wdc-leamington-conservation', 'wdc-local-plan'],
+    sourceIds: ['wdc-leamington-conservation', 'wdc-local-plan', 'dfe-lillington-primary'],
+    factOnlySourceIds: ['dfe-lillington-primary'],
     contexts: {
       'emergency-lockout': {
         localFactIndexes: [0, 1],
@@ -593,8 +631,14 @@ const AREA_SEEDS: AreaGuideSeed[] = [
         sourceIds: ['wdc-leamington-plan'],
         serviceRelevance: `For a named unit, identify the responsible site contact and entrance; the estate label does not prove authority.`,
       },
+      {
+        text: `The Department for Education records Sydenham Primary School at Calder Walk, Sydenham, Leamington Spa, CV31 1SA.`,
+        sourceIds: ['dfe-sydenham-primary'],
+        serviceRelevance: `This identifies one education site only; it does not describe neighbouring properties, access rights, door hardware or service conditions.`,
+      },
     ],
-    sourceIds: ['wdc-leamington-plan'],
+    sourceIds: ['wdc-leamington-plan', 'dfe-sydenham-primary'],
+    factOnlySourceIds: ['dfe-sydenham-primary'],
     contexts: {
       'emergency-lockout': {
         localFactIndexes: [0, 1],
@@ -664,8 +708,14 @@ const AREA_SEEDS: AreaGuideSeed[] = [
         sourceIds: ['wdc-local-plan'],
         serviceRelevance: `Resolve the exact address against the current boundary and verify listing separately before heritage-related guidance.`,
       },
+      {
+        text: `The Department for Education records Whitnash Primary School at Langley Road, Whitnash, Leamington Spa, CV31 2EX.`,
+        sourceIds: ['dfe-whitnash-primary'],
+        serviceRelevance: `This identifies one education site only; it does not describe neighbouring properties, access rights, door hardware or service conditions.`,
+      },
     ],
-    sourceIds: ['wdc-whitnash-plan-page', 'wdc-local-plan'],
+    sourceIds: ['wdc-whitnash-plan-page', 'wdc-local-plan', 'dfe-whitnash-primary'],
+    factOnlySourceIds: ['dfe-whitnash-primary'],
     contexts: {
       'emergency-lockout': {
         localFactIndexes: [0, 1],
@@ -735,8 +785,14 @@ const AREA_SEEDS: AreaGuideSeed[] = [
         sourceIds: ['wdc-tachbrook-park'],
         serviceRelevance: `Treat the planned facility as managed-site orientation only and recheck its status before any publication or instruction.`,
       },
+      {
+        text: `The Department for Education records Heathcote Primary School at Vickers Way, Heathcote, Warwick, CV34 7AP.`,
+        sourceIds: ['dfe-heathcote-primary'],
+        serviceRelevance: `This identifies one education site only; it does not describe neighbouring properties, access rights, door hardware or service conditions.`,
+      },
     ],
-    sourceIds: ['wdc-monitoring-report-2024-25', 'wdc-tachbrook-park'],
+    sourceIds: ['wdc-monitoring-report-2024-25', 'wdc-tachbrook-park', 'dfe-heathcote-primary'],
+    factOnlySourceIds: ['dfe-heathcote-primary'],
     contexts: {
       'emergency-lockout': {
         localFactIndexes: [0, 1],
@@ -806,8 +862,14 @@ const AREA_SEEDS: AreaGuideSeed[] = [
         sourceIds: ['wdc-local-plan'],
         serviceRelevance: `Treat Urban Area as planning classification only, not evidence of a property's use, hardware or service reach.`,
       },
+      {
+        text: `The Department for Education records Coten End Primary School at Coten End, Warwick, CV34 4NP.`,
+        sourceIds: ['dfe-coten-end-primary'],
+        serviceRelevance: `This identifies one education site only; it does not describe neighbouring properties, access rights, door hardware or service conditions.`,
+      },
     ],
-    sourceIds: ['wdc-warwick-conservation', 'wdc-local-plan'],
+    sourceIds: ['wdc-warwick-conservation', 'wdc-local-plan', 'dfe-coten-end-primary'],
+    factOnlySourceIds: ['dfe-coten-end-primary'],
     contexts: {
       'emergency-lockout': {
         localFactIndexes: [0, 1],
@@ -877,8 +939,14 @@ const AREA_SEEDS: AreaGuideSeed[] = [
         sourceIds: ['wdc-community-parks'],
         serviceRelevance: `Treat named park access points as public-site context, not proof of a suitable route to a private address.`,
       },
+      {
+        text: `The Department for Education records Woodloes Primary School at Deansway, Woodloes Park Estate, Warwick, CV34 5DF.`,
+        sourceIds: ['dfe-woodloes-primary'],
+        serviceRelevance: `This identifies one education site only; it does not describe neighbouring properties, access rights, door hardware or service conditions.`,
+      },
     ],
-    sourceIds: ['wdc-local-plan', 'wdc-community-parks'],
+    sourceIds: ['wdc-local-plan', 'wdc-community-parks', 'dfe-woodloes-primary'],
+    factOnlySourceIds: ['dfe-woodloes-primary'],
     contexts: {
       'emergency-lockout': {
         localFactIndexes: [0, 1],
@@ -948,8 +1016,14 @@ const AREA_SEEDS: AreaGuideSeed[] = [
         sourceIds: ['wdc-community-parks'],
         serviceRelevance: `Distinguish managed community-space assets from private addresses and establish the responsible party for the exact opening.`,
       },
+      {
+        text: `Warwick District Council reported on 9 July 2025 that solar panels had been installed on Chase Meadow Community Centre in Warwick.`,
+        sourceIds: ['wdc-chase-meadow-centre-solar'],
+        serviceRelevance: `This is evidence about one named community-centre building only, not surrounding properties, their access, hardware or service conditions.`,
+      },
     ],
-    sourceIds: ['wdc-local-plan', 'wdc-community-parks'],
+    sourceIds: ['wdc-local-plan', 'wdc-community-parks', 'wdc-chase-meadow-centre-solar'],
+    factOnlySourceIds: ['wdc-chase-meadow-centre-solar'],
     contexts: {
       'emergency-lockout': {
         localFactIndexes: [0, 1],
@@ -1019,8 +1093,14 @@ const AREA_SEEDS: AreaGuideSeed[] = [
         sourceIds: ['wdc-community-parks'],
         serviceRelevance: `Public park access is not evidence of a route or permission for work at a private or managed opening.`,
       },
+      {
+        text: `Warwick District Council's facilities directory contains a specific record for Warwick Gates Community Centre.`,
+        sourceIds: ['wdc-warwick-gates-community-centre'],
+        serviceRelevance: `This identifies one managed facility only; it does not describe neighbouring properties, access rights, door hardware or service conditions.`,
+      },
     ],
-    sourceIds: ['wdc-local-plan', 'wdc-community-parks'],
+    sourceIds: ['wdc-local-plan', 'wdc-community-parks', 'wdc-warwick-gates-community-centre'],
+    factOnlySourceIds: ['wdc-warwick-gates-community-centre'],
     contexts: {
       'emergency-lockout': {
         localFactIndexes: [0, 1],
@@ -1166,8 +1246,14 @@ const AREA_SEEDS: AreaGuideSeed[] = [
         sourceIds: ['sdc-stratford-made-plan'],
         serviceRelevance: `Treat the mapped gaps and fields as locality evidence only and do not infer routes or private-property access.`,
       },
+      {
+        text: `The Department for Education records Alveston CofE Primary School at Knights Lane, Tiddington, Stratford-upon-Avon, CV37 7BZ.`,
+        sourceIds: ['dfe-alveston-primary-tiddington'],
+        serviceRelevance: `This identifies one education site only; it does not describe neighbouring properties, access rights, door hardware or service conditions.`,
+      },
     ],
-    sourceIds: ['sdc-stratford-made-plan'],
+    sourceIds: ['sdc-stratford-made-plan', 'dfe-alveston-primary-tiddington'],
+    factOnlySourceIds: ['dfe-alveston-primary-tiddington'],
     contexts: {
       'emergency-lockout': {
         localFactIndexes: [0, 1],
@@ -1237,8 +1323,14 @@ const AREA_SEEDS: AreaGuideSeed[] = [
         sourceIds: ['sdc-stratford-made-plan'],
         serviceRelevance: `Use bridge and allocation references only for verified location; they prove neither completion nor an access route.`,
       },
+      {
+        text: `The Department for Education records Bishopton Primary School at Drayton Avenue, Stratford-upon-Avon, CV37 9PB.`,
+        sourceIds: ['dfe-bishopton-primary'],
+        serviceRelevance: `This identifies one education site only; it does not describe neighbouring properties, access rights, door hardware or service conditions.`,
+      },
     ],
-    sourceIds: ['sdc-stratford-made-plan'],
+    sourceIds: ['sdc-stratford-made-plan', 'dfe-bishopton-primary'],
+    factOnlySourceIds: ['dfe-bishopton-primary'],
     contexts: {
       'emergency-lockout': {
         localFactIndexes: [0, 1],
@@ -1308,8 +1400,14 @@ const AREA_SEEDS: AreaGuideSeed[] = [
         sourceIds: ['sdc-stratford-made-plan'],
         serviceRelevance: `Use Shottery Fields as verified locality context only and never infer private-property access across the green space.`,
       },
+      {
+        text: `The Department for Education records Shottery St Andrew's CofE Primary School at 3 Hathaway Lane, Stratford-upon-Avon, CV37 9BL.`,
+        sourceIds: ['dfe-shottery-st-andrews'],
+        serviceRelevance: `This identifies one education site only; it does not describe neighbouring properties, access rights, door hardware or service conditions.`,
+      },
     ],
-    sourceIds: ['sdc-shottery-conservation', 'sdc-stratford-made-plan'],
+    sourceIds: ['sdc-shottery-conservation', 'sdc-stratford-made-plan', 'dfe-shottery-st-andrews'],
+    factOnlySourceIds: ['dfe-shottery-st-andrews'],
     contexts: {
       'emergency-lockout': {
         localFactIndexes: [0, 1],
@@ -1379,8 +1477,14 @@ const AREA_SEEDS: AreaGuideSeed[] = [
         sourceIds: ['wdc-kenilworth-conservation'],
         serviceRelevance: `Resolve the current boundary for the exact address and verify listed status separately before visible changes.`,
       },
+      {
+        text: `The Department for Education records St Nicholas CofE Primary School at The Blundells, Kenilworth, CV8 2PE.`,
+        sourceIds: ['dfe-kenilworth-st-nicholas-primary'],
+        serviceRelevance: `This identifies one education site only; it does not describe neighbouring properties, access rights, door hardware or service conditions.`,
+      },
     ],
-    sourceIds: ['wdc-kenilworth-plan-page', 'wdc-kenilworth-conservation'],
+    sourceIds: ['wdc-kenilworth-plan-page', 'wdc-kenilworth-conservation', 'dfe-kenilworth-st-nicholas-primary'],
+    factOnlySourceIds: ['dfe-kenilworth-st-nicholas-primary'],
     contexts: {
       'emergency-lockout': {
         localFactIndexes: [0, 1],
@@ -1450,8 +1554,14 @@ const AREA_SEEDS: AreaGuideSeed[] = [
         sourceIds: ['solihull-balsall-made-plan'],
         serviceRelevance: `Fail closed on parish-plan claims until the exact address is resolved to Balsall rather than Berkswell parish.`,
       },
+      {
+        text: `The Department for Education records Balsall Common Primary School at Balsall Street East, Balsall Common, Coventry, CV7 7FS.`,
+        sourceIds: ['dfe-balsall-common-primary'],
+        serviceRelevance: `This identifies one education site only; it does not resolve the wider settlement's parish boundary, neighbouring properties or service conditions.`,
+      },
     ],
-    sourceIds: ['solihull-balsall-plan-page', 'solihull-balsall-made-plan'],
+    sourceIds: ['solihull-balsall-plan-page', 'solihull-balsall-made-plan', 'dfe-balsall-common-primary'],
+    factOnlySourceIds: ['dfe-balsall-common-primary'],
     contexts: {
       'emergency-lockout': {
         localFactIndexes: [0, 1],
@@ -1521,8 +1631,14 @@ const AREA_SEEDS: AreaGuideSeed[] = [
         sourceIds: ['solihull-conservation-areas'],
         serviceRelevance: `Check the exact address against the relevant current boundary and verify any listed status independently.`,
       },
+      {
+        text: `The Department for Education records Meriden Church of England Primary School at Fillongley Road, Meriden, Coventry, CV7 7LW.`,
+        sourceIds: ['dfe-meriden-primary'],
+        serviceRelevance: `This identifies one education site only; it does not describe neighbouring properties, access rights, door hardware or service conditions.`,
+      },
     ],
-    sourceIds: ['solihull-meriden-plan-page', 'solihull-conservation-areas'],
+    sourceIds: ['solihull-meriden-plan-page', 'solihull-conservation-areas', 'dfe-meriden-primary'],
+    factOnlySourceIds: ['dfe-meriden-primary'],
     contexts: {
       'emergency-lockout': {
         localFactIndexes: [0, 1],
@@ -1592,8 +1708,14 @@ const AREA_SEEDS: AreaGuideSeed[] = [
         sourceIds: ['solihull-hampton-history'],
         serviceRelevance: `Check whether the exact address is in the current central boundary and verify listed status separately.`,
       },
+      {
+        text: `The Department for Education records George Fentham Endowed School at Fentham Road, Hampton-in-Arden, Solihull, B92 0AY.`,
+        sourceIds: ['dfe-george-fentham-school'],
+        serviceRelevance: `This identifies one education site only; it does not describe neighbouring properties, access rights, door hardware or service conditions.`,
+      },
     ],
-    sourceIds: ['solihull-hampton-plan-page', 'solihull-hampton-history'],
+    sourceIds: ['solihull-hampton-plan-page', 'solihull-hampton-history', 'dfe-george-fentham-school'],
+    factOnlySourceIds: ['dfe-george-fentham-school'],
     contexts: {
       'emergency-lockout': {
         localFactIndexes: [0, 1],
@@ -1663,8 +1785,14 @@ const AREA_SEEDS: AreaGuideSeed[] = [
         sourceIds: ['rbc-wolston-plan-page'],
         serviceRelevance: `Do not describe Wolston's neighbourhood plan as adopted or made without a newer explicit council statement.`,
       },
+      {
+        text: `The Department for Education records Wolston St Margaret's CofE Primary School at Brookside, Main Street, Wolston, CV8 3HH.`,
+        sourceIds: ['dfe-wolston-st-margarets'],
+        serviceRelevance: `This identifies one education site only; it does not describe neighbouring properties, access rights, door hardware or service conditions.`,
+      },
     ],
-    sourceIds: ['rbc-wolston-conservation', 'rbc-wolston-plan-page'],
+    sourceIds: ['rbc-wolston-conservation', 'rbc-wolston-plan-page', 'dfe-wolston-st-margarets'],
+    factOnlySourceIds: ['dfe-wolston-st-margarets'],
     contexts: {
       'emergency-lockout': {
         localFactIndexes: [0, 1],
@@ -1734,8 +1862,14 @@ const AREA_SEEDS: AreaGuideSeed[] = [
         sourceIds: ['rbc-ryton-made-plan'],
         serviceRelevance: `Use parish and river-valley details for verified orientation only and never infer route or property characteristics.`,
       },
+      {
+        text: `The Department for Education records Ryton-On-Dunsmore Provost Williams Church of England Academy at Sodens Avenue, Ryton-on-Dunsmore, CV8 3FF.`,
+        sourceIds: ['dfe-ryton-provost-williams'],
+        serviceRelevance: `This identifies one education site only; it does not describe neighbouring properties, access rights, door hardware or service conditions.`,
+      },
     ],
-    sourceIds: ['rbc-ryton-plan-page', 'rbc-ryton-made-plan'],
+    sourceIds: ['rbc-ryton-plan-page', 'rbc-ryton-made-plan', 'dfe-ryton-provost-williams'],
+    factOnlySourceIds: ['dfe-ryton-provost-williams'],
     contexts: {
       'emergency-lockout': {
         localFactIndexes: [1],
@@ -1805,8 +1939,14 @@ const AREA_SEEDS: AreaGuideSeed[] = [
         sourceIds: ['wdc-local-plan'],
         serviceRelevance: `Treat settlement hierarchy and conservation status as separate checks, neither of which proves an address-level fact.`,
       },
+      {
+        text: `Warwickshire County Council's parish and town council directory contains a specific record for Baginton Parish Council.`,
+        sourceIds: ['wcc-baginton-parish-council'],
+        serviceRelevance: `This verifies the named parish administration only; it does not establish a property boundary, access authority, hardware or service conditions.`,
+      },
     ],
-    sourceIds: ['wdc-baginton-plan-page', 'wdc-local-plan'],
+    sourceIds: ['wdc-baginton-plan-page', 'wdc-local-plan', 'wcc-baginton-parish-council'],
+    factOnlySourceIds: ['wcc-baginton-parish-council'],
     contexts: {
       'emergency-lockout': {
         localFactIndexes: [0, 1],
@@ -1876,8 +2016,14 @@ const AREA_SEEDS: AreaGuideSeed[] = [
         sourceIds: ['rbc-brandon-conservation'],
         serviceRelevance: `Check the precise boundary and use the viaduct only as orientation, never evidence of route or access.`,
       },
+      {
+        text: `Warwickshire County Council's parish and town council directory has a Brandon & Bretford record linking to Brandon and Bretford Parish Council.`,
+        sourceIds: ['wcc-brandon-bretford-parish-council'],
+        serviceRelevance: `This verifies the named council directory record only; it does not establish a property boundary, access authority, hardware or service conditions.`,
+      },
     ],
-    sourceIds: ['rbc-brandon-plan-page', 'rbc-brandon-conservation'],
+    sourceIds: ['rbc-brandon-plan-page', 'rbc-brandon-conservation', 'wcc-brandon-bretford-parish-council'],
+    factOnlySourceIds: ['wcc-brandon-bretford-parish-council'],
     contexts: {
       'emergency-lockout': {
         localFactIndexes: [0, 1],
@@ -2023,8 +2169,14 @@ const AREA_SEEDS: AreaGuideSeed[] = [
         sourceIds: ['rbc-brinklow-conservation'],
         serviceRelevance: `Check the current boundary and use Ell Lane only for orientation, never to infer building age or access.`,
       },
+      {
+        text: `Warwickshire County Council's parish and town council directory contains a specific record for Brinklow Parish Council.`,
+        sourceIds: ['wcc-brinklow-parish-council'],
+        serviceRelevance: `This verifies the named parish administration only; it does not establish a property boundary, access authority, hardware or service conditions.`,
+      },
     ],
-    sourceIds: ['rbc-brinklow-plan-page', 'rbc-brinklow-conservation'],
+    sourceIds: ['rbc-brinklow-plan-page', 'rbc-brinklow-conservation', 'wcc-brinklow-parish-council'],
+    factOnlySourceIds: ['wcc-brinklow-parish-council'],
     contexts: {
       'emergency-lockout': {
         localFactIndexes: [0, 1],
@@ -2094,8 +2246,14 @@ const AREA_SEEDS: AreaGuideSeed[] = [
         sourceIds: ['sdc-conservation-h-z', 'sdc-conservation-review-2026'],
         serviceRelevance: `Use current formally published records and never treat appraisal-review drafts as adopted replacement evidence.`,
       },
+      {
+        text: `The Department for Education records Southam Primary School at St James Road, Southam, CV47 0QB.`,
+        sourceIds: ['dfe-southam-primary'],
+        serviceRelevance: `This identifies one education site only; it does not describe neighbouring properties, access rights, door hardware or service conditions.`,
+      },
     ],
-    sourceIds: ['sdc-southam-plan-page', 'sdc-conservation-h-z', 'sdc-conservation-review-2026'],
+    sourceIds: ['sdc-southam-plan-page', 'sdc-conservation-h-z', 'sdc-conservation-review-2026', 'dfe-southam-primary'],
+    factOnlySourceIds: ['dfe-southam-primary'],
     contexts: {
       'emergency-lockout': {
         localFactIndexes: [0, 1],
@@ -2165,8 +2323,14 @@ const AREA_SEEDS: AreaGuideSeed[] = [
         sourceIds: ['sdc-studley-area-report', 'sdc-designated-neighbourhood-areas'],
         serviceRelevance: `Describe only the documented neighbourhood-area stage and recheck the council register before stating any later adoption or making.`,
       },
+      {
+        text: `The Department for Education records Studley Infants' School at High Street, Studley, B80 7HJ.`,
+        sourceIds: ['dfe-studley-infants'],
+        serviceRelevance: `This identifies one education site only; it does not describe neighbouring properties, access rights, door hardware or service conditions.`,
+      },
     ],
-    sourceIds: ['sdc-parish-plans', 'sdc-studley-area-report', 'sdc-designated-neighbourhood-areas'],
+    sourceIds: ['sdc-parish-plans', 'sdc-studley-area-report', 'sdc-designated-neighbourhood-areas', 'dfe-studley-infants'],
+    factOnlySourceIds: ['dfe-studley-infants'],
     contexts: {
       'emergency-lockout': {
         localFactIndexes: [0, 1],
@@ -2236,8 +2400,14 @@ const AREA_SEEDS: AreaGuideSeed[] = [
         sourceIds: ['sdc-conservation-a-g'],
         serviceRelevance: `Check the exact current boundary and verify listed status separately before any conservation-related property guidance.`,
       },
+      {
+        text: `The Department for Education records Our Lady's Catholic Primary School at St Faith's Road, Alcester, B49 6AG.`,
+        sourceIds: ['dfe-alcester-our-ladys-primary'],
+        serviceRelevance: `This identifies one education site only; it does not describe neighbouring properties, access rights, door hardware or service conditions.`,
+      },
     ],
-    sourceIds: ['sdc-alcester-plan-page', 'sdc-conservation-a-g'],
+    sourceIds: ['sdc-alcester-plan-page', 'sdc-conservation-a-g', 'dfe-alcester-our-ladys-primary'],
+    factOnlySourceIds: ['dfe-alcester-our-ladys-primary'],
     contexts: {
       'emergency-lockout': {
         localFactIndexes: [0, 1],

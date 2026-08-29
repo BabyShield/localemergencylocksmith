@@ -23,6 +23,9 @@ const RETIRED_UNGOVERNED_FILES = [
   '../src/components/LockBrands.tsx',
 ]
 const MIN_AREA_EDITORIAL_WORDS = 900
+const MIN_AREA_FACTS = 3
+const MAX_AREA_FACTS = 4
+const MIN_AREA_FACT_SOURCES = 2
 const MIN_GUIDANCE_WORDS = 120
 const MAX_EVIDENCE_AGE_DAYS = 366
 const DECLARED_REVIEW_DATE = '2026-08-29'
@@ -476,6 +479,8 @@ const sourceCanonicals = new Map()
 const sourceUrls = new Map()
 const guidanceRecords = []
 const areaWordCounts = []
+const areaFactCounts = []
+const areaFactSourceCounts = []
 const areaEditorialRecords = []
 const searchDescriptionOwners = new Map()
 
@@ -542,7 +547,10 @@ for (const area of AREAS) {
   }
   check(wordCount(guide.accessGuidance) >= 25, `${label} access guidance has ${wordCount(guide.accessGuidance)} words; expected at least 25`)
   check(wordCount(guide.evidenceLimits) >= 25, `${label} evidence limits have ${wordCount(guide.evidenceLimits)} words; expected at least 25`)
-  check(Array.isArray(guide.facts) && guide.facts.length >= 2 && guide.facts.length <= 4, `${label} has ${guide.facts?.length ?? 0} facts; expected 2-4`)
+  check(
+    Array.isArray(guide.facts) && guide.facts.length >= MIN_AREA_FACTS && guide.facts.length <= MAX_AREA_FACTS,
+    `${label} has ${guide.facts?.length ?? 0} facts; expected ${MIN_AREA_FACTS}-${MAX_AREA_FACTS}`,
+  )
   check(Array.isArray(guide.sources) && guide.sources.length >= 2, `${label} has ${guide.sources?.length ?? 0} sources; expected at least 2`)
   check(Array.isArray(guide.faqs) && guide.faqs.length >= 2, `${label} needs at least two evidence or booking FAQs`)
   for (const [index, faq] of (guide.faqs ?? []).entries()) {
@@ -602,6 +610,12 @@ for (const area of AREAS) {
   if (searchDescription) searchDescriptionOwners.set(searchDescription, label)
 
   const factSourceIds = new Set((guide.facts ?? []).flatMap(fact => fact.sourceIds ?? []))
+  areaFactCounts.push(guide.facts?.length ?? 0)
+  areaFactSourceCounts.push(factSourceIds.size)
+  check(
+    factSourceIds.size >= MIN_AREA_FACT_SOURCES,
+    `${label} facts use ${factSourceIds.size} unique sources; expected at least ${MIN_AREA_FACT_SOURCES}`,
+  )
   for (const sourceId of searchDescriptionSourceIds) {
     check(localSourceIds.has(sourceId), `${label} search description references missing source ${sourceId}`)
     check(factSourceIds.has(sourceId), `${label} search description source ${sourceId} is not attached to a visible local fact`)
@@ -996,6 +1010,10 @@ console.log('Area-guide governance audit')
 console.log(`Evidence as-of date: ${AUDIT_AS_OF}`)
 console.log(`Registry: ${guideEntries.length} area guides, ${guidanceRecords.length} service-area guidance records`)
 console.log(`Evidence: ${sourceCanonicals.size} source IDs, ${sourceUrls.size} unique URLs`)
+const factCounts = summary(areaFactCounts)
+const factSourceCounts = summary(areaFactSourceCounts)
+console.log(`Area facts (required ${MIN_AREA_FACTS}-${MAX_AREA_FACTS}): min ${factCounts.min}, median ${factCounts.median}, max ${factCounts.max}`)
+console.log(`Area fact sources (minimum ${MIN_AREA_FACT_SOURCES}): min ${factSourceCounts.min}, median ${factSourceCounts.median}, max ${factSourceCounts.max}`)
 const words = summary(areaWordCounts)
 console.log(`Area editorial words (minimum ${MIN_AREA_EDITORIAL_WORDS}): min ${words.min}, median ${words.median}, p95 ${words.p95}, max ${words.max}`)
 const guidanceWords = summary(guidanceRecords.map(record => record.words))
