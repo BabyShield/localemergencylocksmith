@@ -1,13 +1,12 @@
 import type { Metadata } from 'next'
 import { notFound, permanentRedirect } from 'next/navigation'
 import Link from 'next/link'
-import { getAreaBySlug, getAreaNeighbours } from '@/data/areas'
+import { AREAS, getAreaBySlug, getAreaNeighbours } from '@/data/areas'
 import { SERVICES, getServiceBySlug } from '@/data/services'
 import { LOCKSMITH_AUTHOR_SCHEMA, SERVICE_PROVIDER_SCHEMA, SITE_CONFIG } from '@/data/config'
 import {
   getTownService,
   hasTownService,
-  TOWN_SERVICE_PARAMS,
 } from '@/data/governed-town-services'
 import { getAreaAuthority } from '@/data/area-authorities'
 import { getBlogPostBySlug } from '@/data/blog-posts'
@@ -20,13 +19,17 @@ import SectionEvidenceLinks from '@/components/SectionEvidenceLinks'
 import ContentAuthorNote from '@/components/ContentAuthorNote'
 
 export const dynamic = 'force-static'
-export const dynamicParams = true
+export const dynamicParams = false
 export const revalidate = false
 
-// Only explicit, evidence-governed pairs are pre-rendered. A valid but
-// unpublished pair is handled below and permanently redirected to its area hub.
+// Pre-render the complete governed 78 x 5 universe so the 35 published pages
+// and 355 permanent section redirects are deterministic at the edge. Invalid
+// slugs are excluded and return 404 because dynamic params are disabled.
 export async function generateStaticParams() {
-  return TOWN_SERVICE_PARAMS
+  return AREAS.flatMap(area => SERVICES.map(service => ({
+    slug: area.slug,
+    serviceSlug: service.slug,
+  })))
 }
 
 interface Props {
@@ -100,7 +103,7 @@ export default async function TownServicePage({ params }: Props) {
   if (!area || !service) notFound()
 
   const content = getTownService(slug, serviceSlug)
-  if (!content) permanentRedirect(`/areas/${slug}`)
+  if (!content) permanentRedirect(`/areas/${slug}#${serviceSlug}`)
 
   const neighbours = getAreaNeighbours(area)
   const areaAuthority = getAreaAuthority(area.slug)

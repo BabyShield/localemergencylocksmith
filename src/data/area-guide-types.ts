@@ -9,6 +9,8 @@ export interface AreaGuideSource extends EvidenceSource {
 }
 
 export interface AreaGuideFact {
+  /** Concise, source-bounded label used for the visible heading and inbound links. */
+  heading: string
   text: string
   sourceIds: string[]
   serviceRelevance: string

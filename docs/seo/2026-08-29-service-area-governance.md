@@ -4,9 +4,10 @@
 
 - The service-area universe is 78 areas × 5 services = 390 combinations.
 - 35 combinations (seven towns × five services) have an explicit evidence-reviewed content record and may return an indexable `200` page.
-- The remaining 355 valid combinations permanently redirect to their parent area hub.
+- The remaining 355 valid combinations permanently redirect to their exact service section on the parent area hub. The fragment preserves the visitor's service intent without publishing another indexable URL; the substantial hub remains the canonical owner.
 - Invalid area or service slugs return `404`.
-- The governed registry is the only source for static params, sitemap membership and service-area internal links.
+- The area and service registries define the complete valid static-param universe. The governed town-service registry is the only source for deciding which pairs may return an indexable `200`, enter the sitemap, or receive dedicated-page internal links.
+- All 390 valid pairs are pre-rendered: 35 become static content pages and 355 become static permanent redirects. This avoids an on-demand fallback redirect path while still publishing only the 35 governed canonical pages.
 - The area registry contains routing and geographic-navigation fields only. Publishable local facts, service guidance and FAQs must come from the evidence-governed guide registries.
 - Every area×service record explicitly selects the zero-based local fact indexes that inform its guidance. Only sources attached to those selected facts may appear as that service section's local citations.
 - Fact selection is editorial, not automatic: the service prose must directly use the selected fact as a decision, limitation or address-verification point. Merely sharing a town, source or keyword is not enough.
@@ -47,11 +48,11 @@ The governance audit fails closed on:
 
 The 35 dedicated pages include two hand-authored decision extensions per town×service pair. Their pair-specific and repeated-sentence measures are release gates at the thresholds above. The 390 area-hub service sections also use manually reviewed, pair-specific bodies instead of rotated protocol copy; the source audit now rejects every cross-record exact body-sentence repeat of eight or more words. Five-word overlap and globally unique-sequence gates remain in place so adding a place name or other metric-only wording cannot substitute for substantive local guidance.
 
-The HTTP SEO audit crawls all 178 canonical sitemap URLs and all 390 area-service combinations. It requires each combination to be either a self-canonical published `200` or a `308` to its parent hub, checks invalid combinations for `404`, and requires every area hub to have at least six contextual inbound links from other main-content pages.
+The HTTP SEO audit crawls all 178 canonical sitemap URLs and all 390 area-service combinations. It requires each combination to be either a self-canonical published `200` or a `308` to the matching service fragment on its parent hub, verifies that the fragment target exists, checks invalid combinations for `404`, and requires every area hub to have at least six contextual inbound links from other main-content pages.
 
 The production-host audit checks that HTTP and apex-host variants reach the HTTPS `www` canonical host through permanent redirects, and that the live sitemap and robots file use that canonical origin.
 
-Each area hub displays numbered local facts. Every service section links back to the exact numbered fact or facts it uses, while technical citations remain separately labelled. This makes the local evidence relationship reviewable by users and fail-closed in source and rendered-HTML audits.
+Each area hub displays source-bounded local facts under concise, authored descriptive headings while retaining stable numbered fragment IDs internally. Every service section links back using that same descriptive fact heading, rather than generic "Fact 1" anchor text, while technical citations remain separately labelled. This makes the local evidence relationship meaningful in headings and links, reviewable by users, and fail-closed in source and rendered-HTML audits.
 
 Each published area-service FAQ is also bound to one of that pair's selected local facts. The original customer question and service answer remain intact, followed by a separately labelled note showing how the cited local evidence should be used. The rendered note links directly to the complete fact and its source badges. The source audit requires all 390 FAQ fact pointers and evidence notes to resolve, and requires all 390 complete answers to remain unique even after area and postcode terms are removed.
 

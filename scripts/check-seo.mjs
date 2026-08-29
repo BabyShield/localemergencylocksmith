@@ -302,6 +302,16 @@ function redirectPath(response) {
   return location ? new URL(location, BASE_URL).pathname : null
 }
 
+function exactRedirectTarget(response) {
+  const location = response.headers.get('location')
+  if (!location) return null
+  const target = new URL(location, BASE_URL)
+  const baseOrigin = new URL(BASE_URL).origin
+  return target.origin === baseOrigin
+    ? `${target.pathname}${target.search}${target.hash}`
+    : target.href
+}
+
 function visibleText(html) {
   return decodeHtml(
     html
@@ -826,6 +836,8 @@ try {
 
     if (/^\/areas\/[^/]+$/.test(productionUrl.pathname)) {
       const areaSlug = productionUrl.pathname.split('/')[2]
+      const renderedAreaName = primaryHeading.match(/^Locksmith Services in (.+?)(?: —|$)/)?.[1] ?? ''
+      check(Boolean(renderedAreaName), `${productionUrl.pathname} H1 does not expose its area name`)
       check(/\blocksmith\b/i.test(description), `${productionUrl.pathname} meta description does not express locksmith intent`)
       check(ogDescription === description, `${productionUrl.pathname} Open Graph description does not match its governed meta description`)
       check(!description.includes("Call for today's ETA"), `${productionUrl.pathname} still uses the retired boilerplate area description`)
@@ -834,7 +846,11 @@ try {
       check(html.includes('id="source-heading"'), `${productionUrl.pathname} is missing its evidence source register`)
       const localFactBlocks = Array.from(
         mainHtml.matchAll(/<article\b(?=[^>]*data-evidence-section=["']local-fact-(\d+)["'])[^>]*>[\s\S]*?<\/article>/gi),
-        match => ({ index: match[1], block: match[0] }),
+        match => ({
+          index: match[1],
+          block: match[0],
+          heading: headingOutline(match[0]).find(heading => heading.level === 3)?.text ?? '',
+        }),
       )
       check(localFactBlocks.length >= 2, `${productionUrl.pathname} renders fewer than two source-linked local facts`)
       check(
@@ -842,11 +858,16 @@ try {
         `${productionUrl.pathname} repeats a local-fact evidence marker`,
       )
       const localFactTargets = new Set(localFactBlocks.map(fact => `local-fact-${fact.index}`))
+      const localFactHeadingByTarget = new Map(
+        localFactBlocks.map(fact => [`local-fact-${fact.index}`, fact.heading]),
+      )
       for (const fact of localFactBlocks) {
         check(
           new RegExp(`\\bid=["']local-fact-${fact.index}["']`, 'i').test(fact.block),
           `${productionUrl.pathname} local fact ${fact.index} has no link target`,
         )
+        check(fact.heading.split(/\s+/).filter(Boolean).length >= 3, `${productionUrl.pathname} local fact ${fact.index} has an inadequate descriptive heading`)
+        check(!/^\s*(?:local\s+)?fact(?:\s+\d+)?\b/i.test(fact.heading), `${productionUrl.pathname} local fact ${fact.index} retains a generic heading`)
         checkEvidenceBlockContract(fact.block, `${productionUrl.pathname} local fact ${fact.index}`)
       }
       const hasDedicatedOwnerPages = GOVERNED_TOWNS.includes(areaSlug)
@@ -911,7 +932,8 @@ try {
             check(!/data-service-faq|data-selected-local-fact-links|data-evidence-source-ids/i.test(ownerCard.block), `${productionUrl.pathname} ${serviceSlug} owner card embeds duplicate full guidance or evidence`)
             const ownerHeadings = headingOutline(ownerCard.block)
             check(ownerHeadings.length === 1 && ownerHeadings[0].level === 3, `${productionUrl.pathname} ${serviceSlug} owner card has an invalid heading structure`)
-            check(ownerHeadings[0]?.text === SERVICE_SHORT_NAMES[serviceSlug], `${productionUrl.pathname} ${serviceSlug} owner-card heading is ${JSON.stringify(ownerHeadings[0]?.text)}; expected ${JSON.stringify(SERVICE_SHORT_NAMES[serviceSlug])}`)
+            const expectedOwnerHeading = `${SERVICE_SHORT_NAMES[serviceSlug]} in ${renderedAreaName}`
+            check(ownerHeadings[0]?.text === expectedOwnerHeading, `${productionUrl.pathname} ${serviceSlug} owner-card heading is ${JSON.stringify(ownerHeadings[0]?.text)}; expected ${JSON.stringify(expectedOwnerHeading)}`)
           }
         }
       } else {
@@ -953,10 +975,11 @@ try {
             const selectedLocalFactBlock = block.match(
               /<p\b(?=[^>]*data-selected-local-fact-links=["']true["'])[^>]*>[\s\S]*?<\/p>/i,
             )?.[0] ?? ''
-            const localFactLinks = Array.from(
-              selectedLocalFactBlock.matchAll(/href=["']#(local-fact-\d+)["']/gi),
-              match => match[1],
+            const localFactLinkEntries = Array.from(
+              selectedLocalFactBlock.matchAll(/<a\b(?=[^>]*href=["']#(local-fact-\d+)["'])[^>]*>([\s\S]*?)<\/a>/gi),
+              match => ({ target: match[1], text: visibleText(match[2]) }),
             )
+            const localFactLinks = localFactLinkEntries.map(entry => entry.target)
             const openingTag = block.match(/^<article\b[^>]*>/i)?.[0] ?? ''
             check(
               getAttribute(openingTag, 'data-service-evidence-mode') === expectedEvidenceMode,
@@ -990,6 +1013,12 @@ try {
             check(new Set(localFactLinks).size === localFactLinks.length, `${productionUrl.pathname} ${serviceSlug} guidance repeats a selected local fact link`)
             for (const localFactLink of localFactLinks) {
               check(localFactTargets.has(localFactLink), `${productionUrl.pathname} ${serviceSlug} guidance links missing #${localFactLink}`)
+            }
+            for (const entry of localFactLinkEntries) {
+              check(
+                entry.text === localFactHeadingByTarget.get(entry.target),
+                `${productionUrl.pathname} ${serviceSlug} link to #${entry.target} is ${JSON.stringify(entry.text)}; expected descriptive heading ${JSON.stringify(localFactHeadingByTarget.get(entry.target))}`,
+              )
             }
             const serviceFaqBlocks = Array.from(
               block.matchAll(/<div\b(?=[^>]*data-service-faq=["']true["'])[^>]*>[\s\S]*?<\/div>/gi),
@@ -1339,7 +1368,20 @@ try {
       check(directAreaLinks.length <= 25, `${productionUrl.pathname} has ${directAreaLinks.length} direct area links; expected a focused article CTA`)
     }
 
-    return { path: productionUrl.pathname, title, description, links, mainLinks, mainHrefs, mainText }
+    const fragmentTargets = new Set(
+      Array.from(mainHtml.matchAll(/\bid=["']([^"']+)["']/gi), match => match[1]),
+    )
+
+    return {
+      path: productionUrl.pathname,
+      title,
+      description,
+      links,
+      mainLinks,
+      mainHrefs,
+      mainText,
+      fragmentTargets,
+    }
   })
 
   const titleOwners = new Map()
@@ -1402,7 +1444,8 @@ try {
   }
 
   // Every valid area x service pair must have exactly one outcome: a published
-  // self-canonical 200 in the sitemap, or a permanent redirect to the area hub.
+  // self-canonical 200 in the sitemap, or a permanent redirect to the exact
+  // service section on the area hub.
   const areaPaths = sitemapUrls
     .map(loc => new URL(loc).pathname)
     .filter(path => /^\/areas\/[^/]+$/.test(path))
@@ -1585,8 +1628,16 @@ try {
         check(!response.headers.get('location'), `${pairPath} unexpectedly redirects to ${response.headers.get('location')}`)
         check(getCanonical(html) === `${CANONICAL_ORIGIN}${pairPath}`, `${pairPath} does not self-canonicalise`)
       } else {
+        const expectedTarget = `${areaPath}#${pairPath.split('/').at(-1)}`
         check(response.status === 308, `${pairPath} returned ${response.status}; expected permanent 308`)
-        check(response.headers.get('location')?.endsWith(areaPath), `${pairPath} redirects to ${response.headers.get('location') || 'nowhere'}; expected ${areaPath}`)
+        check(
+          exactRedirectTarget(response) === expectedTarget,
+          `${pairPath} redirects to ${exactRedirectTarget(response) || 'nowhere'}; expected ${expectedTarget}`,
+        )
+        check(
+          pageByPath.get(areaPath)?.fragmentTargets.has(pairPath.split('/').at(-1)),
+          `${pairPath} redirects to missing section ${expectedTarget}`,
+        )
       }
     }
   )

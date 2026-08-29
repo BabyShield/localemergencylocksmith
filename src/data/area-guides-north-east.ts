@@ -898,16 +898,19 @@ export const NORTH_EAST_AREA_GUIDES = {
     evidenceLimits: `The council page establishes attributed town history and public town-centre orientation, while the Gazette notice records defined 2022 conservation-boundary changes. Neither identifies an individual property's current status, construction, controller, door material, lock type, fault, access route or service circumstances without an address-level check.`,
     facts: [
       {
+        heading: 'Nuneaton name derived from a nunnery and market established in 1247',
         text: `The borough council derives Nuneaton's name from a twelfth-century Benedictine nunnery and dates the market's establishment to 1247.`,
         sourceIds: ['nbbc-nuneaton-town-centre'],
         serviceRelevance: `This supports attributed historic context only; it cannot be used to characterise a customer's building, entrance or hardware.`,
       },
       {
+        heading: 'Nuneaton pedestrian centre and transport links',
         text: `The council describes Nuneaton's town-centre core as pedestrian, served by bus and train stations, with Riversley Park a short walk away.`,
         sourceIds: ['nbbc-nuneaton-town-centre'],
         serviceRelevance: `These landmarks can assist orientation but cannot identify the customer's building, threshold, property status or access arrangements.`,
       },
       {
+        heading: '2022 Nuneaton conservation boundary additions',
         text: `A Gazette notice records that Nuneaton Town Centre Conservation Area boundary additions were confirmed on 15 February 2022, including defined properties west of Queens Road and east of Newdegate and Bridge Streets.`,
         sourceIds: ['gazette-nuneaton-conservation-2022'],
         serviceRelevance: `Use the exact street and building to check current status before visible alterations; the boundary does not establish authority or hardware.`,
@@ -976,21 +979,25 @@ export const NORTH_EAST_AREA_GUIDES = {
     evidenceLimits: `The walkabout schedule is not a tenure register, while the statutory and local-list records apply only to their named buildings and address ranges. None establishes another property's controller, construction, door system, lock condition, access rights or service need.`,
     facts: [
       {
+        heading: 'Attleborough housing walkabout street group',
         text: `The council's 2026 walkabout schedule names Abbotsford Road, Attleborough Road, Everard Court and Highfield Road within its Attleborough housing-engagement group.`,
         sourceIds: ['nbbc-tenant-walkabouts-2026'],
         serviceRelevance: `Ask for the exact address and tenure before choosing a landlord or management route; the schedule does not classify every property on those streets.`,
       },
       {
+        heading: 'Attleborough council-home lock alteration permission',
         text: `The council requires prior landlord permission before alterations to council or former council homes, including changes to door handles or locks.`,
         sourceIds: ['nbbc-council-home-alterations'],
         serviceRelevance: `Apply this rule only after confirming that the exact Attleborough property falls within the policy, and keep landlord permission separate from other approvals.`,
       },
       {
+        heading: 'Attleborough Holy Trinity Grade II listing',
         text: `Historic England lists the Church of the Holy Trinity on Attleborough Road at Grade II under list entry 1034975.`,
         sourceIds: ['historic-england-holy-trinity-attleborough-1034975', 'nbbc-listed-building-consent'],
         serviceRelevance: `For that exact church, identify the authorised controller and check restrictions before work affecting listed character or historic fabric; neighbouring premises are not included.`,
       },
       {
+        heading: 'Attleborough Road locally listed buildings',
         text: `The Heritage SPD lists 2 Attleborough Road and Former Albion Works at 64-122 Attleborough Road as locally listed buildings outside conservation areas.`,
         sourceIds: ['nbbc-heritage-spd-2026'],
         serviceRelevance: `Match the exact number or unit and seek property-specific guidance before visible alteration; local listing is not statutory Grade II status and proves no fitted hardware.`,
@@ -1062,21 +1069,25 @@ export const NORTH_EAST_AREA_GUIDES = {
     evidenceLimits: `The street and walkabout records support selected address labels only, the landlord policy applies only to properties within its scope, and the Grade II entry covers two exact numbers. None proves another property's construction, hardware, condition, authority or service circumstances.`,
     facts: [
       {
+        heading: 'Stockingford streets in the county register',
         text: `The county street register assigns selected entries including Arbury Road, Ansley Road, Albert Street and Westbury Road to Stockingford, Nuneaton.`,
         sourceIds: ['wcc-list-of-streets-2026'],
         serviceRelevance: `Use the full number and postcode to disambiguate a booking; the register does not establish a parcel, private access right, tenure or threshold controller.`,
       },
       {
+        heading: 'Stockingford East and West walkabouts',
         text: `The 2026 housing walkabout schedule lists separate Stockingford East and Stockingford West groups and names selected streets within each group.`,
         sourceIds: ['nbbc-tenant-walkabouts-2026'],
         serviceRelevance: `Ask whether the exact property is council-owned, former-council, leasehold, managed or private; participation in a housing area does not determine an address's tenure.`,
       },
       {
+        heading: 'Stockingford council-home lock alteration permission',
         text: `The council requires prior landlord permission before alterations to council or former council homes, including changes to door handles or locks.`,
         sourceIds: ['nbbc-council-home-alterations'],
         serviceRelevance: `Apply the policy only after confirming the exact Stockingford premises falls within its scope, and keep landlord permission separate from planning or building approval.`,
       },
       {
+        heading: 'Stockingford Arbury Road Grade II listing',
         text: `Historic England lists 350 and 352 Arbury Road, Nuneaton CV10 7NE, at Grade II under list entry 1261649 and identifies Stockingford in the entry.`,
         sourceIds: ['historic-england-arbury-road-350-352-1261649', 'nbbc-listed-building-consent'],
         serviceRelevance: `The designation applies only to those two numbers; verify the responsible controller and restrictions before work affecting listed character or historic fabric.`,
@@ -1148,16 +1159,19 @@ export const NORTH_EAST_AREA_GUIDES = {
     evidenceLimits: `The walkabout row is not a property or tenure inventory, the landlord policy is conditional on the exact premises, and the Grade II entry designates one church. None proves another property's ownership, construction, door material, hardware, condition, access or service need.`,
     facts: [
       {
+        heading: 'Weddington housing walkabout streets',
         text: `The council's housing walkabout schedule lists Carisbrook Road, Cleaver Gardens, Niton Road and Ryde Avenue under Weddington and names a Cleaver Gardens flats meeting point.`,
         sourceIds: ['nbbc-tenant-walkabouts-2026'],
         serviceRelevance: `For a Cleaver Gardens call, obtain the block, unit, exact private or communal door and controller; the schedule does not prove any property's tenure.`,
       },
       {
+        heading: 'Weddington council-home lock alteration permission',
         text: `The council requires prior landlord permission before alterations to council or former council homes, including changes to door handles or locks.`,
         sourceIds: ['nbbc-council-home-alterations'],
         serviceRelevance: `Apply this policy only after confirming the exact Weddington property is within its scope, and keep landlord permission separate from planning or building approval.`,
       },
       {
+        heading: 'Weddington St James Grade II listing',
         text: `Historic England lists the Church of St James on Church Lane, Weddington, at Grade II under list entry 1185771.`,
         sourceIds: ['historic-england-st-james-weddington-1185771', 'nbbc-listed-building-consent'],
         serviceRelevance: `For that exact church, identify the authorised controller and check restrictions before work affecting listed character or historic fabric; Church Lane is not designated generally.`,
@@ -1228,16 +1242,19 @@ export const NORTH_EAST_AREA_GUIDES = {
     evidenceLimits: `The sources are a public-park directory entry, a current highway-locality register and one site-specific historic record, not property-access or tenure records. They prove no access arrangement, building construction, door material, mechanism, service history or demand, and the historic record cannot be transferred to another address.`,
     facts: [
       {
+        heading: 'Horestone Grange Woodlands Walk',
         text: `The borough council lists Horestone Grange Woodlands Walk as a local park at Launceston Drive with surfaced footpaths.`,
         sourceIds: ['nbbc-horestone-grange-woodlands-walk'],
         serviceRelevance: `This public-space entry can assist orientation but cannot define a private property, locality boundary or entrance.` ,
       },
       {
+        heading: 'Horeston Grange county street entries',
         text: `The county street register produced on 11 August 2026 assigns Crediton Close, Seaton Close and St Ives Way to Horeston Grange, Nuneaton.`,
         sourceIds: ['wcc-list-of-streets-2026'],
         serviceRelevance: `Those selected highway labels can support address checking but supply no evidence about hardware, access or service needs.`,
       },
       {
+        heading: 'Horeston Grange historic house site',
         text: `The Warwickshire Historic Environment Record identifies a named post-medieval or later house site at Horeston Grange, record MWA6260.`,
         sourceIds: ['warwickshire-her-horeston-grange-house'],
         serviceRelevance: `This site-specific historic record cannot describe another Horeston Grange property, confer designation or establish present access, construction or hardware.`,
@@ -1307,16 +1324,19 @@ export const NORTH_EAST_AREA_GUIDES = {
     evidenceLimits: `The evidence comprises selected highway entries and one official school directory record, not a complete postcode, ward, route or parcel map. The school record identifies that facility and address only; neither source verifies other properties, tenure, construction, lock type, access control or service circumstances.`,
     facts: [
       {
+        heading: 'Whitestone Fairway-area street entries',
         text: `The county street register produced on 11 August 2026 assigns Fairway, Falcon Close and Falstaff Close to Whitestone, Nuneaton.`,
         sourceIds: ['wcc-list-of-streets-2026'],
         serviceRelevance: `These selected street labels can support address checking but cannot be converted into a full boundary or property description.`,
       },
       {
+        heading: 'Whitestone Road-area street entries',
         text: `The same register assigns St Andrews Drive, Whitestone Road and Willowfields Road to Whitestone, Nuneaton.`,
         sourceIds: ['wcc-list-of-streets-2026'],
         serviceRelevance: `The highway-locality entries say nothing about the premises, exact entrance, authority or hardware at an address.`,
       },
       {
+        heading: 'Whitestone Infant School address',
         text: `Warwickshire County Council's school directory identifies Whitestone Infant School as a community school at Magyar Crescent, Nuneaton, Warwickshire CV11 4SQ.`,
         sourceIds: ['wcc-whitestone-infant-school'],
         serviceRelevance: `For a booking at the school, identify the named gate or entrance and confirm the person authorised for the site; the directory establishes neither access rights nor hardware.`,
@@ -1384,21 +1404,25 @@ export const NORTH_EAST_AREA_GUIDES = {
     evidenceLimits: `The street register concerns highways maintainable at public expense, the walkabout is housing-engagement geography, the plan gives a district-centre classification and the CHESS page identifies one managed venue. None supplies a complete service boundary, parcel or tenure record, access right, hardware, condition, incident pattern, demand, route, response time or job history.`,
     facts: [
       {
+        heading: 'Camp Hill county street entries',
         text: `The county List of Streets produced on 11 August 2026 assigns Camp Hill Drive, Copper Beech Road and Hollystitches Road to Camp Hill, Nuneaton, while Camp Hill Road has Nuneaton as its town and no locality entry.`,
         sourceIds: ['wcc-list-of-streets-2026'],
         serviceRelevance: `Use the distinction to request the complete number, street and postcode; it establishes neither a service boundary nor property access, ownership, use or condition.`,
       },
       {
+        heading: 'Camp Hill housing walkabout streets',
         text: `The council's 2026 housing walkabout schedule groups Almond Avenue, Beechwood Road, Cedar Road, Green Lane, Hillcrest Road, Laburnum Grove and other selected streets under Camp Hill.`,
         sourceIds: ['nbbc-tenant-walkabouts-2026'],
         serviceRelevance: `The housing-engagement grouping can prompt a tenure and responsible-controller question, but it does not prove that any address is council-owned, tenanted, shared or managed.`,
       },
       {
+        heading: 'Camp Hill district centre designation',
         text: `The Borough Plan Review adopted on 10 December 2025 names Camp Hill-Copper Beech Road as a district centre.`,
         sourceIds: ['nbbc-borough-plan-review-2021-2039'],
         serviceRelevance: `At a centre address, confirm the business or organisation, unit, affected threshold and authorised contact rather than inferring present use or access from the plan.`,
       },
       {
+        heading: 'Camp Hill CHESS Centre address',
         text: `The council identifies the CHESS Centre as a multi-room managed venue at 460 Cedar Road, Nuneaton CV10 9DN.`,
         sourceIds: ['nbbc-chess-centre'],
         serviceRelevance: `Only at the exact CHESS site, distinguish the room or activity space, affected threshold and authorised site contact.`,
@@ -1468,16 +1492,19 @@ export const NORTH_EAST_AREA_GUIDES = {
     evidenceLimits: `The sources describe one historic chapel and selected current highway-locality entries. They supply no complete boundary, parcel designation, property type, tenure, opening arrangement, door material, lock system, incident pattern or service demand.`,
     facts: [
       {
+        heading: 'Chapel End Congregational Chapel history',
         text: `The Warwickshire record describes the Congregational Chapel on Coleshill Road as built in 1840 to replace a chapel of 1807-08.`,
         sourceIds: ['warwickshire-her-chapel-end-chapel'],
         serviceRelevance: `This building-specific record must not be treated as a description or designation of other Chapel End properties.`,
       },
       {
+        heading: 'Chapel End county street entries',
         text: `The county street register produced on 11 August 2026 assigns Alders Lane, Lincoln Avenue and Salisbury Drive to Chapel End, Nuneaton.`,
         sourceIds: ['wcc-list-of-streets-2026'],
         serviceRelevance: `The selected highway labels can aid address checking but prove no property condition, entrance, authority or service need.`,
       },
       {
+        heading: 'Chapel End infant school record',
         text: `Warwickshire County Council's current directory lists Nathaniel Newton Infant School as a community primary school at Victoria Road, Nuneaton, Warwickshire CV10 0LS; its 2017/18 to 2019/20 admissions directory placed that address in Chapel End, Hartshill.`,
         sourceIds: ['wcc-nathaniel-newton-infant-school', 'wcc-chapel-end-school-directory'],
         serviceRelevance: `These records are limited to the named school and address; they establish no access authority, entrance condition, construction or hardware.`,
@@ -1550,21 +1577,25 @@ export const NORTH_EAST_AREA_GUIDES = {
     evidenceLimits: `The street register concerns highway maintainability, the heritage records cover exact Bermuda Village number ranges, the plan gives wider employment context and the Phoenix page identifies one managed site. None establishes a complete service boundary, access right, current use or controller for another premises, hardware, condition, incident pattern, demand, route, response time or job history.`,
     facts: [
       {
+        heading: 'Bermuda county street entries',
         text: `The county List of Streets produced on 11 August 2026 assigns Bermuda Road, Bermuda Village and Hazell Way to the locality Bermuda and town Nuneaton.`,
         sourceIds: ['wcc-list-of-streets-2026'],
         serviceRelevance: `Use the official Bermuda label to check the complete number, road, unit and postcode; it does not define the Bermuda Park service area or property access.`,
       },
       {
+        heading: 'Bermuda Village heritage and Article 4 range',
         text: `The Heritage Supplementary Planning Document adopted on 29 April 2026 locally lists 20-118 even and 39-117 odd at Bermuda Village, Nuneaton CV10 7PN, and the Article 4 Direction applies to dwellings and curtilages in that same exact range.`,
         sourceIds: ['nbbc-heritage-spd-2026', 'nbbc-heritage-spd-adoption-2026', 'nbbc-bermuda-village-article-4'],
         serviceRelevance: `Apply the evidence only after matching an exact house number; it does not prove that a door, lock or fitting is original, protected, defective or that a proposed locksmith action requires consent.`,
       },
       {
+        heading: 'Wider Bermuda Park employment context',
         text: `The adopted Borough Plan Review describes the wider Bermuda Park area as an employment location.`,
         sourceIds: ['nbbc-borough-plan-review-2021-2039'],
         serviceRelevance: `For a business-site booking, confirm the organisation, unit, building and authorised facilities contact rather than inferring access or control from the planning context.`,
       },
       {
+        heading: 'Bermuda Phoenix Centre and club',
         text: `The council lists Bermuda Phoenix Centre at Bermuda Road, Nuneaton CV10 7HU as a managed multi-space venue with a separate Sports and Social Club on the same site.`,
         sourceIds: ['nbbc-bermuda-phoenix-centre'],
         serviceRelevance: `Only at the exact Phoenix site, distinguish centre from club and identify the affected space, door and authorised contact.`,
@@ -1636,16 +1667,19 @@ export const NORTH_EAST_AREA_GUIDES = {
     evidenceLimits: `The evidence is a historic-environment record and current highway register. It proves no complete locality boundary, property status, tenure, building construction, door material, lock type, access condition or service demand.`,
     facts: [
       {
+        heading: 'Galley Common in former Manor of Stockingford research',
         text: `The Warwickshire record links Galley Common to documentary and map research into the former Manor of Stockingford, including 1592 and 1842 mapping.`,
         sourceIds: ['warwickshire-her-stockingford-galley-manor'],
         serviceRelevance: `The historic research cannot become a current property-status, construction, access, activity or service-demand claim.`,
       },
       {
+        heading: 'Galley Common county street entries',
         text: `The county street register produced on 11 August 2026 assigns Auden Close, Chaucer Drive, Chesterton Drive and Orford Rise to Galley Common, Nuneaton.`,
         sourceIds: ['wcc-list-of-streets-2026'],
         serviceRelevance: `These selected street labels can help check an address but cannot define the modern route or property boundaries.`,
       },
       {
+        heading: 'Galley Common Infant School address',
         text: `Warwickshire County Council's school directory identifies Galley Common Infant School as a community school at Plough Hill Road, Nuneaton, Warwickshire CV10 9NZ.`,
         sourceIds: ['wcc-galley-common-infant-school'],
         serviceRelevance: `This facility record applies only to the named school; it cannot describe surrounding Galley Common properties, access arrangements, entrances or locks.`,
@@ -1715,16 +1749,19 @@ export const NORTH_EAST_AREA_GUIDES = {
     evidenceLimits: `The Historic England record establishes one scheduled site, while the March 2017 neighbourhood plan identifies one community facility in a dated policy. Neither establishes the current status, controller, public access, construction, door material, lock mechanism, incident history or service conditions at a booking address.`,
     facts: [
       {
+        heading: 'Hartshill Castle scheduled monument',
         text: `Hartshill Castle is Scheduled Monument 1011197, located between The Green, Holy Trinity church and Castle Road.`,
         sourceIds: ['historic-england-hartshill-castle-1011197'],
         serviceRelevance: `The designation requires a map check for the exact site and cannot be extended to neighbouring addresses.`,
       },
       {
+        heading: 'Hartshill Castle development phases',
         text: `Historic England records a motte-and-bailey origin during Henry I's reign and enclosure-castle alteration around 1330.`,
         sourceIds: ['historic-england-hartshill-castle-1011197'],
         serviceRelevance: `These phases support attributed monument history only and say nothing about the age or fabric of customer premises.`,
       },
       {
+        heading: 'Hartshill Friends Meeting House protection',
         text: `In the adopted March 2017 Hartshill Neighbourhood Plan, Policy H11 lists the current Society of Friends Meeting House on Castle Road among community facilities to be enhanced and protected.`,
         sourceIds: ['nwbc-hartshill-neighbourhood-plan-2017'],
         serviceRelevance: `This identifies one facility in a dated policy; confirm its present identity, responsible controller and exact entrance before booking, and infer nothing about its hardware.`,
@@ -1790,16 +1827,19 @@ export const NORTH_EAST_AREA_GUIDES = {
     evidenceLimits: `The conservation evidence applies to a mapped core, while the station and park are named points. The sources do not identify an individual property's status, construction, ownership, door material, lock type or service circumstances.`,
     facts: [
       {
+        heading: 'Bedworth conservation-area character areas',
         text: `Bedworth Town Centre Conservation Area dates from 1986 and the 2022 appraisal identifies three character areas within it.`,
         sourceIds: ['nbbc-bedworth-conservation-2022'],
         serviceRelevance: `The mapped designation requires an exact-address check before visible external material is treated as protected context.`,
       },
       {
+        heading: 'Bedworth station and Miners Welfare Park',
         text: `The county visitor page records Bedworth station on the Coventry-Nuneaton line and Miners Welfare Park's mining-community legacy.`,
         sourceIds: ['visit-warwickshire-bedworth'],
         serviceRelevance: `These named features support attributed orientation and heritage context but cannot establish property access or hardware.`,
       },
       {
+        heading: 'Bedworth Library High Street address',
         text: `Warwickshire County Council identifies Bedworth Library and Information Centre at 18 High Street, Bedworth CV12 8NF.`,
         sourceIds: ['wcc-bedworth-library'],
         serviceRelevance: `This public-facility record applies only to the named library; a booking there still requires the exact entrance and an authorised site contact, and it says nothing about other properties.`,
@@ -1869,16 +1909,19 @@ export const NORTH_EAST_AREA_GUIDES = {
     evidenceLimits: `The appraisal establishes one mapped conservation area and facts about two named buildings. It does not assign status, age, ownership, construction, door material, lock type, access conditions or service history to other addresses.`,
     facts: [
       {
+        heading: 'Bulkington conservation-area review history',
         text: `Bulkington Conservation Area dates from 1985 and was reviewed in 2008 and 2021 for the 2022 appraisal.`,
         sourceIds: ['nbbc-bulkington-conservation-2022'],
         serviceRelevance: `The review history supports a mapped-status check but cannot establish designation or fabric at every village address.`,
       },
       {
+        heading: 'Bulkington named historic buildings',
         text: `The appraisal records thirteenth-century fabric at St James Church and an early-seventeenth-century building at 3-4 Church Street.`,
         sourceIds: ['nbbc-bulkington-conservation-2022'],
         serviceRelevance: `The named dates must remain asset-specific and cannot be transferred to a customer's premises or door.`,
       },
       {
+        heading: 'Bulkington Community Library address',
         text: `Warwickshire County Council identifies Bulkington Community Library at School Road, Bulkington, Nuneaton CV12 9JB.`,
         sourceIds: ['wcc-bulkington-library'],
         serviceRelevance: `This facility record is limited to the named library and address; it cannot establish access, authority, construction or hardware there or at other Bulkington properties.`,
@@ -1944,16 +1987,19 @@ export const NORTH_EAST_AREA_GUIDES = {
     evidenceLimits: `The appraisal describes a mapped central designation and historical development. It does not apply to the whole Rugby route or identify an individual property's status, controller, door material, lock type or access conditions.`,
     facts: [
       {
+        heading: 'Rugby town-centre conservation area',
         text: `Rugby Town Centre Conservation Area covers most of the commercial centre along the historic road layout between defined northern and southern contexts.`,
         sourceIds: ['rbc-rugby-town-centre-appraisal'],
         serviceRelevance: `The mapped extent requires exact-address verification before central townscape context is applied to visible property fabric.`,
       },
       {
+        heading: 'Rugby nineteenth-century railway growth',
         text: `The London-Birmingham railway opened in 1838 and five additional companies added Rugby routes within the following twelve years.`,
         sourceIds: ['rbc-rugby-town-centre-appraisal'],
         serviceRelevance: `The railway chronology supports attributed history only and cannot imply current access, proximity or service performance.`,
       },
       {
+        heading: 'Rugby Library Little Elborow Street',
         text: `Warwickshire County Council identifies Rugby Library and Information Centre at Little Elborow Street, Rugby CV21 3BZ.`,
         sourceIds: ['wcc-rugby-library'],
         serviceRelevance: `This public-facility record applies only to the named library; it cannot describe another Rugby property, its entrance, access control, construction or locks.`,
@@ -2019,16 +2065,19 @@ export const NORTH_EAST_AREA_GUIDES = {
     evidenceLimits: `The appraisal concerns a small mapped Hillmorton Locks conservation area, not the whole Hillmorton route. It does not identify another property's designation, construction, ownership, door system, lock condition or access.`,
     facts: [
       {
+        heading: 'Hillmorton Locks conservation-area setting',
         text: `Hillmorton Locks is a small canal-centred conservation area separated from Hillmorton housing by a railway embankment and narrow tunnel.`,
         sourceIds: ['rbc-hillmorton-locks-appraisal'],
         serviceRelevance: `This context applies only to the mapped locks settlement and cannot establish access to another Hillmorton address.`,
       },
       {
+        heading: 'Hillmorton Locks settlement development',
         text: `The locks settlement developed around canal workshops, a dry dock and housing, with continuing uses recorded at appraisal time.`,
         sourceIds: ['rbc-hillmorton-locks-appraisal'],
         serviceRelevance: `The canal-industrial history may be attributed but does not date or describe a customer's building or entrance.`,
       },
       {
+        heading: 'Six historic Hillmorton lock pairs',
         text: `Canal & River Trust reported in May 2026 that Hillmorton Locks consists of six historic pairs of locks on the Oxford Canal.`,
         sourceIds: ['crt-hillmorton-locks-2026'],
         serviceRelevance: `For a call at the Locks complex, record the exact land-side entrance and authorised site contact; the landmark does not identify a private doorway or access method.`,
@@ -2096,16 +2145,19 @@ export const NORTH_EAST_AREA_GUIDES = {
     evidenceLimits: `The source establishes a partial conservation-area boundary and facts about two named buildings. It does not identify another property's designation, age, ownership, construction, door material, lock mechanism or access arrangements.`,
     facts: [
       {
+        heading: 'Bilton village and conservation-area extent',
         text: `Bilton was once a separate village, merged into Rugby in the 1930s, and only part lies within the conservation area.`,
         sourceIds: ['rbc-bilton-appraisal'],
         serviceRelevance: `The limited designation requires an address check and cannot be extended to the whole modern Bilton route.`,
       },
       {
+        heading: 'Bilton named historic buildings',
         text: `The appraisal records mid-fourteenth-century work at St Mark's Church and dates original Bilton Hall fabric to 1623.`,
         sourceIds: ['rbc-bilton-appraisal'],
         serviceRelevance: `Those asset-specific dates provide heritage anchors but cannot characterise a customer's building, door or hardware.`,
       },
       {
+        heading: 'Bilton Infant School address',
         text: `Warwickshire County Council's school directory identifies Bilton Infant School as a community school at Magnet Lane, Rugby, Warwickshire CV22 7NH.`,
         sourceIds: ['wcc-bilton-infant-school'],
         serviceRelevance: `This facility record applies only to the named school; it proves no access authority, entrance arrangement, construction or lock details there or elsewhere in Bilton.`,
@@ -2171,16 +2223,19 @@ export const NORTH_EAST_AREA_GUIDES = {
     evidenceLimits: `Old Brownsover's mapped conservation area is not coterminous with the wider route. The appraisal does not identify another property's status, construction, controller, door material, lock type, modern access or service circumstances.`,
     facts: [
       {
+        heading: 'Old Brownsover conservation-area components',
         text: `Old Brownsover Conservation Area includes Brownsover Hall, a small group of houses, St Michael's Church and adjoining undeveloped land.`,
         sourceIds: ['rbc-old-brownsover-appraisal'],
         serviceRelevance: `The description applies to the mapped hamlet and must not be projected onto wider Brownsover development.`,
       },
       {
+        heading: 'Brownsover canal, highway and hall context',
         text: `The appraisal records historic canal and highway connections and identifies Brownsover Hall as the key landmark building.`,
         sourceIds: ['rbc-old-brownsover-appraisal'],
         serviceRelevance: `These are attributed Old Brownsover facts and cannot establish present property access, condition or hardware.`,
       },
       {
+        heading: 'Brownsover Community School address',
         text: `Warwickshire County Council's school directory identifies Brownsover Community School as a community school at Webb Drive, Rugby, Warwickshire CV23 0UP.`,
         sourceIds: ['wcc-brownsover-community-school'],
         serviceRelevance: `This facility record applies only to the named school and cannot describe other Brownsover properties, their access, entrances, construction or hardware.`,
@@ -2247,16 +2302,19 @@ export const NORTH_EAST_AREA_GUIDES = {
     evidenceLimits: `The masterplan describes broad, phased development with details that can change, while the county map supplies dated orientation. Neither source proves completed infrastructure, present routing, journey time, property status, tenure, construction, hardware, condition, demand or locksmith performance.`,
     facts: [
       {
+        heading: 'South West Rugby masterplan adoption',
         text: `Rugby Borough Council adopted the updated South West Rugby Masterplan Supplementary Planning Document on 11 December 2024.`,
         sourceIds: ['rbc-south-west-rugby-spd-2024'],
         serviceRelevance: `The document is broad planning context; it cannot provide current access, threshold control or hardware details for an exact service address.`,
       },
       {
+        heading: 'South West Rugby ownership and infrastructure',
         text: `The adopted masterplan records multiple ownerships and says preferred infrastructure locations may vary as detailed work and evidence develop.`,
         sourceIds: ['rbc-south-west-rugby-spd-2024'],
         serviceRelevance: `This supports requesting current access instructions only; it cannot identify a property's controller, completed route or attendance time.`,
       },
       {
+        heading: 'Cawston bus-map road labels',
         text: `Warwickshire County Council's Rugby Bus Map, dated 30 August 2025, labels Cawston separately and names Cawston Lane and Cawston Grange Drive.`,
         sourceIds: ['wcc-rugby-bus-map-2025'],
         serviceRelevance: `The map is orientation evidence only, so a booking still needs the full street, postcode, unit and affected entrance.`,
@@ -2324,16 +2382,19 @@ export const NORTH_EAST_AREA_GUIDES = {
     evidenceLimits: `The list entries designate two named assets, while the planning page records an area-level allocation context. None establishes another property's age, status, tenure, construction, door hardware, access or service circumstances.`,
     facts: [
       {
+        heading: 'Lawford Hill Farmhouse Grade II listing',
         text: `Lawford Hill Farmhouse is Grade II listed, with a probably late-eighteenth-century main range and wings added around 1835.`,
         sourceIds: ['historic-england-lawford-hill-farmhouse-1299648'],
         serviceRelevance: `The designation and phases apply only to the named farmhouse and cannot characterise nearby Long Lawford properties.`,
       },
       {
+        heading: 'Long Lawford St John Grade II listing',
         text: `The Grade II Church of St John on Chapel Street dates from 1839 and is attributed to William Walker.`,
         sourceIds: ['historic-england-st-john-long-lawford-1299647'],
         serviceRelevance: `The church record provides a named heritage anchor but no evidence about neighbouring buildings, doors or locks.`,
       },
       {
+        heading: 'Long Lawford local-plan allocation',
         text: `Rugby Borough Council adopted its Local Plan 2011-2031 in 2019 and lists Long Lawford Main Rural Settlement allocation evidence.`,
         sourceIds: ['rbc-local-plan-2011-2031'],
         serviceRelevance: `The planning classification requires current-map context and cannot establish the status or construction of an individual address.`,
@@ -2403,16 +2464,19 @@ export const NORTH_EAST_AREA_GUIDES = {
     evidenceLimits: `The Article 4 record concerns a narrowly defined planning change, while the Local Centres Study uses analytical candidate areas. Neither proves that an address is an HMO, rented, shared or managed, or establishes ownership, access, construction, hardware, condition, demand, routing or locksmith performance.`,
     facts: [
       {
+        heading: 'New Bilton HMO Article 4 timeline',
         text: `Rugby Borough Council confirmed the HMO Article 4 Direction on 25 September 2024, with effect from 23 February 2025 in a defined area including New Bilton ward.`,
         sourceIds: ['rbc-new-bilton-hmo-article-4'],
         serviceRelevance: `Ward inclusion cannot establish an individual address's use or status, which requires an exact-property check where relevant.`,
       },
       {
+        heading: 'New Bilton C3-to-C4 rule in the defined Article 4 area',
         text: `Within the direction's defined area, a proposed change from a C3 dwelling house to a small C4 HMO requires planning permission.`,
         sourceIds: ['rbc-new-bilton-hmo-article-4'],
         serviceRelevance: `This narrow use-control fact does not prove tenure or shared access; authority must be confirmed from the caller's actual circumstances.`,
       },
       {
+        heading: 'New Bilton study-area labels',
         text: `The September 2024 Local Centres Study assessed New Bilton Inner and New Bilton Outer as separate candidate locations.`,
         sourceIds: ['rbc-local-centres-study-2024'],
         serviceRelevance: `These analytical labels are not booking boundaries, so the full street, postcode, unit and exact entrance remain necessary.`,
@@ -2480,16 +2544,19 @@ export const NORTH_EAST_AREA_GUIDES = {
     evidenceLimits: `The conservation area, scheduled cross and registered landscape are distinct mapped contexts. The appraisal does not assign status, age, ownership, construction, door material, lock type or access arrangements to every Dunchurch address.`,
     facts: [
       {
+        heading: 'Dunchurch conservation-area extent',
         text: `Dunchurch Conservation Area covers the historic crossroads core, commercial centre, open spaces and a later northern housing area.`,
         sourceIds: ['rbc-dunchurch-appraisal'],
         serviceRelevance: `The mapped extent must be checked for the exact address and cannot be applied across the whole route.`,
       },
       {
+        heading: 'Dunchurch standing cross and registered landscape',
         text: `The appraisal identifies the central medieval standing cross as scheduled and part of Dunchurch Lodge's registered landscape to the north-east.`,
         sourceIds: ['rbc-dunchurch-appraisal'],
         serviceRelevance: `The separately bounded assets require their own records and cannot confer status on surrounding buildings.`,
       },
       {
+        heading: 'Dunchurch Community Library address',
         text: `Warwickshire County Council identifies Dunchurch Community Library at The Green, Dunchurch, Rugby CV22 6PA and states that it is run by Dunchurch Parish Council.`,
         sourceIds: ['wcc-dunchurch-library'],
         serviceRelevance: `This facility record applies only to the named library; it cannot establish access authority, entrance condition, construction or hardware there or at another Dunchurch property.`,

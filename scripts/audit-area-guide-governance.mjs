@@ -549,6 +549,7 @@ const areaEditorialRecords = []
 const hubOwnedAreaEditorialRecords = []
 const dedicatedParentEditorialRecords = []
 const searchDescriptionOwners = new Map()
+const factHeadingOwners = new Map()
 
 check(AREAS.length === EXPECTED_AREA_COUNT, `area registry has ${AREAS.length} entries; expected ${EXPECTED_AREA_COUNT}`)
 check(SERVICES.length === EXPECTED_SERVICE_COUNT, `service registry has ${SERVICES.length} entries; expected ${EXPECTED_SERVICE_COUNT}`)
@@ -766,8 +767,20 @@ for (const area of AREAS) {
     check(!technicalIds.has(sourceId), `${label} fact-only source ${sourceId} cannot be a technical source`)
   }
 
+  const localFactHeadings = new Set()
   for (const [index, fact] of (guide.facts ?? []).entries()) {
     const factLabel = `${label} fact ${index + 1}`
+    const heading = fact?.heading?.trim() ?? ''
+    const headingKey = normalise(heading)
+    check(wordCount(heading) >= 3 && wordCount(heading) <= 12, `${factLabel} heading has ${wordCount(heading)} words; expected 3-12`)
+    check(!/^\s*(?:local\s+)?fact(?:\s+\d+)?\b/i.test(heading), `${factLabel} uses a generic heading: ${JSON.stringify(heading)}`)
+    check(!localFactHeadings.has(headingKey), `${factLabel} repeats a heading within ${label}: ${JSON.stringify(heading)}`)
+    const previousHeadingOwner = factHeadingOwners.get(headingKey)
+    check(!previousHeadingOwner, `${factLabel} repeats the heading used by ${previousHeadingOwner}: ${JSON.stringify(heading)}`)
+    if (headingKey) {
+      localFactHeadings.add(headingKey)
+      if (!previousHeadingOwner) factHeadingOwners.set(headingKey, factLabel)
+    }
     check(wordCount(fact?.text) >= 10, `${factLabel} has ${wordCount(fact?.text)} words; expected at least 10`)
     check(wordCount(fact?.serviceRelevance) >= 10, `${factLabel} service relevance has ${wordCount(fact?.serviceRelevance)} words; expected at least 10`)
     check(Array.isArray(fact?.sourceIds) && fact.sourceIds.length > 0, `${factLabel} has no source IDs`)
@@ -1215,7 +1228,13 @@ console.log(`Registry: ${guideEntries.length} area guides, ${guidanceRecords.len
 console.log(`Evidence: ${sourceCanonicals.size} source IDs, ${sourceUrls.size} unique URLs`)
 const factCounts = summary(areaFactCounts)
 const factSourceCounts = summary(areaFactSourceCounts)
+const totalAreaFactCount = areaFactCounts.reduce((total, count) => total + count, 0)
+check(
+  factHeadingOwners.size === totalAreaFactCount,
+  `fact-heading registry has ${factHeadingOwners.size} unique labels for ${totalAreaFactCount} facts`,
+)
 console.log(`Area facts (required ${MIN_AREA_FACTS}-${MAX_AREA_FACTS}): min ${factCounts.min}, median ${factCounts.median}, max ${factCounts.max}`)
+console.log(`Descriptive fact headings: ${factHeadingOwners.size}/${totalAreaFactCount} unique labels`)
 console.log(`Area fact sources (minimum ${MIN_AREA_FACT_SOURCES}): min ${factSourceCounts.min}, median ${factSourceCounts.median}, max ${factSourceCounts.max}`)
 const hubOwnedWords = summary(hubOwnedAreaWordCounts)
 const dedicatedParentWords = summary(dedicatedParentWordCounts)

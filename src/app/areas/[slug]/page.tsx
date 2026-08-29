@@ -315,7 +315,7 @@ export default async function AreaPage({ params }: Props) {
                 data-evidence-source-ids={fact.sourceIds.join(' ')}
                 className="scroll-mt-28 rounded-xl border border-gray-200 p-5"
               >
-                <h3 className="font-black text-[#0F1B2D] mb-2">Local fact {index + 1}</h3>
+                <h3 data-local-fact-heading="true" className="font-black text-[#0F1B2D] mb-2">{fact.heading}</h3>
                 <p className="text-gray-700 leading-relaxed">{fact.text}</p>
                 <p className="text-sm text-gray-600 mt-3"><strong>Why it matters here:</strong> {fact.serviceRelevance}</p>
                 <p className="text-xs text-gray-500 mt-3">
@@ -354,7 +354,7 @@ export default async function AreaPage({ params }: Props) {
                   className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm"
                 >
                   <p className="text-xs font-bold uppercase tracking-wider text-[#8A5A00] mb-2">From £{service.priceFrom} · no VAT</p>
-                  <h3 className="text-xl font-black text-[#0F1B2D]">{service.shortName}</h3>
+                  <h3 className="text-xl font-black text-[#0F1B2D]">{service.shortName} in {area.name}</h3>
                   <p className="text-gray-700 leading-relaxed mt-3" data-owner-summary="true">
                     <strong>{guidance.heading}.</strong> {service.description}
                   </p>
@@ -427,8 +427,12 @@ export default async function AreaPage({ params }: Props) {
                         {guidance.localFactIndexes.map((factIndex, index) => (
                           <span key={factIndex}>
                             {index > 0 && ' · '}
-                            <a href={`#local-fact-${factIndex + 1}`} className="underline decoration-[#FFB800] underline-offset-2 hover:text-[#8A5A00]">
-                              Fact {factIndex + 1}
+                            <a
+                              href={`#local-fact-${factIndex + 1}`}
+                              data-local-fact-link="true"
+                              className="underline decoration-[#FFB800] underline-offset-2 hover:text-[#8A5A00]"
+                            >
+                              {guide.facts[factIndex].heading}
                             </a>
                           </span>
                         ))}

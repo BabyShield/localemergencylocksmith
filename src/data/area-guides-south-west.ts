@@ -412,16 +412,19 @@ const AREA_SEEDS: AreaGuideSeed[] = [
     evidenceLimits: `The neighbourhood-plan area, river description and conservation character map are not property records. None proves service coverage, route suitability, ownership, access rights, listed status, building fabric, door material, installed hardware or condition at an individual address.`,
     facts: [
       {
+        heading: `Leamington Spa neighbourhood plan made in 2021`,
         text: `Warwick District Council made the Royal Leamington Spa Neighbourhood Development Plan on 12 May 2021 and uses it when considering planning applications in Leamington Spa.`,
         sourceIds: ['wdc-leamington-plan-page'],
         serviceRelevance: `Use the plan as official planning context only; it cannot establish an address, customer authority or locksmith requirement.`,
       },
       {
+        heading: `River Leam divides north and south Leamington`,
         text: `The made plan says the River Leam flows through the town centre, separating north and south Royal Leamington Spa, with early development beginning on the southern bank.`,
         sourceIds: ['wdc-leamington-plan'],
         serviceRelevance: `Use the river distinction only as caller-confirmed orientation, never as evidence of route, travel time or service reach.`,
       },
       {
+        heading: `Leamington conservation area's named character areas`,
         text: `Warwick District Council publishes a Royal Leamington Spa Conservation Area guide whose key map divides the designation into named character areas.`,
         sourceIds: ['wdc-leamington-conservation'],
         serviceRelevance: `Check the exact current boundary before conservation guidance and verify listed status independently for the particular building.`,
@@ -488,16 +491,19 @@ const AREA_SEEDS: AreaGuideSeed[] = [
     evidenceLimits: `A named conservation character area and protected allotment site do not describe every Milverton address. They provide no evidence of property type, listing, door material, lock mechanism, customer permission, route conditions, demand, response or prior work.`,
     facts: [
       {
+        heading: `New Milverton conservation character area`,
         text: `The Royal Leamington Spa Conservation Area key map names New Milverton, excluding Rugby Road and Warwick New Road, as character area 30.`,
         sourceIds: ['wdc-leamington-conservation'],
         serviceRelevance: `Apply conservation wording only after confirming the address lies in that mapped character area rather than broader Milverton.`,
       },
       {
+        heading: `Milverton New Allotments protected by plan policy`,
         text: `Neighbourhood Plan Policy RLS10 identifies the Northumberland Road Milverton New Allotments Association site as an allotment area protected in line with district policy.`,
         sourceIds: ['wdc-leamington-plan'],
         serviceRelevance: `Use the named site only as verified locality context, not evidence of proximity, access, property characteristics or work.`,
       },
       {
+        heading: `Milverton Primary School on Greatheed Road`,
         text: `The Department for Education records Milverton Primary School as a specific establishment at Greatheed Road, Leamington Spa, CV32 6ES.`,
         sourceIds: ['dfe-milverton-primary'],
         serviceRelevance: `This identifies one education site only; it does not describe neighbouring properties, access rights, door hardware or service conditions.`,
@@ -565,16 +571,19 @@ const AREA_SEEDS: AreaGuideSeed[] = [
     evidenceLimits: `The conservation key map and local-centre entry cannot be applied to all Lillington addresses. They provide no proof of a building's age, listing, use, access, ownership, door construction, lock type, condition or service availability.`,
     facts: [
       {
+        heading: `Lillington conservation character areas`,
         text: `The Royal Leamington Spa Conservation Area key map names Lillington Road North and Lillington Village as character areas 34 and 35.`,
         sourceIds: ['wdc-leamington-conservation'],
         serviceRelevance: `Check the current mapped boundary before using either designation for an address elsewhere in the broader Lillington locality.`,
       },
       {
+        heading: `Crown Way local shopping centre`,
         text: `The adopted Warwick District Local Plan lists Crown Way, Lillington, as a local shopping centre in paragraph 3.103.`,
         sourceIds: ['wdc-local-plan'],
         serviceRelevance: `Use Crown Way only as caller-confirmed orientation; it does not prove a property is nearby or within coverage.`,
       },
       {
+        heading: `Lillington Primary School on Cubbington Road`,
         text: `The Department for Education records Lillington Primary School at Cubbington Road, Lillington, Leamington Spa, CV32 7AG.`,
         sourceIds: ['dfe-lillington-primary'],
         serviceRelevance: `This identifies one education site only; it does not describe neighbouring properties, access rights, door hardware or service conditions.`,
@@ -642,16 +651,19 @@ const AREA_SEEDS: AreaGuideSeed[] = [
     evidenceLimits: `Local-centre and manufacturing-location descriptions are planning context only. They do not prove property use at an individual address, ownership, access rights, operating hours, door type, lock mechanism, security need, service coverage or response time.`,
     facts: [
       {
+        heading: `Sydenham Drive local shopping centre`,
         text: `Royal Leamington Spa Neighbourhood Plan Policy RLS19 identifies Sydenham Drive as one of the plan's local shopping centres.`,
         sourceIds: ['wdc-leamington-plan'],
         serviceRelevance: `Use the named road only to clarify the address, never to infer a commercial property, nearby location or access route.`,
       },
       {
+        heading: `Sydenham Industrial Estate manufacturing location`,
         text: `The neighbourhood plan's spatial portrait names Sydenham Industrial Estate as one of Royal Leamington Spa's manufacturing locations.`,
         sourceIds: ['wdc-leamington-plan'],
         serviceRelevance: `For a named unit, identify the responsible site contact and entrance; the estate label does not prove authority.`,
       },
       {
+        heading: `Sydenham Primary School on Calder Walk`,
         text: `The Department for Education records Sydenham Primary School at Calder Walk, Sydenham, Leamington Spa, CV31 1SA.`,
         sourceIds: ['dfe-sydenham-primary'],
         serviceRelevance: `This identifies one education site only; it does not describe neighbouring properties, access rights, door hardware or service conditions.`,
@@ -719,16 +731,19 @@ const AREA_SEEDS: AreaGuideSeed[] = [
     evidenceLimits: `The neighbourhood-plan status and district conservation table cannot be generalised across Whitnash. They do not prove property use, age, listing, fabric, ownership, access arrangements, installed locks, condition, operational service reach or response.`,
     facts: [
       {
+        heading: `Whitnash neighbourhood plan brought into force`,
         text: `Warwick District Council brought the Whitnash Neighbourhood Plan into legal force on 27 January 2016 following the 26 November 2015 referendum.`,
         sourceIds: ['wdc-whitnash-plan-page'],
         serviceRelevance: `Use the official plan status only as area planning context, not evidence about a particular property or service.`,
       },
       {
+        heading: `Whitnash Church Green and Chapel Green conservation areas`,
         text: `The adopted Warwick District Local Plan conservation table lists Whitnash Church Green and Whitnash Chapel Green as separate conservation areas.`,
         sourceIds: ['wdc-local-plan'],
         serviceRelevance: `Resolve the exact address against the current boundary and verify listing separately before heritage-related guidance.`,
       },
       {
+        heading: `Whitnash Primary School on Langley Road`,
         text: `The Department for Education records Whitnash Primary School at Langley Road, Whitnash, Leamington Spa, CV31 2EX.`,
         sourceIds: ['dfe-whitnash-primary'],
         serviceRelevance: `This identifies one education site only; it does not describe neighbouring properties, access rights, door hardware or service conditions.`,
@@ -796,16 +811,19 @@ const AREA_SEEDS: AreaGuideSeed[] = [
     evidenceLimits: `The monitoring report is dated and the park facility is expressly planned. Neither source proves current completion, private-property access, site ownership, route availability, building fabric, door type, lock condition, service coverage, demand or response time.`,
     facts: [
       {
+        heading: `Lower Heathcote Local Centre status in the 2024-25 monitoring report`,
         text: `The 2024-25 monitoring report says Lower Heathcote Local Centre retail units, nursery and care home were complete while its office had not started at reporting time.`,
         sourceIds: ['wdc-monitoring-report-2024-25'],
         serviceRelevance: `Preserve the dated status and verify the actual building and responsible party instead of assuming current completion or use.`,
       },
       {
+        heading: `Heathcote's planned country park play area`,
         text: `The Tachbrook Country Park development page places planned Play Area 2 in the park's north-west, described specifically as the Heathcote area.`,
         sourceIds: ['wdc-tachbrook-park'],
         serviceRelevance: `Treat the planned facility as managed-site orientation only and recheck its status before any publication or instruction.`,
       },
       {
+        heading: `Heathcote Primary School on Vickers Way`,
         text: `The Department for Education records Heathcote Primary School at Vickers Way, Heathcote, Warwick, CV34 7AP.`,
         sourceIds: ['dfe-heathcote-primary'],
         serviceRelevance: `This identifies one education site only; it does not describe neighbouring properties, access rights, door hardware or service conditions.`,
@@ -873,16 +891,19 @@ const AREA_SEEDS: AreaGuideSeed[] = [
     evidenceLimits: `Fifteen mapped character sections and an Urban Area classification are not property-level findings. They do not prove listing, ownership, building type, access permission, door or lock construction, service availability, route, response, demand or previous work.`,
     facts: [
       {
+        heading: `Fifteen Warwick conservation character sections`,
         text: `Warwick District Council's conservation guide maps fifteen named Warwick Conservation Area character sections, including Coten End–Emscote Road, St Nicholas Park, Priory Park, Castle and Castle Park, and West Street.`,
         sourceIds: ['wdc-warwick-conservation'],
         serviceRelevance: `Use a named section only after resolving the exact address, then check current conservation and listed status separately.`,
       },
       {
+        heading: `Warwick classified as an Urban Area`,
         text: `The adopted Warwick District Local Plan lists Warwick as one of the district's four Urban Areas in Table 2.`,
         sourceIds: ['wdc-local-plan'],
         serviceRelevance: `Treat Urban Area as planning classification only, not evidence of a property's use, hardware or service reach.`,
       },
       {
+        heading: `Coten End Primary School in Warwick`,
         text: `The Department for Education records Coten End Primary School at Coten End, Warwick, CV34 4NP.`,
         sourceIds: ['dfe-coten-end-primary'],
         serviceRelevance: `This identifies one education site only; it does not describe neighbouring properties, access rights, door hardware or service conditions.`,
@@ -950,16 +971,19 @@ const AREA_SEEDS: AreaGuideSeed[] = [
     evidenceLimits: `A local-centre entry and public park description do not identify nearby properties, private access, boundary responsibility, building fabric or hardware. The records cannot support service coverage, parking, route suitability, response time, security demand or job history.`,
     facts: [
       {
+        heading: `Reardon Court local shopping centre`,
         text: `The adopted Warwick District Local Plan lists Reardon Court, Woodloes, Warwick, as a local shopping centre.`,
         sourceIds: ['wdc-local-plan'],
         serviceRelevance: `Use Reardon Court only to clarify an address and do not infer commercial use, proximity or service availability.`,
       },
       {
+        heading: `Woodloes Park access points`,
         text: `The council's community-parks register places Canalside in Warwick (Woodloes Park) and lists access from Coventry Road, Greenway, roads south of Deansway, Scar Bank and Lock Lane.`,
         sourceIds: ['wdc-community-parks'],
         serviceRelevance: `Treat named park access points as public-site context, not proof of a suitable route to a private address.`,
       },
       {
+        heading: `Woodloes Primary School on Deansway`,
         text: `The Department for Education records Woodloes Primary School at Deansway, Woodloes Park Estate, Warwick, CV34 5DF.`,
         sourceIds: ['dfe-woodloes-primary'],
         serviceRelevance: `This identifies one education site only; it does not describe neighbouring properties, access rights, door hardware or service conditions.`,
@@ -1027,16 +1051,19 @@ const AREA_SEEDS: AreaGuideSeed[] = [
     evidenceLimits: `The local-centre and community-parks records are not property surveys or service boundaries. They cannot establish property type, authority, route, parking, door material, lock mechanism, damage, demand, response time, coverage or previous locksmith activity.`,
     facts: [
       {
+        heading: `Narrow Hall Meadow local shopping centre`,
         text: `The adopted Warwick District Local Plan lists Narrow Hall Meadow, Chase Meadow, Warwick, as a local shopping centre.`,
         sourceIds: ['wdc-local-plan'],
         serviceRelevance: `Use Narrow Hall Meadow only to confirm location; its planning status does not establish a property or service fact.`,
       },
       {
+        heading: `Hickmans Green and The Marrish community spaces in Chase Meadow`,
         text: `Warwick District Council lists both Hickmans Green and The Marrish under Warwick south-west and identifies each as being in Chase Meadow.`,
         sourceIds: ['wdc-community-parks'],
         serviceRelevance: `Distinguish managed community-space assets from private addresses and establish the responsible party for the exact opening.`,
       },
       {
+        heading: `Chase Meadow Community Centre solar panels`,
         text: `Warwick District Council reported on 9 July 2025 that solar panels had been installed on Chase Meadow Community Centre in Warwick.`,
         sourceIds: ['wdc-chase-meadow-centre-solar'],
         serviceRelevance: `This is evidence about one named community-centre building only, not surrounding properties, their access, hardware or service conditions.`,
@@ -1104,16 +1131,19 @@ const AREA_SEEDS: AreaGuideSeed[] = [
     evidenceLimits: `Council park access information and a local-centre designation cannot identify private entrances or controlled routes. They do not prove property type, parking, property rights, hardware, damage, security need, locksmith demand, availability or response time.`,
     facts: [
       {
+        heading: `Othello Avenue local shopping centre`,
         text: `The adopted Warwick District Local Plan lists Othello Avenue, Warwick Gates, as a local shopping centre.`,
         sourceIds: ['wdc-local-plan'],
         serviceRelevance: `Use Othello Avenue to clarify location only, not to infer business use, proximity or an entrance type.`,
       },
       {
+        heading: `Cordelia Green and Othello Park access`,
         text: `Warwick District Council lists Cordelia Green and Othello Park under Warwick Gates and names public access from surrounding roads and cycleways.`,
         sourceIds: ['wdc-community-parks'],
         serviceRelevance: `Public park access is not evidence of a route or permission for work at a private or managed opening.`,
       },
       {
+        heading: `Council facilities-directory record for Warwick Gates Community Centre`,
         text: `Warwick District Council's facilities directory contains a specific record for Warwick Gates Community Centre.`,
         sourceIds: ['wdc-warwick-gates-community-centre'],
         serviceRelevance: `This identifies one managed facility only; it does not describe neighbouring properties, access rights, door hardware or service conditions.`,
@@ -1181,16 +1211,19 @@ const AREA_SEEDS: AreaGuideSeed[] = [
     evidenceLimits: `The neighbourhood area, biodiversity corridor and conservation review do not describe a property or route. They cannot establish flood status, listing, building fabric, ownership, access, door or lock type, condition, coverage, parking, response or demand.`,
     facts: [
       {
+        heading: `Stratford neighbourhood plan made in 2018`,
         text: `Stratford-on-Avon District Council made the Stratford-upon-Avon Neighbourhood Development Plan on 17 December 2018, making it part of the development plan used within its area.`,
         sourceIds: ['sdc-stratford-plan-page'],
         serviceRelevance: `Use the made plan as formal planning context only, not evidence about an address, customer or locksmith service.`,
       },
       {
+        heading: `River Avon biodiversity corridor policy`,
         text: `Made-plan Policy NE2 identifies a River Avon biodiversity corridor and addresses proposals in the river's flood zone that could affect that corridor or its links.`,
         sourceIds: ['sdc-stratford-made-plan'],
         serviceRelevance: `Use the river only as verified spatial context and never infer a route, property flood status or coverage.`,
       },
       {
+        heading: `Stratford conservation boundary and appraisal review`,
         text: `The council provides a Stratford-upon-Avon conservation boundary map and report and includes the area in its current conservation-appraisal review programme.`,
         sourceIds: ['sdc-conservation-h-z', 'sdc-conservation-review-2026'],
         serviceRelevance: `Use the latest formally published boundary and do not treat review drafts as adopted property-status evidence.`,
@@ -1257,16 +1290,19 @@ const AREA_SEEDS: AreaGuideSeed[] = [
     evidenceLimits: `Local Service Village status and mapped planning allocations do not prove current land use at an address, ownership, private access, building type, door material, lock mechanism, condition, security need, service coverage or response.`,
     facts: [
       {
+        heading: `Tiddington boundary and village category`,
         text: `The made Stratford plan gives Tiddington a defined built-up-area boundary and records it as a Category 1 Local Service Village in the Core Strategy.`,
         sourceIds: ['sdc-stratford-made-plan'],
         serviceRelevance: `Use the official settlement classification and boundary only for planning context, not address-level property or service claims.`,
       },
       {
+        heading: `Tiddington strategic gaps and open-space allocation`,
         text: `The plan maps strategic gaps between Stratford-upon-Avon, Tiddington and Alveston and allocates southern Tiddington Fields for community orchards, woodland and open space.`,
         sourceIds: ['sdc-stratford-made-plan'],
         serviceRelevance: `Treat the mapped gaps and fields as locality evidence only and do not infer routes or private-property access.`,
       },
       {
+        heading: `Alveston Primary School in Tiddington`,
         text: `The Department for Education records Alveston CofE Primary School at Knights Lane, Tiddington, Stratford-upon-Avon, CV37 7BZ.`,
         sourceIds: ['dfe-alveston-primary-tiddington'],
         serviceRelevance: `This identifies one education site only; it does not describe neighbouring properties, access rights, door hardware or service conditions.`,
@@ -1334,16 +1370,19 @@ const AREA_SEEDS: AreaGuideSeed[] = [
     evidenceLimits: `A plan description of converted farm units, a future bridge review and a housing allocation are not current property surveys. They cannot prove present use, access, building fabric, door type, lock condition, coverage, route or response.`,
     facts: [
       {
+        heading: `Burton Farm industrial units at Bishopton`,
         text: `The made plan identifies Burton Farm at Bishopton Hamlet north of the A46 as a location with small industrial units established in converted farm buildings.`,
         sourceIds: ['sdc-stratford-made-plan'],
         serviceRelevance: `For a Burton Farm instruction, name the unit, entrance and authorised manager rather than relying on plan-era use.`,
       },
       {
+        heading: `Bishopton Road bridge and housing allocation`,
         text: `The plan calls for a future review of Bishopton Road bridge across the canal and identifies housing allocation SUA.3 north of Bishopton Lane.`,
         sourceIds: ['sdc-stratford-made-plan'],
         serviceRelevance: `Use bridge and allocation references only for verified location; they prove neither completion nor an access route.`,
       },
       {
+        heading: `Bishopton Primary School on Drayton Avenue`,
         text: `The Department for Education records Bishopton Primary School at Drayton Avenue, Stratford-upon-Avon, CV37 9PB.`,
         sourceIds: ['dfe-bishopton-primary'],
         serviceRelevance: `This identifies one education site only; it does not describe neighbouring properties, access rights, door hardware or service conditions.`,
@@ -1411,16 +1450,19 @@ const AREA_SEEDS: AreaGuideSeed[] = [
     evidenceLimits: `Designation and appraisal dates do not describe every Shottery building, and Local Green Space status is not an access route. The sources prove no ownership, property type, fabric, lock, damage, service reach, response or demand.`,
     facts: [
       {
+        heading: `Shottery Conservation Area designation and appraisal`,
         text: `Shottery Conservation Area was originally designated in 1969, and the council approved its reviewed appraisal as its formal view on 20 July 1992.`,
         sourceIds: ['sdc-shottery-conservation'],
         serviceRelevance: `Check the current boundary and verify the particular building's status before visible alteration or heritage wording.`,
       },
       {
+        heading: `Shottery Fields designated Local Green Space`,
         text: `Made neighbourhood-plan Policy CLW3 identifies Shottery Fields as one of the plan area's designated Local Green Spaces.`,
         sourceIds: ['sdc-stratford-made-plan'],
         serviceRelevance: `Use Shottery Fields as verified locality context only and never infer private-property access across the green space.`,
       },
       {
+        heading: `Shottery primary school on Hathaway Lane`,
         text: `The Department for Education records Shottery St Andrew's CofE Primary School at 3 Hathaway Lane, Stratford-upon-Avon, CV37 9BL.`,
         sourceIds: ['dfe-shottery-st-andrews'],
         serviceRelevance: `This identifies one education site only; it does not describe neighbouring properties, access rights, door hardware or service conditions.`,
@@ -1488,16 +1530,19 @@ const AREA_SEEDS: AreaGuideSeed[] = [
     evidenceLimits: `Made-plan and conservation-extension dates cannot be applied to every Kenilworth property. The sources do not establish building use, fabric, ownership, access, door or lock type, condition, route, parking, coverage, response or demand.`,
     facts: [
       {
+        heading: `Kenilworth neighbourhood plan made in 2018`,
         text: `Warwick District Council made the Kenilworth Neighbourhood Plan on 16 November 2018 following the 15 November referendum and uses it for planning applications within Kenilworth.`,
         sourceIds: ['wdc-kenilworth-plan-page'],
         serviceRelevance: `Use the plan as formal settlement planning context only, not evidence about a property, entrance or service.`,
       },
       {
+        heading: `Kenilworth conservation designation and extensions`,
         text: `The conservation guide says Kenilworth's first conservation area was designated in 1971 and that 2005 extensions included Waverley Road, Station Road and Clarendon Road.`,
         sourceIds: ['wdc-kenilworth-conservation'],
         serviceRelevance: `Resolve the current boundary for the exact address and verify listed status separately before visible changes.`,
       },
       {
+        heading: `St Nicholas Primary School in Kenilworth`,
         text: `The Department for Education records St Nicholas CofE Primary School at The Blundells, Kenilworth, CV8 2PE.`,
         sourceIds: ['dfe-kenilworth-st-nicholas-primary'],
         serviceRelevance: `This identifies one education site only; it does not describe neighbouring properties, access rights, door hardware or service conditions.`,
@@ -1565,16 +1610,19 @@ const AREA_SEEDS: AreaGuideSeed[] = [
     evidenceLimits: `The made Balsall Parish plan does not cover the whole Balsall Common settlement. It proves no building type, tenure, ownership, access, door material, lock, condition, demand, coverage or response for either parish or an individual address.`,
     facts: [
       {
+        heading: `Balsall parish plan made in 2021`,
         text: `Solihull Metropolitan Borough Council made the Balsall Parish Neighbourhood Development Plan on 17 June 2021 for use in planning decisions within its neighbourhood area.`,
         sourceIds: ['solihull-balsall-plan-page'],
         serviceRelevance: `Use made-plan status only after confirming the address is within the Balsall Parish neighbourhood area.`,
       },
       {
+        heading: `Balsall Common spans Balsall and Berkswell`,
         text: `The made plan states that Balsall Common straddles Balsall and Berkswell parishes and expressly applies only to the Balsall-parish portion of the settlement.`,
         sourceIds: ['solihull-balsall-made-plan'],
         serviceRelevance: `Fail closed on parish-plan claims until the exact address is resolved to Balsall rather than Berkswell parish.`,
       },
       {
+        heading: `Balsall Common Primary School address`,
         text: `The Department for Education records Balsall Common Primary School at Balsall Street East, Balsall Common, Coventry, CV7 7FS.`,
         sourceIds: ['dfe-balsall-common-primary'],
         serviceRelevance: `This identifies one education site only; it does not resolve the wider settlement's parish boundary, neighbouring properties or service conditions.`,
@@ -1642,16 +1690,19 @@ const AREA_SEEDS: AreaGuideSeed[] = [
     evidenceLimits: `A made parish plan and two named conservation areas cannot be generalised to every Meriden property. They do not prove property use, age, listing, ownership, access, door material, lock type, condition, coverage or response.`,
     facts: [
       {
+        heading: `Meriden parish plan made in 2021`,
         text: `The Meriden Parish Neighbourhood Development Plan was made on 17 June 2021 after the 6 May referendum and is used for planning applications in its neighbourhood area.`,
         sourceIds: ['solihull-meriden-plan-page'],
         serviceRelevance: `Use the plan only inside its confirmed area and never as evidence of a property's entrance or service need.`,
       },
       {
+        heading: `Meriden Green and Hill conservation areas`,
         text: `Solihull Metropolitan Borough Council's conservation register lists both Meriden Green Conservation Area and Meriden Hill Conservation Area.`,
         sourceIds: ['solihull-conservation-areas'],
         serviceRelevance: `Check the exact address against the relevant current boundary and verify any listed status independently.`,
       },
       {
+        heading: `Meriden primary school on Fillongley Road`,
         text: `The Department for Education records Meriden Church of England Primary School at Fillongley Road, Meriden, Coventry, CV7 7LW.`,
         sourceIds: ['dfe-meriden-primary'],
         serviceRelevance: `This identifies one education site only; it does not describe neighbouring properties, access rights, door hardware or service conditions.`,
@@ -1719,16 +1770,19 @@ const AREA_SEEDS: AreaGuideSeed[] = [
     evidenceLimits: `The older plan's limited area and central conservation designation cannot be generalised across Hampton-in-Arden. The withdrawn draft proves no current policy, and neither source establishes listing, property use, access, hardware, coverage or response.`,
     facts: [
       {
+        heading: `2017 Hampton-in-Arden plan remains applicable in its previous neighbourhood area`,
         text: `Solihull Council records that the 2017 Hampton-in-Arden plan remains applicable to its previous neighbourhood area after the newer submission draft was withdrawn and examination closed.`,
         sourceIds: ['solihull-hampton-plan-page'],
         serviceRelevance: `Use only the existing 2017 plan for its confirmed prior area and never ingest the withdrawn draft as adopted.`,
       },
       {
+        heading: `Central Hampton-in-Arden conservation area designation`,
         text: `Solihull Metropolitan Borough Council states that the central part of Hampton-in-Arden was designated a conservation area in 1968.`,
         sourceIds: ['solihull-hampton-history'],
         serviceRelevance: `Check whether the exact address is in the current central boundary and verify listed status separately.`,
       },
       {
+        heading: `George Fentham School in Hampton-in-Arden`,
         text: `The Department for Education records George Fentham Endowed School at Fentham Road, Hampton-in-Arden, Solihull, B92 0AY.`,
         sourceIds: ['dfe-george-fentham-school'],
         serviceRelevance: `This identifies one education site only; it does not describe neighbouring properties, access rights, door hardware or service conditions.`,
@@ -1796,16 +1850,19 @@ const AREA_SEEDS: AreaGuideSeed[] = [
     evidenceLimits: `The appraisal covers a limited area and the reviewed council record documents planning stages rather than property facts. Neither proves a building's designation, use, access, material, lock, condition, route, coverage or response; river and rail references are not travel claims.`,
     facts: [
       {
+        heading: `Wolston Conservation Area mostly south of the River Avon`,
         text: `The Wolston Conservation Area appraisal says the designation covers only a limited part of the village, mostly south of the River Avon, with a railway bridge separating Wolston from Brandon.`,
         sourceIds: ['rbc-wolston-conservation'],
         serviceRelevance: `Use river and railway references only for address clarification and boundary checks, never route or coverage claims.`,
       },
       {
+        heading: `Wolston neighbourhood planning records`,
         text: `Rugby Borough Council's Wolston Neighbourhood Plan page hosts neighbourhood-area designation, Call for Sites and November 2024 screening determination records.`,
         sourceIds: ['rbc-wolston-plan-page'],
         serviceRelevance: `Do not describe Wolston's neighbourhood plan as adopted or made without a newer explicit council statement.`,
       },
       {
+        heading: `Wolston primary school on Main Street`,
         text: `The Department for Education records Wolston St Margaret's CofE Primary School at Brookside, Main Street, Wolston, CV8 3HH.`,
         sourceIds: ['dfe-wolston-st-margarets'],
         serviceRelevance: `This identifies one education site only; it does not describe neighbouring properties, access rights, door hardware or service conditions.`,
@@ -1873,16 +1930,19 @@ const AREA_SEEDS: AreaGuideSeed[] = [
     evidenceLimits: `The adopted plan's parish boundary and Main Rural Settlement classification are not property evidence. They establish no river proximity at an address, ownership, access, building type, hardware, damage, coverage, response or locksmith demand.`,
     facts: [
       {
+        heading: `Ryton-on-Dunsmore plan made in 2021`,
         text: `Rugby Borough Council made the Ryton-on-Dunsmore Neighbourhood Plan on 20 July 2021, making it part of the borough development plan used in planning decisions.`,
         sourceIds: ['rbc-ryton-plan-page'],
         serviceRelevance: `Use made-plan status only as planning context within the confirmed area, not evidence of service conditions.`,
       },
       {
+        heading: `Ryton parish boundary and rural classification`,
         text: `The adopted plan says its area coincides with the civil parish, describes northern and western boundaries along the River Avon valley and records Ryton as a Main Rural Settlement.`,
         sourceIds: ['rbc-ryton-made-plan'],
         serviceRelevance: `Use parish and river-valley details for verified orientation only and never infer route or property characteristics.`,
       },
       {
+        heading: `Ryton academy on Sodens Avenue`,
         text: `The Department for Education records Ryton-On-Dunsmore Provost Williams Church of England Academy at Sodens Avenue, Ryton-on-Dunsmore, CV8 3FF.`,
         sourceIds: ['dfe-ryton-provost-williams'],
         serviceRelevance: `This identifies one education site only; it does not describe neighbouring properties, access rights, door hardware or service conditions.`,
@@ -1950,16 +2010,19 @@ const AREA_SEEDS: AreaGuideSeed[] = [
     evidenceLimits: `A joint parish plan, Growth Village classification and conservation-table entry are area-scale records. They do not prove property type, listing, ownership, access, construction, lock condition, service reach, response, demand or previous work.`,
     facts: [
       {
+        heading: `Baginton and Bubbenhall plan following the March 2018 yes vote`,
         text: `The joint Baginton and Bubbenhall Neighbourhood Development Plan was made following the 15 March 2018 yes vote and was prepared by the two parish councils.`,
         sourceIds: ['wdc-baginton-plan-page'],
         serviceRelevance: `Keep Baginton distinct from Bubbenhall and use the joint plan only within its confirmed mapped area.`,
       },
       {
+        heading: `Baginton growth village and conservation entries`,
         text: `The adopted Warwick District Local Plan places Baginton in the Growth Villages column and separately lists Baginton in its conservation-area table.`,
         sourceIds: ['wdc-local-plan'],
         serviceRelevance: `Treat settlement hierarchy and conservation status as separate checks, neither of which proves an address-level fact.`,
       },
       {
+        heading: `Baginton Parish Council directory record`,
         text: `Warwickshire County Council's parish and town council directory contains a specific record for Baginton Parish Council.`,
         sourceIds: ['wcc-baginton-parish-council'],
         serviceRelevance: `This verifies the named parish administration only; it does not establish a property boundary, access authority, hardware or service conditions.`,
@@ -2027,16 +2090,19 @@ const AREA_SEEDS: AreaGuideSeed[] = [
     evidenceLimits: `Most village buildings north of Avondale Road is not an address-level designation test, and the viaduct is not route evidence. The sources prove no listing, property type, access, lock, condition, coverage, response or demand.`,
     facts: [
       {
+        heading: `Brandon and Bretford plan made in 2019`,
         text: `Rugby Borough Council made the Brandon and Bretford Neighbourhood Development Plan on 4 June 2019, and it forms part of the borough development plan.`,
         sourceIds: ['rbc-brandon-plan-page'],
         serviceRelevance: `Keep Brandon distinct from Bretford and apply the joint plan only within its confirmed mapped area.`,
       },
       {
+        heading: `Brandon conservation area and railway viaduct`,
         text: `The Brandon appraisal says its conservation area covers most village buildings north of Avondale Road and that the approach from Wolston is marked by the railway viaduct.`,
         sourceIds: ['rbc-brandon-conservation'],
         serviceRelevance: `Check the precise boundary and use the viaduct only as orientation, never evidence of route or access.`,
       },
       {
+        heading: `Brandon and Bretford Parish Council record`,
         text: `Warwickshire County Council's parish and town council directory has a Brandon & Bretford record linking to Brandon and Bretford Parish Council.`,
         sourceIds: ['wcc-brandon-bretford-parish-council'],
         serviceRelevance: `This verifies the named council directory record only; it does not establish a property boundary, access authority, hardware or service conditions.`,
@@ -2104,16 +2170,19 @@ const AREA_SEEDS: AreaGuideSeed[] = [
     evidenceLimits: `Rural Village status and a bus-stop listing do not prove property type, ownership, access, route suitability, timetable permanence, parking, door material, lock type, condition, locksmith availability, coverage, response time or local demand.`,
     facts: [
       {
+        heading: `Shilton classified as a Rural Village`,
         text: `Rugby Borough Council's 2024 Rural Sustainability Study classifies Shilton as a Rural Village.`,
         sourceIds: ['rbc-rural-study-2024'],
         serviceRelevance: `Use Rural Village only as an official planning classification, not as evidence about an individual property or access route.`,
       },
       {
+        heading: `Shilton listed among Rugby parishes`,
         text: `The Office for National Statistics' Rugby area profile lists Shilton and Barnacle among the district's parishes.`,
         sourceIds: ['ons-rugby-area-profile'],
         serviceRelevance: `The parish name can help clarify an address, but it does not identify the individual settlement, street or doorway.`,
       },
       {
+        heading: `Shilton bus routes to Nuneaton and Coventry`,
         text: `Warwickshire County Council's live bus register lists Shilton on routes 74, 74A, 74B and 74C in the Nuneaton and Coventry corridor.`,
         sourceIds: ['wcc-shilton-bus'],
         serviceRelevance: `Recheck the timetable before publication and never infer that an address is close to or reachable from a stop.`,
@@ -2180,16 +2249,19 @@ const AREA_SEEDS: AreaGuideSeed[] = [
     evidenceLimits: `The conservation area covers only part of Brinklow, and its historic route description is not access evidence. The sources prove no listing, building type, ownership, private route, lock, damage, coverage, response or demand.`,
     facts: [
       {
+        heading: `Brinklow neighbourhood plan made in 2022`,
         text: `Rugby Borough Council made the Brinklow Neighbourhood Plan on 14 December 2022, and it forms part of the borough development plan.`,
         sourceIds: ['rbc-brinklow-plan-page'],
         serviceRelevance: `Use made-plan status as planning context only within the confirmed area, not property or service evidence.`,
       },
       {
+        heading: `Brinklow Conservation Area includes part of Ell Lane`,
         text: `The Brinklow appraisal states that its conservation area covers only part of the village and includes part of Ell Lane leading to the motte-and-bailey castle.`,
         sourceIds: ['rbc-brinklow-conservation'],
         serviceRelevance: `Check the current boundary and use Ell Lane only for orientation, never to infer building age or access.`,
       },
       {
+        heading: `Brinklow Parish Council directory record`,
         text: `Warwickshire County Council's parish and town council directory contains a specific record for Brinklow Parish Council.`,
         sourceIds: ['wcc-brinklow-parish-council'],
         serviceRelevance: `This verifies the named parish administration only; it does not establish a property boundary, access authority, hardware or service conditions.`,
@@ -2257,16 +2329,19 @@ const AREA_SEEDS: AreaGuideSeed[] = [
     evidenceLimits: `The neighbourhood plan and conservation review do not apply uniformly to every Southam building. Draft review material proves no adopted change, and the sources establish no ownership, access, fabric, lock, coverage, response or demand.`,
     facts: [
       {
+        heading: `Southam neighbourhood plan made in 2023`,
         text: `Stratford-on-Avon District Council made the Southam Neighbourhood Plan on 11 July 2023, making it part of the development plan used in planning decisions within the area.`,
         sourceIds: ['sdc-southam-plan-page'],
         serviceRelevance: `Use made-plan status only as formal planning context and not as an address, property or service claim.`,
       },
       {
+        heading: `Southam conservation boundary and appraisal review`,
         text: `The council provides Southam Conservation Area boundary and review documents and includes Southam in a conservation-appraisal review programme with consultation scheduled in 2026.`,
         sourceIds: ['sdc-conservation-h-z', 'sdc-conservation-review-2026'],
         serviceRelevance: `Use current formally published records and never treat appraisal-review drafts as adopted replacement evidence.`,
       },
       {
+        heading: `Southam Primary School on St James Road`,
         text: `The Department for Education records Southam Primary School at St James Road, Southam, CV47 0QB.`,
         sourceIds: ['dfe-southam-primary'],
         serviceRelevance: `This identifies one education site only; it does not describe neighbouring properties, access rights, door hardware or service conditions.`,
@@ -2334,16 +2409,19 @@ const AREA_SEEDS: AreaGuideSeed[] = [
     evidenceLimits: `Designation of an area for neighbourhood planning is not plan adoption, and a parish plan is a different instrument. The records prove no property status, ownership, access, fabric, hardware, coverage, response, demand or job history.`,
     facts: [
       {
+        heading: `Studley parish plan adopted in 2017`,
         text: `Stratford-on-Avon District Council lists Studley's Parish Plan and Action Plan as adopted in February 2017.`,
         sourceIds: ['sdc-parish-plans'],
         serviceRelevance: `Describe the document accurately as a parish plan rather than a made neighbourhood development plan.`,
       },
       {
+        heading: `Studley's whole-parish neighbourhood area`,
         text: `Council records show Studley Parish Council applied to designate the whole civil parish as its neighbourhood area, and the current register links the confirmation documents.`,
         sourceIds: ['sdc-studley-area-report', 'sdc-designated-neighbourhood-areas'],
         serviceRelevance: `Describe only the documented neighbourhood-area stage and recheck the council register before stating any later adoption or making.`,
       },
       {
+        heading: `Studley Infants' School on High Street`,
         text: `The Department for Education records Studley Infants' School at High Street, Studley, B80 7HJ.`,
         sourceIds: ['dfe-studley-infants'],
         serviceRelevance: `This identifies one education site only; it does not describe neighbouring properties, access rights, door hardware or service conditions.`,
@@ -2411,16 +2489,19 @@ const AREA_SEEDS: AreaGuideSeed[] = [
     evidenceLimits: `A plan review does not replace the made 2021 plan until formally completed, and conservation status is boundary-specific. The sources prove no listing, ownership, access, door or lock type, condition, coverage, response or demand.`,
     facts: [
       {
+        heading: `Alcester plan and 2025 review consultation`,
         text: `Stratford-on-Avon District Council made the Alcester Neighbourhood Plan on 12 July 2021 and records that Town Council review consultation began on 15 December 2025.`,
         sourceIds: ['sdc-alcester-plan-page'],
         serviceRelevance: `Use the made 2021 plan as adopted evidence and label review material as draft until officially made.`,
       },
       {
+        heading: `Alcester conservation boundary and appraisal documents`,
         text: `The council's conservation register provides an Alcester Conservation Area boundary map, broadsheet and two-part character appraisal.`,
         sourceIds: ['sdc-conservation-a-g'],
         serviceRelevance: `Check the exact current boundary and verify listed status separately before any conservation-related property guidance.`,
       },
       {
+        heading: `Our Lady's Primary School in Alcester`,
         text: `The Department for Education records Our Lady's Catholic Primary School at St Faith's Road, Alcester, B49 6AG.`,
         sourceIds: ['dfe-alcester-our-ladys-primary'],
         serviceRelevance: `This identifies one education site only; it does not describe neighbouring properties, access rights, door hardware or service conditions.`,

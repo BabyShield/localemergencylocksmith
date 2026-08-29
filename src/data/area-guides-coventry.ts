@@ -1051,16 +1051,19 @@ const AREA_SEEDS: AreaGuideSeed[] = [
     evidenceLimits: '“City centre” spans several official character areas. The cited records do not prove a particular building\'s use, listed or conservation status, entrance arrangement, installed hardware, access permission or service conditions.',
     facts: [
       {
+        heading: 'Eastern city-centre civic and university section',
         text: 'The Central Civic character area covers the eastern city-centre section and predominantly contains council offices and university buildings; its report highlights elevated ring-road sections, junctions, flyovers and pedestrian subways.',
         sourceIds: ['coventry-central-civic'],
         serviceRelevance: 'Use the exact building and entrance rather than a city-centre landmark, and establish the authorised contact for managed premises.',
       },
       {
+        heading: 'Hill Top historic religious core',
         text: 'The Hill Top/Central Religious Core is the historic city-centre core around the medieval and modern cathedrals of St Michael and Holy Trinity Church; the character-area report records one conservation area and twelve listed buildings.',
         sourceIds: ['coventry-central-religious'],
         serviceRelevance: 'Check address-level designation and permission before an externally visible alteration in the historic core.',
       },
       {
+        heading: 'Western city-centre commercial core',
         text: 'The Central Commercial Core covers the western city-centre section, is predominantly shops and offices, and follows the ring road along its western boundary.',
         sourceIds: ['coventry-central-commercial'],
         serviceRelevance: 'For a commercial instruction, identify the precise unit, controlled entrance and person authorised to approve work.',
@@ -1131,16 +1134,19 @@ const AREA_SEEDS: AreaGuideSeed[] = [
     evidenceLimits: 'The historic-landscape area and the later conservation-area boundary are different records. Neither establishes an individual building\'s status, age, construction, entrance arrangement, lock type or condition without an address-level check.',
     facts: [
       {
+        heading: 'Earlsdon and Chapelfields railway division',
         text: 'The Earlsdon and Chapelfields character area lies south-west of Coventry city centre and is bisected by the Coventry–Birmingham railway line.',
         sourceIds: ['earlsdon-chapelfields-hlc'],
         serviceRelevance: 'A full street address is needed because a broad area description and railway division do not identify the affected property or entrance.',
       },
       {
+        heading: 'Original Earlsdon development streets',
         text: 'The report identifies Earlsdon Street, Poplar Road, Providence Street, Cromwell Street, Warwick Street, Clarendon Street and Moor Street as the original Earlsdon development associated with the Freehold Land Society movement.',
         sourceIds: ['earlsdon-chapelfields-hlc'],
         serviceRelevance: 'Historic-development context should trigger address-level checks, not assumptions about the fabric or hardware at a building.',
       },
       {
+        heading: 'Earlsdon Article 4 direction',
         text: 'Coventry City Council\'s Earlsdon Conservation Area Appraisal supports the area\'s designation and identifies an Article 4 direction that removes specified permitted-development rights within its management.',
         sourceIds: ['earlsdon-conservation-appraisal'],
         serviceRelevance: 'Check the current boundary and any applicable Article 4 control for the exact address before planning an externally visible alteration.',
@@ -1210,16 +1216,19 @@ const AREA_SEEDS: AreaGuideSeed[] = [
     evidenceLimits: 'The JSNA boundary is a statistical study area, and the SSSI statement concerns Tile Hill Wood only. Neither source proves a property\'s construction, designation, access route, hardware or service availability.',
     facts: [
       {
+        heading: 'Tile Hill north-south geography',
         text: 'The council JSNA describes Tile Hill as a west-Coventry neighbourhood with Broad Lane along its north and Tile Hill Lane dividing Tile Hill North from Tile Hill South.',
         sourceIds: ['tile-hill-jsna'],
         serviceRelevance: 'Use the street address because Tile Hill North, Tile Hill South and the broader statistical area are not one address-level instruction.',
       },
       {
+        heading: 'Canley boundary and railway division',
         text: 'The JSNA places Canley to the south, using Torrington Avenue and the railway line as the division in its profile geography.',
         sourceIds: ['tile-hill-jsna'],
         serviceRelevance: 'Confirm which side and which entrance is involved rather than inferring location from a broad neighbourhood label.',
       },
       {
+        heading: 'Tile Hill Wood SSSI',
         text: 'Coventry City Council identifies Tile Hill Wood as a Site of Special Scientific Interest for native flora representing local Arden-type woodland.',
         sourceIds: ['tile-hill-woods'],
         serviceRelevance: 'A request involving the named woodland or another council asset requires the responsible manager and must not be conflated with nearby residential addresses.',
@@ -1289,16 +1298,19 @@ const AREA_SEEDS: AreaGuideSeed[] = [
     evidenceLimits: 'Proximity to the university, A45, railway, woodland, industrial units or archaeological sites does not establish a property\'s use, owner, heritage status, access arrangement, fabric or hardware.',
     facts: [
       {
+        heading: 'Canley JSNA boundaries and landmarks',
         text: 'The council JSNA describes Canley with Charter Avenue running east–west, the railway and Tile Hill South to the north, Westwood Heath to the south and the University of Warwick nearby.',
         sourceIds: ['canley-jsna'],
         serviceRelevance: 'The full address is needed to distinguish the statistical neighbourhood from nearby university and adjoining areas.',
       },
       {
+        heading: 'Canley HLC boundary features',
         text: 'The Canley HLC uses the railway as its northern boundary, the A45 to the east, industrial units to the west, and woodland and the university to the south.',
         sourceIds: ['canley-hlc'],
         serviceRelevance: 'Confirm the property or site type and the responsible party rather than inferring them from an edge location.',
       },
       {
+        heading: 'More Hall and Fletchamstead remains',
         text: 'The HLC records More Hall/Canley Moat and buried remains of the deserted medieval village of Fletchamstead within the wider character area.',
         sourceIds: ['canley-hlc'],
         serviceRelevance: 'Archaeological context should prompt an exact property-status check if external fabric is affected; it is not evidence about every address.',
@@ -1368,21 +1380,25 @@ const AREA_SEEDS: AreaGuideSeed[] = [
     evidenceLimits: 'The HLC character area and the Radford service locality are not interchangeable. The report\'s predominant use, light-industrial pocket, hamlet history and designation totals do not establish a property\'s use, age, protected status, access or hardware.',
     facts: [
       {
+        heading: 'Coundon and Radford residential and industrial character',
         text: 'The Coundon and Radford character area is west of Coventry city centre, predominantly residential, and includes a small light-industrial area in the north.',
         sourceIds: ['coundon-radford-hlc'],
         serviceRelevance: 'Identify whether the supplied address is residential or managed industrial premises and obtain the appropriate authority.',
       },
       {
+        heading: 'Historic Radford Road route',
         text: 'The report identifies part of the ancient hamlet of Radford on both sides of Radford Road, described as a medieval route that was later turnpiked.',
         sourceIds: ['coundon-radford-hlc'],
         serviceRelevance: 'Historic-road context supports exact property-status questions but not assumptions about a building or its lock.',
       },
       {
+        heading: 'Coundon and Radford character-area heritage records',
         text: 'At character-area scale, the report records nine listed buildings, nineteen locally listed buildings and no conservation area.',
         sourceIds: ['coundon-radford-hlc'],
         serviceRelevance: 'Check the individual building before externally visible work; an area total does not prove designation.',
       },
       {
+        heading: 'Radford public house local listing',
         text: 'Coventry City Council\'s local list records DCT635, Radford public house (formerly Radford House), as a Locally Listed Building.',
         sourceIds: ['coventry-local-list'],
         serviceRelevance: 'This identifies the named local-list asset only; confirm the exact address, current status and relevant approval before visible work.',
@@ -1453,21 +1469,25 @@ const AREA_SEEDS: AreaGuideSeed[] = [
     evidenceLimits: 'The HLC boundary is broader than Coundon and contains different development periods. Its historic landscape and edge descriptions do not prove any address\'s age, construction, designation, entrance, lock or service conditions.',
     facts: [
       {
+        heading: 'Coundon Green medieval landscape',
         text: 'The HLC places present-day Coundon Green and Norman Place Road in a landscape where medieval assarts and settlement around commons were recorded.',
         sourceIds: ['coundon-radford-hlc'],
         serviceRelevance: 'Use historical context only to prompt an exact property check, never to infer an entrance or installed lock.',
       },
       {
+        heading: 'Western agricultural edge of the wider Coundon and Radford area',
         text: 'The report states that most of the wider character area\'s western side borders agricultural fields.',
         sourceIds: ['coundon-radford-hlc'],
         serviceRelevance: 'A western-edge description may help locate an address but does not show its property type or access arrangement.',
       },
       {
+        heading: 'Coundon and Radford housing-development phases',
         text: 'The HLC describes extensive inter-war development across much of the area and later pockets around Everdon Road, Forland Way and Madeira Croft.',
         sourceIds: ['coundon-radford-hlc'],
         serviceRelevance: 'Mixed development periods mean hardware and door construction must be identified at the individual opening.',
       },
       {
+        heading: 'Coundon Court local listing',
         text: 'Coventry City Council\'s local list records DCT673, Coundon Court School \'Old House\' and Coundon Court Lodge (also known as Holly Lodge), as a Locally Listed Building.',
         sourceIds: ['coventry-local-list'],
         serviceRelevance: 'This identifies the named local-list asset only; confirm the exact address, current status and relevant approval before visible work.',
@@ -1538,16 +1558,19 @@ const AREA_SEEDS: AreaGuideSeed[] = [
     evidenceLimits: 'The council park page concerns one named asset, while the HLC covers a larger historic landscape. Neither source establishes an individual property\'s use, ownership, age, fabric, access or installed hardware.',
     facts: [
       {
+        heading: 'Holbrook Park location and setting',
         text: 'Coventry City Council locates Holbrook Park on Holbrook Lane, CV6 4BY, and describes it as open land amid shops and factories on Holbrook Lane.',
         sourceIds: ['holbrook-park'],
         serviceRelevance: 'A request using the park as a landmark must still identify whether it concerns the council site, a business or a separate address.',
       },
       {
+        heading: 'Monks Park Cottages industrial hostels',
         text: 'The Coundon and Radford HLC records First World War industrial hostels called Monks Park Cottages north of Holbrooks Park, built for workers at a munitions factory outside the character area.',
         sourceIds: ['coundon-radford-hlc'],
         serviceRelevance: 'Historic industrial context cannot identify the present use, fabric or door at a supplied address.',
       },
       {
+        heading: 'Wider Coundon and Radford development history',
         text: 'The same HLC states that the wider character area was completely built up by the Second World War while retaining distinct earlier schemes and later pockets.',
         sourceIds: ['coundon-radford-hlc'],
         serviceRelevance: 'Development chronology is not a substitute for inspecting the entrance and confirming current control of the premises.',
@@ -1617,21 +1640,25 @@ const AREA_SEEDS: AreaGuideSeed[] = [
     evidenceLimits: 'The HLC is a broad mixed-use area and says only that much of a conservation area lies within it. It does not prove that a property is industrial, residential, beside the canal, designated, accessible or fitted with any lock type.',
     facts: [
       {
+        heading: 'Foleshill residential and industrial character',
         text: 'The Foleshill character area is a mixed residential and industrial area north of Coventry city centre, following the Coventry–Bedworth railway line.',
         sourceIds: ['foleshill-hlc'],
         serviceRelevance: 'Distinguish homes from industrial or other managed premises and verify the responsible party for the actual entrance.',
       },
       {
+        heading: 'Coventry Canal industrial landscape',
         text: 'The HLC identifies the Coventry Canal as the predominant landscape feature and a reason for the area\'s industrial development.',
         sourceIds: ['foleshill-hlc'],
         serviceRelevance: 'Canal and industrial history may orient an address but cannot determine building status or access.',
       },
       {
+        heading: 'Coventry Canal Conservation Area',
         text: 'The report records one conservation area and states that much of the Coventry Canal Conservation Area lies within the wider Foleshill character area.',
         sourceIds: ['foleshill-hlc'],
         serviceRelevance: 'Check whether the individual property lies within a designated boundary before visible changes.',
       },
       {
+        heading: 'Foleshill Library Broad Street location',
         text: 'Coventry City Council\'s library directory gives Foleshill Library\'s address as Broad Street, Foleshill, Coventry, CV6 5BG.',
         sourceIds: ['coventry-foleshill-library'],
         serviceRelevance: 'For an instruction at the library, identify the affected entrance and confirm an authorised site contact; the directory establishes neither access rights nor fitted hardware.',
@@ -1702,16 +1729,19 @@ const AREA_SEEDS: AreaGuideSeed[] = [
     evidenceLimits: '“Stoke” is less precise than the council\'s separate Lower Stoke, Upper Stoke/Wyken and South Sowe profiles. None proves an individual address\'s use, age, designation, construction, access or hardware.',
     facts: [
       {
+        heading: 'Lower Stoke industrial character',
         text: 'The Lower Stoke HLC describes a light-industrial character area traversed by the Coventry–Rugby railway, with housing development in its northern part.',
         sourceIds: ['lower-stoke-hlc'],
         serviceRelevance: 'Identify whether a request concerns industrial, managed or residential premises and confirm the correct authority.',
       },
       {
+        heading: 'Wyken and Upper Stoke character',
         text: 'The separate Wyken and Upper Stoke HLC describes an east-Coventry area with mid-20th-century housing and the River Sowe as its eastern boundary.',
         sourceIds: ['wyken-upper-stoke-hlc'],
         serviceRelevance: 'Do not transfer Upper Stoke development context or a river boundary to every address carrying a Stoke label.',
       },
       {
+        heading: 'South Sowe route through Stoke',
         text: 'The South Sowe HLC says its river-valley corridor passes through Stoke and several other named neighbourhoods.',
         sourceIds: ['south-sowe-hlc'],
         serviceRelevance: 'A river-corridor reference requires a full street address and cannot define a property or service-route boundary.',
@@ -1782,16 +1812,19 @@ const AREA_SEEDS: AreaGuideSeed[] = [
     evidenceLimits: 'The River Sowe boundary, medieval-settlement history and counts of scheduled, archaeological and listed assets are character-area facts. They do not establish any individual building\'s status, construction, access or lock.',
     facts: [
       {
+        heading: 'Wyken eastern River Sowe boundary',
         text: 'The Wyken and Upper Stoke HLC is east of Coventry city centre and is bounded by the River Sowe on its eastern side.',
         sourceIds: ['wyken-upper-stoke-hlc'],
         serviceRelevance: 'The river boundary can orient an address but cannot establish the property, entrance or responsible party.',
       },
       {
+        heading: 'Medieval Wyken church settlement',
         text: 'The report records medieval Wyken settlement clustered around the 12th-century church of St Mary Magdalene at Wyken Croft.',
         sourceIds: ['wyken-upper-stoke-hlc'],
         serviceRelevance: 'Historic-core context should lead to address-level status checks before external alteration.',
       },
       {
+        heading: 'Wyken and Upper Stoke heritage designations and South Sowe route',
         text: 'The wider character area records two scheduled monuments, eleven archaeological constraint areas and eight listed buildings; the South Sowe HLC also names Wyken on the river-valley route.',
         sourceIds: ['wyken-upper-stoke-hlc', 'south-sowe-hlc'],
         serviceRelevance: 'Area totals cannot identify a protected building; verify the exact asset and proposed work.',
@@ -1861,16 +1894,19 @@ const AREA_SEEDS: AreaGuideSeed[] = [
     evidenceLimits: 'The historic village, hospital site and North Sowe corridor are separate evidence contexts. None proves an individual Walsgrave property\'s use, ownership, designation, construction, access or lock type.',
     facts: [
       {
+        heading: 'Medieval Walsgrave village settlement',
         text: 'The Woodway Park HLC says medieval settlement was concentrated around Walsgrave village, then known as Sowe, clustered around the church.',
         sourceIds: ['woodway-park-hlc'],
         serviceRelevance: 'Historic-village context should prompt an exact designation check, not an assumption about a building or lock.',
       },
       {
+        heading: 'Historic Hall Lane and Hinckley Road buildings and hospital redevelopment',
         text: 'The report records surviving historic buildings on Hall Lane and Hinckley Road and states that the hospital site was extensively redeveloped around 2005.',
         sourceIds: ['woodway-park-hlc'],
         serviceRelevance: 'Use the full address to distinguish a historic-road property from the hospital or other managed premises.',
       },
       {
+        heading: 'North Sowe route through Walsgrave',
         text: 'The North Sowe river-valley character area explicitly passes through Walsgrave.',
         sourceIds: ['north-sowe-hlc'],
         serviceRelevance: 'River-corridor evidence helps with location only and cannot define a property or access arrangement.',
@@ -1940,16 +1976,19 @@ const AREA_SEEDS: AreaGuideSeed[] = [
     evidenceLimits: '“Binley” is wider than the HLC commercial/industrial area and differs from the combined ward and river corridor. The sources do not prove any address\'s use, owner, construction, designation, access or lock.',
     facts: [
       {
+        heading: 'Binley south-east industrial fringe',
         text: 'The Binley HLC places its character area on Coventry\'s south-east fringe, bounded by the A46 to the south-east and dominated at report date by industrial and commercial uses with smaller open areas.',
         sourceIds: ['binley-hlc'],
         serviceRelevance: 'Identify the current property or site and manager rather than assuming business use from the broader HLC.',
       },
       {
+        heading: 'Binley Business Park and former colliery',
         text: 'The report identifies Binley Business Park in the north and records the former Binley Colliery landscape in the south.',
         sourceIds: ['binley-hlc'],
         serviceRelevance: 'North/south context can help locate the address but cannot establish building access or hardware.',
       },
       {
+        heading: 'Combined Binley and Willenhall ward and South Sowe corridor',
         text: 'The council JSNA defines a combined Binley and Willenhall ward, while the South Sowe HLC names Binley on the river-valley corridor.',
         sourceIds: ['binley-willenhall-jsna', 'south-sowe-hlc'],
         serviceRelevance: 'Do not treat ward or river-corridor geography as a property or service-route boundary.',
@@ -2020,16 +2059,19 @@ const AREA_SEEDS: AreaGuideSeed[] = [
     evidenceLimits: 'The Village Design Statement is settlement-scale and the Historic England entry applies only to Old Lodge Farm\'s named barn. Neither supports a heritage, construction, access or hardware claim for another property.',
     facts: [
       {
+        heading: 'Binley Woods location and parish boundary',
         text: 'Rugby Borough Council\'s Village Design Statement places Binley Woods about four miles east of central Coventry and seven miles west of Rugby and records the parish boundary change made in 1994.',
         sourceIds: ['binley-woods-vds'],
         serviceRelevance: 'Use the full address to distinguish the Warwickshire parish and village from Coventry\'s separate Binley area.',
       },
       {
+        heading: 'Binley Woods development origins',
         text: 'The statement says the developed village largely occupies former Binley Common woodland auctioned after the Coombe Abbey estate break-up in the early 1920s and describes distinct twentieth-century development phases.',
         sourceIds: ['binley-woods-vds'],
         serviceRelevance: 'Settlement history cannot identify the construction or lock at an individual entrance.',
       },
       {
+        heading: 'Old Lodge Farm listed barn',
         text: 'Historic England records the barn at Old Lodge Farm in Binley Woods parish as Grade II listed, list entry 1034897.',
         sourceIds: ['binley-woods-old-lodge-barn'],
         serviceRelevance: 'The listing is asset-specific and should not be transferred to another village address.',
@@ -2099,16 +2141,19 @@ const AREA_SEEDS: AreaGuideSeed[] = [
     evidenceLimits: 'The HLC contains pockets of different layouts and periods. Radburn planning, railway/river boundaries and neighbourhood-plan status do not prove any individual property\'s orientation, owner, access, construction or lock.',
     facts: [
       {
+        heading: 'Willenhall boundaries and residential character',
         text: 'The Willenhall HLC describes a predominantly residential area on Coventry\'s southern edge, divided by the West Coast Main Line, with the River Sowe to the west and A46 immediately south-east.',
         sourceIds: ['willenhall-hlc'],
         serviceRelevance: 'Use the address and exact entrance because infrastructure boundaries do not identify the controlled opening.',
       },
       {
+        heading: 'Willenhall estates completed in 1960 using Radburn planning',
         text: 'The report records two estates completed in 1960 as early English examples of Radburn planning, separating vehicular and pedestrian routes.',
         sourceIds: ['willenhall-hlc'],
         serviceRelevance: 'Ask for entrance and route instructions rather than assuming the postal frontage is the operative door.',
       },
       {
+        heading: 'Willenhall neighbourhood area and ward',
         text: 'Coventry City Council designated the Willenhall Neighbourhood Area in 2013 and approved its Neighbourhood Plan in 2018; the JSNA places Willenhall in a combined Binley and Willenhall ward.',
         sourceIds: ['coventry-neighbourhood-plans', 'binley-willenhall-jsna'],
         serviceRelevance: 'Planning and statistical boundaries are not property, ownership or service-route boundaries.',
@@ -2179,21 +2224,25 @@ const AREA_SEEDS: AreaGuideSeed[] = [
     evidenceLimits: 'The HLC combines Cheylesmore and Stivichall. Its 1936–1955 development description, deer-park history and heritage totals are area-scale and do not prove property status, fabric, access or lock type.',
     facts: [
       {
+        heading: 'Cheylesmore and Stivichall housing development period',
         text: 'The Cheylesmore and Stivichall character area lies south of Coventry city centre and is described as extensive housing developed rapidly between 1936 and 1955.',
         sourceIds: ['cheylesmore-stivichall-hlc'],
         serviceRelevance: 'The broad development period cannot select or prove door construction or installed hardware.',
       },
       {
+        heading: 'Former Cheylesmore Manor deer-park landscape',
         text: 'The north-west of the character area falls within the former medieval deer park of Cheylesmore Manor, with some present road alignments reflecting its boundary.',
         sourceIds: ['cheylesmore-stivichall-hlc'],
         serviceRelevance: 'Historic-landscape context can prompt an exact property check but does not establish designation or access.',
       },
       {
+        heading: 'Cheylesmore and Stivichall character-area heritage records',
         text: 'At character-area scale the report records one scheduled monument, twelve archaeological constraint areas, ten listed buildings and one registered park and garden, but no conservation area.',
         sourceIds: ['cheylesmore-stivichall-hlc'],
         serviceRelevance: 'Verify the individual building before external changes; totals neither confer nor remove property-specific controls.',
       },
       {
+        heading: 'Cheylesmore Library community-centre location',
         text: 'The Coventry library catalogue lists Cheylesmore Library at Cheylesmore Community Centre, Poitiers Road, Cheylesmore, Coventry CV3 5JX.',
         sourceIds: ['coventry-cheylesmore-library'],
         serviceRelevance: 'For an instruction at the library or community centre, identify the exact entrance and authorised site contact; the catalogue says nothing about access rights or installed hardware.',
@@ -2264,16 +2313,19 @@ const AREA_SEEDS: AreaGuideSeed[] = [
     evidenceLimits: 'The Whitley character area contains distinct edge uses and development periods, while the river corridor is a separate evidence layer. The locality name proves none of those conditions for an individual property.',
     facts: [
       {
+        heading: 'Whitley settlement and river setting',
         text: 'The Whitley HLC describes a settlement south of Coventry city centre, with industry to its north and west and the River Sowe Valley to its south and east.',
         sourceIds: ['whitley-hlc'],
         serviceRelevance: 'Confirm whether the address is residential, industrial or another managed site and identify the responsible party.',
       },
       {
+        heading: 'Whitley settlement and development history',
         text: 'The report records medieval settlement south of Abbey Road, a later Whitley Abbey country house and park, and predominantly 1925–1955 development in the modern character area.',
         sourceIds: ['whitley-hlc'],
         serviceRelevance: 'Different historical phases require property-specific checks and do not establish current door fabric or hardware.',
       },
       {
+        heading: 'South Sowe route through Whitley',
         text: 'The South Sowe character-area report explicitly names Whitley on the river-valley route.',
         sourceIds: ['south-sowe-hlc'],
         serviceRelevance: 'River-corridor context may help orient the address but cannot define ownership, access or a service boundary.',
@@ -2343,16 +2395,19 @@ const AREA_SEEDS: AreaGuideSeed[] = [
     evidenceLimits: 'The A45, Howes Lane, city-boundary and railway references define official geographies only. Parish foundation and neighbourhood designation do not establish property type, status, ownership, entrance or hardware.',
     facts: [
       {
+        heading: 'Finham Parish geographic boundaries',
         text: 'Coventry City Council states that Finham Parish lies south of Coventry and is bounded by the A45, Howes Lane, the city boundary and the railway line adjacent to Gretna Road.',
         sourceIds: ['finham-parish'],
         serviceRelevance: 'Use the full address because a parish boundary description cannot identify a property entrance or responsible party.',
       },
       {
+        heading: 'Finham Parish 2016 founding',
         text: 'The council records that Finham Parish was founded in 2016.',
         sourceIds: ['finham-parish'],
         serviceRelevance: 'Governance history supplies no evidence about building age, access or installed hardware.',
       },
       {
+        heading: 'Finham Neighbourhood Area designation',
         text: 'Coventry City Council designated the Finham Neighbourhood Area on 16 March 2017, with Finham Parish Council as the applicant body.',
         sourceIds: ['coventry-neighbourhood-plans'],
         serviceRelevance: 'A neighbourhood-plan boundary is not a property or service-route boundary and cannot authorise work.',
@@ -2422,16 +2477,19 @@ const AREA_SEEDS: AreaGuideSeed[] = [
     evidenceLimits: 'The route spelling and official “Stivichall” records are not a mapped one-to-one area. The conservation statement concerns specified woodlands, and list entry 1342919 applies only to Stivichall Grange.',
     facts: [
       {
+        heading: 'Historic Stivichall spelling and area',
         text: 'Coventry sources use the historic spelling “Stivichall” in the HLC and listed-building record; the combined Cheylesmore and Stivichall character area lies south of the city centre.',
         sourceIds: ['cheylesmore-stivichall-hlc'],
         serviceRelevance: 'Search both spellings and use the full address so locality records are not missed or misapplied.',
       },
       {
+        heading: 'Kenilworth Road woodlands within the conservation area',
         text: 'Coventry City Council says the Kenilworth Road woodlands are within a conservation area designated in 1968, including Wainbody Wood, Stivichall Common and Kenilworth Road Spinney, all local nature reserves.',
         sourceIds: ['kenilworth-road-woodlands'],
         serviceRelevance: 'Work affecting a named protected or managed site requires exact land and authority checks.',
       },
       {
+        heading: 'Stivichall Grange listed building',
         text: 'Historic England records Stivichall Grange on Lonscale Drive as a Grade II listed building, list entry 1342919.',
         sourceIds: ['stivichall-grange'],
         serviceRelevance: 'The listing is specific to the named property and should not be applied to another Styvechale address.',
@@ -2502,16 +2560,19 @@ const AREA_SEEDS: AreaGuideSeed[] = [
     evidenceLimits: 'The HLC and neighbourhood area extend beyond any one street. The medieval origins, Birmingham Road buildings and village conservation area do not establish another property\'s age, designation, access or hardware.',
     facts: [
       {
+        heading: 'Allesley Village origins and historic homes',
         text: 'The Allesley Park and Coundon Wedge HLC says Allesley village has medieval or possibly Anglo-Saxon origins and includes 16th- to 19th-century houses and cottages along Birmingham Road, many listed.',
         sourceIds: ['allesley-coundon-hlc'],
         serviceRelevance: 'Check the precise Birmingham Road or village property before visible alteration; nearby history does not prove status.',
       },
       {
+        heading: 'Allesley historic core and conservation area',
         text: 'The report identifies medieval All Saints Church and describes the historic core of Allesley Village as a conservation area.',
         sourceIds: ['allesley-coundon-hlc'],
         serviceRelevance: 'Use an address-level conservation check rather than applying the historic-core status to the whole locality.',
       },
       {
+        heading: 'Allesley Neighbourhood Area designation',
         text: 'Coventry City Council designated the Allesley Neighbourhood Area on 4 May 2016 following an application by Allesley Parish Council.',
         sourceIds: ['coventry-neighbourhood-plans'],
         serviceRelevance: 'Neighbourhood-plan geography is not a property, access or service-route boundary.',
@@ -2581,16 +2642,19 @@ const AREA_SEEDS: AreaGuideSeed[] = [
     evidenceLimits: 'The park, residential locality, village conservation area and broader HLC are separate evidence units. Area-scale medieval features and designation totals do not prove an individual building\'s status, construction, access or lock.',
     facts: [
       {
+        heading: 'Allesley Park address and setting',
         text: 'Coventry City Council gives Allesley Park\'s address as Allesley Hall Drive, Coventry CV5 9AD and describes it as a historic park between established housing developments.',
         sourceIds: ['allesley-park-council'],
         serviceRelevance: 'Clarify whether the request concerns the council park, a nearby home or another managed property.',
       },
       {
+        heading: 'Allesley Park medieval landscape',
         text: 'The HLC records the park as part of a larger medieval deer park, with surviving park-pale, ridge-and-furrow and earthworks associated with Allesley Castle.',
         sourceIds: ['allesley-coundon-hlc'],
         serviceRelevance: 'Historic landscape evidence requires exact asset and manager checks and does not describe a residential entrance.',
       },
       {
+        heading: 'Allesley wider-area heritage designations',
         text: 'The wider HLC contains a scheduled monument, a conservation area, 33 listed buildings and eight locally listed buildings, while locating the conservation area in Allesley Village rather than the whole park or estate name.',
         sourceIds: ['allesley-coundon-hlc'],
         serviceRelevance: 'Verify the individual asset and do not apply village conservation status to every Allesley Park address.',
@@ -2660,16 +2724,19 @@ const AREA_SEEDS: AreaGuideSeed[] = [
     evidenceLimits: 'The existing neighbourhood, HLC boundary and 176-hectare extension site are different geographies. Development phases, brook and A45 context do not support an individual property, access, construction or lock claim.',
     facts: [
       {
+        heading: 'Eastern Green landscape and Guphill Brook',
         text: 'The Eastern Green HLC describes a west-Coventry residential area crossed east–west by Guphill Brook, with housing around it and farmland and Allesley Park to the north.',
         sourceIds: ['eastern-green-hlc'],
         serviceRelevance: 'Use the full address and property boundary; brook and farmland context cannot identify an entrance or owner.',
       },
       {
+        heading: 'Eastern Green housing development phases',
         text: 'The report records principal housing phases south of Broad Lane in the 1950s and north of it in the 1960s, with earlier pockets on Dial House Lane and Lower Eastern Green Lane.',
         sourceIds: ['eastern-green-hlc'],
         serviceRelevance: 'Mixed development periods require door-specific inspection and cannot establish hardware.',
       },
       {
+        heading: 'Eastern Green urban extension boundary',
         text: 'The council describes a 176-hectare residential-led mixed-use urban extension at the built-up area\'s western edge and states that the existing Eastern Green neighbourhood lies further south and west of the site\'s southern boundary.',
         sourceIds: ['eastern-green-investment'],
         serviceRelevance: 'Distinguish an occupied address from the extension or construction site and identify the responsible manager.',
@@ -2739,16 +2806,19 @@ const AREA_SEEDS: AreaGuideSeed[] = [
     evidenceLimits: 'The JSNA is best-fit statistical geography, and the park page concerns one public asset. Neither defines every Longford property, a service-route boundary, building construction, access arrangement or lock type.',
     facts: [
       {
+        heading: 'Longford JSNA study geography',
         text: 'The Foleshill and Longford JSNA contains the Longford, Little Heath, Foleshill West and Foleshill East MSOAs and explicitly excludes Bell Green from the Longford part used in that profile.',
         sourceIds: ['foleshill-longford-jsna'],
         serviceRelevance: 'Use the full address and do not merge Longford and Bell Green statistical geographies.',
       },
       {
+        heading: 'Longford Park location and status',
         text: 'Coventry City Council locates Longford Park on Longford Road, Longford, CV6 6DW and identifies it as the city\'s largest Area Park.',
         sourceIds: ['longford-park'],
         serviceRelevance: 'Clarify whether the request concerns the public park or a separate Longford property and identify the manager where needed.',
       },
       {
+        heading: 'Longford Park river walk and footpaths',
         text: 'The Longford Park page describes a tree-lined river walk and footpath system alongside recreation and ecological areas.',
         sourceIds: ['longford-park'],
         serviceRelevance: 'Park paths and river context are not vehicle, property or entrance instructions for another address.',
@@ -2818,16 +2888,19 @@ const AREA_SEEDS: AreaGuideSeed[] = [
     evidenceLimits: 'The MSOA, HLC and named library record do not share one property boundary. None proves another Bell Green property\'s use, age, designation, access route, construction or hardware.',
     facts: [
       {
+        heading: 'Bell Green statistical geography',
         text: 'The council JSNA treats Bell Green as one MSOA and Wood End, Henley Green and Manor Farm as a separate combined MSOA, placing Bell Green in Longford ward.',
         sourceIds: ['bell-green-wehm-jsna'],
         serviceRelevance: 'Keep the statistical areas distinct and rely on the street address for the actual property.',
       },
       {
+        heading: 'Bell Green medieval settlement history',
         text: 'The Alderman\'s Green HLC records possible medieval settlement at Bell Green and says Bell Green Road was recorded in the 1775 Foleshill Inclosure survey.',
         sourceIds: ['aldermans-green-hlc'],
         serviceRelevance: 'Historic road context can prompt an address-level status check but cannot establish building fabric or locks.',
       },
       {
+        heading: 'Bell Green Library location',
         text: 'Coventry City Council locates Bell Green Library at Park Edge Community Hub, Roseberry Avenue, CV2 1NE.',
         sourceIds: ['bell-green-library'],
         serviceRelevance: 'A library or community-hub instruction requires its authorised manager and exact controlled opening.',
@@ -2898,16 +2971,19 @@ const AREA_SEEDS: AreaGuideSeed[] = [
     evidenceLimits: 'The historic works/site and current school directory concern named sites. The published catchment is an admissions geography and does not prove another address\'s use, owner, construction, access or lock.',
     facts: [
       {
+        heading: 'Courthouse Green Works redevelopment',
         text: 'The Alderman\'s Green HLC records Courthouse Green Works as a 1930s motor works west of the character area and says the site was later redeveloped as an out-of-town shopping centre.',
         sourceIds: ['aldermans-green-hlc'],
         serviceRelevance: 'Identify the present unit or property; historic works and retail redevelopment do not establish current control of an entrance.',
       },
       {
+        heading: 'Courthouse Green school location',
         text: 'Coventry City Council\'s school directory locates Courthouse Green at 736 Sewall Highway, CV6 7JJ.',
         sourceIds: ['courthouse-green-school'],
         serviceRelevance: 'A school request needs the authorised school contact and exact gate or door.',
       },
       {
+        heading: 'Courthouse Green school catchment',
         text: 'The directory lists a school catchment containing parts of Sewall Highway, Bell Green Road, Henley Road, Riley Square and other streets; this is an admissions geography rather than a locality boundary.',
         sourceIds: ['courthouse-green-school'],
         serviceRelevance: 'Do not infer property identity, service geography or authority from the catchment street list.',
@@ -2977,16 +3053,19 @@ const AREA_SEEDS: AreaGuideSeed[] = [
     evidenceLimits: 'Historic-road evidence and character-area designation totals do not identify a particular property. River, residential and industrial context cannot prove use, status, construction, access or lock type at an address.',
     facts: [
       {
+        heading: 'Aldermans Green character and boundaries',
         text: 'The Alderman\'s Green HLC describes a residential character area north-east of Coventry city centre, bounded by the River Sowe to the east and mixed residential and industrial land to the west.',
         sourceIds: ['aldermans-green-hlc'],
         serviceRelevance: 'Confirm the property or site type and the responsible party rather than inferring them from the mixed-use edge.',
       },
       {
+        heading: 'Historic Aldermans Green Road',
         text: 'The report records Alderman\'s Green Road as “Le Redway” in an early-15th-century record and as part of the 1775 landscape.',
         sourceIds: ['aldermans-green-hlc'],
         serviceRelevance: 'Historic road context is not evidence of property age, designation or installed hardware.',
       },
       {
+        heading: 'Aldermans Green river and heritage context',
         text: 'The North Sowe HLC places its river valley through Aldermans Green; the Alderman\'s Green HLC records three listed and fourteen locally listed buildings but no conservation area at character-area scale.',
         sourceIds: ['north-sowe-hlc', 'aldermans-green-hlc'],
         serviceRelevance: 'Check the exact building before visible work and do not infer status from area totals or lack of a conservation area.',
@@ -3056,16 +3135,19 @@ const AREA_SEEDS: AreaGuideSeed[] = [
     evidenceLimits: 'The HLC describes settlement and archaeological context, while the directory concerns one school and its admissions geography. These sources do not establish an individual property\'s fabric, use, status, access or hardware.',
     facts: [
       {
+        heading: 'Potters Green settlement history',
         text: 'The Woodway Park HLC records settlement at Potters Green on Woodway Lane with possible medieval ceramic-production associations.',
         sourceIds: ['woodway-park-hlc'],
         serviceRelevance: 'Possible archaeological context should prompt an exact site check and cannot establish a present building or lock.',
       },
       {
+        heading: 'Historic Potters Green cottages',
         text: 'The report says cottages west of the present Cardinal Wiseman schools appear on a 1778 estate survey, while Potters Green Road itself was not named on that survey.',
         sourceIds: ['woodway-park-hlc'],
         serviceRelevance: 'Historic road-area evidence does not prove the age, status or hardware of a supplied address.',
       },
       {
+        heading: 'Potters Green school and catchment',
         text: 'Coventry City Council locates Potters Green school at Ringwood Highway, CV2 2GF and publishes a catchment including Potters Green Road, Ringwood Highway and parts of Woodway Lane.',
         sourceIds: ['potters-green-school'],
         serviceRelevance: 'A school instruction requires the authorised site contact; its admissions catchment is not a property or service boundary.',
@@ -3135,16 +3217,19 @@ const AREA_SEEDS: AreaGuideSeed[] = [
     evidenceLimits: 'The WEHM MSOA, HLC development history, North Sowe corridor and named school are separate evidence layers. None proves an individual address\'s property type, ownership, construction, access or lock.',
     facts: [
       {
+        heading: 'Henley Green WEHM statistical area',
         text: 'The JSNA groups Henley Green with Wood End and Manor Farm in the WEHM MSOA in Henley ward and treats it separately from Bell Green.',
         sourceIds: ['bell-green-wehm-jsna'],
         serviceRelevance: 'Use the street address and do not merge WEHM and Bell Green statistical areas.',
       },
       {
+        heading: 'Henley Green housing and river corridor',
         text: 'The Woodway Park HLC says large areas of housing had been built at Wood End and Henley Green by 1967; the North Sowe HLC names Henley Green on the river-valley corridor.',
         sourceIds: ['woodway-park-hlc', 'north-sowe-hlc'],
         serviceRelevance: 'Broad development and river context cannot establish a door, lock or access arrangement.',
       },
       {
+        heading: 'Henley Green school and community centre',
         text: 'Coventry City Council locates Henley Green School and Community Centre at Wyken Croft, CV2 1HQ.',
         sourceIds: ['henley-green-school-centre'],
         serviceRelevance: 'A school or community-centre instruction needs its authorised contact and exact controlled opening.',
@@ -3216,16 +3301,19 @@ const AREA_SEEDS: AreaGuideSeed[] = [
     evidenceLimits: 'The WEHM geography, HLC history, North Sowe corridor and Brookstray directory record cover different units. None establishes property characteristics, ownership, service boundaries, access arrangements or hardware.',
     facts: [
       {
+        heading: 'Wood End WEHM statistical area',
         text: 'The council JSNA places Wood End within the combined Wood End, Henley Green and Manor Farm (WEHM) MSOA in Henley ward.',
         sourceIds: ['bell-green-wehm-jsna'],
         serviceRelevance: 'Use the full address because an MSOA is not a property or service-route boundary.',
       },
       {
+        heading: 'Wood End housing and river corridor',
         text: 'The Woodway Park HLC says housing had been built at Wood End by 1967 and describes post-war estates among green space; the North Sowe HLC names Wood End on its river corridor.',
         sourceIds: ['woodway-park-hlc', 'north-sowe-hlc'],
         serviceRelevance: 'Development and river context cannot establish current door construction or access.',
       },
       {
+        heading: 'Wood End Brookstray marked route',
         text: 'Coventry City Council records Wood End Brookstray at CV2 1BF with a 900-metre marked route on footpaths and grass.',
         sourceIds: ['wood-end-brookstray'],
         serviceRelevance: 'Clarify whether a request concerns this open space or a separate property and identify the responsible manager.',
@@ -3297,16 +3385,19 @@ const AREA_SEEDS: AreaGuideSeed[] = [
     evidenceLimits: 'No opened official source defines one standalone modern residential locality or service boundary matching the Sowe area label. River, flood-management and named-open-space evidence cannot support property, coverage, access, construction or hardware claims.',
     facts: [
       {
+        heading: 'North Sowe river corridor',
         text: 'The North Sowe HLC describes the Sowe River Valley east of Coventry, states that the full river course is divided into North and South character areas, and names Aldermans Green, Wood End, Bell Green, Henley Green and Walsgrave on its northern route.',
         sourceIds: ['north-sowe-hlc'],
         serviceRelevance: 'The evidence defines a river corridor through several localities, not a standalone Sowe property or service boundary.',
       },
       {
+        heading: 'River Sowe Main River status',
         text: 'Coventry City Council\'s flood guidance states that the River Sowe is largely designated Main River and drains much of eastern Coventry.',
         sourceIds: ['coventry-river-sowe-flooding'],
         serviceRelevance: 'Flood-management status is about the river system and cannot establish any building, ownership, entrance or lock condition.',
       },
       {
+        heading: 'Sowe Common Woodway Lane location',
         text: 'Coventry City Council records the named Sowe Common at Woodway Lane.',
         sourceIds: ['sowe-common'],
         serviceRelevance: 'A named common is one public-site reference and must not be treated as a boundary for a wider residential locality.',
@@ -3377,16 +3468,19 @@ const AREA_SEEDS: AreaGuideSeed[] = [
     evidenceLimits: 'The historic common, HLC industrial context, Little Heath MSOA and school catchment are different evidence layers. None establishes an individual property\'s use, age, ownership, construction, access or hardware.',
     facts: [
       {
+        heading: 'Little Heath statistical geography',
         text: 'The Foleshill and Longford JSNA explicitly includes Little Heath as one of four MSOAs in its study geography.',
         sourceIds: ['foleshill-longford-jsna'],
         serviceRelevance: 'An MSOA is statistical geography and cannot identify a property, entrance, owner or service route.',
       },
       {
+        heading: 'Little Heath settlement and industry history',
         text: 'The Foleshill HLC records a medieval common called Little Heath, later roadside settlement associated with mid-19th-century ribbon weaving, and former industrial sites within the wider character area.',
         sourceIds: ['foleshill-hlc'],
         serviceRelevance: 'Historic settlement and industry should prompt exact property verification, not assumptions about current use or hardware.',
       },
       {
+        heading: 'Little Heath school and catchment',
         text: 'Coventry City Council locates Little Heath school on Spring Road, CV6 7FN and publishes a defined admissions catchment street list.',
         sourceIds: ['little-heath-school'],
         serviceRelevance: 'A school request requires the authorised site contact; its catchment is not a locality or property boundary.',
