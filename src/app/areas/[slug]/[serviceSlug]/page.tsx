@@ -3,7 +3,7 @@ import { notFound, permanentRedirect } from 'next/navigation'
 import Link from 'next/link'
 import { getAreaBySlug, getAreaNeighbours } from '@/data/areas'
 import { SERVICES, getServiceBySlug } from '@/data/services'
-import { SERVICE_PROVIDER_SCHEMA, SITE_CONFIG } from '@/data/config'
+import { LOCKSMITH_AUTHOR_SCHEMA, SERVICE_PROVIDER_SCHEMA, SITE_CONFIG } from '@/data/config'
 import {
   getTownService,
   hasTownService,
@@ -17,6 +17,7 @@ import CTABlock from '@/components/CTABlock'
 import FAQSection from '@/components/FAQSection'
 import SchemaMarkup from '@/components/SchemaMarkup'
 import SectionEvidenceLinks from '@/components/SectionEvidenceLinks'
+import ContentAuthorNote from '@/components/ContentAuthorNote'
 
 export const dynamic = 'force-static'
 export const dynamicParams = true
@@ -161,6 +162,20 @@ export default async function TownServicePage({ params }: Props) {
     },
   }
 
+  const webPageSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    '@id': `${SITE_CONFIG.domain}/areas/${slug}/${serviceSlug}#webpage`,
+    url: `${SITE_CONFIG.domain}/areas/${slug}/${serviceSlug}`,
+    name: pageHeading,
+    description: content.metaDescription,
+    dateModified: content.reviewedOn,
+    author: LOCKSMITH_AUTHOR_SCHEMA,
+    publisher: { '@id': `${SITE_CONFIG.domain}/#business` },
+    mainEntity: { '@id': `${SITE_CONFIG.domain}/areas/${slug}/${serviceSlug}#service` },
+    citation: content.sources.map(source => source.url),
+  }
+
   const faqSchema = {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
@@ -175,6 +190,7 @@ export default async function TownServicePage({ params }: Props) {
     <>
       <SchemaMarkup schema={breadcrumbSchema} />
       <SchemaMarkup schema={serviceSchema} />
+      <SchemaMarkup schema={webPageSchema} />
       <SchemaMarkup schema={faqSchema} />
 
       {/* Breadcrumb */}
@@ -342,9 +358,7 @@ export default async function TownServicePage({ params }: Props) {
             Sources and Review Notes for This {area.name} Guide
           </h2>
           <p className="text-gray-700 leading-relaxed">{content.evidenceSummary}</p>
-          <p className="text-sm text-gray-500 mt-3">
-            Content reviewed <time dateTime={content.reviewedOn}>{content.reviewedOn}</time>.
-          </p>
+          <ContentAuthorNote reviewedOn={content.reviewedOn} label={`${service.shortName} in ${area.name} guide`} />
           <ul className="space-y-4 mt-6">
             {content.sources.map((source) => (
               <li id={`evidence-source-${source.id}`} key={source.id} className="scroll-mt-28 rounded-xl border border-gray-200 p-4">

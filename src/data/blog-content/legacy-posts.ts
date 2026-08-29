@@ -57,7 +57,7 @@ Some faults cannot be priced exactly without inspection. The useful test is whet
     faqs: [
       { q: 'What does the £59 lockout price mean?', a: 'It is the published starting price for a standard residential lockout. The fitted lock, its condition, the access method and any replacement parts can change the total. I explain the assumptions before travelling and agree any revised scope before work.' },
       { q: 'Why do prices vary between locksmiths?', a: 'Providers use different call-out, labour, parts, VAT and time-based pricing. Compare an itemised total for the same diagnosed scope rather than relying on headline prices alone.' },
-      { q: 'What if my insurance covers locksmith callouts?', a: 'Some home insurance policies include emergency home cover that covers locksmith callouts. Check your policy before calling — if you are covered, you may be able to claim the cost back. I can provide a receipt and any documentation your insurer requires.' },
+      { q: 'What if my insurance covers locksmith callouts?', a: 'Some home insurance policies include emergency home cover for locksmith callouts. Check your current policy and ask the insurer what evidence it accepts before booking. The insurer decides whether the attendance and cost are covered.' },
     ],
   },
   'locked-out-late-night-coventry': {

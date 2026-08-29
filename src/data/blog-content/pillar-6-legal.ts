@@ -633,7 +633,7 @@ For a detailed explanation of the three main lock standards your insurance might
       },
       {
         q: 'How do I know if my lock meets BS3621?',
-        a: 'For a mortice deadlock (the type with a large key that sits inside the edge of a wooden door), look at the faceplate — the metal strip on the edge of the door. A genuine BS3621 lock will have the BSI Kitemark stamped into the metal along with the standard number BS3621. If there is no Kitemark, the lock has not been independently certified. For euro cylinders, the standard is rarely stamped on the lock itself — check the original packaging or call me for a free check.',
+        a: 'For a mortice deadlock, inspect the faceplate for the standard number and certification mark, then verify the exact product if the marking is unclear. Do not assume certification merely from its shape, lever count or brand. For a euro cylinder, check the product marking, packaging and a current certification catalogue; an agreed visual assessment can record what is visible but cannot replace product evidence.',
       },
       {
         q: 'How do I price an upgrade against my insurance wording?',
@@ -795,7 +795,7 @@ Getting your locks right is one of the simplest things you can do to protect you
       },
       {
         q: 'How can I tell if my euro cylinder is insurance compliant?',
-        a: 'Check the original packaging, invoice and exact model, then compare it with a current certification catalogue. Colour, price and brand markings alone do not prove whether a cylinder is certified. I can record visible details during a free check, but some products require manufacturer or catalogue confirmation and the insurer decides whether the result meets its wording.',
+        a: 'Check the original packaging, invoice and exact model, then compare it with a current certification catalogue. Colour, price and brand markings alone do not prove whether a cylinder is certified. An agreed visual assessment can record visible details, but some products require manufacturer or catalogue confirmation and the insurer decides whether the result meets its wording.',
       },
       {
         q: 'Do I need to change my locks if I switch insurance provider?',

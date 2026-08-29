@@ -10,7 +10,13 @@ import {
 } from '@/data/pricing'
 import { AREAS, AREA_SERVED_SCHEMA, getAllAreasByRegion } from '@/data/areas'
 import { hasTownService } from '@/data/governed-town-services'
-import { SITE_CONFIG, CONTENT_UPDATED, SERVICE_PROVIDER_SCHEMA } from '@/data/config'
+import {
+  SITE_CONFIG,
+  CONTENT_UPDATED,
+  LOCKSMITH_AUTHOR_SCHEMA,
+  SERVICE_PROVIDER_SCHEMA,
+} from '@/data/config'
+import { getTechnicalEvidenceSource } from '@/data/locksmith-evidence'
 import { getBlogPostBySlug } from '@/data/blog-posts'
 import { SERVICE_GUIDE_SLUGS } from '@/data/blog-seo'
 import HeroSection from '@/components/HeroSection'
@@ -20,6 +26,7 @@ import SchemaMarkup from '@/components/SchemaMarkup'
 import DirectAnswer from '@/components/DirectAnswer'
 import LastUpdated from '@/components/LastUpdated'
 import ServiceIcon from '@/components/ServiceIcon'
+import ContentAuthorNote from '@/components/ContentAuthorNote'
 
 export const dynamic = 'force-static'
 export const revalidate = false
@@ -31,6 +38,26 @@ const UPVC_GEARBOX_PRICE = PUBLISHED_PRICE_BY_ID['upvc-gearbox-replacement'].pri
 const BOARDING_PRICE = PUBLISHED_PRICE_BY_ID['emergency-boarding'].price
 const ANTI_SNAP_PRICE = PUBLISHED_PRICE_BY_ID['anti-snap-cylinder'].price
 const BS3621_PRICE = PUBLISHED_PRICE_BY_ID['bs3621-mortice'].price
+
+const SERVICE_SOURCE_IDS: Record<string, readonly string[]> = {
+  'emergency-lockout': ['mla-service-calls'],
+  'lock-change': ['west-midlands-door-security', 'mla-service-calls'],
+  'upvc-lock-repair': [
+    'west-midlands-lock-advice',
+    'west-midlands-door-security',
+    'mila-door-locks-catalogue',
+    'mla-service-calls',
+  ],
+  'boarding-up': ['west-midlands-forensics', 'mla-service-calls'],
+  'lock-upgrade': [
+    'west-midlands-door-security',
+    'west-midlands-lock-advice',
+    'bsi-bs3621-current',
+    'secured-by-design-introduction',
+    'dhf-ts007-current',
+    'mla-service-calls',
+  ],
+}
 
 export async function generateStaticParams() {
   return SERVICES.map((s) => ({ slug: s.slug }))
@@ -185,14 +212,14 @@ const SERVICE_CONTENT: Record<string, {
       "I advise on maintaining your uPVC locks going forward",
     ],
     faqs: [
-      { q: 'My uPVC door is stiff to lock — is that a broken lock?', a: 'Not necessarily. In many cases a stiff uPVC door is due to door misalignment, a worn roller, or a failing gearbox. I diagnose the root cause first — in some cases a simple adjustment is all that is needed.' },
+      { q: 'My uPVC door is stiff to lock — is that a broken lock?', a: 'Not necessarily. Possible causes include alignment, a cylinder or handle fault, or wear within the multipoint mechanism. I inspect the complete operating sequence before proposing an adjustment, repair or replacement.' },
       { q: 'Can you replace just the cylinder on a uPVC door?', a: 'Sometimes. A cylinder can be replaced separately when it is the failed or agreed component and the correct size is available. The rest of the multipoint system and door alignment are checked separately.' },
       { q: 'My uPVC door will not lock at all — is this urgent?', a: 'An entrance that cannot be secured needs prompt attention. Call with the full address and observable symptoms so I can confirm current availability, the ETA and the safe next step.' },
       { q: 'Do you repair window locks on uPVC windows?', a: 'Yes — I repair and replace espagnolette window locks and cockspur handles on uPVC and aluminium windows.' },
     ],
     howToName: 'How to Get a uPVC Lock Repaired in Coventry',
     benefits: [
-      "Assessment of common uPVC multipoint systems, including identifiable Mila, GU, Yale, Fuhr and Lockmaster parts",
+      "Assessment of common uPVC multipoint systems using visible markings and measured component details",
       "Diagnose before quoting — I'll tell you if a repair is possible before recommending replacement",
       "Compatible cylinder and mechanism availability checked after identification",
       "Anti-snap cylinder options assessed where the door, fit and certification support one",
@@ -225,8 +252,8 @@ const SERVICE_CONTENT: Record<string, {
     steps: [
       "Prioritise safety and follow police instructions before repair work begins",
       "I confirm the current ETA from my actual starting point and the full address",
-      "I assess the damage and identify the best boarding solution",
-      "I secure the opening with solid boarding material",
+      "I assess the damage and explain a suitable temporary boarding scope",
+      "I fit the agreed boarding material using the inspected safe fixing points",
       "I advise on next steps for permanent repair and improved security",
     ],
     faqs: [
@@ -268,12 +295,12 @@ const SERVICE_CONTENT: Record<string, {
       `Lock upgrade prices start from £${ANTI_SNAP_PRICE} for an anti-snap euro cylinder, including the stated lock and fitting. No VAT. No separate call-out fee.`,
     ],
     steps: [
-      "Call 024 7522 4730 for a free phone consultation on your security needs",
+      "Call 024 7522 4730 and describe the entrance and security objective",
       "I visit and assess your current locks and door security",
       "I compare suitable options with your door, budget and any exact written policy requirement",
       "I confirm the full price before any work starts",
       "I fit and test the new locks",
-      "I provide documentation of the lock standard fitted for your insurance records",
+      "I record the visible product marking and agreed fitting scope; your insurer decides whether it meets the policy",
     ],
     faqs: [
       { q: 'What lock does my home insurance require?', a: 'Requirements vary by policy and door. Check the security section of your own policy or ask the insurer to confirm the standard in writing before choosing an upgrade.' },
@@ -285,7 +312,7 @@ const SERVICE_CONTENT: Record<string, {
     benefits: [
       "Affected entrance assessed before an upgrade is specified",
       "Current certification and compatible product availability checked",
-      "Written documentation for your insurance company",
+      "An itemised record of the visible product marking and agreed fitting scope",
       "One-visit completion where the diagnosis, authority and suitable parts allow",
       "Honest advice — I'll tell you what you need and what you don't",
     ],
@@ -315,6 +342,10 @@ export default async function ServicePage({ params }: Props) {
 
   const content = SERVICE_CONTENT[slug]
   if (!content) notFound()
+
+  const evidenceSourceIds = SERVICE_SOURCE_IDS[slug]
+  if (!evidenceSourceIds) throw new Error(`Missing service evidence map for ${slug}`)
+  const evidenceSources = evidenceSourceIds.map(sourceId => getTechnicalEvidenceSource(sourceId))
 
   /* ---- Schema markup ---- */
 
@@ -349,6 +380,20 @@ export default async function ServicePage({ params }: Props) {
         description: 'Advertised starting price; the final price depends on the diagnosed scope and agreed parts.',
       },
     },
+  }
+
+  const webPageSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    '@id': `${SITE_CONFIG.domain}/services/${slug}#webpage`,
+    url: `${SITE_CONFIG.domain}/services/${slug}`,
+    name: service.metaTitle,
+    description: service.metaDescription,
+    dateModified: CONTENT_UPDATED,
+    author: LOCKSMITH_AUTHOR_SCHEMA,
+    publisher: { '@id': `${SITE_CONFIG.domain}/#business` },
+    mainEntity: { '@id': `${SITE_CONFIG.domain}/services/${slug}#service` },
+    citation: evidenceSources.map(source => source.url),
   }
 
   // Only add voice-search questions that cover a distinct intent. The source
@@ -389,6 +434,7 @@ export default async function ServicePage({ params }: Props) {
     <>
       <SchemaMarkup schema={breadcrumbSchema} />
       <SchemaMarkup schema={serviceSchema} />
+      <SchemaMarkup schema={webPageSchema} />
       <SchemaMarkup schema={faqSchema} />
 
       {/* ============================================================ */}
@@ -767,6 +813,56 @@ export default async function ServicePage({ params }: Props) {
           </div>
         )}
       />
+
+      {/* ============================================================ */}
+      {/*  Technical evidence and author identity                       */}
+      {/* ============================================================ */}
+      <section
+        className="py-14 px-4 bg-[#F7F7F5]"
+        aria-labelledby="service-source-heading"
+        data-source-register-scope="technical-only"
+        data-evidence-source-ids={evidenceSourceIds.join(' ')}
+      >
+        <div className="max-w-3xl mx-auto">
+          <h2 id="service-source-heading" className="text-2xl md:text-3xl font-black text-[#0F1B2D] mb-4">
+            Technical Sources and Review Notes
+          </h2>
+          <p className="text-gray-700 leading-relaxed">
+            These primary references support the limited technical points stated in each record below.
+            They do not verify my prices, availability, job history, response times, or the condition of
+            a lock or door at an individual address. Published business terms are kept separately on the{' '}
+            <Link href="/terms" prefetch={false} className="font-bold text-[#0F1B2D] underline decoration-[#FFB800] underline-offset-4">
+              terms page
+            </Link>
+            .
+          </p>
+          <ContentAuthorNote reviewedOn={CONTENT_UPDATED} label={`${service.shortName} guide`} />
+          <ul className="space-y-4 mt-6">
+            {evidenceSources.map(source => (
+              <li
+                id={`evidence-source-${source.id}`}
+                key={source.id}
+                data-source-kind="technical"
+                className="scroll-mt-28 rounded-xl border border-gray-200 bg-white p-5"
+              >
+                <a
+                  href={source.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-bold text-[#0F1B2D] underline decoration-[#FFB800] underline-offset-4 hover:text-[#8A5A00]"
+                >
+                  {source.title}
+                </a>
+                <p className="text-sm text-gray-600 mt-1">{source.publisher}</p>
+                <p className="text-sm text-gray-700 mt-2">{source.supports}</p>
+                <p className="text-xs text-gray-500 mt-2">
+                  Source checked <time dateTime={source.checkedOn}>{source.checkedOn}</time>.
+                </p>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
 
       {/* ============================================================ */}
       {/*  12. Other services                                           */}

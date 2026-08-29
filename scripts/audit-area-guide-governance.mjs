@@ -23,7 +23,7 @@ const RETIRED_UNGOVERNED_FILES = [
   '../src/components/LockBrands.tsx',
 ]
 const MIN_HUB_OWNED_EDITORIAL_WORDS = 900
-const MIN_DEDICATED_PARENT_EDITORIAL_WORDS = 400
+const MIN_DEDICATED_PARENT_EDITORIAL_WORDS = 550
 const MIN_AREA_FACTS = 3
 const MAX_AREA_FACTS = 4
 const MIN_AREA_FACT_SOURCES = 2
@@ -42,8 +42,8 @@ const MAX_WITHIN_AREA_P95_OVERLAP = 0.35
 const MAX_WITHIN_AREA_PAIR_OVERLAP = 0.45
 const MAX_WITHIN_SERVICE_P95_OVERLAP = 0.35
 const MAX_WITHIN_SERVICE_PAIR_OVERLAP = 0.45
-const MAX_DEDICATED_PARENT_P95_OVERLAP = 0.40
-const MAX_DEDICATED_PARENT_PAIR_OVERLAP = 0.50
+const MAX_DEDICATED_PARENT_P95_OVERLAP = 0.30
+const MAX_DEDICATED_PARENT_PAIR_OVERLAP = 0.35
 const MAX_WITHIN_PAGE_FAQ_ANSWER_OVERLAP = 0.65
 const MIN_CHECK_UNIQUENESS_RATIO = 0.72
 const MIN_PAIR_UNIQUE_CHECKS = 2
@@ -311,6 +311,10 @@ function wordCount(value) {
   return typeof value === 'string'
     ? (value.match(/[\p{L}\p{N}]+(?:['’\-][\p{L}\p{N}]+)*/gu) ?? []).length
     : 0
+}
+
+function firstSentence(value) {
+  return String(value ?? '').match(/^[\s\S]*?[.!?](?=\s|$)/)?.[0] ?? String(value ?? '')
 }
 
 function normalise(value) {
@@ -877,8 +881,16 @@ for (const area of AREAS) {
         const guidance = guide.serviceGuidance?.[serviceSlug]
         const service = SERVICES.find(candidate => candidate.slug === serviceSlug)
         return [
+          { value: guidance?.heading, owner: `${serviceSlug} owner-card local heading` },
           { value: service?.description, owner: `${serviceSlug} owner-card summary` },
-          { value: guidance?.checks?.[0], owner: `${serviceSlug} owner-card preview` },
+          ...(guidance?.checks ?? []).map((value, index) => ({
+            value,
+            owner: `${serviceSlug} owner-card preview check ${index + 1}`,
+          })),
+          {
+            value: firstSentence(guidance?.body?.[0]),
+            owner: `${serviceSlug} owner-card decision preview`,
+          },
         ]
       })
     : SERVICE_AREA_SLUGS.flatMap(serviceSlug => {

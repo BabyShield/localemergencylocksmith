@@ -537,7 +537,7 @@ When you call 024 7522 4730, you speak to me directly. I explain the quoted scop
 
 Here is what I offer:
 
-- **Based in Coventry** — I live and work here, serving areas from [Earlsdon](/areas/earlsdon) to [Tile Hill](/areas/tile-hill), [Cheylesmore](/areas/cheylesmore) and [the city centre](/areas/coventry-city-centre).
+- **Based in Coventry** — I serve the published coverage locations, including [Earlsdon](/areas/earlsdon), [Tile Hill](/areas/tile-hill), [Cheylesmore](/areas/cheylesmore) and [the city centre](/areas/coventry-city-centre).
 - **No VAT added** — I am not VAT-registered. The phone quote states its scope and assumptions; any changed diagnosis or parts are explained and agreed before work.
 - **No separate call-out fee** — the quoted price covers the stated scope; any newly diagnosed work is explained and authorised first.
 - **Phone pricing** — where the job can be identified remotely, I state the price and assumptions before setting off.

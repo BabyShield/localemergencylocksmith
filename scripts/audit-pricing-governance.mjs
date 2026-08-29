@@ -96,6 +96,33 @@ for (const [label, relativePath, importToken, rejectLiteralAmounts] of architect
   }
 }
 
+const commercialClaimFiles = [
+  'src/app/page.tsx',
+  'src/app/prices/page.tsx',
+  'src/data/blog-content/pillar-5-emergency.ts',
+  'src/data/blog-content/pillar-6-legal.ts',
+  'src/data/blog-content/pillar-8-coventry.ts',
+  'src/data/blog-content/legacy-posts.ts',
+]
+const unsupportedCommercialPatterns = [
+  /\bno surcharge for card payments\b/i,
+  /\bcontactless, chip and pin, apple pay, google pay\b/i,
+  /\breceipt and invoice for insurance claims or landlord records\b/i,
+  /\breceipt with a full breakdown of the work done\b/i,
+  /\bany documentation your insurer requires\b/i,
+  /\bestablished in coventry\b/i,
+  /\bi live and work here\b/i,
+  /\b(?:call me for|during) a free check\b/i,
+]
+
+for (const relativePath of commercialClaimFiles) {
+  const source = await readFile(new URL(`../${relativePath}`, import.meta.url), 'utf8')
+  for (const pattern of unsupportedCommercialPatterns) {
+    const match = source.match(pattern)
+    check(!match, `${relativePath} contains an unsupported commercial or identity claim: ${JSON.stringify(match?.[0])}`)
+  }
+}
+
 if (failures.length > 0) {
   console.error(`Pricing governance failed with ${failures.length} issue(s):`)
   for (const failure of failures) console.error(`- ${failure}`)

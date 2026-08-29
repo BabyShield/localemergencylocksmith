@@ -8,6 +8,25 @@ const failures = []
 const warnings = []
 
 const SERVICE_SLUGS = ['emergency-lockout', 'lock-change', 'upvc-lock-repair', 'boarding-up', 'lock-upgrade']
+const SERVICE_SOURCE_IDS = Object.freeze({
+  'emergency-lockout': ['mla-service-calls'],
+  'lock-change': ['west-midlands-door-security', 'mla-service-calls'],
+  'upvc-lock-repair': [
+    'west-midlands-lock-advice',
+    'west-midlands-door-security',
+    'mila-door-locks-catalogue',
+    'mla-service-calls',
+  ],
+  'boarding-up': ['west-midlands-forensics', 'mla-service-calls'],
+  'lock-upgrade': [
+    'west-midlands-door-security',
+    'west-midlands-lock-advice',
+    'bsi-bs3621-current',
+    'secured-by-design-introduction',
+    'dhf-ts007-current',
+    'mla-service-calls',
+  ],
+})
 const SERVICE_SHORT_NAMES = Object.freeze({
   'emergency-lockout': 'Emergency Lockout',
   'lock-change': 'Lock Repair & Replacement',
@@ -262,6 +281,11 @@ function hasSchemaType(node, type) {
   return types.includes(type)
 }
 
+function authoredWebPageCitationCount(nodes, id) {
+  const webPage = nodes.find(node => hasSchemaType(node, 'WebPage') && node?.['@id'] === id)
+  return Array.isArray(webPage?.citation) ? webPage.citation.length : 0
+}
+
 function redirectPath(response) {
   const location = response.headers.get('location')
   return location ? new URL(location, BASE_URL).pathname : null
@@ -469,6 +493,22 @@ function internalHrefs(html) {
   return hrefs
 }
 
+function externalHrefs(html) {
+  const hrefs = new Set()
+  for (const tag of html.match(/<a\b[^>]*>/gi) ?? []) {
+    const href = getAttribute(tag, 'href')
+    if (!href) continue
+    try {
+      const url = new URL(href, CANONICAL_ORIGIN)
+      if (!['http:', 'https:'].includes(url.protocol) || url.origin === CANONICAL_ORIGIN) continue
+      hrefs.add(url.href)
+    } catch {
+      // Invalid external links are handled by the source registry audits.
+    }
+  }
+  return hrefs
+}
+
 async function mapLimit(items, limit, task) {
   const results = new Array(items.length)
   let cursor = 0
@@ -483,8 +523,25 @@ async function mapLimit(items, limit, task) {
 }
 
 async function fetchLocal(pathname) {
-  const response = await fetch(new URL(pathname, BASE_URL), { redirect: 'manual' })
-  return { response, html: await response.text() }
+  const target = new URL(pathname, BASE_URL)
+  const maximumAttempts = 3
+
+  for (let attempt = 1; attempt <= maximumAttempts; attempt += 1) {
+    try {
+      const response = await fetch(target, { redirect: 'manual' })
+      if (response.status >= 500 && attempt < maximumAttempts) {
+        await response.body?.cancel()
+        await new Promise(resolve => setTimeout(resolve, attempt * 150))
+        continue
+      }
+      return { response, html: await response.text() }
+    } catch (error) {
+      if (attempt === maximumAttempts) throw error
+      await new Promise(resolve => setTimeout(resolve, attempt * 150))
+    }
+  }
+
+  throw new Error(`Unable to fetch ${target}`)
 }
 
 async function checkOneHopPermanentRedirect(pathname, expectedPath) {
@@ -707,8 +764,10 @@ try {
             check(!visibleText(ownerCard.block).includes('First useful check:'), `${productionUrl.pathname} ${serviceSlug} owner card presents preview copy as sourced parent guidance`)
             const summaryBlock = ownerCard.block.match(/<p\b(?=[^>]*data-owner-summary=["']true["'])[^>]*>[\s\S]*?<\/p>/i)?.[0] ?? ''
             const previewBlock = ownerCard.block.match(/<p\b(?=[^>]*data-owner-first-check=["']true["'])[^>]*>[\s\S]*?<\/p>/i)?.[0] ?? ''
+            const decisionBlock = ownerCard.block.match(/<p\b(?=[^>]*data-owner-decision-preview=["']true["'])[^>]*>[\s\S]*?<\/p>/i)?.[0] ?? ''
             check(visibleText(summaryBlock).split(/\s+/).filter(Boolean).length >= 8, `${productionUrl.pathname} ${serviceSlug} owner card has no substantive visible summary`)
             check(visibleText(previewBlock).split(/\s+/).filter(Boolean).length >= 5, `${productionUrl.pathname} ${serviceSlug} owner card has no substantive visible guide preview`)
+            check(visibleText(decisionBlock).split(/\s+/).filter(Boolean).length >= 12, `${productionUrl.pathname} ${serviceSlug} owner card has no substantive decision-context preview`)
             check(visibleText(ownerCard.block).includes('Read the complete'), `${productionUrl.pathname} ${serviceSlug} owner card has no visible owner-link cue`)
             check(!/data-service-faq|data-selected-local-fact-links|data-evidence-source-ids/i.test(ownerCard.block), `${productionUrl.pathname} ${serviceSlug} owner card embeds duplicate full guidance or evidence`)
             const ownerHeadings = headingOutline(ownerCard.block)
@@ -956,6 +1015,78 @@ try {
       }
     }
 
+    if (areaMatch || townServiceMatch || genericServiceMatch) {
+      const expectedWebPageId = `${loc}#webpage`
+      const authoredWebPage = parsedSchemaNodes.find(node => (
+        hasSchemaType(node, 'WebPage') && node?.['@id'] === expectedWebPageId
+      ))
+      check(Boolean(authoredWebPage), `${productionUrl.pathname} has no canonical authored WebPage node`)
+      check(authoredWebPage?.url === loc, `${productionUrl.pathname} WebPage URL is ${authoredWebPage?.url || 'missing'}; expected ${loc}`)
+      check(typeof authoredWebPage?.dateModified === 'string', `${productionUrl.pathname} WebPage has no dateModified`)
+      check(authoredWebPage?.author?.['@id'] === `${CANONICAL_ORIGIN}/about#ross`, `${productionUrl.pathname} WebPage author has the wrong @id`)
+      check(authoredWebPage?.author?.name === 'Ross', `${productionUrl.pathname} WebPage author has the wrong name`)
+      check(authoredWebPage?.author?.url === `${CANONICAL_ORIGIN}/about`, `${productionUrl.pathname} WebPage author does not link to /about`)
+      check(authoredWebPage?.publisher?.['@id'] === `${CANONICAL_ORIGIN}/#business`, `${productionUrl.pathname} WebPage publisher has the wrong @id`)
+      check(authoredWebPage?.mainEntity?.['@id'] === `${loc}#service`, `${productionUrl.pathname} WebPage mainEntity does not reference its Service`)
+      check(Array.isArray(authoredWebPage?.citation) && authoredWebPage.citation.length > 0, `${productionUrl.pathname} WebPage has no evidence citations`)
+
+      const sourceRecords = Array.from(
+        mainHtml.matchAll(/<li\b(?=[^>]*\bid=["']evidence-source-[^"']+["'])[^>]*>[\s\S]*?<\/li>/gi),
+        match => match[0],
+      )
+      const visibleCitationUrls = new Set(sourceRecords.flatMap(record => [...externalHrefs(record)]))
+      const schemaCitationUrls = new Set((authoredWebPage?.citation ?? []).map(value => {
+        try {
+          return new URL(value).href
+        } catch {
+          return ''
+        }
+      }).filter(Boolean))
+      check(
+        visibleCitationUrls.size === schemaCitationUrls.size
+          && [...visibleCitationUrls].every(url => schemaCitationUrls.has(url)),
+        `${productionUrl.pathname} WebPage citations do not exactly match its visible source records`,
+      )
+
+      const authorNote = mainHtml.match(/<p\b(?=[^>]*\bdata-content-author=["']true["'])[^>]*>[\s\S]*?<\/p>/i)?.[0] ?? ''
+      check(Boolean(authorNote), `${productionUrl.pathname} has no visible content-author note`)
+      check(
+        new RegExp(`data-content-author-id=["']${CANONICAL_ORIGIN.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}/about#ross["']`, 'i').test(authorNote),
+        `${productionUrl.pathname} visible content-author note has the wrong identity`,
+      )
+      check(internalHrefs(authorNote).has('/about'), `${productionUrl.pathname} visible author does not link to /about`)
+      check(visibleText(authorNote).includes('Ross'), `${productionUrl.pathname} visible author note does not name Ross`)
+      const authorReviewDate = authorNote.match(/data-content-reviewed-on=["']([^"']+)["']/i)?.[1] ?? ''
+      check(authorReviewDate === authoredWebPage?.dateModified, `${productionUrl.pathname} visible review date does not match WebPage dateModified`)
+    }
+
+    if (genericServiceMatch) {
+      const serviceSlug = genericServiceMatch[1]
+      const expectedSourceIds = SERVICE_SOURCE_IDS[serviceSlug] ?? []
+      const sourceRegister = mainHtml.match(/<section\b(?=[^>]*\bdata-source-register-scope=["']technical-only["'])[^>]*>[\s\S]*?<\/section>/i)?.[0] ?? ''
+      check(Boolean(sourceRegister), `${productionUrl.pathname} has no technical-only source register`)
+      check(sourceRegister.includes('id="service-source-heading"'), `${productionUrl.pathname} source register has no visible heading`)
+      const renderedSourceIds = (sourceRegister.match(/data-evidence-source-ids=["']([^"']*)["']/i)?.[1] ?? '')
+        .split(/\s+/)
+        .filter(Boolean)
+      check(
+        renderedSourceIds.length === expectedSourceIds.length
+          && expectedSourceIds.every(sourceId => renderedSourceIds.includes(sourceId)),
+        `${productionUrl.pathname} source registry IDs do not match its governed evidence map`,
+      )
+      for (const sourceId of expectedSourceIds) {
+        check(sourceRegister.includes(`id="evidence-source-${sourceId}"`), `${productionUrl.pathname} is missing source record ${sourceId}`)
+      }
+      check(
+        authoredWebPageCitationCount(parsedSchemaNodes, `${loc}#webpage`) === expectedSourceIds.length,
+        `${productionUrl.pathname} WebPage citation count does not match its visible source register`,
+      )
+      check(
+        visibleText(sourceRegister).includes('do not verify my prices, availability, job history, response times'),
+        `${productionUrl.pathname} source register does not disclose its evidence limits`,
+      )
+    }
+
     if (productionUrl.pathname.startsWith('/blog/')) {
       const article = parsedSchemaNodes.find(node => hasSchemaType(node, 'BlogPosting'))
       const author = article?.author
@@ -997,11 +1128,16 @@ try {
     const unsupportedOutcomePaymentClaim = pageText.match(/\byou\s+only\s+pay\s+if\s+i\s+complete\s+the\s+job\b|\bif\s+i\s+can(?:not|'t)\s+fix\s+the\s+problem,?\s+you\s+(?:do\s+not|don't)\s+pay\s+(?:a\s+penny|anything)\b/i)
     check(!unsupportedOutcomePaymentClaim, `${productionUrl.pathname} contains an unsupported outcome-payment claim: ${JSON.stringify(unsupportedOutcomePaymentClaim?.[0])}`)
 
-    const unsupportedFreeAssessment = pageText.match(/\b(?:offer|book|arrange)\s+(?:a\s+)?free\s+(?:visual\s+)?(?:security|lock|home[- ]security)\s+(?:survey|check|assessment)\b|\bsecurity\s+survey\s+free\b/i)
+    const unsupportedFreeAssessment = pageText.match(/\b(?:offer|book|arrange)\s+(?:a\s+)?free\s+(?:visual\s+)?(?:security|lock|home[- ]security)\s+(?:survey|check|assessment)\b|\bsecurity\s+survey\s+free\b|\b(?:call me for|during) a free check\b/i)
     check(!unsupportedFreeAssessment, `${productionUrl.pathname} contains an unsupported free-assessment offer: ${JSON.stringify(unsupportedFreeAssessment?.[0])}`)
 
     const unsupportedLiveAvailability = pageText.match(/\bavailable\s+now\b/i)
     check(!unsupportedLiveAvailability, `${productionUrl.pathname} presents a static page as a live availability signal: ${JSON.stringify(unsupportedLiveAvailability?.[0])}`)
+
+    const unsupportedCommercialClaim = pageText.match(
+      /\bno surcharge for card payments\b|\bcontactless, chip and pin, apple pay, google pay\b|\breceipt and invoice for insurance claims or landlord records\b|\breceipt with a full breakdown of the work done\b|\bany documentation your insurer requires\b|\bestablished in coventry\b|\bi live and work here\b/i,
+    )
+    check(!unsupportedCommercialClaim, `${productionUrl.pathname} contains an unsupported commercial or identity claim: ${JSON.stringify(unsupportedCommercialClaim?.[0])}`)
 
     const ungovernedPriceRange = pageText.match(/£\d+(?:\.\d+)?\s*(?:-|–|—|to)\s*£?\d+(?:\.\d+)?/i)
     check(!ungovernedPriceRange, `${productionUrl.pathname} contains an ungoverned price range: ${JSON.stringify(ungovernedPriceRange?.[0])}`)

@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { MapPin, PoundSterling, CheckCircle, Lock, Clock, BookOpen } from 'lucide-react'
 import { AREAS, getAreaBySlug, getAreaNeighbours } from '@/data/areas'
 import { SERVICES } from '@/data/services'
-import { SERVICE_PROVIDER_SCHEMA, SITE_CONFIG } from '@/data/config'
+import { LOCKSMITH_AUTHOR_SCHEMA, SERVICE_PROVIDER_SCHEMA, SITE_CONFIG } from '@/data/config'
 import { getAreaGuide } from '@/data/area-guides'
 import type { ServiceAreaSlug } from '@/data/service-area-types'
 import { getAreaAuthority } from '@/data/area-authorities'
@@ -15,6 +15,7 @@ import HeroSection from '@/components/HeroSection'
 import CTABlock from '@/components/CTABlock'
 import FAQSection from '@/components/FAQSection'
 import SchemaMarkup from '@/components/SchemaMarkup'
+import ContentAuthorNote from '@/components/ContentAuthorNote'
 
 export const dynamic = 'force-static'
 export const revalidate = false
@@ -38,6 +39,10 @@ function areaGuideOrThrow(slug: string) {
   const guide = getAreaGuide(slug)
   if (!guide) throw new Error(`Missing governed area guide for ${slug}`)
   return guide
+}
+
+function firstSentence(value: string): string {
+  return value.match(/^[\s\S]*?[.!?](?=\s|$)/)?.[0] ?? value
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -149,6 +154,20 @@ export default async function AreaPage({ params }: Props) {
     },
   }
 
+  const webPageSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    '@id': `${SITE_CONFIG.domain}/areas/${slug}#webpage`,
+    url: `${SITE_CONFIG.domain}/areas/${slug}`,
+    name: `Locksmith services in ${area.name}`,
+    description: guide.searchDescription,
+    dateModified: guide.reviewedOn,
+    author: LOCKSMITH_AUTHOR_SCHEMA,
+    publisher: { '@id': `${SITE_CONFIG.domain}/#business` },
+    mainEntity: { '@id': `${SITE_CONFIG.domain}/areas/${slug}#service` },
+    citation: pageSources.map(source => source.url),
+  }
+
   const faqSchema = {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
@@ -163,6 +182,7 @@ export default async function AreaPage({ params }: Props) {
     <>
       <SchemaMarkup schema={breadcrumbSchema} />
       <SchemaMarkup schema={areaSchema} />
+      <SchemaMarkup schema={webPageSchema} />
       <SchemaMarkup schema={faqSchema} />
 
       <nav aria-label="Breadcrumb" className="max-w-6xl mx-auto px-4 py-3 text-sm text-gray-500">
@@ -334,8 +354,15 @@ export default async function AreaPage({ params }: Props) {
                 >
                   <p className="text-xs font-bold uppercase tracking-wider text-[#8A5A00] mb-2">From £{service.priceFrom} · no VAT</p>
                   <h3 className="text-xl font-black text-[#0F1B2D]">{service.shortName}</h3>
-                  <p className="text-gray-700 leading-relaxed mt-3" data-owner-summary="true">{service.description}</p>
-                  <p className="text-sm text-gray-600 mt-4" data-owner-first-check="true"><strong>Guide preview:</strong> {guidance.checks[0]}</p>
+                  <p className="text-gray-700 leading-relaxed mt-3" data-owner-summary="true">
+                    <strong>{guidance.heading}.</strong> {service.description}
+                  </p>
+                  <p className="text-sm text-gray-600 mt-4" data-owner-first-check="true">
+                    <strong>Guide preview:</strong> {guidance.checks.join(' · ')}
+                  </p>
+                  <p className="text-sm text-gray-700 mt-4" data-owner-decision-preview="true">
+                    <strong>Decision context:</strong> {firstSentence(guidance.body[0])}
+                  </p>
                   <Link href={localOwnerHref} prefetch={false} className="inline-flex mt-5 text-sm font-bold text-[#0F1B2D] underline decoration-[#FFB800] underline-offset-4 hover:text-[#8A5A00]">
                     Read the complete {service.shortName} guide for {area.name}
                   </Link>
@@ -440,7 +467,7 @@ export default async function AreaPage({ params }: Props) {
               ? 'This overview lists the locality and property-status sources used for the area facts. Technical sources stay on each dedicated service guide so their claims remain with the canonical service owner.'
               : 'Locality facts and technical advice are kept separate. Each source below states the limited point it supports; none is used to infer a lock or access condition at an individual property.'}
           </p>
-          <p className="text-sm text-gray-500 mt-3">Content reviewed <time dateTime={guide.reviewedOn}>{guide.reviewedOn}</time>.</p>
+          <ContentAuthorNote reviewedOn={guide.reviewedOn} label={`${area.name} area guide`} />
           <ul className="space-y-4 mt-7">
             {pageSources.map(source => (
               <li id={`evidence-source-${source.id}`} key={source.id} data-source-kind={source.kind} className="scroll-mt-28 rounded-xl border border-gray-200 p-5">

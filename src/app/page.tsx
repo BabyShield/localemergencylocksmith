@@ -162,7 +162,7 @@ export default function HomePage() {
                 </div>
               </>
             ) : (
-              <span className="font-bold text-[#0F1B2D] text-sm">Local independent locksmith — established in Coventry</span>
+              <span className="font-bold text-[#0F1B2D] text-sm">Local independent locksmith — based in Coventry</span>
             )}
           </div>
           <div className="flex items-center gap-2 text-[#0F1B2D]">

@@ -213,14 +213,21 @@ export default function PricesPage() {
 
           <div className="mt-8 space-y-4 text-gray-700 leading-relaxed">
             <p>
-              I accept payment by <strong>cash or card</strong> — whatever is easiest for you. There is no
-              surcharge for card payments. I can also provide a receipt and invoice for insurance claims or
-              landlord records.
+              I accept payment by <strong>cash, debit card or credit card</strong>. Payment methods and the
+              booking terms are set out on the{' '}
+              <Link href="/terms" className="font-bold text-[#0F1B2D] underline decoration-[#FFB800] underline-offset-4">
+                terms page
+              </Link>
+              . Ask what record you need before booking if a landlord, managing agent or insurer has its own
+              documentation requirement.
             </p>
             <p>
-              Lock fittings come with the stated <strong>12-month guarantee</strong> on the supplied parts and
-              fitting work. If a covered fault develops within that period, call so I can inspect it and apply
-              the guarantee terms.
+              Lock fittings and replacements have the published <strong>12-month guarantee</strong> for covered
+              lock-mechanism defects and installation work, subject to the scope and exclusions on the{' '}
+              <Link href="/terms" className="font-bold text-[#0F1B2D] underline decoration-[#FFB800] underline-offset-4">
+                terms page
+              </Link>
+              . If a possible covered fault develops, call so it can be inspected against those terms.
             </p>
             <p>
               The published starting-price basis has <strong>no separate night, weekend or bank-holiday

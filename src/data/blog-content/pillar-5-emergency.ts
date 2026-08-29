@@ -460,11 +460,9 @@ Common scenarios:
 
 Photographs, markings and measurements help identify a replacement lock, cylinder or mechanism. I confirm the exact compatible part and its current availability before promising a same-visit replacement; otherwise, I quote for the required part and a return visit.
 
-### Step 9: You Pay and I Give You a Receipt
+### Step 9: Complete the Agreed Payment
 
-Payment is simple. I accept **card and cash**. Contactless, chip and pin, Apple Pay, Google Pay — whatever works for you.
-
-You get a **receipt** with a full breakdown of the work done, parts fitted, and cost. Keep it as evidence of the work and alongside any separate written warranty terms that apply.
+Payment can be made by **cash, debit card or credit card**, as stated in the published [terms](/terms). If a landlord, managing agent or insurer needs a particular record, ask what it will accept before booking rather than assuming one document guarantees reimbursement.
 
 ---
 
