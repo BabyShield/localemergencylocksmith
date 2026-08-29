@@ -2,13 +2,13 @@ import Link from 'next/link'
 import { SITE_CONFIG } from '@/data/config'
 
 const PRICES = [
-  { service: 'Emergency lockout', price: '£59', desc: 'Non-destructive door opening', includes: 'Labour, no VAT' },
+  { service: 'Emergency lockout', price: '£59', desc: 'Low-damage method assessed first', includes: 'Labour, no VAT' },
   { service: 'Lock change (standard)', price: '£69', desc: 'Yale or cylinder replacement', includes: 'New lock + fitting' },
-  { service: 'Lock change (BS3621)', price: '£79', desc: 'Insurance-approved deadlock', includes: 'Lock + fitting' },
+  { service: 'Lock change (BS3621)', price: '£79', desc: 'Marked British Standard option', includes: 'Lock + fitting' },
   { service: 'Anti-snap cylinder', price: '£59', desc: 'Snap-resistant euro cylinder', includes: 'Cylinder + fitting' },
   { service: 'uPVC lock repair', price: '£59', desc: 'Cylinder or mechanism repair', includes: 'Labour, no VAT' },
   { service: 'uPVC lock replacement', price: '£89', desc: 'Full mechanism swap', includes: 'Mechanism + fitting' },
-  { service: 'Boarding up (emergency)', price: '£79', desc: 'Same-day emergency boarding', includes: 'Materials + labour' },
+  { service: 'Boarding up (emergency)', price: '£79', desc: 'Temporary boarding after assessment', includes: 'Materials + labour' },
   { service: 'Window lock repair', price: '£49', desc: 'Espagnolette or cockspur', includes: 'Labour, no VAT' },
   { service: 'Security survey', price: 'FREE', desc: 'Full property assessment', includes: 'No obligation' },
 ]

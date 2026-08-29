@@ -49,6 +49,110 @@ function getTitle(html) {
   return match ? decodeHtml(match[1]).replace(/\s+/g, ' ').trim() : ''
 }
 
+function visibleText(html) {
+  return decodeHtml(
+    html
+      .replace(/<script\b[\s\S]*?<\/script>/gi, ' ')
+      .replace(/<style\b[\s\S]*?<\/style>/gi, ' ')
+      .replace(/<[^>]+>/g, ' '),
+  ).replace(/\s+/g, ' ').trim()
+}
+
+function operationalClaimText(html) {
+  // Reviews describe completed historical jobs; they are evidence, not a promise
+  // that the same timing, stock or outcome will apply to a future attendance.
+  return visibleText(
+    html
+      .replace(/<blockquote\b[\s\S]*?<\/blockquote>/gi, ' ')
+      .replace(/<q\b[\s\S]*?<\/q>/gi, ' '),
+  )
+}
+
+const OPERATIONAL_CLAIM_RULES = [
+  {
+    label: 'unsupported job-frequency claim',
+    conditional: false,
+    patterns: [
+      /\b(?:i|we)\s+(?:regularly|daily|weekly)\s+(?:get\s+called|attend|handle|repair|replace|fit|service|see|encounter|change|extract|do|work\s+on)\b[^.!?]{0,120}/gi,
+      /\b(?:i|we)\s+(?:(?:am|are)\s+)?(?:get\s+called|called|attend|handle|repair|replace|fit|service|see|encounter|change|extract|work\s+on)\b[^.!?]{0,120}\b(?:every\s+(?:day|week|month)|daily|weekly|year\s+after\s+year|on\s+a\s+(?:daily|weekly)\s+basis)\b/gi,
+      /\b(?:someone|a\s+locksmith|ross)\s+who\s+(?:regularly\s+)?(?:works?\s+on|handles?|repairs?|replaces?|fits?|services?)\b[^.!?]{0,120}\b(?:every\s+(?:day|week|month)|daily|weekly)\b/gi,
+      /\b(?:one\s+of\s+)?(?:my|our)\s+most\s+(?:common|frequent)\s+(?:calls?|jobs?|callouts?|repairs?|replacements?|services?)\b/gi,
+      /\b(?:the\s+)?most\s+(?:common|frequent)\s+(?:calls?|jobs?|callouts?|faults?|problems?|failures?|issues?)\b[^.!?]{0,100}\b(?:i|we)\s+(?:(?:am|are)\s+)?(?:called|asked|attend|handle|repair|replace|fit|service|see|encounter)\b/gi,
+      /\b(?:i|we)\s+(?:(?:am|are)\s+)?(?:called|asked|attend|handle|repair|replace|fit|service|see|encounter)\b[^.!?]{0,100}\b(?:the\s+)?most\s+(?:common|frequent)\s+(?:calls?|jobs?|callouts?|faults?|problems?|failures?|issues?)\b/gi,
+    ],
+  },
+  {
+    label: 'unsupported personal-volume or client-history claim',
+    conditional: false,
+    patterns: [
+      /\b(?:i(?:'|’)ve|i\s+have)\b[^.!?]{0,100}\b(?:fitted|repaired|replaced|attended|handled|completed|done)\b[^.!?]{0,60}\b(?:hundreds|thousands)\s+of\b/gi,
+      /\bbased\s+on\s+(?:my\s+)?(?:hundreds|thousands)\s+of\s+(?:jobs?|calls?|callouts?|repairs?|replacements?)\b/gi,
+      /\bi\s+(?:work|have\s+worked)\s+with\s+(?:many|several|dozens|hundreds)\b/gi,
+      /\bi\s+have\s+attended\s+(?:many|multiple|dozens|hundreds)\s+(?:jobs?|calls?|callouts?)\b/gi,
+      /\bi\s+(?:typically|usually|often)\s+see\b[^.!?]{0,100}\b\d{1,3}\s*(?:-|–|—|to)\s*\d{1,3}\s+years?\b/gi,
+    ],
+  },
+  {
+    label: 'unsupported full-stock claim',
+    conditional: false,
+    patterns: [
+      /\b(?:carry|stock|keep|hold)\b[^.!?]{0,100}\b(?:a|the)\s+full\s+(?:range|stock)\s+of\s+(?:brands|sizes|locks|cylinders|mechanisms|gearboxes|parts|products)\b/gi,
+      /\b(?:carry|stock|keep|hold)\b[^.!?]{0,100}\b(?:stock\s+of\s+)?all\s+(?:the\s+)?(?:(?:main|major|common|standard|small)\s+)?(?:brands|sizes|locks|cylinders|mechanisms|gearboxes|parts|products)\b/gi,
+      /\b(?:van|vehicle|inventory)\b[^.!?]{0,100}\b(?:has|holds|includes|contains|carries)\b[^.!?]{0,80}\b(?:a\s+full\s+(?:range|stock)|all\s+(?:the\s+)?(?:main|major|common|standard|small)\s+(?:brands|sizes|locks|cylinders|mechanisms|gearboxes|parts|products))\b/gi,
+    ],
+  },
+  {
+    label: 'unconditional fixed completion or sourcing claim',
+    conditional: true,
+    patterns: [
+      /(?:\b(?:i|we)\s+(?:can|will|usually|typically|normally)|\b(?:i|we)(?:'|’)ll)\s+(?:(?:usually|typically|normally)\s+)?(?:complete|finish|fit|repair|replace|source|supply|obtain|secure|accommodate|resolve|fix|do)\b[^.!?]{0,120}\b(?:same[- ]day|the\s+same\s+day|next[- ]day|the\s+next\s+day|in\s+(?:a\s+)?(?:single|one)\s+visit|on\s+the\s+spot|within\s+(?:an?|one|\d{1,3})\s*(?:-|–|—|to)?\s*\d{0,3}\s*(?:hours?|days?))\b/gi,
+      /\b(?:i|we)\s+(?:complete|finish|fit|repair|replace|source|supply|obtain|secure|accommodate|resolve|fix|do)\b[^.!?]{0,120}\b(?:same[- ]day|the\s+same\s+day|next[- ]day|the\s+next\s+day|in\s+(?:a\s+)?(?:single|one)\s+visit|on\s+the\s+spot|within\s+(?:an?|one|\d{1,3})\s*(?:-|–|—|to)?\s*\d{0,3}\s*(?:hours?|days?))\b/gi,
+      /\b(?:most|all)\s+(?:jobs?|repairs?|replacements?|callouts?|problems?|faults?|requests?)\s+(?:(?:can|will)\s+be|are\s+(?:(?:usually|typically|normally)\s+)?)(?:completed|finished|handled|resolved|fixed|accommodated)\b[^.!?]{0,80}\b(?:same[- ]day|the\s+same\s+day|next[- ]day|the\s+next\s+day|in\s+(?:a\s+)?(?:single|one)\s+visit|on\s+the\s+spot|within\s+(?:an?|one|\d{1,3})\s*(?:-|–|—|to)?\s*\d{0,3}\s*(?:hours?|days?))\b/gi,
+      /\b(?:same[- ]day|next[- ]day)\s+(?:completion|repair|replacement|fitting|fit|boarding|sourcing|supply|service|appointment|availability)\b/gi,
+      /\b(?:parts?|products?|locks?|cylinders?|mechanisms?|materials?)\s+(?:(?:can|will)\s+be|are\s+(?:(?:usually|typically|normally)\s+)?)(?:sourced|supplied|obtained)\b[^.!?]{0,80}\bwithin\s+(?:an?|one|\d{1,3})\s*(?:-|–|—|to)?\s*\d{0,3}\s*(?:hours?|days?)\b/gi,
+    ],
+  },
+]
+
+function claimContext(text, index, length) {
+  const before = text.slice(0, index)
+  const start = Math.max(before.lastIndexOf('.'), before.lastIndexOf('!'), before.lastIndexOf('?')) + 1
+  const tail = text.slice(index + length)
+  const offsets = [tail.indexOf('.'), tail.indexOf('!'), tail.indexOf('?')].filter(offset => offset >= 0)
+  const end = offsets.length > 0 ? index + length + Math.min(...offsets) + 1 : text.length
+  return text.slice(start, end).trim()
+}
+
+function isExplicitlyNegated(context) {
+  return /\b(?:not|never)\s+(?:guaranteed|promised)\b/i.test(context)
+    || /\b(?:cannot|can't|do\s+not|don't|will\s+not|won't|never)\s+(?:promise|guarantee)\b/i.test(context)
+    || /\bwithout\s+(?:a\s+)?(?:fixed\s+)?(?:completion|sourcing|stock|same[- ]day)\s+(?:promise|guarantee)\b/i.test(context)
+}
+
+function isExplicitlyConditional(context) {
+  return /\b(?:depends?|depending)\s+on\b/i.test(context)
+    || /\bsubject\s+to\b/i.test(context)
+    || /\b(?:may|might|could)\s+(?:be\s+)?(?:possible|require|need|depend)\b/i.test(context)
+    || /\b(?:if|when|where|provided)\b[^.!?]{0,100}\b(?:available|availability|compatible|suitable|supported|diagnosis|inspection|assessment|in\s+stock)\b/i.test(context)
+    || /\b(?:check|confirm|agree|determine|quote)\b[^.!?]{0,80}\b(?:availability|lead\s+time|number\s+of\s+visits?|completion\s+date|fitting\s+date|appointment)\b/i.test(context)
+    || /\b(?:availability|lead\s+time|number\s+of\s+visits?|completion\s+date|fitting\s+date|appointment)\b[^.!?]{0,60}\b(?:checked|confirmed|agreed|determined|quoted|required)\b/i.test(context)
+    || /\bbefore\s+(?:promising|confirming|committing\s+to)\b/i.test(context)
+}
+
+function findUnsupportedOperationalClaim(text) {
+  for (const rule of OPERATIONAL_CLAIM_RULES) {
+    for (const pattern of rule.patterns) {
+      for (const match of text.matchAll(pattern)) {
+        const context = claimContext(text, match.index ?? 0, match[0].length)
+        if (isExplicitlyNegated(context)) continue
+        if (rule.conditional && isExplicitlyConditional(context)) continue
+        return { label: rule.label, match: match[0] }
+      }
+    }
+  }
+  return null
+}
+
 function internalPaths(html) {
   const paths = new Set()
   for (const tag of html.match(/<a\b[^>]*>/gi) ?? []) {
@@ -137,6 +241,8 @@ try {
     const canonical = getCanonical(html)
     const h1Count = (html.match(/<h1\b/gi) ?? []).length
     const ogImage = getMeta(html, 'property', 'og:image')
+    const pageText = visibleText(html)
+    const claimText = operationalClaimText(html)
 
     check(response.status === 200, `${productionUrl.pathname} returned ${response.status}`)
     check(!response.headers.get('location'), `${productionUrl.pathname} redirects to ${response.headers.get('location')}`)
@@ -150,6 +256,23 @@ try {
     check(h1Count === 1, `${productionUrl.pathname} has ${h1Count} H1 elements`)
     check(Boolean(ogImage), `${productionUrl.pathname} has no og:image`)
     check(!html.includes('https://localemergencylocksmith.co.uk'), `${productionUrl.pathname} contains the redirecting apex origin`)
+
+    const futureArrivalPromise = pageText.match(/\b(?:i|we)\s+(?:can|will|aim\s+to|typically|usually|normally)[^.!?]{0,80}\b(?:arrive|reach|be\s+with\s+you)[^.!?]{0,40}\b\d{1,3}\s*(?:-|–|—|to)?\s*\d{0,3}\s*minutes?\b/i)
+      ?? pageText.match(/\b\d{1,3}\s*(?:-|–|—|to)\s*\d{1,3}[- ]minute\s+(?:response|arrival)\b/i)
+    check(!futureArrivalPromise, `${productionUrl.pathname} contains a fixed future arrival promise: ${JSON.stringify(futureArrivalPromise?.[0])}`)
+
+    const operationalClaim = findUnsupportedOperationalClaim(claimText)
+    check(!operationalClaim, `${productionUrl.pathname} contains an ${operationalClaim?.label}: ${JSON.stringify(operationalClaim?.match)}`)
+
+    if (/^\/areas\/[^/]+$/.test(productionUrl.pathname)) {
+      check(html.includes('id="local-evidence-heading"'), `${productionUrl.pathname} is missing verified local evidence`)
+      check(html.includes('id="service-guidance-heading"'), `${productionUrl.pathname} is missing service-by-service guidance`)
+      check(html.includes('id="source-heading"'), `${productionUrl.pathname} is missing its evidence source register`)
+      for (const serviceSlug of ['emergency-lockout', 'lock-change', 'upvc-lock-repair', 'boarding-up', 'lock-upgrade']) {
+        check(html.includes(`id="${serviceSlug}"`), `${productionUrl.pathname} is missing ${serviceSlug} guidance`)
+      }
+      check(!pageText.includes('Common Lock Problems in'), `${productionUrl.pathname} still renders the unsupported legacy common-problems block`)
+    }
 
     for (const match of html.matchAll(/<script\b[^>]*type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/gi)) {
       try {

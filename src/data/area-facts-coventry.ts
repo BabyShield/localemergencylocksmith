@@ -311,7 +311,7 @@ export const COVENTRY_FACTS: Record<
       },
     },
     {
-      text: 'The A428 Binley Road connects the area directly to the city centre, keeping average locksmith response times under 20 minutes during off-peak hours.',
+      text: 'The A428 Binley Road provides a direct road connection between Binley and Coventry city centre.',
     },
   ],
 

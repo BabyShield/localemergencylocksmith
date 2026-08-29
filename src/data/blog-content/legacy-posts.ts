@@ -110,7 +110,7 @@ My number is 024 7522 4730 — I answer 24/7 and I'll tell you exactly how long 
 
 ## What Happens Next
 
-Most residential lockouts take 5-20 minutes once I arrive. I will use non-destructive entry techniques where possible — which means your door and lock stay undamaged.
+Opening time depends on the exact lock, door, condition and suitable method. I assess an appropriate non-destructive method first where circumstances allow, but no damage outcome can be guaranteed before inspection.
 
 If the lock needs replacing after the opening (rare, but possible with very old or damaged locks), I will explain why and quote you before I do anything.
     `.trim(),
@@ -178,9 +178,9 @@ Call 024 7522 4730 to book.
   },
   'upvc-door-lock-needs-replacing': {
     body: `
-## The Most Common uPVC Lock Problems
+## uPVC Lock Symptoms and Fault Categories
 
-I get called to uPVC door problems every day. Most fall into a few categories:
+Similar symptoms can have different causes. The categories below are checks to inform an on-site diagnosis, not a claim that any one fault is present:
 
 **1. Stiff or difficult to turn the key**
 This is usually one of three things: a worn cylinder, a misaligned door dropping on its hinges, or a failing gearbox mechanism. Most of the time this is repairable, not a full replacement.
@@ -230,7 +230,7 @@ Certified anti-snap upgrades start from £59. See the [lock upgrade service](/se
 If your uPVC door is getting stiffer year on year, the mechanism is wearing. Getting it serviced before it fails completely avoids an emergency callout.
     `.trim(),
     faqs: [
-      { q: 'Can you repair a uPVC lock on the same day?', a: "In most cases yes — I carry the most common uPVC lock mechanisms and cylinders in my van. Call me and describe the symptoms and I'll tell you whether I'm likely to be able to fix it same day." },
+      { q: 'Can you repair a uPVC lock on the same day?', a: 'It depends on the diagnosis, mechanism markings, dimensions, door condition and current compatible-part availability. Call with the full address and symptoms; I will explain what can be established before attendance and whether a return visit may be required.' },
       { q: 'My uPVC door lock failed in the locked position — what do I do?', a: 'This is an emergency situation — you are either locked in or locked out. Call me immediately on 024 7522 4730. Do not attempt to force the door.' },
       { q: 'How long does a uPVC lock last?', a: 'There is no universal lifespan. Use, alignment, maintenance, weather exposure, product quality, and existing wear all affect a multipoint mechanism. Stiffness, grinding, incomplete locking, or a handle that no longer returns normally are reasons to have it assessed.' },
     ],

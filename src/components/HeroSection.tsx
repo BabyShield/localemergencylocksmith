@@ -8,10 +8,8 @@ interface HeroSectionProps {
   subheading: string
   areaName?: string
   compact?: boolean
-  // Per-area honest response window — pass area.responseTime on area pages so
-  // outlying areas never inherit the Coventry-wide claim.
-  responseTime?: string
-  // Governed area×service pages deliberately confirm the current ETA by phone.
+  // Evidence-governed pages confirm the current ETA by phone rather than
+  // rendering a fixed journey-time promise.
   showResponseTime?: boolean
 }
 
@@ -20,7 +18,6 @@ export default function HeroSection({
   subheading,
   areaName,
   compact,
-  responseTime,
   showResponseTime = true,
 }: HeroSectionProps) {
   return (
@@ -80,7 +77,7 @@ export default function HeroSection({
           {showResponseTime && (
             <span className="flex items-center gap-1.5">
               <Clock className="w-4 h-4 text-green-500" aria-hidden="true" />
-              {responseTime ?? SITE_CONFIG.responseTime} Response{areaName ? ` in ${areaName}` : ''}
+              Current ETA Confirmed by Phone{areaName ? ` for ${areaName}` : ''}
             </span>
           )}
         </div>

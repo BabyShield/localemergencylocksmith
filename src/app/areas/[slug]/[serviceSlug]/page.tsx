@@ -148,14 +148,12 @@ export default async function TownServicePage({ params }: Props) {
     },
     offers: {
       '@type': 'Offer',
-      price: String(service.priceFrom),
-      priceCurrency: 'GBP',
-      availability: 'https://schema.org/InStock',
       priceSpecification: {
         '@type': 'PriceSpecification',
-        price: String(service.priceFrom),
+        minPrice: String(service.priceFrom),
         priceCurrency: 'GBP',
         valueAddedTaxIncluded: false,
+        description: 'Advertised starting price; the final price depends on the diagnosed scope and agreed parts.',
       },
     },
   }

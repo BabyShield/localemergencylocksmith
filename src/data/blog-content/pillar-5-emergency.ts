@@ -38,7 +38,7 @@ If there is broken glass or the property is not secure, tell the police this whe
 
 If a door has been forced or a window smashed, temporary boarding or another suitable repair may be needed to reduce further intrusion and weather exposure. Ask the insurer what emergency work and evidence its written terms require; boarding does not guarantee a claim outcome.
 
-I offer [emergency boarding up across Coventry](/services/boarding-up) from **£79**. I carry marine-grade plywood in the van and can board up doors and windows within 30 minutes of arrival. Call me on **024 7522 4730** — I am available 24/7, including evenings and weekends.
+I offer [emergency boarding up across Coventry](/services/boarding-up) from **£79**. I carry marine-grade plywood in the van; the safe fixing method and time depend on the damaged opening. Call me on **024 7522 4730** for the current ETA and scope — I am available 24/7, including evenings and weekends.
 
 Your insurance company may cover boarding up costs, so keep the receipt.
 
@@ -134,7 +134,7 @@ You can check the progress of your case using the contact details and crime refe
       },
       {
         q: 'How quickly can you board up a broken door or window after a burglary in Coventry?',
-        a: 'I carry marine-grade plywood and fixings in my van at all times. For most locations across Coventry and the surrounding areas, I can be with you within 15-30 minutes and have the opening boarded up shortly after. Emergency boarding up starts from £79. Call 024 7522 4730 any time, day or night.',
+        a: 'I carry marine-grade plywood and fixings in my van. Call with the full address and describe or photograph the opening so I can confirm the current ETA, likely method and price basis. Emergency boarding up starts from £79.',
       },
       {
         q: 'Do I need to be at home when the police attend after a burglary?',
@@ -148,7 +148,7 @@ You can check the progress of your case using the contact details and crime refe
 
 You put your key in the lock, turn it, and snap — half the key is in your hand and the other half is stuck inside the lock. It is one of those moments where you just stand there staring at it, wondering how this is your life right now.
 
-Do not worry. I deal with broken key extractions across Coventry every week, and in most cases I can get the broken piece out and have you back inside within 20-30 minutes. But first, let me explain why this happens so you can avoid it in the future — and what you should absolutely not try before calling me.
+Do not force the remaining key fragment or push another object into the keyway. Extraction and entry depend on the break position, cylinder, door and whether another fault is present. First, here is why keys can break and what not to try before calling.
 
 ---
 
@@ -204,7 +204,7 @@ When I arrive, I assess the situation first. Where is the broken piece? How deep
 
 **Pick and hook method.** For keys that are deeper inside the cylinder, I use a combination of a hook pick and an extractor. The hook manipulates the pins to release pressure on the broken key, while the extractor pulls it free.
 
-**Cylinder removal.** In some cases — particularly if someone has already pushed the key piece deep inside, or if the lock mechanism is damaged — I need to remove the cylinder entirely to extract the key from the back. If the cylinder is damaged, I will replace it. I carry common euro cylinder sizes in my van, so I can fit a new one on the spot.
+**Cylinder removal.** In some cases — particularly if someone has already pushed the key piece deep inside, or if the lock mechanism is damaged — I need to remove the cylinder entirely to extract the key from the back. If replacement is supported, the cylinder dimensions, security specification and current compatible-part availability determine whether it can be completed during that attendance or needs a return visit.
 
 I assess whether a non-destructive extraction is suitable first. The result depends on the break position, lock condition and any earlier attempts to remove the key; if the mechanism is damaged, replacement may be necessary.
 
@@ -245,7 +245,7 @@ Call **024 7522 4730** if:
 - The lock feels damaged or the mechanism is not working even after removing the key piece
 - You are locked out because of the broken key and cannot get in
 
-I cover all areas across Coventry and Warwickshire — from the city centre to [Tile Hill](/areas/tile-hill), [Canley](/areas/canley), [Binley](/areas/binley), and beyond. Typical arrival time is **15-30 minutes**.
+I cover the locations listed across Coventry and Warwickshire — from the city centre to [Tile Hill](/areas/tile-hill), [Canley](/areas/canley), [Binley](/areas/binley), and beyond. Call with the full postcode for the current arrival estimate.
 
 Visit the [emergency lockout service page](/services/emergency-lockout) for more details on how emergency call-outs work.`,
     faqs: [
@@ -326,7 +326,7 @@ Lock changes depend on the type of lock and door:
 - **Yale nightlatch replacement**: from **£69** fitted
 - **Full lock change — front and back doors**: from **£120** depending on lock types
 
-I carry a range of regularly used locks and cylinders, so same-day work may be possible when the exact part is available. I cover all areas across Coventry — check the [areas page](/areas/) for your location. Full pricing details are on the [prices page](/prices).
+I carry a range of locks and cylinders, so same-day work may be possible when the exact compatible part is available. Check the [areas page](/areas/) to confirm that your Coventry location is listed. Starting prices and their scope are on the [prices page](/prices).
 
 ---
 
@@ -352,7 +352,7 @@ These are temporary measures only. If there is a real risk that someone has your
 
 1. **Think about where the keys were lost** and whether your address was with them.
 2. **If stolen:** report it to the police and keep the crime reference number; your insurer may ask for it.
-3. **If your address was with the keys:** call me on **024 7522 4730** to arrange a lock change as soon as possible. I am available 24/7 and can usually be with you within 15-30 minutes in Coventry.
+3. **If your address was with the keys:** call me on **024 7522 4730** to discuss the risk and a lock change. I am available 24/7 and will confirm the current ETA from the full address.
 4. **If low risk (lost at home, no address attached):** give yourself 24-48 hours to find them. If they do not turn up, change the locks for peace of mind.
 5. **Tell your insurer** if you believe the keys were stolen, and follow the notification and security instructions in your written policy.
 
@@ -360,7 +360,7 @@ For more on how emergency call-outs work, see my guide on [how emergency locksmi
     faqs: [
       {
         q: 'How quickly should I change the locks after losing my keys?',
-        a: 'It depends on the risk level. If your keys were stolen in a bag that also contained your address (driving licence, bank statement, letter), change them immediately — call 024 7522 4730 and I can usually be with you within 15-30 minutes. If you dropped them somewhere with no identifying information attached, you have a bit more time, but I would recommend changing within 24-48 hours if they do not turn up. The longer you wait, the higher the risk.',
+        a: 'It depends on the risk. If stolen keys were with information identifying the address, report the theft and arrange an urgent security decision. If they were lost without identifying information, consider who might connect them to the property. Call with the full address for the current ETA.',
       },
       {
         q: 'Will my home insurance cover the cost of changing locks after losing keys?',
@@ -419,7 +419,7 @@ For a full breakdown of costs for every type of job, see the [prices page](/pric
 
 ### Step 4: I Give You an ETA
 
-For most locations within Coventry, my arrival time is **15-30 minutes**. I will give you a specific estimate based on where I am and where you are.
+I give you a current estimate based on my actual starting point and your full address. A static page cannot reliably promise a journey time.
 
 If I am on another job and it will be longer, I tell you upfront. I would rather be honest about a 45-minute wait than promise 15 minutes and leave you standing in the cold wondering where I am.
 
@@ -451,7 +451,7 @@ If the approach changes the cost (for example, if a cylinder needs replacing), I
 
 This is the bit that usually surprises people — how quick it is.
 
-For a standard euro cylinder lockout, I can typically gain entry in **5-20 minutes** using non-destructive techniques. Mortice locks can take a bit longer. Highly secure locks (Ultion, ABS, high-security mortice) take longer still because they are designed to resist manipulation — which is a good thing.
+Opening time and method depend on the exact cylinder or lock, its condition, the door, proof of authority and what the inspection reveals. Independently certified higher-security products are designed to improve resistance to specified tests, so no fixed opening time or non-destructive outcome can be promised in advance.
 
 I work quietly and methodically. There is no drama, no forcing, no kicking of doors. If you have ever seen a locksmith in a film, forget everything you saw. Real locksmithing is more like surgery than demolition.
 
@@ -465,7 +465,7 @@ Common scenarios:
 - You want to upgrade to a certified [anti-snap cylinder](/services/lock-upgrade) while I am here
 - The lock mechanism was already worn or damaged, which caused the lockout in the first place — I can diagnose and quote for repair or replacement
 
-I carry a range of replacement locks, cylinders, and mechanisms in my van. If I have the exact part, I can do the replacement on the spot. Otherwise, I will quote and arrange a return visit.
+Photographs, markings and measurements help identify a replacement lock, cylinder or mechanism. I confirm the exact compatible part and its current availability before promising a same-visit replacement; otherwise, I quote for the required part and a return visit.
 
 ### Step 9: You Pay and I Give You a Receipt
 
@@ -475,18 +475,18 @@ You get a **receipt** with a full breakdown of the work done, parts fitted, and 
 
 ---
 
-### What I Carry in My Van
+### Tools and Parts to Confirm Before Attendance
 
-People sometimes ask how I can handle so many different situations from a van. Here is what I carry:
+The method and parts depend on the door, lock and fault. These are examples of the categories used for emergency work; the exact compatible item and current availability must be confirmed for each job:
 
-- **Lock picks** — a full set of manual picks and tension tools for various lock types
+- **Lock picks** — manual picks and tension tools selected for the lock type
 - **Decoders** — tools that read the internal configuration of a lock without damaging it
 - **Euro cylinder snapping tools** — for controlled removal of damaged or compromised cylinders
 - **Replacement euro cylinders** — standard and certified security options in a range of sizes
 - **Mortice lock replacement sets** — 5-lever BS3621 deadlocks in standard sizes
 - **Yale nightlatches** — for replacement on wooden doors
 - **uPVC multipoint lock mechanisms** — a selection of regularly used gearbox types
-- **Handles, screws, fixings** — all the small parts that complete a job
+- **Handles, screws, fixings** — compatible small parts used where the diagnosis supports them
 - **Boarding up materials** — marine-grade plywood for emergency [boarding up](/services/boarding-up) after break-ins
 - **Drilling equipment** — for last-resort destructive entry when non-destructive methods are not possible
 
@@ -508,8 +508,8 @@ If a locksmith turns up and does not ask for any identification at all, that sho
 
 While I am on the subject, here are the warning signs that you have called the wrong locksmith:
 
-- **They will not give you a price on the phone.** "I need to see the lock first" is sometimes legitimate, but most standard lockouts can be quoted over the phone. If they refuse, be cautious.
-- **The price changes when they arrive.** If you were quoted £59 and they ask for £150 after opening the door, that is a scam.
+- **They will not explain the price basis on the phone.** Some locks need an on-site diagnosis, but the locksmith should still explain the callout, labour, likely parts and circumstances that could change the total before you book.
+- **An unexplained price replaces the agreed quote.** If the on-site diagnosis changes the work or price, ask for the reason and revised total before authorising it. Report suspected misleading or unfair trading to the appropriate consumer service.
 - **They do not ask for ID.** As I explained above, this is a red flag.
 - **They arrive in an unmarked van.** Legitimate locksmiths have their details on their vehicle.
 - **They cannot show you any credentials.** I am happy to show my identification and credentials to any customer who asks.
@@ -519,7 +519,7 @@ For more on avoiding locksmith scams, see the blog post on [why you should never
     faqs: [
       {
         q: 'How long does it take a locksmith to open a locked door?',
-        a: 'For a standard euro cylinder lockout, non-destructive entry may take 5-20 minutes, while mortice deadlocks can take longer depending on the lock grade and condition. Certified higher-security products are designed to improve resistance to tested attacks, so entry can take longer. If a non-destructive method is not suitable or does not work, destructive entry may be necessary and the cylinder would then need replacing.',
+        a: 'The time depends on the exact lock, condition, door and available method. Certified higher-security products are designed to improve resistance to specified tests. If an appropriate non-destructive method is unavailable or unsuccessful, a destructive step and replacement may be necessary and should be explained first.',
       },
       {
         q: 'What if I have no ID because everything is locked inside my house?',
@@ -595,7 +595,7 @@ Let me put some numbers on this, because it makes the point clearly:
 - Call-out and entry: from **£59**
 - Door and lock undamaged
 - Total cost: **£59-£89** depending on lock type
-- Time: 15-30 minutes for arrival, 5-20 minutes to open
+- Time: current ETA and opening method confirmed from the actual circumstances
 
 **Fire brigade forced entry (damage repair afterwards):**
 - Fire brigade call-out: free (if they attend — remember, they will only come for genuine emergencies)
@@ -632,15 +632,15 @@ For everything else, call a locksmith.
 
 The key difference between a locksmith and emergency services is **how** we get in.
 
-I am trained in non-destructive entry. My tools are designed to open locks without damaging them. I can pick a euro cylinder, decode a mortice lock, bypass a Yale nightlatch — all without leaving a mark on the door or frame.
+I assess whether a suitable non-destructive entry method is available before considering destructive work. The method and outcome depend on the lock, door, existing damage and prior attempts, so a damage-free result cannot be guaranteed before inspection. If destructive entry is necessary, I explain the reason and replacement implications before asking for authorisation.
 
-This means:
+Before the job is closed:
 
-- Your door is intact and secure after I leave
-- Your lock still works (or if it does not, I replace it on the spot)
-- There is no repair bill
-- You do not need emergency boarding up
-- Your home is secure again within the hour
+- The door and lock condition is recorded before and after the work
+- Any compatible replacement is diagnosed, priced and agreed separately
+- Any resulting repair requirement is explained rather than concealed
+- Boarding is considered only when damage leaves an opening that cannot otherwise be secured
+- The lock and door outcome is checked before the job is closed
 
 Emergency services are trained in **speed**, not preservation. When someone's life is at risk, the priority is getting in as fast as possible — and the door is an acceptable casualty. But when life is not at risk, there is no reason to destroy a perfectly good door.
 
@@ -651,19 +651,19 @@ Emergency services are trained in **speed**, not preservation. When someone's li
 Here are several routine lockout situations and who to call for each:
 
 **Locked out, keys inside, no one at risk:**
-Call a locksmith. Call me on **024 7522 4730**. This is what I do every day. I will be with you in 15-30 minutes across Coventry and open the door non-destructively. From £59. See the [emergency lockout page](/services/emergency-lockout) for details.
+Call a locksmith. Call me on **024 7522 4730** with the full address and door symptoms. I will confirm the current ETA, authority check, likely method and price basis. Lockouts start from £59; see the [emergency lockout page](/services/emergency-lockout) for details.
 
 **Locked out with a young child inside:**
-If the child is a baby or toddler, or if the child is distressed and you cannot communicate with them to open the door, call 999. If the child is old enough to understand instructions (typically 5+), try talking them through unlocking the door. If that fails, call me — I can often get there faster than the fire brigade and open without damage.
+If a child is in immediate danger or you cannot establish that they are safe, call 999 and follow the operator's instructions. Do not delay emergency help to wait for a locksmith. If there is no immediate danger, explain the circumstances when you call so the appropriate next step can be assessed.
 
 **Locked out with a pet inside:**
-A locksmith, not the fire brigade. Unless the pet is in immediate danger (for example, a dog locked in a car in extreme heat), this is not a 999 situation. I can get you in quickly without damaging the door.
+Unless the pet is in immediate danger (for example, a dog locked in a car in extreme heat), call a locksmith and explain the circumstances. I will confirm the current ETA and assess the least-damaging suitable entry method on arrival; a damage-free outcome cannot be promised before the door and lock are inspected.
 
 **Locked out and can hear someone inside:**
 If you believe it is an intruder, call 999. Do not try to enter yourself. If it is a family member who cannot reach the door, try calling them. If they are unresponsive, call 999.
 
 **Locked out after a broken lock or snapped key:**
-Call a locksmith. I handle [broken key extractions](/blog/broken-key-stuck-in-lock) and lock failures every week. I carry replacement parts in my van.
+Call a locksmith and describe where the key broke and how the lock failed. I inspect whether [broken key extraction](/blog/broken-key-stuck-in-lock) is suitable first; if replacement is needed, the exact part and current availability determine whether another visit is required.
 
 **Locked out at night in an unsafe area:**
 Call me first on **024 7522 4730** — I will prioritise getting to you quickly. If you feel genuinely unsafe while waiting, go to a neighbour's house or a public place, and tell me where you will be when I arrive. If you feel threatened by someone, call 999.
@@ -689,7 +689,7 @@ Unless someone's life is at risk, a locksmith is normally the appropriate servic
 
 **024 7522 4730** — available 24 hours, 7 days a week, including bank holidays.
 
-I cover all areas across Coventry and Warwickshire, including the city centre, [Earlsdon](/areas/earlsdon), [Stoke](/areas/stoke), [Walsgrave](/areas/walsgrave), [Allesley](/areas/allesley), and everywhere in between. Typical response time: **15-30 minutes**.`,
+I cover the listed locations across Coventry and Warwickshire, including the city centre, [Earlsdon](/areas/earlsdon), [Stoke](/areas/stoke), [Walsgrave](/areas/walsgrave), and [Allesley](/areas/allesley). Call with the full postcode for the current ETA.`,
     faqs: [
       {
         q: 'Will the fire brigade charge me if they come out for a lockout?',
@@ -697,7 +697,7 @@ I cover all areas across Coventry and Warwickshire, including the city centre, [
       },
       {
         q: 'I am locked out and my child is inside. Should I call 999 or a locksmith?',
-        a: 'It depends on the child\'s age and the situation. If the child is a baby, toddler, or young child who cannot open the door themselves, call 999 — this is a genuine emergency. If the child is older (roughly 5+) and calm, try talking them through unlocking the door first. If that does not work, call me on 024 7522 4730 — I can often arrive within 15 minutes and open the door without any damage. The fire brigade will break the door down, which is the right call if the child is in danger, but a locksmith is better if there is no immediate risk.',
+        a: 'If a child may be in immediate danger or you cannot establish that they are safe, call 999 and follow the operator\'s instructions; do not delay emergency help to wait for a locksmith. If there is no immediate danger, explain the circumstances when you call so the current ETA and appropriate next step can be assessed.',
       },
       {
         q: 'Can I call a locksmith at 3am or is that only for emergency services?',

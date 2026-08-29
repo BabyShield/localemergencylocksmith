@@ -70,35 +70,35 @@ const SERVICE_CONTENT: Record<string, {
     intro: [
       "Being locked out of your house is stressful — especially late at night or in bad weather. I provide a professional emergency lockout service across Coventry and Warwickshire, available 24 hours a day, 7 days a week, 365 days a year.",
       "When you call me, I'll ask you for your address and a brief description of your door and lock type. I'll give you an honest price upfront — from £59 — and an honest arrival time. No call-out fee. No VAT.",
-      "In most cases I can open your door using non-destructive entry techniques, meaning your lock and door frame stay intact. Where a lock does need replacing, I'll explain why and give you a quote before I do anything.",
+      "I try appropriate non-destructive entry methods first where the lock, door and circumstances allow. If a destructive step or replacement becomes necessary, I explain why and confirm the cost before proceeding.",
     ],
     steps: [
       "Call 024 7522 4730 — I answer 24/7",
       "Tell me your location and a brief description of your door",
       "I confirm the price upfront — from £59, no VAT",
-      "I arrive within 15-30 minutes",
+      "I confirm the current ETA from my actual starting point and your full address",
       "I open your door using non-destructive entry where possible",
       "I advise whether your lock needs replacing and give you an honest quote",
     ],
     faqs: [
-      { q: 'Can you open any type of lock?', a: 'I can open the vast majority of residential locks including Yale cylinder locks, mortice deadlocks, uPVC multipoint locks, and composite door cylinders. Occasionally a very unusual or high-security lock requires specialist techniques — I will always tell you honestly if I encounter one.' },
-      { q: 'Will you damage my door or lock?', a: 'My first approach is always non-destructive entry. In most cases I can open a standard residential lock without any damage to the door or frame. If a lock needs to be drilled as a last resort, I will tell you before I do it and give you the cost to replace it.' },
+      { q: 'Can you open any type of lock?', a: 'I work with common residential cylinders, nightlatches, mortice locks and multipoint systems. The safe method depends on the exact lock, its condition and proof of authority; I explain any limitation before work proceeds.' },
+      { q: 'Will you damage my door or lock?', a: 'I assess whether an appropriate non-destructive method is available first. No method or damage outcome can be guaranteed from a phone description. If drilling or replacement becomes necessary, I explain why and confirm the cost before proceeding.' },
       { q: 'Do you charge more for late night callouts?', a: 'No — the price is the same at 3am as it is at 3pm. From £59 for a standard lockout, no VAT, no call-out fee, and no premium for unsociable hours.' },
-      { q: 'How long does it take to open a locked door?', a: 'In most cases 5-15 minutes once I arrive. Some trickier locks or unusual door types can take longer — I will always give you a realistic estimate before I start.' },
+      { q: 'How long does it take to open a locked door?', a: 'The time depends on the lock, door, condition and available method. I inspect the entrance and explain the likely method before starting rather than promise a fixed opening time.' },
     ],
     howToName: 'How to Get an Emergency Locksmith in Coventry',
     benefits: [
       "Non-destructive entry — your lock and door stay intact where possible",
       "Same price 24/7 — no night premium, no weekend surcharge",
-      "I arrive in 15-30 minutes across most of Coventry",
+      "Current ETA confirmed from the full address before I set off",
       "Price confirmed on the phone before I set off",
       "Fully insured with public liability cover",
     ],
     whyUs: "When you're locked out at midnight, you need someone you can trust — not a call centre dispatching the nearest available stranger. I'm Ross, your local Coventry locksmith. When you call, you speak to me. I give you a firm price and an honest arrival time. No games, no surprises.",
     scenarios: [
-      { title: "Locked Out Late at Night", desc: "It's 2am and your keys are on the kitchen table. I'll be there within 30 minutes and open your door without damage." },
-      { title: "Keys Lost or Stolen", desc: "Can't find your keys and worried about security? I'll get you in and replace the lock on the same visit." },
-      { title: "Door Slammed Shut", desc: "A gust of wind or force of habit — Yale latches lock automatically. I'll open it quickly and advise on a deadlock to prevent it happening again." },
+      { title: "Locked Out Late at Night", desc: "Your keys are inside and the door has closed. I confirm the current ETA, check authority, and assess the least destructive suitable entry method at the door." },
+      { title: "Keys Lost or Stolen", desc: "Can't find your keys and worried about security? I assess entry and any key-control risk separately, then confirm whether a compatible lock change can be completed during the attendance." },
+      { title: "Door Slammed Shut", desc: "A nightlatch can engage when the door closes. I verify authority and inspect the fitted lock before agreeing a suitable opening method or any follow-on work." },
     ],
     priceDetails: [
       { item: "Standard lockout (Yale/cylinder)", price: "From £59" },
@@ -109,12 +109,12 @@ const SERVICE_CONTENT: Record<string, {
     testimonial: { text: "Locked out at 11pm — Ross arrived within 20 minutes, had me back in within 10. No VAT, exact price quoted on the phone. Brilliant.", name: "Sarah T.", area: "Earlsdon" },
     directAnswer: {
       question: 'How much does an emergency locksmith cost in Coventry?',
-      answer: 'An emergency locksmith in Coventry costs from £59 for a standard lockout. This price includes labour, with no VAT and no call-out fee. Response time is typically 15 to 30 minutes. No extra charge applies for evenings, weekends, or bank holidays.',
+      answer: 'An emergency locksmith in Coventry costs from £59 for a standard lockout. This price includes labour, with no VAT or separate call-out fee. Call with the full address and lock symptoms for the current ETA and price basis.',
     },
     voiceFaqs: [
-      { q: 'How quickly can a locksmith get to me in Coventry?', a: 'A local locksmith in Coventry can typically reach you within fifteen to thirty minutes. I cover the entire Coventry area and respond the same speed whether it is two in the afternoon or two in the morning.' },
-      { q: 'Will a locksmith damage my door when opening it?', a: 'No. A professional locksmith uses non-destructive entry techniques to open most standard residential locks. Your door and lock stay intact. If a lock does need replacing, the locksmith will explain why and quote you before starting.' },
-      { q: 'Is it more expensive to call a locksmith at night?', a: 'Not with a local independent locksmith. I charge the same price twenty-four hours a day, seven days a week, including bank holidays. National companies often add a night premium of fifty to one hundred pounds.' },
+      { q: 'How quickly can a locksmith get to me in Coventry?', a: 'Call with the full address for a current arrival estimate. It depends on the locksmith’s actual starting point, traffic and any earlier job, so a static page should not promise a fixed journey time.' },
+      { q: 'Will a locksmith damage my door when opening it?', a: 'A locksmith should assess an appropriate non-destructive method first where circumstances allow, but cannot guarantee the outcome without inspecting the lock and door. Any destructive step should be explained and priced before it is taken.' },
+      { q: 'Is it more expensive to call this locksmith at night?', a: 'My published pricing does not add a night, weekend or bank-holiday premium. The agreed price still depends on the diagnosed work and any parts, so confirm the scope when you call.' },
     ],
   },
   'lock-change': {
@@ -135,18 +135,18 @@ const SERVICE_CONTENT: Record<string, {
     faqs: [
       { q: 'Can a broken door lock be repaired?', a: 'Often, yes. Stiffness, alignment, a worn latch, or a replaceable cylinder may be repairable without changing the complete lock. I inspect the fault first and explain whether repair or replacement is the more practical option.' },
       { q: 'When should a door lock be replaced instead of repaired?', a: 'Replacement may be appropriate when the mechanism is badly worn, parts are unavailable, the lock has been damaged, keys are lost, or you need a fresh set of keys after moving. I confirm the reason and price before replacing it.' },
-      { q: 'How long does a lock repair or replacement take?', a: 'Many standard residential lock jobs are completed in one visit. The time depends on the fault, door type, and whether the existing opening accepts the replacement without alteration.' },
+      { q: 'How long does a lock repair or replacement take?', a: 'The time and number of visits depend on the diagnosed fault, safe access, door type, suitable-part availability and whether the existing opening accepts the replacement without alteration.' },
       { q: 'Can I choose the brand of replacement lock?', a: 'Yes. I carry common Yale, Union, ERA, Avocet, and other residential lock types, and can discuss the suitable options for the door and budget.' },
     ],
     howToName: 'How to Get a Door Lock Repaired or Replaced in Coventry',
     benefits: [
       "Repair considered before a complete replacement",
-      "Common residential lock types carried for same-day work",
+      "Compatible residential part availability checked before replacement is promised",
       "Replacement options and full price explained first",
       "New keys supplied and tested when a lock is replaced",
       "Door and lock operation checked before I leave",
     ],
-    whyUs: "I diagnose the cause before recommending a replacement. Common Yale, mortice, and cylinder lock types are carried for same-day work, and I explain the available repair or replacement routes and price before starting.",
+    whyUs: "I diagnose the cause before recommending a replacement. I identify the installed nightlatch, mortice lock or cylinder, check compatible-part availability, and explain the repair or replacement route and price before starting.",
     scenarios: [
       { title: "Broken or Stiff Door Lock", desc: "The key will not turn smoothly, the latch sticks, or the lock has stopped working. I inspect whether the existing lock can be repaired." },
       { title: "Lost Keys or House Move", desc: "You need a fresh lock and key set because keys are missing or you do not know who still has copies." },
@@ -165,7 +165,7 @@ const SERVICE_CONTENT: Record<string, {
     },
     voiceFaqs: [
       { q: 'Can a locksmith repair a door lock instead of replacing it?', a: 'Often, yes. Alignment, latch, cylinder, and some mechanism faults can be repaired. The locksmith should inspect the cause and explain both options before replacing the complete lock.' },
-      { q: 'Can a locksmith replace my lock on the same day?', a: 'Common residential Yale, mortice, and euro-cylinder replacements can usually be completed in one visit when the suitable part is carried. I confirm availability and price when you call.' },
+      { q: 'Can a locksmith replace my lock on the same day?', a: 'It may be possible when the diagnosis, authority, safe access and suitable-part availability align. I confirm what can be established by phone, then agree the scope and price before work proceeds.' },
       { q: 'Should I change the locks when I move house?', a: 'Changing the external locks gives you control over the new key set when you cannot confirm how many old copies remain. The appropriate work depends on the existing door and lock type.' },
     ],
   },
@@ -178,7 +178,7 @@ const SERVICE_CONTENT: Record<string, {
     ],
     steps: [
       "Call 024 7522 4730 and describe the problem with your uPVC door or window",
-      "I diagnose the issue — usually a worn mechanism, misaligned door, or failed cylinder",
+      "I inspect alignment, the cylinder, handles and multipoint mechanism to identify the fault",
       "I confirm the repair or replacement cost upfront",
       "I carry out the repair or fit the replacement part",
       "I test the lock and adjust the door alignment if needed",
@@ -186,23 +186,23 @@ const SERVICE_CONTENT: Record<string, {
     ],
     faqs: [
       { q: 'My uPVC door is stiff to lock — is that a broken lock?', a: 'Not necessarily. In many cases a stiff uPVC door is due to door misalignment, a worn roller, or a failing gearbox. I diagnose the root cause first — in some cases a simple adjustment is all that is needed.' },
-      { q: 'Can you replace just the cylinder on a uPVC door?', a: 'Yes — a euro cylinder replacement is one of the most common uPVC lock jobs. It is a straightforward replacement that also improves your security if you upgrade to an anti-snap cylinder at the same time.' },
+      { q: 'Can you replace just the cylinder on a uPVC door?', a: 'Sometimes. A cylinder can be replaced separately when it is the failed or agreed component and the correct size is available. The rest of the multipoint system and door alignment are checked separately.' },
       { q: 'My uPVC door will not lock at all — is this an emergency?', a: 'Yes — an insecure door is an emergency. I cover this 24/7. Call me and I will attend as soon as possible.' },
       { q: 'Do you repair window locks on uPVC windows?', a: 'Yes — I repair and replace espagnolette window locks and cockspur handles on uPVC and aluminium windows.' },
     ],
     howToName: 'How to Get a uPVC Lock Repaired in Coventry',
     benefits: [
-      "Specialist in all uPVC multipoint mechanisms — Mila, GU, Yale, Fuhr, Lockmaster",
+      "Assessment of common uPVC multipoint systems, including identifiable Mila, GU, Yale, Fuhr and Lockmaster parts",
       "Diagnose before quoting — I'll tell you if a repair is possible before recommending replacement",
       "Common cylinders and mechanisms carried in the van",
-      "Anti-snap cylinder upgrade available on every repair visit",
+      "Anti-snap cylinder options assessed where the door, fit and certification support one",
       "Door alignment included at no extra cost",
     ],
-    whyUs: "uPVC doors are what I work on most. I understand the different mechanism brands, the common failure points, and whether your lock needs a £59 repair or a £150 replacement. I'll never recommend a replacement when a repair will do.",
+    whyUs: "I inspect the cylinder, handles, alignment and multipoint mechanism before recommending work. I explain whether an adjustment, repair or replacement is supported by the diagnosis and confirm the price before starting.",
     scenarios: [
-      { title: "Stiff or Sticky Lock", desc: "Your key is getting harder to turn each month. Usually a worn cylinder or misaligned door — often a repair, not a replacement." },
-      { title: "Mechanism Failed", desc: "The gearbox has seized and the door won't lock at all. I carry the most common replacement mechanisms in my van." },
-      { title: "Euro Cylinder Snapped", desc: "Someone tried to break in, or the cylinder just failed. I'll replace it with an anti-snap cylinder so it can't happen again." },
+      { title: "Stiff or Sticky Lock", desc: "A key or handle is becoming harder to operate. Possible causes include alignment, cylinder, handle or mechanism faults, which need to be separated before parts are proposed." },
+      { title: "Mechanism Failed", desc: "The gearbox or another multipoint component may have failed. Faceplate markings, measurements and the complete mechanism determine whether a compatible repair part is available." },
+      { title: "Euro Cylinder Damaged", desc: "A cylinder has failed or shows attack damage. I assess the full door and compatible size before comparing an independently certified replacement; no cylinder can guarantee that a future attack will fail." },
     ],
     priceDetails: [
       { item: "Euro cylinder replacement", price: "From £59" },
@@ -213,12 +213,12 @@ const SERVICE_CONTENT: Record<string, {
     testimonial: { text: "uPVC door had been stiff for months. Ross diagnosed a worn gearbox, replaced it in under an hour. Door works like new.", name: "Jenny M.", area: "Tile Hill" },
     directAnswer: {
       question: 'How much does a uPVC door lock repair cost?',
-      answer: 'A uPVC door lock repair costs from £59 for a cylinder replacement and from £89 for a multipoint mechanism replacement. The price includes parts and labour with no VAT and no call-out fee. Most repairs are completed within one hour.',
+      answer: 'A uPVC door lock repair costs from £59 for a cylinder replacement and from £89 for a multipoint mechanism replacement. The price includes the stated parts and labour with no VAT or separate call-out fee; timing depends on diagnosis and parts.',
     },
     voiceFaqs: [
-      { q: 'Why is my uPVC door stiff to lock?', a: 'A stiff uPVC door is usually caused by a worn euro cylinder, a misaligned door dropping on its hinges, or a failing gearbox mechanism. In many cases it is repairable without replacing the full mechanism.' },
-      { q: 'What is an anti-snap cylinder and do I need one?', a: 'An anti-snap cylinder is designed to resist snap attacks, where a burglar snaps the exposed part of the euro cylinder to gain entry. If your uPVC door has a standard euro cylinder, upgrading to anti-snap is strongly recommended.' },
-      { q: 'How long does a uPVC door lock last?', a: 'A quality uPVC multipoint locking mechanism should last fifteen to twenty years with normal use. Budget mechanisms on cheaper doors can fail in five to eight years. Regular lubrication with graphite extends the lifespan significantly.' },
+      { q: 'Why is my uPVC door stiff to lock?', a: 'Possible causes include alignment, hinge movement, the cylinder, handles or the multipoint mechanism. Test whether the symptom changes with the door open, stop forcing it, and have the complete entrance diagnosed before replacing parts.' },
+      { q: 'What is an anti-snap cylinder and do I need one?', a: 'An anti-snap cylinder is designed and tested to resist specified cylinder attacks. Whether one is suitable depends on the door, cylinder size, surrounding furniture, current certification and any exact written requirement.' },
+      { q: 'How long does a uPVC door lock last?', a: 'There is no reliable lifespan from the area or door label alone. Use, alignment, installation, maintenance, weather exposure and the particular mechanism all matter; stiffness or changed operation should be diagnosed before failure.' },
     ],
   },
   'boarding-up': {
@@ -229,29 +229,29 @@ const SERVICE_CONTENT: Record<string, {
       "Emergency boarding up starts from £79. No VAT. No call-out fee.",
     ],
     steps: [
-      "Call 024 7522 4730 immediately — do not delay after a break-in",
-      "I arrive as quickly as possible, usually within 15-30 minutes of central Coventry",
+      "Prioritise safety and follow police instructions before repair work begins",
+      "I confirm the current ETA from my actual starting point and the full address",
       "I assess the damage and identify the best boarding solution",
       "I secure the opening with solid boarding material",
       "I advise on next steps for permanent repair and improved security",
     ],
     faqs: [
-      { q: 'Should I call the police before calling a locksmith after a break-in?', a: 'Yes — report the break-in to the police first and obtain a crime reference number, which you will need for your insurance claim. Then call me to secure the property.' },
-      { q: 'How long will boarding hold before I need a permanent repair?', a: 'Proper boarding is secure and weatherproof — it will hold indefinitely until you arrange a permanent glazing or joinery repair. I use solid material, not just plywood.' },
-      { q: 'Can you change the locks after boarding up?', a: 'Yes — if a break-in compromised your lock I can change the locks at the same visit. I always carry a range of replacement locks in the van.' },
+      { q: 'Should I call the police before calling a locksmith after a break-in?', a: 'Call 999 if an offender may still be present or anyone is in immediate danger. Otherwise follow the police reporting route and instructions for the scene, then ask your insurer what evidence its written terms require before repair work.' },
+      { q: 'How long will boarding hold before I need a permanent repair?', a: 'Boarding is temporary security, not a permanent glazing, joinery or structural repair. Its suitable duration depends on the opening, fixing points, material, exposure and any insurer or property-manager requirement.' },
+      { q: 'Can you change the locks after boarding up?', a: 'A compromised residential lock may be replaceable during the attendance when the correct part and authority are available. I confirm the temporary-security scope and any separate follow-on work first.' },
       { q: 'Do you board up commercial properties?', a: 'Yes — I cover residential and commercial premises across Coventry and Warwickshire.' },
     ],
     howToName: 'How to Get Emergency Boarding Up in Coventry',
     benefits: [
-      "Available 24/7 — I'll secure your property within the hour",
-      "Heavy-duty boarding material — not just thin plywood",
-      "Can change locks on the same visit if needed",
+      "Available 24/7 — current ETA confirmed by phone",
+      "Boarding method selected from the opening and safe fixing points",
+      "Compromised locks assessed separately from the temporary board",
       "I'll advise on next steps for permanent repair",
-      "Crime reference number support for insurance claims",
+      "Photographs and an itemised record of the agreed temporary work",
     ],
-    whyUs: "After a break-in, you need your property secured immediately — not tomorrow, not next week. I carry boarding materials in my van and can have your property secured within an hour of your call.",
+    whyUs: "After damage, I separate evidence preservation, immediate temporary security and permanent repair. I explain the proposed board, fixing points, limitations and current ETA before attendance, without presenting boarding as permanent glazing or joinery.",
     scenarios: [
-      { title: "Break-In Damage", desc: "Door or window smashed during a burglary. I'll board up, change locks if needed, and advise on your insurance claim." },
+      { title: "Break-In Damage", desc: "A door or window has been damaged during a burglary. After police evidence instructions are satisfied, I assess temporary boarding and any compromised lock as separate work." },
       { title: "Storm Damage", desc: "A window has blown in or a door has been damaged by high winds. I'll secure it against weather and intruders." },
       { title: "Accidental Breakage", desc: "Glass door or window broken accidentally. I'll board it safely while you arrange glazing repair." },
     ],
@@ -267,22 +267,22 @@ const SERVICE_CONTENT: Record<string, {
       answer: 'Emergency boarding up and immediate burglary repairs in Coventry cost from £79 for a single damaged opening. The service is available 24 hours a day. Compromised residential locks can be replaced on the same visit when the suitable part is available. No VAT is charged.',
     },
     voiceFaqs: [
-      { q: 'Should I call the police before calling a locksmith after a break-in?', a: 'Yes. Call 999 if the break-in is still in progress, or 101 to report it after the fact. Get a crime reference number first as you will need it for your insurance claim. Then call a locksmith to secure the property.' },
+      { q: 'Should I call the police before calling a locksmith after a break-in?', a: 'Call 999 if an offender may still be present or anyone is in immediate danger. Otherwise use the police reporting route and follow scene-preservation instructions. Ask your insurer separately what evidence its current written terms require.' },
       { q: 'How long will boarding hold before I need a permanent repair?', a: 'Boarding is a temporary way to secure a damaged opening while permanent glazing or joinery is arranged. The appropriate duration depends on the opening, material, weather exposure, and insurer requirements.' },
-      { q: 'Can you change the locks after boarding up?', a: 'Yes. If a break-in has compromised your locks, I can change them on the same visit. I always carry replacement locks in the van so there is no need for a return visit.' },
+      { q: 'Can you change the locks after boarding up?', a: 'A compromised residential lock may be replaceable during the attendance when the correct part and authority are available. The board, lock work and any permanent repair are scoped separately.' },
     ],
   },
   'lock-upgrade': {
     h1: 'Anti-Snap Locks & BS3621 Lock Upgrades Coventry',
     intro: [
-      "Anti-snap locks and BS3621 locks are two of the most commonly requested home-security upgrades. Whether you are following your insurer's stated requirements, improving resistance to forced entry, or replacing an older lock, I can assess the door and explain the suitable options.",
+      "Anti-snap cylinders and BS3621-marked locks address different products and tested requirements. If you are following written policy wording, improving resistance to a specified attack method, or replacing a faulty lock, I assess the actual door and explain compatible options.",
       "I fit anti-snap door locks, anti-snap euro cylinders, British Standard BS3621 mortice deadlocks, Secured by Design cylinders, and high-security mortice locks. I can also assess the property's existing locks and identify weak points.",
       "Lock upgrade prices start from £79 including the lock and fitting. No VAT. No call-out fee.",
     ],
     steps: [
       "Call 024 7522 4730 for a free phone consultation on your security needs",
       "I visit and assess your current locks and door security",
-      "I recommend the most appropriate upgrade for your insurance requirements and budget",
+      "I compare suitable options with your door, budget and any exact written policy requirement",
       "I confirm the full price before any work starts",
       "I fit and test the new locks",
       "I provide documentation of the lock standard fitted for your insurance records",
@@ -298,12 +298,12 @@ const SERVICE_CONTENT: Record<string, {
       "Free security assessment of all external doors",
       "BS3621, TS007, and Secured by Design products available",
       "Written documentation for your insurance company",
-      "All work completed in a single visit",
+      "One-visit completion where the diagnosis, authority and suitable parts allow",
       "Honest advice — I'll tell you what you need and what you don't",
     ],
     whyUs: "I assess the existing door and lock, explain the relevant certified options, and fit only the agreed upgrade. For insurance requirements, I recommend checking the exact policy wording rather than assuming one standard applies to every home.",
     scenarios: [
-      { title: "Insurance Non-Compliance", desc: "Your insurer says you need BS3621 locks and your current ones don't qualify. I'll fit compliant locks and give you the documentation." },
+      { title: "Written Policy Requirement", desc: "Your policy names a lock standard. I identify the existing marking, assess the door, and document an agreed certified option; the insurer confirms whether it satisfies the policy." },
       { title: "Post-Burglary Review", desc: "After a break-in, you want damaged or unsuitable locks assessed and replaced with correctly fitted, independently certified options." },
       { title: "General Security Improvement", desc: "You want better peace of mind. I'll survey your property and recommend targeted upgrades based on the weak points." },
     ],
@@ -319,7 +319,7 @@ const SERVICE_CONTENT: Record<string, {
       answer: 'A lock upgrade in Coventry costs from £79 for a BS3621-rated mortice deadlock or from £59 for an anti-snap euro cylinder. The price includes the lock and fitting. Check any insurance requirement in your own policy before choosing a standard.',
     },
     voiceFaqs: [
-      { q: 'What is the difference between a Yale lock and a deadlock?', a: 'A Yale nightlatch is a spring-loaded latch that locks automatically when the door closes. A deadlock is a separate lock with a solid bolt that can only be opened with a key. Most secure front doors have both.' },
+      { q: 'What is the difference between a Yale lock and a deadlock?', a: '“Yale lock” is commonly used for a nightlatch, while a mortice deadlock uses a bolt operated by a key. The suitable arrangement depends on the actual door, escape needs and any exact written requirement.' },
       { q: 'Is a lock upgrade worth the money?', a: 'A correctly fitted, independently certified lock can improve resistance to recognised attack methods. It cannot eliminate risk or guarantee insurance cover, so check the door and your own policy requirements first.' },
       { q: 'Do you offer a free security survey?', a: 'Yes. I offer a free security assessment as part of any lock upgrade. I check all external doors and windows and advise on any weak points, with no obligation to proceed.' },
     ],
@@ -365,21 +365,29 @@ export default async function ServicePage({ params }: Props) {
     ],
     offers: {
       '@type': 'Offer',
-      price: service.priceFrom.toString(),
-      priceCurrency: 'GBP',
-      availability: 'https://schema.org/InStock',
-      validFrom: '2026-01-01',
+      priceSpecification: {
+        '@type': 'PriceSpecification',
+        minPrice: service.priceFrom.toString(),
+        priceCurrency: 'GBP',
+        valueAddedTaxIncluded: false,
+        description: 'Advertised starting price; the final price depends on the diagnosed scope and agreed parts.',
+      },
     },
   }
 
-  // voiceFaqs and faqs overlap on some services — keep the first occurrence of
-  // each question so the FAQPage never asserts one question with two answers.
-  const seenQuestions = new Set<string>()
-  const allFaqs = [...content.voiceFaqs, ...content.faqs].filter((faq) => {
-    if (seenQuestions.has(faq.q)) return false
-    seenQuestions.add(faq.q)
-    return true
-  })
+  // Only add voice-search questions that cover a distinct intent. The source
+  // arrays contain semantic variants, so exact-string deduplication is unsafe.
+  const distinctVoiceFaqIndexes: Record<string, number[]> = {
+    'emergency-lockout': [0],
+    'lock-change': [1, 2],
+    'upvc-lock-repair': [1, 2],
+    'boarding-up': [],
+    'lock-upgrade': [0],
+  }
+  const allFaqs = [
+    ...(distinctVoiceFaqIndexes[slug] ?? []).map(index => content.voiceFaqs[index]),
+    ...content.faqs,
+  ]
 
   const faqSchema = {
     '@context': 'https://schema.org',
@@ -528,7 +536,7 @@ export default async function ServicePage({ params }: Props) {
             When Do You Need This Service?
           </h2>
           <p className="text-gray-500 text-center mb-10 max-w-xl mx-auto">
-            These are the most common situations where people call me for {service.shortName.toLowerCase()} help.
+            These are situations covered by my {service.shortName.toLowerCase()} service.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {content.scenarios.map((scenario, i) => (
@@ -614,7 +622,8 @@ export default async function ServicePage({ params }: Props) {
             {/* Footer */}
             <div className="bg-[#F7F7F5] px-6 py-4 border-t border-gray-200">
               <p className="text-gray-500 text-sm text-center">
-                The price you are quoted on the phone is the final price. No surprises. No hidden charges.
+                I confirm the price basis before travelling. If inspection reveals a different scope,
+                I explain and agree any revised price before additional work proceeds.
               </p>
             </div>
           </div>
@@ -704,7 +713,7 @@ export default async function ServicePage({ params }: Props) {
                   {areas.map((area) => (
                     <Link
                       key={area.slug}
-                      href={hasTownService(area.slug, slug) ? `/areas/${area.slug}/${slug}` : `/areas/${area.slug}`}
+                      href={hasTownService(area.slug, slug) ? `/areas/${area.slug}/${slug}` : `/areas/${area.slug}#${slug}`}
                       className="text-sm text-gray-600 hover:text-[#0F1B2D] bg-white hover:bg-white px-3 py-1.5 rounded-lg border border-gray-200 hover:border-[#FFB800] transition-all duration-200"
                     >
                       {service.shortName} in {area.name}
@@ -823,7 +832,7 @@ export default async function ServicePage({ params }: Props) {
       {/* ============================================================ */}
       <CTABlock
         heading={`Need ${service.shortName.toLowerCase()} help? Call me now.`}
-        subtext={`I'm available 24/7, 365 days a year. ${service.shortName} from £${service.priceFrom}. No VAT, no call-out fee. The price I quote is the price you pay.`}
+        subtext={`I'm available 24/7, 365 days a year. ${service.shortName} from £${service.priceFrom}. No VAT or separate call-out fee. I confirm the price basis first and agree any scope change before work proceeds.`}
       />
     </>
   )

@@ -55,7 +55,7 @@ If you have a uPVC or composite door with a euro cylinder, check whether the cyl
 
 Where an upgrade is appropriate, the cylinder and surrounding furniture should be selected as a compatible, certified system and fitted to the correct size. See the Coventry [lock upgrade service](/services/lock-upgrade) and current [prices](/prices), or compare the certification of products discussed in the [anti-snap lock guide](/blog/anti-snap-locks-compared).
 
-If you've already been a victim of lock snapping or you're concerned about your locks, give me a call on 024 7522 4730. I can assess your doors and recommend the right cylinder for your specific setup. I carry stock of all the main anti-snap brands, so most jobs are done in a single visit.
+If you've already been a victim of lock snapping or you're concerned about your locks, give me a call on 024 7522 4730. I can assess your doors and explain cylinder options for the specific setup. The required size, certification and current product availability are confirmed before I say whether fitting can be completed in one visit.
 
 ## Coventry-Specific Advice
 
@@ -93,7 +93,7 @@ If you are unsure what is fitted, a [lock upgrade assessment](/services/lock-upg
 
 A euro cylinder is the removable lock barrel that sits inside a uPVC or composite door's multipoint locking mechanism. It's the part you put your key into. When you turn the key, it rotates a small metal cam that engages the multipoint lock — shooting bolts into the top, bottom, and side of the door frame.
 
-I'm Ross, a Coventry locksmith, and euro cylinders are a regular part of my work. They are widely used with multipoint mechanisms on uPVC and composite doors, but the cylinder and complete doorset still need checking before a replacement is chosen.
+Euro cylinders are widely used with multipoint mechanisms on uPVC and composite doors, but the cylinder and complete doorset still need checking before a replacement is chosen.
 
 ## Types of Euro Cylinder
 
@@ -107,13 +107,13 @@ A single euro cylinder has a keyhole on one side only. The other side is blank. 
 
 A double euro cylinder has a keyhole on both sides — inside and outside. This is the standard type fitted to most uPVC and composite front doors in the UK. You need a key to lock and unlock from either side.
 
-**The downside:** if there's a fire and you can't find your key, you can't get out. This is a genuine safety concern, and it's why I often recommend thumbturns instead when customers ask me about [lock changes](/services/lock-change).
+**The downside:** key-operated escape can create a safety issue if the key is unavailable. The appropriate arrangement depends on the door, glazing and letterbox position, occupancy, escape plan and any fire-safety duties; assess those before a [lock change](/services/lock-change).
 
 ### Thumbturn Euro Cylinder
 
-A thumbturn cylinder has a keyhole on the outside and a thumbturn knob on the inside. You lock and unlock from inside by turning the knob — no key needed. This is the type I recommend for most front doors because it balances security with fire safety.
+A thumbturn cylinder has a keyhole on the outside and a thumbturn knob on the inside. You lock and unlock from inside by turning the knob, without a key. That can support keyless escape, but suitability depends on the complete entrance and applicable fire-safety requirements.
 
-The one caveat: if your door has a letterbox or glass panel close to the lock, a thumbturn can be a vulnerability. Someone could reach through and turn it. In those cases, I'd suggest either a double cylinder or fitting a letterbox restrictor.
+If a letterbox or breakable panel is close enough to allow reach-through access, the thumbturn position needs assessing as part of the complete entrance. Do not switch to a key-operated internal exit without considering escape and any applicable fire-safety duties.
 
 ## How to Measure a Euro Cylinder
 
@@ -132,13 +132,11 @@ If you're not confident measuring it yourself, call me on 024 7522 4730 and I'll
 
 ## Common Sizes in Coventry
 
-Most uPVC doors in Coventry use cylinders in the 35/35 to 50/50 range. The exact size depends on the door profile and handle position. Composite doors tend to need slightly different sizes depending on the manufacturer — Rockdoor, Solidor, and Endurance all vary.
-
-New-build homes around [Canley](/areas/canley), [Whitley](/areas/whitley), and the Keresley developments often use 40/40 or 45/45 cylinders, but I always measure on-site because assumptions lead to wasted time and money.
+Euro cylinders are sold in multiple internal and external dimensions. The exact size depends on the installed door profile, lock case, protective furniture and required projection, so measure the individual cylinder and complete doorset rather than assigning a size from a Coventry postcode, housing age or manufacturer name.
 
 ## Major Euro Cylinder Brands
 
-Not all euro cylinders are created equal. Here's a rundown of the main brands I work with:
+Certification and features differ by exact euro-cylinder model. These are examples of brands a customer may encounter; verify the current model rather than treating the brand name as evidence:
 
 ### Yale
 
@@ -179,7 +177,7 @@ Price or appearance alone does not establish a cylinder's performance. Check the
     faqs: [
       {
         q: 'Can I replace a euro cylinder myself?',
-        a: 'Technically yes — it involves removing one screw and sliding the old cylinder out. However, getting the correct size is where most people go wrong. If you order the wrong size online, you are stuck waiting for a replacement. I carry a full range of sizes in my van and can fit the correct one in a single visit, so it often works out simpler and faster to call a locksmith.',
+        a: 'A cylinder may be replaceable by removing its retaining screw, but the correct internal and external dimensions, cam and door furniture still need to be identified. If you want a locksmith to supply and fit it, share the measurements or arrange an inspection so compatible-product availability and whether another visit is needed can be confirmed.',
       },
       {
         q: 'What size euro cylinder do I need?',
@@ -191,7 +189,7 @@ Price or appearance alone does not establish a cylinder's performance. Check the
       },
       {
         q: 'How long does it take to replace a euro cylinder?',
-        a: 'A straightforward euro cylinder replacement takes about 15 to 20 minutes including testing. If the multipoint lock mechanism itself has a fault, it can take longer, but I will always let you know before starting any additional work.',
+        a: 'Timing depends on correct cylinder sizing, surrounding furniture, access, door alignment and whether the multipoint mechanism also has a fault. The replacement and keys are tested, and any additional mechanism work should be explained and priced first.',
       },
     ],
   },
@@ -201,7 +199,7 @@ Price or appearance alone does not establish a cylinder's performance. Check the
 
 If you're looking to upgrade your home security, you'll quickly run into three main options: BS3621 mortice deadlocks, anti-snap euro cylinders, and smart locks. Each has its place, and the right choice depends on what type of door you have and what you're trying to achieve.
 
-I'm Ross, a locksmith based in Coventry, and I fit all three types regularly. Here's my honest breakdown — no sales pitch, just practical advice based on what I see on the ground every day.
+This comparison separates what each product category is designed to do from the door, fitting, policy and access-control checks needed at a particular property. No one category is automatically the right upgrade for every entrance.
 
 ## BS3621 Mortice Deadlocks
 
@@ -259,7 +257,7 @@ Anti-snap cylinders are for **uPVC and composite doors**. If your door has a eur
 ### Pros
 
 - Can improve tested resistance to recognised cylinder attacks
-- Quick and affordable to fit — typically 15-20 minutes
+- Fitting time depends on the door preparation, correct lock case, alignment and required finish
 - No door modification needed
 - Multiple brands and price points available ([see my comparison](/blog/anti-snap-locks-compared))
 
@@ -340,7 +338,7 @@ Most homes in [Coventry](/) have a combination of door types. A typical setup I'
 - **Back door (uPVC):** Anti-snap euro cylinder
 - **Back door (wooden):** BS3621 deadlock at minimum
 
-For a full assessment of your home's locks, call 024 7522 4730 or check the [services](/services/lock-upgrade) I offer. I cover all areas of Coventry and can usually attend the same day.`,
+For an assessment of your home's locks, call 024 7522 4730 or check the [services](/services/lock-upgrade) I offer. I cover the Coventry locations listed on the [areas page](/areas/); call with the full address to confirm coverage, the current ETA and appointment availability.`,
     faqs: [
       {
         q: 'Which lock does my insurance company require?',
@@ -366,7 +364,7 @@ For a full assessment of your home's locks, call 024 7522 4730 or check the [ser
 
 Customers across [Coventry](/) ask how these two lock types differ. They do different jobs, and some suitable timber doors use both, but the right arrangement depends on the complete door, frame, escape needs and any written policy condition.
 
-I'm Ross, a local locksmith, and I've fitted thousands of both types across the city. Let me explain exactly what each one does, why they matter, and which one your door actually needs.
+The sections below explain what each type does and the door, frame, escape and policy evidence that should be checked before choosing either one.
 
 ## What Is a Yale Nightlatch?
 
@@ -423,7 +421,7 @@ A mortice deadlock gives you security — once that bolt is thrown, it takes ser
 - The mortice deadlock provides genuine security when you leave the house or go to bed at night
 - The two locks perform different jobs; any policy requirement must be checked in the customer's own written terms
 
-On timber doors I inspect in areas such as [Cheylesmore](/areas/cheylesmore), [Styvechale](/areas/styvechale), and [Earlsdon](/areas/earlsdon), I see varied arrangements: a nightlatch alone, a mortice lock alone, or both. The markings, condition, door and frame need checking rather than inferring performance from appearance.
+Timber doors in areas such as [Cheylesmore](/areas/cheylesmore), [Styvechale](/areas/styvechale), and [Earlsdon](/areas/earlsdon) may have a nightlatch alone, a mortice lock alone, or both. The markings, condition, door and frame need checking rather than inferring performance from appearance or postcode.
 
 ## Common Misconceptions
 
@@ -460,20 +458,20 @@ If you have a uPVC or composite door rather than a wooden one, this whole discus
 
 ## Prices and What to Expect
 
-Here's what I charge for the most common jobs:
+Here are the published starting prices for the listed jobs:
 
 - **Fitting a BS3621 mortice deadlock** (new mortice cut) — from £79 fitted
 - **Replacing an existing mortice deadlock** with BS3621 — from £69 fitted
 - **Upgrading a nightlatch** — from £59 fitted
 - **Both locks fitted to a new door** — I'll quote on-site depending on the door
 
-I carry stock of all the main brands — Union, ERA, Yale — in my van, so most jobs are completed in a single visit. Call 024 7522 4730 for a quote or check the [prices page](/prices).
+The existing lock, dimensions and required certification determine the compatible product. Call 024 7522 4730 so I can confirm the price, current product availability and whether the work is likely to need more than one visit, or check the [prices page](/prices).
 
 ## The Bottom Line
 
 On a suitable timber door, a nightlatch can provide everyday latching while a certified mortice deadlock provides a separate tested locking point. Whether both are appropriate depends on the door, frame, escape needs and written policy; fitting a particular lock does not by itself guarantee cover.
 
-If you're not sure what locks you have, or whether they meet the required standards, I'm happy to take a look. Call 024 7522 4730 — I cover the whole of Coventry and I'll give you an honest assessment with no obligation.`,
+If you're not sure what locks you have, or whether they meet a stated standard, call 024 7522 4730. Check the [listed Coventry areas](/areas), then provide the exact door and any written requirement for an assessment.`,
     faqs: [
       {
         q: 'Do I need both a Yale and a mortice lock on my front door?',
@@ -485,7 +483,7 @@ If you're not sure what locks you have, or whether they meet the required standa
       },
       {
         q: 'Can a locksmith fit a mortice deadlock to any wooden door?',
-        a: 'Most wooden doors can accept a mortice deadlock, but the door needs to be thick enough — at least 44mm for a standard BS3621 lock. Very thin doors or hollow-core internal doors are not suitable. I always assess the door on-site before starting work and will advise if there are any issues.',
+        a: 'Not every timber door can accept every mortice deadlock. The exact product instructions, door thickness and construction, existing cut-out, frame, escape needs and any written requirement must be checked before cutting or fitting.',
       },
       {
         q: 'What is the difference between a 3-lever and 5-lever mortice lock?',
@@ -573,7 +571,7 @@ If budget is limited, compare verified certification and correct fit before comp
 
 ## Getting the Right One Fitted
 
-All four of these cylinders need to be the correct size for your door. The size varies depending on your door profile, handle position, and whether you want a thumbturn or double cylinder. I measure on-site and carry stock of the most common sizes for all four brands.
+All four of these cylinders need to be the correct size for your door. The size varies depending on your door profile, handle position, and whether you want a thumbturn or double cylinder. I measure the installed cylinder and confirm current availability for a compatible product before agreeing the fitting plan.
 
 If you want to upgrade your euro cylinder, call me on 024 7522 4730. I'll inspect the door and explain compatible options for your budget and security needs. I cover areas across Coventry, from [Allesley](/areas/allesley) to [Wyken](/areas/wyken).
 
@@ -603,7 +601,7 @@ For a full breakdown of what each [lock change](/services/lock-change) or [upgra
 
 Smart locks can add app, code, fob or biometric access to a compatible door. Marketing often focuses on convenience, while the physical doorset, software support, power-loss behaviour and backup entry still need separate checks.
 
-I'm Ross, a locksmith working across [Coventry](/), and I get asked about smart locks almost daily. My answer is always the same: they can be a useful addition, but I wouldn't rely on one as your sole lock. Here's why.
+For a [Coventry](/) installation, a smart lock should be assessed as one component of the entrance rather than assumed to be a complete security solution. The guide below sets out the compatibility, physical-security and operational checks behind that assessment.
 
 ## The Main Smart Lock Options in the UK
 
@@ -709,7 +707,7 @@ If you want to discuss smart-lock compatibility, call me on 024 7522 4730 before
 
 If you have a wooden front door, a correctly fitted five-lever mortice deadlock may be an important part of the doorset. Whether BS3621 is required for your home depends on the actual policy wording, so identify the existing lock and check the written terms before choosing a replacement.
 
-I'm Ross, a Coventry locksmith, and I fit and service five-lever mortice deadlocks every week. This guide covers everything you need to know — how they work, how to identify what you have, and when it's time for an upgrade.
+I'm Ross, a Coventry locksmith. This guide explains how five-lever mortice deadlocks work, how to identify the markings on the lock you have, and what to check before repair or upgrade work is agreed.
 
 ## How a Five-Lever Mortice Deadlock Works
 
@@ -788,7 +786,7 @@ If the door doesn't have an existing mortice lock, the process is more involved:
 8. Fit escutcheons
 9. Test extensively
 
-This takes 60-90 minutes and is a skilled job. A badly fitted mortice lock compromises both the lock's security and the door's structural integrity. This is not a YouTube DIY project unless you're genuinely experienced with woodworking.
+This is skilled work whose timing depends on the door, existing preparation, lock case, alignment and finish. A badly fitted mortice lock can compromise both operation and the door, so use a competent installer unless you are genuinely experienced with the required woodworking and lock fitting.
 
 ## Recommended Brands
 
@@ -812,9 +810,9 @@ There are several other manufacturers producing BS3621 locks — Legge, Securefa
 
 Lock requirements vary by insurer, policy, door and renewal terms. Some policies name a standard; others describe the lock or how the door must be secured. Check the exact security condition and ask the insurer to clarify it in writing before changing a lock. A BS3621-rated option starts from £79 fitted, but fitting one does not by itself guarantee a future claim outcome.
 
-## Common Issues I See in Coventry
+## Mortice Lock Issues to Check
 
-Working across areas like [Earlsdon](/areas/earlsdon), [Coundon](/areas/coundon), and [Binley](/areas/binley), the most common mortice lock problems I encounter are:
+For a mortice lock in a listed area such as [Earlsdon](/areas/earlsdon), [Coundon](/areas/coundon), or [Binley](/areas/binley), inspect the actual door and lock for issues such as:
 
 - **3-lever locks on front doors** — these need upgrading to 5-lever BS3621
 - **Stiff or seized locks** — often caused by age, rust, or lack of lubrication. Sometimes a service and lubrication fixes this; sometimes the lock needs replacing
@@ -832,7 +830,7 @@ Five-lever mortice locks are low-maintenance but not zero-maintenance:
 - **Check the faceplate screws** — make sure they're tight
 - **Look for rust** — especially on doors exposed to weather
 
-If your mortice lock needs attention, call me on 024 7522 4730. Whether it's a replacement, a new fitting, or just a service, I carry all the main brands and sizes in my van. Check the [prices page](/prices) for current rates, or see my [Yale vs mortice deadlock guide](/blog/yale-vs-mortice-deadlock) for advice on which locks your wooden door needs.`,
+If your mortice lock needs attention, call me on 024 7522 4730 with its visible markings and the door symptoms. I will confirm compatible-product availability and whether the work may require another visit. Check the [prices page](/prices) for current rates, or see my [Yale vs mortice deadlock guide](/blog/yale-vs-mortice-deadlock) for the checks that inform a wooden-door specification.`,
     faqs: [
       {
         q: 'How do I know if my mortice lock is a 3-lever or 5-lever?',
@@ -1002,7 +1000,7 @@ For a uPVC or composite door in Coventry, fit a euro cylinder that is:
 
 That's it. Don't get lost in the alphabet soup of standards. If a cylinder meets those two criteria, it's providing genuine, independently tested protection for your home.
 
-If you want advice on which certified lock is right for your door, call me on 024 7522 4730. I carry stock of the main certified cylinders and can fit one the same day in most cases. See the [prices page](/prices) for current rates on [lock changes](/services/lock-change) and [upgrades](/services/lock-upgrade).
+If you want advice on which certified lock is right for your door, call me on 024 7522 4730. The door, required cylinder dimensions, certification and current product availability must be checked before the fitting date or number of visits can be confirmed. See the [prices page](/prices) for current rates on [lock changes](/services/lock-change) and [upgrades](/services/lock-upgrade).
 
 ## Authoritative Sources
 

@@ -1,0 +1,1820 @@
+import type { AreaSlug } from './area-authorities'
+import type { AreaGuideSource, GovernedAreaGuide } from './area-guide-types'
+import {
+  EVIDENCE_REVIEWED_ON,
+  POLICE_SOURCE_IDS,
+  getTechnicalEvidenceSource,
+} from './locksmith-evidence.ts'
+
+const REVIEWED_ON = EVIDENCE_REVIEWED_ON
+
+const LOCAL_SOURCES = {
+  'nbbc-nuneaton-town-centre': {
+    id: 'nbbc-nuneaton-town-centre',
+    title: 'Nuneaton town centre',
+    publisher: 'Nuneaton and Bedworth Borough Council',
+    url: 'https://www.nuneatonandbedworth.gov.uk/markets-town-centres/town-centres',
+    supports: 'The origin of the Nuneaton name and the establishment of its market in 1247.',
+    checkedOn: REVIEWED_ON,
+    kind: 'locality',
+  },
+  'warwickshire-her-attleborough-medieval': {
+    id: 'warwickshire-her-attleborough-medieval',
+    title: 'Attleborough Medieval Settlement, record MWA9489',
+    publisher: 'Warwickshire Historic Environment Record',
+    url: 'https://timetrail.warwickshire.gov.uk/detail.aspx?monuid=WA9489',
+    supports: 'The probable medieval-settlement extent derived from the 1888 Ordnance Survey map and the recorded 1243 manor lease.',
+    checkedOn: REVIEWED_ON,
+    kind: 'locality',
+  },
+  'warwickshire-her-stockingford-galley-manor': {
+    id: 'warwickshire-her-stockingford-galley-manor',
+    title: 'The Manor of Stockingford, Galley Common, record MWA12426',
+    publisher: 'Warwickshire Historic Environment Record',
+    url: 'https://timetrail.warwickshire.gov.uk/detail.aspx?monuid=WA12426',
+    supports: 'Documentary and map evidence for the former Stockingford manor, Galley Common and associated historic lanes and field names.',
+    checkedOn: REVIEWED_ON,
+    kind: 'locality',
+  },
+  'nbbc-tenant-walkabouts-2026': {
+    id: 'nbbc-tenant-walkabouts-2026',
+    title: 'Neighbourhood walkabouts and engagement days',
+    publisher: 'Nuneaton and Bedworth Borough Council',
+    url: 'https://www.nuneatonandbedworth.gov.uk/resident-involvement/tenant-engagement/8',
+    supports: 'The council housing walkabout schedule and the named streets grouped under Attleborough, Stockingford, Camp Hill and Weddington.',
+    checkedOn: REVIEWED_ON,
+    kind: 'locality',
+  },
+  'nbbc-weddington-meadows-walk': {
+    id: 'nbbc-weddington-meadows-walk',
+    title: 'Weddington Meadows and Walk',
+    publisher: 'Nuneaton and Bedworth Borough Council',
+    url: 'https://www.nuneatonandbedworth.gov.uk/directory-record/4358/weddington-meadows-and-walk',
+    supports: 'The council directory name and nature-and-wildlife-park classification for Weddington Meadows and Walk.',
+    checkedOn: REVIEWED_ON,
+    kind: 'locality',
+  },
+  'nbbc-horestone-grange-woodlands-walk': {
+    id: 'nbbc-horestone-grange-woodlands-walk',
+    title: 'Horestone Grange Woodlands Walk',
+    publisher: 'Nuneaton and Bedworth Borough Council',
+    url: 'https://www.nuneatonandbedworth.gov.uk/directory-record/4305/horestone-grange-woodlands-walk',
+    supports: 'The council directory address, local-park classification and surfaced-footpath facility for Horestone Grange Woodlands Walk.',
+    checkedOn: REVIEWED_ON,
+    kind: 'locality',
+  },
+  'wcc-list-of-streets-2026': {
+    id: 'wcc-list-of-streets-2026',
+    title: 'List of Streets maintained at public expense, produced 11 August 2026',
+    publisher: 'Warwickshire County Council',
+    url: 'https://api.warwickshire.gov.uk/documents/WCCC-930-12',
+    supports: 'Current county street-to-locality and town labels, including Stockingford, Horeston Grange, Whitestone, Chapel End and Galley Common entries.',
+    checkedOn: REVIEWED_ON,
+    kind: 'locality',
+  },
+  'nbbc-queen-elizabeth-road-park': {
+    id: 'nbbc-queen-elizabeth-road-park',
+    title: 'Queen Elizabeth Road park',
+    publisher: 'Nuneaton and Bedworth Borough Council',
+    url: 'https://www.nuneatonandbedworth.gov.uk/directory-record/4297/queen-elizabeth-road',
+    supports: 'The council directory address, local-park classification and listed facilities at Queen Elizabeth Road.',
+    checkedOn: REVIEWED_ON,
+    kind: 'locality',
+  },
+  'warwickshire-her-chapel-end-chapel': {
+    id: 'warwickshire-her-chapel-end-chapel',
+    title: 'Congregational Chapel, Coleshill Road, Chapel End, record MWA2447',
+    publisher: 'Warwickshire Historic Environment Record',
+    url: 'https://timetrail.warwickshire.gov.uk/detail.aspx?monuid=WA2447',
+    supports: 'The chapel location, 1840 construction date, 1853 Sunday-school addition and recorded architectural features.',
+    checkedOn: REVIEWED_ON,
+    kind: 'property-status',
+  },
+  'wcc-bermuda-park-railway-200': {
+    id: 'wcc-bermuda-park-railway-200',
+    title: 'Warwickshire County Council joins the Railway 200 celebrations',
+    publisher: 'Warwickshire County Council',
+    url: 'https://www.warwickshire.gov.uk/news/article/5895/warwickshire-county-council-joins-the-railway-200-celebrations',
+    supports: 'Bermuda Park station opening history and the council-reported passenger figures for two past periods.',
+    checkedOn: REVIEWED_ON,
+    kind: 'locality',
+  },
+  'historic-england-hartshill-castle-1011197': {
+    id: 'historic-england-hartshill-castle-1011197',
+    title: 'Hartshill Castle, list entry 1011197',
+    publisher: 'Historic England',
+    url: 'https://historicengland.org.uk/listing/the-list/list-entry/1011197',
+    supports: 'The scheduled-monument designation, location and recorded development phases of Hartshill Castle.',
+    checkedOn: REVIEWED_ON,
+    kind: 'property-status',
+  },
+  'nbbc-bedworth-conservation-2022': {
+    id: 'nbbc-bedworth-conservation-2022',
+    title: 'Bedworth Conservation Area Appraisal and Management Plan 2022',
+    publisher: 'Nuneaton and Bedworth Borough Council',
+    url: 'https://www.nuneatonandbedworth.gov.uk/downloads/file/681/bedworth-conservation-area-appraisal-and-management-plan-supplementary-planning-document-2022-',
+    supports: 'The Bedworth conservation-area designation date, mapped core and three appraisal character areas.',
+    checkedOn: REVIEWED_ON,
+    kind: 'property-status',
+  },
+  'visit-warwickshire-bedworth': {
+    id: 'visit-warwickshire-bedworth',
+    title: 'Bedworth',
+    publisher: 'Warwickshire County Council, Visit Warwickshire',
+    url: 'https://visit.warwickshire.gov.uk/towns-villages/bedworth',
+    supports: 'Bedworth station on the Coventry-Nuneaton line and Miners Welfare Park heritage context.',
+    checkedOn: REVIEWED_ON,
+    kind: 'locality',
+  },
+  'nbbc-bulkington-conservation-2022': {
+    id: 'nbbc-bulkington-conservation-2022',
+    title: 'Bulkington Conservation Area Appraisal and Management Plan 2022',
+    publisher: 'Nuneaton and Bedworth Borough Council',
+    url: 'https://www.nuneatonandbedworth.gov.uk/downloads/file/682/bulkington-conservation-area-appraisal-and-management-plan-supplementary-planning-document-2022-',
+    supports: 'The Bulkington conservation-area review history and dates for two specifically named historic buildings.',
+    checkedOn: REVIEWED_ON,
+    kind: 'property-status',
+  },
+  'rbc-rugby-town-centre-appraisal': {
+    id: 'rbc-rugby-town-centre-appraisal',
+    title: 'Rugby Town Centre Conservation Area Appraisal',
+    publisher: 'Rugby Borough Council',
+    url: 'https://www.rugby.gov.uk/documents/20124/6569677/Rugby_Town_Centre_Character_Appraisal.pdf/9a17bab5-bb82-d284-15b4-08ca3a1a1b39?t=1750866416446',
+    supports: 'The mapped central designation, historic road layout and documented nineteenth-century railway development.',
+    checkedOn: REVIEWED_ON,
+    kind: 'property-status',
+  },
+  'rbc-hillmorton-locks-appraisal': {
+    id: 'rbc-hillmorton-locks-appraisal',
+    title: 'Hillmorton Locks Conservation Area Appraisal',
+    publisher: 'Rugby Borough Council',
+    url: 'https://www.rugby.gov.uk/documents/20124/6569677/Hillmorton_Locks_Character_Appraisal.pdf/e3288070-673d-cd8e-2acf-45c5eb3bc825?t=1750866416445',
+    supports: 'The limited Hillmorton Locks designation, canal setting and appraisal-dated industrial history.',
+    checkedOn: REVIEWED_ON,
+    kind: 'property-status',
+  },
+  'rbc-bilton-appraisal': {
+    id: 'rbc-bilton-appraisal',
+    title: 'Bilton Conservation Area Appraisal',
+    publisher: 'Rugby Borough Council',
+    url: 'https://www.rugby.gov.uk/documents/20124/6569677/Bilton_Character_Appraisal.pdf/27083593-8756-5f6f-ed65-f0bc7e2f9067?t=1750866416442',
+    supports: 'Bilton settlement history, the limited conservation-area extent and dates of named historic buildings.',
+    checkedOn: REVIEWED_ON,
+    kind: 'property-status',
+  },
+  'rbc-old-brownsover-appraisal': {
+    id: 'rbc-old-brownsover-appraisal',
+    title: 'Old Brownsover Conservation Area Appraisal',
+    publisher: 'Rugby Borough Council',
+    url: 'https://www.rugby.gov.uk/documents/20124/6569677/Old_Brownsover_Character_Appraisal.pdf/9d9a8cf5-3463-f265-16b6-f895e398c2c6?t=1750866416445',
+    supports: 'The limited Old Brownsover designation, named components and historic canal and highway context.',
+    checkedOn: REVIEWED_ON,
+    kind: 'property-status',
+  },
+  'rbc-cawston-parish-directory': {
+    id: 'rbc-cawston-parish-directory',
+    title: 'Cawston parish council details',
+    publisher: 'Rugby Borough Council',
+    url: 'https://rugby.gov.uk/l/6734048',
+    supports: 'Current identification of Cawston as a civil parish and the parish-council contact location.',
+    checkedOn: REVIEWED_ON,
+    kind: 'locality',
+  },
+  'rbc-cawston-parish-plan-2010': {
+    id: 'rbc-cawston-parish-plan-2010',
+    title: 'Cawston Parish Plan 2010',
+    publisher: 'Cawston Parish Council, hosted by Rugby Borough Council',
+    url: 'https://www.rugby.gov.uk/documents/20124/6573495/Cawston_Parish_Plan.pdf/35928dfe-3d3e-a888-19db-e82f4db6cc3b?t=1750866427061',
+    supports: 'The parish-plan adoption date, its 2009 questionnaire basis and intended review process.',
+    checkedOn: REVIEWED_ON,
+    kind: 'locality',
+  },
+  'historic-england-lawford-hill-farmhouse-1299648': {
+    id: 'historic-england-lawford-hill-farmhouse-1299648',
+    title: 'Lawford Hill Farmhouse, list entry 1299648',
+    publisher: 'Historic England',
+    url: 'https://historicengland.org.uk/listing/the-list/list-entry/1299648',
+    supports: 'The Grade II designation, statutory address and recorded construction phases of the named farmhouse.',
+    checkedOn: REVIEWED_ON,
+    kind: 'property-status',
+  },
+  'historic-england-st-john-long-lawford-1299647': {
+    id: 'historic-england-st-john-long-lawford-1299647',
+    title: 'Church of St John, list entry 1299647',
+    publisher: 'Historic England',
+    url: 'https://historicengland.org.uk/listing/the-list/list-entry/1299647',
+    supports: 'The Grade II designation, date, architect and statutory address of the named church.',
+    checkedOn: REVIEWED_ON,
+    kind: 'property-status',
+  },
+  'rbc-local-plan-2011-2031': {
+    id: 'rbc-local-plan-2011-2031',
+    title: 'Local Plan 2011-2031',
+    publisher: 'Rugby Borough Council',
+    url: 'https://www.rugby.gov.uk/w/local-plan-2011-2031',
+    supports: 'The plan adoption date and its Long Lawford Main Rural Settlement allocation evidence.',
+    checkedOn: REVIEWED_ON,
+    kind: 'locality',
+  },
+  'rbc-new-bilton-play-consultation-2025': {
+    id: 'rbc-new-bilton-play-consultation-2025',
+    title: 'Public consultations launched on play area revamps',
+    publisher: 'Rugby Borough Council',
+    url: 'https://www.rugby.gov.uk/w/public-consultations-launched-on-play-area-revamps',
+    supports: 'The March 2025 consultation proposal for New Bilton Recreation Ground play-area works.',
+    checkedOn: REVIEWED_ON,
+    kind: 'locality',
+  },
+  'rbc-cabinet-new-bilton-2024': {
+    id: 'rbc-cabinet-new-bilton-2024',
+    title: 'Cabinet agenda, 5 February 2024',
+    publisher: 'Rugby Borough Council',
+    url: 'https://www.rugby.gov.uk/documents/20124/7078207/PUBLIC%2BAGENDA%2BCabinet%2B5%2BFebruary%2B2024.pdf/ccba71dc-0ff9-2f75-1ce8-a1b5339521ca?t=1706305510419&version=1.0',
+    supports: 'New Bilton Ward participation in a dated hyperlocal area-action pilot workstream.',
+    checkedOn: REVIEWED_ON,
+    kind: 'locality',
+  },
+  'rbc-dunchurch-appraisal': {
+    id: 'rbc-dunchurch-appraisal',
+    title: 'Dunchurch Conservation Area Appraisal',
+    publisher: 'Rugby Borough Council',
+    url: 'https://www.rugby.gov.uk/documents/20124/6569677/Dunchurch_Character_Appraisal.pdf/5ed4617f-c153-7c3d-2a19-7f0c1c4fee3b?t=1750866416444',
+    supports: 'The mapped historic-crossroads designation and separately bounded scheduled and registered assets.',
+    checkedOn: REVIEWED_ON,
+    kind: 'property-status',
+  },
+} as const satisfies Record<string, AreaGuideSource>
+
+const warwickshireSourceIds = POLICE_SOURCE_IDS.Warwickshire
+const TECHNICAL_SOURCES: AreaGuideSource[] = [
+  'mla-service-calls',
+  warwickshireSourceIds.lockAdvice,
+  warwickshireSourceIds.doorSecurity,
+  warwickshireSourceIds.forensics,
+].map(id => ({ ...getTechnicalEvidenceSource(id), kind: 'technical' as const }))
+
+type AreaFaq = { q: string; a: string }
+
+const AREA_FAQS: Partial<Record<AreaSlug, [AreaFaq, AreaFaq]>> = {
+  nuneaton: [
+    { q: 'What do the Nuneaton locality sources establish?', a: `They establish attributed town history and the council's current description of the town-centre core, stations and Riversley Park. They do not establish an individual property's condition.` },
+    { q: 'What address details help prepare a Nuneaton booking?', a: `Provide the complete property, building or unit, exact affected threshold and person controlling it, plus photographs of the actual door and visible hardware where safe.` },
+  ],
+  attleborough: [
+    { q: 'What is supported about Attleborough in this guide?', a: `The Warwickshire record supports a probable medieval-settlement extent based on the 1888 map and a recorded 1243 manor lease, not a blanket designation for modern premises.` },
+    { q: 'What should an Attleborough caller identify before booking?', a: `Identify the current address, precise private or shared door, responsible controller and observed lock symptoms; historic mapping cannot substitute for those present facts.` },
+  ],
+  stockingford: [
+    { q: 'What do the Stockingford evidence records establish?', a: `They establish a documentary historic-environment record and selected current street-to-locality labels. They do not define every Stockingford address, property status or entrance.` },
+    { q: 'Which Stockingford information should accompany a service enquiry?', a: `Supply the full current address, exact threshold, controller, door photographs and observable hardware behaviour, without relying on the medieval-manor or centre labels.` },
+  ],
+  weddington: [
+    { q: 'Do the Weddington sources define a route boundary?', a: `No. The council sources identify a named park and streets in one housing walkabout schedule; neither source defines the full locality or a property boundary.` },
+    { q: 'How should a Weddington entrance be described when booking?', a: `Give the complete address, position of the affected door, whether it is shared and who controls it, together with photographs and observed symptoms where possible.` },
+  ],
+  'horeston-grange': [
+    { q: 'What do the Horeston Grange records identify?', a: `They identify a council local park at Launceston Drive and several county street-locality entries. They do not establish a property type, entrance arrangement or hardware specification.` },
+    { q: 'What current evidence is needed for a Horeston Grange booking?', a: `The exact property and threshold, responsible person, door images, lock markings and observable fault are needed before authority, diagnosis and scope can be assessed.` },
+  ],
+  whitestone: [
+    { q: 'What does the Whitestone street evidence establish?', a: `The county register assigns selected streets to the Whitestone locality in Nuneaton. It does not supply a complete neighbourhood boundary or any property-level facts.` },
+    { q: 'What should a Whitestone caller provide instead of a centre name?', a: `Provide the complete current address, exact entrance, controller and hardware photographs, plus a clear sequence of what the key, handle and door are doing.` },
+  ],
+  'camp-hill': [
+    { q: 'What do the Camp Hill council sources establish?', a: `They establish streets in a council housing walkabout schedule and the current Queen Elizabeth Road park record, not a complete locality boundary or property conditions.` },
+    { q: 'What preparation is useful for a Camp Hill service enquiry?', a: `State the full address, correct threshold, responsible controller and actual symptoms, and provide door-edge and hardware photographs when it is safe to do so.` },
+  ],
+  'chapel-end': [
+    { q: 'What does the Chapel End heritage record establish?', a: `It describes one chapel at Coleshill Road and its documented construction phases. It does not transfer that building's recorded status or fabric to nearby properties.` },
+    { q: 'What present information should a Chapel End caller gather?', a: `Gather the exact address and threshold, controller, door construction, visible lock markings and observable fault rather than using the historic centre boundary or unit count.` },
+  ],
+  'bermuda-park': [
+    { q: 'What does the Bermuda Park source actually verify?', a: `It verifies the station's opening history and two dated passenger figures. It does not define the wider route, premises, access or current activity.` },
+    { q: 'How should a Bermuda Park property be identified for booking?', a: `Use the complete property and unit address, exact private or shared entrance and responsible person; station proximity alone is not sufficient property information.` },
+  ],
+  'galley-common': [
+    { q: 'What does the Galley Common historic record establish?', a: `It records documentary and map research about the former Stockingford manor and Galley Common. It does not describe present premises, entrances or property status.` },
+    { q: 'What details should a Galley Common caller prepare?', a: `Prepare the full modern address, precise opening, controller, door photographs and observed symptoms without treating any historic planning-centre name as an access instruction.` },
+  ],
+  hartshill: [
+    { q: 'Does Hartshill Castle status apply to nearby properties?', a: `No. Scheduled Monument 1011197 has a specific official map, and the list entry does not designate surrounding buildings or establish access to them.` },
+    { q: 'What should be checked for a Hartshill service address?', a: `Check the exact address and threshold, current property records where relevant, the responsible controller and the actual door and lock evidence before defining work.` },
+  ],
+  bedworth: [
+    { q: 'Which part of Bedworth has verified conservation context?', a: `The source describes a mapped town-centre conservation area with three appraisal character areas. It does not apply that status across every Bedworth address.` },
+    { q: 'What booking details matter more than Bedworth landmarks?', a: `The full property, exact affected door, controller, door-edge images, hardware markings and observed symptoms matter; station and park references provide orientation only.` },
+  ],
+  bulkington: [
+    { q: 'Do the Bulkington building dates apply across the village?', a: `No. The thirteenth- and seventeenth-century dates belong to two named assets, while the conservation designation covers a mapped core only.` },
+    { q: 'What current evidence should a Bulkington caller provide?', a: `Provide the exact property and threshold, controller, door photographs, component markings and symptoms, and check map status if visible external fabric may be affected.` },
+  ],
+  rugby: [
+    { q: 'What area does the Rugby appraisal describe?', a: `It describes the mapped town-centre conservation area and its historic development. The boundary differs substantially from the full Rugby route represented by the guide.` },
+    { q: 'What information prepares a Rugby property booking?', a: `Give the complete address, building and floor where relevant, exact threshold, controller, door images and observable fault rather than relying on railway or centre context.` },
+  ],
+  hillmorton: [
+    { q: 'Is Hillmorton Locks the same as all Hillmorton?', a: `No. The appraisal concerns a small canal-centred conservation area separated from wider housing; its context cannot be applied throughout the route.` },
+    { q: 'How should a Hillmorton service address be prepared?', a: `Provide the complete address and entrance, identify whether the Locks map applies, name the responsible controller and record the actual door and hardware evidence.` },
+  ],
+  bilton: [
+    { q: 'How much of Bilton is within the conservation area?', a: `The appraisal expressly says that only part of the former village is designated, so each property must be checked against the current map.` },
+    { q: 'What should a Bilton caller gather before booking?', a: `Gather the exact address, affected private or shared threshold, controller, door photographs, lock markings and a clear account of the present symptom.` },
+  ],
+  brownsover: [
+    { q: 'Does Old Brownsover cover the wider Brownsover route?', a: `No. Old Brownsover is a limited mapped hamlet containing named assets and land; wider development must not inherit that conservation description.` },
+    { q: 'What details identify a Brownsover service property correctly?', a: `Use the full address, exact entrance and responsible person, then check whether the Old Brownsover map applies and document the actual door and lock.` },
+  ],
+  cawston: [
+    { q: 'What current Cawston fact does the directory support?', a: `It confirms Cawston as a civil parish and provides the parish-council contact location. That hall address does not define the service route.` },
+    { q: 'What information should a Cawston caller provide?', a: `Provide the full property and threshold, controller, door images, hardware marks and symptoms; parish, ward and postal labels cannot replace an exact address.` },
+  ],
+  'long-lawford': [
+    { q: 'Which Long Lawford properties are verified as listed?', a: `The evidence verifies Lawford Hill Farmhouse and the Church of St John as named Grade II assets, not surrounding Long Lawford premises.` },
+    { q: 'What should be prepared for a Long Lawford booking?', a: `Prepare the exact property and door, responsible controller, current status where relevant, hardware photographs, readable markings and observed operation or damage.` },
+  ],
+  'new-bilton': [
+    { q: 'Do the New Bilton sources describe private properties?', a: `No. They concern a consultation proposal at one recreation ground and a dated ward-level council pilot, not individual premises or building conditions.` },
+    { q: 'How should a New Bilton caller identify the service address?', a: `Provide the complete current property and unit, exact affected threshold, controller and actual door evidence rather than using the ward or recreation ground.` },
+  ],
+  dunchurch: [
+    { q: 'Are the Dunchurch heritage boundaries interchangeable with each other?', a: `No. The conservation area, scheduled standing cross and registered landscape have different boundaries, so the correct record must be checked for the property.` },
+    { q: 'What evidence should accompany a Dunchurch booking?', a: `Supply the complete address and exact threshold, responsible controller, applicable map result, door photographs, hardware markings and a description of the current issue.` },
+  ],
+}
+
+type GuideSeed = Omit<GovernedAreaGuide, 'reviewedOn' | 'sources' | 'faqs'> & {
+  sources: AreaGuideSource[]
+}
+
+function makeGuide(seed: GuideSeed): GovernedAreaGuide {
+  const faqs = AREA_FAQS[seed.slug]
+  if (!faqs) throw new Error(`Missing north-east area FAQs for ${seed.slug}`)
+
+  return {
+    ...seed,
+    reviewedOn: REVIEWED_ON,
+    sources: [...seed.sources, ...TECHNICAL_SOURCES],
+    faqs: [...faqs],
+  }
+}
+
+export const NORTH_EAST_AREA_GUIDES = {
+  nuneaton: makeGuide({
+    slug: 'nuneaton',
+    summary: [
+      `Nuneaton and Bedworth Borough Council traces Nuneaton's name to a twelfth-century Benedictine nunnery and records that its market was established in 1247. These are attributed town-history facts, not evidence about a present building or entrance.`,
+      `The council's current town-centre page describes a pedestrian core served by bus and train stations, with Riversley Park a short walk away. Those public landmarks provide orientation only; they do not identify a particular property or entrance.`,
+    ],
+    accessGuidance: `Give the complete Nuneaton address, building name where relevant, floor and exact affected threshold. The stations, pedestrian core and Riversley Park are orientation context only and do not establish access to a property.`,
+    evidenceLimits: `The council page establishes attributed town history and current public town-centre orientation. It does not identify an individual property's status, construction, controller, door material, lock type, fault, access route or service circumstances.`,
+    facts: [
+      {
+        text: `The borough council derives Nuneaton's name from a twelfth-century Benedictine nunnery and dates the market's establishment to 1247.`,
+        sourceIds: ['nbbc-nuneaton-town-centre'],
+        serviceRelevance: `This supports attributed historic context only; it cannot be used to characterise a customer's building, entrance or hardware.`,
+      },
+      {
+        text: `The council describes Nuneaton's town-centre core as pedestrian, served by bus and train stations, with Riversley Park a short walk away.`,
+        sourceIds: ['nbbc-nuneaton-town-centre'],
+        serviceRelevance: `These landmarks can assist orientation but cannot identify the customer's building, threshold, property status or access arrangements.`,
+      },
+    ],
+    sources: [LOCAL_SOURCES['nbbc-nuneaton-town-centre']],
+    serviceGuidance: {
+      'emergency-lockout': {
+        heading: 'Preparing for a Nuneaton lockout at the correct threshold',
+        body: [
+          `Because the council names Nuneaton's pedestrian core, bus and train stations and nearby Riversley Park, a central location should be prepared with the precise building and door rather than a landmark alone. State whether the locked point is a street entrance, shared threshold or internal unit, and identify the person controlling it. That information lets the authority check relate to the correct opening before the key, handle, deadlocking and existing damage are examined.`,
+          `The town-centre page provides no property-status or door-fabric evidence, so photograph the door face, frame and visible furniture before choosing a method that could remove material. The MLA source supports proof-of-authority and agreed scope; it does not promise a particular opening technique. Where gaining entry would require drilling or replacing a visible component, define that intervention separately so preservation, reinstatement and any property-specific checks remain tied to the inspected door.`,
+        ],
+        checks: ['Identify the exact locked Nuneaton threshold', 'Prepare evidence connecting the caller to it', 'Record visible door and frame condition'],
+        faq: { q: 'Do Nuneaton town-centre landmarks determine the opening method?', a: `No. They provide orientation only; the inspected lock, door condition, safety considerations and verified authority determine which methods can properly be considered.` },
+      },
+      'lock-change': {
+        heading: 'Defining a Nuneaton lock change without postcode assumptions',
+        body: [
+          `Nuneaton's market history and railway-centre geography do not identify a cylinder, mortice case or multipoint mechanism. Preparation should explain whether the need concerns lost key control, wear, damage or a planned change, then show both handle faces, the door edge and readable markings. An inspection can separate the lock body, cylinder, keep and alignment, allowing a compatible component to be specified without turning the town's historic narrative into a hardware assumption.`,
+          `The council's public town-centre description does not establish property status or permission for alteration. A component fitted within an existing opening raises a different fabric question from new cutting or replacement of visible furniture. For a shared entrance, the person responsible for the hardware should confirm the keying scope. The written next step should identify retained material, measurements, keys and any external change requiring property-specific owner or authority guidance before it proceeds.`,
+        ],
+        checks: ['State the reason for changing the lock', 'Photograph markings and surrounding door furniture', 'Check the mapped address before visible alteration'],
+        faq: { q: 'Can Nuneaton history identify a compatible replacement lock?', a: `No. Compatibility follows from the actual lock markings, dimensions, door and frame; historic locality evidence answers a separate property-context question.` },
+      },
+      'upvc-lock-repair': {
+        heading: 'Diagnosing a Nuneaton multipoint fault from the actual door',
+        body: [
+          `Neither the 1247 market date nor the station and pedestrian-core description shows that a Nuneaton entrance is uPVC or composite. If the affected door is one of those materials, record key rotation, handle travel and locking-point movement in sequence. When safe access already exists, a gentle comparison between open and closed operation helps direct inspection toward alignment, keeps, cylinder or gearbox rather than selecting a part from the postcode.`,
+          `A central Nuneaton threshold may be private even where another building entrance is shared, and the council's locality page cannot answer that control question. Confirm it independently. Faceplate markings, centres, backset and locking layout support mechanical compatibility; property records become relevant only if the scope would change controlled or visible material. The repair note should list any controller, fire-door or fabric question that must be resolved before the work expands.`,
+        ],
+        checks: ['Describe open and closed operation separately', 'Capture the full faceplate and markings', 'Confirm whether the threshold is shared'],
+        faq: { q: 'Does a central Nuneaton address identify the uPVC mechanism?', a: `No. The actual faceplate, dimensions and observed operation are needed; the council's station and pedestrian-core context provides no parts evidence.` },
+      },
+      'boarding-up': {
+        heading: 'Evidence-aware temporary boarding in central Nuneaton',
+        body: [
+          `The council's town-centre page can orient a caller by public landmarks, but it cannot describe damage at a particular opening. Follow police directions first, then photograph the point of entry, remaining frame, glazing or door, displaced hardware and surrounding material before covering it. Identify whether the opening belongs to a frontage, shared access point or private unit so the person controlling temporary work is clear.`,
+          `Record intact external material and proposed fixing positions before a board is installed, and check any property-specific constraint that the actual address raises. Temporary work should be scoped from the inspected support and opening dimensions, not from proximity to the station or Riversley Park. The handover should list what was covered and any unresolved lock, glazing, joinery or structural question, enabling the permanent specialist to assess the next stage without losing the initial evidence record.`,
+        ],
+        checks: ['Follow police directions before disturbing damage', 'Photograph all material that will be covered', 'Record temporary fixings and unresolved defects'],
+        faq: { q: 'Do Nuneaton town-centre landmarks change the evidence sequence?', a: `No. They provide orientation; police directions and documentation of the actual damaged opening still come before temporary covering work at the address.` },
+      },
+      'lock-upgrade': {
+        heading: 'A measured Nuneaton entrance upgrade with mapped checks',
+        body: [
+          `A security review in Nuneaton should not infer existing resistance from a medieval market origin or rail-centre description. Inspect the door leaf, frame, hinges, keeps, handles, lock engagement and cylinder projection where one is present. Warwickshire Police supports whole-entrance assessment, correctly sized cylinders and accredited products. Markings and measurements can then inform a suitable option while surrounding alignment or frame issues remain visible in the proposed scope.`,
+          `Because the public town-centre page supplies no property-level status, photograph visible furniture, existing cut-outs and the relationship between the leaf and frontage before suggesting alteration. Internal component options can be separated from new cutting or an outward substitution that may need address-specific guidance. The final specification should identify retained fabric, verified product evidence, fitting dependencies and the controller of any common threshold, without implying that one certified component removes every possible entry route.`,
+        ],
+        checks: ['Inspect the complete door and frame', 'Verify dimensions and independent product evidence', 'Separate internal work from frontage alteration'],
+        faq: { q: 'Is one upgrade suitable throughout Nuneaton town centre?', a: `No. Product choice depends on the inspected entrance, measured fit and building constraints; the council's public locality description provides no hardware specification.` },
+      },
+    },
+  }),
+  attleborough: makeGuide({
+    slug: 'attleborough',
+    summary: [
+      `Warwickshire's Historic Environment Record describes the probable extent of Attleborough's medieval settlement by reference to the first-edition 1888 Ordnance Survey map. That record describes historic research, not every modern address.`,
+      `The same record says Attleborough is absent from Domesday and records a 1243 lease of its manor by the Prioress of Chaise-Dieu to Nuneaton. These are documentary-history facts, not current property-status evidence.`,
+    ],
+    accessGuidance: `Provide the complete Attleborough address and identify the working entrance without using the medieval-settlement record or its historic map description as an access boundary. Include the threshold controller and any shared-building instructions.`,
+    evidenceLimits: `The cited Historic Environment Record is not a blanket conservation or listing designation, and its map point is expressly illustrative. Current property status, ownership, construction, door system, condition and lawful authority all require separate evidence.`,
+    facts: [
+      {
+        text: `The Warwickshire record describes the probable Attleborough medieval-settlement extent using the first-edition 1888 Ordnance Survey map.`,
+        sourceIds: ['warwickshire-her-attleborough-medieval'],
+        serviceRelevance: `This dated mapping can prompt an exact-site check but cannot identify the age, status or fabric of a present entrance.`,
+      },
+      {
+        text: `The record says Attleborough is absent from Domesday and that the Prioress of Chaise-Dieu leased the manor to Nuneaton in 1243.`,
+        sourceIds: ['warwickshire-her-attleborough-medieval'],
+        serviceRelevance: `The documentary history supplies locality context only and must not be projected onto a modern property, entrance or estate.`,
+      },
+    ],
+    sources: [LOCAL_SOURCES['warwickshire-her-attleborough-medieval']],
+    serviceGuidance: {
+      'emergency-lockout': {
+        heading: 'An Attleborough lockout starts with the present entrance',
+        body: [
+          `Attleborough's recorded medieval extent and 1243 manor lease are historic-study facts, not directions to a customer's door. A lockout booking should name the full current address, exact threshold and whether the opening is private or shared, then identify the caller's connection to it. That prevents an old mapped locality from being confused with present access and lets the locksmith examine the actual latch, deadlocking, key behaviour and damage only after authority is established.`,
+          `The Historic Environment Record does not itself designate every property, so preservation questions should remain conditional. If the door or surrounding material appears significant, document it and verify present status before a destructive step affects visible fabric. MLA guidance supports explaining scope changes before work proceeds. The opening decision should therefore be based on inspected hardware, safety and verified authority, with any wider reinstatement or property-status question recorded as a separate next action.`,
+        ],
+        checks: ['Give the complete current Attleborough address', 'Identify the private or shared threshold', 'Document older-looking material before intervention'],
+        faq: { q: 'Does the medieval settlement record control an Attleborough lockout?', a: `No. It is historic mapping, not an opening instruction or blanket designation; current status and the actual lock must be checked separately.` },
+      },
+      'lock-change': {
+        heading: 'Component-first lock replacement at an Attleborough address',
+        body: [
+          `The 1888 mapping basis and 1243 lease illustrate why historic documentary evidence cannot date a present Attleborough door. Before a lock change, state whether the purpose is key control, mechanical failure or damage and supply clear images of the hardware and door edge. The inspection can then distinguish cylinder, case, keep and alignment issues, preserving serviceable components and establishing measurements instead of choosing a replacement from the apparent age of the area.`,
+          `If an exact-site check reveals a current designation beyond the Historic Environment Record, describe whether the proposed change stays within existing apertures or affects visible material. A shared threshold also needs its responsible controller identified before keys or hardware change. The written scope should list the diagnosed component, items retained, replacement dimensions, keys and fitting work, while any property-status question remains explicitly pending rather than inferred from the medieval-settlement map or manor history.`,
+        ],
+        checks: ['Explain the purpose of the change', 'Record lock markings and door dimensions', 'Verify current status only for the address'],
+        faq: { q: 'Can the Attleborough historic record specify a replacement?', a: `No. It supports locality history; a compatible lock still depends on the existing door, markings, measurements, observed operation and responsible controller.` },
+      },
+      'upvc-lock-repair': {
+        heading: 'Attleborough uPVC diagnosis without historic-landscape guesses',
+        body: [
+          `A mapped medieval settlement and thirteenth-century manor lease do not show whether today's affected entrance is uPVC, composite or another material. Once the actual door is identified, record whether the key turns, the handle lifts, locking points move and operation changes against the frame. Those observations let the inspection compare alignment, cylinder, handles and gearbox. A faceplate image can narrow investigation, but backset, centres and layout still need confirmation before a component is specified.`,
+          `The historic record is not a parcel-level control, so do not attach a preservation restriction to the repair without a current address check. Equally, a later mechanism does not answer who controls a communal threshold or whether a managed door has separate requirements. The repair record should name the door, controller, symptoms, measurements and scope boundary. If work would extend into visible material with verified status, that alteration can be referred independently from the internal mechanical diagnosis.`,
+        ],
+        checks: ['Confirm the actual door material first', 'Compare safe open and closed operation', 'Measure the identified multipoint components'],
+        faq: { q: 'Does Attleborough history indicate the multipoint manufacturer?', a: `No. The manufacturer and compatibility must come from faceplate markings, geometry and inspection of the individual door, not historic-area records.` },
+      },
+      'boarding-up': {
+        heading: 'Documenting Attleborough damage before temporary boarding',
+        body: [
+          `Attleborough's historic settlement map and manor lease provide no evidence about a damaged modern opening. After following police instructions, photograph the point of entry, frame, glazing or door leaf, broken hardware and surrounding material before it is covered. Confirm which present threshold is affected and who controls it. That evidence supports dimensions and a temporary plan without inventing a link between the incident, building construction and the Historic Environment Record.`,
+          `If current checking identifies protected fabric at the specific site, mark surviving surfaces and intended support points before boarding. The temporary work should preserve the evidence trail and avoid turning an unverified heritage association into a fixing assumption. Its completion record should show materials, fixing locations, covered damage and unresolved glazing, joinery, lock or structural work. The permanent repairer can then inspect a clear handover, while any designation question is addressed from current records rather than the 1888 mapping basis.`,
+        ],
+        checks: ['Follow the police evidence sequence', 'Photograph the precise damaged opening', 'Keep heritage status specific to the address'],
+        faq: { q: 'Do the Attleborough heritage records dictate board fixings?', a: `No. Fixings depend on inspected surviving material and current property status; the cited records do not describe an individual damaged opening.` },
+      },
+      'lock-upgrade': {
+        heading: 'Assessing an Attleborough entrance before upgrading hardware',
+        body: [
+          `Attleborough's Historic Environment Record supplies no security specification. An upgrade should begin with the actual door, frame, hinges, keeps, handles, lock engagement and cylinder fit where applicable. Warwickshire Police guidance supports assessing the complete entrance and considering correctly sized, accredited products. Measurements and marked evidence can then inform an option, while any misalignment or frame weakness is documented rather than hidden behind a locality-based recommendation.`,
+          `The medieval-settlement extent and manor history are not blanket designations. If an upgrade could change outward fabric, check current property status and record the existing cut-outs and furniture before proposing it. For common hardware, identify the responsible building party and any fire-door constraint. The final plan should state retained elements, product evidence and dependencies, and should describe increased tested resistance conditionally without treating historic surroundings as proof of the entrance's present construction or risk.`,
+        ],
+        checks: ['Survey the whole working entrance', 'Check current property records where relevant', 'Verify product dimensions and certification'],
+        faq: { q: 'Does an Attleborough historic record require period hardware?', a: `Not by itself. Exact property status, existing fabric, mechanical compatibility and the responsible person's requirements must all be established independently.` },
+      },
+    },
+  }),
+  stockingford: makeGuide({
+    slug: 'stockingford',
+    summary: [
+      `Warwickshire's Historic Environment Record describes documentary and cartographic research into the former Manor of Stockingford and Galley Common. It records suggested medieval-settlement evidence rather than a boundary for the modern locality.`,
+      `Warwickshire County Council's street register, produced on 11 August 2026, assigns selected entries including Beaumont Place, Beaumont Road and Whitehouse Crescent to Stockingford, Nuneaton. It is not a property inventory.`,
+    ],
+    accessGuidance: `Use the full Stockingford address and identify the affected entrance directly. The county street-locality labels and historic manor record can help distinguish place names but do not establish a route boundary or property access.`,
+    evidenceLimits: `The historic record synthesises documentary research and the current street register lists selected highway labels. Neither source proves parcel boundaries, building age, entrance control, door construction, property status or lock condition.`,
+    facts: [
+      {
+        text: `The Warwickshire record describes documentary and map research into the former Manor of Stockingford and associated Galley Common settlement evidence.`,
+        sourceIds: ['warwickshire-her-stockingford-galley-manor'],
+        serviceRelevance: `This supports limited historic context only and cannot establish the character or status of the service address.`,
+      },
+      {
+        text: `The county street register produced on 11 August 2026 assigns Beaumont Place, Beaumont Road and Whitehouse Crescent to Stockingford, Nuneaton.`,
+        sourceIds: ['wcc-list-of-streets-2026'],
+        serviceRelevance: `These selected street labels can assist address checking but cannot establish the route boundary, threshold, access or property conditions.`,
+      },
+    ],
+    sources: [LOCAL_SOURCES['warwickshire-her-stockingford-galley-manor'], LOCAL_SOURCES['wcc-list-of-streets-2026']],
+    serviceGuidance: {
+      'emergency-lockout': {
+        heading: 'Separating a Stockingford address from dated planning labels',
+        body: [
+          `The former-manor record and current county street register describe different locality evidence, neither of which identifies a locked door. Preparation should use the complete current address, name the affected private or common threshold and establish who controls it. A listed Stockingford street is useful only for address checking. The authority check and mechanical assessment must still concern the actual latch, deadlocking, key behaviour and existing damage at that opening.`,
+          `Because neither cited source provides parcel-level designation, an older-looking Stockingford entrance should be documented without presuming protected status. If an opening method might remove visible material, check current records and explain that additional scope before proceeding. MLA guidance supports advance clarity and proof of authority, while the lock inspection supports technique. Keeping those evidence streams separate prevents historic manor research or a highway-locality label from becoming an unsupported claim about the customer's building.`,
+        ],
+        checks: ['Provide the full current Stockingford address', 'Name the exact private or common door', 'Check present status before fabric removal'],
+        faq: { q: 'Does the street register identify a Stockingford lockout entrance?', a: `No. It supplies selected highway-locality labels; the caller must identify the full current address, correct threshold and lawful connection separately.` },
+      },
+      'lock-change': {
+        heading: 'Scoping a Stockingford lock change from component evidence',
+        body: [
+          `A medieval manor reference and current street schedule cannot select hardware for Stockingford. The change request should record its purpose, images of the handles and edge plate, readable codes and the way the door closes. Inspection can then separate cylinder, lock case, keep and alignment findings before deciding what should be retained. This avoids turning the historic map research or Stockingford highway labels into assumptions about the door's age, material or mechanism.`,
+          `If present-day records reveal a property constraint, define whether the proposed work stays within an existing aperture or changes visible external fabric. The locality sources themselves do not answer that question. A communal door also requires its controller and keying arrangement to be established. The next-step schedule should list the diagnosed component, measured replacement, keys, adjustment and any unresolved property or fire-door issue, giving each decision an evidence source rather than treating Stockingford as one uniform building context.`,
+        ],
+        checks: ['Record why key control must change', 'Inspect the case, keep and alignment', 'Verify the controller of shared hardware'],
+        faq: { q: 'Can a Stockingford street label guide part selection?', a: `No. Part selection depends on current markings, measurements and door condition; the highway-locality label supplies no lock or construction evidence.` },
+      },
+      'upvc-lock-repair': {
+        heading: 'Testing a Stockingford uPVC fault without area inference',
+        body: [
+          `The council evidence says nothing about the distribution of uPVC doors in Stockingford. For the specific affected door, record handle travel, key movement, hook or roller operation and any rubbing against the frame. If the leaf is safely open, compare mechanism operation before it meets the keeps. That sequence helps distinguish alignment, cylinder, handle and gearbox questions, while full faceplate markings and measurements remain necessary before compatible parts can be identified.`,
+          `The county's selected Stockingford street labels do not define the route boundary or decide who controls an entrance. Confirm whether the mechanism belongs to a private door, shared threshold or managed system, then check any current property status only if visible fabric may be affected. The repair note should list tests, geometry, controller and next diagnostic step. Historic manor evidence remains clearly outside the mechanical conclusion and cannot justify a promised component or repair result.`,
+        ],
+        checks: ['Describe handle and key movement in order', 'Photograph the complete multipoint faceplate', 'Distinguish private from managed hardware'],
+        faq: { q: 'Are Stockingford multipoint parts identified by locality?', a: `No. Manufacturer markings, backset, centres and locking layout from the individual mechanism are required before compatibility can be established for that door.` },
+      },
+      'boarding-up': {
+        heading: 'A documented temporary-board plan for Stockingford',
+        body: [
+          `Neither a medieval-manor record nor the current street register describes a damaged Stockingford opening. Follow police instructions, then photograph the point of entry, remaining frame, glazing or door, broken hardware and surrounding material before covering it. Identify the exact current threshold and responsible person, rather than using a highway-locality label as a substitute. These observations support board dimensions and handling while preserving evidence for later technical assessment.`,
+          `Because the cited sources do not confer blanket property status, fixing decisions should follow inspected material and any separately verified current designation. Record sound and damaged substrates, proposed support points and what the temporary board will conceal. The handover should identify board material, fixings and outstanding lock, glazing, joinery or structural work. That record gives the permanent repairer a reliable starting point and keeps former-manor research and street labels out of an unrelated property conclusion.`,
+        ],
+        checks: ['Preserve the scene as police direct', 'Photograph damage before temporary covering', 'Record remaining permanent repair questions'],
+        faq: { q: 'Do Stockingford locality records affect temporary boarding?', a: `Not directly. The board depends on the inspected opening and current property records, while the cited sources provide historic and address context only.` },
+      },
+      'lock-upgrade': {
+        heading: 'Building a Stockingford upgrade from present measurements',
+        body: [
+          `Stockingford's recorded manor and county street labels do not describe an entrance's resistance. A useful upgrade assessment inspects the door leaf, frame, hinges, keeps, handles, lock operation and cylinder projection if present. Warwickshire Police guidance supports looking at that complete assembly and considering correctly sized, accredited products. Markings and dimensions then inform suitable options, while alignment and frame condition remain explicit parts of the diagnosis rather than being obscured by area-level history.`,
+          `Before altering outward material, check current property status because neither the historic record nor street register is a parcel designation. For common hardware, establish who controls the threshold and any applicable fire-door requirements. The written specification should distinguish adjustment, reinforcement and product replacement; cite verified testing evidence; and list any fabric question requiring separate advice. This creates a conditional improvement plan without claiming that Stockingford's locality records predict the existing lock or eliminate forced-entry risk.`,
+        ],
+        checks: ['Assess the complete existing entrance', 'Measure hardware before comparing products', 'Check current constraints for visible work'],
+        faq: { q: 'What upgrade follows from Stockingford locality evidence?', a: `None automatically. The evidence describes history and selected streets; the actual entrance, measured fit and current property constraints determine the proposal.` },
+      },
+    },
+  }),
+  weddington: makeGuide({
+    slug: 'weddington',
+    summary: [
+      `The council's current housing walkabout schedule has a Weddington row naming Carisbrook Road, Cleaver Gardens, Niton Road and Ryde Avenue. It is an engagement schedule for selected housing streets, not a locality boundary.`,
+      `A separate council directory classifies Weddington Meadows and Walk as a nature and wildlife park. The named public space supplies orientation context only and says nothing about a customer's building or entrance.`,
+    ],
+    accessGuidance: `Provide the complete present-day Weddington address, entrance position and responsible contact. Do not use the four scheduled walkabout streets or Weddington Meadows and Walk as proof of the property's route, boundary or access arrangements.`,
+    evidenceLimits: `The sources identify selected streets in a council housing engagement schedule and one named public park. They do not verify a complete locality, mapped parcels, property status, tenure, construction, door material, lock system or authority.`,
+    facts: [
+      {
+        text: `The council's housing walkabout schedule lists Carisbrook Road, Cleaver Gardens, Niton Road and Ryde Avenue under Weddington.`,
+        sourceIds: ['nbbc-tenant-walkabouts-2026'],
+        serviceRelevance: `The selected engagement streets can aid address checking but cannot be used as a complete locality boundary or access description.`,
+      },
+      {
+        text: `The council's parks directory identifies Weddington Meadows and Walk and classifies it as a nature and wildlife park.`,
+        sourceIds: ['nbbc-weddington-meadows-walk'],
+        serviceRelevance: `The public-space name can aid orientation only; property location, access and entrance conditions need independent checking.`,
+      },
+    ],
+    sources: [LOCAL_SOURCES['nbbc-tenant-walkabouts-2026'], LOCAL_SOURCES['nbbc-weddington-meadows-walk']],
+    serviceGuidance: {
+      'emergency-lockout': {
+        heading: 'A Weddington lockout uses the current address, not public-place labels',
+        body: [
+          `The Weddington walkabout schedule names only selected housing streets, so it cannot identify which modern threshold a caller means. Prepare the full current address, door position and whether it serves one occupier or a shared route. Weddington Meadows and Walk may help with general orientation, but it proves no access condition. Authority should be tied to the actual opening before latch, key and deadlock behaviour are diagnosed.`,
+          `Neither the engagement schedule nor park directory supplies a parcel-level conservation or listing decision. If an opening method could affect older-looking material, photograph the door and verify current property status instead of treating a locality label as protection. The MLA source supports confirming authority and explaining changed scope. Any drilling or replacement should follow inspection and recorded agreement, while possible visible-fabric work remains a separate, address-specific question for the responsible owner or authority.`,
+        ],
+        checks: ['State the complete current Weddington address', 'Identify who controls the locked threshold', 'Check current status before altering fabric'],
+        faq: { q: 'Does the Weddington walkabout list define a lockout address?', a: `No. It names selected housing streets, so the complete present property, entrance and caller's connection must be established independently for the booking.` },
+      },
+      'lock-change': {
+        heading: 'Evidence-led lock changes for a Weddington entrance',
+        body: [
+          `A housing walkabout street or named public park does not identify hardware at a Weddington property. Begin with the reason for the change, then record the door faces, edge plate, lock markings and closing behaviour. Diagnosis can distinguish a cylinder, case, keep or alignment issue and determine which components remain serviceable. Measurements and key-control requirements support the specification; the locality sources supply no basis for a product choice.`,
+          `Because the selected-street schedule is neither an address lookup nor a current designation, any external-fabric issue needs a separate present-day check. A communal threshold also requires the person responsible for its shared keys and hardware to define the scope. The written proposal should identify the exact component, dimensions, retained material, keys and adjustment. If new cutting or visible substitution is contemplated, list it as a distinct next decision rather than attributing permission or restriction to Weddington's public-place labels.`,
+        ],
+        checks: ['Describe the exact key-control objective', 'Photograph lock markings before selection', 'Separate component work from external alteration'],
+        faq: { q: 'Can a Weddington street or park name specify a lock?', a: `No. Those names provide locality context only; compatible hardware depends on current measurements, markings and inspection of the individual door.` },
+      },
+      'upvc-lock-repair': {
+        heading: 'Diagnosing Weddington multipoint hardware from present symptoms',
+        body: [
+          `The council's walkabout and park records do not indicate whether any Weddington entrance uses uPVC or composite construction. For the door in question, describe key rotation, handle lift, hook or roller movement and whether contact with the frame changes operation. A safe open-versus-closed comparison can direct the inspection toward alignment, keeps, cylinder or gearbox. The faceplate, centres, backset and locking layout must still be recorded before compatibility is stated.`,
+          `Selected streets in a housing engagement schedule do not establish current ownership of a Weddington threshold. Confirm whether the mechanism is private, communal or managed before removing components. If a proposed repair reaches visible external material, check current property records separately. The job note should keep mechanical findings, authority and property status distinct, with measurements and unresolved fire-door or fabric questions controlling the next step rather than the locality labels.`,
+        ],
+        checks: ['Record key and handle behaviour carefully', 'Compare frame contact only when safe', 'Confirm control of any shared door'],
+        faq: { q: 'Does Weddington locality evidence identify a uPVC gearbox?', a: `No. Gearbox compatibility comes from the actual mechanism's markings and dimensions, while the sources supply only street and public-space context.` },
+      },
+      'boarding-up': {
+        heading: 'Temporary boarding at a Weddington address with a clear evidence trail',
+        body: [
+          `The four streets named in the Weddington walkabout schedule and the named public park do not describe a damaged opening. Follow police directions before disturbing the scene, then photograph the frame, glazing or door, broken lock parts and adjacent material. Identify the exact threshold and person controlling it. That current evidence supports temporary-board dimensions and handling while preventing a public-place label from being mistaken for a property, access or construction fact.`,
+          `Since neither locality source establishes parcel status, fixings should be planned from inspected sound and damaged material plus any separately verified designation. Record intended support points, the surface to be covered and each remaining defect. The handover should state board size, materials, fastenings and unresolved glazing, joinery, lock or structural work. This preserves the next specialist's view of the problem and keeps temporary action separate from any permanent alteration requiring current property-specific advice.`,
+        ],
+        checks: ['Follow current police scene instructions', 'Photograph everything the board will hide', 'Document all permanent work still required'],
+        faq: { q: 'Do Weddington public-place labels determine boarding decisions?', a: `No. Temporary work is based on the inspected opening, police directions and current property information, not a street schedule or park name.` },
+      },
+      'lock-upgrade': {
+        heading: 'A present-condition security review for Weddington',
+        body: [
+          `The Weddington walkabout and park records provide no evidence about an entrance's existing security. Inspect the complete leaf, frame, hinges, keeps, handles, lock engagement and any cylinder projection. Warwickshire Police guidance supports whole-door assessment and correctly sized, accredited products. Current markings and measurements can then support an improvement option, while alignment, weak surrounding material or a shared system remain explicit constraints rather than being guessed from a street or public-space name.`,
+          `Before an upgrade changes outward appearance or creates new cuts, verify present property status because neither locality source is a designation. The responsible person should also define the allowable scope for common or fire-rated hardware. A useful specification separates adjustment, reinforcement and replacement, states product evidence and fitting dimensions, and identifies any fabric question for further advice. It can describe increased resistance within tested conditions without claiming that one product resolves every possible route through a Weddington entrance.`,
+        ],
+        checks: ['Inspect hinges, keeps and frame condition', 'Verify marked products against measured fit', 'Use current records for external changes'],
+        faq: { q: 'What security product follows from Weddington locality evidence?', a: `None. Those sources describe selected streets and one park; a suitable upgrade follows from the inspected entrance, verified dimensions and current constraints.` },
+      },
+    },
+  }),
+  'horeston-grange': makeGuide({
+    slug: 'horeston-grange',
+    summary: [
+      `Nuneaton and Bedworth Borough Council lists Horestone Grange Woodlands Walk as a local park at Launceston Drive, Nuneaton, with surfaced footpaths. That public-space record does not define the surrounding locality.`,
+      `Warwickshire County Council's street register, produced on 11 August 2026, assigns selected entries such as Crediton Close, Seaton Close and St Ives Way to Horeston Grange, Nuneaton. It is not a property inventory.`,
+    ],
+    accessGuidance: `Give the exact present Horeston Grange address and affected door, not merely the Woodlands Walk or one street from the county register. Identify whether the opening is private, common or managed and who controls it.`,
+    evidenceLimits: `The sources are a public-park directory entry and a current highway-locality register, not parcel or property records. They prove no access arrangement, tenure, building construction, door material, mechanism, service history or demand.`,
+    facts: [
+      {
+        text: `The borough council lists Horestone Grange Woodlands Walk as a local park at Launceston Drive with surfaced footpaths.`,
+        sourceIds: ['nbbc-horestone-grange-woodlands-walk'],
+        serviceRelevance: `This public-space entry can assist orientation but cannot define a private property, locality boundary or entrance.` ,
+      },
+      {
+        text: `The county street register produced on 11 August 2026 assigns Crediton Close, Seaton Close and St Ives Way to Horeston Grange, Nuneaton.`,
+        sourceIds: ['wcc-list-of-streets-2026'],
+        serviceRelevance: `Those selected highway labels can support address checking but supply no evidence about hardware, access or service needs.`,
+      },
+    ],
+    sources: [LOCAL_SOURCES['nbbc-horestone-grange-woodlands-walk'], LOCAL_SOURCES['wcc-list-of-streets-2026']],
+    serviceGuidance: {
+      'emergency-lockout': {
+        heading: 'Identifying the exact Horeston Grange door during a lockout',
+        body: [
+          `The Woodlands Walk and selected street-locality entries cannot identify a present Horeston Grange entrance. A caller should provide the full address, unit or floor where relevant, door position and responsible contact. That preparation distinguishes a private lock from a common threshold before authority is checked. Only then should the locksmith assess whether the door closed on a latch, was deadlocked or has a key or mechanism failure requiring a different opening decision.`,
+          `The park and street sources do not establish heritage status, so visual age should prompt documentation and a current record check rather than an assumption. If opening would remove a lock component or mark surrounding material, explain the exact intervention and its reinstatement separately. MLA guidance supports proof-of-authority and scope clarity. The final method follows the inspected hardware and condition, while any external-fabric question remains with present property evidence and the controller.`,
+        ],
+        checks: ['Identify the exact unit and threshold', 'Prepare proof linked to that entrance', 'Photograph fabric before destructive work'],
+        faq: { q: 'Does the Horeston Grange park identify the locked door?', a: `No. It is a public-space reference; the current property, exact threshold and lawful authority must all be established directly for the booking.` },
+      },
+      'lock-change': {
+        heading: 'Horeston Grange lock changes based on mechanism and purpose',
+        body: [
+          `A public-park record and highway-locality labels say nothing about the lock fitted at a Horeston Grange address. Define whether the change concerns lost keys, a failed mechanism, damage or another agreed objective. Photographs of the handles, edge plate and readable markings prepare the inspection to separate cylinder, case, keep and alignment. Components can then be retained or replaced on observed condition and measurements instead of an assumed building type derived from locality sources.`,
+          `For a common entrance, identify the person responsible for shared keying before changing hardware; a unit occupier's authority may relate only to the private threshold. The cited sources provide no current property-status answer, so check separately if the proposal affects visible material. A clear schedule should name the diagnosed part, dimensions, key quantity, fitting and adjustment, and list any fire-door or external-fabric decision awaiting the relevant building controller rather than burying it in a general lock-change description.`,
+        ],
+        checks: ['Define the reason for replacement', 'Measure components after safe access', 'Confirm authority for shared keying'],
+        faq: { q: 'Do locality records affect a Horeston Grange replacement?', a: `The park and street records do not specify hardware or current controls. Inspection, present property evidence and the threshold controller provide those answers.` },
+      },
+      'upvc-lock-repair': {
+        heading: 'Horeston Grange multipoint diagnosis from observed movement',
+        body: [
+          `Nothing in the park or street records proves that a Horeston Grange door uses uPVC, composite construction or a particular mechanism. Once the actual door is confirmed, record whether the handle lifts fully, the key rotates and hooks or rollers move, plus whether the problem appears only against the frame. That sequence can direct attention to alignment, cylinder, handles or gearbox. Faceplate codes and measured geometry are still necessary before a compatible component is proposed.`,
+          `The locality sources also cannot show whether the affected threshold is privately controlled or part of a shared system. Establish that responsibility and any fire-door status before dismantling hardware. If diagnosis extends into cutting or replacing visible door material, check current property constraints separately. The repair record should state symptoms, tests, markings, measurements and next action, leaving no impression that the Woodlands Walk or street label predicts a mechanism, access condition or repair outcome.`,
+        ],
+        checks: ['Confirm the door is uPVC or composite', 'Record the full operating sequence', 'Identify the responsible threshold controller'],
+        faq: { q: 'Can Horeston Grange locality records identify multipoint parts?', a: `No. The mechanism's markings, backset, centres and locking layout must be inspected and measured on the individual door before part selection.` },
+      },
+      'boarding-up': {
+        heading: 'Temporary security for a damaged Horeston Grange opening',
+        body: [
+          `The public-park description and street entries have no bearing on the extent or cause of damage at an opening. Follow police instructions, then photograph the point of entry, frame, glazing or door leaf, compromised lock and adjacent surfaces before covering anything. Confirm whether the opening belongs to one unit or shared circulation and who controls it. That record supports a board plan from current evidence without attributing property characteristics to a locality label.`,
+          `Because the locality sources are not designation maps, potential heritage constraints must be checked from present property records if visible fabric could be affected. Fixings should be selected from the inspected remaining structure and documented before installation. The handover should give dimensions, material, support points, covered damage and permanent glazing, joinery, door, lock or structural tasks still open. This allows the next contractor to recover the initial condition rather than relying on the Woodlands Walk or a street name.`,
+        ],
+        checks: ['Follow police instructions at the scene', 'Record shared-opening authority before fixing', 'List each unresolved permanent repair'],
+        faq: { q: 'Do Horeston Grange locality records alter boarding?', a: `No automatic method follows. The temporary design depends on present damage, safe supports, police directions and any separately verified property constraint.` },
+      },
+      'lock-upgrade': {
+        heading: 'Measured security planning for a Horeston Grange entrance',
+        body: [
+          `The public-park and street records contain no door-security evidence. A Horeston Grange review should inspect leaf and frame condition, hinges, keeps, handles, lock engagement and any cylinder projection. Warwickshire Police supports considering the complete entrance and correctly sized accredited products. Markings, measurements and operation then establish which improvement is compatible, while alignment, fire-door duties or weak surrounding material remain separate findings rather than assumptions based on a locality label.`,
+          `Any outward alteration needs present property evidence because the Woodlands Walk and highway register are not heritage designations or parcel boundaries. Photograph existing cut-outs and furniture, identify the controller of common hardware and separate adjustment from reinforcement or replacement. The specification should record independently evidenced product properties, exact fit and dependencies, and refer unresolved fabric questions appropriately. This permits a conditional improvement in tested resistance without claiming that locality sources describe construction or guarantee the upgraded entrance.`,
+        ],
+        checks: ['Assess hardware within the whole entrance', 'Document product evidence and measurements', 'Verify current constraints before alteration'],
+        faq: { q: 'Is there a standard upgrade for Horeston Grange?', a: `No area-wide product follows from locality records. The inspected door, frame, measured hardware and current building requirements determine suitable options.` },
+      },
+    },
+  }),
+  whitestone: makeGuide({
+    slug: 'whitestone',
+    summary: [
+      `Warwickshire County Council's street register, produced on 11 August 2026, assigns Fairway, Falcon Close and Falstaff Close to Whitestone, Nuneaton. These selected highway entries do not create a complete locality boundary.`,
+      `The same current register assigns St Andrews Drive, Whitestone Road and Willowfields Road to Whitestone, Nuneaton. It provides street-to-locality labels rather than evidence about properties, buildings or entrances.`,
+    ],
+    accessGuidance: `Give the full Whitestone property address and exact entrance. The county register's selected street-to-locality labels may help verify spelling and locality, but they cannot establish a property boundary, unit or access.`,
+    evidenceLimits: `The evidence is a current county highway register, not a complete postcode, ward, route or parcel map. It does not verify property status, tenure, construction, lock type, access control or service circumstances.`,
+    facts: [
+      {
+        text: `The county street register produced on 11 August 2026 assigns Fairway, Falcon Close and Falstaff Close to Whitestone, Nuneaton.`,
+        sourceIds: ['wcc-list-of-streets-2026'],
+        serviceRelevance: `These selected street labels can support address checking but cannot be converted into a full boundary or property description.`,
+      },
+      {
+        text: `The same register assigns St Andrews Drive, Whitestone Road and Willowfields Road to Whitestone, Nuneaton.`,
+        sourceIds: ['wcc-list-of-streets-2026'],
+        serviceRelevance: `The highway-locality entries say nothing about the premises, exact entrance, authority or hardware at an address.`,
+      },
+    ],
+    sources: [LOCAL_SOURCES['wcc-list-of-streets-2026']],
+    serviceGuidance: {
+      'emergency-lockout': {
+        heading: 'Using the exact address during a Whitestone lockout',
+        body: [
+          `Because the county register lists individual Whitestone streets without defining each property, a street label should not stand in for a current address. A lockout call should give the complete property, unit or floor, exact locked threshold and person responsible for it. Whitestone Road or Willowfields Road may help verify locality but does not establish access. Authority can then be checked against the real opening before latch, key, deadlock and existing-damage observations guide the technical approach.`,
+          `The street register provides no blanket property status. If an older-looking door could be affected by a destructive method, record its face, frame and visible furniture and consult current records where appropriate. MLA evidence supports agreeing any revised scope before it proceeds. The locksmith's inspection determines what opening options are proportionate; the locality labels determine none. Reinstatement or external-fabric work should be described separately so the current owner or relevant authority can make the next decision.`,
+        ],
+        checks: ['Use the complete Whitestone address', 'Identify the actual locked threshold', 'Verify current status before fabric change'],
+        faq: { q: 'Does a Whitestone street label govern a lockout?', a: `No. It provides address context only; the complete property, exact threshold, verified authority and inspected lock control the opening decision.` },
+      },
+      'lock-change': {
+        heading: 'A Whitestone lock change separated from planning terminology',
+        body: [
+          `Whitestone Road and the other county street entries do not identify hardware. Preparation should state the key-control or mechanical reason for change and provide images of both door faces, the edge plate and readable marks. Inspection can isolate a cylinder, case, keep or alignment problem, making it possible to retain sound parts and measure a replacement. Neither the street name nor its Whitestone locality label supplies a product specification for the individual entrance.`,
+          `If the threshold is shared, establish who controls its keys and hardware before the change; the street register says nothing about that authority. Likewise, check current property status only when proposed work could affect visible external material. The written scope should separate the diagnosed component, fitting, keys and adjustment from any new cutting or frontage alteration. This creates an accountable next step while keeping highway-locality evidence outside mechanical compatibility and present building-control conclusions.`,
+        ],
+        checks: ['State the key-control or failure reason', 'Capture all readable lock markings', 'Confirm responsibility for common hardware'],
+        faq: { q: 'Does Whitestone Road specify hardware for nearby doors?', a: `No. It is a highway-locality entry; hardware must be identified from the individual door, lock markings, dimensions and observed operation.` },
+      },
+      'upvc-lock-repair': {
+        heading: 'Whitestone uPVC fault-finding from mechanism evidence',
+        body: [
+          `The current street-to-locality labels offer no evidence that a Whitestone property has a uPVC or composite entrance. For the actual door, note the order of key rotation, handle lift and locking-point travel, plus whether the sash rubs or operates differently when open. Those observations direct diagnosis among alignment, keeps, cylinder, handles and gearbox. A full faceplate image and exact geometry remain essential before any compatible multipoint part can be stated.`,
+          `Highway-locality names also cannot establish whether the affected threshold is private, communal or managed. Identify its controller and any fire-door status independently. If the repair expands beyond internal hardware into visible material, use current property information rather than the street register. The work record should show symptoms, safe tests, markings, backset, centres and next diagnostic action, ensuring that a Whitestone label is not mistaken for evidence about mechanism type or condition.`,
+        ],
+        checks: ['Record key, handle and hook sequence', 'Photograph the entire fitted faceplate clearly', 'Establish private or shared responsibility'],
+        faq: { q: 'Can Whitestone street labels identify a gearbox?', a: `No. Compatible parts require actual faceplate marks, dimensions and locking layout; locality terminology contains no mechanical evidence about the fitted door.` },
+      },
+      'boarding-up': {
+        heading: 'Current opening evidence for temporary boarding in Whitestone',
+        body: [
+          `The selected street entries describe no damage at a Whitestone opening. Follow police directions before touching the scene, then photograph the point of entry, frame, glazing or door, damaged lock and adjacent surfaces. Name the precise private or shared threshold and the responsible person. Those current observations support temporary dimensions and handling, while the county register stays limited to confirming that selected roads carry a Whitestone locality label.`,
+          `The street register is not a parcel-status record, so the fixing plan should use inspected support material and any separately verified current constraint. Mark sound and broken areas, intended fixing points and surfaces that will be concealed. The handover should state board construction and list permanent glazing, joinery, door, lock or structural tasks still required. This allows later repair to proceed from documented damage without importing assumptions about present premises from a highway-locality entry.`,
+        ],
+        checks: ['Follow current police evidence-preservation directions carefully', 'Identify the controller of the opening', 'Record every covered component clearly'],
+        faq: { q: 'Does the Whitestone street register change board selection?', a: `No. Selection follows the inspected opening and present property evidence; highway-locality labels do not describe structure, damage or fixing surfaces.` },
+      },
+      'lock-upgrade': {
+        heading: 'Entrance-specific security assessment for Whitestone',
+        body: [
+          `Whitestone's highway-locality entries do not show a door's construction or resistance. An upgrade review should inspect the leaf, frame, hinges, keeps, handles, lock operation and cylinder fit where applicable. Warwickshire Police supports whole-entrance checks and accurately sized, accredited products. Product markings and measurements can then support a suitable proposal, while alignment, weak surrounding material or a shared system are documented as their own findings instead of being inferred from a street entry.`,
+          `Before new cutting or visible substitution, check current address-level status because the street-locality labels are neither designation nor permission. For communal or fire-rated hardware, the responsible controller should define the scope. The final specification should list adjustment, reinforcement and replacement separately, cite tested product evidence and identify unresolved fabric questions. It may describe improved resistance within defined test conditions, but it must not turn the Whitestone name into a universal security recommendation.`,
+        ],
+        checks: ['Inspect the surrounding frame and hinges', 'Confirm exact product dimensions and evidence', 'Check present status for visible work'],
+        faq: { q: 'Is one accredited lock right for Whitestone?', a: `No. Accredited options still need to suit the measured door system and complete entrance, with current property and management constraints checked separately.` },
+      },
+    },
+  }),
+  'camp-hill': makeGuide({
+    slug: 'camp-hill',
+    summary: [
+      `The council's housing walkabout schedule has a Camp Hill row naming streets including Almond Avenue, Green Lane, Hillcrest Road, Queen Elizabeth Road and Sycamore Road. It covers selected housing locations, not every address.`,
+      `The council separately lists Queen Elizabeth Road as a local park at CV10 9BU with a play area, multi-use games area, outdoor gym, seating and surfaced footpaths. This is public-space context only.`,
+    ],
+    accessGuidance: `Use the complete current Camp Hill address, exact entrance and responsible contact. The selected walkabout streets and Queen Elizabeth Road park can aid orientation but cannot prove a locality boundary or property access.`,
+    evidenceLimits: `The locality evidence is a housing engagement schedule and one park directory entry. It does not establish neighbourhood extent, parcel designation, building type, tenure, door construction, lock condition, access rights or service history.`,
+    facts: [
+      {
+        text: `The council housing walkabout schedule names Almond Avenue, Green Lane, Hillcrest Road, Queen Elizabeth Road and Sycamore Road under Camp Hill.`,
+        sourceIds: ['nbbc-tenant-walkabouts-2026'],
+        serviceRelevance: `The selected housing streets can aid address checking but cannot describe a route boundary, premises, entrance or hardware.`,
+      },
+      {
+        text: `The council directory lists Queen Elizabeth Road as a local park at Nuneaton CV10 9BU and records several public facilities there.`,
+        sourceIds: ['nbbc-queen-elizabeth-road-park'],
+        serviceRelevance: `The public-space entry supplies orientation only and must not be used to infer a customer's property, entrance or access.`,
+      },
+    ],
+    sources: [LOCAL_SOURCES['nbbc-tenant-walkabouts-2026'], LOCAL_SOURCES['nbbc-queen-elizabeth-road-park']],
+    serviceGuidance: {
+      'emergency-lockout': {
+        heading: 'A Camp Hill lockout anchored to the current threshold',
+        body: [
+          `The Camp Hill walkabout street list and Queen Elizabeth Road park cannot identify a customer's door. Prepare the full current address, entrance position and whether the threshold is private or shared, then establish the caller's connection to it. A meeting location or public-space name does not broaden that authority. Inspection of latch state, key movement, deadlocking and damage should begin only after the correct opening is established.`,
+          `The council locality sources provide no property-status finding. If the opening method could remove visible material from an older-looking entrance, photograph it and consult current records where relevant rather than assuming a constraint. MLA guidance supports proof-of-authority and explaining changes in scope. A destructive step, if inspection makes one necessary, should identify the exact affected component and reinstatement need, leaving any wider external alteration for a separate decision grounded in present property evidence.`,
+        ],
+        checks: ['Give the full present Camp Hill address', 'Confirm the exact controlled threshold', 'Check current records before fabric removal'],
+        faq: { q: 'Does the Camp Hill walkabout schedule define access?', a: `No. It names selected council housing streets and provides no evidence about a customer's entrance, route or authority for that property.` },
+      },
+      'lock-change': {
+        heading: 'Camp Hill replacement decisions based on the fitted component',
+        body: [
+          `The Queen Elizabeth Road park entry does not indicate whether a Camp Hill door uses a cylinder, nightlatch, mortice case or multipoint system. Explain the purpose of the change, then photograph both handle faces, the edge and visible codes. An inspection can separate the failed or compromised part from alignment and surrounding-frame issues. Compatible dimensions and key-control needs, rather than a nearby public-space name, should define what is retained and replaced.`,
+          `A shared door requires its hardware controller and keying scope to be confirmed independently of the housing walkabout schedule. If the proposed work would cut or substitute external material, obtain current address-level status because neither council source is a designation. The written next step should list diagnosis, measured product, keys, fitting, adjustment and any held-over fabric or fire-door question. That structure prevents selected Camp Hill street references from being misused as present authority or property evidence.`,
+        ],
+        checks: ['Explain why the lock must change', 'Record faceplate codes and dimensions', 'Identify who controls shared keys'],
+        faq: { q: 'Can Queen Elizabeth Road park evidence identify a replacement?', a: `No. It identifies a public space only; the actual door, component markings and measured fit determine compatibility for the proposed work.` },
+      },
+      'upvc-lock-repair': {
+        heading: 'Camp Hill multipoint diagnosis from door behaviour',
+        body: [
+          `The walkabout and park records contain no evidence that an affected Camp Hill entrance is uPVC or composite. Confirm the material, then record whether the key rotates, the handle reaches its normal position and the hooks or rollers move. When safe, compare operation with the door open and against the frame. These observations help distinguish alignment, keep, cylinder, handle and gearbox issues, while faceplate markings and exact geometry remain necessary before a part is named.`,
+          `The selected housing streets cannot tell whether the mechanism belongs to one occupier or a common entrance. Establish the responsible person and any fire-door constraint before dismantling it. A visible-fabric change also requires present property information, not a walkabout or park entry. The repair record should state the threshold, symptoms, tests, centres, backset and locking layout and identify the next diagnostic action, keeping Camp Hill public-place references outside the mechanical conclusion.`,
+        ],
+        checks: ['Verify the door material directly', 'Describe open and closed operation', 'Measure the complete locking geometry'],
+        faq: { q: 'Does Camp Hill locality evidence reveal a multipoint lock?', a: `No. Only inspection of the actual door and its marked, measured mechanism can establish type, fault and compatible components for that entrance.` },
+      },
+      'boarding-up': {
+        heading: 'Evidence-led temporary boarding for a Camp Hill opening',
+        body: [
+          `A housing walkabout or park entry cannot explain damage at a Camp Hill address. Follow police directions before moving material, then photograph the precise point of entry, remaining frame, glazing or door, compromised lock and nearby surfaces. Identify whether it is a private opening or shared threshold and who controls temporary work. Those current observations establish dimensions and handling needs without claiming that Queen Elizabeth Road or another scheduled street describes the property.`,
+          `Since neither source is a parcel or designation map, possible external-fabric constraints must be verified separately. Mark intact supports, damaged substrate and intended fixing locations before boarding. The completion record should state board material, size, fastenings, covered elements and permanent glazing, joinery, door, lock or structural issues still unresolved. This handover preserves evidence for the next specialist and prevents a public-place reference from becoming an unsupported access, construction or property-status assertion.`,
+        ],
+        checks: ['Preserve evidence as police instruct', 'Photograph support and damaged material', 'Record the temporary scope and handover'],
+        faq: { q: 'Do Camp Hill locality records affect boarding fixings?', a: `Not without current property evidence. Fixings depend on the inspected opening, safe surviving material and any verified address-specific constraint at the property.` },
+      },
+      'lock-upgrade': {
+        heading: 'A complete-entrance upgrade review in Camp Hill',
+        body: [
+          `Camp Hill's housing walkabout and park records say nothing about the resistance of a particular entrance. Inspect leaf and frame condition, hinges, keeps, handles, lock engagement and cylinder fit where applicable. Warwickshire Police supports assessing the full door assembly and considering correctly sized, accredited products. Measurements and visible marks can then support suitable options, while misalignment or frame weakness remains separately recorded rather than being obscured by a general neighbourhood label.`,
+          `Check current property information before new cutting or an outward hardware change because the council locality sources create no designation. For managed or fire-rated thresholds, establish the responsible party and requirements first. The specification should distinguish adjustment, reinforcement and replacement, provide product evidence and note any external-material question for separate advice. It can explain conditional improvement within tested conditions without claiming that one product fits Camp Hill generally or that a named park predicts existing hardware.`,
+        ],
+        checks: ['Inspect door, frame, hinges and keeps', 'Measure before comparing accredited products', 'Verify current constraints for alterations'],
+        faq: { q: 'Do Camp Hill locality sources suggest an upgrade?', a: `No. The street and park records provide no security evidence; the measured entrance and current building constraints determine appropriate options for that opening.` },
+      },
+    },
+  }),
+  'chapel-end': makeGuide({
+    slug: 'chapel-end',
+    summary: [
+      `Warwickshire's Historic Environment Record describes the Congregational Chapel on Coleshill Road, Chapel End, as built in 1840 to replace an earlier chapel of 1807-08. This evidence concerns one named building.`,
+      `Warwickshire County Council's street register, produced on 11 August 2026, assigns Alders Lane, Lincoln Avenue and Salisbury Drive to Chapel End, Nuneaton. These selected street labels are not a complete locality boundary.`,
+    ],
+    accessGuidance: `Provide the exact modern Chapel End address, affected entrance and responsible person. The named historic chapel and selected county street labels cannot establish the full route area, property access or building control.`,
+    evidenceLimits: `The sources describe one historic chapel and selected current highway-locality entries. They supply no complete boundary, parcel designation, property type, tenure, opening arrangement, door material, lock system, incident pattern or service demand.`,
+    facts: [
+      {
+        text: `The Warwickshire record describes the Congregational Chapel on Coleshill Road as built in 1840 to replace a chapel of 1807-08.`,
+        sourceIds: ['warwickshire-her-chapel-end-chapel'],
+        serviceRelevance: `This building-specific record must not be treated as a description or designation of other Chapel End properties.`,
+      },
+      {
+        text: `The county street register produced on 11 August 2026 assigns Alders Lane, Lincoln Avenue and Salisbury Drive to Chapel End, Nuneaton.`,
+        sourceIds: ['wcc-list-of-streets-2026'],
+        serviceRelevance: `The selected highway labels can aid address checking but prove no property condition, entrance, authority or service need.`,
+      },
+    ],
+    sources: [LOCAL_SOURCES['warwickshire-her-chapel-end-chapel'], LOCAL_SOURCES['wcc-list-of-streets-2026']],
+    serviceGuidance: {
+      'emergency-lockout': {
+        heading: 'Current-address preparation for a Chapel End lockout',
+        body: [
+          `The historic chapel record and selected Chapel End street entries do not identify today's locked threshold. Give the complete address, unit or floor if relevant, door position and whether the opening is private or common. The caller's authority must relate to that precise entrance. Only after it is identified should the locksmith examine latch state, deadlocking, key behaviour and prior damage; neither the 1840 building date nor a highway-locality label contributes mechanical evidence.`,
+          `The heritage evidence concerns one named chapel, not surrounding addresses. If an opening method could affect visible or apparently older material, photograph it and check present records rather than transferring the chapel's record across Chapel End. MLA guidance supports agreeing authority and changed scope. Any drilling, removal or replacement should be explained at component level, with reinstatement and possible external-fabric work recorded separately so the appropriate owner or authority can make the next property-specific decision.`,
+        ],
+        checks: ['Use the complete Chapel End address', 'Link authority to the exact opening', 'Verify present status before fabric work'],
+        faq: { q: 'Does the Chapel End heritage record control lockout work?', a: `Only if verified for the exact property. The current threshold, lawful authority and inspected lock still control the opening decision at that address.` },
+      },
+      'lock-change': {
+        heading: 'Changing a Chapel End lock from present hardware evidence',
+        body: [
+          `An 1840 chapel record and county street entries reveal nothing about a different Chapel End door. Start with the reason for change, then record inside and outside furniture, faceplate marks and closing behaviour. The locksmith can examine the cylinder, case, keep and alignment separately to determine whether repair, component replacement or broader work is justified. Exact dimensions and desired key control create the specification; locality history does not identify a product.`,
+          `Confirm the responsible person before altering shared hardware, since the street register says nothing about ownership or keying. If new cutting or a visible substitution is proposed, use current property records and check whether the named chapel record actually applies. The written scope should list retained parts, measured replacement, keys, fitting, adjustment and any separate fire-door or external-material question. This preserves a traceable decision sequence without presenting one heritage record as area-wide authority.`,
+        ],
+        checks: ['State the purpose of the change', 'Photograph hardware and door alignment', 'Confirm responsibility for communal components'],
+        faq: { q: 'Can the Chapel End chapel record identify nearby hardware?', a: `No. It concerns one named building and provides no information about the construction, lock or controller at another individual address.` },
+      },
+      'upvc-lock-repair': {
+        heading: 'Chapel End uPVC diagnosis independent of centre history',
+        body: [
+          `The historic chapel and street records do not indicate whether a Chapel End entrance is uPVC or composite. For the door actually affected, document key movement, handle lift, locking-point travel and whether the problem changes when the sash meets the frame. A cautious open-door comparison, where safe, can direct inspection toward alignment, keeps, cylinder, handle or gearbox. Markings, backset, centres and layout remain necessary before compatibility can be confirmed.`,
+          `The selected street-to-locality labels provide no present authority information. Establish whether the mechanism belongs to a private entrance, a common door or a managed fire door before parts are removed. If the repair would alter visible fabric, check the exact current property record separately and do not transfer the chapel evidence. The next-step note should state symptoms, tests and measurements, keeping locality history outside the mechanical and building-control conclusions.`,
+        ],
+        checks: ['Confirm the actual door construction', 'Record safe operation with the door open and closed', 'Identify management or fire-door control'],
+        faq: { q: 'Does Chapel End locality history identify a uPVC mechanism?', a: `No. Mechanism identity and fault follow from the individual door's operation, faceplate markings and measured locking geometry at the current address.` },
+      },
+      'boarding-up': {
+        heading: 'Temporary boarding at Chapel End with dated facts kept separate',
+        body: [
+          `The historic chapel and street register cannot describe a damaged Chapel End opening. Follow police guidance first, then photograph the point of entry, broken glazing or door, remaining frame, lock damage and adjacent material before a board hides them. Identify the threshold and person controlling it. Those records support a temporary design from present evidence and avoid turning building-specific history or a highway label into an assertion about this premises.`,
+          `Any property-status or external-material constraint needs a current address check, because the heritage record applies only to its named chapel. Mark usable supports, damage and intended fixing locations, then record board dimensions, construction and what remains concealed. The handover should name every unresolved glazing, joinery, lock, door or structural task. This keeps boarding temporary and evidence-aware while leaving permanent alteration to the appropriate later assessment instead of assuming conditions from locality evidence.`,
+        ],
+        checks: ['Follow police directions before covering', 'Photograph frame and hardware damage', 'List all outstanding permanent work'],
+        faq: { q: 'Does Chapel End locality history determine board supports?', a: `No. Supports must be chosen from the inspected opening and current property evidence, not a named historic building or street label.` },
+      },
+      'lock-upgrade': {
+        heading: 'Measured entrance upgrades for Chapel End',
+        body: [
+          `Chapel End's historic chapel and street records contain no information about the security of another door. Review the entire entrance: leaf, frame, hinges, keeps, handles, lock operation and any cylinder projection. Warwickshire Police guidance supports this complete assessment and correctly sized, accredited products. Markings, measurements and current condition can then support an option, while alignment or surrounding-frame issues remain explicit rather than being hidden behind an area label.`,
+          `Before a visible alteration, establish current property status because the cited locality evidence neither grants nor restricts work at an unspecified address. Common or fire-rated hardware also requires the responsible controller's requirements. The specification should separate adjustment, reinforcement and replacement, name the evidence for product performance and record any fabric question awaiting further advice. An accredited component may improve resistance under tested conditions, but one chapel record cannot justify a uniform recommendation or promise an outcome for Chapel End entrances.`,
+        ],
+        checks: ['Survey the complete current entrance', 'Verify dimensions and accredited evidence', 'Use current records for visible changes'],
+        faq: { q: 'Does Chapel End need one standard upgrade?', a: `No. The locality evidence does not describe area-wide doors; measured construction, fit, complete-entry condition and current building constraints determine suitable choices.` },
+      },
+    },
+  }),
+  'bermuda-park': makeGuide({
+    slug: 'bermuda-park',
+    summary: [
+      `Warwickshire County Council records that Bermuda Park station opened on 18 January 2016 after a fifteen-month build connected with improvements to the Nuneaton-Coventry railway line. This is transport history only.`,
+      `The same retrospective reports approximately 28,000 station passengers in 2017/18 and just over 38,000 in 2019/20. Those period figures do not establish current usage, local demand or property context.`,
+    ],
+    accessGuidance: `Provide the full Bermuda Park property address, building or unit and exact affected entrance. The station is a point feature and cannot be used to infer the route boundary, land use or access to premises.`,
+    evidenceLimits: `The sole locality source concerns one railway station and historic passenger periods. It proves no wider-area boundary, present activity, property status, building construction, tenure, entrance arrangement, lock type or service need.`,
+    facts: [
+      {
+        text: `Bermuda Park station opened on 18 January 2016 after a fifteen-month build on the Nuneaton-Coventry line improvement project.`,
+        sourceIds: ['wcc-bermuda-park-railway-200'],
+        serviceRelevance: `The exact date supports transport history but cannot imply present road access, proximity or service performance.`,
+      },
+      {
+        text: `The council retrospective reports about 28,000 passengers in 2017/18 and more than 38,000 in 2019/20.`,
+        sourceIds: ['wcc-bermuda-park-railway-200'],
+        serviceRelevance: `These are period-specific station figures and must not become current usage, footfall, demand or incident claims.`,
+      },
+    ],
+    sources: [LOCAL_SOURCES['wcc-bermuda-park-railway-200']],
+    serviceGuidance: {
+      'emergency-lockout': {
+        heading: 'A Bermuda Park lockout needs a property, not a station reference',
+        body: [
+          `The verified station opening date identifies a railway point, not the door at a Bermuda Park call. Preparation should give the full property and unit, the exact threshold and whether it is private or shared, plus the person who controls it. Historical passenger totals do not show present occupancy or access. The locksmith should connect authority to that opening before assessing whether the latch closed, the lock was deadlocked or a key or mechanism failed.`,
+          `The railway source contains no property-status evidence. If entry might require removal of visible material, photograph the door and frame and check any current constraint separately. MLA guidance supports proof-of-authority and agreement before scope changes. The opening method follows the inspected lock and condition, never passenger counts or station proximity. Any reinstatement, shared-system or external-fabric issue should be recorded as its own next decision for the responsible property party.`,
+        ],
+        checks: ['Give the full property and unit', 'Identify the exact locked threshold', 'Prepare evidence of lawful connection'],
+        faq: { q: 'Can Bermuda Park station identify the lockout location?', a: `Only as broad orientation. The station is a point feature; the complete property, entrance and caller's authority must be confirmed directly.` },
+      },
+      'lock-change': {
+        heading: 'Bermuda Park lock changes based on the actual component',
+        body: [
+          `A 2016 station opening and historic passenger figures provide no clue to the lock fitted at a Bermuda Park address. State whether the change concerns lost keys, failure, damage or another defined objective. Photographs of both hardware faces, the door edge and readable markings prepare a component-level inspection. Cylinder, case, keep and alignment can then be assessed separately, with measurements and key requirements supporting the replacement rather than an assumed property type around the station.`,
+          `Because the locality source does not define land use, ownership or property status, confirm who controls the threshold and check current building information where visible work is proposed. A private unit and common door can require different authority even at one address. The written schedule should list diagnosed components, retained parts, dimensions, keys, fitting and adjustment, and reserve any fire-door or external-material question for the responsible party instead of inferring conditions from the rail project.`,
+        ],
+        checks: ['Define the reason for changing keys', 'Photograph and measure existing hardware', 'Confirm control of any shared entrance'],
+        faq: { q: 'Do Bermuda Park passenger figures indicate door hardware?', a: `No. They are dated station statistics and provide no evidence about a property's door, lock, controller or replacement requirements at the address.` },
+      },
+      'upvc-lock-repair': {
+        heading: 'Bermuda Park multipoint diagnosis without transport inference',
+        body: [
+          `The station retrospective cannot establish whether an affected Bermuda Park door is uPVC or composite. After confirming the actual material, record key rotation, handle travel, hook or roller movement and the difference between safe open and closed operation. These symptoms help direct inspection among frame alignment, keeps, cylinder, handles and gearbox. Faceplate marks and exact backset, centres and layout still determine compatibility; railway dates and usage figures determine none of them.`,
+          `A station point also reveals nothing about whether the door is privately controlled, communal or managed. Identify the responsible person and any fire-door requirements before dismantling hardware. If diagnosis expands into visible material, consult current property records rather than the transport source. The repair note should capture symptoms, tests, measurements and the next diagnostic step, explicitly avoiding claims about local construction or mechanism prevalence based on the Bermuda Park name or historic passenger totals.`,
+        ],
+        checks: ['Confirm the actual door material', 'Record mechanism movement without forcing', 'Measure faceplate and locking geometry'],
+        faq: { q: 'Can the station history identify Bermuda Park multipoint parts?', a: `No. Compatible parts require markings and measurements from the individual mechanism; transport history contains no technical door evidence for that mechanism.` },
+      },
+      'boarding-up': {
+        heading: 'Temporary boarding at Bermuda Park from scene evidence',
+        body: [
+          `Station history and passenger periods cannot describe damage at a Bermuda Park property. Follow police instructions, then photograph the point of entry, frame, glazing or door leaf, compromised hardware and surrounding surface before covering it. Identify whether the opening is private or common and who controls it. Those scene-specific observations establish dimensions and handling requirements without converting a railway point or old usage figure into evidence about a building or incident.`,
+          `The locality source supplies no designation or structural information, so fixings should be chosen from the inspected remaining material and any separately verified current property constraint. Mark supports and damaged substrate and document what the board will conceal. The completion record should give material, size, fixing positions and unresolved glazing, joinery, door, lock or structural tasks. This prepares the permanent repairer while keeping the station retrospective outside decisions it cannot support.`,
+        ],
+        checks: ['Follow police scene guidance first', 'Photograph every covered damaged element', 'Document temporary support and follow-on work'],
+        faq: { q: 'Does station proximity affect Bermuda Park boarding?', a: `The cited source cannot support that conclusion. Boarding depends on the exact opening, surviving material, authority and any current property constraint.` },
+      },
+      'lock-upgrade': {
+        heading: 'Measured security options for a Bermuda Park entrance',
+        body: [
+          `The railway retrospective says nothing about security hardware at Bermuda Park properties. An upgrade review should inspect the complete door and frame, hinges, keeps, handles, lock engagement and cylinder fit where applicable. Warwickshire Police supports whole-entrance assessment and correctly sized, accredited products. Current markings, measurements and operation can then support a suitable option, while alignment, frame condition or shared access remain separate findings instead of being inferred from station development.`,
+          `Since the station is only a point feature, it cannot establish property type, status or management. Check those facts directly before changing visible fabric or common hardware. The specification should distinguish adjustment, reinforcement and replacement, state independently evidenced product properties and identify any fire-door or material question for further advice. It may explain conditional improvement in tested resistance, but neither the 2016 opening nor old passenger totals justify an area-wide product choice or security outcome.`,
+        ],
+        checks: ['Inspect the whole entrance assembly', 'Verify product fit and evidence', 'Check property and management constraints directly'],
+        faq: { q: 'Is there a Bermuda Park station-area upgrade standard?', a: `No. The source supplies transport history only; the measured entrance, existing hardware and current building requirements determine appropriate options for that entrance.` },
+      },
+    },
+  }),
+  'galley-common': makeGuide({
+    slug: 'galley-common',
+    summary: [
+      `Warwickshire's Historic Environment Record describes documentary and cartographic research into the former Manor of Stockingford and Galley Common, including a 1592 map and the 1842 tithe plan. It is historic evidence.`,
+      `Warwickshire County Council's street register, produced on 11 August 2026, assigns Auden Close, Chaucer Drive, Chesterton Drive and Orford Rise to Galley Common, Nuneaton. These are selected highway labels, not a boundary.`,
+    ],
+    accessGuidance: `Use the complete current Galley Common address and exact affected opening. Historic manor references and selected county street labels may aid orientation, but they do not establish a route boundary or property access.`,
+    evidenceLimits: `The evidence is a historic-environment record and current highway register. It proves no complete locality boundary, property status, tenure, building construction, door material, lock type, access condition or service demand.`,
+    facts: [
+      {
+        text: `The Warwickshire record links Galley Common to documentary and map research into the former Manor of Stockingford, including 1592 and 1842 mapping.`,
+        sourceIds: ['warwickshire-her-stockingford-galley-manor'],
+        serviceRelevance: `The historic research cannot become a current property-status, construction, access, activity or service-demand claim.`,
+      },
+      {
+        text: `The county street register produced on 11 August 2026 assigns Auden Close, Chaucer Drive, Chesterton Drive and Orford Rise to Galley Common, Nuneaton.`,
+        sourceIds: ['wcc-list-of-streets-2026'],
+        serviceRelevance: `These selected street labels can help check an address but cannot define the modern route or property boundaries.`,
+      },
+    ],
+    sources: [LOCAL_SOURCES['warwickshire-her-stockingford-galley-manor'], LOCAL_SOURCES['wcc-list-of-streets-2026']],
+    serviceGuidance: {
+      'emergency-lockout': {
+        heading: 'Present-threshold checks for a Galley Common lockout',
+        body: [
+          `The former-manor record and selected Galley Common street labels do not identify today's locked door. Give the full address, unit where relevant, exact threshold and the person who controls it. A common entrance and private door need separate authority even if they share a postcode. The locksmith should assess latch state, deadlocking, key operation and visible damage only after the caller's connection to the correct opening has been established.`,
+          `Neither locality source supplies parcel-level property status. If an opening method might disturb visible material, photograph the existing door and use current records rather than presuming a constraint from historic mapping or a highway label. MLA guidance supports authority and scope confirmation. Any drilling, removal or replacement should identify the affected component and reinstatement separately, leaving a broader fabric or management issue as a documented next step for the present property controller.`,
+        ],
+        checks: ['Provide the full Galley Common address', 'Identify private and shared thresholds separately', 'Check current status before material removal'],
+        faq: { q: 'Do Galley Common locality records locate a lockout door?', a: `No. They provide historic and highway context; the complete current address, exact door and caller's lawful connection must be confirmed directly.` },
+      },
+      'lock-change': {
+        heading: 'Galley Common lock changes from present component evidence',
+        body: [
+          `The 1592 and 1842 map references say nothing about locks at a Galley Common property. Preparation should explain whether the objective is key control, mechanical repair or damage response, then show handle faces, the door edge and readable codes. Inspection can isolate cylinder, lock case, keep and alignment issues, retaining sound parts where appropriate. Compatibility follows from geometry and markings, not from former-manor history or surrounding street names.`,
+          `The county street register does not establish ownership or current property controls. Confirm who authorises changes to any communal threshold and check address-level status separately if visible external work is proposed. The schedule should name the diagnosed component, dimensions, supplied keys, fitting and adjustment, and list fire-door or fabric questions outside that scope. This approach prevents locality evidence from becoming an unsupported shortcut to a building type, lock distribution or authority conclusion.`,
+        ],
+        checks: ['Define the change objective clearly', 'Capture faceplate marks and dimensions', 'Confirm authority for shared key changes'],
+        faq: { q: 'Can Galley Common historic mapping specify hardware?', a: `No. The mapping describes locality history only; the fitted lock, measured door and responsible controller determine replacement requirements for that door.` },
+      },
+      'upvc-lock-repair': {
+        heading: 'Galley Common multipoint diagnosis from symptoms and measurements',
+        body: [
+          `No uPVC or composite-door fact appears in the Galley Common historic or highway evidence. For an actual affected door, record the sequence of key rotation, handle lift and locking-point movement and whether operation changes when the sash meets the frame. This can direct inspection toward alignment, keeps, cylinder, handles or gearbox. Full faceplate markings, centres, backset and locking layout are still needed before any compatible mechanism or component can be identified.`,
+          `The former-manor record and street register cannot reveal who controls a modern entrance. Establish private, shared or managed responsibility and any fire-door constraint before hardware is removed. If diagnosis would extend into visible material, consult current property information rather than historic maps. The work record should state tests, measurements and next action, keeping locality history completely separate from claims about door type, mechanism prevalence or repair result.`,
+        ],
+        checks: ['Verify the door construction at site', 'Record safe open and closed behaviour', 'Measure the complete multipoint layout'],
+        faq: { q: 'Does Galley Common locality evidence identify a gearbox?', a: `No. Only markings, dimensions and operation of the mechanism fitted to the individual door can establish a compatible repair option.` },
+      },
+      'boarding-up': {
+        heading: 'Temporary boarding in Galley Common with current scene evidence',
+        body: [
+          `Historic manor references and highway-locality labels cannot describe a damaged Galley Common opening. Follow police directions before disturbing it, then photograph the point of entry, remaining frame, glazing or door leaf, compromised lock and surrounding surfaces. Confirm the exact threshold and responsible person. Those scene-specific records guide board dimensions and safe handling without implying that a historic map or named street says something about this property's construction or incident.`,
+          `Because neither source is a current designation map, external-material constraints need separate verification. Mark sound supports, damage and proposed fixing positions before the board hides them. The handover should record size, material, fastenings, covered components and outstanding glazing, joinery, door, lock or structural assessment. This preserves a recoverable evidence trail for permanent repair while preventing locality evidence from becoming a claim about access, occupancy or required fixing method.`,
+        ],
+        checks: ['Follow current police scene-preservation instructions carefully', 'Photograph all concealed damage first', 'Record fixings and permanent next steps'],
+        faq: { q: 'Do Galley Common locality records alter boarding?', a: `Not by themselves. Temporary work follows the actual opening, police guidance, surviving material and any current address-specific property constraint at the address.` },
+      },
+      'lock-upgrade': {
+        heading: 'A door-specific security review for Galley Common',
+        body: [
+          `The former-manor and street records provide no evidence of security hardware in Galley Common. An upgrade survey should inspect the door leaf, frame, hinges, keeps, handles, lock engagement and any cylinder projection. Warwickshire Police supports assessing the complete entrance and considering correctly sized, accredited products. Actual markings, measurements and condition can then support options, while alignment, frame support or shared control remain separate findings rather than being extrapolated from locality evidence.`,
+          `Current property status must be checked before outward alteration because the historic and highway sources are not parcel designations. The responsible building party should define constraints on communal or fire-rated hardware. A clear specification separates adjustment, reinforcement and replacement, states the evidence and dimensions for proposed products and identifies unresolved material questions. It may describe improved tested resistance conditionally, but cannot use locality records to recommend one product across Galley Common or promise complete protection.`,
+        ],
+        checks: ['Survey leaf, frame and surrounding hardware', 'Verify product evidence and measured fit', 'Check current controls before visible changes'],
+        faq: { q: 'Does historic Galley Common evidence suggest an upgrade?', a: `No. Suitable options follow from the inspected complete entrance, current property requirements and independently evidenced products, not locality records alone.` },
+      },
+    },
+  }),
+  hartshill: makeGuide({
+    slug: 'hartshill',
+    summary: [
+      `Historic England identifies Hartshill Castle as Scheduled Monument 1011197 between The Green, Holy Trinity parish church and Castle Road. The designation applies to the mapped monument, not surrounding Hartshill properties.`,
+      `The official list entry describes a motte-and-bailey castle originating during Henry I's reign and alteration into an enclosure castle around 1330. These phases are monument history, not dates for neighbouring buildings.`,
+    ],
+    accessGuidance: `Provide the exact Hartshill address and entrance without treating the castle, The Green, church or Castle Road as proof of property access. If the address may intersect the monument, consult the official list map.`,
+    evidenceLimits: `The Historic England record establishes one scheduled site and its history. It does not designate nearby premises, confirm public access, identify modern construction, ownership, door material, lock mechanism, incident history or service conditions.`,
+    facts: [
+      {
+        text: `Hartshill Castle is Scheduled Monument 1011197, located between The Green, Holy Trinity church and Castle Road.`,
+        sourceIds: ['historic-england-hartshill-castle-1011197'],
+        serviceRelevance: `The designation requires a map check for the exact site and cannot be extended to neighbouring addresses.`,
+      },
+      {
+        text: `Historic England records a motte-and-bailey origin during Henry I's reign and enclosure-castle alteration around 1330.`,
+        sourceIds: ['historic-england-hartshill-castle-1011197'],
+        serviceRelevance: `These phases support attributed monument history only and say nothing about the age or fabric of customer premises.`,
+      },
+    ],
+    sources: [LOCAL_SOURCES['historic-england-hartshill-castle-1011197']],
+    serviceGuidance: {
+      'emergency-lockout': {
+        heading: 'Keeping Hartshill Castle status separate from a lockout address',
+        body: [
+          `Hartshill Castle's scheduled boundary is a specific mapped site, so proximity to The Green or Castle Road does not establish status or identify a customer's door. A lockout call should provide the complete address, exact private or shared threshold and person controlling it. That allows authority to be checked at the correct opening before latch state, deadlocking, key behaviour and damage determine which methods are technically suitable. Monument history supplies no lock evidence.`,
+          `If the exact list map shows a relationship to the scheduled site, record visible fabric and seek the appropriate property-specific guidance before a proposed intervention extends beyond the lock component. MLA evidence supports explaining method and scope changes in advance. At an unrelated address, do not apply monument constraints merely because it is nearby. The opening decision should remain grounded in inspected hardware, verified authority and current building information, with reinstatement or external alteration listed separately.`,
+        ],
+        checks: ['Confirm the complete Hartshill address', 'Check the official monument map if relevant', 'Photograph visible material before removal'],
+        faq: { q: 'Does being near Hartshill Castle change a lockout?', a: `Not automatically. Only the exact mapped site and present property evidence can establish relevant status; the actual lock still determines technique.` },
+      },
+      'lock-change': {
+        heading: 'A Hartshill lock change without extending monument status',
+        body: [
+          `The motte-and-bailey and enclosure-castle phases describe Hartshill Castle alone, not the hardware of nearby buildings. A lock-change request should explain its key-control or mechanical purpose and show the door faces, edge plate and readable markings. Inspection can distinguish cylinder, case, keep and alignment, then measure the component that may need replacement. The monument's chronology cannot date the customer door, establish ownership or justify a particular product.`,
+          `Where the exact address or proposed work intersects scheduled fabric, identify whether the change stays within an existing fitting or alters surrounding material and seek specialist property guidance before that additional scope. Elsewhere, no restriction should be inferred from proximity. A shared threshold still needs its responsible controller identified. The written proposal should list retained elements, dimensions, keys, fitting and adjustment, making monument status, mechanical compatibility and authority three separate evidence questions.`,
+        ],
+        checks: ['Define the purpose of the lock change', 'Measure and photograph the fitted component', 'Keep monument status specific to this address'],
+        faq: { q: 'Must Hartshill properties use castle-related hardware?', a: `No. The scheduled designation concerns one monument; hardware choices for another address depend on its actual door, current status and measured compatibility.` },
+      },
+      'upvc-lock-repair': {
+        heading: 'Hartshill uPVC diagnosis from the fitted mechanism',
+        body: [
+          `A scheduled medieval castle provides no evidence that an affected Hartshill entrance is uPVC, composite or fitted with multipoint hardware. Confirm the door material first, then record key rotation, handle movement, locking-point travel and any difference against the frame. Those observations can guide diagnosis among alignment, keeps, cylinder, handles and gearbox. Faceplate markings and measured centres, backset and layout remain required before compatibility can be stated.`,
+          `The Historic England map should be consulted only when the exact property or work may relate to the scheduled site; monument proximity alone does not constrain a modern mechanism repair. Separately, identify who controls a communal or fire-rated door before dismantling it. The repair record should distinguish mechanical symptoms, authority and property status, and refer any proposed alteration to scheduled or visible historic material for appropriate advice instead of inferring a rule for all Hartshill addresses.`,
+        ],
+        checks: ['Identify the actual door system', 'Record movement without forcing hardware', 'Check mapped status only where relevant'],
+        faq: { q: 'Does Hartshill Castle indicate local uPVC hardware?', a: `No. The monument record contains no door data; markings, dimensions and observed operation of the individual mechanism are required at that address.` },
+      },
+      'boarding-up': {
+        heading: 'Boarding a Hartshill opening while respecting a specific monument',
+        body: [
+          `Hartshill Castle's list entry does not describe damage at another address. Follow police directions first, then photograph the point of entry, surviving frame, glazing or door, compromised lock and surrounding surfaces before covering it. Identify the exact opening and responsible person. If the site may overlap the scheduled monument, include the official map in the preparation; otherwise do not project the castle's protected status onto unrelated fabric.`,
+          `At a verified scheduled site, temporary supports and fixings need specialist property-specific consideration alongside the inspected safety needs. Record intact material, damage, proposed contact points and everything the board will conceal before proceeding within the authorised scope. The handover should state board dimensions, materials, fastenings and unresolved glazing, joinery, door, lock or structural tasks. This preserves both scene evidence and a clear boundary between temporary security and any permanent change to protected material.`,
+        ],
+        checks: ['Follow police instructions before touching damage', 'Check the monument map for the address', 'Record all board contact points'],
+        faq: { q: 'Can a board be fixed near Hartshill Castle?', a: `The answer depends on the exact mapped site, surviving material and authorised temporary method; nearby location alone neither approves nor prohibits fixings.` },
+      },
+      'lock-upgrade': {
+        heading: 'Hartshill upgrades with monument boundaries correctly applied',
+        body: [
+          `Hartshill Castle's scheduled status does not measure security at surrounding entrances. A review should inspect the actual door, frame, hinges, keeps, handles, lock engagement and cylinder projection where relevant. Warwickshire Police supports complete-entrance assessment and correctly sized, accredited products. Product marks, measurements and fit can then support an option, while alignment or frame issues remain explicit and no conclusion is drawn from the castle's medieval development phases.`,
+          `If the exact list map places proposed work within scheduled fabric, separate internal compatible changes from new cutting or visible substitution and obtain the appropriate site-specific guidance. At other Hartshill addresses, do not import that designation. Common or fire-rated hardware also requires its controller's requirements. The specification should identify retained material, tested product evidence, dimensions and unresolved specialist questions, describing potential resistance improvements conditionally without implying that certification eliminates every entry route.`,
+        ],
+        checks: ['Inspect the complete current entrance', 'Apply scheduled status only to its map', 'Verify measured product compatibility for the entrance'],
+        faq: { q: 'Does Hartshill Castle status choose a security upgrade?', a: `No. It may affect work at the mapped monument, but product choice still follows the inspected entrance, measured fit and current requirements.` },
+      },
+    },
+  }),
+  bedworth: makeGuide({
+    slug: 'bedworth',
+    summary: [
+      `Bedworth Town Centre Conservation Area was designated in 1986. Its 2022 appraisal identifies character areas around Mill Street, Chapel Street and the Almshouses, Bedworth Cemetery, and Miners' Welfare Park within its assessment.`,
+      `Warwickshire County Council's visitor service records Bedworth station on the Coventry-Nuneaton line and describes Miners' Welfare Park as a legacy of mining communities. Neither reference establishes property access or hardware.`,
+    ],
+    accessGuidance: `Provide the full Bedworth address, correct entrance and responsible contact. The station, park and appraisal character-area names can orient the location, but they do not prove access or that a property is designated.`,
+    evidenceLimits: `The conservation evidence applies to a mapped core, while the station and park are named points. The sources do not identify an individual property's status, construction, ownership, door material, lock type or service circumstances.`,
+    facts: [
+      {
+        text: `Bedworth Town Centre Conservation Area dates from 1986 and the 2022 appraisal identifies three character areas within it.`,
+        sourceIds: ['nbbc-bedworth-conservation-2022'],
+        serviceRelevance: `The mapped designation requires an exact-address check before visible external material is treated as protected context.`,
+      },
+      {
+        text: `The county visitor page records Bedworth station on the Coventry-Nuneaton line and Miners Welfare Park's mining-community legacy.`,
+        sourceIds: ['visit-warwickshire-bedworth'],
+        serviceRelevance: `These named features support attributed orientation and heritage context but cannot establish property access or hardware.`,
+      },
+    ],
+    sources: [LOCAL_SOURCES['nbbc-bedworth-conservation-2022'], LOCAL_SOURCES['visit-warwickshire-bedworth']],
+    serviceGuidance: {
+      'emergency-lockout': {
+        heading: 'A Bedworth lockout with the mapped core checked precisely',
+        body: [
+          `The 2022 appraisal separates three character areas within Bedworth's mapped town-centre designation, so the caller should identify the exact building and door rather than merely naming the station or Miners' Welfare Park. State whether the opening is a frontage, common threshold or private unit and who controls it. Authority can then be verified for that door before the locksmith assesses latch state, deadlocking, key movement and existing damage.`,
+          `If the address falls inside the conservation boundary, photograph the leaf, frame and visible furniture before selecting a method that could remove material. The 1986 designation informs preservation but does not reveal the lock or guarantee a particular technique. MLA guidance supports explaining a revised scope before it proceeds. Any destructive entry component and later reinstatement should be recorded separately, with broader external alteration referred using the exact property rather than the Bedworth name alone.`,
+        ],
+        checks: ['Identify the precise Bedworth threshold', 'Prepare authority evidence for that door', 'Check the current conservation map'],
+        faq: { q: 'Does Bedworth conservation status dictate lockout technique?', a: `No. It can inform care for mapped fabric, but the inspected door, lock condition and verified authority determine the available methods.` },
+      },
+      'lock-change': {
+        heading: 'Bedworth lock replacement with character-area context separated',
+        body: [
+          `Bedworth station and the mining-community history of Miners' Welfare Park do not identify a lock. A change request should state whether it concerns key control, failure or damage, then record both hardware faces, edge markings and closing behaviour. Inspection can isolate cylinder, lock case, keep and alignment and preserve serviceable elements. Exact dimensions and required keys support a replacement; proximity to a named feature or character area does not.`,
+          `Within the mapped conservation core, distinguish a component using an existing aperture from new cutting or a visible furniture change. That scope difference helps preserve documented character and frames any property-specific council question. A communal threshold also requires its controller's authority before shared keys change. The written schedule should list retained parts, measured product, keys, fitting and adjustment, while external-fabric and fire-door questions remain separately identified rather than implied by the 1986 designation.`,
+        ],
+        checks: ['Explain the key-control or failure objective', 'Measure the actual Bedworth component', 'Separate visible change from internal replacement'],
+        faq: { q: 'Does a Bedworth character area specify lock hardware?', a: `No. The appraisal describes mapped townscape; compatible hardware follows from the actual door, component markings, dimensions and responsible controller at that property.` },
+      },
+      'upvc-lock-repair': {
+        heading: 'Bedworth multipoint fault checks using the individual door',
+        body: [
+          `Neither the railway line nor the park's heritage context indicates that a Bedworth entrance is uPVC or composite. Confirm the material, then describe key rotation, handle travel, locking-point movement and any change when the sash meets the frame. Those observations help distinguish alignment, keeps, cylinder, handles and gearbox. Faceplate markings, centres, backset and locking layout must still be measured before a compatible part is proposed.`,
+          `A later door can sit within the mapped town-centre core without its mechanism being historic, and a prominent entrance may be communal rather than private. Check property status and control as separate questions. If repair reaches visible external fabric, describe that extension and seek address-specific guidance; internal diagnosis remains based on mechanical evidence. The record should state symptoms, tests, measurements and any fire-door or management requirement that controls the next action.`,
+        ],
+        checks: ['Confirm the door material directly', 'Compare open and closed operation safely', 'Record complete faceplate geometry and markings'],
+        faq: { q: 'Can Bedworth locality facts identify a multipoint mechanism?', a: `No. Identification requires the actual faceplate, dimensions and observed operation; station, park and conservation context provide no parts evidence for that mechanism.` },
+      },
+      'boarding-up': {
+        heading: 'Evidence-aware boarding in Bedworth conservation context',
+        body: [
+          `Bedworth's station and park references can help identify a location but do not describe the damaged opening. Follow police directions, then photograph the point of entry, frame, glazing or door, broken hardware and surrounding material before covering it. Confirm whether the opening belongs to a frontage, common entrance or private unit and who controls temporary work. These observations establish the board plan without attributing damage or construction to a named town feature.`,
+          `When the exact opening lies inside the conservation boundary, record intact character-area material and proposed fixing points before installation. Use the inspected surviving structure, not the area's 1986 designation alone, to define temporary support. The handover should state board dimensions, materials, fastenings, covered damage and outstanding glazing, joinery, lock, door or structural tasks. Any permanent alteration to visible fabric remains a separate address-level decision informed by the 2022 appraisal and later specialist assessment.`,
+        ],
+        checks: ['Preserve scene evidence as directed', 'Check the exact conservation boundary', 'Document covered damage and fixings'],
+        faq: { q: 'Can a Bedworth conservation-area opening be boarded?', a: `A temporary approach may be possible, but it must follow the inspected structure, police directions and property-specific preservation constraints at the address.` },
+      },
+      'lock-upgrade': {
+        heading: 'A measured Bedworth upgrade within a mapped setting',
+        body: [
+          `Bedworth's rail and mining-heritage facts do not establish door security. An upgrade review should inspect the leaf, frame, hinges, keeps, handles, lock engagement and any cylinder projection. Warwickshire Police supports whole-entrance assessment, correctly sized cylinders and accredited products. Markings, measurements and operation can then support an option, while alignment, frame condition and common access remain visible in the specification rather than being guessed from locality.`,
+          `Inside the mapped town-centre core, photograph visible furniture, existing apertures and character material before suggesting new cutting or substitution. Internal compatible changes and outward alterations should follow separate decision paths, with property-specific guidance where needed. For a communal or fire-rated door, the responsible controller defines additional constraints. The final plan should record retained fabric, product evidence, dimensions and dependencies, explaining conditional resistance improvement without claiming that one certified item makes a Bedworth entrance impervious.`,
+        ],
+        checks: ['Inspect the full entrance assembly', 'Verify product evidence and sizing', 'Record mapped fabric before alteration'],
+        faq: { q: 'Does Bedworth conservation context require one upgrade?', a: `No. The mapped context affects relevant preservation checks; suitable hardware still depends on the measured door, frame and current building requirements.` },
+      },
+    },
+  }),
+  bulkington: makeGuide({
+    slug: 'bulkington',
+    summary: [
+      `Bulkington Conservation Area was designated in 1985, reviewed in 2008 and reviewed again in 2021 for the borough council's 2022 appraisal. The designation applies to the mapped village core described there.`,
+      `The appraisal identifies Grade II* St James Parish Church with surviving thirteenth-century fabric and dates 3-4 Church Street to the early seventeenth century. Those dates belong only to the named assets.`,
+    ],
+    accessGuidance: `Provide the exact Bulkington property and affected threshold. St James Church and 3-4 Church Street can orient the heritage record, but proximity does not prove designation, access or building age.`,
+    evidenceLimits: `The appraisal establishes one mapped conservation area and facts about two named buildings. It does not assign status, age, ownership, construction, door material, lock type, access conditions or service history to other addresses.`,
+    facts: [
+      {
+        text: `Bulkington Conservation Area dates from 1985 and was reviewed in 2008 and 2021 for the 2022 appraisal.`,
+        sourceIds: ['nbbc-bulkington-conservation-2022'],
+        serviceRelevance: `The review history supports a mapped-status check but cannot establish designation or fabric at every village address.`,
+      },
+      {
+        text: `The appraisal records thirteenth-century fabric at St James Church and an early-seventeenth-century building at 3-4 Church Street.`,
+        sourceIds: ['nbbc-bulkington-conservation-2022'],
+        serviceRelevance: `The named dates must remain asset-specific and cannot be transferred to a customer's premises or door.`,
+      },
+    ],
+    sources: [LOCAL_SOURCES['nbbc-bulkington-conservation-2022']],
+    serviceGuidance: {
+      'emergency-lockout': {
+        heading: 'Bulkington lockouts with the conservation boundary verified',
+        body: [
+          `The dates attached to St James Church and 3-4 Church Street do not identify another Bulkington entrance. A caller should give the full address, exact private or shared threshold and person controlling it rather than relying on a heritage landmark. That establishes authority for the correct door before latch state, deadlocking, key movement and prior damage are assessed. The conservation appraisal supplies context only after the property is checked against its mapped core.`,
+          `For an entrance inside the designation, photograph the leaf, frame and visible furniture before agreeing a method that could remove material. The appraisal's 1985, 2008 and 2021 milestones do not predict the lock or guarantee non-destructive entry. MLA guidance supports explaining a changed scope first. If drilling or component removal is necessary, document the affected part and reinstatement separately, leaving broader visible alteration for property-specific advice grounded in the current map and actual fabric.`,
+        ],
+        checks: ['Give the exact Bulkington address', 'Verify authority for the correct door', 'Check the mapped conservation core'],
+        faq: { q: 'Does Bulkington conservation status determine lockout entry?', a: `No. It informs preservation at a verified address, while the inspected lock, door condition and lawful authority determine opening options.` },
+      },
+      'lock-change': {
+        heading: 'Changing a Bulkington lock while keeping asset dates specific',
+        body: [
+          `The thirteenth- and seventeenth-century dates in the appraisal belong to two named buildings and cannot date a customer's door. Define why the lock needs changing, then photograph inside and outside furniture, the edge plate and readable marks. Inspection can distinguish cylinder, case, keep and alignment issues and identify what remains serviceable. A compatible replacement follows from dimensions and key-control needs, not proximity to Church Street or the parish church.`,
+          `If the exact property falls inside the mapped conservation area, describe whether work uses an existing fitting or changes visible door material. That distinction frames preservation and any council question. A shared threshold also needs its responsible controller to confirm keying. The written schedule should name retained components, measured product, keys, fitting and adjustment, and set any new cutting, fire-door issue or outward change apart from the core lock replacement rather than treating appraisal history as blanket authority.`,
+        ],
+        checks: ['State why the lock is changing', 'Record markings and accurate dimensions', 'Keep named asset dates specific to those properties'],
+        faq: { q: 'Do Bulkington heritage dates identify a period lock?', a: `No. Those dates apply to named buildings only; the individual door, component markings, measurements and current status must be checked.` },
+      },
+      'upvc-lock-repair': {
+        heading: 'Bulkington multipoint repair without heritage extrapolation',
+        body: [
+          `A mapped village core and two historic assets do not show whether the affected Bulkington door is uPVC or composite. Confirm the material, then record key rotation, handle lift, locking-point travel and whether contact with the frame changes operation. These observations can separate alignment, keeps, cylinder, handles and gearbox questions. Full faceplate marks, centres, backset and layout remain required before any compatible component is identified.`,
+          `A later door may occur within older surroundings, but the appraisal does not establish its status or controller. Check the exact address and distinguish private from common or fire-rated hardware before dismantling it. If repair expands into visible fabric, describe that work separately and obtain property-specific guidance where relevant. The repair record should state symptoms, tests and measurements, ensuring that St James Church or 3-4 Church Street dates are never used as evidence about this mechanism.`,
+        ],
+        checks: ['Confirm the actual door material', 'Observe mechanism movement in sequence', 'Measure the faceplate and locking layout'],
+        faq: { q: 'Can Bulkington appraisal history identify multipoint parts?', a: `No. Compatibility requires markings and geometry from the actual door; named heritage assets provide no mechanical information for other properties.` },
+      },
+      'boarding-up': {
+        heading: 'Temporary boarding in Bulkington with mapped-fabric care',
+        body: [
+          `The conservation appraisal cannot describe damage at a Bulkington opening. Follow police directions, then photograph the point of entry, surviving frame, glazing or door, broken hardware and surrounding surfaces before covering it. Confirm the precise threshold and person controlling the temporary work. Named historic buildings can provide orientation, but their dates do not establish the age, structure or status of the damaged property.`,
+          `Where the exact opening is inside the mapped core, distinguish intact visible fabric from damaged substrate and record proposed support points before installation. Temporary fixings should follow the inspected structure rather than a village-wide assumption. The handover should give board size, material, fastenings, covered elements and unresolved glazing, joinery, door, lock or structural work. Any permanent alteration to protected fabric remains a separate next decision supported by address-level appraisal evidence and specialist assessment.`,
+        ],
+        checks: ['Follow current police evidence instructions first', 'Verify the address against the map', 'Record every temporary fixing point'],
+        faq: { q: 'Does the Bulkington appraisal prescribe boarding fixings?', a: `No. Fixings depend on the actual remaining structure and property-specific status at that property, with the board documented as a temporary measure.` },
+      },
+      'lock-upgrade': {
+        heading: 'A Bulkington entrance review grounded in present fabric',
+        body: [
+          `Bulkington's conservation review dates and named assets supply no security rating for another entrance. Inspect the door leaf, frame, hinges, keeps, handles, lock engagement and any cylinder projection. Warwickshire Police supports assessing the complete entrance and considering correctly sized, accredited products. Markings, measurements and condition can then guide options, while alignment or frame weaknesses remain explicit and no product is selected from village age or heritage proximity.`,
+          `Inside the mapped core, photograph visible furniture, existing apertures and surviving material before proposing a cut or substitution. Compatible internal improvements and changes to outward character should be treated separately. The controller of communal or fire-rated hardware must also define requirements. A final specification should state retained fabric, tested product evidence, measured fit and dependencies, describing possible resistance improvement conditionally without claiming that certification makes every Bulkington entrance secure against all methods.`,
+        ],
+        checks: ['Inspect frame, hinges and lock together', 'Verify product evidence and exact sizing', 'Separate internal and visible changes'],
+        faq: { q: 'Is one upgrade appropriate across historic Bulkington?', a: `No. The measured entrance and current property constraints determine suitable hardware at that address; the appraisal does not describe every door.` },
+      },
+    },
+  }),
+  rugby: makeGuide({
+    slug: 'rugby',
+    summary: [
+      `Rugby Town Centre Conservation Area covers most of the commercial centre and follows the historic road layout, extending from Edwardian suburbs in the north to Rugby School's boundary in the south.`,
+      `The appraisal records the London-Birmingham railway opening in 1838 and five more companies adding routes within twelve years as Rugby developed into a major junction. This is historical transport context.`,
+    ],
+    accessGuidance: `Provide the complete Rugby address, building name, floor and exact threshold. The historic road layout, Rugby School boundary and railway history can orient context but do not establish modern property access.`,
+    evidenceLimits: `The appraisal describes a mapped central designation and historical development. It does not apply to the whole Rugby route or identify an individual property's status, controller, door material, lock type or access conditions.`,
+    facts: [
+      {
+        text: `Rugby Town Centre Conservation Area covers most of the commercial centre along the historic road layout between defined northern and southern contexts.`,
+        sourceIds: ['rbc-rugby-town-centre-appraisal'],
+        serviceRelevance: `The mapped extent requires exact-address verification before central townscape context is applied to visible property fabric.`,
+      },
+      {
+        text: `The London-Birmingham railway opened in 1838 and five additional companies added Rugby routes within the following twelve years.`,
+        sourceIds: ['rbc-rugby-town-centre-appraisal'],
+        serviceRelevance: `The railway chronology supports attributed history only and cannot imply current access, proximity or service performance.`,
+      },
+    ],
+    sources: [LOCAL_SOURCES['rbc-rugby-town-centre-appraisal']],
+    serviceGuidance: {
+      'emergency-lockout': {
+        heading: 'Rugby lockouts with the central boundary and threshold distinguished',
+        body: [
+          `The appraisal's historic road layout and Rugby School boundary help describe the mapped centre, but they cannot identify a locked door. Give the full property, building or unit, exact street-facing, shared or internal threshold and the person controlling it. That permits an authority check for the right opening before the locksmith assesses whether the latch closed, the lock was deadlocked or a key or mechanism failed. Railway history adds no technical information.`,
+          `If the address lies within the conservation area, photograph the door face, frame and visible furniture before a method that might remove material is approved. The central designation informs preservation, not a guaranteed technique. MLA evidence supports agreement before scope changes. Where drilling or replacement becomes necessary after inspection, record the component and reinstatement separately and reserve any broader alteration to the historic frontage for an exact-property decision rather than extending the map across Rugby.`,
+        ],
+        checks: ['Name the exact Rugby building and door', 'Prepare evidence linked to that threshold', 'Check the current conservation boundary'],
+        faq: { q: 'Does Rugby town-centre status decide the opening method?', a: `No. The designation can inform care for visible fabric, but inspected hardware, condition and verified authority determine the available approach.` },
+      },
+      'lock-change': {
+        heading: 'Rugby lock replacement based on components, not railway history',
+        body: [
+          `The 1838 railway opening and later junction development do not indicate what lock is fitted at a Rugby address. Define the key-control or mechanical objective, then photograph both hardware faces, the edge plate and all readable markings. Inspection can separate cylinder, case, keep and alignment issues and identify sound elements to retain. Dimensions and key requirements support a compatible replacement, whereas a central or rail-related location supports none.`,
+          `Within the mapped conservation area, distinguish a component change within existing apertures from new cutting or visible furniture replacement. This clarifies preservation and any property-specific council question. A communal threshold also needs its controller to approve the shared keying scope. The written proposal should list retained parts, measured product, keys, fitting and adjustment and flag external-fabric or fire-door decisions separately, avoiding any claim that all central Rugby doors share one construction.`,
+        ],
+        checks: ['Define the replacement objective precisely', 'Capture markings and existing apertures', 'Confirm control of shared Rugby hardware'],
+        faq: { q: 'Can Rugby railway history indicate a lock type?', a: `No. Compatible hardware follows from the actual component, measurements, door condition and current requirements, not historical transport development at that address.` },
+      },
+      'upvc-lock-repair': {
+        heading: 'Rugby uPVC diagnosis from the individual operating sequence',
+        body: [
+          `A conservation-area appraisal and railway chronology do not establish that a Rugby entrance is uPVC or composite. Once the material is confirmed, record key movement, handle travel, locking-point operation and any difference when the leaf meets its frame. A safe open-versus-closed comparison can direct inspection toward alignment, keeps, cylinder, handles or gearbox. Faceplate marks, centres, backset and locking layout remain essential before a compatible part is stated.`,
+          `A door in the commercial centre may be private, communal or controlled as part of another system, but the appraisal does not decide that relationship. Identify the responsible party and any fire-door condition before components are removed. If repair extends into outward fabric, verify the exact conservation status and describe that extension separately. The work record should keep boundary, authority and mechanical diagnosis distinct, with measurements and observed behaviour governing the next step.`,
+        ],
+        checks: ['Confirm the door system before diagnosis', 'Record open and closed behaviour safely', 'Measure faceplate and locking points'],
+        faq: { q: 'Does central Rugby context identify a multipoint gearbox?', a: `No. The actual mechanism's markings and dimensions are required; conservation and railway evidence supply no parts catalogue for that fitted door.` },
+      },
+      'boarding-up': {
+        heading: 'Rugby town-centre boarding with evidence and fabric recorded',
+        body: [
+          `The historic road layout and railway story cannot describe damage at a Rugby opening. Follow police instructions first, then photograph the point of entry, surviving frame, glazing or door, broken hardware and adjacent surfaces before covering them. Identify whether the opening belongs to a commercial frontage, shared entrance or private unit and who controls it. Those observations support temporary dimensions without inferring structure or incident details from central location.`,
+          `For an opening inside the conservation area, record intact frontage material and proposed fixing positions before installation. Temporary supports should follow the inspected remaining structure, not the map alone. The handover should state board size, materials, fastenings, covered damage and outstanding glazing, joinery, lock, door or structural assessment. Any permanent alteration to the mapped townscape remains a separate property-specific decision, allowing the next specialist to recover the original evidence from clear documentation.`,
+        ],
+        checks: ['Follow police instructions before work', 'Photograph all frontage and lock damage', 'Record fixings and outstanding repairs'],
+        faq: { q: 'Can a central Rugby frontage be boarded temporarily?', a: `A temporary method may be possible, but it must respond to the actual structure, evidence requirements and address-specific conservation context.` },
+      },
+      'lock-upgrade': {
+        heading: 'Complete-entrance security review for a Rugby address',
+        body: [
+          `Rugby's nineteenth-century rail development and central road pattern do not measure an entrance's resistance. Inspect the door leaf, frame, hinges, keeps, handles, lock engagement and any cylinder projection. Warwickshire Police supports reviewing the complete assembly and considering correctly sized, accredited products. Markings, measured fit and operation can then support options, while alignment, frame weakness and shared control remain explicit rather than being hidden by a town-centre description.`,
+          `Inside the mapped conservation area, photograph existing furniture, cut-outs and visible character before suggesting outward changes. Internal compatible improvements can be separated from new cutting or substitution requiring property-specific advice. The controller of common or fire-rated hardware should define further constraints. A specification should identify retained fabric, tested product evidence, dimensions and dependencies, describing improved resistance only within stated conditions and never implying that one certified component protects every Rugby entrance from all attack routes.`,
+        ],
+        checks: ['Inspect the complete Rugby entrance', 'Verify product certification and dimensions', 'Record visible character before changes'],
+        faq: { q: 'Is one lock upgrade right across Rugby?', a: `No. The complete measured entrance and current property constraints determine suitable options for that opening; town-centre history cannot specify a product.` },
+      },
+    },
+  }),
+  hillmorton: makeGuide({
+    slug: 'hillmorton',
+    summary: [
+      `Rugby Borough Council's appraisal describes Hillmorton Locks as a small canal-centred settlement about two miles south-east of Rugby, separated from Hillmorton housing by a railway embankment and narrow tunnel within that assessment.`,
+      `The document records development around canal-company workshops, a dry dock and housing, and says original canal buildings and the dock remained in industrial use when appraised. That use statement is appraisal-dated.`,
+    ],
+    accessGuidance: `Give the exact Hillmorton address and entrance. The canal, railway embankment and tunnel describe Hillmorton Locks context only and must not be converted into vehicle-access, route or property claims.`,
+    evidenceLimits: `The appraisal concerns a small mapped Hillmorton Locks conservation area, not the whole Hillmorton route. It does not identify another property's designation, construction, ownership, door system, lock condition or access.`,
+    facts: [
+      {
+        text: `Hillmorton Locks is a small canal-centred conservation area separated from Hillmorton housing by a railway embankment and narrow tunnel.`,
+        sourceIds: ['rbc-hillmorton-locks-appraisal'],
+        serviceRelevance: `This context applies only to the mapped locks settlement and cannot establish access to another Hillmorton address.`,
+      },
+      {
+        text: `The locks settlement developed around canal workshops, a dry dock and housing, with continuing uses recorded at appraisal time.`,
+        sourceIds: ['rbc-hillmorton-locks-appraisal'],
+        serviceRelevance: `The canal-industrial history may be attributed but does not date or describe a customer's building or entrance.`,
+      },
+    ],
+    sources: [LOCAL_SOURCES['rbc-hillmorton-locks-appraisal']],
+    serviceGuidance: {
+      'emergency-lockout': {
+        heading: 'Hillmorton lockouts with Locks context kept within its map',
+        body: [
+          `The canal, embankment and tunnel describe the small Hillmorton Locks designation, not the location or access of every Hillmorton property. A caller should give the complete address, exact private or shared threshold and responsible person. That identifies the correct opening without relying on a canal landmark. Authority can then be verified before latch state, deadlocking, key movement and prior damage guide inspection of the actual lock.`,
+          `If the official map places the door inside Hillmorton Locks, photograph visible fabric and existing hardware before approving a method that could remove material. Canal-industrial history informs preservation but cannot predict technique. MLA evidence supports explaining scope changes before work. If entry requires drilling or component replacement, record it and reinstatement separately, leaving any broader alteration to appraisal-recognised fabric for property-specific owner or council guidance rather than extending the designation to wider Hillmorton.`,
+        ],
+        checks: ['Provide the complete Hillmorton address', 'Distinguish Locks from wider Hillmorton', 'Document fabric before component removal'],
+        faq: { q: 'Does Hillmorton Locks status determine lockout method?', a: `No. It can inform preservation inside the mapped area; the inspected lock, condition and verified authority determine technical options at that opening.` },
+      },
+      'lock-change': {
+        heading: 'Hillmorton lock changes without canal-building assumptions',
+        body: [
+          `Workshops, a dry dock and appraisal-dated industrial uses do not identify a lock at a Hillmorton address. State whether the change concerns keys, failure or damage, then photograph both hardware faces, the edge plate and markings. Inspection can separate cylinder, lock case, keep and alignment and preserve sound components. Exact geometry and key needs support the replacement, while canal history cannot be transferred to the customer door's age or construction.`,
+          `Inside the small Hillmorton Locks boundary, distinguish an internal component change from fresh cutting or alteration of visible material. That scope defines the preservation question. A shared threshold also requires the person controlling keys and hardware to confirm authority. The written schedule should list retained parts, measured product, key quantity, fitting and adjustment, and hold external-fabric or fire-door issues separately for current property-specific advice instead of treating the canal settlement as one uniform premises type.`,
+        ],
+        checks: ['Define the key or failure objective', 'Record actual component markings and geometry', 'Verify the mapped Locks boundary'],
+        faq: { q: 'Does Hillmorton canal history identify replacement hardware?', a: `No. The individual door, lock markings, measurements and current property requirements provide the evidence for a compatible replacement at that address.` },
+      },
+      'upvc-lock-repair': {
+        heading: 'Hillmorton multipoint diagnosis beyond the canal narrative',
+        body: [
+          `The Hillmorton Locks appraisal does not establish whether a wider-area entrance is uPVC or composite. Confirm the actual material, then record key rotation, handle lift, hook or roller movement and any change when the door closes against its frame. These observations can direct diagnosis toward alignment, keeps, cylinder, handles or gearbox. Faceplate markings, centres, backset and locking layout remain necessary before a compatible part is identified.`,
+          `A later mechanism inside the mapped locks settlement and a door elsewhere in Hillmorton present different property-context questions, but neither is answered by the tunnel or canal. Identify private, shared or fire-door control first. If repair reaches visible external material inside the designation, describe that extension and seek address-specific guidance. The record should keep symptoms, measurements, controller and conservation status separate, with mechanical evidence determining the next diagnostic step.`,
+        ],
+        checks: ['Verify uPVC or composite construction', 'Record frame interaction without forcing', 'Measure all multipoint reference dimensions'],
+        faq: { q: 'Can Hillmorton Locks context reveal a gearbox type?', a: `No. Compatible multipoint parts require the faceplate marks and measured geometry of the actual mechanism, regardless of canal context at that property.` },
+      },
+      'boarding-up': {
+        heading: 'Temporary boarding at Hillmorton Locks or wider Hillmorton',
+        body: [
+          `The appraisal's tunnel, canal and dry-dock history cannot describe damage at an opening. Follow police directions, then photograph the point of entry, remaining frame, glazing or door, broken hardware and adjacent surfaces before anything is hidden. Give the exact address and establish whether it lies in Hillmorton Locks or wider Hillmorton, plus who controls the threshold. Those facts support a temporary plan without implying access or construction from the canal setting.`,
+          `Within the mapped locks designation, record surviving canal-settlement fabric and intended fixing points before installation. In either context, supports must follow the inspected remaining structure. The handover should state board dimensions, materials, fastenings, covered damage and outstanding glazing, joinery, door, lock or structural work. Any permanent change to appraisal-recognised material remains a separate property-specific decision, and the continuation-of-use statement from the appraisal cannot substitute for present site evidence.`,
+        ],
+        checks: ['Follow current police evidence-preservation guidance first', 'Confirm Locks or wider-area location', 'Record supports and concealed damage'],
+        faq: { q: 'Does the Hillmorton tunnel affect boarding access?', a: `The cited appraisal cannot establish access to the property. Temporary work must be planned from the exact address, opening and current conditions.` },
+      },
+      'lock-upgrade': {
+        heading: 'Hillmorton upgrades with the small designation respected',
+        body: [
+          `Hillmorton Locks' canal buildings and industrial history do not provide a security specification for any entrance. Review the door leaf, frame, hinges, keeps, handles, lock engagement and any cylinder projection. Warwickshire Police supports complete-entrance checks and correctly sized, accredited products. Current markings, measurements and operation can then support an option, while frame condition, alignment and shared control remain explicit findings rather than assumptions based on the historic settlement.`,
+          `For a door inside the small mapped designation, photograph visible hardware, cut-outs and surviving material before proposing outward change. Compatible internal work should be separated from new cutting or substitution needing property-specific guidance. Wider Hillmorton must not inherit that status. The specification should record measured fit, product evidence, retained fabric and fire-door or management dependencies, explaining any resistance improvement conditionally and avoiding claims that one item secures all doors associated with the Locks name.`,
+        ],
+        checks: ['Inspect the whole current entrance', 'Apply designation only to its boundary', 'Verify certified products against measurements'],
+        faq: { q: 'Does Hillmorton Locks require a particular upgrade?', a: `No universal product follows. The mapped property context, inspected entrance, measured fit and responsible controller determine appropriate choices for that doorway.` },
+      },
+    },
+  }),
+  bilton: makeGuide({
+    slug: 'bilton',
+    summary: [
+      `Rugby Borough Council records Bilton as a formerly separate village that merged into Rugby during the 1930s. Its conservation area covers only part of that former settlement rather than the whole Bilton route.`,
+      `The appraisal identifies St Mark's Church as Bilton's oldest building, with mid-fourteenth-century work, and dates the original part of Bilton Hall to 1623. Those dates apply only to the named assets.`,
+    ],
+    accessGuidance: `Provide the complete Bilton address and affected threshold. St Mark's Church and Bilton Hall can orient the appraisal, but their dates and the former-village narrative do not prove property status or access.`,
+    evidenceLimits: `The source establishes a partial conservation-area boundary and facts about two named buildings. It does not identify another property's designation, age, ownership, construction, door material, lock mechanism or access arrangements.`,
+    facts: [
+      {
+        text: `Bilton was once a separate village, merged into Rugby in the 1930s, and only part lies within the conservation area.`,
+        sourceIds: ['rbc-bilton-appraisal'],
+        serviceRelevance: `The limited designation requires an address check and cannot be extended to the whole modern Bilton route.`,
+      },
+      {
+        text: `The appraisal records mid-fourteenth-century work at St Mark's Church and dates original Bilton Hall fabric to 1623.`,
+        sourceIds: ['rbc-bilton-appraisal'],
+        serviceRelevance: `Those asset-specific dates provide heritage anchors but cannot characterise a customer's building, door or hardware.`,
+      },
+    ],
+    sources: [LOCAL_SOURCES['rbc-bilton-appraisal']],
+    serviceGuidance: {
+      'emergency-lockout': {
+        heading: 'A Bilton lockout with the partial conservation area checked',
+        body: [
+          `Bilton's former-village history and the dates of St Mark's Church and Bilton Hall cannot identify the caller's door. Give the complete address, exact private or shared threshold and person controlling it. Because the designation covers only part of Bilton, check the property rather than assuming status from the village name. Authority should be established for that opening before latch state, deadlocking, key behaviour and damage guide the locksmith's assessment.`,
+          `At an address inside the mapped area, photograph the leaf, frame and visible furniture before agreeing a method that could remove material. Named-asset dates inform no lock technique and do not guarantee preservation without intervention. MLA guidance supports explaining a changed scope first. If drilling or component replacement becomes necessary, record the affected part and reinstatement separately, leaving broader alteration to visible historic fabric for a property-specific decision based on the appraisal and current records.`,
+        ],
+        checks: ['Give the exact Bilton property address', 'Check whether it enters the mapped area', 'Prepare authority for the identified threshold'],
+        faq: { q: 'Is every Bilton lockout inside the conservation area?', a: `No. The appraisal says the designation covers only part of the former village, so the exact property must be checked.` },
+      },
+      'lock-change': {
+        heading: 'Bilton lock replacement without borrowing named-building dates',
+        body: [
+          `A church with medieval work and a hall dating from 1623 do not date a different Bilton entrance or identify its lock. State the reason for change, then photograph both hardware faces, the door edge and readable markings. Inspection can separate cylinder, case, keep and alignment, preserving sound elements where appropriate. Measurements and key-control needs define a compatible replacement; the named assets provide no product or construction evidence for surrounding addresses.`,
+          `Where the property is within Bilton's limited conservation area, distinguish a component using existing apertures from new cutting or a visible furniture change. For a common entrance, identify the person responsible for shared keying. The written scope should list retained material, measured product, keys, fitting and adjustment and identify any fire-door or outward-fabric issue separately. This keeps mechanical compatibility and preservation tied to the actual door rather than generalising the former village's heritage.`,
+        ],
+        checks: ['Define the reason and key-control need', 'Record existing apertures and markings', 'Verify shared-door responsibility before change'],
+        faq: { q: 'Do Bilton Hall dates indicate a period lock?', a: `No. The date belongs to the named hall; another property's hardware must be identified from its door, markings and measurements.` },
+      },
+      'upvc-lock-repair': {
+        heading: 'Bilton multipoint diagnosis independent of village age',
+        body: [
+          `The appraisal's settlement history does not establish whether an affected Bilton door is uPVC or composite. Confirm the material, then record key rotation, handle lift, hook or roller movement and any difference when the leaf enters the frame. Those symptoms can direct inspection toward alignment, keeps, cylinder, handles or gearbox. Faceplate marks, centres, backset and locking layout remain necessary before a compatible part can be identified.`,
+          `A later replacement door may stand within or outside the partial conservation area, and that mapped status is separate from mechanism diagnosis. Identify the exact threshold, its controller and any fire-door requirement before dismantling hardware. If repair extends into visible external fabric, describe that proposal for address-specific review. The work record should state observed movement and measurements, never projecting the age of St Mark's Church or Bilton Hall onto the fitted multipoint system.`,
+        ],
+        checks: ['Confirm actual material and mechanism', 'Record open and closed behaviour', 'Measure all relevant faceplate geometry'],
+        faq: { q: 'Does Bilton village history identify a uPVC gearbox?', a: `No. The fitted mechanism's markings, dimensions and observed operation are required; named historic buildings provide no parts evidence for that door.` },
+      },
+      'boarding-up': {
+        heading: 'Temporary boarding in Bilton with the exact boundary recorded',
+        body: [
+          `Bilton's former-village narrative and named heritage assets do not describe damage at a service address. Follow police directions, then photograph the point of entry, surviving frame, glazing or door, broken hardware and adjacent surfaces before covering them. Confirm the precise threshold and responsible person, and check whether it lies in the limited conservation area. Those facts support a board plan without assuming property age from nearby landmarks.`,
+          `Inside the mapped area, distinguish intact visible material from damaged substrate and document proposed fixing points before installation. Supports must follow the inspected opening rather than designation alone. The handover should state board size, materials, fastenings, what was concealed and outstanding glazing, joinery, door, lock or structural work. Any permanent change to appraisal-recognised fabric remains a separate property-specific decision, allowing the next specialist to reconstruct the original condition from the photographs.`,
+        ],
+        checks: ['Follow police directions before covering damage', 'Verify the partial conservation boundary', 'Record all support and fixing points'],
+        faq: { q: 'Can a damaged Bilton opening be boarded temporarily?', a: `A temporary method may be possible, but it depends on inspected supports, evidence requirements and the exact property's current status.` },
+      },
+      'lock-upgrade': {
+        heading: 'Measured security improvements for a Bilton entrance',
+        body: [
+          `Bilton's merger history and two named building dates provide no security assessment. Inspect the actual door leaf, frame, hinges, keeps, handles, lock engagement and any cylinder projection. Warwickshire Police supports reviewing the complete entrance and considering correctly sized, accredited products. Current marks, dimensions and condition can then support options, while alignment and frame weaknesses remain separately visible rather than being inferred from the former village's architectural history.`,
+          `For an address inside the partial designation, photograph visible furniture, existing cuts and surviving fabric before proposing an outward change. Compatible internal improvements can be considered separately from alterations needing property-specific guidance. A shared or fire-rated threshold also requires its controller's requirements. The specification should state retained elements, measured fit, tested product evidence and dependencies, explaining conditional resistance improvement without suggesting that one certified component is suitable for every Bilton property.`,
+        ],
+        checks: ['Inspect leaf, frame and hardware together', 'Verify exact sizing and product evidence', 'Apply conservation context only when mapped'],
+        faq: { q: 'Does the Bilton conservation area require one upgrade?', a: `No. The map affects relevant preservation checks, while the inspected complete entrance and current requirements determine suitable hardware at that property.` },
+      },
+    },
+  }),
+  brownsover: makeGuide({
+    slug: 'brownsover',
+    summary: [
+      `The Old Brownsover appraisal describes a hamlet about one and a half miles north of Rugby whose conservation area includes Brownsover Hall, several houses, St Michael's Church and adjoining undeveloped land.`,
+      `The appraisal identifies canal and highway connections as part of Old Brownsover's historic transport context and names Brownsover Hall as its key landmark. These facts apply to Old Brownsover, not all development.`,
+    ],
+    accessGuidance: `Provide the exact Brownsover address and entrance and state whether it is within Old Brownsover only after checking the map. Canal, highway and hall references do not establish present access to premises.`,
+    evidenceLimits: `Old Brownsover's mapped conservation area is not coterminous with the wider route. The appraisal does not identify another property's status, construction, controller, door material, lock type, modern access or service circumstances.`,
+    facts: [
+      {
+        text: `Old Brownsover Conservation Area includes Brownsover Hall, a small group of houses, St Michael's Church and adjoining undeveloped land.`,
+        sourceIds: ['rbc-old-brownsover-appraisal'],
+        serviceRelevance: `The description applies to the mapped hamlet and must not be projected onto wider Brownsover development.`,
+      },
+      {
+        text: `The appraisal records historic canal and highway connections and identifies Brownsover Hall as the key landmark building.`,
+        sourceIds: ['rbc-old-brownsover-appraisal'],
+        serviceRelevance: `These are attributed Old Brownsover facts and cannot establish present property access, condition or hardware.`,
+      },
+    ],
+    sources: [LOCAL_SOURCES['rbc-old-brownsover-appraisal']],
+    serviceGuidance: {
+      'emergency-lockout': {
+        heading: 'Brownsover lockouts with Old Brownsover identified correctly',
+        body: [
+          `Brownsover Hall, St Michael's Church and the canal context identify the mapped hamlet, not every Brownsover entrance. A caller should give the complete address, exact private or common threshold and responsible person, then confirm Old Brownsover status only from the map. That allows lawful authority to be checked for the correct door before latch state, deadlocking, key behaviour and visible damage determine which technical options can be considered.`,
+          `At an opening inside the conservation area, photograph the door, frame and furniture before a method that might remove material is agreed. Historic transport connections do not reveal the lock or property access. MLA evidence supports explaining scope changes. If drilling or replacement follows inspection, identify the component and reinstatement separately and reserve any wider alteration of appraisal-recognised fabric for property-specific advice, without extending Old Brownsover's status to later development represented by the route.`,
+        ],
+        checks: ['Provide the full Brownsover address', 'Check Old Brownsover map status', 'Link authority to the exact threshold'],
+        faq: { q: 'Is every Brownsover lockout in Old Brownsover?', a: `No. The mapped hamlet differs from the wider route, so status and the affected entrance must be checked for the exact address.` },
+      },
+      'lock-change': {
+        heading: 'Brownsover lock changes separated from hamlet context',
+        body: [
+          `A named hall, church and historic canal connection do not identify hardware at another Brownsover property. Define the change objective, then capture inside and outside furniture, the edge plate, visible codes and closing behaviour. Inspection can isolate cylinder, case, keep and alignment and determine which parts remain serviceable. Compatible dimensions and key-control needs, not proximity to Brownsover Hall, should support the replacement decision.`,
+          `If the exact door lies within Old Brownsover's designation, distinguish an internal component change from new cutting or visible furniture substitution. That scope difference informs preservation. For shared hardware, the current controller must confirm keying and authority. The written proposal should list retained components, measured product, keys, fitting and adjustment and flag any outward-fabric or fire-door issue separately, ensuring that the small hamlet description never becomes a general rule for the wider route.`,
+        ],
+        checks: ['State the reason for changing hardware', 'Photograph markings and closing alignment', 'Verify whether Old Brownsover applies'],
+        faq: { q: 'Does Brownsover Hall context identify a suitable lock?', a: `No. The landmark fact supplies locality context only; the individual door, markings, dimensions and current constraints determine compatibility at that address.` },
+      },
+      'upvc-lock-repair': {
+        heading: 'Brownsover uPVC fault diagnosis without canal assumptions',
+        body: [
+          `The Old Brownsover appraisal contains no evidence that a customer door is uPVC or composite. Confirm its material, then record key rotation, handle travel, locking-point movement and any difference when it enters the frame. Those observations can direct inspection among alignment, keeps, cylinder, handles and gearbox. Faceplate markings, centres, backset and layout remain essential before any compatible component is stated, regardless of canal or highway context.`,
+          `A modern Brownsover door may fall outside the small hamlet designation, while a later mechanism can also exist within older fabric. Check the exact map and identify private, shared or fire-door control independently. If repair expands into visible external material inside Old Brownsover, describe that extension for property-specific advice. The diagnostic record should keep operating symptoms, measurements, authority and conservation status distinct, avoiding any inference from Brownsover Hall or St Michael's Church.`,
+        ],
+        checks: ['Verify the actual door system', 'Record locking point movement precisely and safely', 'Confirm map and threshold responsibility'],
+        faq: { q: 'Does Old Brownsover context indicate multipoint hardware?', a: `No. Mechanism identity requires the fitted faceplate, measured geometry and observed operation; the appraisal contains no lock-distribution evidence for another door.` },
+      },
+      'boarding-up': {
+        heading: 'Boarding a Brownsover opening with hamlet fabric preserved',
+        body: [
+          `The Old Brownsover transport history does not describe a damaged opening. Follow police directions first, then photograph the point of entry, remaining frame, glazing or door, compromised hardware and adjacent surfaces. Identify the exact address, threshold and controller and establish whether the mapped hamlet applies. These current observations guide dimensions and temporary handling without assuming structure or access from the canal, highway or landmark references.`,
+          `Inside the conservation area, record intact visible material and proposed fixing positions before a board is placed. Supports should follow the inspected surviving structure, not the designation alone. The handover should state board size, material, fastenings, covered damage and outstanding glazing, joinery, lock, door or structural work. Any permanent change to Old Brownsover fabric remains a separate property-specific decision, while wider Brownsover addresses are assessed from their own evidence rather than the hamlet appraisal.`,
+        ],
+        checks: ['Follow police scene instructions first', 'Confirm whether Old Brownsover applies', 'Document fixings and concealed elements'],
+        faq: { q: 'Does canal context determine Brownsover boarding?', a: `No. The temporary design follows the exact damaged opening, safe surviving supports, police directions and verified property status at that address.` },
+      },
+      'lock-upgrade': {
+        heading: 'A Brownsover upgrade based on the complete entrance',
+        body: [
+          `Old Brownsover's named assets and transport history provide no security specification. Inspect the actual leaf, frame, hinges, keeps, handles, lock engagement and any cylinder projection. Warwickshire Police supports reviewing the full entrance and correctly sized, accredited products. Present markings, measurements and condition can then support options, while alignment, frame weaknesses and shared control remain explicit instead of being inferred from the age or landmark status of the hamlet.`,
+          `For an address within the mapped area, photograph visible furniture, existing apertures and appraisal-recognised material before suggesting outward alteration. Internal compatible improvements can follow a separate path from cutting or substitution needing property-specific guidance. A communal or fire-rated threshold also requires its controller's constraints. The specification should record retained fabric, measured fit, tested product evidence and dependencies, describing potential resistance gains conditionally and never applying one recommendation across Old and wider Brownsover.`,
+        ],
+        checks: ['Assess the complete entrance condition', 'Verify measured fit and product evidence', 'Distinguish Old from wider Brownsover'],
+        faq: { q: 'Is one security upgrade suitable across Brownsover?', a: `No. Old Brownsover is a limited mapped context; each measured door, frame and current building requirement determines suitable options for that entrance.` },
+      },
+    },
+  }),
+  cawston: makeGuide({
+    slug: 'cawston',
+    summary: [
+      `Rugby Borough Council's current directory identifies Cawston as a civil parish with a parish council based at Cawston Community Hall on Scholars Drive. The contact location is not a route boundary.`,
+      `Cawston Parish Council adopted a parish plan in August 2010 following an autumn 2009 questionnaire, with an action plan intended for regular review. It remains a historical community-planning record for present use.`,
+    ],
+    accessGuidance: `Provide the exact Cawston address, entrance and responsible contact. Parish, ward and postal boundaries are not interchangeable, and the community hall address cannot establish access to a service property.`,
+    evidenceLimits: `The directory confirms current parish administration, while the detailed plan dates from 2010 and its survey from 2009. Neither source proves current amenities, property status, construction, hardware, access or resident views.`,
+    facts: [
+      {
+        text: `The current borough directory identifies Cawston as a civil parish and locates its parish council at Cawston Community Hall.`,
+        sourceIds: ['rbc-cawston-parish-directory'],
+        serviceRelevance: `This provides administrative orientation only and cannot define the service route, property boundary or entrance access.`,
+      },
+      {
+        text: `The parish plan was adopted in August 2010 after an autumn 2009 questionnaire and contemplated regular action-plan review.`,
+        sourceIds: ['rbc-cawston-parish-plan-2010'],
+        serviceRelevance: `The dated community-planning process cannot be presented as current property, amenities, development or resident evidence.`,
+      },
+    ],
+    sources: [LOCAL_SOURCES['rbc-cawston-parish-directory'], LOCAL_SOURCES['rbc-cawston-parish-plan-2010']],
+    serviceGuidance: {
+      'emergency-lockout': {
+        heading: 'Cawston lockouts with parish boundaries kept administrative',
+        body: [
+          `The parish council's community-hall contact and the 2010 plan do not identify a customer's locked entrance. Provide the complete property and unit, exact private or shared threshold and person controlling it. Parish, ward and postal labels must not substitute for that address. Authority can then be linked to the correct opening before the locksmith assesses latch state, deadlocking, key behaviour and any existing damage that affects the technical approach.`,
+          `Neither source establishes property designation or construction. If entry could require removing visible material, photograph the door and check current address-level information rather than using the old parish plan. MLA guidance supports authority and advance scope clarity. Any drilling or replacement should identify the component and reinstatement separately, while common-door, fire-door or external-fabric questions remain documented next decisions for the current controller, not conclusions drawn from the 2009 questionnaire.`,
+        ],
+        checks: ['Give the complete current Cawston address', 'Identify private and shared thresholds', 'Use present records for property status'],
+        faq: { q: 'Does the Cawston parish boundary establish lockout access?', a: `No. Administrative boundaries and the hall contact do not prove property access; the exact door and caller's authority must be verified.` },
+      },
+      'lock-change': {
+        heading: 'Cawston lock changes based on current hardware, not a parish plan',
+        body: [
+          `A 2009 questionnaire and 2010 action plan supply no information about a Cawston lock. Explain whether the change concerns key control, failure or damage and provide photographs of both hardware faces, the door edge and readable markings. Inspection can distinguish cylinder, lock case, keep and alignment and determine what remains sound. Measurements and key needs support compatibility; the parish council's Scholars Drive address does not.`,
+          `Confirm who controls the threshold, especially where a common entrance differs from a private door. If proposed work changes outward fabric, check present property records because the parish plan does not establish designation or permission. The written schedule should list retained parts, measured replacement, keys, fitting and adjustment and leave any fire-door or visible-material issue as a separate next action. This keeps administrative evidence, authority and mechanical diagnosis in their proper roles.`,
+        ],
+        checks: ['Define the exact key-control objective', 'Record markings and measured dimensions', 'Confirm current responsibility for the affected threshold'],
+        faq: { q: 'Can the Cawston parish plan specify a lock?', a: `No. It is dated community-planning evidence; a compatible product depends on the actual door, component marks, dimensions and present requirements.` },
+      },
+      'upvc-lock-repair': {
+        heading: 'Cawston multipoint diagnosis from current door behaviour',
+        body: [
+          `The civil-parish directory and old plan do not establish that an affected Cawston door is uPVC or composite. Confirm the material, then record key rotation, handle travel, locking-point movement and whether the fault changes against the frame. These symptoms can direct inspection among alignment, keeps, cylinder, handles and gearbox. Full faceplate markings, centres, backset and locking layout remain necessary before compatible parts can be identified.`,
+          `Administrative orientation cannot reveal whether the threshold is private, communal, managed or fire-rated. Establish its controller before dismantling hardware and use present property information if repair extends into visible material. The diagnostic note should state safe tests, symptoms, measurements and the next action. It should not carry forward resident views or development conditions from the 2009 questionnaire, because those sources contain no evidence about the individual mechanism or current building.`,
+        ],
+        checks: ['Confirm uPVC or composite construction', 'Record the operating sequence safely', 'Identify the current door controller'],
+        faq: { q: 'Does Cawston parish evidence identify multipoint parts?', a: `No. Part identity requires markings and measurements from the fitted mechanism; administrative and historical planning records contain no door data.` },
+      },
+      'boarding-up': {
+        heading: 'Current-scene boarding decisions at a Cawston address',
+        body: [
+          `The parish directory and 2010 plan cannot describe damage at a Cawston opening. Follow police directions, then photograph the point of entry, remaining frame, glazing or door, damaged hardware and surrounding surfaces before covering anything. Confirm the exact address, threshold and responsible person without treating the community hall as a boundary marker. Those current observations support board dimensions and handling and preserve the evidence needed by later repairers.`,
+          `Since neither source establishes property status or structure, fixings must follow inspected surviving material and any separately verified current constraint. Mark sound supports, damage and intended contact points and document what will be concealed. The handover should state board size, material, fastenings and outstanding glazing, joinery, door, lock or structural tasks. This keeps a temporary measure distinct from permanent work and prevents a dated parish action plan from being used as property evidence.`,
+        ],
+        checks: ['Follow police evidence directions first', 'Photograph damage before it is hidden', 'Record temporary and permanent scopes'],
+        faq: { q: 'Does the Cawston parish plan affect boarding?', a: `No direct method follows from it. Boarding depends on the exact opening, police guidance, surviving structure and current property information.` },
+      },
+      'lock-upgrade': {
+        heading: 'A measured Cawston entrance upgrade using current evidence',
+        body: [
+          `Cawston's administrative directory and historical community plan provide no security rating. Inspect the complete door and frame, hinges, keeps, handles, lock engagement and any cylinder projection. Warwickshire Police supports whole-entrance assessment and correctly sized, accredited products. Current markings, dimensions and operation can then support suitable options, while alignment, frame condition and shared control remain explicit rather than being inferred from parish status or old survey responses.`,
+          `Before outward alteration, check current property status and establish the responsible controller of any communal or fire-rated hardware. The 2010 plan cannot answer either question. A written specification should separate adjustment, reinforcement and replacement, state independently evidenced product properties and measured fit, and list any fabric or building-safety dependency for further advice. It may describe conditional resistance improvements but cannot make a universal Cawston recommendation or promise a security result.`,
+        ],
+        checks: ['Inspect leaf, frame and hardware together', 'Verify accredited evidence and sizing', 'Use current building information only'],
+        faq: { q: 'Does civil-parish status suggest a Cawston upgrade?', a: `No. Administrative status supplies no security evidence; the inspected entrance, measured compatibility and current constraints determine appropriate options for that opening.` },
+      },
+    },
+  }),
+  'long-lawford': makeGuide({
+    slug: 'long-lawford',
+    summary: [
+      `Historic England lists Lawford Hill Farmhouse at Grade II and records its main range as probably late eighteenth century with wings added around 1835. That designation applies only to the named farmhouse.`,
+      `The Grade II Church of St John on Chapel Street is dated 1839 and attributed to William Walker. Rugby Borough Council also includes Long Lawford allocation evidence within its adopted 2011-2031 Local Plan.`,
+    ],
+    accessGuidance: `Provide the complete Long Lawford address and exact entrance. Lawford Hill Farmhouse, St John's Church and the Main Rural Settlement planning reference are orientation evidence, not property-access instructions or route boundaries.`,
+    evidenceLimits: `The list entries designate two named assets, while the planning page records an area-level allocation context. None establishes another property's age, status, tenure, construction, door hardware, access or service circumstances.`,
+    facts: [
+      {
+        text: `Lawford Hill Farmhouse is Grade II listed, with a probably late-eighteenth-century main range and wings added around 1835.`,
+        sourceIds: ['historic-england-lawford-hill-farmhouse-1299648'],
+        serviceRelevance: `The designation and phases apply only to the named farmhouse and cannot characterise nearby Long Lawford properties.`,
+      },
+      {
+        text: `The Grade II Church of St John on Chapel Street dates from 1839 and is attributed to William Walker.`,
+        sourceIds: ['historic-england-st-john-long-lawford-1299647'],
+        serviceRelevance: `The church record provides a named heritage anchor but no evidence about neighbouring buildings, doors or locks.`,
+      },
+      {
+        text: `Rugby Borough Council adopted its Local Plan 2011-2031 in 2019 and lists Long Lawford Main Rural Settlement allocation evidence.`,
+        sourceIds: ['rbc-local-plan-2011-2031'],
+        serviceRelevance: `The planning classification requires current-map context and cannot establish the status or construction of an individual address.`,
+      },
+    ],
+    sources: [
+      LOCAL_SOURCES['historic-england-lawford-hill-farmhouse-1299648'],
+      LOCAL_SOURCES['historic-england-st-john-long-lawford-1299647'],
+      LOCAL_SOURCES['rbc-local-plan-2011-2031'],
+    ],
+    serviceGuidance: {
+      'emergency-lockout': {
+        heading: 'Long Lawford lockouts with named listings kept specific',
+        body: [
+          `The listed farmhouse and church are exact assets, while the Main Rural Settlement reference is planning context; none identifies a caller's locked door. Give the full Long Lawford address, precise private or shared threshold and person controlling it. Authority can then be checked for that opening before latch state, deadlocking, key behaviour and existing damage guide inspection. A nearby listed name or Chapel Street reference supplies no technical access evidence.`,
+          `If the address is one of the named listed assets or current records reveal another designation, photograph visible fabric before approving a method that could remove material. Otherwise, do not extend those listings to nearby premises. MLA guidance supports explaining scope changes in advance. Any drilling or component replacement should be documented with reinstatement separately, and a wider alteration to protected material should remain a property-specific next decision rather than an inference from Long Lawford's planning classification.`,
+        ],
+        checks: ['Give the exact Long Lawford address', 'Check named listing only when applicable', 'Prepare authority for the specific threshold'],
+        faq: { q: 'Are all Long Lawford lockouts affected by the listed buildings?', a: `No. The listings cover two named assets only; another address must be checked on its own current property and lock evidence.` },
+      },
+      'lock-change': {
+        heading: 'Long Lawford lock changes without extending listed status',
+        body: [
+          `Dates attached to Lawford Hill Farmhouse and St John's Church do not identify hardware elsewhere. Define whether the change concerns lost keys, failure or damage and photograph both hardware faces, the edge plate and readable marks. Inspection can separate cylinder, lock case, keep and alignment, preserving serviceable components where appropriate. Exact measurements and key-control needs support compatibility; the Main Rural Settlement label and named-asset ages support no product choice.`,
+          `At a named listed asset or another verified protected property, distinguish a replacement within existing apertures from new cutting or visible furniture change. That frames preservation and specialist advice. A common entrance also requires the person responsible for its keys and hardware. The schedule should list retained elements, measured product, keys, fitting and adjustment and flag any external-fabric or fire-door issue separately, avoiding a blanket rule for Long Lawford based on two list entries.`,
+        ],
+        checks: ['State the key-control or failure purpose', 'Record exact markings and dimensions', 'Apply listings only to named assets'],
+        faq: { q: 'Does Long Lawford planning status specify replacement locks?', a: `No. The classification supplies no hardware evidence; compatibility follows from the actual door, component geometry and current property requirements at that address.` },
+      },
+      'upvc-lock-repair': {
+        heading: 'Long Lawford multipoint diagnosis from present door evidence',
+        body: [
+          `The listed farmhouse, church and planning allocation do not establish that an affected Long Lawford door is uPVC or composite. Confirm the material, then record key rotation, handle travel, locking-point movement and any change against the frame. These symptoms can direct diagnosis among alignment, keeps, cylinder, handles and gearbox. Faceplate marks, centres, backset and locking layout remain required before any compatible part is identified.`,
+          `A later door may exist at a listed or unlisted property, so mechanism age and property status must not be conflated. Check the exact address and identify who controls a private, shared or fire-rated threshold before dismantling hardware. If repair reaches visible protected material, describe that extension for appropriate advice. The work record should preserve separate findings for symptoms, measurements, authority and designation, never transferring the farmhouse or church dates to the service door.`,
+        ],
+        checks: ['Confirm the actual door construction', 'Record operation with the door open and closed safely', 'Check address status and controller separately'],
+        faq: { q: 'Do Long Lawford list entries identify multipoint parts?', a: `No. They describe two buildings, while compatible parts require markings, dimensions and operation from the mechanism fitted to the actual door.` },
+      },
+      'boarding-up': {
+        heading: 'Temporary boarding in Long Lawford with named assets distinguished',
+        body: [
+          `The farmhouse and church list entries cannot describe damage at another Long Lawford address. Follow police directions, then photograph the point of entry, remaining frame, glazing or door, compromised lock and adjacent material before covering it. Confirm the exact threshold, responsible person and whether any named or separately verified designation applies. Those current observations support board dimensions without converting an area-level planning classification into structure or incident evidence.`,
+          `At a listed asset, record surviving protected fabric and intended fixing points before any temporary installation, using property-specific specialist guidance where required. At other addresses, assess the opening on its own evidence. The handover should state board size, material, fastenings, covered damage and outstanding glazing, joinery, door, lock or structural tasks. This keeps temporary security separate from permanent alteration and prevents the two listed examples from becoming a Long Lawford-wide fixing assumption.`,
+        ],
+        checks: ['Follow police evidence guidance first', 'Verify whether a named listing applies', 'Document support points and concealed damage'],
+        faq: { q: 'Does a Long Lawford listing change temporary boarding?', a: `Only when the exact property or fabric is protected. The opening, police directions and property-specific advice determine the temporary method.` },
+      },
+      'lock-upgrade': {
+        heading: 'Long Lawford security planning with asset-specific checks',
+        body: [
+          `The two listed-building records and Main Rural Settlement evidence do not rate security at a Long Lawford entrance. Inspect the complete leaf, frame, hinges, keeps, handles, lock engagement and any cylinder projection. Warwickshire Police supports whole-entrance assessment and correctly sized, accredited products. Current markings, measurements and operation can support options, while alignment, frame condition and shared control remain explicit rather than being inferred from planning or building age.`,
+          `At Lawford Hill Farmhouse, St John's Church or another verified protected property, photograph visible hardware and existing apertures before proposing outward change. Internal compatible improvements and fabric alteration should follow separate decisions. Common or fire-rated thresholds also require their controller's constraints. The specification should record retained material, product testing evidence, measured fit and dependencies, explaining conditional resistance gains without implying that one certified product applies throughout Long Lawford or guarantees complete protection.`,
+        ],
+        checks: ['Assess the entire current entrance', 'Keep list entries specific to their named assets', 'Verify product evidence and measured fit'],
+        faq: { q: 'Is one upgrade required across Long Lawford?', a: `No. The measured entrance and current property requirements determine suitable options; named listings and planning classification do not specify hardware.` },
+      },
+    },
+  }),
+  'new-bilton': makeGuide({
+    slug: 'new-bilton',
+    summary: [
+      `In March 2025 Rugby Borough Council published consultation plans to refurbish and expand the play area at New Bilton Recreation Ground. The source establishes a proposal at a named site, not completed works.`,
+      `A February 2024 cabinet paper named New Bilton Ward as one of two pilot areas for a hyperlocal area-action approach under the council's 2023-2025 delivery plan. This is dated programme evidence.`,
+    ],
+    accessGuidance: `Provide the complete New Bilton property address, unit and exact entrance. The recreation ground and electoral ward are limited references and cannot define the route slug, private-property status or access.`,
+    evidenceLimits: `The sources concern a consultation proposal at one recreation ground and a dated ward-level council programme. They prove no current project completion, route boundary, property type, construction, hardware, access or service demand.`,
+    facts: [
+      {
+        text: `The council published March 2025 consultation proposals for refurbishment and expansion at New Bilton Recreation Ground's play area.`,
+        sourceIds: ['rbc-new-bilton-play-consultation-2025'],
+        serviceRelevance: `This is a proposal for one named site and cannot establish implementation, wider conditions or property characteristics.`,
+      },
+      {
+        text: `A February 2024 cabinet paper included New Bilton Ward in a hyperlocal area-action pilot workstream.`,
+        sourceIds: ['rbc-cabinet-new-bilton-2024'],
+        serviceRelevance: `The dated ward programme cannot define the route, describe every address or support service-performance claims.`,
+      },
+    ],
+    sources: [LOCAL_SOURCES['rbc-new-bilton-play-consultation-2025'], LOCAL_SOURCES['rbc-cabinet-new-bilton-2024']],
+    serviceGuidance: {
+      'emergency-lockout': {
+        heading: 'New Bilton lockouts without treating ward evidence as property evidence',
+        body: [
+          `The recreation-ground consultation and ward pilot do not identify a locked New Bilton property. A caller should provide the full address, building or unit, exact private or shared threshold and person controlling it. The named ground is not a route boundary, and the ward programme does not prove access. Authority can then be checked for the correct opening before latch state, deadlocking, key behaviour and existing damage guide technical assessment.`,
+          `Neither source establishes property status or construction. If entry could remove visible material, photograph the door and consult current address-level records rather than relying on council-programme geography. MLA guidance supports agreeing authority and any change in scope. A drilling or replacement decision should identify the affected component and reinstatement, while external-fabric, common-door or fire-door issues remain separate next steps for the responsible property party instead of being inferred from the 2024 pilot.`,
+        ],
+        checks: ['Give the complete New Bilton address', 'Identify the exact controlled entrance', 'Use current property evidence only'],
+        faq: { q: 'Does New Bilton Ward define a lockout property?', a: `No. The ward appears in a dated programme; the current address, precise door and caller's lawful connection must be verified independently.` },
+      },
+      'lock-change': {
+        heading: 'New Bilton lock changes from the fitted hardware',
+        body: [
+          `A proposed play-area project and hyperlocal council pilot reveal nothing about locks at a New Bilton address. Define whether the change concerns keys, failure or damage, then photograph both hardware faces, the door edge and readable markings. Inspection can distinguish cylinder, case, keep and alignment, preserving sound elements and establishing dimensions. The ward or recreation-ground name cannot supply a property type, keying arrangement or compatible replacement.`,
+          `Confirm who controls a shared threshold before hardware or keys change, because an electoral programme does not establish ownership. If proposed work affects outward fabric, check present property status separately; the consultation source concerns only a named play area. The written schedule should list retained parts, measured product, keys, fitting and adjustment and reserve any fire-door or external-material question for current building evidence and the responsible controller, not area-action assumptions.`,
+        ],
+        checks: ['Define the reason for the change', 'Record markings and measured geometry', 'Confirm current authority for shared door hardware'],
+        faq: { q: 'Can New Bilton council programmes specify a lock?', a: `No. They provide dated administrative context only; the actual door, fitted component, dimensions and current controller determine replacement requirements for that threshold.` },
+      },
+      'upvc-lock-repair': {
+        heading: 'New Bilton multipoint repair from observed mechanism behaviour',
+        body: [
+          `The two council sources provide no evidence that a New Bilton entrance is uPVC or composite. Confirm the actual material, then record key rotation, handle lift, locking-point travel and any difference when the leaf meets the frame. Those observations can direct inspection among alignment, keeps, cylinder, handles and gearbox. Faceplate markings, centres, backset and locking layout remain necessary before a compatible part is identified.`,
+          `A ward pilot and recreation-ground consultation cannot reveal whether the threshold is private, communal, managed or fire-rated. Establish the responsible person before components are removed and check current property information if repair extends into visible fabric. The diagnostic record should state symptoms, safe tests, measurements and next action, explicitly avoiding claims about local door type or mechanism prevalence from programme geography or a proposed public-space project.`,
+        ],
+        checks: ['Confirm the actual door material', 'Record key and handle movement', 'Measure the fitted locking arrangement'],
+        faq: { q: 'Does New Bilton ward evidence identify multipoint parts?', a: `No. Compatible parts require the individual mechanism's marks, dimensions and operation; the council programme contains no technical door evidence for that mechanism.` },
+      },
+      'boarding-up': {
+        heading: 'New Bilton temporary boarding based on scene evidence',
+        body: [
+          `The play-area consultation and ward pilot cannot describe damage at a New Bilton opening. Follow police directions, then photograph the point of entry, remaining frame, glazing or door, compromised hardware and adjacent surfaces before covering them. Confirm the exact property, threshold and responsible person. Those current observations establish dimensions and handling needs without extending facts about a recreation ground or electoral ward to private premises.`,
+          `Since neither source supplies structure or property status, fixings must follow inspected surviving material and any separately verified current constraint. Mark sound supports, damage and intended contact points before installation. The handover should state board size, material, fastenings, concealed components and outstanding glazing, joinery, door, lock or structural assessment. This preserves a recoverable evidence trail and keeps the temporary response independent of whether the 2025 consultation proposal was later implemented.`,
+        ],
+        checks: ['Follow current police scene directions', 'Photograph all material before covering', 'Record fixings and permanent next steps'],
+        faq: { q: 'Does the New Bilton recreation proposal affect boarding?', a: `No. It concerns one consultation site; temporary boarding depends on the exact damaged opening, authority, police guidance and current property evidence.` },
+      },
+      'lock-upgrade': {
+        heading: 'New Bilton entrance upgrades using current measured evidence',
+        body: [
+          `A ward-level action pilot and play-area consultation provide no security information about New Bilton properties. Inspect the door leaf, frame, hinges, keeps, handles, lock engagement and any cylinder projection. Warwickshire Police supports reviewing the complete entrance and correctly sized, accredited products. Current marks, dimensions and operation can then support an option, while alignment, frame condition and shared control remain explicit instead of being inferred from council programme participation.`,
+          `Before changing visible material or communal hardware, establish current property status and the responsible controller directly. Neither dated source answers those questions. The specification should separate adjustment, reinforcement and replacement, cite independently evidenced product performance, record measured fit and list fire-door or fabric dependencies for further advice. It may describe a conditional improvement in tested resistance, but cannot use New Bilton's programme or consultation references to recommend one product across the route or promise an outcome.`,
+        ],
+        checks: ['Inspect the whole present entrance', 'Verify product evidence and exact fit', 'Confirm current property and management constraints'],
+        faq: { q: 'Does New Bilton area-action evidence imply an upgrade?', a: `No. It is administrative programme evidence; suitable security work follows from the inspected entrance, measured compatibility and current building requirements.` },
+      },
+    },
+  }),
+  dunchurch: makeGuide({
+    slug: 'dunchurch',
+    summary: [
+      `Dunchurch Conservation Area occupies the historic crossroads core and includes the commercial centre, open spaces and a later housing area to the north. Its mapped extent does not cover the entire route.`,
+      `The appraisal records the medieval standing cross at the centre as a scheduled monument and places part of the registered Dunchurch Lodge park and garden to the north-east. Their boundaries differ.`,
+    ],
+    accessGuidance: `Provide the exact Dunchurch property and entrance and check each relevant map separately. The crossroads, standing cross and registered landscape can orient context but do not establish access or shared boundaries.`,
+    evidenceLimits: `The conservation area, scheduled cross and registered landscape are distinct mapped contexts. The appraisal does not assign status, age, ownership, construction, door material, lock type or access arrangements to every Dunchurch address.`,
+    facts: [
+      {
+        text: `Dunchurch Conservation Area covers the historic crossroads core, commercial centre, open spaces and a later northern housing area.`,
+        sourceIds: ['rbc-dunchurch-appraisal'],
+        serviceRelevance: `The mapped extent must be checked for the exact address and cannot be applied across the whole route.`,
+      },
+      {
+        text: `The appraisal identifies the central medieval standing cross as scheduled and part of Dunchurch Lodge's registered landscape to the north-east.`,
+        sourceIds: ['rbc-dunchurch-appraisal'],
+        serviceRelevance: `The separately bounded assets require their own records and cannot confer status on surrounding buildings.`,
+      },
+    ],
+    sources: [LOCAL_SOURCES['rbc-dunchurch-appraisal']],
+    serviceGuidance: {
+      'emergency-lockout': {
+        heading: 'Dunchurch lockouts with three mapped contexts separated',
+        body: [
+          `The historic crossroads, scheduled standing cross and registered landscape do not identify a customer's locked door, and their boundaries are not interchangeable. Give the complete Dunchurch address, exact private or shared threshold and responsible person. Check the relevant map only for that property. Authority can then be established for the correct opening before latch state, deadlocking, key behaviour and existing damage guide the locksmith's technical assessment.`,
+          `If the entrance lies within a verified protected context, photograph the leaf, frame and visible furniture before approving a method that could remove material. The appraisal informs preservation but does not reveal the lock or guarantee technique. MLA guidance supports advance agreement when scope changes. Any drilling or component replacement should be recorded with reinstatement separately, while broader alteration to conservation, scheduled or registered fabric remains a property- and asset-specific next decision.`,
+        ],
+        checks: ['Give the exact Dunchurch address', 'Check each applicable map separately', 'Prepare authority for the affected threshold'],
+        faq: { q: 'Does the Dunchurch standing cross affect nearby lockouts?', a: `Not automatically. Its scheduled boundary is specific; the service property and any relevant designation must be verified independently for that exact address.` },
+      },
+      'lock-change': {
+        heading: 'Dunchurch lock changes with asset boundaries kept distinct',
+        body: [
+          `The crossroads core and standing cross do not identify hardware at another Dunchurch address. State whether the change concerns key control, mechanical failure or damage, then photograph handle faces, the edge plate and readable markings. Inspection can separate cylinder, lock case, keep and alignment and determine which elements remain sound. Measurements and key requirements support compatibility, whereas the appraisal's scheduled and registered assets support no product choice.`,
+          `At an address within the conservation area or another verified designation, distinguish a component change within existing apertures from new cutting or visible substitution. Check the correct boundary rather than combining asset records. A communal threshold also needs its controller's keying authority. The written scope should list retained parts, measured product, keys, fitting and adjustment and identify any fire-door or protected-fabric issue separately for appropriate property-specific guidance.`,
+        ],
+        checks: ['Define the lock-change objective clearly', 'Record markings and existing apertures', 'Apply only the correct mapped status'],
+        faq: { q: 'Does Dunchurch heritage context specify replacement hardware?', a: `No. The actual door, lock markings, measurements and current property requirements determine compatibility; mapped assets answer separate preservation questions at that property.` },
+      },
+      'upvc-lock-repair': {
+        heading: 'Dunchurch uPVC diagnosis without crossroads assumptions',
+        body: [
+          `The conservation appraisal does not establish that an affected Dunchurch entrance is uPVC or composite. Confirm the material, then record key rotation, handle travel, locking-point movement and whether the fault changes when the leaf enters the frame. These observations can direct inspection among alignment, keeps, cylinder, handles and gearbox. Full faceplate marks, centres, backset and locking layout remain essential before compatible parts can be identified.`,
+          `A later door may exist within or outside the historic core, while the scheduled cross and registered landscape have different boundaries again. Check only the applicable record and identify private, shared or fire-door control before dismantling hardware. If repair extends into visible protected material, describe that extension separately. The diagnostic note should preserve distinct findings for operation, dimensions, authority and property status, with no mechanism inference drawn from the crossroads setting.`,
+        ],
+        checks: ['Confirm the individual door system', 'Record operation against the frame', 'Check the relevant boundary only'],
+        faq: { q: 'Can Dunchurch mapped assets identify a gearbox?', a: `No. Multipoint identity depends on the fitted mechanism's markings and measured geometry; heritage maps contain no compatible-parts information for that mechanism.` },
+      },
+      'boarding-up': {
+        heading: 'Dunchurch boarding with conservation and monument maps separated',
+        body: [
+          `The appraisal's three mapped contexts cannot describe damage at an opening. Follow police directions, then photograph the point of entry, surviving frame, glazing or door, compromised hardware and surrounding material before covering it. Identify the exact threshold and controller and determine which boundary, if any, applies. Those scene observations support board dimensions while avoiding an assumption that the scheduled cross or registered landscape extends to the property.`,
+          `Where verified protected fabric is involved, record intact surfaces and proposed support points and obtain any appropriate property-specific guidance before fixing. Temporary support still follows the inspected remaining structure. The handover should state board size, material, fastenings, covered damage and outstanding glazing, joinery, door, lock or structural tasks. Any permanent alteration remains a separate decision under the correct conservation, scheduled or registered record rather than a blended Dunchurch-wide rule.`,
+        ],
+        checks: ['Follow current police evidence-preservation guidance first', 'Verify the exact applicable designation', 'Document supports and concealed damage'],
+        faq: { q: 'Can a Dunchurch protected opening be boarded?', a: `A temporary method may be possible, but the actual structure, police directions and correct property-specific designation determine the authorised approach.` },
+      },
+      'lock-upgrade': {
+        heading: 'Dunchurch entrance upgrades with mapped status applied precisely',
+        body: [
+          `The historic crossroads and named protected assets provide no security rating for a Dunchurch entrance. Inspect the complete leaf, frame, hinges, keeps, handles, lock engagement and any cylinder projection. Warwickshire Police supports full-entrance assessment and correctly sized, accredited products. Current marks, measurements and operation can then support options, while alignment, frame condition and shared control remain explicit and no product is selected from heritage prominence.`,
+          `Before an outward change, identify whether the address is inside the conservation area, relates to scheduled fabric or intersects the registered landscape; those records cannot be substituted for one another. Photograph existing apertures and visible material and identify the controller of common or fire-rated hardware. The specification should state retained fabric, measured fit, product evidence and dependencies, describing conditional resistance improvement without claiming that one certified component suits every Dunchurch doorway or eliminates all entry routes.`,
+        ],
+        checks: ['Inspect the complete existing entrance', 'Keep the separate designation boundaries distinct', 'Verify product evidence and dimensions'],
+        faq: { q: 'Does Dunchurch heritage status require one upgrade?', a: `No. The relevant map may inform preservation, while the measured door, frame, hardware and current building constraints determine suitable options.` },
+      },
+    },
+  }),
+} satisfies Partial<Record<AreaSlug, GovernedAreaGuide>>

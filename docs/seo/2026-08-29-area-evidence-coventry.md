@@ -1,0 +1,416 @@
+# Coventry-cluster area evidence register
+
+Checked: 2026-08-29
+
+Scope: the first 30 `AREAS` records in the Coventry merchandising cluster, from `coventry-city-centre` through `little-heath`. This is a research register, not publish-ready local copy. Claims are limited to opened primary sources from Coventry City Council, Rugby Borough Council and Historic England. A character area, ward, MSOA, parish, neighbourhood-plan boundary or named park is not interchangeable with a service-area slug or an individual address.
+
+Excluded throughout: inferred lock types, locksmith job history or frequency, crime, response time, parking, property value, tenure and service coverage. A postcode or neighbourhood name does not establish any of those facts.
+
+## `coventry-city-centre`
+
+- **Context tags:** `historic-landscape-report`, `conservation-area-present`, `ring-road`, `civic-and-university`, `commercial-core`.
+- **Supported claims:**
+  1. Coventry City Council's Central Civic character area covers the eastern city-centre section and predominantly contains council offices and university buildings; elevated ring-road sections, junctions, flyovers and pedestrian subways are prominent there.
+  2. The Hill Top/Central Religious Core is the historic city-centre core, dominated by the medieval and modern cathedrals of St Michael and Holy Trinity Church; the council report records one conservation area and twelve listed buildings within that character area.
+  3. The Central Commercial Core covers the western city-centre section, predominantly shops and offices, with its western boundary following the ring road.
+- **Sources:**
+  - Coventry City Council — [Central Civic Character Area, HLC Area 5](https://www.coventry.gov.uk/downloads/file/17416/hlc-area-5-central-civic-character-area) — supports claim 1 and records the area-scale heritage designations. Checked 2026-08-29.
+  - Coventry City Council — [Central Religious Core Character Area, HLC Area 6](https://www.coventry.gov.uk/downloads/file/17417/hlc-area-6-central-religious-core-character-area) — supports claim 2. Checked 2026-08-29.
+  - Coventry City Council — [Central Commercial Core Character Area, HLC Area 16](https://www.coventry.gov.uk/downloads/file/17441/hlc-area-16-central-commercial-core-character-area) — supports claim 3. Checked 2026-08-29.
+- **Conditional service implication:** If a call concerns an externally visible alteration in the historic core, check the exact building's listed/conservation status before agreeing the work; for civic, university or commercial premises, confirm the caller's authority and exact entrance.
+- **Access/property-status caveat:** “City centre” spans several distinct official character areas; none of these sources proves the status or access arrangements of a particular building.
+
+## `earlsdon`
+
+- **Context tags:** `historic-landscape-report`, `conservation-area-present-in-wider-character-area`, `rail`, `watchmaking-history`.
+- **Supported claims:**
+  1. The Earlsdon and Chapelfields character area lies south-west of the city centre and is bisected by the Coventry–Birmingham railway line.
+  2. The report identifies the original Earlsdon development as Earlsdon Street, Poplar Road, Providence Street, Cromwell Street, Warwick Street, Clarendon Street and Moor Street, developed through the Freehold Land Society movement.
+  3. The report explicitly distinguishes the two historic cores: Chapelfields is a conservation area, while the original Earlsdon area has no statutory status as a whole.
+- **Source:**
+  - Coventry City Council — [Earlsdon and Chapelfields Character Area, HLC Area 17](https://www.coventry.gov.uk/downloads/file/17430/hlc-area-17-earlsdon-and-chapelfields-character-area) — supports all three claims and the need to distinguish Earlsdon from adjacent Chapelfields. Checked 2026-08-29.
+- **Conditional service implication:** For visible door or hardware changes, use the full address to establish whether the property is in Chapelfields or another designated/listed location before treating conservation controls as relevant.
+- **Access/property-status caveat:** The combined character-area report does not make every Earlsdon address part of a conservation area or establish an individual building's age, construction or entrance arrangement.
+
+## `tile-hill`
+
+- **Context tags:** `ward/JSNA-profile`, `rail`, `named-road-boundaries`, `woodland-SSSI`.
+- **Supported claims:**
+  1. The council's JSNA defines Tile Hill as a west-Coventry neighbourhood, with Broad Lane along its north and Tile Hill Lane dividing Tile Hill North from Tile Hill South.
+  2. The JSNA places Canley to the south, with Torrington Avenue and the railway line forming the stated division used by that profile.
+  3. Coventry City Council states that Tile Hill Wood is a Site of Special Scientific Interest because of native flora representing local Arden-type woodland.
+- **Sources:**
+  - Coventry City Council — [Tile Hill place-based profile: Demographics and Communities](https://www.coventry.gov.uk/facts-coventry/tile-hill-place-based-profile/3) — supports claims 1 and 2 and defines the statistical geography used by the profile. Checked 2026-08-29.
+  - Coventry City Council — [Woodland management](https://www.coventry.gov.uk/woods) — supports claim 3. Checked 2026-08-29.
+- **Conditional service implication:** Ask for the complete address and entrance description rather than using “Tile Hill” or CV4 alone; where work could affect a protected natural site or shared council asset, obtain the relevant landowner/manager authority.
+- **Access/property-status caveat:** The JSNA boundary is a statistical study area, and the SSSI statement concerns Tile Hill Wood, not every property carrying a Tile Hill address.
+
+## `canley`
+
+- **Context tags:** `ward/JSNA-profile`, `historic-landscape-report`, `rail`, `A45`, `university-nearby`.
+- **Supported claims:**
+  1. The council JSNA describes Canley as a west-Coventry neighbourhood with Charter Avenue running east–west; it places the railway and Tile Hill South to the north and Westwood Heath to the south, with the University of Warwick nearby.
+  2. The Historic Landscape Characterisation uses the railway as the north boundary, the A45 to the east, industrial units to the west, and woodland and the university to the south.
+  3. The HLC records a medieval moated site known as More Hall/Canley Moat and the buried remains of the deserted medieval village of Fletchamstead within the wider character area.
+- **Sources:**
+  - Coventry City Council — [Canley place-based profile: Demographics and communities](https://www.coventry.gov.uk/facts-coventry/canley-place-based-profile/3) — supports claim 1 and defines the JSNA study area. Checked 2026-08-29.
+  - Coventry City Council — [Canley Character Area, HLC Area 15a](https://www.coventry.gov.uk/downloads/file/17427/hlc-area-15a-canley-character-area) — supports claims 2 and 3. Checked 2026-08-29.
+- **Conditional service implication:** Use the full address to distinguish a private dwelling from university, industrial or managed premises; confirm occupier or manager authority before access work.
+- **Access/property-status caveat:** Proximity to the university and archaeological sites does not establish a property's use, ownership, heritage status or access route.
+
+## `radford`
+
+- **Context tags:** `historic-landscape-report`, `ancient-hamlet`, `historic-route`, `area-scale-designations`.
+- **Supported claims:**
+  1. Coventry's Coundon and Radford character area is west of the city centre and predominantly residential, with a small light-industrial area in the north.
+  2. The report identifies part of the ancient hamlet of Radford on both sides of Radford Road, which it describes as a medieval route later turnpiked.
+  3. At character-area scale, the report records nine listed buildings, nineteen locally listed buildings and no conservation area.
+- **Source:**
+  - Coventry City Council — [Coundon and Radford Character Area, HLC Area 40](https://www.coventry.gov.uk/downloads/file/17412/hlc-area-40-coundon-and-radford-character-area) — supports all three claims. Checked 2026-08-29.
+- **Conditional service implication:** If visible alterations are proposed at an older or designated building, verify the exact entry and planning status rather than relying on the Radford name.
+- **Access/property-status caveat:** Designation totals and historic-development statements apply to the whole HLC area; they do not identify the status, age or entrance conditions of any address.
+
+## `coundon`
+
+- **Context tags:** `historic-landscape-report`, `Coundon-Green`, `agricultural-edge`, `inter-war-development`.
+- **Supported claims:**
+  1. The council's HLC places present-day Coundon Green and Norman Place Road within an area where medieval assarts and settlement around commons were recorded.
+  2. It states that most of the character area's western side borders agricultural fields.
+  3. The report describes rapid, extensive inter-war residential development across much of the wider Coundon and Radford character area, while identifying later pockets around Everdon Road, Forland Way and Madeira Croft.
+- **Source:**
+  - Coventry City Council — [Coundon and Radford Character Area, HLC Area 40](https://www.coventry.gov.uk/downloads/file/17412/hlc-area-40-coundon-and-radford-character-area) — supports all three claims. Checked 2026-08-29.
+- **Conditional service implication:** Ask for the exact street and a clear description or photograph of the relevant entrance; an area development period cannot safely select replacement hardware or establish building status.
+- **Access/property-status caveat:** The HLC boundary is broader than the slug and contains different development periods; it does not prove conditions at a specific property.
+
+## `holbrooks`
+
+- **Context tags:** `historic-landscape-report`, `official-park`, `industrial-history`, `ward-map-available`.
+- **Supported claims:**
+  1. Coventry City Council locates Holbrook Park on Holbrook Lane, CV6 4BY, and describes it as open land amid shops and factories on Holbrook Lane.
+  2. The Coundon and Radford HLC records First World War industrial hostels called Monks Park Cottages north of Holbrooks Park, built for workers at a munitions factory outside the character area.
+  3. The same report says that by the Second World War the wider character area had been completely built up, while preserving some different early schemes and later pockets.
+- **Sources:**
+  - Coventry City Council — [Holbrook Park](https://www.coventry.gov.uk/holbrookspark) — supports claim 1 and provides the exact council-site address. Checked 2026-08-29.
+  - Coventry City Council — [Coundon and Radford Character Area, HLC Area 40](https://www.coventry.gov.uk/downloads/file/17412/hlc-area-40-coundon-and-radford-character-area) — supports claims 2 and 3. Checked 2026-08-29.
+- **Conditional service implication:** Distinguish a park, shop, industrial premise and residential address when taking instructions, and confirm the caller's authority for any managed site.
+- **Access/property-status caveat:** A named park and broad HLC history do not establish an individual property's use, ownership, construction or entry point.
+
+## `foleshill`
+
+- **Context tags:** `historic-landscape-report`, `canal`, `rail`, `conservation-area-present`, `mixed-use`.
+- **Supported claims:**
+  1. The Foleshill character area is a mixed residential and industrial area north of the city centre, following the Coventry–Bedworth railway line.
+  2. The council report identifies the Coventry Canal as the predominant landscape feature and a reason for the area's industrial development.
+  3. The report records one conservation area and states that much of the Coventry Canal Conservation Area lies within the wider Foleshill character area.
+- **Source:**
+  - Coventry City Council — [Foleshill Character Area, HLC Area 24](https://www.coventry.gov.uk/downloads/file/17449/hlc-area-24-foleshill-character-area) — supports all three claims. Checked 2026-08-29.
+- **Conditional service implication:** For premises near the canal conservation corridor or historic industrial buildings, check the exact designation and owner/manager authority before external alterations.
+- **Access/property-status caveat:** Canal proximity, mixed use and a conservation area within the HLC boundary do not establish any individual property's use, designation or access arrangement.
+
+## `stoke`
+
+- **Context tags:** `historic-landscape-report`, `rail`, `river-Sowe-corridor`, `multiple-official-character-areas`.
+- **Supported claims:**
+  1. Coventry's HLC treats Lower Stoke separately as a light-industrial character area traversed by the Coventry–Rugby railway, with housing development recorded in its northern part.
+  2. A separate Wyken and Upper Stoke character area is described as east of the city centre, comprising mid-20th-century housing and bounded by the River Sowe on the east.
+  3. The South Sowe character-area report says its river-valley corridor passes through Stoke as well as several other named neighbourhoods.
+- **Sources:**
+  - Coventry City Council — [Lower Stoke Character Area, HLC Area 3](https://www.coventry.gov.uk/downloads/file/17415/hlc-area-3-lower-stoke-character-area) — supports claim 1. Checked 2026-08-29.
+  - Coventry City Council — [Wyken and Upper Stoke Character Area, HLC Area 44](https://www.coventry.gov.uk/downloads/file/17421/hlc-area-44-wyken-and-upper-stoke-character-area) — supports claim 2. Checked 2026-08-29.
+  - Coventry City Council — [South Sowe Character Area, HLC Area 28](https://www.coventry.gov.uk/downloads/file/17439/hlc-area-28-south-sowe-character-area) — supports claim 3. Checked 2026-08-29.
+- **Conditional service implication:** Because official evidence splits Stoke into materially different character areas, capture the full address, premise type and caller authority before preparing for work.
+- **Access/property-status caveat:** The slug “stoke” is broader and less precise than the council's Lower/Upper Stoke profiles; no single report proves the facts of an individual address.
+
+## `wyken`
+
+- **Context tags:** `historic-landscape-report`, `river-Sowe-corridor`, `scheduled-monuments-present`, `historic-settlement`.
+- **Supported claims:**
+  1. The Wyken and Upper Stoke HLC is east of the city centre and bounded by the River Sowe to the east.
+  2. It records the medieval Wyken settlement as clustered around the 12th-century church of St Mary Magdalene at Wyken Croft.
+  3. The report records two scheduled monuments, eleven archaeological constraint areas and eight listed buildings within the wider character area; the South Sowe report also names Wyken on its river-valley route.
+- **Sources:**
+  - Coventry City Council — [Wyken and Upper Stoke Character Area, HLC Area 44](https://www.coventry.gov.uk/downloads/file/17421/hlc-area-44-wyken-and-upper-stoke-character-area) — supports claims 1–3 and the area-scale designation totals. Checked 2026-08-29.
+  - Coventry City Council — [South Sowe Character Area, HLC Area 28](https://www.coventry.gov.uk/downloads/file/17439/hlc-area-28-south-sowe-character-area) — supports the river-corridor part of claim 3. Checked 2026-08-29.
+- **Conditional service implication:** Check the exact property's designation and owner/occupier authority before visible changes; scheduled or listed assets cannot be inferred from the Wyken name alone.
+- **Access/property-status caveat:** The designation counts and medieval-settlement evidence are character-area facts, not claims about every Wyken building.
+
+## `walsgrave`
+
+- **Context tags:** `historic-landscape-report`, `river-Sowe-corridor`, `historic-village`, `hospital-site`.
+- **Supported claims:**
+  1. The Woodway Park HLC says medieval settlement was concentrated around Walsgrave village, then known as Sowe, clustered around the church.
+  2. The report records historic buildings surviving on Hall Lane and Hinckley Road and states that the hospital site was extensively redeveloped around 2005.
+  3. The North Sowe river-valley character area explicitly passes through Walsgrave.
+- **Sources:**
+  - Coventry City Council — [Woodway Park Character Area, HLC Area 42](https://www.coventry.gov.uk/downloads/file/17413/hlc-area-42-woodway-park-character-area) — supports claims 1 and 2. Checked 2026-08-29.
+  - Coventry City Council — [North Sowe Character Area, HLC Area 26](https://www.coventry.gov.uk/downloads/file/17438/hlc-area-26-north-sowe-character-area) — supports claim 3. Checked 2026-08-29.
+- **Conditional service implication:** Distinguish a private address from hospital or other managed premises and verify authorization; check exact heritage status before external alterations around the historic village core.
+- **Access/property-status caveat:** The village, hospital and river corridor are separate contexts; none establishes the premise type or status at a supplied address.
+
+## `binley`
+
+- **Context tags:** `historic-landscape-report`, `ward/JSNA-profile`, `A46`, `river-Sowe-corridor`, `business-park`.
+- **Supported claims:**
+  1. The Binley HLC places its character area on Coventry's south-east fringe, bounded by the A46 to the south-east and dominated at report date by industrial and commercial uses with smaller open areas.
+  2. The report identifies Binley Business Park in the north and records the former Binley Colliery landscape in the south.
+  3. The council JSNA defines Binley and Willenhall as a south-east Coventry ward, while the South Sowe report names Binley on the river-valley corridor.
+- **Sources:**
+  - Coventry City Council — [Binley Character Area, HLC Area 8](https://www.coventry.gov.uk/downloads/file/17418/hlc-area-8-binley-character-area) — supports claims 1 and 2. Checked 2026-08-29.
+  - Coventry City Council — [Binley and Willenhall place-based profile](https://www.coventry.gov.uk/facts-coventry/binley-willenhall-place-based-profile/print) — supports the ward geography in claim 3. Checked 2026-08-29.
+  - Coventry City Council — [South Sowe Character Area, HLC Area 28](https://www.coventry.gov.uk/downloads/file/17439/hlc-area-28-south-sowe-character-area) — supports the river-corridor part of claim 3. Checked 2026-08-29.
+- **Conditional service implication:** Confirm whether the call is residential, business-park, industrial or managed land and obtain the responsible party's authority before access or replacement work.
+- **Access/property-status caveat:** “Binley” covers more than the HLC business/industrial character area; the cited sources do not establish the use or status of an individual premise.
+
+## `binley-woods`
+
+- **Context tags:** `village-design-statement`, `Warwickshire-parish`, `A46-boundary`, `Historic-England-listed-building-present`.
+- **Supported claims:**
+  1. Rugby Borough Council's Village Design Statement places the parish and village about four miles east of central Coventry and seven miles west of Rugby, and records that the current parish boundary reflects the 1994 Coventry–Rugby boundary alteration.
+  2. The statement says the present developed village largely occupies the former Binley Common woodland auctioned after the Coombe Abbey estate break-up in the early 1920s; it describes a twentieth-century settlement with distinct development phases.
+  3. Historic England records Old Lodge Farm's barn in the parish of Binley Woods as a Grade II listed building, list entry 1034897.
+- **Sources:**
+  - Rugby Borough Council — [Binley Woods Village Design Statement](https://www.rugby.gov.uk/documents/20124/6573843/Binley_Woods_Village_Design_Statement.pdf/b5223d67-ed64-56e2-4f4b-ecba8b44d724?t=1750866464443) — supports claims 1 and 2 and distinguishes parish, settlement and planning boundaries. Checked 2026-08-29.
+  - Historic England — [Old Lodge Farm barn, list entry 1034897](https://historicengland.org.uk/listing/the-list/list-entry/1034897) — supports claim 3. Checked 2026-08-29.
+- **Conditional service implication:** Use the full address to distinguish Binley Woods parish from Coventry's Binley area; if work concerns a listed building or its curtilage, establish consent requirements before changing external fabric.
+- **Access/property-status caveat:** The listed entry concerns one named farm building, and the design statement is settlement-scale; neither supports a heritage or construction claim for another address.
+
+## `willenhall`
+
+- **Context tags:** `historic-landscape-report`, `ward/JSNA-profile`, `neighbourhood-plan`, `rail`, `river-Sowe-corridor`, `Radburn-layout`.
+- **Supported claims:**
+  1. The Willenhall HLC describes a predominantly residential area on Coventry's southern edge divided by the West Coast Main Line, with the River Sowe along its western boundary and the A46 immediately south-east.
+  2. It records two housing estates completed in 1960 as early English examples of Radburn planning, separating vehicular and pedestrian routes.
+  3. Coventry City Council designated the Willenhall Neighbourhood Area in 2013 and approved the Willenhall Neighbourhood Plan in 2018; the council JSNA places Willenhall in the Binley and Willenhall ward.
+- **Sources:**
+  - Coventry City Council — [Willenhall Character Area, HLC Area 7](https://www.coventry.gov.uk/downloads/file/17419/hlc-area-7-willenhall-character-area) — supports claims 1 and 2. Checked 2026-08-29.
+  - Coventry City Council — [Neighbourhood Plans](https://www.coventry.gov.uk/neighbourhoodplanning) — supports the designation and approval dates in claim 3. Checked 2026-08-29.
+  - Coventry City Council — [Binley and Willenhall place-based profile](https://www.coventry.gov.uk/facts-coventry/binley-willenhall-place-based-profile/print) — supports the ward geography in claim 3. Checked 2026-08-29.
+- **Conditional service implication:** In a Radburn-style layout or managed open-space setting, obtain the exact entrance instructions and caller authority rather than assuming the postal frontage is the operative entrance.
+- **Access/property-status caveat:** The HLC describes pockets of different layouts and periods; it does not prove a particular property's orientation, ownership or entrance configuration.
+
+## `cheylesmore`
+
+- **Context tags:** `historic-landscape-report`, `heritage-designations-present`, `medieval-deer-park-history`, `post-war-development`.
+- **Supported claims:**
+  1. The Cheylesmore and Stivichall character area lies south of the city centre and is described as extensive housing developed rapidly between 1936 and 1955.
+  2. The north-west of the character area falls within the former medieval deer park of Cheylesmore Manor, with some present road alignments reflecting its boundary.
+  3. At character-area scale the report records one scheduled monument, twelve archaeological constraint areas, ten listed buildings and one registered park and garden, but no conservation area.
+- **Source:**
+  - Coventry City Council — [Cheylesmore and Stivichall Character Area, HLC Area 10](https://www.coventry.gov.uk/downloads/file/17423/hlc-area-10-cheylesmore-and-stivichall-character-area) — supports all three claims. Checked 2026-08-29.
+- **Conditional service implication:** Verify the exact building's designation and proposed scope before external changes; the area's development period cannot select or prove any door or hardware specification.
+- **Access/property-status caveat:** Heritage counts and development history apply to a broad combined character area, not every Cheylesmore address.
+
+## `whitley`
+
+- **Context tags:** `historic-landscape-report`, `river-Sowe-corridor`, `historic-settlement`, `mixed-edge-context`.
+- **Supported claims:**
+  1. The Whitley HLC describes a settlement south of the city centre, with industry to the north and west and the River Sowe Valley to the south and east.
+  2. It records the medieval settlement south of Abbey Road, a later Whitley Abbey country house and park, and predominantly 1925–1955 development in the modern character area.
+  3. The South Sowe character-area report explicitly names Whitley on the river-valley route.
+- **Sources:**
+  - Coventry City Council — [Whitley Character Area, HLC Area 2](https://www.coventry.gov.uk/downloads/file/17410/hlc-area-2-whitley-character-area) — supports claims 1 and 2. Checked 2026-08-29.
+  - Coventry City Council — [South Sowe Character Area, HLC Area 28](https://www.coventry.gov.uk/downloads/file/17439/hlc-area-28-south-sowe-character-area) — supports claim 3. Checked 2026-08-29.
+- **Conditional service implication:** Confirm whether the address is residential, industrial or managed institutional land and verify authority before work; check exact designation where an older building is involved.
+- **Access/property-status caveat:** The character area contains distinct edge uses and development periods; the locality name alone proves none of them for a particular address.
+
+## `finham`
+
+- **Context tags:** `parish`, `neighbourhood-area`, `A45-boundary`, `rail-boundary`.
+- **Supported claims:**
+  1. Coventry City Council states that Finham Parish covers an area south of Coventry bounded by the A45, Howes Lane, the city boundary and the railway line adjacent to Gretna Road.
+  2. The council records that Finham Parish was founded in 2016.
+  3. Coventry City Council designated the Finham Neighbourhood Area on 16 March 2017, with Finham Parish Council as the applicant body.
+- **Sources:**
+  - Coventry City Council — [Finham Parish Council](https://www.coventry.gov.uk/council-democracy/finham-parish-council) — supports claims 1 and 2. Checked 2026-08-29.
+  - Coventry City Council — [Neighbourhood Plans](https://www.coventry.gov.uk/neighbourhoodplanning) — supports claim 3. Checked 2026-08-29.
+- **Conditional service implication:** Use the full address to test whether instructions relate to the parish/neighbourhood area and obtain exact entrance details; do not treat “Finham” as a substitute for a mapped boundary.
+- **Access/property-status caveat:** Parish and neighbourhood-plan designations are governance/planning geographies and do not establish an individual property's construction, status or access.
+
+## `styvechale`
+
+- **Context tags:** `historic-landscape-report`, `conservation-area-present`, `local-nature-reserves`, `Historic-England-listed-building-present`, `spelling-variant-Stivichall`.
+- **Supported claims:**
+  1. Coventry's official sources use the historic spelling “Stivichall” in the HLC and listed-building records; the Cheylesmore and Stivichall report places the combined character area south of the city centre.
+  2. Coventry City Council states that the Kenilworth Road woodlands are in a conservation area designated in 1968, including Wainbody Wood, Stivichall Common and the connecting Kenilworth Road Spinney; all are local nature reserves.
+  3. Historic England records Stivichall Grange on Lonscale Drive as a Grade II listed building, list entry 1342919.
+- **Sources:**
+  - Coventry City Council — [Cheylesmore and Stivichall Character Area, HLC Area 10](https://www.coventry.gov.uk/downloads/file/17423/hlc-area-10-cheylesmore-and-stivichall-character-area) — supports claim 1 and broader historic context. Checked 2026-08-29.
+  - Coventry City Council — [Kenilworth Road woodlands](https://www.coventry.gov.uk/heritage-ecology-trees/kenilworth-road-woodlands) — supports claim 2 and records the preserved Stivichall hamlet context. Checked 2026-08-29.
+  - Historic England — [Stivichall Grange, list entry 1342919](https://historicengland.org.uk/listing/the-list/list-entry/1342919) — supports claim 3. Checked 2026-08-29.
+- **Conditional service implication:** For a property in or beside the Kenilworth Road conservation area, or a listed building/curtilage, establish exact status and consent requirements before altering external door fabric or hardware.
+- **Access/property-status caveat:** The `styvechale` slug and official “Stivichall” references are not a mapped one-to-one boundary, and the listed entry applies only to the named asset.
+
+## `allesley`
+
+- **Context tags:** `historic-landscape-report`, `conservation-area-present`, `listed-buildings-present`, `neighbourhood-area`.
+- **Supported claims:**
+  1. The Allesley Park and Coundon Wedge HLC says Allesley village has medieval or possibly Anglo-Saxon origins and includes houses and cottages along Birmingham Road dating from the 16th to 19th centuries, many listed.
+  2. The report identifies the medieval All Saints Church and describes the historic core of Allesley Village as a conservation area.
+  3. Coventry City Council designated the Allesley Neighbourhood Area on 4 May 2016, following an application by Allesley Parish Council.
+- **Sources:**
+  - Coventry City Council — [Allesley Park and Coundon Wedge Character Area, HLC Area 18](https://www.coventry.gov.uk/downloads/file/17429/hlc-area-18-allesley-park-and-coundon-wedge-character-area) — supports claims 1 and 2. Checked 2026-08-29.
+  - Coventry City Council — [Neighbourhood Plans](https://www.coventry.gov.uk/neighbourhoodplanning) — supports claim 3. Checked 2026-08-29.
+- **Conditional service implication:** At an address in the historic village core, check the exact listed/conservation status and any consent implications before external changes; use the complete address to distinguish village from wider neighbourhood geography.
+- **Access/property-status caveat:** The HLC and neighbourhood area are wider than any single street; they do not make every Allesley property historic, listed or inside the conservation boundary.
+
+## `allesley-park`
+
+- **Context tags:** `historic-landscape-report`, `official-park`, `medieval-park-history`, `heritage-designations-present`.
+- **Supported claims:**
+  1. Coventry City Council gives Allesley Park's address as Allesley Hall Drive, Coventry CV5 9AD and describes it as a historic park between established housing developments.
+  2. The HLC records the park as part of a much larger medieval deer park, with surviving park-pale and ridge-and-furrow evidence and earthworks associated with Allesley Castle.
+  3. The wider Allesley Park and Coundon Wedge character area contains one scheduled monument, one conservation area, 33 listed buildings and eight locally listed buildings; the report locates the conservation area in Allesley Village's historic core rather than treating the whole park/estate name as designated.
+- **Sources:**
+  - Coventry City Council — [Allesley Park](https://www.coventry.gov.uk/allesleypark) — supports claim 1. Checked 2026-08-29.
+  - Coventry City Council — [Allesley Park and Coundon Wedge Character Area, HLC Area 18](https://www.coventry.gov.uk/downloads/file/17429/hlc-area-18-allesley-park-and-coundon-wedge-character-area) — supports claims 2 and 3. Checked 2026-08-29.
+- **Conditional service implication:** Ask whether “Allesley Park” means the council park, the surrounding residential locality or another managed site, and obtain the relevant owner/manager authority before work.
+- **Access/property-status caveat:** The park, residential locality, village conservation area and wider HLC are distinct; no designation or property fact transfers automatically between them.
+
+## `eastern-green`
+
+- **Context tags:** `historic-landscape-report`, `brook`, `mid-20th-century-development`, `council-investment-site`, `A45`.
+- **Supported claims:**
+  1. The Eastern Green HLC describes a west-Coventry residential area crossed east–west by Guphill Brook, with housing around it and farmland/Allesley Park to the north.
+  2. It records the principal modern housing phases as south of Broad Lane in the 1950s and north of Broad Lane in the 1960s, while also identifying earlier pockets on Dial House Lane and Lower Eastern Green Lane.
+  3. Coventry City Council's separate Eastern Green investment-site page describes a 176-hectare residential-led mixed-use urban extension adjacent to the built-up area's western edge; it states that the existing Eastern Green neighbourhood is further south and west of that site's southern boundary.
+- **Sources:**
+  - Coventry City Council — [Eastern Green Character Area, HLC Area 39](https://www.coventry.gov.uk/downloads/file/17452/hlc-area-39-eastern-green-character-area) — supports claims 1 and 2. Checked 2026-08-29.
+  - Coventry City Council — [Eastern Green Coventry: key investment and development site](https://www.coventry.gov.uk/directory-record/50147/eastern-green-coventry) — supports claim 3 and prevents conflating the extension site with the existing neighbourhood. Checked 2026-08-29.
+- **Conditional service implication:** Capture the full address and whether it is an occupied property, construction/development site or managed premise before accepting instructions; historic pockets require an exact status check before external changes.
+- **Access/property-status caveat:** The existing neighbourhood, HLC boundary and urban-extension site are not the same geography and support no individual property or access assumption.
+
+## `longford`
+
+- **Context tags:** `ward/JSNA-profile`, `official-park`, `river-walk`, `named-MSOA`.
+- **Supported claims:**
+  1. Coventry's Foleshill and Longford JSNA says its study area contains the Longford, Little Heath, Foleshill West and Foleshill East MSOAs and explicitly excludes Bell Green from the Longford part used there.
+  2. Coventry City Council locates Longford Park on Longford Road, Longford, CV6 6DW and identifies it as the city's largest Area Park.
+  3. The park page describes a tree-lined river walk and a footpath system, alongside recreation and ecological areas.
+- **Sources:**
+  - Coventry City Council — [Foleshill and Longford place-based profile: Demographics and communities](https://www.coventry.gov.uk/facts-coventry/foleshill-longford/3) — supports claim 1 and defines the profile geography. Checked 2026-08-29.
+  - Coventry City Council — [Longford Park](https://www.coventry.gov.uk/longfordpark) — supports claims 2 and 3. Checked 2026-08-29.
+- **Conditional service implication:** Distinguish a Longford residential address from the council park or another managed site and obtain exact entrance and authority details before attendance.
+- **Access/property-status caveat:** The JSNA is a best-fit statistical geography and the park source concerns one named public asset; neither establishes an individual property's status.
+
+## `bell-green`
+
+- **Context tags:** `ward/JSNA-profile`, `historic-landscape-report`, `named-MSOA`, `official-library`.
+- **Supported claims:**
+  1. Coventry's JSNA treats Bell Green as one MSOA and Wood End, Henley Green and Manor Farm as a separate combined MSOA; it places Bell Green in Longford ward.
+  2. The Alderman's Green HLC records possible medieval settlement at Bell Green and says Bell Green Road was recorded in the 1775 Foleshill Inclosure survey.
+  3. Coventry City Council locates Bell Green Library at Park Edge Community Hub, Roseberry Avenue, CV2 1NE.
+- **Sources:**
+  - Coventry City Council — [Bell Green and Wood End, Henley Green, Manor Farm place-based profile](https://www.coventry.gov.uk/facts-coventry/wood-end-henley-green-manor-farm-wehm-bell-green-place-based-profile/print) — supports claim 1 and the need to keep the two MSOAs distinct. Checked 2026-08-29.
+  - Coventry City Council — [Alderman's Green Character Area, HLC Area 41](https://www.coventry.gov.uk/downloads/file/17411/hlc-area-41-aldermans-green-character-area) — supports claim 2. Checked 2026-08-29.
+  - Coventry City Council — [Bell Green Library](https://www.coventry.gov.uk/directory-record/50150/bell-green-library) — supports claim 3. Checked 2026-08-29.
+- **Conditional service implication:** For a library, hub, business or other managed premise, establish authorized contact and exact entrance; for older fabric near the historic road core, check exact property status before visible changes.
+- **Access/property-status caveat:** The MSOA, HLC and named library are different evidence units and do not establish the use, age or status of another Bell Green address.
+
+## `courthouse-green`
+
+- **Context tags:** `historic-landscape-report`, `former-motor-works`, `official-school-directory`, `mixed-use-context`.
+- **Supported claims:**
+  1. The Alderman's Green HLC records Courthouse Green Works as a motor works built in the 1930s west of that character area and says the site was later redeveloped as an out-of-town shopping centre.
+  2. Coventry City Council's school directory locates Courthouse Green at 736 Sewall Highway, CV6 7JJ.
+  3. The directory lists a defined school catchment containing parts of Sewall Highway, Bell Green Road, Henley Road, Riley Square and other named streets; it is a school-admissions geography, not a locality boundary.
+- **Sources:**
+  - Coventry City Council — [Alderman's Green Character Area, HLC Area 41](https://www.coventry.gov.uk/downloads/file/17411/hlc-area-41-aldermans-green-character-area) — supports claim 1. Checked 2026-08-29.
+  - Coventry City Council — [Courthouse Green: schools and contact details](https://www.coventry.gov.uk/directory-record/43078/courthouse-green) — supports claims 2 and 3. Checked 2026-08-29.
+- **Conditional service implication:** For school, retail or other managed premises, confirm the authorized person and exact gate/entrance; do not use the school catchment as proof of a service-area or property boundary.
+- **Access/property-status caveat:** The historic works/site and current school directory do not establish the use, ownership or status of a separate Courthouse Green address.
+
+## `aldermans-green`
+
+- **Context tags:** `historic-landscape-report`, `river-Sowe-corridor`, `historic-road`, `area-scale-designations`.
+- **Supported claims:**
+  1. The Alderman's Green HLC describes a residential character area north-east of the city centre, bounded by the River Sowe to the east and mixed residential/industrial land to the west.
+  2. It records Alderman's Green Road as “Le Redway” in the early-15th-century documentary record and as part of the 1775 landscape.
+  3. The North Sowe HLC says its river-valley character area passes through Aldermans Green; the Alderman's Green HLC records three listed and fourteen locally listed buildings but no conservation area at character-area scale.
+- **Sources:**
+  - Coventry City Council — [Alderman's Green Character Area, HLC Area 41](https://www.coventry.gov.uk/downloads/file/17411/hlc-area-41-aldermans-green-character-area) — supports claims 1–3 and the designation totals. Checked 2026-08-29.
+  - Coventry City Council — [North Sowe Character Area, HLC Area 26](https://www.coventry.gov.uk/downloads/file/17438/hlc-area-26-north-sowe-character-area) — supports the river-corridor part of claim 3. Checked 2026-08-29.
+- **Conditional service implication:** Check the exact building's listed/local status before external alterations and obtain full-address instructions where the river corridor or mixed-use edge makes the locality label imprecise.
+- **Access/property-status caveat:** Character-area designation totals and historic-road evidence do not identify an individual property's status, use or access.
+
+## `potters-green`
+
+- **Context tags:** `historic-landscape-report`, `historic-settlement`, `official-school-directory`, `named-road-catchment`.
+- **Supported claims:**
+  1. The Woodway Park HLC records a settlement at Potters Green on Woodway Lane with possible medieval ceramic-production associations.
+  2. The same report says cottages west of the present Cardinal Wiseman schools appear on a 1778 estate survey, supporting an 18th-century or earlier road context even though Potters Green Road itself was not named on that survey.
+  3. Coventry City Council locates Potters Green school at Ringwood Highway, CV2 2GF and publishes a catchment street list including Potters Green Road, Ringwood Highway and parts of Woodway Lane.
+- **Sources:**
+  - Coventry City Council — [Woodway Park Character Area, HLC Area 42](https://www.coventry.gov.uk/downloads/file/17413/hlc-area-42-woodway-park-character-area) — supports claims 1 and 2. Checked 2026-08-29.
+  - Coventry City Council — [Potters Green: schools and contact details](https://www.coventry.gov.uk/directory-record/43021/potters-green) — supports claim 3. Checked 2026-08-29.
+- **Conditional service implication:** Use the exact address and caller authority, especially for school or managed premises; verify any heritage status before treating the historic settlement evidence as relevant to external work.
+- **Access/property-status caveat:** Archaeological potential and a school catchment are area/site evidence, not proof of a building's age, construction, boundary or entrance.
+
+## `henley-green`
+
+- **Context tags:** `ward/JSNA-profile`, `historic-landscape-report`, `river-Sowe-corridor`, `official-school-directory`.
+- **Supported claims:**
+  1. Coventry's JSNA groups Henley Green with Wood End and Manor Farm in the WEHM MSOA and places that MSOA in Henley ward, separate from Bell Green.
+  2. The Woodway Park HLC says large areas of housing had been built at Wood End and Henley Green by 1967; the North Sowe report explicitly names Henley Green on the river-valley corridor.
+  3. Coventry City Council locates Henley Green School and Community Centre at Wyken Croft, CV2 1HQ.
+- **Sources:**
+  - Coventry City Council — [Bell Green and Wood End, Henley Green, Manor Farm place-based profile](https://www.coventry.gov.uk/facts-coventry/wood-end-henley-green-manor-farm-wehm-bell-green-place-based-profile/print) — supports claim 1. Checked 2026-08-29.
+  - Coventry City Council — [Woodway Park Character Area, HLC Area 42](https://www.coventry.gov.uk/downloads/file/17413/hlc-area-42-woodway-park-character-area) — supports the development statement in claim 2. Checked 2026-08-29.
+  - Coventry City Council — [North Sowe Character Area, HLC Area 26](https://www.coventry.gov.uk/downloads/file/17438/hlc-area-26-north-sowe-character-area) — supports the river-corridor part of claim 2. Checked 2026-08-29.
+  - Coventry City Council — [Henley Green School and Community Centre](https://www.coventry.gov.uk/directory-record/43061/henley-green-school-and-community-centre) — supports claim 3. Checked 2026-08-29.
+- **Conditional service implication:** Confirm whether the premise is private, school/community or otherwise managed, and record the authorized contact and exact entrance before work.
+- **Access/property-status caveat:** WEHM statistics, HLC development history and a named school are different evidence layers; none proves an individual property's type, status or access.
+
+## `wood-end`
+
+- **Context tags:** `ward/JSNA-profile`, `historic-landscape-report`, `river-Sowe-corridor`, `official-open-space`.
+- **Supported claims:**
+  1. Coventry's JSNA places Wood End within the combined Wood End, Henley Green and Manor Farm (WEHM) MSOA in Henley ward.
+  2. The Woodway Park HLC says housing had been built at Wood End by 1967 and describes the post-war estates there as set among green space; the North Sowe report names Wood End on its river-valley corridor.
+  3. Coventry City Council records Wood End Brookstray at CV2 1BF with a 900-metre marked route on footpaths and grass.
+- **Sources:**
+  - Coventry City Council — [Bell Green and Wood End, Henley Green, Manor Farm place-based profile](https://www.coventry.gov.uk/facts-coventry/wood-end-henley-green-manor-farm-wehm-bell-green-place-based-profile/print) — supports claim 1. Checked 2026-08-29.
+  - Coventry City Council — [Woodway Park Character Area, HLC Area 42](https://www.coventry.gov.uk/downloads/file/17413/hlc-area-42-woodway-park-character-area) — supports the development statement in claim 2. Checked 2026-08-29.
+  - Coventry City Council — [North Sowe Character Area, HLC Area 26](https://www.coventry.gov.uk/downloads/file/17438/hlc-area-26-north-sowe-character-area) — supports the river-corridor part of claim 2. Checked 2026-08-29.
+  - Coventry City Council — [Wood End Brookstray](https://www.coventry.gov.uk/directory-record/57160/wood-end-brookstray) — supports claim 3. Checked 2026-08-29.
+- **Conditional service implication:** Ask whether “Wood End” refers to a private address or the council open space/another managed site, and confirm authorization and exact entrance.
+- **Access/property-status caveat:** The WEHM geography and Brookstray record do not establish property characteristics or a service boundary for the wider Wood End name.
+
+## `sowe`
+
+- **Context tags:** `historic-landscape-report`, `river-Sowe-corridor`, `main-river`, `official-open-space`, `modern-locality-boundary-unresolved`.
+- **Supported claims:**
+  1. Coventry's North Sowe HLC says the Sowe River Valley runs from Wyken Slough Nature Reserve on Coventry's northern fringe towards Stonebridge Highway in the south, and its northern section passes through Aldermans Green, Wood End, Bell Green, Henley Green and Walsgrave.
+  2. The report identifies Wyken Slough Local Nature Reserve and Wyken Croft Nature Park and says the two are linked by a narrow green river corridor.
+  3. It states that the whole North Sowe character area can be followed by the continuous Sowe Valley Footpath; a separate South Sowe report continues the river-valley evidence through eastern and southern Coventry.
+  4. Coventry City Council's flood guidance says the River Sowe is largely designated Main River and drains much of eastern Coventry.
+  5. Coventry City Council records the named Sowe Common public space at Woodway Lane.
+- **Sources:**
+  - Coventry City Council — [North Sowe Character Area, HLC Area 26](https://www.coventry.gov.uk/downloads/file/17438/hlc-area-26-north-sowe-character-area) — supports claims 1–3 for the northern river corridor. Checked 2026-08-29.
+  - Coventry City Council — [South Sowe Character Area, HLC Area 28](https://www.coventry.gov.uk/downloads/file/17439/hlc-area-28-south-sowe-character-area) — supports the continuation of the river-valley context in claim 3. Checked 2026-08-29.
+  - Coventry City Council — [Flooding advice: rivers in Coventry](https://www.coventry.gov.uk/water-management-flooding/flooding-advice/3) — supports claim 4. Checked 2026-08-29.
+  - Coventry City Council — [Sowe Common](https://www.coventry.gov.uk/directory-record/57167/sowe-common) — supports claim 5. Checked 2026-08-29.
+- **Conditional service implication:** Require a full street address and premise description; “Sowe” may refer to the river corridor, historic Walsgrave/Sowe, or a modern locality label, which are not interchangeable.
+- **Access/property-status caveat:** **Boundary evidence unavailable:** the opened official sources do not define a standalone modern residential locality matching the `sowe` slug. The canonical hub may describe the business's declared Sowe service label only when it requires a complete address and makes no mapped-boundary, property, access, construction or hardware inference. No dedicated Sowe service-pair page is released from this evidence.
+
+## `little-heath`
+
+- **Context tags:** `ward/JSNA-profile`, `historic-landscape-report`, `historic-common`, `official-school-directory`.
+- **Supported claims:**
+  1. Coventry's Foleshill and Longford JSNA explicitly includes Little Heath as one of four MSOAs in its study geography.
+  2. The Foleshill HLC records a medieval common called Little Heath and later roadside settlement associated with the mid-19th-century ribbon-weaving expansion; it also records former industrial sites at Little Heath within the wider character area.
+  3. Coventry City Council locates Little Heath school on Spring Road, CV6 7FN and publishes a defined admissions catchment street list.
+- **Sources:**
+  - Coventry City Council — [Foleshill and Longford place-based profile: Demographics and communities](https://www.coventry.gov.uk/facts-coventry/foleshill-longford/3) — supports claim 1 and defines the JSNA geography. Checked 2026-08-29.
+  - Coventry City Council — [Foleshill Character Area, HLC Area 24](https://www.coventry.gov.uk/downloads/file/17449/hlc-area-24-foleshill-character-area) — supports claim 2. Checked 2026-08-29.
+  - Coventry City Council — [Little Heath: schools and contact details](https://www.coventry.gov.uk/directory-record/43049/little-heath) — supports claim 3. Checked 2026-08-29.
+- **Conditional service implication:** Distinguish a residential instruction from school or former/active managed land, verify caller authority, and use the full address rather than a school catchment or MSOA label.
+- **Access/property-status caveat:** The common, HLC industrial history, MSOA and school catchment are different evidence layers and do not prove a particular building's use, construction or entrance.
+
+## Coverage summary
+
+- Slugs audited: **30/30**.
+- Slugs with at least two directly supported factual claims: **30/30**.
+- Slugs with opened authoritative deep sources, context tags, a conditional service implication and an access/property-status caveat: **30/30**.
+- Publication-boundary sufficiency: **not asserted**. Ward, MSOA, parish, HLC, park, school and listed-site geographies in this register must not be treated as route boundaries.
+- Qualified slug: **`sowe`** — official sources define the River Sowe corridors, flood context and Sowe Common but not a standalone modern locality boundary identical to the route slug. The canonical hub is retained only as a source-limited guide for the business's declared service label, requires the complete address, and makes no mapped coverage or property-level claim. Dedicated Sowe service-pair publication remains gated until stronger boundary and pair evidence is found.
+- No source in this register supports claims about lock type, job volume, crime, response time, parking, property value, tenure or universal coverage.

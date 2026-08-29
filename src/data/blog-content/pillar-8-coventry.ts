@@ -13,25 +13,25 @@ This guide uses housing eras as starting points for inspection. It does not clai
 
 Victorian terraces can be found around Earlsdon, Chapelfields and Spon End. Alterations over more than a century mean two outwardly similar homes may have very different doors, frames, windows and locks.
 
-### What I Typically Find
+### What to Inspect
 
 Some terraces retain older timber doors, mortice locks or long-stemmed keys; others have replacement doors and modern hardware. Do not infer attack resistance or a fixed opening time from appearance or property age. Inspect the exact lock, markings, fit, frame and operation.
 
 Where sash windows remain, check the actual catches, frame condition and any secondary locks. A basic catch may provide less resistance than suitable additional hardware, but window age alone does not establish vulnerability.
 
-The doors themselves are often in decent condition — Victorian joinery was built to last — but the frames can be worn, and the gaps around the door make it easier to lever or force.
+Inspect the door leaf and frame separately. Sound older joinery may be retained, while wear, gaps, previous cutting or weak fixing points may require repair; building age alone does not establish either condition.
 
-### Common Security Issues
+### Security Checks
 
 - **Older or unverified mortice locks** — identify the exact product and condition rather than assuming resistance from the key style
 - **No deadlock fitted** — many Victorian front doors only have the one original lock
 - **Sash windows with basic catches** that may benefit from suitable secondary security after inspection
-- **No door viewer or letterbox security** — original letterboxes are often wide enough to reach through and access the latch
-- **Rear doors with even less security** — back doors on terraces often have a basic rim lock or bolt
+- **Door viewer and letterbox position** — check whether the opening permits reach toward an internal release
+- **Rear-door hardware** — inspect it independently rather than assuming the front and back doors have equivalent resistance
 
-### What I Recommend
+### Options to Assess
 
-For Victorian terraces in [Earlsdon](/areas/earlsdon), Chapelfields, and [Spon End](/areas/coventry-city-centre), I typically recommend:
+For an individual Victorian terrace in [Earlsdon](/areas/earlsdon), Chapelfields, or [Spon End](/areas/coventry-city-centre), inspection may identify options such as:
 
 1. **Certified mortice deadlock, where suitable** — check the door and exact written policy wording; some policies name BS3621. Cost: **£75-£95 supplied and fitted**.
 2. **Suitable sash-window security** — product and fitting depend on the window construction and condition. Cost: **£15-£25 per window supplied and fitted**.
@@ -47,7 +47,7 @@ An example package for a front door and accessible windows may cost **£150-£25
 
 Inter-war semis are part of the housing mix in [Cheylesmore](/areas/cheylesmore), Stoke and Coundon. Door, window, garden and side-access arrangements vary by property and later alteration.
 
-### What I Typically Find
+### What to Inspect
 
 Some retain timber doors, glazed panels or older mortice locks, while others have been replaced. There is no universal lifespan based on the build year alone; inspect operation, damage, fit and certification.
 
@@ -55,15 +55,15 @@ Give the back door the same attention as the front. If it has only a basic night
 
 Where a side passage leads to less visible doors or windows, assess the gate and access route without assuming every semi has the same layout.
 
-### Common Security Issues
+### Security Checks
 
 - **Older mortice lock** — check operation, wear and exact certification rather than inferring condition from age
 - **Back door with only a basic nightlatch** — assess the latch, door, frame and whether suitable additional hardware is needed
 - **Side gate with no lock** — providing hidden access to the rear of the property
 - **Original Crittall-style metal windows** with simple catches (on some properties)
-- **Garage doors with basic locks** — often connected to the house via an internal door
+- **Garage and connecting doors** — inspect both openings where an integral or attached garage provides a route toward the home
 
-### What I Recommend
+### Options to Assess
 
 For 1930s semis in [Cheylesmore](/areas/cheylesmore), Stoke, and Coundon:
 
@@ -72,7 +72,7 @@ For 1930s semis in [Cheylesmore](/areas/cheylesmore), Stoke, and Coundon:
 3. **Fit a proper lock to the side gate** — a long-throw gate lock or heavy-duty padlock and hasp. Cost: **£35-£55 fitted**.
 4. **Window locks on all accessible windows** — especially the rear and side windows that are hidden from the street. Cost: **£15-£25 per window fitted**.
 
-Total cost: typically **£200-£320** for the full package.
+The displayed item ranges put that example package at **£200-£320**, before any diagnosis-dependent change in product, quantity or fitting scope.
 
 ---
 
@@ -80,20 +80,20 @@ Total cost: typically **£200-£320** for the full package.
 
 Post-war housing forms part of the mix in [Tile Hill](/areas/tile-hill), Willenhall, Wood End and Bell Green. This section describes inspection points, not an inventory or frequency claim for those neighbourhoods.
 
-### What I Typically Find
+### What to Inspect
 
 There is a mix of older doors and later uPVC replacements. Identify the actual door leaf, frame, mechanism and certification instead of inferring them from tenure or building era.
 
 An older lightweight door may have weaknesses that a new lock cannot correct. A replacement uPVC door may have basic or certified hardware; colour, age and neighbourhood do not establish which. Inspect the whole doorset and exact cylinder.
 
-### Common Security Issues
+### Security Checks
 
-- **Original doors**: physically weak construction, basic locks, often warped or ill-fitting after decades
+- **Older doors**: check construction, fit, warping, previous repairs and the exact lock rather than assigning weakness from age alone
 - **Replacement uPVC doors**: some use basic euro cylinders without independently verified resistance to snapping and related attacks
 - **Patio and sliding doors** with basic locking mechanisms
 - **Communal areas** (on some ex-council blocks) with shared entry points
 
-### What I Recommend
+### Options to Assess
 
 For post-war housing in [Tile Hill](/areas/tile-hill), Willenhall, Wood End, and Bell Green:
 
@@ -107,20 +107,20 @@ For post-war housing in [Tile Hill](/areas/tile-hill), Willenhall, Wood End, and
 
 Newer Coventry estates may use uPVC or composite doors with multipoint locking systems. The exact cylinder and certification vary, so inspect the installed product rather than assuming developer-supplied hardware is basic or high security.
 
-### What I Typically Find
+### What to Inspect
 
 Building-regulation compliance and product security certification are separate questions. Record the exact doorset, cylinder and protective furniture, then verify current certification for the model and configuration.
 
-Euro-cylinder checks and replacements are among the jobs requested on newer estates. Whether replacement is appropriate depends on the existing model, fit and complete doorset.
+Where a newer-estate door uses a euro cylinder, record its model, certification, dimensions, projection and protective furniture. Whether replacement is appropriate depends on those findings and the complete doorset.
 
-### Common Security Issues
+### Security Checks
 
 - **Non-anti-snap euro cylinders** on front and back doors
 - **Basic window locks** that meet minimum standards
 - **Cheap door handles** that can be used as leverage points
 - **Garage doors** (integral garages) with minimal security
 
-### What I Recommend
+### Options to Assess
 
 For new-build homes in [Canley](/areas/canley) and across Coventry:
 
@@ -128,7 +128,7 @@ For new-build homes in [Canley](/areas/canley) and across Coventry:
 2. **Upgrade to secure door handles** that prevent the handle being used as a leverage point. Cost: **£35-£55 supplied and fitted**.
 3. **Check and upgrade window locks** — especially on ground floor and accessible first-floor windows.
 
-Total cost: typically **£120-£200** for front and back door cylinders and handles.
+The displayed item ranges put an example front-and-back-door cylinder and handle scope at **£120-£200**; exact products, quantities and fitting work are agreed after inspection.
 
 ---
 
@@ -315,7 +315,7 @@ A uPVC door multipoint lock has a central gearbox that drives multiple locking p
 
 Wear, misalignment and operating force can affect the gearbox. Symptoms may include a handle spinning without engagement, locking points failing to retract or a door that will not lock or unlock; there is no universal 12-to-20-year lifespan.
 
-When this happens, you are often in a difficult situation: the door is either stuck locked (you cannot get in or out through that door) or stuck unlocked (you cannot secure your home).
+The symptom may leave the door stuck locked or stuck unlocked, or may appear only during part of the locking cycle. Treat loss of an expected escape route or inability to secure the opening as urgent and describe the exact state when calling.
 
 ### What It Costs
 
@@ -353,7 +353,7 @@ A basic spring latch may be exposed to loiding where the door gap and latch conf
 
 If the nightlatch has a deadlocking function, check how the manufacturer says it should be operated and build that step into the leaving routine.
 
-### What I Recommend
+### Options to Assess
 
 For a suitable timber door with only a basic nightlatch, a certified mortice deadlock may be one option. Check the door, escape needs and any exact standard named in the written insurance policy; fitting one does not guarantee security or insurance acceptance.
 

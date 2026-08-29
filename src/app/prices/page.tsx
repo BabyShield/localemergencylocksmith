@@ -29,7 +29,7 @@ const PRICES = [
   {
     service: 'Emergency lockout',
     price: 59,
-    detail: 'Standard residential lockout using non-destructive entry. Includes first 30 minutes of labour.',
+    detail: 'Standard residential lockout where the assessed entry method and stated labour scope apply.',
   },
   {
     service: 'Lock change (standard)',
@@ -90,14 +90,12 @@ const offersSchema = {
       '@type': 'Offer',
       name: p.service,
       description: p.detail,
-      price: String(p.price),
-      priceCurrency: 'GBP',
-      availability: 'https://schema.org/InStock',
       priceSpecification: {
-        '@type': 'UnitPriceSpecification',
-        price: String(p.price),
+        '@type': 'PriceSpecification',
+        minPrice: String(p.price),
         priceCurrency: 'GBP',
         valueAddedTaxIncluded: false,
+        description: 'Advertised starting price; the final price depends on the diagnosed scope and agreed parts.',
       },
     })),
   },
@@ -120,7 +118,7 @@ const faqSchema = {
       name: 'Is there a call-out fee?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'No — there is never a call-out fee. You only pay if I complete the job, and the price I quote on the phone is the price you pay.',
+        text: 'No separate call-out fee is added to the agreed job price. I confirm the price basis by phone and agree any change in diagnosed scope before additional work proceeds.',
       },
     },
     {
@@ -163,8 +161,8 @@ export default function PricesPage() {
             Locksmith Prices in Coventry
           </h1>
           <p className="text-gray-300 text-lg mb-6 max-w-2xl mx-auto">
-            No VAT. No call-out fee. No &ldquo;call for a quote&rdquo; — just real prices. The price you see
-            is the price you pay.
+            No VAT or separate call-out fee. These are genuine starting prices; I confirm the
+            applicable scope and total before work starts.
           </p>
           <a
             href={`tel:${SITE_CONFIG.phoneTel}`}
@@ -215,12 +213,12 @@ export default function PricesPage() {
           <div className="mt-6 bg-[#F7F7F5] rounded-xl p-6 border border-gray-200">
             <h3 className="font-bold text-[#0F1B2D] text-lg mb-3">What these prices include:</h3>
             <ul className="space-y-2 text-sm text-gray-700">
-              <li>✓ No VAT — all prices are the final total</li>
+              <li>✓ No VAT is added to the agreed price</li>
               <li>✓ No call-out fee — ever</li>
-              <li>✓ Labour included in all prices</li>
+              <li>✓ Labour included within each stated starting scope</li>
               <li>✓ Parts included where stated</li>
               <li>✓ Same price 24/7 — no evening or weekend premium</li>
-              <li>✓ Price confirmed on the phone before I come out</li>
+              <li>✓ Price basis confirmed on the phone before I come out</li>
             </ul>
           </div>
 
@@ -262,8 +260,9 @@ export default function PricesPage() {
               landlord records.
             </p>
             <p>
-              All lock fittings come with a <strong>12-month guarantee</strong> on parts and labour. If a lock
-              I have fitted develops a fault within 12 months, I will return and fix it at no cost to you.
+              Lock fittings come with the stated <strong>12-month guarantee</strong> on the supplied parts and
+              fitting work. If a covered fault develops within that period, call so I can inspect it and apply
+              the guarantee terms.
             </p>
             <p>
               There are <strong>no evening or weekend surcharges</strong> — the price is the same whether you
@@ -271,10 +270,9 @@ export default function PricesPage() {
               because emergencies do not wait for office hours.
             </p>
             <p>
-              Every job is <strong>priced and confirmed on the phone before I come out</strong>. I will tell
-              you the exact cost, and that is what you pay. If I arrive and the job turns out to be more
-              complex than expected, I will discuss any change with you before proceeding — you are never
-              committed to a higher price without agreeing to it first.
+              Every job has its <strong>price basis confirmed on the phone before I come out</strong>. The
+              quote applies to the described and agreed scope. If inspection shows that different or extra
+              work is needed, I stop, explain it and agree any revised price before proceeding.
             </p>
           </div>
         </div>
@@ -292,11 +290,11 @@ export default function PricesPage() {
               },
               {
                 q: 'Do you charge more for more expensive properties?',
-                a: 'No — the price is based on the type of work required, not the value of the property. A lock change is the same price whether it is a flat or a detached house.',
+                a: 'The property value is not a pricing factor. The quote depends on the actual lock, fault, access, agreed work and parts; different entrances can require different scopes regardless of property type.',
               },
               {
                 q: 'Do prices include parts?',
-                a: 'For a lock change or replacement, the new lock is included in the quoted price. For emergency lockouts where the lock stays intact, parts are not needed. I always clarify exactly what is included when I quote.',
+                a: 'A replacement part is included only where the quote states it. A lockout may need no part, while a diagnosed repair or replacement may need one; I identify exactly what is included before work starts.',
               },
             ].map((faq) => (
               <div key={faq.q} className="bg-white rounded-lg border border-gray-200 p-6">

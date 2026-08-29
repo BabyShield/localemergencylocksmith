@@ -8,7 +8,7 @@ import SchemaMarkup from '@/components/SchemaMarkup'
 export const metadata: Metadata = {
   title: 'Locksmith Areas | Coventry & Warwickshire',
   description:
-    'Local 24/7 locksmith covering 78 areas across Coventry and Warwickshire. Check your area, response time and postcode. No VAT or call-out fee.',
+    'Browse 78 locksmith area guides across Coventry and Warwickshire, with outward codes, services, source-reviewed guidance and a live ETA by phone.',
   keywords: 'locksmith coventry areas, locksmith warwickshire, locksmith near me, emergency locksmith coventry, locksmith nuneaton, locksmith rugby, locksmith leamington spa',
   alternates: {
     canonical: `${SITE_CONFIG.domain}/areas`,
@@ -35,10 +35,24 @@ const breadcrumbSchema = {
 
 export default function AreasPage() {
   const areasByRegion = getAllAreasByRegion()
+  const allAreas = Object.values(areasByRegion).flat()
+  const areaListSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: 'Locksmith area guides across Coventry and Warwickshire',
+    numberOfItems: allAreas.length,
+    itemListElement: allAreas.map((area, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      name: `Locksmith ${area.name}`,
+      url: `${SITE_CONFIG.domain}/areas/${area.slug}`,
+    })),
+  }
 
   return (
     <>
       <SchemaMarkup schema={breadcrumbSchema} />
+      <SchemaMarkup schema={areaListSchema} />
 
       <nav aria-label="Breadcrumb" className="max-w-6xl mx-auto px-4 py-3 text-sm text-gray-500">
         <ol className="flex flex-wrap items-center gap-0" itemScope itemType="https://schema.org/BreadcrumbList">
@@ -60,8 +74,9 @@ export default function AreasPage() {
             Emergency Locksmith — All Areas Covered
           </h1>
           <p className="text-gray-300 text-lg mb-6 max-w-2xl mx-auto">
-            I cover Coventry and the whole of Warwickshire — 78 towns, villages, and suburbs.
-            No VAT, no call-out fee, 15-30 minute response for most areas.
+            I cover the 78 listed towns, villages, and suburbs across Coventry and Warwickshire.
+            Each area has a source-reviewed local guide. Call with the full postcode for the
+            current ETA; no VAT or separate call-out fee.
           </p>
           <a
             href={`tel:${SITE_CONFIG.phoneTel}`}
@@ -91,7 +106,7 @@ export default function AreasPage() {
                       Locksmith {area.name}
                     </p>
                     <p className="text-sm text-gray-500 mt-1">{area.postcode}</p>
-                    <p className="text-xs text-[#FFB800] mt-1">{area.responseTime}</p>
+                    <p className="text-xs text-[#8A5A00] mt-1">Source-reviewed local guide</p>
                   </Link>
                 ))}
               </div>
@@ -100,7 +115,7 @@ export default function AreasPage() {
         </div>
       </section>
 
-      <CTABlock />
+      <CTABlock subtext="Available 24/7. Call with the full postcode for the current ETA and agreed price basis. No VAT or separate call-out fee." />
     </>
   )
 }

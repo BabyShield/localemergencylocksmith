@@ -127,7 +127,7 @@ Prevention is far easier than cure. Here is what actually works.
 
 This is the number one preventative measure. Graphite powder (sometimes sold as lock lubricant) keeps the internal mechanism lubricated without attracting moisture. Squirt a small amount into each external keyhole in October before the first frost. You can buy it from any hardware shop for a few pounds.
 
-**Important:** Do NOT use WD-40 for this. I know everyone reaches for the blue and yellow can, but WD-40 is a water displacement spray, not a lubricant. It works short-term but then attracts and holds moisture inside the lock — making freezing *more* likely, not less. I see this constantly.
+**Important:** Do not choose a product from a generic brand rule. Identify the exact cylinder or mechanism and follow its manufacturer-approved lubricant, application method and temperature guidance. If those instructions are unavailable, do not introduce a spray or powder into the keyway on guesswork.
 
 ### Silicone Spray on Rubber Seals
 
@@ -183,9 +183,9 @@ I have already mentioned this but it is worth emphasising. Boiling water causes 
 
 ## When to Call a Locksmith
 
-If you have tried de-icer and warm water and the lock still will not turn, call me on 024 7522 4730. Sometimes the issue is not just ice — the lock mechanism itself may be failing, or internal components may have seized. I carry replacement cylinders on the van, so if your lock is beyond saving I can replace it on the spot.
+If you have tried de-icer and warm water and the lock still will not turn, call me on 024 7522 4730. Sometimes the issue is not just ice — the lock mechanism itself may be failing, or internal components may have seized. The cylinder dimensions, security specification and current compatible-part availability determine whether a supported replacement can be completed during that attendance or needs a return visit.
 
-If the key has snapped inside a frozen lock, do not try to extract it yourself. Call me for a [lock repair or replacement](/services/lock-change) — I can extract the broken key and replace the cylinder in one visit.
+If the key has snapped inside a frozen lock, do not try to extract it yourself. Call me for a [lock repair or replacement](/services/lock-change). I assess whether extraction is suitable first; any replacement depends on the cylinder condition, exact dimensions and compatible-part availability.
 
 ## Winter Lock Maintenance Checklist
 
@@ -209,7 +209,7 @@ If you want your external locks checked and lubricated before winter, I offer a 
       },
       {
         q: 'What should I do if my key snaps in a frozen lock?',
-        a: 'Do not try to extract it yourself — you risk pushing it further in and making the problem harder to fix. Call a locksmith. I can extract a broken key and replace the cylinder if needed, usually in a single visit. Call me on 024 7522 4730 and I will come out to you. A broken key extraction typically costs from £59 depending on the situation.',
+        a: 'Do not try to extract it yourself — you risk pushing it further in and making the problem harder to fix. Call a locksmith for an assessment. Extraction suitability, the condition of the cylinder and compatible-part availability determine the work and number of visits. Call 024 7522 4730 to confirm current availability. A broken key extraction typically costs from £59 depending on the situation.',
       },
       {
         q: 'How much does it cost to replace a lock that has been damaged by freezing?',
@@ -342,7 +342,7 @@ You have booked the flights, packed the bags, and you are counting down the days
 
 An extended absence changes normal occupancy signals: post may accumulate, bins may remain out and routine lighting or vehicle movements stop. This page does not claim a Coventry summer burglary spike without a retained, dated local dataset.
 
-I have put together this checklist based on what I see as a locksmith working across Coventry and Warwickshire. Every item on this list comes from a real problem I have dealt with.
+This checklist separates general preparation from property-specific inspection. It does not claim a retained Coventry callout dataset or that every item applies to every home.
 
 ## Before You Leave: The Full Security Checklist
 
@@ -511,7 +511,7 @@ Ideally, change every external door:
 - **Garage door to house** — the internal connecting door, if it has a lock
 - **Patio doors** — check the lock and consider upgrading
 
-For most Coventry homes — particularly the uPVC-door semis and terraces that dominate areas like Cheylesmore, Finham, Wyken, and Binley — changing the front and back euro cylinders covers you. It is a quick job: I can typically do both in 30-40 minutes.
+Do not infer the door or cylinder from a Coventry neighbourhood. Identify each affected entrance, the exact cylinder sizes, key-control risk, surrounding hardware and any written requirement before deciding whether front and back cylinders are the complete scope. Timing depends on that inspection and part availability.
 
 ## When to Do It
 
@@ -560,7 +560,7 @@ When you call me about a moving-day lock change, I will need to know:
 3. Your moving date and preferred time
 4. Whether you want standard or anti-snap cylinders
 
-I carry a full range of cylinders on the van, so I can usually accommodate same-day or next-day requests. Call me on 024 7522 4730 to book your moving-day lock change.
+Call 024 7522 4730 with the full address, moving date and any visible lock markings. I confirm the cylinder specification, current product availability and an available appointment before scheduling the moving-day lock change.
 
 ## Do Not Forget the Other Security Basics
 
@@ -583,7 +583,7 @@ Call me on 024 7522 4730 to arrange your lock change, or check the [prices page]
       },
       {
         q: 'How much does it cost to change the locks on a new house?',
-        a: 'A standard euro cylinder replacement starts from £59 per door. Most Coventry homes need front and back door cylinders changed, which typically costs £100-200 total depending on the quality of lock you choose. An anti-snap upgrade adds roughly £20-30 per door over a standard cylinder and is strongly recommended. Call me on 024 7522 4730 for an exact quote based on your specific doors.',
+        a: 'A standard euro cylinder replacement starts from £59 per door. Which locks, if any, should be changed depends on key control, the inspected doors, cylinder dimensions and the authorised customer decision. Certified anti-snap options also start from £59 where the assessment supports one. Call 024 7522 4730 for an itemised quote based on the specific doors and selected products.',
       },
       {
         q: 'When should I change the locks — before or after moving in?',
@@ -605,7 +605,7 @@ Call me on 024 7522 4730 to arrange your lock change, or check the [prices page]
 
 Moving into student accommodation brings new doors, keys, housemates and tenancy rules. Inspect the actual property rather than assuming a shared house is secure or insecure from its age or area.
 
-I work across all the main student areas in Coventry — Earlsdon (CV5), Canley (CV4), Tile Hill (CV4), Stoke (CV2), Spon End, Gosford Street, and the streets around Far Gosford Street. I see the same security problems in student houses year after year. Here is what you need to know to protect yourself and your stuff.
+The listed service area includes Earlsdon (CV5), Canley (CV4), Tile Hill (CV4), Stoke (CV2), Spon End, Gosford Street and streets around Far Gosford Street; confirm the full address when calling. The checks below cover access-control and lock issues to inspect in a student house without assuming they are present at a particular property.
 
 ## Check All Locks on Day One
 
@@ -618,7 +618,7 @@ The moment you get the keys to your student house, before you unpack a single bo
 - Can you see the euro cylinder sticking out beyond the handle? If it protrudes more than a few millimetres, it is vulnerable to lock snapping
 
 ### Back Door
-- Does it lock at all? Seriously — I see student houses where the back door does not lock
+- Does it lock as designed, without forcing the key or handle?
 - If it is a uPVC door, same checks as above
 - If it is an older wooden door, does it have a deadlock as well as a latch?
 
@@ -638,7 +638,7 @@ Landlord duties and the appropriate remedy depend on the defect, property, tenan
 
 If the issue is not addressed, contact Coventry City Council's housing team or your university's student union for advice before arranging or paying for alterations yourself.
 
-## Common Security Problems I See in Coventry Student Houses
+## Security Questions for a Coventry Student House
 
 Here are the issues I deal with most often in student properties:
 
@@ -689,7 +689,7 @@ Student lockouts are incredibly common — especially during freshers week and a
 - Give a spare key to a trusted housemate
 - If considering a key safe, agree it with the landlord and restrict the code to authorised people; shared codes create their own access-control risk
 
-Do not try to break into your own house. I have seen students put windows through, climb on roofs, and try to kick doors in. All of these are more expensive to fix than calling a locksmith, and you could hurt yourself or damage the property (which your landlord will charge you for).
+Do not climb, break glazing, force a door or enter by an unsafe route. Those actions can cause injury, property damage and tenancy or cost consequences. Use the landlord or managing agent's emergency route where applicable, or call a locksmith and be ready to prove your authority to enter.
 
 ## Quick Move-In Security Checklist
 
@@ -805,7 +805,7 @@ When you call 024 7522 4730, here is what to expect:
 1. I answer the phone (or call back within minutes if I am on another job)
 2. I ask where you are and what the situation is
 3. I give you a firm price — no estimates, no surprises
-4. I give you a realistic arrival time (usually 20-40 minutes across Coventry)
+4. I give you a current arrival estimate from my actual starting point and the full address
 5. I open the door using non-destructive techniques wherever possible
 6. You pay the price I quoted — nothing more
 
@@ -818,7 +818,7 @@ I cover all of Coventry and surrounding areas including Kenilworth, Bedworth, Nu
 - **Lockout price:** from £59
 - **Bank holiday surcharge:** none — same price every day
 - **Coverage:** the Coventry and nearby Warwickshire locations listed on this site; confirm the full postcode when calling
-- **Arrival time:** typically 20-40 minutes
+- **Arrival time:** confirmed when you call from the current location and full address
 - **Full pricing:** [prices page](/prices)
 
 Bank holidays are for relaxing, not for standing outside your house in the cold. But if it happens, you know who to call.
@@ -1008,7 +1008,7 @@ Start the new year secure. It is 30 minutes well spent.
       },
       {
         q: 'Can I do the security audit myself or do I need a locksmith?',
-        a: 'You can absolutely do it yourself using the guide above — that is exactly why I wrote it. Walk around with a pen and paper, test everything, and score yourself honestly. The advantage of having a locksmith do it with you is that I can identify issues you might miss (like a cylinder that looks fine but is actually vulnerable to snapping), and I can fix most problems on the same visit so you only pay for one callout.',
+        a: 'You can use the guide above for an initial walk-around, record what you can inspect safely and avoid dismantling locks. A locksmith can assess details that are not established by appearance alone, such as cylinder dimensions, markings and door alignment. Any repair is diagnosed and quoted separately; product availability, access and the number of identified defects determine whether another visit is needed.',
       },
     ],
   },

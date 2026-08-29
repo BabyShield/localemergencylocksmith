@@ -54,7 +54,7 @@ const pricingFaqs = [
 const responseTimeFaqs = [
   {
     q: 'How quickly can you get to me?',
-    a: 'For most of Coventry, I can be with you in 15-30 minutes. For surrounding areas like Nuneaton, Bedworth, Rugby, and Leamington Spa, allow 20-45 minutes depending on your exact location. I always give you an honest arrival time on the phone.',
+    a: 'I confirm the current arrival estimate when you call, using my actual starting point and your full address. Traffic and an earlier job can change it, so this site does not publish a fixed journey-time promise.',
   },
   {
     q: 'What areas do you cover?',
@@ -69,23 +69,23 @@ const responseTimeFaqs = [
 const servicesFaqs = [
   {
     q: 'What types of locks can you work with?',
-    a: 'I work with all common lock types including Yale, mortice, euro cylinder, rim cylinders, multipoint locking systems, and smart locks. I carry a wide range of stock locks in the van so most jobs can be completed in a single visit.',
+    a: 'I assess common residential nightlatches, mortice locks, euro and rim cylinders, multipoint systems and identifiable smart-lock installations. The exact product, fault and compatible-part availability determine whether work can be completed in one visit.',
   },
   {
     q: 'Can you get in without damaging my lock?',
-    a: 'In most cases, yes. I use non-destructive entry techniques wherever possible — specialist tools that open your lock without damaging it. This means you can often keep your existing lock and just need a spare key cut. If the lock does need replacing, I\'ll explain why and confirm the cost before proceeding.',
+    a: 'I assess an appropriate non-destructive method first where the lock, door and circumstances allow, but no damage outcome can be guaranteed from a phone description. If drilling or replacement becomes necessary, I explain why and confirm the revised scope and price before proceeding.',
   },
   {
-    q: 'Can you fit insurance-approved locks?',
-    a: 'Yes. I fit British Standard BS3621 mortice locks and TS007 3-star euro cylinders that meet insurance requirements. If your insurer has asked you to upgrade your locks, I can advise on the right lock and fit it the same day.',
+    q: 'Can you fit a lock named in my written insurance policy?',
+    a: 'I can identify marked BS3621 mortice locks and independently certified cylinder options, then assess whether the product suits the actual door. Your insurer must confirm what its exact written wording requires and whether any change affects cover.',
   },
   {
     q: 'Do you repair uPVC doors and windows?',
-    a: 'Yes. I repair and replace uPVC multipoint locking mechanisms, gearboxes, handles, hinges, and euro cylinders. If your uPVC door is stiff, not locking properly, or the handle is loose, I can usually fix it on the spot.',
+    a: 'Yes. I diagnose uPVC multipoint mechanisms, gearboxes, handles, hinges and euro cylinders. A stiff door, failed lock or loose handle can have several causes, so inspection and compatible-part availability determine whether adjustment, repair or replacement can be completed during the attendance.',
   },
   {
     q: 'Do you offer emergency boarding up?',
-    a: 'Yes. If your window or door has been broken — whether from a break-in, storm damage, or accident — I can board it up securely to protect your property until a permanent repair is arranged. Boarding up starts from £79.',
+    a: 'Yes. After police evidence instructions are satisfied, I can assess temporary boarding for a broken door or window. The method depends on the opening and safe fixing points; it reduces immediate access and exposure while permanent repair is arranged. Prices start from £79.',
   },
 ]
 

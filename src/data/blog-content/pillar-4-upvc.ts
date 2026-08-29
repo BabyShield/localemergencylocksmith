@@ -13,7 +13,7 @@ I have been replacing these mechanisms across Coventry for years, from the 1990s
 
 ## The Multipoint Locking Mechanism: An Overview
 
-A multipoint locking mechanism is a long, flat metal strip that runs vertically inside the edge of your uPVC door. When you lift the handle and turn the key, it engages multiple locking points simultaneously — typically three, five, or even seven points along the length of the door.
+A multipoint locking mechanism commonly uses a faceplate and lock case within the door edge to operate more than one locking point. The layout, operating sequence and number of hooks, rollers, cams, bolts or other points depend on the exact mechanism.
 
 This is fundamentally different from a traditional wooden door with a single Yale nightlatch or mortice deadlock. A multipoint system spreads the locking force across the full height of the door, making it far harder to force open.
 
@@ -45,7 +45,7 @@ Rollers provide moderate security but their main function is compression and wea
 
 The deadbolt sits within the gearbox and is the final locking action. After you lift the handle (which engages hooks and rollers), turning the key throws the deadbolt into the frame keep.
 
-The deadbolt is what makes the door properly locked rather than just latched. If you only lift the handle and walk away without turning the key, the deadbolt is not engaged — and your door is significantly less secure. I cannot stress this enough: always turn the key.
+On mechanisms that require a key turn after lifting the handle, the key operation engages the specified locking state. Follow the exact manufacturer instructions for the installed doorset; handle movement alone does not prove that every locking point or deadlocking feature is engaged.
 
 ## How It All Works Together
 
@@ -57,9 +57,9 @@ Here is the sequence of what happens when you lock your uPVC door:
 
 To unlock, you reverse the process: key turn retracts the deadbolt, pressing the handle down retracts the hooks and rollers, and you can open the door.
 
-## Common Brands and How to Identify Yours
+## Example Brands and How to Identify Yours
 
-Not all multipoint mechanisms are the same. There are several major manufacturers, and they are not universally interchangeable. The most common brands I encounter on jobs in Coventry are:
+Not all multipoint mechanisms are the same. Manufacturer markings can help narrow the search, but models are not universally interchangeable. Brands that may appear on an installed mechanism include:
 
 - **Mila** — very common in UK-manufactured uPVC doors from the 2000s onward
 - **GU (Gretsch-Unitas)** — German-made, found in higher-specification doors
@@ -78,18 +78,18 @@ If you need a replacement, you will need three measurements:
 
 You will also need to note the shape of the faceplate (flat, rounded, or U-shaped) and the positions of the locking points.
 
-If this sounds complicated, that is because it can be. I carry a range of common mechanisms in my van and can identify yours on site. Give me a call on 024 7522 4730 and I can usually tell you the brand from a photo of the faceplate markings.
+If this sounds complicated, that is because it can be. Give me a call on 024 7522 4730 and share a clear full-length faceplate photograph plus any markings. Those details can narrow the possibilities, but measurements and inspection may still be required before the mechanism and current part availability are confirmed.
 
 ## What Fails First
 
-In my experience, the order of failure is almost always:
+These components are among the points to inspect when a multipoint mechanism stops operating correctly:
 
-1. **Gearbox** — stripped teeth or worn internal components after 10 to 15 years. Symptoms include a sloppy handle, difficulty turning the key, or the handle not springing back up.
+1. **Gearbox** — stripped teeth or worn internal components can be one cause of a sloppy handle, difficulty turning the key, or failure of the handle to return.
 2. **Hook springs** — the springs that retract the hooks can weaken or snap, leaving hooks stuck in the extended or retracted position.
 3. **Rollers** — these can seize up or lose their compression, leading to draughty doors.
 4. **Deadbolt** — less common but can jam if the gearbox internals are failing.
 
-The gearbox is the weak point because it has the most moving parts and bears the most mechanical stress. If your door is from the late 1990s or early 2000s and you have never had the mechanism replaced, it is likely approaching end of life.
+The gearbox contains moving components, but age alone cannot diagnose it or establish remaining life. Compare operation safely with the door open and against the frame, then inspect alignment, keeps, handles, cylinder and mechanism before naming the failed part.
 
 ## When to Call a Locksmith
 
@@ -101,7 +101,7 @@ If your uPVC door is showing any of these symptoms, it is time to get it looked 
 - You can hear grinding or clicking when operating the handle
 - The door does not seal properly against the frame
 
-Do not wait until the mechanism fails completely — you could end up locked out, or worse, locked in. A mechanism replacement typically costs between £89 and £200 depending on the brand, and I can usually complete the job within an hour. Call me on 024 7522 4730 or check our [prices page](/prices) for current rates.
+Do not keep forcing a mechanism that is becoming difficult to operate because that can worsen the fault. A mechanism replacement typically costs between £89 and £200 depending on the brand. Call me on 024 7522 4730 with the symptoms and faceplate details so the likely scope, compatible-part availability and expected work time can be discussed, or check our [prices page](/prices) for current rates.
 
 For more on whether your lock needs replacing or just repairing, see our guide on [how to tell if your uPVC door lock needs replacing](/blog/upvc-door-lock-needs-replacing). And if you are thinking about upgrading your cylinder at the same time, take a look at our [best euro cylinder upgrades for 2026](/blog/best-euro-cylinder-upgrades-2026).
 
@@ -110,7 +110,7 @@ If you are in the Coventry area and need a uPVC door mechanism replaced, I cover
     faqs: [
       {
         q: 'How do I know which multipoint mechanism my uPVC door has?',
-        a: 'You can identify your mechanism by measuring three things: the PZ distance (spindle hole centre to keyhole centre), the backset (faceplate edge to keyhole centre), and the overall length. The brand name is usually stamped on the metal faceplate visible on the door edge. Common brands include Mila, GU, Yale, Fuhr, and Winkhaus. If you are unsure, send me a photo of the faceplate on 024 7522 4730 and I can usually identify it.',
+        a: 'Measure the PZ distance (spindle-hole centre to keyhole centre), backset (faceplate edge to keyhole centre), overall length and locking-point positions, and record any readable faceplate markings. A photograph may narrow the options, but measurements and sometimes an on-site inspection are needed before compatibility or part availability can be confirmed.',
       },
       {
         q: 'How long does a uPVC door lock mechanism last?',
@@ -118,7 +118,7 @@ If you are in the Coventry area and need a uPVC door mechanism replaced, I cover
       },
       {
         q: 'Can I replace a uPVC door lock mechanism myself?',
-        a: 'It is technically possible but not recommended for most people. You need to match the exact mechanism specifications (PZ distance, backset, overall length, locking point positions), which can be tricky. Getting it wrong means the door will not lock properly. A professional locksmith can identify, source, and fit the correct mechanism in about an hour, typically costing between £89 and £200 depending on the brand.',
+        a: 'A replacement must match the PZ distance, backset, overall length, locking-point positions and other compatibility details. Record the markings and measurements before selecting a part. The diagnosis, current compatible-part availability and work required determine timing and visit count. Multipoint mechanism replacement starts from £89; obtain an itemised quote for the inspected door.',
       },
       {
         q: 'What is the difference between hooks and rollers on a uPVC door?',
@@ -133,7 +133,7 @@ If you are in the Coventry area and need a uPVC door mechanism replaced, I cover
 
 If you need to replace the euro cylinder on your uPVC door — whether it has been snapped, is getting stiff, or you simply want to upgrade to an anti-snap model — the first thing you need is the correct size. Buy the wrong cylinder and it either will not fit, will stick out dangerously from the door (making it easier to snap), or will sit too far recessed for the key to turn properly.
 
-I replace euro cylinders across Coventry every week, and the most common problem I see with DIY attempts is people buying the wrong size. This guide will walk you through exactly how to measure yours, step by step. If you would rather skip the measuring and have me supply and fit the right one, call 024 7522 4730 — I carry a range of sizes in my van.
+Buying a cylinder before confirming both dimensions can leave it projecting too far, sitting too deeply or not fitting the door. This guide explains how to measure yours step by step. If you would rather have me assess and supply it, call 024 7522 4730 so the installed cylinder, surrounding furniture and current compatible-product availability can be checked.
 
 ## What You Will Need
 
@@ -357,7 +357,7 @@ Anti-snap cylinder fitting starts from £59. For help measuring the required siz
       },
       {
         q: 'How long does it take to upgrade a euro cylinder?',
-        a: 'A straightforward euro cylinder upgrade takes about 15 to 20 minutes from start to finish. I remove the old cylinder, fit the new one, test it thoroughly with all keys, and make sure the multipoint mechanism operates smoothly. If the mechanism itself needs attention (alignment, lubrication, or replacement), that takes longer — typically 30 to 60 minutes. I carry all common sizes in my van so there is usually no need for a second visit.',
+        a: 'Timing depends on the cylinder, correct sizing, surrounding furniture, door alignment and whether the multipoint mechanism also needs attention. I remove the old cylinder, fit and test the agreed replacement with the keys, and confirm any separate mechanism work before proceeding.',
       },
     ],
   },
@@ -366,11 +366,11 @@ Anti-snap cylinder fitting starts from £59. For help measuring the required siz
     body: `
 ## Why Maintaining Your uPVC Door Matters
 
-Your uPVC door is probably the hardest-working door in your home. It gets opened and closed dozens of times a day, slammed by kids, leaned on by visitors, and battered by the Midlands weather year-round. Yet most people never give it a second thought — until it stops working.
+A uPVC door's usage, exposure and maintenance vary by home. Inspection should focus on the actual operation, alignment, seals, hinges, keeps, handles, cylinder and mechanism rather than assuming a fixed duty cycle or failure pattern.
 
-I see the consequences of neglected uPVC doors across Coventry every week. Mechanisms that should last 15 to 20 years failing after 8. Cylinders seizing up because they have never been lubricated. Doors dropping because the hinges have been ignored for a decade. The repair bills add up, and most of it is preventable.
+Alignment, lubrication, drainage, hinge condition, use and the particular mechanism can all affect how a uPVC door operates. Stiffness, changed handle travel, grinding or incomplete engagement are reasons to inspect the whole door rather than assume a component age or a single cause.
 
-This guide gives you a simple, seasonal maintenance routine that takes about 10 minutes per quarter. Follow it and your uPVC door will work smoothly for 20 years or more. Ignore it and you will be calling me sooner than you think — though of course I am always happy to help on 024 7522 4730.
+This guide gives you a simple seasonal inspection and maintenance routine. It can help identify avoidable strain and changed operation early, but no routine can promise a particular component lifespan. If a fault is already present, call 024 7522 4730 rather than forcing the handle or key.
 
 ## Spring Maintenance (March to May)
 
@@ -392,7 +392,7 @@ Most uPVC door seals are push-fit and can be bought by the metre online. If you 
 
 Apply a drop of light machine oil (3-in-1 oil or similar) to each hinge pin. Open and close the door a few times to work the oil in. This prevents the hinges from stiffening and reduces wear.
 
-If your door has flag hinges (the most common type on uPVC doors), check that the hinge adjustment screws have not worked loose over winter. A loose hinge causes the door to drop, which puts strain on the locking mechanism.
+If your door has flag hinges, visually check for looseness or movement without changing the adjustment unless you have the doorset instructions and suitable competence. Hinge movement can contribute to alignment symptoms, but the hinge, keeps, frame and mechanism should be diagnosed together.
 
 ## Summer Maintenance (June to August)
 
@@ -422,7 +422,7 @@ Autumn is preparation time. Get your door ready for winter before the cold hits.
 
 This is the most important single maintenance task. Apply a small amount of **graphite lubricant** (powdered graphite or a graphite spray) into the keyhole. Insert and remove the key a few times to distribute the lubricant through the pins.
 
-**Do not use WD-40 or any oil-based lubricant in the cylinder.** This is a mistake I see constantly. WD-40 attracts dust and dirt, which mixes with the oil to form a paste that clogs the pin chambers. Within a few months, the key becomes stiff to turn, and within a year the cylinder can seize completely. Graphite is the correct lubricant — it is dry, does not attract dirt, and keeps the pins operating smoothly.
+**Use only the lubricant and method specified for the exact product.** A cylinder, gearbox, hook, roller, hinge and seal may have different maintenance instructions, and a generic spray or graphite recommendation is not safe for every design. If the documentation is unavailable, identify the product or ask its manufacturer before applying anything.
 
 You can buy graphite lubricant from any hardware shop or online for about £3 to £5. It is the best investment you will make in your door.
 
@@ -444,7 +444,7 @@ Winter is survival mode for your door. Cold, rain, and frost all take their toll
 
 ### Turn the Key Fully When Locking
 
-This sounds basic, but it matters. When you lock your uPVC door, lift the handle and then turn the key a full turn. This fully engages the deadbolt and exercises the full range of motion in the gearbox. If you only lift the handle and never turn the key, the deadbolt and associated gearbox components sit idle — and idle mechanisms seize up.
+Use the operating sequence specified for the installed mechanism. Some lever-operated multipoint systems require lifting the handle and then turning the key, but the exact key rotation and indicators vary. Do not infer full engagement from handle position alone, and do not force a key or handle that will not complete its normal travel.
 
 Make it a habit: handle up, key turn, every single time you lock the door. It keeps the mechanism exercised and your door properly secure.
 
@@ -469,57 +469,57 @@ Some things apply all year:
 
 ## How Maintenance Extends Lock Life
 
-A well-maintained multipoint mechanism should last 20 years or more. Without maintenance, I typically see failures at 10 to 12 years — often earlier on heavily used doors.
+There is no universal service life for a multipoint mechanism. Use, alignment, product design, installation, environment, maintenance and existing wear all affect when a fault develops. Maintenance can reduce avoidable friction and reveal symptoms early, but it cannot guarantee a lifespan.
 
 The difference comes down to lubrication and care. A lubricated gearbox has less friction on the internal teeth, so they wear more slowly. Lubricated cylinders turn smoothly, so you do not force the key and stress the pins. Adjusted hinges keep the door aligned, so the locking points engage smoothly rather than grinding against misaligned keeps.
 
-Ten minutes of maintenance four times a year saves you a £150 mechanism replacement down the line. That is a good trade.
+Follow the door and hardware manufacturers' maintenance instructions and stop if a product or adjustment is not specified for the fitted assembly. Preventive checks may expose stiffness, contamination or alignment issues before complete failure, but they do not guarantee that replacement will be avoided.
 
 For more on how your uPVC door mechanism works and what can go wrong, see our [mechanisms explained guide](/blog/upvc-door-lock-mechanisms-explained). If your door is already showing problems, check our guide on [how to tell if your uPVC door lock needs replacing](/blog/upvc-door-lock-needs-replacing). And for handle-specific issues, see our [uPVC door handle problems guide](/blog/upvc-door-handle-problems).
 
-I cover all of Coventry and the surrounding Warwickshire area. See our [areas page](/areas/) or call 024 7522 4730 for advice or to book a maintenance check. You can also visit our [uPVC lock repair service page](/services/upvc-lock-repair) for details on our repair and maintenance services, or check our [prices page](/prices) for current rates.
+Use the [areas page](/areas/) to check the listed Coventry and Warwickshire locations, or call 024 7522 4730 with the full address for the current ETA. You can also visit the [uPVC lock repair service page](/services/upvc-lock-repair) for the diagnostic scope, or check the [prices page](/prices) for current starting rates.
 `,
     faqs: [
       {
         q: 'How often should I lubricate my uPVC door lock?',
-        a: 'Lubricate the euro cylinder with graphite at least twice a year — ideally in autumn before winter and again in spring. The multipoint mechanism should be lubricated with silicone spray at the same intervals. The hinges benefit from a drop of light machine oil at each service. If the door gets heavy use (a busy household or a door that faces prevailing weather), increase to every three months.',
+        a: 'Use only the lubricant, application points and maintenance interval specified by the cylinder, lock, hinge and doorset manufacturers. Different components can require different products, so do not apply one generic spray or schedule to the whole door. If the instructions are unavailable or operation remains stiff, stop forcing it and arrange an inspection.',
       },
       {
         q: 'Why should I not use WD-40 on my door lock?',
-        a: 'WD-40 is an oil-based product that attracts dust and dirt. Inside a euro cylinder, the oil mixes with microscopic debris to form a paste that clogs the delicate pin chambers. Within months, the key becomes stiff to turn, and the cylinder can eventually seize completely. Use graphite lubricant instead — it is dry, does not attract dirt, and is specifically designed for lock mechanisms. You can buy it for about £3 to £5 from any hardware shop.',
+        a: 'Do not choose a lubricant from a brand name or generic online rule. Check the exact lock and doorset manufacturer instructions because cylinders, multipoint cases, rollers, hinges and seals may specify different products or prohibit some lubricants. Applying an unsuitable product can affect operation or warranty terms.',
       },
       {
         q: 'How long should a uPVC door lock mechanism last?',
-        a: 'With proper maintenance, a quality multipoint locking mechanism should last 20 years or more. Without maintenance, I typically see failures at 10 to 12 years. The biggest factors are lubrication (reduces wear on internal gears), door alignment (prevents the mechanism from fighting against misaligned keeps), and general care (not slamming the door, not hanging weight on the handle). A ten-minute seasonal service makes a significant difference.',
+        a: 'There is no reliable universal lifespan. Usage, alignment, load, environment, maintenance, component design and previous damage all matter. Record changes in handle or key operation, follow the exact manufacturer maintenance instructions and have persistent stiffness diagnosed before the mechanism is forced.',
       },
       {
         q: 'My uPVC door is hard to lock in summer — is it broken?',
-        a: 'Probably not. uPVC expands in hot weather, and a south-facing door in direct sunlight can expand enough to make the locking points misalign with the frame keeps. If the door becomes stiff to lock only in warm weather and works fine when it cools down, it is almost certainly heat expansion rather than a broken mechanism. A locksmith can adjust the hinges and keeps to accommodate seasonal movement. Call me on 024 7522 4730 if it is causing problems.',
+        a: 'Temperature-related movement can contribute, but the symptom does not rule out alignment, hinge, keep, cylinder or gearbox faults. Stop forcing the handle or key. Note whether operation changes with temperature and with the door safely open versus against the frame, then have the complete door diagnosed before adjustment or replacement.',
       },
     ],
   },
 
   'upvc-door-handle-problems': {
     body: `
-## The Most Common uPVC Door Handle Problems
+## uPVC Door Handle Problems to Check
 
-uPVC door handles take a beating. They are lifted, pushed, pulled, and turned hundreds of times a week. Kids hang off them. Shopping bags get hooked over them. They are exposed to rain and sun on the outside and central heating on the inside. It is no surprise they eventually develop problems.
+uPVC door handles are exposed to repeated operation, weather and the forces transferred through the door and multipoint mechanism. Hanging weight from a handle or forcing it when the door is binding can add further strain.
 
-The good news is that most uPVC door handle issues are relatively cheap and quick to fix. The challenge is identifying exactly what is wrong — because a dropping handle, a stiff handle, and a wobbly handle all have different causes and different solutions.
+The repair scope depends on identifying what is wrong. A dropping handle, a stiff handle and a wobbly handle can have different causes, and a symptom at the handle may originate in the spindle, alignment or multipoint mechanism.
 
-I fix uPVC door handle problems across Coventry daily, from the big estates in Tile Hill and Canley to the newer builds around Westwood Heath and Eastern Green. Here are the most common issues I see, what causes them, and what each one costs to fix.
+For a uPVC door-handle problem in one of the Coventry locations listed on this site, start with the observed symptom rather than the area or apparent age of the property. The checks below explain possible causes and the published starting prices for the relevant work.
 
 ## Problem 1: Handle Drops and Will Not Spring Back
 
 **What it looks like:** You lift the handle to lock the door, and it stays in the up position. Or you press the handle down to open the door, and it drops and stays down instead of springing back to horizontal.
 
-**What causes it:** Inside the handle mechanism is a small component called a cassette spring (or return spring). This spring is what makes the handle snap back to the horizontal position after you operate it. Over time — typically after 5 to 10 years of regular use — this spring weakens, bends, or snaps entirely.
+**What may cause it:** Some handle assemblies use a cassette or return spring, and wear or breakage can affect lever return. Other causes include loose fixings, spindle or gearbox faults and binding from the door or mechanism, so dismantling should follow diagnosis rather than a lifespan assumption.
 
-Hanging weight on the handle (shopping bags, dog leads, coats) accelerates spring failure dramatically. The weight constantly pulls the handle down, fatiguing the spring far faster than normal use.
+Do not hang weight from a door handle. Added load is outside its intended operation and may affect the lever, spring, fixings, spindle or lock case; the resulting condition still needs inspection rather than an assumed failed component.
 
 **The fix:** Replace the cassette spring or, more commonly, replace the entire handle set. A new handle set includes the cassette spring, the handle itself, and the backplate.
 
-**Cost: £39 to £49 fitted**, including the handle set and labour. This is one of the quickest and cheapest uPVC door fixes — usually done in 15 to 20 minutes.
+**Cost: £39 to £49 fitted**, including the stated handle set and labour. Timing depends on the diagnosed fault, compatible parts, fixings and whether the spindle or multipoint mechanism also needs attention.
 
 **DIY potential:** This is one of the few uPVC door repairs that a handy homeowner can do themselves. The handles are held on by two screws on the inside backplate. Remove the screws, pull off both handles (inside and outside come off together, connected by the spindle), and fit the new set. The key is buying a handle with the correct PZ distance (spindle hole to keyhole centre) — see our [mechanism guide](/blog/upvc-door-lock-mechanisms-explained) for how to measure this.
 
@@ -529,7 +529,7 @@ Hanging weight on the handle (shopping bags, dog leads, coats) accelerates sprin
 
 **What causes it:** There are two possible causes:
 
-1. **Loose fixing screws** — the simplest possibility. The two screws that hold the handle backplate to the door have worked loose over time. This is extremely common and is usually caused by the natural vibration of the door opening and closing.
+1. **Loose or unsuitable fixings** — check the backplate for movement and inspect the correct fixing arrangement without overtightening or masking damage.
 
 2. **Worn spindle** — the spindle is the square metal bar that connects the inside and outside handles through the door. Over time, the square profile wears round at the connection points, causing the handle to feel loose even when the screws are tight. This is more common on doors that are 10 or more years old.
 
@@ -547,9 +547,9 @@ For a worn spindle: replace the spindle (a standard part, about £3 from any har
 
 **What it looks like:** You close the door and try to lift the handle to engage the multipoint locking mechanism, but the handle will not move upward. It may feel completely jammed or may lift partway and then stop.
 
-**What causes it:** This is the most concerning of the common handle problems because it usually indicates an issue beyond the handle itself:
+**What causes it:** A handle that will not lift can reflect an issue beyond the handle itself, so check the door and mechanism rather than replacing the visible furniture first:
 
-1. **Misaligned door** — the most common cause. If the door has dropped on its hinges (very common on older uPVC doors across Coventry), the locking points no longer line up with the keeps in the frame. The handle tries to push the hooks and rollers out, but they hit the frame instead of entering the keeps. The handle jams because the mechanism cannot complete its movement.
+1. **Misaligned door** — if the door has moved on its hinges, the locking points may no longer line up with the keeps in the frame. The handle then tries to move hooks or rollers against the frame instead of into the keeps and cannot complete its travel.
 
 2. **Worn or failing gearbox** — the gearbox inside the mechanism has stripped teeth or broken components. The handle lifts but the internal mechanism does not respond properly, causing it to jam partway through the locking sequence.
 
@@ -571,13 +571,13 @@ For seized locking points: sometimes lubrication and working the mechanism frees
 
 **What it looks like:** The handle lever has physically broken off the backplate, usually at the pivot point. You may be holding the handle while the backplate remains on the door, or the entire assembly may have come away.
 
-**What causes it:** Fatigue failure. uPVC door handles are typically made from cast aluminium or zamak (a zinc alloy). Over years of use, the pivot point develops hairline cracks from repeated stress. Eventually, it gives way — often when you are in a hurry, because that is when you operate the handle with the most force.
+**What causes it:** Repeated stress, an existing crack, unsuitable leverage or resistance elsewhere in the door can contribute to a fracture around the pivot. Inspect the rest of the door before assuming the handle material alone caused the failure.
 
-Cheap replacement handles are particularly prone to snapping. If you have had a budget handle fitted in the past, it may fail within 2 to 3 years.
+Price alone does not establish durability. Check the replacement's dimensions, material, certification where relevant and compatibility with the installed spindle and mechanism.
 
 **The fix:** Replace the full handle set. Make sure you buy a quality replacement — I recommend handles from established brands like Avocet, Hoppe, or Mila. They cost slightly more but last significantly longer than unbranded budget handles.
 
-**Cost: £39 to £59 fitted**, depending on the handle quality. I carry a range of handle sets in my van for same-day fitting.
+**Cost: £39 to £59 fitted**, depending on the handle quality. The dimensions, fixings, spindle and current compatible-handle availability are confirmed before the fitting date or number of visits is agreed.
 
 **DIY potential:** Similar to the cassette spring replacement above — remove two screws from the inside backplate, pull off the old handles, and fit the new set. Ensure the PZ distance matches your mechanism.
 
@@ -607,7 +607,7 @@ As a general rule:
 - Any issue combined with difficulty locking or unlocking the door
 - Any situation where you are unsure of the cause
 
-I would rather you call me for a quick check on 024 7522 4730 than attempt a fix that makes things worse. A diagnosis visit is quick, and I will always tell you honestly whether it is something you can handle yourself.
+If the safe checks do not identify the issue, call 024 7522 4730 with the mechanism markings and symptoms. The inspection scope, ETA and price basis are confirmed before attendance; no fixed diagnostic time or repair outcome is promised from the symptom alone.
 
 For more on the mechanism behind your handle, see our [uPVC door lock mechanisms explained](/blog/upvc-door-lock-mechanisms-explained) guide. For maintenance tips that prevent handle problems, read our [uPVC door maintenance guide](/blog/upvc-door-maintenance-guide). And for a full overview of our repair services, visit our [uPVC lock repair service page](/services/upvc-lock-repair) or check our [prices page](/prices).
 
@@ -616,7 +616,7 @@ I cover all of Coventry and surrounding areas — see our [areas page](/areas/) 
     faqs: [
       {
         q: 'How much does it cost to fix a dropping uPVC door handle?',
-        a: 'A dropping handle caused by a broken cassette spring typically costs £39 to £49 to fix, including a new handle set and fitting. It is one of the cheapest and quickest uPVC door repairs — usually done in 15 to 20 minutes. If the dropping handle is caused by a failing multipoint mechanism (less common), the cost will be higher as the mechanism itself needs replacing.',
+        a: 'A dropping handle caused by a broken cassette spring starts from the stated handle-replacement price, including the agreed handle set and fitting. If diagnosis finds a spindle, alignment or multipoint-mechanism fault, the work, timing and price can differ and should be confirmed first.',
       },
       {
         q: 'Can I replace a uPVC door handle myself?',
@@ -624,11 +624,11 @@ I cover all of Coventry and surrounding areas — see our [areas page](/areas/) 
       },
       {
         q: 'Why does my uPVC door handle keep coming loose?',
-        a: 'The most common cause is the two fixing screws on the inside backplate working loose from repeated use. Tighten them with a screwdriver — but not too tight, or you will strip the screw holes. If they will not stay tight (the holes are stripped), try slightly longer screws or insert small plastic wall plugs into the holes before re-screwing. If the handle feels loose even with tight screws, the spindle connecting the inside and outside handles may be worn and need replacing.',
+        a: 'Loose fixing screws are one possible cause. Tighten them carefully with a screwdriver rather than over-tightening and damaging the holes. If the backplate will not remain secure or the handle still feels loose, stop and inspect the fixings, spindle and handle set before choosing a replacement or altering the holes.',
       },
       {
         q: 'My uPVC door handle will not lift up to lock — what is wrong?',
-        a: 'A handle that will not lift to lock usually indicates a problem beyond the handle itself. The most common cause is a dropped or misaligned door — the locking points no longer line up with the keeps in the frame, so the mechanism jams when you try to engage it. Less commonly, the gearbox inside the mechanism has worn or stripped teeth. This is not a DIY fix. Call a locksmith on 024 7522 4730 to diagnose and repair the issue before it gets worse.',
+        a: 'A handle that will not lift can result from alignment, keeps, a seized locking point, the handle or the gearbox. Do not force it. Compare operation only when it is safe to do so, then have the complete door diagnosed before parts are selected. Call 024 7522 4730 if you need an inspection.',
       },
     ],
   },
@@ -641,7 +641,7 @@ A multipoint locking system is the complete locking mechanism fitted inside the 
 
 If you live in Coventry and your home was built or had new doors fitted any time from the 1990s onward, your front and back doors almost certainly use multipoint locking systems. They are standard on virtually every uPVC and composite door sold in the UK.
 
-I work with these mechanisms every day, fitting, repairing, and replacing them across Coventry and Warwickshire. This guide is a deep technical look at how they work, the different types, what goes wrong, and what it costs to fix.
+This guide explains the mechanism types, observable symptoms, diagnosis steps and pricing basis relevant to a Coventry or Warwickshire enquiry. The fitted markings, dimensions and door condition still need to be checked before a repair or replacement is specified.
 
 ## Types of Locking Points
 
@@ -677,7 +677,7 @@ Multipoint mechanisms come in three main configurations:
 
 ### 3-Point Systems
 
-The most basic configuration: a central deadbolt (at the gearbox) and two additional locking points (usually hooks or rollers) above and below. This is the minimum specification for most residential doors and provides adequate security for standard risk levels.
+One possible configuration uses a central bolt and two additional locking points above and below. The number of points does not by itself establish certification, compatibility or adequate resistance; check the exact mechanism and complete doorset evidence.
 
 Many older uPVC doors in Coventry — particularly those from the 1990s and early 2000s — have 3-point systems. They are secure enough for most homes but are being superseded by 5-point systems in newer installations.
 
@@ -685,11 +685,11 @@ Many older uPVC doors in Coventry — particularly those from the 1990s and earl
 
 The current standard for most new residential doors: a central deadbolt, two hooks (top and bottom), and two rollers or mushroom cams at intermediate positions. This provides both security (hooks and deadbolt) and compression (rollers) along the full height of the door.
 
-Most replacement mechanisms I fit in Coventry are 5-point systems. They offer an excellent balance of security, weatherproofing, and cost.
+A replacement mechanism should match the present door, gearbox dimensions, locking-point positions, keeps and relevant product requirements. The number of locking points alone does not establish compatibility, security performance or value.
 
 ### 7-Point Systems
 
-The highest specification for residential doors: a central deadbolt, hooks at top and bottom, and four additional locking points (rollers, mushroom cams, or additional hooks) at intermediate positions. These are typically found on composite doors and high-security installations.
+Some mechanisms combine a central bolt, hooks and additional rollers or cams. More points do not automatically make one doorset higher security than another; certification, keeps, frame, hinges, cylinder, furniture, fit and correct operation all matter.
 
 7-point systems provide outstanding security and compression but are more expensive and more complex when repairs are needed.
 
@@ -733,17 +733,17 @@ The positions of the hooks, rollers, and other locking points must align with th
 
 Mechanisms have either flat, rounded, or U-shaped faceplates. The faceplate must match the channel cut into the door edge.
 
-### Common Brand Matching
+### Brand and Model Matching
 
-In my experience, the most common brand pairings across Coventry homes are:
+Manufacturer names can help identify a starting point, but the installed model and measurements still control compatibility:
 
-- **Mila** doors typically have Mila mechanisms (but Lockmaster replacements often fit)
-- **GU (Gretsch-Unitas)** mechanisms are found in higher-spec doors and must usually be replaced like-for-like
-- **Fuhr** mechanisms are common in commercial doors and some residential — again, usually like-for-like replacement
+- A door or handle brand does not reliably identify the installed mechanism
+- Apparent brand matches do not prove that a replacement case or strip is compatible
+- Record the faceplate, case, centres, backset, locking-point layout and current manufacturer data before proposing a part
 - **Yale** and **Lockmaster** are common replacement brands that cover a wide range of door configurations
 - **Winkhaus** mechanisms are premium and tend to require like-for-like replacement
 
-I carry a range of common mechanisms in my van, and for unusual specifications I can source the correct mechanism within 24 to 48 hours.
+Call with the full faceplate markings and measurements so current availability and any ordering lead time for a compatible mechanism can be confirmed before work is scheduled.
 
 ## Common Failures
 
@@ -816,7 +816,7 @@ I cover Coventry and the stated surrounding Warwickshire [areas](/areas/). Visit
       },
       {
         q: 'Are multipoint lock mechanisms universal — can I use any brand?',
-        a: 'No, multipoint mechanisms are not universal. The replacement must match your door in several critical dimensions: PZ distance (70mm or 92mm), backset (35mm or 45mm), overall length, locking point positions, and faceplate shape. Some brands like Lockmaster and Yale offer wide compatibility ranges, but specialist brands like GU and Winkhaus often require like-for-like replacement. I carry common mechanisms in my van and can source specialist ones within 24 to 48 hours.',
+        a: 'No. The replacement must match the door in several critical dimensions, including PZ distance, backset, overall length, locking-point positions and faceplate shape. Manufacturer markings narrow the options but do not replace measurement. Current compatible-part availability and any ordering lead time must be confirmed for the exact mechanism.',
       },
       {
         q: 'How much does it cost to replace a multipoint locking mechanism?',
@@ -824,7 +824,7 @@ I cover Coventry and the stated surrounding Warwickshire [areas](/areas/). Visit
       },
       {
         q: 'What is the difference between active and passive locking points?',
-        a: 'Active locking points move when you operate the handle — hooks swing out, rollers extend, cams push forward. They must be deliberately engaged by lifting the handle. Passive locking points are always in the extended position and engage automatically as the door closes, sliding past the frame keeps. Most modern mechanisms use active locking points, which provide more positive engagement but require the user to lift the handle to secure the door.',
+        a: 'Active points move during the mechanism\'s operating sequence; some hooks, rollers or cams extend or rotate. Passive points remain projecting and engage with shaped keeps as the door closes. The installed mechanism instructions determine how each point engages and how the final locked state is confirmed.',
       },
     ],
   },

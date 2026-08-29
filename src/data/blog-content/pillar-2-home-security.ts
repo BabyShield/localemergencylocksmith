@@ -725,7 +725,7 @@ Walk around the garage or shed and record the door, frame, hinges, lock, fixings
 
 For an assessment, call 024 7522 4730 and share the door type, photographs and existing hardware when booking. Parts availability, compatibility and whether the work needs more than one visit can then be discussed.
 
-For the full picture of home security including doors and windows, read the [complete home security checklist](/blog/home-security-checklist-2026), or check the [prices page](/prices) for our full range of services. If you are in [Coventry](/) or the surrounding [Warwickshire areas](/areas), I cover everywhere locally.
+For the full picture of home security including doors and windows, read the [complete home security checklist](/blog/home-security-checklist-2026), or check the [prices page](/prices) for the listed services. If you are in [Coventry](/) or a surrounding [Warwickshire area](/areas), use the area directory to confirm that the location is listed and call for the current ETA.
 `,
     faqs: [
       {
@@ -899,7 +899,7 @@ Where it matters less:
 
 For a particular home, first identify the doorset and fault, then verify the exact certification and any written requirement. Do not assume that naming several standards means a product meets SBD requirements or is the right repair.
 
-If you want advice on which products are right for your home, or you want me to check what standards your current locks meet, call me on 024 7522 4730. I am happy to take a look and give you honest guidance — no sales pitch, just practical advice based on what I see every day.
+If you want advice on which products are right for your home, or you want me to check what standards your current locks meet, call me on 024 7522 4730. I am happy to inspect the lock and door and explain the relevant evidence — no sales pitch, just guidance based on what can be verified at your home.
 
 For more on lock standards, read my posts on [TS007 vs SS312](/blog/ts007-vs-ss312-lock-standards) and [BS3621 vs anti-snap vs smart locks](/blog/bs3621-vs-anti-snap-vs-smart-lock). For a full security assessment of your home, start with the [home security checklist](/blog/home-security-checklist-2026).
 

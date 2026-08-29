@@ -27,6 +27,10 @@ const MAX_LOCALITY_P95_OVERLAP = 0.18
 const MAX_LOCALITY_PAIR_OVERLAP = 0.25
 const MAX_FULL_P95_OVERLAP = 0.35
 const MAX_FULL_PAIR_OVERLAP = 0.40
+const MAX_ALL_P95_OVERLAP = 0.35
+const MAX_ALL_PAIR_OVERLAP = 0.45
+const MAX_SAME_AREA_P95_OVERLAP = 0.40
+const MAX_SAME_AREA_PAIR_OVERLAP = 0.45
 
 const MIN_TITLE_LENGTH = 30
 const MAX_TITLE_LENGTH = 60
@@ -369,10 +373,12 @@ for (const [areaSlug, records] of Object.entries(TOWN_SERVICES)) {
 
     check(Array.isArray(content.intro) && content.intro.length >= 3, `${key} needs at least 3 introduction paragraphs`)
     check(wordCount(content.localAngleBody) >= 75, `${key} local service analysis has ${wordCount(content.localAngleBody)} words; expected at least 75`)
-    check(Array.isArray(content.contextGuidance) && content.contextGuidance.length >= 3, `${key} needs at least 3 source-bounded locality guidance paragraphs`)
+    const expectedContextParagraphs = ['emergency-lockout', 'lock-change'].includes(serviceSlug) ? 4 : 3
+    check(Array.isArray(content.contextGuidance) && content.contextGuidance.length === expectedContextParagraphs, `${key} needs ${expectedContextParagraphs - 2} service-selected locality paragraph(s) plus exactly 2 pair-specific guidance paragraphs`)
     if (Array.isArray(content.contextGuidance)) {
       for (const [index, paragraph] of content.contextGuidance.entries()) {
-        check(wordCount(paragraph) >= 45, `${key} locality guidance paragraph ${index + 1} has ${wordCount(paragraph)} words; expected at least 45`)
+        const minimumWords = index < content.contextGuidance.length - 2 ? 45 : 80
+        check(wordCount(paragraph) >= minimumWords, `${key} locality guidance paragraph ${index + 1} has ${wordCount(paragraph)} words; expected at least ${minimumWords}`)
       }
     }
     check(Array.isArray(content.commonJobs) && content.commonJobs.length >= 5, `${key} needs at least 5 service checks or scenarios`)
@@ -568,6 +574,42 @@ function buildSimilarityReports(groupedRecords) {
 const localitySimilarityReports = buildSimilarityReports(localityRecordsByService)
 const fullSimilarityReports = buildSimilarityReports(recordsByService)
 
+function buildCrossCorpusReport(records, predicate = () => true) {
+  const pairs = []
+  for (let leftIndex = 0; leftIndex < records.length; leftIndex += 1) {
+    for (let rightIndex = leftIndex + 1; rightIndex < records.length; rightIndex += 1) {
+      const left = records[leftIndex]
+      const right = records[rightIndex]
+      if (!predicate(left, right)) continue
+      pairs.push({
+        left: left.key,
+        right: right.key,
+        overlap: overlapCoefficient(left.shingles, right.shingles),
+      })
+    }
+  }
+  const overlaps = pairs.map(pair => pair.overlap)
+  const highestPair = [...pairs].sort((left, right) => right.overlap - left.overlap)[0]
+  return {
+    pairCount: pairs.length,
+    p95: percentile(overlaps, 0.95),
+    max: highestPair?.overlap ?? 0,
+    highestPair,
+  }
+}
+
+const allFullRecords = publishedRecords.map(record => ({
+  key: record.key,
+  areaSlug: record.areaSlug,
+  serviceSlug: record.serviceSlug,
+  shingles: shingles(normaliseLocality(record.editorial, record.area), 5),
+}))
+const allFullReport = buildCrossCorpusReport(allFullRecords)
+const sameAreaCrossServiceReport = buildCrossCorpusReport(
+  allFullRecords,
+  (left, right) => left.areaSlug === right.areaSlug && left.serviceSlug !== right.serviceSlug,
+)
+
 for (const report of localitySimilarityReports) {
   check(report.p95 <= MAX_LOCALITY_P95_OVERLAP, `${report.serviceSlug} locality-specific 5-word-shingle p95 overlap is ${(report.p95 * 100).toFixed(2)}%; maximum is ${(MAX_LOCALITY_P95_OVERLAP * 100).toFixed(0)}%`)
   check(report.max <= MAX_LOCALITY_PAIR_OVERLAP, `${report.serviceSlug} highest locality-specific 5-word-shingle overlap is ${(report.max * 100).toFixed(2)}% on ${report.highestPair?.left} vs ${report.highestPair?.right}; maximum is ${(MAX_LOCALITY_PAIR_OVERLAP * 100).toFixed(0)}%`)
@@ -577,6 +619,11 @@ for (const report of fullSimilarityReports) {
   check(report.p95 <= MAX_FULL_P95_OVERLAP, `${report.serviceSlug} full-editorial 5-word-shingle p95 overlap is ${(report.p95 * 100).toFixed(2)}%; maximum is ${(MAX_FULL_P95_OVERLAP * 100).toFixed(0)}%`)
   check(report.max <= MAX_FULL_PAIR_OVERLAP, `${report.serviceSlug} highest full-editorial 5-word-shingle overlap is ${(report.max * 100).toFixed(2)}% on ${report.highestPair?.left} vs ${report.highestPair?.right}; maximum is ${(MAX_FULL_PAIR_OVERLAP * 100).toFixed(0)}%`)
 }
+
+check(allFullReport.p95 <= MAX_ALL_P95_OVERLAP, `all-page full-editorial 5-word-shingle p95 overlap is ${(allFullReport.p95 * 100).toFixed(2)}%; maximum is ${(MAX_ALL_P95_OVERLAP * 100).toFixed(0)}%`)
+check(allFullReport.max <= MAX_ALL_PAIR_OVERLAP, `all-page highest full-editorial 5-word-shingle overlap is ${(allFullReport.max * 100).toFixed(2)}% on ${allFullReport.highestPair?.left} vs ${allFullReport.highestPair?.right}; maximum is ${(MAX_ALL_PAIR_OVERLAP * 100).toFixed(0)}%`)
+check(sameAreaCrossServiceReport.p95 <= MAX_SAME_AREA_P95_OVERLAP, `same-area cross-service full-editorial p95 overlap is ${(sameAreaCrossServiceReport.p95 * 100).toFixed(2)}%; maximum is ${(MAX_SAME_AREA_P95_OVERLAP * 100).toFixed(0)}%`)
+check(sameAreaCrossServiceReport.max <= MAX_SAME_AREA_PAIR_OVERLAP, `same-area cross-service highest full-editorial overlap is ${(sameAreaCrossServiceReport.max * 100).toFixed(2)}% on ${sameAreaCrossServiceReport.highestPair?.left} vs ${sameAreaCrossServiceReport.highestPair?.right}; maximum is ${(MAX_SAME_AREA_PAIR_OVERLAP * 100).toFixed(0)}%`)
 
 console.log('Service-area governance audit')
 console.log(`Evidence as-of date: ${AUDIT_AS_OF}`)
@@ -599,6 +646,9 @@ console.log(`Full editorial within-service 5-word-shingle overlap (p95 <= ${(MAX
 for (const report of fullSimilarityReports) {
   console.log(`- ${report.serviceSlug}: ${report.pairCount} pairs, p95 ${(report.p95 * 100).toFixed(2)}%, max ${(report.max * 100).toFixed(2)}% (${report.highestPair?.left} vs ${report.highestPair?.right})`)
 }
+console.log('')
+console.log(`All-page full-editorial overlap: ${allFullReport.pairCount} pairs, p95 ${(allFullReport.p95 * 100).toFixed(2)}%, max ${(allFullReport.max * 100).toFixed(2)}% (${allFullReport.highestPair?.left} vs ${allFullReport.highestPair?.right})`)
+console.log(`Same-area cross-service overlap: ${sameAreaCrossServiceReport.pairCount} pairs, p95 ${(sameAreaCrossServiceReport.p95 * 100).toFixed(2)}%, max ${(sameAreaCrossServiceReport.max * 100).toFixed(2)}% (${sameAreaCrossServiceReport.highestPair?.left} vs ${sameAreaCrossServiceReport.highestPair?.right})`)
 
 if (warnings.length > 0) {
   console.warn('')

@@ -6,7 +6,6 @@ export const SITE_CONFIG = {
   domain: 'https://www.localemergencylocksmith.co.uk',
   tagline: 'Coventry & Surrounding Areas',
   hours: '24/7 — 365 days a year',
-  responseTime: '15-30 minutes',
   primaryCity: 'Coventry',
   colors: {
     primary: '#0F1B2D',

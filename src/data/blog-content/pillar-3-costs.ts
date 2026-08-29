@@ -96,7 +96,7 @@ The Yale nightlatch is the spring-loaded lock you slam shut. It is fitted to mos
 
 **My price: from £69 fitted**
 
-That includes a quality replacement nightlatch (I typically fit ERA or Yale brand), fitting, and disposal of the old one. The price can increase if:
+That includes a suitable replacement nightlatch, fitting, and disposal of the old one. The exact product is agreed from the door, dimensions, required features and current availability. The price can increase if:
 
 - You want a British Standard (BS3621) nightlatch — this may match a policy that explicitly names the standard, but the policy wording still needs checking
 - The existing cutout does not match the new lock (rare, but it happens with very old doors)
@@ -152,7 +152,7 @@ The wide price range is because there are dozens of different multipoint mechani
 - **Type** — some use hooks, some use rollers, some use a combination
 - **Size** — the backset, centres, and overall length must match your door exactly
 
-I carry the most common mechanisms in the van, but unusual or discontinued models sometimes need ordering. I will always tell you on the phone if that is likely.
+Compatible-part availability depends on the faceplate markings, backset, centres, overall length and locking layout. Photographs can help initial triage, but final identification or ordering may require inspection and measurements.
 
 For a full breakdown of uPVC door lock costs specifically, see our detailed [uPVC door lock replacement costs](/blog/upvc-door-lock-replacement-costs) guide.
 
@@ -310,14 +310,14 @@ There are dozens of different multipoint mechanisms made by different manufactur
 
 Common mechanism brands include:
 
-- **Mila** — very common in UK uPVC doors, parts widely available, mid-range pricing
-- **Yale** — another common brand, good parts availability
-- **GU (Gretsch-Unitas)** — German-made, tends to be more expensive but very reliable
-- **Lockmaster** — a universal brand designed to replace multiple original mechanisms, often the most cost-effective option
-- **Fuhr** — common in older uPVC doors, parts can be harder to source
-- **Winkhaus** — good quality, mid to upper pricing
+- **Mila** — one manufacturer name that may appear on the faceplate
+- **Yale** — a brand name that still requires the exact model and dimensions
+- **GU (Gretsch-Unitas)** — mechanisms must be identified from their full configuration
+- **Lockmaster** — replacement ranges may cover specified original layouts when measurements match
+- **Fuhr** — identify the exact strip and component rather than relying on the brand alone
+- **Winkhaus** — check model, locking points, dimensions and current part availability
 
-I carry the most common mechanisms in my van. For unusual or discontinued brands, I may need to order — but I will tell you this on the phone.
+No brand name by itself confirms van stock or interchangeability. I check the markings and dimensions, then confirm whether a compatible mechanism is available for the attendance or must be sourced.
 
 ### How to Identify Your Mechanism Brand
 
@@ -325,11 +325,11 @@ Before you call, you can check the brand of your mechanism yourself:
 
 1. **Look at the faceplate** — the thin metal strip visible on the edge of the door when it is open. The brand name is usually stamped on it
 2. **Check the handle** — some brands stamp their name on the handle backplate
-3. **Take a photo** — if you cannot read the markings, take a photo of the door edge with the faceplate visible and send it to me on 024 7522 4730. I can usually identify the mechanism from a photo
+3. **Take a photo** — if you cannot read the markings, photograph the entire door edge and faceplate. It may narrow the options, but final compatibility still depends on complete measurements and inspection
 
 ### Full Multipoint Lock Swap: From £150 - £250
 
-Sometimes the mechanism, the cylinder, and the handles all need replacing at the same time. This is common when:
+The mechanism, cylinder and handles may need separate assessment, and a combined replacement can be considered when:
 
 - The door is 15+ years old and everything is worn
 - The mechanism has failed and damaged the cylinder in the process
@@ -342,11 +342,11 @@ Sometimes the mechanism, the cylinder, and the handles all need replacing at the
 - Full fitting, alignment, and testing
 - All old parts disposal
 
-This is the most comprehensive uPVC door lock job, and the price reflects the number of components involved. On the higher end (£200-£250), you are typically looking at a premium mechanism brand and a high-security cylinder.
+This scope includes several separately identified components. A quote near the higher end of the published range must state the exact mechanism, cylinder, handles and fitting work included rather than infer cost from a brand label.
 
 ### Handle Set Replacement: From £39
 
-A loose, floppy, or broken handle is often the cheapest fix on a uPVC door. In many cases it is just the handle that has failed — the mechanism behind it is fine.
+A loose, floppy or broken handle does not establish which component has failed. Check the handle, spindle, spring cassette and multipoint mechanism separately before deciding whether a handle-only replacement is supported.
 
 **What is included:**
 - New handle set (both sides)
@@ -416,11 +416,11 @@ When you call me on 024 7522 4730, I will ask you a few questions about the symp
 1. **Do not ignore early warning signs** — a stiff key or a handle that needs extra force are signs of wear. Fixing a small problem early (£39-£59) prevents a bigger failure later (£150+)
 2. **Upgrade the cylinder while I am there** — if I am already working on your door, adding an anti-snap cylinder upgrade is cheaper than a separate visit
 3. **Regular maintenance extends the life of your mechanism** — see our [uPVC door maintenance guide](/blog/upvc-door-maintenance-guide)
-4. **Get a price on the phone before booking** — I always give a firm quote upfront. If a locksmith will not do this, consider it a warning sign
+4. **Get a price basis before booking** — ask what is included and which inspection findings could change it. I confirm the basis before travelling and agree any revised scope before additional work proceeds
 
 ## Book a uPVC Door Lock Repair or Replacement
 
-Call 024 7522 4730 for a firm price on any uPVC door lock job. I cover the whole of Coventry and surrounding Warwickshire areas, and I charge the same price day or night — no call-out fee, no VAT.
+Call 024 7522 4730 with the full address, symptoms and any faceplate photographs. I cover the Coventry and Warwickshire locations listed on the [areas page](/areas/); call to confirm the exact address, compatible-part position and price basis. No VAT or separate call-out fee is added.
 
 For uPVC mechanism repairs and replacements, visit the [uPVC lock repair service](/services/upvc-lock-repair) or check the full [price list](/prices). If your uPVC door is jammed and you cannot get in or out, visit the [emergency lockout service](/services/emergency-lockout).`,
     faqs: [
@@ -438,7 +438,7 @@ For uPVC mechanism repairs and replacements, visit the [uPVC lock repair service
       },
       {
         q: 'Why are some uPVC door mechanisms so much more expensive than others?',
-        a: 'The price difference comes down to brand, availability, and type. Common mechanisms from brands like Mila, Yale, and Lockmaster are widely available and competitively priced. German-made mechanisms from GU or Winkhaus tend to cost more but are very reliable. Discontinued mechanisms from older door manufacturers can be expensive because they are harder to source — in these cases, a Lockmaster universal mechanism is often the most cost-effective replacement option.',
+        a: 'The quote depends on the exact mechanism, dimensions, locking-point layout, current compatible-part availability and fitting work. A brand name alone does not establish price, reliability or interchangeability. Identify the installed strip first, then compare only replacements whose specification and current price have been confirmed.',
       },
     ],
   },
@@ -511,7 +511,7 @@ If you want all your locks to work with the same key (keyed alike), rekeying exi
 
 ## When Replacement Is Better
 
-For most standard residential locks in Coventry, I recommend replacement. Here is why:
+Replacement and rekeying each need an address-specific comparison. Consider the following checks:
 
 ### 1. The Anti-Snap Upgrade Opportunity
 
@@ -548,15 +548,15 @@ A serviceable product with an authorised rekey route may justify keeping the har
 ## Common Scenarios and My Recommendation
 
 ### Moving House
-**Recommendation: Replace.** You do not know the history of the existing locks, their age, or their quality. Start fresh with new locks. I do a lot of [moving house lock changes](/blog/moving-house-change-locks) across Coventry — it is one of the most popular jobs.
+**Recommendation: assess key control and the fitted locks.** If old copies cannot be accounted for, an authorised replacement or viable rekeying route can establish a new key set. Inspect condition, markings, compatibility and every external entrance rather than infer a universal answer from the move itself.
 
 Anti-snap cylinder fitting starts from £59 per door, so two separate cylinder replacements start from £118. Other lock combinations depend on the actual products and fitting required; check the current [prices](/prices) or request a quote.
 
 ### Lost Keys
-**Recommendation: Replace** (for standard locks) or **Rekey** (for premium locks in good condition). If you have lost your keys and there is a risk someone could use them, you need to act. Replacing standard cylinders is fast, affordable, and gives you a security upgrade. If you have premium locks, rekeying preserves your investment. Either way, read our guide on [what to do if you have lost your keys](/blog/lost-keys-should-you-change-locks).
+**Recommendation: assess the access risk and available key-control route.** If identifiable keys could be used at the property, replacement or an authorised rekey may remove access through those old copies. Product condition, certification, parts and urgency determine the suitable scope. Read the guide on [what to do if you have lost your keys](/blog/lost-keys-should-you-change-locks).
 
 ### Relationship Breakdown
-**Recommendation: Replace.** When someone who should no longer have access has keys to your home, a complete lock change provides both security and peace of mind. This is a job where the psychological reassurance of new locks matters as much as the practical security.
+**Recommendation: confirm authority and key control.** Where a person is lawfully entitled to change access and an old key should no longer work, compare compatible replacement or rekeying options. Occupancy, tenancy, court orders and ownership can affect authority, so the locksmith should not decide those rights.
 
 ### Landlord — Between Tenants
 **Recommendation: Assess key control and the existing locks.** If previous keys cannot be accounted for, replacement or rekeying can establish a new key set. Tenancy rights and authority still matter; see the guide on [locks between tenancies](/blog/landlords-change-locks-between-tenants).

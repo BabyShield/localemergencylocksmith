@@ -111,7 +111,7 @@ I offer a **free visual lock check** across Coventry and the surrounding areas. 
 
 ## Which Standard Do You Actually Need?
 
-Here is my practical advice based on hundreds of jobs across Coventry:
+Use the written policy, licence, fire-risk assessment and current product evidence as the decision record:
 
 | Situation | Starting Point to Verify |
 |---|---|
@@ -121,7 +121,7 @@ Here is my practical advice based on hundreds of jobs across Coventry:
 | Landlord with HMO | Follow the licence, fire-risk assessment and Coventry council guidance |
 | Student rental | Assess escape and access needs for the actual property |
 
-If you are a Coventry landlord managing multiple properties, I offer discounted rates for bulk lock changes. Whether it is the September student turnover or a mid-year tenancy change, call me on 024 7522 4730 and I will give you an honest quote.
+If you manage multiple Coventry properties, call with the addresses, door details, authority and required timing. I will define what can be quoted remotely, what needs inspection and the price basis for the agreed scope.
 
 For more on the insurance side of lock standards, read our detailed guide on [whether your insurance will pay out with non-compliant locks](/blog/insurance-payout-lock-standards). And if you want to understand your obligations as a landlord around lock changes between tenants, I have covered that in our guide to [changing locks between tenancies](/blog/landlords-change-locks-between-tenants).
 `,
@@ -188,10 +188,10 @@ Illegal eviction is a **criminal offence**. A landlord found guilty can face:
 
 - An **unlimited fine**
 - Up to **2 years in prison**
-- A civil claim from the tenant for **damages** (often thousands of pounds)
+- A civil claim from the tenant for **damages**, with the outcome and amount depending on the facts and legal process
 - Action from the local council's tenancy relations team
 
-Coventry City Council has a dedicated team that investigates illegal eviction complaints. They take it seriously, and I have seen landlords prosecuted.
+Coventry City Council publishes routes for housing and homelessness help. A tenant or landlord facing an access or eviction dispute should use the current council, Shelter or legal-advice route rather than rely on a locksmith article.
 
 ---
 
@@ -252,7 +252,7 @@ If you come home and find the locks have been changed, here is what to do:
 
 If your landlord has illegally evicted you, you may be entitled to:
 
-- **An injunction** forcing the landlord to let you back in (often granted within 24-48 hours)
+- **An injunction or another urgent court remedy** — availability and timing depend on the facts, court process and current legal advice
 - **Compensation** for any losses — hotel costs, damaged belongings, distress
 - **Criminal prosecution** of the landlord
 
@@ -317,7 +317,7 @@ For a physical lock change in Coventry — whether you are a tenant, landlord, o
       },
       {
         q: 'I am a landlord — can I add an extra lock to my rental property?',
-        a: 'You can add or upgrade locks with the tenant\'s agreement, and the tenant must be given keys immediately. You cannot add a lock that only you have the key to — that would effectively allow you to lock the tenant out. If you want to upgrade security between tenancies, that is the ideal time. I work with many Coventry landlords and letting agents on lock upgrades — call 024 7522 4730 for competitive rates.',
+        a: 'A landlord should check the tenancy, obtain any required agreement and preserve lawful tenant access before adding or changing a lock. Fire, licensing and management duties may also apply. Get housing or legal advice for the actual circumstances; for the physical lock scope, call with the address, authority and written requirements.',
       },
     ],
   },
@@ -328,7 +328,7 @@ For a physical lock change in Coventry — whether you are a tenant, landlord, o
 
 There is no general rule in England requiring every landlord to change every lock between tenancies. The decision should be based on key control, the existing hardware, the property and occupants, licence or fire-safety requirements and written insurance terms.
 
-I am Ross, a local locksmith covering Coventry and the surrounding areas. I see the consequences of not changing locks more often than you would think — and they are entirely avoidable.
+I am Ross, a local locksmith serving the listed Coventry and surrounding areas. This guide treats key control as a property-specific decision rather than claiming that every tenancy change requires replacement.
 
 ---
 
@@ -342,9 +342,7 @@ When a tenant hands back their keys at the end of a tenancy, you get back the ke
 - **The key their friend had** for feeding the cat
 - **The key left with the cleaner** or dog walker
 
-I have attended multiple jobs in Coventry where a previous tenant — or someone who had a previous tenant's key — has let themselves into a property after the new tenants moved in. In one case in Stoke, a student returned to a house three months after their tenancy ended because they had a spare key and thought they had left something behind. The new tenants were understandably terrified.
-
-This is not a hypothetical risk. It happens.
+Returning the known keys does not by itself prove that no authorised or unauthorised copies remain. Record how keys were controlled, whether restricted duplication or an access log exists, and whether any loss, non-return or unauthorised access is known before deciding whether to retain, rekey or replace a lock.
 
 ---
 
@@ -413,11 +411,11 @@ Student tenancy changeovers often create a practical window for inspection and a
 - **Early September** — new tenants move in
 - **The gap** — properties are cleaned, inspected, and prepared
 
-This July-to-September window is the perfect time to change locks. I work with several Coventry letting agents who book all their lock changes in one batch during this period. If you manage multiple student lets, call me on 024 7522 4730 to arrange a bulk booking — I offer discounted rates for multiple properties done in one visit.
+If a property is lawfully vacant between tenancies, that period may provide an opportunity to inspect key control, doors and locks without disrupting occupants. Replacement is not automatic: define the authority, fire and licence requirements, existing hardware, missing-key evidence, parts availability and agreed programme for each property.
 
-### A Common Problem I See
+### A Key-Control Question
 
-Some student lets have the same locks that were fitted when the property was first converted into an HMO — sometimes 5 or even 10 years ago. That means there could be dozens of copies of keys floating around from previous tenants. If you have not changed the locks in years, now is the time.
+For an existing student let, ask when the cylinder or lock was last changed, how many keys were issued and returned, whether duplication was controlled and whether any key is unaccounted for. Age alone does not prove that copies exist or that replacement is necessary, but an unresolved key-control gap should be assessed before the next occupancy.
 
 ---
 

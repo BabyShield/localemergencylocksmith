@@ -15,7 +15,7 @@ export const PILLARS = [
   { slug: 'lock-types-security', name: 'Lock Types & Security Ratings', description: 'Everything you need to know about the locks on your doors — types, standards, and which ones actually keep you safe.' },
   { slug: 'home-security', name: 'Home Security & Burglary Prevention', description: 'Practical advice on protecting your home, based on real burglary data and what we see on every job.' },
   { slug: 'locksmith-costs', name: 'Locksmith Costs & Pricing', description: 'Honest prices for every common locksmith job — no vague ranges, no "call for a quote".' },
-  { slug: 'upvc-door-locks', name: 'uPVC Door Locks', description: 'uPVC doors are the most common door in Coventry — and the most common reason people call us. Here is everything you need to know.' },
+  { slug: 'upvc-door-locks', name: 'uPVC Door Locks', description: 'Practical guidance on uPVC cylinders, handles, alignment and multipoint mechanisms, including what to check before repair or replacement.' },
   { slug: 'emergency-situations', name: 'Emergency Situations', description: 'Step-by-step guides for when things go wrong — lockouts, break-ins, broken keys, and lost keys.' },
   { slug: 'legal-insurance', name: 'Legal & Insurance Requirements', description: 'Lock standards, insurance requirements, landlord obligations — the legal side of home security explained clearly.' },
   { slug: 'seasonal-security', name: 'Seasonal Security Guides', description: 'Security advice that changes with the seasons — from frozen locks in winter to dark evenings in autumn.' },
@@ -293,7 +293,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
   {
     slug: 'upvc-door-handle-problems',
     title: 'uPVC Door Handle Problems: Dropping Handles, Stiff Mechanisms, and Fixes',
-    excerpt: 'A dropping or loose uPVC door handle is usually a cheap fix — if you know what is causing it. Here are the common problems and what each one costs to repair.',
+    excerpt: 'A dropping or loose uPVC door handle can have several causes. Learn what to check and why diagnosis comes before a repair or replacement quote.',
     date: '2026-05-02',
     readTime: '6 min read',
     pillar: 'uPVC Door Locks',
@@ -541,7 +541,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
   {
     slug: 'common-lock-problems-coventry-homes',
     title: 'The Most Common Lock Problems We See in Coventry Homes',
-    excerpt: 'After years of locksmith work across Coventry, these are the problems I see most — from snapped euro cylinders on uPVC doors to worn-out mortice locks on Victorian terraces.',
+    excerpt: 'A door-by-door guide to diagnosing cylinders, mortice locks, multipoint mechanisms and other Coventry lock concerns without inferring a fault from postcode or housing age.',
     date: '2026-06-15',
     readTime: '8 min read',
     pillar: 'Coventry & Warwickshire',

@@ -108,7 +108,7 @@ export default function TermsPage() {
                 },
                 {
                   service: 'Lock Upgrade',
-                  desc: 'Upgrading your existing locks to higher-security British Standard or anti-snap cylinders to meet insurance requirements and improve security.',
+                  desc: 'Upgrading existing locks to suitable British Standard or independently certified cylinder options after checking the door and any exact written policy requirement.',
                 },
               ].map((item) => (
                 <div

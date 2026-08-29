@@ -43,7 +43,8 @@ export default function AreaGrid() {
             Areas I Cover
           </h2>
           <p className="text-gray-500 max-w-xl mx-auto">
-            Emergency locksmith covering Coventry, Warwickshire, and all surrounding towns and villages. 15-30 minute response across Coventry.
+            Source-reviewed area guides for Coventry, Warwickshire, and nearby listed locations.
+            Call with the full postcode for the current ETA.
           </p>
         </div>
 

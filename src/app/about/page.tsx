@@ -7,7 +7,7 @@ import CTABlock from '@/components/CTABlock'
 export const metadata: Metadata = {
   title: 'About Ross | Local Emergency Locksmith Coventry',
   description:
-    "I'm Ross, your local independent locksmith covering Coventry and all of Warwickshire. No VAT, no call-out fee, 15-30 minute response. Call 024 7522 4730.",
+    "I'm Ross, an independent locksmith serving listed Coventry and Warwickshire locations. Call for the current ETA and price; no VAT or separate call-out fee.",
   keywords: 'about locksmith coventry, local locksmith coventry, independent locksmith warwickshire, ross locksmith coventry, coventry locksmith no vat, trusted locksmith coventry',
   alternates: {
     canonical: `${SITE_CONFIG.domain}/about`,
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     locale: 'en_GB',
     title: 'About Ross | Local Emergency Locksmith Coventry',
     description:
-      "Independent emergency locksmith serving Coventry and Warwickshire. No VAT, no call-out fee, 15-30 minute response. Available 24/7.",
+      "Independent emergency locksmith serving listed Coventry and Warwickshire locations. Call for the current ETA and price; no VAT or separate call-out fee.",
     url: `${SITE_CONFIG.domain}/about`,
     images: [{ url: `${SITE_CONFIG.domain}/api/og?title=${encodeURIComponent('About Local Emergency Locksmith')}`, width: 1200, height: 630 }],
   },
@@ -125,8 +125,9 @@ export default function AboutPage() {
               and the West Midlands.
             </p>
             <p className="text-gray-600 leading-relaxed">
-              For most of Coventry, I can be with you in 15-30 minutes. For towns further out,
-              allow 30-45 minutes. I always give you an honest arrival time when you call.
+              Travel time depends on my actual starting point, traffic and the full address. I
+              confirm the current arrival estimate when you call rather than promise a fixed
+              journey time on this page.
             </p>
             <div className="mt-4">
               <Link

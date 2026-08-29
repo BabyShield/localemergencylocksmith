@@ -40,7 +40,7 @@ const faqSchema = {
       name: 'How quickly can a locksmith arrive in Coventry?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: "I aim to be with you within 15-30 minutes across most of Coventry. For outlying areas like Stratford or Alcester, allow 35-45 minutes. I'll give you an honest arrival time when you call.",
+        text: "I confirm the current arrival estimate from my actual starting point and your full address when you call. A static page cannot reliably promise a journey time.",
       },
     },
     {
@@ -89,7 +89,7 @@ const faqSchema = {
 const homepageFaqs = [
   {
     q: 'How quickly can a locksmith arrive in Coventry?',
-    a: "I aim to be with you within 15-30 minutes across most of Coventry. For outlying areas like Stratford or Alcester, allow 35-45 minutes. I'll give you an honest arrival time when you call.",
+    a: "I confirm the current arrival estimate from my actual starting point and your full address when you call. A static page cannot reliably promise a journey time.",
   },
   {
     q: 'Do you charge VAT on locksmith services?',
@@ -123,7 +123,8 @@ export default function HomePage() {
       {/* 1. Hero */}
       <HeroSection
         heading="Local Locksmith Coventry — Available 24/7"
-        subheading="Lockouts, door lock repairs and replacements handled personally. I aim to arrive in 15-30 minutes across most of Coventry — no VAT or call-out fee."
+        subheading="Lockouts, door lock repairs and replacements handled personally. Call for the current ETA and agreed price basis — no VAT or separate call-out fee."
+        showResponseTime={false}
       />
 
       {/* 2. Personal trust bar */}
@@ -168,7 +169,7 @@ export default function HomePage() {
         <div className="max-w-3xl mx-auto">
           <DirectAnswer
             question="How much does an emergency locksmith cost in Coventry?"
-            answer="An emergency locksmith in Coventry costs from £59 for a standard lockout. This includes labour with no VAT and no call-out fee. Response time is 15 to 30 minutes across most of Coventry. The same price applies 24 hours a day, 7 days a week, including bank holidays."
+            answer="An emergency locksmith in Coventry costs from £59 for a standard lockout. This includes labour with no VAT or separate call-out fee. Call with the full address and symptoms so I can confirm the current ETA and price basis before travelling."
           />
         </div>
       </section>
@@ -177,7 +178,7 @@ export default function HomePage() {
       <section className="bg-[#0F1B2D] py-12 px-4">
         <div className="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
           {[
-            { number: '15-30', label: 'Minutes Average Response' },
+            { number: 'Live', label: 'ETA Confirmed by Phone' },
             { number: '24/7', label: 'Day or Night, 365 Days' },
             { number: '£59', label: 'Lockouts From' },
             { number: '0%', label: 'VAT Charged — Ever' },
@@ -357,7 +358,7 @@ export default function HomePage() {
             Security Tips &amp; Advice
           </h2>
           <p className="text-gray-600 text-center mb-10 max-w-lg mx-auto">
-            Practical locksmith advice from someone who works on Coventry doors every day.
+            Source-aware guides to locks, security standards and practical decisions for Coventry homes.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {latestPosts.map((post) => (

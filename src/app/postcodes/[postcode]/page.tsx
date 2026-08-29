@@ -6,6 +6,7 @@ import SchemaMarkup from '@/components/SchemaMarkup'
 import CTABlock from '@/components/CTABlock'
 import { MapPin, ArrowRight, ShieldCheck, Clock, CheckCircle } from 'lucide-react'
 import { notFound } from 'next/navigation'
+import { getAreaAuthority } from '@/data/area-authorities'
 
 export const dynamic = 'force-static'
 export const revalidate = false
@@ -19,23 +20,14 @@ interface Props {
   params: Promise<{ postcode: string }>
 }
 
-// Honest response window derived from the postcode's actual areas — outlying
-// districts must never inherit the Coventry "15-30 minutes" claim.
-function responseRange(areas: { responseTime: string }[]): string {
-  const nums = areas.flatMap((a) => (a.responseTime.match(/\d+/g) ?? []).map(Number))
-  if (nums.length === 0) return SITE_CONFIG.responseTime
-  return `${Math.min(...nums)}-${Math.max(...nums)} minutes`
-}
-
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { postcode } = await params
   if (!postcode) return {}
   const upper = postcode.toUpperCase()
-  const response = responseRange(AREAS.filter((a) => a.postcode.toLowerCase() === postcode))
 
   return {
     title: `Locksmith ${upper} | 24/7 | From £59`,
-    description: `Emergency locksmith covering all of ${upper}. Locked out? I can be with you in ${response}. No VAT, no call-out fee. Call ${SITE_CONFIG.phone} now — available 24/7.`,
+    description: `Emergency locksmith for listed ${upper} locations. Call ${SITE_CONFIG.phone} to confirm the full address, current ETA and price. Available 24/7; no VAT or call-out fee.`,
     keywords: `locksmith ${upper}, emergency locksmith ${upper}, locksmith near me ${upper}, 24/7 locksmith ${upper}, locked out ${upper}`,
     alternates: {
       canonical: `${SITE_CONFIG.domain}/postcodes/${postcode}`,
@@ -43,7 +35,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     openGraph: {
       type: 'website',
       title: `Locksmith ${upper} | Emergency 24/7 | No VAT`,
-      description: `Emergency locksmith covering all of ${upper}. ${response} response. No VAT, no call-out fee.`,
+      description: `Emergency locksmith for listed ${upper} locations. Call to confirm the full address, current ETA and price. No VAT or call-out fee.`,
       url: `${SITE_CONFIG.domain}/postcodes/${postcode}`,
       images: [{ url: `${SITE_CONFIG.domain}/api/og?title=${encodeURIComponent(`Locksmith ${upper}`)}`, width: 1200, height: 630 }],
     },
@@ -57,7 +49,6 @@ export default async function PostcodePage({ params }: Props) {
 
   const relevantAreas = AREAS.filter(a => a.postcode.toLowerCase() === postcode)
   if (relevantAreas.length === 0) notFound()
-  const response = responseRange(relevantAreas)
 
   // Two items in both JSON-LD and microdata — there is no /postcodes hub page.
   const breadcrumbSchema = {
@@ -77,7 +68,7 @@ export default async function PostcodePage({ params }: Props) {
     serviceType: 'Emergency locksmith',
     name: `Emergency Locksmith in ${upper}`,
     url: `${SITE_CONFIG.domain}/postcodes/${postcode}`,
-    description: `Emergency locksmith serving all of ${upper}. ${response} response, 24/7, 365 days. No VAT, no call-out fee.`,
+    description: `Emergency locksmith serving the listed ${upper} locations. Call with the full address to confirm coverage, current ETA and price basis. Available 24/7; no VAT or call-out fee.`,
     provider: { '@id': `${SITE_CONFIG.domain}/#business` },
     areaServed: relevantAreas.map(area => ({
       '@type': 'Place',
@@ -85,6 +76,7 @@ export default async function PostcodePage({ params }: Props) {
       address: {
         '@type': 'PostalAddress',
         postalCode: area.postcode,
+        addressRegion: getAreaAuthority(area.slug).addressRegion,
         addressCountry: 'GB',
       },
     })),
@@ -127,7 +119,8 @@ export default async function PostcodePage({ params }: Props) {
             </h1>
 
             <p className="text-lg text-gray-300 max-w-xl leading-relaxed">
-              I provide rapid emergency locksmith services across all {upper} locations. Locked out? I can be with you in {response} — no VAT, no call-out fee, same price 24/7.
+              I provide emergency locksmith services for the listed {upper} locations. Call with
+              the full postcode to confirm the address, current ETA, scope and price before attendance.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-3">
@@ -142,7 +135,7 @@ export default async function PostcodePage({ params }: Props) {
             <div className="flex items-center gap-6 text-sm text-gray-400">
               <div className="flex items-center gap-2">
                 <ShieldCheck className="w-5 h-5 text-[#FFB800]" />
-                <span>BS3621 Approved</span>
+                <span>DBS-Checked</span>
               </div>
               <div className="flex items-center gap-2">
                 <Clock className="w-5 h-5 text-[#FFB800]" />
@@ -162,7 +155,7 @@ export default async function PostcodePage({ params }: Props) {
                 {SITE_CONFIG.phone}
               </a>
               <p className="text-xs text-center text-gray-500 mt-3 uppercase tracking-wider">
-                No VAT · No Call-Out Fee · {response.replace(' minutes', ' min')}
+                No VAT · No Call-Out Fee · ETA Confirmed by Phone
               </p>
             </div>
           </div>
@@ -193,7 +186,7 @@ export default async function PostcodePage({ params }: Props) {
                   </div>
                   <div>
                     <h3 className="font-black text-[#0F1B2D] mb-1">Locksmith {area.name}</h3>
-                    <p className="text-gray-500 text-xs mb-2">{area.responseTime} response · {area.postcode}</p>
+                    <p className="text-gray-500 text-xs mb-2">Source-reviewed area guide · {area.postcode}</p>
                     <div className="flex items-center text-[#FFB800] text-xs font-semibold group-hover:translate-x-1 transition-transform">
                       View coverage <ArrowRight className="w-3 h-3 ml-1" />
                     </div>
@@ -212,15 +205,17 @@ export default async function PostcodePage({ params }: Props) {
             Why Choose a Local Locksmith in {upper}?
           </h2>
           <p className="text-gray-700 mb-6">
-            I&apos;m a local independent locksmith — not a national call centre that sub-contracts to whoever is nearest. When you call me for the {upper} area, I answer personally, give you a fixed price on the phone, and I&apos;m at your door in {response}.
+            I&apos;m an independent locksmith rather than a national call centre. When you call for
+            a listed {upper} location, I confirm the exact address, current arrival estimate and
+            price basis from the information available before travelling.
           </p>
           <ul className="space-y-4">
             {[
-              'No call-out fee — ever. You only pay if I complete the job.',
+              'No separate call-out fee is added to the agreed job price.',
               'No VAT is added to the agreed price.',
-              'Insurance-approved BS3621 locks available on request.',
-              'Non-destructive entry — I always try to save your lock first.',
-              '24/7 availability — same price at 3am as at 3pm.',
+              'Lock standards are matched to the actual door and any exact written requirement.',
+              'The proposed method and any destructive step are explained before work proceeds.',
+              'The current ETA is confirmed by phone rather than promised by a static postcode page.',
             ].map((item) => (
               <li key={item} className="flex items-start gap-3">
                 <CheckCircle className="w-5 h-5 text-[#FFB800] flex-shrink-0 mt-0.5" />
@@ -233,7 +228,7 @@ export default async function PostcodePage({ params }: Props) {
 
       <CTABlock
         heading={`Locked out in ${upper}? Call me now.`}
-        subtext={`Available 24/7 — ${response} response across ${upper}. No VAT, no call-out fee.`}
+        subtext={`Available 24/7 — call with the full postcode for the current ETA and agreed price basis. No VAT or separate call-out fee.`}
       />
     </>
   )
