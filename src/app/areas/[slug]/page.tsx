@@ -162,20 +162,17 @@ export default async function AreaPage({ params }: Props) {
       <SchemaMarkup schema={faqSchema} />
 
       <nav aria-label="Breadcrumb" className="max-w-6xl mx-auto px-4 py-3 text-sm text-gray-500">
-        <ol className="flex flex-wrap items-center gap-0" itemScope itemType="https://schema.org/BreadcrumbList">
-          <li itemScope itemType="https://schema.org/ListItem" itemProp="itemListElement">
-            <Link href="/" prefetch={false} itemProp="item" className="hover:text-[#FFB800]"><span itemProp="name">Home</span></Link>
-            <meta itemProp="position" content="1" />
+        <ol className="flex flex-wrap items-center gap-0">
+          <li>
+            <Link href="/" prefetch={false} className="hover:text-[#FFB800]"><span>Home</span></Link>
           </li>
           <li className="mx-2" aria-hidden="true" role="presentation">›</li>
-          <li itemScope itemType="https://schema.org/ListItem" itemProp="itemListElement">
-            <Link href="/areas" prefetch={false} itemProp="item" className="hover:text-[#FFB800]"><span itemProp="name">Areas</span></Link>
-            <meta itemProp="position" content="2" />
+          <li>
+            <Link href="/areas" prefetch={false} className="hover:text-[#FFB800]"><span>Areas</span></Link>
           </li>
           <li className="mx-2" aria-hidden="true" role="presentation">›</li>
-          <li itemScope itemType="https://schema.org/ListItem" itemProp="itemListElement">
-            <span itemProp="name" className="text-gray-800 font-medium">{area.name}</span>
-            <meta itemProp="position" content="3" />
+          <li>
+            <span className="text-gray-800 font-medium">{area.name}</span>
           </li>
         </ol>
       </nav>
@@ -344,11 +341,47 @@ export default async function AreaPage({ params }: Props) {
                     </li>
                   ))}
                 </ul>
-                <div className="rounded-xl bg-[#FFF9E8] border border-[#FFB800]/30 p-5 mt-6">
+                <div
+                  className="rounded-xl bg-[#FFF9E8] border border-[#FFB800]/30 p-5 mt-6"
+                  data-faq-local-fact-index={guidance.faq.localFactIndex + 1}
+                  data-faq-source-ids={guide.facts[guidance.faq.localFactIndex].sourceIds.join(' ')}
+                >
                   <h4 className="font-black text-[#0F1B2D] mb-2">{guidance.faq.q}</h4>
-                  <p className="text-gray-700 leading-relaxed">{guidance.faq.a}</p>
+                  <p className="text-gray-700 leading-relaxed" data-faq-service-answer="true">
+                    {guidance.faq.serviceAnswer}
+                  </p>
+                  <p className="text-gray-700 leading-relaxed mt-3" data-faq-evidence-guidance="true">
+                    <strong>{guidance.faq.evidenceLabel}:</strong>{' '}
+                    {guidance.faq.evidenceGuidance}
+                  </p>
+                  <p className="text-xs font-bold text-gray-600 mt-4">
+                    Evidence:{' '}
+                    <a
+                      href={`#local-fact-${guidance.faq.localFactIndex + 1}`}
+                      data-faq-evidence-link="true"
+                      className="underline decoration-[#FFB800] underline-offset-2 hover:text-[#8A5A00]"
+                    >
+                      Fact {guidance.faq.localFactIndex + 1}
+                    </a>
+                  </p>
+                  <ul className="flex flex-wrap gap-2 mt-2" aria-label={`FAQ sources for ${guidance.heading}`}>
+                    {guide.facts[guidance.faq.localFactIndex].sourceIds.map(sourceId => {
+                      const source = sourceById.get(sourceId)
+                      return source ? (
+                        <li key={sourceId}>
+                          <a
+                            href={`#evidence-source-${source.id}`}
+                            data-faq-source-link="true"
+                            className="inline-flex rounded-full border border-[#FFB800]/40 bg-white px-3 py-1.5 text-xs leading-snug text-gray-700 underline decoration-[#FFB800] underline-offset-2 hover:border-[#FFB800] hover:text-[#8A5A00]"
+                          >
+                            {source.publisher}: {source.title}
+                          </a>
+                        </li>
+                      ) : null
+                    })}
+                  </ul>
                 </div>
-                <div className="mt-5">
+                <div className="mt-5" data-selected-local-fact-links="true">
                   <p className="text-xs font-bold text-gray-600">
                     Local facts used:{' '}
                     {guidance.localFactIndexes.map((factIndex, index) => (

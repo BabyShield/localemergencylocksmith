@@ -48,6 +48,8 @@ The HTTP SEO audit crawls all 178 canonical sitemap URLs and all 390 area-servic
 
 Each area hub displays numbered local facts. Every service section links back to the exact numbered fact or facts it uses, while technical citations remain separately labelled. This makes the local evidence relationship reviewable by users and fail-closed in source and rendered-HTML audits.
 
+Each published area-service FAQ is also bound to one of that pair's selected local facts. The original customer question and service answer remain intact, followed by a separately labelled note showing how the cited local evidence should be used. The rendered note links directly to the complete fact and its source badges. The source audit requires all 390 FAQ fact pointers and evidence notes to resolve, and requires all 390 complete answers to remain unique even after area and postcode terms are removed.
+
 ## Evidence boundary
 
 The published guides cite council or police pages and the Master Locksmiths Association for the claims those sources support. Local context is deliberately conditional: a town, postcode, conservation area or neighbouring building does not prove an individual door's construction, lock type, property status, insurance terms, access authority or travel time.

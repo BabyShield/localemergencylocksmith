@@ -162,7 +162,7 @@ const SERVICE_FAQS: Record<ServiceAreaSlug, ServiceFaqCopy[]> = {
       answer: `Identify the exact entrance, the reason for the change, who may authorise it and any written insurer or building-management requirement. The final specification must match the inspected door set.`,
     },
     {
-      question: areaName => `Can a replacement cylinder be chosen before a ${areaName} visit?`,
+      question: areaName => `Can a replacement cylinder be chosen before visiting ${areaName}?`,
       answer: `Photographs can help prepare for inspection, but the cylinder still needs to be matched to the actual door and protective furniture. Size, accreditation, scope and cost are confirmed from that evidence.`,
     },
     {

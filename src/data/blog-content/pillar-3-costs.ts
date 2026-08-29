@@ -1,7 +1,7 @@
 export const PILLAR_3_CONTENT: Record<string, { body: string; faqs: { q: string; a: string }[] }> = {
 
   'emergency-locksmith-charges-explained': {
-    body: `## Why Does It Cost More to Call a Locksmith at 2am?
+    body: `## Do Emergency Locksmiths Always Charge More at Night?
 
 If you are comparing emergency locksmith prices, ask for the total for your specific door and time slot. A headline figure is not comparable unless it states whether labour, parts, travel, VAT, time premiums and any call-out charge are included.
 

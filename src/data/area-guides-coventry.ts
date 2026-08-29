@@ -764,7 +764,7 @@ const SERVICE_FAQS: Record<ServiceAreaSlug, {
   },
   'lock-change': {
     question: areaName => `Can a door lock be repaired or replaced in ${areaName}?`,
-    answer: areaName => `A ${areaName} lock can be assessed for repair or replacement after the door, frame, hinges and existing hardware are identified. Explain why the change is needed, provide clear photographs where possible and confirm who can authorise the work.`,
+    answer: areaName => `A lock in ${areaName} can be assessed for repair or replacement after the door, frame, hinges and existing hardware are identified. Explain why the change is needed, provide clear photographs where possible and confirm who can authorise the work.`,
   },
   'upvc-lock-repair': {
     question: areaName => `Can you repair a uPVC door lock in ${areaName}?`,

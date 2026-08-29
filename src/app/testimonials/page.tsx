@@ -42,17 +42,15 @@ export default function TestimonialsPage() {
       <SchemaMarkup schema={breadcrumbSchema} />
 
       <nav aria-label="Breadcrumb" className="max-w-4xl mx-auto px-4 py-3 text-sm text-gray-500">
-        <ol className="flex flex-wrap items-center gap-0" itemScope itemType="https://schema.org/BreadcrumbList">
-          <li itemScope itemType="https://schema.org/ListItem" itemProp="itemListElement">
-            <Link href="/" prefetch={false} itemProp="item" className="hover:text-[#FFB800]">
-              <span itemProp="name">Home</span>
+        <ol className="flex flex-wrap items-center gap-0">
+          <li>
+            <Link href="/" prefetch={false} className="hover:text-[#FFB800]">
+              <span>Home</span>
             </Link>
-            <meta itemProp="position" content="1" />
           </li>
           <li className="mx-2" aria-hidden="true" role="presentation">›</li>
-          <li itemScope itemType="https://schema.org/ListItem" itemProp="itemListElement">
-            <span itemProp="name" className="font-medium text-gray-800">Review information</span>
-            <meta itemProp="position" content="2" />
+          <li>
+            <span className="font-medium text-gray-800">Review information</span>
           </li>
         </ol>
       </nav>

@@ -30,6 +30,16 @@ export type AreaServiceGuidance = AreaServiceGuidanceDraft
 export interface PublishedAreaServiceGuidance extends AreaServiceGuidanceDraft {
   searchHeading: string
   sourceIds: string[]
+  faq: AreaServiceGuidanceDraft['faq'] & {
+    /** Selected local fact used to make this published FAQ pair-specific. */
+    localFactIndex: number
+    /** Original customer-facing service answer before the evidence note. */
+    serviceAnswer: string
+    /** Service-specific label kept separate from the sourced instruction. */
+    evidenceLabel: string
+    /** Existing address-level instruction authored for the selected fact. */
+    evidenceGuidance: string
+  }
 }
 
 export interface GovernedAreaGuideDraft {

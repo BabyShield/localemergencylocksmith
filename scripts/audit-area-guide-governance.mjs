@@ -274,6 +274,14 @@ function normalise(value) {
     .trim()
 }
 
+function areaNeutralFaqKey(value, area) {
+  const areaTokens = new Set(normalise(`${area.name} ${area.postcode}`).split(' ').filter(Boolean))
+  return normalise(value)
+    .split(' ')
+    .filter(token => !areaTokens.has(token))
+    .join(' ')
+}
+
 function exactLongSentenceDuplicates(blocks) {
   const occurrencesBySentence = new Map()
 
@@ -683,6 +691,20 @@ for (const area of AREAS) {
     const selectedFacts = localFactIndexes
       .filter(factIndex => Number.isInteger(factIndex) && factIndex >= 0 && factIndex < guide.facts.length)
       .map(factIndex => guide.facts[factIndex])
+
+    const faqLocalFactIndex = guidance.faq?.localFactIndex
+    check(Number.isInteger(faqLocalFactIndex), `${guidanceLabel} FAQ localFactIndex is not an integer`)
+    check(localFactIndexes.includes(faqLocalFactIndex), `${guidanceLabel} FAQ fact ${faqLocalFactIndex} is not one of its selected local facts`)
+    const faqFact = Number.isInteger(faqLocalFactIndex) ? guide.facts[faqLocalFactIndex] : undefined
+    check(Boolean(faqFact), `${guidanceLabel} FAQ fact ${faqLocalFactIndex} is missing`)
+    check(
+      guidance.faq?.evidenceGuidance === faqFact?.serviceRelevance.trim(),
+      `${guidanceLabel} FAQ evidence guidance does not match fact ${(faqLocalFactIndex ?? -1) + 1}`,
+    )
+    check(
+      guidance.faq?.a === `${guidance.faq?.serviceAnswer} ${guidance.faq?.evidenceLabel}: ${guidance.faq?.evidenceGuidance}`,
+      `${guidanceLabel} FAQ combined answer does not preserve the service answer and evidence note`,
+    )
     for (const [index, fact] of selectedFacts.entries()) {
       check(
         !fact.sourceIds.some(sourceId => factOnlySourceIdSet.has(sourceId)),
@@ -742,6 +764,9 @@ for (const area of AREAS) {
       selectedLocalSourceCount: expectedLocalSourceIds.size,
       broadLocalSourceCount: allEligibleFactLocalSourceIds.size,
       bodySentenceKeys: longSentenceKeys(guidance.body ?? []),
+      faqQuestionKey: normalise(guidance.faq?.q),
+      faqAnswerKey: areaNeutralFaqKey(guidance.faq?.a, area),
+      faqExactAnswerKey: normalise(guidance.faq?.a),
     })
   }
 
@@ -923,6 +948,23 @@ check(
   + `occurrences (${(bodySentenceReuseRatio * 100).toFixed(2)}%) across ${reusedBodySentenceFamilies} repeated families; expected zero`,
 )
 
+const faqQuestionKeys = new Set()
+const faqAnswerOwners = new Map()
+const faqExactAnswerOwners = new Map()
+for (const record of guidanceRecords) {
+  faqQuestionKeys.add(record.faqQuestionKey)
+  for (const [key, owners, label] of [
+    [record.faqAnswerKey, faqAnswerOwners, 'area-neutral FAQ answer'],
+    [record.faqExactAnswerKey, faqExactAnswerOwners, 'exact FAQ answer'],
+  ]) {
+    const previous = owners.get(key)
+    check(!previous, `${record.key} repeats ${label} from ${previous}`)
+    if (key) owners.set(key, record.key)
+  }
+}
+check(faqAnswerOwners.size === EXPECTED_GUIDANCE_COUNT, `area-neutral FAQ answers are ${faqAnswerOwners.size}/${EXPECTED_GUIDANCE_COUNT} unique`)
+check(faqExactAnswerOwners.size === EXPECTED_GUIDANCE_COUNT, `exact FAQ answers are ${faqExactAnswerOwners.size}/${EXPECTED_GUIDANCE_COUNT} unique`)
+
 const similarityReports = [
   similarityReport(
     'complete area-guide editorial',
@@ -968,6 +1010,7 @@ console.log(
 console.log(`Service-check uniqueness: ${checkCounts.size}/${allChecks.length} (${(checkUniquenessRatio * 100).toFixed(2)}%)`)
 console.log(`Per-record body information gain: minimum ${minimumBodyShingleCount} globally unique 5-word shingles and ${(minimumBodyShingleRatio * 100).toFixed(2)}% unique ratio`)
 console.log(`Cross-record exact body-sentence reuse: ${reusedBodySentenceOccurrences.length}/${bodySentenceOccurrences.length} occurrences (${(bodySentenceReuseRatio * 100).toFixed(2)}%) across ${reusedBodySentenceFamilies} repeated families`)
+console.log(`Evidence-linked FAQ uniqueness: ${faqQuestionKeys.size} natural question variants, ${faqAnswerOwners.size}/${EXPECTED_GUIDANCE_COUNT} area-neutral answers, ${faqExactAnswerOwners.size}/${EXPECTED_GUIDANCE_COUNT} exact answers`)
 for (const report of similarityReports) {
   console.log(`${report.name}: ${report.count} pairs, p95 ${(report.p95 * 100).toFixed(2)}%, max ${(report.max * 100).toFixed(2)}% (${report.highestPair?.left ?? 'n/a'} vs ${report.highestPair?.right ?? 'n/a'})`)
 }

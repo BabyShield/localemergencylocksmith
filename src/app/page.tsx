@@ -103,10 +103,6 @@ const homepageFaqs = [
     a: 'No separate call-out fee is added. I explain the price basis for the described scope before travelling and agree any inspection-led revision before additional work.',
   },
   {
-    q: 'What does an emergency locksmith cost in Coventry?',
-    a: 'A standard emergency lockout and a compatible euro-cylinder replacement each start from £59. Yale nightlatches start from £69 and BS3621-rated mortice options from £79. No VAT or separate call-out fee is added. The published starting-price basis has no separate time-of-day surcharge; the agreed total still depends on the diagnosed scope and any parts.',
-  },
-  {
     q: 'Do you work on weekends and bank holidays?',
     a: 'Yes — I take calls 24 hours a day, 7 days a week, including weekends and bank holidays. The published starting-price basis has no separate night, weekend or bank-holiday surcharge; the agreed total still depends on the diagnosed scope and any parts.',
   },
@@ -188,9 +184,14 @@ export default function HomePage() {
       <section className="py-6 px-4 bg-white">
         <div className="max-w-3xl mx-auto">
           <DirectAnswer
-            question="How much does an emergency locksmith cost in Coventry?"
-            answer="An emergency locksmith in Coventry costs from £59 for a standard lockout. This includes labour with no VAT or separate call-out fee. Call with the full address and symptoms so I can confirm the current ETA and price basis before travelling."
+            question="Where can I check current Coventry locksmith prices?"
+            answer="The published price list shows the starting scope for lockouts, lock changes, uPVC repairs, boarding and security upgrades. The confirmed total depends on the inspected lock, suitable method, parts and agreed work."
           />
+          <p className="mt-3 text-sm text-gray-700">
+            <Link href="/prices" className="font-bold underline decoration-[#FFB800] underline-offset-4 hover:text-[#8A5A00]">
+              View current Coventry locksmith costs and prices
+            </Link>
+          </p>
         </div>
       </section>
 

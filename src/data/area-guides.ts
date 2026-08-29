@@ -34,6 +34,36 @@ const SERVICE_SEARCH_HEADINGS: Record<ServiceAreaSlug, string> = {
   'lock-upgrade': 'Lock Upgrades and Door Security',
 }
 
+const SERVICE_FAQ_EVIDENCE_LABELS: Record<ServiceAreaSlug, string> = {
+  'emergency-lockout': 'How the cited local evidence should be used for this lockout',
+  'lock-change': 'How the cited local evidence should be used for lock repair or replacement',
+  'upvc-lock-repair': 'How the cited local evidence should be used for uPVC lock diagnosis',
+  'boarding-up': 'How the cited local evidence should be used for temporary boarding',
+  'lock-upgrade': 'How the cited local evidence should be used for a lock upgrade',
+}
+
+function publishedFaq(
+  guide: GovernedAreaGuideDraft,
+  serviceSlug: ServiceAreaSlug,
+): PublishedAreaServiceGuidance['faq'] {
+  const guidance = guide.serviceGuidance[serviceSlug]
+  const localFactIndex = guidance.localFactIndexes[0]
+  const fact = guide.facts[localFactIndex]
+  if (!fact) throw new Error(`Missing FAQ fact ${localFactIndex} for ${guide.slug}/${serviceSlug}`)
+
+  const serviceAnswer = guidance.faq.a.trim()
+  const evidenceLabel = SERVICE_FAQ_EVIDENCE_LABELS[serviceSlug]
+  const evidenceGuidance = fact.serviceRelevance.trim()
+  return {
+    localFactIndex,
+    serviceAnswer,
+    evidenceLabel,
+    evidenceGuidance,
+    q: guidance.faq.q,
+    a: `${serviceAnswer} ${evidenceLabel}: ${evidenceGuidance}`,
+  }
+}
+
 function technicalSourceId(
   guide: GovernedAreaGuideDraft,
   role: TechnicalSourceRole,
@@ -65,8 +95,9 @@ function guidanceText(guidance: GovernedAreaGuideDraft['serviceGuidance'][Servic
 function sourceIdsForGuidance(
   guide: GovernedAreaGuideDraft,
   serviceSlug: ServiceAreaSlug,
+  guidanceOverride?: GovernedAreaGuideDraft['serviceGuidance'][ServiceAreaSlug],
 ): string[] {
-  const guidance = guide.serviceGuidance[serviceSlug]
+  const guidance = guidanceOverride ?? guide.serviceGuidance[serviceSlug]
   const sourceById = new Map(guide.sources.map(source => [source.id, source]))
   const factOnlySourceIds = new Set(guide.factOnlySourceIds ?? [])
   const localFactIndexes = guidance.localFactIndexes
@@ -119,8 +150,17 @@ function publishGuide(guide: GovernedAreaGuideDraft): PublishedGovernedAreaGuide
   const areaName = AREA_NAMES.get(guide.slug)
   if (!areaName) throw new Error(`Missing area name for governed guide ${guide.slug}`)
 
+  const guidanceWithPublishedFaqs = Object.fromEntries(
+    SERVICE_AREA_SLUGS.map(serviceSlug => [
+      serviceSlug,
+      {
+        ...guide.serviceGuidance[serviceSlug],
+        faq: publishedFaq(guide, serviceSlug),
+      },
+    ]),
+  ) as unknown as GovernedAreaGuideDraft['serviceGuidance']
   const allGuidanceText = SERVICE_AREA_SLUGS
-    .map(serviceSlug => guidanceText(guide.serviceGuidance[serviceSlug]))
+    .map(serviceSlug => guidanceText(guidanceWithPublishedFaqs[serviceSlug]))
     .join(' ')
   const sources = [...guide.sources]
 
@@ -133,17 +173,24 @@ function publishGuide(guide: GovernedAreaGuideDraft): PublishedGovernedAreaGuide
     }
   }
 
-  const augmentedGuide: GovernedAreaGuideDraft = { ...guide, sources }
+  const augmentedGuide: GovernedAreaGuideDraft = {
+    ...guide,
+    sources,
+    serviceGuidance: guidanceWithPublishedFaqs,
+  }
   const searchDescription = getAreaSearchDescription(guide.slug)
   const serviceGuidance = Object.fromEntries(
-    SERVICE_AREA_SLUGS.map(serviceSlug => [
-      serviceSlug,
-      {
-        ...augmentedGuide.serviceGuidance[serviceSlug],
-        searchHeading: `${SERVICE_SEARCH_HEADINGS[serviceSlug]} in ${areaName}`,
-        sourceIds: sourceIdsForGuidance(augmentedGuide, serviceSlug),
-      },
-    ]),
+    SERVICE_AREA_SLUGS.map((serviceSlug) => {
+      const guidance = augmentedGuide.serviceGuidance[serviceSlug]
+      return [
+        serviceSlug,
+        {
+          ...guidance,
+          searchHeading: `${SERVICE_SEARCH_HEADINGS[serviceSlug]} in ${areaName}`,
+          sourceIds: sourceIdsForGuidance(augmentedGuide, serviceSlug, guidance),
+        },
+      ]
+    }),
   ) as Record<ServiceAreaSlug, PublishedAreaServiceGuidance>
 
   return {

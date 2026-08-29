@@ -115,7 +115,7 @@ const SERVICE_CONTENT: Record<string, {
     ],
     priceDetails: SERVICE_PRICE_DETAILS['emergency-lockout'],
     directAnswer: {
-      question: 'How much does an emergency locksmith cost in Coventry?',
+      question: 'What does a standard Coventry lockout start from?',
       answer: `An emergency locksmith in Coventry costs from £${STANDARD_LOCKOUT_PRICE} for a standard lockout. This price includes labour, with no VAT or separate call-out fee. Call with the full address and lock symptoms for the current ETA and price basis.`,
     },
     voiceFaqs: [
@@ -325,7 +325,7 @@ export default async function ServicePage({ params }: Props) {
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_CONFIG.domain },
       { '@type': 'ListItem', position: 2, name: 'Services', item: `${SITE_CONFIG.domain}/services` },
-      { '@type': 'ListItem', position: 3, name: service.name, item: `${SITE_CONFIG.domain}/services/${slug}` },
+      { '@type': 'ListItem', position: 3, name: service.shortName, item: `${SITE_CONFIG.domain}/services/${slug}` },
     ],
   }
 
@@ -396,20 +396,17 @@ export default async function ServicePage({ params }: Props) {
       {/*  1. Breadcrumb                                                */}
       {/* ============================================================ */}
       <nav aria-label="Breadcrumb" className="max-w-6xl mx-auto px-4 py-3 text-sm text-gray-500">
-        <ol className="flex flex-wrap items-center gap-0" itemScope itemType="https://schema.org/BreadcrumbList">
-          <li itemScope itemType="https://schema.org/ListItem" itemProp="itemListElement">
-            <Link href="/" prefetch={false} itemProp="item" className="hover:text-[#8A5A00] transition-colors"><span itemProp="name">Home</span></Link>
-            <meta itemProp="position" content="1" />
+        <ol className="flex flex-wrap items-center gap-0">
+          <li>
+            <Link href="/" prefetch={false} className="hover:text-[#8A5A00] transition-colors"><span>Home</span></Link>
           </li>
           <li className="mx-2 text-gray-300" aria-hidden="true" role="presentation">›</li>
-          <li itemScope itemType="https://schema.org/ListItem" itemProp="itemListElement">
-            <Link href="/services" prefetch={false} itemProp="item" className="hover:text-[#8A5A00] transition-colors"><span itemProp="name">Services</span></Link>
-            <meta itemProp="position" content="2" />
+          <li>
+            <Link href="/services" prefetch={false} className="hover:text-[#8A5A00] transition-colors"><span>Services</span></Link>
           </li>
           <li className="mx-2 text-gray-300" aria-hidden="true" role="presentation">›</li>
-          <li itemScope itemType="https://schema.org/ListItem" itemProp="itemListElement">
-            <span><span itemProp="name" className="text-[#0F1B2D] font-semibold">{service.shortName}</span></span>
-            <meta itemProp="position" content="3" />
+          <li>
+            <span><span className="text-[#0F1B2D] font-semibold">{service.shortName}</span></span>
           </li>
         </ol>
       </nav>

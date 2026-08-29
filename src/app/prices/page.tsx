@@ -7,10 +7,10 @@ import DirectAnswer from '@/components/DirectAnswer'
 import { PUBLISHED_PRICES } from '@/data/pricing'
 
 export const metadata: Metadata = {
-  title: 'Locksmith Prices Coventry | No VAT or Call-Out Fee',
+  title: 'Locksmith Costs & Prices Coventry | From £59',
   description:
     'Published Coventry locksmith from-prices and the factors that determine the agreed quote. Lockouts from £59; no VAT or separate call-out fee.',
-  keywords: 'locksmith prices coventry, how much does a locksmith cost, emergency locksmith price coventry, lock change cost coventry, locksmith cost warwickshire, cheap locksmith coventry, locksmith no vat',
+  keywords: 'locksmith prices coventry, how much does a locksmith cost, emergency locksmith price coventry, lock change cost coventry, locksmith cost warwickshire, locksmith no vat',
   alternates: {
     canonical: `${SITE_CONFIG.domain}/prices`,
   },
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     type: 'website',
     siteName: 'Local Emergency Locksmith',
     locale: 'en_GB',
-    title: 'Locksmith Prices Coventry | No VAT or Call-Out Fee',
+    title: 'Locksmith Costs & Prices Coventry | From £59',
     description:
       'Published Coventry locksmith from-prices and the factors that determine the agreed quote. Lockouts from £59; no VAT or separate call-out fee.',
     url: `${SITE_CONFIG.domain}/prices`,
@@ -27,6 +27,10 @@ export const metadata: Metadata = {
 }
 
 const PRICE_FAQS = [
+  {
+    q: 'What does an emergency locksmith cost in Coventry?',
+    a: 'A standard residential lockout starts from £59, including the stated labour scope, with no VAT or separate call-out fee. The confirmed total depends on the inspected lock, suitable entry method, parts and agreed work.',
+  },
   {
     q: 'What if the job takes longer than expected?',
     a: 'I agree the price for the diagnosed scope before work starts. If inspection or work exposes a different fault, part or additional scope, I stop, explain it and seek approval for the revised price before continuing.',
@@ -94,15 +98,13 @@ export default function PricesPage() {
 
       {/* Breadcrumb */}
       <nav aria-label="Breadcrumb" className="max-w-6xl mx-auto px-4 py-3 text-sm text-gray-500">
-        <ol className="flex flex-wrap items-center gap-0" itemScope itemType="https://schema.org/BreadcrumbList">
-          <li itemScope itemType="https://schema.org/ListItem" itemProp="itemListElement">
-            <Link href="/" prefetch={false} itemProp="item" className="hover:text-[#FFB800]"><span itemProp="name">Home</span></Link>
-            <meta itemProp="position" content="1" />
+        <ol className="flex flex-wrap items-center gap-0">
+          <li>
+            <Link href="/" prefetch={false} className="hover:text-[#FFB800]"><span>Home</span></Link>
           </li>
           <li className="mx-2" aria-hidden="true" role="presentation">›</li>
-          <li itemScope itemType="https://schema.org/ListItem" itemProp="itemListElement">
-            <span><span itemProp="name" className="text-gray-800 font-medium">Prices</span></span>
-            <meta itemProp="position" content="2" />
+          <li>
+            <span><span className="text-gray-800 font-medium">Prices</span></span>
           </li>
         </ol>
       </nav>
@@ -111,7 +113,7 @@ export default function PricesPage() {
       <section className="py-12 px-4 text-white" style={{ background: '#0F1B2D' }}>
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-3xl md:text-5xl font-black mb-4">
-            Locksmith Prices in Coventry
+            Coventry Locksmith Prices and Costs
           </h1>
           <p className="text-gray-300 text-lg mb-6 max-w-2xl mx-auto">
             No VAT or separate call-out fee. These are genuine starting prices; I confirm the

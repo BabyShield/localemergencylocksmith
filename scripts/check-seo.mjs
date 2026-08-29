@@ -8,6 +8,9 @@ const failures = []
 const warnings = []
 
 const SERVICE_SLUGS = ['emergency-lockout', 'lock-change', 'upvc-lock-repair', 'boarding-up', 'lock-upgrade']
+const PRICE_OWNER_PATH = '/prices'
+const PRICE_OWNER_TITLE_H1_PATTERN = /\blocksmith (?:costs?|prices)\b/i
+const PRICE_OWNER_EXACT_QUESTION_PATTERN = /\bwhat does an emergency locksmith cost in coventry\b/i
 const CORE_SEARCH_INTENT_CONTRACTS = Object.freeze({
   '/': [
     { label: 'local locksmith Coventry', pattern: /\blocal locksmith coventry\b/i },
@@ -303,7 +306,7 @@ function checkEvidenceBlockContract(block, label) {
     .split(/\s+/)
     .filter(Boolean)
   const linkedIds = Array.from(
-    block.matchAll(/href=["']#evidence-source-([a-z0-9-]+)["']/gi),
+    block.matchAll(/<a\b(?![^>]*data-faq-source-link=["']true["'])[^>]*href=["']#evidence-source-([a-z0-9-]+)["'][^>]*>/gi),
     match => match[1],
   )
 
@@ -551,6 +554,7 @@ try {
     const mainHtml = mainContent(html)
     const mainText = visibleText(mainHtml)
     const mainHeadings = headingOutline(mainHtml)
+    const primaryHeading = mainHeadings.find(heading => heading.level === 1)?.text ?? ''
     const headingLevelSkip = firstHeadingLevelSkip(mainHeadings)
     const mainHrefs = internalHrefs(mainHtml)
     const claimText = operationalClaimText(html)
@@ -586,6 +590,21 @@ try {
       check(
         intent.pattern.test(mainText),
         `${productionUrl.pathname} does not visibly express measured ${intent.label} intent`,
+      )
+    }
+
+    const priceOwnerSignal = `${title}\n${primaryHeading}`.match(PRICE_OWNER_TITLE_H1_PATTERN)
+    if (productionUrl.pathname === PRICE_OWNER_PATH) {
+      check(Boolean(priceOwnerSignal), `${PRICE_OWNER_PATH} title/H1 does not own broad locksmith cost-and-price intent`)
+      check(PRICE_OWNER_EXACT_QUESTION_PATTERN.test(mainText), `${PRICE_OWNER_PATH} is missing its emergency locksmith cost question`)
+    } else {
+      check(
+        !priceOwnerSignal,
+        `${productionUrl.pathname} competes with ${PRICE_OWNER_PATH} in its title/H1: ${JSON.stringify(priceOwnerSignal?.[0])}`,
+      )
+      check(
+        !PRICE_OWNER_EXACT_QUESTION_PATTERN.test(mainText),
+        `${productionUrl.pathname} repeats ${PRICE_OWNER_PATH}'s emergency locksmith cost question`,
       )
     }
 
@@ -640,8 +659,11 @@ try {
         check(Boolean(block), `${productionUrl.pathname} is missing the ${serviceSlug} evidence section marker`)
         if (block) {
           checkEvidenceBlockContract(block, `${productionUrl.pathname} ${serviceSlug} guidance`)
+          const selectedLocalFactBlock = block.match(
+            /<div\b(?=[^>]*data-selected-local-fact-links=["']true["'])[^>]*>[\s\S]*?<\/div>/i,
+          )?.[0] ?? ''
           const localFactLinks = Array.from(
-            block.matchAll(/href=["']#(local-fact-\d+)["']/gi),
+            selectedLocalFactBlock.matchAll(/href=["']#(local-fact-\d+)["']/gi),
             match => match[1],
           )
           const openingTag = block.match(/^<article\b[^>]*>/i)?.[0] ?? ''
@@ -664,6 +686,42 @@ try {
           for (const localFactLink of localFactLinks) {
             check(localFactTargets.has(localFactLink), `${productionUrl.pathname} ${serviceSlug} guidance links missing #${localFactLink}`)
           }
+          const faqBlock = block.match(
+            /<div\b(?=[^>]*data-faq-local-fact-index=["'][^"']+["'])[^>]*>[\s\S]*?<\/div>/i,
+          )?.[0] ?? ''
+          const faqOpeningTag = faqBlock.match(/^<div\b[^>]*>/i)?.[0] ?? ''
+          const faqFactIndex = getAttribute(faqOpeningTag, 'data-faq-local-fact-index') ?? ''
+          const declaredFaqSourceIds = (getAttribute(faqOpeningTag, 'data-faq-source-ids') ?? '')
+            .trim()
+            .split(/\s+/)
+            .filter(Boolean)
+          const renderedFaqFactLinks = Array.from(
+            faqBlock.matchAll(/<a\b(?=[^>]*data-faq-evidence-link=["']true["'])[^>]*href=["']#(local-fact-\d+)["'][^>]*>/gi),
+            match => match[1],
+          )
+          const renderedFaqSourceIds = Array.from(
+            faqBlock.matchAll(/href=["']#evidence-source-([a-z0-9-]+)["']/gi),
+            match => match[1],
+          )
+          const renderedFaqServiceAnswers = Array.from(
+            faqBlock.matchAll(/<p\b(?=[^>]*data-faq-service-answer=["']true["'])[^>]*>/gi),
+          )
+          const renderedFaqEvidenceNotes = Array.from(
+            faqBlock.matchAll(/<p\b(?=[^>]*data-faq-evidence-guidance=["']true["'])[^>]*>/gi),
+          )
+          check(declaredLocalFactIndexes.includes(faqFactIndex), `${productionUrl.pathname} ${serviceSlug} FAQ fact ${faqFactIndex || 'missing'} is not selected`)
+          check(renderedFaqServiceAnswers.length === 1, `${productionUrl.pathname} ${serviceSlug} FAQ does not render exactly one service answer`)
+          check(renderedFaqEvidenceNotes.length === 1, `${productionUrl.pathname} ${serviceSlug} FAQ does not render exactly one labelled evidence note`)
+          check(
+            renderedFaqFactLinks.length === 1 && renderedFaqFactLinks[0] === `local-fact-${faqFactIndex}`,
+            `${productionUrl.pathname} ${serviceSlug} FAQ does not link exactly once to declared local fact ${faqFactIndex || 'missing'}`,
+          )
+          check(localFactTargets.has(`local-fact-${faqFactIndex}`), `${productionUrl.pathname} ${serviceSlug} FAQ links a missing local fact`)
+          check(declaredFaqSourceIds.length > 0, `${productionUrl.pathname} ${serviceSlug} FAQ declares no local source IDs`)
+          check(
+            renderedFaqSourceIds.join(' ') === declaredFaqSourceIds.join(' '),
+            `${productionUrl.pathname} ${serviceSlug} FAQ source badges do not match its declared fact sources`,
+          )
           const expectedDetailsHref = GOVERNED_TOWNS.includes(areaSlug)
             ? `/areas/${areaSlug}/${serviceSlug}`
             : `/services/${serviceSlug}`
@@ -719,9 +777,13 @@ try {
     check(websiteNodes.length === (productionUrl.pathname === '/' ? 1 : 0), `${productionUrl.pathname} has ${websiteNodes.length} WebSite nodes`)
 
     const breadcrumbNodes = parsedSchemaNodes.filter(node => hasSchemaType(node, 'BreadcrumbList'))
+    const microdataBreadcrumbNodes = Array.from(
+      html.matchAll(/<[^>]+\bitemtype=["']https:\/\/schema\.org\/BreadcrumbList["'][^>]*>/gi),
+    )
+    const breadcrumbNodeCount = breadcrumbNodes.length + microdataBreadcrumbNodes.length
     check(
-      breadcrumbNodes.length === (productionUrl.pathname === '/' ? 0 : 1),
-      `${productionUrl.pathname} has ${breadcrumbNodes.length} BreadcrumbList nodes; expected ${productionUrl.pathname === '/' ? 0 : 1}`,
+      breadcrumbNodeCount === (productionUrl.pathname === '/' ? 0 : 1),
+      `${productionUrl.pathname} has ${breadcrumbNodeCount} BreadcrumbList nodes across JSON-LD and Microdata; expected ${productionUrl.pathname === '/' ? 0 : 1}`,
     )
 
     const serviceNodes = parsedSchemaNodes.filter(node => hasSchemaType(node, 'Service'))

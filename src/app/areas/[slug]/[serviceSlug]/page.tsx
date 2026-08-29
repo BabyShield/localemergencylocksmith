@@ -179,25 +179,21 @@ export default async function TownServicePage({ params }: Props) {
 
       {/* Breadcrumb */}
       <nav aria-label="Breadcrumb" className="max-w-6xl mx-auto px-4 py-3 text-sm text-gray-500">
-        <ol className="flex flex-wrap items-center gap-0" itemScope itemType="https://schema.org/BreadcrumbList">
-          <li itemScope itemType="https://schema.org/ListItem" itemProp="itemListElement">
-            <Link href="/" prefetch={false} itemProp="item" className="hover:text-[#FFB800]"><span itemProp="name">Home</span></Link>
-            <meta itemProp="position" content="1" />
+        <ol className="flex flex-wrap items-center gap-0">
+          <li>
+            <Link href="/" prefetch={false} className="hover:text-[#FFB800]"><span>Home</span></Link>
           </li>
           <li className="mx-2" aria-hidden="true" role="presentation">›</li>
-          <li itemScope itemType="https://schema.org/ListItem" itemProp="itemListElement">
-            <Link href="/areas" prefetch={false} itemProp="item" className="hover:text-[#FFB800]"><span itemProp="name">Areas</span></Link>
-            <meta itemProp="position" content="2" />
+          <li>
+            <Link href="/areas" prefetch={false} className="hover:text-[#FFB800]"><span>Areas</span></Link>
           </li>
           <li className="mx-2" aria-hidden="true" role="presentation">›</li>
-          <li itemScope itemType="https://schema.org/ListItem" itemProp="itemListElement">
-            <Link href={`/areas/${slug}`} prefetch={false} itemProp="item" className="hover:text-[#FFB800]"><span itemProp="name">{area.name}</span></Link>
-            <meta itemProp="position" content="3" />
+          <li>
+            <Link href={`/areas/${slug}`} prefetch={false} className="hover:text-[#FFB800]"><span>{area.name}</span></Link>
           </li>
           <li className="mx-2" aria-hidden="true" role="presentation">›</li>
-          <li itemScope itemType="https://schema.org/ListItem" itemProp="itemListElement">
-            <span><span itemProp="name" className="text-gray-800 font-medium">{service.shortName}</span></span>
-            <meta itemProp="position" content="4" />
+          <li>
+            <span><span className="text-gray-800 font-medium">{service.shortName}</span></span>
           </li>
         </ol>
       </nav>

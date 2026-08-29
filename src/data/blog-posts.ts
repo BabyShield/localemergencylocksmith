@@ -180,7 +180,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
   // === PILLAR 3: Locksmith Costs & Pricing (6 posts) ===
   {
     slug: 'emergency-locksmith-cost-coventry-2026',
-    title: 'How Much Does an Emergency Locksmith Cost in Coventry in 2026?',
+    title: 'How to Compare a Coventry Locksmith Quote in 2026',
     excerpt: 'See published Coventry from-prices for five services and the diagnosis, compatible parts and agreed scope that determine the final quote.',
     date: '2026-03-01',
     readTime: '6 min read',
@@ -190,7 +190,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
   },
   {
     slug: 'emergency-locksmith-charges-explained',
-    title: 'Emergency Locksmith Charges Explained: Why It Costs More at 2am',
+    title: 'Do Emergency Locksmiths Charge More at Night?',
     excerpt: 'Learn which questions to ask about labour, parts, timing, call-out fees, VAT and changed scope before agreeing emergency locksmith work.',
     date: '2026-04-16',
     readTime: '7 min read',
