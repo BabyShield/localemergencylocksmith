@@ -6,6 +6,15 @@ interface SectionEvidenceLinksProps {
   sources: EvidenceSource[]
 }
 
+const SOURCE_SUMMARIES: Record<SectionEvidenceLinksProps['section'], string> = {
+  intro: 'Check the booking information sources',
+  'local-angle': 'Check the local guidance sources',
+  'local-evidence': 'Check the local facts sources',
+  preparation: 'Check the preparation advice sources',
+  checks: 'Check the service-check sources',
+  faqs: 'Check the answer sources',
+}
+
 export default function SectionEvidenceLinks({
   section,
   sourceIds,
@@ -25,7 +34,7 @@ export default function SectionEvidenceLinks({
       className="mt-5 rounded-lg border border-gray-200 bg-white px-4 py-3 text-sm"
     >
       <summary className="cursor-pointer font-bold text-[#0F1B2D] marker:text-[#FFB800]">
-        Evidence links for this section ({sectionSources.length})
+        {SOURCE_SUMMARIES[section]} ({sectionSources.length})
       </summary>
       <ul className="mt-3 flex flex-wrap gap-2" aria-label="Evidence sources used in this section">
         {sectionSources.map(source => (

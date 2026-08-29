@@ -745,6 +745,10 @@ function technicalSourcesBySection(
   ) as Record<TownServiceEvidenceSection, string[]>
 }
 
+function sentenceStart(value: string): string {
+  return value.charAt(0).toUpperCase() + value.slice(1)
+}
+
 const SERVICE_BLUEPRINTS: Record<ServiceAreaSlug, ServiceBlueprint> = {
   'emergency-lockout': {
     name: 'Emergency Locksmith',
@@ -769,7 +773,7 @@ const SERVICE_BLUEPRINTS: Record<ServiceAreaSlug, ServiceBlueprint> = {
     shortName: 'Lock Repair & Replacement',
     priceFrom: 59,
     metaTitle: area => `Lock Repair & Replacement ${area} | From £59`,
-    metaDescription: area => `Lock repair and replacement in ${area.name}. Euro-cylinder replacement from £59. ${area.metaDifferentiator}. No VAT/call-out fee.`,
+    metaDescription: area => `Lock repair and replacement in ${area.name}. Euro-cylinder replacement from £59. ${sentenceStart(area.metaDifferentiator)}. No VAT/call-out fee.`,
     h1: area => `Door Lock Repair & Replacement in ${area}`,
     intro: area => `For a failed, worn or compromised door lock in ${area}, the first decision is whether the lock can be adjusted or repaired, whether one component needs replacing, or whether the complete lock is unsuitable. I inspect the door, frame, lock markings, cylinder or mechanism before agreeing the remedy. A move, lost keys and mechanical failure create different key-control and repair needs. Product, keys, fitting and any alignment work are explained in the price so a headline replacement figure is not confused with a diagnosis.`,
     scenarios: ['Broken or unreliable mortice lock, nightlatch or cylinder', 'Lost-key or moving-home key-control change', 'Door alignment causing a sound lock to bind', 'Replacement after damage, wear or an agreed security review'],
@@ -837,7 +841,7 @@ const SERVICE_BLUEPRINTS: Record<ServiceAreaSlug, ServiceBlueprint> = {
     shortName: 'Lock Upgrade',
     priceFrom: 59,
     metaTitle: area => `Lock Upgrades ${area} | Anti-Snap & BS3621`,
-    metaDescription: area => `Lock upgrades in ${area.name} from £59 for a compatible anti-snap cylinder. ${area.metaDifferentiator}; check written requirements.`,
+    metaDescription: area => `Lock upgrades in ${area.name} from £59 for a compatible anti-snap cylinder. ${sentenceStart(area.metaDifferentiator)}; check written requirements.`,
     h1: area => `Lock Upgrades & Security Review in ${area}`,
     intro: area => `A useful security upgrade in ${area} starts with the complete entrance, not a product slogan. I inspect the door, frame, hinges, keeps, handles, existing lock and cylinder fit. Warwickshire Police advises correctly sized cylinders and accredited products, but a euro-cylinder solution does not apply to every door. If an insurer, landlord or managing agent specifies a standard, use the current written wording and match the marked product and installation to it. Certification indicates tested resistance; it does not make a door attack-proof or guarantee an insurance outcome.`,
     scenarios: ['Cylinder projection, weak handles or incomplete multipoint engagement', 'Worn or unmarked lock considered against a written requirement', 'Door-frame, hinge or keep weaknesses found during an entrance review', 'Planned upgrade after a move, key loss or damage'],

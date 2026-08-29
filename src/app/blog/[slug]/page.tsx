@@ -118,6 +118,7 @@ export default async function BlogPostPage({ params }: Props) {
     author: LOCKSMITH_AUTHOR_SCHEMA,
     publisher: {
       '@type': 'Organization',
+      '@id': `${SITE_CONFIG.domain}/#business`,
       name: 'Local Emergency Locksmith',
       url: SITE_CONFIG.domain,
       logo: { '@type': 'ImageObject', url: `${SITE_CONFIG.domain}/icon-512.png`, width: 512, height: 512 },

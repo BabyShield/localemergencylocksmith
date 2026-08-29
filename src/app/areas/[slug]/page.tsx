@@ -191,7 +191,7 @@ export default async function AreaPage({ params }: Props) {
 
       <section className="py-12 px-4 bg-white">
         <div className="max-w-3xl mx-auto">
-          <p className="text-sm font-bold uppercase tracking-wider text-[#8A5A00] mb-3">Source-reviewed local service guide</p>
+          <p className="text-sm font-bold uppercase tracking-wider text-[#8A5A00] mb-3">Practical local booking guide</p>
           <h2 className="text-2xl font-black text-gray-900 mb-5">Local Locksmith Guidance for {area.name}</h2>
           {guide.summary.map(paragraph => (
             <p key={paragraph.slice(0, 64)} className="text-gray-700 leading-relaxed mb-4">{paragraph}</p>
@@ -228,9 +228,9 @@ export default async function AreaPage({ params }: Props) {
         <div className="max-w-3xl mx-auto">
           <h2 className="text-2xl font-black mb-3">Five Locksmith Services in {area.name}</h2>
           <p className="text-gray-200 leading-relaxed mb-6">
-            Each section below applies the cited local evidence to one service without assuming a
-            property&apos;s lock, construction, ownership, access route or planning status from the
-            area name. The actual entrance and authority are checked before work is agreed.
+            Use these five service sections to understand what to describe when you call, which
+            checks can be made before booking, and what still depends on the exact entrance,
+            authority and on-site inspection.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             {serviceGuidance.map(({ service }) => (
@@ -244,7 +244,7 @@ export default async function AreaPage({ params }: Props) {
 
       <section className="py-12 px-4 bg-[#F7F7F5]">
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-2xl font-black text-[#0F1B2D] mb-6">Why the Address and Door Evidence Matter</h2>
+          <h2 className="text-2xl font-black text-[#0F1B2D] mb-6">What to Check Before Booking</h2>
           <ul className="space-y-4">
             {[
               { Icon: MapPin, text: `The full ${area.name} address is checked against the relevant locality and property-status evidence; the ${area.postcode} outward code alone is not treated as a building description.` },
@@ -267,7 +267,7 @@ export default async function AreaPage({ params }: Props) {
 
       <section className="py-12 px-4 bg-white" aria-labelledby="local-evidence-heading">
         <div className="max-w-3xl mx-auto">
-          <h2 id="local-evidence-heading" className="text-2xl font-black text-[#0F1B2D] mb-3">Verified Local Context for {area.name}</h2>
+          <h2 id="local-evidence-heading" className="text-2xl font-black text-[#0F1B2D] mb-3">Local Access and Property Considerations for {area.name}</h2>
           <p className="text-gray-600 leading-relaxed mb-7">{guide.evidenceLimits}</p>
           <div className="space-y-5">
             {guide.facts.map((fact, index) => (
@@ -299,8 +299,8 @@ export default async function AreaPage({ params }: Props) {
         <div className="max-w-4xl mx-auto">
           <h2 id="service-guidance-heading" className="text-2xl md:text-3xl font-black text-[#0F1B2D] mb-3 text-center">Service-by-Service Guidance for {area.name}</h2>
           <p className="text-gray-600 text-center max-w-3xl mx-auto mb-10">
-            Five separate, source-bounded guides explain what can be checked remotely and what
-            still requires inspection at the exact address.
+            Five separate guides explain what can be checked remotely and what still requires
+            inspection at the exact address. Each local point remains linked to its source.
           </p>
           <div className="space-y-8">
             {serviceGuidance.map(({ service, guidance, detailsHref, hasDedicatedPage }) => (
@@ -336,7 +336,7 @@ export default async function AreaPage({ params }: Props) {
                   <p className="text-gray-700 leading-relaxed">{guidance.faq.a}</p>
                 </div>
                 <div className="mt-5">
-                  <p className="text-xs font-bold text-gray-600">Sources for this guidance</p>
+                  <p className="text-xs font-bold text-gray-600">Check the sources used</p>
                   <ul className="flex flex-wrap gap-2 mt-2" aria-label={`Sources for ${guidance.heading}`}>
                   {guidance.sourceIds.map(sourceId => {
                     const source = sourceById.get(sourceId)
@@ -361,7 +361,7 @@ export default async function AreaPage({ params }: Props) {
 
       <section className="py-12 px-4 bg-white" aria-labelledby="source-heading">
         <div className="max-w-3xl mx-auto">
-          <h2 id="source-heading" className="text-2xl font-black text-[#0F1B2D] mb-3">Evidence Behind This {area.name} Guide</h2>
+          <h2 id="source-heading" className="text-2xl font-black text-[#0F1B2D] mb-3">Sources and Review Notes for This {area.name} Guide</h2>
           <p className="text-gray-600 leading-relaxed">
             Locality facts and technical advice are kept separate. Each source below states the
             limited point it supports; none is used to infer a lock or access condition at an
@@ -424,7 +424,7 @@ export default async function AreaPage({ params }: Props) {
         </section>
       )}
 
-      <FAQSection faqs={guide.faqs} heading={`Evidence and Booking Questions — ${area.name}`} />
+      <FAQSection faqs={guide.faqs} heading={`Booking Questions — ${area.name}`} />
 
       <CTABlock
         heading={`Need a locksmith in ${area.name}?`}

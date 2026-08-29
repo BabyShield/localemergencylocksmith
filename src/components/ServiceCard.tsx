@@ -10,6 +10,7 @@ export default function ServiceCard({ service }: ServiceCardProps) {
   return (
     <Link
       href={`/services/${service.slug}`}
+      prefetch={false}
       className="group relative bg-white rounded-2xl border border-gray-100 hover:border-[#FFB800]/50 transition-all duration-300 p-6 hover:shadow-lg hover:shadow-[#FFB800]/5 hover:-translate-y-0.5"
     >
       {/* Price badge */}

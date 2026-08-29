@@ -636,6 +636,14 @@ export const AREAS: Area[] = RAW_AREAS.filter((a) => {
   return true
 })
 
+// One canonical service-area list for structured data. Each entry is a neutral
+// Place because the registry includes cities, towns, suburbs, villages and
+// neighbourhoods; labelling every entry as a City would be inaccurate.
+export const AREA_SERVED_SCHEMA = AREAS.map(area => ({
+  '@type': 'Place' as const,
+  name: area.name,
+}))
+
 export function getAreaBySlug(slug: string): Area | undefined {
   return AREAS.find((a) => a.slug === slug)
 }

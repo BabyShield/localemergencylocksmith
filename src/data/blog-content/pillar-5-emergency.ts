@@ -230,7 +230,7 @@ There is no VAT or separate call-out fee. I explain the supported price basis an
 
 **Respond to stiffness without forcing the key.** Alignment, contamination, wear and component faults can cause similar symptoms. An assessment may identify a maintenance or repair option, but it cannot guarantee prevention of a later failure or establish a saving in advance.
 
-For more information on maintaining uPVC door hardware, see my guide on [uPVC door locks](/services/lock-change).
+For more information on maintaining uPVC door hardware, see my guide on [uPVC door locks](/services/upvc-lock-repair).
 
 ---
 
@@ -398,7 +398,7 @@ I will ask you a few quick questions:
 - **What has happened?** Locked out? Key snapped? Lock not working? Burglary? This tells me what tools and parts I might need.
 - **What type of door is it?** uPVC, composite, wooden? This affects the approach.
 - **What type of lock?** Euro cylinder? Mortice deadlock? Yale nightlatch? Multi-point mechanism? If you do not know, that is absolutely fine — most people do not. I can usually work it out from a photo if you can send one via text or WhatsApp.
-- **Where are you?** I need the full address to give you a current ETA and confirm coverage. The [areas directory](/areas/) lists the locations served, including [Kenilworth](/areas/kenilworth), [Bedworth](/areas/bedworth) and [Nuneaton](/areas/nuneaton).
+- **Where are you?** I need the full address to give you a current ETA and confirm coverage. The [areas directory](/areas/) lists the locations served, including dedicated emergency-lockout guidance for [Kenilworth](/areas/kenilworth/emergency-lockout), [Bedworth](/areas/bedworth/emergency-lockout) and [Nuneaton](/areas/nuneaton/emergency-lockout).
 
 ### Step 3: I Confirm the Price Basis and Assumptions
 

@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { SERVICE_PROVIDER_SCHEMA, SITE_CONFIG } from '@/data/config'
 import { SERVICES } from '@/data/services'
 import { TOWN_SLUGS } from '@/data/governed-town-services'
+import { AREA_SERVED_SCHEMA } from '@/data/areas'
 import ServiceCard from '@/components/ServiceCard'
 import CTABlock from '@/components/CTABlock'
 import SchemaMarkup from '@/components/SchemaMarkup'
@@ -41,7 +42,7 @@ const servicesCatalogSchema = {
   name: 'Locksmith Services in Coventry and Warwickshire',
   serviceType: 'Locksmith',
   provider: SERVICE_PROVIDER_SCHEMA,
-  areaServed: { '@type': 'Place', name: 'Coventry and Warwickshire' },
+  areaServed: AREA_SERVED_SCHEMA,
   hasOfferCatalog: {
     '@type': 'OfferCatalog',
     name: 'Locksmith Services',

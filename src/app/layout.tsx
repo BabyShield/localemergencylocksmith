@@ -1,19 +1,10 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
 import './globals.css'
 import StickyHeader from '@/components/StickyHeader'
 import MobileCallBar from '@/components/MobileCallBar'
 import TrustStrip from '@/components/TrustStrip'
 import Footer from '@/components/Footer'
 import { SITE_CONFIG } from '@/data/config'
-
-const inter = Inter({
-  subsets: ['latin'],
-  display: 'swap',
-  weight: ['400', '700', '900'],
-  preload: true,
-  variable: '--font-inter',
-})
 
 export const metadata: Metadata = {
   title: 'Locksmith Coventry | Local 24/7 Service | From £59',
@@ -37,7 +28,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en-GB" className={inter.variable}>
+    <html lang="en-GB">
       <head>
         <link rel="manifest" href="/manifest.json" />
         <meta name="theme-color" content="#0F1B2D" />
@@ -59,7 +50,7 @@ export default function RootLayout({
           />
         )}
       </head>
-      <body className="font-[var(--font-inter)] antialiased bg-white text-gray-900">
+      <body className="antialiased bg-white text-gray-900">
         <a href="#main-content" className="skip-link">Skip to main content</a>
         <StickyHeader />
         <TrustStrip />

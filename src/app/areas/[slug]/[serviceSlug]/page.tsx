@@ -279,7 +279,7 @@ export default async function TownServicePage({ params }: Props) {
       <section className="py-12 px-4 bg-white">
         <div className="max-w-3xl mx-auto">
           <h2 className="text-2xl font-black text-[#0F1B2D] mb-4">
-            What the Local Evidence Changes in {area.name}
+            Local Access and Property Considerations for {area.name}
           </h2>
           {content.contextGuidance.map((paragraph) => (
             <p key={paragraph.slice(0, 48)} className="text-gray-700 leading-relaxed mb-4 last:mb-0">
@@ -343,7 +343,7 @@ export default async function TownServicePage({ params }: Props) {
       <section className="py-12 px-4 bg-[#F7F7F5]" aria-labelledby="evidence-heading">
         <div className="max-w-3xl mx-auto">
           <h2 id="evidence-heading" className="text-2xl font-black text-[#0F1B2D] mb-4">
-            Evidence Behind This {area.name} Guide
+            Sources and Review Notes for This {area.name} Guide
           </h2>
           <p className="text-gray-700 leading-relaxed">{content.evidenceSummary}</p>
           <p className="text-sm text-gray-500 mt-3">

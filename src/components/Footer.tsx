@@ -50,13 +50,13 @@ export default function Footer() {
           <ul className="space-y-2 text-sm">
             {SERVICES.map((s) => (
               <li key={s.slug}>
-                <Link href={`/services/${s.slug}`} className="hover:text-white transition-colors">
+                <Link href={`/services/${s.slug}`} prefetch={false} className="hover:text-white transition-colors">
                   {s.shortName}
                 </Link>
               </li>
             ))}
             <li>
-              <Link href="/prices" className="hover:text-white transition-colors">
+              <Link href="/prices" prefetch={false} className="hover:text-white transition-colors">
                 Pricing
               </Link>
             </li>
@@ -77,13 +77,13 @@ export default function Footer() {
               { slug: 'bedworth', name: 'Bedworth' },
             ].map((area) => (
               <li key={area.slug}>
-                <Link href={`/areas/${area.slug}`} className="hover:text-white transition-colors">
+                <Link href={`/areas/${area.slug}`} prefetch={false} className="hover:text-white transition-colors">
                   Locksmith {area.name}
                 </Link>
               </li>
             ))}
             <li>
-              <Link href="/areas" className="hover:text-white transition-colors font-semibold text-[#FFB800]">
+              <Link href="/areas" prefetch={false} className="hover:text-white transition-colors font-semibold text-[#FFB800]">
                 All Areas →
               </Link>
             </li>
@@ -106,7 +106,7 @@ export default function Footer() {
               { slug: 'allesley', name: 'Allesley' },
             ].map((area) => (
               <li key={area.slug}>
-                <Link href={`/areas/${area.slug}`} className="hover:text-white transition-colors">
+                <Link href={`/areas/${area.slug}`} prefetch={false} className="hover:text-white transition-colors">
                   Locksmith {area.name}
                 </Link>
               </li>
@@ -130,15 +130,15 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-400 pt-4 border-t border-gray-800">
           <p>&copy; {year} Local Emergency Locksmith. All rights reserved.</p>
           <div className="flex flex-wrap justify-center gap-4">
-            <Link href="/about" className="hover:text-gray-300 transition-colors">About</Link>
-            <Link href="/blog" className="hover:text-gray-300 transition-colors">Blog</Link>
-            <Link href="/contact" className="hover:text-gray-300 transition-colors">Contact</Link>
-            <Link href="/areas" className="hover:text-gray-300 transition-colors">Areas</Link>
-            <Link href="/prices" className="hover:text-gray-300 transition-colors">Pricing</Link>
-            <Link href="/testimonials" className="hover:text-gray-300 transition-colors">Reviews</Link>
-            <Link href="/faq" className="hover:text-gray-300 transition-colors">FAQ</Link>
-            <Link href="/privacy" className="hover:text-gray-300 transition-colors">Privacy Policy</Link>
-            <Link href="/terms" className="hover:text-gray-300 transition-colors">Terms</Link>
+            <Link href="/about" prefetch={false} className="hover:text-gray-300 transition-colors">About</Link>
+            <Link href="/blog" prefetch={false} className="hover:text-gray-300 transition-colors">Blog</Link>
+            <Link href="/contact" prefetch={false} className="hover:text-gray-300 transition-colors">Contact</Link>
+            <Link href="/areas" prefetch={false} className="hover:text-gray-300 transition-colors">Areas</Link>
+            <Link href="/prices" prefetch={false} className="hover:text-gray-300 transition-colors">Pricing</Link>
+            <Link href="/testimonials" prefetch={false} className="hover:text-gray-300 transition-colors">Reviews</Link>
+            <Link href="/faq" prefetch={false} className="hover:text-gray-300 transition-colors">FAQ</Link>
+            <Link href="/privacy" prefetch={false} className="hover:text-gray-300 transition-colors">Privacy Policy</Link>
+            <Link href="/terms" prefetch={false} className="hover:text-gray-300 transition-colors">Terms</Link>
           </div>
         </div>
       </div>

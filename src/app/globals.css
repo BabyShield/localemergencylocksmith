@@ -13,7 +13,21 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-inter, 'Inter', Arial, sans-serif);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+}
+
+/* Keep the full server-rendered document available to search and assistive
+   technology while allowing browsers to defer below-fold layout and paint. */
+.defer-render {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 800px;
+}
+
+@media print {
+  .defer-render {
+    content-visibility: visible;
+    contain-intrinsic-size: none;
+  }
 }
 
 /* Ensure content is not hidden behind the mobile call bar */

@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { SERVICES, getServiceBySlug } from '@/data/services'
-import { AREAS, getAllAreasByRegion } from '@/data/areas'
+import { AREAS, AREA_SERVED_SCHEMA, getAllAreasByRegion } from '@/data/areas'
 import { hasTownService } from '@/data/governed-town-services'
 import { SITE_CONFIG, CONTENT_UPDATED, SERVICE_PROVIDER_SCHEMA } from '@/data/config'
 import { getBlogPostBySlug } from '@/data/blog-posts'
@@ -349,16 +349,7 @@ export default async function ServicePage({ params }: Props) {
     description: service.description,
     serviceType: service.shortName,
     provider: SERVICE_PROVIDER_SCHEMA,
-    areaServed: [
-      { '@type': 'City', name: 'Coventry' },
-      { '@type': 'City', name: 'Nuneaton' },
-      { '@type': 'City', name: 'Bedworth' },
-      { '@type': 'City', name: 'Rugby' },
-      { '@type': 'City', name: 'Leamington Spa' },
-      { '@type': 'City', name: 'Warwick' },
-      { '@type': 'City', name: 'Kenilworth' },
-      { '@type': 'City', name: 'Stratford-upon-Avon' },
-    ],
+    areaServed: AREA_SERVED_SCHEMA,
     offers: {
       '@type': 'Offer',
       url: `${SITE_CONFIG.domain}/services/${slug}`,

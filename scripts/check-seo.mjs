@@ -553,6 +553,15 @@ try {
 
     const serviceNodes = parsedSchemaNodes.filter(node => hasSchemaType(node, 'Service'))
 
+    if (productionUrl.pathname === '/') {
+      const business = parsedSchemaNodes.find(
+        node => hasSchemaType(node, 'Organization') && node?.['@id'] === `${CANONICAL_ORIGIN}/#business`,
+      )
+      check(Boolean(business), '/ has no canonical business Organization node')
+      check(Array.isArray(business?.areaServed) && business.areaServed.length === 78, '/ business areaServed does not contain 78 governed places')
+      check(business?.areaServed?.every(place => place?.['@type'] === 'Place'), '/ business areaServed contains a non-Place entry')
+    }
+
     for (const serviceNode of serviceNodes) {
       const provider = serviceNode.provider
       check(provider?.['@type'] === 'Organization', `${productionUrl.pathname} Service provider is not an Organization`)
@@ -605,6 +614,11 @@ try {
         }
       }
 
+      if (productionUrl.pathname === '/services' || genericServiceMatch) {
+        check(Array.isArray(serviceNode.areaServed) && serviceNode.areaServed.length === 78, `${productionUrl.pathname} Service areaServed does not contain 78 governed places`)
+        check(serviceNode.areaServed?.every(place => place?.['@type'] === 'Place'), `${productionUrl.pathname} Service areaServed contains a non-Place entry`)
+      }
+
       if (genericServiceMatch || townServiceMatch) {
         check(serviceNode.offers?.url === loc, `${productionUrl.pathname} Offer URL is ${serviceNode.offers?.url || 'missing'}; expected ${loc}`)
       }
@@ -618,6 +632,7 @@ try {
       check(author?.name === 'Ross', `${productionUrl.pathname} BlogPosting author has the wrong name`)
       check(author?.url === `${CANONICAL_ORIGIN}/about`, `${productionUrl.pathname} BlogPosting author does not link to /about`)
       check(author?.worksFor?.['@id'] === `${CANONICAL_ORIGIN}/#business`, `${productionUrl.pathname} BlogPosting author has the wrong worksFor reference`)
+      check(article?.publisher?.['@id'] === `${CANONICAL_ORIGIN}/#business`, `${productionUrl.pathname} BlogPosting publisher has the wrong @id`)
     }
 
     if (productionUrl.pathname === '/about') {

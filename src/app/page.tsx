@@ -12,6 +12,7 @@ import LastUpdated from '@/components/LastUpdated'
 import CredentialsStrip from '@/components/CredentialsStrip'
 import { SERVICES } from '@/data/services'
 import { SITE_CONFIG, CONTENT_UPDATED, GOOGLE_REVIEWS, LOCKSMITH_AUTHOR_SCHEMA } from '@/data/config'
+import { AREA_SERVED_SCHEMA } from '@/data/areas'
 import { ALL_BLOG_POSTS } from '@/data/blog-posts'
 
 export const metadata: Metadata = {
@@ -107,16 +108,7 @@ const organizationSchema = {
   },
   image: `${SITE_CONFIG.domain}/og-image.png`,
   founder: LOCKSMITH_AUTHOR_SCHEMA,
-  areaServed: [
-    'Coventry',
-    'Nuneaton',
-    'Bedworth',
-    'Rugby',
-    'Leamington Spa',
-    'Warwick',
-    'Kenilworth',
-    'Stratford-upon-Avon',
-  ].map(name => ({ '@type': 'Place', name })),
+  areaServed: AREA_SERVED_SCHEMA,
   hasOfferCatalog: {
     '@type': 'OfferCatalog',
     name: 'Locksmith Services',
@@ -173,7 +165,9 @@ const homepageFaqs = [
   },
 ]
 
-const latestPosts = ALL_BLOG_POSTS.slice(0, 3)
+const latestPosts = [...ALL_BLOG_POSTS]
+  .sort((left, right) => right.date.localeCompare(left.date))
+  .slice(0, 3)
 
 export default function HomePage() {
   return (
@@ -257,7 +251,7 @@ export default function HomePage() {
       <CredentialsStrip />
 
       {/* 5. Services grid */}
-      <section className="py-14 px-4 bg-[#F7F7F5]">
+      <section className="defer-render py-14 px-4 bg-[#F7F7F5]">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-2xl md:text-3xl font-black text-[#0F1B2D] mb-2 text-center">
             Locksmith Services in Coventry
@@ -274,7 +268,7 @@ export default function HomePage() {
       </section>
 
       {/* 6. How It Works */}
-      <section className="py-16 px-4 bg-white">
+      <section className="defer-render py-16 px-4 bg-white">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-2xl md:text-3xl font-black text-[#0F1B2D] mb-3 text-center">
             How It Works
@@ -325,10 +319,12 @@ export default function HomePage() {
       </section>
 
       {/* 7. Price table */}
-      <PriceTable />
+      <div className="defer-render">
+        <PriceTable />
+      </div>
 
       {/* 8. 24 Hour section */}
-      <section className="py-16 px-4 bg-[#0F1B2D] relative overflow-hidden">
+      <section className="defer-render py-16 px-4 bg-[#0F1B2D] relative overflow-hidden">
         {/* Subtle background pattern */}
         <div className="absolute inset-0 opacity-5">
           <div className="absolute inset-0" style={{ backgroundImage: 'radial-gradient(circle at 25% 25%, white 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
@@ -356,10 +352,12 @@ export default function HomePage() {
       </section>
 
       {/* 9. Area grid */}
-      <AreaGrid />
+      <div className="defer-render">
+        <AreaGrid />
+      </div>
 
       {/* 10. Reviews / testimonials */}
-      <section className="py-16 px-4 bg-[#F7F7F5]">
+      <section className="defer-render py-16 px-4 bg-[#F7F7F5]">
         <div className="max-w-5xl mx-auto">
           {/* Aggregate rating badge — renders only when real GBP figures are configured */}
           {GOOGLE_REVIEWS.rating != null && GOOGLE_REVIEWS.count != null && (
@@ -416,7 +414,7 @@ export default function HomePage() {
       </section>
 
       {/* 11. Blog preview section */}
-      <section className="py-14 px-4 bg-white">
+      <section className="defer-render py-14 px-4 bg-white">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-2xl md:text-3xl font-black text-[#0F1B2D] mb-2 text-center">
             Security Tips &amp; Advice
@@ -429,6 +427,7 @@ export default function HomePage() {
               <Link
                 key={post.slug}
                 href={`/blog/${post.slug}`}
+                prefetch={false}
                 className="group bg-[#F7F7F5] rounded-2xl p-6 border border-gray-100 hover:border-[#FFB800]/40 transition-colors"
               >
                 <div className="flex items-center gap-2 mb-3">
@@ -447,6 +446,7 @@ export default function HomePage() {
           <div className="text-center mt-8">
             <Link
               href="/blog"
+              prefetch={false}
               className="inline-flex items-center gap-1.5 text-[#0F1B2D] font-bold hover:text-[#FFB800] transition-colors text-sm"
             >
               View all articles
@@ -459,7 +459,9 @@ export default function HomePage() {
       </section>
 
       {/* 12. FAQ */}
-      <FAQSection faqs={homepageFaqs} />
+      <div className="defer-render">
+        <FAQSection faqs={homepageFaqs} />
+      </div>
 
       {/* Last updated */}
       <div className="text-center py-4 px-4 bg-white">
@@ -467,7 +469,7 @@ export default function HomePage() {
       </div>
 
       {/* 13. Quick area links */}
-      <section className="py-10 px-4 bg-[#F7F7F5]">
+      <section className="defer-render py-10 px-4 bg-[#F7F7F5]">
         <div className="max-w-6xl mx-auto">
           <h3 className="text-lg font-bold text-[#0F1B2D] mb-5 text-center">
             Quick Links — Main Towns I Cover
@@ -486,6 +488,7 @@ export default function HomePage() {
               <Link
                 key={link.href}
                 href={link.href}
+                prefetch={false}
                 className="bg-white border border-gray-200 hover:border-[#FFB800] hover:shadow-sm text-[#0F1B2D] px-5 py-2 rounded-full text-sm font-semibold transition-all"
               >
                 {link.label}
@@ -496,7 +499,9 @@ export default function HomePage() {
       </section>
 
       {/* 14. CTA */}
-      <CTABlock />
+      <div className="defer-render">
+        <CTABlock />
+      </div>
     </>
   )
 }
