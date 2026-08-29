@@ -1,3 +1,5 @@
+import type { ReactNode } from 'react'
+
 interface FAQ {
   q: string
   a: string
@@ -6,11 +8,13 @@ interface FAQ {
 interface FAQSectionProps {
   faqs: FAQ[]
   heading?: string
+  footer?: ReactNode
 }
 
 export default function FAQSection({
   faqs,
   heading = 'Frequently Asked Questions',
+  footer,
 }: FAQSectionProps) {
   return (
     <section className="py-14 px-4 bg-[#F7F7F5]">
@@ -43,6 +47,7 @@ export default function FAQSection({
             </details>
           ))}
         </div>
+        {footer ? <div className="mt-6">{footer}</div> : null}
       </div>
     </section>
   )

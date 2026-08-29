@@ -39,6 +39,8 @@ const MAX_WITHIN_AREA_PAIR_OVERLAP = 0.45
 const MAX_WITHIN_SERVICE_P95_OVERLAP = 0.35
 const MAX_WITHIN_SERVICE_PAIR_OVERLAP = 0.45
 const MAX_WITHIN_PAGE_FAQ_ANSWER_OVERLAP = 0.65
+const MIN_CHECK_UNIQUENESS_RATIO = 0.72
+const MIN_PAIR_UNIQUE_CHECKS = 2
 
 // This is an independent release contract. Do not import the production role
 // map here: otherwise weakening the generator would also weaken its audit.
@@ -513,6 +515,7 @@ for (const area of AREAS) {
       serviceSlug,
       words: guidanceWords,
       shingles: shingles(guidanceText),
+      checks: [...(guidance.checks ?? [])],
     })
   }
 
@@ -602,6 +605,30 @@ for (const slug of Object.keys(AREA_GUIDES)) {
 
 check(guidanceRecords.length === EXPECTED_GUIDANCE_COUNT, `found ${guidanceRecords.length} service guidance records; expected ${EXPECTED_GUIDANCE_COUNT}`)
 
+const allChecks = guidanceRecords.flatMap(record => (
+  record.checks.map(value => ({ key: normalise(value), owner: record.key }))
+))
+const checkCounts = new Map()
+for (const item of allChecks) {
+  checkCounts.set(item.key, (checkCounts.get(item.key) ?? 0) + 1)
+}
+const checkUniquenessRatio = checkCounts.size / Math.max(1, allChecks.length)
+check(
+  checkUniquenessRatio >= MIN_CHECK_UNIQUENESS_RATIO,
+  `service checks are ${(checkUniquenessRatio * 100).toFixed(2)}% unique; expected at least ${(MIN_CHECK_UNIQUENESS_RATIO * 100).toFixed(0)}%`,
+)
+for (const record of guidanceRecords) {
+  check(
+    new Set(record.checks.map(normalise)).size === record.checks.length,
+    `${record.key} repeats a check within its own guidance`,
+  )
+  const uniqueChecks = record.checks.filter(value => checkCounts.get(normalise(value)) === 1)
+  check(
+    uniqueChecks.length >= MIN_PAIR_UNIQUE_CHECKS,
+    `${record.key} has ${uniqueChecks.length} pair-unique checks; expected at least ${MIN_PAIR_UNIQUE_CHECKS}`,
+  )
+}
+
 const similarityReports = [
   similarityReport(
     'complete area-guide editorial',
@@ -637,6 +664,7 @@ const words = summary(areaWordCounts)
 console.log(`Area editorial words (minimum ${MIN_AREA_EDITORIAL_WORDS}): min ${words.min}, median ${words.median}, p95 ${words.p95}, max ${words.max}`)
 const guidanceWords = summary(guidanceRecords.map(record => record.words))
 console.log(`Guidance words (minimum ${MIN_GUIDANCE_WORDS}): min ${guidanceWords.min}, median ${guidanceWords.median}, p95 ${guidanceWords.p95}, max ${guidanceWords.max}`)
+console.log(`Service-check uniqueness: ${checkCounts.size}/${allChecks.length} (${(checkUniquenessRatio * 100).toFixed(2)}%)`)
 for (const report of similarityReports) {
   console.log(`${report.name}: ${report.count} pairs, p95 ${(report.p95 * 100).toFixed(2)}%, max ${(report.max * 100).toFixed(2)}% (${report.highestPair?.left ?? 'n/a'} vs ${report.highestPair?.right ?? 'n/a'})`)
 }

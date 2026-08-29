@@ -15,6 +15,7 @@ const TOWN_CENTRE_ALIASES = {
   'stratford-upon-avon-town-centre': 'stratford-upon-avon',
 }
 const GOVERNED_TOWNS = ['nuneaton', 'bedworth', 'rugby', 'leamington-spa', 'warwick', 'kenilworth', 'stratford-upon-avon']
+const TOWN_SERVICE_EVIDENCE_SECTIONS = ['intro', 'local-angle', 'local-evidence', 'preparation', 'checks', 'faqs']
 const SINGLE_AREA_POSTCODES = {
   cv1: 'coventry-city-centre',
   cv47: 'southam',
@@ -94,6 +95,33 @@ function visibleText(html) {
 
 function mainContent(html) {
   return html.match(/<main\b[^>]*>([\s\S]*?)<\/main>/i)?.[1] ?? ''
+}
+
+function evidenceBlock(html, tagName, section) {
+  return html.match(new RegExp(
+    `<${tagName}\\b(?=[^>]*data-evidence-section=["']${section}["'])[^>]*>[\\s\\S]*?<\\/${tagName}>`,
+    'i',
+  ))?.[0] ?? ''
+}
+
+function checkEvidenceBlockContract(block, label) {
+  const openingTag = block.match(/^<[^>]+>/)?.[0] ?? ''
+  const declaredIds = (getAttribute(openingTag, 'data-evidence-source-ids') ?? '')
+    .split(/\s+/)
+    .filter(Boolean)
+  const linkedIds = Array.from(
+    block.matchAll(/href=["']#evidence-source-([a-z0-9-]+)["']/gi),
+    match => match[1],
+  )
+
+  check(declaredIds.length > 0, `${label} declares no evidence source IDs`)
+  check(new Set(declaredIds).size === declaredIds.length, `${label} repeats a declared evidence source ID`)
+  check(new Set(linkedIds).size === linkedIds.length, `${label} repeats a section evidence link`)
+  check(
+    linkedIds.length === declaredIds.length
+      && linkedIds.every(sourceId => declaredIds.includes(sourceId)),
+    `${label} links ${linkedIds.join(', ') || 'none'}; declared ${declaredIds.join(', ') || 'none'}`,
+  )
 }
 
 function operationalClaimText(html) {
@@ -283,6 +311,14 @@ try {
     const mainHtml = mainContent(html)
     const mainText = visibleText(mainHtml)
     const claimText = operationalClaimText(html)
+    const evidenceReferences = Array.from(
+      mainHtml.matchAll(/href=["']#(evidence-source-[a-z0-9-]+)["']/gi),
+      match => match[1],
+    )
+    const evidenceTargets = Array.from(
+      mainHtml.matchAll(/id=["'](evidence-source-[a-z0-9-]+)["']/gi),
+      match => match[1],
+    )
 
     check(response.status === 200, `${productionUrl.pathname} returned ${response.status}`)
     check(!response.headers.get('location'), `${productionUrl.pathname} redirects to ${response.headers.get('location')}`)
@@ -314,6 +350,42 @@ try {
         check(html.includes(`id="${serviceSlug}"`), `${productionUrl.pathname} is missing ${serviceSlug} guidance`)
       }
       check(!pageText.includes('Common Lock Problems in'), `${productionUrl.pathname} still renders the unsupported legacy common-problems block`)
+      for (const serviceSlug of SERVICE_SLUGS) {
+        const block = evidenceBlock(mainHtml, 'article', serviceSlug)
+        check(Boolean(block), `${productionUrl.pathname} is missing the ${serviceSlug} evidence section marker`)
+        if (block) checkEvidenceBlockContract(block, `${productionUrl.pathname} ${serviceSlug} guidance`)
+      }
+    }
+
+    if (/^\/areas\/[^/]+\/[^/]+$/.test(productionUrl.pathname)) {
+      const renderedSections = Array.from(
+        mainHtml.matchAll(/data-evidence-section=["']([^"']+)["']/gi),
+        match => match[1],
+      )
+      check(
+        renderedSections.length === TOWN_SERVICE_EVIDENCE_SECTIONS.length
+          && new Set(renderedSections).size === TOWN_SERVICE_EVIDENCE_SECTIONS.length,
+        `${productionUrl.pathname} renders evidence sections ${renderedSections.join(', ') || 'none'}; expected six unique sections`,
+      )
+      for (const section of TOWN_SERVICE_EVIDENCE_SECTIONS) {
+        const block = evidenceBlock(mainHtml, 'details', section)
+        check(Boolean(block), `${productionUrl.pathname} is missing evidence section ${section}`)
+        if (block) checkEvidenceBlockContract(block, `${productionUrl.pathname} evidence section ${section}`)
+      }
+    }
+
+    if (/^\/areas\/[^/]+(?:\/[^/]+)?$/.test(productionUrl.pathname)) {
+      const targetCounts = new Map()
+      for (const target of evidenceTargets) targetCounts.set(target, (targetCounts.get(target) ?? 0) + 1)
+      check(evidenceReferences.length > 0, `${productionUrl.pathname} has no section-to-source evidence links`)
+      check(evidenceTargets.length > 0, `${productionUrl.pathname} has no evidence bibliography targets`)
+      for (const reference of new Set(evidenceReferences)) {
+        check(targetCounts.get(reference) === 1, `${productionUrl.pathname} evidence link #${reference} has ${targetCounts.get(reference) ?? 0} targets; expected 1`)
+      }
+      for (const target of new Set(evidenceTargets)) {
+        check(targetCounts.get(target) === 1, `${productionUrl.pathname} repeats evidence target ${target}`)
+        check(evidenceReferences.includes(target), `${productionUrl.pathname} bibliography target ${target} is never cited by a section`)
+      }
     }
 
     const parsedSchemaNodes = []

@@ -301,7 +301,7 @@ export default async function AreaPage({ params }: Props) {
           </p>
           <div className="space-y-8">
             {serviceGuidance.map(({ service, guidance, href, hasDedicatedPage }) => (
-              <article key={service.slug} id={service.slug} className="scroll-mt-28 rounded-2xl border border-gray-200 bg-white p-6 md:p-8 shadow-sm">
+              <article key={service.slug} id={service.slug} data-evidence-section={service.slug} data-evidence-source-ids={guidance.sourceIds.join(' ')} className="scroll-mt-28 rounded-2xl border border-gray-200 bg-white p-6 md:p-8 shadow-sm">
                 <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between mb-5">
                   <div>
                     <p className="text-xs font-bold uppercase tracking-wider text-[#8A5A00] mb-2">From £{service.priceFrom} · no VAT</p>

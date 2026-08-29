@@ -16,6 +16,7 @@ import HeroSection from '@/components/HeroSection'
 import CTABlock from '@/components/CTABlock'
 import FAQSection from '@/components/FAQSection'
 import SchemaMarkup from '@/components/SchemaMarkup'
+import SectionEvidenceLinks from '@/components/SectionEvidenceLinks'
 
 export const dynamic = 'force-static'
 export const dynamicParams = true
@@ -215,6 +216,11 @@ export default async function TownServicePage({ params }: Props) {
               {para}
             </p>
           ))}
+          <SectionEvidenceLinks
+            section="intro"
+            sourceIds={content.sectionSourceIds.intro}
+            sources={content.sources}
+          />
 
           {searchIntentCopy && (
             <div className="my-8 rounded-xl border border-[#FFB800]/40 bg-[#FFF9E8] p-6">
@@ -259,6 +265,11 @@ export default async function TownServicePage({ params }: Props) {
         <div className="max-w-3xl mx-auto">
           <h2 className="text-2xl font-black text-[#0F1B2D] mb-4">{content.localAngleHeading}</h2>
           <p className="text-gray-700 leading-relaxed">{content.localAngleBody}</p>
+          <SectionEvidenceLinks
+            section="local-angle"
+            sourceIds={content.sectionSourceIds.localAngle}
+            sources={content.sources}
+          />
         </div>
       </section>
 
@@ -273,6 +284,11 @@ export default async function TownServicePage({ params }: Props) {
               {paragraph}
             </p>
           ))}
+          <SectionEvidenceLinks
+            section="local-evidence"
+            sourceIds={content.sectionSourceIds.contextGuidance}
+            sources={content.sources}
+          />
         </div>
       </section>
 
@@ -290,6 +306,11 @@ export default async function TownServicePage({ params }: Props) {
               </li>
             ))}
           </ul>
+          <SectionEvidenceLinks
+            section="preparation"
+            sourceIds={content.sectionSourceIds.preparation}
+            sources={content.sources}
+          />
         </div>
       </section>
 
@@ -307,6 +328,11 @@ export default async function TownServicePage({ params }: Props) {
               </li>
             ))}
           </ul>
+          <SectionEvidenceLinks
+            section="checks"
+            sourceIds={content.sectionSourceIds.checks}
+            sources={content.sources}
+          />
           <p className="text-gray-600 text-sm mt-6">{content.priceNote}</p>
         </div>
       </section>
@@ -323,7 +349,7 @@ export default async function TownServicePage({ params }: Props) {
           </p>
           <ul className="space-y-4 mt-6">
             {content.sources.map((source) => (
-              <li key={source.id} className="rounded-xl border border-gray-200 p-4">
+              <li id={`evidence-source-${source.id}`} key={source.id} className="scroll-mt-28 rounded-xl border border-gray-200 p-4">
                 <a
                   href={source.url}
                   target="_blank"
@@ -375,6 +401,13 @@ export default async function TownServicePage({ params }: Props) {
       <FAQSection
         faqs={content.faqs}
         heading={`${service.shortName} in ${area.name} — Your Questions`}
+        footer={(
+          <SectionEvidenceLinks
+            section="faqs"
+            sourceIds={content.sectionSourceIds.faqs}
+            sources={content.sources}
+          />
+        )}
       />
 
       {/* Other services in this town */}

@@ -1,8 +1,10 @@
 import { AREAS } from '../src/data/areas.ts'
 import { AREA_AUTHORITIES } from '../src/data/area-authorities.ts'
 import { SERVICES } from '../src/data/services.ts'
+import { AREA_GUIDES } from '../src/data/area-guides.ts'
 import {
   SERVICE_AREA_SLUGS,
+  TOWN_SERVICE_EVIDENCE_SECTIONS,
   TOWN_SERVICES,
   TOWN_SERVICE_PARAMS,
   TOWN_SLUGS,
@@ -60,6 +62,41 @@ const REQUIRED_TECHNICAL_SOURCE_IDS = {
   'upvc-lock-repair': ['warwickshire-lock-advice', 'warwickshire-door-security'],
   'boarding-up': ['warwickshire-forensics', 'mla-service-calls'],
   'lock-upgrade': ['warwickshire-lock-advice', 'warwickshire-door-security'],
+}
+
+function sectionTechnicalRequirements(defaults, overrides = {}) {
+  return Object.fromEntries(
+    TOWN_SERVICE_EVIDENCE_SECTIONS.map(section => [section, [...(overrides[section] ?? defaults)]]),
+  )
+}
+
+// Independent section-level evidence contract. Do not import the blueprint's
+// map here, because weakening production attribution must not weaken its audit.
+const REQUIRED_SECTION_TECHNICAL_SOURCE_IDS = {
+  'emergency-lockout': sectionTechnicalRequirements(['mla-service-calls']),
+  'lock-change': sectionTechnicalRequirements(
+    ['warwickshire-door-security'],
+    {
+      intro: ['warwickshire-door-security', 'mla-service-calls'],
+      contextGuidance: ['warwickshire-door-security', 'mla-service-calls'],
+    },
+  ),
+  'upvc-lock-repair': sectionTechnicalRequirements([
+    'warwickshire-lock-advice',
+    'warwickshire-door-security',
+  ]),
+  'boarding-up': sectionTechnicalRequirements(
+    ['warwickshire-forensics'],
+    {
+      intro: ['warwickshire-forensics', 'mla-service-calls'],
+    },
+  ),
+  'lock-upgrade': sectionTechnicalRequirements(
+    ['warwickshire-door-security'],
+    {
+      checks: ['warwickshire-lock-advice', 'warwickshire-door-security'],
+    },
+  ),
 }
 
 const BANNED_CLAIM_PATTERNS = [
@@ -318,9 +355,53 @@ const descriptionOwners = new Map()
 const h1Owners = new Map()
 const sourceById = new Map()
 const sourceUrlOwners = new Map()
+const crossCorpusSourceById = new Map()
+const crossCorpusSourceUrlOwners = new Map()
 const publishedByKey = new Map()
 const publishedRecords = []
 let rawPublishedCount = 0
+
+function registerCrossCorpusSource(source, owner) {
+  if (!source || typeof source !== 'object') return
+  if (['id', 'title', 'publisher', 'url', 'supports', 'checkedOn'].some(field => (
+    typeof source[field] !== 'string' || source[field].trim().length === 0
+  ))) return
+
+  const canonicalSource = JSON.stringify({
+    title: source.title,
+    publisher: source.publisher,
+    url: source.url,
+    supports: source.supports,
+    checkedOn: source.checkedOn,
+  })
+  const previousSource = crossCorpusSourceById.get(source.id)
+  check(
+    !previousSource || previousSource.canonical === canonicalSource,
+    `${owner} conflicts with cross-corpus source id ${source.id} used by ${previousSource?.owner}`,
+  )
+  if (!previousSource) crossCorpusSourceById.set(source.id, { canonical: canonicalSource, owner })
+
+  let normalisedUrl = source.url
+  try {
+    const parsed = new URL(source.url)
+    parsed.hash = ''
+    normalisedUrl = parsed.href
+  } catch {
+    // The record's normal URL validation reports the malformed value.
+  }
+  const previousUrlOwner = crossCorpusSourceUrlOwners.get(normalisedUrl)
+  check(
+    !previousUrlOwner || previousUrlOwner.id === source.id,
+    `${owner} URL is also assigned to cross-corpus source id ${previousUrlOwner?.id}`,
+  )
+  if (!previousUrlOwner) crossCorpusSourceUrlOwners.set(normalisedUrl, { id: source.id, owner })
+}
+
+for (const [areaSlug, guide] of Object.entries(AREA_GUIDES)) {
+  for (const [index, source] of (guide.sources ?? []).entries()) {
+    registerCrossCorpusSource(source, `area guide ${areaSlug} source ${index + 1}`)
+  }
+}
 
 for (const [areaSlug, records] of Object.entries(TOWN_SERVICES)) {
   check(areaBySlug.has(areaSlug), `published registry contains unknown area ${areaSlug}`)
@@ -455,12 +536,66 @@ for (const [areaSlug, records] of Object.entries(TOWN_SERVICES)) {
       const previousUrlOwner = sourceUrlOwners.get(source.url)
       check(!previousUrlOwner || previousUrlOwner.id === source.id, `${sourceLabel} URL is also assigned to source id ${previousUrlOwner?.id}`)
       if (!previousUrlOwner) sourceUrlOwners.set(source.url, { id: source.id, owner: key })
+
+      registerCrossCorpusSource(source, sourceLabel)
     }
 
     check(localitySources.length >= 2, `${key} has ${localitySources.length} locality sources; expected at least 2`)
     check(technicalSources.length >= 1, `${key} has no recognised technical source`)
     for (const requiredSourceId of REQUIRED_TECHNICAL_SOURCE_IDS[serviceSlug] ?? []) {
       check(sourceIds.has(requiredSourceId), `${key} is missing required technical source ${requiredSourceId}`)
+    }
+
+    const sectionSourceIds = content.sectionSourceIds
+    check(
+      sectionSourceIds && typeof sectionSourceIds === 'object' && !Array.isArray(sectionSourceIds),
+      `${key} sectionSourceIds must be an object`,
+    )
+    const sectionKeys = sectionSourceIds && typeof sectionSourceIds === 'object' && !Array.isArray(sectionSourceIds)
+      ? Object.keys(sectionSourceIds)
+      : []
+    check(
+      sectionKeys.length === TOWN_SERVICE_EVIDENCE_SECTIONS.length
+        && sectionKeys.every(section => TOWN_SERVICE_EVIDENCE_SECTIONS.includes(section)),
+      `${key} evidence sections are ${sectionKeys.join(', ') || 'missing'}; expected ${TOWN_SERVICE_EVIDENCE_SECTIONS.join(', ')}`,
+    )
+
+    const referencedSourceIds = new Set()
+    for (const section of TOWN_SERVICE_EVIDENCE_SECTIONS) {
+      const ids = sectionSourceIds?.[section]
+      check(Array.isArray(ids) && ids.length > 0, `${key} evidence section ${section} has no source IDs`)
+      if (!Array.isArray(ids)) continue
+      check(new Set(ids).size === ids.length, `${key} evidence section ${section} repeats a source ID`)
+      for (const sourceId of ids) {
+        check(sourceIds.has(sourceId), `${key} evidence section ${section} references missing source ${sourceId}`)
+        referencedSourceIds.add(sourceId)
+      }
+
+      const expectedTechnicalIds = REQUIRED_SECTION_TECHNICAL_SOURCE_IDS[serviceSlug]?.[section] ?? []
+      const actualTechnicalIds = ids.filter(sourceId => TECHNICAL_SOURCE_IDS.has(sourceId))
+      check(
+        actualTechnicalIds.length === expectedTechnicalIds.length
+          && actualTechnicalIds.every(sourceId => expectedTechnicalIds.includes(sourceId)),
+        `${key} evidence section ${section} has technical sources ${actualTechnicalIds.join(', ') || 'none'}; expected ${expectedTechnicalIds.join(', ') || 'none'}`,
+      )
+      const actualLocalityIds = ids.filter(sourceId => !TECHNICAL_SOURCE_IDS.has(sourceId))
+      if (section === 'preparation' || section === 'checks') {
+        check(actualLocalityIds.length === 0, `${key} evidence section ${section} includes locality source ${actualLocalityIds.join(', ')}`)
+      } else {
+        check(actualLocalityIds.length > 0, `${key} evidence section ${section} has no locality source`)
+      }
+
+      if (sourceIds.has('sdc-conservation-review-2026')) {
+        const reviewExpected = section === 'intro'
+          || (section === 'contextGuidance' && serviceSlug === 'lock-change')
+        check(
+          ids.includes('sdc-conservation-review-2026') === reviewExpected,
+          `${key} evidence section ${section} has incorrect 2026 Stratford review attribution`,
+        )
+      }
+    }
+    for (const source of sources) {
+      check(referencedSourceIds.has(source.id), `${key} bibliography source ${source.id} is not cited by a section`)
     }
 
     const claims = claimText(content)
@@ -635,6 +770,7 @@ console.log(`Evidence as-of date: ${AUDIT_AS_OF}`)
 console.log(`Universe: ${AREAS.length} areas x ${SERVICES.length} services = ${universeCount} pairs`)
 console.log(`Publication: ${indexableCount} indexable, ${redirectCount} redirect`)
 console.log(`Evidence registry: ${sourceById.size} unique source IDs, ${sourceUrlOwners.size} unique URLs`)
+console.log(`Cross-corpus evidence registry: ${crossCorpusSourceById.size} unique source IDs, ${crossCorpusSourceUrlOwners.size} unique URLs`)
 console.log('')
 console.log(`Editorial word counts (hard minimum ${MIN_EDITORIAL_WORDS})`)
 for (const serviceSlug of serviceSlugs) {

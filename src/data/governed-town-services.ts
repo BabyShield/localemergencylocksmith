@@ -20,6 +20,17 @@ export type { ServiceAreaSlug }
 
 export type { EvidenceSource } from './locksmith-evidence'
 
+export const TOWN_SERVICE_EVIDENCE_SECTIONS = [
+  'intro',
+  'localAngle',
+  'contextGuidance',
+  'preparation',
+  'checks',
+  'faqs',
+] as const
+
+export type TownServiceEvidenceSection = (typeof TOWN_SERVICE_EVIDENCE_SECTIONS)[number]
+
 interface LocalServiceNote {
   heading: string
   body: string
@@ -57,6 +68,7 @@ export interface TownServiceContent {
   contextGuidance: string[]
   preparationSteps: string[]
   sources: EvidenceSource[]
+  sectionSourceIds: Record<TownServiceEvidenceSection, string[]>
   reviewedOn: string
 }
 
@@ -80,20 +92,20 @@ const AREA_SOURCES: Record<string, EvidenceSource> = {
     supports: 'The council lists adopted conservation-area appraisals for Nuneaton Town Centre and Bedworth.',
     checkedOn: REVIEWED_ON,
   },
-  'visit-bedworth': {
-    id: 'visit-bedworth',
+  'visit-warwickshire-bedworth': {
+    id: 'visit-warwickshire-bedworth',
     title: 'Bedworth',
-    publisher: 'Warwickshire County Council',
+    publisher: 'Warwickshire County Council, Visit Warwickshire',
     url: 'https://visit.warwickshire.gov.uk/towns-villages/bedworth',
-    supports: 'Bedworth rail, canal, green-space and industrial-heritage context.',
+    supports: 'Bedworth\'s position between Coventry and Nuneaton, its station on the Coventry-Nuneaton line, Coventry Canal, Miners Welfare Park, and ribbon-weaving and coal-mining heritage.',
     checkedOn: REVIEWED_ON,
   },
-  'bedworth-appraisal': {
-    id: 'bedworth-appraisal',
-    title: 'Bedworth Conservation Area Appraisal and Management Plan',
+  'nbbc-bedworth-conservation-2022': {
+    id: 'nbbc-bedworth-conservation-2022',
+    title: 'Bedworth Conservation Area Appraisal and Management Plan 2022',
     publisher: 'Nuneaton and Bedworth Borough Council',
     url: 'https://www.nuneatonandbedworth.gov.uk/downloads/file/681/bedworth-conservation-area-appraisal-and-management-plan-supplementary-planning-document-2022-',
-    supports: 'The adopted 2022 appraisal and management plan for Bedworth Conservation Area.',
+    supports: 'The adopted 2022 Bedworth Conservation Area appraisal, its 1986 designation date, mapped core and three appraisal character areas.',
     checkedOn: REVIEWED_ON,
   },
   'visit-rugby': {
@@ -152,12 +164,20 @@ const AREA_SOURCES: Record<string, EvidenceSource> = {
     supports: 'Stratford town-centre, medieval street pattern, timber-framed buildings, rail and park-and-ride context.',
     checkedOn: REVIEWED_ON,
   },
-  'stratford-conservation': {
-    id: 'stratford-conservation',
-    title: 'Conservation Areas',
+  'sdc-conservation-h-z': {
+    id: 'sdc-conservation-h-z',
+    title: 'Conservation Areas H-Z',
+    publisher: 'Stratford-on-Avon District Council',
+    url: 'https://www.stratford.gov.uk/planning-building/conservation-areas-h-z.cfm',
+    supports: 'Published conservation-area maps, reports and appraisal documents for Stratford-upon-Avon and Southam.',
+    checkedOn: REVIEWED_ON,
+  },
+  'sdc-conservation-review-2026': {
+    id: 'sdc-conservation-review-2026',
+    title: 'Conservation Area Reviews 2026',
     publisher: 'Stratford-on-Avon District Council',
     url: 'https://www.stratford.gov.uk/planning-building/conservation-areas.cfm',
-    supports: 'The district conservation-area register and the current Stratford-on-Avon appraisal review.',
+    supports: 'The council-commissioned review of eight conservation-area appraisals, including Stratford-upon-Avon and Southam, with formal consultation in 2026.',
     checkedOn: REVIEWED_ON,
   },
 }
@@ -271,7 +291,7 @@ const AREA_PROFILES: Record<string, AreaEvidenceProfile> = {
     ],
     priceScope: 'Rear, private and common entrances are scoped separately whenever different people control the affected hardware.',
     metaDifferentiator: 'Bedworth conservation and access guidance',
-    sources: [AREA_SOURCES['visit-bedworth'], AREA_SOURCES['bedworth-appraisal']],
+    sources: [AREA_SOURCES['visit-warwickshire-bedworth'], AREA_SOURCES['nbbc-bedworth-conservation-2022']],
     serviceNotes: serviceNotes(
       {
         heading: 'Getting the right entrance open in Bedworth',
@@ -641,7 +661,11 @@ const AREA_PROFILES: Record<string, AreaEvidenceProfile> = {
     ],
     priceScope: 'Frontage, communal and private-door tasks are separated where authority, fabric or permanent follow-on work differs.',
     metaDifferentiator: 'medieval-centre and conservation guidance',
-    sources: [AREA_SOURCES['visit-stratford'], AREA_SOURCES['stratford-conservation']],
+    sources: [
+      AREA_SOURCES['visit-stratford'],
+      AREA_SOURCES['sdc-conservation-h-z'],
+      AREA_SOURCES['sdc-conservation-review-2026'],
+    ],
     serviceNotes: serviceNotes(
       {
         heading: 'Stratford lockouts in a busy historic centre',
@@ -709,6 +733,16 @@ interface ServiceBlueprint {
   preparation: string[]
   faqs: (area: string) => { q: string; a: string }[]
   sourceIds: string[]
+  technicalSourceIdsBySection: Record<TownServiceEvidenceSection, string[]>
+}
+
+function technicalSourcesBySection(
+  defaults: string[],
+  overrides: Partial<Record<TownServiceEvidenceSection, string[]>> = {},
+): Record<TownServiceEvidenceSection, string[]> {
+  return Object.fromEntries(
+    TOWN_SERVICE_EVIDENCE_SECTIONS.map(section => [section, [...(overrides[section] ?? defaults)]]),
+  ) as Record<TownServiceEvidenceSection, string[]>
 }
 
 const SERVICE_BLUEPRINTS: Record<ServiceAreaSlug, ServiceBlueprint> = {
@@ -728,6 +762,7 @@ const SERVICE_BLUEPRINTS: Record<ServiceAreaSlug, ServiceBlueprint> = {
       { q: 'How is the lockout price confirmed?', a: 'The starting price is shown on the page. The likely total is discussed from the information you provide; if the on-site diagnosis changes the required work, the revised scope and cost should be agreed before it proceeds.' },
     ],
     sourceIds: ['mla-service-calls'],
+    technicalSourceIdsBySection: technicalSourcesBySection(['mla-service-calls']),
   },
   'lock-change': {
     name: 'Door Lock Repair & Replacement',
@@ -745,6 +780,13 @@ const SERVICE_BLUEPRINTS: Record<ServiceAreaSlug, ServiceBlueprint> = {
       { q: 'Will a replacement satisfy my insurance policy?', a: 'Only the insurer can confirm cover. Check the current written policy, then ask for a correctly marked product and invoice that describe the installed work; do not rely on a generic area or trade claim.' },
     ],
     sourceIds: ['warwickshire-door-security', 'mla-service-calls'],
+    technicalSourceIdsBySection: technicalSourcesBySection(
+      ['warwickshire-door-security'],
+      {
+        intro: ['warwickshire-door-security', 'mla-service-calls'],
+        contextGuidance: ['warwickshire-door-security', 'mla-service-calls'],
+      },
+    ),
   },
   'upvc-lock-repair': {
     name: 'uPVC Door & Window Lock Repair',
@@ -762,6 +804,10 @@ const SERVICE_BLUEPRINTS: Record<ServiceAreaSlug, ServiceBlueprint> = {
       { q: 'Can any multipoint gearbox be fitted?', a: 'No. Backset, centres, faceplate, spindle and locking layout vary. Markings and measurements are required to confirm compatibility.' },
     ],
     sourceIds: ['warwickshire-lock-advice', 'warwickshire-door-security'],
+    technicalSourceIdsBySection: technicalSourcesBySection([
+      'warwickshire-lock-advice',
+      'warwickshire-door-security',
+    ]),
   },
   'boarding-up': {
     name: 'Emergency Boarding Up & Burglary Repairs',
@@ -779,6 +825,12 @@ const SERVICE_BLUEPRINTS: Record<ServiceAreaSlug, ServiceBlueprint> = {
       { q: 'Can a temporary board guarantee no one will enter?', a: 'No. Correctly fitted boarding can reduce immediate access and weather exposure, but no temporary material can make a guarantee against determined entry.' },
     ],
     sourceIds: ['warwickshire-forensics', 'mla-service-calls'],
+    technicalSourceIdsBySection: technicalSourcesBySection(
+      ['warwickshire-forensics'],
+      {
+        intro: ['warwickshire-forensics', 'mla-service-calls'],
+      },
+    ),
   },
   'lock-upgrade': {
     name: 'Lock Upgrade & Security',
@@ -796,11 +848,36 @@ const SERVICE_BLUEPRINTS: Record<ServiceAreaSlug, ServiceBlueprint> = {
       { q: 'Can an upgraded lock guarantee security?', a: 'No. Accredited and correctly fitted hardware can improve resistance to tested attack methods, but no lock removes every route of forced entry or guarantees a claim outcome.' },
     ],
     sourceIds: ['warwickshire-lock-advice', 'warwickshire-door-security'],
+    technicalSourceIdsBySection: technicalSourcesBySection(
+      ['warwickshire-door-security'],
+      {
+        checks: ['warwickshire-lock-advice', 'warwickshire-door-security'],
+      },
+    ),
   },
 }
 
 function uniqueSources(sources: EvidenceSource[]): EvidenceSource[] {
   return [...new Map(sources.map(source => [source.id, source])).values()]
+}
+
+function localitySourceIdsForSection(
+  area: AreaEvidenceProfile,
+  service: ServiceAreaSlug,
+  section: TownServiceEvidenceSection,
+): string[] {
+  if (section === 'preparation' || section === 'checks') return []
+
+  // The 2026 Stratford review is discussed in the overview and the
+  // lock-change evidence analysis only. The published H-Z map/report register
+  // supports the other conservation references on these pages.
+  return area.sources
+    .map(source => source.id)
+    .filter(sourceId => (
+      sourceId !== 'sdc-conservation-review-2026'
+      || section === 'intro'
+      || (section === 'contextGuidance' && service === 'lock-change')
+    ))
 }
 
 function buildContent(area: AreaEvidenceProfile, service: ServiceAreaSlug): TownServiceContent {
@@ -813,6 +890,15 @@ function buildContent(area: AreaEvidenceProfile, service: ServiceAreaSlug): Town
       ? [serviceIndex, 4]
       : [serviceIndex]
   const serviceContext = contextIndexes.map(index => area.contextGuidance[index])
+  const sectionSourceIds = Object.fromEntries(
+    TOWN_SERVICE_EVIDENCE_SECTIONS.map(section => [
+      section,
+      [...new Set([
+        ...localitySourceIdsForSection(area, service, section),
+        ...blueprint.technicalSourceIdsBySection[section],
+      ])],
+    ]),
+  ) as Record<TownServiceEvidenceSection, string[]>
 
   return {
     service,
@@ -842,6 +928,7 @@ function buildContent(area: AreaEvidenceProfile, service: ServiceAreaSlug): Town
       ...area.sources,
       ...blueprint.sourceIds.map(id => TECHNICAL_SOURCES[id]),
     ]),
+    sectionSourceIds,
     reviewedOn: REVIEWED_ON,
   }
 }
