@@ -58,143 +58,685 @@ interface AreaGuideSeed {
   contexts: Record<ServiceAreaSlug, PairContext>
 }
 
-interface TechnicalCopy {
+interface PairEditorialCopy {
   first: string
   second: string
 }
 
-const TECHNICAL_COPY: Record<ServiceAreaSlug, TechnicalCopy[]> = {
-  'emergency-lockout': [
-    {
-      first: 'Before any entry is attempted, the person giving instructions should be identified and their authority to control the address checked. The exact affected entrance matters because an area name does not show whether the call concerns a private home, communal door or managed site.',
-      second: 'The door, frame, hinges and lock should be considered together before the scope is agreed. The expected charge and any reason that it may change should be explained before work proceeds, rather than selecting an intervention from the neighbourhood or apparent age of the surroundings.',
+const COVENTRY_EDITORIAL_COPY_A = {
+  'coventry-city-centre': {
+    'emergency-lockout': {
+      first: 'Council offices, university buildings, churches, shops and offices can each have different controlled entrances, so the instruction must name both the city-centre address and the doorway while the requester supplies evidence of authority.',
+      second: 'Ring-road structures and pedestrian subways can help orient the call but say nothing about the lock; inspect the door, frame, hinges and hardware, then explain the proposed access work and price from what is found there.',
     },
-    {
-      first: 'An urgent access request still needs a clear authority check. Record the full address, the caller\'s relationship to it and which opening is involved; locality evidence cannot establish occupation, ownership or permission to enter, even when a named landmark makes the general location recognisable.',
-      second: 'Assessment should stay with the actual door assembly: lock, frame, hinges and visible condition. Agree the proposed scope and cost information in advance, pausing if the facts at the entrance differ from the telephone description. No response or access method follows from the postcode alone.',
+    'lock-change': {
+      first: 'The three selected city-centre character areas describe civic, religious and commercial settings rather than fitted locks, so examine the individual door set and record the authorised customer\'s reason for repair or replacement before specifying hardware.',
+      second: 'Because the Hill Top record includes a conservation area and listed buildings, check the exact address and proposed scope; listed-building consent must be verified where alteration may affect special architectural or historic character. Any cylinder option must fit the inspected door and be priced before fitting.',
     },
-    {
-      first: 'Treat identification and authority as part of the access decision, not as an afterthought. A complete street address and a precise entrance description are needed because official area sources describe broad geographies and cannot identify the caller, the occupier or a particular controlled doorway.',
-      second: 'Once authority is established, inspect the whole entrance rather than assuming that the lock is the only relevant component. Explain the intended work and cost before starting, and explain any changed scope before continuing if the door, frame or hardware presents a different condition on inspection.',
+    'upvc-lock-repair': {
+      first: 'Predominant office, university, shop or civic use cannot establish that the reported city-centre entrance is uPVC or multipoint, so record the door material, handle and key movement, open-and-closed behaviour and any visible edge markings.',
+      second: 'First resolve whether the address falls in the eastern civic section or western commercial core, then assess the identified door with its frame and hinges; neither land use nor ring-road position selects a compatible part or repair scope.',
     },
-    {
-      first: 'The first practical question is who is authorised to request entry at the stated address. Confirm the building and affected entrance separately, especially where public, commercial, institutional and residential premises can share the same locality label. An area profile cannot answer that question.',
-      second: 'A decision at the door should follow inspection of the lock in its frame and the surrounding door set. The caller should receive advance cost information and a clear explanation of any variation; neither historic context nor a modern development label is evidence for a particular opening technique.',
+    'boarding-up': {
+      first: 'A report near civic buildings, religious sites or commercial premises needs the responsible controller and precise damaged opening. If the incident may be evidential, photograph the scene and follow any police instructions issued before potential evidence is moved, cleaned or covered.',
+      second: 'The Hill Top designation record makes an exact property-status check relevant before visible temporary work. Use the inspected city-centre opening to describe the outside-applied securing work and give the authorised premises contact the expected price; if the service-call price changes, obtain that contact\'s agreement before the revised amount applies.',
     },
-    {
-      first: 'Do not let urgency replace verification. Establish the full address, the exact door and the requester\'s authority before access work is considered. Statistical areas, heritage character areas and named facilities are useful for orientation, but none confirms who may lawfully instruct work.',
-      second: 'Use the condition found at the entrance to determine the scope, looking at the door, frame, hinges and lock as one system. Give the customer the anticipated cost before work and discuss any necessary change before it is made; avoid conclusions based only on locality descriptions.',
+    'lock-upgrade': {
+      first: 'City-centre land-use descriptions cannot support one security specification across council, university, religious, retail and office entrances, so document the actual door, frame, hinges and lock together with any written manager or insurer requirement.',
+      second: 'For an address within the Hill Top setting, check the property and scope for conservation requirements; if it is listed and the alteration may affect its special interest, verify listed-building consent. Compare correctly sized cylinders and accredited products only against the inspected assembly.',
     },
-    {
-      first: 'A locality name is not proof of entitlement to enter. The instruction should include a complete address, a description of the controlled opening and evidence that the caller may authorise access. This remains necessary for homes, workplaces, community buildings and other managed sites.',
-      second: 'After those checks, base the next step on the physical entrance that is present. Reviewing the door, frame, hinges and lock avoids treating an uncertain symptom as a diagnosis. Scope and cost should be set out before work, with changes explained if inspection reveals different facts.',
+  },
+  'earlsdon': {
+    'emergency-lockout': {
+      first: 'The railway and the named original-development streets locate broad parts of Earlsdon but do not identify a caller or controlled doorway, so obtain the full street address, exact entrance and evidence that the requester may authorise access.',
+      second: 'Use the condition of that Earlsdon door, its frame, hinges and lock to describe the proposed access work and provide the expected price before starting. If the service-call price changes after inspection, obtain the requester\'s agreement before the revised amount applies; neither the railway division nor Freehold Land Society history indicates an opening method.',
     },
-  ],
-  'lock-change': [
-    {
-      first: 'A replacement decision should start with the existing opening, not with assumptions about buildings in the wider area. Check the door, frame, hinges and lock together, then record the reason for change and any written requirement supplied by the owner, manager or insurer.',
-      second: 'Where a cylinder is involved, its size should match the door and protective furniture; accredited products can then be considered against the verified need. Confirm authority, proposed specification and price before fitting, and check exact heritage or consent status when external fabric may be affected.',
+    'lock-change': {
+      first: 'An address on one of the original Earlsdon streets still needs an inspection of its present door set, because development history cannot show which lock remains fitted or whether repair, replacement or wider door work is being requested.',
+      second: 'The Article 4 direction is an address-and-scope permission prompt rather than a hardware rule; also verify listed-building consent only if separate records show listed status and the proposed alteration may affect special interest. Price correctly sized, accredited options for the inspected door.',
     },
-    {
-      first: 'Changing a lock is a property-specific specification exercise. Identify the precise door, examine its frame and hinges, and separate a lock fault from alignment or wider door-set concerns. Neither a development date nor a neighbourhood description proves which hardware is installed.',
-      second: 'If the assessed solution uses a cylinder, correct sizing is part of the door-security guidance, alongside choosing an appropriately accredited product. The responsible person should approve the stated scope and cost first; listed, conservation or managed-property controls must be checked at the actual address.',
+    'upvc-lock-repair': {
+      first: 'Neither the railway boundary nor the seven streets associated with original Earlsdon development proves a door material or locking layout, so ask for the precise entrance, handle travel, key response, open-and-closed behaviour and faceplate details.',
+      second: 'Keep the historic street context separate from diagnosis by assessing the identified door, frame, hinges and mechanism together; confirm who controls that address and set out the proposed repair cost before any compatible component is chosen.',
     },
-    {
-      first: 'The supplied address and the current door set are the evidence for a lock-change plan. Inspect how the lock works with the frame and hinges, and ask for the customer\'s documented objective rather than inferring a standard from the surrounding streets or local history.',
-      second: 'Product selection should follow that inspection. Police guidance points to correctly sized cylinders and accredited security products, while the service-call charter supports authority and advance-cost checks. Any external alteration at a designated or managed building needs separate approval based on its exact status.',
+    'boarding-up': {
+      first: 'Damage described only as being near the railway or within the conservation area is not sufficiently located; identify the Earlsdon property, every affected opening and the authorised controller. Where an incident may be evidential, retain photographs and comply with any police directions received before disturbance.',
+      second: 'If visible temporary work is proposed at an address covered by the Article 4 direction or another designation, check the exact controls first. Describe the outside securing measure from the inspected Earlsdon opening and provide its expected price; if the service-call price changes, obtain the controller\'s agreement before the new figure applies, without treating area history as a survey.',
     },
-    {
-      first: 'Begin by defining which lock is to change, who controls it and what outcome has actually been requested. A complete examination of door, frame, hinges and lock is more reliable than assigning hardware from a broad planning character area or a named development phase.',
-      second: 'Only after that review should an appropriate, correctly dimensioned replacement be proposed. Explain the specification and anticipated price to the authorised person before fitting. If the entrance belongs to a listed, conservation, communal or institutional setting, confirm the applicable permissions rather than assuming them.',
+    'lock-upgrade': {
+      first: 'Original-development history on Earlsdon\'s named streets cannot establish current hardware, so base an upgrade comparison on the inspected door set and a written objective from the person authorised to approve work at that address.',
+      second: 'Where the conservation area or Article 4 direction applies, check the requirements for the exact address and scope; if separate records establish listed status, verify consent for alteration that may affect special interest. Then compare accredited products and cylinder fit against the inspected assembly.',
     },
-    {
-      first: 'Area evidence can prompt questions, but it cannot specify a replacement lock. Use photographs or an on-site inspection to record the door, frame, hinges, existing lock and any visible damage, while confirming the requester\'s authority and the purpose of the proposed change.',
-      second: 'Consider accredited products and correct cylinder projection only where they fit the verified door set. Set out the planned work and price before proceeding. Heritage designations, tenancy duties or site rules must come from the exact property records and responsible party, not the locality name.',
+  },
+  'tile-hill': {
+    'emergency-lockout': {
+      first: 'Broad Lane, Tile Hill Lane, the railway and Tile Hill Wood are useful location checks, but none proves entitlement to enter, so confirm whether the caller means Tile Hill North, Tile Hill South or a managed site and verify the exact doorway.',
+      second: 'Once the address and authority are established, examine the lock within the complete door set and explain the planned work and charge; the Canley boundary and woodland designation do not justify a response or entry technique.',
     },
-    {
-      first: 'A sound change specification is built from the individual entrance. Establish the controlled door, inspect the full assembly and obtain any written performance requirement from the authorised customer. Broad statements about an area\'s age or land use cannot identify an installed lock.',
-      second: 'Police advice supports considering the complete door and using correctly sized, accredited components. Match those principles to the observed opening, explain the proposed cost, and resolve any listed-building, conservation or management approval before altering visible fabric or shared security arrangements.',
+    'lock-change': {
+      first: 'The JSNA boundaries and SSSI record describe geography, not the hardware at a Tile Hill property, so photograph or inspect the individual door, frame, hinges and lock and document why its authorised controller wants a change.',
+      second: 'A Tile Hill Wood reference may indicate a managed asset rather than a home, so verify who can approve that opening; if separate records establish listed status, check consent for work that may affect special interest. Price correctly sized, accredited options only after inspection.',
     },
-  ],
-  'upvc-lock-repair': [
-    {
-      first: 'Do not infer a uPVC or multipoint mechanism from the locality or an area-scale development period. Ask what the handle and key do, whether the symptom changes with the door open, and obtain a clear image of the edge and keeps before treating the call as a mechanism fault.',
-      second: 'Police guidance explains that many multipoint doors require the handle to be lifted before the key is turned. Diagnosis should still examine the full door, frame, hinges, alignment and lock. Agree authority, scope and likely cost before repair, because the observed assembly—not the postcode—controls the decision.',
+    'upvc-lock-repair': {
+      first: 'No conclusion about uPVC, composite construction or multipoint locking follows from the north-south division, railway boundary or woodland status, so record the address, material, key action, handle movement, door position and visible locking layout.',
+      second: 'Resolve whether the call concerns a street property or a Tile Hill Wood asset before assessing the door with its frame and hinges; boundary evidence cannot identify a mechanism, compatible part or cause of the reported fault.',
     },
-    {
-      first: 'The locality name cannot establish that a door is uPVC, composite or fitted with multipoint locking. Capture the exact entrance and symptoms: handle movement, key movement, whether the door is open or shut, and any visible change in alignment or frame contact.',
-      second: 'Correct operation may include lifting the handle before turning the key, as police guidance notes, but that check is not a diagnosis. Inspect the door set as a whole and explain the proposed work and cost to the authorised requester before proceeding or changing the agreed scope.',
+    'boarding-up': {
+      first: 'A damaged opening near Broad Lane or Tile Hill Wood must be tied to a precise property or managed asset and authorised contact. If evidence may be involved, photograph it and follow any police direction given before temporary security work begins.',
+      second: 'SSSI status describes the woodland rather than construction at the scene, so verify who can authorise site work and inspect the affected door or window. Let that Tile Hill inspection define the outside temporary measure and included work, and provide the expected price; if the service-call price changes, obtain the site contact\'s agreement before applying the revision.',
     },
-    {
-      first: 'Treat “uPVC lock repair” as a reported symptom until the actual door has been identified. A photograph, full address and account of the handle, key and locking points are more useful than local building history, which cannot prove material, mechanism or condition.',
-      second: 'A multipoint system may depend on lifting the handle before locking, but persistent difficulty calls for assessment of lock, door, frame and hinges together. Confirm who may authorise the work and provide advance cost information; do not prescribe a mechanism or component from area context.',
+    'lock-upgrade': {
+      first: 'Tile Hill North, Tile Hill South and Canley are separated in the source geography, yet those boundaries specify no lock; establish the exact entrance, inspect the complete door set and obtain the customer\'s written security requirement.',
+      second: 'For woodland or another managed site, confirm who can approve the proposed scope; if separate records identify a listed building, verify consent for alteration that may affect its special interest. Match correctly sized and accredited options to the inspected hardware and explain the price.',
     },
-    {
-      first: 'Ask the caller to distinguish the affected entrance and describe exactly what happens during operation. The official locality evidence may separate streets, corridors or development phases, but none of it shows that a particular door uses uPVC, a cylinder or a multipoint strip.',
-      second: 'Operational guidance includes lifting the handle before turning the key on many multipoint doors. If that does not resolve the symptom, the whole door set should be checked for interaction between hardware, frame and hinges. Scope, authority and price remain address-specific decisions made before repair.',
+  },
+  'canley': {
+    'emergency-lockout': {
+      first: 'Charter Avenue, the railway, A45, industrial units, woodland and university edge distinguish parts of Canley without identifying a controlled entrance, so the caller must provide the complete address, exact door and evidence of authority.',
+      second: 'After those checks, assess the lock with the frame, hinges and door, describe the proposed access work and provide the expected cost. If the service-call price changes, obtain the Canley requester\'s agreement before the changed price applies; the nearby university and medieval-site evidence do not determine present use or an entry method.',
     },
-    {
-      first: 'No repair part should be selected from a neighbourhood label. Verify the door material and opening, record what the key and handle are doing, and check whether the behaviour differs when the door is open. Images can help define the question but do not replace inspection.',
-      second: 'Police material describes the normal lift-handle-and-turn-key sequence for many multipoint locks and also stresses the complete door assembly. Use those principles to test the observed system, then explain the authorised scope and cost. Avoid turning a planning-era statement into a hardware claim.',
+    'lock-change': {
+      first: 'Canley\'s modern boundaries and recorded medieval remains cannot reveal the lock on an individual building, so inspect the existing assembly and establish whether the authorised objective is repair, replacement or compliance with a written requirement.',
+      second: 'For a designated or managed place, verify the address, proposed scope and person who can approve it; if separate records show listed status, check consent where alteration may affect special interest. Match correctly sized and accredited options to the observed door set.',
     },
-    {
-      first: 'A reported multipoint problem needs evidence from the entrance itself. Establish the full address, door position, handle travel, key movement and any contact with the frame; an official profile of the surrounding area cannot identify the fitted mechanism or its failure mode.',
-      second: 'Check correct operation, including lifting the handle before turning the key where applicable, and review the lock with the frame, hinges and door. The responsible person should understand the proposed repair and anticipated charge in advance, with any changed diagnosis explained before additional work.',
+    'upvc-lock-repair': {
+      first: 'The railway, A45, university, industrial and woodland context does not show that a Canley entrance uses uPVC or multipoint locking, so collect the material, handle travel, key movement, open-and-closed behaviour and visible faceplate information.',
+      second: 'Keep those mechanical observations tied to the named address rather than the broad HLC boundary, then examine the door, frame and hinges together. Describe the compatible repair and expected charge only after the fitted mechanism is established; if the service-call price changes, obtain the Canley controller\'s agreement before the revised charge applies.',
     },
-  ],
-  'boarding-up': [
-    {
-      first: 'A damaged-opening instruction should identify the exact door or window, the responsible person and whether police have been asked to examine the scene. If an incident may be evidential, photograph damage and follow police directions before touching or rearranging possible evidence.',
-      second: 'Police guidance describes securing a damaged door or window from outside after evidence considerations have been addressed. The practical plan must still be agreed for the particular opening, ownership and site rules, with the scope and cost explained before work rather than inferred from area context.',
+    'boarding-up': {
+      first: 'A Canley report could refer to a residence, industrial unit, woodland edge or university-related site, making the exact opening and responsible controller essential. If the damage may form evidence, photograph it and follow any police instructions issued before disturbance.',
+      second: 'More Hall, Canley Moat and Fletchamstead are historic-area records, not construction evidence for the damaged opening. After relevant site permissions are confirmed, assess the actual scene, describe the outside temporary securing work and provide the expected price; if the service-call price changes, obtain the Canley site contact\'s agreement before the new amount applies.',
     },
-    {
-      first: 'Before temporary securing work, establish who controls the premises and which opening is unsafe. Ask whether the damage relates to a reported incident; possible evidence should be photographed and preserved in accordance with police instructions instead of being disturbed for convenience.',
-      second: 'Once any evidential constraint is cleared, the guidance is to make the damaged opening secure from the outside. Access, materials, boundary responsibility and approval remain specific to the address. Set out the proposed temporary scope and price, and distinguish it from any later permanent repair.',
+    'lock-upgrade': {
+      first: 'Neither Canley\'s boundary features nor its recorded medieval remains establish current hardware or security need, so document the individual entrance, full door assembly and written requirement supplied by its authorised owner or manager.',
+      second: 'For a university, industrial or heritage setting, verify who can approve the exact scope; if separate records identify a listed building, check consent for alteration that may affect its special interest. Compare correct cylinder dimensions and accredited products only with the inspected door set.',
     },
-    {
-      first: 'Record the precise damaged opening and the caller\'s authority before planning a board-up. Where police attendance or an investigation is relevant, preserve the scene, take photographs and obtain direction before moving items that may carry evidence.',
-      second: 'Temporary security can then be considered from the outside of the affected door or window, consistent with police advice. Confirm site ownership, safe access and the agreed limits of work at that address. Neither a neighbourhood feature nor a building-era statement determines the securing method.',
+  },
+  'radford': {
+    'emergency-lockout': {
+      first: 'The residential character, northern light-industrial land and old Radford Road route cannot identify the caller\'s building or rights, so verify the full Radford address, affected entrance and the requester\'s authority before considering access.',
+      second: 'Inspect the lock as part of the actual frame, hinges and door, then explain the proposed work and price; medieval-road history and character-area land use provide orientation only and cannot select an opening approach.',
     },
-    {
-      first: 'A board-up request needs a scene-specific sequence: verify the address and authorised contact, identify every damaged opening, and establish whether evidence must remain untouched. Police guidance supports photographing the damage and preserving potential forensic material before security work begins.',
-      second: 'After the relevant clearance, secure the opening from outside and agree what the temporary measure is intended to achieve. Explain the scope and anticipated cost in advance, while checking any landlord, council, school, business or heritage approval that applies to the actual premises.',
+    'lock-change': {
+      first: 'Radford\'s mixed land use and character-area designation totals do not identify installed hardware, so inspect the particular door set, confirm who controls it and record the repair or replacement outcome that has been authorised.',
+      second: 'Because the selected area evidence records listed and locally listed buildings, verify the exact address and scope; listed-building consent must be checked where alteration may affect special architectural or historic character. Any cylinder and accredited-product proposal must fit the measured entrance.',
     },
-    {
-      first: 'Do not treat the locality description as a survey of damage. Obtain the exact entrance or window, photographs where appropriate, the responsible party\'s authority and the status of any police report. Potential evidence should not be cleaned, moved or covered before police instructions are understood.',
-      second: 'The police source advises making a damaged opening secure from outside once evidence needs have been considered. Choose the temporary plan from the observed structure and permissions, state what is included and give cost information before proceeding; permanent reinstatement is a separate decision.',
+    'upvc-lock-repair': {
+      first: 'Residential, light-industrial and medieval-route descriptions cannot prove that a Radford door is uPVC or multipoint, so record its material, handle and key action, behaviour while open and closed, and any legible faceplate or locking-layout details.',
+      second: 'Use those address-specific observations to assess the complete door assembly rather than treating Radford Road history as a diagnosis. Describe the compatible repair and expected cost to the person who controls the entrance; if the service-call price changes, obtain that controller\'s agreement before the revised cost applies.',
     },
-    {
-      first: 'The first task is to separate immediate safety, authority and evidence questions. Confirm the full address, affected opening and authorised decision-maker. If the damage may form part of an investigation, photograph it and preserve possible evidence until police guidance permits securing work.',
-      second: 'When that boundary is clear, consider an outside-applied temporary security measure for the specific door or window. Agree access, scope and price with the responsible party, and verify any site-management or conservation constraint. Broad local history cannot determine the construction being secured.',
+    'boarding-up': {
+      first: 'A damaged opening in a predominantly residential area or northern industrial pocket still needs a precise Radford address and authorised contact. If the incident may be evidential, retain photographs and follow any police advice received before possible evidence is disturbed.',
+      second: 'The character-area count includes listed assets but does not identify the affected property. If the exact address is confirmed as a listed building and the temporary alteration may affect its special architectural or historic character, verify listed-building consent before temporary work begins. Describe the outside securing work from the inspected Radford opening and provide the expected price; if the service-call price changes, obtain the authorised contact\'s agreement before the revision applies.',
     },
-  ],
-  'lock-upgrade': [
-    {
-      first: 'An upgrade should answer a verified requirement at a particular entrance. Inspect the door, frame, hinges and existing lock together, and ask for any written insurer, landlord or site-management criterion. Do not translate an area\'s history, land use or perceived risk into a specification.',
-      second: 'Police guidance supports correctly sized cylinders and accredited security products as part of a complete-door review. Present options against the inspected assembly, confirm the authorised choice and price, and resolve any listed-building, conservation, communal-door or building-management approval before changing visible hardware.',
+    'lock-upgrade': {
+      first: 'Radford Road\'s medieval route and the wider designation totals can prompt address checks but cannot define a security upgrade, so inspect the individual door, frame, hinges and lock against the authorised customer\'s written objective.',
+      second: 'If the address is listed, verify consent where the alteration may affect special architectural or historic character; for locally listed status, check the address-and-scope requirements. The inspection still governs whether correctly sized cylinders and accredited products suit the assembly.',
     },
-    {
-      first: 'Start an upgrade discussion with the actual door set and the customer\'s documented objective. Area-scale heritage counts or development dates are not evidence of the fitted lock and do not establish what an insurer, freeholder or manager will accept.',
-      second: 'Review frame, hinges, lock and door as a system; where a cylinder is relevant, check that its dimensions suit the hardware and consider accredited products. Agree specification and cost in advance, while obtaining address-specific consent for visible or shared-door alterations where required.',
+  },
+  'coundon': {
+    'emergency-lockout': {
+      first: 'Coundon Green, Norman Place Road, agricultural edges and several development phases describe a broad landscape rather than a controlled door, so establish the exact address, entrance and caller authority before access work is discussed.',
+      second: 'Examine the lock with its current frame, hinges and door and explain both scope and price to the authorised requester; medieval assart history or an inter-war development label cannot indicate an opening method.',
     },
-    {
-      first: 'Avoid recommending hardware from the neighbourhood name alone. Identify the exact opening, its current components and the reason for improvement, then obtain any external requirement in writing. A source describing a conservation area or housing phase cannot select a lock for an individual address.',
-      second: 'The technical evidence points to a whole-door assessment, correctly sized cylinders and accredited products. Apply those checks to what is actually present, explain the proposed scope and price, and verify permissions before changes to listed fabric, managed premises, communal entrances or other controlled assets.',
+    'lock-change': {
+      first: 'The medieval-common context and inter-war or later development phases do not identify a lock at a Coundon address, so record the present door assembly and the owner, manager or insurer requirement behind the proposed change.',
+      second: 'Choose any repair or replacement only from that inspection, checking cylinder dimensions and accredited options where relevant. Describe the resulting Coundon specification and provide its expected price before altering the entrance; if the service-call price changes, obtain the responsible person\'s agreement before the revised figure applies.',
     },
-    {
-      first: 'A meaningful upgrade comparison depends on inspection rather than a generic area label. Document the door, frame, hinges and existing lock, clarify the authorised customer\'s goal, and separate a voluntary improvement from any written policy or management requirement.',
-      second: 'Consider accredited security products only in a specification that fits the observed assembly; correct cylinder size is one element, not the whole decision. Set out cost and scope before work, and check property-specific heritage, lease, fire or site rules wherever they could affect approval.',
+    'upvc-lock-repair': {
+      first: 'Agricultural boundaries and housing periods cannot establish that a Coundon door is uPVC or fitted with a multipoint strip, so capture the material, handle movement, key response, open-and-closed behaviour and visible component markings.',
+      second: 'Keep the observed symptoms separate from the area\'s medieval and inter-war history and assess the identified lock within its frame and hinges. After compatibility is checked, describe the Coundon repair and provide the expected cost; if the service-call price changes, obtain the authorised controller\'s agreement before the revised amount applies.',
     },
-    {
-      first: 'Treat local context as a prompt to verify, never as a shortcut to a security claim. The upgrade basis should be the individual entrance, the condition of its door set and a documented requirement supplied by the person entitled to authorise work.',
-      second: 'Police advice emphasises door, frame, hinges and lock together, plus properly sized cylinders and accredited products. Match options to that inspection, explain price before fitting and obtain any necessary conservation, listed-building, communal or institutional consent for the exact address and proposed alteration.',
+    'boarding-up': {
+      first: 'A report near Coundon Green or the agricultural edge requires the precise property, damaged door or window and controlling party. If an incident may be evidential, photograph the scene and leave potential evidence undisturbed while following any police guidance issued.',
+      second: 'The landscape record supplies no construction or ownership detail for the scene, so inspect only the actual opening. Use its condition to define the outside temporary measure, access arrangements and service extent, and give the verified controller the expected price; if the service-call price changes, obtain that controller\'s agreement before using the revised amount.',
     },
-    {
-      first: 'Define the requested outcome before selecting an upgrade: which entrance, what existing assembly and whose standard must be met. Neither broad property history nor proximity to a named site proves current hardware, risk or permission to alter it.',
-      second: 'Use the complete-door principles in police guidance, checking frame and hinges as well as lock and considering correct cylinder sizing and accredited products where applicable. The authorised decision-maker should approve the stated specification and cost after any heritage or management constraints are confirmed.',
+    'lock-upgrade': {
+      first: 'Coundon\'s medieval and inter-war development evidence cannot establish current hardware, so document the exact door, frame, hinges and lock together with the authorised customer\'s written upgrade objective before comparing products.',
+      second: 'Because development phases are not property-level status, check the address and scope separately; if records establish listed status, verify consent only for alteration that may affect special interest. Then match correctly sized, accredited options to the inspected assembly.',
     },
-  ],
-}
+  },
+  'holbrooks': {
+    'emergency-lockout': {
+      first: 'Holbrook Park\'s published address and the wider shops, factories and former-hostel history cannot identify the entrance in a lockout call, so establish whether the request concerns the park, a business or a residence and verify authority.',
+      second: 'Use inspection of that exact door, frame, hinges and lock to describe the access work and provide the anticipated cost. If the service-call price changes, obtain the Holbrooks requester\'s agreement before the new amount applies; neither the Holbrook Lane park setting nor the record of former Monks Park Cottages provides evidence for a present opening technique.',
+    },
+    'lock-change': {
+      first: 'The park setting and broad build-out chronology do not reveal the hardware at a Holbrooks address, so inspect the current assembly and document who controls it, why a change is wanted and any written requirement.',
+      second: 'For a park or factory-related entrance, verify which person can authorise the scope; check residential authority independently. After that, price a compatible repair or replacement using correct dimensions and accredited products where suitable.',
+    },
+    'upvc-lock-repair': {
+      first: 'Neither Holbrook Lane land use nor former Monks Park Cottages proves the material or mechanism at the reported door, so obtain a photograph, exact address, handle and key symptoms, door-position behaviour and visible locking details.',
+      second: 'Assess those observations on the complete entrance rather than against area history and identify its controller. Describe the repair supported by the Holbrooks mechanism and provide the expected price before selecting a compatible component; if the service-call price changes, obtain that controller\'s agreement before the new figure applies.',
+    },
+    'boarding-up': {
+      first: 'Damage by Holbrook Park, shops or factories must be assigned to a precise premises and authorised contact. If it may relate to an evidential incident, take photographs and follow any police directions received before material is moved or covered.',
+      second: 'The wider area\'s wartime build-out gives no scene-specific construction information. With the manager or owner\'s authority verified, use the observed condition to describe the outside temporary securing work and included openings, and provide the expected price; if the service-call price changes, obtain that controller\'s agreement before the revised price applies.',
+    },
+    'lock-upgrade': {
+      first: 'Open land, commercial surroundings and twentieth-century build-out are not a specification for a Holbrooks entrance, so inspect the door set and obtain the authorised owner or site manager\'s documented purpose before proposing an upgrade.',
+      second: 'Check the exact property, proposed scope and approval route; if it is a listed building, verify consent where alteration may affect special architectural or historic character. Then compare correctly sized cylinders and accredited products with the existing door, frame, hinges and protective furniture.',
+    },
+  },
+  'foleshill': {
+    'emergency-lockout': {
+      first: 'The railway line, mixed residential and industrial use and Coventry Canal help locate Foleshill but cannot prove control of an opening, so obtain the complete address, exact door and requester\'s authority before access is considered.',
+      second: 'Inspect the identified lock with its frame, hinges and door and explain the proposed work and charge; canal or industrial context must not be converted into assumptions about the building, hardware or entry method.',
+    },
+    'lock-change': {
+      first: 'Foleshill\'s mixed land use and canal-led industrial history cannot specify a present lock, so examine the individual entrance and record the authorised reason for repair or replacement together with any written requirement.',
+      second: 'Because much of the Coventry Canal Conservation Area lies within the wider area, check the exact property and proposed scope for any applicable management or designation requirements. Price correctly sized and accredited hardware only against the inspected door set and the authorised change objective.',
+    },
+    'upvc-lock-repair': {
+      first: 'A residential or industrial description beside the railway and canal does not prove uPVC, composite material or multipoint locking, so record the Foleshill door, handle travel, key response, open-and-closed behaviour and visible component markings.',
+      second: 'The repair assessment belongs to that exact lock, frame, hinges and door rather than the character area. Identify the authorised controller, describe the compatible Foleshill repair and provide the expected cost before choosing a part; if the service-call price changes, obtain the controller\'s agreement before the revised cost applies.',
+    },
+    'boarding-up': {
+      first: 'A Foleshill incident may concern housing, industrial premises or a canal-side asset, so identify the damaged opening and responsible party precisely. If evidence may be involved, retain photographs and follow any police instructions that have been given.',
+      second: 'The conservation-area record is broad, requiring an address-level controls check before visible temporary work. Use the actual Foleshill door or window, rather than the area description, to define the outside securing work and access and to provide the expected price; if the service-call price changes, obtain the authorised contact\'s agreement before the new price applies.',
+    },
+    'lock-upgrade': {
+      first: 'Railway, canal and mixed-use evidence cannot establish a common security need or installed lock across Foleshill, so document the exact entrance and obtain a written requirement from its authorised owner, occupier or manager.',
+      second: 'Check whether Coventry Canal Conservation Area requirements apply to the address and proposed scope; if separate records establish listed status, verify consent for alteration that may affect special interest. Then compare correct cylinder sizing and accredited products within the priced specification.',
+    },
+  },
+  'stoke': {
+    'emergency-lockout': {
+      first: 'Lower Stoke industry and housing, Upper Stoke housing and the River Sowe corridor are different contexts, so a lockout instruction must settle the exact Stoke address, controlled entrance and requester\'s authority rather than rely on the locality name.',
+      second: 'After that location check, inspect the lock with the door, frame and hinges and state the proposed work and cost; railway or river-valley evidence cannot determine access conditions or a method of entry.',
+    },
+    'lock-change': {
+      first: 'The railway, industrial land, housing periods and river boundary do not reveal the hardware on a Stoke entrance, so inspect its complete assembly and document the authorised purpose and any written standard for the proposed change.',
+      second: 'Keep Lower Stoke and Upper Stoke evidence separate when confirming the address, then size and specify any cylinder or accredited product against what is installed. Describe the supported repair or replacement and provide its expected price; if the service-call price changes, obtain the Stoke controller\'s agreement before the revised amount applies.',
+    },
+    'upvc-lock-repair': {
+      first: 'Neither light-industry nor mid-century housing context proves that a Stoke door is uPVC or multipoint, so ask for the material, handle movement, key response, behaviour with the door open and closed, and readable faceplate details.',
+      second: 'Assess those symptoms on the named entrance with its frame and hinges, not against Lower or Upper Stoke chronology, and explain the compatible repair and expected cost to the authorised controller before work proceeds.',
+    },
+    'boarding-up': {
+      first: 'A report beside the railway, industrial area, housing or River Sowe must identify the precise Stoke premises and damaged opening. If the damage may be evidential, photograph it and observe any police directions issued before temporary work begins.',
+      second: 'Neither the river corridor nor development period establishes construction at the scene, so obtain property or site authority and inspect the observed door or window. Define the outside securing work and service boundary from that inspection and provide the expected price; if the service-call price changes, obtain the Stoke contact\'s agreement before applying the new figure.',
+    },
+    'lock-upgrade': {
+      first: 'Stoke\'s separate industrial, housing and river-valley records cannot be turned into a local hardware requirement, so inspect the individual door set and obtain the authorised customer\'s written security objective.',
+      second: 'Resolve which Stoke context contains the address, then match correct cylinder dimensions and accredited products to the existing lock, frame and hinges and verify who can authorise the site-specific work. Provide the expected price for the measured option; if the service-call price changes, obtain that controller\'s agreement before the revised price applies.',
+    },
+  },
+  'wyken': {
+    'emergency-lockout': {
+      first: 'The River Sowe boundary, medieval church settlement and wider designation counts locate Wyken history but do not identify a caller or door, so verify the full address, exact opening and authority before any access decision.',
+      second: 'Inspect that entrance as a complete door set and explain the proposed work and charge before starting; scheduled monuments, listed-building totals and the river route cannot indicate the lock condition or entry method.',
+    },
+    'lock-change': {
+      first: 'Wyken\'s medieval settlement and area-scale heritage totals do not show which lock is fitted at a present address, so examine the door, frame, hinges and hardware and record the authorised reason for change.',
+      second: 'Because the source records listed buildings and scheduled monuments, verify the exact property and proposed scope; where alteration may affect a listed building\'s special interest, check consent before work. Propose correctly sized and accredited hardware only for the inspected assembly.',
+    },
+    'upvc-lock-repair': {
+      first: 'River-valley location, medieval settlement and designation counts cannot prove a Wyken door is uPVC or uses multipoint locking, so collect the material, handle travel, key movement, door-position behaviour and visible locking-layout details.',
+      second: 'Use those observations to assess the identified mechanism with its frame and hinges, keeping the church and River Sowe records within their locality purpose. Describe the supported repair and likely cost to the authorised Wyken controller; if the service-call price changes, obtain that person\'s agreement before the changed amount applies.',
+    },
+    'boarding-up': {
+      first: 'A damaged opening near the church, River Sowe or another Wyken location requires a precise address and responsible controller. If it may form part of an investigation, photograph the scene and preserve possible evidence while following any police guidance received.',
+      second: 'Area totals do not establish whether that building is protected, so check the exact status and whether temporary work may affect special interest; if it may, verify listed-building consent before temporary work begins. Let the observed Wyken opening define the outside securing work and expected price; if the service-call price changes, obtain the authorised controller\'s agreement before the revision applies.',
+    },
+    'lock-upgrade': {
+      first: 'Medieval origins, the river boundary and character-area designations cannot specify an upgrade for a Wyken entrance, so document the full door assembly and a written requirement from the person authorised to approve it.',
+      second: 'Verify whether the address is listed or otherwise controlled and assess the proposed scope; listed-building consent is relevant where alteration may affect special architectural or historic character. Then compare correct cylinder fit and accredited products with the inspected door set.',
+    },
+  },
+} satisfies Partial<Record<CoventryAreaSlug, Record<ServiceAreaSlug, PairEditorialCopy>>>
+
+const COVENTRY_EDITORIAL_COPY_C = {
+  'eastern-green': {
+    'emergency-lockout': {
+      first: 'Guphill Brook, Broad Lane, farmland, Allesley Park and the planned urban extension distinguish several Eastern Green references without identifying a caller or doorway, so confirm the full address, exact entrance and requester authority.',
+      second: 'Resolve whether the instruction concerns the existing neighbourhood or extension site before inspecting the lock, frame, hinges and door and explaining the proposed access work and price from the condition found.',
+    },
+    'lock-change': {
+      first: 'The 1950s and 1960s housing phases and residential-led extension do not reveal the lock fitted at an Eastern Green property, so inspect the present door set and document the authorised repair or replacement requirement.',
+      second: 'Keep the existing neighbourhood separate from the extension boundary when confirming site authority, then match correct cylinder dimensions and accredited products to the observed assembly. Describe the supported specification and provide its expected cost before fitting; if the service-call price changes, obtain the Eastern Green controller\'s agreement before the revised amount applies.',
+    },
+    'upvc-lock-repair': {
+      first: 'Housing phases, brook alignment and extension plans cannot prove that an Eastern Green door is uPVC or multipoint, so record the exact material, handle travel, key response, open-and-closed behaviour and visible locking-layout details.',
+      second: 'Use the complete address to distinguish established housing from the development site, then assess the identified lock with its frame and hinges and quote the compatible repair only after authority is confirmed.',
+    },
+    'boarding-up': {
+      first: 'A damaged opening near established housing, farmland or the urban-extension site needs a precise Eastern Green address and responsible controller. Where evidence may be present, photograph and preserve it while following any police instructions that have been issued.',
+      second: 'Brook and development boundaries establish no ownership or construction for the scene, so inspect the actual door or window. Use that Eastern Green scene to define the outside temporary securing work and service extent and give the relevant property or site contact the expected price; if the service-call price changes, obtain their agreement before the new amount applies.',
+    },
+    'lock-upgrade': {
+      first: 'Eastern Green\'s housing chronology and planned extension do not establish a shared security need or current hardware, so document the specific entrance and obtain a written objective from its authorised owner or site manager.',
+      second: 'Confirm whether the address is in the existing neighbourhood or development site and follow its actual approval route, then compare correctly sized cylinders and accredited products with the inspected frame, hinges, door and lock.',
+    },
+  },
+  'longford': {
+    'emergency-lockout': {
+      first: 'The JSNA boundary explicitly separates Longford from Bell Green, while Longford Park is a named managed destination, so the caller must give the complete property or park address, exact opening and evidence of authority.',
+      second: 'Use a park contact for its facilities or the occupier for a separate residence, then inspect the actual lock, door, frame and hinges and state the proposed access work and charge.',
+    },
+    'lock-change': {
+      first: 'MSOA geography, the area-park address and its river walk do not identify the hardware at a Longford entrance, so inspect the complete door set and establish the controller\'s authorised reason or written requirement for change.',
+      second: 'Do not transfer park management authority or the Bell Green exclusion to another property; once the correct controller is known, price a compatible repair or replacement using correct dimensions and accredited products where suitable.',
+    },
+    'upvc-lock-repair': {
+      first: 'A statistical boundary, park route and ecological setting cannot prove that a Longford door is uPVC or fitted with multipoint locking, so collect its material, handle and key movement, position-dependent behaviour and faceplate details.',
+      second: 'First separate a park facility from a street property and Bell Green from Longford, then assess the named lock with its frame and hinges. Describe the compatible repair and expected cost from that mechanism; if the service-call price changes, obtain the identified controller\'s agreement before the revised cost applies.',
+    },
+    'boarding-up': {
+      first: 'For damage at Longford Park, verify who can authorise work for that asset; another Longford property needs its own controller. In each case identify the opening and, if evidence may be involved, follow any police direction received before disturbing it.',
+      second: 'A river walk, footpaths and ecological areas provide no construction evidence for a damaged facility, so inspect the scene. Let the actual Longford opening define the outside temporary securing work and access arrangements, and provide the expected charge; if the service-call price changes, obtain the authorised party\'s agreement before applying the revision.',
+    },
+    'lock-upgrade': {
+      first: 'The Longford MSOA, park status and river route cannot define a security upgrade, so document the exact entrance, complete door assembly and written objective from the person identified as able to approve that work.',
+      second: 'Keep public-park governance separate from residential authority, then compare correct cylinder fit and accredited hardware with the existing lock, frame, hinges and door. Describe the resulting option and provide its expected price; if the service-call price changes, obtain the relevant Longford controller\'s agreement before the new figure applies.',
+    },
+  },
+  'bell-green': {
+    'emergency-lockout': {
+      first: 'Bell Green is separate from the WEHM statistical area, while the library is a named community-hub destination, so verify the complete address, exact doorway and requester authority rather than relying on the neighbourhood label.',
+      second: 'A community-hub call needs its authorised site contact and a residence needs its occupier check; inspect the actual lock, frame, hinges and door and explain the proposed work and charge.',
+    },
+    'lock-change': {
+      first: 'Medieval-settlement evidence, Bell Green Road history and the library address do not identify a current lock, so inspect the individual entrance and establish its present use, controller and authorised reason for change.',
+      second: 'Separate Park Edge Community Hub authority from any nearby residential instruction, then match correctly dimensioned and accredited hardware to the observed door set. Describe the supported repair or replacement and provide its expected price before work; if the service-call price changes, obtain the correct Bell Green controller\'s agreement before the revision applies.',
+    },
+    'upvc-lock-repair': {
+      first: 'The MSOA distinction, historic road record and library location cannot prove that a Bell Green door is uPVC or multipoint, so record the material, handle travel, key action, door-position behaviour and visible faceplate information.',
+      second: 'Confirm whether the opening belongs to the community hub or another address, then assess the identified mechanism with its frame and hinges. Describe only the compatible repair supported at that Bell Green entrance and provide its expected price; if the service-call price changes, obtain the correct controller\'s agreement before the revision applies.',
+    },
+    'boarding-up': {
+      first: 'For damage at the library or community hub, verify who can authorise work for that site; a separate Bell Green property needs its own controller. If evidence may be involved, photograph it and follow any police directions issued.',
+      second: 'The medieval Bell Green Road record and the library directory establish neither ownership nor construction at the scene, so inspect the actual door or window. Describe the outside temporary measure and included work from that Bell Green inspection and provide the expected price; if the service-call price changes, obtain the proper decision-maker\'s agreement before the changed amount applies.',
+    },
+    'lock-upgrade': {
+      first: 'Statistical geography, possible medieval settlement and a named library provide no common hardware standard for Bell Green, so document the exact entrance and obtain a written objective from its authorised owner or facilities manager.',
+      second: 'Use the community-hub approval route only for that site and verify another property separately, then compare correct cylinder sizing and accredited products with the inspected lock, frame, hinges and door.',
+    },
+  },
+  'courthouse-green': {
+    'emergency-lockout': {
+      first: 'The former works, later shopping-centre use, school address and admissions streets can point to distinct Courthouse Green destinations, so identify the actual building, exact entrance and caller authority before considering access.',
+      second: 'A school, retail site and residence each require their own responsible contact; inspect the named door, frame, hinges and lock and explain the proposed access work and price rather than using catchment geography.',
+    },
+    'lock-change': {
+      first: 'Industrial history and the named school do not reveal hardware at a current Courthouse Green entrance, so verify present use, inspect the complete door assembly and record the authorised repair or replacement objective.',
+      second: 'Use the school or retail facilities route only for the relevant site and keep catchment streets separate, then price correctly sized and accredited hardware that fits the observed door set.',
+    },
+    'upvc-lock-repair': {
+      first: 'A former motor works, shopping centre, school and admissions catchment provide no evidence that the reported door is uPVC or multipoint, so capture its material, handle movement, key response, position symptoms and locking-layout markings.',
+      second: 'Resolve which Courthouse Green premises and controlled opening are involved, then assess the lock with its frame and hinges. Describe the compatible repair and expected charge to the properly authorised contact; if the service-call price changes, obtain that contact\'s agreement before the revised charge applies.',
+    },
+    'boarding-up': {
+      first: 'Damage at the school, shopping centre or another Courthouse Green property needs its precise opening and responsible controller. If an incident may be evidential, retain photographs and follow any police instructions received before items are moved or covered.',
+      second: 'The catchment is admissions geography and the works record is historical, so neither supplies site permission or construction detail. Inspect the actual Courthouse Green scene to define the outside temporary work and provide its expected price; if the service-call price changes, obtain the premises controller\'s agreement before the new price applies.',
+    },
+    'lock-upgrade': {
+      first: 'Neither the 1930s works history nor the school catchment establishes a security specification, so document the present Courthouse Green entrance and obtain a written requirement from its authorised owner, retailer or school manager.',
+      second: 'Follow the approval route for the particular premises rather than a historic or admissions boundary, then compare correct cylinder dimensions and accredited products with the inspected door, frame, hinges and existing lock.',
+    },
+  },
+  'aldermans-green': {
+    'emergency-lockout': {
+      first: 'The River Sowe boundary, mixed western land and historic road record describe Aldermans Green broadly but cannot identify the caller or door, so obtain the full address, exact opening and evidence of authority.',
+      second: 'Inspect that entrance as a complete door set and explain the proposed work and charge; the early road name and river-valley route cannot establish present occupancy, hardware condition or entry method.',
+    },
+    'lock-change': {
+      first: 'Residential and industrial context, road history and designation totals do not identify a lock at an Aldermans Green address, so examine the current assembly and document its authorised repair or replacement purpose.',
+      second: 'Because the totals are character-area evidence rather than property records, verify any exact controls through the responsible party, then match correctly sized cylinders and accredited products to the observed door set. Provide the expected price for that measured Aldermans Green option; if the service-call price changes, obtain the responsible party\'s agreement before the revised figure applies.',
+    },
+    'upvc-lock-repair': {
+      first: 'River, land-use and road-history evidence cannot prove that an Aldermans Green entrance uses uPVC or multipoint locking, so record the material, handle and key action, open-and-closed behaviour and visible faceplate details.',
+      second: 'Keep the North Sowe route separate from the mechanical assessment and examine the identified lock with its frame and hinges. Describe the compatible repair and expected cost from that evidence; if the service-call price changes, obtain the Aldermans Green controller\'s agreement before the changed cost applies.',
+    },
+    'boarding-up': {
+      first: 'A damaged opening near the river, residential land or industrial premises needs an exact Aldermans Green address and authorised controller. If the event may be evidential, preserve photographs and follow any police directions given before possible evidence is disturbed.',
+      second: 'As the area report counts listed buildings without identifying the scene, verify the property status and whether temporary work may affect special interest; if it may, check listed-building consent before work begins. Describe the outside securing work from the inspected opening and provide the expected price; if the service-call price changes, obtain the Aldermans Green controller\'s agreement before the revision applies.',
+    },
+    'lock-upgrade': {
+      first: 'Historic road evidence, the river corridor and area-wide designation counts do not support a single Aldermans Green upgrade, so inspect the individual door set and obtain the authorised customer\'s written requirement.',
+      second: 'Confirm property-specific management or heritage controls rather than assigning status from the totals, then compare correct cylinder fit and accredited hardware with the actual frame, hinges, door and lock. Provide the expected price for the supported option; if the service-call price changes, obtain the authorised controller\'s agreement before the new amount applies.',
+    },
+  },
+  'potters-green': {
+    'emergency-lockout': {
+      first: 'Woodway Lane settlement history and the named school catchment cannot identify a caller\'s entrance, so distinguish Potters Green school from nearby properties and verify the complete address, exact opening and requester authority before access is considered.',
+      second: 'Use the school\'s responsible contact for that site or the occupier for another property, then inspect the lock, frame, hinges and door and state the proposed access work and charge.',
+    },
+    'lock-change': {
+      first: 'Cottage history and the school record do not disclose present hardware at a Potters Green entrance, so inspect the complete door set, confirm current property use and record the authorised reason for repair or replacement.',
+      second: 'A catchment street does not transfer school authority to a private address; once the correct controller is known, price correctly sized and accredited hardware that fits the observed assembly.',
+    },
+    'upvc-lock-repair': {
+      first: 'Possible medieval pottery activity, survey-era cottages and a school catchment cannot prove a Potters Green door is uPVC or multipoint, so collect its material, handle travel, key response, position symptoms and faceplate information.',
+      second: 'First establish whether the opening belongs to the school or another Woodway Lane-area address, then assess the identified lock with its frame and hinges. Describe the compatible repair and expected cost to the correct Potters Green contact; if the service-call price changes, obtain that contact\'s agreement before the revised amount applies.',
+    },
+    'boarding-up': {
+      first: 'For damage at the school, verify the person who can authorise that site; a cottage or other Potters Green property needs separate authority. Identify the exact opening and, if evidence may be involved, follow any police directions received.',
+      second: 'The 1778 survey and catchment list provide no present construction or ownership evidence, so inspect the actual scene. Define the outside temporary securing work and access arrangements from the Potters Green opening and provide the expected price; if the service-call price changes, obtain the authorised site or property contact\'s agreement before applying the new figure.',
+    },
+    'lock-upgrade': {
+      first: 'Settlement history, old survey evidence and the school catchment do not define an upgrade for Potters Green, so document the exact entrance, existing door assembly and authorised written objective.',
+      second: 'Follow school facilities approval only for that named site and verify every other property independently, then compare correct cylinder dimensions and accredited products with the inspected lock, frame, hinges and door.',
+    },
+  },
+  'henley-green': {
+    'emergency-lockout': {
+      first: 'The WEHM statistical grouping and the named school and community centre describe different Henley Green references, so obtain the full address, exact doorway and requester authority rather than treating either area label or site name as an access instruction.',
+      second: 'A school or community-centre call requires its responsible site contact and a residence requires its occupier check; inspect the actual door set and explain the proposed work and charge.',
+    },
+    'lock-change': {
+      first: 'Statistical geography, housing chronology and the school address do not identify a fitted lock, so inspect the present Henley Green entrance, verify its use and record the authorised repair or replacement requirement.',
+      second: 'Keep facilities authority for the Wyken Croft site separate from residential authority, then match correctly sized cylinders and accredited products to the observed frame, hinges, door and lock. Provide the expected price for the supported change; if the service-call price changes, obtain the correct Henley Green controller\'s agreement before the revision applies.',
+    },
+    'upvc-lock-repair': {
+      first: 'A 1967 housing statement, river route and school location cannot prove that a Henley Green door is uPVC or multipoint, so record the material, handle movement, key action, position-dependent behaviour and visible locking details.',
+      second: 'Resolve whether the call concerns the school, community centre or another property, then assess the named mechanism with its frame and hinges and quote the compatible repair to its authorised controller.',
+    },
+    'boarding-up': {
+      first: 'For damage at the Wyken Croft school and community centre, verify who can authorise that site; housing or a riverside asset needs separate authority. If evidence may be involved, retain photographs and follow any police guidance issued.',
+      second: 'The WEHM boundary and housing date establish no construction for the affected opening, so inspect the actual door or window. Describe the outside temporary measure and included service from that Henley Green scene and provide the expected price; if the service-call price changes, obtain the responsible contact\'s agreement before the changed amount applies.',
+    },
+    'lock-upgrade': {
+      first: 'The combined MSOA, housing date and river corridor cannot establish one upgrade requirement across Henley Green, so document the exact entrance and obtain a written objective from its authorised owner or facilities manager.',
+      second: 'Check the exact property, proposed scope and person who can authorise it; if records establish listed status, verify consent where alteration may affect special interest. Then compare correctly sized cylinders and accredited products with the inspected door set and provide the expected cost; if the service-call price changes, obtain that Henley Green controller\'s agreement before the revised cost applies.',
+    },
+  },
+  'wood-end': {
+    'emergency-lockout': {
+      first: 'The WEHM statistical area, 1967 housing record, river corridor and Brookstray route cannot identify a caller or controlled door, so verify the full Wood End address, exact opening and requester authority.',
+      second: 'Distinguish a Brookstray or other managed-land instruction from a residence, then inspect the actual lock, frame, hinges and door and explain the proposed access work and price.',
+    },
+    'lock-change': {
+      first: 'Post-war housing and green-space context, the river route and Brookstray path do not reveal installed hardware, so inspect the individual Wood End entrance and document the controller\'s authorised reason for change.',
+      second: 'Obtain the managed-site contact for Brookstray work or separate residential authority, then price correctly dimensioned and accredited hardware that fits the observed door, frame, hinges and existing lock at that identified opening.',
+    },
+    'upvc-lock-repair': {
+      first: 'The 1967 housing record, River Sowe corridor and 900-metre marked route cannot prove that a Wood End door is uPVC or multipoint, so capture its material, handle and key movement, position symptoms and faceplate details.',
+      second: 'First separate a property entrance from Brookstray infrastructure, then assess the identified mechanism with its frame and hinges. Describe the compatible repair and expected cost to the responsible controller; if the service-call price changes, obtain that Wood End controller\'s agreement before the new cost applies.',
+    },
+    'boarding-up': {
+      first: 'Damage beside Brookstray or the river route requires verification of the relevant land controller, while a Wood End property needs its own authority check. Identify the precise opening and, if evidence may be involved, follow any police instructions received.',
+      second: 'Housing chronology and path length provide no scene-specific construction information, so inspect the actual door or window. Use that Wood End scene to define the outside temporary securing work, access and included work and provide the expected price; if the service-call price changes, obtain the responsible party\'s agreement before the revised amount applies.',
+    },
+    'lock-upgrade': {
+      first: 'The WEHM boundary, post-war housing and Brookstray route do not provide a hardware specification, so inspect the exact Wood End entrance and obtain the authorised owner or manager\'s written upgrade objective.',
+      second: 'Check property records and the proposed scope for managed-site controls; if they identify a listed building, verify consent where alteration may affect special architectural or historic character. Then compare correct cylinder fit and accredited products with the existing door set.',
+    },
+  },
+  'sowe': {
+    'emergency-lockout': {
+      first: 'The River Sowe corridor names several neighbourhoods and Sowe Common is a distinct managed place, so a lockout instruction must identify the real street property or public asset, exact opening and authorised requester.',
+      second: 'The northern river-corridor localities and Sowe Common record help resolve which place is meant but provide no access rights; once the location is established, inspect the actual door, frame, hinges and lock and explain the proposed work and charge.',
+    },
+    'lock-change': {
+      first: 'Northern and southern river-character areas, Main River status and Sowe Common do not reveal a lock at any property, so establish the precise address, current use and authorised repair or replacement objective.',
+      second: 'For a public asset, verify who can authorise the proposed scope; for a street address, check its property controller separately. Then match correctly sized and accredited hardware to the inspected door set, describe the supported specification and provide the expected price; if the service-call price changes, obtain the relevant Sowe controller\'s agreement before the new amount applies.',
+    },
+    'upvc-lock-repair': {
+      first: 'River-corridor, flood-management and Common records cannot prove that a Sowe entrance is uPVC or fitted with multipoint locking, so record the material, handle travel, key action, frame interaction and visible component geometry.',
+      second: 'Resolve which named locality, street property or Sowe Common asset is involved before assessing the lock with its frame and hinges. Describe the compatible repair and expected cost to its controller; if the service-call price changes, obtain that controller\'s agreement before the revised Sowe service-call amount applies.',
+    },
+    'boarding-up': {
+      first: 'A damaged opening described only as Sowe could be at a street property, riverside asset or Sowe Common, so identify the precise scene and responsible party. If evidence may be involved, preserve it while following any police direction issued.',
+      second: 'Main River and drainage records grant no fixing authority or construction evidence, making site permission and inspection essential. Let the identified Sowe opening define the outside temporary securing work and included work, and provide the expected price; if the service-call price changes, obtain the site controller\'s agreement before applying the revision.',
+    },
+    'lock-upgrade': {
+      first: 'River-route, flood-management and Common evidence cannot define a security upgrade for Sowe, so document the exact entrance, complete door assembly and written objective from the authorised property or asset controller.',
+      second: 'Check the exact records, proposed scope and person who can approve work on managed land; if the property is a listed building, verify consent where alteration may affect special interest. Then compare correctly sized cylinders and accredited products with the inspected assembly.',
+    },
+  },
+  'little-heath': {
+    'emergency-lockout': {
+      first: 'The Little Heath MSOA, historic common, former industrial land and Spring Road school can denote different places, so identify the actual building, gate or door and verify the school contact or occupier authority.',
+      second: 'A catchment street confers no access right to the school or another property; inspect the named opening as a complete door set and explain the proposed work and charge.',
+    },
+    'lock-change': {
+      first: 'Roadside-settlement and former-industry history do not identify current hardware, while the school is a distinct managed site, so inspect the Little Heath entrance and document its authorised repair or replacement requirement.',
+      second: 'Check exact records and the proposed scope for premises controls; if they identify a listed building, verify consent where alteration may affect special interest. Match correctly sized cylinders and accredited products to the observed Little Heath assembly, describe the supported specification and provide its expected price; if the service-call price changes, obtain the premises controller\'s agreement before the new amount applies.',
+    },
+    'upvc-lock-repair': {
+      first: 'An MSOA, ribbon-weaving history, former industrial sites and a school catchment cannot prove a Little Heath door is uPVC or multipoint, so record its material, handle travel, key response, position behaviour and faceplate details.',
+      second: 'Resolve whether the call concerns the Spring Road school or another property, verify any former industrial site\'s present use, and assess the identified lock with its frame and hinges before quoting a compatible repair.',
+    },
+    'boarding-up': {
+      first: 'For damage at Little Heath school, verify who can authorise that site; a residence or managed former-industrial site needs separate authority. Identify the exact opening and, if evidence may be involved, follow any police instructions received.',
+      second: 'The historic common and catchment establish neither current ownership nor construction, so inspect the actual door or window. Define the outside temporary securing work and service boundary from that Little Heath scene and provide the expected charge; if the service-call price changes, obtain the responsible contact\'s agreement before the changed charge applies.',
+    },
+    'lock-upgrade': {
+      first: 'The MSOA, historic landscape and school catchment do not provide an upgrade specification, so document the individual Little Heath entrance and obtain a written requirement from its authorised owner or site manager.',
+      second: 'For Little Heath, verify the property rather than relying on the school catchment; if exact records identify a listed building, check consent where alteration may affect special architectural or historic character. Then compare correct cylinder dimensions and accredited products with the inspected door set and provide the expected price; if the service-call price changes, obtain the authorised controller\'s agreement before the revision applies.',
+    },
+  },
+} satisfies Partial<Record<CoventryAreaSlug, Record<ServiceAreaSlug, PairEditorialCopy>>>
+
+const COVENTRY_EDITORIAL_COPY_B = {
+  'walsgrave': {
+    'emergency-lockout': {
+      first: 'Medieval Walsgrave, surviving buildings, the redeveloped hospital site and the North Sowe corridor can all describe different destinations, so confirm the complete address, controlled entrance and caller authority before access is considered.',
+      second: 'A hospital or other managed-site request needs its authorised contact, while a residence needs its own occupier check; inspect the actual lock, frame, hinges and door and explain the proposed work and charge.',
+    },
+    'lock-change': {
+      first: 'Hall Lane and Hinckley Road buildings and the redeveloped hospital site do not share a proven lock type, so identify the current entrance, inspect its complete assembly and document the controller\'s reason for repair or replacement.',
+      second: 'Obtain the facilities route for hospital work or separate authority for another property, then match correct dimensions and accredited products to the observed door set. Describe the supported specification and provide its expected price before fitting; if the service-call price changes, obtain the Walsgrave controller\'s agreement before the revised amount applies.',
+    },
+    'upvc-lock-repair': {
+      first: 'The medieval village, historic roads, hospital redevelopment and river corridor provide no evidence that a Walsgrave door is uPVC or multipoint, so record the material, handle travel, key response, door position and faceplate information.',
+      second: 'Resolve whether the call concerns the hospital, a historic-road property or another address, then assess the identified lock with its frame and hinges and quote only the repair compatible with that assembly.',
+    },
+    'boarding-up': {
+      first: 'Damage at the hospital, a Hall Lane or Hinckley Road building, or a riverside asset requires a distinct Walsgrave address and authorised contact. If the incident may be evidential, retain photographs and follow any police directions issued before disturbance.',
+      second: 'Hospital redevelopment and the North Sowe route do not disclose the damaged construction, so inspect the real door or window. Define the outside temporary securing work and access arrangements from that Walsgrave scene and provide the expected price; if the service-call price changes, obtain its controller\'s agreement before applying the new figure.',
+    },
+    'lock-upgrade': {
+      first: 'Walsgrave\'s medieval origins, surviving buildings, hospital redevelopment and river corridor cannot establish one security requirement, so document the specific entrance and obtain the authorised owner or manager\'s written objective.',
+      second: 'Use the hospital facilities route where relevant; elsewhere confirm the property controller, then compare correctly sized cylinders and accredited products with the existing door, frame, hinges and lock. Provide the expected price for the measured option; if the service-call price changes, obtain the relevant Walsgrave controller\'s agreement before the revision applies.',
+    },
+  },
+  'binley': {
+    'emergency-lockout': {
+      first: 'The A46 fringe, business park, former colliery landscape, ward label and River Sowe corridor can point to very different Binley sites, so obtain the full address, exact entrance and requester\'s authority before discussing entry.',
+      second: 'Inspect the lock within the particular door, frame and hinges, describe the access work supported by its condition and provide the expected price. If the service-call price changes, obtain the Binley requester\'s agreement before the changed amount applies; industrial, commercial or river-valley context cannot establish access rights or a suitable opening method.',
+    },
+    'lock-change': {
+      first: 'Binley\'s business, industrial, open-land and former-colliery descriptions do not identify the hardware at one entrance, so inspect the complete door set and record the authorised customer\'s repair or replacement requirement.',
+      second: 'If exact property records show listed status, verify consent only where alteration may affect special architectural or historic character; check managed-site requirements for the proposed scope separately. Match any correctly sized cylinder or accredited product to the inspected assembly and quote.',
+    },
+    'upvc-lock-repair': {
+      first: 'Neither the A46 boundary, business park, colliery history nor combined ward proves that a Binley door uses uPVC or multipoint locking, so capture its material, handle and key movement, open-and-closed behaviour and locking-layout markings.',
+      second: 'Resolve the individual premises and its controller rather than relying on the ward or river route, then assess the identified lock with its frame and hinges. Describe the compatible repair and expected charge; if the service-call price changes, obtain that Binley controller\'s agreement before the revised charge applies.',
+    },
+    'boarding-up': {
+      first: 'A damaged opening at Binley Business Park, the former colliery landscape or near the River Sowe needs a precise premises and responsible party. If incident evidence may be present, photograph it and follow any police direction received before disturbance.',
+      second: 'The ward and land-use records establish no construction or ownership at the scene, so inspect the actual door or window. Let that Binley opening define the outside temporary securing work, access and included work and provide the expected price; if the service-call price changes, obtain the responsible party\'s agreement before the new price applies.',
+    },
+    'lock-upgrade': {
+      first: 'Industrial, commercial and open-land context plus a combined ward label cannot define hardware for a Binley property, so document the exact entrance, complete door assembly and authorised written objective before comparing upgrades.',
+      second: 'For an industrial or commercial entrance on Coventry\'s south-east fringe, verify who can approve the proposed scope; check a riverside asset or other address independently. In every case, fit cylinder dimensions and accredited options to the inspected door set and price.',
+    },
+  },
+  'binley-woods': {
+    'emergency-lockout': {
+      first: 'The Binley Woods parish boundary and named Grade II barn do not identify the caller\'s building, so verify the complete address, exact doorway and authority without assuming the request concerns Old Lodge Farm.',
+      second: 'Once the parish location and any connection to the individually recorded barn are settled, inspect the actual lock with its frame, hinges and door and state the proposed work and cost; neither selected fact provides an opening technique.',
+    },
+    'lock-change': {
+      first: 'Twentieth-century development phases cannot reveal a fitted lock, while the individually listed barn is a separate property record, so inspect the requested Binley Woods entrance and establish its authorised repair or replacement purpose.',
+      second: 'If the call concerns Old Lodge Farm barn, verify listed-building consent where the proposed alteration may affect its special architectural or historic character; for every address, match correct cylinder dimensions and accredited hardware to the inspected door set and priced scope.',
+    },
+    'upvc-lock-repair': {
+      first: 'Parish history, woodland origins, development phases and the listed barn cannot establish a uPVC or multipoint door, so record the exact Binley Woods entrance, material, handle travel, key action and visible component geometry.',
+      second: 'Keep Old Lodge Farm and the wider village evidence distinct while assessing the identified lock, frame and hinges, then set out the compatible repair and charge to the person authorised for that specific property.',
+    },
+    'boarding-up': {
+      first: 'Damage reported only in Binley Woods must be tied to a door or window and responsible controller; the parish boundary cannot locate the scene. If evidence may be involved, take photographs and follow any police guidance issued before it is moved.',
+      second: 'For the Grade II barn, determine whether temporary work may affect its special architectural or historic character and, if so, verify listed-building consent; elsewhere check property controls separately. Describe the outside securing work from the inspected Binley Woods opening and provide the expected price; if the service-call price changes, obtain the controller\'s agreement before the revision applies.',
+    },
+    'lock-upgrade': {
+      first: 'Former woodland and twentieth-century growth do not justify an area-wide upgrade, so inspect the particular Binley Woods door set and obtain a written requirement from its authorised owner or manager.',
+      second: 'Where the address is the Grade II barn, verify listed-building consent if the hardware alteration may affect its special architectural or historic character; any correctly sized cylinder or accredited product must still suit the existing frame, hinges and lock. Describe the supported specification and provide the expected price; if the service-call price changes, obtain the property controller\'s agreement before the revised amount applies.',
+    },
+  },
+  'willenhall': {
+    'emergency-lockout': {
+      first: 'The railway, River Sowe, A46 and Radburn estates can separate parts of Willenhall but do not identify who controls a doorway, so confirm the complete address, exact opening and caller authority before access work.',
+      second: 'Use inspection of that door, frame, hinges and lock to define and price the work; separated pedestrian and vehicle routes or a neighbourhood-plan boundary do not determine an entry technique.',
+    },
+    'lock-change': {
+      first: 'Radburn planning and neighbourhood designation describe layouts and governance, not the lock installed at a Willenhall property, so inspect the present door set and record the authorised reason and written requirement for change.',
+      second: 'Check exact property records and the proposed scope for managed-premises requirements; if listed status is established, verify consent where alteration may affect special interest. Specify correctly sized and accredited hardware against the observed assembly and provide the expected price; if the service-call price changes, obtain the Willenhall controller\'s agreement before the new amount applies.',
+    },
+    'upvc-lock-repair': {
+      first: 'A 1960 estate date and transport or river boundaries cannot prove uPVC construction or multipoint locking at a Willenhall address, so record the door material, handle travel, key movement, position-dependent symptoms and faceplate markings.',
+      second: 'The Radburn route layout should inform location clarification only; assess the named entrance with its frame and hinges and describe the compatible repair and expected charge to its authorised controller. If the service-call price changes, obtain that controller\'s agreement before the revised Willenhall charge applies.',
+    },
+    'boarding-up': {
+      first: 'A Willenhall report near one of the Radburn estates or its separated pedestrian routes still needs a precise premises, damaged opening and responsible contact. If evidence may be involved, photograph it and follow any police directions that have been issued.',
+      second: 'Neighbourhood-plan and estate records grant no permission for temporary work, so verify the person who can authorise the actual premises and price an outside securing measure based solely on the observed door or window.',
+    },
+    'lock-upgrade': {
+      first: 'Radburn planning, 1960 completion dates and the neighbourhood boundary cannot specify security hardware, so document the exact Willenhall entrance, its complete door assembly and the authorised customer\'s written objective.',
+      second: 'Confirm the relevant property or site controller rather than treating the plan applicant as authority, then compare correct cylinder fit and accredited products against the inspected lock, frame and hinges. Provide the expected cost for the supported option; if the service-call price changes, obtain that Willenhall controller\'s agreement before the new cost applies.',
+    },
+  },
+  'cheylesmore': {
+    'emergency-lockout': {
+      first: 'The 1936–1955 housing period and the former deer park cannot identify an occupier or doorway, so verify the full Cheylesmore address, affected entrance and caller authority before considering access or treating either area-scale fact as property evidence.',
+      second: 'Inspect the actual door, frame, hinges and lock and explain the proposed work and charge before starting; housing chronology and medieval park boundaries do not evidence a particular entry method.',
+    },
+    'lock-change': {
+      first: 'Cheylesmore\'s development period and area-wide heritage totals do not reveal the hardware at a specific property, so examine the complete entrance and establish the authorised repair or replacement objective.',
+      second: 'Because the selected evidence records listed buildings and other designations, check the exact address and proposed scope; where alteration may affect a listed building\'s special interest, verify consent. Then price correctly sized and accredited hardware for the inspected door set.',
+    },
+    'upvc-lock-repair': {
+      first: 'Housing age, deer-park history and designation counts do not prove a Cheylesmore door is uPVC or multipoint, so capture the material, handle and key movement, open-and-closed behaviour and any readable faceplate information.',
+      second: 'Keep those mechanical observations tied to the named entrance, not the broad character area, then assess the lock with its frame and hinges. Describe the compatible repair and expected charge to its controller; if the service-call price changes, obtain that Cheylesmore controller\'s agreement before the revised charge applies.',
+    },
+    'boarding-up': {
+      first: 'A damaged Cheylesmore opening requires its precise address and authorised contact despite the broad housing chronology and area-wide designation totals. If the incident may be evidential, photograph it and follow any police instructions received before disturbance.',
+      second: 'Character-area designation totals do not establish status, ownership or construction for the scene, so check the actual property controls and inspect the observed opening. Define the outside temporary work and service boundary from that Cheylesmore scene and provide the expected price; if the service-call price changes, obtain the authorised contact\'s agreement before applying the revision.',
+    },
+    'lock-upgrade': {
+      first: 'Rapid housing development and character-area designation totals cannot support one upgrade specification for Cheylesmore, so inspect the exact door, frame, hinges and lock and obtain the authorised customer\'s written requirement without assigning property status from area counts.',
+      second: 'Verify whether the address is listed or otherwise protected and check the proposed scope; listed-building consent applies where alteration may affect special architectural or historic character. Then compare correctly dimensioned cylinders and accredited products against the existing assembly.',
+    },
+  },
+  'whitley': {
+    'emergency-lockout': {
+      first: 'Industry, settlement history, twentieth-century development and the River Sowe Valley describe Whitley broadly but do not identify control of an entrance, so obtain the complete address, exact door and caller authority.',
+      second: 'Assess the lock with the present frame, hinges and door and state the planned work and charge; a medieval settlement, country-house history or river route cannot indicate how a current opening should be approached.',
+    },
+    'lock-change': {
+      first: 'Whitley\'s industrial edges, historic settlement and 1925–1955 development period cannot reveal an installed lock, so inspect the individual door set and record the authorised reason or written requirement for change.',
+      second: 'Check address-level records and scope-specific conservation or management requirements; if listed status is established, verify consent where alteration may affect special interest. Then match correct cylinder sizing and accredited products to the observed assembly and quoted specification.',
+    },
+    'upvc-lock-repair': {
+      first: 'The settlement chronology and surrounding industrial and river-valley context do not prove uPVC material or multipoint locking, so record the Whitley entrance, handle travel, key action, door-position symptoms and visible locking details.',
+      second: 'Use the precise address to separate a property from nearby industrial or riverside land, then assess its lock, frame and hinges together. Describe the compatible repair and expected cost from that Whitley mechanism; if the service-call price changes, obtain the controller\'s agreement before the revised cost applies.',
+    },
+    'boarding-up': {
+      first: 'Damage at a Whitley residence or industrial premises needs its own authorised controller and exact door or window. If anything may be evidence, retain photographs and follow any police guidance issued before it is disturbed.',
+      second: 'Medieval, country-house and river-valley history does not establish present construction at the scene, so inspect the affected opening. Use its condition to define the outside temporary securing work and access and give the responsible Whitley party the expected price; if the service-call price changes, obtain that party\'s agreement before the new amount applies.',
+    },
+    'lock-upgrade': {
+      first: 'Whitley\'s historic and modern development periods plus the River Sowe route cannot define a security specification, so document the complete entrance and obtain the authorised owner or manager\'s written objective.',
+      second: 'Verify the exact property and proposed scope; if it is a listed building, check consent where alteration may affect special architectural or historic character. Then consider correct cylinder fit and accredited products only as options for the inspected frame, hinges, door and lock.',
+    },
+  },
+  'finham': {
+    'emergency-lockout': {
+      first: 'The A45, Howes Lane, city boundary, railway and parish records define broad Finham geography but not control of a door, so confirm the complete address, exact entrance and requester\'s authority before access work.',
+      second: 'Inspect the named opening as a full door set and explain the proposed method, scope and charge; parish foundation and neighbourhood designation dates cannot establish hardware condition or entitlement to enter.',
+    },
+    'lock-change': {
+      first: 'Finham\'s parish and neighbourhood boundaries do not identify the lock at an individual address, so inspect the door, frame, hinges and hardware and document the authorised repair or replacement requirement.',
+      second: 'Check property records and scope-specific conservation or managed-site requirements; if listed status is established, verify consent where alteration may affect special interest. Specify correctly sized and accredited hardware for the observed Finham assembly and provide the expected price; if the service-call price changes, obtain the property controller\'s agreement before the revision applies.',
+    },
+    'upvc-lock-repair': {
+      first: 'Road, railway and neighbourhood-area boundaries cannot prove a Finham door is uPVC or fitted with multipoint locking, so record its material, handle travel, key response, open-and-closed behaviour and visible faceplate details.',
+      second: 'The applicant body governs planning designation rather than a private repair, so verify the actual property controller and assess the lock with its frame and hinges. Describe the compatible repair and expected cost; if the service-call price changes, obtain that Finham controller\'s agreement before the revised amount applies.',
+    },
+    'boarding-up': {
+      first: 'A damaged opening must be placed at a specific Finham address rather than only within the parish or neighbourhood area, with an authorised contact identified. If evidence may be involved, photograph it and follow any police direction received.',
+      second: 'Boundary and designation dates provide no ownership or construction evidence for the scene, so inspect the real door or window. Describe the outside temporary securing work and included work from that Finham scene and provide the expected charge; if the service-call price changes, obtain the authorised contact\'s agreement before the new charge applies.',
+    },
+    'lock-upgrade': {
+      first: 'Parish creation and neighbourhood-area designation cannot establish current hardware or a security requirement for Finham, so document the particular entrance and obtain a written objective from its authorised owner or manager.',
+      second: 'Verify the exact premises and proposed scope; if the property is a listed building, check consent where alteration may affect special architectural or historic character. Then compare correct cylinder dimensions and accredited products with the inspected door set and provide the expected price; if the service-call price changes, obtain the Finham controller\'s agreement before the changed figure applies.',
+    },
+  },
+  'styvechale': {
+    'emergency-lockout': {
+      first: 'Stivichall spelling, the conservation-area woodlands and the named Grade II grange identify several distinct references, so a lockout call must provide the complete Styvechale address, exact entrance and evidence of authority.',
+      second: 'Do not assume the request concerns Stivichall Grange or a nature reserve; inspect the actual lock, frame, hinges and door and explain the proposed access work and price for that verified property.',
+    },
+    'lock-change': {
+      first: 'The combined character area, protected woodlands and individually listed grange do not reveal hardware at another Styvechale address, so inspect the requested door set and establish the authorised change objective.',
+      second: 'If the entrance is at Stivichall Grange or another listed building, verify consent where the proposed alteration may affect special architectural or historic character; any correctly sized cylinder or accredited product must still suit the inspected assembly and quoted specification.',
+    },
+    'upvc-lock-repair': {
+      first: 'Historic spelling, conservation status and the Grade II record cannot prove that a Styvechale door is uPVC or multipoint, so obtain the exact entrance, material, handle and key response, door-position behaviour and faceplate details.',
+      second: 'Where the address is Stivichall Grange, check listed-building consent if the repair may affect its special architectural or historic character; for every property, assess the identified mechanism with its frame and hinges. Describe the compatible work and expected cost, and if the service-call price changes, obtain the Styvechale controller\'s agreement before the new amount applies.',
+    },
+    'boarding-up': {
+      first: 'Damage at the grange, within a woodland site or at another Styvechale property needs a separate authorised controller and precise opening. If material may be evidential, preserve photographs and follow any police guidance issued before disturbance.',
+      second: 'For Stivichall Grange, verify listed-building consent if temporary work may affect its special architectural or historic character; for a reserve, confirm who can authorise the work. Let the actual Styvechale opening define the outside securing measure and expected price; if the service-call price changes, obtain the relevant controller\'s agreement before applying the revision.',
+    },
+    'lock-upgrade': {
+      first: 'Conservation-area woodland and the Grade II grange record are property-status prompts, not a common security specification, so inspect the exact Styvechale entrance and obtain its authorised written requirement.',
+      second: 'For Stivichall Grange or another listed address, verify consent where changing hardware may affect special architectural or historic character; compare correctly dimensioned cylinders and accredited products only with the existing door, frame, hinges and lock. Provide the expected cost for the supported option; if the service-call price changes, obtain the Styvechale controller\'s agreement before the revision applies.',
+    },
+  },
+  'allesley': {
+    'emergency-lockout': {
+      first: 'Medieval village origins, Birmingham Road buildings, the church, conservation area and neighbourhood boundary do not identify a caller\'s doorway, so verify the complete Allesley address, exact entrance and authority before access.',
+      second: 'Separate a private instruction from church or managed-premises access, then inspect the actual lock within its door, frame and hinges and explain the proposed work and price without deriving a method from heritage context.',
+    },
+    'lock-change': {
+      first: 'The concentration of historic houses and the conservation-area core cannot show which hardware is fitted at a particular Allesley property, so inspect its complete door set and document the authorised repair or replacement objective.',
+      second: 'Treat the neighbourhood body and the individual property controller as separate roles, verifying any address-specific requirements before choosing correct cylinder dimensions or accredited products. Describe the supported Allesley specification and provide its expected price; if the service-call price changes, obtain the property controller\'s agreement before the new amount applies.',
+    },
+    'upvc-lock-repair': {
+      first: 'Village age, historic buildings and neighbourhood designation cannot prove that an Allesley entrance is uPVC or multipoint, so record the exact door material, handle travel, key movement, position-dependent behaviour and visible component details.',
+      second: 'Keep the conservation-area evidence separate from the mechanical assessment, examine the identified lock with its frame and hinges and set out the compatible repair and expected charge to the authorised customer.',
+    },
+    'boarding-up': {
+      first: 'Damage at the church, a Birmingham Road building or another Allesley property requires a precise opening and responsible controller. If potential evidence is present, retain photographs and follow any police directions received before it is moved.',
+      second: 'Because the village core includes listed buildings and a conservation area, verify the exact status and proposed scope; if temporary work may affect a listed building\'s special interest, check consent before work begins. Describe the outside securing measure from the inspected Allesley opening and provide the expected price; if the service-call price changes, obtain the controller\'s agreement before the revised amount applies.',
+    },
+    'lock-upgrade': {
+      first: 'Allesley\'s historic buildings and neighbourhood designation cannot establish an area-wide hardware need, so document the individual entrance, full door assembly and written objective supplied by its authorised controller.',
+      second: 'Check address-and-scope conservation requirements; if the property is a listed building, verify consent where changing hardware may affect special architectural or historic character. Then compare correctly sized cylinders and accredited products against the inspected door set and provide the expected price; if the service-call price changes, obtain the Allesley controller\'s agreement before the revision applies.',
+    },
+  },
+  'allesley-park': {
+    'emergency-lockout': {
+      first: 'The published park address and its medieval deer-park earthworks do not identify a caller\'s building or authority, so distinguish an instruction for a managed park asset from one concerning surrounding housing and verify the exact controlled entrance.',
+      second: 'Use the responsible park contact for a managed asset or the occupier for a residence, then inspect the lock, frame, hinges and door and explain the proposed access work and cost.',
+    },
+    'lock-change': {
+      first: 'The published park address, historic-park description and wider designation totals cannot reveal the hardware at an Allesley Park property, so inspect the particular entrance and establish whether the authorised objective is repair, replacement or a written requirement.',
+      second: 'Do not extend the Allesley Village conservation-area status across the whole park or estate; verify exact property controls, then match correct cylinder dimensions and accredited options to the observed assembly. Provide the expected price for the supported option; if the service-call price changes, obtain the Allesley Park controller\'s agreement before the new figure applies.',
+    },
+    'upvc-lock-repair': {
+      first: 'A historic park and medieval earthworks provide no evidence that a nearby housing entrance is uPVC or multipoint, so capture the exact address, material, handle movement, key action, door-position symptoms and visible faceplate information.',
+      second: 'First decide whether the call concerns a park asset or surrounding residence, then assess the identified lock with its frame and hinges. Describe only the compatible repair supported at that opening and provide the expected price to its authorised controller; if the service-call price changes, obtain the controller\'s agreement before the revised amount applies.',
+    },
+    'boarding-up': {
+      first: 'A damaged opening described as Allesley Park could belong to a managed park asset or surrounding housing, so identify the exact scene and controller rather than treating the published Allesley Hall Drive address as a building. If evidence may be involved, preserve it and follow any police directions issued.',
+      second: 'Wider designation totals do not prove the affected address is protected, so complete a property-level controls check and inspect the observed door or window. Use that Allesley Park scene to define the outside temporary work and provide the expected price; if the service-call price changes, obtain the authorised controller\'s agreement before applying the revised amount.',
+    },
+    'lock-upgrade': {
+      first: 'The published historic-park record and area-wide heritage totals do not define an upgrade for an Allesley Park entrance, so inspect the complete door set and obtain the authorised controller\'s written requirement without extending any designation to the individual property.',
+      second: 'If exact records show conservation status, check requirements for the proposed scope; if they show listed status, verify consent where alteration may affect special architectural or historic character. Match correctly sized and accredited options to the existing assembly and quoted scope.',
+    },
+  },
+} satisfies Partial<Record<CoventryAreaSlug, Record<ServiceAreaSlug, PairEditorialCopy>>>
+
+const COVENTRY_EDITORIAL_COPY = {
+  ...COVENTRY_EDITORIAL_COPY_A,
+  ...COVENTRY_EDITORIAL_COPY_B,
+  ...COVENTRY_EDITORIAL_COPY_C,
+} satisfies Record<CoventryAreaSlug, Record<ServiceAreaSlug, PairEditorialCopy>>
 
 const SERVICE_HEADINGS: Record<ServiceAreaSlug, (areaName: string) => string> = {
   'emergency-lockout': areaName => `What to Check During a Lockout in ${areaName}`,
@@ -238,52 +780,6 @@ const SERVICE_FAQS: Record<ServiceAreaSlug, {
   },
 }
 
-const TECHNICAL_WORDING_STYLES: ReadonlyArray<ReadonlyArray<readonly [string, string]>> = [
-  [],
-  [
-    ['exact', 'precise'], ['full', 'complete'], ['actual', 'verified'], ['particular', 'specific'],
-    ['entrance', 'doorway'], ['scope', 'service extent'],
-    ['cost', 'pricing'], ['explain', 'describe'], ['confirm', 'verify'],
-    ['identify', 'establish'], ['inspect', 'examine'],
-    ['current', 'existing'],
-  ],
-  [
-    ['exact', 'specified'], ['full', 'entire'], ['actual', 'physical'], ['particular', 'individual'],
-    ['entrance', 'opening'], ['scope', 'service plan'],
-    ['cost', 'charge'], ['explain', 'set out'], ['confirm', 'establish'], ['identify', 'determine'],
-    ['inspect', 'evaluate'], ['current', 'present'],
-  ],
-  [
-    ['exact', 'stated'], ['full', 'complete'], ['actual', 'specified'], ['particular', 'named'],
-    ['entrance', 'access point'], ['scope', 'task definition'],
-    ['cost', 'pricing'], ['explain', 'clarify'], ['confirm', 'check'], ['identify', 'specify'],
-    ['inspect', 'look over'],
-  ],
-  [
-    ['exact', 'defined'], ['full', 'complete'], ['actual', 'identified'], ['particular', 'given'],
-    ['entrance', 'controlled opening'], ['scope', 'work plan'], ['cost', 'pricing'],
-    ['explain', 'outline'], ['confirm', 'establish'],
-    ['identify', 'pinpoint'], ['inspect', 'assess'],
-    ['current', 'existing'],
-  ],
-]
-
-function applyTechnicalStyle(value: string, variant: number): string {
-  const style = TECHNICAL_WORDING_STYLES[Math.floor((variant % 30) / 6)]
-  const styled = style.reduce((copy, [from, to]) => {
-    const pattern = new RegExp(`\\b${from}\\b`, 'gi')
-    return copy.replace(pattern, (match) => (
-      /^[A-Z]/.test(match)
-        ? `${to[0].toUpperCase()}${to.slice(1)}`
-        : to
-    ))
-  }, value)
-
-  return styled
-    .replace(/\ba individual\b/g, 'an individual')
-    .replace(/\bA individual\b/g, 'An individual')
-}
-
 function technicalSources(region: AddressRegion): AreaGuideSource[] {
   const police = POLICE_SOURCE_IDS[region]
   return ['mla-service-calls', police.lockAdvice, police.doorSecurity, police.forensics].map((id) => ({
@@ -296,21 +792,14 @@ function buildServiceGuidance(
   seed: AreaGuideSeed,
   service: ServiceAreaSlug,
   context: PairContext,
-  variant: number,
 ): AreaServiceGuidance {
-  const protocolVariant = variant % 30
-  const firstProtocol = TECHNICAL_COPY[service][protocolVariant % TECHNICAL_COPY[service].length]
-  const secondProtocol = TECHNICAL_COPY[service][Math.floor(protocolVariant / 6)]
-  const protocol = {
-    first: applyTechnicalStyle(firstProtocol.first, variant),
-    second: applyTechnicalStyle(secondProtocol.second, variant),
-  }
+  const editorial = COVENTRY_EDITORIAL_COPY[seed.slug][service]
   const faq = SERVICE_FAQS[service]
   return {
     heading: SERVICE_HEADINGS[service](seed.name),
     body: [
-      `${context.local} ${protocol.first}`,
-      `${context.decision} ${protocol.second}`,
+      `${context.local} ${editorial.first}`,
+      `${context.decision} ${editorial.second}`,
     ],
     checks: [
       SERVICE_CHECKS[service],
@@ -324,11 +813,11 @@ function buildServiceGuidance(
   }
 }
 
-function buildGuide(seed: AreaGuideSeed, variant: number): GovernedAreaGuide {
+function buildGuide(seed: AreaGuideSeed): GovernedAreaGuide {
   const serviceGuidance = Object.fromEntries(
-    SERVICE_AREA_SLUGS.map((service, serviceIndex) => [
+    SERVICE_AREA_SLUGS.map((service) => [
       service,
-      buildServiceGuidance(seed, service, seed.contexts[service], variant + serviceIndex * 7),
+      buildServiceGuidance(seed, service, seed.contexts[service]),
     ]),
   ) as Record<ServiceAreaSlug, AreaServiceGuidance>
   const guideFaqs = [
@@ -2832,7 +3321,7 @@ const AREA_SEEDS: AreaGuideSeed[] = [
 ]
 
 const COVENTRY_GUIDES = Object.fromEntries(
-  AREA_SEEDS.map((seed, index) => [seed.slug, buildGuide(seed, index)]),
+  AREA_SEEDS.map(seed => [seed.slug, buildGuide(seed)]),
 ) as Record<CoventryAreaSlug, GovernedAreaGuide>
 
 export const COVENTRY_AREA_GUIDES: Partial<Record<AreaSlug, GovernedAreaGuide>> = COVENTRY_GUIDES

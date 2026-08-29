@@ -35,12 +35,14 @@ The governance audit fails closed on:
 - reintroduced legacy area fields, orphaned local-fact registries or unverified brand-inventory components;
 - fewer than four FAQs, missing preparation/local-guidance sections, or fewer than 600 editorial words;
 - unsupported frequency, fixed-arrival, universal-insurance, guaranteed-entry or absolute-security claims;
+- attribution of method, work or scope agreement to the MLA charter, or copy that bundles agreement to work with pricing instead of limiting agreement to a changed service-call price;
 - duplicate or out-of-range titles, descriptions and H1s;
 - fewer than 50 globally unique body five-word sequences or less than a 35% unique-sequence share in any area×service guidance record;
+- any exact body sentence of eight or more words reused by more than one of the 390 area×service guidance records;
 - less than 39% pair-specific editorial or more than 51% repeated exact-sentence words on any of the 35 dedicated town×service pages;
 - excessive five-word-shingle overlap in locality-specific or full editorial copy.
 
-The 35 dedicated pages now include two hand-authored decision extensions per town×service pair. Their pair-specific and repeated-sentence measures are release gates at the thresholds above, preserving the completed de-templating work. The 390 area-hub service sections still report distributed exact-sentence reuse as a diagnostic for a later manual rewrite; no metric-only wording changes are accepted.
+The 35 dedicated pages include two hand-authored decision extensions per town×service pair. Their pair-specific and repeated-sentence measures are release gates at the thresholds above. The 390 area-hub service sections also use manually reviewed, pair-specific bodies instead of rotated protocol copy; the source audit now rejects every cross-record exact body-sentence repeat of eight or more words. Five-word overlap and globally unique-sequence gates remain in place so adding a place name or other metric-only wording cannot substitute for substantive local guidance.
 
 The HTTP SEO audit crawls all 178 canonical sitemap URLs and all 390 area-service combinations. It requires each combination to be either a self-canonical published `200` or a `308` to its parent hub, and checks invalid combinations for `404`.
 

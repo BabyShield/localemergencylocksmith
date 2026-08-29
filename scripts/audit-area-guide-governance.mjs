@@ -105,6 +105,8 @@ const CUSTOMER_VISIBLE_PROSE_LINTS = Object.freeze([
 const failures = []
 const warnings = []
 
+const UNSUPPORTED_AGREEMENT_TO_WORK_PATTERN = /\bagree(?:d|ment|ing)?\s+(?:what\s+(?:may\s+be\s+changed|remains\s+and\s+what\s+may\s+change)|(?:to\s+)?(?:the\s+|an?\s+|any\s+)?(?:(?:proposed|supported|compatible|authorised|outside|temporary|repair|access|revised)\s+){0,3}(?:scope|work|method|measure|repair|access|security|specification))\b/i
+
 const BANNED_CLAIM_PATTERNS = [
   {
     label: 'fixed response-time claim',
@@ -150,11 +152,38 @@ const BANNED_CLAIM_PATTERNS = [
     label: 'unscoped fire-door claim',
     pattern: /\b(?:fire[- ]door|fire[- ]rated|fire[- ]safety)\b/i,
   },
+  {
+    label: 'unsupported MLA scope attribution',
+    pattern: /\bMLA (?:source|guidance|evidence)\b[^.!?]{0,140}\b(?:scope|method|technique|work)\b/i,
+  },
+  {
+    label: 'unsupported agreement to work or scope',
+    pattern: UNSUPPORTED_AGREEMENT_TO_WORK_PATTERN,
+  },
+  {
+    label: 'unsupported work-and-price agreement bundle',
+    pattern: /\b(?:scope|work|method|measure|repair|access|specification)\s+(?:and|or|,)\s+(?:the\s+)?(?:(?:expected|likely|anticipated|revised)\s+)?(?:price|cost|charge)\s+(?:is|are|be|being|was|were)?\s*agree(?:d|ment|ing)?\b/i,
+  },
 ]
 
 function check(condition, message) {
   if (!condition) failures.push(message)
 }
+
+for (const fixture of [
+  'agreeing temporary scope',
+  'agreeing temporary work',
+  'agreeing a method',
+  'agreeing what may be changed',
+  'agreeing what remains and what may change',
+  'agreeing temporary security',
+]) {
+  check(UNSUPPORTED_AGREEMENT_TO_WORK_PATTERN.test(fixture), `unsupported agreement detector misses fixture: ${fixture}`)
+}
+check(
+  !UNSUPPORTED_AGREEMENT_TO_WORK_PATTERN.test('obtain agreement if the service-call price changes'),
+  'unsupported agreement detector rejects bounded changed-price wording',
+)
 
 check(
   !supplementalGuidanceSourceIds('The records do not prove listed or conservation status, access permission or service conditions.').includes('govuk-listed-building-consent'),
@@ -888,10 +917,10 @@ const reusedBodySentenceOccurrences = bodySentenceOccurrences.filter(sentenceKey
 ))
 const reusedBodySentenceFamilies = [...bodySentenceDocumentFrequency.values()].filter(owners => owners.size > 1).length
 const bodySentenceReuseRatio = reusedBodySentenceOccurrences.length / Math.max(1, bodySentenceOccurrences.length)
-warnings.push(
-  `cross-record exact body-sentence reuse diagnostic: ${reusedBodySentenceOccurrences.length}/${bodySentenceOccurrences.length} `
-  + `occurrences (${(bodySentenceReuseRatio * 100).toFixed(2)}%) belong to ${reusedBodySentenceFamilies} repeated families; `
-  + 'this is measured for future de-templating and is not yet a release gate',
+check(
+  reusedBodySentenceOccurrences.length === 0,
+  `cross-record exact body-sentence reuse is ${reusedBodySentenceOccurrences.length}/${bodySentenceOccurrences.length} `
+  + `occurrences (${(bodySentenceReuseRatio * 100).toFixed(2)}%) across ${reusedBodySentenceFamilies} repeated families; expected zero`,
 )
 
 const similarityReports = [
