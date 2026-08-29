@@ -60,7 +60,7 @@ export default function AreasPage() {
             <Link href="/" prefetch={false} itemProp="item" className="hover:text-[#FFB800]"><span itemProp="name">Home</span></Link>
             <meta itemProp="position" content="1" />
           </li>
-          <span className="mx-2" aria-hidden="true">›</span>
+          <li className="mx-2" aria-hidden="true" role="presentation">›</li>
           <li itemScope itemType="https://schema.org/ListItem" itemProp="itemListElement">
             <span><span itemProp="name" className="text-gray-800 font-medium">All Areas</span></span>
             <meta itemProp="position" content="2" />
@@ -100,6 +100,7 @@ export default function AreasPage() {
                   <Link
                     key={area.slug}
                     href={`/areas/${area.slug}`}
+                    prefetch={false}
                     className="block bg-gray-50 hover:bg-white border border-gray-200 hover:border-[#FFB800] rounded-xl p-4 transition-all group"
                   >
                     <p className="font-bold text-gray-900 group-hover:text-[#FFB800]">

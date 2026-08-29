@@ -41,6 +41,7 @@ const MAX_WITHIN_SERVICE_PAIR_OVERLAP = 0.45
 const MAX_WITHIN_PAGE_FAQ_ANSWER_OVERLAP = 0.65
 const MIN_CHECK_UNIQUENESS_RATIO = 0.72
 const MIN_PAIR_UNIQUE_CHECKS = 2
+const MIN_EXACT_DUPLICATE_SENTENCE_WORDS = 10
 
 // This is an independent release contract. Do not import the production role
 // map here: otherwise weakening the generator would also weaken its audit.
@@ -51,6 +52,52 @@ const AUDIT_SERVICE_TECHNICAL_SOURCE_ROLES = Object.freeze({
   'boarding-up': ['mla', 'forensics'],
   'lock-upgrade': ['mla', 'doorSecurity'],
 })
+
+const AUDIT_SERVICE_SEARCH_HEADING_INTENTS = Object.freeze({
+  'emergency-lockout': {
+    label: 'emergency locksmith and lockout',
+    patterns: [/\bemergency locksmith\b/i, /\blockout\b/i],
+  },
+  'lock-change': {
+    label: 'lock repair and replacement',
+    patterns: [/\block repair\b/i, /\breplacement\b/i],
+  },
+  'upvc-lock-repair': {
+    label: 'uPVC door lock repair',
+    patterns: [/\bupvc\b/i, /\bdoor lock repair\b/i],
+  },
+  'boarding-up': {
+    label: 'emergency boarding up',
+    patterns: [/\bemergency boarding up\b/i],
+  },
+  'lock-upgrade': {
+    label: 'lock upgrades and door security',
+    patterns: [/\block upgrades?\b/i, /\bdoor security\b/i],
+  },
+})
+
+const CUSTOMER_VISIBLE_PROSE_LINTS = Object.freeze([
+  {
+    label: 'raw backtick',
+    pattern: /`/,
+  },
+  {
+    label: 'high-confidence a/an agreement error',
+    pattern: /\ba (?:actual|address|affected|appropriate|area|authorised|available|emergency|entrance|exact|existing|individual|industrial|opening|urgent)\b|\ban (?:euro(?:[- ]\w+)?|one(?:-\w+)?|uniform|unit|universal|university|unique|upvc|user)\b/i,
+  },
+  {
+    label: 'customer-visible implementation term "slug"',
+    pattern: /\bslug\b/i,
+  },
+  {
+    label: 'invalid noun-to-verb substitution after "after that"',
+    pattern: /\bafter that (?:appraise|assess|consider|examine) should\b/i,
+  },
+  {
+    label: 'lowercase sentence start from a style substitution',
+    pattern: /(?:^|[.!?]\s+)(?:appraise|assess|clarify|consider|describe|determine|establish|evaluate|examine|outline|pinpoint|specify|verify)\b/,
+  },
+])
 
 const failures = []
 const warnings = []
@@ -189,6 +236,28 @@ function normalise(value) {
     .replace(/[^a-z0-9]+/g, ' ')
     .replace(/\s+/g, ' ')
     .trim()
+}
+
+function exactLongSentenceDuplicates(blocks) {
+  const occurrencesBySentence = new Map()
+
+  for (const block of blocks) {
+    const sentences = String(block.value ?? '').match(/[^.!?]+(?:[.!?]+|$)/g) ?? []
+    const seenInBlock = new Set()
+    for (const sentence of sentences) {
+      if (wordCount(sentence) < MIN_EXACT_DUPLICATE_SENTENCE_WORDS) continue
+      const key = normalise(sentence)
+      if (!key || seenInBlock.has(key)) continue
+      seenInBlock.add(key)
+      const occurrences = occurrencesBySentence.get(key) ?? []
+      occurrences.push({ owner: block.owner, sentence: sentence.trim() })
+      occurrencesBySentence.set(key, occurrences)
+    }
+  }
+
+  return [...occurrencesBySentence.values()].filter(occurrences => (
+    new Set(occurrences.map(occurrence => occurrence.owner)).size > 1
+  ))
 }
 
 function shingles(value, width = 5) {
@@ -471,6 +540,18 @@ for (const area of AREAS) {
     const guidanceLabel = `${label}/${serviceSlug}`
     check(Boolean(guidance), `${guidanceLabel} guidance is missing`)
     if (!guidance) continue
+    const searchHeading = guidance.searchHeading ?? ''
+    const searchIntent = AUDIT_SERVICE_SEARCH_HEADING_INTENTS[serviceSlug]
+    check(wordCount(searchHeading) >= 4, `${guidanceLabel} search heading is too short`)
+    check(searchHeading.includes(area.name), `${guidanceLabel} search heading does not name ${area.name}`)
+    check(Boolean(searchIntent), `${guidanceLabel} has no independent search-heading intent contract`)
+    if (searchIntent) {
+      const missingIntent = searchIntent.patterns.filter(pattern => !pattern.test(searchHeading))
+      check(
+        missingIntent.length === 0,
+        `${guidanceLabel} search heading does not express ${searchIntent.label}: ${JSON.stringify(searchHeading)}`,
+      )
+    }
     check(wordCount(guidance.heading) >= 4, `${guidanceLabel} heading is too short`)
     check(guidance.heading.includes(area.name), `${guidanceLabel} heading does not name ${area.name}`)
     check(Array.isArray(guidance.body) && guidance.body.length === 2, `${guidanceLabel} needs exactly two body paragraphs`)
@@ -478,6 +559,7 @@ for (const area of AREAS) {
       check(wordCount(paragraph) >= 50, `${guidanceLabel} paragraph ${index + 1} has ${wordCount(paragraph)} words; expected at least 50`)
     }
     const guidanceText = (guidance.body ?? []).join(' ')
+    const guidanceSimilarityText = [searchHeading, guidance.heading, guidanceText].filter(Boolean).join(' ')
     const guidanceWords = wordCount(guidanceText)
     check(guidanceWords >= MIN_GUIDANCE_WORDS, `${guidanceLabel} has ${guidanceWords} guidance words; expected at least ${MIN_GUIDANCE_WORDS}`)
     check(Array.isArray(guidance.checks) && guidance.checks.length >= 3, `${guidanceLabel} needs at least three checks`)
@@ -514,7 +596,7 @@ for (const area of AREAS) {
       areaSlug: area.slug,
       serviceSlug,
       words: guidanceWords,
-      shingles: shingles(guidanceText),
+      shingles: shingles(guidanceSimilarityText),
       checks: [...(guidance.checks ?? [])],
     })
   }
@@ -541,6 +623,8 @@ for (const area of AREAS) {
     ...SERVICE_AREA_SLUGS.flatMap(serviceSlug => {
       const guidance = guide.serviceGuidance?.[serviceSlug]
       return [
+        { value: guidance?.searchHeading, owner: `${serviceSlug} search heading` },
+        { value: guidance?.heading, owner: `${serviceSlug} local heading` },
         ...(guidance?.body ?? []).map((value, index) => ({ value, owner: `${serviceSlug} paragraph ${index + 1}` })),
         ...(guidance?.checks ?? []).map((value, index) => ({ value, owner: `${serviceSlug} check ${index + 1}` })),
       ]
@@ -575,12 +659,35 @@ for (const area of AREAS) {
     }
   }
 
+  const customerVisibleBlocks = [
+    ...nonFaqBlocks,
+    ...pageFaqs.flatMap(faq => [
+      { value: faq.q, owner: `${faq.owner} question` },
+      { value: faq.a, owner: `${faq.owner} answer` },
+    ]),
+  ].filter(block => typeof block.value === 'string' && block.value.trim().length > 0)
+
+  for (const block of customerVisibleBlocks) {
+    for (const lint of CUSTOMER_VISIBLE_PROSE_LINTS) {
+      const match = block.value.match(lint.pattern)?.[0]
+      if (match) failures.push(`${label} ${block.owner} contains ${lint.label}: ${JSON.stringify(match)}`)
+    }
+  }
+
+  for (const duplicate of exactLongSentenceDuplicates(customerVisibleBlocks)) {
+    const owners = [...new Set(duplicate.map(occurrence => occurrence.owner))]
+    failures.push(
+      `${label} repeats a ${wordCount(duplicate[0].sentence)}-word sentence in ${owners.join(' and ')}: ${JSON.stringify(duplicate[0].sentence)}`,
+    )
+  }
+
   const editorial = [
     ...(guide.summary ?? []),
     guide.accessGuidance,
     guide.evidenceLimits,
     ...(guide.facts ?? []).flatMap(fact => [fact.text, fact.serviceRelevance]),
     ...Object.values(guide.serviceGuidance ?? {}).flatMap(guidance => [
+      guidance.searchHeading,
       guidance.heading,
       ...(guidance.body ?? []),
       ...(guidance.checks ?? []),

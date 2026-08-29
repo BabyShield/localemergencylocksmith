@@ -1,0 +1,13 @@
+keyword,volume,database,measured_on,source,interpretation
+locksmith stoke,320,UK,2026-08-29,Semrush connector,"Ambiguous place name; not evidence of demand for Stoke in Coventry"
+locksmith willenhall,110,UK,2026-08-29,Semrush connector,"Ambiguous place name; not evidence of demand for Willenhall in Coventry"
+locksmith brandon,50,UK,2026-08-29,Semrush connector,"Ambiguous place name; not evidence of demand for Brandon in Warwickshire"
+locksmith southam,30,UK,2026-08-29,Semrush connector,"Existing area hub remains the canonical owner"
+locksmith studley,20,UK,2026-08-29,Semrush connector,"Existing area hub remains the canonical owner"
+locksmith alcester,20,UK,2026-08-29,Semrush connector,"Existing area hub remains the canonical owner"
+locksmith whitley,20,UK,2026-08-29,Semrush connector,"Ambiguous place name; not evidence of demand for Whitley in Coventry"
+locksmith coventry city centre,0,UK,2026-08-29,Semrush connector,"Explicit measured zero; existing area hub retained"
+locksmith canley,0,UK,2026-08-29,Semrush connector,"Explicit measured zero; existing area hub retained"
+locksmith radford,0,UK,2026-08-29,Semrush connector,"Explicit measured zero; existing area hub retained"
+locksmith wyken,0,UK,2026-08-29,Semrush connector,"Explicit measured zero; existing area hub retained"
+locksmith cheylesmore,0,UK,2026-08-29,Semrush connector,"Explicit measured zero; existing area hub retained"

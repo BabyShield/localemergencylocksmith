@@ -70,6 +70,41 @@ const nextConfig: NextConfig = {
         destination: `/areas/${to}/:service`,
         permanent: true,
       })),
+      ...TOWN_CENTRE_REDIRECTS.map(([from, to]) => ({
+        source: `/areas/${from}/streets/:street`,
+        destination: `/areas/${to}`,
+        permanent: true,
+      })),
+      ...TOWN_CENTRE_REDIRECTS.map(([from, to]) => ({
+        source: `/locksmith/${from}/streets/:street`,
+        destination: `/areas/${to}`,
+        permanent: true,
+      })),
+      ...TOWN_CENTRE_REDIRECTS.map(([from, to]) => ({
+        source: `/locksmith/${from}`,
+        destination: `/areas/${to}`,
+        permanent: true,
+      })),
+      ...TOWN_CENTRE_REDIRECTS.map(([from, to]) => ({
+        source: `/reviews/${from}`,
+        destination: `/areas/${to}`,
+        permanent: true,
+      })),
+      ...TOWN_CENTRE_REDIRECTS.map(([from, to]) => ({
+        source: `/blog/${from}/:articleSlug`,
+        destination: `/areas/${to}`,
+        permanent: true,
+      })),
+      ...TOWN_CENTRE_REDIRECTS.map(([from, to]) => ({
+        source: `/near-me/:keyword/${from}`,
+        destination: `/areas/${to}`,
+        permanent: true,
+      })),
+      ...TOWN_CENTRE_REDIRECTS.map(([from, to]) => ({
+        source: `/areas/${from}`,
+        destination: `/areas/${to}`,
+        permanent: true,
+      })),
       ...GOVERNED_TOWN_SLUGS.map(slug => ({
         source: `/locksmith/${slug}/:service(${SERVICE_SLUGS})`,
         destination: `/areas/${slug}/:service`,
@@ -91,12 +126,6 @@ const nextConfig: NextConfig = {
       ...SINGLE_AREA_POSTCODE_REDIRECTS.map(([postcode, area]) => ({
         source: `/postcodes/${postcode}`,
         destination: `/areas/${area}`,
-        permanent: true,
-      })),
-      // ── Consolidated boilerplate areas → rich siblings ──
-      ...TOWN_CENTRE_REDIRECTS.map(([from, to]) => ({
-        source: `/areas/${from}`,
-        destination: `/areas/${to}`,
         permanent: true,
       })),
       // ── Stale URLs from the domain's previous owner, still in Google's index ──

@@ -64,7 +64,7 @@ interface TechnicalCopy {
 const TECHNICAL_COPY: Record<ServiceAreaSlug, TechnicalCopy[]> = {
   'emergency-lockout': [
     {
-      first: 'Before any entry is attempted, the person giving instructions should be identified and their authority to control the address checked. The exact affected entrance matters because an area name does not show whether the call concerns a private home, communal door or managed premise.',
+      first: 'Before any entry is attempted, the person giving instructions should be identified and their authority to control the address checked. The exact affected entrance matters because an area name does not show whether the call concerns a private home, communal door or managed site.',
       second: 'The door, frame, hinges and lock should be considered together before the scope is agreed. The expected charge and any reason that it may change should be explained before work proceeds, rather than selecting an intervention from the neighbourhood or apparent age of the surroundings.',
     },
     {
@@ -120,7 +120,7 @@ const TECHNICAL_COPY: Record<ServiceAreaSlug, TechnicalCopy[]> = {
       second: 'Police guidance explains that many multipoint doors require the handle to be lifted before the key is turned. Diagnosis should still examine the full door, frame, hinges, alignment and lock. Agree authority, scope and likely cost before repair, because the observed assembly—not the postcode—controls the decision.',
     },
     {
-      first: 'The route name cannot establish that a door is uPVC, composite or fitted with multipoint locking. Capture the exact entrance and symptoms: handle movement, key movement, whether the door is open or shut, and any visible change in alignment or frame contact.',
+      first: 'The locality name cannot establish that a door is uPVC, composite or fitted with multipoint locking. Capture the exact entrance and symptoms: handle movement, key movement, whether the door is open or shut, and any visible change in alignment or frame contact.',
       second: 'Correct operation may include lifting the handle before turning the key, as police guidance notes, but that check is not a diagnosis. Inspect the door set as a whole and explain the proposed work and cost to the authorised requester before proceeding or changing the agreed scope.',
     },
     {
@@ -194,20 +194,12 @@ const TECHNICAL_COPY: Record<ServiceAreaSlug, TechnicalCopy[]> = {
   ],
 }
 
-const SERVICE_LABELS: Record<ServiceAreaSlug, string> = {
-  'emergency-lockout': 'Emergency access decisions',
-  'lock-change': 'Planning a lock change',
-  'upvc-lock-repair': 'Diagnosing a reported uPVC lock problem',
-  'boarding-up': 'Securing a damaged opening',
-  'lock-upgrade': 'Planning a lock upgrade',
-}
-
-const SERVICE_FAQ_SUBJECTS: Record<ServiceAreaSlug, string> = {
-  'emergency-lockout': 'an emergency access request',
-  'lock-change': 'a lock-change decision',
-  'upvc-lock-repair': 'a reported uPVC lock problem',
-  'boarding-up': 'a boarding-up request',
-  'lock-upgrade': 'a lock-upgrade review',
+const SERVICE_HEADINGS: Record<ServiceAreaSlug, (areaName: string) => string> = {
+  'emergency-lockout': areaName => `What to Check During a Lockout in ${areaName}`,
+  'lock-change': areaName => `Choosing a Lock Repair or Replacement in ${areaName}`,
+  'upvc-lock-repair': areaName => `Checking a Faulty uPVC Door Lock in ${areaName}`,
+  'boarding-up': areaName => `Making a Damaged Door or Window Safe in ${areaName}`,
+  'lock-upgrade': areaName => `Choosing a Door-Security Upgrade in ${areaName}`,
 }
 
 const SERVICE_CHECKS: Record<ServiceAreaSlug, string> = {
@@ -218,20 +210,30 @@ const SERVICE_CHECKS: Record<ServiceAreaSlug, string> = {
   'lock-upgrade': 'Document the current door, frame, hinges and lock.',
 }
 
-const SERVICE_FAQ_ANSWERS: Record<ServiceAreaSlug, (areaName: string) => string> = {
-  'emergency-lockout': areaName => `For an access request in ${areaName}, provide the complete address, identify the exact entrance, describe what the key and door are doing, and have evidence connecting you to the property. The opening method can only be assessed from the actual lock and circumstances.`,
-  'lock-change': areaName => `For a lock change in ${areaName}, explain why control of the old keys or hardware needs to change and send clear photographs of both sides of the furniture and the door edge. Confirm who may authorise replacement and any written requirement that must be checked.`,
-  'upvc-lock-repair': areaName => `For a reported uPVC fault in ${areaName}, say whether the door operates differently while open and closed, describe the handle and key symptoms, and photograph the faceplate markings. Measurements, inspection and authority are still required before a compatible component can be specified.`,
-  'boarding-up': areaName => `For damaged premises in ${areaName}, identify every affected opening, the responsible decision-maker and whether police have given evidence-preservation instructions. Photographs taken when safe document the condition, but the temporary scope still requires direct inspection and the relevant property permission.`,
-  'lock-upgrade': areaName => `For an upgrade enquiry in ${areaName}, provide photographs of the complete door set, the reason for the review and any exact insurer, landlord or manager wording. The inspected fit, current manufacturer documentation and permission for that entrance determine which options can be compared.`,
-}
-
-const WHITLEY_SERVICE_FAQ_ANSWERS: Record<ServiceAreaSlug, string> = {
-  'emergency-lockout': 'Identify the named Whitley building and the precise doorway, then explain whether it is a private home, industrial premise or managed institutional site. Have evidence linking you to that entrance and describe what the key, latch and door are doing; the river and historic-settlement records establish none of those access facts.',
-  'lock-change': 'Send photographs of both faces of the Whitley door furniture and the complete edge, state why key control or the fitted lock needs to change, and name the person who can approve it. An industrial edge, older Abbey Road context or broad development period cannot identify the component or supply permission.',
-  'upvc-lock-repair': 'Report how the Whitley door behaves while open and closed, what happens to the handle and key, and every marking visible on the faceplate or cylinder. The area-scale 1925–1955 development statement cannot prove that this entrance uses uPVC, a euro cylinder or any particular multipoint gearbox.',
-  'boarding-up': 'Name every damaged Whitley door or window, the responsible owner or site contact and the police status before temporary work is scoped. Industrial, institutional and older-building contexts need different permission checks, while the River Sowe source cannot reveal the opening material, scene condition or appropriate temporary scope.',
-  'lock-upgrade': 'Provide the Whitley entrance photographs, the intended security outcome and any written policy, landlord or facilities criterion. The locality sources combine river-edge, industrial, residential and historic contexts, so they cannot select hardware; compare current manufacturer documentation, dimensions and complete-door condition only after inspection and property-specific approval.',
+const SERVICE_FAQS: Record<ServiceAreaSlug, {
+  question: (areaName: string) => string
+  answer: (areaName: string) => string
+}> = {
+  'emergency-lockout': {
+    question: areaName => `Can an emergency locksmith help with a lockout in ${areaName}?`,
+    answer: areaName => `Call with the full ${areaName} address, the exact door and evidence that you are authorised to enter. Describe what the key, lock and door are doing; the opening method and final scope depend on the condition found at that entrance.`,
+  },
+  'lock-change': {
+    question: areaName => `Can a door lock be repaired or replaced in ${areaName}?`,
+    answer: areaName => `A ${areaName} lock can be assessed for repair or replacement after the door, frame, hinges and existing hardware are identified. Explain why the change is needed, provide clear photographs where possible and confirm who can authorise the work.`,
+  },
+  'upvc-lock-repair': {
+    question: areaName => `Can you repair a uPVC door lock in ${areaName}?`,
+    answer: areaName => `Describe how the ${areaName} door behaves while open and closed, what the handle and key do, and any visible faceplate markings. A compatible repair depends on the actual door, alignment and fitted mechanism, so the part cannot be selected from the area name alone.`,
+  },
+  'boarding-up': {
+    question: areaName => `Can you board up a damaged door or window in ${areaName}?`,
+    answer: areaName => `Identify every damaged opening at the ${areaName} address and the person authorised to approve temporary work. If the damage may be evidence, follow police directions before anything is moved or covered; the safe temporary scope depends on the condition found.`,
+  },
+  'lock-upgrade': {
+    question: areaName => `Which lock upgrade is suitable for my door in ${areaName}?`,
+    answer: areaName => `The suitable ${areaName} upgrade depends on the complete door set, cylinder fit and any written insurer, landlord or manager requirement. Provide photographs and the exact requirement where possible; options can then be compared against the inspected entrance.`,
+  },
 }
 
 const TECHNICAL_WORDING_STYLES: ReadonlyArray<ReadonlyArray<readonly [string, string]>> = [
@@ -240,39 +242,44 @@ const TECHNICAL_WORDING_STYLES: ReadonlyArray<ReadonlyArray<readonly [string, st
     ['exact', 'precise'], ['full', 'complete'], ['actual', 'verified'], ['particular', 'specific'],
     ['entrance', 'doorway'], ['scope', 'service extent'],
     ['cost', 'pricing'], ['explain', 'describe'], ['confirm', 'verify'],
-    ['identify', 'establish'], ['inspect', 'examine'], ['review', 'assess'],
+    ['identify', 'establish'], ['inspect', 'examine'],
     ['current', 'existing'],
   ],
   [
     ['exact', 'specified'], ['full', 'entire'], ['actual', 'physical'], ['particular', 'individual'],
     ['entrance', 'opening'], ['scope', 'service plan'],
     ['cost', 'charge'], ['explain', 'set out'], ['confirm', 'establish'], ['identify', 'determine'],
-    ['inspect', 'evaluate'], ['review', 'consider'], ['current', 'present'],
+    ['inspect', 'evaluate'], ['current', 'present'],
   ],
   [
     ['exact', 'stated'], ['full', 'complete'], ['actual', 'specified'], ['particular', 'named'],
     ['entrance', 'access point'], ['scope', 'task definition'],
     ['cost', 'pricing'], ['explain', 'clarify'], ['confirm', 'check'], ['identify', 'specify'],
-    ['inspect', 'look over'], ['review', 'appraise'],
+    ['inspect', 'look over'],
   ],
   [
     ['exact', 'defined'], ['full', 'complete'], ['actual', 'identified'], ['particular', 'given'],
     ['entrance', 'controlled opening'], ['scope', 'work plan'], ['cost', 'pricing'],
     ['explain', 'outline'], ['confirm', 'establish'],
-    ['identify', 'pinpoint'], ['inspect', 'assess'], ['review', 'examine'],
+    ['identify', 'pinpoint'], ['inspect', 'assess'],
     ['current', 'existing'],
   ],
 ]
 
 function applyTechnicalStyle(value: string, variant: number): string {
   const style = TECHNICAL_WORDING_STYLES[Math.floor((variant % 30) / 6)]
-  return style.reduce((copy, [from, to]) => {
+  const styled = style.reduce((copy, [from, to]) => {
     const pattern = new RegExp(`\\b${from}\\b`, 'gi')
-    return copy.replace(pattern, (match) => {
-      if (match[0] !== match[0].toUpperCase()) return to
-      return `${to[0].toUpperCase()}${to.slice(1)}`
-    })
+    return copy.replace(pattern, (match) => (
+      /^[A-Z]/.test(match)
+        ? `${to[0].toUpperCase()}${to.slice(1)}`
+        : to
+    ))
   }, value)
+
+  return styled
+    .replace(/\ba individual\b/g, 'an individual')
+    .replace(/\bA individual\b/g, 'An individual')
 }
 
 function technicalSources(region: AddressRegion): AreaGuideSource[] {
@@ -288,36 +295,28 @@ function buildServiceGuidance(
   service: ServiceAreaSlug,
   context: PairContext,
   variant: number,
-  serviceIndex: number,
 ): AreaServiceGuidance {
-  const baseProtocol = TECHNICAL_COPY[service][variant % TECHNICAL_COPY[service].length]
+  const protocolVariant = variant % 30
+  const firstProtocol = TECHNICAL_COPY[service][protocolVariant % TECHNICAL_COPY[service].length]
+  const secondProtocol = TECHNICAL_COPY[service][Math.floor(protocolVariant / 6)]
   const protocol = {
-    first: applyTechnicalStyle(baseProtocol.first, variant),
-    second: applyTechnicalStyle(baseProtocol.second, variant),
+    first: applyTechnicalStyle(firstProtocol.first, variant),
+    second: applyTechnicalStyle(secondProtocol.second, variant),
   }
-  const localitySummary = seed.summary[serviceIndex % seed.summary.length]
-  const localityFact = seed.facts[serviceIndex % seed.facts.length]
-  const localitySourceId = localityFact.sourceIds[serviceIndex % localityFact.sourceIds.length]
-  const localitySource = seed.sources.find(source => source.id === localitySourceId)
-  if (!localitySource) {
-    throw new Error(`${seed.slug}/${service} cannot resolve locality source ${localitySourceId}`)
-  }
-  const faqAnswer = seed.slug === 'whitley'
-    ? WHITLEY_SERVICE_FAQ_ANSWERS[service]
-    : SERVICE_FAQ_ANSWERS[service](seed.name)
+  const faq = SERVICE_FAQS[service]
   return {
-    heading: `${SERVICE_LABELS[service]} in ${seed.name}`,
+    heading: SERVICE_HEADINGS[service](seed.name),
     body: [
-      `${context.local} ${protocol.first} The relevant official locality context is: ${localitySummary}`,
-      `${context.decision} ${protocol.second} The source-backed fact selected for this decision is: ${localityFact.text} Its service relevance is limited to this: ${localityFact.serviceRelevance} The governing evidence limit is: ${seed.evidenceLimits}`,
+      `${context.local} ${protocol.first}`,
+      `${context.decision} ${protocol.second}`,
     ],
     checks: [
       SERVICE_CHECKS[service],
       ...context.checks,
     ],
     faq: {
-      q: `What information is needed for ${SERVICE_FAQ_SUBJECTS[service]} in ${seed.name}?`,
-      a: `${faqAnswer} For orientation only, the cited “${localitySource.title}” record supports this limited context: ${localitySource.supports}`,
+      q: faq.question(seed.name),
+      a: faq.answer(seed.name),
     },
   }
 }
@@ -326,32 +325,19 @@ function buildGuide(seed: AreaGuideSeed, variant: number): GovernedAreaGuide {
   const serviceGuidance = Object.fromEntries(
     SERVICE_AREA_SLUGS.map((service, serviceIndex) => [
       service,
-      buildServiceGuidance(seed, service, seed.contexts[service], variant + serviceIndex * 7, serviceIndex),
+      buildServiceGuidance(seed, service, seed.contexts[service], variant + serviceIndex * 7),
     ]),
   ) as Record<ServiceAreaSlug, AreaServiceGuidance>
-  const firstLocalSource = seed.sources[0]
-  const lastLocalSource = seed.sources.at(-1) ?? firstLocalSource
-  const guideFaqs = seed.slug === 'whitley'
-    ? [
-        {
-          q: 'Can Whitley locality records identify my door, lock or right to authorise work?',
-          a: 'No. The council records describe industrial and River Sowe edges, historic settlement, Whitley Abbey and broad development phases across an area. None is a property inspection or access record. Confirm the present building, controlled threshold, installed hardware and responsible person independently before agreeing locksmith work.',
-        },
-        {
-          q: 'Which Whitley address details help separate the relevant property context?',
-          a: 'Give the complete street address, building or unit name, exact door or window and any facilities contact. Say whether the premise is residential, industrial or institutionally managed only from current address information, not from an HLC label. Check the individual heritage status before a visible change to older external fabric.',
-        },
-      ]
-    : [
-        {
-          q: `Does the official area evidence identify the lock or door at my ${seed.name} address?`,
-          a: `No. The “${firstLocalSource.title}” record is cited for this limited point: ${firstLocalSource.supports} It is not an inspection of your ${seed.name} property, so the exact entrance, installed hardware, condition and authority must be checked separately.`,
-        },
-        {
-          q: `Why is a full ${seed.name} address required?`,
-          a: `A complete ${seed.name} address distinguishes the controlled entrance from the broader place described online. Give the building, unit or floor when relevant and identify who can authorise work. The “${lastLocalSource.title}” source supports ${lastLocalSource.supports.toLowerCase()}, not private access, hardware or permission at your property.`,
-        },
-      ]
+  const guideFaqs = [
+    {
+      q: `What should I have ready before calling a locksmith in ${seed.name}?`,
+      a: `Have the full ${seed.name} address, the exact door or window and evidence that you can authorise the work. Describe the symptoms and send clear photographs where practical; for a managed building, also identify the responsible site or facilities contact.`,
+    },
+    {
+      q: `Can the right locksmith work be confirmed before my ${seed.name} door is inspected?`,
+      a: `Photographs and a clear symptom description can narrow the options, but the method, compatible parts and final scope depend on the actual door, frame, hinges and lock. Any landlord, insurer, conservation or site requirement must also be checked for that address.`,
+    },
+  ]
 
   return {
     slug: seed.slug,
@@ -496,7 +482,7 @@ const AREA_SEEDS: AreaGuideSeed[] = [
         ],
       },
       'boarding-up': {
-        local: 'The central sources describe civic, university, religious and commercial settings, each of which can have a different responsible authority. A damage report should therefore name the premise, unit and opening rather than relying on a nearby landmark.',
+        local: 'The central sources describe civic, university, religious and commercial settings, each of which can have a different responsible authority. A damage report should therefore name the building, unit and opening rather than relying on a nearby landmark.',
         decision: 'If the opening sits in the Hill Top historic core, verify the exact building\'s designation and obtain the relevant property approval before an external temporary fixing. The area-wide designation count is only a prompt for that check.',
         checks: [
           'Name the premises, unit and damaged opening, then identify the responsible authority for its civic, university, religious or commercial setting.',
@@ -679,7 +665,7 @@ const AREA_SEEDS: AreaGuideSeed[] = [
       {
         text: 'The Canley HLC uses the railway as its northern boundary, the A45 to the east, industrial units to the west, and woodland and the university to the south.',
         sourceIds: ['canley-hlc'],
-        serviceRelevance: 'Confirm premise type and the responsible party rather than inferring them from an edge location.',
+        serviceRelevance: 'Confirm the property or site type and the responsible party rather than inferring them from an edge location.',
       },
       {
         text: 'The HLC records More Hall/Canley Moat and buried remains of the deserted medieval village of Fletchamstead within the wider character area.',
@@ -693,7 +679,7 @@ const AREA_SEEDS: AreaGuideSeed[] = [
     ],
     contexts: {
       'emergency-lockout': {
-        local: 'Canley\'s official profiles place university, industrial, woodland and residential contexts around the railway and A45. The call should name the premise and entrance so that a private address is not confused with a managed campus or industrial site.',
+        local: 'Canley\'s official profiles place university, industrial, woodland and residential contexts around the railway and A45. The call should name the building and entrance so that a private address is not confused with a managed campus or industrial site.',
         decision: 'Charter Avenue can help orient the address, but neither that road nor the wider JSNA area proves who occupies a building. Establish the requester\'s authority and any institutional contact before considering access.',
         checks: [
           'Name the premises and exact entrance, distinguishing a private address from a managed university or industrial site.',
@@ -702,7 +688,7 @@ const AREA_SEEDS: AreaGuideSeed[] = [
       },
       'lock-change': {
         local: 'The HLC records archaeological sites in the wider Canley character area, including More Hall/Canley Moat and Fletchamstead remains. If a proposed change affects external fabric, check the exact property rather than assuming those constraints apply everywhere.',
-        decision: 'At a university or industrial premise near the stated boundaries, obtain the responsible manager\'s specification and approval. At a private address, use the observed door; proximity to those land uses cannot select replacement hardware.',
+        decision: 'At a university or industrial site near the stated boundaries, obtain the responsible manager\'s specification and approval. At a private address, use the observed door; proximity to those land uses cannot select replacement hardware.',
         checks: [
           'If visible work may affect external fabric, check the exact property rather than applying wider archaeological context.',
           'Obtain the responsible manager\'s approval at university or industrial premises; at a private address, inspect the observed door.',
@@ -743,7 +729,7 @@ const AREA_SEEDS: AreaGuideSeed[] = [
       'The report gives designation totals for the entire character area, including listed and locally listed buildings but no conservation area. These totals do not identify the age, status, use or entrance of a particular Radford address.',
     ],
     accessGuidance: 'Ask for the exact street, building and entrance and verify caller authority. Where visible work concerns an older or potentially designated building, check its individual record rather than relying on the historic road or area totals.',
-    evidenceLimits: 'The HLC area is broader than the route slug. Its predominant use, light-industrial pocket, hamlet history and designation totals do not establish a property\'s use, age, protected status, access or hardware.',
+    evidenceLimits: 'The HLC character area and the Radford service locality are not interchangeable. The report\'s predominant use, light-industrial pocket, hamlet history and designation totals do not establish a property\'s use, age, protected status, access or hardware.',
     facts: [
       {
         text: 'The Coundon and Radford character area is west of Coventry city centre, predominantly residential, and includes a small light-industrial area in the north.',
@@ -766,7 +752,7 @@ const AREA_SEEDS: AreaGuideSeed[] = [
     ],
     contexts: {
       'emergency-lockout': {
-        local: 'The HLC distinguishes a predominantly residential character area from a small light-industrial pocket in the north. An urgent Radford instruction should therefore identify the actual premise and doorway, not rely on the neighbourhood label.',
+        local: 'The HLC distinguishes a predominantly residential character area from a small light-industrial pocket in the north. An urgent Radford instruction should therefore identify the actual property or site and doorway, not rely on the neighbourhood label.',
         decision: 'Radford Road\'s history as a medieval route later turnpiked is useful context but no evidence of present occupation. Verify the requester and the controlled entrance independently before making an access decision.',
         checks: [
           'Identify the actual premises and doorway, distinguishing a residential address from the northern light-industrial part of the character area.',
@@ -790,7 +776,7 @@ const AREA_SEEDS: AreaGuideSeed[] = [
         ],
       },
       'boarding-up': {
-        local: 'A damage report from Radford should distinguish a private address from a premise in the northern light-industrial area and identify the responsible person. The character-area description cannot supply site ownership or entry arrangements.',
+        local: 'A damage report from Radford should distinguish a private address from a site in the northern light-industrial area and identify the responsible person. The character-area description cannot supply site ownership or entry arrangements.',
         decision: 'If external temporary work may affect one of the listed or locally listed buildings recorded area-wide, confirm the exact designation first. The absence of an area conservation designation does not remove building-specific controls.',
         checks: [
           'Distinguish a private address from northern light-industrial premises and identify the responsible person for the damaged opening.',
@@ -826,7 +812,7 @@ const AREA_SEEDS: AreaGuideSeed[] = [
       {
         text: 'The report states that most of the wider character area\'s western side borders agricultural fields.',
         sourceIds: ['coundon-radford-hlc'],
-        serviceRelevance: 'A western-edge description may help locate an address but does not show its premise type or access arrangement.',
+        serviceRelevance: 'A western-edge description may help locate an address but does not show its property type or access arrangement.',
       },
       {
         text: 'The HLC describes extensive inter-war development across much of the area and later pockets around Everdon Road, Forland Way and Madeira Croft.',
@@ -886,7 +872,7 @@ const AREA_SEEDS: AreaGuideSeed[] = [
     region: 'West Midlands',
     summary: [
       'Coventry City Council locates Holbrook Park on Holbrook Lane and describes open land among nearby shops and factories. Its wider HLC also records First World War industrial hostels north of Holbrooks Park and later area development.',
-      'A park record and broad industrial history do not identify the use, owner, construction or entrance of another Holbrooks address. Private and managed-premise instructions must be separated through direct verification.',
+      'A park record and broad industrial history do not identify the use, owner, construction or entrance of another Holbrooks address. Private-address and managed-site instructions must be separated through direct verification.',
     ],
     accessGuidance: 'Distinguish the named park, a shop, factory and residential address when recording the call. Obtain the full address, exact gate or entrance and the authorised owner, occupier or site manager.',
     evidenceLimits: 'The council park page concerns one named asset, while the HLC covers a larger historic landscape. Neither source establishes an individual property\'s use, ownership, age, fabric, access or installed hardware.',
@@ -937,7 +923,7 @@ const AREA_SEEDS: AreaGuideSeed[] = [
         ],
       },
       'boarding-up': {
-        local: 'A damaged opening on Holbrook Lane needs a precise premise description because the official page places parkland among shops and factories. Confirm the council, business or private responsible party before arranging temporary securing.',
+        local: 'A damaged opening on Holbrook Lane needs a precise building or site description because the official page places parkland among shops and factories. Confirm the council, business or private responsible party before arranging temporary securing.',
         decision: 'The broad HLC development record does not reveal wall, door or window construction at the scene. Use direct photographs and inspection, and obtain any site-manager permission rather than relying on Holbrooks industrial history.',
         checks: [
           'Identify the precise Holbrook Lane premises and confirm whether the council, business or private party controls the damaged opening.',
@@ -962,7 +948,7 @@ const AREA_SEEDS: AreaGuideSeed[] = [
       'Coventry\'s Foleshill HLC describes a mixed residential and industrial character area north of the city centre, following the Coventry–Bedworth railway and shaped by the Coventry Canal.',
       'The report places much of the Coventry Canal Conservation Area within the wider character area. Canal proximity, mixed use and character-area designation do not establish the use, status or entrance of an individual address.',
     ],
-    accessGuidance: 'Record the full address, premise type, exact entrance and authorised decision-maker. For an address near the canal conservation corridor or a historic industrial building, verify its own designation before external alteration.',
+    accessGuidance: 'Record the full address, property or site type, exact entrance and authorised decision-maker. For an address near the canal conservation corridor or a historic industrial building, verify its own designation before external alteration.',
     evidenceLimits: 'The HLC is a broad mixed-use area and says only that much of a conservation area lies within it. It does not prove that a property is industrial, residential, beside the canal, designated, accessible or fitted with any lock type.',
     facts: [
       {
@@ -986,7 +972,7 @@ const AREA_SEEDS: AreaGuideSeed[] = [
     ],
     contexts: {
       'emergency-lockout': {
-        local: 'Foleshill\'s official character area combines residential and industrial land along the railway, so the locality name does not tell whether a home, workshop or managed premise is involved. State the building and controlled entrance.',
+        local: 'Foleshill\'s official character area combines residential and industrial land along the railway, so the locality name does not tell whether a home, workshop or managed site is involved. State the building and controlled entrance.',
         decision: 'The Coventry Canal is the report\'s predominant landscape feature, but proximity to it supplies neither permission nor a route into a property. Confirm the authorised occupier or manager for the exact address.',
         checks: [
           'State the building and controlled entrance, distinguishing a home, workshop or other managed premises within Foleshill\'s mixed-use area.',
@@ -1018,10 +1004,10 @@ const AREA_SEEDS: AreaGuideSeed[] = [
         ],
       },
       'lock-upgrade': {
-        local: 'Foleshill\'s combined residential and industrial context means an upgrade request should include the premise type and any written owner or site standard. The locality alone cannot establish a suitable security specification.',
+        local: 'Foleshill\'s combined residential and industrial context means an upgrade request should include the property or site type and any written owner or site standard. The locality alone cannot establish a suitable security specification.',
         decision: 'If the entrance is near the canal conservation corridor or within a historic industrial building, check property status and approval for visible changes. Canal-driven development history is not evidence of the door set now present.',
         checks: [
-          'Record the premise type and any written owner or site standard; Foleshill alone does not establish a security specification.',
+          'Record the property or site type and any written owner or site standard; Foleshill alone does not establish a security specification.',
           'Check property status and approval near the canal corridor or a historic industrial building, then inspect the current door set.',
         ],
       },
@@ -1033,9 +1019,9 @@ const AREA_SEEDS: AreaGuideSeed[] = [
     region: 'West Midlands',
     summary: [
       'Coventry\'s HLC does not use one undifferentiated Stoke profile: it separates Lower Stoke, Wyken and Upper Stoke, and the South Sowe river corridor. Their descriptions include light-industrial, housing, railway and river-valley contexts.',
-      'Because the route slug is broader than those official evidence units, the full address, premise type and caller authority are essential. No single report establishes the facts of a particular Stoke property.',
+      'Because “Stoke” covers more than those official evidence units, the full address, property or site type and caller authority are essential. No single report establishes the facts of a particular Stoke property.',
     ],
-    accessGuidance: 'Capture the complete address, exact entrance, premise type and caller authority. Use it to distinguish Lower Stoke, Upper Stoke and river-corridor contexts rather than applying one official profile to the whole slug.',
+    accessGuidance: 'Capture the complete address, exact entrance, property or site type and caller authority. Use it to distinguish Lower Stoke, Upper Stoke and river-corridor contexts rather than applying one official profile to the whole locality.',
     evidenceLimits: '“Stoke” is less precise than the council\'s separate Lower Stoke, Upper Stoke/Wyken and South Sowe profiles. None proves an individual address\'s use, age, designation, construction, access or hardware.',
     facts: [
       {
@@ -1078,7 +1064,7 @@ const AREA_SEEDS: AreaGuideSeed[] = [
       },
       'upvc-lock-repair': {
         local: 'The different HLCs demonstrate why “Stoke housing” cannot be used as evidence for uPVC or multipoint hardware. Ask for the door material, locking points, key response and frame interaction at the exact opening.',
-        decision: 'A call from the Lower Stoke industrial area may involve managed premises, whereas an Upper Stoke address may not. Premise control must be confirmed separately from the mechanical diagnosis in both cases.',
+        decision: 'A call from the Lower Stoke industrial area may involve managed premises, whereas an Upper Stoke address may not. Control of the premises must be confirmed separately from the mechanical diagnosis in both cases.',
         checks: [
           'Record door material, locking points, key response and frame interaction; “Stoke housing” does not establish uPVC or multipoint hardware.',
           'Confirm whether the premises are private or managed separately from the mechanical diagnosis.',
@@ -1093,7 +1079,7 @@ const AREA_SEEDS: AreaGuideSeed[] = [
         ],
       },
       'lock-upgrade': {
-        local: 'No single HLC supports a uniform Stoke upgrade recommendation. Determine whether the address is a home, industrial unit or another managed premise, then obtain the authorised party\'s written requirement.',
+        local: 'No single HLC supports a uniform Stoke upgrade recommendation. Determine whether the address is a home, industrial unit or another managed site, then obtain the authorised party\'s written requirement.',
         decision: 'Mid-20th-century housing context in Upper Stoke and railway-linked industry in Lower Stoke are broad history, not hardware evidence. Inspect the complete entrance and treat the River Sowe reference only as a location check.',
         checks: [
           'Determine whether the entrance serves a home, industrial unit or other managed premises, then obtain the authorised party\'s written requirement.',
@@ -1182,9 +1168,9 @@ const AREA_SEEDS: AreaGuideSeed[] = [
     region: 'West Midlands',
     summary: [
       'Coventry\'s Woodway Park HLC records medieval Walsgrave, then called Sowe, around the church, surviving historic buildings on Hall Lane and Hinckley Road, and major redevelopment of the hospital site around 2005.',
-      'A separate North Sowe report places Walsgrave on the river-valley corridor. Village, hospital and river contexts are distinct and cannot establish the premise type, status or entrance at a supplied address.',
+      'A separate North Sowe report places Walsgrave on the river-valley corridor. Village, hospital and river contexts are distinct and cannot establish the property or site type, status or entrance at a supplied address.',
     ],
-    accessGuidance: 'Distinguish a private address from the hospital or another managed premise and identify the authorised contact and entrance. Around the historic village core, verify the exact building\'s status before external changes.',
+    accessGuidance: 'Distinguish a private address from the hospital or another managed site and identify the authorised contact and entrance. Around the historic village core, verify the exact building\'s status before external changes.',
     evidenceLimits: 'The historic village, hospital site and North Sowe corridor are separate evidence contexts. None proves an individual Walsgrave property\'s use, ownership, designation, construction, access or lock type.',
     facts: [
       {
@@ -1209,8 +1195,8 @@ const AREA_SEEDS: AreaGuideSeed[] = [
     ],
     contexts: {
       'emergency-lockout': {
-        local: 'Walsgrave evidence includes a historic village, surviving buildings on Hall Lane and Hinckley Road, and a redeveloped hospital site. A lockout must name the actual premise and entrance rather than use one of those landmarks.',
-        decision: 'Hospital or other managed-premise instructions need an authorised site contact, while a private address needs occupier verification. The North Sowe corridor does not establish control of either kind of opening.',
+        local: 'Walsgrave evidence includes a historic village, surviving buildings on Hall Lane and Hinckley Road, and a redeveloped hospital site. A lockout must name the actual building or site and entrance rather than use one of those landmarks.',
+        decision: 'Hospital or other managed-site instructions need an authorised site contact, while a private address needs occupier verification. The North Sowe corridor does not establish control of either kind of opening.',
         checks: [
           'Name the actual premises and entrance, distinguishing the historic village, Hall Lane or Hinckley Road properties and the hospital site.',
           'At the hospital, obtain the authorised facilities contact; elsewhere, verify the requester against the exact premises because the North Sowe corridor does not establish control.',
@@ -1225,7 +1211,7 @@ const AREA_SEEDS: AreaGuideSeed[] = [
         ],
       },
       'upvc-lock-repair': {
-        local: 'Neither medieval Walsgrave history nor the hospital\'s circa-2005 redevelopment shows what mechanism is installed at a reported door. Record whether the premise is managed and capture the actual handle, key and frame symptoms.',
+        local: 'Neither medieval Walsgrave history nor the hospital\'s circa-2005 redevelopment shows what mechanism is installed at a reported door. Record whether the property is managed and capture the actual handle, key and frame symptoms.',
         decision: 'A River Sowe reference may help locate the address, but it is not evidence for uPVC, composite construction or multipoint locking. Diagnosis remains specific to the identified entrance and its operating condition.',
         checks: [
           'Record whether the premises are managed and capture actual handle, key and frame symptoms; local history does not identify the mechanism.',
@@ -1256,7 +1242,7 @@ const AREA_SEEDS: AreaGuideSeed[] = [
     region: 'West Midlands',
     summary: [
       'Coventry\'s Binley HLC places a commercial and industrial character area on the city\'s south-east fringe, bounded by the A46, with Binley Business Park in the north and the former colliery landscape in the south.',
-      'The council\'s JSNA uses a wider Binley and Willenhall ward, while the South Sowe report names Binley on its river corridor. These different geographies cannot establish the use or status of one premise.',
+      'The council\'s JSNA uses a wider Binley and Willenhall ward, while the South Sowe report names Binley on its river corridor. These different geographies cannot establish the use or status of one property.',
     ],
     accessGuidance: 'Confirm whether the supplied address is residential, business-park, industrial or another managed site. Record the exact entrance and responsible party before access, replacement or temporary work.',
     evidenceLimits: '“Binley” is wider than the HLC commercial/industrial area and differs from the combined ward and river corridor. The sources do not prove any address\'s use, owner, construction, designation, access or lock.',
@@ -1264,7 +1250,7 @@ const AREA_SEEDS: AreaGuideSeed[] = [
       {
         text: 'The Binley HLC places its character area on Coventry\'s south-east fringe, bounded by the A46 to the south-east and dominated at report date by industrial and commercial uses with smaller open areas.',
         sourceIds: ['binley-hlc'],
-        serviceRelevance: 'Identify the current premise and manager rather than assuming business use from the broader HLC.',
+        serviceRelevance: 'Identify the current property or site and manager rather than assuming business use from the broader HLC.',
       },
       {
         text: 'The report identifies Binley Business Park in the north and records the former Binley Colliery landscape in the south.',
@@ -1308,7 +1294,7 @@ const AREA_SEEDS: AreaGuideSeed[] = [
         ],
       },
       'boarding-up': {
-        local: 'A damage report from Binley Business Park needs the specific unit and authorised manager; one from the wider residential area needs the actual occupier or owner. The route name alone cannot distinguish them.',
+        local: 'A damage report from Binley Business Park needs the specific unit and authorised manager; one from the wider residential area needs the actual occupier or owner. The area name alone cannot distinguish them.',
         decision: 'The former colliery landscape and River Sowe corridor are geographic context, not evidence of construction or ownership at the damaged opening. Confirm boundary, access and any site approval directly.',
         checks: [
           'Identify the specific Business Park unit and manager, or the actual owner or occupier for residential damage.',
@@ -1555,13 +1541,13 @@ const AREA_SEEDS: AreaGuideSeed[] = [
       'Coventry\'s Whitley HLC describes a settlement south of the city centre, with industry to the north and west and the River Sowe Valley to the south and east. It records medieval and country-house history alongside later development.',
       'The South Sowe HLC also places Whitley on the river corridor. These mixed edge contexts and broad periods do not prove the use, ownership, status, construction or entrance of a particular Whitley address.',
     ],
-    accessGuidance: 'Identify the full address, actual entrance and whether the premise is residential, industrial or managed institutional land. Verify caller authority, and check exact designation before external work on an older building.',
+    accessGuidance: 'Identify the full address, actual entrance and whether the property is residential, industrial or part of a managed institutional site. Verify caller authority, and check exact designation before external work on an older building.',
     evidenceLimits: 'The Whitley character area contains distinct edge uses and development periods, while the river corridor is a separate evidence layer. The locality name proves none of those conditions for an individual property.',
     facts: [
       {
         text: 'The Whitley HLC describes a settlement south of Coventry city centre, with industry to its north and west and the River Sowe Valley to its south and east.',
         sourceIds: ['whitley-hlc'],
-        serviceRelevance: 'Confirm whether the address is residential, industrial or another managed premise and identify the responsible party.',
+        serviceRelevance: 'Confirm whether the address is residential, industrial or another managed site and identify the responsible party.',
       },
       {
         text: 'The report records medieval settlement south of Abbey Road, a later Whitley Abbey country house and park, and predominantly 1925–1955 development in the modern character area.',
@@ -1589,7 +1575,7 @@ const AREA_SEEDS: AreaGuideSeed[] = [
       },
       'lock-change': {
         local: 'The HLC records medieval, country-house and predominantly 1925–1955 development phases, but none identifies the lock on a supplied Whitley door. Inspect the opening and verify its actual status before replacement.',
-        decision: 'At an industrial or managed premise on the described edges, obtain facilities approval; near an older asset, check designation. The South Sowe corridor adds location context but no replacement specification.',
+        decision: 'At an industrial or managed site on the described edges, obtain facilities approval; near an older asset, check designation. The South Sowe corridor adds location context but no replacement specification.',
         checks: [
           'Inspect the supplied Whitley opening; the recorded development phases do not identify its lock, door fabric or current status.',
           'Obtain any facilities or heritage approval required at the exact premises; the South Sowe corridor supplies no replacement specification.',
@@ -1701,7 +1687,7 @@ const AREA_SEEDS: AreaGuideSeed[] = [
     region: 'West Midlands',
     summary: [
       'Coventry\'s official sources use the historic spelling “Stivichall” in HLC and listed-building records. The council identifies Kenilworth Road woodlands within a 1968 conservation area, and Historic England lists the specifically named Stivichall Grange.',
-      'The Styvechale route label is not a one-to-one mapped boundary for those records. Woodland designation and the listed entry do not establish the status, fabric or entrance of another address.',
+      'The Styvechale locality label does not map one-to-one to those records. Woodland designation and the listed entry do not establish the status, fabric or entrance of another address.',
     ],
     accessGuidance: 'Check both Styvechale and official Stivichall references when verifying the exact address. For property in or beside the Kenilworth Road conservation area or a listed asset, establish status and consent before altering external fabric.',
     evidenceLimits: 'The route spelling and official “Stivichall” records are not a mapped one-to-one area. The conservation statement concerns specified woodlands, and list entry 1342919 applies only to Stivichall Grange.',
@@ -1804,7 +1790,7 @@ const AREA_SEEDS: AreaGuideSeed[] = [
     contexts: {
       'emergency-lockout': {
         local: 'Allesley Village\'s historic core is a conservation area, while the neighbourhood-plan geography is wider. A lockout instruction needs the full address and exact doorway so those evidence boundaries are not confused.',
-        decision: 'All Saints Church and historic Birmingham Road properties are locality context, not proof of occupancy. Confirm the requester\'s authority for the named building, especially where a church or other managed premise is involved.',
+        decision: 'All Saints Church and historic Birmingham Road properties are locality context, not proof of occupancy. Confirm the requester\'s authority for the named building, especially where a church or other managed site is involved.',
         checks: [
           'Give the full Allesley address and exact doorway so the village conservation core is not confused with the wider neighbourhood area.',
           'Confirm the requester for the named building; All Saints Church and Birmingham Road history do not prove occupancy or access authority.',
@@ -1926,7 +1912,7 @@ const AREA_SEEDS: AreaGuideSeed[] = [
       'Coventry\'s Eastern Green HLC describes a west-Coventry residential area crossed by Guphill Brook, with principal 1950s and 1960s development phases and earlier pockets on named lanes.',
       'A separate council investment page describes a proposed mixed-use extension and explicitly distinguishes it from the existing neighbourhood. Neither planning context establishes the use, status, entrance or hardware of a particular address.',
     ],
-    accessGuidance: 'Capture the full address and whether it is an occupied property, construction or development site, or another managed premise. Confirm the authorised contact and check exact status before visible work at an older pocket.',
+    accessGuidance: 'Capture the full address and whether it is an occupied property, construction or development site, or another managed site. Confirm the authorised contact and check exact status before visible work at an older pocket.',
     evidenceLimits: 'The existing neighbourhood, HLC boundary and 176-hectare extension site are different geographies. Development phases, brook and A45 context do not support an individual property, access, construction or lock claim.',
     facts: [
       {
@@ -1951,7 +1937,7 @@ const AREA_SEEDS: AreaGuideSeed[] = [
     ],
     contexts: {
       'emergency-lockout': {
-        local: 'The council distinguishes the existing Eastern Green neighbourhood from a 176-hectare extension site. A lockout instruction must identify whether it concerns an occupied address or a managed development premise and name the exact entrance.',
+        local: 'The council distinguishes the existing Eastern Green neighbourhood from a 176-hectare extension site. A lockout instruction must identify whether it concerns an occupied address or a managed development site and name the exact entrance.',
         decision: 'Guphill Brook, Broad Lane and the nearby farmland can orient a location but do not establish occupancy. Verify the requester or construction-site contact directly before considering access.',
         checks: [
           'Distinguish an occupied Eastern Green address from the managed extension site and name the exact entrance.',
@@ -2025,10 +2011,10 @@ const AREA_SEEDS: AreaGuideSeed[] = [
     ],
     contexts: {
       'emergency-lockout': {
-        local: 'Longford Park is a named council asset on Longford Road, while the JSNA describes a wider statistical area. A lockout report should state whether it concerns the park, a home or another premise and identify the exact entrance.',
+        local: 'Longford Park is a named council asset on Longford Road, while the JSNA describes a wider statistical area. A lockout report should state whether it concerns the park, a home or another site and identify the exact entrance.',
         decision: 'The profile explicitly keeps Bell Green outside its Longford component, so a broad locality label can be misleading. Verify the full address and the authorised occupier or park/site manager before access.',
         checks: [
-          'State whether the Longford request concerns the council park, a home or another premise and identify the exact entrance.',
+          'State whether the Longford request concerns the council park, a home or another site and identify the exact entrance.',
           'Verify the full address and authorised occupier or park manager; the statistical boundary and Bell Green distinction grant no access authority.',
         ],
       },
@@ -2074,7 +2060,7 @@ const AREA_SEEDS: AreaGuideSeed[] = [
       'Coventry\'s JSNA treats Bell Green as one MSOA, separate from the combined Wood End, Henley Green and Manor Farm MSOA. The HLC records earlier Bell Green settlement and road history, while the council lists a named library and community hub.',
       'Those statistical, historical and facility records are different evidence units. They do not establish the use, age, designation, ownership or entrance of another Bell Green address.',
     ],
-    accessGuidance: 'For a library, community hub, business or other managed premise, identify the authorised contact and exact entrance. For any older-address question, verify property status rather than relying on the Bell Green Road history.',
+    accessGuidance: 'For a library, community hub, business or other managed site, identify the authorised contact and exact entrance. For any older-address question, verify property status rather than relying on the Bell Green Road history.',
     evidenceLimits: 'The MSOA, HLC and named library record do not share one property boundary. None proves another Bell Green property\'s use, age, designation, access route, construction or hardware.',
     facts: [
       {
@@ -2149,7 +2135,7 @@ const AREA_SEEDS: AreaGuideSeed[] = [
       'Coventry\'s HLC records the former Courthouse Green Works and later redevelopment of that site as an out-of-town shopping centre. The council also lists Courthouse Green school on Sewall Highway with a defined admissions catchment.',
       'A former works, current retail site, school address and admissions geography are distinct. None establishes the use, ownership, boundary, entrance or hardware of another Courthouse Green property.',
     ],
-    accessGuidance: 'For a school, retail site or other managed premise, name the building, gate or unit and identify the authorised contact. Do not use the school catchment as a locality, property or service boundary.',
+    accessGuidance: 'For a school, retail site or other managed site, name the building, gate or unit and identify the authorised contact. Do not use the school catchment as a locality, property or service boundary.',
     evidenceLimits: 'The historic works/site and current school directory concern named sites. The published catchment is an admissions geography and does not prove another address\'s use, owner, construction, access or lock.',
     facts: [
       {
@@ -2165,7 +2151,7 @@ const AREA_SEEDS: AreaGuideSeed[] = [
       {
         text: 'The directory lists a school catchment containing parts of Sewall Highway, Bell Green Road, Henley Road, Riley Square and other streets; this is an admissions geography rather than a locality boundary.',
         sourceIds: ['courthouse-green-school'],
-        serviceRelevance: 'Do not infer premise identity, service geography or authority from the catchment street list.',
+        serviceRelevance: 'Do not infer property identity, service geography or authority from the catchment street list.',
       },
     ],
     sources: [
@@ -2198,7 +2184,7 @@ const AREA_SEEDS: AreaGuideSeed[] = [
         ],
       },
       'boarding-up': {
-        local: 'Damage at the school requires its authorised contact and exact gate or building; damage at the shopping site requires the relevant unit and facilities manager. The route name does not distinguish those premises.',
+        local: 'Damage at the school requires its authorised contact and exact gate or building; damage at the shopping site requires the relevant unit and facilities manager. The locality name does not distinguish those premises.',
         decision: 'The Sewall Highway catchment street list cannot locate a damaged opening or prove responsibility. Record the scene directly and keep admissions boundaries separate from temporary securing decisions.',
         checks: [
           'Identify the authorised school contact and gate, or the shopping unit and facilities manager, for the exact damaged opening.',
@@ -2229,7 +2215,7 @@ const AREA_SEEDS: AreaGuideSeed[] = [
       {
         text: 'The Alderman\'s Green HLC describes a residential character area north-east of Coventry city centre, bounded by the River Sowe to the east and mixed residential and industrial land to the west.',
         sourceIds: ['aldermans-green-hlc'],
-        serviceRelevance: 'Confirm premise type and the responsible party rather than inferring them from the mixed-use edge.',
+        serviceRelevance: 'Confirm the property or site type and the responsible party rather than inferring them from the mixed-use edge.',
       },
       {
         text: 'The report records Alderman\'s Green Road as “Le Redway” in an early-15th-century record and as part of the 1775 landscape.',
@@ -2248,10 +2234,10 @@ const AREA_SEEDS: AreaGuideSeed[] = [
     ],
     contexts: {
       'emergency-lockout': {
-        local: 'The official character area is residential but has mixed residential and industrial land to the west and the River Sowe to the east. An urgent request must identify the actual premise and controlled entrance.',
+        local: 'The official character area is residential but has mixed residential and industrial land to the west and the River Sowe to the east. An urgent request must identify the actual property or site and controlled entrance.',
         decision: 'Alderman\'s Green Road\'s early documentary history gives no evidence of present occupation. Confirm the requester\'s authority, especially where an industrial or other managed site is involved.',
         checks: [
-          'Identify the actual Aldermans Green premise and entrance rather than inferring use from residential, industrial or River Sowe edge context.',
+          'Identify the actual Aldermans Green property or site and entrance rather than inferring use from residential, industrial or River Sowe edge context.',
           'Confirm the requester and any managed-site contact; Alderman\'s Green Road history provides no evidence of present occupation.',
         ],
       },
@@ -2297,7 +2283,7 @@ const AREA_SEEDS: AreaGuideSeed[] = [
       'Coventry\'s Woodway Park HLC records historic settlement at Potters Green on Woodway Lane and earlier cottages near the present school area. The council separately lists Potters Green school on Ringwood Highway with an admissions catchment.',
       'Archaeological potential, road history and a school catchment are different evidence layers. None proves a building\'s age, construction, boundary, entrance, ownership or lock.',
     ],
-    accessGuidance: 'Use the exact address and identify the authorised occupier or manager, especially for the school or another managed premise. Verify property status before treating historic-settlement evidence as relevant to external work.',
+    accessGuidance: 'Use the exact address and identify the authorised occupier or manager, especially for the school or another managed site. Verify property status before treating historic-settlement evidence as relevant to external work.',
     evidenceLimits: 'The HLC describes settlement and archaeological context, while the directory concerns one school and its admissions geography. These sources do not establish an individual property\'s fabric, use, status, access or hardware.',
     facts: [
       {
@@ -2371,7 +2357,7 @@ const AREA_SEEDS: AreaGuideSeed[] = [
       'Coventry\'s JSNA groups Henley Green with Wood End and Manor Farm in the WEHM MSOA, separate from Bell Green. HLC evidence records development by 1967 and places Henley Green on the North Sowe corridor.',
       'The council also lists a named school and community centre on Wyken Croft. Statistics, development history, river geography and that managed facility do not establish another property\'s type, status or entrance.',
     ],
-    accessGuidance: 'Confirm whether the premise is private, school/community or otherwise managed, and record the authorised contact and exact entrance. Use the full address rather than a WEHM or river-corridor label.',
+    accessGuidance: 'Confirm whether the property is private, a school or community facility, or otherwise managed, and record the authorised contact and exact entrance. Use the full address rather than a WEHM or river-corridor label.',
     evidenceLimits: 'The WEHM MSOA, HLC development history, North Sowe corridor and named school are separate evidence layers. None proves an individual address\'s property type, ownership, construction, access or lock.',
     facts: [
       {
@@ -2398,7 +2384,7 @@ const AREA_SEEDS: AreaGuideSeed[] = [
     ],
     contexts: {
       'emergency-lockout': {
-        local: 'Henley Green School and Community Centre is a named managed site on Wyken Croft, while other Henley Green addresses sit within the WEHM statistical geography. State which premise and controlled entrance is involved.',
+        local: 'Henley Green School and Community Centre is a named managed site on Wyken Croft, while other Henley Green addresses sit within the WEHM statistical geography. State which property or site and controlled entrance is involved.',
         decision: 'The JSNA keeps WEHM separate from Bell Green, but that boundary gives no access authority. Verify the responsible school contact, community-centre manager or private occupier for the exact address.',
         checks: [
           'State whether the Henley Green request concerns the Wyken Croft school, community centre or another address and name the entrance.',
@@ -2524,7 +2510,7 @@ const AREA_SEEDS: AreaGuideSeed[] = [
       'The council\'s flood guidance says the River Sowe is largely designated Main River and drains much of eastern Coventry. These are river-system facts only; a complete street address is required for every property or service decision.',
     ],
     accessGuidance: 'Require a full street address, property description, exact entrance and authorised contact. “Sowe” may refer to the river, a historic Walsgrave/Sowe reference, Sowe Common or a modern informal label, and these are not interchangeable.',
-    evidenceLimits: 'No opened official source defines one standalone modern residential locality or service-route boundary matching the Sowe route label. River, flood-management and named-open-space evidence cannot support property, coverage, access, construction or hardware claims.',
+    evidenceLimits: 'No opened official source defines one standalone modern residential locality or service boundary matching the Sowe area label. River, flood-management and named-open-space evidence cannot support property, coverage, access, construction or hardware claims.',
     facts: [
       {
         text: 'The North Sowe HLC describes the Sowe River Valley east of Coventry, states that the full river course is divided into North and South character areas, and names Aldermans Green, Wood End, Bell Green, Henley Green and Walsgrave on its northern route.',
@@ -2557,7 +2543,7 @@ const AREA_SEEDS: AreaGuideSeed[] = [
         ],
       },
       'lock-change': {
-        local: 'The North and South Sowe character areas describe the river course, not a uniform stock of doors or locks. No replacement can be specified from the `sowe` route name without an exact address and door inspection.',
+        local: 'The North and South Sowe character areas describe the river course, not a uniform stock of doors or locks. No replacement can be specified from the name “Sowe” without an exact address and door inspection.',
         decision: 'If Sowe Common or another managed riverside asset is involved, obtain its responsible authority. The River Sowe\'s Main River status concerns flood management and supplies no property permission or hardware requirement.',
         checks: [
           'Inspect the exact Sowe address and door; North and South river character areas describe no uniform lock stock.',
@@ -2641,26 +2627,26 @@ const AREA_SEEDS: AreaGuideSeed[] = [
       },
       'upvc-lock-repair': {
         local: 'Neither the mid-19th-century ribbon-weaving context nor the MSOA proves that a Little Heath door is uPVC or multipoint. Ask for the actual material, handle action, key movement and frame behaviour.',
-        decision: 'If the school is named, establish which controlled opening and manager are involved; if a former industrial site is referenced, verify its current premise. Historical land use cannot diagnose the mechanism.',
+        decision: 'If the school is named, establish which controlled opening and manager are involved; if a former industrial site is referenced, verify its current use. Historical land use cannot diagnose the mechanism.',
         checks: [
           'Record the Little Heath door material, handle action, key movement and frame behaviour; historical context identifies no mechanism.',
-          'Identify the school opening and manager or verify the former industrial site\'s current premise before diagnosis.',
+          'Identify the school opening and manager or verify the former industrial site\'s current use before diagnosis.',
         ],
       },
       'boarding-up': {
-        local: 'Damage at Little Heath school needs the responsible site contact and precise door or window. Damage at a residence or managed industrial premise needs its own authority and must not be located through the school catchment.',
+        local: 'Damage at Little Heath school needs the responsible site contact and precise door or window. Damage at a residence or managed industrial site needs its own authority and must not be located through the school catchment.',
         decision: 'The medieval common and former industrial sites are area history, not evidence of present construction or ownership. Confirm the exact scene and any property-specific controls before exterior temporary work.',
         checks: [
-          'Identify the Little Heath school contact and opening, or verify the separate residential or managed-premise authority.',
+          'Identify the Little Heath school contact and opening, or verify the separate residential or managed-site authority.',
           'Confirm the exact scene and property controls before external work; common and industrial history establish no present construction or ownership.',
         ],
       },
       'lock-upgrade': {
         local: 'Little Heath\'s MSOA, school catchment and historic landscape do not provide a local security specification. Begin with the individual entrance and a written requirement from the authorised owner or site manager.',
-        decision: 'At the school, follow the facility approval route; elsewhere, verify current premise use rather than inferring it from former industry or roadside settlement. Inspect the complete door set before comparing hardware.',
+        decision: 'At the school, follow the facility approval route; elsewhere, verify current property use rather than inferring it from former industry or roadside settlement. Inspect the complete door set before comparing hardware.',
         checks: [
           'Begin with the Little Heath entrance and a written requirement from the authorised owner or site manager.',
-          'Follow school approval or verify the premise\'s current use, then inspect the door set without inferring from former land use.',
+          'Follow school approval or verify the property\'s current use, then inspect the door set without inferring from former land use.',
         ],
       },
     },

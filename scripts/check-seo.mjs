@@ -29,6 +29,126 @@ function check(condition, message) {
   if (!condition) failures.push(message)
 }
 
+function robotsDirectiveTokens(value = '') {
+  return new Set(
+    String(value)
+      .toLowerCase()
+      .split(/[,\s;:]+/)
+      .map(token => token.trim())
+      .filter(Boolean),
+  )
+}
+
+function checkCanonicalRobots(pathname, metaValue, headerValue) {
+  const meta = robotsDirectiveTokens(metaValue)
+  const header = robotsDirectiveTokens(headerValue)
+  check(
+    meta.has('index')
+      && meta.has('follow')
+      && !meta.has('noindex')
+      && !meta.has('nofollow')
+      && !meta.has('none'),
+    `${pathname} meta robots is ${metaValue || 'missing'}; expected exact index, follow directives`,
+  )
+  check(
+    !header.has('noindex') && !header.has('nofollow') && !header.has('none'),
+    `${pathname} X-Robots-Tag is ${headerValue || 'missing'}; canonical pages must not be blocked`,
+  )
+}
+
+function checkUtilityRobots(pathname, metaValue, headerValue) {
+  const meta = robotsDirectiveTokens(metaValue)
+  const header = robotsDirectiveTokens(headerValue)
+  const combined = new Set([...meta, ...header])
+  check(
+    meta.has('noindex')
+      && meta.has('follow')
+      && !meta.has('index')
+      && !meta.has('nofollow')
+      && !meta.has('none')
+      && !meta.has('all'),
+    `${pathname} meta robots is ${metaValue || 'missing'}; expected exact noindex, follow directives`,
+  )
+  check(
+    combined.has('noindex')
+      && combined.has('follow')
+      && !combined.has('index')
+      && !combined.has('nofollow')
+      && !combined.has('none')
+      && !combined.has('all'),
+    `${pathname} combined robots directives conflict: meta=${metaValue || 'missing'}; X-Robots-Tag=${headerValue || 'missing'}`,
+  )
+}
+
+function wildcardRobotsRules(value) {
+  const rules = []
+  let appliesToWildcard = false
+  let groupHasDirectives = false
+  let hasWildcardGroup = false
+
+  for (const rawLine of String(value).split(/\r?\n/)) {
+    const line = rawLine.replace(/#.*$/, '').trim()
+    if (!line) continue
+    const separator = line.indexOf(':')
+    if (separator < 0) continue
+    const field = line.slice(0, separator).trim().toLowerCase()
+    const directive = line.slice(separator + 1).trim()
+
+    if (field === 'user-agent') {
+      if (groupHasDirectives) {
+        appliesToWildcard = false
+        groupHasDirectives = false
+      }
+      if (directive.toLowerCase() === '*') {
+        appliesToWildcard = true
+        hasWildcardGroup = true
+      }
+      continue
+    }
+
+    // Any directive closes the run of user-agent lines for this group. This
+    // prevents a later bot-specific group leaking into User-agent: * merely
+    // because the wildcard group used Crawl-delay or another extension first.
+    groupHasDirectives = true
+    if (field !== 'allow' && field !== 'disallow') continue
+    if (appliesToWildcard && directive) rules.push({ type: field, pattern: directive })
+  }
+
+  return { hasWildcardGroup, rules }
+}
+
+function robotsPatternMatches(pathname, pattern) {
+  const anchored = pattern.endsWith('$')
+  const unanchoredPattern = anchored ? pattern.slice(0, -1) : pattern
+  const escaped = unanchoredPattern
+    .replace(/[.+?^${}()|[\]\\]/g, '\\$&')
+    .replace(/\*/g, '.*')
+  return new RegExp(`^${escaped}${anchored ? '$' : ''}`).test(pathname)
+}
+
+function wildcardRobotsAllows(pathname, rules) {
+  const matches = rules
+    .filter(rule => robotsPatternMatches(pathname, rule.pattern))
+    .map(rule => ({
+      ...rule,
+      specificity: rule.pattern.replace(/[*$]/g, '').length,
+    }))
+  if (matches.length === 0) return true
+  const highestSpecificity = Math.max(...matches.map(rule => rule.specificity))
+  return matches.some(rule => rule.specificity === highestSpecificity && rule.type === 'allow')
+}
+
+const wildcardIsolationFixture = wildcardRobotsRules([
+  'User-agent: *',
+  'Crawl-delay: 10',
+  'User-agent: Googlebot',
+  'Disallow: /private',
+].join('\n'))
+check(
+  wildcardRobotsAllows('/private', wildcardIsolationFixture.rules),
+  'robots parser leaks a bot-specific rule into the User-agent: * group',
+)
+
 function decodeHtml(value = '') {
   return value
     .replace(/&#x([0-9a-f]+);/gi, (_, hex) => String.fromCodePoint(Number.parseInt(hex, 16)))
@@ -254,6 +374,21 @@ async function fetchLocal(pathname) {
   return { response, html: await response.text() }
 }
 
+async function checkOneHopPermanentRedirect(pathname, expectedPath) {
+  const { response } = await fetchLocal(pathname)
+  const actualPath = redirectPath(response)
+  check(response.status === 308, `${pathname} returned ${response.status}; expected permanent 308`)
+  check(actualPath === expectedPath, `${pathname} redirects to ${actualPath || 'nowhere'}; expected ${expectedPath}`)
+
+  const { response: finalResponse, html: finalHtml } = await fetchLocal(expectedPath)
+  check(finalResponse.status === 200, `${pathname} final target ${expectedPath} returned ${finalResponse.status}; expected 200`)
+  check(!finalResponse.headers.get('location'), `${pathname} final target ${expectedPath} redirects again to ${finalResponse.headers.get('location')}`)
+  check(
+    getCanonical(finalHtml) === `${CANONICAL_ORIGIN}${expectedPath}`,
+    `${pathname} final target ${expectedPath} does not self-canonicalise`,
+  )
+}
+
 async function waitForServer() {
   for (let attempt = 0; attempt < 40; attempt += 1) {
     try {
@@ -298,6 +433,16 @@ try {
     check(url.origin === CANONICAL_ORIGIN, `sitemap URL uses the wrong origin: ${loc}`)
   }
 
+  const robotsResult = await fetchLocal('/robots.txt')
+  check(robotsResult.response.status === 200, `robots.txt returned ${robotsResult.response.status}`)
+  check(robotsResult.html.includes(`Sitemap: ${CANONICAL_ORIGIN}/sitemap.xml`), 'robots.txt does not declare the canonical sitemap URL')
+  const wildcardRobots = wildcardRobotsRules(robotsResult.html)
+  check(wildcardRobots.hasWildcardGroup, 'robots.txt has no User-agent: * group')
+  for (const loc of sitemapUrls) {
+    const pathname = new URL(loc).pathname
+    check(wildcardRobotsAllows(pathname, wildcardRobots.rules), `robots.txt blocks sitemap URL ${pathname} for User-agent: *`)
+  }
+
   const pages = await mapLimit(sitemapUrls, 12, async loc => {
     const productionUrl = new URL(loc)
     const { response, html } = await fetchLocal(productionUrl.pathname)
@@ -328,7 +473,7 @@ try {
     check((title.match(/Local Emergency Locksmith/g) ?? []).length <= 1, `${productionUrl.pathname} repeats the brand in its title`)
     check(description.length > 0, `${productionUrl.pathname} has no meta description`)
     check(description.length <= 160, `${productionUrl.pathname} description is ${description.length} characters`)
-    check(/index/i.test(robots) && /follow/i.test(robots) && !/noindex/i.test(robots), `${productionUrl.pathname} robots is ${robots || 'missing'}`)
+    checkCanonicalRobots(productionUrl.pathname, robots, response.headers.get('x-robots-tag') ?? '')
     check(h1Count === 1, `${productionUrl.pathname} has ${h1Count} H1 elements`)
     check(Boolean(ogImage), `${productionUrl.pathname} has no og:image`)
     check(mainHtml.length > 0, `${productionUrl.pathname} has no main content landmark`)
@@ -400,13 +545,69 @@ try {
     const websiteNodes = parsedSchemaNodes.filter(node => hasSchemaType(node, 'WebSite'))
     check(websiteNodes.length === (productionUrl.pathname === '/' ? 1 : 0), `${productionUrl.pathname} has ${websiteNodes.length} WebSite nodes`)
 
-    for (const serviceNode of parsedSchemaNodes.filter(node => hasSchemaType(node, 'Service'))) {
+    const breadcrumbNodes = parsedSchemaNodes.filter(node => hasSchemaType(node, 'BreadcrumbList'))
+    check(
+      breadcrumbNodes.length === (productionUrl.pathname === '/' ? 0 : 1),
+      `${productionUrl.pathname} has ${breadcrumbNodes.length} BreadcrumbList nodes; expected ${productionUrl.pathname === '/' ? 0 : 1}`,
+    )
+
+    const serviceNodes = parsedSchemaNodes.filter(node => hasSchemaType(node, 'Service'))
+
+    for (const serviceNode of serviceNodes) {
       const provider = serviceNode.provider
       check(provider?.['@type'] === 'Organization', `${productionUrl.pathname} Service provider is not an Organization`)
       check(provider?.['@id'] === `${CANONICAL_ORIGIN}/#business`, `${productionUrl.pathname} Service provider has the wrong @id`)
       check(provider?.name === 'Local Emergency Locksmith', `${productionUrl.pathname} Service provider has the wrong name`)
       check(provider?.url === CANONICAL_ORIGIN, `${productionUrl.pathname} Service provider has the wrong URL`)
       check(provider?.telephone === '+442475224730', `${productionUrl.pathname} Service provider has the wrong telephone`)
+    }
+
+    const areaMatch = productionUrl.pathname.match(/^\/areas\/([^/]+)$/)
+    const townServiceMatch = productionUrl.pathname.match(/^\/areas\/([^/]+)\/([^/]+)$/)
+    const genericServiceMatch = productionUrl.pathname.match(/^\/services\/([^/]+)$/)
+    const expectsServiceSchema = Boolean(areaMatch || townServiceMatch || genericServiceMatch || productionUrl.pathname === '/services')
+    check(
+      serviceNodes.length === (expectsServiceSchema ? 1 : 0),
+      `${productionUrl.pathname} has ${serviceNodes.length} Service nodes; expected ${expectsServiceSchema ? 1 : 0}`,
+    )
+
+    if (serviceNodes.length === 1 && expectsServiceSchema) {
+      const serviceNode = serviceNodes[0]
+      const expectedId = productionUrl.pathname === '/services'
+        ? `${loc}#service-catalogue`
+        : `${loc}#service`
+      check(serviceNode['@id'] === expectedId, `${productionUrl.pathname} Service @id is ${serviceNode['@id'] || 'missing'}; expected ${expectedId}`)
+      check(serviceNode.url === loc, `${productionUrl.pathname} Service URL is ${serviceNode.url || 'missing'}; expected ${loc}`)
+
+      if (areaMatch) {
+        const areaSlug = areaMatch[1]
+        const offers = serviceNode.hasOfferCatalog?.itemListElement
+        check(Array.isArray(offers) && offers.length === SERVICE_SLUGS.length, `${productionUrl.pathname} Service catalog does not contain five offers`)
+        if (Array.isArray(offers)) {
+          const actualOfferUrls = new Set(offers.map(offer => offer?.url))
+          const expectedOfferUrls = SERVICE_SLUGS.map(serviceSlug => GOVERNED_TOWNS.includes(areaSlug)
+            ? `${loc}/${serviceSlug}`
+            : `${loc}#${serviceSlug}`)
+          for (const expectedUrl of expectedOfferUrls) {
+            check(actualOfferUrls.has(expectedUrl), `${productionUrl.pathname} Service catalog is missing local owner URL ${expectedUrl}`)
+          }
+        }
+      }
+
+      if (productionUrl.pathname === '/services') {
+        const offers = serviceNode.hasOfferCatalog?.itemListElement
+        check(Array.isArray(offers) && offers.length === SERVICE_SLUGS.length, '/services Service catalog does not contain five offers')
+        if (Array.isArray(offers)) {
+          const actualOfferUrls = new Set(offers.map(offer => offer?.url))
+          for (const serviceSlug of SERVICE_SLUGS) {
+            check(actualOfferUrls.has(`${loc}/${serviceSlug}`), `/services catalog is missing ${loc}/${serviceSlug}`)
+          }
+        }
+      }
+
+      if (genericServiceMatch || townServiceMatch) {
+        check(serviceNode.offers?.url === loc, `${productionUrl.pathname} Offer URL is ${serviceNode.offers?.url || 'missing'}; expected ${loc}`)
+      }
     }
 
     if (productionUrl.pathname.startsWith('/blog/')) {
@@ -483,7 +684,7 @@ try {
     const { response, html } = await fetchLocal(noindexPath)
     const robots = getMeta(html, 'name', 'robots') ?? ''
     check(response.status === 200, `${noindexPath} returned ${response.status}`)
-    check(/noindex/i.test(robots) && /follow/i.test(robots), `${noindexPath} robots is ${robots || 'missing'}; expected noindex, follow`)
+    checkUtilityRobots(noindexPath, robots, response.headers.get('x-robots-tag') ?? '')
     check(!sitemapUrls.some(loc => new URL(loc).pathname === noindexPath), `${noindexPath} is noindex but present in sitemap`)
   }
 
@@ -506,10 +707,6 @@ try {
     check(response.status === 308, `${path} returned ${response.status}; expected permanent 308`)
     check(redirectPath(response) === `/areas/${area}`, `${path} redirects to ${redirectPath(response) || 'nowhere'}; expected /areas/${area}`)
   }
-
-  const robotsResult = await fetchLocal('/robots.txt')
-  check(robotsResult.response.status === 200, `robots.txt returned ${robotsResult.response.status}`)
-  check(robotsResult.html.includes(`Sitemap: ${CANONICAL_ORIGIN}/sitemap.xml`), 'robots.txt does not declare the canonical sitemap URL')
 
   const manifestResult = await fetchLocal('/manifest.json')
   check(manifestResult.response.status === 200, `manifest.json returned ${manifestResult.response.status}`)
@@ -584,16 +781,31 @@ try {
     }
   )
 
+  const townCentreAliasRedirectCases = Object.entries(TOWN_CENTRE_ALIASES).flatMap(([alias, owner]) => {
+    const ownerPath = `/areas/${owner}`
+    return [
+      { path: `/areas/${alias}`, expected: ownerPath },
+      { path: `/areas/${alias}/streets/high-street`, expected: ownerPath },
+      ...SERVICE_SLUGS.map(serviceSlug => ({
+        path: `/areas/${alias}/${serviceSlug}`,
+        expected: `${ownerPath}/${serviceSlug}`,
+      })),
+      { path: `/locksmith/${alias}`, expected: ownerPath },
+      { path: `/locksmith/${alias}/streets/high-street`, expected: ownerPath },
+      ...SERVICE_SLUGS.map(serviceSlug => ({
+        path: `/locksmith/${alias}/${serviceSlug}`,
+        expected: `${ownerPath}/${serviceSlug}`,
+      })),
+      { path: `/reviews/${alias}`, expected: ownerPath },
+      { path: `/blog/${alias}/retired-local-guide`, expected: ownerPath },
+      { path: `/near-me/emergency-locksmith/${alias}`, expected: ownerPath },
+    ]
+  })
+
   await mapLimit(
-    Object.entries(TOWN_CENTRE_ALIASES).flatMap(([alias, owner]) => SERVICE_SLUGS.map(serviceSlug => ({ alias, owner, serviceSlug }))),
+    townCentreAliasRedirectCases,
     12,
-    async ({ alias, owner, serviceSlug }) => {
-      const path = `/areas/${alias}/${serviceSlug}`
-      const expected = `/areas/${owner}/${serviceSlug}`
-      const { response } = await fetchLocal(path)
-      check(response.status === 308, `${path} returned ${response.status}; expected permanent 308`)
-      check(redirectPath(response) === expected, `${path} redirects to ${redirectPath(response) || 'nowhere'}; expected ${expected}`)
-    }
+    async ({ path, expected }) => checkOneHopPermanentRedirect(path, expected),
   )
 
   await mapLimit(

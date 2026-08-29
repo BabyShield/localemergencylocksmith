@@ -1,5 +1,4 @@
 import { SITE_CONFIG } from '@/data/config'
-import { Suspense } from 'react'
 import { UserRound, FileCheck2, Clock } from 'lucide-react'
 import PPCHandler from './PPCHandler'
 
@@ -22,9 +21,7 @@ export default function HeroSection({
 }: HeroSectionProps) {
   return (
     <section className={`relative overflow-hidden ${compact ? 'py-10 md:py-14' : 'py-14 md:py-24'} px-4 text-white`}>
-      <Suspense fallback={null}>
-         <PPCHandler />
-      </Suspense>
+      <PPCHandler />
       {/* Background with gradient and subtle pattern */}
       <div className="absolute inset-0 bg-gradient-to-br from-[#0A1628] via-[#0F1B2D] to-[#162438]" />
       <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'url("data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'1\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")' }} />
@@ -59,7 +56,7 @@ export default function HeroSection({
             href={`tel:${SITE_CONFIG.phoneTel}`}
             className="group relative inline-flex flex-col items-center bg-[#FFB800] hover:bg-[#FFC933] text-[#0F1B2D] px-10 py-5 rounded-2xl font-black transition-all duration-200 min-h-[72px] justify-center shadow-[0_4px_24px_rgba(255,184,0,0.3)] hover:shadow-[0_4px_32px_rgba(255,184,0,0.5)] hover:scale-[1.02]"
           >
-            <span className="text-xs font-bold uppercase tracking-[0.15em] text-[#0F1B2D]/60">Call Now — Free Quote</span>
+            <span className="text-xs font-bold uppercase tracking-[0.15em] text-[#0F1B2D]">Call Now — Free Quote</span>
             <span className="text-2xl md:text-3xl">{SITE_CONFIG.phone}</span>
           </a>
         </div>

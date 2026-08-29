@@ -2,21 +2,27 @@
   "name": "locksmith-build",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
+  "engines": {
+    "node": "24.x"
+  },
   "scripts": {
     "dev": "next dev",
+    "prebuild": "npm run verify:source",
     "build": "next build",
     "start": "next start",
     "typecheck": "tsc --noEmit --incremental false",
     "check:seo": "node scripts/check-seo.mjs",
     "audit:service-areas": "node --experimental-strip-types scripts/audit-service-area-governance.mjs",
-    "audit:area-guides": "node --experimental-strip-types scripts/audit-area-guide-governance.mjs"
+    "audit:area-guides": "node --experimental-strip-types scripts/audit-area-guide-governance.mjs",
+    "verify:source": "npm run typecheck && npm run audit:area-guides && npm run audit:service-areas"
   },
   "dependencies": {
-    "@vercel/og": "^0.11.1",
-    "lucide-react": "^1.7.0",
-    "next": "^16.1.6",
-    "react": "^19.2.3",
-    "react-dom": "^19.2.3"
+    "@vercel/og": "^1.0.2",
+    "lucide-react": "^1.37.0",
+    "next": "^16.3.3",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",

@@ -343,6 +343,8 @@ export default async function ServicePage({ params }: Props) {
   const serviceSchema = {
     '@context': 'https://schema.org',
     '@type': 'Service',
+    '@id': `${SITE_CONFIG.domain}/services/${slug}#service`,
+    url: `${SITE_CONFIG.domain}/services/${slug}`,
     name: service.name,
     description: service.description,
     serviceType: service.shortName,
@@ -359,6 +361,7 @@ export default async function ServicePage({ params }: Props) {
     ],
     offers: {
       '@type': 'Offer',
+      url: `${SITE_CONFIG.domain}/services/${slug}`,
       priceSpecification: {
         '@type': 'PriceSpecification',
         minPrice: service.priceFrom.toString(),
@@ -708,6 +711,7 @@ export default async function ServicePage({ params }: Props) {
                     <Link
                       key={area.slug}
                       href={hasTownService(area.slug, slug) ? `/areas/${area.slug}/${slug}` : `/areas/${area.slug}#${slug}`}
+                      prefetch={false}
                       className="text-sm text-gray-600 hover:text-[#0F1B2D] bg-white hover:bg-white px-3 py-1.5 rounded-lg border border-gray-200 hover:border-[#FFB800] transition-all duration-200"
                     >
                       {service.shortName} in {area.name}

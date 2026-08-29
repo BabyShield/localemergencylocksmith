@@ -55,7 +55,7 @@ export default function TermsPage() {
             <Link href="/" prefetch={false} itemProp="item" className="hover:text-[#0F1B2D] transition-colors"><span itemProp="name">Home</span></Link>
             <meta itemProp="position" content="1" />
           </li>
-          <span className="mx-2" aria-hidden="true">›</span>
+          <li className="mx-2" aria-hidden="true" role="presentation">›</li>
           <li itemScope itemType="https://schema.org/ListItem" itemProp="itemListElement">
             <span><span itemProp="name" className="text-[#0F1B2D] font-medium">Terms of Service</span></span>
             <meta itemProp="position" content="2" />

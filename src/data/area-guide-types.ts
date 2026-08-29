@@ -26,6 +26,7 @@ export interface AreaServiceGuidanceDraft {
 export type AreaServiceGuidance = AreaServiceGuidanceDraft
 
 export interface PublishedAreaServiceGuidance extends AreaServiceGuidanceDraft {
+  searchHeading: string
   sourceIds: string[]
 }
 

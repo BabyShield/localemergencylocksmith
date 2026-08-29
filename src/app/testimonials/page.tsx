@@ -49,7 +49,7 @@ export default function TestimonialsPage() {
             </Link>
             <meta itemProp="position" content="1" />
           </li>
-          <span className="mx-2" aria-hidden="true">›</span>
+          <li className="mx-2" aria-hidden="true" role="presentation">›</li>
           <li itemScope itemType="https://schema.org/ListItem" itemProp="itemListElement">
             <span itemProp="name" className="font-medium text-gray-800">Review information</span>
             <meta itemProp="position" content="2" />

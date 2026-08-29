@@ -36,6 +36,9 @@ const breadcrumbSchema = {
 const servicesCatalogSchema = {
   '@context': 'https://schema.org',
   '@type': 'Service',
+  '@id': `${SITE_CONFIG.domain}/services#service-catalogue`,
+  url: `${SITE_CONFIG.domain}/services`,
+  name: 'Locksmith Services in Coventry and Warwickshire',
   serviceType: 'Locksmith',
   provider: SERVICE_PROVIDER_SCHEMA,
   areaServed: { '@type': 'Place', name: 'Coventry and Warwickshire' },
@@ -70,7 +73,7 @@ export default function ServicesPage() {
             <Link href="/" prefetch={false} itemProp="item" className="hover:text-[#FFB800]"><span itemProp="name">Home</span></Link>
             <meta itemProp="position" content="1" />
           </li>
-          <span className="mx-2" aria-hidden="true">›</span>
+          <li className="mx-2" aria-hidden="true" role="presentation">›</li>
           <li itemScope itemType="https://schema.org/ListItem" itemProp="itemListElement">
             <span><span itemProp="name" className="text-gray-800 font-medium">Services</span></span>
             <meta itemProp="position" content="2" />
@@ -124,6 +127,7 @@ export default function ServicesPage() {
                     <li key={town.slug}>
                       <Link
                         href={`/areas/${town.slug}/${service.slug}`}
+                        prefetch={false}
                         className="text-gray-700 underline decoration-[#FFB800] underline-offset-4 hover:text-[#8A5A00]"
                       >
                         {service.shortName} in {town.name}

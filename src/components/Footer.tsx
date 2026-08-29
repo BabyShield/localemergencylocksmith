@@ -121,10 +121,10 @@ export default function Footer() {
           className="flex flex-wrap justify-center gap-x-6 gap-y-1.5 text-xs text-gray-400 pb-4"
           style={{ fontFamily: 'Arial, Helvetica, sans-serif' }}
         >
-          <span lang="pl"><span className="font-semibold text-gray-400">Zamknięty?</span> Zadzwoń: <a href={`tel:${SITE_CONFIG.phoneTel}`} className="text-gray-300 hover:text-white">{SITE_CONFIG.phone}</a></span>
-          <span lang="ro"><span className="font-semibold text-gray-400">Blocat afară?</span> Sunați: <a href={`tel:${SITE_CONFIG.phoneTel}`} className="text-gray-300 hover:text-white">{SITE_CONFIG.phone}</a></span>
-          <span lang="ur" dir="rtl"><span className="font-semibold text-gray-400">ایمرجنسی؟</span> کال کریں: <a href={`tel:${SITE_CONFIG.phoneTel}`} className="text-gray-300 hover:text-white">{SITE_CONFIG.phone}</a></span>
-          <span lang="hi"><span className="font-semibold text-gray-400">बंद हो गए?</span> कॉल करें: <a href={`tel:${SITE_CONFIG.phoneTel}`} className="text-gray-300 hover:text-white">{SITE_CONFIG.phone}</a></span>
+          <span lang="pl"><span className="font-semibold text-gray-400">Zamknięty?</span> Zadzwoń: <a href={`tel:${SITE_CONFIG.phoneTel}`} className="text-white underline decoration-[#FFB800] underline-offset-2 hover:text-[#FFB800]">{SITE_CONFIG.phone}</a></span>
+          <span lang="ro"><span className="font-semibold text-gray-400">Blocat afară?</span> Sunați: <a href={`tel:${SITE_CONFIG.phoneTel}`} className="text-white underline decoration-[#FFB800] underline-offset-2 hover:text-[#FFB800]">{SITE_CONFIG.phone}</a></span>
+          <span lang="ur" dir="rtl"><span className="font-semibold text-gray-400">ایمرجنسی؟</span> کال کریں: <a href={`tel:${SITE_CONFIG.phoneTel}`} className="text-white underline decoration-[#FFB800] underline-offset-2 hover:text-[#FFB800]">{SITE_CONFIG.phone}</a></span>
+          <span lang="hi"><span className="font-semibold text-gray-400">बंद हो गए?</span> कॉल करें: <a href={`tel:${SITE_CONFIG.phoneTel}`} className="text-white underline decoration-[#FFB800] underline-offset-2 hover:text-[#FFB800]">{SITE_CONFIG.phone}</a></span>
         </div>
 
         <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-400 pt-4 border-t border-gray-800">

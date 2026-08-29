@@ -41,7 +41,7 @@ export default function NotFound() {
               aria-label={`Call Local Emergency Locksmith on ${SITE_CONFIG.phone}`}
               className="inline-flex flex-col items-center bg-[#FFB800] hover:bg-[#FFC933] text-[#0F1B2D] font-black text-xl px-10 py-5 rounded-2xl transition-all shadow-[0_4px_24px_rgba(255,184,0,0.3)] hover:shadow-[0_4px_40px_rgba(255,184,0,0.5)] hover:scale-[1.02]"
             >
-              <span className="text-xs font-bold uppercase tracking-[0.15em] text-[#0F1B2D]/60">Call Now</span>
+              <span className="text-xs font-bold uppercase tracking-[0.15em] text-[#0F1B2D]">Call Now</span>
               <span className="text-2xl">{SITE_CONFIG.phone}</span>
             </a>
 

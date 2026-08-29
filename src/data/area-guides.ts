@@ -1,4 +1,5 @@
 import type { AreaSlug } from './area-authorities'
+import { AREAS } from './areas.ts'
 import type {
   GovernedAreaGuideDraft,
   PublishedAreaServiceGuidance,
@@ -20,6 +21,16 @@ const mergedDraftGuides: Partial<Record<AreaSlug, GovernedAreaGuideDraft>> = {
   ...COVENTRY_AREA_GUIDES,
   ...NORTH_EAST_AREA_GUIDES,
   ...SOUTH_WEST_AREA_GUIDES,
+}
+
+const AREA_NAMES = new Map(AREAS.map(area => [area.slug, area.name]))
+
+const SERVICE_SEARCH_HEADINGS: Record<ServiceAreaSlug, string> = {
+  'emergency-lockout': 'Emergency Locksmith and Lockout Help',
+  'lock-change': 'Lock Repair and Replacement',
+  'upvc-lock-repair': 'uPVC Door Lock Repair',
+  'boarding-up': 'Emergency Boarding Up',
+  'lock-upgrade': 'Lock Upgrades and Door Security',
 }
 
 function technicalSourceId(
@@ -81,6 +92,9 @@ function sourceIdsForGuidance(
 }
 
 function publishGuide(guide: GovernedAreaGuideDraft): PublishedGovernedAreaGuide {
+  const areaName = AREA_NAMES.get(guide.slug)
+  if (!areaName) throw new Error(`Missing area name for governed guide ${guide.slug}`)
+
   const allGuidanceText = SERVICE_AREA_SLUGS
     .map(serviceSlug => guidanceText(guide.serviceGuidance[serviceSlug]))
     .join(' ')
@@ -101,6 +115,7 @@ function publishGuide(guide: GovernedAreaGuideDraft): PublishedGovernedAreaGuide
       serviceSlug,
       {
         ...augmentedGuide.serviceGuidance[serviceSlug],
+        searchHeading: `${SERVICE_SEARCH_HEADINGS[serviceSlug]} in ${areaName}`,
         sourceIds: sourceIdsForGuidance(augmentedGuide, serviceSlug),
       },
     ]),

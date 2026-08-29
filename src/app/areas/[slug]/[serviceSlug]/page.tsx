@@ -132,6 +132,7 @@ export default async function TownServicePage({ params }: Props) {
   const serviceSchema = {
     '@context': 'https://schema.org',
     '@type': 'Service',
+    '@id': `${SITE_CONFIG.domain}/areas/${slug}/${serviceSlug}#service`,
     serviceType: service.shortName,
     name: pageHeading,
     url: `${SITE_CONFIG.domain}/areas/${slug}/${serviceSlug}`,
@@ -149,6 +150,7 @@ export default async function TownServicePage({ params }: Props) {
     },
     offers: {
       '@type': 'Offer',
+      url: `${SITE_CONFIG.domain}/areas/${slug}/${serviceSlug}`,
       priceSpecification: {
         '@type': 'PriceSpecification',
         minPrice: String(service.priceFrom),
@@ -182,17 +184,17 @@ export default async function TownServicePage({ params }: Props) {
             <Link href="/" prefetch={false} itemProp="item" className="hover:text-[#FFB800]"><span itemProp="name">Home</span></Link>
             <meta itemProp="position" content="1" />
           </li>
-          <span className="mx-2" aria-hidden="true">›</span>
+          <li className="mx-2" aria-hidden="true" role="presentation">›</li>
           <li itemScope itemType="https://schema.org/ListItem" itemProp="itemListElement">
             <Link href="/areas" prefetch={false} itemProp="item" className="hover:text-[#FFB800]"><span itemProp="name">Areas</span></Link>
             <meta itemProp="position" content="2" />
           </li>
-          <span className="mx-2" aria-hidden="true">›</span>
+          <li className="mx-2" aria-hidden="true" role="presentation">›</li>
           <li itemScope itemType="https://schema.org/ListItem" itemProp="itemListElement">
             <Link href={`/areas/${slug}`} prefetch={false} itemProp="item" className="hover:text-[#FFB800]"><span itemProp="name">{area.name}</span></Link>
             <meta itemProp="position" content="3" />
           </li>
-          <span className="mx-2" aria-hidden="true">›</span>
+          <li className="mx-2" aria-hidden="true" role="presentation">›</li>
           <li itemScope itemType="https://schema.org/ListItem" itemProp="itemListElement">
             <span><span itemProp="name" className="text-gray-800 font-medium">{service.shortName}</span></span>
             <meta itemProp="position" content="4" />
@@ -444,8 +446,14 @@ export default async function TownServicePage({ params }: Props) {
               {neighbours.slice(0, 4).map((n, i) => (
                 <span key={n.slug}>
                   {i > 0 && ' · '}
-                  <Link href={`/areas/${n.slug}`} className="underline hover:text-[#0F1B2D]">
-                    Locksmith {n.name}
+                  <Link
+                    href={hasTownService(n.slug, serviceSlug)
+                      ? `/areas/${n.slug}/${serviceSlug}`
+                      : `/areas/${n.slug}#${serviceSlug}`}
+                    prefetch={false}
+                    className="underline hover:text-[#0F1B2D]"
+                  >
+                    {service.shortName} in {n.name}
                   </Link>
                 </span>
               ))}

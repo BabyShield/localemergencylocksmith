@@ -22,7 +22,7 @@ export default function CTABlock({
           href={`tel:${SITE_CONFIG.phoneTel}`}
           className="group inline-flex flex-col items-center bg-[#FFB800] hover:bg-[#FFC933] text-[#0F1B2D] px-12 py-6 rounded-2xl font-black transition-all duration-200 shadow-[0_4px_24px_rgba(255,184,0,0.3)] hover:shadow-[0_4px_40px_rgba(255,184,0,0.5)] hover:scale-[1.02]"
         >
-          <span className="text-xs font-bold uppercase tracking-[0.15em] text-[#0F1B2D]/60 mb-1">Call Now &mdash; 24/7</span>
+          <span className="text-xs font-bold uppercase tracking-[0.15em] text-[#0F1B2D] mb-1">Call Now &mdash; 24/7</span>
           <span className="text-3xl md:text-4xl">{SITE_CONFIG.phone}</span>
         </a>
 

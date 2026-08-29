@@ -166,12 +166,12 @@ export default async function BlogPostPage({ params }: Props) {
             <Link href="/" prefetch={false} itemProp="item" className="hover:text-[#FFB800]"><span itemProp="name">Home</span></Link>
             <meta itemProp="position" content="1" />
           </li>
-          <span className="mx-2" aria-hidden="true">›</span>
+          <li className="mx-2" aria-hidden="true" role="presentation">›</li>
           <li itemScope itemType="https://schema.org/ListItem" itemProp="itemListElement">
             <Link href="/blog" prefetch={false} itemProp="item" className="hover:text-[#FFB800]"><span itemProp="name">Blog</span></Link>
             <meta itemProp="position" content="2" />
           </li>
-          <span className="mx-2" aria-hidden="true">›</span>
+          <li className="mx-2" aria-hidden="true" role="presentation">›</li>
           <li itemScope itemType="https://schema.org/ListItem" itemProp="itemListElement">
             <span><span itemProp="name" className="text-gray-800 font-medium truncate max-w-xs inline-block align-bottom">{post.title}</span></span>
             <meta itemProp="position" content="3" />

@@ -84,9 +84,12 @@ export default async function AreaPage({ params }: Props) {
   const serviceGuidance = SERVICES.map(service => ({
     service,
     guidance: guide.serviceGuidance[service.slug as ServiceAreaSlug],
-    href: hasTownService(area.slug, service.slug)
+    detailsHref: hasTownService(area.slug, service.slug)
       ? `/areas/${area.slug}/${service.slug}`
       : `/services/${service.slug}`,
+    localOwnerHref: hasTownService(area.slug, service.slug)
+      ? `/areas/${area.slug}/${service.slug}`
+      : `/areas/${area.slug}#${service.slug}`,
     hasDedicatedPage: hasTownService(area.slug, service.slug),
   }))
   const allFaqs = [
@@ -126,7 +129,7 @@ export default async function AreaPage({ params }: Props) {
     hasOfferCatalog: {
       '@type': 'OfferCatalog',
       name: `Locksmith services in ${area.name}`,
-      itemListElement: serviceGuidance.map(({ service, guidance, href }) => ({
+      itemListElement: serviceGuidance.map(({ service, guidance, localOwnerHref }) => ({
         '@type': 'Offer',
         name: `${service.shortName} in ${area.name}`,
         description: guidance.body[0],
@@ -137,7 +140,7 @@ export default async function AreaPage({ params }: Props) {
           valueAddedTaxIncluded: false,
           description: 'Advertised starting price; the final price depends on the diagnosed scope and agreed parts.',
         },
-        url: `${SITE_CONFIG.domain}${href}`,
+        url: `${SITE_CONFIG.domain}${localOwnerHref}`,
       })),
     },
   }
@@ -164,12 +167,12 @@ export default async function AreaPage({ params }: Props) {
             <Link href="/" prefetch={false} itemProp="item" className="hover:text-[#FFB800]"><span itemProp="name">Home</span></Link>
             <meta itemProp="position" content="1" />
           </li>
-          <span className="mx-2" aria-hidden="true">›</span>
+          <li className="mx-2" aria-hidden="true" role="presentation">›</li>
           <li itemScope itemType="https://schema.org/ListItem" itemProp="itemListElement">
             <Link href="/areas" prefetch={false} itemProp="item" className="hover:text-[#FFB800]"><span itemProp="name">Areas</span></Link>
             <meta itemProp="position" content="2" />
           </li>
-          <span className="mx-2" aria-hidden="true">›</span>
+          <li className="mx-2" aria-hidden="true" role="presentation">›</li>
           <li itemScope itemType="https://schema.org/ListItem" itemProp="itemListElement">
             <span itemProp="name" className="text-gray-800 font-medium">{area.name}</span>
             <meta itemProp="position" content="3" />
@@ -180,7 +183,7 @@ export default async function AreaPage({ params }: Props) {
       <HeroSection
         heading={hasDedicatedServicePages
           ? `Locksmith Services in ${area.name}`
-          : `Locksmith ${area.name} — Emergency Help 24/7`}
+          : `Locksmith Services in ${area.name} — Emergency & Planned Help`}
         subheading={`Locked out or dealing with a faulty or damaged lock in ${area.name}? Call for the current ETA, scope and price before attendance. No VAT or separate call-out fee.`}
         areaName={area.name}
         showResponseTime={false}
@@ -300,14 +303,17 @@ export default async function AreaPage({ params }: Props) {
             still requires inspection at the exact address.
           </p>
           <div className="space-y-8">
-            {serviceGuidance.map(({ service, guidance, href, hasDedicatedPage }) => (
+            {serviceGuidance.map(({ service, guidance, detailsHref, hasDedicatedPage }) => (
               <article key={service.slug} id={service.slug} data-evidence-section={service.slug} data-evidence-source-ids={guidance.sourceIds.join(' ')} className="scroll-mt-28 rounded-2xl border border-gray-200 bg-white p-6 md:p-8 shadow-sm">
                 <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between mb-5">
                   <div>
                     <p className="text-xs font-bold uppercase tracking-wider text-[#8A5A00] mb-2">From £{service.priceFrom} · no VAT</p>
-                    <h3 className="text-xl md:text-2xl font-black text-[#0F1B2D]">{guidance.heading}</h3>
+                    <h3 className="text-xl md:text-2xl font-black text-[#0F1B2D]">{guidance.searchHeading}</h3>
+                    {guidance.heading !== guidance.searchHeading && (
+                      <p className="text-sm font-semibold text-gray-600 mt-2">Local decision focus: {guidance.heading}</p>
+                    )}
                   </div>
-                  <Link href={href} className="shrink-0 text-sm font-bold text-[#0F1B2D] underline decoration-[#FFB800] underline-offset-4 hover:text-[#8A5A00]">
+                  <Link href={detailsHref} prefetch={false} className="shrink-0 text-sm font-bold text-[#0F1B2D] underline decoration-[#FFB800] underline-offset-4 hover:text-[#8A5A00]">
                     {hasDedicatedPage
                       ? `View ${service.shortName} in ${area.name}`
                       : `View ${service.shortName} service details`}

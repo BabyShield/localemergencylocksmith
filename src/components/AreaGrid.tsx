@@ -61,6 +61,7 @@ export default function AreaGrid() {
                   <Link
                     key={area.slug}
                     href={`/areas/${area.slug}`}
+                    prefetch={false}
                     className="flex items-center justify-between bg-white rounded-lg border border-gray-100 py-2.5 px-3 hover:border-[#FFB800]/50 hover:shadow-sm transition-all group"
                   >
                     <span className="text-sm text-gray-700 group-hover:text-[#0F1B2D] font-medium leading-tight truncate">

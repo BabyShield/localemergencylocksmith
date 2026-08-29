@@ -176,7 +176,7 @@ export default function FAQPage() {
             <Link href="/" prefetch={false} itemProp="item" className="hover:text-[#0F1B2D] transition-colors"><span itemProp="name">Home</span></Link>
             <meta itemProp="position" content="1" />
           </li>
-          <span className="mx-2" aria-hidden="true">›</span>
+          <li className="mx-2" aria-hidden="true" role="presentation">›</li>
           <li itemScope itemType="https://schema.org/ListItem" itemProp="itemListElement">
             <span><span itemProp="name" className="text-[#0F1B2D] font-medium">FAQ</span></span>
             <meta itemProp="position" content="2" />
@@ -268,7 +268,7 @@ export default function FAQPage() {
               href={`tel:${SITE_CONFIG.phoneTel}`}
               className="inline-flex flex-col items-center bg-[#FFB800] hover:bg-[#FFC933] text-[#0F1B2D] px-10 py-5 rounded-2xl font-black transition-all duration-200 shadow-[0_4px_24px_rgba(255,184,0,0.3)] hover:shadow-[0_4px_40px_rgba(255,184,0,0.5)] hover:scale-[1.02]"
             >
-              <span className="text-xs font-bold uppercase tracking-[0.15em] text-[#0F1B2D]/60 mb-1">
+              <span className="text-xs font-bold uppercase tracking-[0.15em] text-[#0F1B2D] mb-1">
                 Call Now — 24/7
               </span>
               <span className="text-2xl md:text-3xl">{SITE_CONFIG.phone}</span>

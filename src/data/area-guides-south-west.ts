@@ -203,7 +203,7 @@ const TECHNICAL_COPY: Record<ServiceAreaSlug, TechnicalCopy[]> = {
       second: `Once cleared, plan external temporary security for the specific door or window. Establish owner or manager consent, access and any status constraint, then agree scope and cost. Official area facts do not reveal materials, dimensions or attachment points.`,
     },
     {
-      first: `A request for temporary securing must distinguish the affected premise from nearby public or managed land. Name the exact opening and authorised party, and ask whether police require photographs or undisturbed forensic evidence before anything is moved or covered.`,
+      first: `A request for temporary securing must distinguish the affected property from nearby public or managed land. Name the exact opening and authorised party, and ask whether police require photographs or undisturbed forensic evidence before anything is moved or covered.`,
       second: `Following that check, police advice is to make the damaged opening secure from outside. Inspection and property permission determine the temporary plan; provide cost information in advance and do not infer the method from a settlement's planning description.`,
     },
     {
@@ -305,11 +305,11 @@ const LOCALITY_SOURCES: Record<string, AreaGuideSource> = {
 }
 
 const SERVICE_LABELS: Record<ServiceAreaSlug, string> = {
-  'emergency-lockout': 'emergency access checks',
-  'lock-change': 'evidence-led lock replacement',
-  'upvc-lock-repair': 'checking a reported uPVC lock fault',
-  'boarding-up': 'temporary security after damage',
-  'lock-upgrade': 'planning a door-security upgrade',
+  'emergency-lockout': 'Confirming the right entrance for emergency access',
+  'lock-change': 'Choosing between lock repair and replacement',
+  'upvc-lock-repair': 'Diagnosing a uPVC door lock fault',
+  'boarding-up': 'Securing a damaged opening',
+  'lock-upgrade': 'Choosing a compatible door-security upgrade',
 }
 
 const SERVICE_CHECKS: Record<ServiceAreaSlug, string> = {
@@ -319,6 +319,177 @@ const SERVICE_CHECKS: Record<ServiceAreaSlug, string> = {
   'boarding-up': 'Name each damaged opening and authorised contact.',
   'lock-upgrade': 'Document the whole existing door assembly.',
 }
+
+interface ServiceFaqCopy {
+  question: (areaName: string) => string
+  answer: string
+}
+
+const SERVICE_FAQS: Record<ServiceAreaSlug, ServiceFaqCopy[]> = {
+  'emergency-lockout': [
+    {
+      question: areaName => `What happens before an emergency locksmith opens a door in ${areaName}?`,
+      answer: `The caller's identity, authority, full address and affected entrance are confirmed first. The door set is then inspected, and the proposed work and expected cost are explained before access work begins.`,
+    },
+    {
+      question: areaName => `Will an emergency lockout in ${areaName} automatically require drilling?`,
+      answer: `An opening method cannot be selected from the area name or a telephone description alone. The complete entrance must be inspected, with the supported approach and any change in scope or cost agreed before continuing.`,
+    },
+    {
+      question: areaName => `What should I have ready for emergency lockout help in ${areaName}?`,
+      answer: `Have the complete address, the precise door and evidence that you may authorise access ready. The likely charge and proposed scope should be discussed before work starts.`,
+    },
+    {
+      question: areaName => `How is the opening method chosen for a lockout in ${areaName}?`,
+      answer: `It follows an inspection of the particular lock, door, frame and hinges rather than an assumption about the neighbourhood. The proposed method is explained to the authorised customer before work proceeds.`,
+    },
+    {
+      question: areaName => `Why does an emergency locksmith need the full ${areaName} address?`,
+      answer: `The full address identifies the controlled entrance but does not itself prove authority. The caller's connection to the property, the affected door and the observed condition still need to be checked.`,
+    },
+  ],
+  'lock-change': [
+    {
+      question: areaName => `Does a faulty lock in ${areaName} need repair or replacement?`,
+      answer: `That decision depends on the lock's condition, the door, frame, hinges and alignment, and the required outcome. The supported option and expected cost should be explained before work begins.`,
+    },
+    {
+      question: areaName => `What information helps specify a replacement lock in ${areaName}?`,
+      answer: `Identify the exact entrance, the reason for the change, who may authorise it and any written insurer or building-management requirement. The final specification must match the inspected door set.`,
+    },
+    {
+      question: areaName => `Can a replacement cylinder be chosen before a ${areaName} visit?`,
+      answer: `Photographs can help prepare for inspection, but the cylinder still needs to be matched to the actual door and protective furniture. Size, accreditation, scope and cost are confirmed from that evidence.`,
+    },
+    {
+      question: areaName => `Who can authorise a lock repair or replacement in ${areaName}?`,
+      answer: `The person responsible for the particular entrance must be identified before the change is agreed. Shared, rented or managed doors may also require a landlord's, manager's or other documented approval.`,
+    },
+    {
+      question: areaName => `Could a sticking door in ${areaName} need alignment work rather than a new lock?`,
+      answer: `A reported symptom does not identify the failed component. The lock, door, frame and hinges should be inspected together before repair or replacement is specified.`,
+    },
+  ],
+  'upvc-lock-repair': [
+    {
+      question: areaName => `Why does my uPVC door lock work open but not closed in ${areaName}?`,
+      answer: `That difference is useful diagnostic information but does not identify the failed part. The mechanism, keeps, alignment, hinges and frame need to be assessed together.`,
+    },
+    {
+      question: areaName => `Does a stiff uPVC door handle in ${areaName} mean the lock needs replacing?`,
+      answer: `Handle resistance is a symptom, not a complete diagnosis. Key movement, locking-point behaviour, alignment and operation with the door open and closed should be checked before a repair is specified.`,
+    },
+    {
+      question: areaName => `What photos help with uPVC door lock repair in ${areaName}?`,
+      answer: `Where they can be taken safely, images of the affected entrance, door edge, locking points and keeps can help frame the inspection. They do not replace checking the installed assembly.`,
+    },
+    {
+      question: areaName => `Should I lift the handle before locking a uPVC door in ${areaName}?`,
+      answer: `Many multipoint doors use a lift-handle-then-turn-key sequence. That operating check cannot diagnose persistent difficulty, which still requires inspection of the complete door set.`,
+    },
+    {
+      question: areaName => `Can a uPVC replacement mechanism be identified from my ${areaName} address?`,
+      answer: `No area or planning record identifies the mechanism fitted to an individual door. The exact opening, installed parts and reported handle and key behaviour must be checked directly.`,
+    },
+  ],
+  'boarding-up': [
+    {
+      question: areaName => `What should I do before emergency boarding up after a break-in in ${areaName}?`,
+      answer: `Follow any police instructions and avoid disturbing possible forensic evidence until evidential needs are clear. Then identify every damaged opening and the person authorised to approve temporary securing.`,
+    },
+    {
+      question: areaName => `What details are needed for emergency boarding up in ${areaName}?`,
+      answer: `Provide the complete address, each damaged door or window, safe-access information and the authorised contact. The observed construction determines the temporary scope and expected cost.`,
+    },
+    {
+      question: areaName => `How is a damaged opening boarded up in ${areaName}?`,
+      answer: `The temporary method depends on inspecting the opening, surrounding construction and safe access. Ownership approval, scope and cost are agreed for that specific structure.`,
+    },
+    {
+      question: areaName => `Can emergency boarding up begin before police checks in ${areaName}?`,
+      answer: `Possible evidence should not be disturbed before relevant police instructions are obtained. Once evidential needs are addressed, the damaged opening and authorised temporary measure can be agreed.`,
+    },
+    {
+      question: areaName => `Who can approve boarding up at a shared site in ${areaName}?`,
+      answer: `The responsible owner, occupier or site contact for the exact opening must be identified. A nearby public place or planning designation does not establish control of the damaged structure.`,
+    },
+  ],
+  'lock-upgrade': [
+    {
+      question: areaName => `Which lock upgrade is suitable for a door in ${areaName}?`,
+      answer: `The choice follows inspection of the existing door, frame, hinges, lock and protective furniture. Any written insurer, landlord or manager requirement should be checked against that assembly.`,
+    },
+    {
+      question: areaName => `Is an anti-snap cylinder enough to improve door security in ${areaName}?`,
+      answer: `A cylinder is one part of the entrance, not a complete security assessment. Its size, accreditation and protection need to be considered with the door, frame, hinges and locking arrangement.`,
+    },
+    {
+      question: areaName => `Do I need BS 3621 or another lock standard in ${areaName}?`,
+      answer: `A standard should not be assigned from the area name or assumed insurer wording. Confirm the exact door and obtain any external requirement in writing before specifying compatible hardware.`,
+    },
+    {
+      question: areaName => `Can a door-security upgrade in ${areaName} be planned from photos?`,
+      answer: `Photographs can record visible parts and help prepare questions, but they do not establish dimensions, alignment or the complete installed assembly. Final options should follow direct inspection.`,
+    },
+    {
+      question: areaName => `Does a managed or protected property in ${areaName} need approval for a lock upgrade?`,
+      answer: `Check the exact property's current listing, conservation, lease or management requirements before altering affected fabric. The authorised customer should approve the compatible specification and expected cost.`,
+    },
+  ],
+}
+
+const AREA_FAQ_VARIANTS: [ServiceFaqCopy, ServiceFaqCopy][] = [
+  [
+    {
+      question: areaName => `Can you identify the lock at my ${areaName} address before a visit?`,
+      answer: `An area name cannot identify the fitted lock or the door's condition. Share the complete address and safe photographs if available; the exact entrance and hardware still require direct confirmation.`,
+    },
+    {
+      question: areaName => `What details help you plan locksmith work in ${areaName}?`,
+      answer: `Provide the full address, affected entrance, reported problem and the person authorised to instruct work. Include any written landlord, manager or insurer requirement that applies to that specific property.`,
+    },
+  ],
+  [
+    {
+      question: areaName => `Does my ${areaName} postcode show which door or lock I have?`,
+      answer: `No. A postcode or planning designation gives location context, not the construction, mechanism or current condition of an individual entrance. Those details must be established from the door itself.`,
+    },
+    {
+      question: areaName => `Why do you need the exact ${areaName} property and doorway?`,
+      answer: `Nearby streets can fall under different boundaries or controls. The precise address, responsible customer and affected opening must be known before access, repair, temporary securing or an alteration is agreed.`,
+    },
+  ],
+  [
+    {
+      question: areaName => `Can local planning records tell you what lock is fitted in ${areaName}?`,
+      answer: `Planning and conservation records do not inventory a private door's material, hardware or condition. They can prompt an address-level status check, but the lock decision follows direct evidence from the entrance.`,
+    },
+    {
+      question: areaName => `What should I send before arranging locksmith work in ${areaName}?`,
+      answer: `Send the complete address, identify the door, describe the access, damage or locking problem and provide safe photographs where useful. Also confirm who can authorise the requested work.`,
+    },
+  ],
+  [
+    {
+      question: areaName => `Can a lock or replacement part be chosen from my ${areaName} address?`,
+      answer: `The address locates the work but does not specify the installed assembly. Door type, measurements, condition, required outcome and any property controls must be checked before compatible work is proposed.`,
+    },
+    {
+      question: areaName => `What must be confirmed before work at a property in ${areaName}?`,
+      answer: `Confirm the full address, exact opening, caller's authority and reported problem. Any listing, conservation, lease, insurer or site-management requirement must relate to that individual property, not the wider locality.`,
+    },
+  ],
+  [
+    {
+      question: areaName => `Why can't the area guide diagnose my ${areaName} door or lock?`,
+      answer: `Its official records describe locality or planning context rather than the physical entrance. Diagnosis requires current information about the actual door, frame, hinges, locking parts and how they behave.`,
+    },
+    {
+      question: areaName => `What helps make a locksmith call in ${areaName} accurate?`,
+      answer: `Give the complete address, point out the affected entrance and explain the required outcome. Safe photographs and written property requirements can help, while authority and final scope are confirmed for the specific opening.`,
+    },
+  ],
+]
 
 function technicalSources(region: AddressRegion): AreaGuideSource[] {
   const police = POLICE_SOURCE_IDS[region]
@@ -337,13 +508,14 @@ function buildServiceGuidance(
   const protocols = TECHNICAL_COPY[service]
   const firstProtocol = protocols[variant % protocols.length].first
   const secondProtocol = protocols[Math.floor(variant / protocols.length) % protocols.length].second
+  const faq = SERVICE_FAQS[service][variant % SERVICE_FAQS[service].length]
   return {
-    heading: `${SERVICE_LABELS[service]} for ${seed.name}`,
+    heading: `${SERVICE_LABELS[service]} in ${seed.name}`,
     body: [`${context.local} ${firstProtocol}`, `${context.decision} ${secondProtocol}`],
     checks: [SERVICE_CHECKS[service], ...context.checks],
     faq: {
-      q: `What should I provide for ${SERVICE_LABELS[service]} at an address in ${seed.name}?`,
-      a: `${context.local} ${SERVICE_CHECKS[service]} ${context.decision}`,
+      q: faq.question(seed.name),
+      a: faq.answer,
     },
   }
 }
@@ -355,6 +527,7 @@ function buildGuide(seed: AreaGuideSeed, areaIndex: number): GovernedAreaGuide {
       buildServiceGuidance(seed, service, seed.contexts[service], areaIndex + serviceIndex * 11),
     ]),
   ) as Record<ServiceAreaSlug, AreaServiceGuidance>
+  const areaFaqs = AREA_FAQ_VARIANTS[areaIndex % AREA_FAQ_VARIANTS.length]
 
   return {
     slug: seed.slug,
@@ -367,12 +540,12 @@ function buildGuide(seed: AreaGuideSeed, areaIndex: number): GovernedAreaGuide {
     serviceGuidance,
     faqs: [
       {
-        q: `Do the official sources identify the door or lock at my ${seed.name} address?`,
-        a: `No. ${seed.evidenceLimits}`,
+        q: areaFaqs[0].question(seed.name),
+        a: areaFaqs[0].answer,
       },
       {
-        q: `Why is the complete ${seed.name} address needed before work is planned?`,
-        a: `${seed.facts[0].serviceRelevance} ${seed.facts.at(-1)?.serviceRelevance} That is why the complete ${seed.name} address and exact entrance must be supplied before work is planned.`,
+        q: areaFaqs[1].question(seed.name),
+        a: areaFaqs[1].answer,
       },
     ],
   }
@@ -456,7 +629,7 @@ const AREA_SEEDS: AreaGuideSeed[] = [
     region: 'Warwickshire',
     summary: [
       `The Leamington conservation guide identifies New Milverton as character area 30 while expressly excluding Rugby Road and Warwick New Road. The neighbourhood plan separately names the Northumberland Road site of the Milverton New Allotments Association.`,
-      `The service-area slug is broader than the guide's New Milverton character-area label. A full address must therefore be checked before using conservation wording, and neither source establishes the building, entrance, hardware, authority or practical access arrangements.`,
+      `The service area is broader than the guide's New Milverton character-area label. A full address must therefore be checked before using conservation wording, and neither source establishes the building, entrance, hardware, authority or practical access arrangements.`,
     ],
     accessGuidance: `Ask for the full Milverton address and distinguish New Milverton from the broader locality, especially Rugby Road and Warwick New Road exclusions. Treat Northumberland Road allotments as orientation only and confirm property status and authority independently.`,
     evidenceLimits: `A named conservation character area and protected allotment site do not describe every Milverton address. They provide no evidence of property type, listing, door material, lock mechanism, customer permission, route conditions, demand, response or prior work.`,
@@ -483,7 +656,7 @@ const AREA_SEEDS: AreaGuideSeed[] = [
         ],
       },
       'lock-change': {
-        local: `The conservation guide's wording is specifically New Milverton and expressly excludes two roads, so a visible replacement must not inherit conservation assumptions from the broader service slug. Resolve the supplied address against the current designation before planning alteration.`,
+        local: `The conservation guide's wording is specifically New Milverton and expressly excludes two roads, so a visible replacement must not inherit conservation assumptions from the broader service area. Resolve the supplied address against the current designation before planning alteration.`,
         decision: `Policy protection for the Milverton New Allotments Association site concerns planning context, not the fabric of nearby doors. Specify a change from the inspected entrance and separately obtain any permission that the individual property record requires.`,
         checks: [
           `Check the current New Milverton boundary and both named road exclusions before applying conservation controls.`,
@@ -535,7 +708,7 @@ const AREA_SEEDS: AreaGuideSeed[] = [
       {
         text: `The adopted Warwick District Local Plan lists Crown Way, Lillington, as a local shopping centre in paragraph 3.103.`,
         sourceIds: ['wdc-local-plan'],
-        serviceRelevance: `Use Crown Way only as caller-confirmed orientation; it does not prove a premise is nearby or within coverage.`,
+        serviceRelevance: `Use Crown Way only as caller-confirmed orientation; it does not prove a property is nearby or within coverage.`,
       },
     ],
     sourceIds: ['wdc-leamington-conservation', 'wdc-local-plan'],
@@ -565,7 +738,7 @@ const AREA_SEEDS: AreaGuideSeed[] = [
         ],
       },
       'boarding-up': {
-        local: `A damaged opening described only as Lillington could lie inside or outside either named character area, or relate to a premise around Crown Way. Establish the exact property and responsible party before any temporary external measure is specified.`,
+        local: `A damaged opening described only as Lillington could lie inside or outside either named character area, or relate to a property around Crown Way. Establish the exact property and responsible party before any temporary external measure is specified.`,
         decision: `Where the current map confirms conservation context, address-specific permission may need checking after possible evidence is preserved. Do not assume the designation from a village label, and do not treat the local shopping-centre record as ownership or access authority.`,
         checks: [
           `Locate the damaged property against both named character areas and Crown Way before defining a temporary external measure.`,
@@ -591,12 +764,12 @@ const AREA_SEEDS: AreaGuideSeed[] = [
       `Neither reference identifies a particular Sydenham property, business unit, occupier, entrance or installed locking system. A caller's full address and the responsible private or managed-premises contact remain necessary before any service decision.`,
     ],
     accessGuidance: `Distinguish a Sydenham Drive address from a unit on Sydenham Industrial Estate and from other Sydenham streets. Record the building or unit, exact controlled entrance and person authorised by the occupier, owner or manager.`,
-    evidenceLimits: `Local-centre and manufacturing-location descriptions are planning context only. They do not prove premise use at an individual address, ownership, access rights, operating hours, door type, lock mechanism, security need, service coverage or response time.`,
+    evidenceLimits: `Local-centre and manufacturing-location descriptions are planning context only. They do not prove property use at an individual address, ownership, access rights, operating hours, door type, lock mechanism, security need, service coverage or response time.`,
     facts: [
       {
         text: `Royal Leamington Spa Neighbourhood Plan Policy RLS19 identifies Sydenham Drive as one of the plan's local shopping centres.`,
         sourceIds: ['wdc-leamington-plan'],
-        serviceRelevance: `Use the named road only to clarify the address, never to infer a commercial premise, nearby location or access route.`,
+        serviceRelevance: `Use the named road only to clarify the address, never to infer a commercial property, nearby location or access route.`,
       },
       {
         text: `The neighbourhood plan's spatial portrait names Sydenham Industrial Estate as one of Royal Leamington Spa's manufacturing locations.`,
@@ -608,7 +781,7 @@ const AREA_SEEDS: AreaGuideSeed[] = [
     contexts: {
       'emergency-lockout': {
         local: `Sydenham Drive local centre and Sydenham Industrial Estate are different official references, so “Sydenham” does not identify the controlled doorway. Obtain the street or unit, building identifier and exact entrance before accepting an urgent access instruction.`,
-        decision: `If the call concerns the industrial estate, establish the authorised business or site contact; if it concerns Sydenham Drive, do not infer that the premise is commercial from the local-centre designation. In both cases, verify authority at the address.`,
+        decision: `If the call concerns the industrial estate, establish the authorised business or site contact; if it concerns Sydenham Drive, do not infer that the property is commercial from the local-centre designation. In both cases, verify authority at the address.`,
         checks: [
           `Distinguish a Sydenham Drive address from an industrial-estate unit and record the building and exact entrance.`,
           `Verify the authorised business, site or property contact without inferring commercial use from the local-centre label.`,
@@ -631,10 +804,10 @@ const AREA_SEEDS: AreaGuideSeed[] = [
         ],
       },
       'boarding-up': {
-        local: `Temporary securing on the industrial estate requires the exact unit and authorised site contact; near Sydenham Drive it requires the precise premise, not the local-centre label. The plan does not identify ownership, boundary responsibility or damaged construction.`,
+        local: `Temporary securing on the industrial estate requires the exact unit and authorised site contact; near Sydenham Drive it requires the precise property, not the local-centre label. The plan does not identify ownership, boundary responsibility or damaged construction.`,
         decision: `Separate public-facing, staff, shared and private entrances at the supplied address before defining the affected opening. Preserve possible evidence first and obtain the relevant owner or manager's approval instead of treating Sydenham's land-use description as permission.`,
         checks: [
-          `Name the exact unit or premise, damaged construction and authorised site contact rather than relying on a land-use label.`,
+          `Name the exact unit or property, damaged construction and authorised site contact rather than relying on a land-use label.`,
           `Distinguish public-facing, staff, shared and private openings, preserve evidence and obtain the relevant controller's approval.`,
         ],
       },
@@ -739,10 +912,10 @@ const AREA_SEEDS: AreaGuideSeed[] = [
     sourceIds: ['wdc-monitoring-report-2024-25', 'wdc-tachbrook-park'],
     contexts: {
       'emergency-lockout': {
-        local: `A Heathcote request may refer to a building at Lower Heathcote Local Centre, another private address or a managed park asset. The dated monitoring record and planned play-area reference cannot identify which, so name the premise and doorway.`,
+        local: `A Heathcote request may refer to a building at Lower Heathcote Local Centre, another private address or a managed park asset. The dated monitoring record and planned play-area reference cannot identify which, so name the property and doorway.`,
         decision: `For a nursery, care home, retail unit or park facility, establish the authorised organisational contact rather than assuming the caller controls access. Preserve “planned” for Play Area 2 and do not treat a 2024-25 completion snapshot as current authority.`,
         checks: [
-          `Name the premise and doorway and distinguish Lower Heathcote Local Centre, a private address and any park asset.`,
+          `Name the property and doorway and distinguish Lower Heathcote Local Centre, a private address and any park asset.`,
           `Verify the current organisational controller and recheck facility status; dated completion and planned records cannot confer authority.`,
         ],
       },
@@ -788,7 +961,7 @@ const AREA_SEEDS: AreaGuideSeed[] = [
       `Warwick District Council's conservation guide maps the Warwick Conservation Area in fifteen named character sections, including Coten End–Emscote Road, St Nicholas Park, Priory Park, Castle and Castle Park, and West Street.`,
       `The adopted district plan separately classifies Warwick as an Urban Area. These broad official contexts do not identify a building, its current designation or use, the person authorised for an entrance, its fabric, hardware or access conditions.`,
     ],
-    accessGuidance: `Require the complete Warwick address and distinguish a named conservation character section from the wider urban area. For a park, castle-related, institutional, commercial or shared premise, identify the responsible controller and exact entrance separately.`,
+    accessGuidance: `Require the complete Warwick address and distinguish a named conservation character section from the wider urban area. For a park, castle-related, institutional, commercial or shared property, identify the responsible controller and exact entrance separately.`,
     evidenceLimits: `Fifteen mapped character sections and an Urban Area classification are not property-level findings. They do not prove listing, ownership, building type, access permission, door or lock construction, service availability, route, response, demand or previous work.`,
     facts: [
       {
@@ -829,10 +1002,10 @@ const AREA_SEEDS: AreaGuideSeed[] = [
         ],
       },
       'boarding-up': {
-        local: `A damaged opening near a named Warwick park or castle character section must be tied to the exact premise and responsible controller. The conservation guide does not establish whether the affected asset is public, private, listed or even within the boundary.`,
+        local: `A damaged opening near a named Warwick park or castle character section must be tied to the exact property and responsible controller. The conservation guide does not establish whether the affected asset is public, private, listed or even within the boundary.`,
         decision: `After preserving any evidence, check current address-level designation and permission before attaching an external temporary measure where protected fabric may be involved. The Urban Area label supplies neither structural details nor approval for the work.`,
         checks: [
-          `Tie the damaged opening to its exact premise and controller and establish whether the asset is public or private.`,
+          `Tie the damaged opening to its exact property and controller and establish whether the asset is public or private.`,
           `After preserving evidence, check current designation and permission before attaching material to potentially protected fabric.`,
         ],
       },
@@ -852,7 +1025,7 @@ const AREA_SEEDS: AreaGuideSeed[] = [
     region: 'Warwickshire',
     summary: [
       `The adopted local plan lists Reardon Court, Woodloes, as a local shopping centre. Warwick District Council's community-parks register separately places Canalside in Warwick (Woodloes Park) and names several public access points.`,
-      `Those planning and park references help distinguish parts of Woodloes Park but do not locate a private address or grant access through public land. They establish no premise use, authority, door construction, lock type or condition.`,
+      `Those planning and park references help distinguish parts of Woodloes Park but do not locate a private address or grant access through public land. They establish no property use, authority, door construction, lock type or condition.`,
     ],
     accessGuidance: `Ask for the full Woodloes Park address and distinguish Reardon Court from Canalside and surrounding streets. Named park access points are orientation only; identify the precise property entrance and authorised controller without assuming a route.`,
     evidenceLimits: `A local-centre entry and public park description do not identify nearby properties, private access, boundary responsibility, building fabric or hardware. The records cannot support service coverage, parking, route suitability, response time, security demand or job history.`,
@@ -879,10 +1052,10 @@ const AREA_SEEDS: AreaGuideSeed[] = [
         ],
       },
       'lock-change': {
-        local: `A Reardon Court local-centre entry does not identify the door, unit or current use at a Woodloes address. Name the particular premise and inspect its entrance rather than using the planning label as a replacement specification.`,
+        local: `A Reardon Court local-centre entry does not identify the door, unit or current use at a Woodloes address. Name the particular property and inspect its entrance rather than using the planning label as a replacement specification.`,
         decision: `For a park asset at Canalside, public access from Coventry Road, Greenway, Deansway, Scar Bank or Lock Lane does not authorise alterations. Establish the responsible manager and the exact controlled opening before any change.`,
         checks: [
-          `Name the Reardon Court-area premise and inspect its entrance without inferring unit use from the planning label.`,
+          `Name the Reardon Court-area property and inspect its entrance without inferring unit use from the planning label.`,
           `For Canalside, identify the controlled opening and responsible manager; public access points cannot authorise alteration.`,
         ],
       },
@@ -904,10 +1077,10 @@ const AREA_SEEDS: AreaGuideSeed[] = [
       },
       'lock-upgrade': {
         local: `Local shopping-centre and community-park records are not security standards for Woodloes Park. An upgrade requires the exact entrance, existing assembly and a documented objective from its authorised owner, occupier or manager.`,
-        decision: `If the opening belongs to Canalside, obtain the public asset manager's specification; if it is near Reardon Court, verify the individual premise rather than inferring business use. Named access points cannot determine compatible hardware.`,
+        decision: `If the opening belongs to Canalside, obtain the public asset manager's specification; if it is near Reardon Court, verify the individual property rather than inferring business use. Named access points cannot determine compatible hardware.`,
         checks: [
           `Document the exact entrance, existing assembly and authorised objective instead of relying on local-centre or park records.`,
-          `Obtain a Canalside manager's specification or verify the individual Reardon Court-area premise without inferring business use.`,
+          `Obtain a Canalside manager's specification or verify the individual Reardon Court-area property without inferring business use.`,
         ],
       },
     },
@@ -921,12 +1094,12 @@ const AREA_SEEDS: AreaGuideSeed[] = [
       `These named features support location clarification but do not describe every Chase Meadow address. They provide no evidence of property use, ownership, entrance arrangements, private access, construction, installed locks, security need or operational service conditions.`,
     ],
     accessGuidance: `Obtain the full address and distinguish Narrow Hall Meadow from Hickmans Green, The Marrish and other Chase Meadow streets. For a community-space asset, identify the responsible manager; do not assume public paths reach a property.`,
-    evidenceLimits: `The local-centre and community-parks records are not property surveys or service boundaries. They cannot establish premise type, authority, route, parking, door material, lock mechanism, damage, demand, response time, coverage or previous locksmith activity.`,
+    evidenceLimits: `The local-centre and community-parks records are not property surveys or service boundaries. They cannot establish property type, authority, route, parking, door material, lock mechanism, damage, demand, response time, coverage or previous locksmith activity.`,
     facts: [
       {
         text: `The adopted Warwick District Local Plan lists Narrow Hall Meadow, Chase Meadow, Warwick, as a local shopping centre.`,
         sourceIds: ['wdc-local-plan'],
-        serviceRelevance: `Use Narrow Hall Meadow only to confirm location; its planning status does not establish a premise or service fact.`,
+        serviceRelevance: `Use Narrow Hall Meadow only to confirm location; its planning status does not establish a property or service fact.`,
       },
       {
         text: `Warwick District Council lists both Hickmans Green and The Marrish under Warwick south-west and identifies each as being in Chase Meadow.`,
@@ -937,7 +1110,7 @@ const AREA_SEEDS: AreaGuideSeed[] = [
     sourceIds: ['wdc-local-plan', 'wdc-community-parks'],
     contexts: {
       'emergency-lockout': {
-        local: `Narrow Hall Meadow, Hickmans Green and The Marrish are three separate official Chase Meadow references, none of which identifies a doorway. Record the complete address and state whether the request concerns a private premise or managed community-space asset.`,
+        local: `Narrow Hall Meadow, Hickmans Green and The Marrish are three separate official Chase Meadow references, none of which identifies a doorway. Record the complete address and state whether the request concerns a private property or managed community-space asset.`,
         decision: `A park name may orient the caller but cannot prove an access route or authority. For Hickmans Green or The Marrish, identify the responsible manager; for another address, verify the requester's connection to that specific property.`,
         checks: [
           `Distinguish Narrow Hall Meadow, Hickmans Green and The Marrish and name the complete address and doorway.`,
@@ -961,19 +1134,19 @@ const AREA_SEEDS: AreaGuideSeed[] = [
         ],
       },
       'boarding-up': {
-        local: `A damaged opening near Hickmans Green, The Marrish or Narrow Hall Meadow must be tied to a named premise and responsible controller. The official records do not show ownership boundaries, safe access, dimensions or construction.`,
+        local: `A damaged opening near Hickmans Green, The Marrish or Narrow Hall Meadow must be tied to a named property and responsible controller. The official records do not show ownership boundaries, safe access, dimensions or construction.`,
         decision: `Preserve potential evidence and then inspect the actual door or window before agreeing temporary security. Do not treat a community-space name as permission to cross land, attach material or act for a neighbouring Chase Meadow property.`,
         checks: [
-          `Tie the damaged opening to a named premise and controller, verify its boundaries, and inspect its dimensions and construction.`,
+          `Tie the damaged opening to a named property and controller, verify its boundaries, and inspect its dimensions and construction.`,
           `Preserve evidence and obtain explicit access and attachment permission rather than relying on a community-space name.`,
         ],
       },
       'lock-upgrade': {
         local: `Chase Meadow's local-centre and community-space entries cannot establish a need for security improvement or a fitted standard. Begin with the individual entrance and written objective, distinguishing managed public assets from private premises.`,
-        decision: `For Narrow Hall Meadow, identify the specific premise and any responsible manager; for Hickmans Green or The Marrish, obtain the asset controller's requirement. In every case, select options from the inspected door rather than nearby land-use labels.`,
+        decision: `For Narrow Hall Meadow, identify the specific property and any responsible manager; for Hickmans Green or The Marrish, obtain the asset controller's requirement. In every case, select options from the inspected door rather than nearby land-use labels.`,
         checks: [
           `Start with the individual entrance and written objective, distinguishing managed community assets from private premises.`,
-          `Obtain the relevant premise or asset controller's requirement and select options only from the inspected door.`,
+          `Obtain the relevant property or asset controller's requirement and select options only from the inspected door.`,
         ],
       },
     },
@@ -987,7 +1160,7 @@ const AREA_SEEDS: AreaGuideSeed[] = [
       `The road, park and access-point names may help verify locality but do not provide a route to an individual property. They establish no address-level use, boundary, ownership, authority, door construction, lock mechanism, condition or service coverage.`,
     ],
     accessGuidance: `Ask for the complete Warwick Gates address and distinguish Othello Avenue, Cordelia Green and Othello Park. Treat Ophelia Drive, Plantagenet Park, Lady Grey Avenue and cycleway references only as public-space orientation, never private access.`,
-    evidenceLimits: `Council park access information and a local-centre designation cannot identify private entrances or controlled routes. They do not prove premise type, parking, property rights, hardware, damage, security need, locksmith demand, availability or response time.`,
+    evidenceLimits: `Council park access information and a local-centre designation cannot identify private entrances or controlled routes. They do not prove property type, parking, property rights, hardware, damage, security need, locksmith demand, availability or response time.`,
     facts: [
       {
         text: `The adopted Warwick District Local Plan lists Othello Avenue, Warwick Gates, as a local shopping centre.`,
@@ -1011,35 +1184,35 @@ const AREA_SEEDS: AreaGuideSeed[] = [
         ],
       },
       'lock-change': {
-        local: `Othello Avenue's local-centre designation does not tell which unit or door is involved or what hardware it carries. Obtain the exact premise, authorised decision-maker and any landlord or site requirement before specifying replacement.`,
+        local: `Othello Avenue's local-centre designation does not tell which unit or door is involved or what hardware it carries. Obtain the exact property, authorised decision-maker and any landlord or site requirement before specifying replacement.`,
         decision: `Cordelia Green and Othello Park access points are for public-space orientation, not permission to alter an asset. A managed park opening needs its controller's approval; a nearby private entrance must remain separate from the park record.`,
         checks: [
-          `Identify the exact Othello Avenue premise, entrance, decision-maker and any direct landlord or site requirement.`,
+          `Identify the exact Othello Avenue property, entrance, decision-maker and any direct landlord or site requirement.`,
           `For Cordelia Green or Othello Park, obtain the asset controller's approval; keep nearby private doors separate.`,
         ],
       },
       'upvc-lock-repair': {
         local: `Neither the Othello Avenue planning entry nor the park access list indicates uPVC construction or multipoint locking at a Warwick Gates address. Identify the actual door and record its handle, key and frame behaviour directly.`,
-        decision: `A caller mentioning Cordelia Green or Othello Park may be orienting the address, not describing the premise. Do not use road or cycleway access points as mechanical clues or route commitments; assess the stated entrance only.`,
+        decision: `A caller mentioning Cordelia Green or Othello Park may be orienting the address, not describing the property. Do not use road or cycleway access points as mechanical clues or route commitments; assess the stated entrance only.`,
         checks: [
           `Identify the actual door and record handle, key and frame behaviour rather than inferring hardware from planning records.`,
           `Treat Cordelia Green, Othello Park and access points only as orientation and assess the stated entrance itself.`,
         ],
       },
       'boarding-up': {
-        local: `A damaged opening around Warwick Gates needs precise ownership and premise identification because public green spaces and private addresses can share nearby names. The community-parks record supplies no construction, boundary responsibility or authorisation.`,
+        local: `A damaged opening around Warwick Gates needs precise ownership and property identification because public green spaces and private addresses can share nearby names. The community-parks record supplies no construction, boundary responsibility or authorisation.`,
         decision: `After police evidence questions are resolved, inspect the actual door or window and agree the temporary scope with its controller. Do not interpret public access from named roads or cycleways as permission to reach or secure private property.`,
         checks: [
-          `Establish the precise premise, ownership and damaged opening where public spaces and private addresses share nearby names.`,
+          `Establish the precise property, ownership and damaged opening where public spaces and private addresses share nearby names.`,
           `After evidence clearance, inspect the structure and obtain access and attachment authority without relying on public routes.`,
         ],
       },
       'lock-upgrade': {
         local: `A local shopping-centre designation and public park-access list are not evidence that a Warwick Gates entrance needs an upgrade. Obtain the exact opening, current assembly and a written requirement from the authorised property or site controller.`,
-        decision: `For a park asset, follow the responsible manager's approved specification; for a premise on Othello Avenue or elsewhere, inspect that door without importing park information. Public route descriptions cannot select a cylinder, lock or security standard.`,
+        decision: `For a park asset, follow the responsible manager's approved specification; for a property on Othello Avenue or elsewhere, inspect that door without importing park information. Public route descriptions cannot select a cylinder, lock or security standard.`,
         checks: [
           `Obtain the exact opening, current assembly and written requirement from the authorised property or site controller.`,
-          `Follow a park manager's specification or inspect the private premise directly; exclude public-route records from product choice.`,
+          `Follow a park manager's specification or inspect the private property directly; exclude public-route records from product choice.`,
         ],
       },
     },
@@ -1230,10 +1403,10 @@ const AREA_SEEDS: AreaGuideSeed[] = [
         ],
       },
       'boarding-up': {
-        local: `Damage at Burton Farm requires a named unit and current authorised site contact; damage near Bishopton Lane or the canal needs the exact premise. The plan does not establish ownership, current construction or safe approach.`,
+        local: `Damage at Burton Farm requires a named unit and current authorised site contact; damage near Bishopton Lane or the canal needs the exact property. The plan does not establish ownership, current construction or safe approach.`,
         decision: `After possible evidence is preserved, inspect the real opening and agree temporary work with its controller. A future bridge review cannot be treated as an access guarantee, and allocation SUA.3 cannot be treated as a completed building.`,
         checks: [
-          `Name the Burton Farm unit or other exact premise and verify its current authorised site contact.`,
+          `Name the Burton Farm unit or other exact property and verify its current authorised site contact.`,
           `After preserving evidence, inspect the real opening without treating bridge review or SUA.3 as access or completion evidence.`,
         ],
       },
@@ -1482,7 +1655,7 @@ const AREA_SEEDS: AreaGuideSeed[] = [
         decision: `The parish plan's made status cannot identify the installed lock or approve alteration. Inspect the door and obtain authority, with any conservation, listed-building, landlord or manager requirement tied to the exact premises.`,
         checks: [
           `Resolve the latest boundary and individual building status across Meriden Green, Meriden Hill or neither.`,
-          `Inspect the door and tie authority and any conservation, listing, landlord or manager requirement to that premise.`,
+          `Inspect the door and tie authority and any conservation, listing, landlord or manager requirement to that property.`,
         ],
       },
       'upvc-lock-repair': {
@@ -1516,7 +1689,7 @@ const AREA_SEEDS: AreaGuideSeed[] = [
     name: 'Hampton-in-Arden',
     region: 'West Midlands',
     summary: [
-      `Solihull Council records that the 2017 Hampton-in-Arden plan remains applicable to its previous neighbourhood area after the newer submission draft was withdrawn and examination closed. The council also records a 1968 conservation designation for the central area.`,
+      `The 2017 Hampton-in-Arden plan continues to apply within its previous neighbourhood area, according to Solihull Council; the later submission draft was withdrawn and its examination closed. The council also records a 1968 conservation designation for the central area.`,
       `The withdrawn replacement must not be treated as adopted evidence, and the 2017 plan applies only to its previous area. Central conservation status does not extend automatically to every address or establish listed status, entrance control or hardware.`,
     ],
     accessGuidance: `Use the complete Hampton-in-Arden address, confirm whether it lies in the previous 2017 plan area and current central conservation boundary, and ignore the withdrawn replacement draft as adopted evidence. Verify authority and building status separately.`,
@@ -1687,7 +1860,7 @@ const AREA_SEEDS: AreaGuideSeed[] = [
         local: `Civil-parish extent, river edges and settlement classification do not show that a Ryton-on-Dunsmore door is uPVC or multipoint. Record the actual entrance, material and operating symptoms without using planning geography as diagnosis.`,
         decision: `The River Avon valley can help confirm general location only after the address is known. It supplies no evidence about handle movement, key travel, hinges, frame alignment or safe approach to the property.`,
         checks: [
-          `Record the actual entrance, material and operating symptoms without using planning geography as diagnosis.`,
+          `Note the precise doorway, confirmed material and open-or-closed symptoms; exclude the plan geography from the diagnosis.`,
           `Use the River Avon valley only after address confirmation and assess handle, key, hinges and frame directly.`,
         ],
       },
@@ -1890,7 +2063,7 @@ const AREA_SEEDS: AreaGuideSeed[] = [
         ],
       },
       'boarding-up': {
-        local: `A damaged opening in Shilton must be identified by address and responsible controller, not Rural Village status or the broader Shilton and Barnacle parish name. The study provides no structural or boundary information for a premise.`,
+        local: `A damaged opening in Shilton must be identified by address and responsible controller, not Rural Village status or the broader Shilton and Barnacle parish name. The study provides no structural or boundary information for a property.`,
         decision: `After any evidence-preservation requirement, inspect the actual door or window and agree temporary work. Bus routes 74/74A/74B/74C are volatile orientation data and establish neither safe access, dimensions nor attachment permission.`,
         checks: [
           `Identify the Shilton address and responsible controller without relying on Rural Village or joint-parish labels.`,
@@ -2044,7 +2217,7 @@ const AREA_SEEDS: AreaGuideSeed[] = [
     name: 'Studley',
     region: 'Warwickshire',
     summary: [
-      `Stratford-on-Avon District Council lists Studley's Parish Plan and Action Plan as adopted in February 2017. The council also records the whole civil parish as a designated neighbourhood area and publishes the associated confirmation documents.`,
+      `Studley's Parish Plan and Action Plan has a council-recorded adoption date of February 2017. The council also records the whole civil parish as a designated neighbourhood area and publishes the associated confirmation documents.`,
       `A parish plan and designated neighbourhood area are distinct planning records. They provide locality and process context only, without establishing a building's status, use, access, entrance hardware or service conditions.`,
     ],
     accessGuidance: `Use the complete Studley address and describe the evidence accurately: a February 2017 Parish Plan and Action Plan plus a designated whole-parish neighbourhood area. Recheck the latest council record before describing any later planning stage.`,
