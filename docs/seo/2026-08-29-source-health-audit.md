@@ -27,6 +27,19 @@ The Rugby Borough Council Rural Sustainability Study supports Shilton's Rural Vi
 
 No other mismatch was found in the prioritised semantic sample. No result from this snapshot proves that a source will remain unchanged or reachable indefinitely.
 
+## Current full-registry recheck
+
+After the later locality enrichments, the complete registry contains **126 unique source IDs and 126 distinct URLs**: 75 locality, 42 property-status and 9 technical sources. All 126 records show a `checkedOn` date of 29 August 2026, with no conflicting reused ID, exact URL alias or normalised URL alias.
+
+A bounded current recheck verified all 126 destinations:
+
+- 114 returned HTTP 200 or 206 directly;
+- 11 official police and Historic England pages returned uniform anti-bot 403 responses to the terminal client but opened independently at the expected record;
+- `wcc-list-of-streets-2026` rejected HEAD/range probes but returned its 692,326-byte official PDF to an ordinary GET; and
+- none produced a verified redirect, dead URL, stale destination, timeout or server error.
+
+The 117 locality/property records resolve to councils, Historic England, ONS, The Gazette, official Warwickshire services, the Warwickshire Historic Environment Record, official Warwickshire tourism or the Canal & River Trust. The nine technical records resolve to MLA, police, GOV.UK or manufacturer material. No repository source change is supported by this recheck.
+
 ## Sources added after the baseline crawl
 
 The corrected registry contains **121 unique source IDs and 121 unique URLs**. Each of the four additions returned HTTP 200 directly and was opened to verify the exact cited passage:

@@ -4,6 +4,7 @@ import { SERVICE_PROVIDER_SCHEMA, SITE_CONFIG } from '@/data/config'
 import CTABlock from '@/components/CTABlock'
 import SchemaMarkup from '@/components/SchemaMarkup'
 import DirectAnswer from '@/components/DirectAnswer'
+import { PUBLISHED_PRICES } from '@/data/pricing'
 
 export const metadata: Metadata = {
   title: 'Locksmith Prices Coventry | No VAT or Call-Out Fee',
@@ -24,54 +25,6 @@ export const metadata: Metadata = {
     images: [{ url: `${SITE_CONFIG.domain}/api/og?title=${encodeURIComponent('Locksmith Prices — No VAT, No Call-Out Fee')}`, width: 1200, height: 630 }],
   },
 }
-
-const PRICES = [
-  {
-    service: 'Emergency lockout',
-    price: 59,
-    detail: 'Standard residential lockout where the assessed entry method and stated labour scope apply.',
-  },
-  {
-    service: 'Euro cylinder replacement',
-    price: 59,
-    detail: 'Supply and fit a compatible euro cylinder where the inspected door, size and stated scope apply.',
-  },
-  {
-    service: 'Yale nightlatch repair or replacement',
-    price: 69,
-    detail: 'Repair or replacement where the inspected door and compatible nightlatch allow the stated scope.',
-  },
-  {
-    service: 'Lock change (BS3621-rated)',
-    price: 79,
-    detail: 'British Standard five-lever mortice deadlock. Check your own policy for the exact lock requirement.',
-  },
-  {
-    service: 'Anti-snap euro cylinder',
-    price: 59,
-    detail: 'Supply and fit a compatible independently certified cylinder after the required size and door fit are checked.',
-  },
-  {
-    service: 'uPVC lock repair',
-    price: 59,
-    detail: 'Repair of multipoint locking mechanism, cylinder, or handle on uPVC door.',
-  },
-  {
-    service: 'uPVC multipoint gearbox replacement',
-    price: 89,
-    detail: 'Replacement gearbox where the exact mechanism is identified and a compatible part is available.',
-  },
-  {
-    service: 'Boarding up (emergency)',
-    price: 79,
-    detail: 'Secure boarding of broken windows or doors after break-in or damage.',
-  },
-  {
-    service: 'Window lock repair',
-    price: 49,
-    detail: 'Repair or replace espagnolette or cockspur locks on uPVC or timber windows.',
-  },
-]
 
 const PRICE_FAQS = [
   {
@@ -104,7 +57,7 @@ const offersSchema = {
   hasOfferCatalog: {
     '@type': 'OfferCatalog',
     name: 'Locksmith Prices',
-    itemListElement: PRICES.filter((p) => p.price > 0).map((p) => ({
+    itemListElement: PUBLISHED_PRICES.map((p) => ({
       '@type': 'Offer',
       name: p.service,
       description: p.detail,
@@ -198,14 +151,14 @@ export default function PricesPage() {
                 </tr>
               </thead>
               <tbody>
-                {PRICES.map((row, i) => (
+                {PUBLISHED_PRICES.map((row, i) => (
                   <tr key={row.service} className={`border-b border-gray-100 ${i % 2 === 0 ? 'bg-white' : 'bg-gray-50'}`}>
                     <td className="px-6 py-4">
                       <p className="font-semibold text-gray-900">{row.service}</p>
                       <p className="text-sm text-gray-600 mt-1">{row.detail}</p>
                     </td>
-                    <td className={`px-6 py-4 text-right font-black text-xl align-top pt-5 ${row.price === 0 ? 'text-green-700' : 'text-[#8A5A00]'}`}>
-                      {row.price === 0 ? 'FREE' : `£${row.price}`}
+                    <td className="px-6 py-4 text-right font-black text-xl align-top pt-5 text-[#8A5A00]">
+                      £{row.price}
                     </td>
                   </tr>
                 ))}

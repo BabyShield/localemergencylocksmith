@@ -66,7 +66,7 @@ function hasListedBuildingWorkClaim(text: string): boolean {
 export function supplementalGuidanceSourceIds(text: string): string[] {
   const sourceIds: string[] = []
 
-  if (/\b(?:faceplate|backset|centres|locking layout|component geometry|multipoint (?:part|component))\b/i.test(text)) {
+  if (/\b(?:faceplate|backset|locking layout|component geometry|multipoint (?:part|component)|(?:handle|spindle|fixing|pz) centres?)\b/i.test(text)) {
     sourceIds.push('mila-door-locks-catalogue')
   }
 

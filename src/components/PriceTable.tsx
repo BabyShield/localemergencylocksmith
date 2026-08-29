@@ -1,16 +1,6 @@
 import Link from 'next/link'
 import { SITE_CONFIG } from '@/data/config'
-
-const PRICES = [
-  { service: 'Emergency lockout', price: '£59', desc: 'Standard residential lockout scope', includes: 'Stated labour scope' },
-  { service: 'Euro cylinder replacement', price: '£59', desc: 'Compatible cylinder after inspection', includes: 'Cylinder + fitting' },
-  { service: 'Lock change (BS3621)', price: '£79', desc: 'Compatible rated mortice option', includes: 'Lock + fitting' },
-  { service: 'Anti-snap cylinder', price: '£59', desc: 'Compatible certified option', includes: 'Cylinder + fitting' },
-  { service: 'uPVC lock repair', price: '£59', desc: 'Diagnosed cylinder, handle or mechanism work', includes: 'Agreed repair scope' },
-  { service: 'uPVC gearbox replacement', price: '£89', desc: 'Compatible gearbox after identification', includes: 'Gearbox + fitting' },
-  { service: 'Boarding up (emergency)', price: '£79', desc: 'Temporary boarding after assessment', includes: 'Materials + labour' },
-  { service: 'Window lock repair', price: '£49', desc: 'Diagnosed window-lock work', includes: 'Agreed repair scope' },
-]
+import { PUBLISHED_PRICES } from '@/data/pricing'
 
 export default function PriceTable() {
   return (
@@ -37,17 +27,17 @@ export default function PriceTable() {
               </tr>
             </thead>
             <tbody>
-              {PRICES.map((row, i) => (
+              {PUBLISHED_PRICES.map((row, i) => (
                 <tr
                   key={row.service}
                   className={`border-b border-gray-100 hover:bg-[#F7F7F5] transition-colors ${i % 2 === 0 ? '' : 'bg-gray-50/50'}`}
                 >
                   <td className="px-5 py-3.5">
                     <span className="font-bold text-[#0F1B2D] text-sm block">{row.service}</span>
-                    <span className="text-xs text-gray-600 sm:hidden">{row.desc}</span>
+                    <span className="text-xs text-gray-600 sm:hidden">{row.detail}</span>
                   </td>
                   <td className="px-5 py-3.5 text-right font-black text-lg whitespace-nowrap text-[#8A5A00]">
-                    {row.price}
+                    £{row.price}
                   </td>
                   <td className="px-5 py-3.5 text-gray-500 text-sm hidden sm:table-cell">{row.includes}</td>
                 </tr>

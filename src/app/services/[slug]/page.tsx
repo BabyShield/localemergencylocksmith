@@ -2,6 +2,12 @@ import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { SERVICES, getServiceBySlug } from '@/data/services'
+import {
+  PUBLISHED_PRICE_BY_ID,
+  SERVICE_PRICE_DETAILS,
+  servicePriceLabel,
+  type ServicePriceDetail,
+} from '@/data/pricing'
 import { AREAS, AREA_SERVED_SCHEMA, getAllAreasByRegion } from '@/data/areas'
 import { hasTownService } from '@/data/governed-town-services'
 import { SITE_CONFIG, CONTENT_UPDATED, SERVICE_PROVIDER_SCHEMA } from '@/data/config'
@@ -17,6 +23,14 @@ import ServiceIcon from '@/components/ServiceIcon'
 
 export const dynamic = 'force-static'
 export const revalidate = false
+
+const STANDARD_LOCKOUT_PRICE = PUBLISHED_PRICE_BY_ID['emergency-lockout'].price
+const EURO_CYLINDER_PRICE = PUBLISHED_PRICE_BY_ID['euro-cylinder-replacement'].price
+const UPVC_REPAIR_PRICE = PUBLISHED_PRICE_BY_ID['upvc-lock-repair'].price
+const UPVC_GEARBOX_PRICE = PUBLISHED_PRICE_BY_ID['upvc-gearbox-replacement'].price
+const BOARDING_PRICE = PUBLISHED_PRICE_BY_ID['emergency-boarding'].price
+const ANTI_SNAP_PRICE = PUBLISHED_PRICE_BY_ID['anti-snap-cylinder'].price
+const BS3621_PRICE = PUBLISHED_PRICE_BY_ID['bs3621-mortice'].price
 
 export async function generateStaticParams() {
   return SERVICES.map((s) => ({ slug: s.slug }))
@@ -60,7 +74,7 @@ const SERVICE_CONTENT: Record<string, {
   benefits: string[]
   whyUs: string
   scenarios: { title: string; desc: string }[]
-  priceDetails: { item: string; price: string }[]
+  priceDetails: readonly ServicePriceDetail[]
   directAnswer: { question: string; answer: string }
   voiceFaqs: { q: string; a: string }[]
 }> = {
@@ -68,13 +82,13 @@ const SERVICE_CONTENT: Record<string, {
     h1: 'Emergency Locksmith for House Lockouts in Coventry',
     intro: [
       "Being locked out of your house is stressful — especially late at night or in bad weather. I provide a professional emergency lockout service across Coventry and Warwickshire, available 24 hours a day, 7 days a week, 365 days a year.",
-      "When you call me, I'll ask for the full address and a brief description of the door and lock. I confirm the current ETA and the price basis for the described scope — from £59, with no VAT or separate call-out fee.",
+      `When you call me, I'll ask for the full address and a brief description of the door and lock. I confirm the current ETA and the price basis for the described scope — from £${STANDARD_LOCKOUT_PRICE}, with no VAT or separate call-out fee.`,
       "I try appropriate non-destructive entry methods first where the lock, door and circumstances allow. If a destructive step or replacement becomes necessary, I explain why and confirm the cost before proceeding.",
     ],
     steps: [
       "Call 024 7522 4730 — I answer 24/7",
       "Tell me your location and a brief description of your door",
-      "I confirm the price basis — from £59, no VAT",
+      `I confirm the price basis — from £${STANDARD_LOCKOUT_PRICE}, no VAT`,
       "I confirm the current ETA from my actual starting point and your full address",
       "I open your door using non-destructive entry where possible",
       "I advise whether your lock needs replacing and give you an honest quote",
@@ -82,7 +96,7 @@ const SERVICE_CONTENT: Record<string, {
     faqs: [
       { q: 'Can you open any type of lock?', a: 'I work with common residential cylinders, nightlatches, mortice locks and multipoint systems. The safe method depends on the exact lock, its condition and proof of authority; I explain any limitation before work proceeds.' },
       { q: 'Will you damage my door or lock?', a: 'I assess whether an appropriate non-destructive method is available first. No method or damage outcome can be guaranteed from a phone description. If drilling or replacement becomes necessary, I explain why and confirm the cost before proceeding.' },
-      { q: 'Do you charge more for late night callouts?', a: 'The published starting-price basis has no separate night, weekend or bank-holiday surcharge. A standard lockout starts from £59 with no VAT or separate call-out fee; the agreed total still depends on the diagnosed work, method, parts and approved scope.' },
+      { q: 'Do you charge more for late night callouts?', a: `The published starting-price basis has no separate night, weekend or bank-holiday surcharge. A standard lockout starts from £${STANDARD_LOCKOUT_PRICE} with no VAT or separate call-out fee; the agreed total still depends on the diagnosed work, method, parts and approved scope.` },
       { q: 'How long does it take to open a locked door?', a: 'The time depends on the lock, door, condition and available method. I inspect the entrance and explain the likely method before starting rather than promise a fixed opening time.' },
     ],
     howToName: 'How to Get an Emergency Locksmith in Coventry',
@@ -99,15 +113,10 @@ const SERVICE_CONTENT: Record<string, {
       { title: "Keys Lost or Stolen", desc: "Can't find your keys and worried about security? I assess entry and any key-control risk separately, then confirm whether a compatible lock change can be completed during the attendance." },
       { title: "Door Slammed Shut", desc: "A nightlatch can engage when the door closes. I verify authority and inspect the fitted lock before agreeing a suitable opening method or any follow-on work." },
     ],
-    priceDetails: [
-      { item: "Standard lockout (Yale/cylinder)", price: "From £59" },
-      { item: "Multipoint lock lockout (uPVC)", price: "From £69" },
-      { item: "High-security lock lockout", price: "From £79" },
-      { item: "Compatible euro cylinder replacement after entry (if needed)", price: "From £59" },
-    ],
+    priceDetails: SERVICE_PRICE_DETAILS['emergency-lockout'],
     directAnswer: {
       question: 'How much does an emergency locksmith cost in Coventry?',
-      answer: 'An emergency locksmith in Coventry costs from £59 for a standard lockout. This price includes labour, with no VAT or separate call-out fee. Call with the full address and lock symptoms for the current ETA and price basis.',
+      answer: `An emergency locksmith in Coventry costs from £${STANDARD_LOCKOUT_PRICE} for a standard lockout. This price includes labour, with no VAT or separate call-out fee. Call with the full address and lock symptoms for the current ETA and price basis.`,
     },
     voiceFaqs: [
       { q: 'How quickly can a locksmith get to me in Coventry?', a: 'Call with the full address for a current arrival estimate. It depends on the locksmith’s actual starting point, traffic and any earlier job, so a static page should not promise a fixed journey time.' },
@@ -120,7 +129,7 @@ const SERVICE_CONTENT: Record<string, {
     intro: [
       "A stiff, broken, or unreliable door lock does not always need a full security upgrade. I diagnose door lock faults across Coventry and repair the existing lock where that is practical, or replace it when wear or damage makes replacement the better option.",
       "This service covers Yale nightlatches, mortice locks, euro cylinders, broken front-door locks, and planned lock changes after lost keys or a house move. I explain the repair and replacement options before any work starts.",
-      "Door lock repair or replacement starts from £59 including labour and any part explicitly stated in the quote. No VAT. No separate call-out fee.",
+      `Door lock repair or replacement starts from £${EURO_CYLINDER_PRICE} including labour and any part explicitly stated in the quote. No VAT. No separate call-out fee.`,
     ],
     steps: [
       "Call 024 7522 4730 and describe the door, lock, and fault",
@@ -150,15 +159,10 @@ const SERVICE_CONTENT: Record<string, {
       { title: "Lost Keys or House Move", desc: "You need a fresh lock and key set because keys are missing or you do not know who still has copies." },
       { title: "Worn Lock Needs Replacing", desc: "An older lock is unreliable or its parts are no longer practical to repair. I fit and test a suitable replacement." },
     ],
-    priceDetails: [
-      { item: "Yale nightlatch repair or replacement", price: "From £69" },
-      { item: "Euro cylinder replacement", price: "From £59" },
-      { item: "Mortice lock replacement", price: "From £79" },
-      { item: "Multiple lock changes", price: "Quoted before work" },
-    ],
+    priceDetails: SERVICE_PRICE_DETAILS['lock-change'],
     directAnswer: {
       question: 'How much does door lock repair or replacement cost in Coventry?',
-      answer: 'Door lock repair or replacement in Coventry starts from £59 for a euro-cylinder replacement. The final price depends on the fault, lock type and compatible part. I confirm the price basis before work starts, with no VAT or separate call-out fee.',
+      answer: `Door lock repair or replacement in Coventry starts from £${EURO_CYLINDER_PRICE} for a euro-cylinder replacement. The final price depends on the fault, lock type and compatible part. I confirm the price basis before work starts, with no VAT or separate call-out fee.`,
     },
     voiceFaqs: [
       { q: 'Can a locksmith repair a door lock instead of replacing it?', a: 'Often, yes. Alignment, latch, cylinder, and some mechanism faults can be repaired. The locksmith should inspect the cause and explain both options before replacing the complete lock.' },
@@ -170,8 +174,8 @@ const SERVICE_CONTENT: Record<string, {
     h1: 'uPVC Door Lock Repair & Replacement Coventry',
     intro: [
       "A stiff, sticky, or misaligned uPVC door lock is not just annoying — it can leave the door difficult to secure. I diagnose uPVC door lock repairs and replacements across Coventry and Warwickshire.",
-      "I repair and replace uPVC door lock mechanisms, multipoint locks, euro cylinders, window locks, composite door locks, and door handles. Where a repair is possible I will explain it; where replacement is necessary I will quote before fitting the part.",
-      "uPVC lock repair starts from £59. No VAT. No call-out fee.",
+      "I repair and replace uPVC door lock mechanisms, multipoint locks, euro cylinders, window locks, composite door locks, and door handles. A uPVC door lock replacement is proposed only when the diagnosis supports it and a compatible part is identified; I explain and quote the scope before fitting.",
+      `uPVC lock repair starts from £${UPVC_REPAIR_PRICE}. No VAT. No call-out fee.`,
     ],
     steps: [
       "Call 024 7522 4730 and describe the problem with your uPVC door or window",
@@ -201,15 +205,10 @@ const SERVICE_CONTENT: Record<string, {
       { title: "Mechanism Failed", desc: "The gearbox or another multipoint component may have failed. Faceplate markings, measurements and the complete mechanism determine whether a compatible repair part is available." },
       { title: "Euro Cylinder Damaged", desc: "A cylinder has failed or shows attack damage. I assess the full door and compatible size before comparing an independently certified replacement; no cylinder can guarantee that a future attack will fail." },
     ],
-    priceDetails: [
-      { item: "Euro cylinder replacement", price: "From £59" },
-      { item: "Mechanism/gearbox replacement", price: "From £89" },
-      { item: "Handle set replacement", price: "From £39" },
-      { item: "Door realignment", price: "From £49" },
-    ],
+    priceDetails: SERVICE_PRICE_DETAILS['upvc-lock-repair'],
     directAnswer: {
       question: 'How much does a uPVC door lock repair cost?',
-      answer: 'A uPVC door lock repair costs from £59 for a cylinder replacement and from £89 for a multipoint mechanism replacement. The price includes the stated parts and labour with no VAT or separate call-out fee; timing depends on diagnosis and parts.',
+      answer: `A uPVC door lock repair costs from £${UPVC_REPAIR_PRICE} for the stated repair scope and from £${UPVC_GEARBOX_PRICE} for a compatible multipoint gearbox replacement. The price includes the stated parts and labour with no VAT or separate call-out fee; timing depends on diagnosis and parts.`,
     },
     voiceFaqs: [
       { q: 'Why is my uPVC door stiff to lock?', a: 'Possible causes include alignment, hinge movement, the cylinder, handles or the multipoint mechanism. Test whether the symptom changes with the door open, stop forcing it, and have the complete entrance diagnosed before replacing parts.' },
@@ -222,7 +221,7 @@ const SERVICE_CONTENT: Record<string, {
     intro: [
       "After a break-in, storm damage, or accidental breakage, a damaged door, lock, or window may need temporary securing. I provide 24/7 boarding and burglary-related lock assessment across the listed coverage locations.",
       "I board damaged openings and can replace compromised residential locks on the same visit when the suitable part is available. Permanent glazing, joinery, or structural repairs remain separate work, and I explain the temporary security scope before starting.",
-      "Emergency boarding up starts from £79. No VAT. No call-out fee.",
+      `Emergency boarding up starts from £${BOARDING_PRICE}. No VAT. No call-out fee.`,
     ],
     steps: [
       "Prioritise safety and follow police instructions before repair work begins",
@@ -251,15 +250,10 @@ const SERVICE_CONTENT: Record<string, {
       { title: "Storm Damage", desc: "A window has blown in or a door has been damaged by high winds. The opening and safe fixing points are assessed before temporary work is agreed." },
       { title: "Accidental Breakage", desc: "A glass door or window is broken accidentally. Temporary boarding may reduce immediate access and exposure while glazing repair is arranged." },
     ],
-    priceDetails: [
-      { item: "Single window board-up", price: "From £79" },
-      { item: "Door board-up", price: "From £89" },
-      { item: "Multiple openings", price: "From £120" },
-      { item: "Board-up + lock change", price: "From £139" },
-    ],
+    priceDetails: SERVICE_PRICE_DETAILS['boarding-up'],
     directAnswer: {
       question: 'How much does emergency boarding up cost in Coventry?',
-      answer: 'Temporary boarding in Coventry starts from £79 for a single damaged opening. The service is available 24 hours a day. A compromised residential lock may also be replaceable when authority, safe access and a compatible part are available. No VAT is charged.',
+      answer: `Temporary boarding in Coventry starts from £${BOARDING_PRICE} for one assessed damaged opening. The service is available 24 hours a day. A compromised residential lock may also be replaceable when authority, safe access and a compatible part are available. No VAT is charged.`,
     },
     voiceFaqs: [
       { q: 'Should I call the police before calling a locksmith after a break-in?', a: 'Call 999 if an offender may still be present or anyone is in immediate danger. Otherwise use the police reporting route and follow scene-preservation instructions. Ask your insurer separately what evidence its current written terms require.' },
@@ -272,7 +266,7 @@ const SERVICE_CONTENT: Record<string, {
     intro: [
       "Anti-snap cylinders and BS3621-marked locks address different products and tested requirements. If you are following written policy wording, improving resistance to a specified attack method, or replacing a faulty lock, I assess the actual door and explain compatible options.",
       "I assess anti-snap euro cylinders, BS3621-marked mortice deadlocks and other independently certified options against the actual entrance, measurements and required function.",
-      "Lock upgrade prices start from £59 for an anti-snap euro cylinder, including the stated lock and fitting. No VAT. No separate call-out fee.",
+      `Lock upgrade prices start from £${ANTI_SNAP_PRICE} for an anti-snap euro cylinder, including the stated lock and fitting. No VAT. No separate call-out fee.`,
     ],
     steps: [
       "Call 024 7522 4730 for a free phone consultation on your security needs",
@@ -302,15 +296,10 @@ const SERVICE_CONTENT: Record<string, {
       { title: "Post-Burglary Review", desc: "After a break-in, you want damaged or unsuitable locks assessed and replaced with correctly fitted, independently certified options." },
       { title: "General Security Improvement", desc: "You want the inspected entrance reviewed against a clear objective. I record what is fitted and explain compatible, independently certified options." },
     ],
-    priceDetails: [
-      { item: "Anti-snap euro cylinder", price: "From £59" },
-      { item: "BS3621 mortice deadlock", price: "From £79" },
-      { item: "Full front door upgrade (deadlock + cylinder)", price: "From £129" },
-      { item: "Whole house upgrade (all doors)", price: "From £199" },
-    ],
+    priceDetails: SERVICE_PRICE_DETAILS['lock-upgrade'],
     directAnswer: {
       question: 'How much does a lock upgrade cost in Coventry?',
-      answer: 'A lock upgrade in Coventry costs from £79 for a BS3621-rated mortice deadlock or from £59 for an anti-snap euro cylinder. The price includes the lock and fitting. Check any insurance requirement in your own policy before choosing a standard.',
+      answer: `A lock upgrade in Coventry costs from £${BS3621_PRICE} for a BS3621-rated mortice deadlock or from £${ANTI_SNAP_PRICE} for an anti-snap euro cylinder. The price includes the stated lock and fitting scope. Check any insurance requirement in your own policy before choosing a standard.`,
     },
     voiceFaqs: [
       { q: 'What is the difference between a Yale lock and a deadlock?', a: '“Yale lock” is commonly used for a nightlatch, while a mortice deadlock uses a bolt operated by a key. The suitable arrangement depends on the actual door, escape needs and any exact written requirement.' },
@@ -592,7 +581,7 @@ export default async function ServicePage({ params }: Props) {
             {service.shortName} Prices
           </h2>
           <p className="text-gray-500 text-center mb-8">
-            All prices include labour. No VAT. No call-out fee.
+            Published from-prices include the stated labour scope. Quote-only work is itemised after inspection. No VAT or separate call-out fee.
           </p>
 
           {/* Price card */}
@@ -600,10 +589,10 @@ export default async function ServicePage({ params }: Props) {
             {content.priceDetails.map((item, i) => (
               <div
                 key={i}
-                className={`flex items-center justify-between px-6 py-4 ${i < content.priceDetails.length - 1 ? 'border-b border-gray-100' : ''}`}
+                className={`flex flex-col items-start gap-1 px-6 py-4 sm:flex-row sm:items-center sm:justify-between ${i < content.priceDetails.length - 1 ? 'border-b border-gray-100' : ''}`}
               >
                 <span className="text-[#0F1B2D] font-medium">{item.item}</span>
-                <span className="text-[#8A5A00] font-black text-lg whitespace-nowrap ml-4">{item.price}</span>
+                <span className="text-[#8A5A00] font-black text-sm sm:text-lg sm:whitespace-nowrap sm:ml-4">{servicePriceLabel(item)}</span>
               </div>
             ))}
 
@@ -615,6 +604,12 @@ export default async function ServicePage({ params }: Props) {
               </p>
             </div>
           </div>
+
+          <p className="text-center mt-4">
+            <Link href="/prices" className="text-sm font-bold text-[#0F1B2D] underline decoration-[#FFB800] underline-offset-4 hover:text-[#8A5A00]">
+              View the full published price catalogue
+            </Link>
+          </p>
 
           {/* CTA */}
           <div className="text-center mt-8">

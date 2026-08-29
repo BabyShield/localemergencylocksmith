@@ -12,6 +12,8 @@ import {
   TECHNICAL_EVIDENCE_SOURCES,
   type EvidenceSource,
 } from './locksmith-evidence.ts'
+import { supplementalGuidanceSourceIds } from './area-guide-evidence-policy.ts'
+import { serviceStartingPrice } from './pricing.ts'
 import { SERVICE_AREA_SLUGS, type ServiceAreaSlug } from './service-area-types.ts'
 import type { AreaSlug } from './area-authorities.ts'
 
@@ -749,13 +751,19 @@ function sentenceStart(value: string): string {
   return value.charAt(0).toUpperCase() + value.slice(1)
 }
 
+const EMERGENCY_LOCKOUT_PRICE = serviceStartingPrice('emergency-lockout')
+const LOCK_CHANGE_PRICE = serviceStartingPrice('lock-change')
+const UPVC_LOCK_REPAIR_PRICE = serviceStartingPrice('upvc-lock-repair')
+const BOARDING_UP_PRICE = serviceStartingPrice('boarding-up')
+const LOCK_UPGRADE_PRICE = serviceStartingPrice('lock-upgrade')
+
 const SERVICE_BLUEPRINTS: Record<ServiceAreaSlug, ServiceBlueprint> = {
   'emergency-lockout': {
     name: 'Emergency Locksmith',
     shortName: 'Emergency Lockout',
-    priceFrom: 59,
-    metaTitle: area => `Emergency Locksmith ${area} | Lockout From £59`,
-    metaDescription: area => `Locked out in ${area.name}? Locksmith from £59, with ${area.metaDifferentiator}, authority checks and price agreed before travel.`,
+    priceFrom: EMERGENCY_LOCKOUT_PRICE,
+    metaTitle: area => `Emergency Locksmith ${area} | Lockout From £${EMERGENCY_LOCKOUT_PRICE}`,
+    metaDescription: area => `Locked out in ${area.name}? Locksmith from £${EMERGENCY_LOCKOUT_PRICE}, with ${area.metaDifferentiator}, authority checks and price basis agreed before travel.`,
     h1: area => `Emergency Locksmith for Lockouts in ${area}`,
     intro: area => `If you are locked out in ${area}, call with the exact address, entrance type and a short description of what the key, handle and door are doing. I will confirm the current estimated arrival time and the price basis before travelling. On arrival I verify your authority to enter, inspect the lock and start with an appropriate low-damage method where the lock and circumstances allow. Non-destructive entry is an aim, not a guarantee; if drilling or replacement becomes necessary, I explain why and agree it first.`,
     scenarios: ['Slammed door where the lock has not been deadlocked', 'Lost or stolen keys requiring entry and a separate key-control decision', 'A key snapped or trapped in the lock', 'A failed lock or mechanism leaving the authorised occupier outside'],
@@ -771,9 +779,9 @@ const SERVICE_BLUEPRINTS: Record<ServiceAreaSlug, ServiceBlueprint> = {
   'lock-change': {
     name: 'Door Lock Repair & Replacement',
     shortName: 'Lock Repair & Replacement',
-    priceFrom: 59,
-    metaTitle: area => `Lock Repair & Replacement ${area} | From £59`,
-    metaDescription: area => `Lock repair and replacement in ${area.name}. Euro-cylinder replacement from £59. ${sentenceStart(area.metaDifferentiator)}. No VAT/call-out fee.`,
+    priceFrom: LOCK_CHANGE_PRICE,
+    metaTitle: area => `Lock Repair & Replacement ${area} | From £${LOCK_CHANGE_PRICE}`,
+    metaDescription: area => `Lock repair and replacement in ${area.name}. Euro-cylinder replacement from £${LOCK_CHANGE_PRICE}. ${sentenceStart(area.metaDifferentiator)}. No VAT/call-out fee.`,
     h1: area => `Door Lock Repair & Replacement in ${area}`,
     intro: area => `For a failed, worn or compromised door lock in ${area}, the first decision is whether the lock can be adjusted or repaired, whether one component needs replacing, or whether the complete lock is unsuitable. I inspect the door, frame, lock markings, cylinder or mechanism before agreeing the remedy. A move, lost keys and mechanical failure create different key-control and repair needs. Product, keys, fitting and any alignment work are explained in the price so a headline replacement figure is not confused with a diagnosis.`,
     scenarios: ['Broken or unreliable mortice lock, nightlatch or cylinder', 'Lost-key or moving-home key-control change', 'Door alignment causing a sound lock to bind', 'Replacement after damage, wear or an agreed security review'],
@@ -795,9 +803,9 @@ const SERVICE_BLUEPRINTS: Record<ServiceAreaSlug, ServiceBlueprint> = {
   'upvc-lock-repair': {
     name: 'uPVC Door & Window Lock Repair',
     shortName: 'uPVC Lock Repair',
-    priceFrom: 59,
-    metaTitle: area => `uPVC Door Lock Repair ${area} | From £59`,
-    metaDescription: area => `uPVC door lock diagnosis in ${area.name} from £59. Alignment, cylinder, handle and multipoint checks with ${area.metaDifferentiator}.`,
+    priceFrom: UPVC_LOCK_REPAIR_PRICE,
+    metaTitle: area => `uPVC Door Lock Repair ${area} | From £${UPVC_LOCK_REPAIR_PRICE}`,
+    metaDescription: area => `uPVC door lock diagnosis in ${area.name} from £${UPVC_LOCK_REPAIR_PRICE}. Alignment, cylinder, handle and multipoint checks with ${area.metaDifferentiator}.`,
     h1: area => `uPVC Door Lock Repair in ${area}`,
     intro: area => `A stiff handle, key that will not turn, hooks that miss their keeps, or a door that locks open but not closed can have different causes. For a uPVC or composite door in ${area}, I check alignment, handle movement, cylinder operation and the multipoint mechanism before proposing parts. Continuing to force a binding handle can turn an alignment issue into mechanism damage. Compatibility must be established from markings and measurements; the town, estate or apparent door age is not a reliable parts catalogue.`,
     scenarios: ['Door locks while open but binds or fails when closed', 'Handle is stiff, loose, floppy or will not lift fully', 'Key or euro cylinder turns badly or not at all', 'Multipoint hooks, rollers or gearbox fail to move correctly'],
@@ -807,18 +815,20 @@ const SERVICE_BLUEPRINTS: Record<ServiceAreaSlug, ServiceBlueprint> = {
       { q: 'Why does the door lock while open but not when closed?', a: 'That symptom often directs the inspection toward alignment between the sash and frame keeps, but hinges, keeps and mechanism condition still need checking. Do not keep forcing the handle.' },
       { q: 'Can any multipoint gearbox be fitted?', a: 'No. Backset, centres, faceplate, spindle and locking layout vary. Markings and measurements are required to confirm compatibility.' },
     ],
-    sourceIds: ['warwickshire-lock-advice', 'warwickshire-door-security'],
+    sourceIds: ['warwickshire-lock-advice', 'warwickshire-door-security', 'mla-service-calls'],
     technicalSourceIdsBySection: technicalSourcesBySection([
       'warwickshire-lock-advice',
       'warwickshire-door-security',
-    ]),
+    ], {
+      intro: ['warwickshire-lock-advice', 'warwickshire-door-security', 'mla-service-calls'],
+    }),
   },
   'boarding-up': {
     name: 'Emergency Boarding Up & Burglary Repairs',
     shortName: 'Boarding Up & Burglary Repairs',
-    priceFrom: 79,
-    metaTitle: area => `Emergency Boarding Up ${area} | From £79`,
-    metaDescription: area => `Boarding up in ${area.name} from £79. Evidence-aware temporary security for damaged doors or windows, with ${area.metaDifferentiator}.`,
+    priceFrom: BOARDING_UP_PRICE,
+    metaTitle: area => `Emergency Boarding Up ${area} | From £${BOARDING_UP_PRICE}`,
+    metaDescription: area => `Boarding up in ${area.name} from £${BOARDING_UP_PRICE}. Evidence-aware temporary security for damaged doors or windows, with ${area.metaDifferentiator}.`,
     h1: area => `Emergency Boarding Up & Burglary Repairs in ${area}`,
     intro: area => `If a door or window in ${area} has been forced or broken, protect people first and follow police instructions about the scene. Photograph damage and avoid disturbing possible evidence unless told otherwise. Boarding is a temporary measure intended to reduce immediate access and weather exposure while glazing, joinery, door or structural repairs are arranged. I assess the opening, remaining frame and compromised locks, explain what the temporary work can and cannot do, and record any permanent work still required.`,
     scenarios: ['Broken window or glazed door panel requiring temporary cover', 'Forced door or frame needing temporary external security', 'Damaged commercial or communal opening with owner authority', 'Boarding followed by a separately agreed lock or hardware repair'],
@@ -839,9 +849,9 @@ const SERVICE_BLUEPRINTS: Record<ServiceAreaSlug, ServiceBlueprint> = {
   'lock-upgrade': {
     name: 'Lock Upgrade & Security',
     shortName: 'Lock Upgrade',
-    priceFrom: 59,
+    priceFrom: LOCK_UPGRADE_PRICE,
     metaTitle: area => `Lock Upgrades ${area} | Anti-Snap & BS3621`,
-    metaDescription: area => `Lock upgrades in ${area.name} from £59 for a compatible anti-snap cylinder. ${sentenceStart(area.metaDifferentiator)}; check written requirements.`,
+    metaDescription: area => `Lock upgrades in ${area.name} from £${LOCK_UPGRADE_PRICE} for a compatible anti-snap cylinder. ${sentenceStart(area.metaDifferentiator)}; check written requirements.`,
     h1: area => `Lock Upgrades & Security Review in ${area}`,
     intro: area => `A useful security upgrade in ${area} starts with the complete entrance, not a product slogan. I inspect the door, frame, hinges, keeps, handles, existing lock and cylinder fit. Warwickshire Police advises correctly sized cylinders and accredited products, but a euro-cylinder solution does not apply to every door. If an insurer, landlord or managing agent specifies a standard, use the current written wording and match the marked product and installation to it. Certification indicates tested resistance; it does not make a door attack-proof or guarantee an insurance outcome.`,
     scenarios: ['Cylinder projection, weak handles or incomplete multipoint engagement', 'Worn or unmarked lock considered against a written requirement', 'Door-frame, hinge or keep weaknesses found during an entrance review', 'Planned upgrade after a move, key loss or damage'],
@@ -851,10 +861,11 @@ const SERVICE_BLUEPRINTS: Record<ServiceAreaSlug, ServiceBlueprint> = {
       { q: 'What do TS007 and BS3621 mean?', a: 'They apply to different product categories and evidence tested requirements. The marked product still needs to suit the door and be correctly fitted; check any exact policy wording with the insurer.' },
       { q: 'Can an upgraded lock guarantee security?', a: 'No. Accredited and correctly fitted hardware can improve resistance to tested attack methods, but no lock removes every route of forced entry or guarantees a claim outcome.' },
     ],
-    sourceIds: ['warwickshire-lock-advice', 'warwickshire-door-security'],
+    sourceIds: ['warwickshire-lock-advice', 'warwickshire-door-security', 'mla-service-calls'],
     technicalSourceIdsBySection: technicalSourcesBySection(
       ['warwickshire-door-security'],
       {
+        intro: ['warwickshire-door-security', 'mla-service-calls'],
         checks: ['warwickshire-lock-advice', 'warwickshire-door-security'],
       },
     ),
@@ -894,43 +905,61 @@ function buildContent(area: AreaEvidenceProfile, service: ServiceAreaSlug): Town
       ? [serviceIndex, 4]
       : [serviceIndex]
   const serviceContext = contextIndexes.map(index => area.contextGuidance[index])
+  const intro = [
+    `${area.summary} ${area.planningNote}`,
+    blueprint.intro(area.name),
+    `The advertised starting price is £${blueprint.priceFrom}. I confirm the current ETA and price basis from the actual symptoms and access details before travelling; there is no VAT or separate call-out fee.`,
+  ]
+  const commonJobs = [...local.checks, ...blueprint.scenarios]
+  const faqs = [
+    local.faq,
+    ...blueprint.faqs(area.name).map((faq, index) => ({
+      q: faq.q,
+      a: `${faq.a} ${area.faqScope[index]}`,
+    })),
+  ]
+  const contextGuidance = [...serviceContext, ...local.details]
+  const preparationSteps = blueprint.preparation
+  const sectionText: Record<TownServiceEvidenceSection, string> = {
+    intro: intro.join(' '),
+    localAngle: `${local.heading} ${local.body}`,
+    contextGuidance: contextGuidance.join(' '),
+    preparation: preparationSteps.join(' '),
+    checks: commonJobs.join(' '),
+    faqs: faqs.flatMap(faq => [faq.q, faq.a]).join(' '),
+  }
   const sectionSourceIds = Object.fromEntries(
     TOWN_SERVICE_EVIDENCE_SECTIONS.map(section => [
       section,
       [...new Set([
         ...localitySourceIdsForSection(area, service, section),
         ...blueprint.technicalSourceIdsBySection[section],
+        ...supplementalGuidanceSourceIds(sectionText[section]),
       ])],
     ]),
   ) as Record<TownServiceEvidenceSection, string[]>
+  const supplementalSourceIds = [...new Set(
+    Object.values(sectionText).flatMap(text => supplementalGuidanceSourceIds(text)),
+  )]
 
   return {
     service,
     metaTitle: blueprint.metaTitle(area.name),
     metaDescription: blueprint.metaDescription(area),
     h1: blueprint.h1(area.name),
-    intro: [
-      `${area.summary} ${area.planningNote}`,
-      blueprint.intro(area.name),
-      `The advertised starting price is £${blueprint.priceFrom}. I confirm the current ETA and price basis from the actual symptoms and access details before travelling; there is no VAT or separate call-out fee.`,
-    ],
+    intro,
     localAngleHeading: local.heading,
     localAngleBody: local.body,
-    commonJobs: [...local.checks, ...blueprint.scenarios],
-    faqs: [
-      local.faq,
-      ...blueprint.faqs(area.name).map((faq, index) => ({
-        q: faq.q,
-        a: `${faq.a} ${area.faqScope[index]}`,
-      })),
-    ],
+    commonJobs,
+    faqs,
     priceNote: `${blueprint.shortName} in ${area.name} starts from £${blueprint.priceFrom}. The agreed price depends on the diagnosed work and parts, with no VAT or separate call-out fee. ${area.priceScope}`,
     evidenceSummary: `${area.contactPrep} Local context was checked against the sources below on ${REVIEWED_ON}. The sources support place, planning and general technical guidance; they do not prove the lock type or job history at an individual address.`,
-    contextGuidance: [...serviceContext, ...local.details],
-    preparationSteps: blueprint.preparation,
+    contextGuidance,
+    preparationSteps,
     sources: uniqueSources([
       ...area.sources,
       ...blueprint.sourceIds.map(id => TECHNICAL_SOURCES[id]),
+      ...supplementalSourceIds.map(id => TECHNICAL_SOURCES[id]),
     ]),
     sectionSourceIds,
     reviewedOn: REVIEWED_ON,

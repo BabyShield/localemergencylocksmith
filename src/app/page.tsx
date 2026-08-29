@@ -18,15 +18,15 @@ import { ALL_BLOG_POSTS } from '@/data/blog-posts'
 export const metadata: Metadata = {
   title: 'Locksmith Coventry | Local 24/7 Service | From £59',
   description:
-    'Local locksmith in Coventry for lockouts, door lock repairs, replacements, uPVC locks and security upgrades. Available 24/7 from £59; no VAT or call-out fee.',
-  keywords: 'locksmith coventry, local locksmith coventry, locksmith near me coventry, emergency locksmith coventry, 24 hour locksmith coventry, door lock repair coventry, lock replacement coventry, locksmith warwickshire',
+    'Local mobile locksmith in Coventry for lockouts, door lock repairs, replacements, uPVC locks and security upgrades. 24/7 from £59; no VAT or call-out fee.',
+  keywords: 'locksmith coventry, local locksmith coventry, mobile locksmith coventry, locksmith near me coventry, emergency locksmith coventry, 24 hour locksmith coventry, door lock repair coventry, lock replacement coventry, locksmith warwickshire',
   alternates: {
     canonical: SITE_CONFIG.domain,
   },
   openGraph: {
     type: 'website',
     title: 'Locksmith Coventry | Local 24/7 Service | From £59',
-    description: 'Local Coventry locksmith for lockouts, door lock repairs, replacements and security upgrades. Available 24/7; no VAT or call-out fee.',
+    description: 'Local mobile Coventry locksmith for lockouts, door lock repairs, replacements and security upgrades. Call to confirm attendance; no VAT or call-out fee.',
     url: SITE_CONFIG.domain,
     images: [{ url: `${SITE_CONFIG.domain}/og-image.png`, width: 1200, height: 630 }],
   },
@@ -50,7 +50,7 @@ const organizationSchema = {
     email: SITE_CONFIG.email,
   },
   description:
-    'Independent locksmith serving 78 listed locations across Coventry and nearby parts of Warwickshire, Solihull, and the West Midlands.',
+    'Independent mobile locksmith serving 78 listed locations across Coventry and nearby parts of Warwickshire, Solihull, and the West Midlands.',
   logo: {
     '@type': 'ImageObject',
     url: `${SITE_CONFIG.domain}/icon-512.png`,
@@ -194,6 +194,31 @@ export default function HomePage() {
         </div>
       </section>
 
+      <section className="py-12 px-4 bg-[#F7F7F5]" aria-labelledby="mobile-locksmith-heading">
+        <div className="max-w-3xl mx-auto">
+          <h2 id="mobile-locksmith-heading" className="text-2xl md:text-3xl font-black text-[#0F1B2D] mb-4">
+            Mobile Locksmith Callouts in Coventry
+          </h2>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            I provide a mobile locksmith service at the affected property. Call with the full
+            address, exact entrance and observed symptoms; I confirm whether I can attend, the
+            current ETA and the price basis before travelling.
+          </p>
+          <p className="text-gray-700 leading-relaxed">
+            At the address, the fitted door, lock, condition and authority to enter are checked
+            before a method and scope are agreed. Review the five advertised{' '}
+            <Link href="/services" className="font-semibold underline decoration-[#FFB800] underline-offset-4 hover:text-[#8A5A00]">
+              locksmith services
+            </Link>{' '}
+            and the{' '}
+            <Link href="/areas" className="font-semibold underline decoration-[#FFB800] underline-offset-4 hover:text-[#8A5A00]">
+              listed service areas
+            </Link>
+            {', then call to confirm the exact address and current availability.'}
+          </p>
+        </div>
+      </section>
+
       {/* 3. Stats / numbers section */}
       <section className="bg-[#0F1B2D] py-12 px-4">
         <div className="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
@@ -201,7 +226,7 @@ export default function HomePage() {
             { number: 'Live', label: 'ETA Confirmed by Phone' },
             { number: '24/7', label: 'Day or Night, 365 Days' },
             { number: '£59', label: 'Lockouts From' },
-            { number: '0%', label: 'VAT Charged — Ever' },
+            { number: 'No VAT', label: 'Added to Agreed Prices' },
           ].map((stat) => (
             <div key={stat.label}>
               <div className="text-[#FFB800] text-4xl md:text-5xl font-black mb-2">{stat.number}</div>
@@ -257,7 +282,7 @@ export default function HomePage() {
                 },
                 {
                   step: '3',
-                  title: 'Problem Solved',
+                  title: 'Work Agreed',
                   desc: 'The inspected scope and price are agreed before work; any change needs your approval first.',
                 },
               ].map((item) => (

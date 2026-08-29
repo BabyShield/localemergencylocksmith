@@ -49,19 +49,24 @@ const SYSTEM_UTC_DATE = new Date().toISOString().slice(0, 10)
 const AUDIT_AS_OF = process.env.SERVICE_AREA_AUDIT_AS_OF
   ?? (SYSTEM_UTC_DATE > DECLARED_REVIEW_DATE ? SYSTEM_UTC_DATE : DECLARED_REVIEW_DATE)
 
-const TECHNICAL_SOURCE_IDS = new Set([
+const CORE_TECHNICAL_SOURCE_IDS = new Set([
   'mla-service-calls',
   'warwickshire-lock-advice',
   'warwickshire-door-security',
   'warwickshire-forensics',
 ])
+const SUPPLEMENTAL_SOURCE_IDS = new Set([
+  'mila-door-locks-catalogue',
+  'govuk-listed-building-consent',
+])
+const TECHNICAL_SOURCE_IDS = new Set([...CORE_TECHNICAL_SOURCE_IDS, ...SUPPLEMENTAL_SOURCE_IDS])
 
 const REQUIRED_TECHNICAL_SOURCE_IDS = {
   'emergency-lockout': ['mla-service-calls'],
   'lock-change': ['warwickshire-door-security', 'mla-service-calls'],
-  'upvc-lock-repair': ['warwickshire-lock-advice', 'warwickshire-door-security'],
+  'upvc-lock-repair': ['warwickshire-lock-advice', 'warwickshire-door-security', 'mla-service-calls'],
   'boarding-up': ['warwickshire-forensics', 'mla-service-calls'],
-  'lock-upgrade': ['warwickshire-lock-advice', 'warwickshire-door-security'],
+  'lock-upgrade': ['warwickshire-lock-advice', 'warwickshire-door-security', 'mla-service-calls'],
 }
 
 function sectionTechnicalRequirements(defaults, overrides = {}) {
@@ -81,10 +86,12 @@ const REQUIRED_SECTION_TECHNICAL_SOURCE_IDS = {
       contextGuidance: ['warwickshire-door-security', 'mla-service-calls'],
     },
   ),
-  'upvc-lock-repair': sectionTechnicalRequirements([
-    'warwickshire-lock-advice',
-    'warwickshire-door-security',
-  ]),
+  'upvc-lock-repair': sectionTechnicalRequirements(
+    ['warwickshire-lock-advice', 'warwickshire-door-security'],
+    {
+      intro: ['warwickshire-lock-advice', 'warwickshire-door-security', 'mla-service-calls'],
+    },
+  ),
   'boarding-up': sectionTechnicalRequirements(
     ['warwickshire-forensics'],
     {
@@ -94,9 +101,36 @@ const REQUIRED_SECTION_TECHNICAL_SOURCE_IDS = {
   'lock-upgrade': sectionTechnicalRequirements(
     ['warwickshire-door-security'],
     {
+      intro: ['warwickshire-door-security', 'mla-service-calls'],
       checks: ['warwickshire-lock-advice', 'warwickshire-door-security'],
     },
   ),
+}
+
+function independentlyRequiredSupplementalSourceIds(text) {
+  const required = []
+
+  if (/\b(?:faceplate|backset|locking layout|component geometry|multipoint (?:part|component)|(?:handle|spindle|fixing|pz) centres?)\b/i.test(text)) {
+    required.push('mila-door-locks-catalogue')
+  }
+
+  const sentences = text.match(/[^.!?]+[.!?]?/g) ?? []
+  const positiveListedSentences = sentences.filter(sentence => (
+    /\b(?:listed[- ]building|listed (?:status|fabric|properties|property|premises|assets?|buildings?)|grade (?:i|ii\*?|iii) listed|protected or listed)\b/i.test(sentence)
+    && !/\b(?:do|does|did) not\b|\bcannot\b|\bno listed\b/i.test(sentence)
+  ))
+  const heritageWorkPattern = /\b(?:listed[- ]building consent|heritage consent|consents?|permissions?|approvals?|protected fabric|historic fabric|visible (?:work|changes?|replacements?|alterations?)|external (?:work|changes?|attachments?|alterations?))\b/i
+  const hasDirectListedWorkClaim = positiveListedSentences.some(sentence => heritageWorkPattern.test(sentence))
+  const hasSplitListedWorkClaim = positiveListedSentences.length > 0 && sentences.some(sentence => (
+    heritageWorkPattern.test(sentence)
+    && !/\b(?:do|does|did) not\b|\bcannot\b/i.test(sentence)
+  ))
+
+  if (hasDirectListedWorkClaim || hasSplitListedWorkClaim) {
+    required.push('govuk-listed-building-consent')
+  }
+
+  return required
 }
 
 const BANNED_CLAIM_PATTERNS = [
@@ -192,6 +226,28 @@ function localityEditorialText(content) {
   ].filter(value => typeof value === 'string' && value.trim().length > 0).join(' ')
 }
 
+function pairSpecificCoreText(content) {
+  return [
+    content.localAngleHeading,
+    content.localAngleBody,
+    ...(Array.isArray(content.contextGuidance) ? content.contextGuidance.slice(-2) : []),
+    ...(Array.isArray(content.commonJobs) ? content.commonJobs.slice(0, 3) : []),
+    ...(Array.isArray(content.faqs) && content.faqs[0]
+      ? [content.faqs[0].q, content.faqs[0].a]
+      : []),
+  ].filter(value => typeof value === 'string' && value.trim().length > 0).join(' ')
+}
+
+function sentenceOccurrences(text, minimumWords = 8) {
+  const sentences = text.match(/[^.!?]+(?:[.!?]+|$)/g) ?? []
+  return sentences
+    .map(sentence => ({
+      key: sentence.toLowerCase().normalize('NFKC').replace(/[^\p{L}\p{N}]+/gu, ' ').trim(),
+      words: wordCount(sentence),
+    }))
+    .filter(sentence => sentence.words >= minimumWords && sentence.key)
+}
+
 function claimText(content) {
   return [
     ...(Array.isArray(content.intro) ? content.intro : []),
@@ -204,6 +260,21 @@ function claimText(content) {
     ...(Array.isArray(content.preparationSteps) ? content.preparationSteps : []),
     content.metaDescription,
   ].filter(value => typeof value === 'string' && value.trim().length > 0).join(' ')
+}
+
+function sectionClaimText(content, section) {
+  const values = {
+    intro: content.intro,
+    localAngle: [content.localAngleHeading, content.localAngleBody],
+    contextGuidance: content.contextGuidance,
+    preparation: content.preparationSteps,
+    checks: content.commonJobs,
+    faqs: Array.isArray(content.faqs) ? content.faqs.flatMap(faq => [faq?.q, faq?.a]) : [],
+  }[section]
+
+  return (Array.isArray(values) ? values : [])
+    .filter(value => typeof value === 'string' && value.trim().length > 0)
+    .join(' ')
 }
 
 function escapeRegExp(value) {
@@ -435,6 +506,8 @@ for (const [areaSlug, records] of Object.entries(TOWN_SERVICES)) {
       editorial: editorialText(content),
       localityEditorial: localityEditorialText(content),
     }
+    record.pairSpecificWords = wordCount(pairSpecificCoreText(content))
+    record.sentenceOccurrences = sentenceOccurrences(record.editorial)
     publishedRecords.push(record)
 
     check(content.metaTitle?.includes(area.name), `${key} meta title does not name ${area.name}`)
@@ -572,7 +645,7 @@ for (const [areaSlug, records] of Object.entries(TOWN_SERVICES)) {
       }
 
       const expectedTechnicalIds = REQUIRED_SECTION_TECHNICAL_SOURCE_IDS[serviceSlug]?.[section] ?? []
-      const actualTechnicalIds = ids.filter(sourceId => TECHNICAL_SOURCE_IDS.has(sourceId))
+      const actualTechnicalIds = ids.filter(sourceId => CORE_TECHNICAL_SOURCE_IDS.has(sourceId))
       check(
         actualTechnicalIds.length === expectedTechnicalIds.length
           && actualTechnicalIds.every(sourceId => expectedTechnicalIds.includes(sourceId)),
@@ -583,6 +656,13 @@ for (const [areaSlug, records] of Object.entries(TOWN_SERVICES)) {
         check(actualLocalityIds.length === 0, `${key} evidence section ${section} includes locality source ${actualLocalityIds.join(', ')}`)
       } else {
         check(actualLocalityIds.length > 0, `${key} evidence section ${section} has no locality source`)
+      }
+
+      for (const requiredSourceId of independentlyRequiredSupplementalSourceIds(sectionClaimText(content, section))) {
+        check(
+          ids.includes(requiredSourceId),
+          `${key} evidence section ${section} is missing claim-triggered source ${requiredSourceId}`,
+        )
       }
 
       if (sourceIds.has('sdc-conservation-review-2026')) {
@@ -744,6 +824,30 @@ const allFullRecords = publishedRecords.map(record => ({
   serviceSlug: record.serviceSlug,
   shingles: shingles(normaliseLocality(record.editorial, record.area), 5),
 }))
+const pairSpecificShares = publishedRecords.map(record => record.pairSpecificWords / record.editorialWords)
+const sentenceDocumentFrequency = new Map()
+for (const record of publishedRecords) {
+  for (const sentenceKey of new Set(record.sentenceOccurrences.map(sentence => sentence.key))) {
+    const owners = sentenceDocumentFrequency.get(sentenceKey) ?? new Set()
+    owners.add(record.key)
+    sentenceDocumentFrequency.set(sentenceKey, owners)
+  }
+}
+const repeatedSentenceWordShares = publishedRecords.map(record => {
+  const totalWords = record.sentenceOccurrences.reduce((sum, sentence) => sum + sentence.words, 0)
+  const repeatedWords = record.sentenceOccurrences
+    .filter(sentence => (sentenceDocumentFrequency.get(sentence.key)?.size ?? 0) > 1)
+    .reduce((sum, sentence) => sum + sentence.words, 0)
+  return repeatedWords / Math.max(1, totalWords)
+})
+const pairSpecificShareSummary = numericSummary(pairSpecificShares)
+const repeatedSentenceWordSummary = numericSummary(repeatedSentenceWordShares)
+warnings.push(
+  `information-gain diagnostic: pair-specific core is ${(pairSpecificShareSummary.min * 100).toFixed(2)}%–${(pairSpecificShareSummary.max * 100).toFixed(2)}% `
+  + `of dedicated-page editorial (median ${(pairSpecificShareSummary.median * 100).toFixed(2)}%); repeated exact-sentence words are `
+  + `${(repeatedSentenceWordSummary.min * 100).toFixed(2)}%–${(repeatedSentenceWordSummary.max * 100).toFixed(2)}% `
+  + `(median ${(repeatedSentenceWordSummary.median * 100).toFixed(2)}%); measured for future de-templating, not yet a release gate`,
+)
 const allFullReport = buildCrossCorpusReport(allFullRecords)
 const sameAreaCrossServiceReport = buildCrossCorpusReport(
   allFullRecords,
@@ -790,6 +894,8 @@ for (const report of fullSimilarityReports) {
 console.log('')
 console.log(`All-page full-editorial overlap: ${allFullReport.pairCount} pairs, p95 ${(allFullReport.p95 * 100).toFixed(2)}%, max ${(allFullReport.max * 100).toFixed(2)}% (${allFullReport.highestPair?.left} vs ${allFullReport.highestPair?.right})`)
 console.log(`Same-area cross-service overlap: ${sameAreaCrossServiceReport.pairCount} pairs, p95 ${(sameAreaCrossServiceReport.p95 * 100).toFixed(2)}%, max ${(sameAreaCrossServiceReport.max * 100).toFixed(2)}% (${sameAreaCrossServiceReport.highestPair?.left} vs ${sameAreaCrossServiceReport.highestPair?.right})`)
+console.log(`Pair-specific editorial share: min ${(pairSpecificShareSummary.min * 100).toFixed(2)}%, median ${(pairSpecificShareSummary.median * 100).toFixed(2)}%, p95 ${(pairSpecificShareSummary.p95 * 100).toFixed(2)}%, max ${(pairSpecificShareSummary.max * 100).toFixed(2)}%`)
+console.log(`Repeated exact-sentence word share: min ${(repeatedSentenceWordSummary.min * 100).toFixed(2)}%, median ${(repeatedSentenceWordSummary.median * 100).toFixed(2)}%, p95 ${(repeatedSentenceWordSummary.p95 * 100).toFixed(2)}%, max ${(repeatedSentenceWordSummary.max * 100).toFixed(2)}%`)
 
 if (warnings.length > 0) {
   console.warn('')

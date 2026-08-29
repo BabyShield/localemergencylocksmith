@@ -315,7 +315,7 @@ export default async function AreaPage({ params }: Props) {
                     <p className="text-xs font-bold uppercase tracking-wider text-[#8A5A00] mb-2">From £{service.priceFrom} · no VAT</p>
                     <h3 className="text-xl md:text-2xl font-black text-[#0F1B2D]">{guidance.searchHeading}</h3>
                     {guidance.heading !== guidance.searchHeading && (
-                      <p className="text-sm font-semibold text-gray-600 mt-2">Local decision focus: {guidance.heading}</p>
+                      <h4 className="text-sm font-semibold text-gray-600 mt-2">Local decision focus: {guidance.heading}</h4>
                     )}
                   </div>
                   <Link href={detailsHref} prefetch={false} className="shrink-0 text-sm font-bold text-[#0F1B2D] underline decoration-[#FFB800] underline-offset-4 hover:text-[#8A5A00]">

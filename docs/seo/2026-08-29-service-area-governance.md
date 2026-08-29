@@ -18,6 +18,7 @@ Run:
 ```powershell
 npm run audit:service-areas
 npm run audit:area-guides
+npm run audit:pricing
 npm run typecheck
 npm run build
 $env:SEO_BASE_URL='http://127.0.0.1:3101'; npm run check:seo
@@ -32,7 +33,10 @@ The governance audit fails closed on:
 - fewer than four FAQs, missing preparation/local-guidance sections, or fewer than 600 editorial words;
 - unsupported frequency, fixed-arrival, universal-insurance, guaranteed-entry or absolute-security claims;
 - duplicate or out-of-range titles, descriptions and H1s;
+- fewer than 50 globally unique body five-word sequences or less than a 35% unique-sequence share in any area×service guidance record;
 - excessive five-word-shingle overlap in locality-specific or full editorial copy.
+
+The audits also report distributed exact-sentence reuse and the pair-specific share of dedicated town-service editorial. These are visibility metrics for the next reviewed de-templating wave, not release gates yet; setting thresholds without first replacing the legacy shared copy would disguise rather than solve the editorial work.
 
 The HTTP SEO audit crawls all 178 canonical sitemap URLs and all 390 area-service combinations. It requires each combination to be either a self-canonical published `200` or a `308` to its parent hub, and checks invalid combinations for `404`.
 

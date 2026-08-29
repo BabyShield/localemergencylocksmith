@@ -8,6 +8,36 @@ const failures = []
 const warnings = []
 
 const SERVICE_SLUGS = ['emergency-lockout', 'lock-change', 'upvc-lock-repair', 'boarding-up', 'lock-upgrade']
+const CORE_SEARCH_INTENT_CONTRACTS = Object.freeze({
+  '/': [
+    { label: 'local locksmith Coventry', pattern: /\blocal locksmith coventry\b/i },
+    { label: 'mobile locksmith', pattern: /\bmobile locksmith\b/i },
+  ],
+  '/prices': [
+    { label: 'locksmith prices', pattern: /\blocksmith prices\b/i },
+    { label: 'locksmith cost', pattern: /\bhow much does (?:a|an) locksmith cost\b/i },
+  ],
+  '/services/emergency-lockout': [
+    { label: 'emergency locksmith', pattern: /\bemergency locksmith\b/i },
+    { label: 'lockout', pattern: /\blockouts?\b/i },
+  ],
+  '/services/lock-change': [
+    { label: 'door lock repair', pattern: /\bdoor lock repair\b/i },
+    { label: 'lock replacement', pattern: /\block replacement\b/i },
+  ],
+  '/services/upvc-lock-repair': [
+    { label: 'uPVC door lock repair', pattern: /\bupvc door lock repair\b/i },
+    { label: 'uPVC door lock replacement', pattern: /\bupvc door lock replacement\b/i },
+  ],
+  '/services/boarding-up': [
+    { label: 'emergency boarding up', pattern: /\bemergency boarding up\b/i },
+    { label: 'burglary repairs', pattern: /\bburglary repairs\b/i },
+  ],
+  '/services/lock-upgrade': [
+    { label: 'anti-snap locks', pattern: /\banti[- ]snap locks?\b/i },
+    { label: 'BS3621 locks', pattern: /\bbs\s*3621 locks?\b/i },
+  ],
+})
 const TOWN_CENTRE_ALIASES = {
   'rugby-town-centre': 'rugby',
   'royal-leamington-spa-town-centre': 'leamington-spa',
@@ -551,6 +581,13 @@ try {
     check(mainHtml.length > 0, `${productionUrl.pathname} has no main content landmark`)
     check(!html.includes('https://localemergencylocksmith.co.uk'), `${productionUrl.pathname} contains the redirecting apex origin`)
     check(!html.includes(UNVERIFIED_PROFILE_URL), `${productionUrl.pathname} exposes the unverified differently named Google profile`)
+
+    for (const intent of CORE_SEARCH_INTENT_CONTRACTS[productionUrl.pathname] ?? []) {
+      check(
+        intent.pattern.test(mainText),
+        `${productionUrl.pathname} does not visibly express measured ${intent.label} intent`,
+      )
+    }
 
     if (productionUrl.pathname === '/faq') {
       check(/\bid=["']pricing["']/i.test(mainHtml), '/faq is missing its #pricing fragment target')

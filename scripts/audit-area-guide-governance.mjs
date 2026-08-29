@@ -41,7 +41,10 @@ const MAX_WITHIN_SERVICE_PAIR_OVERLAP = 0.45
 const MAX_WITHIN_PAGE_FAQ_ANSWER_OVERLAP = 0.65
 const MIN_CHECK_UNIQUENESS_RATIO = 0.72
 const MIN_PAIR_UNIQUE_CHECKS = 2
+const MIN_PAIR_UNIQUE_BODY_SHINGLES = 50
+const MIN_PAIR_UNIQUE_BODY_SHINGLE_RATIO = 0.35
 const MIN_EXACT_DUPLICATE_SENTENCE_WORDS = 10
+const MIN_CROSS_RECORD_SENTENCE_WORDS = 8
 
 // This is an independent release contract. Do not import the production role
 // map here: otherwise weakening the generator would also weaken its audit.
@@ -218,6 +221,10 @@ check(
   'Mila source policy must recognise the dimensions its cited pages document',
 )
 check(
+  !supplementalGuidanceSourceIds('The borough lists Rugby Town Centre and several named local centres.').includes('mila-door-locks-catalogue'),
+  'Mila source policy must not treat geographic centres as lock geometry',
+)
+check(
   !supplementalGuidanceSourceIds('Confirm that any proposed component is compatible after inspection.').includes('mila-door-locks-catalogue'),
   'Mila source policy must not attach to generic compatibility wording alone',
 )
@@ -258,6 +265,16 @@ function exactLongSentenceDuplicates(blocks) {
   return [...occurrencesBySentence.values()].filter(occurrences => (
     new Set(occurrences.map(occurrence => occurrence.owner)).size > 1
   ))
+}
+
+function longSentenceKeys(values, minimumWords = MIN_CROSS_RECORD_SENTENCE_WORDS) {
+  return values.flatMap(value => {
+    const sentences = String(value ?? '').match(/[^.!?]+(?:[.!?]+|$)/g) ?? []
+    return sentences
+      .filter(sentence => wordCount(sentence) >= minimumWords)
+      .map(sentence => normalise(sentence))
+      .filter(Boolean)
+  })
 }
 
 function shingles(value, width = 5) {
@@ -337,7 +354,7 @@ function technicalSourceId(sources, role) {
 function auditSupplementalGuidanceSourceIds(text) {
   const sourceIds = []
 
-  if (/\b(?:faceplate|backset|centres|locking layout|component geometry|multipoint (?:part|component))\b/i.test(text)) {
+  if (/\b(?:faceplate|backset|locking layout|component geometry|multipoint (?:part|component)|(?:handle|spindle|fixing|pz) centres?)\b/i.test(text)) {
     sourceIds.push('mila-door-locks-catalogue')
   }
 
@@ -647,7 +664,9 @@ for (const area of AREAS) {
       serviceSlug,
       words: guidanceWords,
       shingles: shingles(guidanceSimilarityText),
+      bodyShingles: shingles(guidanceText),
       checks: [...(guidance.checks ?? [])],
+      bodySentenceKeys: longSentenceKeys(guidance.body ?? []),
     })
   }
 
@@ -786,6 +805,49 @@ for (const record of guidanceRecords) {
   )
 }
 
+const bodyShingleDocumentFrequency = new Map()
+for (const record of guidanceRecords) {
+  for (const shingle of record.bodyShingles) {
+    bodyShingleDocumentFrequency.set(shingle, (bodyShingleDocumentFrequency.get(shingle) ?? 0) + 1)
+  }
+}
+const bodyShingleUniqueness = []
+for (const record of guidanceRecords) {
+  const uniqueCount = [...record.bodyShingles].filter(shingle => bodyShingleDocumentFrequency.get(shingle) === 1).length
+  const uniqueRatio = uniqueCount / Math.max(1, record.bodyShingles.size)
+  bodyShingleUniqueness.push({ key: record.key, uniqueCount, uniqueRatio })
+  check(
+    uniqueCount >= MIN_PAIR_UNIQUE_BODY_SHINGLES,
+    `${record.key} has ${uniqueCount} globally unique body 5-word shingles; expected at least ${MIN_PAIR_UNIQUE_BODY_SHINGLES}`,
+  )
+  check(
+    uniqueRatio >= MIN_PAIR_UNIQUE_BODY_SHINGLE_RATIO,
+    `${record.key} has ${(uniqueRatio * 100).toFixed(2)}% globally unique body 5-word shingles; expected at least ${(MIN_PAIR_UNIQUE_BODY_SHINGLE_RATIO * 100).toFixed(0)}%`,
+  )
+}
+const minimumBodyShingleCount = Math.min(...bodyShingleUniqueness.map(record => record.uniqueCount))
+const minimumBodyShingleRatio = Math.min(...bodyShingleUniqueness.map(record => record.uniqueRatio))
+
+const bodySentenceDocumentFrequency = new Map()
+for (const record of guidanceRecords) {
+  for (const sentenceKey of new Set(record.bodySentenceKeys)) {
+    const owners = bodySentenceDocumentFrequency.get(sentenceKey) ?? new Set()
+    owners.add(record.key)
+    bodySentenceDocumentFrequency.set(sentenceKey, owners)
+  }
+}
+const bodySentenceOccurrences = guidanceRecords.flatMap(record => record.bodySentenceKeys)
+const reusedBodySentenceOccurrences = bodySentenceOccurrences.filter(sentenceKey => (
+  (bodySentenceDocumentFrequency.get(sentenceKey)?.size ?? 0) > 1
+))
+const reusedBodySentenceFamilies = [...bodySentenceDocumentFrequency.values()].filter(owners => owners.size > 1).length
+const bodySentenceReuseRatio = reusedBodySentenceOccurrences.length / Math.max(1, bodySentenceOccurrences.length)
+warnings.push(
+  `cross-record exact body-sentence reuse diagnostic: ${reusedBodySentenceOccurrences.length}/${bodySentenceOccurrences.length} `
+  + `occurrences (${(bodySentenceReuseRatio * 100).toFixed(2)}%) belong to ${reusedBodySentenceFamilies} repeated families; `
+  + 'this is measured for future de-templating and is not yet a release gate',
+)
+
 const similarityReports = [
   similarityReport(
     'complete area-guide editorial',
@@ -822,6 +884,8 @@ console.log(`Area editorial words (minimum ${MIN_AREA_EDITORIAL_WORDS}): min ${w
 const guidanceWords = summary(guidanceRecords.map(record => record.words))
 console.log(`Guidance words (minimum ${MIN_GUIDANCE_WORDS}): min ${guidanceWords.min}, median ${guidanceWords.median}, p95 ${guidanceWords.p95}, max ${guidanceWords.max}`)
 console.log(`Service-check uniqueness: ${checkCounts.size}/${allChecks.length} (${(checkUniquenessRatio * 100).toFixed(2)}%)`)
+console.log(`Per-record body information gain: minimum ${minimumBodyShingleCount} globally unique 5-word shingles and ${(minimumBodyShingleRatio * 100).toFixed(2)}% unique ratio`)
+console.log(`Cross-record exact body-sentence reuse: ${reusedBodySentenceOccurrences.length}/${bodySentenceOccurrences.length} occurrences (${(bodySentenceReuseRatio * 100).toFixed(2)}%) across ${reusedBodySentenceFamilies} repeated families`)
 for (const report of similarityReports) {
   console.log(`${report.name}: ${report.count} pairs, p95 ${(report.p95 * 100).toFixed(2)}%, max ${(report.max * 100).toFixed(2)}% (${report.highestPair?.left ?? 'n/a'} vs ${report.highestPair?.right ?? 'n/a'})`)
 }
