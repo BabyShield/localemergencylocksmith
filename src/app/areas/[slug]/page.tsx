@@ -273,9 +273,10 @@ export default async function AreaPage({ params }: Props) {
             {guide.facts.map((fact, index) => (
               <article
                 key={fact.text}
+                id={`local-fact-${index + 1}`}
                 data-evidence-section={`local-fact-${index + 1}`}
                 data-evidence-source-ids={fact.sourceIds.join(' ')}
-                className="rounded-xl border border-gray-200 p-5"
+                className="scroll-mt-28 rounded-xl border border-gray-200 p-5"
               >
                 <h3 className="font-black text-[#0F1B2D] mb-2">Local fact {index + 1}</h3>
                 <p className="text-gray-700 leading-relaxed">{fact.text}</p>
@@ -309,7 +310,14 @@ export default async function AreaPage({ params }: Props) {
           </p>
           <div className="space-y-8">
             {serviceGuidance.map(({ service, guidance, detailsHref, hasDedicatedPage }) => (
-              <article key={service.slug} id={service.slug} data-evidence-section={service.slug} data-evidence-source-ids={guidance.sourceIds.join(' ')} className="scroll-mt-28 rounded-2xl border border-gray-200 bg-white p-6 md:p-8 shadow-sm">
+              <article
+                key={service.slug}
+                id={service.slug}
+                data-evidence-section={service.slug}
+                data-evidence-source-ids={guidance.sourceIds.join(' ')}
+                data-local-fact-indexes={guidance.localFactIndexes.map(factIndex => factIndex + 1).join(' ')}
+                className="scroll-mt-28 rounded-2xl border border-gray-200 bg-white p-6 md:p-8 shadow-sm"
+              >
                 <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between mb-5">
                   <div>
                     <p className="text-xs font-bold uppercase tracking-wider text-[#8A5A00] mb-2">From £{service.priceFrom} · no VAT</p>
@@ -341,6 +349,17 @@ export default async function AreaPage({ params }: Props) {
                   <p className="text-gray-700 leading-relaxed">{guidance.faq.a}</p>
                 </div>
                 <div className="mt-5">
+                  <p className="text-xs font-bold text-gray-600">
+                    Local facts used:{' '}
+                    {guidance.localFactIndexes.map((factIndex, index) => (
+                      <span key={factIndex}>
+                        {index > 0 && ' · '}
+                        <a href={`#local-fact-${factIndex + 1}`} className="underline decoration-[#FFB800] underline-offset-2 hover:text-[#8A5A00]">
+                          Fact {factIndex + 1}
+                        </a>
+                      </span>
+                    ))}
+                  </p>
                   <p className="text-xs font-bold text-gray-600">Check the sources used</p>
                   <ul className="flex flex-wrap gap-2 mt-2" aria-label={`Sources for ${guidance.heading}`}>
                   {guidance.sourceIds.map(sourceId => {

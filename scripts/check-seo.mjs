@@ -622,7 +622,12 @@ try {
         new Set(localFactBlocks.map(fact => fact.index)).size === localFactBlocks.length,
         `${productionUrl.pathname} repeats a local-fact evidence marker`,
       )
+      const localFactTargets = new Set(localFactBlocks.map(fact => `local-fact-${fact.index}`))
       for (const fact of localFactBlocks) {
+        check(
+          new RegExp(`\\bid=["']local-fact-${fact.index}["']`, 'i').test(fact.block),
+          `${productionUrl.pathname} local fact ${fact.index} has no link target`,
+        )
         checkEvidenceBlockContract(fact.block, `${productionUrl.pathname} local fact ${fact.index}`)
       }
       for (const serviceSlug of SERVICE_SLUGS) {
@@ -635,6 +640,30 @@ try {
         check(Boolean(block), `${productionUrl.pathname} is missing the ${serviceSlug} evidence section marker`)
         if (block) {
           checkEvidenceBlockContract(block, `${productionUrl.pathname} ${serviceSlug} guidance`)
+          const localFactLinks = Array.from(
+            block.matchAll(/href=["']#(local-fact-\d+)["']/gi),
+            match => match[1],
+          )
+          const openingTag = block.match(/^<article\b[^>]*>/i)?.[0] ?? ''
+          const declaredLocalFactIndexes = (getAttribute(openingTag, 'data-local-fact-indexes') ?? '')
+            .trim()
+            .split(/\s+/)
+            .filter(Boolean)
+          const declaredLocalFactLinks = declaredLocalFactIndexes.map(index => `local-fact-${index}`)
+          check(declaredLocalFactIndexes.length > 0, `${productionUrl.pathname} ${serviceSlug} guidance declares no selected local facts`)
+          check(
+            declaredLocalFactIndexes.every(index => /^[1-9]\d*$/.test(index)),
+            `${productionUrl.pathname} ${serviceSlug} guidance has an invalid selected local fact declaration`,
+          )
+          check(
+            localFactLinks.join(' ') === declaredLocalFactLinks.join(' '),
+            `${productionUrl.pathname} ${serviceSlug} rendered local fact links do not match its declared selections`,
+          )
+          check(localFactLinks.length > 0, `${productionUrl.pathname} ${serviceSlug} guidance links no selected local fact`)
+          check(new Set(localFactLinks).size === localFactLinks.length, `${productionUrl.pathname} ${serviceSlug} guidance repeats a selected local fact link`)
+          for (const localFactLink of localFactLinks) {
+            check(localFactTargets.has(localFactLink), `${productionUrl.pathname} ${serviceSlug} guidance links missing #${localFactLink}`)
+          }
           const expectedDetailsHref = GOVERNED_TOWNS.includes(areaSlug)
             ? `/areas/${areaSlug}/${serviceSlug}`
             : `/services/${serviceSlug}`

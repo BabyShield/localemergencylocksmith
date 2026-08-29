@@ -15,6 +15,8 @@ export interface AreaGuideFact {
 }
 
 export interface AreaServiceGuidanceDraft {
+  /** Zero-based indexes of guide.facts that directly inform this service guidance. */
+  localFactIndexes: number[]
   heading: string
   body: string[]
   checks: string[]

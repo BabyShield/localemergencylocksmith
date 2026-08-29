@@ -599,6 +599,14 @@ for (const area of AREAS) {
     }
   }
 
+  const allEligibleFactLocalSourceIds = new Set((guide.facts ?? []).flatMap(fact => (
+    (fact.sourceIds ?? []).filter(sourceId => {
+      const source = sources.find(candidate => candidate.id === sourceId)
+      return !factOnlySourceIdSet.has(sourceId)
+        && (source?.kind === 'locality' || source?.kind === 'property-status')
+    })
+  )))
+
   const guidanceEntries = Object.entries(guide.serviceGuidance ?? {})
   check(guidanceEntries.length === EXPECTED_SERVICE_COUNT, `${label} has ${guidanceEntries.length} service guidance records; expected ${EXPECTED_SERVICE_COUNT}`)
   for (const serviceSlug of SERVICE_AREA_SLUGS) {
@@ -635,6 +643,32 @@ for (const area of AREAS) {
     check(wordCount(guidance.faq?.q) >= 6, `${guidanceLabel} FAQ question is too short`)
     check(wordCount(guidance.faq?.a) >= 18, `${guidanceLabel} FAQ answer has ${wordCount(guidance.faq?.a)} words; expected at least 18`)
 
+    check(Array.isArray(guidance.localFactIndexes), `${guidanceLabel} localFactIndexes must be an array`)
+    const localFactIndexes = Array.isArray(guidance.localFactIndexes) ? guidance.localFactIndexes : []
+    check(localFactIndexes.length > 0, `${guidanceLabel} must select at least one local fact`)
+    check(new Set(localFactIndexes).size === localFactIndexes.length, `${guidanceLabel} repeats a local fact index`)
+    for (const factIndex of localFactIndexes) {
+      check(Number.isInteger(factIndex), `${guidanceLabel} local fact index ${JSON.stringify(factIndex)} is not an integer`)
+      check(factIndex >= 0 && factIndex < guide.facts.length, `${guidanceLabel} local fact index ${factIndex} is out of range`)
+    }
+    const selectedFacts = localFactIndexes
+      .filter(factIndex => Number.isInteger(factIndex) && factIndex >= 0 && factIndex < guide.facts.length)
+      .map(factIndex => guide.facts[factIndex])
+    for (const [index, fact] of selectedFacts.entries()) {
+      check(
+        !fact.sourceIds.some(sourceId => factOnlySourceIdSet.has(sourceId)),
+        `${guidanceLabel} selected local fact ${localFactIndexes[index]} uses a fact-only source`,
+      )
+    }
+    const expectedLocalSourceIds = new Set(selectedFacts.flatMap(fact => (
+      fact.sourceIds.filter(sourceId => {
+        const source = sources.find(candidate => candidate.id === sourceId)
+        return !factOnlySourceIdSet.has(sourceId)
+          && (source?.kind === 'locality' || source?.kind === 'property-status')
+      })
+    )))
+    check(expectedLocalSourceIds.size > 0, `${guidanceLabel} selected facts resolve no eligible local source`)
+
     check(Array.isArray(guidance.sourceIds) && guidance.sourceIds.length > 0, `${guidanceLabel} has no source IDs`)
     const guidanceSourceIds = new Set(guidance.sourceIds ?? [])
     check(guidanceSourceIds.size === (guidance.sourceIds ?? []).length, `${guidanceLabel} repeats a source ID`)
@@ -645,6 +679,15 @@ for (const area of AREAS) {
     check(
       sources.some(source => guidanceSourceIds.has(source.id) && (source.kind === 'locality' || source.kind === 'property-status')),
       `${guidanceLabel} has no locality or property-status source`,
+    )
+    const actualLocalSourceIds = new Set((guidance.sourceIds ?? []).filter(sourceId => {
+      const source = sources.find(candidate => candidate.id === sourceId)
+      return source?.kind === 'locality' || source?.kind === 'property-status'
+    }))
+    check(
+      actualLocalSourceIds.size === expectedLocalSourceIds.size
+        && [...actualLocalSourceIds].every(sourceId => expectedLocalSourceIds.has(sourceId)),
+      `${guidanceLabel} local sources ${[...actualLocalSourceIds].join(', ') || 'none'} do not exactly match selected facts ${[...expectedLocalSourceIds].join(', ') || 'none'}`,
     )
 
     const expectedTechnicalSources = expectedGuidanceTechnicalSourceIds(sources, serviceSlug, guidance)
@@ -666,6 +709,9 @@ for (const area of AREAS) {
       shingles: shingles(guidanceSimilarityText),
       bodyShingles: shingles(guidanceText),
       checks: [...(guidance.checks ?? [])],
+      localFactIndexes: [...localFactIndexes],
+      selectedLocalSourceCount: expectedLocalSourceIds.size,
+      broadLocalSourceCount: allEligibleFactLocalSourceIds.size,
       bodySentenceKeys: longSentenceKeys(guidance.body ?? []),
     })
   }
@@ -883,6 +929,13 @@ const words = summary(areaWordCounts)
 console.log(`Area editorial words (minimum ${MIN_AREA_EDITORIAL_WORDS}): min ${words.min}, median ${words.median}, p95 ${words.p95}, max ${words.max}`)
 const guidanceWords = summary(guidanceRecords.map(record => record.words))
 console.log(`Guidance words (minimum ${MIN_GUIDANCE_WORDS}): min ${guidanceWords.min}, median ${guidanceWords.median}, p95 ${guidanceWords.p95}, max ${guidanceWords.max}`)
+const selectedFactLinks = guidanceRecords.reduce((total, record) => total + record.localFactIndexes.length, 0)
+const selectedLocalCitationLinks = guidanceRecords.reduce((total, record) => total + record.selectedLocalSourceCount, 0)
+const broadLocalCitationLinks = guidanceRecords.reduce((total, record) => total + record.broadLocalSourceCount, 0)
+console.log(
+  `Pair-level local provenance: ${selectedFactLinks} fact selections and ${selectedLocalCitationLinks} local citation links; `
+  + `${broadLocalCitationLinks - selectedLocalCitationLinks} unselected broad citation links excluded`,
+)
 console.log(`Service-check uniqueness: ${checkCounts.size}/${allChecks.length} (${(checkUniquenessRatio * 100).toFixed(2)}%)`)
 console.log(`Per-record body information gain: minimum ${minimumBodyShingleCount} globally unique 5-word shingles and ${(minimumBodyShingleRatio * 100).toFixed(2)}% unique ratio`)
 console.log(`Cross-record exact body-sentence reuse: ${reusedBodySentenceOccurrences.length}/${bodySentenceOccurrences.length} occurrences (${(bodySentenceReuseRatio * 100).toFixed(2)}%) across ${reusedBodySentenceFamilies} repeated families`)

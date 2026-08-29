@@ -34,6 +34,12 @@ const MAX_ALL_PAIR_OVERLAP = 0.45
 const MAX_SAME_AREA_P95_OVERLAP = 0.40
 const MAX_SAME_AREA_PAIR_OVERLAP = 0.45
 
+// The hand-authored decision-guidance tranche established these per-page
+// information-gain floors. Keep a small margin beneath the measured baseline
+// while failing any return to the older, more heavily shared corpus.
+const MIN_PAIR_SPECIFIC_SHARE = 0.39
+const MAX_REPEATED_SENTENCE_WORD_SHARE = 0.51
+
 const MIN_TITLE_LENGTH = 30
 const MAX_TITLE_LENGTH = 60
 const MIN_DESCRIPTION_LENGTH = 120
@@ -842,11 +848,13 @@ const repeatedSentenceWordShares = publishedRecords.map(record => {
 })
 const pairSpecificShareSummary = numericSummary(pairSpecificShares)
 const repeatedSentenceWordSummary = numericSummary(repeatedSentenceWordShares)
-warnings.push(
-  `information-gain diagnostic: pair-specific core is ${(pairSpecificShareSummary.min * 100).toFixed(2)}%–${(pairSpecificShareSummary.max * 100).toFixed(2)}% `
-  + `of dedicated-page editorial (median ${(pairSpecificShareSummary.median * 100).toFixed(2)}%); repeated exact-sentence words are `
-  + `${(repeatedSentenceWordSummary.min * 100).toFixed(2)}%–${(repeatedSentenceWordSummary.max * 100).toFixed(2)}% `
-  + `(median ${(repeatedSentenceWordSummary.median * 100).toFixed(2)}%); measured for future de-templating, not yet a release gate`,
+check(
+  pairSpecificShareSummary.min >= MIN_PAIR_SPECIFIC_SHARE,
+  `minimum pair-specific editorial share is ${(pairSpecificShareSummary.min * 100).toFixed(2)}%; expected at least ${(MIN_PAIR_SPECIFIC_SHARE * 100).toFixed(0)}%`,
+)
+check(
+  repeatedSentenceWordSummary.max <= MAX_REPEATED_SENTENCE_WORD_SHARE,
+  `maximum repeated exact-sentence word share is ${(repeatedSentenceWordSummary.max * 100).toFixed(2)}%; expected at most ${(MAX_REPEATED_SENTENCE_WORD_SHARE * 100).toFixed(0)}%`,
 )
 const allFullReport = buildCrossCorpusReport(allFullRecords)
 const sameAreaCrossServiceReport = buildCrossCorpusReport(

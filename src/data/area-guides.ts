@@ -66,9 +66,26 @@ function sourceIdsForGuidance(
   guide: GovernedAreaGuideDraft,
   serviceSlug: ServiceAreaSlug,
 ): string[] {
+  const guidance = guide.serviceGuidance[serviceSlug]
   const sourceById = new Map(guide.sources.map(source => [source.id, source]))
   const factOnlySourceIds = new Set(guide.factOnlySourceIds ?? [])
-  const localitySourceIds = guide.facts
+  const localFactIndexes = guidance.localFactIndexes
+
+  if (
+    !Array.isArray(localFactIndexes)
+    || localFactIndexes.length === 0
+    || new Set(localFactIndexes).size !== localFactIndexes.length
+    || localFactIndexes.some(index => !Number.isInteger(index) || index < 0 || index >= guide.facts.length)
+  ) {
+    throw new Error(`Invalid localFactIndexes for ${guide.slug}/${serviceSlug}`)
+  }
+
+  const selectedFacts = localFactIndexes.map(index => guide.facts[index])
+  if (selectedFacts.some(fact => fact.sourceIds.some(sourceId => factOnlySourceIds.has(sourceId)))) {
+    throw new Error(`Fact-only source selected for ${guide.slug}/${serviceSlug}`)
+  }
+
+  const localitySourceIds = selectedFacts
     .flatMap(fact => fact.sourceIds)
     .filter(sourceId => {
       const kind = sourceById.get(sourceId)?.kind
@@ -76,10 +93,14 @@ function sourceIdsForGuidance(
         && (kind === 'locality' || kind === 'property-status')
     })
 
+  if (localitySourceIds.length === 0) {
+    throw new Error(`No eligible local source selected for ${guide.slug}/${serviceSlug}`)
+  }
+
   const roles = [...SERVICE_TECHNICAL_SOURCE_ROLES[serviceSlug]]
   if (
     serviceSlug === 'lock-upgrade'
-    && /\bTS\s*007\b/i.test(guidanceText(guide.serviceGuidance[serviceSlug]))
+    && /\bTS\s*007\b/i.test(guidanceText(guidance))
   ) {
     roles.push('lockAdvice')
   }
@@ -88,7 +109,7 @@ function sourceIdsForGuidance(
     .map(role => technicalSourceId(guide, role))
     .filter((sourceId): sourceId is string => Boolean(sourceId))
 
-  const text = guidanceText(guide.serviceGuidance[serviceSlug])
+  const text = guidanceText(guidance)
   const supplementalSourceIds = supplementalGuidanceSourceIds(text)
 
   return [...new Set([...localitySourceIds, ...technicalSourceIds, ...supplementalSourceIds])]
