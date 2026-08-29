@@ -30,7 +30,7 @@ const MAX_AREA_FACTS = 4
 const MIN_AREA_FACT_SOURCES = 2
 const MIN_GUIDANCE_WORDS = 120
 const MAX_EVIDENCE_AGE_DAYS = 366
-const DECLARED_REVIEW_DATE = '2026-08-29'
+const DECLARED_REVIEW_DATE = '2026-08-30'
 const SYSTEM_UTC_DATE = new Date().toISOString().slice(0, 10)
 const AUDIT_AS_OF = process.env.AREA_GUIDE_AUDIT_AS_OF
   ?? (SYSTEM_UTC_DATE > DECLARED_REVIEW_DATE ? SYSTEM_UTC_DATE : DECLARED_REVIEW_DATE)
@@ -67,14 +67,7 @@ const AUDIT_DEDICATED_AREA_SLUGS = new Set([
   'stratford-upon-avon',
 ])
 const AUDIT_HUB_CONTEXT_ONLY_SLUGS = new Set([
-  'attleborough',
-  'stockingford',
-  'weddington',
   'horeston-grange',
-  'camp-hill',
-  'bermuda-park',
-  'cawston',
-  'new-bilton',
 ])
 const AUDIT_SOLIHULL_REGION_SLUGS = new Set([
   'balsall-common',
@@ -157,6 +150,8 @@ const failures = []
 const warnings = []
 
 const UNSUPPORTED_AGREEMENT_TO_WORK_PATTERN = /\bagree(?:d|ment|ing)?\s+(?:what\s+(?:may\s+be\s+changed|remains\s+and\s+what\s+may\s+change)|(?:to\s+)?(?:the\s+|an?\s+|any\s+)?(?:(?:proposed|supported|compatible|authorised|outside|temporary|repair|access|revised)\s+){0,3}(?:scope|work|method|measure|repair|access|security|specification))\b/i
+const NON_HERITAGE_PLANNING_GUIDANCE_SLUGS = new Set(['cawston', 'new-bilton'])
+const UNSUPPORTED_PHYSICAL_STATUS_CHECK_PATTERN = /\b(?:check|verify|confirm)\b[^.!?]{0,100}\b(?:listing|conservation|designation|(?:the\s+)?(?:exact\s+)?property(?:'s)?\s+(?:present\s+|current\s+)?status|current\s+status|protected(?:\s+or\s+controlled)?\s+fabric)\b/i
 
 const BANNED_CLAIM_PATTERNS = [
   {
@@ -193,7 +188,7 @@ const BANNED_CLAIM_PATTERNS = [
   },
   {
     label: 'unsupported boarding specification',
-    pattern: /\b(?:board (?:dimensions?|size|materials?|construction)|fastenings|fixing (?:points?|positions?|locations?)|(?:intended|proposed|temporary|safe) support (?:points?|positions?|locations?))\b/i,
+    pattern: /\b(?:board (?:dimensions?|size|materials?|construction)|fastenings|fixing (?:points?|positions?|locations?)|(?:intended|proposed|temporary|safe) support (?:points?|positions?|locations?)|(?:inspected\s+)?substrate\s+supports?\s+(?:the\s+)?attachment|authori[sz]ed\s+attachment\s+(?:points?|positions?|locations?))\b/i,
   },
   {
     label: 'unsupported generic product-performance claim',
@@ -214,6 +209,10 @@ const BANNED_CLAIM_PATTERNS = [
   {
     label: 'unsupported work-and-price agreement bundle',
     pattern: /\b(?:scope|work|method|measure|repair|access|specification)\s+(?:and|or|,)\s+(?:the\s+)?(?:(?:expected|likely|anticipated|revised)\s+)?(?:price|cost|charge)\s+(?:is|are|be|being|was|were)?\s*agree(?:d|ment|ing)?\b/i,
+  },
+  {
+    label: 'unsupported price-and-work agreement bundle',
+    pattern: /\bagree(?:d|ment|ing)?\b[^.!?]{0,100}\b(?:price|cost|charge)\s+(?:and|or|,)\s+(?:the\s+)?(?:scope|work|method|measure|repair|access|specification)\b/i,
   },
 ]
 
@@ -238,6 +237,14 @@ for (const fixture of [
 check(
   !UNSUPPORTED_AGREEMENT_TO_WORK_PATTERN.test('obtain agreement if the service-call price changes'),
   'unsupported agreement detector rejects bounded changed-price wording',
+)
+check(
+  UNSUPPORTED_PHYSICAL_STATUS_CHECK_PATTERN.test('check the exact property current status before visible alteration'),
+  'unsupported physical-status detector misses an exact-property status check',
+)
+check(
+  !UNSUPPORTED_PHYSICAL_STATUS_CHECK_PATTERN.test('confirm the responsible controller before changing shared hardware'),
+  'unsupported physical-status detector rejects a bounded controller check',
 )
 
 check(
@@ -804,6 +811,19 @@ for (const area of AREAS) {
       check(wordCount(paragraph) >= 50, `${guidanceLabel} paragraph ${index + 1} has ${wordCount(paragraph)} words; expected at least 50`)
     }
     const guidanceText = (guidance.body ?? []).join(' ')
+    const guidanceEvidenceText = [
+      guidanceText,
+      ...(guidance.checks ?? []),
+      guidance.faq?.q,
+      guidance.faq?.a,
+    ].filter(Boolean).join(' ')
+    if (NON_HERITAGE_PLANNING_GUIDANCE_SLUGS.has(area.slug)) {
+      const unsupportedPhysicalStatusCheck = guidanceEvidenceText.match(UNSUPPORTED_PHYSICAL_STATUS_CHECK_PATTERN)?.[0]
+      check(
+        !unsupportedPhysicalStatusCheck,
+        `${guidanceLabel} contains a physical heritage/status check unsupported by its planning evidence: ${JSON.stringify(unsupportedPhysicalStatusCheck)}`,
+      )
+    }
     const guidanceSimilarityText = [searchHeading, guidance.heading, guidanceText].filter(Boolean).join(' ')
     const guidanceWords = wordCount(guidanceText)
     check(guidanceWords >= MIN_GUIDANCE_WORDS, `${guidanceLabel} has ${guidanceWords} guidance words; expected at least ${MIN_GUIDANCE_WORDS}`)

@@ -279,7 +279,7 @@ export default async function AreaPage({ params }: Props) {
           <h2 className="text-2xl font-black text-[#0F1B2D] mb-6">What to Check Before Booking</h2>
           <ul className="space-y-4">
             {[
-              { Icon: MapPin, text: `The full ${area.name} address is checked against the relevant locality and property-status evidence; the ${area.postcode} outward code alone is not treated as a building description.` },
+              { Icon: MapPin, text: `The full ${area.name} address is recorded before any source-specific check is applied; the ${area.postcode} outward code alone is not treated as a building description.` },
               { Icon: Lock, text: 'The door material, frame, lock markings and symptoms are inspected before a repair, replacement or upgrade is specified.' },
               { Icon: CheckCircle, text: 'Proof of a connection to the affected entrance is required, with separate authority checks for communal, rented or managed doors.' },
               { Icon: Clock, text: 'The current arrival estimate is confirmed by phone from the actual starting point and is not inferred from a static area page.' },

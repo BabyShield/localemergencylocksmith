@@ -74,7 +74,7 @@ const TOWN_CENTRE_ALIASES = {
   'stratford-upon-avon-town-centre': 'stratford-upon-avon',
 }
 const GOVERNED_TOWNS = ['nuneaton', 'bedworth', 'rugby', 'leamington-spa', 'warwick', 'kenilworth', 'stratford-upon-avon']
-const HUB_CONTEXT_ONLY_AREAS = ['attleborough', 'stockingford', 'weddington', 'horeston-grange', 'camp-hill', 'bermuda-park', 'cawston', 'new-bilton']
+const HUB_CONTEXT_ONLY_AREAS = ['horeston-grange']
 const TOWN_SERVICE_EVIDENCE_SECTIONS = ['intro', 'local-angle', 'local-evidence', 'preparation', 'checks', 'faqs']
 // These are regression caps established from the complete rendered-main crawl
 // on 2026-08-29 at release 7d30302. They include a small amount of headroom
