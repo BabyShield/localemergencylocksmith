@@ -45,12 +45,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const area = getAreaBySlug(slug)
   if (!area) return {}
 
-  areaGuideOrThrow(slug)
+  const guide = areaGuideOrThrow(slug)
   const hasDedicatedServicePages = hasTownService(area.slug, 'emergency-lockout')
   const title = hasDedicatedServicePages
-    ? `Locksmith ${area.name} | 5 Local Services | From £59`
-    : `Locksmith ${area.name} | 24/7 Help | From £59`
-  const description = `Locksmith in ${area.name} for lockouts, lock repairs, uPVC mechanisms, boarding up and upgrades. Call for today's ETA. From £59; no VAT or call-out fee.`
+    ? `Locksmith ${area.name} ${area.postcode} | 5 Services | From £59`
+    : `Locksmith ${area.name} ${area.postcode} | 24/7 Help | From £59`
+  const description = guide.searchDescription
 
   return {
     title,

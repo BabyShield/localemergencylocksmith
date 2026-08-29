@@ -914,10 +914,10 @@ Sash jammers are additional devices used on some uPVC windows. If fitted, check 
 If you have a garage, it needs checking — especially if there is a connecting door into the house.
 
 ### Check Garage Door Security
-Is the main garage door locked with a proper lock (not just a flimsy handle)? Up-and-over garage doors are notoriously easy to break into. Defender locks, garage door bolts, and ground anchors all help.
+Record the main garage door type, every fitted locking point and any visible looseness or damage. An up-and-over design alone does not establish its resistance. Any defender lock, garage bolt or ground anchor must be checked for compatibility with the actual door, frame, floor and current product instructions before it is treated as an upgrade option.
 
 ### Internal Connecting Door
-If your garage connects to the house via an internal door, this is a critical vulnerability. A burglar who gets into the garage has unlimited time and privacy to work on the internal door. Make sure it has a proper [deadlock](/services/lock-change) — not just a latch — and that it is locked at all times.
+If the garage connects to the house, inspect that internal door as a separate doorset rather than assuming the garage door protects it. Record the door, frame, hinges, closer where fitted and existing lock, then check any fire-safety, insurer or property-management requirement before specifying a [lock repair or replacement](/services/lock-change).
 
 ### Scoring
 - Garage door secured, internal door has working deadlock: **3/3**

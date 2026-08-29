@@ -131,7 +131,7 @@ export const BLOG_CONTENT_UPDATED: Record<string, string> = {
   'bank-holiday-lockout-guide': '2026-08-28',
   'bs3621-locks-explained': '2026-08-28',
   'pas3621-bs3621-bs8621-differences': '2026-08-28',
-  'can-landlord-change-locks': '2026-08-28',
+  'can-landlord-change-locks': '2026-08-29',
   'landlords-change-locks-between-tenants': '2026-08-28',
   'insurance-payout-lock-standards': '2026-08-28',
   'insurance-approved-locks-explained': '2026-08-28',
@@ -140,7 +140,7 @@ export const BLOG_CONTENT_UPDATED: Record<string, string> = {
   'christmas-home-security': '2026-08-28',
   'summer-holiday-security-checklist': '2026-08-28',
   'student-move-in-security-guide': '2026-08-28',
-  'new-year-home-security-audit': '2026-08-28',
+  'new-year-home-security-audit': '2026-08-29',
   'moving-house-change-locks': '2026-08-28',
   'choosing-locksmith-coventry': '2026-08-28',
 }

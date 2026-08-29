@@ -356,6 +356,27 @@ function internalPaths(html) {
   return paths
 }
 
+function internalHrefs(html) {
+  const hrefs = new Set()
+  for (const tag of html.match(/<a\b[^>]*>/gi) ?? []) {
+    const href = getAttribute(tag, 'href')
+    if (!href || /^(?:tel:|mailto:|javascript:)/i.test(href)) continue
+    if (href.startsWith('#')) {
+      hrefs.add(href)
+      continue
+    }
+    let url
+    try {
+      url = new URL(href, CANONICAL_ORIGIN)
+    } catch {
+      continue
+    }
+    if (url.origin !== CANONICAL_ORIGIN || url.pathname.startsWith('/_next/')) continue
+    hrefs.add(`${url.pathname.replace(/\/$/, '') || '/'}${url.hash}`)
+  }
+  return hrefs
+}
+
 async function mapLimit(items, limit, task) {
   const results = new Array(items.length)
   let cursor = 0
@@ -452,9 +473,11 @@ try {
     const canonical = getCanonical(html)
     const h1Count = (html.match(/<h1\b/gi) ?? []).length
     const ogImage = getMeta(html, 'property', 'og:image')
+    const ogDescription = getMeta(html, 'property', 'og:description')
     const pageText = visibleText(html)
     const mainHtml = mainContent(html)
     const mainText = visibleText(mainHtml)
+    const mainHrefs = internalHrefs(mainHtml)
     const claimText = operationalClaimText(html)
     const evidenceReferences = Array.from(
       mainHtml.matchAll(/href=["']#(evidence-source-[a-z0-9-]+)["']/gi),
@@ -486,8 +509,16 @@ try {
 
     const operationalClaim = findUnsupportedOperationalClaim(claimText)
     check(!operationalClaim, `${productionUrl.pathname} contains an ${operationalClaim?.label}: ${JSON.stringify(operationalClaim?.match)}`)
+    const unsupportedPersonalVolume = pageText.match(/\b(?:called|attended|handled)\b[^.!?]{0,100}\bmore times than (?:i|we) can count\b/i)
+    check(!unsupportedPersonalVolume, `${productionUrl.pathname} contains an unverified personal-volume anecdote: ${JSON.stringify(unsupportedPersonalVolume?.[0])}`)
+    const unsupportedEaseOfEntry = pageText.match(/\bnotoriously easy to (?:break|force|get) into\b/i)
+    check(!unsupportedEaseOfEntry, `${productionUrl.pathname} contains an unsupported ease-of-entry claim: ${JSON.stringify(unsupportedEaseOfEntry?.[0])}`)
 
     if (/^\/areas\/[^/]+$/.test(productionUrl.pathname)) {
+      const areaSlug = productionUrl.pathname.split('/')[2]
+      check(/\blocksmith\b/i.test(description), `${productionUrl.pathname} meta description does not express locksmith intent`)
+      check(ogDescription === description, `${productionUrl.pathname} Open Graph description does not match its governed meta description`)
+      check(!description.includes("Call for today's ETA"), `${productionUrl.pathname} still uses the retired boilerplate area description`)
       check(html.includes('id="local-evidence-heading"'), `${productionUrl.pathname} is missing verified local evidence`)
       check(html.includes('id="service-guidance-heading"'), `${productionUrl.pathname} is missing service-by-service guidance`)
       check(html.includes('id="source-heading"'), `${productionUrl.pathname} is missing its evidence source register`)
@@ -496,9 +527,19 @@ try {
       }
       check(!pageText.includes('Common Lock Problems in'), `${productionUrl.pathname} still renders the unsupported legacy common-problems block`)
       for (const serviceSlug of SERVICE_SLUGS) {
+        check(mainHrefs.has(`#${serviceSlug}`), `${productionUrl.pathname} has no visible jump link to #${serviceSlug}`)
         const block = evidenceBlock(mainHtml, 'article', serviceSlug)
         check(Boolean(block), `${productionUrl.pathname} is missing the ${serviceSlug} evidence section marker`)
-        if (block) checkEvidenceBlockContract(block, `${productionUrl.pathname} ${serviceSlug} guidance`)
+        if (block) {
+          checkEvidenceBlockContract(block, `${productionUrl.pathname} ${serviceSlug} guidance`)
+          const expectedDetailsHref = GOVERNED_TOWNS.includes(areaSlug)
+            ? `/areas/${areaSlug}/${serviceSlug}`
+            : `/services/${serviceSlug}`
+          check(
+            internalHrefs(block).has(expectedDetailsHref),
+            `${productionUrl.pathname} ${serviceSlug} guidance does not link to ${expectedDetailsHref}`,
+          )
+        }
       }
     }
 
@@ -568,6 +609,10 @@ try {
       check(Boolean(business), '/ has no canonical business Organization node')
       check(Array.isArray(business?.areaServed) && business.areaServed.length === 78, '/ business areaServed does not contain 78 governed places')
       check(business?.areaServed?.every(place => place?.['@type'] === 'Place'), '/ business areaServed contains a non-Place entry')
+      check(business?.contactPoint?.['@type'] === 'ContactPoint', '/ business has no ContactPoint')
+      check(business?.contactPoint?.contactType === 'customer service', '/ business ContactPoint has the wrong contact type')
+      check(business?.contactPoint?.telephone === '+442475224730', '/ business ContactPoint has the wrong telephone')
+      check(business?.contactPoint?.email === 'info@localemergencylocksmith.co.uk', '/ business ContactPoint has the wrong email')
     }
 
     for (const serviceNode of serviceNodes) {
@@ -641,6 +686,14 @@ try {
       check(author?.url === `${CANONICAL_ORIGIN}/about`, `${productionUrl.pathname} BlogPosting author does not link to /about`)
       check(author?.worksFor?.['@id'] === `${CANONICAL_ORIGIN}/#business`, `${productionUrl.pathname} BlogPosting author has the wrong worksFor reference`)
       check(article?.publisher?.['@id'] === `${CANONICAL_ORIGIN}/#business`, `${productionUrl.pathname} BlogPosting publisher has the wrong @id`)
+      check(typeof article?.datePublished === 'string', `${productionUrl.pathname} BlogPosting has no datePublished`)
+      check(typeof article?.dateModified === 'string', `${productionUrl.pathname} BlogPosting has no dateModified`)
+      const visibleDateTimes = Array.from(
+        html.matchAll(/<time\b[^>]*\bdateTime=["']([^"']+)["'][^>]*>/gi),
+        match => match[1],
+      )
+      check(visibleDateTimes.includes(article?.datePublished), `${productionUrl.pathname} does not visibly expose its BlogPosting datePublished in a semantic time element`)
+      check(visibleDateTimes.includes(article?.dateModified), `${productionUrl.pathname} does not visibly expose its BlogPosting dateModified in a semantic time element`)
     }
 
     if (productionUrl.pathname === '/about') {
@@ -678,7 +731,7 @@ try {
       check(directAreaLinks.length <= 25, `${productionUrl.pathname} has ${directAreaLinks.length} direct area links; expected a focused article CTA`)
     }
 
-    return { path: productionUrl.pathname, title, description, links, mainLinks }
+    return { path: productionUrl.pathname, title, description, links, mainLinks, mainHrefs }
   })
 
   const titleOwners = new Map()
@@ -774,6 +827,28 @@ try {
     .filter(page => (clickDepth.get(page.path) ?? Number.POSITIVE_INFINITY) > 2)
     .map(page => `${page.path} (${clickDepth.get(page.path) ?? 'unreachable'})`)
   check(beyondTwoClicks.length === 0, `canonical pages beyond two clicks from /: ${beyondTwoClicks.join(', ')}`)
+
+  const focusPagesWithoutContextualInbound = pages
+    .filter(page => /^\/(?:areas|services|blog)(?:\/|$)/.test(page.path))
+    .filter(page => !pages.some(source => source.path !== page.path && source.mainLinks.has(page.path)))
+    .map(page => page.path)
+  check(
+    focusPagesWithoutContextualInbound.length === 0,
+    `SEO focus pages without a contextual inbound link: ${focusPagesWithoutContextualInbound.join(', ')}`,
+  )
+
+  for (const areaPath of areaPaths) {
+    const areaSlug = areaPath.split('/')[2]
+    for (const serviceSlug of serviceSlugs) {
+      const expectedOwnerHref = GOVERNED_TOWNS.includes(areaSlug)
+        ? `${areaPath}/${serviceSlug}`
+        : `${areaPath}#${serviceSlug}`
+      check(
+        pageByPath.get(`/services/${serviceSlug}`)?.mainHrefs.has(expectedOwnerHref),
+        `/services/${serviceSlug} main content does not link to canonical owner ${expectedOwnerHref}`,
+      )
+    }
+  }
 
   const servicesDirectory = pageByPath.get('/services')
   for (const pairPath of publishedPairPaths) {

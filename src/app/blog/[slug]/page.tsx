@@ -26,6 +26,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!post) return {}
   const searchTitle = BLOG_SEARCH_TITLES[slug] ?? post.title
   const metaDescription = BLOG_META_DESCRIPTIONS[slug] ?? post.excerpt
+  const modifiedDate = BLOG_CONTENT_UPDATED[slug] ?? post.date
   return {
     title: searchTitle,
     description: metaDescription,
@@ -36,6 +37,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description: metaDescription,
       type: 'article',
       publishedTime: post.date,
+      modifiedTime: modifiedDate,
       url: `${SITE_CONFIG.domain}/blog/${slug}`,
       images: [{ url: `${SITE_CONFIG.domain}/api/og?title=${encodeURIComponent(post.title)}`, width: 1200, height: 630 }],
     },
@@ -99,6 +101,8 @@ export default async function BlogPostPage({ params }: Props) {
   const content = ALL_BLOG_CONTENT[slug]
   if (!content) notFound()
 
+  const modifiedDate = BLOG_CONTENT_UPDATED[slug] ?? post.date
+  const hasBeenUpdated = modifiedDate !== post.date
   const related = getRelatedPosts(slug, 4)
   const pillar = PILLARS.find((p) => p.slug === post.pillarSlug)
   const serviceCta = BLOG_CTA_BY_SLUG[slug] ?? BLOG_CTA_BY_PILLAR[post.pillarSlug]
@@ -113,7 +117,7 @@ export default async function BlogPostPage({ params }: Props) {
     description: post.excerpt,
     url: `${SITE_CONFIG.domain}/blog/${slug}`,
     datePublished: post.date,
-    dateModified: BLOG_CONTENT_UPDATED[slug] ?? post.date,
+    dateModified: modifiedDate,
     image: { '@type': 'ImageObject', url: `${SITE_CONFIG.domain}/api/og?title=${encodeURIComponent(post.title)}`, width: 1200, height: 630 },
     author: LOCKSMITH_AUTHOR_SCHEMA,
     publisher: {
@@ -193,7 +197,10 @@ export default async function BlogPostPage({ params }: Props) {
           )}
 
           <div className="text-sm text-gray-400 mb-4">
-            {new Date(post.date).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })}
+            Published <time dateTime={post.date}>{new Date(post.date).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })}</time>
+            {hasBeenUpdated && <>
+              {' · '}Updated <time dateTime={modifiedDate}>{new Date(modifiedDate).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })}</time>
+            </>}
             {' · '}{post.readTime}
             {' · '}By Ross, Local Emergency Locksmith
           </div>

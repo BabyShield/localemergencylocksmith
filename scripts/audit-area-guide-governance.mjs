@@ -423,6 +423,7 @@ const sourceUrls = new Map()
 const guidanceRecords = []
 const areaWordCounts = []
 const areaEditorialRecords = []
+const searchDescriptionOwners = new Map()
 
 check(AREAS.length === EXPECTED_AREA_COUNT, `area registry has ${AREAS.length} entries; expected ${EXPECTED_AREA_COUNT}`)
 check(SERVICES.length === EXPECTED_SERVICE_COUNT, `service registry has ${SERVICES.length} entries; expected ${EXPECTED_SERVICE_COUNT}`)
@@ -431,6 +432,18 @@ check(new Set(areaSlugs).size === areaSlugs.length, 'area registry contains dupl
 check(new Set(serviceSlugs).size === serviceSlugs.length, 'service registry contains duplicate slugs')
 check(serviceSlugs.every(slug => SERVICE_AREA_SLUGS.includes(slug)), 'canonical services and governed service slugs differ')
 check(guideEntries.length === EXPECTED_AREA_COUNT, `area-guide registry has ${guideEntries.length} entries; expected ${EXPECTED_AREA_COUNT}`)
+
+const areaSlugSet = new Set(areaSlugs)
+for (const area of AREAS) {
+  check(Array.isArray(area.neighbours) && area.neighbours.length > 0, `${area.slug} has no reviewed neighbour links`)
+  check(new Set(area.neighbours).size === area.neighbours.length, `${area.slug} repeats a neighbour link`)
+  check(!area.neighbours.includes(area.slug), `${area.slug} links to itself as a neighbour`)
+  for (const neighbourSlug of area.neighbours) {
+    check(areaSlugSet.has(neighbourSlug), `${area.slug} references missing neighbour ${neighbourSlug}`)
+  }
+  const inboundNeighbourCount = AREAS.filter(candidate => candidate.neighbours.includes(area.slug)).length
+  check(inboundNeighbourCount > 0, `${area.slug} receives no reviewed neighbour link`)
+}
 
 for (const relativePath of RETIRED_UNGOVERNED_FILES) {
   check(!existsSync(new URL(relativePath, import.meta.url)), `retired ungoverned content file has returned: ${relativePath}`)
@@ -521,6 +534,29 @@ for (const area of AREAS) {
   }
   check(sources.some(source => source.kind === 'locality' || source.kind === 'property-status'), `${label} has no locality or property-status source`)
   check(sources.some(source => source.id === 'mla-service-calls'), `${label} is missing MLA service-call evidence`)
+
+  const searchDescription = guide.searchDescription?.trim() ?? ''
+  const searchDescriptionSourceIds = guide.searchDescriptionSourceIds ?? []
+  check(searchDescription.length >= 125, `${label} search description is ${searchDescription.length} characters; expected at least 125`)
+  check(searchDescription.length <= 160, `${label} search description is ${searchDescription.length} characters; expected at most 160`)
+  check(searchDescription.includes(area.name), `${label} search description does not name ${area.name}`)
+  check(/\blocksmith\b/i.test(searchDescription), `${label} search description does not express locksmith intent`)
+  check(Array.isArray(searchDescriptionSourceIds) && searchDescriptionSourceIds.length > 0, `${label} search description has no source IDs`)
+  check(new Set(searchDescriptionSourceIds).size === searchDescriptionSourceIds.length, `${label} search description repeats a source ID`)
+  const previousDescriptionOwner = searchDescriptionOwners.get(searchDescription)
+  check(!previousDescriptionOwner, `${label} repeats the search description used by ${previousDescriptionOwner}`)
+  if (searchDescription) searchDescriptionOwners.set(searchDescription, label)
+
+  const factSourceIds = new Set((guide.facts ?? []).flatMap(fact => fact.sourceIds ?? []))
+  for (const sourceId of searchDescriptionSourceIds) {
+    check(localSourceIds.has(sourceId), `${label} search description references missing source ${sourceId}`)
+    check(factSourceIds.has(sourceId), `${label} search description source ${sourceId} is not attached to a visible local fact`)
+    check(!technicalIds.has(sourceId), `${label} search description cites technical source ${sourceId} for a locality cue`)
+  }
+  check(
+    sources.some(source => searchDescriptionSourceIds.includes(source.id) && (source.kind === 'locality' || source.kind === 'property-status')),
+    `${label} search description has no locality or property-status source`,
+  )
 
   for (const [index, fact] of (guide.facts ?? []).entries()) {
     const factLabel = `${label} fact ${index + 1}`

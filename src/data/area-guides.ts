@@ -16,6 +16,7 @@ import { NORTH_EAST_AREA_GUIDES } from './area-guides-north-east.ts'
 import { SOUTH_WEST_AREA_GUIDES } from './area-guides-south-west.ts'
 import { getTechnicalEvidenceSource } from './locksmith-evidence.ts'
 import { SERVICE_AREA_SLUGS, type ServiceAreaSlug } from './service-area-types.ts'
+import { getAreaSearchDescription } from './area-search-descriptions.ts'
 
 const mergedDraftGuides: Partial<Record<AreaSlug, GovernedAreaGuideDraft>> = {
   ...COVENTRY_AREA_GUIDES,
@@ -110,6 +111,7 @@ function publishGuide(guide: GovernedAreaGuideDraft): PublishedGovernedAreaGuide
   }
 
   const augmentedGuide: GovernedAreaGuideDraft = { ...guide, sources }
+  const searchDescription = getAreaSearchDescription(guide.slug)
   const serviceGuidance = Object.fromEntries(
     SERVICE_AREA_SLUGS.map(serviceSlug => [
       serviceSlug,
@@ -121,7 +123,12 @@ function publishGuide(guide: GovernedAreaGuideDraft): PublishedGovernedAreaGuide
     ]),
   ) as Record<ServiceAreaSlug, PublishedAreaServiceGuidance>
 
-  return { ...augmentedGuide, serviceGuidance }
+  return {
+    ...augmentedGuide,
+    searchDescription: searchDescription.description,
+    searchDescriptionSourceIds: [...searchDescription.sourceIds],
+    serviceGuidance,
+  }
 }
 
 export const AREA_GUIDES = Object.fromEntries(

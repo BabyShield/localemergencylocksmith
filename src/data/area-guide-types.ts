@@ -45,5 +45,7 @@ export interface GovernedAreaGuideDraft {
 export type GovernedAreaGuide = GovernedAreaGuideDraft
 
 export interface PublishedGovernedAreaGuide extends Omit<GovernedAreaGuideDraft, 'serviceGuidance'> {
+  searchDescription: string
+  searchDescriptionSourceIds: string[]
   serviceGuidance: Record<ServiceAreaSlug, PublishedAreaServiceGuidance>
 }

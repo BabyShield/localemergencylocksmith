@@ -412,12 +412,12 @@ export default async function ServicePage({ params }: Props) {
             <Link href="/" prefetch={false} itemProp="item" className="hover:text-[#FFB800] transition-colors"><span itemProp="name">Home</span></Link>
             <meta itemProp="position" content="1" />
           </li>
-          <span className="mx-2 text-gray-300" aria-hidden="true">›</span>
+          <li className="mx-2 text-gray-300" aria-hidden="true" role="presentation">›</li>
           <li itemScope itemType="https://schema.org/ListItem" itemProp="itemListElement">
             <Link href="/services" prefetch={false} itemProp="item" className="hover:text-[#FFB800] transition-colors"><span itemProp="name">Services</span></Link>
             <meta itemProp="position" content="2" />
           </li>
-          <span className="mx-2 text-gray-300" aria-hidden="true">›</span>
+          <li className="mx-2 text-gray-300" aria-hidden="true" role="presentation">›</li>
           <li itemScope itemType="https://schema.org/ListItem" itemProp="itemListElement">
             <span><span itemProp="name" className="text-[#0F1B2D] font-semibold">{service.shortName}</span></span>
             <meta itemProp="position" content="3" />

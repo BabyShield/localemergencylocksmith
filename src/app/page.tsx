@@ -98,6 +98,12 @@ const organizationSchema = {
   url: SITE_CONFIG.domain,
   telephone: SITE_CONFIG.phoneTel,
   email: SITE_CONFIG.email,
+  contactPoint: {
+    '@type': 'ContactPoint',
+    contactType: 'customer service',
+    telephone: SITE_CONFIG.phoneTel,
+    email: SITE_CONFIG.email,
+  },
   description:
     'Independent locksmith serving 78 listed locations across Coventry and nearby parts of Warwickshire, Solihull, and the West Midlands.',
   logo: {

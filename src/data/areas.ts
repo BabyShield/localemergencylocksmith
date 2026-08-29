@@ -84,7 +84,7 @@ const RAW_AREAS: Area[] = [
     region: 'Coventry',
     lat: 52.425,
     lng: -1.505,
-    neighbours: ['radford', 'holbrooks', 'longford', 'bell-green', 'aldermans-green'],
+    neighbours: ['radford', 'holbrooks', 'longford', 'bell-green', 'little-heath'],
   },
   {
     slug: 'stoke',

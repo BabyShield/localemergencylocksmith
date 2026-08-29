@@ -151,7 +151,7 @@ For more on the insurance side of lock standards, read our detailed guide on [wh
 
 Lock changes in occupied rental property can have serious legal consequences. The correct answer depends on the occupier's status, tenancy, possession process and circumstances, so this guide should not replace housing advice.
 
-I am Ross, and I have been called to lock-related disputes between landlords and tenants more times than I can count. Here is the law, explained clearly, so both landlords and tenants know exactly where they stand.
+This page separates the locksmith authority check from the housing-law question. A locksmith can verify who is giving the instruction and which entrance is involved, but the parties should use the cited housing guidance or legal advice to establish possession and access rights.
 
 ---
 
