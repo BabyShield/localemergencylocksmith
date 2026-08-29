@@ -34,36 +34,6 @@ const SERVICE_SEARCH_HEADINGS: Record<ServiceAreaSlug, string> = {
   'lock-upgrade': 'Lock Upgrades and Door Security',
 }
 
-const SERVICE_FAQ_EVIDENCE_LABELS: Record<ServiceAreaSlug, string> = {
-  'emergency-lockout': 'How the cited local evidence should be used for this lockout',
-  'lock-change': 'How the cited local evidence should be used for lock repair or replacement',
-  'upvc-lock-repair': 'How the cited local evidence should be used for uPVC lock diagnosis',
-  'boarding-up': 'How the cited local evidence should be used for temporary boarding',
-  'lock-upgrade': 'How the cited local evidence should be used for a lock upgrade',
-}
-
-function publishedFaq(
-  guide: GovernedAreaGuideDraft,
-  serviceSlug: ServiceAreaSlug,
-): PublishedAreaServiceGuidance['faq'] {
-  const guidance = guide.serviceGuidance[serviceSlug]
-  const localFactIndex = guidance.localFactIndexes[0]
-  const fact = guide.facts[localFactIndex]
-  if (!fact) throw new Error(`Missing FAQ fact ${localFactIndex} for ${guide.slug}/${serviceSlug}`)
-
-  const serviceAnswer = guidance.faq.a.trim()
-  const evidenceLabel = SERVICE_FAQ_EVIDENCE_LABELS[serviceSlug]
-  const evidenceGuidance = fact.serviceRelevance.trim()
-  return {
-    localFactIndex,
-    serviceAnswer,
-    evidenceLabel,
-    evidenceGuidance,
-    q: guidance.faq.q,
-    a: `${serviceAnswer} ${evidenceLabel}: ${evidenceGuidance}`,
-  }
-}
-
 function technicalSourceId(
   guide: GovernedAreaGuideDraft,
   role: TechnicalSourceRole,
@@ -101,31 +71,39 @@ function sourceIdsForGuidance(
   const sourceById = new Map(guide.sources.map(source => [source.id, source]))
   const factOnlySourceIds = new Set(guide.factOnlySourceIds ?? [])
   const localFactIndexes = guidance.localFactIndexes
+  const isHubContextOnly = guide.serviceEvidenceMode === 'hub-context-only'
+  let localitySourceIds: string[] = []
 
-  if (
-    !Array.isArray(localFactIndexes)
-    || localFactIndexes.length === 0
-    || new Set(localFactIndexes).size !== localFactIndexes.length
-    || localFactIndexes.some(index => !Number.isInteger(index) || index < 0 || index >= guide.facts.length)
-  ) {
-    throw new Error(`Invalid localFactIndexes for ${guide.slug}/${serviceSlug}`)
-  }
+  if (isHubContextOnly) {
+    if (!Array.isArray(localFactIndexes) || localFactIndexes.length !== 0) {
+      throw new Error(`Hub-context-only guide selects service facts for ${guide.slug}/${serviceSlug}`)
+    }
+  } else {
+    if (
+      !Array.isArray(localFactIndexes)
+      || localFactIndexes.length === 0
+      || new Set(localFactIndexes).size !== localFactIndexes.length
+      || localFactIndexes.some(index => !Number.isInteger(index) || index < 0 || index >= guide.facts.length)
+    ) {
+      throw new Error(`Invalid localFactIndexes for ${guide.slug}/${serviceSlug}`)
+    }
 
-  const selectedFacts = localFactIndexes.map(index => guide.facts[index])
-  if (selectedFacts.some(fact => fact.sourceIds.some(sourceId => factOnlySourceIds.has(sourceId)))) {
-    throw new Error(`Fact-only source selected for ${guide.slug}/${serviceSlug}`)
-  }
+    const selectedFacts = localFactIndexes.map(index => guide.facts[index])
+    if (selectedFacts.some(fact => fact.sourceIds.some(sourceId => factOnlySourceIds.has(sourceId)))) {
+      throw new Error(`Fact-only source selected for ${guide.slug}/${serviceSlug}`)
+    }
 
-  const localitySourceIds = selectedFacts
-    .flatMap(fact => fact.sourceIds)
-    .filter(sourceId => {
-      const kind = sourceById.get(sourceId)?.kind
-      return !factOnlySourceIds.has(sourceId)
-        && (kind === 'locality' || kind === 'property-status')
-    })
+    localitySourceIds = selectedFacts
+      .flatMap(fact => fact.sourceIds)
+      .filter(sourceId => {
+        const kind = sourceById.get(sourceId)?.kind
+        return !factOnlySourceIds.has(sourceId)
+          && (kind === 'locality' || kind === 'property-status')
+      })
 
-  if (localitySourceIds.length === 0) {
-    throw new Error(`No eligible local source selected for ${guide.slug}/${serviceSlug}`)
+    if (localitySourceIds.length === 0) {
+      throw new Error(`No eligible local source selected for ${guide.slug}/${serviceSlug}`)
+    }
   }
 
   const roles = [...SERVICE_TECHNICAL_SOURCE_ROLES[serviceSlug]]
@@ -150,17 +128,8 @@ function publishGuide(guide: GovernedAreaGuideDraft): PublishedGovernedAreaGuide
   const areaName = AREA_NAMES.get(guide.slug)
   if (!areaName) throw new Error(`Missing area name for governed guide ${guide.slug}`)
 
-  const guidanceWithPublishedFaqs = Object.fromEntries(
-    SERVICE_AREA_SLUGS.map(serviceSlug => [
-      serviceSlug,
-      {
-        ...guide.serviceGuidance[serviceSlug],
-        faq: publishedFaq(guide, serviceSlug),
-      },
-    ]),
-  ) as unknown as GovernedAreaGuideDraft['serviceGuidance']
   const allGuidanceText = SERVICE_AREA_SLUGS
-    .map(serviceSlug => guidanceText(guidanceWithPublishedFaqs[serviceSlug]))
+    .map(serviceSlug => guidanceText(guide.serviceGuidance[serviceSlug]))
     .join(' ')
   const sources = [...guide.sources]
 
@@ -176,7 +145,6 @@ function publishGuide(guide: GovernedAreaGuideDraft): PublishedGovernedAreaGuide
   const augmentedGuide: GovernedAreaGuideDraft = {
     ...guide,
     sources,
-    serviceGuidance: guidanceWithPublishedFaqs,
   }
   const searchDescription = getAreaSearchDescription(guide.slug)
   const serviceGuidance = Object.fromEntries(

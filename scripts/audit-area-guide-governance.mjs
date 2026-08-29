@@ -22,7 +22,8 @@ const RETIRED_UNGOVERNED_FILES = [
   '../src/components/AreaFacts.tsx',
   '../src/components/LockBrands.tsx',
 ]
-const MIN_AREA_EDITORIAL_WORDS = 900
+const MIN_HUB_OWNED_EDITORIAL_WORDS = 900
+const MIN_DEDICATED_PARENT_EDITORIAL_WORDS = 400
 const MIN_AREA_FACTS = 3
 const MAX_AREA_FACTS = 4
 const MIN_AREA_FACT_SOURCES = 2
@@ -41,6 +42,8 @@ const MAX_WITHIN_AREA_P95_OVERLAP = 0.35
 const MAX_WITHIN_AREA_PAIR_OVERLAP = 0.45
 const MAX_WITHIN_SERVICE_P95_OVERLAP = 0.35
 const MAX_WITHIN_SERVICE_PAIR_OVERLAP = 0.45
+const MAX_DEDICATED_PARENT_P95_OVERLAP = 0.40
+const MAX_DEDICATED_PARENT_PAIR_OVERLAP = 0.50
 const MAX_WITHIN_PAGE_FAQ_ANSWER_OVERLAP = 0.65
 const MIN_CHECK_UNIQUENESS_RATIO = 0.72
 const MIN_PAIR_UNIQUE_CHECKS = 2
@@ -48,6 +51,30 @@ const MIN_PAIR_UNIQUE_BODY_SHINGLES = 50
 const MIN_PAIR_UNIQUE_BODY_SHINGLE_RATIO = 0.35
 const MIN_EXACT_DUPLICATE_SENTENCE_WORDS = 10
 const MIN_CROSS_RECORD_SENTENCE_WORDS = 8
+const MIN_AREA_NEUTRAL_FAQ_FAMILIES = 85
+const MAX_AREA_NEUTRAL_FAQ_FAMILY_SIZE = 5
+
+// Keep these ownership and evidence-mode lists independent from production
+// routing/data so a generator change cannot silently weaken the audit.
+const AUDIT_DEDICATED_AREA_SLUGS = new Set([
+  'nuneaton',
+  'bedworth',
+  'rugby',
+  'leamington-spa',
+  'warwick',
+  'kenilworth',
+  'stratford-upon-avon',
+])
+const AUDIT_HUB_CONTEXT_ONLY_SLUGS = new Set([
+  'attleborough',
+  'stockingford',
+  'weddington',
+  'horeston-grange',
+  'camp-hill',
+  'bermuda-park',
+  'cawston',
+  'new-bilton',
+])
 
 // This is an independent release contract. Do not import the production role
 // map here: otherwise weakening the generator would also weaken its audit.
@@ -102,6 +129,21 @@ const CUSTOMER_VISIBLE_PROSE_LINTS = Object.freeze([
   {
     label: 'lowercase sentence start from a style substitution',
     pattern: /(?:^|[.!?]\s+)(?:appraise|assess|clarify|consider|describe|determine|establish|evaluate|examine|outline|pinpoint|specify|verify)\b/,
+  },
+])
+
+const HUB_CONTEXT_ONLY_BODY_LINTS = Object.freeze([
+  {
+    label: 'local-record source attribution',
+    pattern: /\b(?:source|record|evidence)s?\s+(?:from|published by|provided by|shows?|states?|describes?|records?|supports?)\s+(?:the\s+)?(?:council|local authority|municipal|borough|planning|conservation|locality|park|street register|ward|rail(?:way)?|train|historic|medieval|manor|parish)\b/i,
+  },
+  {
+    label: 'local-record source description',
+    pattern: /\b(?:council|local authority|municipal|borough|planning|conservation|locality|park|street register|ward|rail(?:way)?|train|historic|medieval|manor|parish|public[- ]space|recreation ground)\s+(?:source|record|evidence|dataset|map|page|directory|register|schedule|plan|project|workstream|context|history|figure)s?\b/i,
+  },
+  {
+    label: 'retired locality-context shorthand',
+    pattern: /\b(?:area-level evidence|engagement schedule|ward pilot|station passengers?|public[- ]place|property (?:record|status|evidence|information)|current (?:record|status|evidence))\b/i,
   },
 ])
 
@@ -171,6 +213,10 @@ const BANNED_CLAIM_PATTERNS = [
 
 function check(condition, message) {
   if (!condition) failures.push(message)
+}
+
+function escapeRegExp(value) {
+  return String(value).replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
 }
 
 for (const fixture of [
@@ -478,10 +524,13 @@ const technicalIds = new Set(Object.keys(TECHNICAL_EVIDENCE_SOURCES))
 const sourceCanonicals = new Map()
 const sourceUrls = new Map()
 const guidanceRecords = []
-const areaWordCounts = []
+const hubOwnedAreaWordCounts = []
+const dedicatedParentWordCounts = []
 const areaFactCounts = []
 const areaFactSourceCounts = []
 const areaEditorialRecords = []
+const hubOwnedAreaEditorialRecords = []
+const dedicatedParentEditorialRecords = []
 const searchDescriptionOwners = new Map()
 
 check(AREAS.length === EXPECTED_AREA_COUNT, `area registry has ${AREAS.length} entries; expected ${EXPECTED_AREA_COUNT}`)
@@ -539,6 +588,15 @@ for (const area of AREAS) {
   if (!guide) continue
 
   const label = area.slug
+  const hasDedicatedOwnerPages = AUDIT_DEDICATED_AREA_SLUGS.has(area.slug)
+  const serviceEvidenceMode = guide.serviceEvidenceMode ?? 'pair-linked'
+  const expectedServiceEvidenceMode = AUDIT_HUB_CONTEXT_ONLY_SLUGS.has(area.slug)
+    ? 'hub-context-only'
+    : 'pair-linked'
+  check(
+    serviceEvidenceMode === expectedServiceEvidenceMode,
+    `${label} service evidence mode is ${serviceEvidenceMode}; expected ${expectedServiceEvidenceMode}`,
+  )
   check(guide.slug === area.slug, `${label} guide slug is ${guide.slug}`)
   validateDate(guide.reviewedOn, `${label} review`)
   check(Array.isArray(guide.summary) && guide.summary.length >= 2, `${label} needs at least two summary paragraphs`)
@@ -691,12 +749,32 @@ for (const area of AREAS) {
     for (const [index, item] of (guidance.checks ?? []).entries()) {
       check(wordCount(item) >= 4, `${guidanceLabel} check ${index + 1} is too short`)
     }
+    if (serviceEvidenceMode === 'hub-context-only') {
+      for (const lint of HUB_CONTEXT_ONLY_BODY_LINTS) {
+        const match = guidanceText.match(lint.pattern)?.[0]
+        check(!match, `${guidanceLabel} contains ${lint.label}: ${JSON.stringify(match)}`)
+      }
+      for (const [index, item] of (guidance.checks ?? []).entries()) {
+        const checkStem = item.trim().replace(/[.!?]+$/, '')
+        const unpunctuatedInterpolation = checkStem
+          ? (guidance.body ?? []).some(paragraph => new RegExp(
+              `(?:^|[^\\p{L}\\p{N}])${escapeRegExp(checkStem)}(?=["'”’)]*(?:$|[\\s,;:—–-]))`,
+              'u',
+            ).test(paragraph))
+          : false
+        check(!unpunctuatedInterpolation, `${guidanceLabel} interpolates check ${index + 1} without terminal punctuation`)
+      }
+    }
     check(wordCount(guidance.faq?.q) >= 6, `${guidanceLabel} FAQ question is too short`)
     check(wordCount(guidance.faq?.a) >= 18, `${guidanceLabel} FAQ answer has ${wordCount(guidance.faq?.a)} words; expected at least 18`)
 
     check(Array.isArray(guidance.localFactIndexes), `${guidanceLabel} localFactIndexes must be an array`)
     const localFactIndexes = Array.isArray(guidance.localFactIndexes) ? guidance.localFactIndexes : []
-    check(localFactIndexes.length > 0, `${guidanceLabel} must select at least one local fact`)
+    if (serviceEvidenceMode === 'hub-context-only') {
+      check(localFactIndexes.length === 0, `${guidanceLabel} selects local facts despite hub-context-only evidence mode`)
+    } else {
+      check(localFactIndexes.length > 0, `${guidanceLabel} must select at least one local fact`)
+    }
     check(new Set(localFactIndexes).size === localFactIndexes.length, `${guidanceLabel} repeats a local fact index`)
     for (const factIndex of localFactIndexes) {
       check(Number.isInteger(factIndex), `${guidanceLabel} local fact index ${JSON.stringify(factIndex)} is not an integer`)
@@ -706,19 +784,6 @@ for (const area of AREAS) {
       .filter(factIndex => Number.isInteger(factIndex) && factIndex >= 0 && factIndex < guide.facts.length)
       .map(factIndex => guide.facts[factIndex])
 
-    const faqLocalFactIndex = guidance.faq?.localFactIndex
-    check(Number.isInteger(faqLocalFactIndex), `${guidanceLabel} FAQ localFactIndex is not an integer`)
-    check(localFactIndexes.includes(faqLocalFactIndex), `${guidanceLabel} FAQ fact ${faqLocalFactIndex} is not one of its selected local facts`)
-    const faqFact = Number.isInteger(faqLocalFactIndex) ? guide.facts[faqLocalFactIndex] : undefined
-    check(Boolean(faqFact), `${guidanceLabel} FAQ fact ${faqLocalFactIndex} is missing`)
-    check(
-      guidance.faq?.evidenceGuidance === faqFact?.serviceRelevance.trim(),
-      `${guidanceLabel} FAQ evidence guidance does not match fact ${(faqLocalFactIndex ?? -1) + 1}`,
-    )
-    check(
-      guidance.faq?.a === `${guidance.faq?.serviceAnswer} ${guidance.faq?.evidenceLabel}: ${guidance.faq?.evidenceGuidance}`,
-      `${guidanceLabel} FAQ combined answer does not preserve the service answer and evidence note`,
-    )
     for (const [index, fact] of selectedFacts.entries()) {
       check(
         !fact.sourceIds.some(sourceId => factOnlySourceIdSet.has(sourceId)),
@@ -732,7 +797,11 @@ for (const area of AREAS) {
           && (source?.kind === 'locality' || source?.kind === 'property-status')
       })
     )))
-    check(expectedLocalSourceIds.size > 0, `${guidanceLabel} selected facts resolve no eligible local source`)
+    if (serviceEvidenceMode === 'hub-context-only') {
+      check(expectedLocalSourceIds.size === 0, `${guidanceLabel} resolves local sources despite hub-context-only evidence mode`)
+    } else {
+      check(expectedLocalSourceIds.size > 0, `${guidanceLabel} selected facts resolve no eligible local source`)
+    }
 
     check(Array.isArray(guidance.sourceIds) && guidance.sourceIds.length > 0, `${guidanceLabel} has no source IDs`)
     const guidanceSourceIds = new Set(guidance.sourceIds ?? [])
@@ -741,10 +810,14 @@ for (const area of AREAS) {
       check(localSourceIds.has(sourceId), `${guidanceLabel} references missing source ${sourceId}`)
       check(!factOnlySourceIdSet.has(sourceId), `${guidanceLabel} cites fact-only source ${sourceId}`)
     }
-    check(
-      sources.some(source => guidanceSourceIds.has(source.id) && (source.kind === 'locality' || source.kind === 'property-status')),
-      `${guidanceLabel} has no locality or property-status source`,
-    )
+    const guidanceLocalSources = sources.filter(source => (
+      guidanceSourceIds.has(source.id) && (source.kind === 'locality' || source.kind === 'property-status')
+    ))
+    if (serviceEvidenceMode === 'hub-context-only') {
+      check(guidanceLocalSources.length === 0, `${guidanceLabel} cites locality evidence reserved for the area hub`)
+    } else {
+      check(guidanceLocalSources.length > 0, `${guidanceLabel} has no locality or property-status source`)
+    }
     const actualLocalSourceIds = new Set((guidance.sourceIds ?? []).filter(sourceId => {
       const source = sources.find(candidate => candidate.id === sourceId)
       return source?.kind === 'locality' || source?.kind === 'property-status'
@@ -777,8 +850,10 @@ for (const area of AREAS) {
       localFactIndexes: [...localFactIndexes],
       selectedLocalSourceCount: expectedLocalSourceIds.size,
       broadLocalSourceCount: allEligibleFactLocalSourceIds.size,
+      serviceEvidenceMode,
       bodySentenceKeys: longSentenceKeys(guidance.body ?? []),
       faqQuestionKey: normalise(guidance.faq?.q),
+      faqQuestionNeutralKey: areaNeutralFaqKey(guidance.faq?.q, area),
       faqAnswerKey: areaNeutralFaqKey(guidance.faq?.a, area),
       faqExactAnswerKey: normalise(guidance.faq?.a),
     })
@@ -786,15 +861,35 @@ for (const area of AREAS) {
 
   const pageFaqs = [
     ...(guide.faqs ?? []).map((faq, index) => ({ ...faq, owner: `guide FAQ ${index + 1}` })),
-    ...SERVICE_AREA_SLUGS
-      .map(serviceSlug => ({
-        ...guide.serviceGuidance?.[serviceSlug]?.faq,
-        owner: `${serviceSlug} FAQ`,
-      }))
-      .filter(faq => faq.q || faq.a),
+    ...(hasDedicatedOwnerPages
+      ? []
+      : SERVICE_AREA_SLUGS
+        .map(serviceSlug => ({
+          ...guide.serviceGuidance?.[serviceSlug]?.faq,
+          owner: `${serviceSlug} FAQ`,
+        }))
+        .filter(faq => faq.q || faq.a)),
   ]
   const faqQuestionOwners = new Map()
   const faqAnswerOwners = new Map()
+  const visibleServiceBlocks = hasDedicatedOwnerPages
+    ? SERVICE_AREA_SLUGS.flatMap(serviceSlug => {
+        const guidance = guide.serviceGuidance?.[serviceSlug]
+        const service = SERVICES.find(candidate => candidate.slug === serviceSlug)
+        return [
+          { value: service?.description, owner: `${serviceSlug} owner-card summary` },
+          { value: guidance?.checks?.[0], owner: `${serviceSlug} owner-card preview` },
+        ]
+      })
+    : SERVICE_AREA_SLUGS.flatMap(serviceSlug => {
+        const guidance = guide.serviceGuidance?.[serviceSlug]
+        return [
+          { value: guidance?.searchHeading, owner: `${serviceSlug} search heading` },
+          { value: guidance?.heading, owner: `${serviceSlug} local heading` },
+          ...(guidance?.body ?? []).map((value, index) => ({ value, owner: `${serviceSlug} paragraph ${index + 1}` })),
+          ...(guidance?.checks ?? []).map((value, index) => ({ value, owner: `${serviceSlug} check ${index + 1}` })),
+        ]
+      })
   const nonFaqBlocks = [
     ...(guide.summary ?? []).map((value, index) => ({ value, owner: `summary paragraph ${index + 1}` })),
     { value: guide.accessGuidance, owner: 'access guidance' },
@@ -803,15 +898,7 @@ for (const area of AREAS) {
       { value: fact.text, owner: `fact ${index + 1}` },
       { value: fact.serviceRelevance, owner: `fact ${index + 1} service relevance` },
     ]),
-    ...SERVICE_AREA_SLUGS.flatMap(serviceSlug => {
-      const guidance = guide.serviceGuidance?.[serviceSlug]
-      return [
-        { value: guidance?.searchHeading, owner: `${serviceSlug} search heading` },
-        { value: guidance?.heading, owner: `${serviceSlug} local heading` },
-        ...(guidance?.body ?? []).map((value, index) => ({ value, owner: `${serviceSlug} paragraph ${index + 1}` })),
-        ...(guidance?.checks ?? []).map((value, index) => ({ value, owner: `${serviceSlug} check ${index + 1}` })),
-      ]
-    }),
+    ...visibleServiceBlocks,
   ]
   const nonFaqOwners = new Map(
     nonFaqBlocks
@@ -864,25 +951,24 @@ for (const area of AREAS) {
     )
   }
 
-  const editorial = [
-    ...(guide.summary ?? []),
-    guide.accessGuidance,
-    guide.evidenceLimits,
-    ...(guide.facts ?? []).flatMap(fact => [fact.text, fact.serviceRelevance]),
-    ...Object.values(guide.serviceGuidance ?? {}).flatMap(guidance => [
-      guidance.searchHeading,
-      guidance.heading,
-      ...(guidance.body ?? []),
-      ...(guidance.checks ?? []),
-      guidance.faq?.q,
-      guidance.faq?.a,
-    ]),
-    ...(guide.faqs ?? []).flatMap(faq => [faq.q, faq.a]),
-  ].filter(Boolean).join(' ')
+  const editorial = customerVisibleBlocks.map(block => block.value).join(' ')
   const editorialWords = wordCount(editorial)
-  areaWordCounts.push(editorialWords)
   areaEditorialRecords.push({ key: area.slug, shingles: shingles(editorial) })
-  check(editorialWords >= MIN_AREA_EDITORIAL_WORDS, `${label} has ${editorialWords} governed editorial words; expected at least ${MIN_AREA_EDITORIAL_WORDS}`)
+  if (hasDedicatedOwnerPages) {
+    dedicatedParentWordCounts.push(editorialWords)
+    dedicatedParentEditorialRecords.push({ key: area.slug, shingles: shingles(editorial) })
+    check(
+      editorialWords >= MIN_DEDICATED_PARENT_EDITORIAL_WORDS,
+      `${label} dedicated parent renders ${editorialWords} governed editorial words; expected at least ${MIN_DEDICATED_PARENT_EDITORIAL_WORDS}`,
+    )
+  } else {
+    hubOwnedAreaWordCounts.push(editorialWords)
+    hubOwnedAreaEditorialRecords.push({ key: area.slug, shingles: shingles(editorial) })
+    check(
+      editorialWords >= MIN_HUB_OWNED_EDITORIAL_WORDS,
+      `${label} hub-owned page renders ${editorialWords} governed editorial words; expected at least ${MIN_HUB_OWNED_EDITORIAL_WORDS}`,
+    )
+  }
   for (const bannedClaim of BANNED_CLAIM_PATTERNS) {
     const match = editorial.match(bannedClaim.pattern)?.[0]
     if (match) failures.push(`${label} contains ${bannedClaim.label}: ${JSON.stringify(match)}`)
@@ -962,29 +1048,56 @@ check(
   + `occurrences (${(bodySentenceReuseRatio * 100).toFixed(2)}%) across ${reusedBodySentenceFamilies} repeated families; expected zero`,
 )
 
-const faqQuestionKeys = new Set()
+const renderedHubGuidanceRecords = guidanceRecords.filter(record => !AUDIT_DEDICATED_AREA_SLUGS.has(record.areaSlug))
+const hubContextOnlyGuidanceRecords = renderedHubGuidanceRecords.filter(record => record.serviceEvidenceMode === 'hub-context-only')
+check(
+  renderedHubGuidanceRecords.length === (EXPECTED_AREA_COUNT - AUDIT_DEDICATED_AREA_SLUGS.size) * EXPECTED_SERVICE_COUNT,
+  `found ${renderedHubGuidanceRecords.length} rendered hub-owned service FAQs; expected ${(EXPECTED_AREA_COUNT - AUDIT_DEDICATED_AREA_SLUGS.size) * EXPECTED_SERVICE_COUNT}`,
+)
+check(
+  hubContextOnlyGuidanceRecords.length === AUDIT_HUB_CONTEXT_ONLY_SLUGS.size * EXPECTED_SERVICE_COUNT,
+  `found ${hubContextOnlyGuidanceRecords.length} hub-context-only service records; expected ${AUDIT_HUB_CONTEXT_ONLY_SLUGS.size * EXPECTED_SERVICE_COUNT}`,
+)
+const faqQuestionOwners = new Map()
 const faqAnswerOwners = new Map()
 const faqExactAnswerOwners = new Map()
-for (const record of guidanceRecords) {
-  faqQuestionKeys.add(record.faqQuestionKey)
-  for (const [key, owners, label] of [
-    [record.faqAnswerKey, faqAnswerOwners, 'area-neutral FAQ answer'],
-    [record.faqExactAnswerKey, faqExactAnswerOwners, 'exact FAQ answer'],
+for (const record of renderedHubGuidanceRecords) {
+  for (const [key, owners] of [
+    [record.faqQuestionNeutralKey, faqQuestionOwners],
+    [record.faqAnswerKey, faqAnswerOwners],
+    [record.faqExactAnswerKey, faqExactAnswerOwners],
   ]) {
-    const previous = owners.get(key)
-    check(!previous, `${record.key} repeats ${label} from ${previous}`)
-    if (key) owners.set(key, record.key)
+    if (key) owners.set(key, (owners.get(key) ?? 0) + 1)
   }
 }
-check(faqAnswerOwners.size === EXPECTED_GUIDANCE_COUNT, `area-neutral FAQ answers are ${faqAnswerOwners.size}/${EXPECTED_GUIDANCE_COUNT} unique`)
-check(faqExactAnswerOwners.size === EXPECTED_GUIDANCE_COUNT, `exact FAQ answers are ${faqExactAnswerOwners.size}/${EXPECTED_GUIDANCE_COUNT} unique`)
+const largestFaqQuestionFamily = Math.max(0, ...faqQuestionOwners.values())
+const largestFaqAnswerFamily = Math.max(0, ...faqAnswerOwners.values())
+const largestExactFaqAnswerFamily = Math.max(0, ...faqExactAnswerOwners.values())
+check(faqQuestionOwners.size >= MIN_AREA_NEUTRAL_FAQ_FAMILIES, `rendered service FAQs have only ${faqQuestionOwners.size} area-neutral question families; expected at least ${MIN_AREA_NEUTRAL_FAQ_FAMILIES}`)
+check(faqAnswerOwners.size >= MIN_AREA_NEUTRAL_FAQ_FAMILIES, `rendered service FAQs have only ${faqAnswerOwners.size} area-neutral answer families; expected at least ${MIN_AREA_NEUTRAL_FAQ_FAMILIES}`)
+check(faqExactAnswerOwners.size >= MIN_AREA_NEUTRAL_FAQ_FAMILIES, `rendered service FAQs have only ${faqExactAnswerOwners.size} exact answer families; expected at least ${MIN_AREA_NEUTRAL_FAQ_FAMILIES}`)
+check(largestFaqQuestionFamily <= MAX_AREA_NEUTRAL_FAQ_FAMILY_SIZE, `largest area-neutral FAQ question family is ${largestFaqQuestionFamily}; expected at most ${MAX_AREA_NEUTRAL_FAQ_FAMILY_SIZE}`)
+check(largestFaqAnswerFamily <= MAX_AREA_NEUTRAL_FAQ_FAMILY_SIZE, `largest area-neutral FAQ answer family is ${largestFaqAnswerFamily}; expected at most ${MAX_AREA_NEUTRAL_FAQ_FAMILY_SIZE}`)
+check(largestExactFaqAnswerFamily <= MAX_AREA_NEUTRAL_FAQ_FAMILY_SIZE, `largest exact FAQ answer family is ${largestExactFaqAnswerFamily}; expected at most ${MAX_AREA_NEUTRAL_FAQ_FAMILY_SIZE}`)
 
 const similarityReports = [
   similarityReport(
-    'complete area-guide editorial',
+    'rendered area-hub editorial',
     pairwise(areaEditorialRecords),
     MAX_GLOBAL_P95_OVERLAP,
     MAX_GLOBAL_PAIR_OVERLAP,
+  ),
+  similarityReport(
+    'rendered hub-owned area editorial',
+    pairwise(hubOwnedAreaEditorialRecords),
+    MAX_GLOBAL_P95_OVERLAP,
+    MAX_GLOBAL_PAIR_OVERLAP,
+  ),
+  similarityReport(
+    'rendered dedicated-parent editorial',
+    pairwise(dedicatedParentEditorialRecords),
+    MAX_DEDICATED_PARENT_P95_OVERLAP,
+    MAX_DEDICATED_PARENT_PAIR_OVERLAP,
   ),
   similarityReport(
     'all service-area guidance',
@@ -1014,21 +1127,24 @@ const factCounts = summary(areaFactCounts)
 const factSourceCounts = summary(areaFactSourceCounts)
 console.log(`Area facts (required ${MIN_AREA_FACTS}-${MAX_AREA_FACTS}): min ${factCounts.min}, median ${factCounts.median}, max ${factCounts.max}`)
 console.log(`Area fact sources (minimum ${MIN_AREA_FACT_SOURCES}): min ${factSourceCounts.min}, median ${factSourceCounts.median}, max ${factSourceCounts.max}`)
-const words = summary(areaWordCounts)
-console.log(`Area editorial words (minimum ${MIN_AREA_EDITORIAL_WORDS}): min ${words.min}, median ${words.median}, p95 ${words.p95}, max ${words.max}`)
+const hubOwnedWords = summary(hubOwnedAreaWordCounts)
+const dedicatedParentWords = summary(dedicatedParentWordCounts)
+console.log(`Rendered hub-owned editorial words (minimum ${MIN_HUB_OWNED_EDITORIAL_WORDS}): min ${hubOwnedWords.min}, median ${hubOwnedWords.median}, p95 ${hubOwnedWords.p95}, max ${hubOwnedWords.max}`)
+console.log(`Rendered dedicated-parent editorial words (minimum ${MIN_DEDICATED_PARENT_EDITORIAL_WORDS}): min ${dedicatedParentWords.min}, median ${dedicatedParentWords.median}, p95 ${dedicatedParentWords.p95}, max ${dedicatedParentWords.max}`)
 const guidanceWords = summary(guidanceRecords.map(record => record.words))
 console.log(`Guidance words (minimum ${MIN_GUIDANCE_WORDS}): min ${guidanceWords.min}, median ${guidanceWords.median}, p95 ${guidanceWords.p95}, max ${guidanceWords.max}`)
-const selectedFactLinks = guidanceRecords.reduce((total, record) => total + record.localFactIndexes.length, 0)
-const selectedLocalCitationLinks = guidanceRecords.reduce((total, record) => total + record.selectedLocalSourceCount, 0)
-const broadLocalCitationLinks = guidanceRecords.reduce((total, record) => total + record.broadLocalSourceCount, 0)
+const selectedFactLinks = renderedHubGuidanceRecords.reduce((total, record) => total + record.localFactIndexes.length, 0)
+const selectedLocalCitationLinks = renderedHubGuidanceRecords.reduce((total, record) => total + record.selectedLocalSourceCount, 0)
+const broadLocalCitationLinks = renderedHubGuidanceRecords.reduce((total, record) => total + record.broadLocalSourceCount, 0)
 console.log(
-  `Pair-level local provenance: ${selectedFactLinks} fact selections and ${selectedLocalCitationLinks} local citation links; `
+  `Rendered hub service provenance: ${selectedFactLinks} fact selections and ${selectedLocalCitationLinks} local citation links; `
   + `${broadLocalCitationLinks - selectedLocalCitationLinks} unselected broad citation links excluded`,
 )
+console.log(`Hub-context-only service records: ${hubContextOnlyGuidanceRecords.length}; local fact selections 0 by contract`)
 console.log(`Service-check uniqueness: ${checkCounts.size}/${allChecks.length} (${(checkUniquenessRatio * 100).toFixed(2)}%)`)
 console.log(`Per-record body information gain: minimum ${minimumBodyShingleCount} globally unique 5-word shingles and ${(minimumBodyShingleRatio * 100).toFixed(2)}% unique ratio`)
 console.log(`Cross-record exact body-sentence reuse: ${reusedBodySentenceOccurrences.length}/${bodySentenceOccurrences.length} occurrences (${(bodySentenceReuseRatio * 100).toFixed(2)}%) across ${reusedBodySentenceFamilies} repeated families`)
-console.log(`Evidence-linked FAQ uniqueness: ${faqQuestionKeys.size} natural question variants, ${faqAnswerOwners.size}/${EXPECTED_GUIDANCE_COUNT} area-neutral answers, ${faqExactAnswerOwners.size}/${EXPECTED_GUIDANCE_COUNT} exact answers`)
+console.log(`Rendered service FAQ diversity: ${faqQuestionOwners.size} area-neutral question families, ${faqAnswerOwners.size} area-neutral answer families and ${faqExactAnswerOwners.size} exact answer families; largest question/answer families ${largestFaqQuestionFamily}/${largestFaqAnswerFamily}`)
 for (const report of similarityReports) {
   console.log(`${report.name}: ${report.count} pairs, p95 ${(report.p95 * 100).toFixed(2)}%, max ${(report.max * 100).toFixed(2)}% (${report.highestPair?.left ?? 'n/a'} vs ${report.highestPair?.right ?? 'n/a'})`)
 }

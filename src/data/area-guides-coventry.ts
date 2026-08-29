@@ -754,30 +754,142 @@ const SERVICE_CHECKS: Record<ServiceAreaSlug, string> = {
   'lock-upgrade': 'Document the current door, frame, hinges and lock.',
 }
 
-const SERVICE_FAQS: Record<ServiceAreaSlug, {
+interface ServiceFaqCopy {
   question: (areaName: string) => string
-  answer: (areaName: string) => string
-}> = {
-  'emergency-lockout': {
-    question: areaName => `Can an emergency locksmith help with a lockout in ${areaName}?`,
-    answer: areaName => `Call with the full ${areaName} address, the exact door and evidence that you are authorised to enter. Describe what the key, lock and door are doing; the opening method and final scope depend on the condition found at that entrance.`,
-  },
-  'lock-change': {
-    question: areaName => `Can a door lock be repaired or replaced in ${areaName}?`,
-    answer: areaName => `A lock in ${areaName} can be assessed for repair or replacement after the door, frame, hinges and existing hardware are identified. Explain why the change is needed, provide clear photographs where possible and confirm who can authorise the work.`,
-  },
-  'upvc-lock-repair': {
-    question: areaName => `Can you repair a uPVC door lock in ${areaName}?`,
-    answer: areaName => `Describe how the ${areaName} door behaves while open and closed, what the handle and key do, and any visible faceplate markings. A compatible repair depends on the actual door, alignment and fitted mechanism, so the part cannot be selected from the area name alone.`,
-  },
-  'boarding-up': {
-    question: areaName => `Can you board up a damaged door or window in ${areaName}?`,
-    answer: areaName => `Identify every damaged opening at the ${areaName} address and the person authorised to approve temporary work. If the damage may be evidence, follow police directions before anything is moved or covered; the safe temporary scope depends on the condition found.`,
-  },
-  'lock-upgrade': {
-    question: areaName => `Which lock upgrade is suitable for my door in ${areaName}?`,
-    answer: areaName => `The suitable ${areaName} upgrade depends on the complete door set, cylinder fit and any written insurer, landlord or manager requirement. Provide photographs and the exact requirement where possible; options can then be compared against the inspected entrance.`,
-  },
+  answer: string
+}
+
+const SERVICE_FAQS: Record<ServiceAreaSlug, ServiceFaqCopy[]> = {
+  'emergency-lockout': [
+    {
+      question: areaName => `What should I provide for emergency lockout help in ${areaName}?`,
+      answer: `Provide the full address, identify the exact entrance and be ready to show that you may authorise access. Describe what the key, lock and door are doing so the inspection can start with the reported symptoms rather than an assumed fault.`,
+    },
+    {
+      question: areaName => `Will a house lockout in ${areaName} always require drilling?`,
+      answer: `No opening method can be promised before the lock and complete door set are inspected. The supported approach, any risk of damage and the expected price should be explained before work begins.`,
+    },
+    {
+      question: areaName => `Why must authority be checked during a lockout in ${areaName}?`,
+      answer: `A locksmith needs reasonable evidence that the requester may control the affected entrance. The address locates the job, but identity, authority and the precise door still need separate confirmation before access work starts.`,
+    },
+    {
+      question: areaName => `How is an emergency opening method chosen in ${areaName}?`,
+      answer: `The choice follows inspection of the fitted lock, door, frame, hinges, deadlocking and any existing damage. The proposed method and price basis should be agreed with the authorised customer before the opening attempt proceeds.`,
+    },
+    {
+      question: areaName => `Can photographs confirm how a locked door in ${areaName} will be opened?`,
+      answer: `Safe photographs can clarify the entrance and visible hardware, but they cannot establish the internal condition or guarantee a particular method. Final diagnosis and scope depend on the actual lock and door.`,
+    },
+    {
+      question: areaName => `How is the price for a lockout in ${areaName} confirmed?`,
+      answer: `Give the full address, affected entrance and observable symptoms when calling. The expected scope and price are explained from the available information, then confirmed against the inspected condition before work; any changed scope needs fresh agreement.`,
+    },
+  ],
+  'lock-change': [
+    {
+      question: areaName => `Can a faulty door lock in ${areaName} be repaired instead of replaced?`,
+      answer: `Often a repair can be considered, but the lock, door, frame, hinges and alignment need to be inspected together. The diagnosis determines whether adjustment, repair, component replacement or a complete lock replacement is supported.`,
+    },
+    {
+      question: areaName => `Which details should be recorded before replacing a lock in ${areaName}?`,
+      answer: `Identify the precise entrance, reason for the change, current hardware and person authorised to approve the work. Include any written landlord, manager or insurer requirement so compatible options can be checked against the actual door.`,
+    },
+    {
+      question: areaName => `Can a replacement cylinder be selected from photos of a door in ${areaName}?`,
+      answer: `Photographs and visible markings can help prepare for the visit, but the cylinder dimensions, fit, protective furniture and complete door assembly still require confirmation. A compatible part should not be promised from the area or image alone.`,
+    },
+    {
+      question: areaName => `Should I change a lock after losing keys in ${areaName}?`,
+      answer: `The decision depends on who may hold the missing keys, the required level of key control and the condition of the existing lock. The affected entrance should be inspected before agreeing whether a cylinder, another component or the complete lock needs changing.`,
+    },
+    {
+      question: areaName => `Could a sticking door in ${areaName} need adjustment rather than a new lock?`,
+      answer: `Yes. Misalignment, hinge movement, the frame, latch or another component can produce similar symptoms. Inspect operation with the door open and closed before deciding that replacement is necessary.`,
+    },
+    {
+      question: areaName => `Who can approve a door lock repair or replacement in ${areaName}?`,
+      answer: `The responsible owner, occupier or authorised property contact for the exact entrance must be identified. A shared, rented or managed-building description does not by itself establish authority or permission for the requested work.`,
+    },
+  ],
+  'upvc-lock-repair': [
+    {
+      question: areaName => `Why does a uPVC door in ${areaName} lock while open but not when closed?`,
+      answer: `That difference can indicate an alignment or keep-related issue, but it does not identify the failed part by itself. The mechanism, hinges, frame, keeps and locking points need to be assessed together.`,
+    },
+    {
+      question: areaName => `Does a stiff uPVC door handle in ${areaName} mean the mechanism has failed?`,
+      answer: `Not necessarily. Handle resistance can result from alignment, the cylinder, handles or the multipoint mechanism. Record how the key and handle behave with the door open and closed, and avoid forcing them pending diagnosis.`,
+    },
+    {
+      question: areaName => `What photographs help diagnose a uPVC lock problem in ${areaName}?`,
+      answer: `Where safe, photograph the complete entrance, door edge, faceplate markings, locking points, keeps and handles. Images can narrow the questions and likely parts, but measurements and direct inspection still determine compatibility.`,
+    },
+    {
+      question: areaName => `Can a uPVC gearbox be identified from an ${areaName} postcode?`,
+      answer: `No. A postcode does not identify the manufacturer, backset, centres, faceplate or locking layout fitted to a private door. Those details must come from the installed mechanism and its measurements.`,
+    },
+    {
+      question: areaName => `Should I keep forcing a stiff uPVC door lock in ${areaName}?`,
+      answer: `Stop if normal operation requires excessive force. Continued force can obscure the original symptoms or add damage; record the handle, key and door-position behaviour and have the complete door set assessed.`,
+    },
+    {
+      question: areaName => `Does a uPVC lock fault in ${areaName} require a whole new door?`,
+      answer: `A lock symptom does not prove that the complete door needs replacing. Alignment, handles, cylinder, gearbox and other multipoint components should be separated before repair or replacement options are agreed.`,
+    },
+  ],
+  'boarding-up': [
+    {
+      question: areaName => `What should happen before boarding up burglary damage in ${areaName}?`,
+      answer: `Make safety the priority and follow police instructions for a potentially evidential scene. Once those needs are addressed, identify every damaged opening and the authorised property contact before temporary work is proposed.`,
+    },
+    {
+      question: areaName => `Which details help plan emergency boarding up in ${areaName}?`,
+      answer: `Provide the full address, each affected door or window, safe-access information and the person authorised to approve work. The opening and surrounding construction must be inspected before the temporary method and price are confirmed.`,
+    },
+    {
+      question: areaName => `Is boarding up a permanent repair for damage in ${areaName}?`,
+      answer: `No. Boarding is a temporary measure intended to reduce immediate access and exposure. Permanent glazing, joinery, structural work and any lock replacement need separate assessment and authorisation.`,
+    },
+    {
+      question: areaName => `Can a damaged opening in ${areaName} be boarded before police checks?`,
+      answer: `If police provide scene-preservation instructions, follow them before moving or covering possible evidence. Temporary securing can be considered after those instructions, immediate safety and the authorised scope are clear.`,
+    },
+    {
+      question: areaName => `Who may approve boarding at a shared property in ${areaName}?`,
+      answer: `Identify the owner, occupier, manager or other authorised contact responsible for the exact damaged opening. Being present at a shared site does not by itself establish permission to instruct temporary work.`,
+    },
+    {
+      question: areaName => `How is a temporary boarding method chosen in ${areaName}?`,
+      answer: `The decision depends on the damaged opening, surrounding material, safe access and exposure found on inspection. The proposed extent, limitations and expected price should be explained before installation.`,
+    },
+  ],
+  'lock-upgrade': [
+    {
+      question: areaName => `How is a suitable lock upgrade selected for a door in ${areaName}?`,
+      answer: `The choice follows inspection of the door, frame, hinges, existing lock and protective furniture. Any written insurer, landlord or manager requirement should be checked against that complete assembly.`,
+    },
+    {
+      question: areaName => `Is an anti-snap cylinder a complete security upgrade in ${areaName}?`,
+      answer: `No cylinder is the whole entrance. Its dimensions, certification and protection need to be considered with the door, frame, hinges, handles and locking arrangement before an upgrade is specified.`,
+    },
+    {
+      question: areaName => `Does a home in ${areaName} automatically need a BS 3621 lock?`,
+      answer: `No single standard can be assigned from an area name. Identify the actual door and lock type, then check any policy, landlord or building requirement in writing before choosing compatible hardware.`,
+    },
+    {
+      question: areaName => `Can a security upgrade in ${areaName} be planned entirely from photographs?`,
+      answer: `Photographs can record visible components and certification marks, but they do not establish hidden dimensions, alignment or the condition of the complete assembly. Final options require inspection and compatibility checks.`,
+    },
+    {
+      question: areaName => `Why must several external doors in ${areaName} be assessed separately?`,
+      answer: `Different entrances can use different lock types, dimensions, functions and surrounding hardware. Each affected door should be assessed separately rather than applying one product choice across a property or neighbourhood.`,
+    },
+    {
+      question: areaName => `Who confirms whether a lock upgrade in ${areaName} meets an insurance requirement?`,
+      answer: `The insurer determines whether an installation satisfies its policy wording. Obtain the exact requirement in writing, then compare compatible and independently certified options with the inspected door before work is agreed.`,
+    },
+  ],
 }
 
 function technicalSources(region: AddressRegion): AreaGuideSource[] {
@@ -792,9 +904,10 @@ function buildServiceGuidance(
   seed: AreaGuideSeed,
   service: ServiceAreaSlug,
   context: PairContext,
+  variant: number,
 ): AreaServiceGuidance {
   const editorial = COVENTRY_EDITORIAL_COPY[seed.slug][service]
-  const faq = SERVICE_FAQS[service]
+  const faq = SERVICE_FAQS[service][variant % SERVICE_FAQS[service].length]
   return {
     heading: SERVICE_HEADINGS[service](seed.name),
     body: [
@@ -808,16 +921,16 @@ function buildServiceGuidance(
     localFactIndexes: context.localFactIndexes,
     faq: {
       q: faq.question(seed.name),
-      a: faq.answer(seed.name),
+      a: faq.answer,
     },
   }
 }
 
-function buildGuide(seed: AreaGuideSeed): GovernedAreaGuide {
+function buildGuide(seed: AreaGuideSeed, areaIndex: number): GovernedAreaGuide {
   const serviceGuidance = Object.fromEntries(
-    SERVICE_AREA_SLUGS.map((service) => [
+    SERVICE_AREA_SLUGS.map((service, serviceIndex) => [
       service,
-      buildServiceGuidance(seed, service, seed.contexts[service]),
+      buildServiceGuidance(seed, service, seed.contexts[service], areaIndex + serviceIndex * 7),
     ]),
   ) as Record<ServiceAreaSlug, AreaServiceGuidance>
   const guideFaqs = [
@@ -3335,7 +3448,7 @@ const AREA_SEEDS: AreaGuideSeed[] = [
 ]
 
 const COVENTRY_GUIDES = Object.fromEntries(
-  AREA_SEEDS.map(seed => [seed.slug, buildGuide(seed)]),
+  AREA_SEEDS.map((seed, index) => [seed.slug, buildGuide(seed, index)]),
 ) as Record<CoventryAreaSlug, GovernedAreaGuide>
 
 export const COVENTRY_AREA_GUIDES: Partial<Record<AreaSlug, GovernedAreaGuide>> = COVENTRY_GUIDES

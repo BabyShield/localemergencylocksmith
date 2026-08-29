@@ -28,7 +28,7 @@ const aboutSchema = {
   '@context': 'https://schema.org',
   '@graph': [
     {
-      '@type': 'AboutPage',
+      '@type': 'ProfilePage',
       '@id': `${SITE_CONFIG.domain}/about#webpage`,
       url: `${SITE_CONFIG.domain}/about`,
       name: 'About Ross | Local Emergency Locksmith',

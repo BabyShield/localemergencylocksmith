@@ -30,20 +30,15 @@ export type AreaServiceGuidance = AreaServiceGuidanceDraft
 export interface PublishedAreaServiceGuidance extends AreaServiceGuidanceDraft {
   searchHeading: string
   sourceIds: string[]
-  faq: AreaServiceGuidanceDraft['faq'] & {
-    /** Selected local fact used to make this published FAQ pair-specific. */
-    localFactIndex: number
-    /** Original customer-facing service answer before the evidence note. */
-    serviceAnswer: string
-    /** Service-specific label kept separate from the sourced instruction. */
-    evidenceLabel: string
-    /** Existing address-level instruction authored for the selected fact. */
-    evidenceGuidance: string
-  }
 }
 
 export interface GovernedAreaGuideDraft {
   slug: AreaSlug
+  /**
+   * `hub-context-only` keeps locality facts and their citations on the area hub
+   * without presenting them as evidence for a service diagnosis or method.
+   */
+  serviceEvidenceMode?: 'pair-linked' | 'hub-context-only'
   reviewedOn: string
   summary: string[]
   accessGuidance: string

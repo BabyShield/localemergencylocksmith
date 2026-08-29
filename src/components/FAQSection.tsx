@@ -29,11 +29,12 @@ export default function FAQSection({
           {faqs.map((faq, i) => (
             <details
               key={faq.q}
+              data-faq-item="true"
               open={i === 0}
               className="group bg-white rounded-xl border border-gray-200 open:border-[#FFB800] open:shadow-sm"
             >
               <summary className="w-full cursor-pointer list-none px-6 py-5 font-bold text-[#0F1B2D] flex justify-between items-center hover:bg-gray-50/50 transition-colors min-h-[56px] rounded-xl [&::-webkit-details-marker]:hidden">
-                <span className="pr-4 leading-snug">{faq.q}</span>
+                <span data-faq-question="true" className="pr-4 leading-snug">{faq.q}</span>
                 <span
                   aria-hidden="true"
                   className="flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center text-sm font-black bg-gray-100 text-gray-600 transition-all duration-200 group-open:bg-[#FFB800] group-open:text-[#0F1B2D] group-open:rotate-45"
@@ -41,7 +42,7 @@ export default function FAQSection({
                   +
                 </span>
               </summary>
-              <div className="px-6 pb-5 text-gray-600 leading-relaxed border-t border-gray-100 pt-4">
+              <div data-faq-answer="true" className="px-6 pb-5 text-gray-600 leading-relaxed border-t border-gray-100 pt-4">
                 {faq.a}
               </div>
             </details>

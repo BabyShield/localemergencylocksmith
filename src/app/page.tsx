@@ -326,12 +326,18 @@ export default function HomePage() {
           </div>
           <div className="text-[#FFB800] text-7xl md:text-8xl font-black mb-4">24/7</div>
           <h2 className="text-2xl md:text-3xl font-black text-white mb-4">
-            Emergency Locksmith Coventry — Any Time, Any Day
+            24/7 Locksmith Availability in Coventry
           </h2>
           <p className="text-white/80 leading-relaxed text-lg max-w-2xl mx-auto mb-6">
             Call with the full postcode to confirm the exact address, current availability and ETA.
             The published starting-price basis does not add a night, weekend or bank-holiday
             premium; the itemised total still depends on the diagnosed scope and any parts.
+          </p>
+          <p className="text-white/80 leading-relaxed max-w-2xl mx-auto mb-6">
+            Locked out now? Read the steps and scope on the{' '}
+            <Link href="/services/emergency-lockout" prefetch={false} className="font-bold text-[#FFB800] underline underline-offset-4 hover:text-amber-300">
+              emergency locksmith and lockout service page
+            </Link>.
           </p>
           <a
             href="tel:+442475224730"

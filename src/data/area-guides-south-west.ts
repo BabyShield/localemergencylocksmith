@@ -176,6 +176,10 @@ const SERVICE_FAQS: Record<ServiceAreaSlug, ServiceFaqCopy[]> = {
       question: areaName => `Why does an emergency locksmith need the full ${areaName} address?`,
       answer: `The full address identifies the controlled entrance but does not itself prove authority. The caller's connection to the property, the affected door and the observed condition still need to be checked.`,
     },
+    {
+      question: areaName => `How is the price for emergency lockout work in ${areaName} confirmed?`,
+      answer: `The caller should provide the complete address, affected entrance and observable symptoms. The expected method, scope and charge are explained from that information and confirmed against the inspected condition before work; any material change needs fresh agreement.`,
+    },
   ],
   'lock-change': [
     {
@@ -197,6 +201,10 @@ const SERVICE_FAQS: Record<ServiceAreaSlug, ServiceFaqCopy[]> = {
     {
       question: areaName => `Could a sticking door in ${areaName} need alignment work rather than a new lock?`,
       answer: `A reported symptom does not identify the failed component. The lock, door, frame and hinges should be inspected together before repair or replacement is specified.`,
+    },
+    {
+      question: areaName => `Should a lock be changed after keys are lost in ${areaName}?`,
+      answer: `Consider who may hold the missing keys, the required level of key control and the condition of the existing lock. Inspect the exact entrance before agreeing whether a cylinder, another component or the complete lock needs to be changed.`,
     },
   ],
   'upvc-lock-repair': [
@@ -220,6 +228,10 @@ const SERVICE_FAQS: Record<ServiceAreaSlug, ServiceFaqCopy[]> = {
       question: areaName => `Can a uPVC replacement mechanism be identified from my ${areaName} address?`,
       answer: `No area or planning record identifies the mechanism fitted to an individual door. The exact opening, installed parts and reported handle and key behaviour must be checked directly.`,
     },
+    {
+      question: areaName => `Should I keep forcing a stiff uPVC door handle in ${areaName}?`,
+      answer: `Stop if ordinary operation requires excessive force. Record how the handle, key and locking points behave with the door open and closed, then have the complete door set inspected before a repair or replacement is selected.`,
+    },
   ],
   'boarding-up': [
     {
@@ -242,6 +254,10 @@ const SERVICE_FAQS: Record<ServiceAreaSlug, ServiceFaqCopy[]> = {
       question: areaName => `Who can approve boarding up at a shared site in ${areaName}?`,
       answer: `The responsible owner, occupier or site contact for the exact opening must be identified. A nearby public place or planning designation does not establish control of the damaged structure.`,
     },
+    {
+      question: areaName => `Is emergency boarding up in ${areaName} a permanent repair?`,
+      answer: `No. Boarding is a temporary measure intended to reduce immediate access and exposure. Permanent glazing, joinery, structural work and any lock replacement require separate assessment and authorisation.`,
+    },
   ],
   'lock-upgrade': [
     {
@@ -263,6 +279,10 @@ const SERVICE_FAQS: Record<ServiceAreaSlug, ServiceFaqCopy[]> = {
     {
       question: areaName => `Does a managed or protected property in ${areaName} need approval for a lock upgrade?`,
       answer: `Check the exact property's current listing, conservation, lease or management requirements before altering affected fabric. The authorised customer should approve the compatible specification and expected cost.`,
+    },
+    {
+      question: areaName => `Why should multiple external doors in ${areaName} be checked individually?`,
+      answer: `Different entrances can use different lock types, dimensions, functions and surrounding hardware. Inspect each affected door and compare compatible, independently certified options instead of applying one product choice to every opening.`,
     },
   ],
 }

@@ -47,7 +47,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: service.metaTitle,
     description: service.metaDescription,
-    keywords: [...service.keywords, `locksmith coventry ${service.shortName.toLowerCase()}`, `emergency ${service.shortName.toLowerCase()} coventry`, `${service.shortName.toLowerCase()} near me`].join(', '),
     alternates: {
       canonical: `${SITE_CONFIG.domain}/services/${slug}`,
     },

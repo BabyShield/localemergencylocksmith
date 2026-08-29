@@ -80,7 +80,10 @@ export default async function AreaPage({ params }: Props) {
   const neighbours = getAreaNeighbours(area)
   const areaAuthority = getAreaAuthority(area.slug)
   const relatedPosts = getRelatedGuides()
-  const sourceById = new Map(guide.sources.map(source => [source.id, source]))
+  const pageSources = hasDedicatedServicePages
+    ? guide.sources.filter(source => source.kind !== 'technical')
+    : guide.sources
+  const sourceById = new Map(pageSources.map(source => [source.id, source]))
   const serviceGuidance = SERVICES.map(service => ({
     service,
     guidance: guide.serviceGuidance[service.slug as ServiceAreaSlug],
@@ -90,12 +93,13 @@ export default async function AreaPage({ params }: Props) {
     localOwnerHref: hasTownService(area.slug, service.slug)
       ? `/areas/${area.slug}/${service.slug}`
       : `/areas/${area.slug}#${service.slug}`,
-    hasDedicatedPage: hasTownService(area.slug, service.slug),
   }))
-  const allFaqs = [
-    ...guide.faqs,
-    ...serviceGuidance.map(({ guidance }) => guidance.faq),
-  ]
+  const allFaqs = hasDedicatedServicePages
+    ? guide.faqs
+    : [
+        ...guide.faqs,
+        ...serviceGuidance.map(({ guidance }) => guidance.faq),
+      ]
 
   const breadcrumbSchema = {
     '@context': 'https://schema.org',
@@ -132,7 +136,7 @@ export default async function AreaPage({ params }: Props) {
       itemListElement: serviceGuidance.map(({ service, guidance, localOwnerHref }) => ({
         '@type': 'Offer',
         name: `${service.shortName} in ${area.name}`,
-        description: guidance.body[0],
+        description: hasDedicatedServicePages ? service.description : guidance.body[0],
         priceSpecification: {
           '@type': 'PriceSpecification',
           minPrice: String(service.priceFrom),
@@ -223,17 +227,27 @@ export default async function AreaPage({ params }: Props) {
 
       <section className="py-10 px-4 bg-[#0F1B2D] text-white">
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-2xl font-black mb-3">Five Locksmith Services in {area.name}</h2>
+          <h2 className="text-2xl font-black mb-3">
+            {hasDedicatedServicePages
+              ? `Choose a Locksmith Service in ${area.name}`
+              : `Five Locksmith Services in ${area.name}`}
+          </h2>
           <p className="text-gray-200 leading-relaxed mb-6">
-            Use these five service sections to understand what to describe when you call, which
-            checks can be made before booking, and what still depends on the exact entrance,
-            authority and on-site inspection.
+            {hasDedicatedServicePages
+              ? `Each service below has its own ${area.name} guide, while this page remains the source-reviewed area overview.`
+              : 'Use these five service sections to understand what to describe when you call, which checks can be made before booking, and what still depends on the exact entrance, authority and on-site inspection.'}
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-            {serviceGuidance.map(({ service }) => (
-              <a key={service.slug} href={`#${service.slug}`} className="rounded-lg border border-white/15 bg-white/5 px-4 py-3 text-sm font-semibold hover:border-[#FFB800] hover:text-[#FFB800] transition-colors">
-                {service.shortName} in {area.name}
-              </a>
+            {serviceGuidance.map(({ service, localOwnerHref }) => (
+              hasDedicatedServicePages ? (
+                <Link key={service.slug} href={localOwnerHref} prefetch={false} className="rounded-lg border border-white/15 bg-white/5 px-4 py-3 text-sm font-semibold hover:border-[#FFB800] hover:text-[#FFB800] transition-colors">
+                  {service.shortName} in {area.name}
+                </Link>
+              ) : (
+                <a key={service.slug} href={`#${service.slug}`} className="rounded-lg border border-white/15 bg-white/5 px-4 py-3 text-sm font-semibold hover:border-[#FFB800] hover:text-[#FFB800] transition-colors">
+                  {service.shortName} in {area.name}
+                </a>
+              )
             ))}
           </div>
         </div>
@@ -249,7 +263,12 @@ export default async function AreaPage({ params }: Props) {
               { Icon: CheckCircle, text: 'Proof of a connection to the affected entrance is required, with separate authority checks for communal, rented or managed doors.' },
               { Icon: Clock, text: 'The current arrival estimate is confirmed by phone from the actual starting point and is not inferred from a static area page.' },
               { Icon: PoundSterling, text: 'The price basis, included labour, likely parts and any reason a price could change are explained before work proceeds.' },
-              { Icon: BookOpen, text: `This guide was reviewed on ${guide.reviewedOn} and links to the primary locality and technical sources used.` },
+              {
+                Icon: BookOpen,
+                text: hasDedicatedServicePages
+                  ? `This area overview was reviewed on ${guide.reviewedOn} and links to the primary locality sources used; each dedicated service guide carries its own technical evidence.`
+                  : `This guide was reviewed on ${guide.reviewedOn} and links to the primary locality and technical sources used.`,
+              },
             ].map(item => (
               <li key={item.text} className="flex gap-3 items-start">
                 <span className="flex-shrink-0 mt-0.5 flex items-center justify-center w-8 h-8 rounded-lg bg-[#0F1B2D]/5">
@@ -298,80 +317,101 @@ export default async function AreaPage({ params }: Props) {
         </div>
       </section>
 
-      <section className="py-12 px-4 bg-[#F7F7F5]" aria-labelledby="service-guidance-heading">
-        <div className="max-w-4xl mx-auto">
-          <h2 id="service-guidance-heading" className="text-2xl md:text-3xl font-black text-[#0F1B2D] mb-3 text-center">Service-by-Service Guidance for {area.name}</h2>
-          <p className="text-gray-600 text-center max-w-3xl mx-auto mb-10">
-            Five separate guides explain what can be checked remotely and what still requires
-            inspection at the exact address. Each local point remains linked to its source.
-          </p>
-          <div className="space-y-8">
-            {serviceGuidance.map(({ service, guidance, detailsHref, hasDedicatedPage }) => (
-              <article
-                key={service.slug}
-                id={service.slug}
-                data-evidence-section={service.slug}
-                data-evidence-source-ids={guidance.sourceIds.join(' ')}
-                data-local-fact-indexes={guidance.localFactIndexes.map(factIndex => factIndex + 1).join(' ')}
-                className="scroll-mt-28 rounded-2xl border border-gray-200 bg-white p-6 md:p-8 shadow-sm"
-              >
-                <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between mb-5">
-                  <div>
-                    <p className="text-xs font-bold uppercase tracking-wider text-[#8A5A00] mb-2">From £{service.priceFrom} · no VAT</p>
-                    <h3 className="text-xl md:text-2xl font-black text-[#0F1B2D]">{guidance.searchHeading}</h3>
-                    {guidance.heading !== guidance.searchHeading && (
-                      <h4 className="text-sm font-semibold text-gray-600 mt-2">Local decision focus: {guidance.heading}</h4>
-                    )}
-                  </div>
-                  <Link href={detailsHref} prefetch={false} className="shrink-0 text-sm font-bold text-[#0F1B2D] underline decoration-[#FFB800] underline-offset-4 hover:text-[#8A5A00]">
-                    {hasDedicatedPage
-                      ? `View ${service.shortName} in ${area.name}`
-                      : `View ${service.shortName} service details`}
-                  </Link>
-                </div>
-                {guidance.body.map(paragraph => (
-                  <p key={paragraph.slice(0, 64)} className="text-gray-700 leading-relaxed mb-4">{paragraph}</p>
-                ))}
-                <h4 className="font-black text-[#0F1B2D] mt-6 mb-3">Checks before the work is agreed</h4>
-                <ul className="space-y-3">
-                  {guidance.checks.map(check => (
-                    <li key={check} className="flex gap-3 items-start">
-                      <span className="text-[#FFB800] font-bold flex-shrink-0 mt-0.5">✓</span>
-                      <span className="text-gray-700">{check}</span>
-                    </li>
-                  ))}
-                </ul>
-                <div
-                  className="rounded-xl bg-[#FFF9E8] border border-[#FFB800]/30 p-5 mt-6"
-                  data-faq-local-fact-index={guidance.faq.localFactIndex + 1}
-                  data-faq-source-ids={guide.facts[guidance.faq.localFactIndex].sourceIds.join(' ')}
+      {hasDedicatedServicePages ? (
+        <section className="py-12 px-4 bg-[#F7F7F5]" aria-labelledby="service-guidance-heading">
+          <div className="max-w-4xl mx-auto">
+            <h2 id="service-guidance-heading" className="text-2xl md:text-3xl font-black text-[#0F1B2D] mb-3 text-center">Detailed Locksmith Guides for {area.name}</h2>
+            <p className="text-gray-600 text-center max-w-3xl mx-auto mb-10">
+              Choose the page that matches the affected entrance. Each guide keeps its diagnosis,
+              booking checks and service-specific evidence in one canonical place.
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-5" data-dedicated-service-owner-links="true">
+              {serviceGuidance.map(({ service, guidance, localOwnerHref }) => (
+                <article
+                  key={service.slug}
+                  data-dedicated-service-owner={service.slug}
+                  className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm"
                 >
-                  <h4 className="font-black text-[#0F1B2D] mb-2">{guidance.faq.q}</h4>
-                  <p className="text-gray-700 leading-relaxed" data-faq-service-answer="true">
-                    {guidance.faq.serviceAnswer}
-                  </p>
-                  <p className="text-gray-700 leading-relaxed mt-3" data-faq-evidence-guidance="true">
-                    <strong>{guidance.faq.evidenceLabel}:</strong>{' '}
-                    {guidance.faq.evidenceGuidance}
-                  </p>
-                  <p className="text-xs font-bold text-gray-600 mt-4">
-                    Evidence:{' '}
-                    <a
-                      href={`#local-fact-${guidance.faq.localFactIndex + 1}`}
-                      data-faq-evidence-link="true"
-                      className="underline decoration-[#FFB800] underline-offset-2 hover:text-[#8A5A00]"
-                    >
-                      Fact {guidance.faq.localFactIndex + 1}
-                    </a>
-                  </p>
-                  <ul className="flex flex-wrap gap-2 mt-2" aria-label={`FAQ sources for ${guidance.heading}`}>
-                    {guide.facts[guidance.faq.localFactIndex].sourceIds.map(sourceId => {
+                  <p className="text-xs font-bold uppercase tracking-wider text-[#8A5A00] mb-2">From £{service.priceFrom} · no VAT</p>
+                  <h3 className="text-xl font-black text-[#0F1B2D]">{service.shortName}</h3>
+                  <p className="text-gray-700 leading-relaxed mt-3" data-owner-summary="true">{service.description}</p>
+                  <p className="text-sm text-gray-600 mt-4" data-owner-first-check="true"><strong>Guide preview:</strong> {guidance.checks[0]}</p>
+                  <Link href={localOwnerHref} prefetch={false} className="inline-flex mt-5 text-sm font-bold text-[#0F1B2D] underline decoration-[#FFB800] underline-offset-4 hover:text-[#8A5A00]">
+                    Read the complete {service.shortName} guide for {area.name}
+                  </Link>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+      ) : (
+        <section className="py-12 px-4 bg-[#F7F7F5]" aria-labelledby="service-guidance-heading">
+          <div className="max-w-4xl mx-auto">
+            <h2 id="service-guidance-heading" className="text-2xl md:text-3xl font-black text-[#0F1B2D] mb-3 text-center">Service-by-Service Guidance for {area.name}</h2>
+            <p className="text-gray-600 text-center max-w-3xl mx-auto mb-10">
+              Five separate guides explain what can be checked remotely and what still requires
+              inspection at the exact address. Each local point remains linked to its source.
+            </p>
+            <div className="space-y-8">
+              {serviceGuidance.map(({ service, guidance, detailsHref }) => (
+                <article
+                  key={service.slug}
+                  id={service.slug}
+                  data-evidence-section={service.slug}
+                  data-evidence-source-ids={guidance.sourceIds.join(' ')}
+                  data-local-fact-indexes={guidance.localFactIndexes.map(factIndex => factIndex + 1).join(' ')}
+                  className="scroll-mt-28 rounded-2xl border border-gray-200 bg-white p-6 md:p-8 shadow-sm"
+                >
+                  <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between mb-5">
+                    <div>
+                      <p className="text-xs font-bold uppercase tracking-wider text-[#8A5A00] mb-2">From £{service.priceFrom} · no VAT</p>
+                      <h3 className="text-xl md:text-2xl font-black text-[#0F1B2D]">{guidance.searchHeading}</h3>
+                      {guidance.heading !== guidance.searchHeading && (
+                        <h4 className="text-sm font-semibold text-gray-600 mt-2">Local decision focus: {guidance.heading}</h4>
+                      )}
+                    </div>
+                    <Link href={detailsHref} prefetch={false} className="shrink-0 text-sm font-bold text-[#0F1B2D] underline decoration-[#FFB800] underline-offset-4 hover:text-[#8A5A00]">
+                      View {service.shortName} service details
+                    </Link>
+                  </div>
+                  {guidance.body.map(paragraph => (
+                    <p key={paragraph.slice(0, 64)} className="text-gray-700 leading-relaxed mb-4">{paragraph}</p>
+                  ))}
+                  <h4 className="font-black text-[#0F1B2D] mt-6 mb-3">Checks before the work is agreed</h4>
+                  <ul className="space-y-3">
+                    {guidance.checks.map(check => (
+                      <li key={check} className="flex gap-3 items-start">
+                        <span className="text-[#FFB800] font-bold flex-shrink-0 mt-0.5">✓</span>
+                        <span className="text-gray-700">{check}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <div className="rounded-xl bg-[#FFF9E8] border border-[#FFB800]/30 p-5 mt-6" data-service-faq="true">
+                    <h4 className="font-black text-[#0F1B2D] mb-2" data-faq-question="true">{guidance.faq.q}</h4>
+                    <p className="text-gray-700 leading-relaxed" data-faq-answer="true">{guidance.faq.a}</p>
+                  </div>
+                  <div className="mt-5">
+                    {guidance.localFactIndexes.length > 0 && (
+                      <p className="text-xs font-bold text-gray-600" data-selected-local-fact-links="true">
+                        Local facts used:{' '}
+                        {guidance.localFactIndexes.map((factIndex, index) => (
+                          <span key={factIndex}>
+                            {index > 0 && ' · '}
+                            <a href={`#local-fact-${factIndex + 1}`} className="underline decoration-[#FFB800] underline-offset-2 hover:text-[#8A5A00]">
+                              Fact {factIndex + 1}
+                            </a>
+                          </span>
+                        ))}
+                      </p>
+                    )}
+                    <p className="text-xs font-bold text-gray-600">Guidance sources</p>
+                    <ul className="flex flex-wrap gap-2 mt-2" aria-label={`Sources for ${guidance.heading}`}>
+                    {guidance.sourceIds.map(sourceId => {
                       const source = sourceById.get(sourceId)
                       return source ? (
                         <li key={sourceId}>
                           <a
                             href={`#evidence-source-${source.id}`}
-                            data-faq-source-link="true"
                             className="inline-flex rounded-full border border-[#FFB800]/40 bg-white px-3 py-1.5 text-xs leading-snug text-gray-700 underline decoration-[#FFB800] underline-offset-2 hover:border-[#FFB800] hover:text-[#8A5A00]"
                           >
                             {source.publisher}: {source.title}
@@ -379,55 +419,31 @@ export default async function AreaPage({ params }: Props) {
                         </li>
                       ) : null
                     })}
-                  </ul>
-                </div>
-                <div className="mt-5" data-selected-local-fact-links="true">
-                  <p className="text-xs font-bold text-gray-600">
-                    Local facts used:{' '}
-                    {guidance.localFactIndexes.map((factIndex, index) => (
-                      <span key={factIndex}>
-                        {index > 0 && ' · '}
-                        <a href={`#local-fact-${factIndex + 1}`} className="underline decoration-[#FFB800] underline-offset-2 hover:text-[#8A5A00]">
-                          Fact {factIndex + 1}
-                        </a>
-                      </span>
-                    ))}
-                  </p>
-                  <p className="text-xs font-bold text-gray-600">Check the sources used</p>
-                  <ul className="flex flex-wrap gap-2 mt-2" aria-label={`Sources for ${guidance.heading}`}>
-                  {guidance.sourceIds.map(sourceId => {
-                    const source = sourceById.get(sourceId)
-                    return source ? (
-                      <li key={sourceId}>
-                        <a
-                          href={`#evidence-source-${source.id}`}
-                          className="inline-flex rounded-full border border-[#FFB800]/40 bg-white px-3 py-1.5 text-xs leading-snug text-gray-700 underline decoration-[#FFB800] underline-offset-2 hover:border-[#FFB800] hover:text-[#8A5A00]"
-                        >
-                          {source.publisher}: {source.title}
-                        </a>
-                      </li>
-                    ) : null
-                  })}
-                  </ul>
-                </div>
-              </article>
-            ))}
+                    </ul>
+                  </div>
+                </article>
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      )}
 
-      <section className="py-12 px-4 bg-white" aria-labelledby="source-heading">
+      <section
+        className="py-12 px-4 bg-white"
+        aria-labelledby="source-heading"
+        data-source-register-scope={hasDedicatedServicePages ? 'locality-only' : 'locality-and-technical'}
+      >
         <div className="max-w-3xl mx-auto">
           <h2 id="source-heading" className="text-2xl font-black text-[#0F1B2D] mb-3">Sources and Review Notes for This {area.name} Guide</h2>
           <p className="text-gray-600 leading-relaxed">
-            Locality facts and technical advice are kept separate. Each source below states the
-            limited point it supports; none is used to infer a lock or access condition at an
-            individual property.
+            {hasDedicatedServicePages
+              ? 'This overview lists the locality and property-status sources used for the area facts. Technical sources stay on each dedicated service guide so their claims remain with the canonical service owner.'
+              : 'Locality facts and technical advice are kept separate. Each source below states the limited point it supports; none is used to infer a lock or access condition at an individual property.'}
           </p>
           <p className="text-sm text-gray-500 mt-3">Content reviewed <time dateTime={guide.reviewedOn}>{guide.reviewedOn}</time>.</p>
           <ul className="space-y-4 mt-7">
-            {guide.sources.map(source => (
-              <li id={`evidence-source-${source.id}`} key={source.id} className="scroll-mt-28 rounded-xl border border-gray-200 p-5">
+            {pageSources.map(source => (
+              <li id={`evidence-source-${source.id}`} key={source.id} data-source-kind={source.kind} className="scroll-mt-28 rounded-xl border border-gray-200 p-5">
                 <p className="text-xs uppercase tracking-wider font-bold text-[#8A5A00] mb-2">{source.kind.replace('-', ' ')}</p>
                 <a href={source.url} target="_blank" rel="noopener noreferrer" className="font-bold text-[#0F1B2D] underline decoration-[#FFB800] underline-offset-4 hover:text-[#8A5A00]">{source.title}</a>
                 <p className="text-sm text-gray-600 mt-1">{source.publisher}</p>

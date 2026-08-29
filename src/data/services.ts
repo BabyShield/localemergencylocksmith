@@ -49,7 +49,7 @@ export const SERVICES: Service[] = [
     description: '24/7 temporary boarding and burglary-related lock assessment for damaged doors, locks or windows across listed Coventry-area locations.',
     priceFrom: serviceStartingPrice('boarding-up'),
     keywords: ['emergency boarding up coventry', 'burglary repairs coventry', 'emergency boarding up service coventry', 'board up service coventry', 'emergency window boarding up coventry', 'emergency boarding up cost coventry'],
-    metaTitle: `Boarding Up & Burglary Repairs Coventry | From £${serviceStartingPrice('boarding-up')}`,
+    metaTitle: `Emergency Boarding Up & Burglary Repairs Coventry | From £${serviceStartingPrice('boarding-up')}`,
     metaDescription: `Emergency boarding up and burglary repairs in Coventry for damaged doors, locks and windows. Available 24/7 from £${serviceStartingPrice('boarding-up')}, with no VAT or call-out fee.`,
   },
   {

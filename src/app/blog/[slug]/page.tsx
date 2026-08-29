@@ -277,9 +277,9 @@ export default async function BlogPostPage({ params }: Props) {
               <h2 className="text-2xl font-black text-gray-900 mb-6">Frequently Asked Questions</h2>
               <div className="space-y-4">
                 {content.faqs.map((faq) => (
-                  <div key={faq.q} className="bg-gray-50 rounded-xl p-6 border border-gray-200">
-                    <p className="font-bold text-gray-900 mb-2">{faq.q}</p>
-                    <p className="text-gray-600 text-sm leading-relaxed">{faq.a}</p>
+                  <div key={faq.q} data-faq-item="true" className="bg-gray-50 rounded-xl p-6 border border-gray-200">
+                    <p data-faq-question="true" className="font-bold text-gray-900 mb-2">{faq.q}</p>
+                    <p data-faq-answer="true" className="text-gray-600 text-sm leading-relaxed">{faq.a}</p>
                   </div>
                 ))}
               </div>

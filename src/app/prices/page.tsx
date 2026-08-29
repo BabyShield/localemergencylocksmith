@@ -242,9 +242,9 @@ export default function PricesPage() {
           <h2 className="text-2xl font-black text-gray-900 mb-6 text-center">Price FAQs</h2>
           <div className="space-y-4">
             {PRICE_FAQS.map((faq) => (
-              <div key={faq.q} className="bg-white rounded-lg border border-gray-200 p-6">
-                <p className="font-semibold text-gray-900 mb-2">{faq.q}</p>
-                <p className="text-gray-600 text-sm leading-relaxed">{faq.a}</p>
+              <div key={faq.q} data-faq-item="true" className="bg-white rounded-lg border border-gray-200 p-6">
+                <p data-faq-question="true" className="font-semibold text-gray-900 mb-2">{faq.q}</p>
+                <p data-faq-answer="true" className="text-gray-600 text-sm leading-relaxed">{faq.a}</p>
               </div>
             ))}
           </div>

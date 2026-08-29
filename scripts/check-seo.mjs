@@ -8,6 +8,13 @@ const failures = []
 const warnings = []
 
 const SERVICE_SLUGS = ['emergency-lockout', 'lock-change', 'upvc-lock-repair', 'boarding-up', 'lock-upgrade']
+const SERVICE_SHORT_NAMES = Object.freeze({
+  'emergency-lockout': 'Emergency Lockout',
+  'lock-change': 'Lock Repair & Replacement',
+  'upvc-lock-repair': 'uPVC Lock Repair',
+  'boarding-up': 'Boarding Up & Burglary Repairs',
+  'lock-upgrade': 'Lock Upgrade',
+})
 const PRICE_OWNER_PATH = '/prices'
 const PRICE_OWNER_TITLE_H1_PATTERN = /\blocksmith (?:costs?|prices)\b/i
 const PRICE_OWNER_EXACT_QUESTION_PATTERN = /\bwhat does an emergency locksmith cost in coventry\b/i
@@ -48,6 +55,7 @@ const TOWN_CENTRE_ALIASES = {
   'stratford-upon-avon-town-centre': 'stratford-upon-avon',
 }
 const GOVERNED_TOWNS = ['nuneaton', 'bedworth', 'rugby', 'leamington-spa', 'warwick', 'kenilworth', 'stratford-upon-avon']
+const HUB_CONTEXT_ONLY_AREAS = ['attleborough', 'stockingford', 'weddington', 'horeston-grange', 'camp-hill', 'bermuda-park', 'cawston', 'new-bilton']
 const TOWN_SERVICE_EVIDENCE_SECTIONS = ['intro', 'local-angle', 'local-evidence', 'preparation', 'checks', 'faqs']
 const SINGLE_AREA_POSTCODES = {
   cv1: 'coventry-city-centre',
@@ -266,6 +274,14 @@ function visibleText(html) {
       .replace(/<style\b[\s\S]*?<\/style>/gi, ' ')
       .replace(/<[^>]+>/g, ' '),
   ).replace(/\s+/g, ' ').trim()
+}
+
+function markedVisibleTexts(html, attribute) {
+  const pattern = new RegExp(
+    `<([a-z][\\w:-]*)\\b(?=[^>]*\\b${attribute}=["']true["'])[^>]*>([\\s\\S]*?)<\\/\\1>`,
+    'gi',
+  )
+  return Array.from(html.matchAll(pattern), match => visibleText(match[2]))
 }
 
 function mainContent(html) {
@@ -649,86 +665,126 @@ try {
         )
         checkEvidenceBlockContract(fact.block, `${productionUrl.pathname} local fact ${fact.index}`)
       }
-      for (const serviceSlug of SERVICE_SLUGS) {
-        check(html.includes(`id="${serviceSlug}"`), `${productionUrl.pathname} is missing ${serviceSlug} guidance`)
-      }
+      const hasDedicatedOwnerPages = GOVERNED_TOWNS.includes(areaSlug)
+      const sourceRegisterScope = mainHtml.match(/<section\b[^>]*\bdata-source-register-scope=["']([^"']+)["'][^>]*>/i)?.[1] ?? ''
+      const renderedSourceKinds = Array.from(
+        mainHtml.matchAll(/<li\b[^>]*\bdata-source-kind=["']([^"']+)["'][^>]*>/gi),
+        match => match[1],
+      )
       check(!pageText.includes('Common Lock Problems in'), `${productionUrl.pathname} still renders the unsupported legacy common-problems block`)
-      for (const serviceSlug of SERVICE_SLUGS) {
-        check(mainHrefs.has(`#${serviceSlug}`), `${productionUrl.pathname} has no visible jump link to #${serviceSlug}`)
-        const block = evidenceBlock(mainHtml, 'article', serviceSlug)
-        check(Boolean(block), `${productionUrl.pathname} is missing the ${serviceSlug} evidence section marker`)
-        if (block) {
-          checkEvidenceBlockContract(block, `${productionUrl.pathname} ${serviceSlug} guidance`)
-          const selectedLocalFactBlock = block.match(
-            /<div\b(?=[^>]*data-selected-local-fact-links=["']true["'])[^>]*>[\s\S]*?<\/div>/i,
-          )?.[0] ?? ''
-          const localFactLinks = Array.from(
-            selectedLocalFactBlock.matchAll(/href=["']#(local-fact-\d+)["']/gi),
-            match => match[1],
-          )
-          const openingTag = block.match(/^<article\b[^>]*>/i)?.[0] ?? ''
-          const declaredLocalFactIndexes = (getAttribute(openingTag, 'data-local-fact-indexes') ?? '')
-            .trim()
-            .split(/\s+/)
-            .filter(Boolean)
-          const declaredLocalFactLinks = declaredLocalFactIndexes.map(index => `local-fact-${index}`)
-          check(declaredLocalFactIndexes.length > 0, `${productionUrl.pathname} ${serviceSlug} guidance declares no selected local facts`)
-          check(
-            declaredLocalFactIndexes.every(index => /^[1-9]\d*$/.test(index)),
-            `${productionUrl.pathname} ${serviceSlug} guidance has an invalid selected local fact declaration`,
-          )
-          check(
-            localFactLinks.join(' ') === declaredLocalFactLinks.join(' '),
-            `${productionUrl.pathname} ${serviceSlug} rendered local fact links do not match its declared selections`,
-          )
-          check(localFactLinks.length > 0, `${productionUrl.pathname} ${serviceSlug} guidance links no selected local fact`)
-          check(new Set(localFactLinks).size === localFactLinks.length, `${productionUrl.pathname} ${serviceSlug} guidance repeats a selected local fact link`)
-          for (const localFactLink of localFactLinks) {
-            check(localFactTargets.has(localFactLink), `${productionUrl.pathname} ${serviceSlug} guidance links missing #${localFactLink}`)
+      if (hasDedicatedOwnerPages) {
+        check(sourceRegisterScope === 'locality-only', `${productionUrl.pathname} source register scope is ${sourceRegisterScope || 'missing'}; expected locality-only`)
+        check(!renderedSourceKinds.includes('technical'), `${productionUrl.pathname} locality-only source register still renders a technical source`)
+        check(pageText.includes('links to the primary locality sources used'), `${productionUrl.pathname} does not disclose its locality-only review sources`)
+        check(
+          pageText.includes('Technical sources stay on each dedicated service guide'),
+          `${productionUrl.pathname} does not explain where its technical service evidence is published`,
+        )
+        check(
+          !pageText.includes('links to the primary locality and technical sources used'),
+          `${productionUrl.pathname} incorrectly claims its parent source register includes technical sources`,
+        )
+        check(
+          html.includes('data-dedicated-service-owner-links="true"'),
+          `${productionUrl.pathname} is missing its dedicated service-owner directory`,
+        )
+        const ownerCards = Array.from(
+          mainHtml.matchAll(/<article\b(?=[^>]*data-dedicated-service-owner=["']([^"']+)["'])[^>]*>[\s\S]*?<\/article>/gi),
+          match => ({ serviceSlug: match[1], block: match[0] }),
+        )
+        check(ownerCards.length === SERVICE_SLUGS.length, `${productionUrl.pathname} renders ${ownerCards.length} dedicated owner cards; expected ${SERVICE_SLUGS.length}`)
+        check(new Set(ownerCards.map(card => card.serviceSlug)).size === SERVICE_SLUGS.length, `${productionUrl.pathname} repeats a dedicated service-owner card`)
+        for (const serviceSlug of SERVICE_SLUGS) {
+          const ownerHref = `/areas/${areaSlug}/${serviceSlug}`
+          const ownerCard = ownerCards.find(card => card.serviceSlug === serviceSlug)
+          check(Boolean(ownerCard), `${productionUrl.pathname} is missing its ${serviceSlug} owner card`)
+          check(mainHrefs.has(ownerHref), `${productionUrl.pathname} does not link directly to ${ownerHref}`)
+          check(!html.includes(`id="${serviceSlug}"`), `${productionUrl.pathname} retains duplicate #${serviceSlug} guidance beside its dedicated owner`)
+          check(!html.includes(`data-evidence-section="${serviceSlug}"`), `${productionUrl.pathname} retains duplicate ${serviceSlug} evidence beside its dedicated owner`)
+          if (ownerCard) {
+            check(internalHrefs(ownerCard.block).has(ownerHref), `${productionUrl.pathname} ${serviceSlug} owner card does not link to ${ownerHref}`)
+            check(visibleText(ownerCard.block).includes('Guide preview:'), `${productionUrl.pathname} ${serviceSlug} owner card is missing its guide-preview label`)
+            check(!visibleText(ownerCard.block).includes('First useful check:'), `${productionUrl.pathname} ${serviceSlug} owner card presents preview copy as sourced parent guidance`)
+            const summaryBlock = ownerCard.block.match(/<p\b(?=[^>]*data-owner-summary=["']true["'])[^>]*>[\s\S]*?<\/p>/i)?.[0] ?? ''
+            const previewBlock = ownerCard.block.match(/<p\b(?=[^>]*data-owner-first-check=["']true["'])[^>]*>[\s\S]*?<\/p>/i)?.[0] ?? ''
+            check(visibleText(summaryBlock).split(/\s+/).filter(Boolean).length >= 8, `${productionUrl.pathname} ${serviceSlug} owner card has no substantive visible summary`)
+            check(visibleText(previewBlock).split(/\s+/).filter(Boolean).length >= 5, `${productionUrl.pathname} ${serviceSlug} owner card has no substantive visible guide preview`)
+            check(visibleText(ownerCard.block).includes('Read the complete'), `${productionUrl.pathname} ${serviceSlug} owner card has no visible owner-link cue`)
+            check(!/data-service-faq|data-selected-local-fact-links|data-evidence-source-ids/i.test(ownerCard.block), `${productionUrl.pathname} ${serviceSlug} owner card embeds duplicate full guidance or evidence`)
+            const ownerHeadings = headingOutline(ownerCard.block)
+            check(ownerHeadings.length === 1 && ownerHeadings[0].level === 3, `${productionUrl.pathname} ${serviceSlug} owner card has an invalid heading structure`)
+            check(ownerHeadings[0]?.text === SERVICE_SHORT_NAMES[serviceSlug], `${productionUrl.pathname} ${serviceSlug} owner-card heading is ${JSON.stringify(ownerHeadings[0]?.text)}; expected ${JSON.stringify(SERVICE_SHORT_NAMES[serviceSlug])}`)
           }
-          const faqBlock = block.match(
-            /<div\b(?=[^>]*data-faq-local-fact-index=["'][^"']+["'])[^>]*>[\s\S]*?<\/div>/i,
-          )?.[0] ?? ''
-          const faqOpeningTag = faqBlock.match(/^<div\b[^>]*>/i)?.[0] ?? ''
-          const faqFactIndex = getAttribute(faqOpeningTag, 'data-faq-local-fact-index') ?? ''
-          const declaredFaqSourceIds = (getAttribute(faqOpeningTag, 'data-faq-source-ids') ?? '')
-            .trim()
-            .split(/\s+/)
-            .filter(Boolean)
-          const renderedFaqFactLinks = Array.from(
-            faqBlock.matchAll(/<a\b(?=[^>]*data-faq-evidence-link=["']true["'])[^>]*href=["']#(local-fact-\d+)["'][^>]*>/gi),
-            match => match[1],
-          )
-          const renderedFaqSourceIds = Array.from(
-            faqBlock.matchAll(/href=["']#evidence-source-([a-z0-9-]+)["']/gi),
-            match => match[1],
-          )
-          const renderedFaqServiceAnswers = Array.from(
-            faqBlock.matchAll(/<p\b(?=[^>]*data-faq-service-answer=["']true["'])[^>]*>/gi),
-          )
-          const renderedFaqEvidenceNotes = Array.from(
-            faqBlock.matchAll(/<p\b(?=[^>]*data-faq-evidence-guidance=["']true["'])[^>]*>/gi),
-          )
-          check(declaredLocalFactIndexes.includes(faqFactIndex), `${productionUrl.pathname} ${serviceSlug} FAQ fact ${faqFactIndex || 'missing'} is not selected`)
-          check(renderedFaqServiceAnswers.length === 1, `${productionUrl.pathname} ${serviceSlug} FAQ does not render exactly one service answer`)
-          check(renderedFaqEvidenceNotes.length === 1, `${productionUrl.pathname} ${serviceSlug} FAQ does not render exactly one labelled evidence note`)
-          check(
-            renderedFaqFactLinks.length === 1 && renderedFaqFactLinks[0] === `local-fact-${faqFactIndex}`,
-            `${productionUrl.pathname} ${serviceSlug} FAQ does not link exactly once to declared local fact ${faqFactIndex || 'missing'}`,
-          )
-          check(localFactTargets.has(`local-fact-${faqFactIndex}`), `${productionUrl.pathname} ${serviceSlug} FAQ links a missing local fact`)
-          check(declaredFaqSourceIds.length > 0, `${productionUrl.pathname} ${serviceSlug} FAQ declares no local source IDs`)
-          check(
-            renderedFaqSourceIds.join(' ') === declaredFaqSourceIds.join(' '),
-            `${productionUrl.pathname} ${serviceSlug} FAQ source badges do not match its declared fact sources`,
-          )
-          const expectedDetailsHref = GOVERNED_TOWNS.includes(areaSlug)
-            ? `/areas/${areaSlug}/${serviceSlug}`
-            : `/services/${serviceSlug}`
-          check(
-            internalHrefs(block).has(expectedDetailsHref),
-            `${productionUrl.pathname} ${serviceSlug} guidance does not link to ${expectedDetailsHref}`,
-          )
+        }
+      } else {
+        const expectsPairLinkedLocalFacts = !HUB_CONTEXT_ONLY_AREAS.includes(areaSlug)
+        check(sourceRegisterScope === 'locality-and-technical', `${productionUrl.pathname} source register scope is ${sourceRegisterScope || 'missing'}; expected locality-and-technical`)
+        check(renderedSourceKinds.includes('technical'), `${productionUrl.pathname} combined source register renders no technical source`)
+        check(
+          pageText.includes('Locality facts and technical advice are kept separate'),
+          `${productionUrl.pathname} does not explain its combined locality and technical source register`,
+        )
+        check(!html.includes('data-dedicated-service-owner-links="true"'), `${productionUrl.pathname} renders a dedicated-owner directory without dedicated pages`)
+        for (const serviceSlug of SERVICE_SLUGS) {
+          check(html.includes(`id="${serviceSlug}"`), `${productionUrl.pathname} is missing ${serviceSlug} guidance`)
+          check(mainHrefs.has(`#${serviceSlug}`), `${productionUrl.pathname} has no visible jump link to #${serviceSlug}`)
+          const block = evidenceBlock(mainHtml, 'article', serviceSlug)
+          check(Boolean(block), `${productionUrl.pathname} is missing the ${serviceSlug} evidence section marker`)
+          if (block) {
+            checkEvidenceBlockContract(block, `${productionUrl.pathname} ${serviceSlug} guidance`)
+            const selectedLocalFactBlock = block.match(
+              /<p\b(?=[^>]*data-selected-local-fact-links=["']true["'])[^>]*>[\s\S]*?<\/p>/i,
+            )?.[0] ?? ''
+            const localFactLinks = Array.from(
+              selectedLocalFactBlock.matchAll(/href=["']#(local-fact-\d+)["']/gi),
+              match => match[1],
+            )
+            const openingTag = block.match(/^<article\b[^>]*>/i)?.[0] ?? ''
+            const declaredLocalFactIndexes = (getAttribute(openingTag, 'data-local-fact-indexes') ?? '')
+              .trim()
+              .split(/\s+/)
+              .filter(Boolean)
+            const declaredLocalFactLinks = declaredLocalFactIndexes.map(index => `local-fact-${index}`)
+            if (expectsPairLinkedLocalFacts) {
+              check(declaredLocalFactIndexes.length > 0, `${productionUrl.pathname} ${serviceSlug} guidance declares no selected local facts`)
+              check(Boolean(selectedLocalFactBlock), `${productionUrl.pathname} ${serviceSlug} guidance renders no selected-local-facts block`)
+            } else {
+              check(declaredLocalFactIndexes.length === 0, `${productionUrl.pathname} ${serviceSlug} declares local facts despite hub-context-only evidence mode`)
+              check(!selectedLocalFactBlock, `${productionUrl.pathname} ${serviceSlug} renders selected local facts despite hub-context-only evidence mode`)
+            }
+            check(
+              declaredLocalFactIndexes.every(index => /^[1-9]\d*$/.test(index)),
+              `${productionUrl.pathname} ${serviceSlug} guidance has an invalid selected local fact declaration`,
+            )
+            check(
+              localFactLinks.join(' ') === declaredLocalFactLinks.join(' '),
+              `${productionUrl.pathname} ${serviceSlug} rendered local fact links do not match its declared selections`,
+            )
+            if (expectsPairLinkedLocalFacts) {
+              check(localFactLinks.length > 0, `${productionUrl.pathname} ${serviceSlug} guidance links no selected local fact`)
+            } else {
+              check(localFactLinks.length === 0, `${productionUrl.pathname} ${serviceSlug} links local facts despite hub-context-only evidence mode`)
+            }
+            check(new Set(localFactLinks).size === localFactLinks.length, `${productionUrl.pathname} ${serviceSlug} guidance repeats a selected local fact link`)
+            for (const localFactLink of localFactLinks) {
+              check(localFactTargets.has(localFactLink), `${productionUrl.pathname} ${serviceSlug} guidance links missing #${localFactLink}`)
+            }
+            const serviceFaqBlocks = Array.from(
+              block.matchAll(/<div\b(?=[^>]*data-service-faq=["']true["'])[^>]*>[\s\S]*?<\/div>/gi),
+              match => match[0],
+            )
+            check(serviceFaqBlocks.length === 1, `${productionUrl.pathname} ${serviceSlug} guidance renders ${serviceFaqBlocks.length} service FAQ blocks; expected one`)
+            const serviceFaqBlock = serviceFaqBlocks[0] ?? ''
+            const serviceFaqHeadings = headingOutline(serviceFaqBlock)
+            check(serviceFaqHeadings.length === 1 && serviceFaqHeadings[0].level === 4, `${productionUrl.pathname} ${serviceSlug} service FAQ has an invalid heading structure`)
+            check(visibleText(serviceFaqBlock).split(/\s+/).filter(Boolean).length >= 24, `${productionUrl.pathname} ${serviceSlug} service FAQ is too short`)
+            check(!/data-faq-(?:local-fact|evidence|source)/i.test(serviceFaqBlock), `${productionUrl.pathname} ${serviceSlug} service FAQ still manufactures a local-evidence suffix`)
+            const expectedDetailsHref = `/services/${serviceSlug}`
+            check(
+              internalHrefs(block).has(expectedDetailsHref),
+              `${productionUrl.pathname} ${serviceSlug} guidance does not link to ${expectedDetailsHref}`,
+            )
+          }
         }
       }
     }
@@ -771,6 +827,35 @@ try {
       } catch (error) {
         failures.push(`${productionUrl.pathname} has invalid JSON-LD: ${error.message}`)
       }
+    }
+
+    const visibleFaqQuestions = markedVisibleTexts(mainHtml, 'data-faq-question')
+    const visibleFaqAnswers = markedVisibleTexts(mainHtml, 'data-faq-answer')
+    const faqPageNodes = parsedSchemaNodes.filter(node => hasSchemaType(node, 'FAQPage'))
+    if (visibleFaqQuestions.length > 0 || visibleFaqAnswers.length > 0 || faqPageNodes.length > 0) {
+      check(
+        visibleFaqQuestions.length === visibleFaqAnswers.length,
+        `${productionUrl.pathname} renders ${visibleFaqQuestions.length} marked FAQ questions and ${visibleFaqAnswers.length} marked answers`,
+      )
+      check(
+        visibleFaqQuestions.length > 0 && visibleFaqQuestions.every(Boolean) && visibleFaqAnswers.every(Boolean),
+        `${productionUrl.pathname} has FAQPage data without complete, non-empty visible FAQ markers`,
+      )
+      check(faqPageNodes.length === 1, `${productionUrl.pathname} has ${faqPageNodes.length} FAQPage nodes for ${visibleFaqQuestions.length} visible FAQs`)
+      const schemaFaqPairs = Array.isArray(faqPageNodes[0]?.mainEntity)
+        ? faqPageNodes[0].mainEntity.map(item => ({
+            q: String(item?.name ?? '').replace(/\s+/g, ' ').trim(),
+            a: String(item?.acceptedAnswer?.text ?? '').replace(/\s+/g, ' ').trim(),
+          }))
+        : []
+      const visibleFaqPairs = visibleFaqQuestions.map((q, index) => ({ q, a: visibleFaqAnswers[index] ?? '' }))
+      const sortedPairs = pairs => [...pairs].sort((left, right) => (
+        left.q.localeCompare(right.q) || left.a.localeCompare(right.a)
+      ))
+      check(
+        JSON.stringify(sortedPairs(schemaFaqPairs)) === JSON.stringify(sortedPairs(visibleFaqPairs)),
+        `${productionUrl.pathname} FAQPage question/answer text does not exactly match its visible FAQs`,
+      )
     }
 
     const websiteNodes = parsedSchemaNodes.filter(node => hasSchemaType(node, 'WebSite'))
@@ -891,10 +976,10 @@ try {
     }
 
     if (productionUrl.pathname === '/about') {
-      const aboutPage = parsedSchemaNodes.find(node => hasSchemaType(node, 'AboutPage'))
+      const profilePage = parsedSchemaNodes.find(node => hasSchemaType(node, 'ProfilePage'))
       const person = parsedSchemaNodes.find(node => hasSchemaType(node, 'Person') && node?.['@id'] === `${CANONICAL_ORIGIN}/about#ross`)
-      check(aboutPage?.mainEntity?.['@id'] === `${CANONICAL_ORIGIN}/about#ross`, '/about does not identify Ross as its main entity')
-      check(aboutPage?.about?.['@id'] === `${CANONICAL_ORIGIN}/#business`, '/about does not reference the business it describes')
+      check(profilePage?.mainEntity?.['@id'] === `${CANONICAL_ORIGIN}/about#ross`, '/about ProfilePage does not identify Ross as its main entity')
+      check(profilePage?.about?.['@id'] === `${CANONICAL_ORIGIN}/#business`, '/about ProfilePage does not reference the business it describes')
       check(person?.url === `${CANONICAL_ORIGIN}/about`, '/about has no stable Person author URL')
       check(person?.worksFor?.['@id'] === `${CANONICAL_ORIGIN}/#business`, '/about Person has the wrong worksFor reference')
     }

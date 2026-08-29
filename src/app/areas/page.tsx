@@ -69,7 +69,7 @@ export default function AreasPage() {
       <section className="py-12 px-4 text-white" style={{ background: '#0F1B2D' }}>
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-3xl md:text-4xl font-black mb-4">
-            Emergency Locksmith — All Areas Covered
+            Locksmith Areas Across Coventry &amp; Warwickshire
           </h1>
           <p className="text-gray-300 text-lg mb-6 max-w-2xl mx-auto">
             I cover the 78 listed towns, villages, and suburbs across Coventry and Warwickshire.

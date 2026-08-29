@@ -650,6 +650,190 @@ const SERVICE_FAQ_VARIANTS: Record<ServiceAreaSlug, readonly ServiceFaqVariant[]
   ],
 }
 
+const HUB_CONTEXT_ONLY_LOCALITY_PATTERNS: Partial<Record<AreaSlug, RegExp>> = {
+  attleborough: /\b(?:medieval|manor|1888|1243|domesday|historic environment record|historic-study|historic record|heritage association)\b/i,
+  stockingford: /\b(?:manor|medieval|historic map|historic record|street register|street schedule|highway-locality|highway labels|stockingford street labels|locality sources)\b/i,
+  weddington: /\b(?:walkabout|engagement streets|meadows|public park|park entry|housing schedule|locality evidence)\b/i,
+  'horeston-grange': /\b(?:woodlands walk|public-space|park directory|street register|county register|highway labels|locality records)\b/i,
+  'camp-hill': /\b(?:walkabout|queen elizabeth road|public park|park entry|housing streets|housing schedule|locality evidence)\b/i,
+  'bermuda-park': /\b(?:station|passenger|railway|rail history|rail chronology|transport history|transport figures|transport record)\b/i,
+  cawston: /\b(?:parish|questionnaire|2010|2009|community hall|administrative directory|community plan|action plan|administrative evidence)\b/i,
+  'new-bilton': /\b(?:play-area|play area|recreation ground|ward pilot|hyperlocal|consultation|public-space proposal|council pilot)\b/i,
+}
+
+interface HubServiceDecisionContext {
+  issue: string
+  observations: string
+  inspectionItems: string
+  controlledSubject: string
+  outcomes: string
+}
+
+const HUB_CONTEXT_ONLY_PARAGRAPH_FRAMES: Partial<Record<AreaSlug, [
+  (serviceLabel: string, checks: readonly string[], context: HubServiceDecisionContext) => string,
+  (serviceLabel: string, checks: readonly string[], context: HubServiceDecisionContext) => string,
+]>> = {
+  attleborough: [
+    (serviceLabel, checks) => `Build the ${serviceLabel} brief as a chronological evidence sequence for the present entrance. ${checks[0]} ${checks[1]} Keep ${serviceLabel} caller reports, photographs and measurements labelled separately so an untested symptom is not mistaken for a finding made at the door.`,
+    (serviceLabel, checks) => `Close the ${serviceLabel} decision with a traceable scope boundary. ${checks[2]} State which observation supports the next ${serviceLabel} step, what still needs direct testing, who can approve it and when a changed method or price would require fresh agreement.`,
+  ],
+  stockingford: [
+    (serviceLabel, checks, context) => `Use a component-by-component worksheet for the ${serviceLabel} request instead of one broad description. ${checks[0]} ${checks[1]} Give ${context.inspectionItems} separate entries, marking each item as reported, photographed, measured or awaiting inspection.`,
+    (serviceLabel, checks, context) => `Turn that worksheet into a bounded ${serviceLabel} proposal only after responsibility is clear. ${checks[2]} Link ${context.outcomes} to the relevant recorded item, then list retained material, exclusions, follow-on work and any price variation requiring approval.`,
+  ],
+  weddington: [
+    (serviceLabel, checks, context) => `Separate the customer's account from the safe tests used for this ${serviceLabel} assessment. ${checks[0]} ${checks[1]} Record the order of events and changes in ${context.observations}, because a reproducible sequence is more useful than a guessed component or method.`,
+    (serviceLabel, checks, context) => `Use the comparison to define what the ${serviceLabel} visit must resolve. ${checks[2]} Identify ${context.controlledSubject}, note any test that could not be completed safely, and connect ${context.outcomes} to the evidence actually available.`,
+  ],
+  'horeston-grange': [
+    (serviceLabel, checks, context) => `Treat the ${serviceLabel} instruction as a threshold-control problem with a named opening and decision-maker. ${checks[0]} ${checks[1]} Identify who controls ${context.controlledSubject} before removal, measurement or temporary attachment, and record which person supplied each instruction.`,
+    (serviceLabel, checks, context) => `Make the ${serviceLabel} handover usable to the person controlling that threshold. ${checks[2]} Describe ${context.issue}, the inspection still required and anything excluded from the proposed scope. Record ${context.outcomes}, including later repair or approval questions and the basis of the expected price.`,
+  ],
+  'camp-hill': [
+    (serviceLabel, checks, context) => `Create a present-condition brief before deciding the ${serviceLabel} scope. ${checks[0]} ${checks[1]} Capture ${context.observations} at the identified opening, while keeping supplied photographs and caller descriptions distinct from observations that require attendance.`,
+    (serviceLabel, checks, context) => `Convert that ${serviceLabel} brief into explicit decision branches rather than a single assumed outcome. ${checks[2]} Say which finding would support ${context.outcomes}, then record the responsible customer, included material, unresolved dependencies, inspection limits and any agreed price change.`,
+  ],
+  'bermuda-park': [
+    (serviceLabel, checks, context) => `Organise the ${serviceLabel} booking by property, unit, controlled opening and responsible contact. ${checks[0]} ${checks[1]} Add ${context.issue}, safe-access restrictions, photographs and relevant identifiers as separate fields so the instruction does not collapse several entrances into one.`,
+    (serviceLabel, checks, context) => `Use those fields to prepare a precise ${serviceLabel} inspection and approval route. ${checks[2]} The resulting proposal should state the observed basis, measurements still required, ${context.outcomes}, exclusions, responsible approver, inspection limits and how any on-site change to work or price will be handled.`,
+  ],
+  cawston: [
+    (serviceLabel, checks, context) => `Keep authority, symptoms and physical evidence in separate parts of the ${serviceLabel} record. ${checks[0]} ${checks[1]} Identify what the customer reports, what photographs show and what must still be checked at the opening, including ${context.observations}.`,
+    (serviceLabel, checks, context) => `Resolve those parts in order before agreeing the ${serviceLabel} work. ${checks[2]} First confirm the responsible person, then test or measure ${context.inspectionItems}, and finally document ${context.outcomes}, including limits, follow-on questions and expected price.`,
+  ],
+  'new-bilton': [
+    (serviceLabel, checks, context) => `Work forward from the entrance's present condition when preparing the ${serviceLabel} instruction. ${checks[0]} ${checks[1]} Note ${context.observations}, without turning an address label into a mechanical conclusion.`,
+    (serviceLabel, checks, context) => `Set a clear decision point for every proposed ${serviceLabel} action. ${checks[2]} Explain what inspection result would justify ${context.outcomes}, what remains outside the work, who must approve it and when revised findings require a new price agreement.`,
+  ],
+}
+
+const SERVICE_DECISION_LABELS: Record<ServiceAreaSlug, string> = {
+  'emergency-lockout': 'lockout',
+  'lock-change': 'lock-change',
+  'upvc-lock-repair': 'uPVC repair',
+  'boarding-up': 'temporary-boarding',
+  'lock-upgrade': 'door-upgrade',
+}
+
+const SERVICE_DECISION_CONTEXTS: Record<ServiceAreaSlug, HubServiceDecisionContext> = {
+  'emergency-lockout': {
+    issue: 'the reported lockout symptoms and any existing damage',
+    observations: 'key response, latch or deadlock state, door position, frame contact and visible damage',
+    inspectionItems: 'the fitted lock, handles, door leaf, frame, hinges and existing damage',
+    controlledSubject: 'the locked entrance and its fitted hardware',
+    outcomes: 'the supported opening step, any component work and required reinstatement',
+  },
+  'lock-change': {
+    issue: 'the reason for the change, current operation and required key control',
+    observations: 'key control, lock operation, component markings, door alignment and measured geometry',
+    inspectionItems: 'the cylinder, lock case, keep, furniture, door and frame alignment',
+    controlledSubject: 'the affected lock, supplied keys and shared or private entrance',
+    outcomes: 'adjustment, repair, cylinder work or measured replacement',
+  },
+  'upvc-lock-repair': {
+    issue: 'the reported key, handle and multipoint-lock symptoms',
+    observations: 'key rotation, handle travel, locking-point movement, open-and-closed operation and frame contact',
+    inspectionItems: 'the handles, cylinder, faceplate, locking points, keeps, hinges and frame alignment',
+    controlledSubject: 'the affected uPVC or composite entrance and its fitted mechanism',
+    outcomes: 'alignment work, mechanism repair or a measured compatible component',
+  },
+  'boarding-up': {
+    issue: 'the damaged openings, scene instructions and safe-access restrictions',
+    observations: 'opening dimensions, surviving frame, damaged door or glazing, adjacent material and scene restrictions',
+    inspectionItems: 'each damaged opening, surviving frame, glazing or door material and safe attachment points',
+    controlledSubject: 'the damaged opening and any temporary attachment',
+    outcomes: 'the temporary covering method, attachment scope and permanent-repair handover',
+  },
+  'lock-upgrade': {
+    issue: 'the documented security objective and present door-set condition',
+    observations: 'door operation, frame and hinge condition, lock engagement, furniture, markings and measured cylinder fit',
+    inspectionItems: 'the door leaf, frame, hinges, keeps, handles, lock, cylinder fit and protective furniture',
+    controlledSubject: 'the complete private or shared entrance and any visible fabric',
+    outcomes: 'adjustment, reinforcement or a correctly sized compatible upgrade',
+  },
+}
+
+const SERVICE_TECHNICAL_SENTENCE_PATTERNS: Record<ServiceAreaSlug, RegExp> = {
+  'emergency-lockout': /\b(?:authority|identity|entrance|threshold|latch|deadlock|key|lock|door|frame|hinge|opening method|drilling|damage|price|scope)\b/i,
+  'lock-change': /\b(?:authority|key control|entrance|threshold|cylinder|lock case|keep|alignment|door|frame|hinge|hardware|marking|measurement|replacement|repair|price|scope)\b/i,
+  'upvc-lock-repair': /\b(?:uPVC|composite|entrance|threshold|handle|key|locking point|faceplate|backset|centres|gearbox|multipoint|alignment|hinge|keep|frame|measurement|mechanism|repair|scope)\b/i,
+  'boarding-up': /\b(?:police|evidence|scene|entrance|threshold|opening|frame|glazing|glass|door|damage|photograph|temporary|board|attachment|joinery|structural|scope|authoris)\b/i,
+  'lock-upgrade': /\b(?:entrance|threshold|door|frame|hinge|keep|handle|lock|cylinder|hardware|alignment|measurement|manufacturer|product|accredit|certif|upgrade|reinforcement|replacement|scope)\b/i,
+}
+
+const NON_TECHNICAL_CONTEXT_PATTERN = /\b(?:council|source|sources|cited|locality|area-level|area name|area label|local history|historic|heritage|medieval|manor|mapped|map|street|park|station|rail|railway|transport|parish|ward|programme|pilot|recreation ground|public[- ]place|public[- ]space|walkabout|directory|register|schedule|borough|county|selected place|named ground|community plan|questionnaire|property (?:record|status|evidence|information)|current (?:record|status|evidence))\b/i
+
+const HUB_CONTEXT_ONLY_PAIR_CLOSERS: Partial<Record<AreaSlug, Partial<Record<ServiceAreaSlug, string>>>> = {
+  'camp-hill': {
+    'lock-change': 'Record separately whether the cylinder, lock case, keep or door alignment supports repair, adjustment or measured replacement before agreeing the final component work list.',
+  },
+  'new-bilton': {
+    'lock-change': 'Retain each serviceable component unless the inspection and key-control objective support its measured replacement.',
+    'upvc-lock-repair': 'State whether alignment, the fitted mechanism or both remain in scope after the measured operating comparison.',
+  },
+}
+
+const SERVICE_TECHNICAL_CHECK_FALLBACKS: Record<ServiceAreaSlug, string> = {
+  'emergency-lockout': 'Record the inspected opening method, affected component and any reinstatement still required.',
+  'lock-change': 'Record the measured component, retained hardware, supplied keys and final operation.',
+  'upvc-lock-repair': 'Record the safe operating tests, measured mechanism details and confirmed repair scope.',
+  'boarding-up': 'Record the damaged opening, temporary attachment, covered material and permanent repair still required.',
+  'lock-upgrade': 'Record the inspected assembly, exact product evidence, measured fit and agreed upgrade scope.',
+}
+
+const HUB_CONTEXT_ONLY_CHECK_FALLBACK_OVERRIDES: Partial<Record<AreaSlug, Partial<Record<ServiceAreaSlug, string>>>> = {
+  weddington: {
+    'emergency-lockout': 'Record the opening method chosen after safe comparison, the component affected and any reinstatement still required.',
+  },
+  cawston: {
+    'emergency-lockout': 'Link the selected opening method to the inspected condition, then note any affected component and reinstatement work.',
+  },
+  'new-bilton': {
+    'emergency-lockout': 'Document which inspected condition supports the opening method, plus any component work or reinstatement outside it.',
+  },
+}
+
+function punctuated(sentence: string): string {
+  const trimmed = sentence.trim()
+  return /[.!?]$/.test(trimmed) ? trimmed : `${trimmed}.`
+}
+
+function hubContextOnlyBody(
+  areaSlug: AreaSlug,
+  serviceSlug: ServiceAreaSlug,
+  body: readonly string[],
+  checks: readonly string[],
+): [string, string] {
+  const localityPattern = HUB_CONTEXT_ONLY_LOCALITY_PATTERNS[areaSlug]
+  const frames = HUB_CONTEXT_ONLY_PARAGRAPH_FRAMES[areaSlug]
+  if (!localityPattern || !frames) throw new Error(`Missing hub-context-only body policy for ${areaSlug}`)
+
+  const serviceLabel = SERVICE_DECISION_LABELS[serviceSlug]
+  const serviceContext = SERVICE_DECISION_CONTEXTS[serviceSlug]
+  const checkFallback = HUB_CONTEXT_ONLY_CHECK_FALLBACK_OVERRIDES[areaSlug]?.[serviceSlug]
+    ?? SERVICE_TECHNICAL_CHECK_FALLBACKS[serviceSlug]
+  const punctuatedChecks = checks.map(check => punctuated(
+    NON_TECHNICAL_CONTEXT_PATTERN.test(check)
+      ? checkFallback
+      : check,
+  ))
+  const technicalPattern = SERVICE_TECHNICAL_SENTENCE_PATTERNS[serviceSlug]
+  return body.map((paragraph, index) => {
+    const retainedSentences = paragraph
+      .match(/[^.!?]+(?:[.!?]+|$)/g)
+      ?.map(sentence => sentence.trim())
+      .filter(sentence => (
+        sentence
+        && technicalPattern.test(sentence)
+        && !localityPattern.test(sentence)
+        && !NON_TECHNICAL_CONTEXT_PATTERN.test(sentence)
+      )) ?? []
+
+    const pairCloser = index === 1 ? HUB_CONTEXT_ONLY_PAIR_CLOSERS[areaSlug]?.[serviceSlug] : undefined
+    return `${frames[index](serviceLabel, punctuatedChecks, serviceContext)} ${retainedSentences.join(' ')} ${pairCloser ?? ''}`.trim()
+  }) as [string, string]
+}
+
 type GuideSeed = Omit<GovernedAreaGuide, 'reviewedOn' | 'sources' | 'faqs' | 'serviceGuidance'> & {
   sources: AreaGuideSource[]
   serviceGuidance: Record<
@@ -669,8 +853,16 @@ function makeGuide(seed: GuideSeed): GovernedAreaGuide {
     SERVICE_AREA_SLUGS.map((serviceSlug, serviceIndex) => {
       const variants = SERVICE_FAQ_VARIANTS[serviceSlug]
       const faq = variants[(areaIndex + serviceIndex * 2) % variants.length]
+      const authoredGuidance = seed.serviceGuidance[serviceSlug]
+      const guidance = seed.serviceEvidenceMode === 'hub-context-only'
+        ? {
+            ...authoredGuidance,
+            body: hubContextOnlyBody(seed.slug, serviceSlug, authoredGuidance.body, authoredGuidance.checks),
+            localFactIndexes: [],
+          }
+        : authoredGuidance
 
-      return [serviceSlug, { ...seed.serviceGuidance[serviceSlug], faq: { ...faq } }]
+      return [serviceSlug, { ...guidance, faq: { ...faq } }]
     }),
   ) as GovernedAreaGuide['serviceGuidance']
 
@@ -763,6 +955,7 @@ export const NORTH_EAST_AREA_GUIDES = {
   }),
   attleborough: makeGuide({
     slug: 'attleborough',
+    serviceEvidenceMode: 'hub-context-only',
     summary: [
       `Warwickshire's Historic Environment Record describes the probable extent of Attleborough's medieval settlement by reference to the first-edition 1888 Ordnance Survey map. That record describes historic research, not every modern address.`,
       `The same record says Attleborough is absent from Domesday and records a 1243 lease of its manor by the Prioress of Chaise-Dieu to Nuneaton. These are documentary-history facts, not current property-status evidence.`,
@@ -838,6 +1031,7 @@ export const NORTH_EAST_AREA_GUIDES = {
   }),
   stockingford: makeGuide({
     slug: 'stockingford',
+    serviceEvidenceMode: 'hub-context-only',
     summary: [
       `Warwickshire's Historic Environment Record describes documentary and cartographic research into the former Manor of Stockingford and Galley Common. It records suggested medieval-settlement evidence rather than a boundary for the modern locality.`,
       `Warwickshire County Council's street register, produced on 11 August 2026, assigns selected entries including Beaumont Place, Beaumont Road and Whitehouse Crescent to Stockingford, Nuneaton. It is not a property inventory.`,
@@ -917,6 +1111,7 @@ export const NORTH_EAST_AREA_GUIDES = {
   }),
   weddington: makeGuide({
     slug: 'weddington',
+    serviceEvidenceMode: 'hub-context-only',
     summary: [
       `The council's current housing walkabout schedule has a Weddington row naming Carisbrook Road, Cleaver Gardens, Niton Road and Ryde Avenue. It is an engagement schedule for selected housing streets, not a locality boundary.`,
       `A separate council directory classifies Weddington Meadows and Walk as a nature and wildlife park. The named public space supplies orientation context only and says nothing about a customer's building or entrance.`,
@@ -996,6 +1191,7 @@ export const NORTH_EAST_AREA_GUIDES = {
   }),
   'horeston-grange': makeGuide({
     slug: 'horeston-grange',
+    serviceEvidenceMode: 'hub-context-only',
     summary: [
       `Nuneaton and Bedworth Borough Council lists Horestone Grange Woodlands Walk as a local park at Launceston Drive, Nuneaton, with surfaced footpaths. That public-space record does not define the surrounding locality.`,
       `Warwickshire County Council's street register, produced on 11 August 2026, assigns selected entries such as Crediton Close, Seaton Close and St Ives Way to Horeston Grange, Nuneaton. It is not a property inventory.`,
@@ -1150,6 +1346,7 @@ export const NORTH_EAST_AREA_GUIDES = {
   }),
   'camp-hill': makeGuide({
     slug: 'camp-hill',
+    serviceEvidenceMode: 'hub-context-only',
     summary: [
       `The council's housing walkabout schedule has a Camp Hill row naming streets including Almond Avenue, Green Lane, Hillcrest Road, Queen Elizabeth Road and Sycamore Road. It covers selected housing locations, not every address.`,
       `The council separately lists Queen Elizabeth Road as a local park at CV10 9BU with a play area, multi-use games area, outdoor gym, seating and surfaced footpaths. This is public-space context only.`,
@@ -1309,6 +1506,7 @@ export const NORTH_EAST_AREA_GUIDES = {
   }),
   'bermuda-park': makeGuide({
     slug: 'bermuda-park',
+    serviceEvidenceMode: 'hub-context-only',
     summary: [
       `Warwickshire County Council records that Bermuda Park station opened on 18 January 2016 after a fifteen-month build connected with improvements to the Nuneaton-Coventry railway line. This is transport history only.`,
       `The same retrospective reports approximately 28,000 station passengers in 2017/18 and just over 38,000 in 2019/20. Those period figures do not establish current usage, local demand or property context.`,
@@ -1994,6 +2192,7 @@ export const NORTH_EAST_AREA_GUIDES = {
   }),
   cawston: makeGuide({
     slug: 'cawston',
+    serviceEvidenceMode: 'hub-context-only',
     summary: [
       `Rugby Borough Council's current directory lists Cawston Parish Council at Cawston Community Hall on Scholars Drive. The contact location is not a route boundary or proof of administrative extent.`,
       `Cawston Parish Council adopted a parish plan in August 2010 following an autumn 2009 questionnaire, with an action plan intended for regular review. It remains a historical community-planning record for present use.`,
@@ -2151,6 +2350,7 @@ export const NORTH_EAST_AREA_GUIDES = {
   }),
   'new-bilton': makeGuide({
     slug: 'new-bilton',
+    serviceEvidenceMode: 'hub-context-only',
     summary: [
       `In March 2025 Rugby Borough Council published consultation plans to refurbish and expand the play area at New Bilton Recreation Ground. The source establishes a proposal at a named site, not completed works.`,
       `A February 2024 cabinet paper named New Bilton Ward as one of two pilot areas for a hyperlocal area-action approach under the council's 2023-2025 delivery plan. This is dated programme evidence.`,
