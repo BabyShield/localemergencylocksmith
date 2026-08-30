@@ -18,8 +18,8 @@ export const COVENTRY_AREA_SEARCH_DESCRIPTIONS = {
     sourceIds: ['canley-jsna'],
   },
   radford: {
-    description: 'Radford locksmith help for lockouts, repairs and upgrades, with Coventry’s HLC recording the historic Radford Road hamlet on a later turnpike route.',
-    sourceIds: ['coundon-radford-hlc'],
+    description: 'Radford locksmith help for lockouts, repairs and upgrades, with official records for Radford Road, Radford Common, its school and the Jubilee Crescent GP site.',
+    sourceIds: ['coundon-radford-hlc', 'radford-common', 'radford-primary-school', 'radford-gp-group-nhs'],
   },
   coundon: {
     description: 'Coundon locksmith help for lockouts, repairs and lock changes, with Coventry’s HLC recording Coundon Green and Norman Place Road near former commons.',
@@ -30,8 +30,8 @@ export const COVENTRY_AREA_SEARCH_DESCRIPTIONS = {
     sourceIds: ['holbrook-park'],
   },
   foleshill: {
-    description: 'Foleshill locksmith help for lockouts, repairs and lock changes, with Coventry’s HLC noting the mixed area follows the Coventry–Bedworth railway line.',
-    sourceIds: ['foleshill-hlc'],
+    description: 'Foleshill locksmith help for lockouts, repairs and upgrades, with official records for its mixed-use setting, Edgwick Park, Broad Heath and St Lawrence.',
+    sourceIds: ['foleshill-hlc', 'foleshill-edgwick-park', 'foleshill-broad-heath-school', 'foleshill-st-lawrence-he'],
   },
   stoke: {
     description: 'Stoke locksmith help for lockouts, repairs and upgrades, with Coventry’s Lower Stoke HLC noting the Coventry–Rugby railway and northern housing.',

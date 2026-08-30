@@ -1,6 +1,6 @@
 # Coventry-cluster area evidence register
 
-Checked: baseline corpus 2026-08-29; `wyken`, `allesley` and `aldermans-green` evidence refreshed 2026-08-30.
+Checked: baseline corpus 2026-08-29; `radford`, `foleshill`, `wyken`, `allesley` and `aldermans-green` evidence refreshed 2026-08-30.
 
 Scope: the first 30 `AREAS` records in the Coventry merchandising cluster, from `coventry-city-centre` through `little-heath`. This is a research register, not publish-ready local copy. Claims are limited to opened primary sources from Coventry City Council, Rugby Borough Council, Historic England and the named institution's current site where it is needed to establish its own contact address. A character area, ward, MSOA, parish, neighbourhood-plan boundary or named park is not interchangeable with a service-area slug or an individual address.
 
@@ -61,17 +61,19 @@ Excluded throughout: inferred lock types, locksmith job history or frequency, cr
 
 ## `radford`
 
-- **Context tags:** `historic-landscape-report`, `ancient-hamlet`, `historic-route`, `area-scale-designations`, `locally-listed-specific-asset`.
+- **Context tags:** `historic-landscape-report`, `ancient-hamlet`, `historic-route`, `official-park`, `school-directory`, `NHS-practice-address`.
 - **Supported claims:**
-  1. Coventry's Coundon and Radford character area is west of the city centre and predominantly residential, with a small light-industrial area in the north.
-  2. The report identifies part of the ancient hamlet of Radford on both sides of Radford Road, which it describes as a medieval route later turnpiked.
-  3. At character-area scale, the report records nine listed buildings, nineteen locally listed buildings and no conservation area.
-  4. Coventry City Council's local list records DCT635, Radford public house (formerly Radford House), as a Locally Listed Building.
+  1. Coventry's Coundon and Radford HLC describes a predominantly residential character area with a small light-industrial section in the north, and records the ancient Radford hamlet on both sides of Radford Road, a medieval route later turnpiked.
+  2. Coventry City Council locates Radford Common on Radford Road, Radford, Coventry, CV6 3BU, and states that it was originally part of Coventry's ancient commons.
+  3. Coventry City Council's school directory records Radford at Lawrence Saunders Road, CV6 1HD.
+  4. The NHS record for Coventry GP Group of Practices gives its address as Jubilee Crescent, Radford, Coventry, CV6 3FA.
 - **Sources:**
-  - Coventry City Council — [Coundon and Radford Character Area, HLC Area 40](https://www.coventry.gov.uk/downloads/file/17412/hlc-area-40-coundon-and-radford-character-area) — supports claims 1 to 3. Checked 2026-08-29.
-  - Coventry City Council — [Local list of buildings of architectural or historic interest](https://www.coventry.gov.uk/downloads/file/17245/local-list-of-buildings-of-architectural-or-historic-interest) — supports claim 4's DCT635 entry only. Checked 2026-08-29.
-- **Conditional service implication:** If visible alterations are proposed at an older or designated building, verify the exact entry and planning status rather than relying on the Radford name.
-- **Access/property-status caveat:** Designation totals and historic-development statements apply to the whole HLC area. The DCT635 entry identifies only its named asset, not the status, age or entrance conditions of another Radford address.
+  - Coventry City Council — [Coundon and Radford Character Area, HLC Area 40](https://www.coventry.gov.uk/downloads/file/17412/hlc-area-40-coundon-and-radford-character-area) — supports claim 1 and defines the broad HLC evidence unit. Checked 2026-08-29.
+  - Coventry City Council — [Radford Common](https://www.coventry.gov.uk/radfordcommon) — supports claim 2 for the named public park only. Checked 2026-08-30.
+  - Coventry City Council — [Radford school directory record](https://www.coventry.gov.uk/directory-record/43007/radford) — supports claim 3 for the named school only. Checked 2026-08-30.
+  - NHS — [Coventry GP Group of Practices](https://www.nhs.uk/services/gp-surgery/coventry-gp-group-of-practices/X39561) — supports claim 4 for the named NHS practice only. Checked 2026-08-30.
+- **Conditional service implication:** Decide whether a park, school or GP record names the actual premises or only a landmark, then identify the exact opening and independently verify the owner, occupier or responsible premises contact.
+- **Access/property-status caveat:** The HLC boundary is broader than Radford, while the other sources identify named places only. Public access and directory publication do not establish a keyholder, job authority, private access route, building construction, installed hardware or conditions at another address.
 
 ## `coundon`
 
@@ -102,15 +104,19 @@ Excluded throughout: inferred lock types, locksmith job history or frequency, cr
 
 ## `foleshill`
 
-- **Context tags:** `historic-landscape-report`, `canal`, `rail`, `conservation-area-present`, `mixed-use`.
+- **Context tags:** `historic-landscape-report`, `mixed-use`, `rail`, `official-park`, `school-directory`, `Grade-II-star-specific-asset`.
 - **Supported claims:**
   1. The Foleshill character area is a mixed residential and industrial area north of the city centre, following the Coventry–Bedworth railway line.
-  2. The council report identifies the Coventry Canal as the predominant landscape feature and a reason for the area's industrial development.
-  3. The report records one conservation area and states that much of the Coventry Canal Conservation Area lies within the wider Foleshill character area.
-- **Source:**
-  - Coventry City Council — [Foleshill Character Area, HLC Area 24](https://www.coventry.gov.uk/downloads/file/17449/hlc-area-24-foleshill-character-area) — supports all three claims. Checked 2026-08-29.
-- **Conditional service implication:** For premises near the canal conservation corridor or historic industrial buildings, check the exact designation and owner/manager authority before external alterations.
-- **Access/property-status caveat:** Canal proximity, mixed use and a conservation area within the HLC boundary do not establish any individual property's use, designation or access arrangement.
+  2. Coventry City Council locates Edgwick Park on Foleshill Road, Foleshill, Coventry, CV6 5LB, and describes it as a compact park behind Edgwick Play Centre.
+  3. Coventry City Council's school directory records Broad Heath Community at Hanford Close, CV6 5DP.
+  4. Historic England records the Church of St Lawrence, Old Church Road, as a Grade II* listed building, list entry 1335825.
+- **Sources:**
+  - Coventry City Council — [Foleshill Character Area, HLC Area 24](https://www.coventry.gov.uk/downloads/file/17449/hlc-area-24-foleshill-character-area) — supports claim 1 and defines the broad HLC evidence unit. Checked 2026-08-29.
+  - Coventry City Council — [Edgwick Park](https://www.coventry.gov.uk/directory-record/57119/edgwick-park) — supports claim 2 for the named public park only. Checked 2026-08-30.
+  - Coventry City Council — [Broad Heath Community](https://www.coventry.gov.uk/directory-record/43091/broad-heath-community) — supports claim 3 for the named school only. Checked 2026-08-30.
+  - Historic England — [Church of St Lawrence, list entry 1335825](https://historicengland.org.uk/listing/the-list/list-entry/1335825) — supports claim 4 for the named listed church only. Checked 2026-08-30.
+- **Conditional service implication:** Establish whether the park, school or church is the actual premises or a landmark, verify the responsible controller and use the St Lawrence listing only when that church and a potentially relevant alteration are involved.
+- **Access/property-status caveat:** The HLC covers a broad area, while the other records concern named places. Public access, a school address and a listed-building entry establish no caller authority, access route, door type, fitted lock, job history or protected status for another Foleshill address.
 
 ## `stoke`
 

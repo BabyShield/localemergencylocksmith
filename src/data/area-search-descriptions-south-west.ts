@@ -70,8 +70,8 @@ export const SOUTH_WEST_AREA_SEARCH_DESCRIPTIONS = {
     sourceIds: ['solihull-conservation-areas'],
   },
   'hampton-in-arden': {
-    description: 'Locksmith help in Hampton-in-Arden for lockouts, lock repairs and upgrades, with the council dating the central conservation-area designation to 1968.',
-    sourceIds: ['solihull-hampton-history'],
+    description: 'Hampton-in-Arden locksmith guidance distinguishing the continuing 2017 plan, central conservation area, Fentham Road library and Grade I High Street church.',
+    sourceIds: ['solihull-hampton-plan-page', 'solihull-hampton-history', 'solihull-hampton-library', 'historic-england-hampton-church-1055777'],
   },
   wolston: {
     description: 'Locksmith services in Wolston for lockouts, repairs and upgrades, with the conservation appraisal limiting its boundary mostly south of the River Avon.',
@@ -86,8 +86,8 @@ export const SOUTH_WEST_AREA_SEARCH_DESCRIPTIONS = {
     sourceIds: ['wdc-local-plan'],
   },
   brandon: {
-    description: 'Locksmith help in Brandon for lockouts, lock repairs and upgrades, with the appraisal placing most conservation-area buildings north of Avondale Road.',
-    sourceIds: ['rbc-brandon-conservation'],
+    description: 'Brandon locksmith guidance distinguishing the joint plan, partial conservation area, Main Street ceremony venue and Grade II Avon Viaduct.',
+    sourceIds: ['rbc-brandon-plan-page', 'rbc-brandon-conservation', 'wcc-brandon-hall-approved-venue', 'historic-england-avon-viaduct-1034898'],
   },
   shilton: {
     description: "Locksmith services in Shilton for lockouts, repairs and upgrades, with the council's 2024 study classifying Shilton as a Rural Village.",

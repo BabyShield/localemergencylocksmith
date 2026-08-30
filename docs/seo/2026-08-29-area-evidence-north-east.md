@@ -192,20 +192,30 @@ Status: research only. This file is a claim-level evidence register, not publish
 
 ### `chapel-end` — Chapel End
 
-**Context tags:** `heritage-record`, `locality-register`
+**Context tags:** `locality-register`, `local-centre`, `listed-building-present`, `managed-premises`
 
-1. **Fact:** Warwickshire Historic Environment Record MWA2447 describes the Congregational Chapel on Coleshill Road, Chapel End, as built in 1840 to replace a chapel of 1807-08.
-   - **Publisher / title / deep URL:** [Warwickshire Historic Environment Record — Congregational Chapel, Coleshill Road, Chapel End, MWA2447](https://timetrail.warwickshire.gov.uk/detail.aspx?monuid=WA2447)
-   - **Direct support:** The live record gives the location, 1840 construction date and earlier chapel date.
-   - **Checked:** 2026-08-29.
-   - **Conditional service-use implication:** This may be used as attributed history for that named building only; it must not be projected onto other Chapel End properties.
-2. **Fact:** The county street register produced on 11 August 2026 assigns Alders Lane, Lincoln Avenue and Salisbury Drive to Chapel End, Nuneaton.
+1. **Fact:** The county street register produced on 11 August 2026 assigns Alders Lane, Lincoln Avenue and Salisbury Drive to Chapel End, Nuneaton.
    - **Publisher / title / deep URL:** [Warwickshire County Council — List of Streets maintained at public expense](https://api.warwickshire.gov.uk/documents/WCCC-930-12)
    - **Direct support:** The live county register lists those streets with Chapel End as the locality and Nuneaton as the town.
-   - **Checked:** 2026-08-29.
-   - **Conditional service-use implication:** These labels may assist address checking; they do not establish property type, heritage status, access, hardware or authority.
+   - **Checked:** 2026-08-30.
+   - **Conditional service-use implication:** Use the labels to check a complete address only. The selected highway entries do not define the locality, a parcel, approach route, controlled opening, authority or service need.
+2. **Fact:** The Borough Plan Review adopted on 10 December 2025 lists Chapel End as a local centre intended for smaller-scale day-to-day top-up shopping needs.
+   - **Publisher / title / deep URL:** [Nuneaton and Bedworth Borough Council — Adopted Borough Plan Review 2021-2039](https://fs-filestore-eu.s3.eu-west-1.amazonaws.com/nuneaton/Documents/Borough%20Plan%20Review%20%282021-2039%29.pdf)
+   - **Direct support:** Table 23 places Chapel End in the local-centre tier and defines that tier's role.
+   - **Checked:** 2026-08-30.
+   - **Conditional service-use implication:** At a centre instruction, record the current business or unit, exact threshold and authorised contact. The planning tier supplies no current occupier, controller, entrance, hardware or access right.
+3. **Fact:** Historic England lists Chapel End Congregational Church on Coleshill Road at Grade II as entry 1262600; its legacy description identifies a central round-arched entrance with panelled double doors.
+   - **Publisher / title / deep URL:** [Historic England — Chapel End Congregational Church, list entry 1262600](https://historicengland.org.uk/listing/the-list/list-entry/1262600)
+   - **Direct support:** The official entry supplies the grade, list number, statutory Coleshill Road address and exact legacy entrance wording.
+   - **Checked:** 2026-08-30; the page rendered in the live web view, while unauthenticated command-line retrieval was bot-gated.
+   - **Conditional service-use implication:** The designation and doorway description apply only to this exact chapel and are not a current condition, hardware, keyholder or access survey. Identify the actual opening and obtain current property-specific guidance before fabric decisions.
+4. **Fact:** The NHS identifies Chapel End Surgery at 10 Camp Hill Road, Nuneaton, Warwickshire CV10 0JH.
+   - **Publisher / title / deep URL:** [NHS — Chapel End Surgery](https://www.nhs.uk/services/gp-surgery/chapel-end-surgery/M84005)
+   - **Direct support:** The current NHS profile supplies the practice name and complete address.
+   - **Checked:** 2026-08-30.
+   - **Conditional service-use implication:** The profile identifies one healthcare site but no instructed doorway, current keyholder, caller authority, installed hardware, fault, damage or safe access arrangement. Do not reproduce time-dependent open or closed messaging as a stable fact.
 
-**Access/property-status caveat:** The chapel record concerns one building and the street register is not a parcel map. Verify the exact property, designation, threshold and controller separately.
+**Access/property-status caveat:** The street register, planning tier, listed-chapel entry and NHS profile have different and bounded scopes. Verify the full address, current organisation or unit, exact threshold, present controller and property status; none proves route conditions, installed hardware, incident, service coverage, response time or outcome.
 
 ### `bermuda-park` — Bermuda Park
 
@@ -231,20 +241,30 @@ Status: research only. This file is a claim-level evidence register, not publish
 
 ### `galley-common` — Galley Common
 
-**Context tags:** `settlement/local-plan`, `heritage-record`, `locality-register`
+**Context tags:** `locality-register`, `school`, `listed-building-present`, `managed-premises`
 
-1. **Fact:** Warwickshire Historic Environment Record MWA12426 describes documentary and cartographic research into the former Manor of Stockingford and Galley Common, including a 1592 map and the 1842 tithe plan.
-   - **Publisher / title / deep URL:** [Warwickshire Historic Environment Record — The Manor of Stockingford, Galley Common, MWA12426](https://timetrail.warwickshire.gov.uk/detail.aspx?monuid=WA12426)
-   - **Direct support:** The live record's summary and source notes identify both dated maps and explain the historic-settlement research.
-   - **Checked:** 2026-08-29.
-   - **Conditional service-use implication:** This may be used as attributed historic context only; it must not become a claim about a modern property, route, access or service need.
-2. **Fact:** The county street register produced on 11 August 2026 assigns Auden Close, Chaucer Drive, Chesterton Drive and Orford Rise to Galley Common, Nuneaton.
+1. **Fact:** The county street register produced on 11 August 2026 assigns Auden Close, Chaucer Drive, Chesterton Drive and Orford Rise to Galley Common, Nuneaton.
    - **Publisher / title / deep URL:** [Warwickshire County Council — List of Streets maintained at public expense](https://api.warwickshire.gov.uk/documents/WCCC-930-12)
    - **Direct support:** The live county register lists those entries with Galley Common as the locality and Nuneaton as the town.
-   - **Checked:** 2026-08-29.
-   - **Conditional service-use implication:** These labels may assist address checking but must not be converted into a complete boundary, property or access statement.
+   - **Checked:** 2026-08-30.
+   - **Conditional service-use implication:** Use the labels to check a complete address only. The selected entries do not define the locality, a property boundary, approach, controlled entrance, authority or service need.
+2. **Fact:** Warwickshire County Council identifies Galley Common Infant School as a community infant school at Plough Hill Road, Nuneaton, Warwickshire CV10 9NZ.
+   - **Publisher / title / deep URL:** [Warwickshire County Council — Galley Common Infant School](https://apps.warwickshire.gov.uk/FindASchool/schools/galley-common-infant-school)
+   - **Direct support:** The current school directory supplies the establishment name, community classification, age range and complete address.
+   - **Checked:** 2026-08-30.
+   - **Conditional service-use implication:** The record identifies one managed site only and supplies no gate, building entrance, current keyholder, caller authority, door construction, hardware or work approval.
+3. **Fact:** Historic England lists the Church of St Peter, Galley Common at Grade II as entry 1389490; its legacy description identifies narrow aisles with porches at their west ends and porches on the west-front returns.
+   - **Publisher / title / deep URL:** [Historic England — Church of St Peter, Galley Common, list entry 1389490](https://historicengland.org.uk/listing/the-list/list-entry/1389490)
+   - **Direct support:** The official entry supplies the grade, list number, statutory asset identity and exact legacy porch distinctions.
+   - **Checked:** 2026-08-30; the page rendered in the live web view, while unauthenticated command-line retrieval was bot-gated.
+   - **Conditional service-use implication:** The designation and porch wording apply only to this exact church and are not a current doorway, lock, condition, access or keyholder survey. Identify the instructed opening and obtain current property-specific guidance before fabric decisions.
+4. **Fact:** The NHS identifies Galley Common Medical Centre at Valley Road, Galley Common, Nuneaton, Warwickshire CV10 9NH.
+   - **Publisher / title / deep URL:** [NHS — Galley Common Medical Centre](https://www.nhs.uk/services/gp-surgery/galley-common-medical-centre/M84008001)
+   - **Direct support:** The current NHS profile supplies the medical-centre name and complete address.
+   - **Checked:** 2026-08-30.
+   - **Conditional service-use implication:** The profile identifies one healthcare site but no instructed entrance, current keyholder, caller authority, installed hardware, fault, damage or access arrangement. Do not reproduce time-dependent open or closed messaging as a stable fact.
 
-**Access/property-status caveat:** The historic record and selected highway entries do not define the route boundary or any property's status, construction, entrance or access.
+**Access/property-status caveat:** The street register, school directory, listed-church entry and NHS profile concern selected entries or exact named sites. Verify the full address, site name, exact threshold, present controller and property status; none proves route conditions, door construction, installed hardware, incident, service coverage, response time or outcome.
 
 ### `hartshill` — Hartshill
 

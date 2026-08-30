@@ -1,6 +1,6 @@
 # South-west service-area evidence register
 
-Checked: baseline corpus 2026-08-29; `bishopton`, `chase-meadow`, `lillington`, `sydenham`, `tiddington` and `woodloes-park` evidence refreshed 2026-08-30.
+Checked: baseline corpus 2026-08-29; `bishopton`, `brandon`, `chase-meadow`, `hampton-in-arden`, `lillington`, `sydenham`, `tiddington` and `woodloes-park` evidence refreshed 2026-08-30.
 Scope: 27 governed area slugs across Leamington Spa, Warwick, Stratford-upon-Avon and the Warwickshire/nearby cluster.
 Source rule: primary official sources only (central-government registers and services, district/borough/county councils, official adopted or submitted planning documents hosted by them, and the named institution's current site where it is needed to establish its visit address).
 
@@ -15,9 +15,9 @@ Source rule: primary official sources only (central-government registers and ser
 ## Counts and unresolved status
 
 - Registry slugs reviewed: **27/27**.
-- Factual claims recorded: **69** (at least two per slug; four each for `bishopton`, `chase-meadow`, `lillington`, `sydenham`, `tiddington` and `woodloes-park`, plus a third for `leamington-spa`, `stratford-upon-avon` and `shilton`).
+- Factual claims recorded: **73** (at least two per slug; four each for `bishopton`, `brandon`, `chase-meadow`, `hampton-in-arden`, `lillington`, `sydenham`, `tiddington` and `woodloes-park`, plus a third for `leamington-spa`, `stratford-upon-avon` and `shilton`).
 - Slugs with at least two official-source claims: **27/27**.
-- Distinct primary deep URLs cited: **57** across **11** publishing bodies (15 Warwick District Council, 11 Stratford-on-Avon District Council, 9 Rugby Borough Council, 6 Solihull Metropolitan Borough Council, 5 Charity Commission, 4 Department for Education, 2 Warwickshire County Council, 2 Historic England, 1 Office for National Statistics, 1 NHS and 1 Chase Meadow Community Centre URL); these appear in **75** claim citations because sources are reused where they support more than one slug and several claims cite complementary records.
+- Distinct primary deep URLs cited: **61** across **11** publishing bodies (15 Warwick District Council, 11 Stratford-on-Avon District Council, 9 Rugby Borough Council, 7 Solihull Metropolitan Borough Council, 5 Charity Commission, 4 Department for Education, 4 Historic England, 3 Warwickshire County Council, 1 Office for National Statistics, 1 NHS and 1 Chase Meadow Community Centre URL); these appear in **79** claim citations because sources are reused where they support more than one slug and several claims cite complementary records.
 - Slugs with a directly evidenced conservation-area tag: **16/27**.
 - Slugs with a directly evidenced rail tag: **2/27** (`brandon`, `wolston`).
 - Slugs with a directly evidenced river tag: **4/27** (`leamington-spa`, `stratford-upon-avon`, `wolston`, `ryton-on-dunsmore`).
@@ -408,7 +408,7 @@ Source rule: primary official sources only (central-government registers and ser
 ### `hampton-in-arden`
 
 **Context tags:** `conservation-area-present`, `settlement/local-plan`, `official-parish`
-**Access/property-status caveat:** The old and revised neighbourhood areas differ, and the conservation area covers the central part of the village only. Verify both the applicable plan boundary and the conservation map for an exact address.
+**Access/property-status caveat:** The previous plan area, central conservation boundary, Fentham Road library and Grade I High Street church are distinct records. Verify the record applicable to the exact address; neither a public-site page nor a list entry identifies a current keyholder, requested entrance, caller authority or neighbouring-property status.
 
 1. **Claim:** Solihull Council records that the 2017 Hampton-in-Arden plan remains applicable to its previous neighbourhood area; the parish council withdrew the newer submission draft from examination, which then closed.
    **Publisher / title / deep URL:** Solihull Metropolitan Borough Council — [Hampton-in-Arden neighbourhood plan](https://www.solihull.gov.uk/planning-and-building-control/hampton-arden-neighbourhood-plan).
@@ -421,6 +421,18 @@ Source rule: primary official sources only (central-government registers and ser
    **Supports:** A partial, dated conservation designation and the `conservation-area-present` tag.
    **Conditional service use:** Mention conservation context only for an address verified in the central-area boundary; do not infer that the whole village or any particular building is listed.
    **Checked:** 2026-08-29.
+
+3. **Claim:** Solihull Metropolitan Borough Council identifies Hampton-in-Arden Library at 39 Fentham Road, Hampton in Arden, Solihull, B92 0AY.
+   **Publisher / title / deep URL:** Solihull Metropolitan Borough Council — [Hampton-in-Arden Library](https://www.solihull.gov.uk/libraries/hampton-arden-library).
+   **Supports:** The current council library name and exact address of this managed public site.
+   **Conditional service use:** Apply the record only to the named library. It does not identify a requested doorway, current keyholder, caller authority, installed hardware or another Fentham Road property; do not embed changeable opening hours in locality copy.
+   **Checked:** 2026-08-30.
+
+4. **Claim:** Historic England's list entry 1055777 identifies the Church of Saint Mary and Saint Bartholomew on High Street, Hampton in Arden, as a Grade I listed building.
+   **Publisher / title / deep URL:** Historic England — [Church of Saint Mary and Saint Bartholomew, list entry 1055777](https://historicengland.org.uk/listing/the-list/list-entry/1055777?section=official-list-entry).
+   **Supports:** The statutory address and exact building's Grade I listed status.
+   **Conditional service use:** Apply the designation only to the identified church. It does not make a neighbouring property listed, grant work authority, describe a door or determine consent for an unspecified alteration; verify the current controller and proposal-specific requirements separately.
+   **Checked:** 2026-08-30.
 
 ### `wolston`
 
@@ -476,7 +488,7 @@ Source rule: primary official sources only (central-government registers and ser
 ### `brandon`
 
 **Context tags:** `conservation-area-present`, `settlement/local-plan`, `official-parish`, `rail`
-**Access/property-status caveat:** The neighbourhood plan is joint with Bretford and the conservation area covers only part of Brandon; the railway viaduct is a landscape/transport feature, not proof of access, delay or service coverage.
+**Access/property-status caveat:** The neighbourhood plan is joint with Bretford, the conservation area covers only part of Brandon, Brandon Hall is one managed venue and the Avon Viaduct is one Grade II structure. Keep those records separate; none proves a private route, neighbouring-property status, current site representative, caller authority or service coverage.
 
 1. **Claim:** Rugby Borough Council made the Brandon and Bretford Neighbourhood Development Plan on 4 June 2019; it forms part of the borough development plan.
    **Publisher / title / deep URL:** Rugby Borough Council — [Brandon and Bretford Neighbourhood Plan](https://www.rugby.gov.uk/w/brandon-and-bretford-neighbourhood-plan).
@@ -489,6 +501,18 @@ Source rule: primary official sources only (central-government registers and ser
    **Supports:** A bounded conservation context and the `conservation-area-present` and `rail` tags.
    **Conditional service use:** Use the viaduct only as caller-confirmed orientation and conservation wording only after a boundary check; do not infer property age, listing or route access.
    **Checked:** 2026-08-29.
+
+3. **Claim:** Warwickshire County Council's approved-venue directory identifies Brandon Hall Hotel at Main Street, Brandon, CV8 3FW.
+   **Publisher / title / deep URL:** Warwickshire County Council — [Brandon Hall Hotel](https://apps.warwickshire.gov.uk/ApprovedVenue/venues/10).
+   **Supports:** The current county venue record, named managed site and exact Brandon address.
+   **Conditional service use:** Apply the record only to Brandon Hall. It does not identify an affected entrance, present site representative, caller authority, installed hardware or a neighbouring property, and its venue status must not be represented as work permission.
+   **Checked:** 2026-08-30.
+
+4. **Claim:** Historic England's list entry 1034898 records the Avon Viaduct in Brandon and Bretford civil parish as a Grade II listed building.
+   **Publisher / title / deep URL:** Historic England — [Avon Viaduct, list entry 1034898](https://historicengland.org.uk/listing/the-list/list-entry/1034898?section=official-list-entry).
+   **Supports:** The exact structure's Grade II listed status and its Brandon and Bretford civil-parish location.
+   **Conditional service use:** Apply the designation only to the viaduct. It does not make nearby property listed, establish a private approach, grant authority for work or describe any modern entrance hardware; verify any other address and proposal independently.
+   **Checked:** 2026-08-30.
 
 ### `shilton`
 

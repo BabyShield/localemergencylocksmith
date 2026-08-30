@@ -30,16 +30,16 @@ export const NORTH_EAST_AREA_SEARCH_DESCRIPTIONS = {
     sourceIds: ['wcc-list-of-streets-2026'],
   },
   'chapel-end': {
-    description: "Chapel End locksmith help for lockouts, repairs and lock changes, with Warwickshire's record dating the Congregational Chapel on Coleshill Road to 1840.",
-    sourceIds: ['warwickshire-her-chapel-end-chapel'],
+    description: 'Chapel End locksmith guidance separating county street records, its adopted local-centre role, the listed Coleshill Road chapel and Camp Hill Road surgery.',
+    sourceIds: ['wcc-list-of-streets-2026', 'nbbc-borough-plan-review-2021-2039', 'historic-england-chapel-end-congregational-church-1262600', 'nhs-chapel-end-surgery-m84005'],
   },
   'bermuda-park': {
     description: 'Bermuda Park locksmith help for lockouts, repairs and upgrades, with council heritage records covering 20-118 even and 39-117 odd at Bermuda Village, CV10 7PN.',
     sourceIds: ['nbbc-heritage-spd-2026', 'nbbc-bermuda-village-article-4'],
   },
   'galley-common': {
-    description: 'Galley Common locksmith help for lockouts and repairs, with the county street register assigning Chaucer Drive and Orford Rise to Galley Common, Nuneaton.',
-    sourceIds: ['wcc-list-of-streets-2026'],
+    description: 'Galley Common locksmith guidance separating county street records, Plough Hill Road school, the listed St Peter site and Valley Road medical centre.',
+    sourceIds: ['wcc-list-of-streets-2026', 'wcc-galley-common-infant-school', 'historic-england-st-peter-galley-common-1389490', 'nhs-galley-common-medical-centre-m84008001'],
   },
   hartshill: {
     description: 'Hartshill locksmith guidance separating Holy Trinity library entrances, the current academy and asset-specific church and castle records.',
