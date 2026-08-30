@@ -94,20 +94,30 @@ Status: research only. This file is a claim-level evidence register, not publish
 
 ### `horeston-grange` — Horeston Grange
 
-**Context tags:** `park`, `locality-register`
+**Context tags:** `locality-register`, `district-centre`, `managed-premises`, `council-asset`
 
-1. **Fact:** The borough council lists Horestone Grange Woodlands Walk as a local park at Launceston Drive, Nuneaton CV11 6FT, with surfaced footpaths.
-   - **Publisher / title / deep URL:** [Nuneaton and Bedworth Borough Council — Horestone Grange Woodlands Walk](https://www.nuneatonandbedworth.gov.uk/directory-record/4305/horestone-grange-woodlands-walk)
-   - **Direct support:** The live directory record supplies the name, park type, address and listed facility.
-   - **Checked:** 2026-08-29.
-   - **Conditional service-use implication:** The public-space record can aid orientation only; it must not be extended to surrounding property status, entrances or access.
-2. **Fact:** The county street register produced on 11 August 2026 assigns Crediton Close, Seaton Close and St Ives Way to Horeston Grange, Nuneaton.
+1. **Fact:** The county street register produced on 11 August 2026 assigns Camborne Drive, Crediton Close, Seaton Close, St Ives Way and Tiverton Drive to Horeston Grange, Nuneaton.
    - **Publisher / title / deep URL:** [Warwickshire County Council — List of Streets maintained at public expense](https://api.warwickshire.gov.uk/documents/WCCC-930-12)
    - **Direct support:** The live county register lists each named street with Horeston Grange as the locality and Nuneaton as the town.
-   - **Checked:** 2026-08-29.
+   - **Checked:** 2026-08-30.
    - **Conditional service-use implication:** These labels can assist address checking but cannot establish a complete neighbourhood boundary, property or entrance.
+2. **Fact:** The Borough Plan Review adopted on 10 December 2025 lists Horeston Grange as a district centre serving day-to-day shopping and service needs.
+   - **Publisher / title / deep URL:** [Nuneaton and Bedworth Borough Council — Adopted Borough Plan Review 2021-2039](https://fs-filestore-eu.s3.eu-west-1.amazonaws.com/nuneaton/Documents/Borough%20Plan%20Review%20%282021-2039%29.pdf)
+   - **Direct support:** Table 23 names Horeston Grange in the district-centre tier and defines that tier's function.
+   - **Checked:** 2026-08-30.
+   - **Conditional service-use implication:** At a centre booking, ask for the current business, unit, exact threshold and authorised contact; the planning designation supplies none of those details.
+3. **Fact:** The council's current well-being-walk schedule names the Horeston Grange Co-op meeting point at Camborne Drive, Nuneaton CV11 6GU.
+   - **Publisher / title / deep URL:** [Nuneaton and Bedworth Borough Council — Well-being walks](https://www.nuneatonandbedworth.gov.uk/sports-physical-activity/wellbeing-walks)
+   - **Direct support:** The live schedule supplies the current named retail meeting point and complete address.
+   - **Checked:** 2026-08-30.
+   - **Conditional service-use implication:** For a call at that site, name the business or unit, exact door and authorised manager; a public meeting point does not grant authority.
+4. **Fact:** The current council asset list records St. Nicholas MUGA at Tiverton Drive, Nuneaton CV11 6YL as freehold land occupied by the local authority.
+   - **Publisher / title / deep URL:** [Nuneaton and Bedworth Borough Council — Land and Buildings Assets list](https://www.nuneatonandbedworth.gov.uk/downloads/file/1733/assets-list)
+   - **Direct support:** Asset row 9999004 supplies the name, address, play-area/park classification, freehold tenure and local-authority occupancy.
+   - **Checked:** 2026-08-30.
+   - **Conditional service-use implication:** Only for that exact asset, use an authorised council or facilities contact; the register proves no gate, door, lock, condition or access right.
 
-**Access/property-status caveat:** A named park and selected highway-locality entries do not establish the boundary, tenure, construction or access conditions of any Horeston Grange address.
+**Access/property-status caveat:** The plan and current records distinguish selected streets, a centre, one retailer address and one council-controlled parcel. They establish no controller for another property and no door construction, hardware, condition, access right or service need.
 
 ### `whitestone` — Whitestone
 
@@ -411,10 +421,10 @@ Status: research only. This file is a claim-level evidence register, not publish
 ## Coverage and unresolved evidence
 
 - **Slugs checked:** 21/21.
-- **Fact records:** 43: two for every slug, plus a third planning-status record for Long Lawford.
+- **Fact records:** 45: two for every slug, a third planning-status record for Long Lawford, and two additional current managed-premises records for Horeston Grange.
 - **Each record includes:** publisher, document/page title, deep primary URL, direct-support statement, checked date and a conditional use constraint.
 - **No support found or claimed for:** locks or door hardware, local call volumes, fault prevalence, response or journey time, crime, parking, property value, service coverage, first-visit outcomes or property-wide construction types.
-- **Dated planning evidence:** Attleborough, Stockingford, Weddington, Horeston Grange, Whitestone, Camp Hill, Chapel End and Galley Common rely on at least one 2012-2016 council evidence document. Those records are labelled as historic planning snapshots and require a current-plan check before publication.
+- **Dated planning evidence:** Attleborough, Stockingford, Weddington, Whitestone, Camp Hill, Chapel End and Galley Common rely on at least one 2012-2016 council evidence document. Those records are labelled as historic planning snapshots and require a current-plan check before publication.
 - **Cawston limitation:** the detailed parish plan is from 2010. The current council directory confirms the parish council and contact location only; it does not refresh the plan's historic survey findings.
 - **New Bilton limitation:** the strongest deep official evidence found is ward/programme and named-recreation-ground evidence, not a settlement or conservation-area definition.
 - **Boundary limitation:** conservation-area, ward, parish, planning-locality, listed-asset, scheduled-monument and route-slug boundaries are not interchangeable. Exact-address verification remains unresolved for every future property-specific use.

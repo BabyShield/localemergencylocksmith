@@ -86,8 +86,8 @@ export const COVENTRY_AREA_SEARCH_DESCRIPTIONS = {
     sourceIds: ['eastern-green-hlc'],
   },
   longford: {
-    description: 'Longford locksmith help for lockouts, repairs and lock changes, with Coventry City Council locating Longford Park on Longford Road.',
-    sourceIds: ['longford-park'],
+    description: "Longford locksmith help for lockouts, repairs and upgrades, with Coventry's JSNA distinguishing Longford from Bell Green for exact-address checks.",
+    sourceIds: ['foleshill-longford-jsna'],
   },
   'bell-green': {
     description: 'Bell Green locksmith help for lockouts, repairs and upgrades, with Coventry’s HLC recording possible medieval settlement and Bell Green Road in 1775.',
@@ -106,7 +106,7 @@ export const COVENTRY_AREA_SEARCH_DESCRIPTIONS = {
     sourceIds: ['woodway-park-hlc'],
   },
   'henley-green': {
-    description: 'Locksmith help in Henley Green for lockouts, repairs and upgrades, with Coventry City Council locating its school and community centre on Wyken Croft.',
+    description: 'Henley Green locksmith help for lockouts, repairs and upgrades, with the council locating its school and community centre at Wyken Croft, CV2 1HQ.',
     sourceIds: ['henley-green-school-centre'],
   },
   'wood-end': {

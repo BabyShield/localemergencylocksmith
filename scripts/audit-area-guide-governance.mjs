@@ -66,9 +66,7 @@ const AUDIT_DEDICATED_AREA_SLUGS = new Set([
   'kenilworth',
   'stratford-upon-avon',
 ])
-const AUDIT_HUB_CONTEXT_ONLY_SLUGS = new Set([
-  'horeston-grange',
-])
+const AUDIT_HUB_CONTEXT_ONLY_SLUGS = new Set()
 const AUDIT_SOLIHULL_REGION_SLUGS = new Set([
   'balsall-common',
   'meriden',

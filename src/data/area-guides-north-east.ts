@@ -128,21 +128,30 @@ const LOCAL_SOURCES = {
     checkedOn: REVIEWED_ON,
     kind: 'locality',
   },
-  'nbbc-horestone-grange-woodlands-walk': {
-    id: 'nbbc-horestone-grange-woodlands-walk',
-    title: 'Horestone Grange Woodlands Walk',
+  'nbbc-horeston-grange-wellbeing-walk': {
+    id: 'nbbc-horeston-grange-wellbeing-walk',
+    title: 'Well-being walks: Horeston Grange meeting point',
     publisher: 'Nuneaton and Bedworth Borough Council',
-    url: 'https://www.nuneatonandbedworth.gov.uk/directory-record/4305/horestone-grange-woodlands-walk',
-    supports: 'The council directory address, local-park classification and surfaced-footpath facility for Horestone Grange Woodlands Walk.',
-    checkedOn: REVIEWED_ON,
+    url: 'https://www.nuneatonandbedworth.gov.uk/sports-physical-activity/wellbeing-walks',
+    supports: 'The current council schedule naming the Horeston Grange Co-op meeting point at Camborne Drive, Nuneaton CV11 6GU.',
+    checkedOn: PROMOTION_REVIEWED_ON,
     kind: 'locality',
+  },
+  'nbbc-horeston-grange-asset-register-2026': {
+    id: 'nbbc-horeston-grange-asset-register-2026',
+    title: 'Land and Buildings Assets list',
+    publisher: 'Nuneaton and Bedworth Borough Council',
+    url: 'https://www.nuneatonandbedworth.gov.uk/downloads/file/1733/assets-list',
+    supports: 'The current asset row for St. Nicholas MUGA at Tiverton Drive, Nuneaton CV11 6YL, recorded as freehold land occupied by the local authority and classed as a play area or park.',
+    checkedOn: PROMOTION_REVIEWED_ON,
+    kind: 'property-status',
   },
   'wcc-list-of-streets-2026': {
     id: 'wcc-list-of-streets-2026',
     title: 'List of Streets maintained at public expense, produced 11 August 2026',
     publisher: 'Warwickshire County Council',
     url: 'https://api.warwickshire.gov.uk/documents/WCCC-930-12',
-    supports: 'The 11 August 2026 county street-to-locality labels, including selected Attleborough, Stockingford, Weddington, Horeston Grange and Camp Hill entries, Camp Hill Road\'s blank locality, and Bermuda-labelled roads in Nuneaton.',
+    supports: 'The 11 August 2026 county street-to-locality labels, including selected Attleborough, Stockingford, Weddington, Horeston Grange and Camp Hill entries, Tiverton Drive\'s Horeston Grange label, Camp Hill Road\'s blank locality, and Bermuda-labelled roads in Nuneaton.',
     checkedOn: REVIEWED_ON,
     kind: 'locality',
   },
@@ -196,7 +205,7 @@ const LOCAL_SOURCES = {
     title: 'Adopted Borough Plan Review 2021-2039',
     publisher: 'Nuneaton and Bedworth Borough Council',
     url: 'https://fs-filestore-eu.s3.eu-west-1.amazonaws.com/nuneaton/Documents/Borough%20Plan%20Review%20%282021-2039%29.pdf',
-    supports: 'The plan adopted on 10 December 2025, including the Camp Hill-Copper Beech Road district-centre entry and Strategic Policy DS5\'s bounded wider Bermuda Park employment context.',
+    supports: 'The plan adopted on 10 December 2025, including the Horeston Grange and Camp Hill-Copper Beech Road district-centre entries and Strategic Policy DS5\'s bounded wider Bermuda Park employment context.',
     checkedOn: PROMOTION_REVIEWED_ON,
     kind: 'locality',
   },
@@ -398,15 +407,6 @@ const LOCAL_SOURCES = {
     checkedOn: REVIEWED_ON,
     kind: 'locality',
   },
-  'warwickshire-her-horeston-grange-house': {
-    id: 'warwickshire-her-horeston-grange-house',
-    title: 'Site of post-medieval or later house at Horeston Grange, record MWA6260',
-    publisher: 'Warwickshire Historic Environment Record',
-    url: 'https://timetrail.warwickshire.gov.uk/detail.aspx?monuid=WA6260',
-    supports: 'The named Horeston Grange historic-environment record, its house-site classification and post-medieval to industrial period.',
-    checkedOn: REVIEWED_ON,
-    kind: 'property-status',
-  },
   'wcc-camp-hill-primary-school': {
     id: 'wcc-camp-hill-primary-school',
     title: 'Camp Hill Primary School',
@@ -527,8 +527,8 @@ const AREA_FAQS: Partial<Record<AreaSlug, [AreaFaq, AreaFaq]>> = {
     { q: 'How should a Weddington entrance be identified before work?', a: `Give the full address, block or unit, private or communal threshold, tenure and responsible controller so any landlord or listed-fabric check remains tied to the exact premises.` },
   ],
   'horeston-grange': [
-    { q: 'What do the Horeston Grange records identify?', a: `They identify a council local park at Launceston Drive and several county street-locality entries. They do not establish a property type, entrance arrangement or hardware specification.` },
-    { q: 'What current evidence is needed for a Horeston Grange booking?', a: `The exact property and threshold, responsible person, door images, lock markings and observable fault are needed before authority, diagnosis and scope can be assessed.` },
+    { q: 'What do the current Horeston Grange records identify?', a: `They distinguish selected streets, the district centre, one named Camborne Drive retailer and one council-controlled Tiverton Drive asset. They prove no lock, door, fault or access right.` },
+    { q: 'How should a managed Horeston Grange site be identified?', a: `Give the organisation or business, unit where relevant, complete address, exact affected threshold and authorised contact; the centre or asset name alone does not authorise work.` },
   ],
   whitestone: [
     { q: 'What does the Whitestone street evidence establish?', a: `The county register assigns selected streets to the Whitestone locality in Nuneaton. It does not supply a complete neighbourhood boundary or any property-level facts.` },
@@ -714,9 +714,7 @@ const SERVICE_FAQ_VARIANTS: Record<ServiceAreaSlug, readonly ServiceFaqVariant[]
   ],
 }
 
-const HUB_CONTEXT_ONLY_LOCALITY_PATTERNS: Partial<Record<AreaSlug, RegExp>> = {
-  'horeston-grange': /\b(?:woodlands walk|public-space|park directory|street register|county register|highway labels|locality records)\b/i,
-}
+const HUB_CONTEXT_ONLY_LOCALITY_PATTERNS: Partial<Record<AreaSlug, RegExp>> = {}
 
 interface HubServiceDecisionContext {
   issue: string
@@ -729,12 +727,7 @@ interface HubServiceDecisionContext {
 const HUB_CONTEXT_ONLY_PARAGRAPH_FRAMES: Partial<Record<AreaSlug, [
   (serviceLabel: string, checks: readonly string[], context: HubServiceDecisionContext) => string,
   (serviceLabel: string, checks: readonly string[], context: HubServiceDecisionContext) => string,
-]>> = {
-  'horeston-grange': [
-    (serviceLabel, checks, context) => `Treat the ${serviceLabel} instruction as a threshold-control problem with a named opening and decision-maker. ${checks[0]} ${checks[1]} Identify who controls ${context.controlledSubject} before any intervention, and record which person supplied each instruction.`,
-    (serviceLabel, checks, context) => `Make the ${serviceLabel} handover usable to the person controlling that threshold. ${checks[2]} Describe ${context.issue}, the inspection still required and anything excluded from the proposed scope. Record ${context.outcomes}, including later repair or approval questions and the basis of the expected price.`,
-  ],
-}
+]>> = {}
 
 const SERVICE_DECISION_LABELS: Record<ServiceAreaSlug, string> = {
   'emergency-lockout': 'lockout',
@@ -1233,84 +1226,91 @@ export const NORTH_EAST_AREA_GUIDES = {
   }),
   'horeston-grange': makeGuide({
     slug: 'horeston-grange',
-    serviceEvidenceMode: 'hub-context-only',
+    reviewedOn: PROMOTION_REVIEWED_ON,
     summary: [
-      `Nuneaton and Bedworth Borough Council lists Horestone Grange Woodlands Walk as a local park at Launceston Drive, Nuneaton, with surfaced footpaths. That public-space record does not define the surrounding locality.`,
-      `Warwickshire County Council's street register, produced on 11 August 2026, assigns selected entries such as Crediton Close, Seaton Close and St Ives Way to Horeston Grange, Nuneaton. It is not a property inventory.`,
+      `Warwickshire County Council's street register, produced on 11 August 2026, assigns Camborne Drive, Crediton Close, Seaton Close, St Ives Way and Tiverton Drive to Horeston Grange, Nuneaton. These selected highway labels are not a complete boundary or property inventory.`,
+      `The Borough Plan Review adopted on 10 December 2025 names Horeston Grange as a district centre serving day-to-day shopping and service needs. The council's current well-being-walk schedule separately identifies the Horeston Grange Co-op meeting point at Camborne Drive, Nuneaton CV11 6GU; neither record identifies a unit, entrance or controller for locksmith work.`,
+      `A current council asset row gives the named St. Nicholas MUGA parcel on Tiverton Drive freehold and local-authority-occupied status. That exact controller record applies only to CV11 6YL and proves no gate, door, lock, access right, fault or service requirement.`,
     ],
-    accessGuidance: `Give the exact present Horeston Grange address and affected door, not merely the Woodlands Walk or one street from the county register. Identify whether the opening is private, common or managed and who controls it.`,
-    evidenceLimits: `The sources are a public-park directory entry, a current highway-locality register and one site-specific historic record, not property-access or tenure records. They prove no access arrangement, building construction, door material, mechanism, service history or demand, and the historic record cannot be transferred to another address.`,
+    accessGuidance: `Give the complete Horeston Grange address and exact affected threshold. At the district centre, add the business and unit; at St. Nicholas MUGA, obtain instruction from an authorised council or facilities contact. A street, retailer or asset name alone does not establish authority.`,
+    evidenceLimits: `The street register supplies selected highway-locality labels, the plan supplies a centre classification, the walk schedule identifies one current retail meeting point and the asset list identifies one council-controlled parcel. None establishes another property's use, owner, manager, entrance, construction, hardware, condition, access right, incident, demand, route, response time or service history.`,
     facts: [
       {
-        heading: 'Horestone Grange Woodlands Walk',
-        text: `The borough council lists Horestone Grange Woodlands Walk as a local park at Launceston Drive with surfaced footpaths.`,
-        sourceIds: ['nbbc-horestone-grange-woodlands-walk'],
-        serviceRelevance: `This public-space entry can assist orientation but cannot define a private property, locality boundary or entrance.` ,
-      },
-      {
         heading: 'Horeston Grange county street entries',
-        text: `The county street register produced on 11 August 2026 assigns Crediton Close, Seaton Close and St Ives Way to Horeston Grange, Nuneaton.`,
+        text: `The county street register produced on 11 August 2026 assigns Camborne Drive, Crediton Close, Seaton Close, St Ives Way and Tiverton Drive to Horeston Grange, Nuneaton.`,
         sourceIds: ['wcc-list-of-streets-2026'],
-        serviceRelevance: `Those selected highway labels can support address checking but supply no evidence about hardware, access or service needs.`,
+        serviceRelevance: `Use the complete number, street and postcode to locate the instruction; selected highway labels establish no property, entrance, controller or access right.`,
       },
       {
-        heading: 'Horeston Grange historic house site',
-        text: `The Warwickshire Historic Environment Record identifies a named post-medieval or later house site at Horeston Grange, record MWA6260.`,
-        sourceIds: ['warwickshire-her-horeston-grange-house'],
-        serviceRelevance: `This site-specific historic record cannot describe another Horeston Grange property, confer designation or establish present access, construction or hardware.`,
+        heading: 'Horeston Grange district centre designation',
+        text: `The Borough Plan Review adopted on 10 December 2025 lists Horeston Grange as a district centre serving day-to-day shopping and service needs.`,
+        sourceIds: ['nbbc-borough-plan-review-2021-2039'],
+        serviceRelevance: `At a centre booking, identify the current business, unit, exact affected threshold and authorised contact; the planning label proves none of those details.`,
+      },
+      {
+        heading: 'Camborne Drive Co-op meeting point',
+        text: `The council's current well-being-walk schedule names the Horeston Grange Co-op meeting point at Camborne Drive, Nuneaton CV11 6GU.`,
+        sourceIds: ['nbbc-horeston-grange-wellbeing-walk'],
+        serviceRelevance: `For a call at that retail site, name the business or unit, exact door and authorised manager; a public meeting point supplies no work authority.`,
+      },
+      {
+        heading: 'Council-controlled St Nicholas MUGA land',
+        text: `The council asset list records St. Nicholas MUGA at Tiverton Drive, Nuneaton CV11 6YL as freehold land occupied by the local authority.`,
+        sourceIds: ['nbbc-horeston-grange-asset-register-2026'],
+        serviceRelevance: `Only for that exact asset, obtain instruction from an authorised council or facilities contact; the register proves no gate, door, lock, condition or access right.`,
       },
     ],
-    factOnlySourceIds: ['warwickshire-her-horeston-grange-house'],
     sources: [
-      LOCAL_SOURCES['nbbc-horestone-grange-woodlands-walk'],
       LOCAL_SOURCES['wcc-list-of-streets-2026'],
-      LOCAL_SOURCES['warwickshire-her-horeston-grange-house'],
+      LOCAL_SOURCES['nbbc-borough-plan-review-2021-2039'],
+      LOCAL_SOURCES['nbbc-horeston-grange-wellbeing-walk'],
+      LOCAL_SOURCES['nbbc-horeston-grange-asset-register-2026'],
     ],
     serviceGuidance: {
       'emergency-lockout': {
-        localFactIndexes: [0, 1],
-        heading: 'Identifying the exact Horeston Grange door during a lockout',
+        localFactIndexes: [0, 1, 2, 3],
+        heading: 'Identifying the exact Horeston Grange threshold during a lockout',
         body: [
-          `The Woodlands Walk and selected street-locality entries cannot identify a present Horeston Grange entrance. A caller should provide the full address, unit or floor where relevant, door position and responsible contact. That preparation distinguishes a private lock from a common threshold before authority is checked. Only then should the locksmith assess whether the door closed on a latch, was deadlocked or has a key or mechanism failure requiring a different opening decision.`,
-          `The park and street sources do not establish heritage status, so visual age should prompt documentation and a current record check rather than an assumption. If opening would remove a lock component or mark surrounding material, explain the exact intervention and its reinstatement separately. Record the resulting method and scope from inspection rather than assigning them to the MLA source. MLA guidance supports identity-and-authority checks, available price information in advance and agreement if that service-call price later changes. The final method follows the inspected hardware and condition, while any external-fabric question remains with present property evidence and the controller.`,
+          `A Horeston Grange lockout instruction should begin with the full number, street and postcode because a county locality label does not identify a property or door. At the district centre or the Camborne Drive Co-op site, record the current business, unit and precise private, shared or service entrance. If the request concerns St. Nicholas MUGA on Tiverton Drive, obtain instruction from an authorised council or facilities contact and identify the exact secured point; the asset register itself proves no gate or lock.`,
+          `Connect the caller's identity and authority to that threshold before testing the key, latch, deadlocking and visible condition. The centre, retailer and asset records select no opening method and predict no hardware. Use inspection to explain any non-destructive option, component removal, replacement or reinstatement, and record pre-existing damage. MLA guidance separately supports identity-and-authority checks, available price information in advance and fresh agreement if the service-call price changes; it does not promise entry or prescribe a technique.`,
         ],
-        checks: ['Identify the exact unit and threshold', 'Prepare proof linked to that entrance', 'Photograph fabric before destructive work'],
+        checks: ['Resolve the Camborne unit or Tiverton asset', 'Link the caller to the precisely named opening', 'Record latch state before choosing an entry step'],
       },
       'lock-change': {
-        localFactIndexes: [0, 1],
-        heading: 'Horeston Grange lock changes based on mechanism and purpose',
+        localFactIndexes: [1, 2, 3],
+        heading: 'Authority and component checks for a Horeston Grange lock change',
         body: [
-          `A public-park record and highway-locality labels say nothing about the lock fitted at a Horeston Grange address. Define whether the change concerns lost keys, a reported failure, damage or another agreed objective. Photographs of the handles, edge plate and readable markings prepare an inspection in which cylinder, case, keep and alignment remain separate questions; the reported symptom does not identify a component. Any decision to retain or replace material should follow observed condition and measurements instead of an assumed building type derived from locality sources.`,
-          `For a common entrance, identify the person responsible for shared keying before changing hardware; a unit occupier's authority may relate only to the private threshold. The cited sources provide no current property-status answer, so check separately if the proposal affects visible material. A clear schedule should name the diagnosed part, dimensions, key quantity, fitting and adjustment, and list any building-management or external-fabric decision awaiting the relevant building controller rather than burying it in a general lock-change description.`,
+          `Horeston Grange's district-centre designation does not identify a current occupier, unit or keying system. For the Camborne Drive retail site, name the business, unit and door and obtain the authorised manager's instruction; for St. Nicholas MUGA, use an authorised council or facilities contact for the exact asset. Define whether the change concerns lost key control, failure, damage or another agreed objective, and distinguish a private component from shared or site-controlled hardware before replacement is considered.`,
+          `Photograph both faces of the furniture, door edge, readable markings and keep, then inspect cylinder, case, alignment and surrounding condition as separate questions. Neither the plan nor the asset list proves a fitted lock or compatible product. The written scope should identify the diagnosed component, measurements, retained parts, supplied keys, fitting and adjustment, plus any shared-keying or building-management approval. Do not transfer the council's control of one Tiverton Drive parcel to another address or treat a centre name as permission.`,
         ],
-        checks: ['Define the reason for replacement', 'Measure components after safe access', 'Confirm authority for shared keying'],
+        checks: ['Identify the current unit and decision-maker', 'Define the key-control or repair objective', 'Measure the installed component before selection'],
       },
       'upvc-lock-repair': {
-        localFactIndexes: [0, 1],
-        heading: 'Horeston Grange multipoint diagnosis from observed movement',
+        localFactIndexes: [0, 1, 2, 3],
+        heading: 'Horeston Grange multipoint diagnosis at the named door',
         body: [
-          `Nothing in the park or street records proves that a Horeston Grange door uses uPVC, composite construction or a particular mechanism. Once the actual door is confirmed, record whether the handle lifts fully, the key rotates and hooks or rollers move, plus whether the problem appears only against the frame. Use that movement sequence only to describe this Horeston Grange door; Launceston Drive's park entry and the county's three street labels cannot identify a failed component. Faceplate codes and measured geometry are still necessary before a compatible component is proposed.`,
-          `The locality sources also cannot show whether the affected threshold is privately controlled or part of a shared system. Establish that responsibility and any building-management status before dismantling hardware. If diagnosis extends into cutting or replacing visible door material, check current property constraints separately. The repair record should state symptoms, tests, markings, measurements and next action, leaving no impression that the Woodlands Walk or street label predicts a mechanism, access condition or repair outcome.`,
+          `Nothing in the county street list, district-centre plan, Co-op meeting-point record or council asset list proves that a Horeston Grange opening is uPVC, composite or fitted with multipoint hardware. Confirm the complete address and actual door first. At a centre unit, name the business and authorised manager; at St. Nicholas MUGA, obtain the council or facilities instruction for the specific asset. Those steps resolve place and control only and must not be used as a remote mechanism diagnosis.`,
+          `At the confirmed uPVC or composite door, record whether the handle lifts fully, the key rotates and hooks or rollers move, plus any safe difference between open and closed operation. Photograph the faceplate and readable codes and measure centres, backset and locking layout before a compatible component is proposed. Establish separately whether the threshold is private, shared or managed before dismantling hardware. The repair record should state symptoms, reproduced tests, measurements, proposed part and approvals, without assigning a fault or outcome from locality evidence.`,
         ],
-        checks: ['Confirm the door is uPVC or composite', 'Record the full operating sequence', 'Identify the responsible threshold controller'],
+        checks: ['Confirm the complete address door and controller', 'Record the safe operating sequence', 'Measure the complete fitted locking arrangement'],
       },
       'boarding-up': {
-        localFactIndexes: [0, 1],
-        heading: 'Temporary security for a damaged Horeston Grange opening',
+        localFactIndexes: [1, 2, 3],
+        heading: 'Exact-site preparation for Horeston Grange boarding',
         body: [
-          `The public-park description and street entries have no bearing on the extent or cause of damage at an opening. Follow police instructions, then photograph the point of entry, frame, glazing or door leaf, compromised lock and adjacent surfaces before covering anything. Confirm whether the opening belongs to one unit or shared circulation and who controls it. That record supports a board plan from current evidence without attributing property characteristics to a locality label.`,
-          `Because the locality sources are not designation maps, potential heritage constraints must be checked from present property records if visible fabric could be affected. Define the temporary scope only after the remaining structure has been inspected and document it before work. The completion note should identify covered damage and permanent glazing, joinery, door, lock or structural tasks still open. This allows the next contractor to recover the initial condition rather than relying on the Woodlands Walk or a street name.`,
+          `A boarding request at the Horeston Grange district centre must identify the current business, unit and damaged external or internal opening rather than using the centre name alone. At the Camborne Drive retail site, obtain the authorised manager; at St. Nicholas MUGA, use an authorised council or facilities contact for that exact parcel. The official records do not show damage, safe access, construction or attachment points, and the asset row cannot be treated as proof that a gate, door or window exists.`,
+          `Follow any police evidence-preservation instruction before disturbing the scene, then photograph the point of entry, surviving frame, glazing or door material, compromised hardware and adjacent surfaces. Measure only the authorised opening and define temporary coverage after direct inspection of what remains. The handover should identify the fixing and material used, what evidence was concealed, and permanent glazing, joinery, door, lock or structural work still open. Keep site authority, temporary access reduction and full restoration as separate recorded decisions.`,
         ],
-        checks: ['Follow police instructions at the scene', 'Record shared-opening authority before fixing', 'List each unresolved permanent repair'],
+        checks: ['Separate Camborne unit damage from Tiverton asset authority', 'Capture every surface hidden by temporary coverage', 'Assign permanent follow-on work to the site controller'],
       },
       'lock-upgrade': {
-        localFactIndexes: [0, 1],
-        heading: 'Measured security planning for a Horeston Grange entrance',
+        localFactIndexes: [1, 2, 3],
+        heading: 'A controlled-site security brief for Horeston Grange',
         body: [
-          `The public-park and street records contain no door-security evidence. A Horeston Grange review should inspect leaf and frame condition, hinges, keeps, handles, lock engagement and any cylinder projection. Warwickshire Police supports considering the complete entrance and correctly sized accredited products. Markings, measurements and operation then establish which improvement is compatible, while alignment, building-management duties or weak surrounding material remain separate findings rather than assumptions based on a locality label.`,
-          `Any outward alteration needs present property evidence because the Woodlands Walk and highway register are not heritage designations or parcel boundaries. Photograph existing cut-outs and furniture, identify the controller of common hardware and separate adjustment from reinforcement or replacement. The specification should record current manufacturer documentation, exact fit and dependencies, and refer unresolved fabric questions appropriately, without claiming that locality sources describe construction or guarantee an outcome.`,
+          `A Horeston Grange upgrade brief should identify one entrance and its authorised objective. At the district centre or Camborne Drive retail site, record the current business, unit, exact private or shared threshold and responsible manager. If the request concerns St. Nicholas MUGA, obtain the council or facilities requirement for that exact asset. The plan and asset register establish context and one controller record only; they supply no existing security level, door construction, fitted product or need for replacement.`,
+          `Inspect the identified leaf or gate, frame, hinges, keeps, handles, lock engagement and cylinder fit where those components are actually present. Record markings and measurements and check any written insurer, landlord, council or site-management condition before comparing correctly sized, accredited options. Photograph existing cut-outs and distinguish adjustment, reinforcement and replacement. The specification should identify retained material, exact manufacturer evidence, fit, dependencies and approving party, without transferring the Tiverton Drive controller fact to other premises or promising that one upgrade removes every entry route.`,
         ],
-        checks: ['Assess hardware within the whole entrance', 'Document product evidence and measurements', 'Verify current constraints before alteration'],
+        checks: ['Tie the objective to one controlled entrance', 'Inspect and measure the complete assembly', 'Record product evidence and approving party'],
       },
     },
   }),

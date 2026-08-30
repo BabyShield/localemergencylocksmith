@@ -34,8 +34,8 @@ export const SOUTH_WEST_AREA_SEARCH_DESCRIPTIONS = {
     sourceIds: ['wdc-community-parks'],
   },
   'chase-meadow': {
-    description: 'Locksmith services in Chase Meadow for lockouts, repairs and upgrades, with Hickmans Green and The Marrish listed locally as community parks.',
-    sourceIds: ['wdc-community-parks'],
+    description: 'Chase Meadow locksmith help for lockouts, repairs and upgrades, with the adopted local plan listing Narrow Hall Meadow as a local shopping centre.',
+    sourceIds: ['wdc-local-plan'],
   },
   'warwick-gates': {
     description: 'Locksmith help in Warwick Gates for lockouts, lock repairs and upgrades, with Othello Avenue recorded in the local plan as a local shopping centre.',

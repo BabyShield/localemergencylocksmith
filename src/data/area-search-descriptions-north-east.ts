@@ -2,8 +2,8 @@ import type { AreaSearchDescriptionRegistry } from './area-search-description-ty
 
 export const NORTH_EAST_AREA_SEARCH_DESCRIPTIONS = {
   nuneaton: {
-    description: "Nuneaton locksmith help for lockouts, repairs and security upgrades, with the borough council recording the town's market as established in 1247.",
-    sourceIds: ['nbbc-nuneaton-town-centre'],
+    description: 'Nuneaton locksmith help for lockouts, repairs and security upgrades, with town-centre conservation-boundary additions confirmed on 15 February 2022.',
+    sourceIds: ['gazette-nuneaton-conservation-2022'],
   },
   attleborough: {
     description: 'Attleborough locksmith help for lockouts, repairs and upgrades, with official records identifying selected housing streets and exact heritage checks.',
@@ -18,8 +18,8 @@ export const NORTH_EAST_AREA_SEARCH_DESCRIPTIONS = {
     sourceIds: ['nbbc-tenant-walkabouts-2026', 'historic-england-st-james-weddington-1185771'],
   },
   'horeston-grange': {
-    description: 'Horeston Grange locksmith help for lockouts, repairs and upgrades, with the borough council listing Horestone Grange Woodlands Walk on Launceston Drive.',
-    sourceIds: ['nbbc-horestone-grange-woodlands-walk'],
+    description: 'Horeston Grange locksmith help for lockouts and repairs, with the adopted plan naming its district centre and the council locating the Co-op on Camborne Drive.',
+    sourceIds: ['nbbc-borough-plan-review-2021-2039', 'nbbc-horeston-grange-wellbeing-walk'],
   },
   whitestone: {
     description: 'Whitestone locksmith help for lockouts and repairs, with the county street register assigning Whitestone Road and St Andrews Drive to Whitestone, Nuneaton.',
@@ -34,8 +34,8 @@ export const NORTH_EAST_AREA_SEARCH_DESCRIPTIONS = {
     sourceIds: ['warwickshire-her-chapel-end-chapel'],
   },
   'bermuda-park': {
-    description: "Bermuda Park locksmith help for lockouts and repairs, with the council's 2026 Heritage SPD listing specified Bermuda Village number ranges.",
-    sourceIds: ['nbbc-heritage-spd-2026'],
+    description: 'Bermuda Park locksmith help for lockouts, repairs and upgrades, with council heritage records covering 20-118 even and 39-117 odd at Bermuda Village, CV10 7PN.',
+    sourceIds: ['nbbc-heritage-spd-2026', 'nbbc-bermuda-village-article-4'],
   },
   'galley-common': {
     description: 'Galley Common locksmith help for lockouts and repairs, with the county street register assigning Chaucer Drive and Orford Rise to Galley Common, Nuneaton.',
