@@ -1,8 +1,8 @@
 # South-west service-area evidence register
 
-Checked: 2026-08-29
+Checked: baseline corpus 2026-08-29; `bishopton`, `sydenham` and `tiddington` evidence refreshed 2026-08-30.
 Scope: 27 governed area slugs across Leamington Spa, Warwick, Stratford-upon-Avon and the Warwickshire/nearby cluster.
-Source rule: primary official sources only (district/borough/county councils and official adopted or submitted planning documents hosted by them).
+Source rule: primary official sources only (central-government registers, district/borough/county councils, and official adopted or submitted planning documents hosted by them).
 
 ## Editorial guardrails
 
@@ -15,9 +15,9 @@ Source rule: primary official sources only (district/borough/county councils and
 ## Counts and unresolved status
 
 - Registry slugs reviewed: **27/27**.
-- Factual claims recorded: **56** (two per slug, plus a third for `leamington-spa` and `stratford-upon-avon`).
+- Factual claims recorded: **63** (at least two per slug; four each for `bishopton`, `sydenham` and `tiddington`, plus a third for `leamington-spa`, `stratford-upon-avon` and `shilton`).
 - Slugs with at least two official-source claims: **27/27**.
-- Distinct official deep URLs cited: **38** across **5** official host authorities (12 Warwick District Council, 10 Stratford-on-Avon District Council, 9 Rugby Borough Council, 6 Solihull Metropolitan Borough Council and 1 Warwickshire County Council URL); these appear in **57** claim citations because sources are reused where they support more than one slug.
+- Distinct official deep URLs cited: **48** across **9** official publishing authorities (13 Warwick District Council, 11 Stratford-on-Avon District Council, 9 Rugby Borough Council, 6 Solihull Metropolitan Borough Council, 3 Charity Commission, 3 Department for Education, 1 Warwickshire County Council, 1 Office for National Statistics and 1 Historic England URL); these appear in **64** claim citations because sources are reused where they support more than one slug and one claim cites two official records.
 - Slugs with a directly evidenced conservation-area tag: **16/27**.
 - Slugs with a directly evidenced rail tag: **2/27** (`brandon`, `wolston`).
 - Slugs with a directly evidenced river tag: **4/27** (`leamington-spa`, `stratford-upon-avon`, `wolston`, `ryton-on-dunsmore`).
@@ -85,19 +85,31 @@ Source rule: primary official sources only (district/borough/county councils and
 ### `sydenham`
 
 **Context tags:** `settlement/local-plan`
-**Access/property-status caveat:** The official plan names a shopping centre and industrial estate, but neither feature establishes the use, construction, security setup or access of any particular Sydenham address.
+**Access/property-status caveat:** The plan classifications, registered community-centre record, school address and outdoor play-area listing identify named Sydenham places only. They do not establish the use, construction, security setup, correct entrance, current keyholder or work authority for a particular address.
 
-1. **Claim:** Policy RLS19 identifies Sydenham Drive as one of the neighbourhood plan's local shopping centres.
-   **Publisher / title / deep URL:** Warwick District Council (host; Royal Leamington Spa Town Council plan) — [Royal Leamington Spa Neighbourhood Plan, June 2020](https://www.warwickdc.gov.uk/download/downloads/id/6087/final_rlsndp_for_referendum.pdf), Policy RLS19.
-   **Supports:** An official local-centre reference for Sydenham and the `settlement/local-plan` tag.
-   **Conditional service use:** Use Sydenham Drive only as a caller-confirmed orientation point; do not infer commercial work, demand or coverage from the centre's designation.
-   **Checked:** 2026-08-29.
+1. **Claim:** Policy RLS19 identifies Sydenham Drive as a local shopping centre, while the plan's spatial portrait separately names Sydenham Industrial Estate as one of the town's manufacturing locations.
+   **Publisher / title / deep URL:** Warwick District Council (host; Royal Leamington Spa Town Council plan) — [Royal Leamington Spa Neighbourhood Plan, June 2020](https://www.warwickdc.gov.uk/download/downloads/id/6087/final_rlsndp_for_referendum.pdf), Policy RLS19 and section 3.17.
+   **Supports:** Two distinct authority-recorded land-use references and the `settlement/local-plan` tag.
+   **Conditional service use:** Use either name only as caller-confirmed locality context; the classifications do not prove the use of a particular address, commercial demand, job history or service coverage.
+   **Checked:** 2026-08-30.
 
-2. **Claim:** The plan's spatial portrait names Sydenham Industrial Estate as one of the town's manufacturing locations.
-   **Publisher / title / deep URL:** Warwick District Council (host; Royal Leamington Spa Town Council plan) — [Royal Leamington Spa Neighbourhood Plan, June 2020](https://www.warwickdc.gov.uk/download/downloads/id/6087/final_rlsndp_for_referendum.pdf), section 3.17.
-   **Supports:** A second independently stated, Sydenham-named official locality feature.
-   **Conditional service use:** The estate may be named only as general locality context; it is not evidence that the business has attended it or offers any estate-specific response.
-   **Checked:** 2026-08-29.
+2. **Claim:** The Charity Commission record for Sydenham Neighbourhood Initiatives Limited, registered charity 1077333, describes the SYDNI Centre as a multicultural community centre and gives its contact address as Cottage Square, Sydenham, Leamington Spa, CV31 1PT.
+   **Publisher / title / deep URL:** Charity Commission for England and Wales — [Sydenham Neighbourhood Initiatives Limited: full register record](https://register-of-charities.charitycommission.gov.uk/en/charity-search/-/charity-details/3951749/full-print).
+   **Supports:** A registered organisation, named community-centre use and precise Sydenham contact address.
+   **Conditional service use:** Treat this as organisation and site-identification evidence only. The register does not identify a current individual keyholder, the correct entrance, installed hardware or authority to approve work; confirm those directly for any attendance.
+   **Checked:** 2026-08-30.
+
+3. **Claim:** The Department for Education record places Sydenham Primary School at Calder Walk, Sydenham, Leamington Spa, CV31 1SA.
+   **Publisher / title / deep URL:** Department for Education — [Sydenham Primary School](https://get-information-schools.service.gov.uk/Establishments/Establishment/Details/130868).
+   **Supports:** A current central-government school record and exact named-site address in Sydenham.
+   **Conditional service use:** Use the school solely as an address-verification cue. The record does not establish the relevant gate or entrance, safeguarding arrangements, current keyholder or authority to instruct work.
+   **Checked:** 2026-08-30.
+
+4. **Claim:** Warwick District Council's play-area register lists Fallow Hill Play Area at Sydenham Drive.
+   **Publisher / title / deep URL:** Warwick District Council — [Play areas](https://www.warwickdc.gov.uk/info/20245/parks/216/play_areas), “Fallow Hill Play Area”.
+   **Supports:** A council-recorded outdoor place name tied to Sydenham Drive.
+   **Conditional service use:** Use this outdoor feature only for caller-confirmed orientation; it is not evidence of a building, private entrance, property access or locksmith-service authority.
+   **Checked:** 2026-08-30.
 
 ### `whitnash`
 
@@ -231,36 +243,61 @@ Source rule: primary official sources only (district/borough/county councils and
 ### `tiddington`
 
 **Context tags:** `settlement/local-plan`
-**Access/property-status caveat:** Tiddington's built-up-area boundary, strategic gap and site policies are planning designations; they do not establish a particular property's status, type, access or distance from Stratford.
+**Access/property-status caveat:** Tiddington's planning designations, scheduled monument, registered charity contact and school address identify bounded records or named sites only. They do not establish a particular property's status, current condition, correct entrance, access arrangements, keyholder or work authority.
+**Excluded source:** `tiddingtoncommunitycentre.org.uk` was not used because the page checked on 2026-08-30 contained injected spam text; the Charity Commission record below is used only for the registered contact it actually supports.
 
-1. **Claim:** The made Stratford plan gives Tiddington a defined built-up-area boundary and records it as a Category 1 Local Service Village in the Core Strategy.
-   **Publisher / title / deep URL:** Stratford-on-Avon District Council (host; Stratford-upon-Avon Town Council plan) — [Stratford-upon-Avon Neighbourhood Development Plan 2011-2031, made version](https://www.stratford.gov.uk/doc/208868/name/Stratford-upon-Avon%20made%20Neighbourhood%20Plan.pdf), Policy H1 and section 5.20.
-   **Supports:** A formal settlement classification and boundary reference for the `settlement/local-plan` tag.
-   **Conditional service use:** Use “Local Service Village” only as an official planning description; do not infer service demand, property mix or operational coverage.
-   **Checked:** 2026-08-29.
+1. **Claim:** The made Stratford plan gives Tiddington a defined built-up-area boundary and records it as a Category 1 Local Service Village; it also maps strategic gaps between Stratford-upon-Avon, Tiddington and Alveston and allocates the southern part of Tiddington Fields for community orchards, woodland and open space.
+   **Publisher / title / deep URL:** Stratford-on-Avon District Council (host; Stratford-upon-Avon Town Council plan) — [Stratford-upon-Avon Neighbourhood Development Plan 2011-2031, made version](https://www.stratford.gov.uk/doc/208868/name/Stratford-upon-Avon%20made%20Neighbourhood%20Plan.pdf), Policy H1, section 5.20, Policy H2 and Policy SSB3.
+   **Supports:** A formal settlement classification, built-up boundary and distinct mapped planning context for the `settlement/local-plan` tag.
+   **Conditional service use:** Use the classification and mapped features only as dated planning context; they do not define a locksmith service radius, property mix, demand or a customer's access route.
+   **Checked:** 2026-08-30.
 
-2. **Claim:** Policy H2 maps strategic gaps intended to maintain separation between Stratford-upon-Avon, Tiddington and Alveston; Policy SSB3 allocates the southern part of Tiddington Fields for community orchards, woodland and open space.
-   **Publisher / title / deep URL:** Stratford-on-Avon District Council (host; Stratford-upon-Avon Town Council plan) — [Stratford-upon-Avon Neighbourhood Development Plan 2011-2031, made version](https://www.stratford.gov.uk/doc/208868/name/Stratford-upon-Avon%20made%20Neighbourhood%20Plan.pdf), Policy H2 and Policy SSB3.
-   **Supports:** Two precise mapped planning features associated with Tiddington.
-   **Conditional service use:** They may distinguish the village in evidence-led editorial copy, but not define a locksmith service radius or a customer's access route.
-   **Checked:** 2026-08-29.
+2. **Claim:** Historic England's official list entry identifies Tiddington Roman Settlement, Tiddington Road, CV37 7SA, as Scheduled Monument 1003741.
+   **Publisher / title / deep URL:** Historic England — [Tiddington Roman Settlement: official list entry](https://historicengland.org.uk/listing/the-list/list-entry/1003741?section=official-list-entry).
+   **Supports:** An exact statutory asset record and address-specific Tiddington reference.
+   **Conditional service use:** Scheduling is asset-specific and must not be extended to nearby properties. The list entry is not a survey of any building, entrance, door hardware, access arrangement or authority to commission work.
+   **Checked:** 2026-08-30.
+
+3. **Claim:** The Charity Commission contact record for Tiddington Community Centre, registered charity 1093526, gives the charity's contact address as Touchwood, Beeches Walk, Tiddington, Stratford-upon-Avon, CV37 7AT.
+   **Publisher / title / deep URL:** Charity Commission for England and Wales — [Tiddington Community Centre: contact information](https://register-of-charities.charitycommission.gov.uk/en/charity-search/-/charity-details/3986912/contact-information).
+   **Supports:** The registered charity identity and its published contact address in Tiddington.
+   **Conditional service use:** This is a registered contact address, not evidence that it is the community-centre venue or service entrance. Confirm the actual site, current keyholder and work authority directly.
+   **Checked:** 2026-08-30.
+
+4. **Claim:** The Department for Education record places Alveston CofE Primary School at Knights Lane, Tiddington, Stratford-upon-Avon, CV37 7BZ.
+   **Publisher / title / deep URL:** Department for Education — [Alveston CofE Primary School](https://www.get-information-schools.service.gov.uk/establishments/establishment/details/125623).
+   **Supports:** A central-government school record and exact named-site address in Tiddington.
+   **Conditional service use:** Use the school solely as an address-verification cue. The record does not establish the relevant gate or entrance, safeguarding arrangements, current keyholder or authority to instruct work.
+   **Checked:** 2026-08-30.
 
 ### `bishopton`
 
 **Context tags:** `settlement/local-plan`
-**Access/property-status caveat:** The plan references Bishopton Hamlet, Bishopton Road bridge and Bishopton Lane but does not define a service-area boundary or current route condition, nor does it support assumptions about a particular property.
+**Access/property-status caveat:** The made-plan, registered charity, public park-and-ride and school records identify distinct Bishopton places. They do not define a service-area boundary or establish current route conditions, a property's security setup, the correct entrance, an individual keyholder or authority to approve work.
 
 1. **Claim:** The made plan identifies Burton Farm at “Bishopton Hamlet” north of the A46 as one of the locations with small industrial units established in converted farm buildings.
    **Publisher / title / deep URL:** Stratford-on-Avon District Council (host; Stratford-upon-Avon Town Council plan) — [Stratford-upon-Avon Neighbourhood Development Plan 2011-2031, made version](https://www.stratford.gov.uk/doc/208868/name/Stratford-upon-Avon%20made%20Neighbourhood%20Plan.pdf), section 6.9.
    **Supports:** An explicit official use of the Bishopton Hamlet name and the `settlement/local-plan` tag.
    **Conditional service use:** Use only as general locality context; do not infer that a caller is on an industrial site, that the business has worked there, or that access is via the A46.
-   **Checked:** 2026-08-29.
+   **Checked:** 2026-08-30.
 
-2. **Claim:** The plan's infrastructure projects call for a future review of the Bishopton Road bridge across the canal, and its site-specific briefs identify the Core Strategy housing allocation north of Bishopton Lane (SUA.3).
-   **Publisher / title / deep URL:** Stratford-on-Avon District Council (host; Stratford-upon-Avon Town Council plan) — [Stratford-upon-Avon Neighbourhood Development Plan 2011-2031, made version](https://www.stratford.gov.uk/doc/208868/name/Stratford-upon-Avon%20made%20Neighbourhood%20Plan.pdf), INF Project 1 and section 12.2.
-   **Supports:** Two Bishopton-named planning/infrastructure references.
-   **Conditional service use:** Describe them only as plan references; “future review” is not evidence of a present bridge problem, and neither reference establishes property access or service coverage.
-   **Checked:** 2026-08-29.
+2. **Claim:** The Charity Commission record identifies Bishopton Community Centre CIO, registered charity 1188894, and states that its purpose is to rent the Community Centre on Drayton Avenue, Stratford-upon-Avon, from Warwickshire County Council and hire the hall to groups.
+   **Publisher / title / deep URL:** Charity Commission for England and Wales — [Bishopton Community Centre CIO: full register record](https://register-of-charities.charitycommission.gov.uk/en/charity-search/-/charity-details/5158655/full-print).
+   **Supports:** The registered charity identity, the stated Drayton Avenue community-centre relationship and the stated hall-hire purpose.
+   **Conditional service use:** Treat this as registered-organisation and stated-purpose evidence only. The register does not identify a current individual keyholder, correct entrance, installed hardware or authority for a particular job; confirm those directly.
+   **Checked:** 2026-08-30.
+
+3. **Claim:** Stratford-on-Avon District Council places Stratford Park and Ride off Bishopton Lane near the A46/A3400 at CV37 0RJ and describes more than 700 parking spaces and a passenger terminal.
+   **Publisher / title / deep URL:** Stratford-on-Avon District Council — [Stratford Park and Ride](https://www.stratford.gov.uk/parking-roads-transport/park-and-ride.cfm).
+   **Supports:** A current council-recorded public site and precise Bishopton Lane orientation point.
+   **Conditional service use:** Use the public site only for caller-confirmed orientation. Its record does not establish a private route, the relevant door or gate, current access authority, keyholder or permission to undertake work.
+   **Checked:** 2026-08-30.
+
+4. **Claim:** The Department for Education record places Bishopton Primary School at Drayton Avenue, Stratford-upon-Avon, CV37 9PB.
+   **Publisher / title / deep URL:** Department for Education — [Bishopton Primary School](https://get-information-schools.service.gov.uk/Establishments/Establishment/Details/125607).
+   **Supports:** A central-government school record and exact named-site address in Bishopton.
+   **Conditional service use:** Use the school solely as an address-verification cue. The record does not establish the relevant gate or entrance, safeguarding arrangements, current keyholder or authority to instruct work.
+   **Checked:** 2026-08-30.
 
 ### `shottery`
 

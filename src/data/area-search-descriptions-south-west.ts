@@ -14,8 +14,8 @@ export const SOUTH_WEST_AREA_SEARCH_DESCRIPTIONS = {
     sourceIds: ['wdc-leamington-conservation'],
   },
   sydenham: {
-    description: 'Locksmith help in Sydenham for lockouts, lock repairs and upgrades, with Sydenham Drive identified by the made plan as a local shopping centre.',
-    sourceIds: ['wdc-leamington-plan'],
+    description: 'Sydenham locksmith guidance distinguishing the SYDNI Centre on Cottage Square, Calder Walk school and separate Sydenham Drive sites.',
+    sourceIds: ['charity-commission-sydenham-neighbourhood-initiatives-1077333', 'dfe-sydenham-primary', 'wdc-sydenham-play-area'],
   },
   whitnash: {
     description: 'Locksmith services in Whitnash for lockouts, repairs and upgrades, where the local plan lists Church Green and Chapel Green as separate conservation areas.',
@@ -46,12 +46,12 @@ export const SOUTH_WEST_AREA_SEARCH_DESCRIPTIONS = {
     sourceIds: ['sdc-stratford-made-plan'],
   },
   tiddington: {
-    description: 'Locksmith help in Tiddington for lockouts, lock repairs and upgrades, with the made plan recording it as a Category 1 Local Service Village.',
-    sourceIds: ['sdc-stratford-made-plan'],
+    description: 'Tiddington locksmith guidance distinguishing the scheduled Roman settlement, Knights Lane school and registered community-centre charity.',
+    sourceIds: ['historic-england-tiddington-roman-settlement-1003741', 'dfe-alveston-primary-tiddington', 'charity-commission-tiddington-community-centre-1093526'],
   },
   bishopton: {
-    description: 'Locksmith services in Bishopton for lockouts, repairs and upgrades, with the made plan recording small industrial units at Burton Farm in Bishopton Hamlet.',
-    sourceIds: ['sdc-stratford-made-plan'],
+    description: 'Bishopton locksmith guidance distinguishing its Drayton Avenue community centre and school, Park and Ride and Burton Farm context.',
+    sourceIds: ['charity-commission-bishopton-community-centre-1188894', 'dfe-bishopton-primary', 'sdc-stratford-park-and-ride', 'sdc-stratford-made-plan'],
   },
   shottery: {
     description: 'Locksmith help in Shottery for lockouts, lock repairs and upgrades, with its conservation area originally designated in 1969 in council records.',

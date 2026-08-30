@@ -35,8 +35,11 @@ const SOUTH_WEST_AREA_SLUGS = [
 
 type SouthWestAreaSlug = (typeof SOUTH_WEST_AREA_SLUGS)[number]
 
+const PROMOTION_REVIEWED_ON = '2026-08-30'
+
 interface PairContext {
   localFactIndexes: number[]
+  heading?: string
   local: string
   decision: string
   checks: [string, string]
@@ -52,6 +55,7 @@ interface AreaGuideSeed {
   facts: AreaGuideFact[]
   sourceIds: string[]
   factOnlySourceIds?: string[]
+  reviewedOn?: string
   contexts: Record<ServiceAreaSlug, PairContext>
 }
 
@@ -62,8 +66,9 @@ function localitySource(
   url: string,
   supports: string,
   kind: AreaGuideSource['kind'] = 'locality',
+  checkedOn: string = EVIDENCE_REVIEWED_ON,
 ): AreaGuideSource {
-  return { id, title, publisher, url, supports, checkedOn: EVIDENCE_REVIEWED_ON, kind }
+  return { id, title, publisher, url, supports, checkedOn, kind }
 }
 
 const LOCALITY_SOURCES: Record<string, AreaGuideSource> = {
@@ -78,6 +83,10 @@ const LOCALITY_SOURCES: Record<string, AreaGuideSource> = {
   'wdc-community-parks': localitySource('wdc-community-parks', 'Community parks', 'Warwick District Council', 'https://www.warwickdc.gov.uk/info/20245/parks_and_green_spaces/215/community_parks', 'The council park records and named access points for Woodloes Park, Chase Meadow and Warwick Gates.'),
   'sdc-stratford-plan-page': localitySource('sdc-stratford-plan-page', 'Stratford-upon-Avon Neighbourhood Plan', 'Stratford-on-Avon District Council', 'https://www.stratford.gov.uk/planning-building/stratford-upon-avon-neighbourhood-plan.cfm', 'The made date and current development-plan status of the Stratford-upon-Avon neighbourhood plan.'),
   'sdc-stratford-made-plan': localitySource('sdc-stratford-made-plan', 'Stratford-upon-Avon Neighbourhood Development Plan 2011-2031, made version', 'Stratford-on-Avon District Council (host; Stratford-upon-Avon Town Council plan)', 'https://www.stratford.gov.uk/doc/208868/name/Stratford-upon-Avon%20made%20Neighbourhood%20Plan.pdf', 'The River Avon corridor, Tiddington, Bishopton and Shottery policies and site descriptions in the made plan.'),
+  'sdc-stratford-park-and-ride': localitySource('sdc-stratford-park-and-ride', 'Stratford-upon-Avon Park and Ride', 'Stratford-on-Avon District Council', 'https://www.stratford.gov.uk/parking-roads-transport/park-and-ride.cfm', 'The current council page identifies the Park and Ride off Bishopton Lane, its CV37 0RJ postcode, more than 700 spaces and passenger terminal.', 'locality', PROMOTION_REVIEWED_ON),
+  'charity-commission-bishopton-community-centre-1188894': localitySource('charity-commission-bishopton-community-centre-1188894', 'Bishopton Community Centre CIO, charity 1188894', 'Charity Commission for England and Wales', 'https://register-of-charities.charitycommission.gov.uk/en/charity-search/-/charity-details/5158655/full-print', 'The current register records the CIO, its purpose to rent the Drayton Avenue community centre from Warwickshire County Council and hire the hall to local groups.', 'locality', PROMOTION_REVIEWED_ON),
+  'historic-england-tiddington-roman-settlement-1003741': localitySource('historic-england-tiddington-roman-settlement-1003741', 'Tiddington Roman Settlement, list entry 1003741', 'Historic England', 'https://historicengland.org.uk/listing/the-list/list-entry/1003741?section=official-list-entry', 'The official list entry identifies the scheduled monument, its Tiddington Road statutory address and its buried Romano-British settlement remains.', 'property-status', PROMOTION_REVIEWED_ON),
+  'charity-commission-tiddington-community-centre-1093526': localitySource('charity-commission-tiddington-community-centre-1093526', 'Tiddington Community Centre, charity 1093526', 'Charity Commission for England and Wales', 'https://register-of-charities.charitycommission.gov.uk/en/charity-search/-/charity-details/3986912/full-print', 'The current register records the community-centre charity, its community-management purpose and a contact address at Touchwood, Beeches Walk.', 'locality', PROMOTION_REVIEWED_ON),
   'sdc-conservation-h-z': localitySource('sdc-conservation-h-z', 'Conservation Areas H-Z', 'Stratford-on-Avon District Council', 'https://www.stratford.gov.uk/planning-building/conservation-areas-h-z.cfm', 'Published conservation-area maps, reports and appraisal documents for Stratford-upon-Avon and Southam.', 'property-status'),
   'sdc-conservation-review-2026': localitySource('sdc-conservation-review-2026', 'Conservation Area Reviews 2026', 'Stratford-on-Avon District Council', 'https://www.stratford.gov.uk/planning-building/conservation-areas.cfm', 'The council-commissioned review of eight conservation-area appraisals, including Stratford-upon-Avon and Southam, with formal consultation in 2026.', 'property-status'),
   'sdc-shottery-conservation': localitySource('sdc-shottery-conservation', 'Shottery Conservation Area report', 'Stratford-on-Avon District Council', 'https://www.stratford.gov.uk/doc/175565/name/Shottery.pdf', 'Shottery Conservation Area designation and formal appraisal dates.', 'property-status'),
@@ -110,7 +119,9 @@ const LOCALITY_SOURCES: Record<string, AreaGuideSource> = {
   'dfe-heathcote-primary': localitySource('dfe-heathcote-primary', 'Heathcote Primary School', 'Department for Education', 'https://get-information-schools.service.gov.uk/Establishments/Establishment/Details/144648', 'The official establishment name and Vickers Way, Heathcote address for this specific primary school.'),
   'dfe-lillington-primary': localitySource('dfe-lillington-primary', 'Lillington Primary School', 'Department for Education', 'https://get-information-schools.service.gov.uk/Establishments/Establishment/Details/147642', 'The official establishment name and Cubbington Road, Lillington address for this specific primary school.'),
   'dfe-milverton-primary': localitySource('dfe-milverton-primary', 'Milverton Primary School', 'Department for Education', 'https://get-information-schools.service.gov.uk/Establishments/Establishment/Details/125610', 'The official establishment name and Greatheed Road, Leamington Spa address for this specific primary school.'),
-  'dfe-sydenham-primary': localitySource('dfe-sydenham-primary', 'Sydenham Primary School', 'Department for Education', 'https://get-information-schools.service.gov.uk/Establishments/Establishment/Details/130868', 'The official establishment name and Calder Walk, Sydenham address for this specific primary school.'),
+  'dfe-sydenham-primary': localitySource('dfe-sydenham-primary', 'Sydenham Primary School', 'Department for Education', 'https://get-information-schools.service.gov.uk/Establishments/Establishment/Details/130868', 'The official establishment name and Calder Walk, Sydenham address for this specific primary school.', 'locality', PROMOTION_REVIEWED_ON),
+  'charity-commission-sydenham-neighbourhood-initiatives-1077333': localitySource('charity-commission-sydenham-neighbourhood-initiatives-1077333', 'Sydenham Neighbourhood Initiatives Limited, charity 1077333', 'Charity Commission for England and Wales', 'https://register-of-charities.charitycommission.gov.uk/en/charity-search/-/charity-details/3951749/full-print', 'The current register describes the SYDNI Centre as a multicultural community centre and gives its Cottage Square contact address.', 'locality', PROMOTION_REVIEWED_ON),
+  'wdc-sydenham-play-area': localitySource('wdc-sydenham-play-area', 'Children\'s play areas', 'Warwick District Council', 'https://www.warwickdc.gov.uk/info/20245/parks/216/play_areas', 'The council list identifies Fallow Hill Play Area on Sydenham Drive among the play areas it maintains.', 'locality', PROMOTION_REVIEWED_ON),
   'dfe-whitnash-primary': localitySource('dfe-whitnash-primary', 'Whitnash Primary School', 'Department for Education', 'https://get-information-schools.service.gov.uk/Establishments/Establishment/Details/125560', 'The official establishment name and Langley Road, Whitnash address for this specific primary school.'),
   'wdc-chase-meadow-centre-solar': localitySource('wdc-chase-meadow-centre-solar', 'Chase Meadow Community Centre benefits from Council grant', 'Warwick District Council', 'https://www.warwickdc.gov.uk/news/article/1331/chase_meadow_community_centre_benefits_from_council_grant', 'The council report that solar panels were installed on the named Chase Meadow Community Centre in Warwick.'),
   'dfe-coten-end-primary': localitySource('dfe-coten-end-primary', 'Coten End Primary School', 'Department for Education', 'https://get-information-schools.service.gov.uk/Establishments/Establishment/Details/151505', 'The official establishment name and Coten End, Warwick address for this specific primary school.'),
@@ -128,9 +139,9 @@ const LOCALITY_SOURCES: Record<string, AreaGuideSource> = {
   'dfe-southam-primary': localitySource('dfe-southam-primary', 'Southam Primary School', 'Department for Education', 'https://get-information-schools.service.gov.uk/Establishments/Establishment/Details/143906', 'The official establishment name and St James Road, Southam address for this specific primary school.'),
   'dfe-studley-infants': localitySource('dfe-studley-infants', "Studley Infants' School", 'Department for Education', 'https://get-information-schools.service.gov.uk/Establishments/Establishment/Details/148511', 'The official establishment name and High Street, Studley address for this specific infant school.'),
   'dfe-wolston-st-margarets': localitySource('dfe-wolston-st-margarets', "Wolston St Margaret's CofE Primary School", 'Department for Education', 'https://get-information-schools.service.gov.uk/Establishments/Establishment/Details/125676', 'The official establishment name and Brookside, Main Street, Wolston address for this specific primary school.'),
-  'dfe-bishopton-primary': localitySource('dfe-bishopton-primary', 'Bishopton Primary School', 'Department for Education', 'https://get-information-schools.service.gov.uk/Establishments/Establishment/Details/125607', 'The official establishment name and Drayton Avenue, Stratford-upon-Avon address for this specific primary school.'),
+  'dfe-bishopton-primary': localitySource('dfe-bishopton-primary', 'Bishopton Primary School', 'Department for Education', 'https://get-information-schools.service.gov.uk/Establishments/Establishment/Details/125607', 'The official establishment name and Drayton Avenue, Stratford-upon-Avon address for this specific primary school.', 'locality', PROMOTION_REVIEWED_ON),
   'dfe-shottery-st-andrews': localitySource('dfe-shottery-st-andrews', "Shottery St Andrew's CofE Primary School", 'Department for Education', 'https://get-information-schools.service.gov.uk/Establishments/Establishment/Details/125646', 'The official establishment name and Hathaway Lane, Stratford-upon-Avon address for this specific primary school.'),
-  'dfe-alveston-primary-tiddington': localitySource('dfe-alveston-primary-tiddington', 'Alveston CofE Primary School', 'Department for Education', 'https://get-information-schools.service.gov.uk/Establishments/Establishment/Details/125623', 'The official establishment name and Knights Lane, Tiddington address for this specific primary school.'),
+  'dfe-alveston-primary-tiddington': localitySource('dfe-alveston-primary-tiddington', 'Alveston CofE Primary School', 'Department for Education', 'https://get-information-schools.service.gov.uk/Establishments/Establishment/Details/125623', 'The official establishment name and Knights Lane, Tiddington address for this specific primary school.', 'locality', PROMOTION_REVIEWED_ON),
 }
 
 const SERVICE_LABELS: Record<ServiceAreaSlug, string> = {
@@ -357,7 +368,7 @@ function buildServiceGuidance(
   const faq = SERVICE_FAQS[service][variant % SERVICE_FAQS[service].length]
   return {
     localFactIndexes: context.localFactIndexes,
-    heading: `${SERVICE_LABELS[service]} in ${seed.name}`,
+    heading: context.heading ?? `${SERVICE_LABELS[service]} in ${seed.name}`,
     body: [context.local, context.decision],
     checks: [SERVICE_CHECKS[service], ...context.checks],
     faq: {
@@ -378,7 +389,7 @@ function buildGuide(seed: AreaGuideSeed, areaIndex: number): GovernedAreaGuide {
 
   return {
     slug: seed.slug,
-    reviewedOn: EVIDENCE_REVIEWED_ON,
+    reviewedOn: seed.reviewedOn ?? EVIDENCE_REVIEWED_ON,
     summary: seed.summary,
     accessGuidance: seed.accessGuidance,
     evidenceLimits: seed.evidenceLimits,
@@ -643,78 +654,89 @@ const AREA_SEEDS: AreaGuideSeed[] = [
     slug: 'sydenham',
     name: 'Sydenham',
     region: 'Warwickshire',
+    reviewedOn: PROMOTION_REVIEWED_ON,
     summary: [
-      `The Royal Leamington Spa Neighbourhood Plan identifies Sydenham Drive as a local shopping centre and names Sydenham Industrial Estate among the town's manufacturing locations. These are two official but different land-use references.`,
-      `Neither reference identifies a particular Sydenham property, business unit, occupier, entrance or installed locking system. A caller's full address and the responsible private or managed-premises contact remain necessary before any service decision.`,
+      `Official records distinguish Sydenham Drive's local shopping centre and Fallow Hill Play Area from Sydenham Industrial Estate, Sydenham Primary School on Calder Walk and the SYDNI Centre on Cottage Square. These are separate named places, not one interchangeable destination.`,
+      `The records identify locality, land use and named organisations only. They do not reveal a private address's entrance, public access outside stated arrangements, the current person controlling a door, installed hardware or a locksmith fault.`,
     ],
-    accessGuidance: `Distinguish a Sydenham Drive address from a unit on Sydenham Industrial Estate and from other Sydenham streets. Record the building or unit, exact controlled entrance and person authorised by the occupier, owner or manager.`,
-    evidenceLimits: `Local-centre and manufacturing-location descriptions are planning context only. They do not prove property use at an individual address, ownership, access rights, operating hours, door type, lock mechanism, security need, service coverage or response time.`,
+    accessGuidance: `Record the complete street, building or unit and exact threshold. In particular, distinguish the SYDNI Centre on Cottage Square, Sydenham Primary School on Calder Walk, the industrial estate and the separate Sydenham Drive references before identifying the responsible occupier, owner or manager.`,
+    evidenceLimits: `Planning, charity, school and play-area records do not establish ownership of a caller's property, a current keyholder, permission to enter, route conditions, opening hours, door construction, lock mechanism, damage, security need, service coverage or response time.`,
     facts: [
       {
-        heading: `Sydenham Drive local shopping centre`,
-        text: `Royal Leamington Spa Neighbourhood Plan Policy RLS19 identifies Sydenham Drive as one of the plan's local shopping centres.`,
+        heading: `Two different Sydenham land-use references`,
+        text: `The Royal Leamington Spa Neighbourhood Plan identifies Sydenham Drive as a local shopping centre and separately names Sydenham Industrial Estate as a manufacturing location.`,
         sourceIds: ['wdc-leamington-plan'],
-        serviceRelevance: `Use the named road only to clarify the address, never to infer a commercial property, nearby location or access route.`,
+        serviceRelevance: `Use either name to clarify a caller-supplied location only; neither proves a property's present use, unit, entrance or site controller.`,
       },
       {
-        heading: `Sydenham Industrial Estate manufacturing location`,
-        text: `The neighbourhood plan's spatial portrait names Sydenham Industrial Estate as one of Royal Leamington Spa's manufacturing locations.`,
-        sourceIds: ['wdc-leamington-plan'],
-        serviceRelevance: `For a named unit, identify the responsible site contact and entrance; the estate label does not prove authority.`,
+        heading: `SYDNI Centre on Cottage Square`,
+        text: `The Charity Commission records Sydenham Neighbourhood Initiatives Limited, charity 1077333, and describes its SYDNI Centre as a multicultural community centre at Cottage Square, Sydenham, CV31 1PT.`,
+        sourceIds: ['charity-commission-sydenham-neighbourhood-initiatives-1077333'],
+        serviceRelevance: `The register identifies the charity and contact site, not a current individual keyholder, the requested entrance or permission for locksmith work.`,
       },
       {
         heading: `Sydenham Primary School on Calder Walk`,
         text: `The Department for Education records Sydenham Primary School at Calder Walk, Sydenham, Leamington Spa, CV31 1SA.`,
         sourceIds: ['dfe-sydenham-primary'],
-        serviceRelevance: `This identifies one education site only; it does not describe neighbouring properties, access rights, door hardware or service conditions.`,
+        serviceRelevance: `This identifies one education site only; it neither describes neighbouring properties nor establishes a current contact, access right or door condition.`,
+      },
+      {
+        heading: `Fallow Hill Play Area on Sydenham Drive`,
+        text: `Warwick District Council lists Fallow Hill Play Area on Sydenham Drive among the play areas it maintains.`,
+        sourceIds: ['wdc-sydenham-play-area'],
+        serviceRelevance: `This is an outdoor-site orientation record, not evidence of a building entrance, private route, keyholder or locking system.`,
       },
     ],
-    sourceIds: ['wdc-leamington-plan', 'dfe-sydenham-primary'],
-    factOnlySourceIds: ['dfe-sydenham-primary'],
+    sourceIds: ['wdc-leamington-plan', 'charity-commission-sydenham-neighbourhood-initiatives-1077333', 'dfe-sydenham-primary', 'wdc-sydenham-play-area'],
     contexts: {
       'emergency-lockout': {
-        localFactIndexes: [0, 1],
-        local: `Sydenham Drive local centre and Sydenham Industrial Estate are different official references, so “Sydenham” does not identify the controlled doorway. Obtain the street or unit, building identifier and exact entrance before accepting an urgent access instruction. Record whether the caller means a unit door, common site entrance or private home, because the two plan references can disambiguate place but cannot establish the threshold or the person using it.`,
-        decision: `If the call concerns the industrial estate, establish the authorised business or site contact; if it concerns Sydenham Drive, do not infer that the property is commercial from the local-centre designation. In both cases, verify authority at the address. Inspect the named opening with its frame and hinges, then explain the supported access scope and expected charge without allowing a manufacturing or shopping-centre label to imply an opening method.`,
+        localFactIndexes: [1, 2],
+        heading: `Distinguishing the SYDNI Centre from Sydenham Primary during a lockout`,
+        local: `The registered SYDNI Centre on Cottage Square and Sydenham Primary School on Calder Walk are separate managed sites. Neither name identifies the door in an urgent request. Record the full address, organisation, building and exact private, shared or staff threshold, then identify the current representative responsible for that opening. A postcode or landmark can disambiguate the destination but cannot show that the caller controls it.`,
+        decision: `The charity and school records establish named sites only; they publish no live keyholder chain or locksmith authority. Verify identity and permission for the requested threshold independently, inspect the lock with its door, frame and hinges, and explain the supported access method and expected charge before work. If the observed condition changes the service-call scope or price, obtain fresh agreement rather than treating either institution's public record as consent.`,
         checks: [
-          `Distinguish a Sydenham Drive address from an industrial-estate unit and record the building and exact entrance.`,
-          `Verify the authorised business, site or property contact without inferring commercial use from the local-centre label.`,
+          `Name Cottage Square or Calder Walk, the organisation, building and exact private, shared or staff entrance.`,
+          `Verify the present authorised representative; neither public record identifies a live keyholder or grants access.`,
         ],
       },
       'lock-change': {
-        localFactIndexes: [0, 1],
-        local: `A lock-change request on Sydenham Industrial Estate should identify the individual unit, entrance and manager able to approve work. The plan's manufacturing-location description does not establish current occupation, shared-door responsibilities or a technical specification. Separate hardware controlled by one unit from any estate-wide or communal system, and record the requested key-control or repair outcome before considering a component for that precise door.`,
-        decision: `For Sydenham Drive or another street, inspect the particular door rather than applying assumptions from a local shopping-centre label. Any landlord, freeholder or facilities requirement must be obtained directly and matched to the observed opening. The written proposal should identify retained parts, measured replacement, keys, adjustment and excluded shared work, so the land-use description never substitutes for compatibility evidence or approval.`,
+        localFactIndexes: [0, 1, 2],
+        heading: `A Sydenham lock change tied to site, controller and measured door`,
+        local: `Sydenham Drive's local centre, the industrial estate, the SYDNI Centre and Sydenham Primary are distinct official references. For a change request, record the precise unit or building, the affected entrance and the current occupier, facilities contact or other person entitled to approve that component. The plan does not prove present business use, while the charity and school records do not reveal an authority chain or shared-door responsibility.`,
+        decision: `Inspect the particular lock, leaf, frame, hinges and keep before separating repair, adjustment and replacement. Obtain any landlord, freeholder or site requirement directly and match it to that opening; never derive a product from the surrounding land-use label. The proposal should name the measured component, key-control outcome, retained parts, fitting, adjustment and excluded communal work, with the approving controller and evidence recorded before a Sydenham replacement begins.`,
         checks: [
-          `For the industrial estate, name the unit, entrance and current manager and resolve any shared-door responsibility.`,
-          `For Sydenham Drive or elsewhere, inspect the opening and match direct landlord or facilities requirements to it.`,
+          `Name the exact unit or institution, entrance and current controller and resolve shared-door responsibility.`,
+          `Measure the inspected assembly and attribute every landlord, school or facilities requirement to its provider.`,
         ],
       },
       'upvc-lock-repair': {
-        localFactIndexes: [0, 1],
-        local: `The plan's descriptions of Sydenham Drive and the industrial estate do not show that any entrance uses uPVC, composite construction or multipoint locking. Ask for door-specific symptoms and photographs, with the exact unit or property clearly identified. Record key movement, handle travel and locking-point action in order, noting whether each observation was reproduced with the door open or closed rather than assigning a fault from the site name.`,
-        decision: `A manufacturing-location label can help distinguish a site but cannot diagnose a mechanism or identify who may approve repair. Check the handle, key, frame and locking points at the named opening, then confirm the responsible decision-maker. Use readable faceplate information, centres, backset and locking layout to narrow compatibility only after inspection, and keep any common-site access requirement separate from the unit's own repair.`,
+        localFactIndexes: [0, 2],
+        heading: `Diagnosing a Sydenham multipoint fault without land-use assumptions`,
+        local: `Neither the Sydenham Drive and industrial-estate planning labels nor the school address on Calder Walk shows that a reported door is uPVC, composite or fitted with multipoint locking. Identify the exact property and threshold, then record material, key movement, handle travel, frame contact and locking-point action. Mark any safe open-versus-closed comparison as reported, reproduced or not tested rather than assigning a fault from the street or site name.`,
+        decision: `The school record identifies one managed site but no fitted mechanism or person authorised to approve repair. At any Sydenham address, inspect the handle, cylinder where present, faceplate, keeps, hinges and frame before narrowing a part. Use readable markings, centres, backset and locking layout as compatibility evidence, keep alignment work separate from mechanism replacement, and document the responsible controller for a school, unit or communal opening directly.`,
         checks: [
-          `Identify the exact unit or property and collect door photographs plus handle, key, frame and locking-point symptoms.`,
-          `Confirm the responsible decision-maker at the named opening; the manufacturing label cannot diagnose or authorise repair.`,
+          `Record the exact threshold, material, handle, key, frame and locking-point behaviour without inferring a mechanism.`,
+          `Use measurements and readable markings to shortlist parts and verify the responsible controller separately.`,
         ],
       },
       'boarding-up': {
-        localFactIndexes: [0, 1],
-        local: `Temporary securing on the industrial estate requires the exact unit and authorised site contact; near Sydenham Drive it requires the precise property, not the local-centre label. The plan does not identify ownership, boundary responsibility or damaged construction. Photograph the particular pane, panel, door or frame and record what is visible without treating a commercial land-use description as evidence that the surrounding material will support an attachment.`,
-        decision: `Separate public-facing, staff, shared and private entrances at the supplied address before defining the affected opening. Where police have issued evidence-preservation instructions, follow them before obtaining the relevant owner or manager's approval; Sydenham's land-use description supplies no permission. Record observed opening measurements, intended coverage, proposed attachment positions and unresolved glazing, door or frame work, keeping temporary access reduction distinct from reinstatement or any claim about hidden condition.`,
+        localFactIndexes: [0, 1, 3],
+        heading: `Temporary boarding at the exact Sydenham site and opening`,
+        local: `The industrial estate, SYDNI Centre and Fallow Hill Play Area represent different commercial, managed-building and outdoor contexts. A report near Sydenham Drive must therefore identify the exact property and damaged pane, panel, door or frame rather than borrowing a nearby place name. Confirm the responsible owner or site contact, photograph visible damage and surrounding material, and leave hidden condition and attachment suitability unresolved until the opening is physically assessed.`,
+        decision: `Fallow Hill is useful outdoor orientation but supplies no building, private route or permission; the charity record likewise does not name a current keyholder. Separate public-facing, staff, shared and private openings, follow any police evidence-preservation instruction, and obtain approval from the actual controller. Record measurements, temporary coverage, proposed attachment positions, compromised hardware and later glazing, joinery or door work so immediate securing is not presented as permanent reinstatement.`,
         checks: [
-          `Name the exact unit or property, damaged construction and authorised site contact rather than relying on a land-use label.`,
-          `Distinguish public-facing, staff, shared and private openings, preserve evidence and obtain the relevant controller's approval.`,
+          `Name the property and damaged opening; Fallow Hill and the industrial estate are orientation, not authority.`,
+          `Preserve evidence, verify the actual controller and document temporary coverage separately from permanent repair.`,
         ],
       },
       'lock-upgrade': {
-        localFactIndexes: [0, 1],
-        local: `Manufacturing and local-shopping-centre descriptions do not establish risk, existing hardware or a required standard at a Sydenham address. Ask the authorised occupier or manager for a written objective and inspect the individual entrance before comparing upgrades. Record frame condition, hinges, keeps, handle protection, lock engagement and cylinder fit where applicable, connecting each option to one observed issue rather than the plan's description of surrounding use.`,
-        decision: `Where a unit shares an estate entrance, distinguish responsibility for that opening from the unit's own doors; where an address is on Sydenham Drive, avoid assuming business use. Match any approved requirement to the actual assembly. State product markings, measured dimensions, retained hardware and excluded communal work in the specification, and leave any unverified management or insurer condition explicitly unresolved rather than presenting it as a locality rule.`,
+        localFactIndexes: [0, 1, 2],
+        heading: `A Sydenham upgrade brief with organisation and threshold resolved`,
+        local: `Manufacturing, local-centre, charity and school records do not demonstrate risk or prescribe security hardware. Ask the authorised controller for the objective and identify whether the opening belongs to a private home, industrial unit, SYDNI building, school or shared entrance. Inspect the leaf, frame, hinges, keeps, handles, lock engagement and cylinder fit where applicable, linking every proposed measure to one recorded condition instead of to Sydenham's surrounding land use.`,
+        decision: `Resolve responsibility for a communal or managed door separately from an occupier's own entrance. Neither the Cottage Square charity record nor Calder Walk school record supplies approval, and Sydenham Drive's planning status is not a standard. Match any documented manager or insurer requirement to the actual assembly, then state product evidence, measurements, retained hardware and excluded work. Keep unverified conditions explicit so the written comparison does not imply endorsement or guaranteed resistance.`,
         checks: [
-          `Obtain a written objective from the authorised occupier or manager and inspect the individual entrance.`,
-          `Separate responsibility for shared estate entrances from unit doors and never infer business use from Sydenham Drive.`,
+          `Identify the organisation or property, exact threshold and authorised objective before comparing upgrades.`,
+          `Match measured product evidence and documented requirements to the door, keeping shared work and claims explicit.`,
         ],
       },
     },
@@ -1282,78 +1304,89 @@ const AREA_SEEDS: AreaGuideSeed[] = [
     slug: 'tiddington',
     name: 'Tiddington',
     region: 'Warwickshire',
+    reviewedOn: PROMOTION_REVIEWED_ON,
     summary: [
-      `The made Stratford plan gives Tiddington a defined built-up-area boundary and records it as a Category 1 Local Service Village. It also maps strategic gaps and allocates part of Tiddington Fields for community orchards, woodland and open space.`,
-      `Those settlement, boundary and land-use policies are not property records. They do not show whether an address lies inside a particular mapped area, who controls it, what its building or entrance contains, or how it may be accessed.`,
+      `Current official records distinguish the Tiddington Road scheduled Roman settlement, Alveston CofE Primary School on Knights Lane and the registered Tiddington Community Centre charity. The made Stratford plan separately records the village boundary, strategic gaps and Tiddington Fields policies.`,
+      `Each fact is limited to its named site, organisation or planning geography. None identifies a private property's status, the current controller of an entrance, a route across scheduled or allocated land, installed hardware or a locksmith fault.`,
     ],
-    accessGuidance: `Use the full Tiddington address and distinguish the built-up boundary, strategic gaps and Tiddington Fields from a specific property. For an open-space or managed asset, identify the responsible body; never assume access across allocated land.`,
-    evidenceLimits: `Local Service Village status and mapped planning allocations do not prove current land use at an address, ownership, private access, building type, door material, lock mechanism, condition, security need, service coverage or response.`,
+    accessGuidance: `Use the full Tiddington address, building and threshold. Distinguish the Tiddington Road monument, Knights Lane school, charity contact on Beeches Walk and the mapped Tiddington Fields context, then identify the current person responsible for the actual opening without assuming access across protected or allocated land.`,
+    evidenceLimits: `The scheduled record is not a door survey, the school entry does not publish a keyholder, the charity's Beeches Walk address is a registered contact rather than proof of the venue entrance, and planning policies establish no ownership, private route, hardware, damage, service coverage or response.`,
     facts: [
       {
-        heading: `Tiddington boundary and village category`,
-        text: `The made Stratford plan gives Tiddington a defined built-up-area boundary and records it as a Category 1 Local Service Village in the Core Strategy.`,
-        sourceIds: ['sdc-stratford-made-plan'],
-        serviceRelevance: `Use the official settlement classification and boundary only for planning context, not address-level property or service claims.`,
-      },
-      {
-        heading: `Tiddington strategic gaps and open-space allocation`,
-        text: `The plan maps strategic gaps between Stratford-upon-Avon, Tiddington and Alveston and allocates southern Tiddington Fields for community orchards, woodland and open space.`,
-        sourceIds: ['sdc-stratford-made-plan'],
-        serviceRelevance: `Treat the mapped gaps and fields as locality evidence only and do not infer routes or private-property access.`,
+        heading: `Tiddington Roman Settlement scheduled record`,
+        text: `Historic England records Tiddington Roman Settlement at Tiddington Road, CV37 7SA, as Scheduled Monument 1003741 containing buried remains of a Romano-British roadside settlement.`,
+        sourceIds: ['historic-england-tiddington-roman-settlement-1003741'],
+        serviceRelevance: `The scheduling applies to the mapped archaeological site; it neither describes a present building entrance nor establishes public access, condition or work authority.`,
       },
       {
         heading: `Alveston Primary School in Tiddington`,
         text: `The Department for Education records Alveston CofE Primary School at Knights Lane, Tiddington, Stratford-upon-Avon, CV37 7BZ.`,
         sourceIds: ['dfe-alveston-primary-tiddington'],
-        serviceRelevance: `This identifies one education site only; it does not describe neighbouring properties, access rights, door hardware or service conditions.`,
+        serviceRelevance: `This identifies one managed education site only; it does not name a current keyholder, door, access right, installed hardware or fault.`,
+      },
+      {
+        heading: `Tiddington Community Centre charity record`,
+        text: `The Charity Commission records Tiddington Community Centre as charity 1093526, describes its community-management purpose and gives a registered contact address at Touchwood, Beeches Walk, Tiddington, CV37 7AT.`,
+        sourceIds: ['charity-commission-tiddington-community-centre-1093526'],
+        serviceRelevance: `Beeches Walk is the register contact address, not evidence of the venue entrance, present keyholder, caller authority or fitted door hardware.`,
+      },
+      {
+        heading: `Tiddington boundary, strategic gaps and Fields policy`,
+        text: `The made Stratford plan records Tiddington as a Category 1 Local Service Village with a built-up-area boundary, maps strategic gaps toward Stratford-upon-Avon and Alveston, and allocates southern Tiddington Fields for community orchards, woodland and open space.`,
+        sourceIds: ['sdc-stratford-made-plan'],
+        serviceRelevance: `Treat the planning geography as bounded locality context only; it does not prove a route, present land use, private access or service reach.`,
       },
     ],
-    sourceIds: ['sdc-stratford-made-plan', 'dfe-alveston-primary-tiddington'],
-    factOnlySourceIds: ['dfe-alveston-primary-tiddington'],
+    sourceIds: ['historic-england-tiddington-roman-settlement-1003741', 'dfe-alveston-primary-tiddington', 'charity-commission-tiddington-community-centre-1093526', 'sdc-stratford-made-plan'],
     contexts: {
       'emergency-lockout': {
-        localFactIndexes: [0, 1],
-        local: `Tiddington's built-up boundary, strategic gaps and Tiddington Fields are planning geometries, not an address. A caller must identify the street, building and controlled entrance rather than relying on Category 1 Local Service Village status. Record any common threshold and the precise door requested, using the mapped field or gap only to correct location ambiguity and never as a route.`,
-        decision: `If Tiddington Fields or a strategic gap is mentioned as orientation, do not assume it provides an approach to the property. Verify the requester at the supplied premises and keep allocated open space separate from access authority. Inspect the confirmed lock, door, frame and hinges, describe the access work supported by that inspection and advise the expected price. If the service-call price changes, obtain agreement before the changed price applies; settlement category supplies neither urgency nor method.`,
+        localFactIndexes: [1, 2],
+        heading: `Separating the Tiddington school from the community-centre contact`,
+        local: `Alveston CofE Primary School is recorded on Knights Lane, while the Charity Commission gives Touchwood on Beeches Walk as Tiddington Community Centre's registered contact address. Those records identify different references and neither tells which entrance an urgent call concerns. Obtain the complete address, organisation, building and exact private, staff or shared threshold, and ask for the present site representative rather than treating a registered contact as a venue door or keyholder.`,
+        decision: `Verify identity and permission for the requested opening through the responsible organisation or property controller. The school and charity entries provide no live access authority, fitted lock or fault diagnosis. Inspect the confirmed door, frame, hinges and locking components before explaining the supported method and expected charge; if findings change the service-call price or scope, obtain fresh agreement. Record any unavailable site contact explicitly instead of substituting a public register entry for consent.`,
         checks: [
-          `Identify the street, building and doorway rather than relying on settlement category or mapped planning geometry.`,
-          `Use Tiddington Fields only for orientation, never as an approach, and verify the requester at the premises.`,
+          `Distinguish Knights Lane from the Beeches Walk contact and record the exact organisation, building and threshold.`,
+          `Verify the present authorised representative; neither the school nor charity record supplies live access permission.`,
         ],
       },
       'lock-change': {
-        localFactIndexes: [0, 1],
-        local: `A defined built-up boundary does not identify what lock is installed at a Tiddington property or whether an entrance is managed. Inspect the individual door and obtain the authorised owner's, occupier's or manager's stated replacement objective. Record the present lock, frame and hinge condition and whether shared hardware is excluded, then compare repair and replacement only from that entrance-level evidence.`,
-        decision: `Policies for strategic separation and future orchard, woodland or open-space use at Tiddington Fields cannot authorise work or specify hardware. If a managed asset is involved, identify its controller; otherwise do not import those land-use policies. The proposed schedule should name measured components, keys, fitting, adjustment and retained parts, leaving future land use outside compatibility and approval. Identify who authorises any shared component.`,
+        localFactIndexes: [0, 2],
+        heading: `A Tiddington lock change with monument and charity limits kept clear`,
+        local: `The Tiddington Road scheduled monument is a mapped archaeological site, while the community-centre charity record describes an organisation and registered contact. Neither establishes the status or fabric of another property. Identify the exact building and threshold, obtain the current owner's, occupier's or manager's replacement objective, and check whether any scheduled or managed-site issue actually relates to that address rather than extending either record across Tiddington.`,
+        decision: `Inspect the existing lock, leaf, frame, hinges, keeps and shared components before deciding between repair, adjustment and replacement. A legacy or statutory place record cannot specify a modern component, and the charity register cannot authorise a change. The written schedule should name measurements, retained parts, keys, fitting, adjustment and excluded communal work, with any heritage, landlord or site requirement attributed to a current property-specific source and approved by the responsible controller.`,
         checks: [
-          `Inspect the individual door and obtain the authorised controller's replacement objective; the built-up boundary cannot specify it.`,
-          `For a Tiddington Fields asset, identify its manager; otherwise exclude future land-use policies from the change.`,
+          `Resolve the precise property against any relevant monument boundary and identify the current entrance controller.`,
+          `Specify repair or replacement from the measured assembly and separately evidence every external requirement.`,
         ],
       },
       'upvc-lock-repair': {
-        localFactIndexes: [0, 1],
-        local: `Category 1 Local Service Village status supplies no evidence that a Tiddington door is uPVC or multipoint. Document material, handle travel, key movement and frame contact at the exact opening rather than inferring construction from settlement classification. Include faceplate markings and locking-point movement and label any safe open-versus-closed comparison as observed, reported or not tested.`,
-        decision: `Tiddington Fields and the mapped strategic gaps may help prevent geographical confusion but cannot diagnose a mechanism or prove access. Keep the planning map outside the repair assessment and use direct evidence from the door set. Confirm centres, backset and locking layout before naming a compatible multipoint part, recording cylinder size and any frame adjustment as separate items. Record the code source used to narrow the shortlist.`,
+        localFactIndexes: [1, 2],
+        heading: `Door-specific uPVC diagnosis at a Tiddington managed site`,
+        local: `Neither the Knights Lane school record nor the community-centre charity entry identifies a uPVC door, multipoint mechanism or affected entrance. For a managed-site or private request, record the exact building and threshold, material, handle travel, key movement, frame contact and locking-point action. Label any safe open-versus-closed comparison as reported, reproduced or not tested, and do not infer construction or site authority from the organisation name or registered contact address.`,
+        decision: `Confirm the current representative responsible for the opening separately from diagnosing it. Inspect the handle, cylinder where present, faceplate, hinges, keeps and frame; use readable markings, centres, backset and locking layout to narrow compatibility only after that evidence exists. Record alignment, mechanism and cylinder findings as separate questions and preserve photographs and measurements supporting the shortlist, because neither official address record supplies a part number or permission to repair.`,
         checks: [
-          `Document material, handle travel, key movement and frame contact at the exact opening.`,
-          `Use Tiddington Fields and strategic gaps only to resolve geography and keep them outside the repair diagnosis.`,
+          `Record the exact building, threshold, material and handle, key, frame and locking-point symptoms.`,
+          `Verify the current site controller and use markings and measurements—not an organisation name—to shortlist parts.`,
         ],
       },
       'boarding-up': {
-        localFactIndexes: [0, 1],
-        local: `A damaged opening near Tiddington Fields must be distinguished from the allocated orchard, woodland and open-space land and tied to a named building. The plan provides no ownership, boundary, construction or safe-access information for that opening. Photograph and measure the individual door, window or panel, recording visible surrounding damage while leaving hidden condition and support suitability unconfirmed.`,
-        decision: `Where police have issued preservation instructions, follow them before obtaining the responsible property or site controller's approval and inspecting the opening. Neither the built-up boundary nor strategic-gap policy establishes permission to cross land or attach a temporary measure. List the area covered, attachment positions, affected lock and permanent repair outstanding, so temporary security is not presented as structural, glazing or joinery reinstatement. Identify who approved each attachment position.`,
+        localFactIndexes: [0, 2, 3],
+        heading: `Boarding a named Tiddington opening without crossing evidence boundaries`,
+        local: `The scheduled Roman settlement, the community-centre charity and the Tiddington Fields planning allocation describe three different contexts. A damaged opening must be tied to a named building and controller rather than to archaeological, charity-contact or open-space geography. Confirm the precise scene and lawful approach, photograph and measure the pane, panel, frame or door, and record visible surrounding damage while leaving hidden condition and attachment capacity unresolved until the material can be inspected safely.`,
+        decision: `Follow any police evidence-preservation instruction before temporary work, then obtain approval from the actual property or site controller. Scheduling and strategic-gap policy establish no route across land; the charity record identifies no venue doorway or keyholder. Record intended coverage, attachment positions, compromised hardware and permanent glazing, joinery, door or structural work outstanding. That handover keeps an immediate temporary measure separate from reinstatement and avoids presenting locality records as construction evidence or permission.`,
         checks: [
-          `Tie the damaged opening to a named building and distinguish it from allocated orchard, woodland and open-space land.`,
-          `Where police issue evidence-preservation instructions, follow them before inspecting the opening and confirming access and attachment permission.`,
+          `Identify the named building, lawful approach, damaged opening and current controller before specifying coverage.`,
+          `Preserve evidence and document attachment and later repairs without treating scheduling, charity or plan records as consent.`,
         ],
       },
       'lock-upgrade': {
-        localFactIndexes: [0, 1],
-        local: `Settlement category and strategic-gap policy do not demonstrate security need or set a lock standard in Tiddington. An upgrade requires the exact entrance, observed assembly and a documented requirement from the person authorised for that property. Record the frame, hinges, keeps, handles, lock engagement and cylinder fit where present, connecting each option to an inspected weakness rather than the village category.`,
-        decision: `If the request concerns an asset on allocated community-orchard, woodland or open-space land, establish its current status and manager. For any other address, keep Tiddington Fields policy separate from technical product selection. State measurements, product evidence, retained hardware and exclusions in the proposal, allowing any site requirement to remain a separately verified constraint. Attribute every external requirement to its provider.`,
+        localFactIndexes: [0, 1, 2],
+        heading: `A measured Tiddington upgrade with site status and authority separated`,
+        local: `The Roman settlement, Alveston school and community-centre charity are exact records, but none demonstrates a security weakness or standard for another entrance. Identify the property, building and current controller, then record the authorised objective and inspect the leaf, frame, hinges, keeps, handles, lock engagement and cylinder fit where applicable. Connect each proposed measure to an observed condition rather than to scheduled status, institutional use or a charity's contact address.`,
+        decision: `For the named monument or a managed site, confirm address-specific status and approval before any visible alteration; do not assume the school and community centre share a controller or threshold. Match a documented insurer, landlord or facilities requirement to the actual assembly. The written comparison should state measurements, product evidence, retained hardware, excluded communal work and dependencies, explaining conditional improvement without implying that one component guarantees the whole entrance.`,
         checks: [
-          `Record the exact entrance, observed assembly and authorised requirement without using settlement policy as a security standard.`,
-          `For an allocated-land asset, verify current status and manager; otherwise exclude Tiddington Fields policy from product selection.`,
+          `Identify the exact site, entrance and authorised objective; official locality records are not security standards.`,
+          `Match product evidence and property-specific approvals to the inspected assembly and document exclusions.`,
         ],
       },
     },
@@ -1362,78 +1395,89 @@ const AREA_SEEDS: AreaGuideSeed[] = [
     slug: 'bishopton',
     name: 'Bishopton',
     region: 'Warwickshire',
+    reviewedOn: PROMOTION_REVIEWED_ON,
     summary: [
-      `The made Stratford plan identifies Burton Farm at Bishopton Hamlet north of the A46 as a location with small industrial units in converted farm buildings. It also references Bishopton Road canal bridge and housing allocation SUA.3 north of Bishopton Lane.`,
-      `These site and infrastructure references locate different Bishopton contexts but do not establish present building use, completion, ownership, entrance authority, private access or installed hardware. Each request must be resolved to a particular address and opening.`,
+      `Current official records distinguish Bishopton Community Centre and Bishopton Primary School on Drayton Avenue from Stratford Park and Ride off Bishopton Lane. The made Stratford plan separately identifies Burton Farm at Bishopton Hamlet north of the A46 as a plan-era small-industrial-unit location.`,
+      `These records establish named sites and bounded locality context only. They do not identify a current individual keyholder, the requested entrance, public access outside stated arrangements, present use at Burton Farm, fitted hardware or a locksmith fault.`,
     ],
-    accessGuidance: `Distinguish Burton Farm north of the A46, Bishopton Road bridge and land north of Bishopton Lane from the supplied property. For an industrial, allocated or infrastructure site, identify the current responsible manager and entrance.`,
-    evidenceLimits: `A plan description of converted farm units, a future bridge review and a housing allocation are not current property surveys. They cannot prove present use, access, building fabric, door type, lock condition, coverage, route or response.`,
+    accessGuidance: `Record the complete Bishopton address, building and threshold. Distinguish the community centre from the primary school on Drayton Avenue, the Park and Ride off Bishopton Lane and any Burton Farm unit, then identify the present occupier, site representative or other person responsible for the exact opening.`,
+    evidenceLimits: `The charity, school and visitor-site pages identify organisations or public sites without granting locksmith authority. The made plan is not a current Burton Farm survey. None proves a private route, current keyholder, entrance construction, lock type, condition, service coverage or response time.`,
     facts: [
       {
-        heading: `Burton Farm industrial units at Bishopton`,
-        text: `The made plan identifies Burton Farm at Bishopton Hamlet north of the A46 as a location with small industrial units established in converted farm buildings.`,
-        sourceIds: ['sdc-stratford-made-plan'],
-        serviceRelevance: `For a Burton Farm instruction, name the unit, entrance and authorised manager rather than relying on plan-era use.`,
-      },
-      {
-        heading: `Bishopton Road bridge and housing allocation`,
-        text: `The plan calls for a future review of Bishopton Road bridge across the canal and identifies housing allocation SUA.3 north of Bishopton Lane.`,
-        sourceIds: ['sdc-stratford-made-plan'],
-        serviceRelevance: `Use bridge and allocation references only for verified location; they prove neither completion nor an access route.`,
+        heading: `Bishopton Community Centre charity and hall role`,
+        text: `The Charity Commission records Bishopton Community Centre CIO, charity 1188894, and describes its purpose as renting the community centre on Drayton Avenue from Warwickshire County Council and hiring the hall to local groups.`,
+        sourceIds: ['charity-commission-bishopton-community-centre-1188894'],
+        serviceRelevance: `The register identifies the charity and its stated role, not a current individual keyholder, exact entrance, caller authority or installed hardware.`,
       },
       {
         heading: `Bishopton Primary School on Drayton Avenue`,
         text: `The Department for Education records Bishopton Primary School at Drayton Avenue, Stratford-upon-Avon, CV37 9PB.`,
         sourceIds: ['dfe-bishopton-primary'],
-        serviceRelevance: `This identifies one education site only; it does not describe neighbouring properties, access rights, door hardware or service conditions.`,
+        serviceRelevance: `The school is a distinct managed site; the record does not identify a requested door, public access, present keyholder or authority for work.`,
+      },
+      {
+        heading: `Stratford Park and Ride off Bishopton Lane`,
+        text: `Stratford-on-Avon District Council locates Stratford Park and Ride off Bishopton Lane near the A46 and A3400 at CV37 0RJ and records more than 700 spaces plus a passenger terminal.`,
+        sourceIds: ['sdc-stratford-park-and-ride'],
+        serviceRelevance: `This public visitor record is orientation only; it does not identify a private route, controlled entrance, responsible keyholder or door condition.`,
+      },
+      {
+        heading: `Burton Farm industrial units in the made plan`,
+        text: `The made Stratford plan identifies Burton Farm at Bishopton Hamlet north of the A46 as a location where small industrial units had been established in converted farm buildings.`,
+        sourceIds: ['sdc-stratford-made-plan'],
+        serviceRelevance: `For a Burton Farm instruction, verify the present unit, use and authorised manager; plan-era wording cannot establish current control, fabric or access.`,
       },
     ],
-    sourceIds: ['sdc-stratford-made-plan', 'dfe-bishopton-primary'],
-    factOnlySourceIds: ['dfe-bishopton-primary'],
+    sourceIds: ['charity-commission-bishopton-community-centre-1188894', 'dfe-bishopton-primary', 'sdc-stratford-park-and-ride', 'sdc-stratford-made-plan'],
     contexts: {
       'emergency-lockout': {
-        localFactIndexes: [0, 1],
-        local: `Burton Farm north of the A46, Bishopton Road canal bridge and the SUA.3 allocation north of Bishopton Lane are separate plan references. A caller must name the present building, unit and exact doorway rather than using “Bishopton” alone. Record whether the affected threshold is a unit, common site door or private entrance, and use each planning reference only to eliminate location ambiguity.`,
-        decision: `If Burton Farm is involved, confirm the current occupier or site manager because the plan-era industrial-unit description does not prove present control. A future bridge review or housing allocation supplies no route or authority for access. Verify the instruction for the named opening, inspect its lock with the door, frame and hinges, and explain the supported scope and expected charge from present evidence.`,
+        localFactIndexes: [0, 1, 2],
+        heading: `Resolving the Drayton Avenue site before a Bishopton lockout`,
+        local: `Bishopton Community Centre and Bishopton Primary School are separate managed sites on Drayton Avenue, while Stratford Park and Ride is off Bishopton Lane at CV37 0RJ. An urgent request must name the organisation or property, building and exact private, staff, shared or terminal entrance. Use the postcode only to disambiguate the destination, then identify the present representative responsible for the threshold rather than assuming one Drayton Avenue contact controls another site.`,
+        decision: `The charity register, school directory and council visitor page identify sites but no live keyholder or locksmith permission. Verify the requester's identity and authority for the named opening, inspect the lock with its door, frame and hinges, and explain the supported method and expected charge before work. If observations change the service-call scope or price, obtain fresh agreement; public opening information or a registered organisational role is not consent for access.`,
         checks: [
-          `Distinguish Burton Farm, Bishopton Road bridge and SUA.3 and name the present building, unit and doorway.`,
-          `Confirm the current occupier or manager and never use a bridge review or housing allocation as route or authority.`,
+          `Distinguish the community centre, primary school and Park and Ride and name the exact building and threshold.`,
+          `Verify the present authorised representative; no public site record supplies a live keyholder or access consent.`,
         ],
       },
       'lock-change': {
-        localFactIndexes: [0, 1],
-        local: `The plan describes small units in converted farm buildings at Burton Farm, but that does not establish current fabric, occupation or hardware. A replacement instruction needs the precise unit, observed entrance and the manager entitled to approve it. Define the reason for change and whether shared site hardware is excluded, then document lock, door and frame condition instead of inferring a specification from conversion history.`,
-        decision: `For a property near Bishopton Lane or the canal bridge, do not use allocation or infrastructure policy as a specification. Verify present building status and any site requirement directly before selecting a compatible component. The schedule should name retained parts, measured replacement, keys, fitting, adjustment and exclusions, keeping future planning proposals outside product choice and approval.`,
+        localFactIndexes: [0, 1, 3],
+        heading: `A Bishopton lock change with site control and fabric verified`,
+        local: `A community-centre hall, primary school and Burton Farm unit have different control arrangements even though official records place each within Bishopton context. Name the precise building and entrance, obtain the present manager's or property controller's replacement objective and resolve shared-door responsibility. The charity's rental purpose, the school address and plan-era converted-farm wording establish neither current occupation nor which person may change a particular lock.`,
+        decision: `Inspect the existing lock, leaf, frame, hinges and keep before distinguishing repair, adjustment and replacement. Burton Farm's plan description cannot prove modern fabric, and neither Drayton Avenue record supplies a technical specification. The written schedule should state measured components, key-control outcome, retained parts, fitting, adjustment and excluded communal work, with every facilities, landlord or insurer requirement obtained directly and matched to the inspected threshold before approval.`,
         checks: [
-          `At Burton Farm, identify the current unit, inspect its entrance and verify the manager entitled to approve replacement.`,
-          `Near Bishopton Lane or the canal bridge, confirm present building status and direct site requirements before component selection.`,
+          `Identify the exact community, school or Burton Farm entrance and the current person entitled to approve change.`,
+          `Specify the change from measurements and inspected condition and attribute every external requirement.`,
         ],
       },
       'upvc-lock-repair': {
-        localFactIndexes: [0, 1],
-        local: `A converted-farm-building description at Burton Farm cannot show whether the affected entrance is uPVC, composite, timber or multipoint. Ask for the exact unit and direct handle, key, frame and locking-point symptoms. Photograph the full faceplate and record any safe open-versus-closed comparison as reported or reproduced evidence, without assigning alignment or mechanism failure remotely.`,
-        decision: `The Bishopton Road bridge review and SUA.3 allocation are spatial planning matters, not mechanical evidence. They neither diagnose a door nor prove that development has occurred, so keep them outside the repair decision. Confirm centres, backset, locking layout and readable codes before proposing a component, while site responsibility and cylinder dimensions remain separately documented questions. Preserve the photographs and measurements that justify the resulting component shortlist.`,
+        localFactIndexes: [0, 3],
+        heading: `Bishopton uPVC diagnosis independent of hall or farm-building history`,
+        local: `The community-centre charity record and Burton Farm's converted-building description do not show that an affected entrance is uPVC, composite, timber or fitted with multipoint locking. Identify the exact hall, unit, home or shared threshold, then record door material, handle travel, key movement, frame contact and locking-point action. Mark any safe open-versus-closed comparison as reported, reproduced or not tested rather than assigning alignment or mechanism failure from a site's past use.`,
+        decision: `Confirm the current controller separately from the mechanical diagnosis. Inspect the handle, cylinder where present, full faceplate, hinges, keeps and frame; use readable codes, centres, backset and locking layout to narrow compatible parts only after direct evidence exists. Record cylinder sizing, alignment work and mechanism replacement as separate questions, preserving photographs and measurements behind the shortlist because neither an organisational purpose nor planning-era conversion supplies a part number or approval.`,
         checks: [
-          `Name the exact Burton Farm unit and record handle, key, frame and locking-point behaviour at that opening.`,
-          `Keep the Bishopton Road bridge review and SUA.3 allocation outside diagnosis and do not assume development occurred.`,
+          `Name the exact opening and record its material, handle, key, frame and locking-point behaviour.`,
+          `Use faceplate evidence and measurements to shortlist parts and verify present site authority separately.`,
         ],
       },
       'boarding-up': {
-        localFactIndexes: [0, 1],
-        local: `Damage at Burton Farm requires a named unit and current authorised site contact; damage near Bishopton Lane or the canal needs the exact property. The plan does not establish ownership, current construction or safe approach. Photograph the particular pane, panel, frame or door and record visible surrounding damage, leaving hidden condition and support suitability for physical inspection.`,
-        decision: `Where police have issued evidence-preservation instructions, follow them before inspecting the real opening and documenting the proposed temporary measure for its controller. A future bridge review cannot be treated as an access guarantee, and allocation SUA.3 cannot be treated as a completed building. List observed dimensions, temporary coverage, proposed attachment positions, compromised hardware and permanent repair outstanding so planning-stage evidence never substitutes for a site record. Identify who authorised the recorded temporary scope.`,
+        localFactIndexes: [0, 1, 2],
+        heading: `Temporary boarding at the correct Bishopton managed site`,
+        local: `The community centre, primary school and Park and Ride are three different managed settings. A damage report must specify the organisation, building and pane, panel, frame or door rather than relying on Drayton Avenue, Bishopton Lane or a nearby landmark. Identify the actual controller, lawful approach and public, staff or shared threshold, then photograph and measure visible damage while leaving hidden condition and attachment capacity unresolved until the surrounding material can be inspected safely.`,
+        decision: `Follow any police evidence-preservation instruction before temporary work and obtain approval from the current site or property controller. The charity register does not name a keyholder, the school record grants no access, and visitor information for the Park and Ride is not work authority. Record intended coverage, proposed attachment positions, compromised hardware and permanent glazing, joinery, door or structural work outstanding so immediate securing remains distinct from reinstatement.`,
         checks: [
-          `Name the Burton Farm unit or other exact property and verify its current authorised site contact.`,
-          `Where police issue evidence-preservation instructions, follow them before inspecting the opening; bridge review and SUA.3 prove no access.`,
+          `Name the managed site, exact damaged opening, lawful approach and present controller before specifying coverage.`,
+          `Preserve evidence and document temporary attachment and follow-on work without treating public records as consent.`,
         ],
       },
       'lock-upgrade': {
-        localFactIndexes: [0, 1],
-        local: `Industrial-unit history, a bridge project and a housing allocation do not establish security need or current hardware in Bishopton. Obtain a written objective from the authorised occupier or manager and assess the individual door set. Record frame condition, hinges, keeps, handles, lock engagement and cylinder fit where applicable, relating each option to an observed weakness rather than historical or proposed land use.`,
-        decision: `Where Burton Farm is named, confirm the present unit and any shared-site responsibilities. Where Bishopton Lane or Bishopton Road is referenced, verify the actual property and do not convert planning proposals into a product standard or permission. State product evidence, measured dimensions, retained hardware and excluded shared work, with any current manager or insurer criterion attributed to its own document.`,
+        localFactIndexes: [0, 1, 3],
+        heading: `A Bishopton upgrade brief grounded in the inspected entrance`,
+        local: `Community-centre use, a school address and Burton Farm's plan-era history do not demonstrate security need or prescribe hardware. Identify the exact premises and current controller, obtain a written objective, and inspect the individual leaf, frame, hinges, keeps, handles, lock engagement and cylinder fit where applicable. Connect each proposed measure to an observed condition rather than institutional use, a converted-building description or the broader Bishopton name.`,
+        decision: `Separate responsibility for a shared hall, school or unit entrance from any private opening and confirm present Burton Farm use rather than relying on the made plan. Match an approved facilities, landlord or insurer requirement to the actual assembly. The comparison should state product evidence, measurements, retained hardware, excluded communal work and dependencies, explaining conditional improvement without implying endorsement or that one component guarantees the entire door set.`,
         checks: [
-          `Obtain a written objective from the current occupier or manager and assess the individual door set.`,
-          `Resolve Burton Farm shared-site responsibilities or the actual Bishopton property without turning proposals into standards or permission.`,
+          `Identify the exact premises, current controller and written objective before assessing the whole door set.`,
+          `Match measured product evidence and direct requirements to the threshold and document shared-work exclusions.`,
         ],
       },
     },

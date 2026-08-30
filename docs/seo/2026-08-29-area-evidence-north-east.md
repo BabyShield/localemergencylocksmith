@@ -221,25 +221,30 @@ Status: research only. This file is a claim-level evidence register, not publish
 
 ### `hartshill` — Hartshill
 
-**Context tags:** `scheduled-monument-present`, `community-facility`, `neighbourhood-plan`
+**Context tags:** `scheduled-monument-present`, `community-library`, `listed-building-present`, `school`
 
-1. **Fact:** Hartshill Castle is Scheduled Monument 1011197, situated within Hartshill between The Green, Holy Trinity parish church and Castle Road.
+1. **Fact:** Hartshill Castle is Scheduled Monument 1011197.
    - **Publisher / title / deep URL:** [Historic England — Hartshill Castle, list entry 1011197](https://historicengland.org.uk/listing/the-list/list-entry/1011197)
-   - **Direct support:** The official list entry supplies the designation, identifier and location description.
-   - **Checked:** 2026-08-29.
-   - **Conditional service-use implication:** The named monument can provide attributed locality context; the designation must not be extended to unrelated nearby properties.
-2. **Fact:** Historic England records the site as a motte-and-bailey castle constructed during Henry I's reign and altered into an enclosure castle around 1330.
-   - **Publisher / title / deep URL:** [Historic England — Hartshill Castle, list entry 1011197](https://historicengland.org.uk/listing/the-list/list-entry/1011197)
-   - **Direct support:** The official description sets out both development phases.
-   - **Checked:** 2026-08-29.
-   - **Conditional service-use implication:** These phases may be paraphrased as monument history only; they say nothing about the age or status of a customer's premises.
-3. **Fact:** In the adopted March 2017 Hartshill Neighbourhood Plan, Policy H11 lists the current Society of Friends Meeting House on Castle Road among community facilities to be enhanced and protected.
-   - **Publisher / title / deep URL:** [North Warwickshire Borough Council — Hartshill Neighbourhood Plan, adopted March 2017](https://www.northwarks.gov.uk/downloads/file/18/hartshill-neighbourhood-plan-adopted-march-2017-)
-   - **Direct support:** The adopted-plan cover gives March 2017, and Policy H11 names the current Society of Friends Meeting House, Castle Road in its protected community-facility list.
-   - **Checked:** 2026-08-29.
-   - **Conditional service-use implication:** The word current is part of the 2017 plan wording, not a 2026 status check. Confirm the facility's present identity, exact entrance and responsible controller before booking; the plan says nothing about installed hardware.
+   - **Direct support:** The official list entry supplies the Scheduled Monument designation and identifier for the mapped castle site.
+   - **Checked:** 2026-08-30.
+   - **Conditional service-use implication:** This is one asset-specific designation fact only. It must not be extended to a neighbouring property or used to infer access, fabric, condition, hardware or authority.
+2. **Fact:** Warwickshire County Council locates Hartshill Community Library inside Holy Trinity Church, Church Road, Hartshill CV10 0LY, and directs visitors through the community-centre entrance or the vestry door to the left of the main church doors.
+   - **Publisher / title / deep URL:** [Warwickshire County Council — Hartshill Community Library](https://www.warwickshire.gov.uk/hartshilllibrary)
+   - **Direct support:** The current county page supplies the library location, postcode and its two separately worded entrance directions.
+   - **Checked:** 2026-08-30.
+   - **Conditional service-use implication:** The directions can distinguish approaches at this named site, but they do not identify the affected threshold, current keyholder, caller authority, installed hardware or fault.
+3. **Fact:** Holy Trinity Church on Church Road is Grade II listed as entry 1365167; Historic England's legacy description records a deep west portal with double-leaf doors and separate return-side doorways.
+   - **Publisher / title / deep URL:** [Historic England — Church of the Holy Trinity, Hartshill, list entry 1365167](https://historicengland.org.uk/listing/the-list/list-entry/1365167)
+   - **Direct support:** The official entry supplies the Grade II designation and the quoted doorway distinctions in its legacy descriptive text.
+   - **Checked:** 2026-08-30.
+   - **Conditional service-use implication:** The description is asset-specific and is not a current condition or hardware survey. Do not equate the listed west portal or return doorways with either library entrance without an exact on-site check.
+4. **Fact:** Warwickshire County Council's current directory lists Hartshill Academy at Church Road, Nuneaton CV10 0NA and links to establishment URN 150453.
+   - **Publisher / title / deep URLs:** [Warwickshire County Council — Hartshill Academy](https://apps.warwickshire.gov.uk/FindASchool/schools/hartshill-academy); [Department for Education — Hartshill Academy, URN 150453](https://get-information-schools.service.gov.uk/Establishments/Establishment/Details/150453)
+   - **Direct support:** The live county directory supplies the current academy name and address; the open Department for Education record supplies URN 150453 and identifies URN 138644 as its closed predecessor.
+   - **Checked:** 2026-08-30.
+   - **Conditional service-use implication:** Use URN 150453 to distinguish the current academy from closed predecessor URN 138644. The directory does not identify an entrance, responsible keyholder, authority chain, door type or hardware.
 
-**Access/property-status caveat:** The scheduled area is a specific protected site, and Policy H11 is a dated record of one named community facility. Check the exact address, current status and responsible controller; neither source establishes public access, installed hardware or designation of surrounding buildings.
+**Access/property-status caveat:** The castle, listed church, library and academy are distinct named records. Their identifiers, addresses and entrance wording do not establish a caller's authority, current controller, hardware, condition, route access or the status of neighbouring buildings.
 
 ### `bedworth` — Bedworth
 
@@ -260,20 +265,30 @@ Status: research only. This file is a claim-level evidence register, not publish
 
 ### `bulkington` — Bulkington
 
-**Context tags:** `conservation-area-present`
+**Context tags:** `conservation-area-present`, `listed-building-present`, `community-facilities`, `public-open-space`
 
 1. **Fact:** Bulkington Conservation Area was designated in 1985, reviewed in 2008 and reviewed again in 2021 for the council's 2022 appraisal.
    - **Publisher / title / deep URL:** [Nuneaton and Bedworth Borough Council — Bulkington Conservation Area Appraisal and Management Plan 2022](https://www.nuneatonandbedworth.gov.uk/downloads/file/682/bulkington-conservation-area-appraisal-and-management-plan-supplementary-planning-document-2022-)
    - **Direct support:** Section 2.1.1 supplies the designation and review dates.
-   - **Checked:** 2026-08-29.
+   - **Checked:** 2026-08-30.
    - **Conditional service-use implication:** The existence and review history of the mapped conservation area may be stated, but only for the designated core.
-2. **Fact:** The appraisal identifies Grade II* St James Parish Church as the village's oldest standing structure, with surviving 13th-century fabric, and 3-4 Church Street as an early-17th-century secular building.
-   - **Publisher / title / deep URL:** [Nuneaton and Bedworth Borough Council — Bulkington Conservation Area Appraisal and Management Plan 2022](https://www.nuneatonandbedworth.gov.uk/downloads/file/682/bulkington-conservation-area-appraisal-and-management-plan-supplementary-planning-document-2022-)
-   - **Direct support:** The statement of special interest names and dates both assets.
-   - **Checked:** 2026-08-29.
-   - **Conditional service-use implication:** These named assets can anchor attributed heritage context; they do not establish the age or designation of other addresses.
+2. **Fact:** Historic England lists 3 and 4 Church Street, Bulkington at Grade II as entry 1365050 and describes the cottages as probably 16th or 17th century; its legacy text records a part-glazed door and a separate rear entrance.
+   - **Publisher / title / deep URL:** [Historic England — 3 and 4 Church Street, Bulkington, list entry 1365050](https://historicengland.org.uk/listing/the-list/list-entry/1365050)
+   - **Direct support:** The official entry supplies the designation, statutory asset identity, broad date and legacy door details.
+   - **Checked:** 2026-08-30.
+   - **Conditional service-use implication:** The record applies only to 3 and 4 Church Street and is not a current condition or hardware survey. It cannot characterise another Bulkington address or prove present access arrangements.
+3. **Fact:** The Charity Commission's current record describes Bulkington Village Centre, charity 1071175, as a multi-activity community centre with rooms for hire at School Road CV12 9JB; Warwickshire County Council separately lists Bulkington Community Library at the same postal address as a community-managed library.
+   - **Publisher / title / deep URLs:** [Charity Commission for England and Wales — Bulkington Village Centre, charity 1071175](https://register-of-charities.charitycommission.gov.uk/en/charity-search/-/charity-details/3942056/full-print); [Warwickshire County Council — Bulkington Community Library](https://www.warwickshire.gov.uk/bulkingtonlibrary)
+   - **Direct support:** The charity record supplies the centre's current purposes and contact address; the county page independently supplies the library name, management classification and matching School Road CV12 9JB location.
+   - **Checked:** 2026-08-30.
+   - **Conditional service-use implication:** A shared postal address does not prove that these are the same organisation or that they share an entrance, keyholder or access controller. Identify the booked organisation and exact threshold directly.
+4. **Fact:** Nuneaton and Bedworth Borough Council identifies Bulkington Rec at Bedworth Road, Bulkington CV12 9LT as a community park with a play area, multi-use games area, sports pitch, tennis and netball court, parking, seating, picnic area and surfaced footpath.
+   - **Publisher / title / deep URL:** [Nuneaton and Bedworth Borough Council — Bulkington Rec](https://www.nuneatonandbedworth.gov.uk/directory-record/4351/bulkington-rec)
+   - **Direct support:** The current council directory record supplies the park classification, postal address and listed outdoor facilities.
+   - **Checked:** 2026-08-30.
+   - **Conditional service-use implication:** This is outdoor orientation evidence only. It identifies no serviceable building, entrance, keyholder, route condition, hardware or authority to instruct work.
 
-**Access/property-status caveat:** Verify whether an exact property lies inside the conservation boundary or is itself listed; village-level proximity is insufficient.
+**Access/property-status caveat:** The conservation area, listed cottages, Village Centre, community-managed library and recreation ground are separate records with different scopes. Verify the exact address, organisation, threshold, present controller and property status; neither proximity nor a shared postcode establishes access or authority.
 
 ## Rugby display cluster
 
@@ -404,25 +419,30 @@ Status: research only. This file is a claim-level evidence register, not publish
 
 ### `long-lawford` — Long Lawford
 
-**Context tags:** `settlement/local-plan`, `listed-building-present`
+**Context tags:** `school`, `registered-open-space`, `settlement/local-plan`, `listed-building-present`
 
-1. **Fact:** Lawford Hill Farmhouse on Lawford Heath Lane is Grade II listed; Historic England describes the main range as probably late 18th century with wings added around 1835.
+1. **Fact:** Warwickshire County Council's current directory lists Long Lawford Primary School as a community school for ages 4 to 11 at Holbrook Road, Long Lawford, Rugby CV23 9AL.
+   - **Publisher / title / deep URL:** [Warwickshire County Council — Long Lawford Primary School](https://apps.warwickshire.gov.uk/FindASchool/schools/long-lawford-primary-school)
+   - **Direct support:** The live county record supplies the school type, age range and postal address.
+   - **Checked:** 2026-08-30.
+   - **Conditional service-use implication:** This identifies one managed site only. It supplies no entrance, current keyholder, caller authority, access instructions, door material or installed hardware.
+2. **Fact:** The Charity Commission's current record for King George's Field, Long Lawford, charity 1082855, says it provides public open space with children's play, football pitches and a pavilion and declares that the charity owns or leases land or property.
+   - **Publisher / title / deep URL:** [Charity Commission for England and Wales — King George's Field, Long Lawford, charity 1082855](https://register-of-charities.charitycommission.gov.uk/en/charity-search/-/charity-details/3975372/full-print)
+   - **Direct support:** The current-reporting record supplies the charity's stated activities, facilities and general land-or-property declaration.
+   - **Checked:** 2026-08-30.
+   - **Conditional service-use implication:** The published contact is a correspondence address, not an identified field or pavilion location. The record does not identify a service entrance, current keyholder, authority route, hardware or present condition.
+3. **Fact:** Rugby Borough Council says the Local Plan approved in 2019 remains the current plan while its replacement, submitted on 27 April 2026, is under examination; an earlier review option proposed Long Lawford among the largest rural allocations.
+   - **Publisher / title / deep URLs:** [Rugby Borough Council — Submission Local Plan](https://www.rugby.gov.uk/submission-local-plan); [Rugby Borough Council — Local Plan review frequently asked questions](https://www.rugby.gov.uk/pl/w/local-plan-review-faqs)
+   - **Direct support:** The submission page supplies the 2019-current-plan statement, submission date and examination status; the review FAQ supplies the earlier Long Lawford option.
+   - **Checked:** 2026-08-30.
+   - **Conditional service-use implication:** The earlier option is not proof of an adopted Long Lawford allocation, completed development, present route or property status. Check the examination outcome and current policies before any later planning statement.
+4. **Fact:** Lawford Hill Farmhouse on Lawford Heath Lane is Grade II listed as entry 1299648; Historic England's legacy description records a six-panelled door within a Roman Doric porch.
    - **Publisher / title / deep URL:** [Historic England — Lawford Hill Farmhouse, list entry 1299648](https://historicengland.org.uk/listing/the-list/list-entry/1299648)
-   - **Direct support:** The official entry supplies the designation, address and phased date.
-   - **Checked:** 2026-08-29.
-   - **Conditional service-use implication:** This exact named asset may be referenced as local heritage; it cannot characterise other Long Lawford properties.
-2. **Fact:** The Church of St John on Chapel Street is Grade II listed, dated 1839 and attributed to architect William Walker.
-   - **Publisher / title / deep URL:** [Historic England — Church of St John, list entry 1299647](https://historicengland.org.uk/listing/the-list/list-entry/1299647)
-   - **Direct support:** The official list entry gives the designation, date, architect and statutory address.
-   - **Checked:** 2026-08-29.
-   - **Conditional service-use implication:** It may be used only as a named heritage fact, not as evidence about neighbouring building ages or status.
-3. **Fact:** Rugby Borough Council adopted its Local Plan 2011-2031 on 4 June 2019 and its evidence library includes a Main Rural Settlement Site Allocation Development Pack for Long Lawford.
-   - **Publisher / title / deep URL:** [Rugby Borough Council — Local Plan 2011-2031](https://www.rugby.gov.uk/w/local-plan-2011-2031)
-   - **Direct support:** The council page states the adoption date and lists LP46 for Long Lawford.
-   - **Checked:** 2026-08-29.
-   - **Conditional service-use implication:** “Main Rural Settlement” may be used only as an attributed planning classification, subject to checking the current plan review and policies map.
+   - **Direct support:** The official entry supplies the designation, statutory address and legacy door-and-porch description for the named farmhouse.
+   - **Checked:** 2026-08-30.
+   - **Conditional service-use implication:** The listing is asset-specific and its legacy description is not a current condition or hardware survey. It cannot characterise another Long Lawford property or establish present access.
 
-**Access/property-status caveat:** Listing applies only to the two named assets; the planning classification does not establish the age, tenure, access or designation of an individual address.
+**Access/property-status caveat:** The school, registered charity, planning records and listed farmhouse have different scopes. They do not establish an exact field location, adopted or completed development, current route, caller authority, property status, door construction, hardware, condition or service coverage.
 
 ### `new-bilton` — New Bilton
 
@@ -471,9 +491,9 @@ Status: research only. This file is a claim-level evidence register, not publish
 ## Coverage and unresolved evidence
 
 - **Slugs checked:** 21/21.
-- **Fact records:** 61: at least two for every slug; four each for Horeston Grange, Whitestone, Rugby, Hillmorton, Bilton, Brownsover and Dunchurch; and three each for Nuneaton, Attleborough, Bermuda Park, Hartshill and Long Lawford.
+- **Fact records:** 65: at least two for every slug; four each for Horeston Grange, Whitestone, Hartshill, Bulkington, Rugby, Hillmorton, Bilton, Brownsover, Long Lawford and Dunchurch; and three each for Nuneaton, Attleborough and Bermuda Park.
 - **Each record includes:** publisher, document/page title, deep primary URL, direct-support statement, checked date and a conditional use constraint.
-- **Latest record check:** Newly added named-site, operator and listed-building records and the Rugby Town Centre appraisal were checked on 2026-08-30; other retained appraisal records keep their 2026-08-29 check date.
+- **Latest record check:** Newly added named-site, operator, school, planning and listed-building records and the Rugby Town Centre appraisal were checked on 2026-08-30; other retained appraisal records keep their 2026-08-29 check date.
 - **No support found or claimed for:** locks or door hardware, local call volumes, fault prevalence, response or journey time, crime, parking, property value, service coverage, first-visit outcomes or property-wide construction types.
 - **Dated planning evidence:** Attleborough, Stockingford, Weddington, Whitestone, Camp Hill, Chapel End and Galley Common rely on at least one 2012-2016 council evidence document. Those records are labelled as historic planning snapshots and require a current-plan check before publication.
 - **Cawston limitation:** the detailed parish plan is from 2010. The current council directory confirms the parish council and contact location only; it does not refresh the plan's historic survey findings.
