@@ -1,6 +1,8 @@
 # North-east area evidence register
 
-Checked: 2026-08-29
+Initial corpus check: 2026-08-29
+
+Latest targeted checks: 2026-08-30
 
 Status: research only. This file is a claim-level evidence register, not publishable service copy.
 
@@ -38,59 +40,84 @@ Status: research only. This file is a claim-level evidence register, not publish
 
 ### `attleborough` — Attleborough
 
-**Context tags:** `settlement/local-plan`, `heritage-record`, `local-list-present`
+**Context tags:** `council-engagement`, `park`, `heritage-record`, `local-list-present`
 
-1. **Fact:** Warwickshire Historic Environment Record MWA9489 records the probable extent of Attleborough's medieval settlement using the first-edition 1888 Ordnance Survey map.
-   - **Publisher / title / deep URL:** [Warwickshire Historic Environment Record — Attleborough Medieval Settlement, MWA9489](https://timetrail.warwickshire.gov.uk/detail.aspx?monuid=WA9489)
-   - **Direct support:** The live record's summary and first source note state the probable extent and its 1888 map basis.
-   - **Checked:** 2026-08-29.
-   - **Conditional service-use implication:** This may support a carefully attributed statement that a medieval settlement extent is recorded; it cannot characterise all present-day buildings.
-2. **Fact:** The same record says Attleborough is absent from Domesday and records that the Prioress of Chaise-Dieu leased the Manor of Attleborough to Nuneaton in 1243.
-   - **Publisher / title / deep URL:** [Warwickshire Historic Environment Record — Attleborough Medieval Settlement, MWA9489](https://timetrail.warwickshire.gov.uk/detail.aspx?monuid=WA9489)
-   - **Direct support:** Source notes two and three contain the Domesday statement and the dated manor lease.
-   - **Checked:** 2026-08-29.
-   - **Conditional service-use implication:** These may be used only as attributed documentary history, not as evidence about a present property, entrance or estate.
-3. **Fact:** The council's Heritage SPD 2026 lists Former Albion Works at 64-122 Attleborough Road, Nuneaton CV11 4JJ in Appendix B's locally listed buildings outside conservation areas and marks it as a landmark.
-   - **Publisher / title / deep URL:** [Nuneaton and Bedworth Borough Council — Heritage Supplementary Planning Document 2026](https://www.nuneatonandbedworth.gov.uk/downloads/file/2503/heritage-supplementary-planning-document-2026-)
-   - **Direct support:** Appendix B's heading and the Albion Works row provide the locally listed context, address, postcode and landmark value.
-   - **Checked:** 2026-08-29.
-   - **Conditional service-use implication:** This identifies one named asset only. Confirm the exact number or unit, current status and responsible controller before visible work; the SPD does not identify installed hardware or grant consent.
+1. **Fact:** The council's neighbourhood-walkabout schedule has an Attleborough row naming Abbotsford Road, Attleborough Road, Everard Court, Highfield Road and other selected streets, with a meeting point outside Everard Court.
+   - **Publisher / title / deep URL:** [Nuneaton and Bedworth Borough Council — Neighbourhood walkabouts and engagement days](https://www.nuneatonandbedworth.gov.uk/resident-involvement/tenant-engagement/8)
+   - **Direct support:** The live schedule places the named streets and meeting point in its Attleborough housing-engagement group.
+   - **Checked:** 2026-08-30.
+   - **Conditional service-use implication:** The row may help distinguish a council housing-engagement location only. It is not a complete neighbourhood, tenure, route or property boundary and proves no access right.
+2. **Fact:** The council identifies Attleborough Recreation Ground as a local park at Springfield Road, Nuneaton CV11 4PY with a play area, seating or picnic area and surfaced footpaths; a 20 May 2025 council update says it was one of three parks that received new play equipment, outdoor-gym equipment, benches and bins.
+   - **Publisher / title / deep URLs:** [Nuneaton and Bedworth Borough Council — Attleborough recreation ground](https://www.nuneatonandbedworth.gov.uk/directory-record/4317/attleborough-recreation-ground); [Nuneaton and Bedworth Borough Council — Major transformation of three Nuneaton recreation grounds completed](https://www.nuneatonandbedworth.gov.uk/news/article/224/major-transformation-of-three-nuneaton-recreation-grounds-completed)
+   - **Direct support:** The current directory supplies the park type, exact address and listed facilities; the dated update names Attleborough Recreation Ground among the three completed schemes and identifies the equipment common to all three.
+   - **Checked:** 2026-08-30.
+   - **Conditional service-use implication:** These records prove neither ownership nor a gate, building, lock, controller, current opening condition or approach route. The pooled funding amount must not be assigned to Attleborough alone.
+3. **Fact:** Historic England lists the Church of the Holy Trinity on Attleborough Road at Grade II as entry 1034975; its legacy description distinguishes a small east door, a south-west plank door and the tower's west door.
+   - **Publisher / title / deep URL:** [Historic England — Church of the Holy Trinity, list entry 1034975](https://historicengland.org.uk/listing/the-list/list-entry/1034975)
+   - **Direct support:** The official entry supplies the statutory address, grade, list number and the three separately described door positions.
+   - **Checked:** 2026-08-30.
+   - **Conditional service-use implication:** The description applies only to this listed church and is not a current condition or hardware survey. It cannot characterise another Attleborough property or identify an authorised keyholder.
+4. **Fact:** The Heritage Supplementary Planning Document formally adopted on 29 April 2026 lists 2 Attleborough Road and 64-122 Attleborough Road, Former Albion Works, as two separate locally listed buildings outside conservation areas.
+   - **Publisher / title / deep URLs:** [Nuneaton and Bedworth Borough Council — Heritage Supplementary Planning Document 2026](https://www.nuneatonandbedworth.gov.uk/downloads/file/2503/heritage-supplementary-planning-document-2026-); [Nuneaton and Bedworth Borough Council — Heritage SPD adoption statement](https://www.nuneatonandbedworth.gov.uk/downloads/file/2504/heritage-supplementary-planning-document-2026-adoption-statement)
+   - **Direct support:** The SPD's local-list contents identify both exact Attleborough Road records, and the adoption statement supplies the formal adoption date.
+   - **Checked:** 2026-08-30, using the indexed document text and one-page adoption statement.
+   - **Conditional service-use implication:** The two entries are asset-specific and do not make the rest of Attleborough Road locally listed. Confirm the exact number or unit, current status, present controller and proposed scope before visible work.
 
-**Access/property-status caveat:** The Historic Environment Record is not a blanket designation, and its map point is illustrative rather than a complete archaeological boundary. The Heritage SPD row concerns Former Albion Works only; verify the exact site, current status, controller and proposed scope separately.
+**Access/property-status caveat:** The walkabout, park, listed-church and local-list records describe distinct and bounded places. They establish no route condition, tenure for another address, caller authority, door construction, fitted hardware, service coverage or response time.
 
 ### `stockingford` — Stockingford
 
-**Context tags:** `settlement/local-plan`, `heritage-record`, `locality-register`
+**Context tags:** `locality-register`, `council-engagement`, `managed-premises`, `school`, `heritage-record`
 
-1. **Fact:** Warwickshire Historic Environment Record MWA12426 describes documentary and cartographic research into the former Manor of Stockingford and Galley Common, including evidence interpreted as medieval settlement.
-   - **Publisher / title / deep URL:** [Warwickshire Historic Environment Record — The Manor of Stockingford, Galley Common, MWA12426](https://timetrail.warwickshire.gov.uk/detail.aspx?monuid=WA12426)
-   - **Direct support:** The live record's summary and source notes describe the former manor, the settlement interpretation and its documentary basis.
-   - **Checked:** 2026-08-29.
-   - **Conditional service-use implication:** The former-manor and settlement evidence may be attributed as historic context; it must not be presented as defining the whole modern locality.
-2. **Fact:** Warwickshire County Council's street register, produced on 11 August 2026, assigns Beaumont Place, Beaumont Road and Whitehouse Crescent to Stockingford, Nuneaton.
-   - **Publisher / title / deep URL:** [Warwickshire County Council — List of Streets maintained at public expense](https://api.warwickshire.gov.uk/documents/WCCC-930-12)
-   - **Direct support:** The live county register lists each named street with Stockingford as the locality and Nuneaton as the town.
-   - **Checked:** 2026-08-29.
-   - **Conditional service-use implication:** These labels may assist address checking; they cannot establish a complete route boundary, property, access condition or service need.
+1. **Fact:** Warwickshire County Council's street register assigns selected roads including Beaumont Place, Beaumont Road and Whitehouse Crescent to Stockingford, while the borough's housing walkabout schedule separately groups named streets under Stockingford East and Stockingford West.
+   - **Publisher / title / deep URLs:** [Warwickshire County Council — List of Streets maintained at public expense](https://api.warwickshire.gov.uk/documents/WCCC-930-12); [Nuneaton and Bedworth Borough Council — Neighbourhood walkabouts and engagement days](https://www.nuneatonandbedworth.gov.uk/resident-involvement/tenant-engagement/8)
+   - **Direct support:** The county register supplies selected locality labels; the live walkabout schedule lists separate East and West housing-engagement groups and their named meeting points.
+   - **Checked:** 2026-08-30.
+   - **Conditional service-use implication:** Neither list defines the full route slug, every Stockingford address, a parcel, tenure, current approach or service need. Use the caller's complete address and exact threshold.
+2. **Fact:** The council identifies Stockingford Community Centre at Haunchwood Road, Nuneaton CV10 8DY, says it is run by Stockingford Community Centre CIO and lists a large hall, small hall and kitchen for hire; the Charity Commission separately records The 'FORD Community Centre, charity 1199642, whose stated activities benefit Stockingford residents.
+   - **Publisher / title / deep URLs:** [Nuneaton and Bedworth Borough Council — Stockingford Community Centre](https://www.nuneatonandbedworth.gov.uk/community-facilities/community-centres-1/10); [Charity Commission for England and Wales — The 'FORD Community Centre, charity 1199642](https://register-of-charities.charitycommission.gov.uk/en/charity-search/-/charity-details/5200609/charity-overview)
+   - **Direct support:** The council page supplies the venue address, named operator and room uses; the current charity overview supplies the registered name, number, reporting status and Stockingford-benefit purpose.
+   - **Checked:** 2026-08-30.
+   - **Conditional service-use implication:** These records do not identify a freeholder, current keyholder, correct entrance or person authorised to approve work. Record the organisation, booked room or building, exact threshold and present responsible representative.
+3. **Fact:** Warwickshire County Council identifies Stockingford Academy as an academy for ages 4 to 11 at Cross Street, Nuneaton CV10 8JH.
+   - **Publisher / title / deep URL:** [Warwickshire County Council — Stockingford Academy](https://apps.warwickshire.gov.uk/FindASchool/schools/stockingford-academy)
+   - **Direct support:** The current school directory supplies the establishment name, category, age range and complete address.
+   - **Checked:** 2026-08-30.
+   - **Conditional service-use implication:** The record identifies one managed site only. It does not reveal a service entrance, access right, site approval chain, lock type or fitted component.
+4. **Fact:** Historic England lists only 350 and 352 Arbury Road, Nuneaton CV10 7NE at Grade II as entry 1261649; its legacy description records two doorways with plank doors and cover moulds.
+   - **Publisher / title / deep URL:** [Historic England — 350 and 352 Arbury Road, list entry 1261649](https://historicengland.org.uk/listing/the-list/list-entry/1261649)
+   - **Direct support:** The official entry supplies the exact pair, address, grade, list number and doorway wording.
+   - **Checked:** 2026-08-30.
+   - **Conditional service-use implication:** The record applies only to numbers 350 and 352 and is not a current condition or hardware survey. It cannot describe another Arbury Road or Stockingford address.
 
-**Access/property-status caveat:** The historic record and selected highway entries do not define every address represented by the Stockingford route or establish any property's status, construction or access.
+**Access/property-status caveat:** The locality lists, community-centre records, school directory and listed-cottage entry describe different scopes and controllers. None establishes ownership, caller authority, the correct door, route conditions, construction, fitted hardware, service coverage or response time.
 
 ### `weddington` — Weddington
 
-**Context tags:** `council-engagement`, `park`
+**Context tags:** `council-engagement`, `park`, `school`, `heritage-record`
 
 1. **Fact:** The council's housing walkabout schedule has a Weddington row naming Carisbrook Road, Cleaver Gardens, Niton Road and Ryde Avenue.
    - **Publisher / title / deep URL:** [Nuneaton and Bedworth Borough Council — Neighbourhood walkabouts and engagement days](https://www.nuneatonandbedworth.gov.uk/resident-involvement/tenant-engagement/8)
    - **Direct support:** The live schedule lists those four streets and a Cleaver Gardens meeting location under Weddington.
-   - **Checked:** 2026-08-29.
+   - **Checked:** 2026-08-30.
    - **Conditional service-use implication:** The row can support selected council-housing engagement geography only; it must not become a complete route, boundary or property-access claim.
 2. **Fact:** The council's parks directory identifies Weddington Meadows and Walk and classifies it as a nature and wildlife park.
    - **Publisher / title / deep URL:** [Nuneaton and Bedworth Borough Council — Weddington Meadows and Walk](https://www.nuneatonandbedworth.gov.uk/directory-record/4358/weddington-meadows-and-walk)
    - **Direct support:** The live directory record supplies the name and park classification.
-   - **Checked:** 2026-08-29.
+   - **Checked:** 2026-08-30.
    - **Conditional service-use implication:** The named public space may provide orientation only; it cannot establish a customer's property, entrance, road access or service coverage.
+3. **Fact:** Warwickshire County Council identifies Weddington Primary School as a community primary school for ages 4 to 11 at Winchester Avenue, Nuneaton CV10 0DR.
+   - **Publisher / title / deep URL:** [Warwickshire County Council — Weddington Primary School](https://apps.warwickshire.gov.uk/FindASchool/schools/weddington-primary-school)
+   - **Direct support:** The current school directory supplies the establishment name, community category, age range and complete address.
+   - **Checked:** 2026-08-30.
+   - **Conditional service-use implication:** The record identifies one managed site only and supplies no gate, entrance, keyholder, access right, fitted hardware or work authority.
+4. **Fact:** Historic England lists the Church of St James on Church Lane at Grade II as entry 1185771; its legacy description distinguishes the south porch's double-leaf doors from the tower's west plank door.
+   - **Publisher / title / deep URL:** [Historic England — Church of St James, list entry 1185771](https://historicengland.org.uk/listing/the-list/list-entry/1185771)
+   - **Direct support:** The official entry supplies the statutory address, grade, list number and the two separately described doorway locations.
+   - **Checked:** 2026-08-30.
+   - **Conditional service-use implication:** The record applies only to this listed church and is not a current condition or hardware survey. It cannot characterise another Weddington address or authorise access.
 
-**Access/property-status caveat:** A housing walkabout schedule and park directory are not parcel, route or designation maps. Verify the complete address, threshold and current property evidence separately.
+**Access/property-status caveat:** The housing schedule, park directory, school record and church listing are not interchangeable boundary or property records. Verify the complete address, exact threshold, present controller and authority; none proves route conditions, door construction, fitted hardware, service coverage or response time.
 
 ### `horeston-grange` — Horeston Grange
 
@@ -121,30 +148,30 @@ Status: research only. This file is a claim-level evidence register, not publish
 
 ### `whitestone` — Whitestone
 
-**Context tags:** `locality-register`, `housing-trajectory`, `conditional-council-route`, `school`
+**Context tags:** `housing-trajectory`, `conditional-council-route`, `school`, `managed-premises`
 
-1. **Fact:** The county street register produced on 11 August 2026 assigns Fairway, Falcon Close, Falstaff Close, St Andrews Drive, Whitestone Road and Willowfields Road to Whitestone, Nuneaton.
-   - **Publisher / title / deep URL:** [Warwickshire County Council — List of Streets maintained at public expense](https://api.warwickshire.gov.uk/documents/WCCC-930-12)
-   - **Direct support:** The live county register lists each selected street with Whitestone as the locality and Nuneaton as the town.
-   - **Checked:** 2026-08-30.
-   - **Conditional service-use implication:** These labels can assist address checking but must not be converted into a full route or property boundary.
-2. **Fact:** The borough's housing trajectory at 1 April 2026 records site 64c001, land off Golf Drive (HSG9), with status “U/C” in the Whitestone-and-Bulkington ward grouping; the row records total capacity of 621 and 68 completions between 2021/22 and 2025/26.
+1. **Fact:** The borough's housing trajectory at 1 April 2026 records site 64c001, land off Golf Drive (HSG9), with status “U/C” in the Whitestone-and-Bulkington ward grouping; the row records total capacity of 621 and 68 completions between 2021/22 and 2025/26.
    - **Publisher / title / deep URL:** [Nuneaton and Bedworth Borough Council — Five-Year Housing Land Supply Calculation - 1 April 2026](https://www.nuneatonandbedworth.gov.uk/downloads/file/2666/5yhls-calculation-and-housing-trajectory-1st-april-2026)
    - **Direct support:** Appendix 1, page 6, supplies the named site, row status, ward grouping, capacity and completions figures.
    - **Checked:** 2026-08-30, using extracted table text and a rendered page image.
    - **Conditional service-use implication:** Only for an HSG9 booking, request the current plot or postal address and distinguish a completed dwelling from a controlled site. The dated trajectory does not establish today's phase, route, occupation, threshold controller or hardware.
-3. **Fact:** The council's tenancy-and-neighbourhood directory publishes a tenancy management officer, housing-repair route and emergency out-of-hours number for Magyar Crescent, Nuneaton.
+2. **Fact:** The council's tenancy-and-neighbourhood directory publishes a tenancy management officer, housing-repair route and emergency out-of-hours number for Magyar Crescent, Nuneaton.
    - **Publisher / title / deep URL:** [Nuneaton and Bedworth Borough Council — Magyar Crescent, Nuneaton - Tenancy and neighbourhood teams](https://www.nuneatonandbedworth.gov.uk/directory-record/3892/magyar-crescent-nuneaton)
    - **Direct support:** The live record names the street and publishes the tenancy-management, repair and emergency contact routes.
    - **Checked:** 2026-08-30.
    - **Conditional service-use implication:** Apply those routes only after confirming that a council tenancy or council-controlled threshold is involved. The directory does not assign tenure or door control to every Magyar Crescent address.
-4. **Fact:** Warwickshire County Council's school directory identifies Whitestone Infant School as a community school at Magyar Crescent, Nuneaton, Warwickshire CV11 4SQ.
+3. **Fact:** Warwickshire County Council's school directory identifies Whitestone Infant School as a community school for ages 4 to 7 at Magyar Crescent, Nuneaton CV11 4SQ.
    - **Publisher / title / deep URL:** [Warwickshire County Council — Whitestone Infant School](https://apps.warwickshire.gov.uk/FindASchool/schools/whitestone-infant-school)
-   - **Direct support:** The official record gives the school name, displays its category as Community, and lists Magyar Crescent, Nuneaton, Warwickshire CV11 4SQ as the contact address.
+   - **Direct support:** The current directory gives the school name, community category, age range and complete contact address.
    - **Checked:** 2026-08-30.
    - **Conditional service-use implication:** If a booking concerns the school, identify the named gate or entrance and the person authorised for the site. The directory establishes neither access rights nor installed hardware.
+4. **Fact:** The Charity Commission records Whitestone Community Centre as charity 508566 and says it runs the local community centre and makes the property available for hire; its registered contact address is Whitestone Infant School at Magyar Crescent, Nuneaton CV11 4SQ.
+   - **Publisher / title / deep URLs:** [Charity Commission for England and Wales — Whitestone Community Centre, charity 508566](https://register-of-charities.charitycommission.gov.uk/en/charity-search/-/charity-details/508566); [Charity Commission for England and Wales — Whitestone Community Centre contact information](https://register-of-charities.charitycommission.gov.uk/en/charity-search/-/charity-details/508566/contact-information)
+   - **Direct support:** The current charity overview supplies the registered organisation, number, reporting status and centre-hire purpose; the contact page supplies the school address as correspondence evidence.
+   - **Checked:** 2026-08-30.
+   - **Conditional service-use implication:** The operator purpose and contact record do not prove freehold ownership, the centre's exact current venue, a correct service entrance, current opening arrangements or a caller's authority. The charity's CV11 4SQ school contact address proves neither that the centre is there nor that the sites are physically separate.
 
-**Access/property-status caveat:** The highway register is not a boundary or parcel map, the trajectory is a dated site-level record, the tenancy directory is not tenure proof for every address, and the school entry identifies one facility only. Verify the current plot or full address, named threshold, present status and responsible controller separately.
+**Access/property-status caveat:** The trajectory is a dated site-level record, the tenancy directory is not tenure proof for every address, and the school and charity-contact records have different evidential roles without proving co-location or physical separation. Verify the current plot or full address, named threshold, present status and responsible controller; none establishes route conditions, fitted hardware, service coverage or response time.
 
 ### `camp-hill` — Camp Hill
 
@@ -491,11 +518,11 @@ Status: research only. This file is a claim-level evidence register, not publish
 ## Coverage and unresolved evidence
 
 - **Slugs checked:** 21/21.
-- **Fact records:** 65: at least two for every slug; four each for Horeston Grange, Whitestone, Hartshill, Bulkington, Rugby, Hillmorton, Bilton, Brownsover, Long Lawford and Dunchurch; and three each for Nuneaton, Attleborough and Bermuda Park.
+- **Fact records:** 70: at least two for every slug; four each for Attleborough, Stockingford, Weddington, Horeston Grange, Whitestone, Hartshill, Bulkington, Rugby, Hillmorton, Bilton, Brownsover, Long Lawford and Dunchurch; and three each for Nuneaton and Bermuda Park.
 - **Each record includes:** publisher, document/page title, deep primary URL, direct-support statement, checked date and a conditional use constraint.
 - **Latest record check:** Newly added named-site, operator, school, planning and listed-building records and the Rugby Town Centre appraisal were checked on 2026-08-30; other retained appraisal records keep their 2026-08-29 check date.
 - **No support found or claimed for:** locks or door hardware, local call volumes, fault prevalence, response or journey time, crime, parking, property value, service coverage, first-visit outcomes or property-wide construction types.
-- **Dated planning evidence:** Attleborough, Stockingford, Weddington, Whitestone, Camp Hill, Chapel End and Galley Common rely on at least one 2012-2016 council evidence document. Those records are labelled as historic planning snapshots and require a current-plan check before publication.
+- **Dated planning evidence:** Camp Hill, Chapel End and Galley Common retain at least one 2012-2016 council evidence document. Those records are labelled as historic planning snapshots and require a current-plan check before later planning claims.
 - **Cawston limitation:** the detailed parish plan is from 2010. The current council directory confirms the parish council and contact location only; it does not refresh the plan's historic survey findings.
 - **New Bilton limitation:** the strongest deep official evidence found is ward/programme and named-recreation-ground evidence, not a settlement or conservation-area definition.
 - **Boundary limitation:** conservation-area, ward, parish, planning-locality, listed-asset, scheduled-monument, named-site, operator-record and route-slug scopes are not interchangeable. Exact-address, exact-threshold and present-controller verification remains unresolved for every future property-specific use.

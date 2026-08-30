@@ -6,24 +6,24 @@ export const NORTH_EAST_AREA_SEARCH_DESCRIPTIONS = {
     sourceIds: ['gazette-nuneaton-conservation-2022'],
   },
   attleborough: {
-    description: 'Attleborough locksmith help for lockouts, repairs and upgrades, with official records identifying selected housing streets and exact heritage checks.',
-    sourceIds: ['nbbc-tenant-walkabouts-2026', 'historic-england-holy-trinity-attleborough-1034975'],
+    description: 'Attleborough locksmith guidance separating the Springfield Road recreation ground, Holy Trinity doors and two exact locally listed Attleborough Road assets.',
+    sourceIds: ['nbbc-attleborough-recreation-ground', 'historic-england-holy-trinity-attleborough-1034975', 'nbbc-heritage-spd-2026'],
   },
   stockingford: {
-    description: 'Stockingford locksmith help for lockouts, repairs and upgrades, with current street records and the exact Grade II entry for 350 and 352 Arbury Road.',
-    sourceIds: ['wcc-list-of-streets-2026', 'historic-england-arbury-road-350-352-1261649'],
+    description: 'Stockingford locksmith guidance distinguishing its East and West housing groups, Haunchwood Road centre, Cross Street academy and exact Arbury Road cottages.',
+    sourceIds: ['nbbc-tenant-walkabouts-2026', 'nbbc-stockingford-community-centre', 'wcc-stockingford-academy', 'historic-england-arbury-road-350-352-1261649'],
   },
   weddington: {
-    description: 'Weddington locksmith help for lockouts, repairs and upgrades, with council housing-address checks and the Grade II Church of St James kept property-specific.',
-    sourceIds: ['nbbc-tenant-walkabouts-2026', 'historic-england-st-james-weddington-1185771'],
+    description: 'Weddington locksmith guidance distinguishing its named housing group, Meadows and Walk, Winchester Avenue school and asset-specific St James door records.',
+    sourceIds: ['nbbc-tenant-walkabouts-2026', 'nbbc-weddington-meadows-walk', 'wcc-weddington-primary-school', 'historic-england-st-james-weddington-1185771'],
   },
   'horeston-grange': {
     description: 'Horeston Grange locksmith help for lockouts and repairs, with the adopted plan naming its district centre and the council locating the Co-op on Camborne Drive.',
     sourceIds: ['nbbc-borough-plan-review-2021-2039', 'nbbc-horeston-grange-wellbeing-walk'],
   },
   whitestone: {
-    description: 'Whitestone locksmith help for lockouts, repairs and upgrades, with council records identifying HSG9 off Golf Drive and Magyar Crescent repair contacts.',
-    sourceIds: ['nbbc-whitestone-hsg9-5yhls-2026', 'nbbc-magyar-crescent-tenancy-team'],
+    description: 'Whitestone locksmith guidance separating HSG9 and tenancy routes from the infant-school and current community-centre charity records.',
+    sourceIds: ['nbbc-whitestone-hsg9-5yhls-2026', 'nbbc-magyar-crescent-tenancy-team', 'wcc-whitestone-infant-school', 'charity-commission-whitestone-community-centre-508566'],
   },
   'camp-hill': {
     description: 'Camp Hill locksmith help for lockouts and repairs, with the 11 August 2026 county register distinguishing Camp Hill Drive\'s locality entry from Camp Hill Road.',
