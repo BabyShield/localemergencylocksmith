@@ -464,20 +464,30 @@ Status: research only. This file is a claim-level evidence register, not publish
 
 ### `cawston` — Cawston
 
-**Context tags:** `settlement/local-plan`, `parish-council`
+**Context tags:** `school`, `managed-contact-location`, `listed-building-present`, `dated-map`
 
-1. **Fact:** Rugby Borough Council's current directory identifies Cawston as a civil parish with a parish council based at Cawston Community Hall, Scholars Drive.
-   - **Publisher / title / deep URL:** [Rugby Borough Council — Cawston parish council details](https://rugby.gov.uk/l/6734048)
-   - **Direct support:** The official directory supplies the council type and contact location.
-   - **Checked:** 2026-08-29.
-   - **Conditional service-use implication:** The parish and named hall may be used only as administrative orientation; the hall address is not a service-area boundary.
-2. **Fact:** Cawston Parish Council adopted a parish plan in August 2010 based on a questionnaire conducted in autumn 2009, with an action plan intended for regular review.
-   - **Publisher / title / deep URL:** [Cawston Parish Council, hosted by Rugby Borough Council — Cawston Parish Plan 2010](https://www.rugby.gov.uk/documents/20124/6573495/Cawston_Parish_Plan.pdf/35928dfe-3d3e-a888-19db-e82f4db6cc3b?t=1750866427061)
-   - **Direct support:** The title page and introduction provide the adoption date, survey basis and review intention.
-   - **Checked:** 2026-08-29.
-   - **Conditional service-use implication:** The plan may be cited as a historical community-planning record, not as evidence of current amenities, development or resident views.
+1. **Fact:** Warwickshire County Council lists Cawston Grange Primary School as an academy at Scholars Drive, Rugby CV22 7GU.
+   - **Publisher / title / deep URL:** [Warwickshire County Council — Cawston Grange Primary School](https://apps.warwickshire.gov.uk/FindASchool/schools/cawston-grange-primary-school)
+   - **Direct support:** The current directory supplies the school name, classification and contact address.
+   - **Checked:** 2026-08-30.
+   - **Conditional service-use implication:** This identifies one managed site only, not an entrance, current controller, access instruction, construction or hardware.
+2. **Fact:** Rugby Borough Council gives Cawston Community Hall, Scholars Drive, Rugby CV22 7GU as Cawston Parish Council's contact location.
+   - **Publisher / title / deep URL:** [Rugby Borough Council — Cawston parish council details](https://services.rugby.gov.uk/web/guest/l/6734048)
+   - **Direct support:** The current parish-council record supplies the named contact location.
+   - **Checked:** 2026-08-30.
+   - **Conditional service-use implication:** A contact location does not identify an affected hall entrance, current site controller, keyholder, access or work authority.
+3. **Fact:** Historic England records Cawston Farm House on Coventry Road as Grade II listed, entry 1390996, in Dunchurch parish.
+   - **Publisher / title / deep URL:** [Historic England — Cawston Farm House, list entry 1390996](https://historicengland.org.uk/listing/the-list/list-entry/1390996)
+   - **Direct support:** The official entry supplies the designation and statutory address for the named asset.
+   - **Checked:** 2026-08-30.
+   - **Conditional service-use implication:** The listing is asset-specific and does not establish current fabric, access, hardware, condition or neighbouring status.
+4. **Fact:** Warwickshire County Council's Rugby Bus Map, dated 30 August 2025, labels Cawston, Cawston Lane and Cawston Grange Drive.
+   - **Publisher / title / deep URL:** [Warwickshire County Council — Rugby Bus Map](https://api.warwickshire.gov.uk/documents/WCCC-222510381-351)
+   - **Direct support:** The dated map supplies the stated orientation labels.
+   - **Checked:** 2026-08-30.
+   - **Conditional service-use implication:** Map labels do not establish a full address, entrance, current access, route or property status.
 
-**Access/property-status caveat:** Parish, ward and postal boundaries are not interchangeable. The 2010 plan is not current property evidence; check the exact address and present records.
+**Access/property-status caveat:** The school, hall contact location, listed farmhouse and map have different scopes. None proves present control, access, hardware or condition at a requested entrance.
 
 ### `long-lawford` — Long Lawford
 
@@ -508,20 +518,30 @@ Status: research only. This file is a claim-level evidence register, not publish
 
 ### `new-bilton` — New Bilton
 
-**Context tags:** `council-area-action`
+**Context tags:** `planning-control`, `analytical-centre-area`, `dated-recreation-ground-update`, `dated-map`
 
-1. **Fact:** In March 2025 Rugby Borough Council published consultation plans for a refurbishment and expansion of the play area at New Bilton Recreation Ground, alongside wider recreation-ground proposals.
-   - **Publisher / title / deep URL:** [Rugby Borough Council — Public consultations launched on play area revamps](https://www.rugby.gov.uk/w/public-consultations-launched-on-play-area-revamps)
-   - **Direct support:** The council announcement identifies the New Bilton location and describes the consultation-stage proposals.
-   - **Checked:** 2026-08-29.
-   - **Conditional service-use implication:** This may be cited only as a 2025 consultation proposal unless implementation is separately verified; it is not general property context.
-2. **Fact:** A February 2024 cabinet paper identifies New Bilton Ward as one of two pilot areas for the council's hyperlocal area-action approach under its 2023-2025 Corporate Strategy Delivery Plan.
-   - **Publisher / title / deep URL:** [Rugby Borough Council — Cabinet agenda, 5 February 2024](https://www.rugby.gov.uk/documents/20124/7078207/PUBLIC%2BAGENDA%2BCabinet%2B5%2BFebruary%2B2024.pdf/ccba71dc-0ff9-2f75-1ce8-a1b5339521ca?t=1706305510419&version=1.0)
-   - **Direct support:** The equality-impact material names New Bilton Ward and the pilot-workstream context.
-   - **Checked:** 2026-08-29.
-   - **Conditional service-use implication:** It may support a dated council-programme reference, not a claim about current conditions or every address in the route area.
+1. **Fact:** Rugby Borough Council confirmed its HMO Article 4 Direction on 25 September 2024, effective 23 February 2025 in a defined area including New Bilton ward.
+   - **Publisher / title / deep URL:** [Rugby Borough Council — Article 4 Direction: Houses in Multiple Occupation](https://www.rugby.gov.uk/pl/w/article-4-direction-hmos)
+   - **Direct support:** The page supplies the confirmation and commencement dates, defined-area material and limited C3-to-C4 planning effect.
+   - **Checked:** 2026-08-30.
+   - **Conditional service-use implication:** Ward inclusion does not prove that an address is an HMO, rented, shared or managed.
+2. **Fact:** Rugby Borough Council's September 2024 Local Centres Study assesses New Bilton Inner and New Bilton Outer as separate candidate locations.
+   - **Publisher / title / deep URL:** [Rugby Borough Council — Local Centres Study Report](https://www.rugby.gov.uk/documents/20124/62314905/Local%2BCentres%2BStudy%2BReport.pdf/c3f3f817-e99c-eeb5-5c77-d25471afeb29?t=1765546746847)
+   - **Direct support:** The report supplies the separate analytical labels.
+   - **Checked:** 2026-08-30.
+   - **Conditional service-use implication:** The labels are not booking boundaries and provide no address, entrance, controller, access or hardware evidence.
+3. **Fact:** A council update dated 14 March 2024 said work had started on a community orchard at Jubilee Recreation Ground, described as the recreation ground in Bridle Road.
+   - **Publisher / title / deep URL:** [Rugby Borough Council — New orchard promises to bear fruit for New Bilton](https://www.rugby.gov.uk/w/new-orchard-promises-to-bear-fruit-for-new-bilton)
+   - **Direct support:** The dated update supplies the site wording and work-start statement.
+   - **Checked:** 2026-08-30.
+   - **Conditional service-use implication:** It does not prove current completion, condition, access, a particular opening or present work authority.
+4. **Fact:** Warwickshire County Council's Rugby Bus Map, dated 30 August 2025, labels New Bilton separately within Rugby.
+   - **Publisher / title / deep URL:** [Warwickshire County Council — Rugby Bus Map](https://api.warwickshire.gov.uk/documents/WCCC-222510381-351)
+   - **Direct support:** The dated map supplies the New Bilton orientation label.
+   - **Checked:** 2026-08-30.
+   - **Conditional service-use implication:** The map does not establish a full address, property status, threshold, access instruction or route.
 
-**Access/property-status caveat:** Both sources concern a named recreation ground or electoral ward. Neither defines the route slug, private-property status or access to a specific address.
+**Access/property-status caveat:** The planning-control area, study labels, dated recreation-ground update and map label are not interchangeable. None establishes present completion, condition, access, property status, hardware or work authority at an address.
 
 ### `dunchurch` — Dunchurch
 
@@ -553,11 +573,11 @@ Status: research only. This file is a claim-level evidence register, not publish
 ## Coverage and unresolved evidence
 
 - **Slugs checked:** 21/21.
-- **Fact records:** 77: four each for Nuneaton, Attleborough, Stockingford, Weddington, Horeston Grange, Whitestone, Chapel End, Galley Common, Hartshill, Bedworth, Bulkington, Rugby, Hillmorton, Bilton, Brownsover, Long Lawford and Dunchurch; three for Bermuda Park; and two each for Camp Hill, Cawston and New Bilton.
+- **Fact records:** 81: four each for Nuneaton, Attleborough, Stockingford, Weddington, Horeston Grange, Whitestone, Chapel End, Galley Common, Hartshill, Bedworth, Bulkington, Rugby, Hillmorton, Bilton, Brownsover, Cawston, Long Lawford, New Bilton and Dunchurch; three for Bermuda Park; and two for Camp Hill.
 - **Each record includes:** publisher, document/page title, deep primary URL, direct-support statement, checked date and a conditional use constraint.
-- **Latest record check:** The promoted Nuneaton and Bedworth street, conservation, listed-building and managed-site sources were checked on 2026-08-30; other retained rows keep the checked date stated beside each fact.
+- **Latest record check:** The promoted Cawston and New Bilton school, hall, listed-building, planning, recreation-ground and map sources were checked on 2026-08-30; other retained rows keep the checked date stated beside each fact.
 - **No support found or claimed for:** locks or door hardware, local call volumes, fault prevalence, response or journey time, crime, parking, property value, service coverage, first-visit outcomes or property-wide construction types.
 - **Dated planning evidence:** Camp Hill, Chapel End and Galley Common retain at least one 2012-2016 council evidence document. Those records are labelled as historic planning snapshots and require a current-plan check before later planning claims.
-- **Cawston limitation:** the detailed parish plan is from 2010. The current council directory confirms the parish council and contact location only; it does not refresh the plan's historic survey findings.
-- **New Bilton limitation:** the strongest deep official evidence found is ward/programme and named-recreation-ground evidence, not a settlement or conservation-area definition.
+- **Cawston limitation:** the hall record is a parish contact location, the school is one managed site, the listing is asset-specific and the map is dated orientation only.
+- **New Bilton limitation:** the 14 March 2024 orchard update proves only that work had started by that date; current completion, condition and access remain unverified.
 - **Boundary limitation:** conservation-area, ward, parish, planning-locality, listed-asset, scheduled-monument, named-site, operator-record and route-slug scopes are not interchangeable. Exact-address, exact-threshold and present-controller verification remains unresolved for every future property-specific use.

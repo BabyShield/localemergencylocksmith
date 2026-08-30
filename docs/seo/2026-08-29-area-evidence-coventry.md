@@ -1,6 +1,6 @@
 # Coventry-cluster area evidence register
 
-Checked: baseline corpus 2026-08-29; `radford`, `foleshill`, `wyken`, `allesley` and `aldermans-green` evidence refreshed 2026-08-30.
+Checked: baseline corpus 2026-08-29; `radford`, `foleshill`, `wyken`, `allesley`, `eastern-green`, `courthouse-green` and `aldermans-green` evidence refreshed 2026-08-30.
 
 Scope: the first 30 `AREAS` records in the Coventry merchandising cluster, from `coventry-city-centre` through `little-heath`. This is a research register, not publish-ready local copy. Claims are limited to opened primary sources from Coventry City Council, Rugby Borough Council, Historic England and the named institution's current site where it is needed to establish its own contact address. A character area, ward, MSOA, parish, neighbourhood-plan boundary or named park is not interchangeable with a service-area slug or an individual address.
 
@@ -291,16 +291,19 @@ Excluded throughout: inferred lock types, locksmith job history or frequency, cr
 
 ## `eastern-green`
 
-- **Context tags:** `historic-landscape-report`, `brook`, `mid-20th-century-development`, `council-investment-site`, `A45`.
+- **Context tags:** `historic-landscape-report`, `brook`, `council-planning-site`, `official-park`, `current-school-register`.
 - **Supported claims:**
   1. The Eastern Green HLC describes a west-Coventry residential area crossed east–west by Guphill Brook, with housing around it and farmland/Allesley Park to the north.
-  2. It records the principal modern housing phases as south of Broad Lane in the 1950s and north of Broad Lane in the 1960s, while also identifying earlier pockets on Dial House Lane and Lower Eastern Green Lane.
-  3. Coventry City Council's separate Eastern Green investment-site page describes a 176-hectare residential-led mixed-use urban extension adjacent to the built-up area's western edge; it states that the existing Eastern Green neighbourhood is further south and west of that site's southern boundary.
+  2. Coventry City Council's separate Eastern Green planning-site page describes a 176-hectare residential-led mixed-use urban extension adjacent to the built-up area's western edge; it states that the existing Eastern Green neighbourhood is further south and west of that site's southern boundary.
+  3. Coventry City Council locates Eastern Green Recreation Ground on Church Lane, Eastern Green, Coventry, CV5 7BX, and describes it as a small park with a children's play area.
+  4. The Department for Education records Eastern Green Junior School, URN 103665, as open at Sutton Avenue, Coventry, CV5 7EG.
 - **Sources:**
-  - Coventry City Council — [Eastern Green Character Area, HLC Area 39](https://www.coventry.gov.uk/downloads/file/17452/hlc-area-39-eastern-green-character-area) — supports claims 1 and 2. Checked 2026-08-29.
-  - Coventry City Council — [Eastern Green Coventry: key investment and development site](https://www.coventry.gov.uk/directory-record/50147/eastern-green-coventry) — supports claim 3 and prevents conflating the extension site with the existing neighbourhood. Checked 2026-08-29.
-- **Conditional service implication:** Capture the full address and whether it is an occupied property, construction/development site or managed premise before accepting instructions; historic pockets require an exact status check before external changes.
-- **Access/property-status caveat:** The existing neighbourhood, HLC boundary and urban-extension site are not the same geography and support no individual property or access assumption.
+  - Coventry City Council — [Eastern Green Character Area, HLC Area 39](https://www.coventry.gov.uk/downloads/file/17452/hlc-area-39-eastern-green-character-area) — supports claim 1 for the broad character area only. Checked 2026-08-30.
+  - Coventry City Council — [Eastern Green Coventry: key investment and development site](https://www.coventry.gov.uk/directory-record/50147/eastern-green-coventry) — supports claim 2 and the distinction between its planning-site boundary and the existing neighbourhood. Checked 2026-08-30.
+  - Coventry City Council — [Eastern Green Recreation Ground](https://www.coventry.gov.uk/directory-record/57118/eastern-green-recreation-ground) — supports claim 3 for the named public park only. Checked 2026-08-30.
+  - Department for Education — [Eastern Green Junior School, URN 103665](https://get-information-schools.service.gov.uk/Establishments/Establishment/Details/103665) — supports claim 4 for the named establishment and records its status and address. Checked 2026-08-30.
+- **Conditional service implication:** Decide whether the recreation ground, school or planning site is the actual premises or only a location reference, then identify the exact opening and independently verify the owner, occupier or responsible organisational contact.
+- **Access/property-status caveat:** The HLC, planning-site boundary, park directory and school register are separate evidence units. Recorded-open school status, a public listing or a planning record establishes no caller authority, access arrangement, secured opening, current site condition, construction, hardware or service history.
 
 ## `longford`
 
@@ -331,16 +334,19 @@ Excluded throughout: inferred lock types, locksmith job history or frequency, cr
 
 ## `courthouse-green`
 
-- **Context tags:** `historic-landscape-report`, `former-motor-works`, `official-school-directory`, `mixed-use-context`.
+- **Context tags:** `first-party-leisure-centre`, `named-managed-site`, `official-school-directory`, `current-school-register`, `environmental-permit-register`.
 - **Supported claims:**
-  1. The Alderman's Green HLC records Courthouse Green Works as a motor works built in the 1930s west of that character area and says the site was later redeveloped as an out-of-town shopping centre.
-  2. Coventry City Council's school directory locates Courthouse Green at 736 Sewall Highway, CV6 7JJ.
-  3. The directory lists a defined school catchment containing parts of Sewall Highway, Bell Green Road, Henley Road, Riley Square and other named streets; it is a school-admissions geography, not a locality boundary.
+  1. CV Life identifies Centre AT7 as a sports and leisure centre at Bell Green Road, Coventry, CV6 7GP and says it is managed by CV Life.
+  2. Coventry City Council's school directory locates Courthouse Green at 736 Sewall Highway, CV6 7JJ and lists a defined school catchment; the catchment is school-admissions geography rather than a locality or premises boundary.
+  3. The Department for Education records Courthouse Green Primary School, URN 144064, as open at Sewall Highway, Coventry, CV6 7JJ.
+  4. Coventry City Council's IPPC public register records permit 101 for unloading petrol into storage at Sainsburys Petrol Station, Austin Drive, Coventry, CV6 7NS.
 - **Sources:**
-  - Coventry City Council — [Alderman's Green Character Area, HLC Area 41](https://www.coventry.gov.uk/downloads/file/17411/hlc-area-41-aldermans-green-character-area) — supports claim 1. Checked 2026-08-29.
-  - Coventry City Council — [Courthouse Green: schools and contact details](https://www.coventry.gov.uk/directory-record/43078/courthouse-green) — supports claims 2 and 3. Checked 2026-08-29.
-- **Conditional service implication:** For school, retail or other managed premises, confirm the authorized person and exact gate/entrance; do not use the school catchment as proof of a service-area or property boundary.
-- **Access/property-status caveat:** The historic works/site and current school directory do not establish the use, ownership or status of a separate Courthouse Green address.
+  - CV Life — [Centre AT7](https://cvlife.co.uk/centre-at7/) — supports claim 1 for the named centre, its address and CV Life management statement only. Checked 2026-08-30.
+  - Coventry City Council — [Courthouse Green: schools and contact details](https://www.coventry.gov.uk/directory-record/43078/courthouse-green) — supports claim 2 for the named school and its admissions geography only. Checked 2026-08-30.
+  - Department for Education — [Courthouse Green Primary School, URN 144064](https://get-information-schools.service.gov.uk/Establishments/Establishment/Details/144064) — supports claim 3 for the named establishment and records its status and address. Checked 2026-08-30.
+  - Coventry City Council — [Sainsbury's Supermarkets Ltd Courthouse Green 101](https://www.coventry.gov.uk/directory-record/50038/sainsbury-s-supermarkets-ltd-courthouse-green-101) — supports claim 4 as a process-specific environmental-permit entry at the named address. Checked 2026-08-30.
+- **Conditional service implication:** Distinguish Centre AT7, the school, the permit-addressed premises and any other Courthouse Green location, identify the exact opening and verify the responsible party independently before access, repair, temporary securing or alteration.
+- **Access/property-status caveat:** The Centre AT7 page, school directory, DfE register and process-specific permit record concern separate evidence units, with the two school records describing one named establishment. CV Life's management statement does not identify a caller or authorise work, and none of the records proves a keyholder, particular entrance, access arrangement, construction, installed hardware, damage or service need.
 
 ## `aldermans-green`
 

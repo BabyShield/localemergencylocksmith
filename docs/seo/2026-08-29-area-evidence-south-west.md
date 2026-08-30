@@ -1,6 +1,6 @@
 # South-west service-area evidence register
 
-Checked: baseline corpus 2026-08-29; `alcester`, `bishopton`, `brandon`, `brinklow`, `chase-meadow`, `hampton-in-arden`, `lillington`, `sydenham`, `tiddington` and `woodloes-park` evidence refreshed 2026-08-30.
+Checked: baseline corpus 2026-08-29; `alcester`, `baginton`, `bishopton`, `brandon`, `brinklow`, `chase-meadow`, `hampton-in-arden`, `lillington`, `meriden`, `sydenham`, `tiddington` and `woodloes-park` evidence refreshed 2026-08-30.
 Scope: 27 governed area slugs across Leamington Spa, Warwick, Stratford-upon-Avon and the Warwickshire/nearby cluster.
 Source rule: primary official sources only (central-government registers and services, district/borough/county councils, official adopted or submitted planning documents hosted by them, and the named institution's current site where it is needed to establish its visit address).
 
@@ -15,9 +15,9 @@ Source rule: primary official sources only (central-government registers and ser
 ## Counts and unresolved status
 
 - Registry slugs reviewed: **27/27**.
-- Factual claims recorded: **77** (at least two per slug; four each for `alcester`, `bishopton`, `brandon`, `brinklow`, `chase-meadow`, `hampton-in-arden`, `lillington`, `sydenham`, `tiddington` and `woodloes-park`, plus a third for `leamington-spa`, `stratford-upon-avon` and `shilton`).
+- Factual claims recorded: **81** (at least two per slug; four each for `alcester`, `baginton`, `bishopton`, `brandon`, `brinklow`, `chase-meadow`, `hampton-in-arden`, `lillington`, `meriden`, `sydenham`, `tiddington` and `woodloes-park`, plus a third for `leamington-spa`, `stratford-upon-avon` and `shilton`).
 - Slugs with at least two official-source claims: **27/27**.
-- Distinct primary deep URLs cited: **65** across **11** publishing bodies (15 Warwick District Council, 11 Stratford-on-Avon District Council, 9 Rugby Borough Council, 7 Solihull Metropolitan Borough Council, 6 Historic England, 5 Charity Commission, 4 Department for Education, 4 Warwickshire County Council, 2 NHS, 1 Office for National Statistics and 1 Chase Meadow Community Centre URL); these appear in **83** claim citations because sources are reused where they support more than one slug and several claims cite complementary records.
+- Distinct primary deep URLs cited: **69** across **12** publishing bodies (15 Warwick District Council, 11 Stratford-on-Avon District Council, 9 Rugby Borough Council, 8 Solihull Metropolitan Borough Council, 8 Historic England, 5 Charity Commission, 4 Department for Education, 4 Warwickshire County Council, 2 NHS, 1 Coventry City Council, 1 Office for National Statistics and 1 Chase Meadow Community Centre URL); these appear in **87** claim citations because sources are reused where they support more than one slug and several claims cite complementary records.
 - Slugs with a directly evidenced conservation-area tag: **16/27**.
 - Slugs with a directly evidenced rail tag: **2/27** (`brandon`, `wolston`).
 - Slugs with a directly evidenced river tag: **4/27** (`leamington-spa`, `stratford-upon-avon`, `wolston`, `ryton-on-dunsmore`).
@@ -390,8 +390,8 @@ Source rule: primary official sources only (central-government registers and ser
 
 ### `meriden`
 
-**Context tags:** `conservation-area-present`, `settlement/local-plan`, `official-parish`
-**Access/property-status caveat:** Meriden Green and Meriden Hill are two separate conservation areas and do not cover every address in Meriden Parish; neither designation establishes listing, property type or access.
+**Context tags:** `conservation-area-present`, `settlement/local-plan`, `official-parish`, `named-public-site`, `managed-premises`, `listed-building-present`
+**Access/property-status caveat:** Meriden Green and Meriden Hill are separate boundaries, Arden Cottage library is one named managed public site, and the Grade I entry applies only to the Church of St Lawrence. Verify the exact address, asset and current controller; none of these records establishes a neighbouring property's status, entrance, caller authority or hardware.
 
 1. **Claim:** The Meriden Parish Neighbourhood Development Plan was made on 17 June 2021 after the 6 May referendum and is used to help determine planning applications in the neighbourhood area.
    **Publisher / title / deep URL:** Solihull Metropolitan Borough Council — [Meriden Neighbourhood Plan](https://www.solihull.gov.uk/Planning-and-building-control/Meriden-neighbourhood-plan).
@@ -404,6 +404,18 @@ Source rule: primary official sources only (central-government registers and ser
    **Supports:** Two specifically named Meriden conservation areas and the `conservation-area-present` tag.
    **Conditional service use:** Determine whether the exact address is in either current boundary before offering conservation-related guidance; do not describe Meriden as wholly conserved.
    **Checked:** 2026-08-29.
+
+3. **Claim:** Solihull Metropolitan Borough Council identifies Meriden Library at Arden Cottage, The Green, Meriden, CV7 7LN.
+   **Publisher / title / deep URL:** Solihull Metropolitan Borough Council — [Meriden Library](https://www.solihull.gov.uk/libraries/meriden-library).
+   **Supports:** One named managed public site and the `named-public-site` and `managed-premises` tags.
+   **Conditional service use:** Use the address only to distinguish the library from another Meriden premises; the page does not identify a current representative, caller authority, requested door or installed hardware.
+   **Checked:** 2026-08-30.
+
+4. **Claim:** Historic England list entry 1031828 identifies the Church of St Lawrence on Church Lane, Meriden, as Grade I listed.
+   **Publisher / title / deep URL:** Historic England — [Church of St Lawrence, list entry 1031828](https://historicengland.org.uk/listing/the-list/list-entry/1031828?section=official-list-entry).
+   **Supports:** A building-specific Grade I designation and the `listed-building-present` tag.
+   **Conditional service use:** Apply the designation only to the named church; do not transfer it to another Church Lane address or infer current control, permission, door construction or consent outcome.
+   **Checked:** 2026-08-30.
 
 ### `hampton-in-arden`
 
@@ -470,8 +482,8 @@ Source rule: primary official sources only (central-government registers and ser
 
 ### `baginton`
 
-**Context tags:** `conservation-area-present`, `settlement/local-plan`, `official-parish`
-**Access/property-status caveat:** The neighbourhood plan is joint with Bubbenhall, while the Baginton conservation area and settlement boundary are separate; verify the exact address before applying either context.
+**Context tags:** `conservation-area-present`, `settlement/local-plan`, `official-parish`, `named-public-site`, `managed-premises`, `listed-building-present`
+**Access/property-status caveat:** The neighbourhood plan is joint with Bubbenhall, while the district classifications, Coventry Road Roman fort and Grade I Church Road church are separate records. Verify the exact address, asset and current controller; the public-site and list entries do not establish neighbouring status, access authority or hardware.
 
 1. **Claim:** The joint Baginton and Bubbenhall Neighbourhood Development Plan was made following the 15 March 2018 yes vote; the council states that Baginton and Bubbenhall Parish Councils prepared it jointly.
    **Publisher / title / deep URL:** Warwick District Council — [Baginton and Bubbenhall neighbourhood plan](https://www.warwickdc.gov.uk/info/20444/neighbourhood_plans/1129/baginton_and_bubbenhall_neighbourhood_plan).
@@ -484,6 +496,18 @@ Source rule: primary official sources only (central-government registers and ser
    **Supports:** Official settlement classification and the `conservation-area-present` tag.
    **Conditional service use:** “Growth Village” is planning terminology only, and conservation wording requires a current address-level boundary check; neither supports demand, access or property assumptions.
    **Checked:** 2026-08-29.
+
+3. **Claim:** Coventry City Council identifies Lunt Roman Fort at Coventry Road, Baginton, Coventry, CV8 3AJ.
+   **Publisher / title / deep URL:** Coventry City Council — [Lunt Roman Fort](https://www.coventry.gov.uk/directory-record/49594/lunt-roman-fort).
+   **Supports:** One named public site and the `named-public-site` and `managed-premises` tags.
+   **Conditional service use:** Use the address only to identify that site; the directory does not prove a current representative, work authority, requested entrance, neighbouring-property status or installed hardware.
+   **Checked:** 2026-08-30.
+
+4. **Claim:** Historic England list entry 1116539 identifies the Church of Saint John the Baptist on Church Road, Baginton, as Grade I listed.
+   **Publisher / title / deep URL:** Historic England — [Church of Saint John the Baptist, list entry 1116539](https://historicengland.org.uk/listing/the-list/list-entry/1116539?section=official-list-entry).
+   **Supports:** A building-specific Grade I designation and the `listed-building-present` tag.
+   **Conditional service use:** Apply the designation only to the named church; do not extend it to neighbouring Church Road premises or infer current control, caller authority, hardware or consent outcome.
+   **Checked:** 2026-08-30.
 
 ### `brandon`
 

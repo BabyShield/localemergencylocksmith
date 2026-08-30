@@ -82,8 +82,8 @@ export const COVENTRY_AREA_SEARCH_DESCRIPTIONS = {
     sourceIds: ['allesley-park-council'],
   },
   'eastern-green': {
-    description: 'Eastern Green locksmith help for lockouts, repairs and upgrades, with Coventry’s HLC noting Guphill Brook crosses the west-Coventry area.',
-    sourceIds: ['eastern-green-hlc'],
+    description: 'Eastern Green locksmith help for lockouts and repairs; records cover Guphill Brook, the extension boundary, Church Lane park and school recorded as open.',
+    sourceIds: ['eastern-green-hlc', 'eastern-green-investment', 'eastern-green-recreation-ground', 'eastern-green-junior-dfe'],
   },
   longford: {
     description: "Longford locksmith help for lockouts, repairs and upgrades, with Coventry's JSNA distinguishing Longford from Bell Green for exact-address checks.",
@@ -94,8 +94,8 @@ export const COVENTRY_AREA_SEARCH_DESCRIPTIONS = {
     sourceIds: ['aldermans-green-hlc'],
   },
   'courthouse-green': {
-    description: 'Courthouse Green locksmith help for lockouts, repairs and lock changes, with Coventry’s HLC recording the former motor-works site’s later redevelopment.',
-    sourceIds: ['aldermans-green-hlc'],
+    description: "Courthouse Green locksmith guidance separating Centre AT7, the Sewall Highway school's address and open record, and the Austin Drive permit site.",
+    sourceIds: ['centre-at7-cvlife', 'courthouse-green-school', 'courthouse-green-primary-dfe', 'courthouse-green-sainsburys-permit'],
   },
   'aldermans-green': {
     description: 'Aldermans Green locksmith help for lockouts, repairs and upgrades, with official records for its primary school, a faith building and Wyken Slough.',

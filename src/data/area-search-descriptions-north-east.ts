@@ -70,16 +70,16 @@ export const NORTH_EAST_AREA_SEARCH_DESCRIPTIONS = {
     sourceIds: ['charity-commission-brownsover-community-association-1199939', 'historic-england-st-michael-brownsover-1183659', 'historic-england-brownsover-hall-1365029'],
   },
   cawston: {
-    description: 'Cawston locksmith help for lockouts, repairs and upgrades, with current council and county records reinforcing exact address, entrance and access checks.',
-    sourceIds: ['rbc-south-west-rugby-spd-2024', 'wcc-rugby-bus-map-2025'],
+    description: 'Cawston locksmith guidance separating Scholars Drive school and hall records, the listed Coventry Road farmhouse and dated county-map orientation.',
+    sourceIds: ['wcc-cawston-grange-primary-school', 'rbc-cawston-parish-council', 'historic-england-cawston-farm-house-1390996', 'wcc-rugby-bus-map-2025'],
   },
   'long-lawford': {
     description: "Long Lawford locksmith guidance separating Holbrook Road school, King George's Field, current planning status and the listed farmhouse.",
     sourceIds: ['wcc-long-lawford-primary-school', 'charity-commission-king-georges-field-long-lawford-1082855', 'rbc-submission-local-plan-2026', 'historic-england-lawford-hill-farmhouse-1299648'],
   },
   'new-bilton': {
-    description: 'New Bilton locksmith help for lockouts, repairs and upgrades, with council evidence reinforcing exact address, entrance, authority and property-status checks.',
-    sourceIds: ['rbc-new-bilton-hmo-article-4', 'rbc-local-centres-study-2024'],
+    description: 'New Bilton locksmith guidance separating Article 4 scope, Inner and Outer study areas, the dated Bridle Road orchard update and county-map orientation.',
+    sourceIds: ['rbc-new-bilton-hmo-article-4', 'rbc-local-centres-study-2024', 'rbc-new-bilton-orchard-2024', 'wcc-rugby-bus-map-2025'],
   },
   dunchurch: {
     description: 'Dunchurch locksmith guidance with exact historic-core map checks and current controller guidance for the named Heath open space.',

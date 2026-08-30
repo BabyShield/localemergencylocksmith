@@ -66,8 +66,8 @@ export const SOUTH_WEST_AREA_SEARCH_DESCRIPTIONS = {
     sourceIds: ['solihull-balsall-made-plan'],
   },
   meriden: {
-    description: 'Locksmith services in Meriden for lockouts, repairs and upgrades, where the council register lists Meriden Green and Meriden Hill conservation areas.',
-    sourceIds: ['solihull-conservation-areas'],
+    description: 'Meriden locksmith guidance distinguishing its made parish plan, Green and Hill boundaries, Arden Cottage library and Grade I Church Lane church.',
+    sourceIds: ['solihull-meriden-plan-page', 'solihull-conservation-areas', 'solihull-meriden-library', 'historic-england-meriden-church-1031828'],
   },
   'hampton-in-arden': {
     description: 'Hampton-in-Arden locksmith guidance distinguishing the continuing 2017 plan, central conservation area, Fentham Road library and Grade I High Street church.',
@@ -82,8 +82,8 @@ export const SOUTH_WEST_AREA_SEARCH_DESCRIPTIONS = {
     sourceIds: ['rbc-ryton-made-plan'],
   },
   baginton: {
-    description: 'Locksmith services in Baginton for lockouts, repairs and upgrades, with the adopted local plan listing Baginton as both a Growth Village and conservation area.',
-    sourceIds: ['wdc-local-plan'],
+    description: 'Baginton locksmith guidance distinguishing the joint parish plan, conservation record, Coventry Road Roman fort and Grade I Church Road church.',
+    sourceIds: ['wdc-baginton-plan-page', 'wdc-local-plan', 'coventry-lunt-roman-fort', 'historic-england-baginton-church-1116539'],
   },
   brandon: {
     description: 'Brandon locksmith guidance distinguishing the joint plan, partial conservation area, Main Street ceremony venue and Grade II Avon Viaduct.',
