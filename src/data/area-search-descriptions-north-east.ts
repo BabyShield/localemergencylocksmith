@@ -54,20 +54,20 @@ export const NORTH_EAST_AREA_SEARCH_DESCRIPTIONS = {
     sourceIds: ['nbbc-bulkington-conservation-2022'],
   },
   rugby: {
-    description: "Rugby locksmith help for lockouts and repairs, with the borough council's appraisal tracing the town-centre conservation area along the historic road layout.",
-    sourceIds: ['rbc-rugby-town-centre-appraisal'],
+    description: 'Rugby locksmith guidance for lockouts, repairs and upgrades, separating one named shared-use cultural building from an exact listed Chapel Street doorway.',
+    sourceIds: ['rbc-ragm-modernising', 'historic-england-46-chapel-street-1035045'],
   },
   hillmorton: {
-    description: 'Hillmorton locksmith help for lockouts and repairs, with the borough council defining Hillmorton Locks as a small canal-centred conservation area.',
-    sourceIds: ['rbc-hillmorton-locks-appraisal'],
+    description: 'Hillmorton locksmith guidance with exact site-controller, High Street listed-door and Hillmorton Locks boundary checks, each bounded to its named place.',
+    sourceIds: ['wcc-hillmorton-primary-school', 'historic-england-81-high-street-hillmorton-1365008', 'rbc-hillmorton-locks-appraisal'],
   },
   bilton: {
-    description: "Bilton locksmith help for lockouts and repairs, with the borough council's appraisal noting that only part of Bilton lies in the conservation area.",
-    sourceIds: ['rbc-bilton-appraisal'],
+    description: 'Bilton locksmith guidance with exact threshold checks for its partial conservation area and the named Alwyn Road recreation site.',
+    sourceIds: ['rbc-bilton-appraisal', 'rbc-alwyn-road-recreation-ground'],
   },
   brownsover: {
-    description: "Brownsover locksmith help for lockouts and repairs; Rugby Borough Council's appraisal identifies Brownsover Hall as Old Brownsover's key landmark building.",
-    sourceIds: ['rbc-old-brownsover-appraisal'],
+    description: 'Brownsover locksmith guidance with current community-centre controller checks and exact listed-fabric limits for two Old Brownsover assets.',
+    sourceIds: ['charity-commission-brownsover-community-association-1199939', 'historic-england-st-michael-brownsover-1183659', 'historic-england-brownsover-hall-1365029'],
   },
   cawston: {
     description: 'Cawston locksmith help for lockouts, repairs and upgrades, with current council and county records reinforcing exact address, entrance and access checks.',
@@ -82,7 +82,7 @@ export const NORTH_EAST_AREA_SEARCH_DESCRIPTIONS = {
     sourceIds: ['rbc-new-bilton-hmo-article-4', 'rbc-local-centres-study-2024'],
   },
   dunchurch: {
-    description: "Dunchurch locksmith help for lockouts and repairs, with the borough council's appraisal mapping the conservation area around the historic crossroads core.",
-    sourceIds: ['rbc-dunchurch-appraisal'],
+    description: 'Dunchurch locksmith guidance with exact historic-core map checks and current controller guidance for the named Heath open space.',
+    sourceIds: ['rbc-dunchurch-appraisal', 'rbc-dunchurch-heath-open-space'],
   },
 } satisfies AreaSearchDescriptionRegistry

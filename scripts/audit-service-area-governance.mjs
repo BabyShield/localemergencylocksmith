@@ -131,11 +131,11 @@ const EXPECTED_PREPARATION_LOCALITY_SOURCE_IDS = {
     'lock-upgrade': ['visit-warwickshire-bedworth'],
   },
   rugby: {
-    'emergency-lockout': ['visit-rugby', 'rugby-conservation'],
-    'lock-change': ['visit-rugby', 'rugby-conservation'],
-    'upvc-lock-repair': ['visit-rugby'],
-    'boarding-up': ['visit-rugby'],
-    'lock-upgrade': ['visit-rugby'],
+    'emergency-lockout': ['rbc-ragm-modernising', 'rbc-town-hall-contact'],
+    'lock-change': ['rugby-conservation', 'historic-england-46-chapel-street-1035045'],
+    'upvc-lock-repair': ['rbc-ragm-modernising', 'rbc-town-hall-contact'],
+    'boarding-up': ['rugby-conservation', 'historic-england-46-chapel-street-1035045'],
+    'lock-upgrade': ['rbc-ragm-modernising', 'historic-england-46-chapel-street-1035045', 'rbc-town-hall-contact'],
   },
   'leamington-spa': {
     'emergency-lockout': ['visit-leamington', 'warwick-district-conservation'],

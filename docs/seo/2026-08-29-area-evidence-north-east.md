@@ -279,76 +279,111 @@ Status: research only. This file is a claim-level evidence register, not publish
 
 ### `rugby` — Rugby
 
-**Context tags:** `conservation-area-present`, `rail`
+**Context tags:** `conservation-area-present`, `named-managed-premises`, `listed-building-present`
 
-1. **Fact:** Rugby Town Centre Conservation Area covers most of the commercial centre and follows the historic road layout, stretching from Edwardian suburbs in the north to the boundary with Rugby School in the south.
+1. **Fact:** Rugby Town Centre Conservation Area covers most of the commercial centre along the historic road layout between defined northern and southern contexts.
    - **Publisher / title / deep URL:** [Rugby Borough Council — Rugby Town Centre Conservation Area Appraisal](https://www.rugby.gov.uk/documents/20124/6569677/Rugby_Town_Centre_Character_Appraisal.pdf/9a17bab5-bb82-d284-15b4-08ca3a1a1b39?t=1750866416446)
    - **Direct support:** The location-and-context section describes the extent and form of the designation.
-   - **Checked:** 2026-08-29.
-   - **Conditional service-use implication:** Use only to describe the mapped central designation, not all properties represented by the Rugby slug.
-2. **Fact:** The appraisal records that the London-Birmingham railway opened in 1838 and that Rugby became a major rail junction as five more companies added routes within 12 years.
-   - **Publisher / title / deep URL:** [Rugby Borough Council — Rugby Town Centre Conservation Area Appraisal](https://www.rugby.gov.uk/documents/20124/6569677/Rugby_Town_Centre_Character_Appraisal.pdf/9a17bab5-bb82-d284-15b4-08ca3a1a1b39?t=1750866416446)
-   - **Direct support:** The historic-development section gives the opening year and subsequent junction development.
-   - **Checked:** 2026-08-29.
-   - **Conditional service-use implication:** The rail-history point may be paraphrased as history; it cannot establish present road access, parking or arrival time.
+   - **Checked:** 2026-08-30.
+   - **Conditional service-use implication:** The mapped extent requires exact-address verification before central townscape context is applied to visible property fabric.
+2. **Fact:** Rugby Borough Council says the purpose-built Rugby Art Gallery and Museum venue houses its Art Gallery, Museum and Visitor Centre together with Warwickshire County Council's Library under a lease until 2125.
+   - **Publisher / title / deep URL:** [Rugby Borough Council — Modernising and reconfiguring the Rugby Art Gallery and Museum building](https://www.rugby.gov.uk/w/modernising-ragm)
+   - **Direct support:** The current council record describes the purpose-built cultural venue, its borough-gallery, museum and visitor-centre uses and the county library lease.
+   - **Checked:** 2026-08-30.
+   - **Conditional service-use implication:** At this named multi-occupier venue, identify the exact unit, threshold and responsible facilities contact; the record does not name an authorised keyholder or describe any lock.
+3. **Fact:** Historic England records 46 Chapel Street, Rugby CV21 3EB as Grade II and describes a recessed porch, a five-panel door and a rectangular fanlight in the official list entry.
+   - **Publisher / title / deep URL:** [Historic England — 46 Chapel Street, list entry 1035045](https://historicengland.org.uk/listing/the-list/list-entry/1035045)
+   - **Direct support:** The official list entry supplies the Grade II designation, exact statutory address and named doorway description.
+   - **Checked:** 2026-08-30.
+   - **Conditional service-use implication:** The description applies only to number 46 and is not a current condition survey; inspect the actual opening and obtain property-specific consent before altering listed fabric.
+4. **Fact:** Rugby Borough Council gives the Town Hall address as Evreux Way, Rugby CV21 2RR and separately locates rear cycle racks via the Newbold Road car-park entrance.
+   - **Publisher / title / deep URL:** [Rugby Borough Council — Contact us](https://www.rugby.gov.uk/pl/contact-us)
+   - **Direct support:** The current contact record supplies the Town Hall address and separately describes the rear cycle-rack approach from the Newbold Road car park.
+   - **Checked:** 2026-08-30.
+   - **Conditional service-use implication:** The civic address and separate rear-approach reference show why a booking at a named complex needs the exact threshold and site contact; they do not provide access permission or a current route for another property.
 
-**Access/property-status caveat:** The conservation-area boundary and the route slug differ substantially. Check the exact address; the rail tag is contextual only.
+**Access/property-status caveat:** The records concern a mapped central designation and three named sites. They do not transfer listed status, management arrangements, door fabric, present condition, access authority or hardware to another Rugby address.
 
 ### `hillmorton` — Hillmorton
 
-**Context tags:** `conservation-area-present`, `canal`
+**Context tags:** `named-public-site`, `academy`, `listed-building-present`, `conservation-area-present`
 
-1. **Fact:** The Hillmorton Locks Conservation Area appraisal describes a small settlement about two miles south-east of Rugby, centred on the canal and separated from Hillmorton housing by a railway embankment and narrow tunnel.
+1. **Fact:** Rugby Borough Council identifies Hillmorton Recreation Ground at Featherbed Lane and lists a car park, play area, skate/BMX facility, informal recreation and a circular walk.
+   - **Publisher / title / deep URL:** [Rugby Borough Council — Hillmorton Recreation Ground](https://www.rugby.gov.uk/l/6741483)
+   - **Direct support:** The current parks record supplies the Featherbed Lane location and council-listed facilities at the named recreation ground.
+   - **Checked:** 2026-08-30.
+   - **Conditional service-use implication:** These are named-site orientation facts only; a call still needs the exact building, gate or opening and the present person authorised to control it.
+2. **Fact:** Warwickshire County Council's directory identifies Hillmorton Primary School as an academy at Watts Lane, Rugby CV21 4PE.
+   - **Publisher / title / deep URL:** [Warwickshire County Council — Hillmorton Primary School](https://apps.warwickshire.gov.uk/FindASchool/schools/hillmorton-primary-school)
+   - **Direct support:** The official directory supplies the academy classification and exact Watts Lane address.
+   - **Checked:** 2026-08-30.
+   - **Conditional service-use implication:** The directory identifies a named academy site but not its trust, owner, authorised facilities contact, entrances or installed hardware.
+3. **Fact:** Historic England records 81 High Street, Hillmorton as Grade II and its legacy description identifies a central five-panel door in a ribbed surround.
+   - **Publisher / title / deep URL:** [Historic England — 81 High Street, list entry 1365008](https://historicengland.org.uk/listing/the-list/list-entry/1365008)
+   - **Direct support:** The official entry supplies the Grade II designation, Hillmorton locality and legacy description of the named doorway.
+   - **Checked:** 2026-08-30.
+   - **Conditional service-use implication:** The record applies only to number 81 and is not a present-condition survey; its status and door description cannot be transferred to another High Street property.
+4. **Fact:** Rugby Borough Council's appraisal describes Hillmorton Locks as a small canal-centred conservation area separated from Hillmorton housing by a railway embankment and narrow tunnel.
    - **Publisher / title / deep URL:** [Rugby Borough Council — Hillmorton Locks Conservation Area Appraisal](https://www.rugby.gov.uk/documents/20124/6569677/Hillmorton_Locks_Character_Appraisal.pdf/e3288070-673d-cd8e-2acf-45c5eb3bc825?t=1750866416445)
-   - **Direct support:** The appraisal introduction gives the location, canal focus and physical separation.
+   - **Direct support:** The appraisal establishes the limited Locks designation, canal setting and physical separation from Hillmorton housing.
    - **Checked:** 2026-08-29.
-   - **Conditional service-use implication:** This supports context specifically about Hillmorton Locks, not the whole Hillmorton route.
-2. **Fact:** The appraisal says the locks settlement developed after canal construction around company workshops, a dry dock and housing, with many original canal buildings and the dry dock still in industrial use when appraised.
-   - **Publisher / title / deep URL:** [Rugby Borough Council — Hillmorton Locks Conservation Area Appraisal](https://www.rugby.gov.uk/documents/20124/6569677/Hillmorton_Locks_Character_Appraisal.pdf/e3288070-673d-cd8e-2acf-45c5eb3bc825?t=1750866416445)
-   - **Direct support:** The introductory settlement history directly lists those canal functions and the appraisal-time use.
-   - **Checked:** 2026-08-29.
-   - **Conditional service-use implication:** Canal-industrial history may be attributed, but the continuation-of-use statement must be treated as appraisal-dated rather than verified current use.
-3. **Fact:** Canal & River Trust reported in May 2026 that Hillmorton Locks contains six historic pairs of locks on the Oxford Canal.
-   - **Publisher / title / deep URL:** [Canal & River Trust — Volunteers help spruce up Hillmorton Locks](https://canalrivertrust.org.uk/news-and-views/news/volunteers-help-spruce-up-hillmorton-locks-the-busiest-lock-flight-in-the-country)
-   - **Direct support:** The Trust's current article names the Oxford Canal site and six historic lock pairs.
-   - **Checked:** 2026-08-29.
-   - **Conditional service-use implication:** For a call at the Locks complex, record the exact land-side entrance and authorised site contact; the canal landmark does not identify a private doorway or access method.
+   - **Conditional service-use implication:** This context applies only inside the mapped Locks settlement and cannot establish access, status or fabric at another Hillmorton address.
 
-**Access/property-status caveat:** “Hillmorton Locks” is a small mapped designation, not all Hillmorton. The tunnel and canal do not support a claim about vehicle access to an address.
+**Access/property-status caveat:** The sources identify three named sites and one small mapped conservation area. They do not prove current legal title, keyholding, caller authority, adjacent-property status, door material, present condition, hardware or safe access.
 
 ### `bilton` — Bilton
 
-**Context tags:** `conservation-area-present`
+**Context tags:** `conservation-area-present`, `named-public-site`
 
-1. **Fact:** Rugby Borough Council records Bilton as originally a separate village that merged into Rugby in the 1930s; its conservation area covers only part of the former village.
+1. **Fact:** Bilton was once a separate village, merged into Rugby in the 1930s, and only part lies within the conservation area.
    - **Publisher / title / deep URL:** [Rugby Borough Council — Bilton Conservation Area Appraisal](https://www.rugby.gov.uk/documents/20124/6569677/Bilton_Character_Appraisal.pdf/27083593-8756-5f6f-ed65-f0bc7e2f9067?t=1750866416442)
    - **Direct support:** The introduction and location section give the settlement relationship and limited designation extent.
    - **Checked:** 2026-08-29.
-   - **Conditional service-use implication:** This can support concise settlement history while explicitly limiting conservation status to the mapped area.
-2. **Fact:** The appraisal identifies St Mark's Church as Bilton's oldest building, with mid-14th-century work, and records the original part of Bilton Hall as dating from 1623.
+   - **Conditional service-use implication:** The limited designation requires an address check and cannot be extended to the whole modern Bilton route.
+2. **Fact:** The appraisal records mid-fourteenth-century work at St Mark's Church and dates original Bilton Hall fabric to 1623.
    - **Publisher / title / deep URL:** [Rugby Borough Council — Bilton Conservation Area Appraisal](https://www.rugby.gov.uk/documents/20124/6569677/Bilton_Character_Appraisal.pdf/27083593-8756-5f6f-ed65-f0bc7e2f9067?t=1750866416442)
    - **Direct support:** The historic-development and architecture sections date both named buildings.
    - **Checked:** 2026-08-29.
-   - **Conditional service-use implication:** The named buildings may be used as heritage anchors; their dates cannot be projected onto surrounding homes.
+   - **Conditional service-use implication:** Those asset-specific dates provide heritage anchors but cannot characterise a customer's building, door or hardware.
+3. **Fact:** Warwickshire County Council's school directory identifies Bilton Infant School as a community school at Magnet Lane, Rugby, Warwickshire CV22 7NH.
+   - **Publisher / title / deep URL:** [Warwickshire County Council — Bilton Infant School](https://apps.warwickshire.gov.uk/FindASchool/schools/bilton-infant-school)
+   - **Direct support:** The official school directory supplies the school name, community-school classification and exact Magnet Lane address.
+   - **Checked:** 2026-08-29.
+   - **Conditional service-use implication:** This facility record applies only to the named school; it proves no access authority, entrance arrangement, construction or lock details there or elsewhere in Bilton.
+4. **Fact:** Rugby Borough Council identifies Alwyn Road Recreation Ground at Rugby CV22 7RD, says it purchased the site in 1938 and records the 10.9-acre ground as a designated Queen Elizabeth II Field.
+   - **Publisher / title / deep URL:** [Rugby Borough Council — Alwyn Road Recreation Ground](https://www.rugby.gov.uk/l/6729718)
+   - **Direct support:** The current parks record supplies the exact CV22 7RD location, named facilities, 1938 council purchase and Queen Elizabeth II Field designation.
+   - **Checked:** 2026-08-30.
+   - **Conditional service-use implication:** The named-site record does not prove present title, an authorised keyholder, a particular entrance or hardware; calls there need an exact opening and current controller.
 
-**Access/property-status caveat:** The appraisal expressly covers only part of Bilton. Verify the property's position and any individual listing before using a heritage-status statement.
+**Access/property-status caveat:** The sources establish a partial conservation boundary and facts about named historic buildings, a school and a recreation ground. They do not prove current title, caller authority, adjacent-property status, entrance construction, hardware, condition or access.
 
 ### `brownsover` — Brownsover
 
-**Context tags:** `conservation-area-present`, `canal`
+**Context tags:** `conservation-area-present`, `registered-charity`, `listed-building-present`
 
-1. **Fact:** The Old Brownsover appraisal describes a hamlet about one and a half miles north of Rugby whose conservation area includes Brownsover Hall, a small group of houses, St Michael's Church and adjoining undeveloped land.
+1. **Fact:** Old Brownsover Conservation Area includes Brownsover Hall, a small group of houses, St Michael's Church and adjoining undeveloped land.
    - **Publisher / title / deep URL:** [Rugby Borough Council — Old Brownsover Conservation Area Appraisal](https://www.rugby.gov.uk/documents/20124/6569677/Old_Brownsover_Character_Appraisal.pdf/9d9a8cf5-3463-f265-16b6-f895e398c2c6?t=1750866416445)
    - **Direct support:** The appraisal introduction defines the designation and named components.
    - **Checked:** 2026-08-29.
-   - **Conditional service-use implication:** A future page must say “Old Brownsover” or “the mapped conservation area,” not apply the description to all Brownsover development.
-2. **Fact:** The appraisal identifies canal and highway connections as part of Old Brownsover's historic transport context and Brownsover Hall as its key landmark building.
-   - **Publisher / title / deep URL:** [Rugby Borough Council — Old Brownsover Conservation Area Appraisal](https://www.rugby.gov.uk/documents/20124/6569677/Old_Brownsover_Character_Appraisal.pdf/9d9a8cf5-3463-f265-16b6-f895e398c2c6?t=1750866416445)
-   - **Direct support:** The appraisal conclusion directly names the transport elements and landmark.
-   - **Checked:** 2026-08-29.
-   - **Conditional service-use implication:** These may provide attributed Old Brownsover context; they do not support current route, traffic or access assertions.
+   - **Conditional service-use implication:** The description applies to the mapped hamlet and must not be projected onto wider Brownsover development.
+2. **Fact:** The Charity Commission's current register says Brownsover Community Association runs Brownsover Community Centre at Bow Fell, Rugby and supports Brownsover Youth Hut.
+   - **Publisher / title / deep URL:** [Charity Commission for England and Wales — Brownsover Community Association, charity 1199939](https://register-of-charities.charitycommission.gov.uk/en/charity-search/-/charity-details/5198357/charity-overview)
+   - **Direct support:** The current registered-charity record states the association's community-centre and Youth Hut roles.
+   - **Checked:** 2026-08-30.
+   - **Conditional service-use implication:** The register identifies the charity's role but not an individual authorised keyholder, lease terms, an affected threshold or fitted hardware.
+3. **Fact:** Historic England records the Brownsover Lane church of St Michael and All Angels as Grade II*, describes its only entrance as a pointed doorway with a nineteenth-century door and elaborate hinges, and includes legacy-generated history describing the church as redundant and vested in the Churches Conservation Trust.
+   - **Publisher / title / deep URL:** [Historic England — Church of Saint Michael and All Angels, list entry 1183659](https://historicengland.org.uk/listing/the-list/list-entry/1183659)
+   - **Direct support:** The official entry supplies the Grade II* designation, Brownsover Lane statutory address, only-entrance description and legacy-generated history describing the church as redundant and vested in the Trust.
+   - **Checked:** 2026-08-30.
+   - **Conditional service-use implication:** This named-asset record is not a current condition, lock or operational-control survey; confirm the present authorised site contact independently and protect verified listed fabric.
+4. **Fact:** Historic England records Brownsover Hall at Leicester Road as Grade II* and its legacy description identifies a mid-nineteenth-century Gothic building with a named entrance-front composition and porch.
+   - **Publisher / title / deep URL:** [Historic England — Brownsover Hall, list entry 1365029](https://historicengland.org.uk/listing/the-list/list-entry/1365029)
+   - **Direct support:** The official entry supplies the Grade II* designation, Leicester Road statutory address and legacy description of the named hall and entrance front.
+   - **Checked:** 2026-08-30.
+   - **Conditional service-use implication:** The entry applies only to the hall and is not a present-condition, use, access or lock survey; surrounding Brownsover properties do not inherit its status.
 
-**Access/property-status caveat:** Old Brownsover is not coterminous with the wider Brownsover route. Confirm the exact mapped designation and named asset before use.
+**Access/property-status caveat:** Old Brownsover's map and the named community-centre, church and hall records are not coterminous with the wider route. They do not prove another property's status, construction, present condition, controller, door material, hardware or access.
 
 ### `cawston` — Cawston
 
@@ -408,28 +443,39 @@ Status: research only. This file is a claim-level evidence register, not publish
 
 ### `dunchurch` — Dunchurch
 
-**Context tags:** `conservation-area-present`, `scheduled-monument-present`
+**Context tags:** `conservation-area-present`, `scheduled-monument-present`, `named-managed-premises`, `named-public-site`
 
-1. **Fact:** Dunchurch Conservation Area occupies the village's historic crossroads core and includes its commercial centre, open spaces and a later housing area to the north.
+1. **Fact:** Dunchurch Conservation Area covers the historic crossroads core, commercial centre, open spaces and a later northern housing area.
    - **Publisher / title / deep URL:** [Rugby Borough Council — Dunchurch Conservation Area Appraisal](https://www.rugby.gov.uk/documents/20124/6569677/Dunchurch_Character_Appraisal.pdf/5ed4617f-c153-7c3d-2a19-7f0c1c4fee3b?t=1750866416444)
    - **Direct support:** The appraisal introduction defines the designation and its principal components.
    - **Checked:** 2026-08-29.
-   - **Conditional service-use implication:** This context may be used only for the mapped conservation area, not the entire Dunchurch route.
-2. **Fact:** The appraisal records the medieval standing cross in the conservation-area centre as a scheduled monument and places part of the registered Dunchurch Lodge park and garden to the north-east.
+   - **Conditional service-use implication:** The mapped extent must be checked for the exact address and cannot be applied across the whole route.
+2. **Fact:** The appraisal identifies the central medieval standing cross as scheduled and part of Dunchurch Lodge's registered landscape to the north-east.
    - **Publisher / title / deep URL:** [Rugby Borough Council — Dunchurch Conservation Area Appraisal](https://www.rugby.gov.uk/documents/20124/6569677/Dunchurch_Character_Appraisal.pdf/5ed4617f-c153-7c3d-2a19-7f0c1c4fee3b?t=1750866416444)
    - **Direct support:** The archaeology section identifies the standing cross and registered landscape.
    - **Checked:** 2026-08-29.
-   - **Conditional service-use implication:** These named protected assets may be referenced with attribution; their status must not be applied to surrounding buildings.
+   - **Conditional service-use implication:** The separately bounded assets require their own records and cannot confer status on surrounding buildings.
+3. **Fact:** Warwickshire County Council identifies Dunchurch Community Library at The Green, Dunchurch, Rugby CV22 6PA and states that it is run by Dunchurch Parish Council.
+   - **Publisher / title / deep URL:** [Warwickshire County Council — Dunchurch Community Library](https://www.warwickshire.gov.uk/dunchurchlibrary)
+   - **Direct support:** The current library record supplies the exact address and names Dunchurch Parish Council as operator.
+   - **Checked:** 2026-08-29.
+   - **Conditional service-use implication:** This facility record applies only to the named library; it cannot establish access authority, entrance condition, construction or hardware there or at another Dunchurch property.
+4. **Fact:** Rugby Borough Council identifies Dunchurch Heath Open Space at The Heath and says its Parks and Cemeteries department maintains the 2.45-acre village green, which the council has looked after since 1971.
+   - **Publisher / title / deep URL:** [Rugby Borough Council — Dunchurch Heath Open Space](https://www.rugby.gov.uk/l/6741465)
+   - **Direct support:** The current parks record supplies The Heath location, maintenance wording, village-green extent and the recorded memorial plaque.
+   - **Checked:** 2026-08-30.
+   - **Conditional service-use implication:** Maintenance wording and a public-space record do not prove legal title, an authorised keyholder, a building or hardware; any site call needs an exact opening and present controller.
 
-**Access/property-status caveat:** The mapped conservation area, scheduled cross and registered landscape have different boundaries. Verify the exact property and asset record before any status statement.
+**Access/property-status caveat:** The conservation area, scheduled cross, registered landscape, community library and Heath record describe distinct places. They do not prove legal ownership, caller authority, neighbouring status, construction, hardware, present condition or access.
 
 ## Coverage and unresolved evidence
 
 - **Slugs checked:** 21/21.
-- **Fact records:** 45: two for every slug, a third planning-status record for Long Lawford, and two additional current managed-premises records for Horeston Grange.
+- **Fact records:** 61: at least two for every slug; four each for Horeston Grange, Whitestone, Rugby, Hillmorton, Bilton, Brownsover and Dunchurch; and three each for Nuneaton, Attleborough, Bermuda Park, Hartshill and Long Lawford.
 - **Each record includes:** publisher, document/page title, deep primary URL, direct-support statement, checked date and a conditional use constraint.
+- **Latest record check:** Newly added named-site, operator and listed-building records and the Rugby Town Centre appraisal were checked on 2026-08-30; other retained appraisal records keep their 2026-08-29 check date.
 - **No support found or claimed for:** locks or door hardware, local call volumes, fault prevalence, response or journey time, crime, parking, property value, service coverage, first-visit outcomes or property-wide construction types.
 - **Dated planning evidence:** Attleborough, Stockingford, Weddington, Whitestone, Camp Hill, Chapel End and Galley Common rely on at least one 2012-2016 council evidence document. Those records are labelled as historic planning snapshots and require a current-plan check before publication.
 - **Cawston limitation:** the detailed parish plan is from 2010. The current council directory confirms the parish council and contact location only; it does not refresh the plan's historic survey findings.
 - **New Bilton limitation:** the strongest deep official evidence found is ward/programme and named-recreation-ground evidence, not a settlement or conservation-area definition.
-- **Boundary limitation:** conservation-area, ward, parish, planning-locality, listed-asset, scheduled-monument and route-slug boundaries are not interchangeable. Exact-address verification remains unresolved for every future property-specific use.
+- **Boundary limitation:** conservation-area, ward, parish, planning-locality, listed-asset, scheduled-monument, named-site, operator-record and route-slug scopes are not interchangeable. Exact-address, exact-threshold and present-controller verification remains unresolved for every future property-specific use.

@@ -46,6 +46,7 @@ interface LocalServiceNote {
 interface AreaEvidenceProfile {
   slug: AreaSlug
   name: string
+  reviewedOn?: string
   summary: string
   planningNote: string
   contactPrep: string
@@ -77,6 +78,7 @@ export interface TownServiceContent {
 }
 
 const REVIEWED_ON = EVIDENCE_REVIEWED_ON
+const RUGBY_REVIEWED_ON = '2026-08-30'
 const TECHNICAL_SOURCES = TECHNICAL_EVIDENCE_SOURCES
 
 const AREA_SOURCES: Record<string, EvidenceSource> = {
@@ -126,7 +128,31 @@ const AREA_SOURCES: Record<string, EvidenceSource> = {
     publisher: 'Rugby Borough Council',
     url: 'https://www.rugby.gov.uk/pl/w/conservation-areas-and-character-appraisals',
     supports: 'The borough lists 19 conservation areas, including Rugby Town Centre and several named local centres.',
-    checkedOn: REVIEWED_ON,
+    checkedOn: RUGBY_REVIEWED_ON,
+  },
+  'rbc-ragm-modernising': {
+    id: 'rbc-ragm-modernising',
+    title: 'Modernising and reconfiguring the Rugby Art Gallery and Museum building',
+    publisher: 'Rugby Borough Council',
+    url: 'https://www.rugby.gov.uk/w/modernising-ragm',
+    supports: 'The current description of the purpose-built cultural venue and its borough-gallery, museum and visitor-centre uses alongside the county library lease.',
+    checkedOn: RUGBY_REVIEWED_ON,
+  },
+  'historic-england-46-chapel-street-1035045': {
+    id: 'historic-england-46-chapel-street-1035045',
+    title: '46 Chapel Street, list entry 1035045',
+    publisher: 'Historic England',
+    url: 'https://historicengland.org.uk/listing/the-list/list-entry/1035045',
+    supports: 'The Grade II designation, exact statutory address and official description of the named Chapel Street doorway.',
+    checkedOn: RUGBY_REVIEWED_ON,
+  },
+  'rbc-town-hall-contact': {
+    id: 'rbc-town-hall-contact',
+    title: 'Contact us',
+    publisher: 'Rugby Borough Council',
+    url: 'https://www.rugby.gov.uk/pl/contact-us',
+    supports: 'The current Town Hall address and the separately described rear cycle-rack approach from the Newbold Road car park.',
+    checkedOn: RUGBY_REVIEWED_ON,
   },
   'visit-leamington': {
     id: 'visit-leamington',
@@ -392,94 +418,100 @@ const AREA_PROFILES: Record<string, AreaEvidenceProfile> = {
   rugby: {
     slug: 'rugby',
     name: 'Rugby',
-    summary: 'Warwickshire County Council\'s official guide describes Rugby\'s Market Place, railway, Rugby School area, Georgian and Victorian buildings and later growth. Rugby Borough Council lists 19 separate conservation areas, including Rugby Town Centre, Rugby School and several nearby local centres.',
-    planningNote: 'Those conservation areas have defined boundaries. A Rugby address, CV21 postcode or older-looking door is not enough to decide whether special controls apply; check the council map and the exact work proposed.',
-    contactPrep: 'For a central address, include the street, building name, floor and access route. Outside the centre, describe the door and lock rather than relying on a broad Rugby or CV21 label.',
+    reviewedOn: RUGBY_REVIEWED_ON,
+    summary: 'Rugby Borough Council describes Rugby Art Gallery and Museum as a purpose-built 2000 venue housing its Art Gallery, Museum and Visitor Centre alongside Warwickshire County Council\'s library under a lease until 2125. Historic England separately lists 46 Chapel Street at Grade II and identifies its recessed porch and five-panel door.',
+    planningNote: 'Those facts belong only to the named buildings. The gallery-and-library occupancy does not identify a controller for another Rugby threshold, while the Chapel Street list entry does not describe neighbouring doors or their present condition. Check the exact address, responsible organisation and proposed work.',
+    contactPrep: 'Provide the full Rugby address, named organisation or unit, floor or frontage, exact affected threshold and the person responsible for it. Give current access instructions directly; a civic address, visitor approach or CV21 code does not identify the working entrance.',
     contextGuidance: [
-      'Warwickshire\'s official guide describes Rugby\'s Market Place, railway role and a townscape containing Georgian and Victorian buildings. That mix makes precise identification more reliable than assuming one lock type from the town name. A caller can help by distinguishing a private house door, flat entrance, shared door or commercial frontage and by stating whether the problem is access, mechanical failure, damage or a planned security review.',
-      'Rugby Borough Council publishes a register of conservation areas and character appraisals, including the town centre. The register is a prompt to check the exact address where visible external work or historic material may be involved; it does not make every central door protected, and it does not dictate a lock product. Listed status, conservation controls, fire-door duties, management rules and insurance wording are separate questions that should be checked with the relevant authority.',
-      'Rail and central-market references may help describe an address, but they do not justify an arrival promise. The current ETA is given only after the full postcode, entrance and starting point are known. For the technical decision, photographs of both sides of the hardware and the full door edge are stronger evidence than architectural age. Measurements and markings are confirmed before a compatible cylinder, lock case or multipoint component is promised.',
-      'In a central Rugby building, establish whether the affected door belongs to the public frontage, a shared circulation route or a private occupier. Permission to enter a unit does not necessarily authorise changes to a communal lock, and a fire-rated door can carry separate duties. Giving the building name, floor, contact person and entrance position at the outset makes the visit more precise without making unsupported assumptions about the premises.',
-      'The service record should distinguish what Rugby\'s locality sources establish from what the locksmith observes. Council material can identify a mapped conservation context; photos and inspection identify the hardware; written owner or policy documents set customer-specific requirements. The quote can then name labour, parts, keys, adjustment and follow-on work, avoiding a vague town-price promise or a claim that one certified product solves every entrance.',
+      'The council names several uses inside the Rugby Art Gallery and Museum building: its own gallery, museum and visitor centre and the county library held under a long lease. A lockout booking at that named complex must therefore identify the organisation, unit and exact public, staff, shared or internal threshold. The source does not name a current keyholder or grant authority to open any door.',
+      'Historic England\'s entry for 46 Chapel Street identifies that exact Grade II building and describes a recessed porch, panelled surround, five-panel door and fanlight. Those details support care around the named fabric only. They do not establish the door\'s present condition, its lock, whether a component is original or what repair another Chapel Street property needs.',
+      'Rugby\'s named civic buildings show why address and controller evidence must stay separate from mechanism diagnosis. The RAGM source describes multiple institutional uses, and the Town Hall page gives an Evreux Way address and a rear cycle-rack approach. Neither proves that a reported door is uPVC, identifies a multipoint case or supplies live access instructions for a service visit.',
+      'For burglary damage at a Rugby frontage, follow police scene instructions and document the individual opening before it is covered. If the exact address is 46 Chapel Street or lies in a mapped conservation area, the official records add a property-specific fabric check; they do not diagnose hidden damage or select a temporary fixing method.',
+      'An upgrade review must keep three questions separate: who controls the identified threshold, whether exact property status affects visible work, and what the inspected door and frame require mechanically. RAGM\'s lease arrangement, the Town Hall contact record and the listed doorway at 46 Chapel Street answer parts of the first two questions only for those assets; none supplies a Rugby-wide security rating or product specification.',
     ],
     faqScope: [
-      'For Rugby, town-centre or conservation context prompts an address check but does not specify the lock; the door, markings, measurements and reported symptom provide the mechanical evidence.',
-      'A Rugby shared entrance may be controlled by a manager or freeholder, so private occupancy alone does not automatically authorise work to communal, master-keyed or fire-rated hardware.',
-      'The Rugby work record should show what was inspected, retained and supplied, with policy, planning and follow-on specialist questions recorded separately rather than implied by the town name.',
+      'For Rugby, a named building record can identify an address, occupier or protected feature, but only inspection of the affected threshold supplies its hardware, condition and safe opening evidence.',
+      'A lease or public-facing use does not identify the individual authorised to approve lock work. Confirm current control for the exact private, shared, staff or public entrance before altering hardware.',
+      'The Rugby work record should separate reported facts, observed mechanical findings, owner or manager requirements and any property-status question instead of treating one source as proof of all four.',
     ],
-    priceScope: 'Building name, entrance position and management responsibility can change the scope even when the outward code is the same.',
-    metaDifferentiator: 'Rugby town-centre and conservation guidance',
-    sources: [AREA_SOURCES['visit-rugby'], AREA_SOURCES['rugby-conservation']],
+    priceScope: 'The named building, responsible organisation, exact threshold, protected-fabric question and measured component scope are recorded separately before additional work is agreed.',
+    metaDifferentiator: 'named-building control and protected-fabric guidance',
+    sources: [
+      AREA_SOURCES['rugby-conservation'],
+      AREA_SOURCES['rbc-ragm-modernising'],
+      AREA_SOURCES['historic-england-46-chapel-street-1035045'],
+      AREA_SOURCES['rbc-town-hall-contact'],
+    ],
     serviceNotes: serviceNotes(
       {
-        heading: 'Rugby lockouts: separate town-centre access from the lock fault',
-        body: 'Rugby\'s official guide identifies a rail-connected centre, Market Place and historic streets around Rugby School. In a lockout, say whether the problem is the street-facing door, a shared entrance, an internal flat door or an outlying house. That avoids treating a building-access issue as a private lock fault. Several Rugby conservation areas are separately mapped, so an older door should be handled carefully, but no locality can guarantee non-destructive entry. The lock type, existing damage, deadlocking and proof of authority determine the lawful, proportionate opening approach.',
+        heading: 'Rugby lockouts: identify the organisation, unit and threshold',
+        body: 'Rugby Borough Council records its gallery, museum and visitor centre alongside the county library in one purpose-built venue, with the library under lease until 2125. Its Town Hall contact page separately identifies the Evreux Way civic address. These are exact named-building facts, not authority to open a door. For a Rugby lockout, name the organisation or occupier, unit and precise public, staff, shared or private threshold, then establish lawful authority before the lock condition determines the opening options. At any other Rugby property, do not transfer that occupancy structure or visitor approach. A house, flat, shop or managed block needs its own controller and entrance evidence. State whether the caller is outside a common door, inside it but outside a unit, or locked out at a private house, because each is a different authority boundary.',
         details: [
-          `The county guide verifies Rugby's Market Place, railway and historic townscape, so a central lockout must be prepared around the named building and threshold rather than the town label. The caller should identify whether the locked point is a street door, common entrance, internal unit or house door and who controls it. That information lets the locksmith check authority for the correct opening before diagnosing whether the door merely closed, was deadlocked or suffered a key or mechanism failure. Architectural surroundings can clarify location, but the observed lock and door condition determine which opening options can be considered.`,
-          `Rugby Borough Council lists 19 separate conservation areas, which makes the exact mapped boundary important. If a locked door may form part of one of those areas, photograph its existing face, frame and furniture before any method that could mark or remove material is agreed. Preservation is a planning input, not a prediction that the lock can be opened in one particular way. If access cannot be achieved without a destructive step, explain the proposed intervention separately and decide whether immediate entry can be limited while the owner or council addresses any additional change to visible protected fabric.`,
+          `At the Rugby Art Gallery and Museum building, the council's current page distinguishes borough-run gallery, museum and visitor-centre uses from the county library held under lease. A caller should say which organisation and space they represent and whether the blocked point is an external public door, staff entrance, shared circulation door or internal room. The published occupancy does not identify a current keyholder, confer authority or reveal the lock. Evidence linking the caller to the exact threshold is therefore checked before latch state, deadlocking, key behaviour and visible damage guide the opening assessment.`,
+          `The Town Hall page gives Evreux Way, Rugby CV21 2RR as the Customer Service Centre address and describes rear cycle racks approached from the Newbold Road car park. That is visitor orientation only: it does not identify the affected door, promise access through the rear or replace live instructions from the responsible contact. Record the named entrance and current on-site contact, then keep location separate from method. If inspection shows that drilling or replacement is required, explain the affected component, reinstatement and revised scope before proceeding.`,
         ],
         decisionGuidance: [
-          `Resolve the building boundary before diagnosing the lock. A caller outside a shared street door, inside a common area but outside a flat, or at a private house is requesting access through a different threshold and may need different supporting authority. In Rugby's centre, a building name or nearby landmark can help locate the address, but the booking should still name the exact threshold and any concierge or manager responsible for it.`,
-          `Next separate the immediate entry decision from follow-on hardware work. Key position, deadlocking and earlier damage determine what can be assessed on arrival; property appearance does not. If a proportionate opening would require drilling or affect a frontage that may be protected, explain that boundary and obtain agreement before proceeding. Replacement, additional keys and council or management questions should remain separately described outcomes.`,
+          `Resolve the authority boundary before diagnosing the lock. Proof connected to one library, gallery, office, flat or commercial unit does not automatically authorise opening a shared building door or another organisation's staff area. Record the responsible contact and the threshold they control. Treat the council pages as identifiers of named uses and addresses, not as an access instruction or substitute for current authority.`,
+          `Separate immediate entry from follow-on work. The key position, deadlocking, hardware response and existing damage determine which techniques can be considered; a building's civic use does not. If a low-damage approach is not feasible, identify the proposed intervention and obtain agreement. Replacement, extra keys, access-control work and manager approval remain distinct outcomes rather than being bundled into the lockout.`,
         ],
-        checks: ['Name the precise entrance and any concierge or managing-agent contact', 'Explain whether the key is lost, trapped, turning, or snapped', 'Check whether one of Rugby Borough Council\'s listed conservation areas is relevant before visible frontage work is considered'],
-        faq: { q: 'Are all older doors near Rugby School in the same conservation area?', a: 'No assumption should be made from proximity alone. Rugby Borough Council publishes separate mapped conservation areas, and the exact address and work need checking.' },
+        checks: ['Name the organisation, unit and precise Rugby threshold', 'Explain whether the key is lost, trapped, turning or snapped', 'Provide the current authorised building contact and live entrance instructions'],
+        faq: { q: 'Does one contact control every entrance at Rugby Art Gallery, Museum and Library?', a: 'The council source identifies several uses and a county-library lease but does not assign door-by-door authority. Confirm the current responsible person for the exact public, staff, shared or internal threshold.' },
       },
       {
-        heading: 'Lock repair and replacement across Rugby\'s varied townscape',
-        body: 'The official sources confirm historic central buildings and multiple conservation areas, not a single Rugby-wide door type. Before replacing anything, identify whether the fault sits in a cylinder, lever lock, nightlatch, handle, keep or multipoint case. At a protected frontage, retaining serviceable fabric and using a compatible lock may be preferable to altering the door. At a modern entrance, dimensions and certification may be the main questions. A quote should distinguish repair, product replacement, extra keys and any door alignment so the scope is clear.',
+        heading: 'Rugby lock changes: separate No. 46 fabric from the failed component',
+        body: 'Historic England lists 46 Chapel Street, Rugby CV21 3EB at Grade II and describes that exact building\'s recessed porch, panelled surround, five-panel door and fanlight. The entry does not identify its present lock or describe another Rugby door. At any address, inspect the cylinder, case, keep, furniture and alignment before deciding whether repair, adjustment or replacement is justified. For visible work at No. 46 or another verified protected property, keep compatible component work separate from alterations to recorded fabric. At a shared Rugby building, neither the list entry nor a conservation map identifies who controls keys or may authorise new cutting. Verify the responsible owner, manager or organisation for that threshold and keep common-door keying distinct from a private unit\'s lock-change request.',
         details: [
-          `Rugby's documented Georgian and Victorian townscape sits alongside later growth, so building period cannot select a replacement lock. Preparation should capture the reason for intervention, photographs of the hardware on both faces, the door edge and all readable markings. The inspection can then isolate a worn cylinder, lock case, nightlatch, keep or alignment problem before deciding whether repair or replacement is justified. Recording dimensions and key-control needs at this stage produces a defined component scope and avoids treating Market Place context, a CV21 code or the apparent age of neighbouring buildings as a mechanical diagnosis.`,
-          `Because the borough identifies multiple conservation areas rather than one Rugby-wide designation, property status must be checked at the address where visible work is contemplated. A compatible internal component may present a different preservation question from cutting the door edge or replacing external furniture. For a shared building, the controller of that threshold should also confirm the intended keying and hardware scope. The written next step should list what inspection found, what remains serviceable, the marked replacement under consideration and any alteration held for council or building-specific guidance, keeping conservation and mechanical decisions traceable but separate.`,
+          `The official list entry for No. 46 is unusually specific about the doorway but remains an asset record, not a condition survey. It records a recessed porch, panelled surround, five-panel door with two flush and two glazed panels, and a fanlight. If work is proposed at that exact address, photograph the present door faces, furniture, edge and apertures and compare them with what is actually on site. At every other Rugby property, do not borrow No. 46's construction, status or age; document the fitted hardware and reason for intervention directly.`,
+          `Rugby Borough Council's conservation register adds an address-level map check where visible external material may change. Mechanical inspection should first isolate the cylinder, lock case, nightlatch, multipoint case, keep or alignment issue and record measurements and readable marks. A compatible part within existing apertures is a different scope from new cutting, external furniture substitution or door replacement. The written proposal should identify retained components, measured replacement, keys, adjustment and any property-specific question still awaiting the owner, manager or council.`,
         ],
         decisionGuidance: [
-          `Record the requested outcome and reported observations before committing to replacement. They may include lost keys, binding, visible damage or another symptom, but the cause and affected component remain unconfirmed until inspection. Note what was observed, which components were inspected, what was not tested and any adjustment considered. Compare repair with replacement only when the on-site evidence supports both scopes, keeping product cost distinct from diagnosis and labour.`,
-          `For an address covered by one of Rugby Borough's mapped conservation areas, identify whether work remains inside the existing door or alters visible external material. A retained door with compatible internal hardware is a different proposition from cutting, changing furniture or replacing the leaf. The quote should flag the exact property-status check, responsible owner and any unanswered consent point instead of applying a town-wide heritage rule.`,
+          `Define whether the requested outcome is restored operation, changed key control or a measured security improvement before selecting a component. Record reported symptoms separately from what inspection confirms. Compare repair, adjustment and replacement only where the observed condition supports those options, and keep parts, labour, keys and door work distinct rather than treating a listed address or postcode as the diagnosis.`,
+          `When exact address evidence confirms relevant protection, identify whether the proposal stays inside existing apertures or changes the visible door, surround, furniture or fanlight. The Historic England entry does not decide consent and the conservation register does not prescribe a product. Flag the responsible owner and any unanswered property-status question while the measured mechanical scope remains independently traceable.`,
         ],
-        checks: ['Read the lock faceplate and measure only after the door is safely open', 'Check whether a repair or adjustment resolves the fault before replacing parts', 'Check the council conservation-area register for external-fabric work, and verify any listed status separately'],
-        faq: { q: 'Does a Rugby conservation area prevent a lock replacement?', a: 'Not automatically. Controls depend on the exact property and work. A like-for-like internal mechanism change is different from replacing or materially altering a protected external door, so check the council when the fabric or appearance may change.' },
+        checks: ['Photograph current hardware, apertures and surrounding fabric', 'Test whether repair or adjustment resolves the measured fault', 'Check the exact listing and conservation record before visible material changes'],
+        faq: { q: 'Does the listed doorway at 46 Chapel Street describe other Rugby doors?', a: 'No. The Grade II entry and five-panel-door description apply only to No. 46. Every other address needs its own property-status check, hardware inspection and measured repair scope.' },
       },
       {
-        heading: 'uPVC and composite-door checks for Rugby',
-        body: 'Rugby\'s mixture of historic and later development means the town name cannot identify a mechanism. On an actual uPVC or composite door, note whether the key turns when open, how far the handle moves and whether hooks or rollers move. Those observations must be reproduced and the door inspected before alignment, cylinder or mechanism failure is assigned. Markings and measurements support a parts proposal. Treat any customer description of a shared or managed entrance as an unconfirmed building-specific constraint.',
+        heading: 'Rugby multipoint checks start with the exact managed threshold',
+        body: 'The council identifies borough gallery, museum and visitor-centre uses alongside a county library lease at the RAGM building, while its Town Hall page names a separate civic address. Neither source says that any entrance is uPVC or composite. For an actual Rugby uPVC door, identify the controlling organisation or occupier, then record key rotation, handle travel, locking-point movement and open-versus-closed behaviour. Markings and measurements—not a building date, public use or CV21 postcode—support a parts proposal.',
         details: [
-          `The official Rugby guide confirms both historic buildings and later town growth, which is precisely why locality cannot prove that an affected door is uPVC or composite. Remote preparation should show the complete door edge and faceplate and describe whether the key and handle behave differently while the door is open and when it meets the frame. During inspection, those observations support separate checks of sash alignment, keeps, cylinder, handles and gearbox. Backset, centres and locking layout still require measurement before compatibility is stated, preventing the broad architectural character of Rugby from becoming an unsupported parts catalogue.`,
-          `A Rugby multipoint repair also needs two non-mechanical checks when relevant. First, the borough's separate conservation maps should be consulted if the proposed repair would extend into visible external material; being near Rugby School or Market Place is not enough. Second, the responsible person must be identified when the door serves common circulation rather than one private occupier. The next-step note should therefore record the exact threshold, property-status result, observed movement and dimensions. It can then distinguish adjustment from component investigation and reserve any alteration to protected or shared fabric for a separately authorised, property-specific decision.`,
+          `RAGM's purpose-built 2000 description and long county-library lease establish named uses, not an entrance material or mechanism. A request there must identify whether the affected threshold serves the library, a borough venue, a shared route or another space and who is currently authorised to control it. For a confirmed uPVC or composite door, show the full edge and faceplate and describe whether key and handle behaviour changes when the leaf is open and when it meets the frame. Inspection can then separate alignment, keeps, cylinder, handles and gearbox without turning occupancy evidence into a parts diagnosis.`,
+          `The Town Hall contact page supplies an Evreux Way address and rear cycle-rack approach from the Newbold Road car park, but no door specification or live service access. Obtain current entrance instructions from the responsible person and record the precise private, public, staff or shared threshold. Backset, centres, faceplate, spindle and locking layout still require measurement before compatibility is stated. If work would extend beyond the mechanism into a managed door or frame, describe and authorise that extra scope separately.`,
         ],
         decisionGuidance: [
-          `A useful Rugby fault record follows the operating order: whether the sash meets the frame, how far the handle travels, whether locking points move and when the key stops. Label each point as observed, reported or not safely tested. A change between open and closed conditions is evidence for the on-site inspection, not a diagnosis by itself. End the comparison when resistance increases and mark the remaining steps as not tested.`,
-          `Move to a multipoint-parts decision only when faceplate information, centres, backset and locking layout narrow compatibility sufficiently; record cylinder dimensions and handle details separately. State whether the proposal concerns adjustment or a named component and which evidence remains unconfirmed. If the customer describes the Rugby entrance as shared or managed, record that description as an unconfirmed constraint and do not infer authority or hardware requirements from it.`,
+          `Follow the operating sequence: record when the sash meets the frame, handle travel, locking-point movement and where the key stops. Mark each item reported, observed or not safely tested. A change between open and closed operation helps direct inspection but does not remotely prove misalignment or a failed gearbox. Stop if resistance increases rather than damaging the mechanism to complete the test.`,
+          `Name a candidate part only when readable faceplate information, centres, backset and locking layout narrow compatibility sufficiently; record cylinder dimensions and handle details separately. Treat a customer's description of a managed Rugby entrance as unconfirmed until the responsible organisation and threshold are checked. Keep removal, adjustment, component supply and any door or frame alteration provisional while authority or measurements remain outstanding.`,
         ],
-        checks: ['Compare operation open and closed without forcing the handle', 'Photograph the whole faceplate and every visible marking', 'Tell the locksmith if the door is communal, fire-rated or managed'],
-        faq: { q: 'Do Rugby\'s newer districts all use the same multipoint lock?', a: 'No. Door age or neighbourhood does not establish the manufacturer or dimensions. The faceplate, centres, backset and locking points on the actual door must be identified.' },
+        checks: ['Identify the organisation and exact managed or private threshold', 'Compare open and closed operation without forcing the handle', 'Photograph the full faceplate and measure the installed layout'],
+        faq: { q: 'Does RAGM\'s 2000 opening date identify its door mechanisms?', a: 'No. The council page establishes the venue and occupiers, not the material, manufacturer or dimensions of an entrance. Inspect and measure the actual door before identifying a multipoint component.' },
       },
       {
-        heading: 'Burglary boarding in Rugby: evidence first, temporary work second',
-        body: 'Warwickshire Police advises photographing damage, preserving possible forensic evidence and securing a damaged door or window from outside where possible. That sequence is important in Rugby whether the opening is at a home, flat or business. In a mapped conservation area, record surviving frontage material and refer any proposal that may alter it for property-specific advice. Boarding reduces immediate access and weather exposure; it does not replace structural, glazing or joinery work, and it should be documented so the permanent repairer can see what was covered.',
+        heading: 'Rugby boarding: preserve evidence and exact listed fabric',
+        body: 'Historic England\'s Grade II entry for 46 Chapel Street identifies a recessed porch, panelled surround, five-panel door and fanlight at that exact address. If crime damage affects that named fabric, follow police instructions and record it before temporary covering. Elsewhere in Rugby, do not transfer No. 46\'s status or construction. Check the actual address and any conservation record, then define boarding from the inspected opening. Temporary work can reduce immediate access and weather exposure but cannot certify hidden structure or complete the permanent repair.',
         details: [
-          `Rugby's Market Place and historic central streets can help identify a premises, but the boarding record must start with the precise damaged opening. Following police directions, take photographs that show the point of entry, surrounding frame, glazing, lock and any material that will disappear beneath a board. State whether the opening belongs to a private unit, shared threshold or frontage so the responsible person can be identified before work is agreed. The record should not draw conclusions about construction or remaining strength from the building's location.`,
-          `Rugby Borough Council's register requires an address-specific check because the borough contains 19 distinct conservation areas. Where damaged material lies inside a mapped boundary, record surviving frontage, covered components and any compromised door or frame section before temporary work. The completion note can list board size and attachment positions without certifying the surrounding material. It gives the permanent specialist a usable record and the owner a defined proposal if council advice is needed before visible historic material is removed or altered.`,
+          `At 46 Chapel Street, the list entry provides a precise pre-incident reference for the named doorway but not its current condition. Photograph the point of entry, five-panel door or fanlight where affected, surround, frame, glazing, lock and any material that will disappear beneath a board. Do not infer that every recorded element survives unchanged or that a fixing surface is sound. The exact controller must authorise the temporary scope, while police, glazing, joinery and structural questions remain with their respective evidence and specialists.`,
+          `For any other Rugby opening, check the exact address rather than extending No. 46's Grade II status along Chapel Street. Rugby Borough Council's conservation register can identify a mapped context where visible frontage material may be involved, but the map does not select a fixing method. Record surviving material, opening dimensions, attachment questions and compromised hardware before coverage. The completion note should list what was concealed and the permanent glazing, door, frame, lock or structural work still unresolved.`,
         ],
         decisionGuidance: [
-          `If police issue instructions for the scene, follow them before temporary work. Record observations including loose glass, a damaged panel, a split frame or a displaced door in the written and photographic record; other damage may remain unobserved. Do not infer from the opening type that a particular temporary method is suitable. Record any condition that cannot be checked safely and refer glazing, joinery or structural questions before the scope expands.`,
-          `At a Rugby frontage confirmed as protected, document surviving external material before it is covered and record any property-specific advice still required. The completion record should show the opening before coverage, board position, attachment method, affected lock and any area still exposed or unsafe. Give the owner or permanent repairer the measurements and unresolved defects, separating evidence preservation and temporary access reduction from reinstating the building.`,
+          `Follow attending-police instructions before disturbing the scene. Record loose glass, damaged panels, split frame sections, displaced hardware and unsafe edges only where they can be observed without contamination or avoidable risk; other damage may remain hidden. Do not infer structural suitability from the listed description or opening type. Mark any surface or support that could not be checked and refer it before the temporary scope expands.`,
+          `Where exact property evidence confirms protected fabric, distinguish emergency coverage from removal, reinstatement or permanent alteration. The handover should show the opening before coverage, board position, attachment method, affected lock, material concealed and any area still exposed. That record helps the owner, insurer and permanent repairer without claiming that the listed element has been restored or that the premises is ready for normal use.`,
         ],
-        checks: ['Follow the attending force\'s instructions before repairs begin', 'Photograph frame, glass, lock and surrounding damage', 'Record the temporary materials, fixings and remaining permanent work'],
-        faq: { q: 'Can boarding start immediately after a Rugby burglary?', a: 'Only when it is safe and consistent with police instructions. Preserve possible evidence first, then secure the opening in the way advised for the scene.' },
+        checks: ['Follow the attending force\'s instructions before disturbing evidence', 'Check the exact listing or conservation record, not the street name', 'Record listed fabric, temporary fixings and unfinished permanent work'],
+        faq: { q: 'Does the Grade II entry for 46 Chapel Street decide how it should be boarded?', a: 'No. It identifies exact recorded fabric but is not a damage or structural survey. Police instructions, current inspection, property-specific authority and any required heritage advice determine the temporary scope.' },
       },
       {
-        heading: 'Choosing a Rugby lock upgrade without postcode assumptions',
-        body: 'Rugby Borough\'s separate conservation areas and the town\'s mix of building periods call for an entrance-by-entrance review. Warwickshire Police advises looking at the door, frame, hinges and correctly sized cylinder, not only a product label. A timber final-exit door, a modern multipoint door and a managed flat entrance need different assessments. If a written insurance policy names a standard, match the marked product and installation to that wording; do not assume every Rugby property has the same requirement.',
+        heading: 'Rugby upgrades: controller, protected fabric and mechanics stay separate',
+        body: 'RAGM\'s borough-and-county occupancy, the Town Hall contact record and Historic England\'s exact entry for 46 Chapel Street describe three different named-property questions. None rates a lock or specifies a product. A Rugby upgrade should identify who controls the threshold, verify whether exact property status affects visible work, and inspect the door, frame, hinges, keeps, furniture and lock. Match any accredited product to measured fit and an observed weakness, then check current written insurer, landlord, manager or fire-door requirements separately.',
         details: [
-          `Rugby's verified Georgian, Victorian and later development makes a whole-entrance survey more informative than any town-wide upgrade label. The review should document door and frame material, hinge and keep condition, lock engagement, handle protection and cylinder fit where a cylinder is present. Product markings and measurements support comparison with an accredited option for that item. Record the exact visible mark or accreditation evidence relied upon; do not interpret it as evidence about uninspected parts of the entrance.`,
-          `The council's 19 conservation areas create several possible property contexts, so the upgrade plan must record which boundary, if any, contains the address. On a protected frontage, visible furniture and retainable material should be photographed before proposing cuts or substitutions. A managed entrance also requires the person responsible for common hardware to define the allowable scope. The resulting specification should distinguish adjustment, reinforcement and product replacement, cite dimensions and certification, and list any external-fabric or fire-door question as a separate next step. That keeps local character relevant to preservation without using it as evidence of existing security.`,
+          `The RAGM page establishes several institutional uses and a county-library lease inside one venue; the Town Hall page establishes another civic address and a visitor approach. Those facts make exact threshold control important but do not prove how either building is keyed or secured. Record the responsible organisation and whether the proposal affects a private, staff, public or shared door. Inspect leaf and frame material, hinge and keep condition, lock engagement, handle protection and cylinder fit where present. Current markings and measurements can then support a suitable product comparison without converting civic use into a security specification.`,
+          `Historic England's entry for 46 Chapel Street establishes Grade II status and records a five-panel door, surround and fanlight at that property only. If visible work is proposed there, photograph current fabric and apertures and distinguish an internal compatible component from new cutting or external substitution. At other addresses, verify their own status rather than borrowing No. 46's. The specification should identify the observed weakness, retained material, measured product, exact accreditation evidence and any owner, manager, council, fire-door or insurer question still unresolved.`,
         ],
         decisionGuidance: [
-          `Translate the inspection into a ranked set of entrance issues. A sound lock in a poorly aligned door, a correctly sized cylinder behind weak handles and a worn mortice case require different interventions. State the existing condition and the security objective beside each proposed item, so an accredited product is selected for a measured weakness rather than because a Rugby postcode or neighbourhood suggests it.`,
-          `Before agreement, reconcile the mechanical proposal with the exact property and any current written policy. A conservation map is only a prompt: relevance depends on the exact address, verified status and proposed alteration. If the customer describes the entrance as shared or managed, record that as an unconfirmed constraint. Record product markings, dimensions and exclusions without treating accreditation as council, building or insurer approval.`,
+          `Rank separate entrance findings instead of selecting one product first. A sound lock in a misaligned door, excessive cylinder projection, weak handle protection, incomplete multipoint engagement and a worn mortice case require different interventions. State the observed condition and customer's security objective beside each proposal so certification is matched to a measured item rather than a Rugby postcode or the public role of a building.`,
+          `Reconcile the mechanical proposal with exact-property evidence and current written requirements before agreement. A lease, civic contact page, conservation map or list entry is only relevant within its stated scope; none is owner, manager or insurer approval. Record controller evidence, dimensions, retained fabric, product marks and excluded work. Keep any shared-door, fire, planning or policy issue provisional until the responsible authority confirms it.`,
         ],
-        checks: ['Inspect door, frame, hinges, keeps, handles and cylinder together', 'Use measured, independently evidenced product specifications', 'Check property controls and written policy wording before work is agreed'],
-        faq: { q: 'Is a three-star cylinder the answer for every Rugby door?', a: 'No. Warwickshire Police discusses correctly sized cylinders and accredited products, but not every door uses a euro cylinder. The complete entrance and actual policy requirements must be assessed.' },
+        checks: ['Confirm the controller of the exact Rugby threshold', 'Inspect and measure the complete entrance before choosing a product', 'Separate exact property status from manager, fire-door and policy requirements'],
+        faq: { q: 'Do Rugby\'s named civic and listed buildings imply one upgrade standard?', a: 'No. Their sources establish specific occupancies, addresses or protected fabric only. The inspected entrance, measured fit, product evidence and current written requirements determine an appropriate proposal.' },
       },
     ),
   },
@@ -897,11 +929,11 @@ const PREPARATION_LOCALITY_SOURCE_IDS: Record<string, Record<ServiceAreaSlug, st
     ['visit-warwickshire-bedworth'],
   ),
   rugby: preparationSources(
-    ['visit-rugby', 'rugby-conservation'],
-    ['visit-rugby', 'rugby-conservation'],
-    ['visit-rugby'],
-    ['visit-rugby'],
-    ['visit-rugby'],
+    ['rbc-ragm-modernising', 'rbc-town-hall-contact'],
+    ['rugby-conservation', 'historic-england-46-chapel-street-1035045'],
+    ['rbc-ragm-modernising', 'rbc-town-hall-contact'],
+    ['rugby-conservation', 'historic-england-46-chapel-street-1035045'],
+    ['rbc-ragm-modernising', 'historic-england-46-chapel-street-1035045', 'rbc-town-hall-contact'],
   ),
   'leamington-spa': preparationSources(
     ['visit-leamington', 'warwick-district-conservation'],
@@ -1116,6 +1148,7 @@ function localitySourceIdsForSection(
 function buildContent(area: AreaEvidenceProfile, service: ServiceAreaSlug): TownServiceContent {
   const blueprint = SERVICE_BLUEPRINTS[service]
   const local = area.serviceNotes[service]
+  const reviewedOn = area.reviewedOn ?? REVIEWED_ON
   const serviceIndex = SERVICE_AREA_SLUGS.indexOf(service)
   const contextIndexes = service === 'emergency-lockout'
     ? [serviceIndex, 2]
@@ -1182,7 +1215,7 @@ function buildContent(area: AreaEvidenceProfile, service: ServiceAreaSlug): Town
     commonJobs,
     faqs,
     priceNote: `${blueprint.shortName} in ${area.name} starts from £${blueprint.priceFrom}. The agreed price depends on the diagnosed work and parts, with no VAT or separate call-out fee. ${area.priceScope}`,
-    evidenceSummary: `Local context was checked against the sources below on ${REVIEWED_ON}. The sources support place, planning and general technical guidance; they do not prove the lock type or job history at an individual address. The separate "${local.heading}" section explains which address-level facts still require direct verification.`,
+    evidenceSummary: `Local context was checked against the sources below on ${reviewedOn}. The sources support place, planning and general technical guidance; they do not prove the lock type or job history at an individual address. The separate "${local.heading}" section explains which address-level facts still require direct verification.`,
     contextGuidance,
     preparationSteps,
     sources: uniqueSources([
@@ -1191,7 +1224,7 @@ function buildContent(area: AreaEvidenceProfile, service: ServiceAreaSlug): Town
       ...supplementalSourceIds.map(id => TECHNICAL_SOURCES[id]),
     ]),
     sectionSourceIds,
-    reviewedOn: REVIEWED_ON,
+    reviewedOn,
   }
 }
 
