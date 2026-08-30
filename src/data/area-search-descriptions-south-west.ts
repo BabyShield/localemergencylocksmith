@@ -94,8 +94,8 @@ export const SOUTH_WEST_AREA_SEARCH_DESCRIPTIONS = {
     sourceIds: ['rbc-rural-study-2024'],
   },
   brinklow: {
-    description: 'Locksmith help in Brinklow for lockouts, lock repairs and upgrades, with the conservation appraisal including part of Ell Lane towards the castle.',
-    sourceIds: ['rbc-brinklow-conservation'],
+    description: 'Brinklow locksmith guidance distinguishing its made plan, partial conservation area, Barr Lane surgery and Grade II* church on The Crescent.',
+    sourceIds: ['rbc-brinklow-plan-page', 'rbc-brinklow-conservation', 'nhs-revel-surgery-brinklow-m84031', 'historic-england-brinklow-church-1034957'],
   },
   southam: {
     description: 'Locksmith services in Southam for lockouts, repairs and upgrades, with its neighbourhood plan made by the district council on 11 July 2023.',
@@ -106,7 +106,7 @@ export const SOUTH_WEST_AREA_SEARCH_DESCRIPTIONS = {
     sourceIds: ['sdc-parish-plans'],
   },
   alcester: {
-    description: 'Locksmith services in Alcester for lockouts, repairs and upgrades, with its 2021 made neighbourhood plan kept distinct from the later review consultation.',
-    sourceIds: ['sdc-alcester-plan-page'],
+    description: 'Alcester locksmith guidance distinguishing the made 2021 plan, conservation record, Priory Road library and Grade I Henley Street Town Hall.',
+    sourceIds: ['sdc-alcester-plan-page', 'sdc-conservation-a-g', 'wcc-alcester-library', 'historic-england-alcester-town-hall-1024606'],
   },
 } satisfies AreaSearchDescriptionRegistry

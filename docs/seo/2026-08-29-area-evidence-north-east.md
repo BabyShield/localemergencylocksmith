@@ -18,25 +18,30 @@ Status: research only. This file is a claim-level evidence register, not publish
 
 ### `nuneaton` — Nuneaton
 
-**Context tags:** `rail`, `conservation-area-present`
+**Context tags:** `locality-register`, `conservation-area-present`, `listed-building-present`, `managed-premises`
 
-1. **Fact:** The council says Nuneaton's name derives from a 12th-century Benedictine nunnery and that the town's market was established in 1247.
-   - **Publisher / title / deep URL:** [Nuneaton and Bedworth Borough Council — Nuneaton town centre](https://www.nuneatonandbedworth.gov.uk/markets-town-centres/town-centres)
-   - **Direct support:** The council's brief history gives both the nunnery origin and the 1247 market date.
-   - **Checked:** 2026-08-29.
-   - **Conditional service-use implication:** If historic town-centre context is useful, these two dated points may be paraphrased and attributed; they do not describe any customer's building.
-2. **Fact:** The council's current page describes Nuneaton's core as a pedestrian area served by bus and train stations, with Riversley Park a short walk from the town centre.
-   - **Publisher / title / deep URL:** [Nuneaton and Bedworth Borough Council — Nuneaton town centre](https://www.nuneatonandbedworth.gov.uk/markets-town-centres/town-centres)
-   - **Direct support:** The live town-centre description names the pedestrian core, both stations and Riversley Park's relationship to the centre.
-   - **Checked:** 2026-08-29.
-   - **Conditional service-use implication:** The public landmarks may be used for orientation only; they must not become a travel-time, parking, access or service-coverage claim.
-3. **Fact:** A published-by-authority notice says defined additions to Nuneaton Town Centre Conservation Area were confirmed on 15 February 2022, including properties west of Queens Road and east of Newdegate and Bridge Streets.
-   - **Publisher / title / deep URL:** [The Gazette — Notice of Variation of Nuneaton Town Centre Conservation Area](https://www.thegazette.co.uk/notice/4289465)
-   - **Direct support:** The notice gives the confirmation date, boundary directions and listed additional properties.
-   - **Checked:** 2026-08-29.
-   - **Conditional service-use implication:** Use the exact street and building before applying the boundary to visible work; the notice proves neither caller authority nor installed hardware.
+1. **Fact:** The county street register produced on 11 August 2026 lists Abbey Gate, Abbey Green and Abbey Street with Nuneaton in the Town field.
+   - **Publisher / title / deep URL:** [Warwickshire County Council — List of Streets maintained at public expense](https://api.warwickshire.gov.uk/documents/WCCC-930-12)
+   - **Direct support:** The live register's Street, Locality and Town columns show each selected street with Nuneaton in the Town field.
+   - **Checked:** 2026-08-30.
+   - **Conditional service-use implication:** Use the entries to prompt a complete address check only. A highway maintained at public expense is not a locality boundary, property, approach instruction, controlled opening or access right.
+2. **Fact:** The Gazette records that Nuneaton Town Centre Conservation Area boundary changes were confirmed on 15 February 2022, including additions at 23a and 23b Queens Road and 5 and 26 Bridge Street.
+   - **Publisher / title / deep URL:** [The Gazette — Notice of Variation of Nuneaton and Bedworth Town Centre Conservation Areas](https://www.thegazette.co.uk/notice/4289465)
+   - **Direct support:** The published-by-authority notice gives the confirmation date and names those Nuneaton additions.
+   - **Checked:** 2026-08-30.
+   - **Conditional service-use implication:** Apply the notice only to an exact named property and check the current map before visible alteration. It supplies no present controller, entrance, hardware, condition or permission.
+3. **Fact:** Historic England lists 61 Coton Road, Nuneaton at Grade II as entry 1034982; its legacy description identifies a recessed plain C20 door and painted moulded doorcase.
+   - **Publisher / title / deep URL:** [Historic England — 61 Coton Road, list entry 1034982](https://historicengland.org.uk/listing/the-list/list-entry/1034982)
+   - **Direct support:** The official entry supplies the grade, list number, statutory address and exact legacy doorway wording.
+   - **Checked:** 2026-08-30.
+   - **Conditional service-use implication:** The designation and doorway description apply only to this exact asset and are not a current use, condition, lock, keyholder, access or work-authority survey. Obtain current property-specific guidance before fabric decisions.
+4. **Fact:** Nuneaton and Bedworth Borough Council identifies Newtown Community Centre at CV11 4HG, states that WCAVA manages it day to day and refers to ramped access at front and rear entrances.
+   - **Publisher / title / deep URL:** [Nuneaton and Bedworth Borough Council — Newtown Community Centre](https://www.nuneatonandbedworth.gov.uk/community-facilities/community-centres-1/8)
+   - **Direct support:** The live facility page supplies the centre name, postcode, management statement and entrance references. Its address bullet contains a road-name typo while the narrative uses Newtown Road, so the guide deliberately does not reproduce the faulty address line.
+   - **Checked:** 2026-08-30.
+   - **Conditional service-use implication:** Confirm the complete current address, road spelling, instructed entrance and authorised contact directly. The page does not identify a present keyholder, locked opening, hardware, fault or permission for work.
 
-**Access/property-status caveat:** The town-centre page is not a route or property map, while the Gazette notice applies only to defined boundary changes. Neither proves road access, authority, hardware or service coverage.
+**Access/property-status caveat:** The street register, conservation notice, listed-building entry and community-centre page have separate scopes. Verify the complete address, exact threshold, current controller and only the applicable property-status record; none proves demand, journey conditions, service coverage, response time, installed hardware, incident or outcome.
 
 ### `attleborough` — Attleborough
 
@@ -295,20 +300,30 @@ Status: research only. This file is a claim-level evidence register, not publish
 
 ### `bedworth` — Bedworth
 
-**Context tags:** `conservation-area-present`, `rail`
+**Context tags:** `locality-register`, `conservation-area-present`, `listed-building-present`, `managed-premises`
 
-1. **Fact:** Bedworth Town Centre Conservation Area was designated in 1986; the 2022 appraisal identifies character areas around Mill Street/Chapel Street/Almshouses, Bedworth Cemetery and Miners' Welfare Park.
-   - **Publisher / title / deep URL:** [Nuneaton and Bedworth Borough Council — Bedworth Conservation Area Appraisal and Management Plan 2022](https://www.nuneatonandbedworth.gov.uk/downloads/file/681/bedworth-conservation-area-appraisal-and-management-plan-supplementary-planning-document-2022-)
-   - **Direct support:** Sections 2.1 and the summary identify the designation date and three appraisal areas.
-   - **Checked:** 2026-08-29.
-   - **Conditional service-use implication:** A future page may name the mapped town-centre conservation area and its documented character areas, subject to address verification.
-2. **Fact:** The county's official visitor service records Bedworth station on the Coventry-Nuneaton line and identifies Miners' Welfare Park as a legacy of the town's mining communities.
-   - **Publisher / title / deep URL:** [Warwickshire County Council, Visit Warwickshire — Bedworth](https://visit.warwickshire.gov.uk/towns-villages/bedworth)
-   - **Direct support:** The official page states the rail line and the park's stated heritage context.
-   - **Checked:** 2026-08-29.
-   - **Conditional service-use implication:** These may be used as attributed orientation or heritage points; neither supports a journey-time or property claim.
+1. **Fact:** The county street register produced on 11 August 2026 lists Acacia Crescent, Alexander Road and All Saints Square with Bedworth in the Town field.
+   - **Publisher / title / deep URL:** [Warwickshire County Council — List of Streets maintained at public expense](https://api.warwickshire.gov.uk/documents/WCCC-930-12)
+   - **Direct support:** The live register's Street, Locality and Town columns show each selected street with Bedworth in the Town field.
+   - **Checked:** 2026-08-30.
+   - **Conditional service-use implication:** Use the entries to prompt a complete address check only. A highway maintained at public expense is not a locality boundary, property, approach instruction, controlled opening or access right.
+2. **Fact:** The Gazette records that Bedworth Town Centre Conservation Area boundary changes were confirmed on 15 February 2022, including the addition of 10-16 High Street.
+   - **Publisher / title / deep URL:** [The Gazette — Notice of Variation of Nuneaton and Bedworth Town Centre Conservation Areas](https://www.thegazette.co.uk/notice/4289465)
+   - **Direct support:** The published-by-authority notice gives the confirmation date and exact Bedworth number range added on High Street.
+   - **Checked:** 2026-08-30.
+   - **Conditional service-use implication:** Keep the range exact and check the current map before visible alteration. The notice does not include number 18 or establish a controller, entrance, hardware, condition or permission.
+3. **Fact:** Historic England lists the Water Tower, Tower Road, Bedworth at Grade II as entry 1116416; its legacy description identifies deeply recessed double-leaf moulded six-panelled doors and a fanlight.
+   - **Publisher / title / deep URL:** [Historic England — Water Tower, Tower Road, Bedworth, list entry 1116416](https://historicengland.org.uk/listing/the-list/list-entry/1116416)
+   - **Direct support:** The official entry supplies the grade, list number, statutory address, disused-use description and exact legacy doorway wording.
+   - **Checked:** 2026-08-30.
+   - **Conditional service-use implication:** The entry applies only to this exact asset. Its disused-use and doorway descriptions are not a current condition, controller, access, lock or work-authority survey; obtain current property-specific guidance before fabric decisions.
+4. **Fact:** Warwickshire County Council identifies Bedworth Library and Information Centre at 18 High Street, Bedworth CV12 8NF.
+   - **Publisher / title / deep URL:** [Warwickshire County Council — Bedworth Library and Information Centre](https://www.warwickshire.gov.uk/bedworthlibrary)
+   - **Direct support:** The current county library page supplies the facility name and complete address.
+   - **Checked:** 2026-08-30.
+   - **Conditional service-use implication:** This identifies one managed site, not its instructed entrance, present keyholder, caller authority, hardware, fault or access arrangement. Do not reuse dynamic opening hours or closure notices as stable facts, and do not infer that number 18 is within the separately stated 10-16 addition.
 
-**Access/property-status caveat:** The conservation designation covers a mapped core, not all Bedworth. Station and park references do not establish access to any address.
+**Access/property-status caveat:** The street entries, High Street variation, listed water tower and library record identify selected highways, an exact number range or named sites. Verify the complete address, exact opening, current controller and applicable property record; none proves demand, journey conditions, service coverage, response time, installed hardware, incident or outcome.
 
 ### `bulkington` — Bulkington
 
@@ -538,9 +553,9 @@ Status: research only. This file is a claim-level evidence register, not publish
 ## Coverage and unresolved evidence
 
 - **Slugs checked:** 21/21.
-- **Fact records:** 70: at least two for every slug; four each for Attleborough, Stockingford, Weddington, Horeston Grange, Whitestone, Hartshill, Bulkington, Rugby, Hillmorton, Bilton, Brownsover, Long Lawford and Dunchurch; and three each for Nuneaton and Bermuda Park.
+- **Fact records:** 77: four each for Nuneaton, Attleborough, Stockingford, Weddington, Horeston Grange, Whitestone, Chapel End, Galley Common, Hartshill, Bedworth, Bulkington, Rugby, Hillmorton, Bilton, Brownsover, Long Lawford and Dunchurch; three for Bermuda Park; and two each for Camp Hill, Cawston and New Bilton.
 - **Each record includes:** publisher, document/page title, deep primary URL, direct-support statement, checked date and a conditional use constraint.
-- **Latest record check:** Newly added named-site, operator, school, planning and listed-building records and the Rugby Town Centre appraisal were checked on 2026-08-30; other retained appraisal records keep their 2026-08-29 check date.
+- **Latest record check:** The promoted Nuneaton and Bedworth street, conservation, listed-building and managed-site sources were checked on 2026-08-30; other retained rows keep the checked date stated beside each fact.
 - **No support found or claimed for:** locks or door hardware, local call volumes, fault prevalence, response or journey time, crime, parking, property value, service coverage, first-visit outcomes or property-wide construction types.
 - **Dated planning evidence:** Camp Hill, Chapel End and Galley Common retain at least one 2012-2016 council evidence document. Those records are labelled as historic planning snapshots and require a current-plan check before later planning claims.
 - **Cawston limitation:** the detailed parish plan is from 2010. The current council directory confirms the parish council and contact location only; it does not refresh the plan's historic survey findings.

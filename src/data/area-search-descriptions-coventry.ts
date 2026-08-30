@@ -62,12 +62,12 @@ export const COVENTRY_AREA_SEARCH_DESCRIPTIONS = {
     sourceIds: ['cheylesmore-stivichall-hlc'],
   },
   whitley: {
-    description: 'Whitley locksmith help for lockouts, repairs and lock changes, with Coventry’s HLC placing industry north and west and the Sowe Valley south and east.',
-    sourceIds: ['whitley-hlc'],
+    description: 'Whitley locksmith help for lockouts and repairs; records cover the Sowe Valley setting, common, Meadow Park School, recorded as open, and listed Abbey Bridge.',
+    sourceIds: ['whitley-hlc', 'whitley-common', 'meadow-park-school-dfe', 'whitley-abbey-bridge-he'],
   },
   finham: {
-    description: 'Finham locksmith help for lockouts, repairs and upgrades, with Coventry City Council placing the parish south of the city between the A45 and railway.',
-    sourceIds: ['finham-parish'],
+    description: 'Finham locksmith help for lockouts and repairs; records cover its parish boundary, neighbourhood designation, library and Finham Park School, recorded as open.',
+    sourceIds: ['finham-parish', 'coventry-neighbourhood-plans', 'finham-library', 'finham-park-school-dfe'],
   },
   styvechale: {
     description: 'Styvechale locksmith help for lockouts, repairs and lock changes, with Coventry’s HLC using the historic spelling Stivichall for the combined character area.',

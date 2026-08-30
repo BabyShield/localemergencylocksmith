@@ -1,6 +1,6 @@
 # South-west service-area evidence register
 
-Checked: baseline corpus 2026-08-29; `bishopton`, `brandon`, `chase-meadow`, `hampton-in-arden`, `lillington`, `sydenham`, `tiddington` and `woodloes-park` evidence refreshed 2026-08-30.
+Checked: baseline corpus 2026-08-29; `alcester`, `bishopton`, `brandon`, `brinklow`, `chase-meadow`, `hampton-in-arden`, `lillington`, `sydenham`, `tiddington` and `woodloes-park` evidence refreshed 2026-08-30.
 Scope: 27 governed area slugs across Leamington Spa, Warwick, Stratford-upon-Avon and the Warwickshire/nearby cluster.
 Source rule: primary official sources only (central-government registers and services, district/borough/county councils, official adopted or submitted planning documents hosted by them, and the named institution's current site where it is needed to establish its visit address).
 
@@ -15,9 +15,9 @@ Source rule: primary official sources only (central-government registers and ser
 ## Counts and unresolved status
 
 - Registry slugs reviewed: **27/27**.
-- Factual claims recorded: **73** (at least two per slug; four each for `bishopton`, `brandon`, `chase-meadow`, `hampton-in-arden`, `lillington`, `sydenham`, `tiddington` and `woodloes-park`, plus a third for `leamington-spa`, `stratford-upon-avon` and `shilton`).
+- Factual claims recorded: **77** (at least two per slug; four each for `alcester`, `bishopton`, `brandon`, `brinklow`, `chase-meadow`, `hampton-in-arden`, `lillington`, `sydenham`, `tiddington` and `woodloes-park`, plus a third for `leamington-spa`, `stratford-upon-avon` and `shilton`).
 - Slugs with at least two official-source claims: **27/27**.
-- Distinct primary deep URLs cited: **61** across **11** publishing bodies (15 Warwick District Council, 11 Stratford-on-Avon District Council, 9 Rugby Borough Council, 7 Solihull Metropolitan Borough Council, 5 Charity Commission, 4 Department for Education, 4 Historic England, 3 Warwickshire County Council, 1 Office for National Statistics, 1 NHS and 1 Chase Meadow Community Centre URL); these appear in **79** claim citations because sources are reused where they support more than one slug and several claims cite complementary records.
+- Distinct primary deep URLs cited: **65** across **11** publishing bodies (15 Warwick District Council, 11 Stratford-on-Avon District Council, 9 Rugby Borough Council, 7 Solihull Metropolitan Borough Council, 6 Historic England, 5 Charity Commission, 4 Department for Education, 4 Warwickshire County Council, 2 NHS, 1 Office for National Statistics and 1 Chase Meadow Community Centre URL); these appear in **83** claim citations because sources are reused where they support more than one slug and several claims cite complementary records.
 - Slugs with a directly evidenced conservation-area tag: **16/27**.
 - Slugs with a directly evidenced rail tag: **2/27** (`brandon`, `wolston`).
 - Slugs with a directly evidenced river tag: **4/27** (`leamington-spa`, `stratford-upon-avon`, `wolston`, `ryton-on-dunsmore`).
@@ -539,8 +539,8 @@ Source rule: primary official sources only (central-government registers and ser
 
 ### `brinklow`
 
-**Context tags:** `conservation-area-present`, `settlement/local-plan`, `official-parish`
-**Access/property-status caveat:** Brinklow Conservation Area covers only part of the village; neither its historic route references nor the parish plan establishes the status, fabric or access of a specific property.
+**Context tags:** `conservation-area-present`, `settlement/local-plan`, `official-parish`, `managed-premises`, `listed-building-present`
+**Access/property-status caveat:** Brinklow Conservation Area covers only part of the village, Revel Surgery is one managed Barr Lane site and Grade II* status belongs only to the named church on The Crescent. Keep those records separate; none identifies a current site representative, requested entrance, caller authority, another property's status or a private route.
 
 1. **Claim:** Rugby Borough Council made the Brinklow Neighbourhood Plan on 14 December 2022; it forms part of the borough development plan.
    **Publisher / title / deep URL:** Rugby Borough Council — [Brinklow Neighbourhood Plan](https://www.rugby.gov.uk/w/brinklow-neighbourhood-plan).
@@ -553,6 +553,18 @@ Source rule: primary official sources only (central-government registers and ser
    **Supports:** A bounded Brinklow conservation context and the `conservation-area-present` tag.
    **Conditional service use:** Mention Ell Lane or the historic feature only as verified locality context and check the current boundary before conservation guidance; do not infer building age or access.
    **Checked:** 2026-08-29.
+
+3. **Claim:** The NHS service record identifies Revel Surgery at The Surgery, Barr Lane, Brinklow, Rugby, Warwickshire, CV23 0LU.
+   **Publisher / title / deep URL:** NHS — [Revel Surgery](https://www.nhs.uk/services/gp-surgery/revel-surgery/M84031).
+   **Supports:** The current NHS service name and exact address of this managed health site.
+   **Conditional service use:** Apply the record only to the named surgery. It does not identify a requested doorway, current facilities representative or keyholder, caller authority, installed hardware or another Barr Lane property; do not embed dynamic opening status or hours in locality copy.
+   **Checked:** 2026-08-30.
+
+4. **Claim:** Historic England's list entry 1034957 identifies the Church of St John the Baptist on The Crescent, Brinklow, as a Grade II* listed building.
+   **Publisher / title / deep URL:** Historic England — [Church of St John the Baptist, list entry 1034957](https://historicengland.org.uk/listing/the-list/list-entry/1034957?section=official-list-entry).
+   **Supports:** The statutory address and exact church building's Grade II* listed status.
+   **Conditional service use:** Apply the designation only to the identified church. It does not make a neighbouring property listed, grant work authority, describe a door or determine consent for an unspecified alteration; verify the current controller and proposal-specific requirements separately.
+   **Checked:** 2026-08-30.
 
 ### `southam`
 
@@ -590,8 +602,8 @@ Source rule: primary official sources only (central-government registers and ser
 
 ### `alcester`
 
-**Context tags:** `conservation-area-present`, `settlement/local-plan`, `official-parish`
-**Access/property-status caveat:** Alcester's made 2021 plan remains the evidenced plan while its review proceeds, and the conservation area has its own boundary; neither status applies automatically to every address or building.
+**Context tags:** `conservation-area-present`, `settlement/local-plan`, `official-parish`, `named-public-site`, `managed-premises`, `listed-building-present`
+**Access/property-status caveat:** Alcester's made 2021 plan remains the evidenced plan while its review proceeds, the conservation area has its own boundary, the Priory Road library is one managed site and Grade I status belongs only to the Town Hall. Keep those records separate; none identifies a current keyholder, requested entrance, caller authority or another property's status.
 
 1. **Claim:** Stratford-on-Avon District Council made the Alcester Neighbourhood Plan on 12 July 2021; the council also records that Alcester Town Council is reviewing it and moved to consultation from 15 December 2025.
    **Publisher / title / deep URL:** Stratford-on-Avon District Council — [Alcester Neighbourhood Plan](https://www.stratford.gov.uk/planning-building/alcester-neighbourhood-plan.cfm).
@@ -604,6 +616,18 @@ Source rule: primary official sources only (central-government registers and ser
    **Supports:** A mapped Alcester conservation area and the `conservation-area-present` tag.
    **Conditional service use:** Check the exact current boundary before mentioning conservation controls and verify listed status separately; do not describe all Alcester properties as historic or protected.
    **Checked:** 2026-08-29.
+
+3. **Claim:** Warwickshire County Council identifies Alcester Library and Information Centre at Globe House, Priory Road, Alcester, B49 5DZ.
+   **Publisher / title / deep URL:** Warwickshire County Council — [Alcester Library and Information Centre](https://www.warwickshire.gov.uk/alcesterlibrary).
+   **Supports:** The current county library name and exact address of this managed public site.
+   **Conditional service use:** Apply the record only to the named library. It does not identify a requested doorway, current facilities representative or keyholder, caller authority, installed hardware or another Priory Road property; do not embed changeable opening hours in locality copy.
+   **Checked:** 2026-08-30.
+
+4. **Claim:** Historic England's list entry 1024606 identifies Alcester Town Hall on Henley Street as a Grade I listed building.
+   **Publisher / title / deep URL:** Historic England — [Alcester Town Hall, list entry 1024606](https://historicengland.org.uk/listing/the-list/list-entry/1024606?section=official-list-entry).
+   **Supports:** The statutory address and exact Town Hall building's Grade I listed status.
+   **Conditional service use:** Apply the designation only to the identified Town Hall. It does not make a neighbouring property listed, grant work authority, describe a door or determine consent for an unspecified alteration; verify the current controller and proposal-specific requirements separately.
+   **Checked:** 2026-08-30.
 
 ## Unresolved limitations and required fail-closed treatment
 

@@ -216,29 +216,35 @@ Excluded throughout: inferred lock types, locksmith job history or frequency, cr
 
 ## `whitley`
 
-- **Context tags:** `historic-landscape-report`, `river-Sowe-corridor`, `historic-settlement`, `mixed-edge-context`.
+- **Context tags:** `historic-landscape-report`, `river-Sowe-setting`, `public-common`, `current-open-school`, `Grade-II-listed-bridge`.
 - **Supported claims:**
   1. The Whitley HLC describes a settlement south of the city centre, with industry to the north and west and the River Sowe Valley to the south and east.
-  2. It records the medieval settlement south of Abbey Road, a later Whitley Abbey country house and park, and predominantly 1925–1955 development in the modern character area.
-  3. The South Sowe character-area report explicitly names Whitley on the river-valley route.
+  2. Coventry City Council locates Whitley Common at The Park Paling, Coventry, CV3 5LL.
+  3. The Department for Education records Meadow Park School, URN 148429, as open at Abbey Road, Whitley, Coventry, CV3 4BD.
+  4. Historic England records Whitley Abbey Bridge on Abbey Road as a Grade II listed building, list entry 1076652, and describes a C16 stone single-span arched bridge with buttressed piers; the record evidences no secured opening.
 - **Sources:**
-  - Coventry City Council — [Whitley Character Area, HLC Area 2](https://www.coventry.gov.uk/downloads/file/17410/hlc-area-2-whitley-character-area) — supports claims 1 and 2. Checked 2026-08-29.
-  - Coventry City Council — [South Sowe Character Area, HLC Area 28](https://www.coventry.gov.uk/downloads/file/17439/hlc-area-28-south-sowe-character-area) — supports claim 3. Checked 2026-08-29.
-- **Conditional service implication:** Confirm whether the address is residential, industrial or managed institutional land and verify authority before work; check exact designation where an older building is involved.
-- **Access/property-status caveat:** The character area contains distinct edge uses and development periods; the locality name alone proves none of them for a particular address.
+  - Coventry City Council — [Whitley Character Area, HLC Area 2](https://www.coventry.gov.uk/downloads/file/17410/hlc-area-2-whitley-character-area) — supports claim 1. Checked 2026-08-30.
+  - Coventry City Council — [Whitley Common](https://www.coventry.gov.uk/directory-record/57158/whitley-common) — supports claim 2. Checked 2026-08-30.
+  - Department for Education — [Meadow Park School, URN 148429](https://get-information-schools.service.gov.uk/Establishments/Establishment/Details/148429) — supports claim 3, including current open status and the Abbey Road address. Checked 2026-08-30.
+  - Historic England — [Whitley Abbey Bridge, list entry 1076652](https://historicengland.org.uk/listing/the-list/list-entry/1076652) — supports claim 4 as precise profile context only. Checked 2026-08-30.
+- **Conditional service implication:** Use the HLC, common and Meadow Park records to distinguish the supplied Whitley address and named site, then verify its controller independently. Keep the bridge entry off service selections because it evidences no secured opening.
+- **Access/property-status caveat:** The HLC is area-scale, the common and school records concern named sites, and the Grade II entry concerns one stone bridge. None proves authority, access, construction, hardware or service conditions at another Whitley property; the bridge fact is profile-only.
 
 ## `finham`
 
-- **Context tags:** `parish`, `neighbourhood-area`, `A45-boundary`, `rail-boundary`.
+- **Context tags:** `parish-boundary`, `neighbourhood-area`, `community-library`, `current-open-school`.
 - **Supported claims:**
   1. Coventry City Council states that Finham Parish covers an area south of Coventry bounded by the A45, Howes Lane, the city boundary and the railway line adjacent to Gretna Road.
-  2. The council records that Finham Parish was founded in 2016.
-  3. Coventry City Council designated the Finham Neighbourhood Area on 16 March 2017, with Finham Parish Council as the applicant body.
+  2. Coventry City Council designated the Finham Neighbourhood Area on 16 March 2017, with Finham Parish Council as the applicant body.
+  3. Coventry City Council locates Finham Library on Finham Green Road, Finham, Coventry, CV3 6EP.
+  4. The Department for Education records Finham Park School, URN 136963, as open at Green Lane, Coventry, CV3 6EA.
 - **Sources:**
-  - Coventry City Council — [Finham Parish Council](https://www.coventry.gov.uk/council-democracy/finham-parish-council) — supports claims 1 and 2. Checked 2026-08-29.
-  - Coventry City Council — [Neighbourhood Plans](https://www.coventry.gov.uk/neighbourhoodplanning) — supports claim 3. Checked 2026-08-29.
-- **Conditional service implication:** Use the full address to test whether instructions relate to the parish/neighbourhood area and obtain exact entrance details; do not treat “Finham” as a substitute for a mapped boundary.
-- **Access/property-status caveat:** Parish and neighbourhood-plan designations are governance/planning geographies and do not establish an individual property's construction, status or access.
+  - Coventry City Council — [Finham Parish Council](https://www.coventry.gov.uk/council-democracy/finham-parish-council) — supports claim 1. Checked 2026-08-30.
+  - Coventry City Council — [Neighbourhood Plans](https://www.coventry.gov.uk/neighbourhoodplanning) — supports claim 2. Checked 2026-08-29.
+  - Coventry City Council — [Finham Library](https://www.coventry.gov.uk/directory-record/50159/finham-library) — supports claim 3. Checked 2026-08-30.
+  - Department for Education — [Finham Park School, URN 136963](https://get-information-schools.service.gov.uk/Establishments/Establishment/Details/136963) — supports claim 4, including current open status and the Green Lane address. Checked 2026-08-30.
+- **Conditional service implication:** Use the full address to distinguish the parish, designated neighbourhood area, library, school or another premises, and verify the responsible controller independently before discussing access or alterations.
+- **Access/property-status caveat:** The parish and neighbourhood records are governance/planning geographies, while the library and school records concern named sites. None establishes another Finham property's construction, controller, entrance, hardware or service conditions.
 
 ## `styvechale`
 

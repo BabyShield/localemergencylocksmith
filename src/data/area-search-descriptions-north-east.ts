@@ -2,8 +2,8 @@ import type { AreaSearchDescriptionRegistry } from './area-search-description-ty
 
 export const NORTH_EAST_AREA_SEARCH_DESCRIPTIONS = {
   nuneaton: {
-    description: 'Nuneaton locksmith help for lockouts, repairs and security upgrades, with town-centre conservation-boundary additions confirmed on 15 February 2022.',
-    sourceIds: ['gazette-nuneaton-conservation-2022'],
+    description: 'Nuneaton locksmith guidance separating county street entries, exact 2022 conservation additions, listed 61 Coton Road and Newtown Community Centre.',
+    sourceIds: ['wcc-list-of-streets-2026', 'gazette-nuneaton-conservation-2022', 'historic-england-61-coton-road-1034982', 'nbbc-newtown-community-centre'],
   },
   attleborough: {
     description: 'Attleborough locksmith guidance separating the Springfield Road recreation ground, Holy Trinity doors and two exact locally listed Attleborough Road assets.',
@@ -46,8 +46,8 @@ export const NORTH_EAST_AREA_SEARCH_DESCRIPTIONS = {
     sourceIds: ['wcc-hartshill-community-library', 'dfe-hartshill-academy-150453', 'historic-england-holy-trinity-hartshill-1365167'],
   },
   bedworth: {
-    description: "Bedworth locksmith help for lockouts and repairs, with the council's 2022 appraisal identifying three character areas in the town-centre conservation area.",
-    sourceIds: ['nbbc-bedworth-conservation-2022'],
+    description: 'Bedworth locksmith guidance separating county streets, the 2022 High Street addition, listed Tower Road water tower and Bedworth Library at 18 High Street.',
+    sourceIds: ['wcc-list-of-streets-2026', 'gazette-nuneaton-conservation-2022', 'historic-england-bedworth-water-tower-1116416', 'wcc-bedworth-library'],
   },
   bulkington: {
     description: "Bulkington locksmith guidance distinguishing School Road's Village Centre and library, Church Street listed cottages and Bulkington Rec.",
