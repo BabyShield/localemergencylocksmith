@@ -62,8 +62,8 @@ export const SOUTH_WEST_AREA_SEARCH_DESCRIPTIONS = {
     sourceIds: ['wdc-kenilworth-conservation'],
   },
   'balsall-common': {
-    description: 'Locksmith help in Balsall Common for lockouts, lock repairs and upgrades, with the made plan noting the settlement spans Balsall and Berkswell parishes.',
-    sourceIds: ['solihull-balsall-made-plan'],
+    description: 'Balsall Common locksmith guidance separating the Balsall-Berkswell plan boundary, Balsall Street East school and 283 Kenilworth Road library.',
+    sourceIds: ['solihull-balsall-plan-page', 'solihull-balsall-made-plan', 'dfe-balsall-common-primary', 'solihull-balsall-library'],
   },
   meriden: {
     description: 'Meriden locksmith guidance distinguishing its made parish plan, Green and Hill boundaries, Arden Cottage library and Grade I Church Lane church.',
@@ -74,8 +74,8 @@ export const SOUTH_WEST_AREA_SEARCH_DESCRIPTIONS = {
     sourceIds: ['solihull-hampton-plan-page', 'solihull-hampton-history', 'solihull-hampton-library', 'historic-england-hampton-church-1055777'],
   },
   wolston: {
-    description: 'Locksmith services in Wolston for lockouts, repairs and upgrades, with the conservation appraisal limiting its boundary mostly south of the River Avon.',
-    sourceIds: ['rbc-wolston-conservation'],
+    description: 'Wolston locksmith guidance separating its limited conservation area and planning-stage record from the Main Street school and Grade I church.',
+    sourceIds: ['rbc-wolston-conservation', 'rbc-wolston-plan-page', 'dfe-wolston-st-margarets', 'historic-england-wolston-st-margaret-1185682'],
   },
   'ryton-on-dunsmore': {
     description: 'Locksmith help in Ryton-on-Dunsmore for lockouts, lock repairs and upgrades, with the adopted plan recording it as a Main Rural Settlement.',

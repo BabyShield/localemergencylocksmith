@@ -180,20 +180,30 @@ Status: research only. This file is a claim-level evidence register, not publish
 
 ### `camp-hill` — Camp Hill
 
-**Context tags:** `council-engagement`, `park`
+**Context tags:** `locality-register`, `council-engagement`, `district-centre`, `managed-premises`
 
-1. **Fact:** The council's housing walkabout schedule has a Camp Hill row naming streets including Almond Avenue, Green Lane, Hillcrest Road, Queen Elizabeth Road and Sycamore Road.
+1. **Fact:** The county street register produced on 11 August 2026 assigns Camp Hill Drive, Copper Beech Road and Hollystitches Road to Camp Hill, Nuneaton, while Camp Hill Road has Nuneaton as its town and no locality entry.
+   - **Publisher / title / deep URL:** [Warwickshire County Council — List of Streets maintained at public expense](https://api.warwickshire.gov.uk/documents/WCCC-930-12)
+   - **Direct support:** The live county register provides the stated street, locality and town fields.
+   - **Checked:** 2026-08-30.
+   - **Conditional service-use implication:** Use the distinction to request a complete number, street and postcode. The selected highway entries do not define a full locality, property boundary, approach, controller or service need.
+2. **Fact:** The council's 2026 neighbourhood walkabout schedule groups Almond Avenue, Beechwood Road, Cedar Road, Green Lane, Hillcrest Road, Laburnum Grove and other selected streets under Camp Hill.
    - **Publisher / title / deep URL:** [Nuneaton and Bedworth Borough Council — Neighbourhood walkabouts and engagement days](https://www.nuneatonandbedworth.gov.uk/resident-involvement/tenant-engagement/8)
-   - **Direct support:** The live schedule lists those streets and an outside-Chess-Centre meeting location under Camp Hill.
-   - **Checked:** 2026-08-29.
-   - **Conditional service-use implication:** The row can support selected council-housing engagement geography only; it does not prove a full locality boundary or customer access.
-2. **Fact:** The council lists Queen Elizabeth Road as a local park at Nuneaton CV10 9BU with a play area, multi-use games area, outdoor gym, seating and surfaced footpaths.
-   - **Publisher / title / deep URL:** [Nuneaton and Bedworth Borough Council — Queen Elizabeth Road park](https://www.nuneatonandbedworth.gov.uk/directory-record/4297/queen-elizabeth-road)
-   - **Direct support:** The live directory record supplies the name, type, address and listed facilities.
-   - **Checked:** 2026-08-29.
-   - **Conditional service-use implication:** The park may provide orientation only and must not be used to infer surrounding property, entrance or access conditions.
+   - **Direct support:** The live Camp Hill schedule row supplies the selected housing-engagement street group and an outside-CHESS meeting point.
+   - **Checked:** 2026-08-30.
+   - **Conditional service-use implication:** The engagement grouping can prompt a question about tenure and the responsible controller, but it does not prove that any listed address is council-owned, tenanted, shared or managed.
+3. **Fact:** The Borough Plan Review adopted on 10 December 2025 names Camp Hill-Copper Beech Road as a district centre.
+   - **Publisher / title / deep URL:** [Nuneaton and Bedworth Borough Council — Adopted Borough Plan Review 2021-2039](https://fs-filestore-eu.s3.eu-west-1.amazonaws.com/nuneaton/Documents/Borough%20Plan%20Review%20%282021-2039%29.pdf)
+   - **Direct support:** The adopted plan's centre hierarchy contains the Camp Hill-Copper Beech Road entry.
+   - **Checked:** 2026-08-30.
+   - **Conditional service-use implication:** At a centre instruction, name the current business or organisation, unit, exact threshold and authorised contact. The planning tier supplies no occupier, entrance, access right, hardware or condition.
+4. **Fact:** Nuneaton and Bedworth Borough Council identifies the CHESS Centre as a multi-room managed venue at 460 Cedar Road, Nuneaton, CV10 9DN.
+   - **Publisher / title / deep URL:** [Nuneaton and Bedworth Borough Council — The CHESS Centre](https://www.nuneatonandbedworth.gov.uk/community-facilities/community-centres-1/4)
+   - **Direct support:** The current council page supplies the venue identity, complete address and multiple bookable-space descriptions.
+   - **Checked:** 2026-08-30.
+   - **Conditional service-use implication:** At the exact CHESS site, identify the room or activity space, external or internal opening and current authorised site contact. The page supplies no keyholder, work authority, door, hardware or condition evidence.
 
-**Access/property-status caveat:** A housing walkabout schedule and park entry are not parcel, route or designation maps. Check the exact address, threshold and current property evidence.
+**Access/property-status caveat:** The street register, housing-engagement geography, district-centre classification and CHESS venue page have different and bounded roles. Verify the full address, current organisation or unit, exact threshold and present controller; none proves tenure at an individual address, route conditions, fitted hardware, incident, service coverage, response time or outcome.
 
 ### `chapel-end` — Chapel End
 
@@ -224,25 +234,30 @@ Status: research only. This file is a claim-level evidence register, not publish
 
 ### `bermuda-park` — Bermuda Park
 
-**Context tags:** `rail`, `employment/local-plan`
+**Context tags:** `locality-register`, `property-status`, `employment/local-plan`, `managed-premises`
 
-1. **Fact:** Bermuda Park station opened on 18 January 2016 after a 15-month build as part of improvements to the Nuneaton-Coventry line.
-   - **Publisher / title / deep URL:** [Warwickshire County Council — Warwickshire County Council joins the Railway 200 celebrations](https://www.warwickshire.gov.uk/news/article/5895/warwickshire-county-council-joins-the-railway-200-celebrations)
-   - **Direct support:** The county council gives the opening date, build duration and project context.
-   - **Checked:** 2026-08-29.
-   - **Conditional service-use implication:** This exact transport-history fact may be used with attribution; it cannot support a road journey, arrival-time or coverage claim.
-2. **Fact:** The county council reports about 28,000 station passengers in 2017/18 and just over 38,000 in 2019/20.
-   - **Publisher / title / deep URL:** [Warwickshire County Council — Warwickshire County Council joins the Railway 200 celebrations](https://www.warwickshire.gov.uk/news/article/5895/warwickshire-county-council-joins-the-railway-200-celebrations)
-   - **Direct support:** Both historical passenger figures appear in the council's station retrospective.
-   - **Checked:** 2026-08-29.
-   - **Conditional service-use implication:** If included, retain the reporting periods and do not imply current usage or local demand.
-3. **Fact:** The adopted Borough Plan Review's Strategic Policy DS5 describes the wider Bermuda Park area south of Nuneaton, including Faultlands and SEA4, as an employment location of regional significance for inward and local investment.
-   - **Publisher / title / deep URL:** [Nuneaton and Bedworth Borough Council — Borough Plan Review 2021-2039](https://fs-filestore-eu.s3.eu-west-1.amazonaws.com/nuneaton/Documents/Borough%20Plan%20Review%20%282021-2039%29.pdf)
-   - **Direct support:** Strategic Policy DS5 contains the wider-area statement and names Faultlands and SEA4. The council publishes this PDF in its Borough Plan Review adoption collection.
-   - **Checked:** 2026-08-29.
-   - **Conditional service-use implication:** For a business-site booking, confirm the exact organisation, unit, building, entrance and authorised facilities contact. The policy does not establish the use, access arrangements or hardware of any individual premises.
+1. **Fact:** The county street register produced on 11 August 2026 assigns Bermuda Road, Bermuda Village and Hazell Way to the locality Bermuda and town Nuneaton.
+   - **Publisher / title / deep URL:** [Warwickshire County Council — List of Streets maintained at public expense](https://api.warwickshire.gov.uk/documents/WCCC-930-12)
+   - **Direct support:** The live county register supplies the stated street, locality and town fields.
+   - **Checked:** 2026-08-30.
+   - **Conditional service-use implication:** Use the Bermuda label only to check a complete number, road, unit and postcode. It does not define a Bermuda Park service boundary, property approach, controller or access right.
+2. **Fact:** The Heritage Supplementary Planning Document adopted on 29 April 2026 locally lists 20-118 even and 39-117 odd at Bermuda Village, Nuneaton, CV10 7PN, and the Article 4 Direction applies to dwellings and curtilages in that same exact range.
+   - **Publisher / title / deep URLs:** [Nuneaton and Bedworth Borough Council — Heritage Supplementary Planning Document 2026](https://www.nuneatonandbedworth.gov.uk/downloads/file/2503/heritage-supplementary-planning-document-2026-); [adoption statement](https://www.nuneatonandbedworth.gov.uk/downloads/file/2504/heritage-supplementary-planning-document-2026-adoption-statement); [Article 4 Direction - Bermuda Village](https://www.nuneatonandbedworth.gov.uk/downloads/file/741/article-4-direction-bermuda-village)
+   - **Direct support:** The SPD and adoption statement supply current local-list and adoption evidence; the direction supplies the same bounded number range for dwellings and curtilages.
+   - **Checked:** 2026-08-30.
+   - **Conditional service-use implication:** Apply these records only after matching an exact house number. They do not prove that a door, lock or fitting is original, protected, defective or that an unspecified locksmith action requires consent.
+3. **Fact:** The adopted Borough Plan Review describes the wider Bermuda Park area as an employment location.
+   - **Publisher / title / deep URL:** [Nuneaton and Bedworth Borough Council — Adopted Borough Plan Review 2021-2039](https://fs-filestore-eu.s3.eu-west-1.amazonaws.com/nuneaton/Documents/Borough%20Plan%20Review%20%282021-2039%29.pdf)
+   - **Direct support:** Strategic Policy DS5 gives bounded wider-area employment context, including Faultlands and SEA4.
+   - **Checked:** 2026-08-30.
+   - **Conditional service-use implication:** For a business-site instruction, confirm the organisation, building, unit, entrance and authorised facilities contact. The policy identifies no current occupier, use, access arrangement, hardware or condition at an individual premises.
+4. **Fact:** The council lists Bermuda Phoenix Centre at Bermuda Road, Nuneaton, CV10 7HU as a managed multi-space venue with a separate Sports and Social Club on the same site.
+   - **Publisher / title / deep URL:** [Nuneaton and Bedworth Borough Council — Bermuda Phoenix Centre](https://www.nuneatonandbedworth.gov.uk/community-facilities/community-centres-1/2)
+   - **Direct support:** The current council page supplies the centre identity, complete address, multiple managed-space descriptions and separate-club distinction.
+   - **Checked:** 2026-08-30.
+   - **Conditional service-use implication:** At the exact Phoenix site, distinguish centre from club and identify the affected space, opening and current authorised site contact. The page supplies no keyholder, access authority, door, hardware or condition evidence.
 
-**Access/property-status caveat:** The railway station is a point feature, while Policy DS5 makes a wider-area employment statement. Neither establishes a service-route boundary, vehicle access, current individual use, property status or entrance conditions for a particular Bermuda Park address.
+**Access/property-status caveat:** The street register, exact heritage range, wider employment policy and Phoenix venue record have different scopes. Verify the full address and number, organisation or unit, exact threshold, property-specific status and present controller; none proves a complete service boundary, route, fitted hardware, incident, demand, response time or outcome.
 
 ### `galley-common` — Galley Common
 
@@ -573,9 +588,9 @@ Status: research only. This file is a claim-level evidence register, not publish
 ## Coverage and unresolved evidence
 
 - **Slugs checked:** 21/21.
-- **Fact records:** 81: four each for Nuneaton, Attleborough, Stockingford, Weddington, Horeston Grange, Whitestone, Chapel End, Galley Common, Hartshill, Bedworth, Bulkington, Rugby, Hillmorton, Bilton, Brownsover, Cawston, Long Lawford, New Bilton and Dunchurch; three for Bermuda Park; and two for Camp Hill.
+- **Fact records:** 84: four for every audited slug.
 - **Each record includes:** publisher, document/page title, deep primary URL, direct-support statement, checked date and a conditional use constraint.
-- **Latest record check:** The promoted Cawston and New Bilton school, hall, listed-building, planning, recreation-ground and map sources were checked on 2026-08-30; other retained rows keep the checked date stated beside each fact.
+- **Latest record check:** The promoted Camp Hill and Bermuda Park street-register, planning, heritage, walkabout and managed-premises sources were checked on 2026-08-30; other retained rows keep the checked date stated beside each fact.
 - **No support found or claimed for:** locks or door hardware, local call volumes, fault prevalence, response or journey time, crime, parking, property value, service coverage, first-visit outcomes or property-wide construction types.
 - **Dated planning evidence:** Camp Hill, Chapel End and Galley Common retain at least one 2012-2016 council evidence document. Those records are labelled as historic planning snapshots and require a current-plan check before later planning claims.
 - **Cawston limitation:** the hall record is a parish contact location, the school is one managed site, the listing is asset-specific and the map is dated orientation only.

@@ -26,16 +26,16 @@ export const NORTH_EAST_AREA_SEARCH_DESCRIPTIONS = {
     sourceIds: ['nbbc-whitestone-hsg9-5yhls-2026', 'nbbc-magyar-crescent-tenancy-team', 'wcc-whitestone-infant-school', 'charity-commission-whitestone-community-centre-508566'],
   },
   'camp-hill': {
-    description: 'Camp Hill locksmith help for lockouts and repairs, with the 11 August 2026 county register distinguishing Camp Hill Drive\'s locality entry from Camp Hill Road.',
-    sourceIds: ['wcc-list-of-streets-2026'],
+    description: 'Camp Hill locksmith guidance separating county street labels, housing walkabout geography, Copper Beech Road district centre and Cedar Road CHESS Centre.',
+    sourceIds: ['wcc-list-of-streets-2026', 'nbbc-tenant-walkabouts-2026', 'nbbc-borough-plan-review-2021-2039', 'nbbc-chess-centre'],
   },
   'chapel-end': {
     description: 'Chapel End locksmith guidance separating county street records, its adopted local-centre role, the listed Coleshill Road chapel and Camp Hill Road surgery.',
     sourceIds: ['wcc-list-of-streets-2026', 'nbbc-borough-plan-review-2021-2039', 'historic-england-chapel-end-congregational-church-1262600', 'nhs-chapel-end-surgery-m84005'],
   },
   'bermuda-park': {
-    description: 'Bermuda Park locksmith help for lockouts, repairs and upgrades, with council heritage records covering 20-118 even and 39-117 odd at Bermuda Village, CV10 7PN.',
-    sourceIds: ['nbbc-heritage-spd-2026', 'nbbc-bermuda-village-article-4'],
+    description: 'Bermuda Park locksmith guidance separating Bermuda street labels, the exact Bermuda Village heritage range, wider employment context and Phoenix Centre.',
+    sourceIds: ['wcc-list-of-streets-2026', 'nbbc-heritage-spd-2026', 'nbbc-heritage-spd-adoption-2026', 'nbbc-bermuda-village-article-4', 'nbbc-borough-plan-review-2021-2039', 'nbbc-bermuda-phoenix-centre'],
   },
   'galley-common': {
     description: 'Galley Common locksmith guidance separating county street records, Plough Hill Road school, the listed St Peter site and Valley Road medical centre.',

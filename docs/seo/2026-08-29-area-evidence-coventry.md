@@ -1,6 +1,6 @@
 # Coventry-cluster area evidence register
 
-Checked: baseline corpus 2026-08-29; `radford`, `foleshill`, `wyken`, `allesley`, `eastern-green`, `courthouse-green` and `aldermans-green` evidence refreshed 2026-08-30.
+Checked: baseline corpus 2026-08-29; `radford`, `foleshill`, `wyken`, `allesley`, `cheylesmore`, `eastern-green`, `courthouse-green`, `aldermans-green` and `sowe` evidence refreshed 2026-08-30.
 
 Scope: the first 30 `AREAS` records in the Coventry merchandising cluster, from `coventry-city-centre` through `little-heath`. This is a research register, not publish-ready local copy. Claims are limited to opened primary sources from Coventry City Council, Rugby Borough Council, Historic England and the named institution's current site where it is needed to establish its own contact address. A character area, ward, MSOA, parish, neighbourhood-plan boundary or named park is not interchangeable with a service-area slug or an individual address.
 
@@ -204,15 +204,19 @@ Excluded throughout: inferred lock types, locksmith job history or frequency, cr
 
 ## `cheylesmore`
 
-- **Context tags:** `historic-landscape-report`, `heritage-designations-present`, `medieval-deer-park-history`, `post-war-development`.
+- **Context tags:** `historic-landscape-report`, `medieval-deer-park-history`, `post-war-development`, `managed-public-site`, `current-open-school`, `Grade-II-star-listed-building`.
 - **Supported claims:**
-  1. The Cheylesmore and Stivichall character area lies south of the city centre and is described as extensive housing developed rapidly between 1936 and 1955.
-  2. The north-west of the character area falls within the former medieval deer park of Cheylesmore Manor, with some present road alignments reflecting its boundary.
-  3. At character-area scale the report records one scheduled monument, twelve archaeological constraint areas, ten listed buildings and one registered park and garden, but no conservation area.
-- **Source:**
-  - Coventry City Council — [Cheylesmore and Stivichall Character Area, HLC Area 10](https://www.coventry.gov.uk/downloads/file/17423/hlc-area-10-cheylesmore-and-stivichall-character-area) — supports all three claims. Checked 2026-08-29.
-- **Conditional service implication:** Verify the exact building's designation and proposed scope before external changes; the area's development period cannot select or prove any door or hardware specification.
-- **Access/property-status caveat:** Heritage counts and development history apply to a broad combined character area, not every Cheylesmore address.
+  1. The combined Cheylesmore and Stivichall character-area report describes extensive housing developed rapidly between 1936 and 1955 and places its north-west within the former medieval deer park of Cheylesmore Manor.
+  2. Coventry City Council identifies Cheylesmore Library as a community-led library delivered by Cheylesmore Community Centre at Poitiers Road, Cheylesmore, Coventry, CV3 5JX.
+  3. The Department for Education records Manor Park Primary School, URN 103691, as open at Ulverscroft Road, Cheylesmore, Coventry, CV3 5EZ.
+  4. Historic England list entry 1376051 identifies Christ Church at Frankpledge Road, Cheylesmore, Coventry, CV3 5GT as Grade II*.
+- **Sources:**
+  - Coventry City Council — [Cheylesmore and Stivichall Character Area, HLC Area 10](https://www.coventry.gov.uk/downloads/file/17423/hlc-area-10-cheylesmore-and-stivichall-character-area) — supports claim 1 as combined-area history only. Checked 2026-08-30.
+  - Coventry City Council — [Cheylesmore Library](https://www.coventry.gov.uk/cheylesmorelibrary) — supports the library identity, delivery description and Poitiers Road address in claim 2. Checked 2026-08-30.
+  - Department for Education — [Manor Park Primary School, URN 103691](https://get-information-schools.service.gov.uk/Establishments/Establishment/Details/103691) — supports the open establishment status and Ulverscroft Road address in claim 3. Checked 2026-08-30.
+  - Historic England — [Christ Church, list entry 1376051](https://historicengland.org.uk/listing/the-list/list-entry/1376051) — supports the exact church's Grade II* designation and Frankpledge Road statutory address in claim 4. Checked 2026-08-30.
+- **Conditional service implication:** Distinguish the Poitiers Road library, Ulverscroft Road school and Frankpledge Road church, then identify the exact gate or doorway and current authorised controller. Use the combined HLC only as qualified area history; none of the sources identifies installed hardware or a locksmith need.
+- **Access/property-status caveat:** The HLC combines Cheylesmore and Stivichall, while the library, school and list entry apply only to their named sites. None grants access or work authority, establishes another property's age or designation, or reports present door construction, hardware or condition.
 
 ## `whitley`
 
@@ -409,20 +413,19 @@ Excluded throughout: inferred lock types, locksmith job history or frequency, cr
 
 ## `sowe`
 
-- **Context tags:** `historic-landscape-report`, `river-Sowe-corridor`, `main-river`, `official-open-space`, `modern-locality-boundary-unresolved`.
+- **Context tags:** `historic-landscape-report`, `river-Sowe-corridor`, `main-river`, `official-open-space`, `Grade-II-star-listed-building`, `modern-locality-boundary-unresolved`.
 - **Supported claims:**
-  1. Coventry's North Sowe HLC says the Sowe River Valley runs from Wyken Slough Nature Reserve on Coventry's northern fringe towards Stonebridge Highway in the south, and its northern section passes through Aldermans Green, Wood End, Bell Green, Henley Green and Walsgrave.
-  2. The report identifies Wyken Slough Local Nature Reserve and Wyken Croft Nature Park and says the two are linked by a narrow green river corridor.
-  3. It states that the whole North Sowe character area can be followed by the continuous Sowe Valley Footpath; a separate South Sowe report continues the river-valley evidence through eastern and southern Coventry.
-  4. Coventry City Council's flood guidance says the River Sowe is largely designated Main River and drains much of eastern Coventry.
-  5. Coventry City Council records the named Sowe Common public space at Woodway Lane.
+  1. The North Sowe HLC describes the Sowe River Valley east of Coventry, states that the full river course is split into North and South character areas and names Aldermans Green, Wood End, Bell Green, Henley Green and Walsgrave on the northern route.
+  2. Coventry City Council's flood guidance says the River Sowe is largely classified as Main River and drains eastern Coventry.
+  3. Coventry City Council records Sowe Common at Woodway Lane, Coventry, CV2 2AE.
+  4. Historic England list entry 1115404 identifies the Church of St Mary the Virgin on Hall Lane at Grade II*; its legacy details header uses the historical wording “Walgrave on Sowe”.
 - **Sources:**
-  - Coventry City Council — [North Sowe Character Area, HLC Area 26](https://www.coventry.gov.uk/downloads/file/17438/hlc-area-26-north-sowe-character-area) — supports claims 1–3 for the northern river corridor. Checked 2026-08-29.
-  - Coventry City Council — [South Sowe Character Area, HLC Area 28](https://www.coventry.gov.uk/downloads/file/17439/hlc-area-28-south-sowe-character-area) — supports the continuation of the river-valley context in claim 3. Checked 2026-08-29.
-  - Coventry City Council — [Flooding advice: rivers in Coventry](https://www.coventry.gov.uk/water-management-flooding/flooding-advice/3) — supports claim 4. Checked 2026-08-29.
-  - Coventry City Council — [Sowe Common](https://www.coventry.gov.uk/directory-record/57167/sowe-common) — supports claim 5. Checked 2026-08-29.
-- **Conditional service implication:** Require a full street address and premise description; “Sowe” may refer to the river corridor, historic Walsgrave/Sowe, or a modern locality label, which are not interchangeable.
-- **Access/property-status caveat:** **Boundary evidence unavailable:** the opened official sources do not define a standalone modern residential locality matching the `sowe` slug. The canonical hub may describe the business's declared Sowe service label only when it requires a complete address and makes no mapped-boundary, property, access, construction or hardware inference. No dedicated Sowe service-pair page is released from this evidence.
+  - Coventry City Council — [North Sowe Character Area, HLC Area 26](https://www.coventry.gov.uk/downloads/file/17438/hlc-area-26-north-sowe-character-area) — supports the corridor split and five named northern localities in claim 1. Checked 2026-08-30.
+  - Coventry City Council — [Flooding advice: rivers in Coventry](https://www.coventry.gov.uk/water-management-flooding/flooding-advice/3) — supports the Main River and eastern-drainage statement in claim 2. Checked 2026-08-30.
+  - Coventry City Council — [Sowe Common](https://www.coventry.gov.uk/directory-record/57167/sowe-common) — supports the public-space identity and Woodway Lane address in claim 3. Checked 2026-08-30.
+  - Historic England — [Church of St Mary the Virgin, list entry 1115404](https://historicengland.org.uk/listing/the-list/list-entry/1115404) — supports the exact Hall Lane church's Grade II* designation and legacy “Walgrave on Sowe” wording in claim 4. Checked 2026-08-30.
+- **Conditional service implication:** Require a full street address, premises description, exact threshold and current controller. Keep the multi-locality river corridor, Main River status, Woodway Lane Common and named Hall Lane church separate; apply the historical label only to the church record.
+- **Access/property-status caveat:** **Boundary evidence unavailable:** the verified sources do not define a standalone modern residential locality matching the `sowe` slug. They establish no service boundary, private route, caller authority, current controller, neighbouring-property status, construction, hardware, condition, demand, response time or previous work.
 
 ## `little-heath`
 

@@ -1,6 +1,6 @@
 # South-west service-area evidence register
 
-Checked: baseline corpus 2026-08-29; `alcester`, `baginton`, `bishopton`, `brandon`, `brinklow`, `chase-meadow`, `hampton-in-arden`, `lillington`, `meriden`, `sydenham`, `tiddington` and `woodloes-park` evidence refreshed 2026-08-30.
+Checked: baseline corpus 2026-08-29; `alcester`, `baginton`, `balsall-common`, `bishopton`, `brandon`, `brinklow`, `chase-meadow`, `hampton-in-arden`, `lillington`, `meriden`, `sydenham`, `tiddington`, `wolston` and `woodloes-park` evidence refreshed 2026-08-30.
 Scope: 27 governed area slugs across Leamington Spa, Warwick, Stratford-upon-Avon and the Warwickshire/nearby cluster.
 Source rule: primary official sources only (central-government registers and services, district/borough/county councils, official adopted or submitted planning documents hosted by them, and the named institution's current site where it is needed to establish its visit address).
 
@@ -15,9 +15,9 @@ Source rule: primary official sources only (central-government registers and ser
 ## Counts and unresolved status
 
 - Registry slugs reviewed: **27/27**.
-- Factual claims recorded: **81** (at least two per slug; four each for `alcester`, `baginton`, `bishopton`, `brandon`, `brinklow`, `chase-meadow`, `hampton-in-arden`, `lillington`, `meriden`, `sydenham`, `tiddington` and `woodloes-park`, plus a third for `leamington-spa`, `stratford-upon-avon` and `shilton`).
+- Factual claims recorded: **85** (at least two per slug; four each for `alcester`, `baginton`, `balsall-common`, `bishopton`, `brandon`, `brinklow`, `chase-meadow`, `hampton-in-arden`, `lillington`, `meriden`, `sydenham`, `tiddington`, `wolston` and `woodloes-park`, plus a third for `leamington-spa`, `stratford-upon-avon` and `shilton`).
 - Slugs with at least two official-source claims: **27/27**.
-- Distinct primary deep URLs cited: **69** across **12** publishing bodies (15 Warwick District Council, 11 Stratford-on-Avon District Council, 9 Rugby Borough Council, 8 Solihull Metropolitan Borough Council, 8 Historic England, 5 Charity Commission, 4 Department for Education, 4 Warwickshire County Council, 2 NHS, 1 Coventry City Council, 1 Office for National Statistics and 1 Chase Meadow Community Centre URL); these appear in **87** claim citations because sources are reused where they support more than one slug and several claims cite complementary records.
+- Distinct primary deep URLs cited: **73** across **12** publishing bodies (15 Warwick District Council, 11 Stratford-on-Avon District Council, 9 Rugby Borough Council, 8 Solihull Metropolitan Borough Council, 9 Historic England, 5 Charity Commission, 6 Department for Education, 4 Warwickshire County Council, 2 NHS, 1 Coventry City Council, 1 Office for National Statistics and 1 Chase Meadow Community Centre URL); these appear in **91** claim citations because sources are reused where they support more than one slug and several claims cite complementary records.
 - Slugs with a directly evidenced conservation-area tag: **16/27**.
 - Slugs with a directly evidenced rail tag: **2/27** (`brandon`, `wolston`).
 - Slugs with a directly evidenced river tag: **4/27** (`leamington-spa`, `stratford-upon-avon`, `wolston`, `ryton-on-dunsmore`).
@@ -373,20 +373,32 @@ Source rule: primary official sources only (central-government registers and ser
 
 ### `balsall-common`
 
-**Context tags:** `settlement/local-plan`, `official-parish`
-**Access/property-status caveat:** Balsall Common crosses Balsall and Berkswell parish boundaries. The Balsall plan covers only the Balsall-parish portion, so an address must be assigned to the correct parish/plan before using plan-based copy.
+**Context tags:** `settlement/local-plan`, `official-parish`, `school`, `named-public-site`, `managed-premises`
+**Access/property-status caveat:** Balsall Common crosses Balsall and Berkswell parish boundaries, while the Balsall Street East school and 283 Kenilworth Road library are two separate managed sites. Resolve the exact address, applicable parish, named threshold and current controller; neither plan evidence nor a public-site page supplies access authority, installed hardware or another property's status.
 
 1. **Claim:** Solihull Council made the Balsall Parish Neighbourhood Development Plan on 17 June 2021 and states that it is used to help determine planning applications in its neighbourhood area.
    **Publisher / title / deep URL:** Solihull Metropolitan Borough Council — [Balsall Neighbourhood Plan](https://www.solihull.gov.uk/planning-and-building-control/balsall-neighbourhood-plan).
    **Supports:** Made-plan status, Balsall Parish Council's official role, and the `settlement/local-plan` and `official-parish` tags.
    **Conditional service use:** Apply plan wording only after confirming that the address is inside the Balsall neighbourhood area; it does not prove service reach or a property characteristic.
-   **Checked:** 2026-08-29.
+   **Checked:** 2026-08-30.
 
 2. **Claim:** The made plan states that Balsall Common is one continuous settlement straddling Balsall and Berkswell parishes, and expressly says the plan applies to the Balsall Common area within Balsall parish, not the whole settlement.
    **Publisher / title / deep URL:** Solihull Metropolitan Borough Council (host; Balsall Parish Council plan) — [Balsall Parish Neighbourhood Development Plan 2018-2033](https://www.solihull.gov.uk/sites/default/files/2021-06/Balsall-Parish-Neighbourhood-Development-Plan.pdf), sections 1.6 and 1.12.
    **Supports:** The critical parish-boundary limitation for Balsall Common.
    **Conditional service use:** Resolve the address to Balsall or Berkswell parish before using either plan; never apply Balsall-plan facts to the Berkswell portion by assumption.
-   **Checked:** 2026-08-29.
+   **Checked:** 2026-08-30; sections 1.6 and 1.12 were also visually checked in the official PDF.
+
+3. **Claim:** The Department for Education identifies Balsall Common Primary School at Balsall Street East, Balsall Common, Coventry, West Midlands, CV7 7FS.
+   **Publisher / title / deep URL:** Department for Education — [Balsall Common Primary School, URN 138536](https://get-information-schools.service.gov.uk/Establishments/Establishment/Details/138536).
+   **Supports:** The official establishment identity and exact address of one managed education site, plus the `school` and `managed-premises` tags.
+   **Conditional service use:** If an instruction concerns the school, identify the exact gate, block or door and a current authorised representative. The record does not grant access, name a keyholder, describe installed hardware or establish conditions at neighbouring premises.
+   **Checked:** 2026-08-30.
+
+4. **Claim:** Solihull Metropolitan Borough Council identifies Balsall Common Library at 283 Kenilworth Road, Balsall Common, Coventry, CV7 7EL.
+   **Publisher / title / deep URL:** Solihull Metropolitan Borough Council — [Balsall Common Library](https://www.solihull.gov.uk/libraries/balsall-common-library).
+   **Supports:** One named council library and its complete address, plus the `named-public-site` and `managed-premises` tags.
+   **Conditional service use:** Apply the page only to the named library. It identifies no current facilities representative, requested opening, work authority, installed lock or condition; do not reproduce changeable opening hours as a stable locality fact.
+   **Checked:** 2026-08-30.
 
 ### `meriden`
 
@@ -448,20 +460,32 @@ Source rule: primary official sources only (central-government registers and ser
 
 ### `wolston`
 
-**Context tags:** `conservation-area-present`, `settlement/local-plan`, `official-parish`, `rail`, `river`
-**Access/property-status caveat:** The conservation area covers only a limited part of Wolston and differs from the parish/neighbourhood-plan area; river and railway features do not prove a service route, crossing availability or property status.
+**Context tags:** `conservation-area-present`, `settlement/local-plan`, `official-parish`, `rail`, `river`, `school`, `listed-building-present`, `managed-premises`
+**Access/property-status caveat:** The conservation area covers only a limited part of Wolston and differs from the neighbourhood-planning area. The Brookside school and Grade I Main Street church are separate exact sites. Verify the address, current boundary and planning stage, named opening and present controller; river and railway features do not prove a route, and neither site record grants access or describes another property's status or hardware.
 
 1. **Claim:** Rugby Borough Council's appraisal says the Wolston Conservation Area covers only a limited part of the village; most buildings in the designation are south of the River Avon, and a railway bridge at its northern tip separates Wolston from Brandon.
    **Publisher / title / deep URL:** Rugby Borough Council — [Wolston Conservation Area Character Appraisal](https://www.rugby.gov.uk/documents/20124/6569677/Wolston_Character_Appraisal.pdf/bc559f87-8d33-e741-9b96-c4797248699b?t=1750866416447), “Location and context”.
    **Supports:** The `conservation-area-present`, `river` and `rail` tags and a clear boundary limitation.
    **Conditional service use:** Use river/rail references only for address orientation after verification; do not infer travel route, delay, coverage or the conservation status of the whole village.
-   **Checked:** 2026-08-29.
+   **Checked:** 2026-08-30.
 
 2. **Claim:** Rugby Borough Council maintains an official Wolston Neighbourhood Plan record with a neighbourhood-area decision statement, Call for Sites documents and a November 2024 SEA/HRA screening determination, but the page does not state that a plan has been made.
    **Publisher / title / deep URL:** Rugby Borough Council — [Wolston Neighbourhood Plan](https://www.rugby.gov.uk/w/wolston-neighbourhood-plan).
    **Supports:** Official parish-level plan activity, including the Call for Sites and November 2024 screening stage, and the `settlement/local-plan` and `official-parish` tags, while preserving the unresolved adoption status.
    **Conditional service use:** It is acceptable to say that neighbourhood planning documents exist; do not call the Wolston plan adopted or part of the development plan without later official evidence.
-   **Checked:** 2026-08-29.
+   **Checked:** 2026-08-30.
+
+3. **Claim:** The Department for Education identifies Wolston St Margaret's CofE Primary School at Brookside, Main Street, Wolston, Coventry, Warwickshire, CV8 3HH.
+   **Publisher / title / deep URL:** Department for Education — [Wolston St Margaret's CofE Primary School, URN 125676](https://get-information-schools.service.gov.uk/Establishments/Establishment/Details/125676).
+   **Supports:** The official establishment identity and exact address of one managed education site, plus the `school` and `managed-premises` tags.
+   **Conditional service use:** If an instruction concerns the school, identify the gate, block or door and obtain current site authority. The directory supplies no keyholder, access arrangement, installed hardware, condition or fact about another Main Street property.
+   **Checked:** 2026-08-30.
+
+4. **Claim:** Historic England list entry 1185682 identifies the Church of St Margaret on Main Street, Wolston, as a Grade I listed building.
+   **Publisher / title / deep URL:** Historic England — [Church of St Margaret, list entry 1185682](https://historicengland.org.uk/listing/the-list/list-entry/1185682).
+   **Supports:** The exact church's statutory address and Grade I designation, plus the `listed-building-present` tag.
+   **Conditional service use:** Apply the designation only to the named church and identify the actual doorway. The entry does not report current condition or hardware, grant access or work authority, or determine consent for an unspecified alteration.
+   **Checked:** 2026-08-30; the official page rendered in browser retrieval while unauthenticated command-line retrieval may be bot-gated.
 
 ### `ryton-on-dunsmore`
 

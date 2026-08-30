@@ -58,8 +58,8 @@ export const COVENTRY_AREA_SEARCH_DESCRIPTIONS = {
     sourceIds: ['willenhall-hlc'],
   },
   cheylesmore: {
-    description: 'Cheylesmore locksmith help for lockouts, repairs and upgrades, with Coventry’s HLC describing extensive housing south of the city centre from 1936 to 1955.',
-    sourceIds: ['cheylesmore-stivichall-hlc'],
+    description: 'Cheylesmore locksmith guidance separating combined-area history, Poitiers Road library, Ulverscroft Road school and Grade II* Frankpledge Road church.',
+    sourceIds: ['cheylesmore-stivichall-hlc', 'coventry-cheylesmore-library', 'cheylesmore-manor-park-primary-dfe', 'cheylesmore-christ-church-he'],
   },
   whitley: {
     description: 'Whitley locksmith help for lockouts and repairs; records cover the Sowe Valley setting, common, Meadow Park School, recorded as open, and listed Abbey Bridge.',
@@ -114,8 +114,8 @@ export const COVENTRY_AREA_SEARCH_DESCRIPTIONS = {
     sourceIds: ['wood-end-brookstray'],
   },
   sowe: {
-    description: 'Sowe locksmith help for lockouts, repairs and upgrades, with Coventry’s HLC describing the North Sowe River Valley east of the city.',
-    sourceIds: ['north-sowe-hlc'],
+    description: 'Sowe locksmith guidance separating the multi-locality river corridor and Main River status from Woodway Lane Common and the Grade II* Hall Lane church.',
+    sourceIds: ['north-sowe-hlc', 'coventry-river-sowe-flooding', 'sowe-common', 'sowe-st-mary-virgin-he'],
   },
   'little-heath': {
     description: 'Little Heath locksmith help for lockouts, repairs and lock changes, with Coventry’s HLC recording a former medieval common and later ribbon weaving.',
