@@ -38,7 +38,10 @@ const COVENTRY_AREA_SLUGS = [
 
 type CoventryAreaSlug = (typeof COVENTRY_AREA_SLUGS)[number]
 
+const COVENTRY_PROMOTION_REVIEWED_ON = '2026-08-30'
+
 interface PairContext {
+  heading?: string
   local: string
   decision: string
   checks: [string, string]
@@ -55,6 +58,7 @@ interface AreaGuideSeed {
   facts: AreaGuideFact[]
   factOnlySourceIds?: string[]
   sources: AreaGuideSource[]
+  reviewedOn?: string
   contexts: Record<ServiceAreaSlug, PairContext>
 }
 
@@ -264,24 +268,24 @@ const COVENTRY_EDITORIAL_COPY_A = {
   },
   'wyken': {
     'emergency-lockout': {
-      first: 'The River Sowe boundary, medieval church settlement and wider designation counts locate Wyken history but do not identify a caller or door, so verify the full address, exact opening and authority before any access decision.',
-      second: 'Inspect that entrance as a complete door set and explain the proposed work and charge before starting; scheduled monuments, listed-building totals and the river route cannot indicate the lock condition or entry method.',
+      first: 'For a managed-premises request, record the caller\'s role, a callback route for the organisation and any handover details available at attendance. If entitlement cannot be resolved, limit the visit to observations that do not defeat the lock; urgency alone does not replace a completed authority check.',
+      second: 'After authority is established, examine the cylinder, case, furniture, frame and hinges before choosing an entry approach. Explain the least disruptive supported method and the expected service-call price as separate matters. Should inspection change that Wyken price, secure the customer\'s agreement to the revised figure before applying it.',
     },
     'lock-change': {
-      first: 'Wyken\'s medieval settlement and area-scale heritage totals do not show which lock is fitted at a present address, so examine the door, frame, hinges and hardware and record the authorised reason for change.',
-      second: 'Because the source records listed buildings and scheduled monuments, verify the exact property and proposed scope; where alteration may affect a listed building\'s special interest, check consent before work. Propose correctly sized and accredited hardware only for the inspected assembly.',
+      first: 'Ask whether lost keys, unreliable operation, a tenancy event or a written security requirement prompted the call, because those reasons lead to different decisions. Test the existing lock before condemning it, check how the door closes, and distinguish a key-control concern from faults in the cylinder, case, furniture or alignment.',
+      second: 'Record the fitted dimensions and operating function before comparing compatible components, and retain photographs where they help document the existing assembly. State the supported replacement option and its expected charge. If findings alter the service-call price, obtain agreement to the new Wyken figure before charging it, without treating price acceptance as property consent.',
     },
     'upvc-lock-repair': {
-      first: 'River-valley location, medieval settlement and designation counts cannot prove a Wyken door is uPVC or uses multipoint locking, so collect the material, handle travel, key movement, door-position behaviour and visible locking-layout details.',
-      second: 'Use those observations to assess the identified mechanism with its frame and hinges, keeping the church and River Sowe records within their locality purpose. Describe the supported repair and likely cost to the authorised Wyken controller; if the service-call price changes, obtain that person\'s agreement before the changed amount applies.',
+      first: 'Ask the caller not to force a resistant key or repeatedly lift a jammed handle while the fault is being assessed. A short symptom sequence—what moved first, whether the fault developed suddenly and whether the door can still open—helps separate an immediate access problem from a repair that can wait for inspection.',
+      second: 'Test operation with the door open before loading the mechanism against its keeps, then inspect alignment, hinges, gearbox action and cylinder response in a controlled order. Describe only the repair supported by those findings. If the Wyken service-call price must change, obtain the customer\'s agreement to that revised amount before it is applied.',
     },
     'boarding-up': {
-      first: 'A damaged opening near the church, River Sowe or another Wyken location requires a precise address and responsible controller. If it may form part of an investigation, photograph the scene and preserve possible evidence while following any police guidance received.',
-      second: 'Area totals do not establish whether that building is protected, so check the exact status and whether temporary work may affect special interest; if it may, verify listed-building consent before temporary work begins. Let the observed Wyken opening define the outside securing work and expected price; if the service-call price changes, obtain the authorised controller\'s agreement before the revision applies.',
+      first: 'Before measuring, check for unsafe glass, exposed fixings and any instruction from police about preserving the scene. Photograph the damage without moving possible evidence, note whether the opening is a door or window, and record its accessible fixing surfaces, dimensions and weather exposure so temporary materials are not chosen from a verbal description alone.',
+      second: 'Choose a reversible securing arrangement that matches the observed substrate and limits further damage, then state what the temporary measure will and will not protect. Give the expected service-call price separately. If conditions at the Wyken opening change that price, obtain the authorised customer\'s agreement to the revised amount before charging it.',
     },
     'lock-upgrade': {
-      first: 'Medieval origins, the river boundary and character-area designations cannot specify an upgrade for a Wyken entrance, so document the full door assembly and a written requirement from the person authorised to approve it.',
-      second: 'Verify whether the address is listed or otherwise controlled and assess the proposed scope; listed-building consent is relevant where alteration may affect special architectural or historic character. Then compare correct cylinder fit and accredited products with the inspected door set.',
+      first: 'Translate the customer\'s objective into a testable brief: improved key control, resistance to a stated attack concern, or compliance with wording supplied by an insurer, landlord or facilities manager. Record each entrance separately, including cylinder projection, visible certification marks, handle protection and the condition of the frame, hinges and keeps.',
+      second: 'Compare independently certified products only after compatibility and dimensions have been checked, and explain the limits of an upgrade that leaves weaker parts of the assembly unchanged. Quote the supported Wyken option at the expected service-call price; if later findings revise that price, get agreement to the changed figure before it applies.',
     },
   },
 } satisfies Partial<Record<CoventryAreaSlug, Record<ServiceAreaSlug, PairEditorialCopy>>>
@@ -377,24 +381,24 @@ const COVENTRY_EDITORIAL_COPY_C = {
   },
   'aldermans-green': {
     'emergency-lockout': {
-      first: 'The River Sowe boundary, mixed western land and historic road record describe Aldermans Green broadly but cannot identify the caller or door, so obtain the full address, exact opening and evidence of authority.',
-      second: 'Inspect that entrance as a complete door set and explain the proposed work and charge; the early road name and river-valley route cannot establish present occupancy, hardware condition or entry method.',
+      first: 'For an institutional call, note the requester\'s job role, obtain a callback through the organisation\'s normal contact route and record who will meet the locksmith. A residence or commercial unit instead needs its own occupancy or management evidence. If those checks remain unresolved, do not bypass the locking system merely because the request is urgent.',
+      second: 'Once entitlement is settled, assess the keyway, cylinder, latch or case, handle operation and door alignment before selecting a non-destructive approach where practicable. Explain the intended method and expected charge independently. If inspection changes the Aldermans Green service-call price, obtain agreement to the revised amount before applying it.',
     },
     'lock-change': {
-      first: 'Residential and industrial context, road history and designation totals do not identify a lock at an Aldermans Green address, so examine the current assembly and document its authorised repair or replacement purpose.',
-      second: 'Because the totals are character-area evidence rather than property records, verify any exact controls through the responsible party, then match correctly sized cylinders and accredited products to the observed door set. Provide the expected price for that measured Aldermans Green option; if the service-call price changes, obtain the responsible party\'s agreement before the revised figure applies.',
+      first: 'Establish the reason for changing the lock and whether the customer needs restored operation, revoked key access or a documented hardware standard. Test the present assembly, note any door movement or worn furniture and decide whether a correctly fitted component repair could meet the requirement before proposing wholesale replacement.',
+      second: 'Take the relevant cylinder, spindle, backset and case measurements from the entrance itself and check that the proposed component preserves its required operating function. Present the compatible option with an expected service-call price. Should further findings alter that price, obtain the customer\'s agreement to the changed Aldermans Green amount before it is charged.',
     },
     'upvc-lock-repair': {
-      first: 'River, land-use and road-history evidence cannot prove that an Aldermans Green entrance uses uPVC or multipoint locking, so record the material, handle and key action, open-and-closed behaviour and visible faceplate details.',
-      second: 'Keep the North Sowe route separate from the mechanical assessment and examine the identified lock with its frame and hinges. Describe the compatible repair and expected cost from that evidence; if the service-call price changes, obtain the Aldermans Green controller\'s agreement before the changed cost applies.',
+      first: 'Capture the failure sequence before anyone applies more force: whether the handle lifts fully, whether the key turns, whether the latch retracts and whether the symptoms change as pressure is taken off the door. Clear photographs of the faceplate and keeps can guide preparation, but they do not replace the on-site functional test.',
+      second: 'Operate the mechanism with the door open, then compare that result with closed-door loading to separate internal failure from frame or hinge alignment. Explain the repair justified by the test results and its expected price. If the service-call price changes after assessment, obtain agreement to the new Aldermans Green figure before charging it.',
     },
     'boarding-up': {
-      first: 'A damaged opening near the river, residential land or industrial premises needs an exact Aldermans Green address and authorised controller. If the event may be evidential, preserve photographs and follow any police directions given before possible evidence is disturbed.',
-      second: 'As the area report counts listed buildings without identifying the scene, verify the property status and whether temporary work may affect special interest; if it may, check listed-building consent before work begins. Describe the outside securing work from the inspected opening and provide the expected price; if the service-call price changes, obtain the Aldermans Green controller\'s agreement before the revision applies.',
+      first: 'Treat scene preservation and physical safety as separate checks. Record broken glazing, unstable frames, exposed edges and any police reference before clearing or covering material, then measure the opening and note its surrounding surfaces and access restrictions. That inspection determines what can be secured temporarily without making unsupported assumptions about concealed construction.',
+      second: 'Select fixings and panels for the observed substrate, keep the temporary intervention no larger than necessary and document any part of the opening that remains vulnerable. State the service boundary and expected charge separately. If site conditions change the Aldermans Green service-call price, obtain agreement to the revised sum before applying it.',
     },
     'lock-upgrade': {
-      first: 'Historic road evidence, the river corridor and area-wide designation counts do not support a single Aldermans Green upgrade, so inspect the individual door set and obtain the authorised customer\'s written requirement.',
-      second: 'Confirm property-specific management or heritage controls rather than assigning status from the totals, then compare correct cylinder fit and accredited hardware with the actual frame, hinges, door and lock. Provide the expected price for the supported option; if the service-call price changes, obtain the authorised controller\'s agreement before the new amount applies.',
+      first: 'Ask the decision-maker to define the intended outcome and supply any insurer, landlord or organisational wording that the installation must address. Survey each affected entrance rather than extrapolating from one door, recording cylinder dimensions, key-control needs, existing certification marks, handle protection, frame condition and hinge security as separate observations.',
+      second: 'Use those observations to compare compatible, independently certified components and explain residual weaknesses that a cylinder or lock-only change would leave untouched. Provide the expected price for the supported option. If later inspection revises the Aldermans Green service-call price, obtain the customer\'s agreement to the changed figure before it takes effect.',
     },
   },
   'potters-green': {
@@ -688,24 +692,24 @@ const COVENTRY_EDITORIAL_COPY_B = {
   },
   'allesley': {
     'emergency-lockout': {
-      first: 'Medieval village origins, Birmingham Road buildings, the church, conservation area and neighbourhood boundary do not identify a caller\'s doorway, so verify the complete Allesley address, exact entrance and authority before access.',
-      second: 'Separate a private instruction from church or managed-premises access, then inspect the actual lock within its door, frame and hinges and explain the proposed work and price without deriving a method from heritage context.',
+      first: 'Record the requester\'s role and a reliable callback route before attendance, then check identification against the occupier or organisation responsible for the entrance. Managed premises may also need a key-holder or facilities handover. Where entitlement remains uncertain, restrict activity to non-invasive observation until the appropriate controller can confirm it.',
+      second: 'Inspect the keyway, cylinder, latch or case, furniture and door alignment as one system before deciding how access could be restored with the least avoidable damage. Describe the intended approach and expected charge separately. If the Allesley service-call price changes after inspection, obtain agreement to that revised price before applying it.',
     },
     'lock-change': {
-      first: 'The concentration of historic houses and the conservation-area core cannot show which hardware is fitted at a particular Allesley property, so inspect its complete door set and document the authorised repair or replacement objective.',
-      second: 'Treat the neighbourhood body and the individual property controller as separate roles, verifying any address-specific requirements before choosing correct cylinder dimensions or accredited products. Describe the supported Allesley specification and provide its expected price; if the service-call price changes, obtain the property controller\'s agreement before the new amount applies.',
+      first: 'Clarify whether the customer is responding to lost keys, a defective mechanism, an occupier change or a written security requirement. Inspect operation before removing components, record the existing furniture and fixing pattern, and consider whether a measured cylinder or case repair can meet the stated need with less disturbance to the door.',
+      second: 'Photograph and measure the current assembly before selecting parts so that cylinder projection, backset, spindle position and operating function remain compatible. Explain the supported option and give its expected service-call price. If discoveries at the Allesley door revise that price, obtain the customer\'s agreement to the changed amount before it is charged.',
     },
     'upvc-lock-repair': {
-      first: 'Village age, historic buildings and neighbourhood designation cannot prove that an Allesley entrance is uPVC or multipoint, so record the exact door material, handle travel, key movement, position-dependent behaviour and visible component details.',
-      second: 'Keep the conservation-area evidence separate from the mechanical assessment, examine the identified lock with its frame and hinges and set out the compatible repair and expected charge to the authorised customer.',
+      first: 'Ask for the order in which the symptoms appeared and advise against forcing a resistant handle or key while the door remains operable. Note whether lifting the handle engages every point, whether the key completes its turn and whether gentle pressure on the door changes the result; photographs can support preparation only.',
+      second: 'Compare open-door mechanism travel with closed-door loading, then inspect keeps, hinges, frame alignment, gearbox movement and cylinder action before isolating the fault. State the repair supported by that sequence and the expected charge. Should the Allesley service-call price change after diagnosis, obtain agreement to the revised figure before applying it.',
     },
     'boarding-up': {
-      first: 'Damage at the church, a Birmingham Road building or another Allesley property requires a precise opening and responsible controller. If potential evidence is present, retain photographs and follow any police directions received before it is moved.',
-      second: 'Because the village core includes listed buildings and a conservation area, verify the exact status and proposed scope; if temporary work may affect a listed building\'s special interest, check consent before work begins. Describe the outside securing measure from the inspected Allesley opening and provide the expected price; if the service-call price changes, obtain the controller\'s agreement before the revised amount applies.',
+      first: 'Before touching the scene, record unstable glazing, exposed sharp edges, weather entry and any police instruction affecting evidence. Measure the damaged aperture and inspect sound fixing surfaces from a safe position, noting obstructions and occupied areas. These observations allow temporary materials to be prepared without presuming what sits behind the visible frame.',
+      second: 'Prefer a reversible arrangement sized to the observed opening and explain any remaining limitation, such as an adjacent damaged panel outside the authorised service boundary. Provide the expected service-call price separately. If the conditions found in Allesley change that price, obtain the customer\'s agreement to the revised amount before it is applied.',
     },
     'lock-upgrade': {
-      first: 'Allesley\'s historic buildings and neighbourhood designation cannot establish an area-wide hardware need, so document the individual entrance, full door assembly and written objective supplied by its authorised controller.',
-      second: 'Check address-and-scope conservation requirements; if the property is a listed building, verify consent where changing hardware may affect special architectural or historic character. Then compare correctly sized cylinders and accredited products against the inspected door set and provide the expected price; if the service-call price changes, obtain the Allesley controller\'s agreement before the revision applies.',
+      first: 'Turn the customer\'s concern into a written objective and obtain any exact insurer, landlord or managing-agent wording before products are discussed. Survey each affected entrance independently, recording existing certification marks, cylinder projection, key-control arrangements, handle protection and the condition of the case, frame, keeps and hinges.',
+      second: 'Compare independently certified options only after the existing dimensions and operating function are known, and make clear which residual weaknesses would remain outside a lock-only change. Give the expected price for the supported Allesley option. If subsequent findings change the service-call price, obtain agreement to the revised figure before it applies.',
     },
   },
   'allesley-park': {
@@ -909,7 +913,7 @@ function buildServiceGuidance(
   const editorial = COVENTRY_EDITORIAL_COPY[seed.slug][service]
   const faq = SERVICE_FAQS[service][variant % SERVICE_FAQS[service].length]
   return {
-    heading: SERVICE_HEADINGS[service](seed.name),
+    heading: context.heading ?? SERVICE_HEADINGS[service](seed.name),
     body: [
       `${context.local} ${editorial.first}`,
       `${context.decision} ${editorial.second}`,
@@ -946,7 +950,7 @@ function buildGuide(seed: AreaGuideSeed, areaIndex: number): GovernedAreaGuide {
 
   return {
     slug: seed.slug,
-    reviewedOn: EVIDENCE_REVIEWED_ON,
+    reviewedOn: seed.reviewedOn ?? EVIDENCE_REVIEWED_ON,
     summary: seed.summary,
     accessGuidance: seed.accessGuidance,
     evidenceLimits: seed.evidenceLimits,
@@ -1016,6 +1020,7 @@ function localitySource(
   url: string,
   supports: string,
   kind: AreaGuideSource['kind'] = 'locality',
+  checkedOn: string = EVIDENCE_REVIEWED_ON,
 ): AreaGuideSource {
   const override = CANONICAL_LOCALITY_SOURCE_OVERRIDES[id]
   return {
@@ -1024,7 +1029,7 @@ function localitySource(
     publisher,
     url,
     supports: override?.supports ?? supports,
-    checkedOn: EVIDENCE_REVIEWED_ON,
+    checkedOn,
     kind: override?.kind ?? kind,
   }
 }
@@ -1804,80 +1809,94 @@ const AREA_SEEDS: AreaGuideSeed[] = [
     slug: 'wyken',
     name: 'Wyken',
     region: 'West Midlands',
+    reviewedOn: COVENTRY_PROMOTION_REVIEWED_ON,
     summary: [
-      'The Wyken and Upper Stoke HLC places the River Sowe at the eastern boundary and records medieval Wyken settlement around St Mary Magdalene at Wyken Croft, alongside several area-scale heritage designations.',
-      'Those designations and historic-settlement facts apply across a broad character area. They do not make every Wyken property scheduled, listed, old or subject to the same entrance and hardware conditions.',
+      'Official records describe mid-20th-century housing and the River Sowe edge, list the Grade I Church of St Mary Magdalen, and identify Wyken Croft Primary School and Wyken Croft Nature Park.',
+      'The four records cover a broad character area and three named destinations. They do not establish shared boundaries, entrances, ownership, building status, door construction, access authority or installed locks at another Wyken address.',
     ],
-    accessGuidance: 'Use the exact property and entrance, confirm owner or occupier authority, and check the individual designation record before visible work. Do not infer protected status from the Wyken name or character-area totals.',
-    evidenceLimits: 'The River Sowe boundary, medieval-settlement history and counts of scheduled, archaeological and listed assets are character-area facts. They do not establish any individual building\'s status, construction, access or lock.',
+    accessGuidance: 'Use the full address and exact entrance, especially where “Wyken Croft” could mean the church, school, nature park or another property. Obtain the relevant occupier or site authority; a directory entry and shared road name do not authorise locksmith work.',
+    evidenceLimits: 'The HLC is area-scale evidence. The church listing applies only to the named asset, and the school and park directories apply only to those destinations. None establishes another property\'s use, status, entrance, hardware or controller.',
     facts: [
       {
-        heading: 'Wyken eastern River Sowe boundary',
-        text: 'The Wyken and Upper Stoke HLC is east of Coventry city centre and is bounded by the River Sowe on its eastern side.',
+        heading: 'Wyken mid-century housing and river edge',
+        text: 'The Wyken and Upper Stoke HLC describes much of the character area as mid-20th-century housing and places the River Sowe at its eastern boundary.',
         sourceIds: ['wyken-upper-stoke-hlc'],
-        serviceRelevance: 'The river boundary can orient an address but cannot establish the property, entrance or responsible party.',
+        serviceRelevance: 'Use the area context only to confirm location; inspect the actual entrance instead of inferring its construction or lock.',
       },
       {
-        heading: 'Medieval Wyken church settlement',
-        text: 'The report records medieval Wyken settlement clustered around the 12th-century church of St Mary Magdalene at Wyken Croft.',
-        sourceIds: ['wyken-upper-stoke-hlc'],
-        serviceRelevance: 'Historic-core context should lead to address-level status checks before external alteration.',
+        heading: 'St Mary Magdalen listed church',
+        text: 'Historic England lists the Church of St Mary Magdalen at Wyken Croft as Grade I under National Heritage List entry 1076583.',
+        sourceIds: ['wyken-st-mary-magdalen-he'],
+        serviceRelevance: 'Apply the listing only to the named church and check the exact work and authority before alteration.',
       },
       {
-        heading: 'Wyken and Upper Stoke heritage designations and South Sowe route',
-        text: 'The wider character area records two scheduled monuments, eleven archaeological constraint areas and eight listed buildings; the South Sowe HLC also names Wyken on the river-valley route.',
-        sourceIds: ['wyken-upper-stoke-hlc', 'south-sowe-hlc'],
-        serviceRelevance: 'Area totals cannot identify a protected building; verify the exact asset and proposed work.',
+        heading: 'Wyken Croft Primary directory address',
+        text: 'Coventry City Council lists Wyken Croft Primary School at Wyken Croft, Coventry, with the postcode CV2 3AA.',
+        sourceIds: ['wyken-croft-primary-school'],
+        serviceRelevance: 'Use the school\'s responsible contact and exact entrance for school work; the address grants no wider authority.',
+      },
+      {
+        heading: 'Wyken Croft nature park record',
+        text: 'Coventry City Council locates Wyken Croft Nature Park at Wyken Croft, CV2 3AB, and describes it as the city\'s first ecological park.',
+        sourceIds: ['wyken-croft-nature-park'],
+        serviceRelevance: 'Public access to the park does not authorise work on a gate, facility or neighbouring property.',
       },
     ],
     sources: [
-      localitySource('wyken-upper-stoke-hlc', 'Wyken and Upper Stoke Character Area, HLC Area 44', 'Coventry City Council', 'https://www.coventry.gov.uk/downloads/file/17421/hlc-area-44-wyken-and-upper-stoke-character-area', 'River Sowe boundary, medieval Wyken settlement and character-area designation totals.', 'property-status'),
-      localitySource('south-sowe-hlc', 'South Sowe Character Area, HLC Area 28', 'Coventry City Council', 'https://www.coventry.gov.uk/downloads/file/17439/hlc-area-28-south-sowe-character-area', 'Wyken\'s place on the wider South Sowe river-valley corridor.'),
+      localitySource('wyken-upper-stoke-hlc', 'Wyken and Upper Stoke Character Area, HLC Area 44', 'Coventry City Council', 'https://www.coventry.gov.uk/downloads/file/17421/hlc-area-44-wyken-and-upper-stoke-character-area', 'Mid-20th-century housing context and the eastern River Sowe boundary.', 'property-status'),
+      localitySource('wyken-st-mary-magdalen-he', 'CHURCH OF ST MARY MAGDALEN', 'Historic England', 'https://historicengland.org.uk/listing/the-list/list-entry/1076583', 'The Grade I listing, statutory name and Wyken Croft address for the church.', 'property-status', COVENTRY_PROMOTION_REVIEWED_ON),
+      localitySource('wyken-croft-primary-school', 'Wyken Croft', 'Coventry City Council', 'https://www.coventry.gov.uk/directory-record/43035/wyken-croft', 'The council directory address and postcode for Wyken Croft Primary School.', 'locality', COVENTRY_PROMOTION_REVIEWED_ON),
+      localitySource('wyken-croft-nature-park', 'Wyken Croft Nature Park', 'Coventry City Council', 'https://www.coventry.gov.uk/directory-record/57139/wyken-croft-nature-park', 'The park address and council description as Coventry\'s first ecological park.', 'locality', COVENTRY_PROMOTION_REVIEWED_ON),
     ],
     contexts: {
       'emergency-lockout': {
-        localFactIndexes: [0, 1, 2],
-        local: 'The official Wyken evidence spans a river-edge character area and a historic settlement around St Mary Magdalene at Wyken Croft. Neither identifies the requested building, so record the full address and precise doorway.',
-        decision: 'Scheduled, archaeological and listed assets are counted across the wider HLC, but those totals do not prove a caller\'s property status or entitlement. Confirm both the individual address and the authorised requester.',
+        heading: 'Confirming Authority for a Wyken Lockout',
+        localFactIndexes: [2, 3],
+        local: 'Coventry City Council lists Wyken Croft Primary School at Wyken Croft, CV2 3AA, and Wyken Croft Nature Park at CV2 3AB. These are separate directory records, so an emergency call must identify the exact premises, entrance and authorised controller rather than rely on the shared road name.',
+        decision: 'The nature-park and school directories identify separate named sites. A published address is not evidence that a caller may open a gate, classroom or facility, and it gives no authority over a nearby residence.',
         checks: [
-          'Record the full address and precise doorway across Wyken\'s river-edge character area and historic settlement.',
-          'Confirm both the individual property and authorised requester; area-wide scheduled, archaeological and listed totals establish neither status nor entitlement.',
+          'Distinguish Wyken Croft Primary at CV2 3AA from the nature park at CV2 3AB and identify the exact locked opening.',
+          'Use the relevant school or park contact and verify authority; a directory entry grants no locksmith permission.',
         ],
       },
       'lock-change': {
-        localFactIndexes: [0, 1, 2],
-        local: 'Before any visible or external change near the historic Wyken settlement, check the exact designation because the wider character area includes listed and scheduled assets. Do not turn those area-wide records into a blanket heritage assumption for Wyken.',
-        decision: 'An address near the River Sowe boundary still needs direct inspection of its door and current hardware. River-corridor context cannot select a replacement or show that an external alteration is permitted.',
+        heading: 'Planning a Wyken Lock Change at a Listed Address',
+        localFactIndexes: [0, 1],
+        local: 'The Wyken and Upper Stoke HLC supplies area-scale housing and River Sowe context, while Historic England\'s entry identifies the Church of St Mary Magdalen at Wyken Croft as a specific Grade I building. Establish whether the instruction concerns that asset or a separate Wyken address before planning a change.',
+        decision: 'Mid-20th-century housing context cannot establish a door\'s age or lock, and the church listing cannot be transferred to neighbouring premises. Check the exact property and scope, then follow the authorised approval route if work at the listed church may affect its special interest.',
         checks: [
-          'Check the exact designation before visible work near historic Wyken; do not apply area-wide heritage records to every address.',
-          'Inspect the door and current hardware directly; River Sowe context cannot select a replacement or establish permission.',
+          'Confirm whether the job is at the Grade I Church of St Mary Magdalen or another Wyken property before applying heritage controls.',
+          'Inspect and measure the actual door set; broad housing and river context cannot select or authorise replacement hardware.',
         ],
       },
       'upvc-lock-repair': {
-        localFactIndexes: [0, 1, 2],
-        local: 'Neither the 12th-century church context nor the character-area designation totals provide evidence that a particular Wyken door is timber, uPVC or multipoint. Record the actual door and its key-and-handle behaviour.',
-        decision: 'The River Sowe boundary and route can help disambiguate location, but they do not explain a mechanism fault. Keep the geographic check separate from inspection of the frame, hinges, alignment and lock.',
+        heading: 'Diagnosing a Wyken uPVC Lock at the Exact Door',
+        localFactIndexes: [0, 2],
+        local: 'The HLC\'s mid-20th-century housing description is broad character evidence, not proof of uPVC or multipoint locking at a particular home. Coventry City Council\'s Wyken Croft Primary record identifies a named managed site, so establish whether the reported entrance belongs to the school or a separate property.',
+        decision: 'The River Sowe boundary may help orient the address, and the school postcode may identify that premises, but neither explains a jammed handle, key resistance or alignment fault. Diagnosis must come from the actual door, mechanism and behaviour, with authority confirmed for the precise entrance.',
         checks: [
-          'Record the actual door, handle and key behaviour; church history and designation totals do not identify material or mechanism.',
-          'Keep River Sowe location checks separate from inspection of the frame, hinges, alignment and lock.',
+          'Confirm whether the entrance is at Wyken Croft Primary or another property; the HLC and directory identify no lock type.',
+          'Record material, handle and key behaviour with the door open and closed before selecting a compatible repair.',
         ],
       },
       'boarding-up': {
-        localFactIndexes: [0, 1, 2],
-        local: 'If a damaged opening is described as near Wyken Croft or the historic church, identify the exact building and check whether its designation is one of those recorded area-wide. Do not transfer status by proximity.',
-        decision: 'For a site on the River Sowe edge, confirm the property boundary and authorised responsible party before temporary securing. The South Sowe corridor source does not establish ownership or access for the affected opening.',
+        heading: 'Boarding Up a Damaged Wyken Opening Safely',
+        localFactIndexes: [1, 3],
+        local: 'Historic England\'s record applies to the Grade I Church of St Mary Magdalen, while the council directory identifies Wyken Croft Nature Park as a separate named site. A report “near Wyken Croft” must therefore resolve the exact building, facility, gate, door or window before temporary securing is considered.',
+        decision: 'The statutory church entry does not designate the park, and the park directory does not establish control of an opening. Confirm the responsible church or park representative and any property-specific constraints, then limit the instruction to the observed damage and the authorised temporary scope.',
         checks: [
-          'Identify the exact building near Wyken Croft and verify its designation; do not transfer protected status by proximity.',
-          'At the River Sowe edge, confirm the property boundary and authorised responsible party before temporary securing.',
+          'Distinguish the Grade I church from Wyken Croft Nature Park and record the exact damaged opening and asset controller.',
+          'Treat the park directory as site identification only and check the listed church\'s approval route for the actual temporary scope.',
         ],
       },
       'lock-upgrade': {
+        heading: 'Specifying a Wyken Lock Upgrade From Inspection',
         localFactIndexes: [0, 1, 2],
-        local: 'Because Wyken\'s area-wide totals include eight listed buildings, verify whether the individual address has protected status before visible changes. The two scheduled monuments and eleven archaeological constraint areas are also area context, not an upgrade specification.',
-        decision: 'At other addresses, the historic settlement and river boundary remain context only. Use the actual door set and the owner\'s documented requirement to compare hardware, without inferring risk or construction from the locality.',
+        local: 'Official records distinguish broad Wyken housing, the Grade I Church of St Mary Magdalen and Wyken Croft Primary School. They do not provide a shared security requirement. Identify the precise premises, current use, every affected entrance and the person authorised to approve an upgrade before comparing any hardware.',
+        decision: 'The listed church requires an asset-and-scope check, while the school requires its responsible site contact; neither control applies automatically to surrounding housing. The HLC\'s period and river-edge context cannot establish current construction, condition or risk, so specification must follow direct inspection and a written objective.',
         checks: [
-          'Verify the individual address\'s protected status before visible changes; area-wide heritage totals do not provide an upgrade specification.',
-          'Use the actual door set and owner\'s documented requirement; historic settlement and river context do not establish construction or risk.',
+          'Confirm whether the upgrade concerns broad housing, the named listed church or Wyken Croft Primary and identify its controller.',
+          'Specify from each inspected door and written objective; locality records establish neither shared risk nor compatible hardware.',
         ],
       },
     },
@@ -2552,80 +2571,94 @@ const AREA_SEEDS: AreaGuideSeed[] = [
     slug: 'allesley',
     name: 'Allesley',
     region: 'West Midlands',
+    reviewedOn: COVENTRY_PROMOTION_REVIEWED_ON,
     summary: [
-      'Coventry\'s HLC describes medieval or possibly Anglo-Saxon origins for Allesley village, historic houses and cottages along Birmingham Road, All Saints Church and a conservation area around the village core.',
-      'The council also designated a wider Allesley Neighbourhood Area in 2016. Neither the HLC nor planning geography makes every Allesley address historic, listed or inside the conservation boundary.',
+      'Official records describe Allesley village\'s medieval or possibly Anglo-Saxon origins and historic Birmingham Road homes, date the village conservation area, list All Saints Church, and identify Allesley Primary School on Antrim Close.',
+      'The HLC and conservation-area record are broader than any one property, while the listing and school directory apply to named assets. None establishes another Allesley address\'s status, entrance, authority, construction or installed lock.',
     ],
-    accessGuidance: 'Use the complete address to distinguish the village core from the wider neighbourhood geography. Check the exact listed or conservation status and caller authority before external changes at a historic address.',
-    evidenceLimits: 'The HLC and neighbourhood area extend beyond any one street. The medieval origins, Birmingham Road buildings and village conservation area do not establish another property\'s age, designation, access or hardware.',
+    accessGuidance: 'Use the full address and exact entrance, distinguishing All Saints, Allesley Primary and private property. Check the individual conservation or listing position for the proposed scope and obtain the relevant occupier, owner or managed-site authority before work.',
+    evidenceLimits: 'Village history and conservation-area dates cannot prove an individual property\'s age, fabric or controls. The Grade I entry applies only to All Saints, and the school directory applies only to the Antrim Close site.',
     facts: [
       {
-        heading: 'Allesley Village origins and historic homes',
+        heading: 'Allesley village origins and Birmingham Road homes',
         text: 'The Allesley Park and Coundon Wedge HLC says Allesley village has medieval or possibly Anglo-Saxon origins and includes 16th- to 19th-century houses and cottages along Birmingham Road, many listed.',
         sourceIds: ['allesley-coundon-hlc'],
         serviceRelevance: 'Check the precise Birmingham Road or village property before visible alteration; nearby history does not prove status.',
       },
       {
-        heading: 'Allesley historic core and conservation area',
-        text: 'The report identifies medieval All Saints Church and describes the historic core of Allesley Village as a conservation area.',
-        sourceIds: ['allesley-coundon-hlc'],
-        serviceRelevance: 'Use an address-level conservation check rather than applying the historic-core status to the whole locality.',
+        heading: 'Allesley Village conservation area dates',
+        text: 'Coventry City Council records that Allesley Village Conservation Area was declared on 20 December 1968 and extended on 29 November 1994.',
+        sourceIds: ['allesley-conservation-areas'],
+        serviceRelevance: 'Verify current conservation status for the exact address separately; designation dates do not identify another property\'s status.',
       },
       {
-        heading: 'Allesley Neighbourhood Area designation',
-        text: 'Coventry City Council designated the Allesley Neighbourhood Area on 4 May 2016 following an application by Allesley Parish Council.',
-        sourceIds: ['coventry-neighbourhood-plans'],
-        serviceRelevance: 'Neighbourhood-plan geography is not a property, access or service-route boundary.',
+        heading: 'All Saints Grade I listing',
+        text: 'Historic England lists the Church of All Saints on Birmingham Road, Allesley, as Grade I under National Heritage List entry 1342900.',
+        sourceIds: ['allesley-all-saints-he'],
+        serviceRelevance: 'Apply the statutory listing only to the named church and verify authority and scope before alteration.',
+      },
+      {
+        heading: 'Allesley Primary Antrim Close address',
+        text: 'Coventry City Council lists Allesley Primary School at Antrim Close, Coventry, with the postcode CV5 9FY.',
+        sourceIds: ['allesley-primary-school'],
+        serviceRelevance: 'Use the authorised school contact and exact entrance for that site; the directory grants no wider access authority.',
       },
     ],
     sources: [
-      localitySource('allesley-coundon-hlc', 'Allesley Park and Coundon Wedge Character Area, HLC Area 18', 'Coventry City Council', 'https://www.coventry.gov.uk/downloads/file/17429/hlc-area-18-allesley-park-and-coundon-wedge-character-area', 'Village origins, Birmingham Road historic buildings, All Saints Church and the village-core conservation area.', 'property-status'),
-      localitySource('coventry-neighbourhood-plans', 'Neighbourhood Plans', 'Coventry City Council', 'https://www.coventry.gov.uk/neighbourhoodplanning', 'Allesley Neighbourhood Area designation date and applicant.'),
+      localitySource('allesley-coundon-hlc', 'Allesley Park and Coundon Wedge Character Area, HLC Area 18', 'Coventry City Council', 'https://www.coventry.gov.uk/downloads/file/17429/hlc-area-18-allesley-park-and-coundon-wedge-character-area', 'Village origins and the historic Birmingham Road houses and cottages.', 'property-status'),
+      localitySource('allesley-conservation-areas', 'Conservation areas: list of conservation areas', 'Coventry City Council', 'https://www.coventry.gov.uk/heritage-ecology-trees/conservation-areas/3', 'The declaration and extension dates for Allesley Village Conservation Area.', 'property-status', COVENTRY_PROMOTION_REVIEWED_ON),
+      localitySource('allesley-all-saints-he', 'CHURCH OF ALL SAINTS', 'Historic England', 'https://historicengland.org.uk/listing/the-list/list-entry/1342900', 'The Grade I listing and statutory Birmingham Road address for Church of All Saints.', 'property-status', COVENTRY_PROMOTION_REVIEWED_ON),
+      localitySource('allesley-primary-school', 'Allesley Primary', 'Coventry City Council', 'https://www.coventry.gov.uk/directory-record/43095/allesley-primary', 'The council directory address and postcode for Allesley Primary School.', 'locality', COVENTRY_PROMOTION_REVIEWED_ON),
     ],
     contexts: {
       'emergency-lockout': {
-        localFactIndexes: [0, 1, 2],
-        local: 'Allesley Village\'s historic core is a conservation area, while the neighbourhood-plan geography is wider. A lockout instruction needs the full address and exact doorway so those evidence boundaries are not confused.',
-        decision: 'All Saints Church and historic Birmingham Road properties are locality context, not proof of occupancy. Confirm the requester\'s authority for the named building, especially where a church or other managed site is involved.',
+        heading: 'Confirming Authority for an Allesley Lockout',
+        localFactIndexes: [2, 3],
+        local: 'Historic England identifies the Church of All Saints on Birmingham Road, and Coventry City Council lists Allesley Primary School on Antrim Close. Those are two separate managed premises. An emergency instruction must name the exact building and doorway rather than using “the church”, “the school” or the Allesley locality alone.',
+        decision: 'The Grade I listing proves the church\'s status, not a caller\'s entitlement, and the school directory supplies contact geography rather than access permission. Confirm the person or organisation responsible for the particular entrance and do not transfer authority, ownership or access arrangements between the named sites and nearby properties.',
         checks: [
-          'Give the full Allesley address and exact doorway so the village conservation core is not confused with the wider neighbourhood area.',
-          'Confirm the requester for the named building; All Saints Church and Birmingham Road history do not prove occupancy or access authority.',
+          'Distinguish All Saints on Birmingham Road from Allesley Primary on Antrim Close and record the exact locked doorway.',
+          'Verify the authorised church, school or property contact; a statutory listing and directory address do not prove entitlement.',
         ],
       },
       'lock-change': {
+        heading: 'Planning an Allesley Lock Change in the Historic Core',
         localFactIndexes: [0, 1, 2],
-        local: 'Many 16th- to 19th-century houses and cottages are recorded along Birmingham Road, but the HLC does not designate every building. Verify the specific listing and conservation position before a visible lock or door change.',
-        decision: 'Outside the village core, the 2016 neighbourhood area still cannot specify installed hardware. Inspect the individual entrance and obtain any owner, landlord or manager approval for the proposed replacement.',
+        local: 'The HLC records 16th- to 19th-century Birmingham Road homes, the council dates the Allesley Village Conservation Area, and Historic England lists All Saints as Grade I. These sources overlap in local context but do not establish that another property is listed or its current conservation status.',
+        decision: 'First resolve the full address and its individual status, then identify whether the proposed lock or door work changes external appearance or the special interest of the named listed asset. The declaration dates are not a technical specification, and historic-area context cannot reveal the currently installed hardware.',
         checks: [
-          'Verify the specific Birmingham Road property\'s listing and conservation position before a visible lock or door change.',
-          'Inspect the individual entrance and obtain owner, landlord or manager approval; neighbourhood geography specifies no installed hardware.',
+          'Verify the exact Birmingham Road or village property\'s current listing and conservation status before visible alteration.',
+          'Inspect and measure the installed door set; heritage records provide neither fitted hardware nor property-controller approval.',
         ],
       },
       'upvc-lock-repair': {
-        localFactIndexes: [0, 1, 2],
-        local: 'Medieval origins and historic Birmingham Road buildings do not demonstrate that the affected Allesley entrance uses traditional or modern hardware. Ask for the actual door material and handle, key and closing symptoms.',
-        decision: 'The village conservation boundary and wider neighbourhood area are different geographies, neither of which diagnoses a multipoint fault. Use them only to verify location and any property-specific permission.',
+        heading: 'Diagnosing an Allesley uPVC Lock at the Door',
+        localFactIndexes: [0, 3],
+        local: 'Medieval or possibly Anglo-Saxon village origins and historic Birmingham Road homes are area-scale evidence, not proof that the reported door is traditional, uPVC or multipoint. The Allesley Primary directory identifies one Antrim Close site, so establish whether the entrance belongs to the school or a separate property.',
+        decision: 'The school address can route an authorised site instruction, but it provides no mechanical detail; the HLC likewise cannot diagnose a modern lock. Record the actual material, handle travel, key response, visible faceplate and whether the symptoms differ with the door open and closed before selecting a repair.',
         checks: [
-          'Record the Allesley door material and handle, key and closing symptoms; medieval and Birmingham Road history identifies no hardware.',
-          'Use village and neighbourhood boundaries only for location and property permission, never to diagnose a multipoint fault.',
+          'Confirm whether the affected entrance is at Allesley Primary or another address; village history establishes no lock type.',
+          'Record material, markings, handle and key behaviour open and closed, then inspect alignment before selecting parts.',
         ],
       },
       'boarding-up': {
-        localFactIndexes: [0, 1, 2],
-        local: 'If damage occurs in the historic village core, confirm the exact building and conservation or listed status before an external temporary fixing. The area source does not provide blanket designation for Allesley.',
-        decision: 'At All Saints Church or another managed site, identify the authorised representative and affected opening. The neighbourhood-area designation supplies no ownership or approval for temporary securing.',
+        heading: 'Boarding Up an Allesley Opening With Address Checks',
+        localFactIndexes: [1, 2, 3],
+        local: 'Official records distinguish the Allesley Village Conservation Area, the Grade I Church of All Saints and Allesley Primary School on Antrim Close. A report of damage “in Allesley village” must identify the exact building and opening, because the designation, listing and school record have different boundaries and responsible parties.',
+        decision: 'Verify current conservation status for the actual address, apply the statutory listing only to All Saints, and use the authorised school contact only for the Antrim Close site. Neither the designation nor a directory establishes permission for temporary external work, even where rapid weather protection is requested.',
         checks: [
-          'Confirm the exact Allesley building and verified conservation or listed status before external temporary fixing in the historic core.',
-          'At All Saints Church or another managed site, identify the authorised representative and opening; neighbourhood designation grants no approval.',
+          'Resolve the exact Allesley opening and whether it is in the conservation area, at All Saints or at the school.',
+          'Obtain the relevant controller and check the approval route for the actual temporary scope; records grant no work authority.',
         ],
       },
       'lock-upgrade': {
-        localFactIndexes: [0, 1, 2],
-        local: 'A Birmingham Road property may require an exact heritage check because the report records many listed historic houses and cottages there. That possibility cannot be extended to every Allesley upgrade enquiry.',
-        decision: 'Within or outside the conservation core, base the specification on the observed entrance and written customer requirement. The medieval village and neighbourhood-plan history are not evidence of current lock condition or risk.',
+        heading: 'Specifying an Allesley Lock Upgrade From the Existing Door',
+        localFactIndexes: [0, 1],
+        local: 'The HLC\'s village origins and historic Birmingham Road homes, together with the council\'s conservation-area dates, establish local history and planning context rather than a shared security need. Verify the precise address and its current conservation status, then obtain the authorised customer\'s written objective for each entrance instead of assigning a locality-wide product.',
+        decision: 'A property can be historic without the sources proving its individual designation, and a conservation-area date cannot show its cylinder, frame or hinges. Establish any address-and-scope approval requirement separately, then base the proposed upgrade on the existing door set, verified compatibility and documented customer or insurer requirement.',
         checks: [
-          'Check the exact Birmingham Road property\'s heritage status instead of extending recorded historic-building context to every Allesley upgrade.',
-          'Base the specification on the observed entrance and written requirement; medieval and neighbourhood-plan history establishes neither lock condition nor risk.',
+          'Verify the exact Allesley address and conservation position rather than extending Birmingham Road history to every property.',
+          'Use the inspected door set and written objective; village origins and designation dates specify neither risk nor hardware.',
         ],
       },
     },
@@ -3045,12 +3078,13 @@ const AREA_SEEDS: AreaGuideSeed[] = [
     slug: 'aldermans-green',
     name: 'Aldermans Green',
     region: 'West Midlands',
+    reviewedOn: COVENTRY_PROMOTION_REVIEWED_ON,
     summary: [
-      'The Alderman\'s Green HLC describes a residential character area north-east of Coventry city centre, with the River Sowe to the east and mixed residential and industrial land to the west. It also records historic Alderman\'s Green Road.',
-      'The HLC and North Sowe report give area-scale designation and river-corridor context. They do not identify an individual building\'s listed status, use, ownership, access or hardware.',
+      'Official records describe Aldermans Green\'s residential, river-edge and mixed-use context and identify Alderman\'s Green Primary School, Wyken Slough local nature reserve and Aldermans Green Free Methodist Church on Aldermans Green Road.',
+      'The HLC is area-scale evidence and the three premises records have separate functions and management routes. A shared road or postcode does not prove co-location, shared entrances, ownership, access authority, construction or installed hardware.',
     ],
-    accessGuidance: 'Use the full address, exact entrance and responsible party, particularly near the river corridor or mixed-use western edge. Verify the individual building\'s listed or local status before external alterations.',
-    evidenceLimits: 'Historic-road evidence and character-area designation totals do not identify a particular property. River, residential and industrial context cannot prove use, status, construction, access or lock type at an address.',
+    accessGuidance: 'Use the full address, named premises and exact entrance. Obtain the school, church, reserve, landlord or occupier contact appropriate to that asset; a shared postcode, directory listing or proximity on Aldermans Green Road does not authorise work.',
+    evidenceLimits: 'The area record cannot identify a property\'s use or hardware. The school contact page, reserve directory and faith-building record apply only to their named premises and do not prove shared boundaries, entrances or controllers.',
     facts: [
       {
         heading: 'Aldermans Green character and boundaries',
@@ -3059,66 +3093,79 @@ const AREA_SEEDS: AreaGuideSeed[] = [
         serviceRelevance: 'Confirm the property or site type and the responsible party rather than inferring them from the mixed-use edge.',
       },
       {
-        heading: 'Historic Aldermans Green Road',
-        text: 'The report records Alderman\'s Green Road as “Le Redway” in an early-15th-century record and as part of the 1775 landscape.',
-        sourceIds: ['aldermans-green-hlc'],
-        serviceRelevance: 'Historic road context is not evidence of property age, designation or installed hardware.',
+        heading: 'Aldermans Green Primary contact address',
+        text: 'The school operator gives Alderman\'s Green Primary School\'s address as Alderman\'s Green Road, Coventry, CV2 1PP.',
+        sourceIds: ['aldermans-green-primary-school'],
+        serviceRelevance: 'Use the school\'s authorised contact for its exact entrance; the published address grants no wider authority.',
       },
       {
-        heading: 'Aldermans Green river and heritage context',
-        text: 'The North Sowe HLC places its river valley through Aldermans Green; the Alderman\'s Green HLC records three listed and fourteen locally listed buildings but no conservation area at character-area scale.',
-        sourceIds: ['north-sowe-hlc', 'aldermans-green-hlc'],
-        serviceRelevance: 'Check the exact building before visible work and do not infer status from area totals or lack of a conservation area.',
+        heading: 'Wyken Slough reserve location and management',
+        text: 'Coventry City Council locates Wyken Slough local nature reserve on Aldermans Green Road, CV2 1PL, and says it is managed with Warwickshire Wildlife Trust.',
+        sourceIds: ['wyken-slough'],
+        serviceRelevance: 'Public access does not authorise work on reserve gates or facilities; use the relevant management route.',
+      },
+      {
+        heading: 'Aldermans Green faith building record',
+        text: 'Coventry City Council lists Aldermans Green Free Methodist Church on Aldermans Green Road, CV2 1PP, and classifies it as a faith building.',
+        sourceIds: ['aldermans-green-free-methodist'],
+        serviceRelevance: 'Confirm the church representative and exact opening; a shared postcode does not prove shared premises or control.',
       },
     ],
     sources: [
-      localitySource('aldermans-green-hlc', 'Alderman\'s Green Character Area, HLC Area 41', 'Coventry City Council', 'https://www.coventry.gov.uk/downloads/file/17411/hlc-area-41-aldermans-green-character-area', 'Mixed-use and river-edge setting, historic Alderman\'s Green Road and area-scale designations.', 'property-status'),
-      localitySource('north-sowe-hlc', 'North Sowe Character Area, HLC Area 26', 'Coventry City Council', 'https://www.coventry.gov.uk/downloads/file/17438/hlc-area-26-north-sowe-character-area', 'The North Sowe river-valley route through Aldermans Green.'),
+      localitySource('aldermans-green-hlc', 'Alderman\'s Green Character Area, HLC Area 41', 'Coventry City Council', 'https://www.coventry.gov.uk/downloads/file/17411/hlc-area-41-aldermans-green-character-area', 'The residential character area, eastern River Sowe boundary and mixed-use western edge.', 'property-status'),
+      localitySource('aldermans-green-primary-school', 'Contact Us', 'Alderman\'s Green Primary School', 'https://www.aldermansgreen.com/contact/', 'The school operator\'s main contact address and postcode for the school.', 'locality', COVENTRY_PROMOTION_REVIEWED_ON),
+      localitySource('wyken-slough', 'Wyken Slough', 'Coventry City Council', 'https://www.coventry.gov.uk/directory-record/57140/wyken-slough', 'The local nature reserve\'s Aldermans Green location and joint management description.', 'locality', COVENTRY_PROMOTION_REVIEWED_ON),
+      localitySource('aldermans-green-free-methodist', 'Aldermans Green Free Methodist Church', 'Coventry City Council', 'https://www.coventry.gov.uk/directory-record/59442/aldermans-green-free-methodist-church', 'The Aldermans Green Road postcode and faith-building classification for the church.', 'locality', COVENTRY_PROMOTION_REVIEWED_ON),
     ],
     contexts: {
       'emergency-lockout': {
-        localFactIndexes: [0, 1],
-        local: 'The official character area is residential but has mixed residential and industrial land to the west and the River Sowe to the east. An urgent request must identify the actual property or site and controlled entrance.',
-        decision: 'Alderman\'s Green Road\'s early documentary history gives no evidence of present occupation. Confirm the requester\'s authority, especially where an industrial or other managed site is involved.',
+        heading: 'Confirming Authority for an Aldermans Green Lockout',
+        localFactIndexes: [1, 3],
+        local: 'The operator gives Alderman\'s Green Primary School an Alderman\'s Green Road address with postcode CV2 1PP, and the council directory gives that same street and postcode for Aldermans Green Free Methodist Church. These records identify two named premises, not one combined site or shared entrance.',
+        decision: 'An urgent caller must state whether the locked opening belongs to the school, church or another property and identify the person responsible for it. Neither the school contact page nor the faith-building directory proves occupancy, key entitlement or authority simply because the road and postcode match.',
         checks: [
-          'Identify the actual Aldermans Green property or site and entrance rather than inferring use from residential, industrial or River Sowe edge context.',
-          'Confirm the requester and any managed-site contact; Alderman\'s Green Road history provides no evidence of present occupation.',
+          'Distinguish the school from the Free Methodist Church despite their shared road and CV2 1PP postcode.',
+          'Verify the authorised site representative and exact locked opening; published contact details do not prove entitlement.',
         ],
       },
       'lock-change': {
-        localFactIndexes: [0, 1, 2],
-        local: 'Three listed and fourteen locally listed buildings are recorded across the HLC, with no conservation area at that scale. Verify the exact property because neither the totals nor absence of an area designation determine its status.',
-        decision: 'At the mixed-use western edge, obtain any site or landlord approval; elsewhere, confirm the property controller. The River Sowe boundary and road history cannot specify a replacement lock.',
+        heading: 'Planning an Aldermans Green Lock Change by Premise',
+        localFactIndexes: [0, 1, 3],
+        local: 'The HLC distinguishes a residential character area and mixed residential and industrial land to the west, while separate records identify the primary school and Free Methodist Church. A lock-change request must resolve the present premises and use; area character and directory categories do not identify the installed door or lock.',
+        decision: 'The school and church share a road and postcode but their records do not establish co-location, common ownership or one approval route. Obtain the authorised school, church, landlord, occupier or site manager for the exact entrance, then inspect the current assembly before selecting a repair or replacement.',
         checks: [
-          'Verify the exact Aldermans Green property; area-wide listed totals and no HLC-scale conservation area do not determine its status.',
-          'Obtain site, landlord or property-controller approval; the River Sowe boundary and road history specify no replacement lock.',
+          'Resolve the exact residential, industrial, school or church premises and the person authorised to approve the change.',
+          'Inspect and measure the existing door set; area character, street and postcode specify no compatible replacement.',
         ],
       },
       'upvc-lock-repair': {
+        heading: 'Diagnosing an Aldermans Green uPVC Lock at the Door',
         localFactIndexes: [0, 1],
-        local: 'Historic references to Alderman\'s Green Road as Le Redway and in the 1775 landscape do not identify modern door material. Capture the affected entrance and exact handle, key and alignment symptoms.',
-        decision: 'Residential, industrial and river-edge contexts may change directions or authority checks but do not diagnose a multipoint mechanism. Inspect the actual door set rather than using the HLC description.',
+        local: 'Residential, river-edge and mixed-use character evidence cannot prove that a particular Aldermans Green door is uPVC or fitted with multipoint locking. The primary school contact page identifies its managed premises, so confirm whether the report concerns that school or a different residential or industrial entrance.',
+        decision: 'The school address can route an authorised instruction but gives no information about material, manufacturer, alignment or mechanism. Likewise, the HLC can orient the property but cannot diagnose it. Record the actual door, handle and key behaviour and inspect the full assembly before identifying a compatible repair.',
         checks: [
-          'Capture the Aldermans Green entrance and exact handle, key and alignment symptoms; historic road records identify no modern door material.',
-          'Inspect the actual door set; residential, industrial and river-edge context cannot diagnose a multipoint mechanism.',
+          'Confirm whether the entrance is at the primary school or another property and identify its authorised controller.',
+          'Record door material, markings, handle, key and open-and-closed behaviour; area records diagnose no mechanism.',
         ],
       },
       'boarding-up': {
-        localFactIndexes: [0, 2],
-        local: 'A damaged opening near the western mixed-use edge needs a named building and responsible manager; one near the Sowe requires the actual property boundary. The locality evidence cannot supply either automatically.',
-        decision: 'Before external temporary work, check whether the building is one of the listed or locally listed assets recorded area-wide. No conservation area at HLC scale is not proof that the address has no controls.',
+        heading: 'Boarding Up an Aldermans Green Opening at Managed Sites',
+        localFactIndexes: [2, 3],
+        local: 'Coventry City Council locates Wyken Slough local nature reserve on Aldermans Green Road and separately records Aldermans Green Free Methodist Church as a faith building on the same road. A damaged gate, facility, door or window must be tied to one exact asset rather than the road name alone.',
+        decision: 'The reserve is managed by the council with Warwickshire Wildlife Trust, while the church needs its own authorised representative. Public access to the reserve does not permit temporary work, and the church directory establishes no control over nearby land. Verify the opening, boundary, controller and permitted securing scope directly.',
         checks: [
-          'Name the Aldermans Green building, manager, damaged opening and boundary instead of relying on mixed-use or Sowe edge context.',
-          'Check the individual listed or locally listed status before external work; no HLC-scale conservation area proves no property controls.',
+          'Distinguish a Wyken Slough asset from the Free Methodist Church and record the precise damaged opening and boundary.',
+          'Use the relevant reserve or church management route; directory records grant no work authority.',
         ],
       },
       'lock-upgrade': {
+        heading: 'Specifying an Aldermans Green Lock Upgrade From Inspection',
         localFactIndexes: [0, 1, 2],
-        local: 'Aldermans Green\'s river edge, industrial edge and historic road are not security or hardware evidence. Obtain the individual door-set details and the authorised customer\'s documented objective.',
-        decision: 'Area designation totals should prompt a precise property search where visible work is proposed. After that, base the specification on the entrance itself, not the age suggested by Alderman\'s Green Road history.',
+        local: 'The HLC\'s residential and mixed-use setting, the primary school contact page and the Wyken Slough reserve record represent different premises and management contexts. They provide no shared risk assessment or hardware standard. Confirm the exact address, affected doors, current use and authorised decision-maker before specifying an upgrade.',
+        decision: 'Use the school\'s responsible contact for its site and the reserve management route for its facilities; neither authority extends to another Aldermans Green property. River-edge or industrial context cannot establish door construction, condition or insurer requirements, so obtain the written objective and inspect every relevant assembly.',
         checks: [
-          'Obtain the Aldermans Green door-set details and authorised customer\'s written objective; local edges provide no security evidence.',
-          'Verify exact property status before visible work, then specify from the entrance rather than historic road age.',
+          'Identify the residential, mixed-use, school or reserve premises and its authorised controller before comparing upgrades.',
+          'Specify from each inspected assembly and written requirement; locality and directory records provide no common risk standard.',
         ],
       },
     },

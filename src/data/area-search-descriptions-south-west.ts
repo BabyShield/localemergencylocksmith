@@ -10,8 +10,8 @@ export const SOUTH_WEST_AREA_SEARCH_DESCRIPTIONS = {
     sourceIds: ['wdc-leamington-conservation'],
   },
   lillington: {
-    description: 'Locksmith services in Lillington for lockouts, repairs and upgrades, with Lillington Road North and Lillington Village noted in the conservation guide.',
-    sourceIds: ['wdc-leamington-conservation'],
+    description: 'Lillington locksmith help for lockouts, repairs and upgrades, with official records for Crown Way, Mason Avenue community centre and Valley Road library.',
+    sourceIds: ['wdc-local-plan', 'wdc-asset-list-2026', 'wcc-lillington-library', 'historic-england-lillington-library-1420766'],
   },
   sydenham: {
     description: 'Sydenham locksmith guidance distinguishing the SYDNI Centre on Cottage Square, Calder Walk school and separate Sydenham Drive sites.',
@@ -30,12 +30,12 @@ export const SOUTH_WEST_AREA_SEARCH_DESCRIPTIONS = {
     sourceIds: ['wdc-warwick-conservation'],
   },
   'woodloes-park': {
-    description: 'Locksmith help in Woodloes Park for lockouts, lock repairs and upgrades, with Canalside recorded by the council as a community park in Woodloes Park.',
-    sourceIds: ['wdc-community-parks'],
+    description: 'Woodloes Park locksmith help for lockouts, repairs and upgrades, with official records for Reardon Court, Canalside, Deansway school and the centre charity.',
+    sourceIds: ['wdc-local-plan', 'wdc-community-parks', 'dfe-woodloes-primary', 'charity-commission-woodloes-park-community-centre-511957'],
   },
   'chase-meadow': {
-    description: 'Chase Meadow locksmith help for lockouts, repairs and upgrades, with the adopted local plan listing Narrow Hall Meadow as a local shopping centre.',
-    sourceIds: ['wdc-local-plan'],
+    description: 'Chase Meadow locksmith help for lockouts, repairs and upgrades, with records for Narrow Hall Meadow, local parks, the community centre and health centre.',
+    sourceIds: ['wdc-local-plan', 'wdc-community-parks', 'chase-meadow-community-centre', 'nhs-chase-meadow-health-centre'],
   },
   'warwick-gates': {
     description: 'Locksmith help in Warwick Gates for lockouts, lock repairs and upgrades, with Othello Avenue recorded in the local plan as a local shopping centre.',

@@ -38,8 +38,8 @@ export const COVENTRY_AREA_SEARCH_DESCRIPTIONS = {
     sourceIds: ['lower-stoke-hlc'],
   },
   wyken: {
-    description: 'Wyken locksmith help for lockouts, repairs and lock changes, with Coventry’s HLC placing the River Sowe on the area’s eastern side.',
-    sourceIds: ['wyken-upper-stoke-hlc'],
+    description: 'Wyken locksmith help for lockouts, repairs and upgrades, with official records for St Mary Magdalen, Wyken Croft Primary and the nature park.',
+    sourceIds: ['wyken-st-mary-magdalen-he', 'wyken-croft-primary-school', 'wyken-croft-nature-park'],
   },
   walsgrave: {
     description: 'Walsgrave locksmith help for lockouts, repairs and upgrades, with Coventry’s HLC recording historic settlement around the village church.',
@@ -74,8 +74,8 @@ export const COVENTRY_AREA_SEARCH_DESCRIPTIONS = {
     sourceIds: ['cheylesmore-stivichall-hlc'],
   },
   allesley: {
-    description: 'Allesley locksmith help for lockouts, repairs and upgrades, with Coventry’s HLC recording historic village houses and cottages along Birmingham Road.',
-    sourceIds: ['allesley-coundon-hlc'],
+    description: 'Allesley locksmith help for lockouts, repairs and upgrades, with official records for the village conservation area, All Saints and Antrim Close school.',
+    sourceIds: ['allesley-conservation-areas', 'allesley-all-saints-he', 'allesley-primary-school'],
   },
   'allesley-park': {
     description: 'Allesley Park locksmith help for lockouts, repairs and lock changes, with Coventry City Council describing a historic park between established housing.',
@@ -98,8 +98,8 @@ export const COVENTRY_AREA_SEARCH_DESCRIPTIONS = {
     sourceIds: ['aldermans-green-hlc'],
   },
   'aldermans-green': {
-    description: 'Aldermans Green locksmith help for lockouts, repairs and upgrades, with Coventry’s HLC placing the River Sowe to the east of the character area.',
-    sourceIds: ['aldermans-green-hlc'],
+    description: 'Aldermans Green locksmith help for lockouts, repairs and upgrades, with official records for its primary school, a faith building and Wyken Slough.',
+    sourceIds: ['aldermans-green-primary-school', 'aldermans-green-free-methodist', 'wyken-slough'],
   },
   'potters-green': {
     description: 'Potters Green locksmith help for lockouts, repairs and lock changes, with Coventry’s HLC recording settlement on Woodway Lane and ceramic associations.',

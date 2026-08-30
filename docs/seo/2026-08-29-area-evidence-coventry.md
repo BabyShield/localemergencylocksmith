@@ -1,8 +1,8 @@
 # Coventry-cluster area evidence register
 
-Checked: 2026-08-29
+Checked: baseline corpus 2026-08-29; `wyken`, `allesley` and `aldermans-green` evidence refreshed 2026-08-30.
 
-Scope: the first 30 `AREAS` records in the Coventry merchandising cluster, from `coventry-city-centre` through `little-heath`. This is a research register, not publish-ready local copy. Claims are limited to opened primary sources from Coventry City Council, Rugby Borough Council and Historic England. A character area, ward, MSOA, parish, neighbourhood-plan boundary or named park is not interchangeable with a service-area slug or an individual address.
+Scope: the first 30 `AREAS` records in the Coventry merchandising cluster, from `coventry-city-centre` through `little-heath`. This is a research register, not publish-ready local copy. Claims are limited to opened primary sources from Coventry City Council, Rugby Borough Council, Historic England and the named institution's current site where it is needed to establish its own contact address. A character area, ward, MSOA, parish, neighbourhood-plan boundary or named park is not interchangeable with a service-area slug or an individual address.
 
 Excluded throughout: inferred lock types, locksmith job history or frequency, crime, response time, parking, property value, tenure and service coverage. A postcode or neighbourhood name does not establish any of those facts.
 
@@ -128,16 +128,19 @@ Excluded throughout: inferred lock types, locksmith job history or frequency, cr
 
 ## `wyken`
 
-- **Context tags:** `historic-landscape-report`, `river-Sowe-corridor`, `scheduled-monuments-present`, `historic-settlement`.
+- **Context tags:** `historic-landscape-report`, `listed-church`, `official-school-directory`, `official-nature-park`.
 - **Supported claims:**
-  1. The Wyken and Upper Stoke HLC is east of the city centre and bounded by the River Sowe to the east.
-  2. It records the medieval Wyken settlement as clustered around the 12th-century church of St Mary Magdalene at Wyken Croft.
-  3. The report records two scheduled monuments, eleven archaeological constraint areas and eight listed buildings within the wider character area; the South Sowe report also names Wyken on its river-valley route.
+  1. The Wyken and Upper Stoke HLC describes much of the character area as mid-20th-century housing and places the River Sowe at its eastern boundary.
+  2. Historic England lists the Church of St Mary Magdalen at Wyken Croft as Grade I under National Heritage List entry 1076583.
+  3. Coventry City Council lists Wyken Croft Primary School at Wyken Croft, Coventry, with the postcode CV2 3AA.
+  4. Coventry City Council locates Wyken Croft Nature Park at Wyken Croft, CV2 3AB, and describes it as the city's first ecological park.
 - **Sources:**
-  - Coventry City Council — [Wyken and Upper Stoke Character Area, HLC Area 44](https://www.coventry.gov.uk/downloads/file/17421/hlc-area-44-wyken-and-upper-stoke-character-area) — supports claims 1–3 and the area-scale designation totals. Checked 2026-08-29.
-  - Coventry City Council — [South Sowe Character Area, HLC Area 28](https://www.coventry.gov.uk/downloads/file/17439/hlc-area-28-south-sowe-character-area) — supports the river-corridor part of claim 3. Checked 2026-08-29.
-- **Conditional service implication:** Check the exact property's designation and owner/occupier authority before visible changes; scheduled or listed assets cannot be inferred from the Wyken name alone.
-- **Access/property-status caveat:** The designation counts and medieval-settlement evidence are character-area facts, not claims about every Wyken building.
+  - Coventry City Council — [Wyken and Upper Stoke Character Area, HLC Area 44](https://www.coventry.gov.uk/downloads/file/17421/hlc-area-44-wyken-and-upper-stoke-character-area) — supports claim 1. Checked 2026-08-29.
+  - Historic England — [Church of St Mary Magdalen, list entry 1076583](https://historicengland.org.uk/listing/the-list/list-entry/1076583) — supports claim 2. Checked 2026-08-30.
+  - Coventry City Council — [Wyken Croft](https://www.coventry.gov.uk/directory-record/43035/wyken-croft) — supports claim 3. Checked 2026-08-30.
+  - Coventry City Council — [Wyken Croft Nature Park](https://www.coventry.gov.uk/directory-record/57139/wyken-croft-nature-park) — supports claim 4. Checked 2026-08-30.
+- **Conditional service implication:** Distinguish the church, primary school, nature park and another Wyken property by full address and exact entrance, then use the responsible asset contact before access, repair, temporary securing or alteration.
+- **Access/property-status caveat:** “Wyken Croft” is a shared road reference, not evidence of co-location, common ownership or one entrance; the statutory listing applies only to the named church, and the park directory grants no locksmith authority.
 
 ## `walsgrave`
 
@@ -247,16 +250,19 @@ Excluded throughout: inferred lock types, locksmith job history or frequency, cr
 
 ## `allesley`
 
-- **Context tags:** `historic-landscape-report`, `conservation-area-present`, `listed-buildings-present`, `neighbourhood-area`.
+- **Context tags:** `historic-landscape-report`, `conservation-area-present`, `listed-church`, `official-school-directory`.
 - **Supported claims:**
-  1. The Allesley Park and Coundon Wedge HLC says Allesley village has medieval or possibly Anglo-Saxon origins and includes houses and cottages along Birmingham Road dating from the 16th to 19th centuries, many listed.
-  2. The report identifies the medieval All Saints Church and describes the historic core of Allesley Village as a conservation area.
-  3. Coventry City Council designated the Allesley Neighbourhood Area on 4 May 2016, following an application by Allesley Parish Council.
+  1. The Allesley Park and Coundon Wedge HLC says Allesley village has medieval or possibly Anglo-Saxon origins and includes 16th- to 19th-century houses and cottages along Birmingham Road, many listed.
+  2. Coventry City Council records that Allesley Village Conservation Area was declared on 20 December 1968 and extended on 29 November 1994.
+  3. Historic England lists the Church of All Saints on Birmingham Road, Allesley, as Grade I under National Heritage List entry 1342900.
+  4. Coventry City Council lists Allesley Primary School at Antrim Close, Coventry, with the postcode CV5 9FY.
 - **Sources:**
-  - Coventry City Council — [Allesley Park and Coundon Wedge Character Area, HLC Area 18](https://www.coventry.gov.uk/downloads/file/17429/hlc-area-18-allesley-park-and-coundon-wedge-character-area) — supports claims 1 and 2. Checked 2026-08-29.
-  - Coventry City Council — [Neighbourhood Plans](https://www.coventry.gov.uk/neighbourhoodplanning) — supports claim 3. Checked 2026-08-29.
-- **Conditional service implication:** At an address in the historic village core, check the exact listed/conservation status and any consent implications before external changes; use the complete address to distinguish village from wider neighbourhood geography.
-- **Access/property-status caveat:** The HLC and neighbourhood area are wider than any single street; they do not make every Allesley property historic, listed or inside the conservation boundary.
+  - Coventry City Council — [Allesley Park and Coundon Wedge Character Area, HLC Area 18](https://www.coventry.gov.uk/downloads/file/17429/hlc-area-18-allesley-park-and-coundon-wedge-character-area) — supports claim 1. Checked 2026-08-29.
+  - Coventry City Council — [Conservation areas: list of conservation areas](https://www.coventry.gov.uk/heritage-ecology-trees/conservation-areas/3) — supports claim 2. Checked 2026-08-30.
+  - Historic England — [Church of All Saints, list entry 1342900](https://historicengland.org.uk/listing/the-list/list-entry/1342900) — supports claim 3. Checked 2026-08-30.
+  - Coventry City Council — [Allesley Primary](https://www.coventry.gov.uk/directory-record/43095/allesley-primary) — supports claim 4. Checked 2026-08-30.
+- **Conditional service implication:** Use the full address to distinguish a Birmingham Road property, the conservation area, All Saints and the Antrim Close school; check the asset, proposed scope and authorised controller before access or external alteration.
+- **Access/property-status caveat:** The HLC and conservation-area record are broader than one property, the Grade I entry applies only to All Saints, and the school directory grants no access or work authority over another address.
 
 ## `allesley-park`
 
@@ -326,16 +332,19 @@ Excluded throughout: inferred lock types, locksmith job history or frequency, cr
 
 ## `aldermans-green`
 
-- **Context tags:** `historic-landscape-report`, `river-Sowe-corridor`, `historic-road`, `area-scale-designations`.
+- **Context tags:** `historic-landscape-report`, `official-school-contact`, `local-nature-reserve`, `faith-building-directory`.
 - **Supported claims:**
-  1. The Alderman's Green HLC describes a residential character area north-east of the city centre, bounded by the River Sowe to the east and mixed residential/industrial land to the west.
-  2. It records Alderman's Green Road as “Le Redway” in the early-15th-century documentary record and as part of the 1775 landscape.
-  3. The North Sowe HLC says its river-valley character area passes through Aldermans Green; the Alderman's Green HLC records three listed and fourteen locally listed buildings but no conservation area at character-area scale.
+  1. The Alderman's Green HLC describes a residential character area north-east of Coventry city centre, bounded by the River Sowe to the east and mixed residential and industrial land to the west.
+  2. The school operator gives Alderman's Green Primary School's address as Alderman's Green Road, Coventry, CV2 1PP.
+  3. Coventry City Council locates Wyken Slough local nature reserve on Aldermans Green Road, CV2 1PL, and says it is managed with Warwickshire Wildlife Trust.
+  4. Coventry City Council lists Aldermans Green Free Methodist Church on Aldermans Green Road, CV2 1PP, and classifies it as a faith building.
 - **Sources:**
-  - Coventry City Council — [Alderman's Green Character Area, HLC Area 41](https://www.coventry.gov.uk/downloads/file/17411/hlc-area-41-aldermans-green-character-area) — supports claims 1–3 and the designation totals. Checked 2026-08-29.
-  - Coventry City Council — [North Sowe Character Area, HLC Area 26](https://www.coventry.gov.uk/downloads/file/17438/hlc-area-26-north-sowe-character-area) — supports the river-corridor part of claim 3. Checked 2026-08-29.
-- **Conditional service implication:** Check the exact building's listed/local status before external alterations and obtain full-address instructions where the river corridor or mixed-use edge makes the locality label imprecise.
-- **Access/property-status caveat:** Character-area designation totals and historic-road evidence do not identify an individual property's status, use or access.
+  - Coventry City Council — [Alderman's Green Character Area, HLC Area 41](https://www.coventry.gov.uk/downloads/file/17411/hlc-area-41-aldermans-green-character-area) — supports claim 1. Checked 2026-08-29.
+  - Alderman's Green Primary School — [Contact Us](https://www.aldermansgreen.com/contact/) — supports claim 2. Checked 2026-08-30.
+  - Coventry City Council — [Wyken Slough](https://www.coventry.gov.uk/directory-record/57140/wyken-slough) — supports claim 3. Checked 2026-08-30.
+  - Coventry City Council — [Aldermans Green Free Methodist Church](https://www.coventry.gov.uk/directory-record/59442/aldermans-green-free-methodist-church) — supports claim 4. Checked 2026-08-30.
+- **Conditional service implication:** Resolve the exact residential, industrial, school, reserve or church premises and use its authorised controller; directory addresses and land-use context cannot select a lock, repair method or temporary securing scope.
+- **Access/property-status caveat:** The school and church sharing CV2 1PP does not prove co-location, shared entrances or ownership; the Wyken Slough directory does not authorise work, and its name does not move the council-listed location out of Aldermans Green.
 
 ## `potters-green`
 

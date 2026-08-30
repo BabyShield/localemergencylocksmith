@@ -1,8 +1,8 @@
 # South-west service-area evidence register
 
-Checked: baseline corpus 2026-08-29; `bishopton`, `sydenham` and `tiddington` evidence refreshed 2026-08-30.
+Checked: baseline corpus 2026-08-29; `bishopton`, `chase-meadow`, `lillington`, `sydenham`, `tiddington` and `woodloes-park` evidence refreshed 2026-08-30.
 Scope: 27 governed area slugs across Leamington Spa, Warwick, Stratford-upon-Avon and the Warwickshire/nearby cluster.
-Source rule: primary official sources only (central-government registers, district/borough/county councils, and official adopted or submitted planning documents hosted by them).
+Source rule: primary official sources only (central-government registers and services, district/borough/county councils, official adopted or submitted planning documents hosted by them, and the named institution's current site where it is needed to establish its visit address).
 
 ## Editorial guardrails
 
@@ -15,9 +15,9 @@ Source rule: primary official sources only (central-government registers, distri
 ## Counts and unresolved status
 
 - Registry slugs reviewed: **27/27**.
-- Factual claims recorded: **63** (at least two per slug; four each for `bishopton`, `sydenham` and `tiddington`, plus a third for `leamington-spa`, `stratford-upon-avon` and `shilton`).
+- Factual claims recorded: **69** (at least two per slug; four each for `bishopton`, `chase-meadow`, `lillington`, `sydenham`, `tiddington` and `woodloes-park`, plus a third for `leamington-spa`, `stratford-upon-avon` and `shilton`).
 - Slugs with at least two official-source claims: **27/27**.
-- Distinct official deep URLs cited: **48** across **9** official publishing authorities (13 Warwick District Council, 11 Stratford-on-Avon District Council, 9 Rugby Borough Council, 6 Solihull Metropolitan Borough Council, 3 Charity Commission, 3 Department for Education, 1 Warwickshire County Council, 1 Office for National Statistics and 1 Historic England URL); these appear in **64** claim citations because sources are reused where they support more than one slug and one claim cites two official records.
+- Distinct primary deep URLs cited: **57** across **11** publishing bodies (15 Warwick District Council, 11 Stratford-on-Avon District Council, 9 Rugby Borough Council, 6 Solihull Metropolitan Borough Council, 5 Charity Commission, 4 Department for Education, 2 Warwickshire County Council, 2 Historic England, 1 Office for National Statistics, 1 NHS and 1 Chase Meadow Community Centre URL); these appear in **75** claim citations because sources are reused where they support more than one slug and several claims cite complementary records.
 - Slugs with a directly evidenced conservation-area tag: **16/27**.
 - Slugs with a directly evidenced rail tag: **2/27** (`brandon`, `wolston`).
 - Slugs with a directly evidenced river tag: **4/27** (`leamington-spa`, `stratford-upon-avon`, `wolston`, `ryton-on-dunsmore`).
@@ -68,19 +68,31 @@ Source rule: primary official sources only (central-government registers, distri
 ### `lillington`
 
 **Context tags:** `conservation-area-present`, `settlement/local-plan`
-**Access/property-status caveat:** The named Lillington conservation character areas and Crown Way local centre do not cover every Lillington address or establish any building's age, listing, fabric or entry arrangements.
+**Access/property-status caveat:** The named character areas, local centre and managed assets do not describe every Lillington address. The council's freehold interest and the library's Grade II designation identify property status, not the current person authorised to instruct work, the relevant entrance, installed hardware or the requirements for a proposed alteration.
 
-1. **Claim:** The Royal Leamington Spa Conservation Area key map names both “Lillington Road North” and “Lillington Village” as character areas 34 and 35.
-   **Publisher / title / deep URL:** Warwick District Council — [A Guide to Conservation Areas: Royal Leamington Spa Conservation Area](https://www.warwickdc.gov.uk/download/downloads/id/3081/leamington_-_guide_to_conservation_areas.pdf), conservation-area key map.
-   **Supports:** A precise, partial conservation context and the `conservation-area-present` tag.
-   **Conditional service use:** Apply conservation wording only after the current map confirms the address is in one of those areas; do not describe Lillington as wholly conserved.
+1. **Claim:** The Royal Leamington Spa Conservation Area key map names Lillington Road North and Lillington Village as character areas 34 and 35; the council's current conservation page directs users to check status for the individual property.
+   **Publisher / title / deep URL:** Warwick District Council — [A Guide to Conservation Areas: Royal Leamington Spa Conservation Area](https://www.warwickdc.gov.uk/download/downloads/id/3081/leamington_-_guide_to_conservation_areas.pdf), conservation-area key map; Warwick District Council — [Conservation: property search and current guidance](https://www.warwickdc.gov.uk/info/20377/conservation).
+   **Supports:** Two precisely named character areas plus the current address-specific check, and the `conservation-area-present` tag.
+   **Conditional service use:** Resolve the supplied address before raising a visible-alteration question. Neither character name makes all Lillington properties conserved or listed, and status alone does not decide consent for a particular proposal.
    **Checked:** 2026-08-29.
 
-2. **Claim:** The adopted Warwick District Local Plan lists Crown Way, Lillington, as a local shopping centre; the Leamington neighbourhood plan repeats it in Policy RLS19.
+2. **Claim:** The adopted Warwick District Local Plan lists Crown Way, Lillington, as a local shopping centre in paragraph 3.103.
    **Publisher / title / deep URL:** Warwick District Council — [Warwick District Local Plan 2011-2029, adopted September 2017](https://www.warwickdc.gov.uk/download/downloads/id/4623/new_local_plan.pdf), paragraph 3.103.
    **Supports:** An authority-defined Lillington local-centre reference and the `settlement/local-plan` tag.
-   **Conditional service use:** Crown Way can be a confirmation prompt only when a customer identifies it; it does not prove that an address is nearby or within service coverage.
+   **Conditional service use:** Use Crown Way only to distinguish a caller-supplied location or unit; the planning label does not prove present use, proximity, authority, hardware or service coverage.
    **Checked:** 2026-08-29.
+
+3. **Claim:** Warwick District Council's January 2026 asset register records Lillington Community Centre, Mason Avenue, Leamington Spa, CV32 7QE, and states the council interest as freehold.
+   **Publisher / title / deep URL:** Warwick District Council — [Land and building assets, January 2026](https://www.warwickdc.gov.uk/download/downloads/id/7190/warwick_district_council_asset_list_pdf.pdf), Lillington Community Centre entry.
+   **Supports:** The exact named council asset, address and recorded council property interest.
+   **Conditional service use:** Use this to distinguish the Mason Avenue asset only. Freehold interest does not identify the current occupier, facilities contact, service entrance, keyholder, installed lock or authority for a requested job.
+   **Checked:** 2026-08-30.
+
+4. **Claim:** Warwickshire County Council places Lillington Library and Information Centre at Valley Road, Lillington, CV32 7SJ; Historic England lists the building at that statutory address at Grade II under entry 1420766.
+   **Publisher / title / deep URL:** Warwickshire County Council — [Lillington Library and Information Centre](https://www.warwickshire.gov.uk/lillingtonlibrary); Historic England — [Lillington Library, list entry 1420766](https://historicengland.org.uk/listing/the-list/list-entry/1420766?section=official-list-entry).
+   **Supports:** The current managed-library address and the exact building's statutory Grade II status.
+   **Conditional service use:** Apply these records only to this library building. Verify the present controller, entrance and property-specific requirements directly; listing does not describe its doors, grant access authority or determine consent for an unspecified proposal.
+   **Checked:** 2026-08-30.
 
 ### `sydenham`
 
@@ -91,13 +103,13 @@ Source rule: primary official sources only (central-government registers, distri
    **Publisher / title / deep URL:** Warwick District Council (host; Royal Leamington Spa Town Council plan) — [Royal Leamington Spa Neighbourhood Plan, June 2020](https://www.warwickdc.gov.uk/download/downloads/id/6087/final_rlsndp_for_referendum.pdf), Policy RLS19 and section 3.17.
    **Supports:** Two distinct authority-recorded land-use references and the `settlement/local-plan` tag.
    **Conditional service use:** Use either name only as caller-confirmed locality context; the classifications do not prove the use of a particular address, commercial demand, job history or service coverage.
-   **Checked:** 2026-08-30.
+   **Checked:** 2026-08-29.
 
 2. **Claim:** The Charity Commission record for Sydenham Neighbourhood Initiatives Limited, registered charity 1077333, describes the SYDNI Centre as a multicultural community centre and gives its contact address as Cottage Square, Sydenham, Leamington Spa, CV31 1PT.
    **Publisher / title / deep URL:** Charity Commission for England and Wales — [Sydenham Neighbourhood Initiatives Limited: full register record](https://register-of-charities.charitycommission.gov.uk/en/charity-search/-/charity-details/3951749/full-print).
    **Supports:** A registered organisation, named community-centre use and precise Sydenham contact address.
    **Conditional service use:** Treat this as organisation and site-identification evidence only. The register does not identify a current individual keyholder, the correct entrance, installed hardware or authority to approve work; confirm those directly for any attendance.
-   **Checked:** 2026-08-30.
+   **Checked:** 2026-08-29.
 
 3. **Claim:** The Department for Education record places Sydenham Primary School at Calder Walk, Sydenham, Leamington Spa, CV31 1SA.
    **Publisher / title / deep URL:** Department for Education — [Sydenham Primary School](https://get-information-schools.service.gov.uk/Establishments/Establishment/Details/130868).
@@ -167,36 +179,60 @@ Source rule: primary official sources only (central-government registers, distri
 ### `woodloes-park`
 
 **Context tags:** `settlement/local-plan`
-**Access/property-status caveat:** The local-centre and park references are public-area context only; they do not prove a caller's proximity, road access, property status or that the business covers every address using the Woodloes name.
+**Access/property-status caveat:** The local centre, public-space asset, school and registered charity are separate Woodloes references. Their records do not establish a private route, building entrance, current representative, installed lock, customer authority or service coverage; the charity contact must not be presented as a venue address.
 
-1. **Claim:** The adopted local plan lists Reardon Court, Woodloes, Warwick, as a local shopping centre.
+1. **Claim:** The adopted Warwick District Local Plan lists Reardon Court, Woodloes, Warwick, as a local shopping centre.
    **Publisher / title / deep URL:** Warwick District Council — [Warwick District Local Plan 2011-2029, adopted September 2017](https://www.warwickdc.gov.uk/download/downloads/id/4623/new_local_plan.pdf), paragraph 3.103.
    **Supports:** An authority-defined Woodloes local-centre reference and the `settlement/local-plan` tag.
    **Conditional service use:** Use Reardon Court only if it helps confirm a customer's stated locality; do not infer commercial demand, proximity or coverage.
    **Checked:** 2026-08-29.
 
-2. **Claim:** The council's community-parks register places Canalside in “Warwick (Woodloes Park)” and describes a play area, informal-games space and woodland, with access points including Coventry Road, Greenway, roads south of Deansway, Scar Bank and Lock Lane.
-   **Publisher / title / deep URL:** Warwick District Council — [Community parks](https://www.warwickdc.gov.uk/info/20245/parks_and_green_spaces/215/community_parks), “Warwick (Woodloes Park)”.
-   **Supports:** A council-maintained named locality feature and its published public access points.
-   **Conditional service use:** Use Canalside only as a caller-confirmed orientation cue; published park entrances do not establish access to a private service address.
-   **Checked:** 2026-08-29.
+2. **Claim:** The council places Canalside under Warwick (Woodloes Park) and lists public access from Coventry Road, Greenway, roads south of Deansway, Scar Bank and Lock Lane; its January 2026 asset register records the Canalside play area at Greenway with the council interest as freehold.
+   **Publisher / title / deep URL:** Warwick District Council — [Community parks](https://www.warwickdc.gov.uk/info/20245/parks_and_green_spaces/215/community_parks), “Warwick (Woodloes Park)”; Warwick District Council — [Land and building assets, January 2026](https://www.warwickdc.gov.uk/download/downloads/id/7190/warwick_district_council_asset_list_pdf.pdf), Canalside Play Area entry.
+   **Supports:** The named public asset, published public entrances and the council's recorded property interest.
+   **Conditional service use:** Use the records to identify Canalside only. Public entrances and freehold interest do not establish a private-property route, boundary, relevant opening, current site contact or authority for locksmith work.
+   **Checked:** community-parks source 2026-08-29; asset-register source 2026-08-30.
+
+3. **Claim:** The Department for Education records Woodloes Primary School at Deansway, Woodloes Park Estate, Warwick, CV34 5DF.
+   **Publisher / title / deep URL:** Department for Education — [Woodloes Primary School](https://get-information-schools.service.gov.uk/Establishments/Establishment/Details/141855).
+   **Supports:** A current central-government school record and exact named-site address in Woodloes Park.
+   **Conditional service use:** Use the school only as an address-verification cue. The record does not identify the relevant gate or service entrance, safeguarding procedure, present representative, installed hardware or authority to instruct work.
+   **Checked:** 2026-08-30.
+
+4. **Claim:** The Charity Commission identifies Woodloes Park Community Centre, charity 511957, gives Woodloes Park Estate as its area of benefit and states that the charity does not own or lease land or property.
+   **Publisher / title / deep URL:** Charity Commission for England and Wales — [Woodloes Park Community Centre, charity 511957](https://register-of-charities.charitycommission.gov.uk/en/constituency-search/-/charity-details/511957/full-print).
+   **Supports:** The registered organisation name, charitable area of benefit and its reported lack of an owned or leased property interest.
+   **Conditional service use:** Verify the actual community-centre premises and controller independently. The register's 4 Crane Close contact is not evidence of the centre venue, an entrance, property responsibility or a current keyholder.
+   **Checked:** 2026-08-30.
 
 ### `chase-meadow`
 
 **Context tags:** `settlement/local-plan`
-**Access/property-status caveat:** Named centres and parks do not establish any property's boundary, type, tenure, access or distance from them.
+**Access/property-status caveat:** Narrow Hall Meadow, the two public spaces, the community centre and the Alder Meadow health centre are separate official references. Their planning, property, governance and service records do not identify a private boundary, relevant entrance, current keyholder, safe route, installed hardware, work authority or service coverage.
 
-1. **Claim:** The adopted local plan lists Narrow Hall Meadow, Chase Meadow, Warwick, as a local shopping centre.
+1. **Claim:** The adopted Warwick District Local Plan lists Narrow Hall Meadow, Chase Meadow, Warwick, as a local shopping centre.
    **Publisher / title / deep URL:** Warwick District Council — [Warwick District Local Plan 2011-2029, adopted September 2017](https://www.warwickdc.gov.uk/download/downloads/id/4623/new_local_plan.pdf), paragraph 3.103.
    **Supports:** An authority-defined Chase Meadow local-centre reference and the `settlement/local-plan` tag.
    **Conditional service use:** Use Narrow Hall Meadow only to disambiguate a caller-supplied locality; do not infer demand, job history or coverage.
    **Checked:** 2026-08-29.
 
-2. **Claim:** Warwick District Council lists both Hickmans Green and The Marrish under “Warwick (south-west)” and identifies each as being in Chase Meadow.
+2. **Claim:** Warwick District Council lists Hickmans Green and The Marrish under Warwick south-west and identifies each as a community park in Chase Meadow.
    **Publisher / title / deep URL:** Warwick District Council — [Community parks](https://www.warwickdc.gov.uk/info/20245/parks_and_green_spaces/215/community_parks), “Warwick (south-west)”.
-   **Supports:** Two council-recognised Chase Meadow public-space names.
-   **Conditional service use:** These names can support neutral local orientation if the customer mentions them; they are not evidence about a private address or the service's operating footprint.
+   **Supports:** Two council-recognised Chase Meadow public-space assets.
+   **Conditional service use:** Use either name only to distinguish a caller-supplied place. The record does not prove a route, private boundary, building opening, responsible representative or the service's operating footprint.
    **Checked:** 2026-08-29.
+
+3. **Claim:** Warwick District Council's January 2026 asset register records Chase Meadow Community Centre at Narrow Hall Meadow, Warwick, CV34 6BT and the council interest as freehold. The centre's current site gives the same visit address, while the Charity Commission identifies Chase Meadow Community Centre Ltd, charity 1156393, and states that the charity does not own or lease land or property.
+   **Publisher / title / deep URL:** Warwick District Council — [Land and building assets, January 2026](https://www.warwickdc.gov.uk/download/downloads/id/7190/warwick_district_council_asset_list_pdf.pdf), Chase Meadow Community Centre entry; Chase Meadow Community Centre — [How to find us](https://www.chasemeadowcc.co.uk/find-us/); Charity Commission for England and Wales — [Chase Meadow Community Centre Ltd, charity 1156393](https://register-of-charities.charitycommission.gov.uk/en/charity-search/-/charity-details/5044193/governance).
+   **Supports:** The council's recorded property interest, the centre's current visit address and the operator charity's separate governance status.
+   **Conditional service use:** Keep the asset register's recorded council freehold interest, the visit address and charity governance separate. The charity register's contact postcode must not replace the centre's verified CV34 6BT visit address, and none of the records identifies a current keyholder, entrance, installed lock or authority for an instruction.
+   **Checked:** 2026-08-30.
+
+4. **Claim:** The NHS service record identifies Chase Meadow Health Centre at The New Dispensary, 2 Alder Meadow, Warwick, CV34 6JY.
+   **Publisher / title / deep URL:** NHS — [Chase Meadow Health Centre](https://www.nhs.uk/services/gp-surgery/chase-meadow-health-centre/M84063).
+   **Supports:** The current official service name and exact address of this managed health site.
+   **Conditional service use:** Use the record to distinguish this health-centre site only. It does not identify a relevant entrance, present facilities representative, access procedure, installed hardware or authority to approve work; do not copy time-sensitive open-or-closed status into evergreen content.
+   **Checked:** 2026-08-30.
 
 ### `warwick-gates`
 
