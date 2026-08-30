@@ -34,6 +34,28 @@ const SERVICE_SHORT_NAMES = Object.freeze({
   'boarding-up': 'Boarding Up & Burglary Repairs',
   'lock-upgrade': 'Lock Upgrade',
 })
+const PRIMARY_SERVICE_GUIDES = Object.freeze({
+  'emergency-lockout': {
+    slug: 'locked-out-late-night-coventry',
+    title: 'Locked Out of Your House? A Step-by-Step Guide to Getting Back In Safely',
+  },
+  'lock-change': {
+    slug: 'lock-change-costs-by-type',
+    title: 'Lock Change Costs Broken Down by Lock Type and Door Type',
+  },
+  'upvc-lock-repair': {
+    slug: 'upvc-door-lock-needs-replacing',
+    title: 'How to Tell If Your uPVC Door Lock Needs Replacing (Not Just Fixing)',
+  },
+  'boarding-up': {
+    slug: 'what-to-do-after-burglary',
+    title: 'What to Do After a Burglary: The Complete UK Step-by-Step Guide',
+  },
+  'lock-upgrade': {
+    slug: 'bs3621-locks-explained',
+    title: 'BS3621 Locks Explained — Why Your Home Insurance May Require One',
+  },
+})
 const PRICE_OWNER_PATH = '/prices'
 const PRICE_OWNER_TITLE_H1_PATTERN = /\blocksmith (?:costs?|prices)\b/i
 const PRICE_OWNER_EXACT_QUESTION_PATTERN = /\bwhat does an emergency locksmith cost in coventry\b/i
@@ -279,6 +301,11 @@ function getCanonical(html) {
 function getTitle(html) {
   const match = html.match(/<title[^>]*>([\s\S]*?)<\/title>/i)
   return match ? decodeHtml(match[1]).replace(/\s+/g, ' ').trim() : ''
+}
+
+function calendarDate(value = '') {
+  const match = String(value).match(/^(\d{4}-\d{2}-\d{2})(?:T|$)/)
+  return match?.[1] ?? ''
 }
 
 function schemaNodes(value) {
@@ -727,17 +754,26 @@ try {
 
   const sitemapResult = await fetchLocal('/sitemap.xml')
   check(sitemapResult.response.status === 200, `sitemap.xml returned ${sitemapResult.response.status}`)
-  const sitemapUrls = Array.from(
-    sitemapResult.html.matchAll(/<loc>([\s\S]*?)<\/loc>/g),
-    match => decodeHtml(match[1].trim())
+  const sitemapEntries = Array.from(
+    sitemapResult.html.matchAll(/<url>([\s\S]*?)<\/url>/g),
+    match => {
+      const entry = match[1]
+      return {
+        loc: decodeHtml(entry.match(/<loc>([\s\S]*?)<\/loc>/)?.[1]?.trim() ?? ''),
+        lastModified: decodeHtml(entry.match(/<lastmod>([\s\S]*?)<\/lastmod>/)?.[1]?.trim() ?? ''),
+      }
+    },
   )
+  const sitemapUrls = sitemapEntries.map(entry => entry.loc)
+  const sitemapLastModifiedByUrl = new Map(sitemapEntries.map(entry => [entry.loc, entry.lastModified]))
 
   check(sitemapUrls.length === EXPECTED_SITEMAP_URLS, `sitemap has ${sitemapUrls.length} URLs; expected ${EXPECTED_SITEMAP_URLS}`)
   check(new Set(sitemapUrls).size === sitemapUrls.length, 'sitemap contains duplicate URLs')
 
-  for (const loc of sitemapUrls) {
+  for (const { loc, lastModified } of sitemapEntries) {
     const url = new URL(loc)
     check(url.origin === CANONICAL_ORIGIN, `sitemap URL uses the wrong origin: ${loc}`)
+    check(Boolean(calendarDate(lastModified)), `sitemap URL has a missing or invalid lastmod: ${loc}`)
   }
 
   const robotsResult = await fetchLocal('/robots.txt')
@@ -890,6 +926,7 @@ try {
       )
       check(!pageText.includes('Common Lock Problems in'), `${productionUrl.pathname} still renders the unsupported legacy common-problems block`)
       if (hasDedicatedOwnerPages) {
+        check(!html.includes('data-primary-service-guide='), `${productionUrl.pathname} duplicates primary blog-guide links beside dedicated service owners`)
         check(sourceRegisterScope === 'locality-only', `${productionUrl.pathname} source register scope is ${sourceRegisterScope || 'missing'}; expected locality-only`)
         check(!renderedSourceKinds.includes('technical'), `${productionUrl.pathname} locality-only source register still renders a technical source`)
         check(pageText.includes('links to the primary locality sources used'), `${productionUrl.pathname} does not disclose its locality-only review sources`)
@@ -972,6 +1009,15 @@ try {
           check(Boolean(block), `${productionUrl.pathname} is missing the ${serviceSlug} evidence section marker`)
           if (block) {
             checkEvidenceBlockContract(block, `${productionUrl.pathname} ${serviceSlug} guidance`)
+            const primaryGuideLinks = Array.from(
+              block.matchAll(/<a\b(?=[^>]*\bdata-primary-service-guide=["']([^"']+)["'])(?=[^>]*\bhref=["']([^"']+)["'])[^>]*>([\s\S]*?)<\/a>/gi),
+              match => ({ serviceSlug: match[1], href: decodeHtml(match[2]), text: visibleText(match[3]) }),
+            )
+            const expectedPrimaryGuide = PRIMARY_SERVICE_GUIDES[serviceSlug]
+            check(primaryGuideLinks.length === 1, `${productionUrl.pathname} ${serviceSlug} guidance renders ${primaryGuideLinks.length} primary guide links; expected one`)
+            check(primaryGuideLinks[0]?.serviceSlug === serviceSlug, `${productionUrl.pathname} ${serviceSlug} guidance has the wrong primary-guide marker`)
+            check(primaryGuideLinks[0]?.href === `/blog/${expectedPrimaryGuide.slug}`, `${productionUrl.pathname} ${serviceSlug} guidance links the wrong primary guide`)
+            check(primaryGuideLinks[0]?.text.includes(expectedPrimaryGuide.title), `${productionUrl.pathname} ${serviceSlug} primary guide link has non-descriptive anchor text`)
             const selectedLocalFactBlock = block.match(
               /<p\b(?=[^>]*data-selected-local-fact-links=["']true["'])[^>]*>[\s\S]*?<\/p>/i,
             )?.[0] ?? ''
@@ -1274,6 +1320,10 @@ try {
       check(visibleText(authorNote).includes('Ross'), `${productionUrl.pathname} visible author note does not name Ross`)
       const authorReviewDate = authorNote.match(/data-content-reviewed-on=["']([^"']+)["']/i)?.[1] ?? ''
       check(authorReviewDate === authoredWebPage?.dateModified, `${productionUrl.pathname} visible review date does not match WebPage dateModified`)
+      check(
+        calendarDate(sitemapLastModifiedByUrl.get(loc)) === calendarDate(authoredWebPage?.dateModified),
+        `${productionUrl.pathname} sitemap lastmod does not match its WebPage dateModified`,
+      )
     }
 
     if (genericServiceMatch) {
@@ -1320,6 +1370,10 @@ try {
       )
       check(visibleDateTimes.includes(article?.datePublished), `${productionUrl.pathname} does not visibly expose its BlogPosting datePublished in a semantic time element`)
       check(visibleDateTimes.includes(article?.dateModified), `${productionUrl.pathname} does not visibly expose its BlogPosting dateModified in a semantic time element`)
+      check(
+        calendarDate(sitemapLastModifiedByUrl.get(loc)) === calendarDate(article?.dateModified),
+        `${productionUrl.pathname} sitemap lastmod does not match its BlogPosting dateModified`,
+      )
     }
 
     if (productionUrl.pathname === '/about') {
@@ -1381,8 +1435,14 @@ try {
       mainHrefs,
       mainText,
       fragmentTargets,
+      primaryServiceGuideLinks: (mainHtml.match(/\bdata-primary-service-guide=["'][^"']+["']/gi) ?? []).length,
     }
   })
+
+  check(
+    pages.reduce((total, page) => total + page.primaryServiceGuideLinks, 0) === 355,
+    'rendered estate does not contain exactly 355 contextual primary service-guide links',
+  )
 
   const titleOwners = new Map()
   const descriptionOwners = new Map()

@@ -28,13 +28,6 @@ interface Props {
   params: Promise<{ slug: string }>
 }
 
-function getRelatedGuides() {
-  const slugs = Array.from(new Set(Object.values(SERVICE_GUIDE_SLUGS).map(serviceSlugs => serviceSlugs[0])))
-  return slugs
-    .map(slug => getBlogPostBySlug(slug))
-    .filter((post): post is NonNullable<typeof post> => post != null)
-}
-
 function areaGuideOrThrow(slug: string) {
   const guide = getAreaGuide(slug)
   if (!guide) throw new Error(`Missing governed area guide for ${slug}`)
@@ -85,21 +78,27 @@ export default async function AreaPage({ params }: Props) {
   const hasPairLinkedServiceEvidence = guide.serviceEvidenceMode !== 'hub-context-only'
   const neighbours = getAreaNeighbours(area)
   const areaAuthority = getAreaAuthority(area.slug)
-  const relatedPosts = getRelatedGuides()
   const pageSources = hasDedicatedServicePages
     ? guide.sources.filter(source => source.kind !== 'technical')
     : guide.sources
   const sourceById = new Map(pageSources.map(source => [source.id, source]))
-  const serviceGuidance = SERVICES.map(service => ({
-    service,
-    guidance: guide.serviceGuidance[service.slug as ServiceAreaSlug],
-    detailsHref: hasTownService(area.slug, service.slug)
-      ? `/areas/${area.slug}/${service.slug}`
-      : `/services/${service.slug}`,
-    localOwnerHref: hasTownService(area.slug, service.slug)
-      ? `/areas/${area.slug}/${service.slug}`
-      : `/areas/${area.slug}#${service.slug}`,
-  }))
+  const serviceGuidance = SERVICES.map(service => {
+    const primaryGuideSlug = SERVICE_GUIDE_SLUGS[service.slug]?.[0]
+    const primaryGuide = primaryGuideSlug ? getBlogPostBySlug(primaryGuideSlug) : undefined
+    if (!primaryGuide) throw new Error(`Missing primary ${service.slug} guide for ${area.slug}`)
+
+    return {
+      service,
+      guidance: guide.serviceGuidance[service.slug as ServiceAreaSlug],
+      primaryGuide,
+      detailsHref: hasTownService(area.slug, service.slug)
+        ? `/areas/${area.slug}/${service.slug}`
+        : `/services/${service.slug}`,
+      localOwnerHref: hasTownService(area.slug, service.slug)
+        ? `/areas/${area.slug}/${service.slug}`
+        : `/areas/${area.slug}#${service.slug}`,
+    }
+  })
   const allFaqs = hasDedicatedServicePages
     ? guide.faqs
     : [
@@ -382,7 +381,7 @@ export default async function AreaPage({ params }: Props) {
                 : `These five service sections provide operational and technical checks only. They are not presented as locally evidenced diagnoses for ${area.name}; the separately cited area facts are not used to infer any property's lock, access, demand or condition.`}
             </p>
             <div className="space-y-8">
-              {serviceGuidance.map(({ service, guidance, detailsHref }) => (
+              {serviceGuidance.map(({ service, guidance, detailsHref, primaryGuide }) => (
                 <article
                   key={service.slug}
                   id={service.slug}
@@ -416,6 +415,13 @@ export default async function AreaPage({ params }: Props) {
                       </li>
                     ))}
                   </ul>
+                  <Link
+                    href={`/blog/${primaryGuide.slug}`}
+                    data-primary-service-guide={service.slug}
+                    className="inline-flex mt-6 text-sm font-bold text-[#0F1B2D] underline decoration-[#FFB800] underline-offset-4 hover:text-[#8A5A00]"
+                  >
+                    Read: {primaryGuide.title}
+                  </Link>
                   <div className="rounded-xl bg-[#FFF9E8] border border-[#FFB800]/30 p-5 mt-6" data-service-faq="true">
                     <h4 className="font-black text-[#0F1B2D] mb-2" data-faq-question="true">{guidance.faq.q}</h4>
                     <p className="text-gray-700 leading-relaxed" data-faq-answer="true">{guidance.faq.a}</p>
@@ -486,21 +492,6 @@ export default async function AreaPage({ params }: Props) {
               </li>
             ))}
           </ul>
-        </div>
-      </section>
-
-      <section className="py-10 px-4 bg-[#F7F7F5]">
-        <div className="max-w-3xl mx-auto">
-          <h2 className="text-xl font-black text-[#0F1B2D] mb-2">Helpful Locksmith Guides</h2>
-          <p className="text-gray-600 text-sm mb-5">Long-form advice for comparing methods, parts, standards and costs before you book.</p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-            {relatedPosts.map(post => (
-              <Link key={post.slug} href={`/blog/${post.slug}`} className="bg-white border border-gray-200 hover:border-[#FFB800] rounded-xl p-4 transition-colors group">
-                <p className="font-bold text-[#0F1B2D] text-sm leading-snug group-hover:text-[#8A5A00]">{post.title}</p>
-                <p className="text-xs text-gray-600 mt-2">{post.readTime}</p>
-              </Link>
-            ))}
-          </div>
         </div>
       </section>
 

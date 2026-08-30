@@ -22,8 +22,8 @@ export const NORTH_EAST_AREA_SEARCH_DESCRIPTIONS = {
     sourceIds: ['nbbc-borough-plan-review-2021-2039', 'nbbc-horeston-grange-wellbeing-walk'],
   },
   whitestone: {
-    description: 'Whitestone locksmith help for lockouts and repairs, with the county street register assigning Whitestone Road and St Andrews Drive to Whitestone, Nuneaton.',
-    sourceIds: ['wcc-list-of-streets-2026'],
+    description: 'Whitestone locksmith help for lockouts, repairs and upgrades, with council records identifying HSG9 off Golf Drive and Magyar Crescent repair contacts.',
+    sourceIds: ['nbbc-whitestone-hsg9-5yhls-2026', 'nbbc-magyar-crescent-tenancy-team'],
   },
   'camp-hill': {
     description: 'Camp Hill locksmith help for lockouts and repairs, with the 11 August 2026 county register distinguishing Camp Hill Drive\'s locality entry from Camp Hill Road.',

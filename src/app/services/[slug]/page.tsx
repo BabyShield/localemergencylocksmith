@@ -12,10 +12,10 @@ import { AREAS, AREA_SERVED_SCHEMA, getAllAreasByRegion } from '@/data/areas'
 import { hasTownService } from '@/data/governed-town-services'
 import {
   SITE_CONFIG,
-  CONTENT_UPDATED,
   LOCKSMITH_AUTHOR_SCHEMA,
   SERVICE_PROVIDER_SCHEMA,
 } from '@/data/config'
+import { SERVICE_GUIDES_REVIEWED_ON } from '@/data/content-dates'
 import { getTechnicalEvidenceSource } from '@/data/locksmith-evidence'
 import { getBlogPostBySlug } from '@/data/blog-posts'
 import { SERVICE_GUIDE_SLUGS } from '@/data/blog-seo'
@@ -389,7 +389,7 @@ export default async function ServicePage({ params }: Props) {
     url: `${SITE_CONFIG.domain}/services/${slug}`,
     name: service.metaTitle,
     description: service.metaDescription,
-    dateModified: CONTENT_UPDATED,
+    dateModified: SERVICE_GUIDES_REVIEWED_ON,
     author: LOCKSMITH_AUTHOR_SCHEMA,
     publisher: { '@id': `${SITE_CONFIG.domain}/#business` },
     mainEntity: { '@id': `${SITE_CONFIG.domain}/services/${slug}#service` },
@@ -542,7 +542,7 @@ export default async function ServicePage({ params }: Props) {
             </div>
           )}
 
-          <LastUpdated date={CONTENT_UPDATED} />
+          <LastUpdated date={SERVICE_GUIDES_REVIEWED_ON} />
         </div>
       </section>
 
@@ -836,7 +836,7 @@ export default async function ServicePage({ params }: Props) {
             </Link>
             .
           </p>
-          <ContentAuthorNote reviewedOn={CONTENT_UPDATED} label={`${service.shortName} guide`} />
+          <ContentAuthorNote reviewedOn={SERVICE_GUIDES_REVIEWED_ON} label={`${service.shortName} guide`} />
           <ul className="space-y-4 mt-6">
             {evidenceSources.map(source => (
               <li

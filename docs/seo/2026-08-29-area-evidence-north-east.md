@@ -121,25 +121,30 @@ Status: research only. This file is a claim-level evidence register, not publish
 
 ### `whitestone` — Whitestone
 
-**Context tags:** `locality-register`, `school`
+**Context tags:** `locality-register`, `housing-trajectory`, `conditional-council-route`, `school`
 
-1. **Fact:** The county street register produced on 11 August 2026 assigns Fairway, Falcon Close and Falstaff Close to Whitestone, Nuneaton.
+1. **Fact:** The county street register produced on 11 August 2026 assigns Fairway, Falcon Close, Falstaff Close, St Andrews Drive, Whitestone Road and Willowfields Road to Whitestone, Nuneaton.
    - **Publisher / title / deep URL:** [Warwickshire County Council — List of Streets maintained at public expense](https://api.warwickshire.gov.uk/documents/WCCC-930-12)
-   - **Direct support:** The live county register lists the three streets with Whitestone as the locality and Nuneaton as the town.
-   - **Checked:** 2026-08-29.
+   - **Direct support:** The live county register lists each selected street with Whitestone as the locality and Nuneaton as the town.
+   - **Checked:** 2026-08-30.
    - **Conditional service-use implication:** These labels can assist address checking but must not be converted into a full route or property boundary.
-2. **Fact:** The same register assigns St Andrews Drive, Whitestone Road and Willowfields Road to Whitestone, Nuneaton.
-   - **Publisher / title / deep URL:** [Warwickshire County Council — List of Streets maintained at public expense](https://api.warwickshire.gov.uk/documents/WCCC-930-12)
-   - **Direct support:** The live county register gives Whitestone and Nuneaton alongside each of these entries.
-   - **Checked:** 2026-08-29.
-   - **Conditional service-use implication:** The street names may be used for locality disambiguation only; no property type, door, access or service condition should be inferred.
-3. **Fact:** Warwickshire County Council's school directory identifies Whitestone Infant School as a community school at Magyar Crescent, Nuneaton, Warwickshire CV11 4SQ.
+2. **Fact:** The borough's housing trajectory at 1 April 2026 records site 64c001, land off Golf Drive (HSG9), with status “U/C” in the Whitestone-and-Bulkington ward grouping; the row records total capacity of 621 and 68 completions between 2021/22 and 2025/26.
+   - **Publisher / title / deep URL:** [Nuneaton and Bedworth Borough Council — Five-Year Housing Land Supply Calculation - 1 April 2026](https://www.nuneatonandbedworth.gov.uk/downloads/file/2666/5yhls-calculation-and-housing-trajectory-1st-april-2026)
+   - **Direct support:** Appendix 1, page 6, supplies the named site, row status, ward grouping, capacity and completions figures.
+   - **Checked:** 2026-08-30, using extracted table text and a rendered page image.
+   - **Conditional service-use implication:** Only for an HSG9 booking, request the current plot or postal address and distinguish a completed dwelling from a controlled site. The dated trajectory does not establish today's phase, route, occupation, threshold controller or hardware.
+3. **Fact:** The council's tenancy-and-neighbourhood directory publishes a tenancy management officer, housing-repair route and emergency out-of-hours number for Magyar Crescent, Nuneaton.
+   - **Publisher / title / deep URL:** [Nuneaton and Bedworth Borough Council — Magyar Crescent, Nuneaton - Tenancy and neighbourhood teams](https://www.nuneatonandbedworth.gov.uk/directory-record/3892/magyar-crescent-nuneaton)
+   - **Direct support:** The live record names the street and publishes the tenancy-management, repair and emergency contact routes.
+   - **Checked:** 2026-08-30.
+   - **Conditional service-use implication:** Apply those routes only after confirming that a council tenancy or council-controlled threshold is involved. The directory does not assign tenure or door control to every Magyar Crescent address.
+4. **Fact:** Warwickshire County Council's school directory identifies Whitestone Infant School as a community school at Magyar Crescent, Nuneaton, Warwickshire CV11 4SQ.
    - **Publisher / title / deep URL:** [Warwickshire County Council — Whitestone Infant School](https://apps.warwickshire.gov.uk/FindASchool/schools/whitestone-infant-school)
    - **Direct support:** The official record gives the school name, displays its category as Community, and lists Magyar Crescent, Nuneaton, Warwickshire CV11 4SQ as the contact address.
-   - **Checked:** 2026-08-29.
+   - **Checked:** 2026-08-30.
    - **Conditional service-use implication:** If a booking concerns the school, identify the named gate or entrance and the person authorised for the site. The directory establishes neither access rights nor installed hardware.
 
-**Access/property-status caveat:** The highway register is not a complete postcode, ward, parcel or property lookup, and the school directory identifies one facility only. Verify the complete current address, named threshold and responsible controller separately.
+**Access/property-status caveat:** The highway register is not a boundary or parcel map, the trajectory is a dated site-level record, the tenancy directory is not tenure proof for every address, and the school entry identifies one facility only. Verify the current plot or full address, named threshold, present status and responsible controller separately.
 
 ### `camp-hill` — Camp Hill
 
