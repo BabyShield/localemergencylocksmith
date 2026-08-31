@@ -54,6 +54,7 @@ const MIN_EXACT_DUPLICATE_SENTENCE_WORDS = 10
 const MIN_CROSS_RECORD_SENTENCE_WORDS = 8
 const MIN_AREA_NEUTRAL_FAQ_FAMILIES = 85
 const MAX_AREA_NEUTRAL_FAQ_FAMILY_SIZE = 5
+const MIN_AREA_SERVICE_FACT_PATTERNS = 2
 
 // Keep these ownership and evidence-mode lists independent from production
 // routing/data so a generator change cannot silently weaken the audit.
@@ -103,6 +104,56 @@ const AUDIT_SERVICE_SEARCH_HEADING_INTENTS = Object.freeze({
   'lock-upgrade': {
     label: 'lock upgrades and door security',
     patterns: [/\block upgrades?\b/i, /\bdoor security\b/i],
+  },
+})
+
+// Search headings alone cannot prove that a page helps somebody make the
+// corresponding locksmith decision. Keep a separate, body-only contract for
+// the practical evidence and decision stages each service guide must cover.
+const AUDIT_SERVICE_BODY_DECISION_CONTRACTS = Object.freeze({
+  'emergency-lockout': {
+    minimumSignals: 4,
+    signals: [
+      { label: 'an exact affected opening', patterns: [/\b(?:exact|precise|particular|confirmed|affected|named|specific|identified)\b/i, /\b(?:door|opening|threshold|entrance|lock)\b/i] },
+      { label: 'an authority-verification action', patterns: [/\b(?:confirm|verify|establish|connect|link|obtain|record|check|identify)\w*\b/i, /\b(?:identity|authority|authorisation|authorised|permission|requester|occupier|responsible|controller)\w*\b/i] },
+      { label: 'an inspection-led access decision', patterns: [/\b(?:inspect|examine|assess|test|observe|check)\w*\b/i, /\b(?:method|approach|access|entry|opening|non-destructive|destructive)\w*\b/i] },
+      { label: 'advance price or charge clarity', patterns: [/\b(?:price|charge|cost|quote)\b/i, /\b(?:before|advance|available|explain|provide|state|confirm|agree|agreement|expected|basis)\w*\b/i] },
+    ],
+  },
+  'lock-change': {
+    minimumSignals: 2,
+    signals: [
+      { label: 'inspection of the installed hardware', patterns: [/\b(?:inspect|photograph|record|identify|test|assess|document|capture|measure)\w*\b/i, /\b(?:lock|cylinder|case|door|hardware|component|edge plate|keep)\w*\b/i] },
+      { label: 'a fault-or-objective-led repair/change comparison', patterns: [/\b(?:reason|objective|goal|purpose|key control|fault|failure|damage|requirement|symptom)\w*\b/i, /\b(?:repair|adjust|fault|failure)\w*\b/i, /\b(?:replace|replacement|change)\w*\b/i] },
+      { label: 'component measurements', patterns: [/\b(?:measure|measurement|dimension|backset|centres?|marking|size)\w*\b/i, /\b(?:lock|cylinder|case|door|hardware|component|faceplate|centres?|backset)\w*\b/i] },
+    ],
+  },
+  'upvc-lock-repair': {
+    minimumSignals: 3,
+    signals: [
+      { label: 'the actual door or multipoint assembly', patterns: [/\b(?:upvc|composite|multipoint|door material)\b/i, /\b(?:door|leaf|mechanism|locking|faceplate)\w*\b/i] },
+      { label: 'observable operating symptoms', patterns: [/\b(?:handle|key|locking point|hook|roller|bolt|frame)\w*\b/i, /\b(?:move|travel|turn|lift|engage|operate|behav|symptom|resist|contact|open|closed)\w*\b/i] },
+      { label: 'component identifiers and dimensions', patterns: [/\b(?:faceplate|marking|code)\w*\b/i, /\b(?:backset|centres?|layout|code|dimension|size)\w*\b/i] },
+      { label: 'an inspection-led diagnosis', patterns: [/\b(?:inspect|test|diagnos|assess|separate|check)\w*\b/i, /\b(?:repair|replacement|component|part|mechanism|alignment|cylinder|gearbox|strip)\w*\b/i] },
+    ],
+  },
+  'boarding-up': {
+    minimumSignals: 3,
+    signals: [
+      { label: 'the damaged opening', patterns: [/\b(?:damage|broken|compromised|exposed)\w*\b/i, /\b(?:opening|door|window|pane|panel|frame)\w*\b/i] },
+      { label: 'an authority-verification action', patterns: [/\b(?:confirm|verify|establish|obtain|identify|name)\w*\b/i, /\b(?:authority|authorisation|authorised|permission|responsible|controller|instructing party|contact)\w*\b/i] },
+      { label: 'scene or evidence preservation', patterns: [/\b(?:police|evidence|scene)\w*\b/i, /\b(?:follow|preserve|retain|photograph|avoid|before|undisturbed|disturb)\w*\b/i] },
+      { label: 'temporary work separated from follow-up repair', patterns: [/\btemporary\w*\b/i, /\b(?:permanent|later|follow-up|outstanding|reinstatement|glazing|joinery|structural|repair)\w*\b/i] },
+    ],
+  },
+  'lock-upgrade': {
+    minimumSignals: 3,
+    signals: [
+      { label: 'an authorised objective or observed weakness', patterns: [/\b(?:define|confirm|record|obtain|establish|identify|state|document|written)\w*\b/i, /\b(?:objective|goal|outcome|required|requirement|weakness|risk|key control)\w*\b/i] },
+      { label: 'the whole door assembly', patterns: [/\b(?:door|leaf)\w*\b/i, /\b(?:frame|hinge|keep)\w*\b/i, /\b(?:lock|cylinder|handle|hardware)\w*\b/i] },
+      { label: 'measured fit and product evidence', minimumPatterns: 2, patterns: [/\b(?:measure|measurement|dimension|sized)\w*\b/i, /\b(?:compatible|compatibility|fit|suit)\w*\b/i, /\b(?:product evidence|certification|certified|accredited|standard|manufacturer)\w*\b/i] },
+      { label: 'a bounded option or specification', patterns: [/\b(?:option|proposal|specification|scope|adjustment|reinforcement|replacement)\w*\b/i, /\b(?:retain|exclude|limitation|limit|outside|dependency|dependenc|unchanged|cannot|does not|separate)\w*\b/i] },
+    ],
   },
 })
 
@@ -543,6 +594,7 @@ const hubOwnedAreaWordCounts = []
 const dedicatedParentWordCounts = []
 const areaFactCounts = []
 const areaFactSourceCounts = []
+const areaServiceFactPatternCounts = []
 const areaEditorialRecords = []
 const hubOwnedAreaEditorialRecords = []
 const dedicatedParentEditorialRecords = []
@@ -822,6 +874,24 @@ for (const area of AREAS) {
       check(wordCount(paragraph) >= 50, `${guidanceLabel} paragraph ${index + 1} has ${wordCount(paragraph)} words; expected at least 50`)
     }
     const guidanceText = (guidance.body ?? []).join(' ')
+    const bodyDecisionContract = AUDIT_SERVICE_BODY_DECISION_CONTRACTS[serviceSlug]
+    check(Boolean(bodyDecisionContract), `${guidanceLabel} has no independent body decision contract`)
+    if (bodyDecisionContract) {
+      const signalResults = bodyDecisionContract.signals.map(signal => {
+        const matchedPatterns = signal.patterns.filter(pattern => pattern.test(guidanceText)).length
+        return {
+          label: signal.label,
+          passes: matchedPatterns >= (signal.minimumPatterns ?? signal.patterns.length),
+        }
+      })
+      const matchedSignals = signalResults.filter(result => result.passes).length
+      const missingSignals = signalResults.filter(result => !result.passes).map(result => result.label)
+      check(
+        matchedSignals >= bodyDecisionContract.minimumSignals,
+        `${guidanceLabel} body covers ${matchedSignals}/${signalResults.length} practical ${serviceSlug} signals; `
+        + `expected at least ${bodyDecisionContract.minimumSignals}; missing ${missingSignals.join(', ')}`,
+      )
+    }
     const guidanceEvidenceText = [
       guidanceText,
       ...(guidance.checks ?? []),
@@ -950,6 +1020,17 @@ for (const area of AREAS) {
       faqAnswerKey: areaNeutralFaqKey(guidance.faq?.a, area),
       faqExactAnswerKey: normalise(guidance.faq?.a),
     })
+  }
+
+  if (serviceEvidenceMode !== 'hub-context-only') {
+    const areaServiceFactPatterns = new Set(SERVICE_AREA_SLUGS.map(serviceSlug => (
+      JSON.stringify([...(guide.serviceGuidance?.[serviceSlug]?.localFactIndexes ?? [])].sort((left, right) => left - right))
+    )))
+    areaServiceFactPatternCounts.push(areaServiceFactPatterns.size)
+    check(
+      areaServiceFactPatterns.size >= MIN_AREA_SERVICE_FACT_PATTERNS,
+      `${label} reuses only ${areaServiceFactPatterns.size} local-fact selection pattern across all five services; expected at least ${MIN_AREA_SERVICE_FACT_PATTERNS}`,
+    )
   }
 
   const pageFaqs = [
@@ -1226,6 +1307,7 @@ console.log(`Registry: ${guideEntries.length} area guides, ${guidanceRecords.len
 console.log(`Evidence: ${sourceCanonicals.size} source IDs, ${sourceUrls.size} unique URLs`)
 const factCounts = summary(areaFactCounts)
 const factSourceCounts = summary(areaFactSourceCounts)
+const serviceFactPatternCounts = summary(areaServiceFactPatternCounts)
 const totalAreaFactCount = areaFactCounts.reduce((total, count) => total + count, 0)
 check(
   factHeadingOwners.size === totalAreaFactCount,
@@ -1234,6 +1316,7 @@ check(
 console.log(`Area facts (required ${MIN_AREA_FACTS}-${MAX_AREA_FACTS}): min ${factCounts.min}, median ${factCounts.median}, max ${factCounts.max}`)
 console.log(`Descriptive fact headings: ${factHeadingOwners.size}/${totalAreaFactCount} unique labels`)
 console.log(`Area fact sources (minimum ${MIN_AREA_FACT_SOURCES}): min ${factSourceCounts.min}, median ${factSourceCounts.median}, max ${factSourceCounts.max}`)
+console.log(`Area service fact-selection patterns (minimum ${MIN_AREA_SERVICE_FACT_PATTERNS}): min ${serviceFactPatternCounts.min}, median ${serviceFactPatternCounts.median}, max ${serviceFactPatternCounts.max}`)
 const hubOwnedWords = summary(hubOwnedAreaWordCounts)
 const dedicatedParentWords = summary(dedicatedParentWordCounts)
 console.log(`Rendered hub-owned editorial words (minimum ${MIN_HUB_OWNED_EDITORIAL_WORDS}): min ${hubOwnedWords.min}, median ${hubOwnedWords.median}, p95 ${hubOwnedWords.p95}, max ${hubOwnedWords.max}`)

@@ -1,6 +1,6 @@
 # South-west service-area evidence register
 
-Checked: baseline corpus 2026-08-29; `alcester`, `baginton`, `balsall-common`, `bishopton`, `brandon`, `brinklow`, `chase-meadow`, `hampton-in-arden`, `lillington`, `meriden`, `sydenham`, `tiddington`, `wolston` and `woodloes-park` evidence refreshed 2026-08-30; `heathcote` and `milverton` evidence refreshed 2026-08-31.
+Checked: baseline corpus 2026-08-29; `alcester`, `baginton`, `balsall-common`, `bishopton`, `brandon`, `brinklow`, `chase-meadow`, `hampton-in-arden`, `lillington`, `meriden`, `sydenham`, `tiddington`, `wolston` and `woodloes-park` evidence refreshed 2026-08-30; `heathcote`, `kenilworth`, `milverton`, `shilton`, `shottery`, `southam`, `studley` and `warwick` evidence refreshed 2026-08-31.
 Scope: 27 governed area slugs across Leamington Spa, Warwick, Stratford-upon-Avon and the Warwickshire/nearby cluster.
 Source rule: primary official sources only (central-government registers and services, district/borough/county councils, official adopted or submitted planning documents hosted by them, and the named institution's current site where it is needed to establish its visit address).
 
@@ -15,9 +15,9 @@ Source rule: primary official sources only (central-government registers and ser
 ## Counts and unresolved status
 
 - Registry slugs reviewed: **27/27**.
-- Factual claims recorded: **89** (at least two per slug; four each for `alcester`, `baginton`, `balsall-common`, `bishopton`, `brandon`, `brinklow`, `chase-meadow`, `hampton-in-arden`, `heathcote`, `lillington`, `meriden`, `milverton`, `sydenham`, `tiddington`, `wolston` and `woodloes-park`, plus a third for `leamington-spa`, `stratford-upon-avon` and `shilton`).
+- Factual claims recorded: **100** (at least two per slug; four each for `alcester`, `baginton`, `balsall-common`, `bishopton`, `brandon`, `brinklow`, `chase-meadow`, `hampton-in-arden`, `heathcote`, `kenilworth`, `lillington`, `meriden`, `milverton`, `shilton`, `shottery`, `southam`, `studley`, `sydenham`, `tiddington`, `warwick`, `wolston` and `woodloes-park`, plus a third for `leamington-spa` and `stratford-upon-avon`).
 - Slugs with at least two official-source claims: **27/27**.
-- Distinct primary deep URLs cited: **77** across **12** publishing bodies (16 Warwick District Council, 11 Stratford-on-Avon District Council, 9 Rugby Borough Council, 9 Solihull Metropolitan Borough Council, 10 Historic England, 5 Charity Commission, 8 Department for Education, 4 Warwickshire County Council, 2 NHS, 1 Coventry City Council, 1 Office for National Statistics and 1 Chase Meadow Community Centre URL); these appear in **95** claim citations because sources are reused where they support more than one slug and several claims cite complementary records.
+- Distinct primary deep URLs cited: **89** across **12** publishing bodies (16 Warwick District Council, 12 Stratford-on-Avon District Council, 10 Rugby Borough Council, 9 Solihull Metropolitan Borough Council, 11 Historic England, 5 Charity Commission, 13 Department for Education, 8 Warwickshire County Council, 2 NHS, 1 Coventry City Council, 1 Office for National Statistics and 1 Chase Meadow Community Centre URL); these appear in **107** claim citations because sources are reused where they support more than one slug and several claims cite complementary records.
 - Slugs with a directly evidenced conservation-area tag: **16/27**.
 - Slugs with a directly evidenced rail tag: **2/27** (`brandon`, `wolston`).
 - Slugs with a directly evidenced river tag: **4/27** (`leamington-spa`, `stratford-upon-avon`, `wolston`, `ryton-on-dunsmore`).
@@ -185,8 +185,8 @@ Source rule: primary official sources only (central-government registers and ser
 
 ### `warwick`
 
-**Context tags:** `conservation-area-present`, `settlement/local-plan`
-**Access/property-status caveat:** The Warwick conservation designation comprises named subareas and does not establish that every Warwick property is historic, listed, constructed in a particular material or accessible by a particular route.
+**Context tags:** `conservation-area-present`, `settlement/local-plan`, `school`, `named-public-site`, `managed-premises`
+**Access/property-status caveat:** The Warwick conservation designation and Urban Area operate at wider scales, while the Coten End school and Shire Hall library are separate named sites. None establishes a requested threshold, current controller, caller authority, installed hardware, private route or another property's status.
 
 1. **Claim:** Warwick District Council's conservation guide maps the Warwick Conservation Area and presents 15 named character sections, including Coten End-Emscote Road, St Nicholas Park, Priory Park, Castle/ Castle Park and West Street.
    **Publisher / title / deep URL:** Warwick District Council — [A Guide to Conservation Areas: Warwick Conservation Area](https://www.warwickdc.gov.uk/download/downloads/id/3082/warwick_-_guide_to_conservation_areas.pdf), conservation-area key map.
@@ -199,6 +199,18 @@ Source rule: primary official sources only (central-government registers and ser
    **Supports:** Warwick's explicit status in the official settlement hierarchy and the `settlement/local-plan` tag.
    **Conditional service use:** This is planning classification only; it may identify official town context but cannot substantiate reach, response or any address-level condition.
    **Checked:** 2026-08-29.
+
+3. **Claim:** The Department for Education records Coten End Primary School at Coten End, Warwick, CV34 4NP.
+   **Publisher / title / deep URL:** Department for Education — [Coten End Primary School](https://get-information-schools.service.gov.uk/Establishments/Establishment/Details/151505).
+   **Supports:** One exact managed education site and the `school` and `managed-premises` tags.
+   **Conditional service use:** Use the record only to identify this school. It does not name a current representative, requested gate or door, caller authority, access arrangement, hardware or condition.
+   **Checked:** 2026-08-29.
+
+4. **Claim:** Warwickshire County Council identifies Warwick Library and Information Centre at Shire Hall, Warwick, CV34 4RL.
+   **Publisher / title / deep URL:** Warwickshire County Council — [Warwick Library and Information Centre](https://www.warwickshire.gov.uk/warwicklibrary).
+   **Supports:** One exact named public site and the `named-public-site` and `managed-premises` tags.
+   **Conditional service use:** Use Shire Hall only to identify the library site. The page does not establish its current controller, keyholder, requested threshold, access, installed hardware, condition or work authority.
+   **Checked:** 2026-08-31.
 
 ### `woodloes-park`
 
@@ -361,8 +373,8 @@ Source rule: primary official sources only (central-government registers and ser
 
 ### `shottery`
 
-**Context tags:** `conservation-area-present`, `settlement/local-plan`
-**Access/property-status caveat:** Shottery Conservation Area and Shottery Fields are separately bounded; neither establishes the status, materials, listing or access of an address elsewhere in Shottery.
+**Context tags:** `conservation-area-present`, `settlement/local-plan`, `school`, `managed-premises`, `listed-building-present`
+**Access/property-status caveat:** Shottery Conservation Area and Shottery Fields are separately bounded, the Hathaway Lane school is one managed site and Grade I status belongs only to Anne Hathaway's Cottage on Cottage Lane. None identifies a current representative, requested opening, authority, installed hardware or another property's status.
 
 1. **Claim:** The Shottery Conservation Area was originally designated in 1969, and the council approved its reviewed appraisal as its formal view on 20 July 1992.
    **Publisher / title / deep URL:** Stratford-on-Avon District Council — [Shottery Conservation Area report](https://www.stratford.gov.uk/doc/175565/name/Shottery.pdf), sections 1.2 and 1.5.
@@ -376,12 +388,24 @@ Source rule: primary official sources only (central-government registers and ser
    **Conditional service use:** Use Shottery Fields only as neutral, verified locality context; it is not a service landmark, evidence of proximity or a route instruction.
    **Checked:** 2026-08-29.
 
+3. **Claim:** The Department for Education records Shottery St Andrew's CofE Primary School at 3 Hathaway Lane, Stratford-upon-Avon, CV37 9BL.
+   **Publisher / title / deep URL:** Department for Education — [Shottery St Andrew's CofE Primary School](https://get-information-schools.service.gov.uk/Establishments/Establishment/Details/125646).
+   **Supports:** One exact managed education site and the `school` and `managed-premises` tags.
+   **Conditional service use:** Use the record only to identify the school. It supplies no current representative, requested entrance, safeguarding arrangement, hardware, condition or authority for work.
+   **Checked:** 2026-08-29.
+
+4. **Claim:** Historic England identifies Anne Hathaway's Cottage on Cottage Lane, Shottery, as Grade I under list entry 1298551.
+   **Publisher / title / deep URL:** Historic England — [Anne Hathaway's Cottage, list entry 1298551](https://historicengland.org.uk/listing/the-list/list-entry/1298551).
+   **Supports:** The exact listed asset and the `listed-building-present` tag.
+   **Conditional service use:** Apply Grade I status only to this cottage. The legacy description is not evidence of current condition or hardware, and the entry supplies no present controller, access or work authority.
+   **Checked:** 2026-08-31.
+
 ## Warwickshire and nearby cluster
 
 ### `kenilworth`
 
-**Context tags:** `conservation-area-present`, `settlement/local-plan`
-**Access/property-status caveat:** Kenilworth's neighbourhood area and conservation-area extensions have different purposes and boundaries; neither establishes that an individual building is listed, historic, of a particular type or accessible in a particular way.
+**Context tags:** `conservation-area-present`, `settlement/local-plan`, `school`, `named-public-site`, `managed-premises`
+**Access/property-status caveat:** Kenilworth's plan and conservation extensions operate at wider scales, while The Blundells school and Smalley Place library are separate named sites. None identifies the requested threshold, current representative, caller authority, installed hardware, access arrangement or another property's status.
 
 1. **Claim:** Warwick District Council made the Kenilworth Neighbourhood Plan on 16 November 2018 following the 15 November referendum; the plan is used in considering planning applications within Kenilworth.
    **Publisher / title / deep URL:** Warwick District Council — [Kenilworth neighbourhood plan](https://www.warwickdc.gov.uk/info/20444/neighbourhood_plans/1006/kenilworth_neighbourhood_plan).
@@ -394,6 +418,18 @@ Source rule: primary official sources only (central-government registers and ser
    **Supports:** A documented Kenilworth conservation area and named extension areas for the `conservation-area-present` tag.
    **Conditional service use:** Check the current map for the exact address before mentioning the designation; named roads are not proof that every property on them has the same status.
    **Checked:** 2026-08-29.
+
+3. **Claim:** The Department for Education records St Nicholas CofE Primary School at The Blundells, Kenilworth, CV8 2PE.
+   **Publisher / title / deep URL:** Department for Education — [St Nicholas CofE Primary School](https://get-information-schools.service.gov.uk/Establishments/Establishment/Details/151107).
+   **Supports:** One exact managed education site and the `school` and `managed-premises` tags.
+   **Conditional service use:** Use the record only to identify this school. It does not identify a current representative, requested opening, caller authority, access, hardware or condition.
+   **Checked:** 2026-08-29.
+
+4. **Claim:** Warwickshire County Council identifies Kenilworth Library and Information Centre at Smalley Place, Kenilworth, CV8 1QG.
+   **Publisher / title / deep URL:** Warwickshire County Council — [Kenilworth Library and Information Centre](https://www.warwickshire.gov.uk/kenilworthlibrary).
+   **Supports:** One exact named public site and the `named-public-site` and `managed-premises` tags.
+   **Conditional service use:** Use Smalley Place only to identify the library site. The page does not establish a current controller, keyholder, requested entrance, access, installed hardware, condition or work authority.
+   **Checked:** 2026-08-31.
 
 ### `balsall-common`
 
@@ -588,8 +624,8 @@ Source rule: primary official sources only (central-government registers and ser
 
 ### `shilton`
 
-**Context tags:** `settlement/local-plan`, `official-parish`
-**Access/property-status caveat:** ONS lists Shilton and Barnacle as a Rugby parish, while transport schedules are time-sensitive; none of these sources defines a service boundary or establishes private-property access.
+**Context tags:** `settlement/local-plan`, `official-parish`, `named-public-site`
+**Access/property-status caveat:** ONS lists Shilton and Barnacle as a parish, transport schedules are time-sensitive, and the Wood Lane hall appears in a notice dated 28 April 2026. None defines a service boundary, establishes private access or proves the hall's current use, controller, entrance or hardware.
 
 1. **Claim:** Rugby Borough Council's 2024 Rural Sustainability Study classifies Shilton as a Rural Village in the adopted-plan settlement set.
    **Publisher / title / deep URL:** Rugby Borough Council — [Rugby Borough Council Rural Sustainability Study 2024](https://www.rugby.gov.uk/documents/20124/62894537/CD.3.10%2BAppendix%2B10%2BRugby%2BBorough%2BCouncil%2BRural%2BSustainability%2BStudy%2B2024.pdf/6837df18-54d6-0146-1910-37307fb4a34f?t=1774451299803), scope and settlement tables.
@@ -608,6 +644,12 @@ Source rule: primary official sources only (central-government registers and ser
    **Supports:** A current official-transport reference that distinguishes Shilton from similarly named places.
    **Conditional service use:** If retained as orientation copy, label it as current at the checked date and recheck the timetable; do not infer that a service address is near a stop or accessible by that route.
    **Checked:** 2026-08-29.
+
+4. **Claim:** Rugby Borough Council's Notice of Poll dated 28 April 2026 names Shilton Village Hall, Wood Lane, Shilton, as polling station 66.
+   **Publisher / title / deep URL:** Rugby Borough Council — [Notice of Poll: Wolvey and Shilton](https://www.rugby.gov.uk/documents/20124/63178156/Notice%2Bof%2BPoll%2B-%2BWolvey%2Band%2BShilton.pdf/7d4fb52e-8589-71dc-fe10-04a76e076296?t=1777367922287).
+   **Supports:** A dated official location reference for Shilton Village Hall and the `named-public-site` tag.
+   **Conditional service use:** Preserve the notice date and polling-station context. It does not establish present use, ownership, controller, keyholder, access, requested opening, hardware or work authority.
+   **Checked:** 2026-08-31.
 
 ### `brinklow`
 
@@ -640,8 +682,8 @@ Source rule: primary official sources only (central-government registers and ser
 
 ### `southam`
 
-**Context tags:** `conservation-area-present`, `settlement/local-plan`
-**Access/property-status caveat:** The neighbourhood-plan area and conservation-area boundary are not interchangeable, and Southam's conservation documents are under review; an exact address and the latest adopted map must be checked.
+**Context tags:** `conservation-area-present`, `settlement/local-plan`, `school`, `named-public-site`, `managed-premises`
+**Access/property-status caveat:** The plan area, current conservation material and 2026 review are not interchangeable, while the St James Road school and Tithe Place library are separate named sites. None identifies the requested threshold, current representative, caller authority, hardware, access or another property's status.
 
 1. **Claim:** Stratford-on-Avon District Council made the Southam Neighbourhood Plan on 11 July 2023; it is formally part of the development plan and used in planning decisions within the area.
    **Publisher / title / deep URL:** Stratford-on-Avon District Council — [Southam Neighbourhood Plan](https://www.stratford.gov.uk/planning-building/southam-neighbourhood-plan.cfm).
@@ -650,15 +692,27 @@ Source rule: primary official sources only (central-government registers and ser
    **Checked:** 2026-08-29.
 
 2. **Claim:** The council's conservation register provides a Southam Conservation Area boundary map and a three-part review; Southam is also included in the council's eight-area conservation-appraisal review programme with formal consultation scheduled in 2026.
-   **Publisher / title / deep URL:** Stratford-on-Avon District Council — [Conservation Areas H-Z](https://www.stratford.gov.uk/planning-building/conservation-areas-h-z.cfm), “Southam”.
+   **Publisher / title / deep URL:** Stratford-on-Avon District Council — [Conservation Areas H-Z](https://www.stratford.gov.uk/planning-building/conservation-areas-h-z.cfm), “Southam”; Stratford-on-Avon District Council — [Conservation Area Reviews 2026](https://www.stratford.gov.uk/planning-building/conservation-areas.cfm).
    **Supports:** A mapped Southam conservation area, current review status and the `conservation-area-present` tag.
    **Conditional service use:** Use the latest formally published boundary and distinguish existing documents from review work; do not infer that every Southam property is inside the designation.
    **Checked:** 2026-08-29.
 
+3. **Claim:** The Department for Education records Southam Primary School at St James Road, Southam, CV47 0QB.
+   **Publisher / title / deep URL:** Department for Education — [Southam Primary School](https://get-information-schools.service.gov.uk/Establishments/Establishment/Details/143906).
+   **Supports:** One exact managed education site and the `school` and `managed-premises` tags.
+   **Conditional service use:** Use the record only to identify this school. It does not identify a current representative, requested entrance, safeguarding arrangement, hardware, condition or authority for work.
+   **Checked:** 2026-08-29.
+
+4. **Claim:** Warwickshire County Council identifies Southam Library and Information Centre at Tithe Place, High Street, Southam, CV47 0HB.
+   **Publisher / title / deep URL:** Warwickshire County Council — [Southam Library and Information Centre](https://www.warwickshire.gov.uk/directory-record/591/southam-library-and-information-centre).
+   **Supports:** One exact named public site and the `named-public-site` and `managed-premises` tags.
+   **Conditional service use:** Use Tithe Place only to identify the library. The page does not establish a current controller, keyholder, requested threshold, access, installed hardware, condition or work authority.
+   **Checked:** 2026-08-31.
+
 ### `studley`
 
-**Context tags:** `settlement/local-plan`, `official-parish`
-**Access/property-status caveat:** A parish plan and designated neighbourhood area are not a made neighbourhood development plan. They do not establish property status, access or a locksmith service boundary.
+**Context tags:** `settlement/local-plan`, `official-parish`, `school`, `named-public-site`, `managed-premises`
+**Access/property-status caveat:** A parish plan and designated neighbourhood area are not a made neighbourhood development plan. The infant-school and community-library records both publish High Street and B80 7HJ, but that does not prove co-location, a shared entrance, ownership or common control; none establishes locksmith authority or hardware.
 
 1. **Claim:** Stratford-on-Avon District Council lists Studley's Parish Plan and Action Plan as adopted in February 2017.
    **Publisher / title / deep URL:** Stratford-on-Avon District Council — [List of Adopted Parish Plans](https://www.stratford.gov.uk/planning-building/parish-plans-a-m.cfm), “Studley”.
@@ -671,6 +725,18 @@ Source rule: primary official sources only (central-government registers and ser
    **Supports:** The whole-parish neighbourhood-area boundary, the `settlement/local-plan` tag, and the current no-made-plan limitation.
    **Conditional service use:** It is safe to state that the area is designated for neighbourhood planning; do not state that Studley has an adopted neighbourhood development plan without new official evidence.
    **Checked:** 2026-08-29.
+
+3. **Claim:** The Department for Education records Studley Infants' School at High Street, Studley, B80 7HJ.
+   **Publisher / title / deep URL:** Department for Education — [Studley Infants' School](https://get-information-schools.service.gov.uk/Establishments/Establishment/Details/148511).
+   **Supports:** One exact managed education record and the `school` and `managed-premises` tags.
+   **Conditional service use:** Use the record only to identify the school. Matching address text with the library record does not prove a shared building, entrance or controller, and the source supplies no work authority or hardware evidence.
+   **Checked:** 2026-08-29.
+
+4. **Claim:** Warwickshire County Council identifies Studley Community Library in Studley Village Hall, High Street, Studley, B80 7HJ, and says it is run by Studley Parish Council.
+   **Publisher / title / deep URL:** Warwickshire County Council — [Studley Community Library](https://www.warwickshire.gov.uk/studleylibrary).
+   **Supports:** One exact named public-site record, its stated operator and the `named-public-site` and `managed-premises` tags.
+   **Conditional service use:** Do not infer ownership, co-location with the infant school, a shared threshold or present work authority. Verify the actual building, opening and current representative independently.
+   **Checked:** 2026-08-31.
 
 ### `alcester`
 

@@ -11,7 +11,7 @@
 - The area registry contains routing and geographic-navigation fields only. Publishable local facts, service guidance and FAQs must come from the evidence-governed guide registries.
 - Every area×service record explicitly selects the zero-based local fact indexes that inform its guidance. Only sources attached to those selected facts may appear as that service section's local citations.
 - Fact selection is editorial, not automatic: the service prose must directly use the selected fact as a decision, limitation or address-verification point. Merely sharing a town, source or keyword is not enough.
-- Every area hub carries three or four visible, governed local facts supported by at least two distinct fact sources. A facility-specific fact can add useful address context, but its source must be marked fact-only and cannot support a general residential or commercial service claim.
+- Every area hub carries three or four visible, governed local facts supported by at least two distinct fact sources. A facility-specific fact may remain fact-only when it is displayed solely as hub context. If a service section selects it, the prose must use it only to identify or distinguish that exact premises and must not turn it into a general residential, commercial, access, hardware or demand claim.
 
 This keeps one canonical owner for each query family and prevents a URL from becoming indexable merely because an area and service slug can be combined. A new combination must be added to the governed registry before it can enter the sitemap or internal-link graph.
 
@@ -36,6 +36,8 @@ The governance audit fails closed on:
 - missing locality or technical sources, homepage-only source URLs, missing claim-support notes, stale checks or invalid dates;
 - fewer than three visible local facts, more than four facts, or fewer than two distinct sources attached to those facts;
 - missing, duplicated or out-of-range pair-level fact selections, use of a fact-only source, or any difference between selected-fact sources and rendered service-section citations;
+- reuse of one identical local-fact selection across all five services for an area;
+- a service body that fails its multi-signal practical decision contract. Lockout bodies must cover all four paired signals: exact opening, authority verification, inspection-led method and advance price clarity. Lock-change bodies must cover at least two of hardware inspection, a fault-or-objective-led repair/change comparison and component measurements. uPVC/multipoint, boarding and upgrade bodies must each cover at least three of their four paired diagnostic, authority, evidence and bounded-scope signals;
 - reintroduced legacy area fields, orphaned local-fact registries or unverified brand-inventory components;
 - fewer than four FAQs, missing preparation/local-guidance sections, or fewer than 600 editorial words;
 - unsupported frequency, fixed-arrival, universal-insurance, guaranteed-entry or absolute-security claims;
@@ -46,7 +48,7 @@ The governance audit fails closed on:
 - less than 39% pair-specific editorial or more than 51% repeated exact-sentence words on any of the 35 dedicated town×service pages;
 - excessive five-word-shingle overlap in locality-specific or full editorial copy.
 
-The 35 dedicated pages include two hand-authored decision extensions per town×service pair. Their pair-specific and repeated-sentence measures are release gates at the thresholds above. The 390 area-hub service sections also use manually reviewed, pair-specific bodies instead of rotated protocol copy; the source audit now rejects every cross-record exact body-sentence repeat of eight or more words. Five-word overlap and globally unique-sequence gates remain in place so adding a place name or other metric-only wording cannot substitute for substantive local guidance.
+The 35 dedicated pages include two hand-authored decision extensions per town×service pair. Their pair-specific and repeated-sentence measures are release gates at the thresholds above. The 390 area-hub service sections also use manually reviewed, pair-specific bodies instead of rotated protocol copy; the source audit rejects every cross-record exact body-sentence repeat of eight or more words and separately checks practical locksmith decision coverage in the body text. Five-word overlap, globally unique-sequence and per-area fact-pattern gates remain in place so adding a place name, repeating one local fact set or changing only metric wording cannot substitute for substantive local guidance.
 
 The HTTP SEO audit crawls all 178 canonical sitemap URLs and all 390 area-service combinations. It requires each combination to be either a self-canonical published `200` or a `308` to the matching service fragment on its parent hub, verifies that the fragment target exists, checks invalid combinations for `404`, and requires every area hub to have at least six contextual inbound links from other main-content pages.
 

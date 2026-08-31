@@ -1632,43 +1632,43 @@ export const NORTH_EAST_AREA_GUIDES = {
     ],
     serviceGuidance: {
       'emergency-lockout': {
-        localFactIndexes: [0, 1, 2, 3],
+        localFactIndexes: [0, 2],
         heading: 'Identifying the exact Horeston Grange threshold during a lockout',
         body: [
-          `A Horeston Grange lockout instruction should begin with the full number, street and postcode because a county locality label does not identify a property or door. At the district centre or the Camborne Drive Co-op site, record the current business, unit and precise private, shared or service entrance. If the request concerns St. Nicholas MUGA on Tiverton Drive, obtain instruction from an authorised council or facilities contact and identify the exact secured point; the asset register itself proves no gate or lock.`,
-          `Connect the caller's identity and authority to that threshold before testing the key, latch, deadlocking and visible condition. The centre, retailer and asset records select no opening method and predict no hardware. Use inspection to explain any non-destructive option, component removal, replacement or reinstatement, and record pre-existing damage. MLA guidance separately supports identity-and-authority checks, available price information in advance and fresh agreement if the service-call price changes; it does not promise entry or prescribe a technique.`,
+          `A Horeston Grange lockout instruction should begin with the full number, street and postcode because the county street register identifies selected highways, not a property or door. If the caller uses the Camborne Drive Co-op meeting point as orientation, record the actual business or unit and the precise private, shared or service entrance. The meeting-point record supplies neither control of that threshold nor evidence of its lock, so establish the caller's identity and authority before testing anything.`,
+          `Record the key response, latch state, deadlocking and visible condition at the confirmed opening before choosing a method. Explain the least-invasive inspection-supported option, the circumstances that would require component removal and any separate replacement or reinstatement. Provide the available price basis before attendance and obtain fresh agreement if the service-call price changes, as the cited MLA charter supports. Keep the locality description, authority evidence, method decision and resulting damage as separate entries rather than allowing a landmark to decide the work.`,
         ],
-        checks: ['Resolve the Camborne unit or Tiverton asset', 'Link the caller to the precisely named opening', 'Record latch state before choosing an entry step'],
+        checks: ['Resolve the full address or Camborne unit', 'Link the caller to the precisely named opening', 'Record latch state before choosing an entry step'],
       },
       'lock-change': {
-        localFactIndexes: [1, 2, 3],
+        localFactIndexes: [1, 2],
         heading: 'Authority and component checks for a Horeston Grange lock change',
         body: [
-          `Horeston Grange's district-centre designation does not identify a current occupier, unit or keying system. For the Camborne Drive retail site, name the business, unit and door and obtain the authorised manager's instruction; for St. Nicholas MUGA, use an authorised council or facilities contact for the exact asset. Define whether the change concerns lost key control, failure, damage or another agreed objective, and distinguish a private component from shared or site-controlled hardware before replacement is considered.`,
-          `Photograph both faces of the furniture, door edge, readable markings and keep, then inspect cylinder, case, alignment and surrounding condition as separate questions. Neither the plan nor the asset list proves a fitted lock or compatible product. The written scope should identify the diagnosed component, measurements, retained parts, supplied keys, fitting and adjustment, plus any shared-keying or building-management approval. Do not transfer the council's control of one Tiverton Drive parcel to another address or treat a centre name as permission.`,
+          `Horeston Grange's district-centre designation does not identify a current occupier, unit or keying system. For the Camborne Drive Co-op site, name the current business or unit, exact door and authorised manager. Define whether the decision is repair, adjustment or change and whether its purpose is lost-key control, failure or damage. Distinguish a private component from shared or site-controlled hardware before removal; neither the centre label nor the public meeting point gives permission.`,
+          `Photograph both faces of the furniture, the door edge, readable markings and the keep, then inspect cylinder, case, alignment and surrounding condition as separate questions. Measure the existing component and record the required key operation before selecting a compatible product. The written scope should identify the diagnosed component, retained parts, supplied keys, fitting and adjustment, plus any shared-keying or building-management approval. A district-centre or retailer record proves no fitted lock, so the repair-versus-change decision must remain inspection-led.`,
         ],
         checks: ['Identify the current unit and decision-maker', 'Define the key-control or repair objective', 'Measure the installed component before selection'],
       },
       'upvc-lock-repair': {
-        localFactIndexes: [0, 1, 2, 3],
+        localFactIndexes: [0, 3],
         heading: 'Horeston Grange multipoint diagnosis at the named door',
         body: [
-          `Nothing in the county street list, district-centre plan, Co-op meeting-point record or council asset list proves that a Horeston Grange opening is uPVC, composite or fitted with multipoint hardware. Confirm the complete address and actual door first. At a centre unit, name the business and authorised manager; at St. Nicholas MUGA, obtain the council or facilities instruction for the specific asset. Those steps resolve place and control only and must not be used as a remote mechanism diagnosis.`,
+          `Neither the county street register nor the St. Nicholas MUGA asset row proves that a Horeston Grange opening is uPVC, composite or fitted with multipoint hardware. Confirm the complete address and actual door first. If the request concerns the Tiverton Drive CV11 6YL parcel, identify the specific secured point and obtain instruction from an authorised council or facilities contact. Those records resolve locality and one parcel controller only; they must not be used as a remote mechanism diagnosis.`,
           `At the confirmed uPVC or composite door, record whether the handle lifts fully, the key rotates and hooks or rollers move, plus any safe difference between open and closed operation. Photograph the faceplate and readable codes and measure centres, backset and locking layout before a compatible component is proposed. Establish separately whether the threshold is private, shared or managed before dismantling hardware. The repair record should state symptoms, reproduced tests, measurements, proposed part and approvals, without assigning a fault or outcome from locality evidence.`,
         ],
         checks: ['Confirm the complete address door and controller', 'Record the safe operating sequence', 'Measure the complete fitted locking arrangement'],
       },
       'boarding-up': {
-        localFactIndexes: [1, 2, 3],
+        localFactIndexes: [1, 3],
         heading: 'Exact-site preparation for Horeston Grange boarding',
         body: [
-          `A boarding request at the Horeston Grange district centre must identify the current business, unit and damaged external or internal opening rather than using the centre name alone. At the Camborne Drive retail site, obtain the authorised manager; at St. Nicholas MUGA, use an authorised council or facilities contact for that exact parcel. The official records do not show damage, safe access, construction or attachment points, and the asset row cannot be treated as proof that a gate, door or window exists.`,
+          `A boarding request at the Horeston Grange district centre must identify the current business, unit and damaged external or internal opening rather than using the centre name alone. If the request concerns St. Nicholas MUGA, use an authorised council or facilities contact for the exact Tiverton Drive parcel and name the affected secured point. The official records show neither damage, construction nor suitable attachment points, and the asset row cannot be treated as proof that a gate, door or window exists.`,
           `Follow any police evidence-preservation instruction before disturbing the scene, then photograph the point of entry, surviving frame, glazing or door material, compromised hardware and adjacent surfaces. Measure only the authorised opening and define temporary coverage after direct inspection of what remains. The handover should identify the fixing and material used, what evidence was concealed, and permanent glazing, joinery, door, lock or structural work still open. Keep site authority, temporary access reduction and full restoration as separate recorded decisions.`,
         ],
-        checks: ['Separate Camborne unit damage from Tiverton asset authority', 'Capture every surface hidden by temporary coverage', 'Assign permanent follow-on work to the site controller'],
+        checks: ['Separate district-centre identity from Tiverton asset authority', 'Capture every surface hidden by temporary coverage', 'Assign permanent follow-on work to the site controller'],
       },
       'lock-upgrade': {
-        localFactIndexes: [1, 2, 3],
+        localFactIndexes: [0, 1, 2, 3],
         heading: 'A controlled-site security brief for Horeston Grange',
         body: [
           `A Horeston Grange upgrade brief should identify one entrance and its authorised objective. At the district centre or Camborne Drive retail site, record the current business, unit, exact private or shared threshold and responsible manager. If the request concerns St. Nicholas MUGA, obtain the council or facilities requirement for that exact asset. The plan and asset register establish context and one controller record only; they supply no existing security level, door construction, fitted product or need for replacement.`,
@@ -2190,11 +2190,11 @@ export const NORTH_EAST_AREA_GUIDES = {
         checks: ['Choose the named library entrance', 'Record the current key-control purpose', 'Separate component replacement from fabric change'],
       },
       'upvc-lock-repair': {
-        localFactIndexes: [1, 3],
+        localFactIndexes: [3],
         heading: 'Hartshill managed-site uPVC mechanism diagnosis',
         body: [
-          `Neither the Hartshill library directions nor the academy directory establishes that a booked entrance is uPVC, composite or fitted with multipoint locking. At CV10 0LY, identify the community-centre or vestry opening before testing anything. Confirm the leaf material, then record key rotation, handle travel, locking-point movement and the difference between open-door and closed-door operation without forcing the managed-site mechanism.`,
-          `At Hartshill Academy CV10 0NA, current URN 150453 identifies the establishment but not the affected gate, door, facilities controller or fitted product. Obtain live site authority, capture the complete faceplate marking, centres, backset and locking layout, and separate frame contact from internal failure. The repair proposal should state the diagnosed component and measured compatibility rather than treating a school or library record as mechanism evidence.`,
+          `The Hartshill Academy directory does not establish that any booked entrance is uPVC, composite or fitted with multipoint locking. Use Church Road CV10 0NA and current URN 150453 to identify the establishment, then name the exact gate, block or door and obtain its authorised facilities contact. Confirm the leaf material before recording key rotation, handle travel, locking-point movement and any safe difference between open-door and closed-door operation without forcing the managed-site mechanism.`,
+          `At Hartshill Academy CV10 0NA, current URN 150453 identifies the establishment but not the affected gate, door, facilities controller or fitted product. Obtain live site authority, capture the complete faceplate marking, centres, backset and locking layout, and separate frame contact from internal failure. The repair proposal should state the diagnosed component and measured compatibility rather than treating the school directory as mechanism evidence.`,
         ],
         checks: ['Confirm the managed-site door material', 'Compare open and closed operation safely', 'Measure the complete locking layout'],
       },
@@ -2360,25 +2360,25 @@ export const NORTH_EAST_AREA_GUIDES = {
         checks: ['Name the Bulkington organisation involved', 'Identify the precise locked opening', 'Confirm the current site controller'],
       },
       'lock-change': {
-        localFactIndexes: [0, 1, 2],
+        localFactIndexes: [0, 1],
         heading: 'Bulkington heritage and shared-site lock changes',
         body: [
-          `For 3 or 4 Church Street, use the exact numbered cottage and actual opening rather than treating the legacy part-glazed door and rear entrance as a current hardware inventory. For School Road, establish whether the Village Centre charity or the community library controls the affected threshold. Define lost-key, staff-change or mechanical purpose, then photograph both faces and the edge plate and record the cylinder, case, keep and alignment separately.`,
+          `For 3 or 4 Church Street, use the exact numbered cottage and actual opening rather than treating the legacy part-glazed door and rear entrance as a current hardware inventory. Decide from observed operation whether adjustment or repair is enough, and record the lost-key-control, failure or damage reason before any replacement. Confirm the person authorised for that threshold, then photograph both faces and the edge plate and record the cylinder, case, keep and alignment separately before replacement is proposed.`,
           `Check the property's position against the mapped Bulkington conservation area where visible fabric may change. The 1985 designation and later review dates do not select a lock, and the Grade II cottage description cannot be transferred elsewhere. Measure the existing component and keying need, distinguish replacement within present apertures from new cutting, and list retained parts, keys, fitting and adjustment with any heritage or managed-building approval as a separate dependency.`,
         ],
         checks: ['Confirm the numbered property or organisation', 'Capture markings and measured dimensions', 'Separate key control from visible alteration'],
       },
       'upvc-lock-repair': {
-        localFactIndexes: [1, 2],
-        heading: 'Bulkington Church Street and School Road uPVC diagnosis',
+        localFactIndexes: [2],
+        heading: 'Bulkington School Road uPVC diagnosis by organisation',
         body: [
-          `The Grade II record for 3 and 4 Church Street describes historic cottages and legacy door positions, not a current uPVC or multipoint installation. The Village Centre and library records likewise publish uses and an address without naming door material. Identify the numbered property or School Road organisation, controller and exact opening, then verify whether the leaf is uPVC, composite, timber or another construction before dismantling hardware.`,
-          `Record key rotation, handle lift, locking-point travel and any change between open-door and closed-door operation at the booked Bulkington threshold. Capture the complete faceplate mark, centres, backset and hook, roller or bolt layout, while treating frame contact separately from internal mechanism failure. If repair extends into visible fabric at the listed cottages, document that scope for property-specific advice; shared-postcode evidence cannot decide component compatibility or authorise work.`,
+          `The Village Centre and library records publish separate organisations at School Road CV12 9JB without identifying a shared entrance, controller, door material or multipoint installation. Name which organisation instructed the visit, its exact threshold and its authorised contact. Then verify whether the leaf is uPVC, composite, timber or another construction before dismantling hardware; the shared postal address is useful for premises identification only and supplies no mechanical diagnosis.`,
+          `Record key rotation, handle lift, locking-point travel and any change between open-door and closed-door operation at the booked Bulkington threshold. Capture the complete faceplate mark, centres, backset and hook, roller or bolt layout, while treating frame contact separately from internal mechanism failure. If repair extends beyond a replaceable component into the door or frame, document that added scope for the relevant organisation's approval; shared-postcode evidence cannot decide compatibility or authorise work.`,
         ],
         checks: ['Verify the booked door construction', 'Record locking movement without force', 'Measure faceplate and locking positions'],
       },
       'boarding-up': {
-        localFactIndexes: [0, 1, 3],
+        localFactIndexes: [0, 3],
         heading: 'Bulkington mapped-core and recreation-ground boarding',
         body: [
           `A boarding request in Bulkington's mapped conservation core requires the exact address and damaged opening; the designation history does not report current fabric or an incident. At 3 or 4 Church Street, confirm the numbered Grade II asset and do not treat its legacy door wording as a condition survey. Follow police evidence directions, then photograph surviving frame, glazing or leaf, failed hardware and surrounding surfaces before covering them.`,
@@ -2610,7 +2610,6 @@ export const NORTH_EAST_AREA_GUIDES = {
         serviceRelevance: `The named-site record does not prove present title, an authorised keyholder, a particular entrance or hardware; calls there need an exact opening and current controller.`,
       },
     ],
-    factOnlySourceIds: ['wcc-bilton-infant-school'],
     sources: [
       LOCAL_SOURCES['rbc-bilton-appraisal'],
       LOCAL_SOURCES['wcc-bilton-infant-school'],
@@ -2618,29 +2617,29 @@ export const NORTH_EAST_AREA_GUIDES = {
     ],
     serviceGuidance: {
       'emergency-lockout': {
-        localFactIndexes: [0, 3],
-        heading: 'Bilton lockouts with boundary and recreation-site checks',
+        localFactIndexes: [0, 2],
+        heading: 'Bilton lockouts with boundary and school-site checks',
         body: [
-          `Bilton's conservation area covers only part of the former village, while the Alwyn Road page identifies one recreation ground at CV22 7RD. Neither record identifies a caller's locked door. Give the full address or named site, exact private, shared, gate or changing-room threshold and the person currently controlling it. Public recreation use and the council's 1938 purchase statement do not establish today's keyholder or authority for an opening.`,
-          `After authority is tied to the exact threshold, record latch state, deadlocking, key behaviour and visible damage. Inside the mapped conservation area, photograph visible fabric before a method that might remove it; at the recreation ground, verify the present site contact rather than assuming council staff control every opening. Provide the available price basis before attendance and obtain agreement if the service-call price later changes, consistent with the cited MLA charter. Record any drilling, replacement and reinstatement as a separate inspected scope.`,
+          `Bilton's conservation area covers only part of the former village, while the county directory identifies Bilton Infant School at Magnet Lane CV22 7NH. Neither record identifies a caller's locked door. Give the full address or named site, exact private, shared, gate or building threshold and the person currently controlling it. For a school instruction, obtain the authorised facilities contact for that precise opening; the directory supplies neither a keyholder nor permission.`,
+          `After authority is tied to the exact threshold, record latch state, deadlocking, key behaviour and visible damage. Inside the mapped conservation area, photograph visible fabric before a method that might remove it; at the school, keep safeguarding and site-authority questions separate from the mechanical inspection. Provide the available price basis before attendance and obtain agreement if the service-call price later changes, consistent with the cited MLA charter. Record any drilling, replacement and reinstatement as a separate inspected scope.`,
         ],
         checks: ['Give the exact Bilton site and opening', 'Check the conservation map when relevant', 'Identify the current controller, not only the landmark'],
       },
       'lock-change': {
-        localFactIndexes: [1, 3],
-        heading: 'Bilton lock changes at named heritage and recreation sites',
+        localFactIndexes: [1, 2],
+        heading: 'Bilton lock changes at a named heritage or school site',
         body: [
-          `St Mark's Church and Bilton Hall have asset-specific dates, while Alwyn Road Recreation Ground has its own named facilities and public-site record. None identifies hardware at the booked door. State the reason for change, photograph both hardware faces, the door edge and readable marks, then inspect cylinder, case, keep and alignment separately. Measurements and key-control needs—not the age or public status of another site—define a compatible replacement.`,
-          `For work at a named historic asset or recreation facility, first identify the exact opening and present controller; the council page's purchase history and public-site description are not an individual authorisation. Distinguish an internal component change from fresh cutting or visible furniture substitution where protected fabric is verified. The scope should list retained material, measured product, keys, fitting and adjustment and keep site-management, shared-keying and consent decisions separate.`,
+          `St Mark's Church and Bilton Hall have asset-specific dates, while the county directory identifies Bilton Infant School at Magnet Lane CV22 7NH. None identifies hardware at the booked door. State whether the decision is repair, adjustment or change and define its key-control, failure or damage objective. Photograph both hardware faces, the door edge and readable marks, then inspect cylinder, case, keep and alignment separately; measurements and the authorised objective define a compatible replacement.`,
+          `For work at a named historic asset or Bilton Infant School, first identify the exact opening and present controller; the heritage dates and school directory are not an individual authorisation. Distinguish an internal component change from fresh cutting or visible furniture substitution where protected fabric is verified. The scope should list retained material, measured product, keys, fitting and adjustment and keep facilities approval, shared-keying and any property-specific heritage decision separate.`,
         ],
         checks: ['Define the reason and key-control need', 'Name the exact Bilton asset and controller', 'Record existing apertures, markings and dimensions'],
       },
       'upvc-lock-repair': {
-        localFactIndexes: [0, 3],
-        heading: 'Bilton multipoint diagnosis beyond map and site labels',
+        localFactIndexes: [2, 3],
+        heading: 'Bilton multipoint diagnosis at a school or recreation-site door',
         body: [
-          `Neither Bilton's partial conservation map nor the recreation-ground record proves that an entrance is uPVC, composite or fitted with a multipoint system. Confirm the exact address or Alwyn Road facility, door material and current controller. Then record key rotation, handle lift, locking-point travel and any safe difference when the leaf meets the frame. The 1938 purchase and field designation supply no mechanical evidence.`,
-          `Capture the full faceplate, centres, backset and locking layout before identifying a compatible component. A later door may stand inside or outside the mapped area, while a recreation-site opening may have separate facilities control; keep those questions apart from diagnosis. If work extends into visible external material, describe it separately for address-specific review. The record should distinguish reported symptoms, reproduced tests and measurements without forcing the mechanism.`,
+          `Neither the Bilton Infant School directory nor the Alwyn Road recreation-ground record proves that an entrance is uPVC, composite or fitted with a multipoint system. Confirm whether the request concerns Magnet Lane CV22 7NH or the CV22 7RD ground, name the exact gate or door and identify its current controller. Then record key rotation, handle lift, locking-point travel and any safe difference when the leaf meets the frame; neither site record supplies mechanical evidence.`,
+          `Capture the full faceplate, centres, backset and locking layout before identifying a compatible component. School and recreation-site openings may have different facilities contacts, so verify the authorised controller independently and keep that question apart from diagnosis. If work extends beyond a replaceable component into the door or frame, describe it as a separate approval item. The record should distinguish reported symptoms, reproduced tests, measurements and component evidence without forcing the mechanism.`,
         ],
         checks: ['Confirm the exact site and door material', 'Record open and closed behaviour safely', 'Verify controller and faceplate geometry'],
       },
@@ -2654,8 +2653,8 @@ export const NORTH_EAST_AREA_GUIDES = {
         checks: ['Follow police directions before covering damage', 'Confirm the precise site, opening and controller', 'Record map status, fixings and concealed damage'],
       },
       'lock-upgrade': {
-        localFactIndexes: [1, 3],
-        heading: 'Measured Bilton upgrades without heritage or field assumptions',
+        localFactIndexes: [0, 1, 2, 3],
+        heading: 'Measured Bilton upgrades without locality-wide assumptions',
         body: [
           `The dates of St Mark's Church and Bilton Hall and Alwyn Road's field designation provide no security rating. At the exact Bilton entrance, identify the controller and inspect the leaf, frame, hinges, keeps, handles, lock engagement and any cylinder projection. Warwickshire Police supports reviewing the complete entrance and correctly sized, accredited products, while present marks, dimensions and condition—not the age or public use of another site—support an option.`,
           `At a named historic building or recreation facility, verify who controls the specific threshold and keying scope. Photograph existing apertures and visible material where protected fabric is confirmed, separating compatible internal work from new cutting or substitution. The specification should distinguish adjustment, reinforcement and replacement, state retained components, measured fit and current product evidence, and list management or consent dependencies without claiming a Bilton-wide solution.`,
@@ -2886,11 +2885,11 @@ export const NORTH_EAST_AREA_GUIDES = {
     ],
     serviceGuidance: {
       'emergency-lockout': {
-        localFactIndexes: [0, 1, 2],
-        heading: 'Long Lawford school and field lockout routing',
+        localFactIndexes: [0, 1],
+        heading: 'Long Lawford school and field lockout identification',
         body: [
           `For Long Lawford Primary School, Holbrook Road CV23 9AL identifies the managed campus but not the locked gate or building entrance. A King George's Field call must likewise name the pavilion, store, gate or other opening; the charity's Willoughby correspondence address is not a dispatch destination. Obtain a live meeting point, exact threshold and authorised controller before assessing latch state, deadlocking, key behaviour or damage.`,
-          `The 2026 submitted Local Plan and earlier preferred-option material do not verify a completed Long Lawford development, road or current access route. Use the customer's full postal address and live site instructions rather than proposed allocation context. After identity and authority checks, select an inspection-led entry method and explain any change in method, scope or price before proceeding. Record removed parts, resulting damage and reinstatement as separate items.`,
+          `After identity and authority are tied to the named school or field opening, record key response, latch state, deadlocking and visible damage. Select the least-invasive inspection-supported entry method and explain the available price basis before attendance. If the method, scope or service-call price changes after inspection, obtain fresh agreement before proceeding. Record removed parts, resulting damage and reinstatement as separate items; neither a school directory nor a charity record selects a technique or predicts an outcome.`,
         ],
         checks: ['Name the exact school or field opening', 'Obtain a live Long Lawford meeting point', 'Verify authority at the booked threshold'],
       },
@@ -2904,22 +2903,22 @@ export const NORTH_EAST_AREA_GUIDES = {
         checks: ['Identify pavilion or farmhouse threshold', 'Confirm the responsible keying controller', 'Measure before specifying replacement hardware'],
       },
       'upvc-lock-repair': {
-        localFactIndexes: [0, 2],
+        localFactIndexes: [0],
         heading: 'Long Lawford school-door uPVC diagnosis',
         body: [
           `Long Lawford Primary School's directory entry supplies an address and age range, not the construction of any campus door. Identify the exact gate, block or room entrance and authorised facilities contact, then confirm whether the leaf is uPVC, composite, timber or another material. Record key rotation, handle travel, locking-point movement and the difference between safe open-door and closed-door operation before attributing the symptom to alignment or mechanism failure.`,
-          `Consultation-stage rural allocation wording and the 2026 examination process provide no evidence about an installed multipoint system or access to a newer property. Use the completed postal address and present controller, capture faceplate marks, centres, backset and locking layout, and measure frame contact at the affected opening. Keep planned growth, current road access and technical diagnosis separate so compatibility follows manufacturer evidence and dimensions rather than assumed building age.`,
+          `At the confirmed school opening, capture faceplate marks, centres, backset and the complete locking layout, and measure frame contact before identifying a compatible component. Establish whether the symptom follows alignment, a cylinder, handles or the mechanism through safe testing rather than the site's use or age. Keep facilities authority, safeguarding constraints and technical diagnosis as separate records so the repair-versus-replacement decision follows reproduced behaviour, manufacturer evidence and dimensions rather than the directory entry.`,
         ],
         checks: ['Identify the exact school or property door', 'Compare open and closed locking travel', 'Capture mechanism marks and dimensions'],
       },
       'boarding-up': {
-        localFactIndexes: [1, 3],
-        heading: 'Long Lawford field and farmhouse boarding scope',
+        localFactIndexes: [1],
+        heading: 'Long Lawford field-pavilion boarding scope',
         body: [
           `A King George's Field incident needs the actual pavilion, store, gate or other damaged opening and live site controller; the charity's correspondence address does not locate the scene. Follow police evidence-preservation directions before photographing and measuring the point of entry, surviving frame, glazing or door, damaged hardware and adjacent surfaces. The charity record's general land holding and recreation purpose do not establish construction, safe attachment or permission for temporary work.`,
-          `At Lawford Hill Farmhouse, confirm that the reported opening belongs to the exact Grade II asset and label the main or return doorway from direct inspection, not solely from the legacy description. Record surviving panelled fabric and porch material before covering or fixing. Agree a reversible temporary boundary where practicable, then document contact points, concealed damage and outstanding glazing, joinery, door, lock or structural work separately from permanent alteration.`,
+          `After the scene record is complete, define temporary coverage from the measured field or pavilion opening and the surviving support, not from the charity's general purpose. Agree the material, attachment method and temporary access boundary with the current authorised controller. The handover should document contact points, every area concealed and any outstanding glazing, joinery, door, lock or structural work. Keep emergency weather or security reduction separate from the later permanent repair decision and its approval.`,
         ],
-        checks: ['Locate the exact damaged Long Lawford opening', 'Preserve scene and listed fabric evidence', 'Record attachment and concealed material'],
+        checks: ['Locate the exact damaged Long Lawford opening', 'Preserve scene and surviving-material evidence', 'Record attachment and concealed material'],
       },
       'lock-upgrade': {
         localFactIndexes: [0, 1, 3],
@@ -3056,7 +3055,6 @@ export const NORTH_EAST_AREA_GUIDES = {
         serviceRelevance: `Maintenance wording and a public-space record do not prove legal title, an authorised keyholder, a building or hardware; any site call needs an exact opening and present controller.`,
       },
     ],
-    factOnlySourceIds: ['wcc-dunchurch-library'],
     sources: [
       LOCAL_SOURCES['rbc-dunchurch-appraisal'],
       LOCAL_SOURCES['wcc-dunchurch-library'],
@@ -3064,29 +3062,29 @@ export const NORTH_EAST_AREA_GUIDES = {
     ],
     serviceGuidance: {
       'emergency-lockout': {
-        localFactIndexes: [0, 3],
-        heading: 'Dunchurch lockouts with map and Heath site separated',
+        localFactIndexes: [0, 2],
+        heading: 'Dunchurch lockouts with mapped core and library separated',
         body: [
-          `The conservation map covers a defined crossroads core, while the council identifies Dunchurch Heath as a separate village green at The Heath. Neither identifies a locked door. Give the complete property or named site, exact private, shared or site threshold and current responsible person. Parks and Cemeteries maintenance of the green is not authority to open an adjacent structure, and the public-space record provides no building or keyholder.`,
-          `After authority is linked to the exact opening, record latch state, deadlocking, key behaviour and existing damage. If the address is inside the mapped conservation area, photograph visible fabric before approving a method that could remove it; do not extend that boundary from the Heath landmark. State the available price basis before travelling and seek fresh agreement if the service-call price changes, following the cited MLA charter. Record drilling, replacement and reinstatement separately and reserve protected-fabric changes for property-specific review.`,
+          `The conservation map covers a defined crossroads core, while Warwickshire County Council identifies Dunchurch Community Library at The Green CV22 6PA. Neither identifies the caller's locked door. Give the complete property or named site, exact private, shared or library threshold and current responsible person. For a library request, obtain live instruction from the Parish Council or other authorised site contact; the facility page supplies neither a keyholder nor authority for a particular entrance.`,
+          `After authority is linked to the exact opening, inspect the confirmed lock with its door, frame and hinges before choosing an opening method, recording latch state, deadlocking, key behaviour and existing damage. If the address is inside the mapped conservation area, photograph visible fabric before a step that could remove it; the boundary still supplies no technique. State the available price basis before travelling and seek fresh agreement if the service-call price changes, following the cited MLA charter. Record drilling, replacement and reinstatement separately and reserve protected-fabric changes for property-specific review.`,
         ],
-        checks: ['Give the exact Dunchurch site and opening', 'Check the conservation map only for that property', 'Identify the current controller rather than relying on maintenance wording'],
+        checks: ['Give the exact Dunchurch site and opening', 'Check the conservation map only for that property', 'Identify the current controller rather than relying on the venue listing'],
       },
       'lock-change': {
-        localFactIndexes: [1, 3],
-        heading: 'Dunchurch lock changes with monument and Heath control separated',
+        localFactIndexes: [1, 2],
+        heading: 'Dunchurch lock changes with monument and library control separated',
         body: [
-          `The scheduled standing cross and registered Dunchurch Lodge landscape are separately bounded assets; the Heath page describes maintenance of a village green. None identifies hardware at a service door. State whether the change concerns key control, failure or damage, then photograph both hardware faces, the edge plate, existing apertures and readable marks. Inspect cylinder, case, keep and alignment separately, using present dimensions and condition—not monument or green context—for compatibility.`,
-          `For a call at The Heath, identify the exact structure or adjoining property and present controller; Parks and Cemeteries maintenance does not authorise lock changes. At a verified protected address, apply only the correct boundary and distinguish use of existing apertures from new cutting or visible substitution. The written scope should list retained parts, measured product, keys, fitting and adjustment and keep management, landscape, monument or consent questions separate.`,
+          `The scheduled standing cross and registered Dunchurch Lodge landscape are separately bounded assets, while the library page identifies a distinct managed venue at The Green CV22 6PA. None identifies hardware at a service door. Record the key-control, failure or damage outcome, then compare adjustment, repair and replacement for the inspected hardware. Photograph both hardware faces, the edge plate, existing apertures and readable marks, then inspect cylinder, case, keep and alignment separately.`,
+          `For a call at Dunchurch Community Library, identify the exact entrance and obtain the present authorised controller; Parish Council operation does not authorise an unidentified caller. At a verified protected asset, apply only its correct boundary and distinguish use of existing apertures from new cutting or visible substitution. The written scope should list retained parts, measured product, keys, fitting and adjustment and keep venue management, landscape, monument or property-specific consent questions separate.`,
         ],
         checks: ['Define the lock-change objective', 'Identify the exact site and current controller', 'Record apertures, markings and only the applicable status'],
       },
       'upvc-lock-repair': {
-        localFactIndexes: [0, 3],
-        heading: 'Dunchurch uPVC diagnosis without map or green assumptions',
+        localFactIndexes: [2, 3],
+        heading: 'Dunchurch uPVC diagnosis at a library or Heath-site opening',
         body: [
-          `Neither Dunchurch's conservation map nor the Heath open-space record proves that an affected entrance is uPVC, composite or multipoint. Confirm the exact property or site, door material and current controller. Record in order how far the key turns, how the handle travels, whether locking points move and what safely changes as the leaf meets the frame. The council's maintenance and acreage statements identify no building, mechanism or failed component.`,
-          `Capture full faceplate marks, centres, backset and locking layout before stating compatibility. A later door may sit inside or outside the historic core, while an opening near The Heath may belong to an unrelated property; check each question directly. If repair extends into visible external material, describe that scope separately for exact-address review. The diagnostic record should separate reported symptoms, reproduced tests, dimensions, authority and map status without forcing the mechanism.`,
+          `Neither the Dunchurch Community Library page nor the Heath open-space record proves that an affected entrance is uPVC, composite or fitted with multipoint locking. Confirm whether the request concerns The Green CV22 6PA or a precisely identified opening at The Heath, then establish the door material and current authorised controller. Record how far the key turns, how the handle travels, whether locking points move and what safely changes as the leaf meets the frame.`,
+          `Capture full faceplate marks, centres, backset and locking layout before stating compatibility. A library entrance and any site opening at The Heath have separate controllers and may have unrelated construction, so check each question directly rather than transferring assumptions. If repair extends beyond a replaceable component into the door or frame, describe that scope separately for site approval. The diagnostic record should separate reported symptoms, reproduced tests, dimensions, authority and component evidence without forcing the mechanism.`,
         ],
         checks: ['Confirm the exact site and door system', 'Record operation against the frame safely', 'Verify controller, dimensions and relevant boundary separately'],
       },
@@ -3100,10 +3098,10 @@ export const NORTH_EAST_AREA_GUIDES = {
         checks: ['Follow current police evidence instructions first', 'Verify the exact site, controller and applicable record', 'Document supports, fixings and concealed damage'],
       },
       'lock-upgrade': {
-        localFactIndexes: [1, 3],
-        heading: 'Dunchurch upgrades with asset status and maintenance kept distinct',
+        localFactIndexes: [0, 2, 3],
+        heading: 'Dunchurch upgrades across mapped and managed-site evidence',
         body: [
-          `The standing cross, registered landscape and council-maintained Heath supply no security rating for a Dunchurch entrance. Identify the exact property or site and current controller, then inspect the leaf, frame, hinges, keeps, handles, lock engagement and any cylinder projection. Warwickshire Police supports complete-entrance assessment and correctly sized, accredited products; current marks, measurements and operation—not monument prominence or open-space maintenance—support options.`,
+          `The mapped conservation area, Community Library record and council-maintained Heath supply no security rating for a Dunchurch entrance. Identify the exact property or site and current controller, then inspect the leaf, frame, hinges, keeps, handles, lock engagement and any cylinder projection. Warwickshire Police supports complete-entrance assessment and correctly sized, accredited products; current marks, measurements and operation—not locality or venue labels—support options.`,
           `Before an outward change, apply only the designation or asset record relevant to that address. At The Heath, maintenance by a council department does not settle ownership or key authority for a structure; obtain direct approval. Photograph existing apertures and visible material where protected fabric is verified. The specification should separate adjustment, reinforcement and replacement, state retained fabric, measured fit and current product evidence, and list management or consent dependencies without a Dunchurch-wide claim.`,
         ],
         checks: ['Identify the current Dunchurch controller', 'Inspect and measure the complete entrance', 'Keep asset records and product evidence separate'],

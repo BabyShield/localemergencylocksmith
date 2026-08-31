@@ -1,6 +1,6 @@
 # Coventry-cluster area evidence register
 
-Checked: baseline corpus 2026-08-29; `radford`, `foleshill`, `wyken`, `cheylesmore`, `whitley`, `finham`, `allesley`, `eastern-green`, `courthouse-green`, `aldermans-green` and `sowe` evidence refreshed 2026-08-30; `tile-hill`, `walsgrave`, `longford` and `potters-green` evidence refreshed 2026-08-31.
+Checked: baseline corpus 2026-08-29; `radford`, `foleshill`, `wyken`, `cheylesmore`, `whitley`, `finham`, `allesley`, `eastern-green`, `courthouse-green`, `aldermans-green` and `sowe` evidence refreshed 2026-08-30; `tile-hill`, `walsgrave`, `longford`, `potters-green`, `canley`, `coundon`, `holbrooks`, `henley-green`, `wood-end` and `little-heath` evidence refreshed 2026-08-31.
 
 Scope: the first 30 `AREAS` records in the Coventry merchandising cluster, from `coventry-city-centre` through `little-heath`. This is a research register, not publish-ready local copy. Claims are limited to opened primary sources from central-government registers and services, councils, Historic England, NHS providers, CV Life and named institutions' current sites where needed to establish their own records or contact addresses. A character area, ward, MSOA, parish, neighbourhood-plan boundary or named park is not interchangeable with a service-area slug or an individual address.
 
@@ -50,16 +50,19 @@ Excluded throughout: inferred lock types, locksmith job history or frequency, cr
 
 ## `canley`
 
-- **Context tags:** `ward/JSNA-profile`, `historic-landscape-report`, `rail`, `A45`, `university-nearby`.
+- **Context tags:** `ward/JSNA-profile`, `official-library`, `official-community-centre`, `current-school-register`, `shared-postcode`.
 - **Supported claims:**
   1. The council JSNA describes Canley as a west-Coventry neighbourhood with Charter Avenue running east–west; it places the railway and Tile Hill South to the north and Westwood Heath to the south, with the University of Warwick nearby.
-  2. The Historic Landscape Characterisation uses the railway as the north boundary, the A45 to the east, industrial units to the west, and woodland and the university to the south.
-  3. The HLC records a medieval moated site known as More Hall/Canley Moat and the buried remains of the deserted medieval village of Fletchamstead within the wider character area.
+  2. Coventry City Council locates Canley Library at Prior Deram Walk, Canley, Coventry, CV4 8FT.
+  3. Coventry City Council records Canley Community Centre at Prior Deram Walk, Canley, CV4 8FT.
+  4. The Department for Education records Charter Academy, URN 148533, as open at 314 Mitchell Avenue, Coventry, CV4 8DW.
 - **Sources:**
   - Coventry City Council — [Canley place-based profile: Demographics and communities](https://www.coventry.gov.uk/facts-coventry/canley-place-based-profile/3) — supports claim 1 and defines the JSNA study area. Checked 2026-08-29.
-  - Coventry City Council — [Canley Character Area, HLC Area 15a](https://www.coventry.gov.uk/downloads/file/17427/hlc-area-15a-canley-character-area) — supports claims 2 and 3. Checked 2026-08-29.
-- **Conditional service implication:** Use the full address to distinguish a private dwelling from university, industrial or managed premises; confirm occupier or manager authority before access work.
-- **Access/property-status caveat:** Proximity to the university and archaeological sites does not establish a property's use, ownership, heritage status or access route.
+  - Coventry City Council — [Canley Library](https://www.coventry.gov.uk/canleylibrary) — supports claim 2 for the named library and address only; opening times and facilities were not used. Checked 2026-08-31.
+  - Coventry City Council — [Canley Community Centre - Warm welcome venues](https://www.coventry.gov.uk/directory-record/59030/canley-community-centre) — supports claim 3 for the named centre and address only; opening times and activities were not used. Checked 2026-08-31.
+  - Department for Education — [Charter Academy, URN 148533](https://get-information-schools.service.gov.uk/Establishments/Establishment/Details/148533) — supports claim 4 for the establishment's recorded status and address. Checked 2026-08-31.
+- **Conditional service implication:** Require the complete Canley address, premises name and exact threshold. If the library, community centre or academy is involved, verify the current responsible contact and requester authority independently; use the JSNA only to clarify locality.
+- **Access/property-status caveat:** The library and community-centre records share CV4 8FT but do not prove shared entrances, control or work authority. None of the four records establishes ownership, access, construction, installed hardware, condition, incident, response, price or service history.
 
 ## `radford`
 
@@ -79,30 +82,35 @@ Excluded throughout: inferred lock types, locksmith job history or frequency, cr
 
 ## `coundon`
 
-- **Context tags:** `historic-landscape-report`, `Coundon-Green`, `agricultural-edge`, `inter-war-development`, `locally-listed-specific-asset`.
+- **Context tags:** `historic-landscape-report`, `Coundon-Green`, `official-open-space`, `official-library`, `current-school-register`.
 - **Supported claims:**
   1. The council's HLC places present-day Coundon Green and Norman Place Road within an area where medieval assarts and settlement around commons were recorded.
-  2. It states that most of the character area's western side borders agricultural fields.
-  3. The report describes rapid, extensive inter-war residential development across much of the wider Coundon and Radford character area, while identifying later pockets around Everdon Road, Forland Way and Madeira Croft.
-  4. Coventry City Council's local list records DCT673, Coundon Court School 'Old House' and Coundon Court Lodge (also known as Holly Lodge), as a Locally Listed Building.
+  2. Coventry City Council locates Coundon Hall Park at Waste Lane, Coundon, Coventry, CV6 2EH.
+  3. Coventry City Council locates Coundon Library at Coundon Family Centre, 82 Moseley Avenue, Coventry, CV6 1AB.
+  4. The Department for Education records Coundon Primary School, URN 103680, as open at Forfield Road, Coundon, Coventry, CV6 1FQ.
 - **Sources:**
-  - Coventry City Council — [Coundon and Radford Character Area, HLC Area 40](https://www.coventry.gov.uk/downloads/file/17412/hlc-area-40-coundon-and-radford-character-area) — supports claims 1 to 3. Checked 2026-08-29.
-  - Coventry City Council — [Local list of buildings of architectural or historic interest](https://www.coventry.gov.uk/downloads/file/17245/local-list-of-buildings-of-architectural-or-historic-interest) — supports claim 4's DCT673 entry only. Checked 2026-08-29.
-- **Conditional service implication:** Ask for the exact street and a clear description or photograph of the relevant entrance; an area development period cannot safely select replacement hardware or establish building status.
-- **Access/property-status caveat:** The HLC boundary is broader than the slug and contains different development periods. The DCT673 entry identifies only its named assets; neither source proves conditions at another Coundon property.
+  - Coventry City Council — [Coundon and Radford Character Area, HLC Area 40](https://www.coventry.gov.uk/downloads/file/17412/hlc-area-40-coundon-and-radford-character-area) — supports claim 1 as bounded historical-landscape context. Checked 2026-08-29.
+  - Coventry City Council — [Coundon Hall Park](https://www.coventry.gov.uk/directory-record/57117/coundon-hall-park) — supports claim 2 for the named open space and address only; facilities, hours and routes were not used. Checked 2026-08-31.
+  - Coventry City Council — [Coundon Library](https://www.coventry.gov.uk/coundonlibrary) — supports claim 3 for the named library and address only; opening times and facilities were not used. Checked 2026-08-31.
+  - Department for Education — [Coundon Primary School, URN 103680](https://get-information-schools.service.gov.uk/Establishments/Establishment/Details/103680) — supports claim 4 for the establishment's recorded status and address. Checked 2026-08-31.
+- **Conditional service implication:** Capture the full Coundon address, exact threshold and requester authority. Treat Coundon Hall Park as open-space evidence only; verify the current responsible contact independently for the library or school.
+- **Access/property-status caveat:** The HLC is historical locality evidence and the other pages concern three separate named sites. None proves a secured park opening, shared control, access, construction, hardware, condition, work requirement, response, price or availability.
 
 ## `holbrooks`
 
-- **Context tags:** `historic-landscape-report`, `official-park`, `industrial-history`, `ward-map-available`.
+- **Context tags:** `official-open-space`, `official-community-centre`, `official-library`, `current-school-register`.
 - **Supported claims:**
-  1. Coventry City Council locates Holbrook Park on Holbrook Lane, CV6 4BY, and describes it as open land amid shops and factories on Holbrook Lane.
-  2. The Coundon and Radford HLC records First World War industrial hostels called Monks Park Cottages north of Holbrooks Park, built for workers at a munitions factory outside the character area.
-  3. The same report says that by the Second World War the wider character area had been completely built up, while preserving some different early schemes and later pockets.
+  1. Coventry City Council locates Holbrook Park on Holbrook Lane, CV6 4BY, and describes the named park as open land.
+  2. Coventry City Council records Holbrooks Community Centre at John Shelton Drive, Holbrooks, Coventry, CV6 4PE.
+  3. Coventry City Council locates Holbrooks Library at the Dementia Partnership Hub, Everdon Road, Coventry, CV6 4DT.
+  4. The Department for Education records John Shelton Community Primary School, URN 103698, as open at Briscoe Road, Holbrooks, Coventry, CV6 4JP.
 - **Sources:**
-  - Coventry City Council — [Holbrook Park](https://www.coventry.gov.uk/holbrookspark) — supports claim 1 and provides the exact council-site address. Checked 2026-08-29.
-  - Coventry City Council — [Coundon and Radford Character Area, HLC Area 40](https://www.coventry.gov.uk/downloads/file/17412/hlc-area-40-coundon-and-radford-character-area) — supports claims 2 and 3. Checked 2026-08-29.
-- **Conditional service implication:** Distinguish a park, shop, industrial premise and residential address when taking instructions, and confirm the caller's authority for any managed site.
-- **Access/property-status caveat:** A named park and broad HLC history do not establish an individual property's use, ownership, construction or entry point.
+  - Coventry City Council — [Holbrook Park](https://www.coventry.gov.uk/holbrookspark) — supports claim 1 for the named park, address and open-land description only. Checked 2026-08-29.
+  - Coventry City Council — [Holbrooks Community Centre](https://www.coventry.gov.uk/directory-record/57893/holbrooks-community-centre) — supports claim 2 for the named venue and address only; service details and opening times were not used. Checked 2026-08-31.
+  - Coventry City Council — [Holbrooks Library](https://www.coventry.gov.uk/holbrookslibrary) — supports claim 3 for the named library and address only; opening times and facilities were not used. Checked 2026-08-31.
+  - Department for Education — [John Shelton Community Primary School, URN 103698](https://www.get-information-schools.service.gov.uk/Establishments/Establishment/Details/103698) — supports claim 4 for the establishment's recorded status and address. Checked 2026-08-31.
+- **Conditional service implication:** Require the full Holbrooks address, premises name and exact threshold, then verify the current responsible contact and requester authority independently for the community centre, library or school. If the park is only a landmark, identify the separate premises.
+- **Access/property-status caveat:** Holbrook Park is open-space evidence, not proof of a building or secured park opening. The four records establish no shared controller, access route, construction, hardware, condition, incident, response, price or previous work.
 
 ## `foleshill`
 

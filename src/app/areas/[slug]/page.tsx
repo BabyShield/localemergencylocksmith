@@ -340,10 +340,11 @@ export default async function AreaPage({ params }: Props) {
       {hasDedicatedServicePages ? (
         <section className="py-12 px-4 bg-[#F7F7F5]" aria-labelledby="service-guidance-heading">
           <div className="max-w-4xl mx-auto">
-            <h2 id="service-guidance-heading" className="text-2xl md:text-3xl font-black text-[#0F1B2D] mb-3 text-center">Detailed Locksmith Guides for {area.name}</h2>
+            <h2 id="service-guidance-heading" className="text-2xl md:text-3xl font-black text-[#0F1B2D] mb-3 text-center">Emergency, Lock Repair and Door Security Guides for {area.name}</h2>
             <p className="text-gray-600 text-center max-w-3xl mx-auto mb-10">
-              Choose the page that matches the affected entrance. Each guide keeps its diagnosis,
-              booking checks and service-specific evidence in one canonical place.
+              Choose the guide for an emergency lockout, lock repair or replacement, uPVC or
+              multipoint fault, damaged-opening boarding, or a measured security upgrade. Each
+              page keeps its diagnosis, booking checks and service-specific evidence together.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-5" data-dedicated-service-owner-links="true">
               {serviceGuidance.map(({ service, guidance, localOwnerHref }) => (
@@ -374,10 +375,10 @@ export default async function AreaPage({ params }: Props) {
       ) : (
         <section className="py-12 px-4 bg-[#F7F7F5]" aria-labelledby="service-guidance-heading">
           <div className="max-w-4xl mx-auto">
-            <h2 id="service-guidance-heading" className="text-2xl md:text-3xl font-black text-[#0F1B2D] mb-3 text-center">Service-by-Service Guidance for {area.name}</h2>
+            <h2 id="service-guidance-heading" className="text-2xl md:text-3xl font-black text-[#0F1B2D] mb-3 text-center">Emergency, Lock Repair and Door Security Guidance for {area.name}</h2>
             <p className="text-gray-600 text-center max-w-3xl mx-auto mb-10">
               {hasPairLinkedServiceEvidence
-                ? 'Five separate guides explain what can be checked remotely and what still requires inspection at the exact address. Each locality-specific point remains linked to its source.'
+                ? 'Five practical guides cover emergency lockouts, lock repair or replacement, uPVC and multipoint faults, temporary boarding, and measured security upgrades. Each explains what can be checked remotely and what needs inspection at the exact opening. Each locality-specific point remains linked to its source.'
                 : `These five service sections provide operational and technical checks only. They are not presented as locally evidenced diagnoses for ${area.name}; the separately cited area facts are not used to infer any property's lock, access, demand or condition.`}
             </p>
             <div className="space-y-8">
