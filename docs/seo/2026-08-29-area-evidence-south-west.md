@@ -1,6 +1,6 @@
 # South-west service-area evidence register
 
-Checked: baseline corpus 2026-08-29; `alcester`, `baginton`, `balsall-common`, `bishopton`, `brandon`, `brinklow`, `chase-meadow`, `hampton-in-arden`, `lillington`, `meriden`, `sydenham`, `tiddington`, `wolston` and `woodloes-park` evidence refreshed 2026-08-30.
+Checked: baseline corpus 2026-08-29; `alcester`, `baginton`, `balsall-common`, `bishopton`, `brandon`, `brinklow`, `chase-meadow`, `hampton-in-arden`, `lillington`, `meriden`, `sydenham`, `tiddington`, `wolston` and `woodloes-park` evidence refreshed 2026-08-30; `heathcote` and `milverton` evidence refreshed 2026-08-31.
 Scope: 27 governed area slugs across Leamington Spa, Warwick, Stratford-upon-Avon and the Warwickshire/nearby cluster.
 Source rule: primary official sources only (central-government registers and services, district/borough/county councils, official adopted or submitted planning documents hosted by them, and the named institution's current site where it is needed to establish its visit address).
 
@@ -15,9 +15,9 @@ Source rule: primary official sources only (central-government registers and ser
 ## Counts and unresolved status
 
 - Registry slugs reviewed: **27/27**.
-- Factual claims recorded: **85** (at least two per slug; four each for `alcester`, `baginton`, `balsall-common`, `bishopton`, `brandon`, `brinklow`, `chase-meadow`, `hampton-in-arden`, `lillington`, `meriden`, `sydenham`, `tiddington`, `wolston` and `woodloes-park`, plus a third for `leamington-spa`, `stratford-upon-avon` and `shilton`).
+- Factual claims recorded: **89** (at least two per slug; four each for `alcester`, `baginton`, `balsall-common`, `bishopton`, `brandon`, `brinklow`, `chase-meadow`, `hampton-in-arden`, `heathcote`, `lillington`, `meriden`, `milverton`, `sydenham`, `tiddington`, `wolston` and `woodloes-park`, plus a third for `leamington-spa`, `stratford-upon-avon` and `shilton`).
 - Slugs with at least two official-source claims: **27/27**.
-- Distinct primary deep URLs cited: **73** across **12** publishing bodies (15 Warwick District Council, 11 Stratford-on-Avon District Council, 9 Rugby Borough Council, 8 Solihull Metropolitan Borough Council, 9 Historic England, 5 Charity Commission, 6 Department for Education, 4 Warwickshire County Council, 2 NHS, 1 Coventry City Council, 1 Office for National Statistics and 1 Chase Meadow Community Centre URL); these appear in **91** claim citations because sources are reused where they support more than one slug and several claims cite complementary records.
+- Distinct primary deep URLs cited: **77** across **12** publishing bodies (16 Warwick District Council, 11 Stratford-on-Avon District Council, 9 Rugby Borough Council, 9 Solihull Metropolitan Borough Council, 10 Historic England, 5 Charity Commission, 8 Department for Education, 4 Warwickshire County Council, 2 NHS, 1 Coventry City Council, 1 Office for National Statistics and 1 Chase Meadow Community Centre URL); these appear in **95** claim citations because sources are reused where they support more than one slug and several claims cite complementary records.
 - Slugs with a directly evidenced conservation-area tag: **16/27**.
 - Slugs with a directly evidenced rail tag: **2/27** (`brandon`, `wolston`).
 - Slugs with a directly evidenced river tag: **4/27** (`leamington-spa`, `stratford-upon-avon`, `wolston`, `ryton-on-dunsmore`).
@@ -50,8 +50,8 @@ Source rule: primary official sources only (central-government registers and ser
 
 ### `milverton`
 
-**Context tags:** `conservation-area-present`, `settlement/local-plan`
-**Access/property-status caveat:** The conservation guide specifically names **New Milverton**, while the service slug is broader; an address described as Milverton must be boundary-checked before any conservation statement, and neither source proves property type or access.
+**Context tags:** `conservation-area-present`, `settlement/local-plan`, `school`, `managed-premises`, `listed-building-present`
+**Access/property-status caveat:** The conservation guide specifically names **New Milverton**, while the service slug is broader. The allotments, Greatheed Road school and Grade II Milverton House are exact named sites; none proves the requested entrance, present controller, access, hardware or condition, and the list entry cannot be extended to neighbouring property.
 
 1. **Claim:** The Royal Leamington Spa Conservation Area key map names “New Milverton (excluding Rugby Road and Warwick New Road)” as character area 30.
    **Publisher / title / deep URL:** Warwick District Council — [A Guide to Conservation Areas: Royal Leamington Spa Conservation Area](https://www.warwickdc.gov.uk/download/downloads/id/3081/leamington_-_guide_to_conservation_areas.pdf), conservation-area key map.
@@ -64,6 +64,18 @@ Source rule: primary official sources only (central-government registers and ser
    **Supports:** An official Milverton-named planning feature and the `settlement/local-plan` tag.
    **Conditional service use:** Use Northumberland Road/allotments only as verified locality context if relevant to the caller's address; it is not evidence of jobs, proximity or route access.
    **Checked:** 2026-08-29.
+
+3. **Claim:** The Department for Education records Milverton Primary School at Greatheed Road, Leamington Spa, CV32 6ES.
+   **Publisher / title / deep URL:** Department for Education — [Milverton Primary School](https://get-information-schools.service.gov.uk/Establishments/Establishment/Details/125610).
+   **Supports:** One exact managed education site and the `school` and `managed-premises` tags.
+   **Conditional service use:** Use this to distinguish the Greatheed Road school only. The record does not identify a current keyholder, requested entrance, safeguarding arrangement, work authority, door construction or lock condition.
+   **Checked:** 2026-08-31.
+
+4. **Claim:** Historic England identifies Milverton House at the statutory addresses Milverton House, 11 Beauchamp Hill and Milverton House, Milverton Crescent, as Grade II under entry 1381160.
+   **Publisher / title / deep URL:** Historic England — [Milverton House, list entry 1381160](https://historicengland.org.uk/listing/the-list/list-entry/1381160).
+   **Supports:** The exact listed asset and the `listed-building-present` tag.
+   **Conditional service use:** Apply the designation only to Milverton House. The entry does not establish current use, condition, controller, access, installed hardware or whether an unspecified proposal requires consent; its architectural description is not evidence of current door condition.
+   **Checked:** 2026-08-31.
 
 ### `lillington`
 
@@ -142,8 +154,8 @@ Source rule: primary official sources only (central-government registers and ser
 
 ### `heathcote`
 
-**Context tags:** `settlement/local-plan`
-**Access/property-status caveat:** The monitoring report records project status at publication and the park page describes planned facilities; neither source proves completion after its reporting date, customer access, property type or service coverage.
+**Context tags:** `settlement/local-plan`, `school`, `named-public-site`, `managed-premises`
+**Access/property-status caveat:** The monitoring report records project status at publication and the park page describes planned facilities. The Vickers Way school and Cressida Close community centre are exact managed sites; none of these records proves later completion, a current keyholder, the requested entrance, access arrangements, hardware, condition or service coverage.
 
 1. **Claim:** Warwick District Council's 2024-25 monitoring report says permission was granted for the Lower Heathcote Local Centre; at reporting time, the retail units, nursery and care home were complete while the office had not started.
    **Publisher / title / deep URL:** Warwick District Council — [Authority Monitoring Report 2024-25](https://www.warwickdc.gov.uk/download/downloads/id/9326/authority_monitoring_report_2024-25.pdf), section 5.6.
@@ -156,6 +168,18 @@ Source rule: primary official sources only (central-government registers and ser
    **Supports:** An explicit geographic link between Heathcote and the park's north-west sector.
    **Conditional service use:** Retain “planned” unless completion is separately verified; use the park only as conditional orientation, not as a route, timing or coverage claim.
    **Checked:** 2026-08-29.
+
+3. **Claim:** The Department for Education records Heathcote Primary School at Vickers Way, Heathcote, Warwick, CV34 7AP.
+   **Publisher / title / deep URL:** Department for Education — [Heathcote Primary School](https://get-information-schools.service.gov.uk/Establishments/Establishment/Details/144648).
+   **Supports:** One exact managed education site and the `school` and `managed-premises` tags.
+   **Conditional service use:** Use this to distinguish the Vickers Way school only. The record does not identify a current keyholder, requested entrance, safeguarding arrangement, work authority, door construction or lock condition.
+   **Checked:** 2026-08-31.
+
+4. **Claim:** Warwick District Council's local-services guide identifies Heathcote Community Centre at Cressida Close, Heathcote, Warwick, CV34 6DZ.
+   **Publisher / title / deep URL:** Warwick District Council — [Your guide to local services in Warwick District](https://www.warwickdc.gov.uk/download/downloads/id/9125/guide_to_local_services_booklet.pdf), community-centres directory.
+   **Supports:** One exact named public site and the `named-public-site` and `managed-premises` tags.
+   **Conditional service use:** Use the directory address only to identify the centre. It does not establish ownership, current controller, keyholder, requested entrance, access arrangement, installed hardware, condition, opening hours or work authority.
+   **Checked:** 2026-08-31.
 
 ## Warwick cluster
 

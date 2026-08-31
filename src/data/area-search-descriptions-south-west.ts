@@ -6,8 +6,8 @@ export const SOUTH_WEST_AREA_SEARCH_DESCRIPTIONS = {
     sourceIds: ['wdc-leamington-plan'],
   },
   milverton: {
-    description: "Locksmith help in Milverton for lockouts, lock repairs and upgrades, noting the council guide's New Milverton conservation character area.",
-    sourceIds: ['wdc-leamington-conservation'],
+    description: "Milverton locksmith guidance distinguishing New Milverton's mapped boundary, Northumberland Road allotments, Greatheed Road school and Grade II Milverton House.",
+    sourceIds: ['wdc-leamington-conservation', 'wdc-leamington-plan', 'dfe-milverton-primary', 'historic-england-milverton-house-1381160'],
   },
   lillington: {
     description: 'Lillington locksmith help for lockouts, repairs and upgrades, with official records for Crown Way, Mason Avenue community centre and Valley Road library.',
@@ -22,8 +22,8 @@ export const SOUTH_WEST_AREA_SEARCH_DESCRIPTIONS = {
     sourceIds: ['wdc-local-plan'],
   },
   heathcote: {
-    description: "Locksmith help in Heathcote for lockouts, lock repairs and upgrades, with Lower Heathcote Local Centre recorded in the council's 2024-25 monitoring report.",
-    sourceIds: ['wdc-monitoring-report-2024-25'],
+    description: 'Heathcote locksmith guidance separating dated Lower Heathcote status, the planned country park, Vickers Way school and Cressida Close community centre.',
+    sourceIds: ['wdc-monitoring-report-2024-25', 'wdc-tachbrook-park', 'dfe-heathcote-primary', 'wdc-heathcote-community-centre-guide'],
   },
   warwick: {
     description: 'Locksmith services in Warwick for lockouts, repairs and upgrades, with the council conservation guide mapping fifteen named character sections.',

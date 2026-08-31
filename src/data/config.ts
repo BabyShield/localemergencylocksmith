@@ -24,12 +24,12 @@ export const SERVICE_PROVIDER_SCHEMA = {
   telephone: SITE_CONFIG.phoneTel,
 } as const
 
-// One stable author identity for the visible Ross byline. Article markup links
+// One stable author identity for the visible Albert byline. Article markup links
 // to the real About page rather than leaving the author as an unconnected name.
 export const LOCKSMITH_AUTHOR_SCHEMA = {
   '@type': 'Person',
-  '@id': `${SITE_CONFIG.domain}/about#ross`,
-  name: 'Ross',
+  '@id': `${SITE_CONFIG.domain}/about#albert`,
+  name: 'Albert',
   jobTitle: 'Locksmith',
   url: `${SITE_CONFIG.domain}/about`,
   worksFor: { '@id': `${SITE_CONFIG.domain}/#business` },
@@ -37,7 +37,7 @@ export const LOCKSMITH_AUTHOR_SCHEMA = {
 
 // Bump only when page content genuinely changes — drives visible "last updated"
 // dates and sitemap lastModified, so it must never be a build timestamp.
-export const CONTENT_UPDATED = '2026-08-30'
+export const CONTENT_UPDATED = '2026-08-31'
 
 // Real Google Business Profile figures, maintained by hand to exactly match the
 // live profile. All-null until real values are supplied — UI must render nothing

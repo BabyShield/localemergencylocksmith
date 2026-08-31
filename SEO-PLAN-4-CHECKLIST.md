@@ -1,7 +1,7 @@
 # Build Plan #4: Off-Site SEO Operational Checklist
 ## localemergencylocksmith.co.uk
 
-*AIOS — Ross Alinari Artificial Intelligence Operating System*
+*AIOS — Albert Alinari Artificial Intelligence Operating System*
 *Implementation Checklist — March 2026*
 
 ---
@@ -122,7 +122,7 @@ in [area]. If you ever need us again, we're just a phone call away — 24/7.
 - [ ] Sign up for HARO — helpareporter.com (3x daily digests)
 - [ ] Sign up for SourceBottle — sourcebottle.com
 - [ ] Monitor #JournoRequest on X/Twitter
-- [ ] Position responses as: "Ross, a Coventry locksmith with X years of experience..."
+- [ ] Position responses as: "Albert, a Coventry locksmith with X years of experience..."
 
 ### Monthly
 - [ ] Pitch 1 story to CoventryLive (coventrytelegraph.net, DA 70+)

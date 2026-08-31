@@ -5,10 +5,10 @@ import SchemaMarkup from '@/components/SchemaMarkup'
 import CTABlock from '@/components/CTABlock'
 
 export const metadata: Metadata = {
-  title: 'About Ross | Local Emergency Locksmith Coventry',
+  title: 'About Albert | Local Emergency Locksmith Coventry',
   description:
-    "I'm Ross, an independent locksmith serving listed Coventry and Warwickshire locations. Call for the current ETA and price; no VAT or separate call-out fee.",
-  keywords: 'about locksmith coventry, local locksmith coventry, independent locksmith warwickshire, ross locksmith coventry, coventry locksmith no vat, trusted locksmith coventry',
+    "I'm Albert, an independent locksmith serving listed Coventry and Warwickshire locations. Call for the current ETA and price; no VAT or separate call-out fee.",
+  keywords: 'about locksmith coventry, local locksmith coventry, independent locksmith warwickshire, albert locksmith coventry, coventry locksmith no vat, trusted locksmith coventry',
   alternates: {
     canonical: `${SITE_CONFIG.domain}/about`,
   },
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     type: 'website',
     siteName: 'Local Emergency Locksmith',
     locale: 'en_GB',
-    title: 'About Ross | Local Emergency Locksmith Coventry',
+    title: 'About Albert | Local Emergency Locksmith Coventry',
     description:
       "Independent emergency locksmith serving listed Coventry and Warwickshire locations. Call for the current ETA and price; no VAT or separate call-out fee.",
     url: `${SITE_CONFIG.domain}/about`,
@@ -31,8 +31,8 @@ const aboutSchema = {
       '@type': 'ProfilePage',
       '@id': `${SITE_CONFIG.domain}/about#webpage`,
       url: `${SITE_CONFIG.domain}/about`,
-      name: 'About Ross | Local Emergency Locksmith',
-      mainEntity: { '@id': `${SITE_CONFIG.domain}/about#ross` },
+      name: 'About Albert | Local Emergency Locksmith',
+      mainEntity: { '@id': `${SITE_CONFIG.domain}/about#albert` },
       about: { '@id': `${SITE_CONFIG.domain}/#business` },
     },
     {
@@ -76,12 +76,12 @@ export default function AboutPage() {
         <div className="max-w-3xl mx-auto">
           {/* H1 */}
           <h1 className="text-3xl md:text-4xl font-black text-[#0F1B2D] mb-6">
-            About Ross and Local Emergency Locksmith
+            About Albert and Local Emergency Locksmith
           </h1>
 
           {/* Hero paragraph */}
           <p className="text-lg text-gray-700 leading-relaxed mb-10">
-            I&apos;m Ross, your local independent locksmith serving the locations listed across
+            I&apos;m Albert, your local independent locksmith serving the locations listed across
             Coventry and nearby parts of Warwickshire, Solihull, and the West Midlands. When you call{' '}
             <a
               href={`tel:${SITE_CONFIG.phoneTel}`}

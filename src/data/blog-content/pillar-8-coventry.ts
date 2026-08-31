@@ -423,7 +423,7 @@ If you recognise any of these problems in your own home — or if you are not su
   'choosing-locksmith-coventry': {
     body: `# How to Choose a Locksmith in Coventry: An Honest Guide From a Local Locksmith
 
-I am going to level with you. Writing a "how to choose a locksmith" article as a locksmith is a bit like a barber writing "how to choose a barber" — there is an obvious conflict of interest. So I want to be upfront: I am Ross, I am an independent locksmith based in Coventry, and yes, I would like you to choose me. But this article is genuinely intended to help you make a good decision, whether that is me or someone else.
+I am going to level with you. Writing a "how to choose a locksmith" article as a locksmith is a bit like a barber writing "how to choose a barber" — there is an obvious conflict of interest. So I want to be upfront: I am Albert, I am an independent locksmith based in Coventry, and yes, I would like you to choose me. But this article is genuinely intended to help you make a good decision, whether that is me or someone else.
 
 Locksmith listings can represent local independents, dispatch services or wider-area businesses, and advertised prices may not describe the same scope. Verify identity, location, total price and who will attend rather than assuming a listing is local or dishonest.
 

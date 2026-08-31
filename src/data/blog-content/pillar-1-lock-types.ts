@@ -7,7 +7,7 @@ export const PILLAR_1_CONTENT: Record<
 
 Lock snapping is an attack on some euro-profile cylinders used in uPVC and composite doors. [Police.uk's door and window lock guidance](https://www.police.uk/cp/crime-prevention/protect-home-crime/door-window-lock-advice/) lists snapping among the attacks that a 3-star TS007 euro cylinder is designed to resist and recommends that standard when a euro cylinder is changed. That makes snapping a genuine risk to check for, but it does not establish that it is the UK's most common burglary method or that every attack takes the same amount of time.
 
-I'm Ross, an independent locksmith working across Coventry. I attend uPVC and composite doors that have damaged or failed euro cylinders in areas such as [Earlsdon](/areas/earlsdon), [Tile Hill](/areas/tile-hill), and [Coventry city centre](/areas/coventry-city-centre). A door's age, appearance or location does not by itself show whether its cylinder has certified attack resistance, so the lock and door furniture need to be checked directly.
+I'm Albert, an independent locksmith working across Coventry. I attend uPVC and composite doors that have damaged or failed euro cylinders in areas such as [Earlsdon](/areas/earlsdon), [Tile Hill](/areas/tile-hill), and [Coventry city centre](/areas/coventry-city-centre). A door's age, appearance or location does not by itself show whether its cylinder has certified attack resistance, so the lock and door furniture need to be checked directly.
 
 ## How Lock Snapping Works
 
@@ -702,7 +702,7 @@ If you want to discuss smart-lock compatibility, call me on 024 7522 4730 before
 
 If you have a wooden front door, a correctly fitted five-lever mortice deadlock may be an important part of the doorset. Whether BS3621 is required for your home depends on the actual policy wording, so identify the existing lock and check the written terms before choosing a replacement.
 
-I'm Ross, a Coventry locksmith. This guide explains how five-lever mortice deadlocks work, how to identify the markings on the lock you have, and what to check before repair or upgrade work is agreed.
+I'm Albert, a Coventry locksmith. This guide explains how five-lever mortice deadlocks work, how to identify the markings on the lock you have, and what to check before repair or upgrade work is agreed.
 
 ## How a Five-Lever Mortice Deadlock Works
 
@@ -851,7 +851,7 @@ If your mortice lock needs attention, call me on 024 7522 4730 with its visible 
 
 Lock security standards are confusing. Manufacturers throw around terms like "3-star", "Diamond Standard", and "Secured by Design" as if everyone knows what they mean. Most people don't, and that's not their fault — the system is genuinely complicated.
 
-I'm Ross, a locksmith in [Coventry](/), and I'm going to break down the three main standards you'll encounter when shopping for door locks in the UK. By the end of this, you'll know exactly what each one means and which standard matters for your specific situation.
+I'm Albert, a locksmith in [Coventry](/), and I'm going to break down the three main standards you'll encounter when shopping for door locks in the UK. By the end of this, you'll know exactly what each one means and which standard matters for your specific situation.
 
 ## TS007: The Star Rating System
 

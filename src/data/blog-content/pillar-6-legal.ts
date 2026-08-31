@@ -9,7 +9,7 @@ export const PILLAR_6_CONTENT: Record<string, { body: string; faqs: { q: string;
 
 If you have ever read a home insurance policy or looked into upgrading your locks, you may have encountered one of these standards. They apply to different lock functions and products; whether any particular standard matters to you depends on the actual door, the certified product, written policy terms and any property-specific safety or licensing requirement.
 
-I am Ross, a local locksmith in Coventry. I can identify installed hardware and its visible certification, but an insurer, council or fire-risk assessor must confirm how its own wording applies to a particular property.
+I am Albert, a local locksmith in Coventry. I can identify installed hardware and its visible certification, but an insurer, council or fire-risk assessor must confirm how its own wording applies to a particular property.
 
 Let me break all three down in plain English.
 
@@ -328,7 +328,7 @@ For a physical lock change in Coventry — whether you are a tenant, landlord, o
 
 There is no general rule in England requiring every landlord to change every lock between tenancies. The decision should be based on key control, the existing hardware, the property and occupants, licence or fire-safety requirements and written insurance terms.
 
-I am Ross, a local locksmith serving the listed Coventry and surrounding areas. This guide treats key control as a property-specific decision rather than claiming that every tenancy change requires replacement.
+I am Albert, a local locksmith serving the listed Coventry and surrounding areas. This guide treats key control as a property-specific decision rather than claiming that every tenancy change requires replacement.
 
 ---
 
@@ -493,7 +493,7 @@ For information on lockouts and occupancy, see our guide on [whether landlords c
 
 Lock wording is easy to overlook until a burglary or renewal. Checking it now lets you identify the installed hardware, ask the insurer about ambiguity and retain evidence before a claim is ever needed.
 
-I am Ross, a local locksmith covering Coventry and the surrounding areas. I can identify hardware and certification evidence, but only the insurer can confirm whether a product satisfies its wording, and any claim decision depends on the written terms and circumstances.
+I am Albert, a local locksmith covering Coventry and the surrounding areas. I can identify hardware and certification evidence, but only the insurer can confirm whether a product satisfies its wording, and any claim decision depends on the written terms and circumstances.
 
 ---
 

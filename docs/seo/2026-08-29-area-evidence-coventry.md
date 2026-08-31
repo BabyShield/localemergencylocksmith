@@ -1,8 +1,8 @@
 # Coventry-cluster area evidence register
 
-Checked: baseline corpus 2026-08-29; `radford`, `foleshill`, `wyken`, `allesley`, `cheylesmore`, `eastern-green`, `courthouse-green`, `aldermans-green` and `sowe` evidence refreshed 2026-08-30.
+Checked: baseline corpus 2026-08-29; `radford`, `foleshill`, `wyken`, `cheylesmore`, `whitley`, `finham`, `allesley`, `eastern-green`, `courthouse-green`, `aldermans-green` and `sowe` evidence refreshed 2026-08-30; `tile-hill`, `walsgrave`, `longford` and `potters-green` evidence refreshed 2026-08-31.
 
-Scope: the first 30 `AREAS` records in the Coventry merchandising cluster, from `coventry-city-centre` through `little-heath`. This is a research register, not publish-ready local copy. Claims are limited to opened primary sources from Coventry City Council, Rugby Borough Council, Historic England and the named institution's current site where it is needed to establish its own contact address. A character area, ward, MSOA, parish, neighbourhood-plan boundary or named park is not interchangeable with a service-area slug or an individual address.
+Scope: the first 30 `AREAS` records in the Coventry merchandising cluster, from `coventry-city-centre` through `little-heath`. This is a research register, not publish-ready local copy. Claims are limited to opened primary sources from central-government registers and services, councils, Historic England, NHS providers, CV Life and named institutions' current sites where needed to establish their own records or contact addresses. A character area, ward, MSOA, parish, neighbourhood-plan boundary or named park is not interchangeable with a service-area slug or an individual address.
 
 Excluded throughout: inferred lock types, locksmith job history or frequency, crime, response time, parking, property value, tenure and service coverage. A postcode or neighbourhood name does not establish any of those facts.
 
@@ -35,16 +35,18 @@ Excluded throughout: inferred lock types, locksmith job history or frequency, cr
 
 ## `tile-hill`
 
-- **Context tags:** `ward/JSNA-profile`, `rail`, `named-road-boundaries`, `woodland-SSSI`.
+- **Context tags:** `ward/JSNA-profile`, `rail`, `named-road-boundaries`, `woodland-SSSI`, `official-library`.
 - **Supported claims:**
   1. The council's JSNA defines Tile Hill as a west-Coventry neighbourhood, with Broad Lane along its north and Tile Hill Lane dividing Tile Hill North from Tile Hill South.
   2. The JSNA places Canley to the south, with Torrington Avenue and the railway line forming the stated division used by that profile.
   3. Coventry City Council states that Tile Hill Wood is a Site of Special Scientific Interest because of native flora representing local Arden-type woodland.
+  4. Coventry City Council identifies Tile Hill Library at Jardine Crescent, Tile Hill, Coventry, CV4 9PL.
 - **Sources:**
-  - Coventry City Council — [Tile Hill place-based profile: Demographics and Communities](https://www.coventry.gov.uk/facts-coventry/tile-hill-place-based-profile/3) — supports claims 1 and 2 and defines the statistical geography used by the profile. Checked 2026-08-29.
-  - Coventry City Council — [Woodland management](https://www.coventry.gov.uk/woods) — supports claim 3. Checked 2026-08-29.
-- **Conditional service implication:** Ask for the complete address and entrance description rather than using “Tile Hill” or CV4 alone; where work could affect a protected natural site or shared council asset, obtain the relevant landowner/manager authority.
-- **Access/property-status caveat:** The JSNA boundary is a statistical study area, and the SSSI statement concerns Tile Hill Wood, not every property carrying a Tile Hill address.
+  - Coventry City Council — [Tile Hill place-based profile: Demographics and Communities](https://www.coventry.gov.uk/facts-coventry/tile-hill-place-based-profile/3) — supports claims 1 and 2 and defines the statistical geography used by the profile. Checked 2026-08-31.
+  - Coventry City Council — [Woodland management](https://www.coventry.gov.uk/woods) — supports claim 3. Checked 2026-08-31.
+  - Coventry City Council — [Tile Hill Library - Libraries](https://www.coventry.gov.uk/tilehilllibrary) — supports claim 4 only; opening times were not used. Checked 2026-08-31.
+- **Conditional service implication:** Require the complete address, premises name and exact entrance. If the library, woodland or another managed site is involved, independently verify the current responsible contact and requester authority.
+- **Access/property-status caveat:** The JSNA boundary is statistical, the SSSI statement concerns Tile Hill Wood only and the library page identifies one Jardine Crescent site. None proves current control, authority, access, construction, hardware, condition, demand, travel or service availability.
 
 ## `canley`
 
@@ -150,16 +152,18 @@ Excluded throughout: inferred lock types, locksmith job history or frequency, cr
 
 ## `walsgrave`
 
-- **Context tags:** `historic-landscape-report`, `river-Sowe-corridor`, `historic-village`, `hospital-site`.
+- **Context tags:** `historic-landscape-report`, `river-Sowe-corridor`, `historic-village`, `hospital-site`, `current-school-register`.
 - **Supported claims:**
   1. The Woodway Park HLC says medieval settlement was concentrated around Walsgrave village, then known as Sowe, clustered around the church.
   2. The report records historic buildings surviving on Hall Lane and Hinckley Road and states that the hospital site was extensively redeveloped around 2005.
   3. The North Sowe river-valley character area explicitly passes through Walsgrave.
+  4. The Department for Education records Walsgrave Church of England Academy, URN 142244, as open at School House Lane, Coventry, West Midlands, CV2 2BA.
 - **Sources:**
   - Coventry City Council — [Woodway Park Character Area, HLC Area 42](https://www.coventry.gov.uk/downloads/file/17413/hlc-area-42-woodway-park-character-area) — supports claims 1 and 2. Checked 2026-08-29.
   - Coventry City Council — [North Sowe Character Area, HLC Area 26](https://www.coventry.gov.uk/downloads/file/17438/hlc-area-26-north-sowe-character-area) — supports claim 3. Checked 2026-08-29.
-- **Conditional service implication:** Distinguish a private address from hospital or other managed premises and verify authorization; check exact heritage status before external alterations around the historic village core.
-- **Access/property-status caveat:** The village, hospital and river corridor are separate contexts; none establishes the premise type or status at a supplied address.
+  - Department for Education — [Walsgrave Church of England Academy, URN 142244](https://get-information-schools.service.gov.uk/Establishments/Establishment/Details/142244) — supports the recorded-open status and School House Lane address in claim 4. Checked 2026-08-31.
+- **Conditional service implication:** Distinguish the academy, hospital site, historic-road premises and another Walsgrave address by complete address and exact threshold, then verify the current owner, occupier or organisational controller independently.
+- **Access/property-status caveat:** The village and hospital history, river corridor and academy register are separate evidence units. They establish no shared entrance, private route, caller authority, current controller, construction, hardware, condition, demand, response, coverage or work history; recorded-open school status is not facilities authority.
 
 ## `binley`
 
@@ -311,16 +315,18 @@ Excluded throughout: inferred lock types, locksmith job history or frequency, cr
 
 ## `longford`
 
-- **Context tags:** `ward/JSNA-profile`, `official-park`, `river-walk`, `named-MSOA`.
+- **Context tags:** `ward/JSNA-profile`, `official-park`, `river-walk`, `named-MSOA`, `Grade-II-listed-church`.
 - **Supported claims:**
   1. Coventry's Foleshill and Longford JSNA says its study area contains the Longford, Little Heath, Foleshill West and Foleshill East MSOAs and explicitly excludes Bell Green from the Longford part used there.
   2. Coventry City Council locates Longford Park on Longford Road, Longford, CV6 6DW and identifies it as the city's largest Area Park.
   3. The park page describes a tree-lined river walk and a footpath system, alongside recreation and ecological areas.
+  4. Historic England list entry 1076617 identifies the Church of St Thomas on Hurst Road as a Grade II listed building; the official entry details identify it under Longford.
 - **Sources:**
   - Coventry City Council — [Foleshill and Longford place-based profile: Demographics and communities](https://www.coventry.gov.uk/facts-coventry/foleshill-longford/3) — supports claim 1 and defines the profile geography. Checked 2026-08-29.
-  - Coventry City Council — [Longford Park](https://www.coventry.gov.uk/longfordpark) — supports claims 2 and 3. Checked 2026-08-29.
-- **Conditional service implication:** Distinguish a Longford residential address from the council park or another managed site and obtain exact entrance and authority details before attendance.
-- **Access/property-status caveat:** The JSNA is a best-fit statistical geography and the park source concerns one named public asset; neither establishes an individual property's status.
+  - Coventry City Council — [Longford Park](https://www.coventry.gov.uk/longfordpark) — supports claims 2 and 3. Checked 2026-08-31.
+  - Historic England — [Church of St Thomas, list entry 1076617](https://historicengland.org.uk/listing/the-list/list-entry/1076617) — supports the named Hurst Road church's Grade II designation and Longford wording in claim 4. Checked 2026-08-31.
+- **Conditional service implication:** Distinguish Longford Park, the Hurst Road church and another premises by complete address and exact threshold, then verify the current park, church or property controller independently before any service decision.
+- **Access/property-status caveat:** The best-fit JSNA, named park and listed church are separate evidence units. The listing applies only to the church, and none of these records establishes a shared entrance, private route, caller authority, current controller, secured park opening, construction, hardware, condition, demand, response, coverage or work history.
 
 ## `bell-green`
 
@@ -370,16 +376,18 @@ Excluded throughout: inferred lock types, locksmith job history or frequency, cr
 
 ## `potters-green`
 
-- **Context tags:** `historic-landscape-report`, `historic-settlement`, `official-school-directory`, `named-road-catchment`.
+- **Context tags:** `historic-landscape-report`, `historic-settlement`, `official-school-directory`, `named-road-catchment`, `dated-polling-notice`.
 - **Supported claims:**
   1. The Woodway Park HLC records a settlement at Potters Green on Woodway Lane with possible medieval ceramic-production associations.
   2. The same report says cottages west of the present Cardinal Wiseman schools appear on a 1778 estate survey, supporting an 18th-century or earlier road context even though Potters Green Road itself was not named on that survey.
   3. Coventry City Council locates Potters Green school at Ringwood Highway, CV2 2GF and publishes a catchment street list including Potters Green Road, Ringwood Highway and parts of Woodway Lane.
+  4. Coventry City Council's Situation of Polling Stations Notice dated 10 April 2026 names Potters Green Social Club & Community Centre on Wigston Road as polling station 22.
 - **Sources:**
   - Coventry City Council — [Woodway Park Character Area, HLC Area 42](https://www.coventry.gov.uk/downloads/file/17413/hlc-area-42-woodway-park-character-area) — supports claims 1 and 2. Checked 2026-08-29.
-  - Coventry City Council — [Potters Green: schools and contact details](https://www.coventry.gov.uk/directory-record/43021/potters-green) — supports claim 3. Checked 2026-08-29.
-- **Conditional service implication:** Use the exact address and caller authority, especially for school or managed premises; verify any heritage status before treating the historic settlement evidence as relevant to external work.
-- **Access/property-status caveat:** Archaeological potential and a school catchment are area/site evidence, not proof of a building's age, construction, boundary or entrance.
+  - Coventry City Council — [Potters Green: schools and contact details](https://www.coventry.gov.uk/directory-record/43021/potters-green) — supports claim 3. Checked 2026-08-31.
+  - Coventry City Council — [Situation of Polling Stations Notice – Henley](https://www.coventry.gov.uk/elections-voting/situation-polling-stations-notice/6) — supports claim 4 as a notice dated 10 April 2026; it is not evidence of ongoing polling status. Checked 2026-08-31.
+- **Conditional service implication:** Require the complete address, premises name and exact entrance. Independently verify the current responsible contact and requester authority for the school or notice-named venue.
+- **Access/property-status caveat:** The HLC is historical, the directory concerns one school and catchment, and the electoral notice records what was named on 10 April 2026 only. None proves present polling use, current control, access, property status, hardware, condition, demand, travel or service availability.
 
 ## `henley-green`
 
@@ -420,7 +428,7 @@ Excluded throughout: inferred lock types, locksmith job history or frequency, cr
   3. Coventry City Council records Sowe Common at Woodway Lane, Coventry, CV2 2AE.
   4. Historic England list entry 1115404 identifies the Church of St Mary the Virgin on Hall Lane at Grade II*; its legacy details header uses the historical wording “Walgrave on Sowe”.
 - **Sources:**
-  - Coventry City Council — [North Sowe Character Area, HLC Area 26](https://www.coventry.gov.uk/downloads/file/17438/hlc-area-26-north-sowe-character-area) — supports the corridor split and five named northern localities in claim 1. Checked 2026-08-30.
+  - Coventry City Council — [North Sowe Character Area, HLC Area 26](https://www.coventry.gov.uk/downloads/file/17438/hlc-area-26-north-sowe-character-area) — supports the corridor split and five named northern localities in claim 1. Checked 2026-08-29.
   - Coventry City Council — [Flooding advice: rivers in Coventry](https://www.coventry.gov.uk/water-management-flooding/flooding-advice/3) — supports the Main River and eastern-drainage statement in claim 2. Checked 2026-08-30.
   - Coventry City Council — [Sowe Common](https://www.coventry.gov.uk/directory-record/57167/sowe-common) — supports the public-space identity and Woodway Lane address in claim 3. Checked 2026-08-30.
   - Historic England — [Church of St Mary the Virgin, list entry 1115404](https://historicengland.org.uk/listing/the-list/list-entry/1115404) — supports the exact Hall Lane church's Grade II* designation and legacy “Walgrave on Sowe” wording in claim 4. Checked 2026-08-30.

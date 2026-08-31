@@ -32,7 +32,7 @@ export default function ContentAuthorNote({
         prefetch={false}
         className="font-bold text-[#0F1B2D] underline decoration-[#FFB800] underline-offset-2 hover:text-[#8A5A00]"
       >
-        Ross
+        Albert
       </Link>
       , locksmith. Content reviewed{' '}
       <time dateTime={reviewedOn}>{formatDate(reviewedOn)}</time>.

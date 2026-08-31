@@ -541,7 +541,7 @@ const OPERATIONAL_CLAIM_RULES = [
     patterns: [
       /\b(?:i|we)\s+(?:regularly|daily|weekly)\s+(?:get\s+called|attend|handle|repair|replace|fit|service|see|encounter|change|extract|do|work\s+on)\b[^.!?]{0,120}/gi,
       /\b(?:i|we)\s+(?:(?:am|are)\s+)?(?:get\s+called|called|attend|handle|repair|replace|fit|service|see|encounter|change|extract|work\s+on)\b[^.!?]{0,120}\b(?:every\s+(?:day|week|month)|daily|weekly|year\s+after\s+year|on\s+a\s+(?:daily|weekly)\s+basis)\b/gi,
-      /\b(?:someone|a\s+locksmith|ross)\s+who\s+(?:regularly\s+)?(?:works?\s+on|handles?|repairs?|replaces?|fits?|services?)\b[^.!?]{0,120}\b(?:every\s+(?:day|week|month)|daily|weekly)\b/gi,
+      /\b(?:someone|a\s+locksmith|albert)\s+who\s+(?:regularly\s+)?(?:works?\s+on|handles?|repairs?|replaces?|fits?|services?)\b[^.!?]{0,120}\b(?:every\s+(?:day|week|month)|daily|weekly)\b/gi,
       /\b(?:one\s+of\s+)?(?:my|our)\s+most\s+(?:common|frequent)\s+(?:calls?|jobs?|callouts?|repairs?|replacements?|services?)\b/gi,
       /\b(?:the\s+)?most\s+(?:common|frequent)\s+(?:calls?|jobs?|callouts?|faults?|problems?|failures?|issues?)\b[^.!?]{0,100}\b(?:i|we)\s+(?:(?:am|are)\s+)?(?:called|asked|attend|handle|repair|replace|fit|service|see|encounter)\b/gi,
       /\b(?:i|we)\s+(?:(?:am|are)\s+)?(?:called|asked|attend|handle|repair|replace|fit|service|see|encounter)\b[^.!?]{0,100}\b(?:the\s+)?most\s+(?:common|frequent)\s+(?:calls?|jobs?|callouts?|faults?|problems?|failures?|issues?)\b/gi,
@@ -1285,8 +1285,8 @@ try {
       check(Boolean(authoredWebPage), `${productionUrl.pathname} has no canonical authored WebPage node`)
       check(authoredWebPage?.url === loc, `${productionUrl.pathname} WebPage URL is ${authoredWebPage?.url || 'missing'}; expected ${loc}`)
       check(typeof authoredWebPage?.dateModified === 'string', `${productionUrl.pathname} WebPage has no dateModified`)
-      check(authoredWebPage?.author?.['@id'] === `${CANONICAL_ORIGIN}/about#ross`, `${productionUrl.pathname} WebPage author has the wrong @id`)
-      check(authoredWebPage?.author?.name === 'Ross', `${productionUrl.pathname} WebPage author has the wrong name`)
+      check(authoredWebPage?.author?.['@id'] === `${CANONICAL_ORIGIN}/about#albert`, `${productionUrl.pathname} WebPage author has the wrong @id`)
+      check(authoredWebPage?.author?.name === 'Albert', `${productionUrl.pathname} WebPage author has the wrong name`)
       check(authoredWebPage?.author?.url === `${CANONICAL_ORIGIN}/about`, `${productionUrl.pathname} WebPage author does not link to /about`)
       check(authoredWebPage?.publisher?.['@id'] === `${CANONICAL_ORIGIN}/#business`, `${productionUrl.pathname} WebPage publisher has the wrong @id`)
       check(authoredWebPage?.mainEntity?.['@id'] === `${loc}#service`, `${productionUrl.pathname} WebPage mainEntity does not reference its Service`)
@@ -1313,11 +1313,11 @@ try {
       const authorNote = mainHtml.match(/<p\b(?=[^>]*\bdata-content-author=["']true["'])[^>]*>[\s\S]*?<\/p>/i)?.[0] ?? ''
       check(Boolean(authorNote), `${productionUrl.pathname} has no visible content-author note`)
       check(
-        new RegExp(`data-content-author-id=["']${CANONICAL_ORIGIN.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}/about#ross["']`, 'i').test(authorNote),
+        new RegExp(`data-content-author-id=["']${CANONICAL_ORIGIN.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}/about#albert["']`, 'i').test(authorNote),
         `${productionUrl.pathname} visible content-author note has the wrong identity`,
       )
       check(internalHrefs(authorNote).has('/about'), `${productionUrl.pathname} visible author does not link to /about`)
-      check(visibleText(authorNote).includes('Ross'), `${productionUrl.pathname} visible author note does not name Ross`)
+      check(visibleText(authorNote).includes('Albert'), `${productionUrl.pathname} visible author note does not name Albert`)
       const authorReviewDate = authorNote.match(/data-content-reviewed-on=["']([^"']+)["']/i)?.[1] ?? ''
       check(authorReviewDate === authoredWebPage?.dateModified, `${productionUrl.pathname} visible review date does not match WebPage dateModified`)
       check(
@@ -1357,8 +1357,8 @@ try {
       const article = parsedSchemaNodes.find(node => hasSchemaType(node, 'BlogPosting'))
       const author = article?.author
       check(author?.['@type'] === 'Person', `${productionUrl.pathname} BlogPosting author is not a Person`)
-      check(author?.['@id'] === `${CANONICAL_ORIGIN}/about#ross`, `${productionUrl.pathname} BlogPosting author has the wrong @id`)
-      check(author?.name === 'Ross', `${productionUrl.pathname} BlogPosting author has the wrong name`)
+      check(author?.['@id'] === `${CANONICAL_ORIGIN}/about#albert`, `${productionUrl.pathname} BlogPosting author has the wrong @id`)
+      check(author?.name === 'Albert', `${productionUrl.pathname} BlogPosting author has the wrong name`)
       check(author?.url === `${CANONICAL_ORIGIN}/about`, `${productionUrl.pathname} BlogPosting author does not link to /about`)
       check(author?.worksFor?.['@id'] === `${CANONICAL_ORIGIN}/#business`, `${productionUrl.pathname} BlogPosting author has the wrong worksFor reference`)
       check(article?.publisher?.['@id'] === `${CANONICAL_ORIGIN}/#business`, `${productionUrl.pathname} BlogPosting publisher has the wrong @id`)
@@ -1378,8 +1378,8 @@ try {
 
     if (productionUrl.pathname === '/about') {
       const profilePage = parsedSchemaNodes.find(node => hasSchemaType(node, 'ProfilePage'))
-      const person = parsedSchemaNodes.find(node => hasSchemaType(node, 'Person') && node?.['@id'] === `${CANONICAL_ORIGIN}/about#ross`)
-      check(profilePage?.mainEntity?.['@id'] === `${CANONICAL_ORIGIN}/about#ross`, '/about ProfilePage does not identify Ross as its main entity')
+      const person = parsedSchemaNodes.find(node => hasSchemaType(node, 'Person') && node?.['@id'] === `${CANONICAL_ORIGIN}/about#albert`)
+      check(profilePage?.mainEntity?.['@id'] === `${CANONICAL_ORIGIN}/about#albert`, '/about ProfilePage does not identify Albert as its main entity')
       check(profilePage?.about?.['@id'] === `${CANONICAL_ORIGIN}/#business`, '/about ProfilePage does not reference the business it describes')
       check(person?.url === `${CANONICAL_ORIGIN}/about`, '/about has no stable Person author URL')
       check(person?.worksFor?.['@id'] === `${CANONICAL_ORIGIN}/#business`, '/about Person has the wrong worksFor reference')

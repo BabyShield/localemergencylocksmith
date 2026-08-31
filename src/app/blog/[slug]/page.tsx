@@ -199,7 +199,7 @@ export default async function BlogPostPage({ params }: Props) {
               {' · '}Updated <time dateTime={modifiedDate}>{new Date(modifiedDate).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })}</time>
             </>}
             {' · '}{post.readTime}
-            {' · '}By Ross, Local Emergency Locksmith
+            {' · '}By Albert, Local Emergency Locksmith
           </div>
 
           <h1 className="text-3xl md:text-4xl font-black text-gray-900 mb-6 leading-tight">
@@ -213,7 +213,7 @@ export default async function BlogPostPage({ params }: Props) {
           {/* Quick CTA */}
           <div className="bg-[#0F1B2D] text-white rounded-xl p-4 mb-8 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
             <p className="text-sm">
-              Need help now? Call Ross directly — 24/7, no call centre.
+              Need help now? Call Albert directly — 24/7, no call centre.
             </p>
             <a
               href={`tel:${SITE_CONFIG.phoneTel}`}
@@ -289,10 +289,10 @@ export default async function BlogPostPage({ params }: Props) {
           {/* Author bio */}
           <div className="mt-12 bg-[#F7F7F5] rounded-xl p-6 border border-gray-200">
             <p className="font-bold text-[#0F1B2D] mb-2">
-              <Link href="/about" className="hover:underline">About Ross</Link>
+              <Link href="/about" className="hover:underline">About Albert</Link>
             </p>
             <p className="text-gray-700 text-sm leading-relaxed">
-              I&apos;m Ross, the independent locksmith behind Local Emergency Locksmith. These guides
+              I&apos;m Albert, the independent locksmith behind Local Emergency Locksmith. These guides
               separate cited standards and public guidance from the checks that can only be made at
               the actual door. If you need a locksmith in one of the listed coverage locations, call me on{' '}
               <a href={`tel:${SITE_CONFIG.phoneTel}`} className="font-bold hover:underline">

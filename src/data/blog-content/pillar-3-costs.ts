@@ -5,7 +5,7 @@ export const PILLAR_3_CONTENT: Record<string, { body: string; faqs: { q: string;
 
 If you are comparing emergency locksmith prices, ask for the total for your specific door and time slot. A headline figure is not comparable unless it states whether labour, parts, travel, VAT, time premiums and any call-out charge are included.
 
-I am Ross, a local independent locksmith based in Coventry. My published standard residential lockout price starts from £59, with no VAT or separate call-out fee. I confirm the specific quote before work starts.
+I am Albert, a local independent locksmith based in Coventry. My published standard residential lockout price starts from £59, with no VAT or separate call-out fee. I confirm the specific quote before work starts.
 
 ## Why Quotes Can Differ
 
@@ -224,7 +224,7 @@ You can also check our full [price list](/prices) or browse our [lock change ser
 
 uPVC doors are widely used in Coventry and across the UK. Whether your door will not lock, the handle is floppy, or you want its security assessed, this guide covers the relevant repair, replacement, and upgrade costs.
 
-I am Ross, a local locksmith based in Coventry. The prices below are current starting prices for the described scopes. The exact part, fitting, alignment and any additional repair are confirmed after diagnosis. No VAT or separate call-out fee is added.
+I am Albert, a local locksmith based in Coventry. The prices below are current starting prices for the described scopes. The exact part, fitting, alignment and any additional repair are confirmed after diagnosis. No VAT or separate call-out fee is added.
 
 ## Understanding Your uPVC Door Lock
 
@@ -442,7 +442,7 @@ For uPVC mechanism repairs and replacements, visit the [uPVC lock repair service
 
 You have moved into a new home, lost your keys, or split up with someone who has a copy. You want to make sure old keys no longer work. The question is: should you rekey the existing locks or replace them entirely?
 
-I am Ross, a local locksmith based in Coventry. Whether rekeying or replacement is practical depends on the exact lock, available parts, certification, condition and key-control objective. This guide explains the assessment rather than assuming one route is always cheaper.
+I am Albert, a local locksmith based in Coventry. Whether rekeying or replacement is practical depends on the exact lock, available parts, certification, condition and key-control objective. This guide explains the assessment rather than assuming one route is always cheaper.
 
 ## What Is Rekeying?
 

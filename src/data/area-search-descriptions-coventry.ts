@@ -10,8 +10,8 @@ export const COVENTRY_AREA_SEARCH_DESCRIPTIONS = {
     sourceIds: ['earlsdon-chapelfields-hlc'],
   },
   'tile-hill': {
-    description: 'Tile Hill locksmith help for lockouts, repairs and upgrades, with Coventry’s JSNA placing Broad Lane to the north and Tile Hill Lane through the area.',
-    sourceIds: ['tile-hill-jsna'],
+    description: 'Tile Hill locksmith guidance separating the council’s JSNA road-and-rail geography, Tile Hill Wood SSSI and Tile Hill Library at Jardine Crescent.',
+    sourceIds: ['tile-hill-jsna', 'tile-hill-woods', 'tile-hill-library'],
   },
   canley: {
     description: 'Canley locksmith help for lockouts, repairs and lock changes, with Coventry’s JSNA noting Charter Avenue, the railway and the nearby university.',
@@ -42,8 +42,8 @@ export const COVENTRY_AREA_SEARCH_DESCRIPTIONS = {
     sourceIds: ['wyken-st-mary-magdalen-he', 'wyken-croft-primary-school', 'wyken-croft-nature-park'],
   },
   walsgrave: {
-    description: 'Walsgrave locksmith help for lockouts, repairs and upgrades, with Coventry’s HLC recording historic settlement around the village church.',
-    sourceIds: ['woodway-park-hlc'],
+    description: 'Walsgrave locksmith guidance separating village and hospital records, the North Sowe corridor and Walsgrave Church of England Academy, recorded as open.',
+    sourceIds: ['woodway-park-hlc', 'north-sowe-hlc', 'walsgrave-ce-academy-dfe'],
   },
   binley: {
     description: 'Binley locksmith help for lockouts, repairs and lock changes, with Coventry’s HLC placing the character area on the south-east fringe by the A46.',
@@ -86,8 +86,8 @@ export const COVENTRY_AREA_SEARCH_DESCRIPTIONS = {
     sourceIds: ['eastern-green-hlc', 'eastern-green-investment', 'eastern-green-recreation-ground', 'eastern-green-junior-dfe'],
   },
   longford: {
-    description: "Longford locksmith help for lockouts, repairs and upgrades, with Coventry's JSNA distinguishing Longford from Bell Green for exact-address checks.",
-    sourceIds: ['foleshill-longford-jsna'],
+    description: 'Longford locksmith guidance separating its JSNA geography, Longford Park and park paths from the Grade II Church of St Thomas on Hurst Road.',
+    sourceIds: ['foleshill-longford-jsna', 'longford-park', 'longford-st-thomas-he'],
   },
   'bell-green': {
     description: 'Bell Green locksmith help for lockouts, repairs and upgrades, with Coventry’s HLC recording possible medieval settlement and Bell Green Road in 1775.',
@@ -102,8 +102,8 @@ export const COVENTRY_AREA_SEARCH_DESCRIPTIONS = {
     sourceIds: ['aldermans-green-primary-school', 'aldermans-green-free-methodist', 'wyken-slough'],
   },
   'potters-green': {
-    description: 'Potters Green locksmith help for lockouts, repairs and lock changes, with Coventry’s HLC recording settlement on Woodway Lane and ceramic associations.',
-    sourceIds: ['woodway-park-hlc'],
+    description: 'Potters Green locksmith guidance separating historic Woodway Lane evidence, the Ringwood Highway school and the venue named in a 10 April 2026 polling notice.',
+    sourceIds: ['woodway-park-hlc', 'potters-green-school', 'potters-green-polling-notice'],
   },
   'henley-green': {
     description: 'Henley Green locksmith help for lockouts, repairs and upgrades, with the council locating its school and community centre at Wyken Croft, CV2 1HQ.',

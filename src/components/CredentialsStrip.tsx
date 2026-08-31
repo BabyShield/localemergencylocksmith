@@ -1,7 +1,7 @@
 import { Phone, FileCheck2, Clock3, CreditCard } from 'lucide-react'
 
 const CREDENTIALS = [
-  { Icon: Phone, title: 'Direct Booking', sub: 'Speak to Ross' },
+  { Icon: Phone, title: 'Direct Booking', sub: 'Speak to Albert' },
   { Icon: FileCheck2, title: 'Agreed Scope', sub: 'Before work starts' },
   { Icon: Clock3, title: 'Current ETA', sub: 'Confirmed by phone' },
   { Icon: CreditCard, title: 'Card Payments', sub: 'Cash or card — your choice' },

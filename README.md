@@ -518,7 +518,7 @@ This creates a web of internal links that Google crawls efficiently and associat
 
 ---
 
-*AIOS — Ross Alinari Artificial Intelligence Operating System*
+*AIOS — Albert Alinari Artificial Intelligence Operating System*
 *Build Plan — March 2026*
 # CLAUDE CODE BUILD PLAN #2
 ## SEO Area Articles — localemergencylocksmith.co.uk
@@ -1266,7 +1266,7 @@ The speed depends on:
 
 ---
 
-*AIOS — Ross Alinari Artificial Intelligence Operating System*
+*AIOS — Albert Alinari Artificial Intelligence Operating System*
 *Build Plan #2 — SEO Area Articles — March 2026*
 # CLAUDE CODE BUILD PLAN
 ## Local Emergency Locksmith — localemergencylocksmith.co.uk
@@ -1804,5 +1804,5 @@ This creates a web of internal links that Google crawls efficiently and associat
 
 ---
 
-*AIOS — Ross Alinari Artificial Intelligence Operating System*
+*AIOS — Albert Alinari Artificial Intelligence Operating System*
 *Build Plan — March 2026*
