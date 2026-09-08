@@ -6,7 +6,8 @@ import { ALL_BLOG_POSTS } from '@/data/blog-posts'
 import { getAreaGuide } from '@/data/area-guides'
 import { getTownService, TOWN_SERVICE_PARAMS } from '@/data/governed-town-services'
 import { BLOG_CONTENT_UPDATED } from '@/data/blog-seo'
-import { CORE_ROUTE_LAST_MODIFIED, SERVICE_GUIDES_REVIEWED_ON } from '@/data/content-dates'
+import { BLOG_TOPICS } from '@/data/blog-topics'
+import { BLOG_TOPICS_REVIEWED_ON, CORE_ROUTE_LAST_MODIFIED, SERVICE_GUIDES_REVIEWED_ON } from '@/data/content-dates'
 
 // Exactly the canonical indexable set — every URL here returns 200 with a
 // self-canonical and no noindex. Each authored route owns its lastModified
@@ -58,6 +59,14 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         priority: 0.8,
       }
     }),
+
+    // Topic hubs — one indexable page per editorial pillar
+    ...BLOG_TOPICS.map((t) => ({
+      url: `${base}/blog/topic/${t.slug}`,
+      lastModified: new Date(BLOG_TOPICS_REVIEWED_ON),
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    })),
 
     // Hand-written blog posts only
     ...ALL_BLOG_POSTS.map((p) => ({

@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
-import Link from 'next/link'
 import { SITE_CONFIG } from '@/data/config'
+import Breadcrumbs from '@/components/Breadcrumbs'
 import SchemaMarkup from '@/components/SchemaMarkup'
 import CTABlock from '@/components/CTABlock'
 import FAQSection from '@/components/FAQSection'
@@ -144,43 +144,19 @@ const faqSchema = {
   })),
 }
 
-const breadcrumbSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'BreadcrumbList',
-  itemListElement: [
-    {
-      '@type': 'ListItem',
-      position: 1,
-      name: 'Home',
-      item: SITE_CONFIG.domain,
-    },
-    {
-      '@type': 'ListItem',
-      position: 2,
-      name: 'FAQ',
-      item: `${SITE_CONFIG.domain}/faq`,
-    },
-  ],
-}
 
 export default function FAQPage() {
   return (
     <>
       <SchemaMarkup schema={faqSchema} />
-      <SchemaMarkup schema={breadcrumbSchema} />
 
-      {/* Breadcrumb */}
-      <nav aria-label="Breadcrumb" className="bg-[#F7F7F5] py-3 px-4 border-b border-gray-200">
-        <ol className="max-w-3xl mx-auto text-sm text-gray-500 flex flex-wrap items-center gap-0">
-          <li>
-            <Link href="/" prefetch={false} className="hover:text-[#0F1B2D] transition-colors"><span>Home</span></Link>
-          </li>
-          <li className="mx-2" aria-hidden="true" role="presentation">›</li>
-          <li>
-            <span><span className="text-[#0F1B2D] font-medium">FAQ</span></span>
-          </li>
-        </ol>
-      </nav>
+      <Breadcrumbs
+        width="narrow"
+        items={[
+          { name: 'Home', href: '/' },
+          { name: 'FAQ', href: '/faq' },
+        ]}
+      />
 
       {/* Hero */}
       <section className="py-14 px-4 bg-white">

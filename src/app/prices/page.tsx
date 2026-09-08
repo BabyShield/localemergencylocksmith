@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { SERVICE_PROVIDER_SCHEMA, SITE_CONFIG } from '@/data/config'
+import Breadcrumbs from '@/components/Breadcrumbs'
 import CTABlock from '@/components/CTABlock'
 import SchemaMarkup from '@/components/SchemaMarkup'
 import DirectAnswer from '@/components/DirectAnswer'
@@ -45,14 +46,6 @@ const PRICE_FAQS = [
   },
 ]
 
-const breadcrumbSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'BreadcrumbList',
-  itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_CONFIG.domain },
-    { '@type': 'ListItem', position: 2, name: 'Prices', item: `${SITE_CONFIG.domain}/prices` },
-  ],
-}
 
 // Extends the homepage Organization node with the detailed price catalogue.
 const offersSchema = {
@@ -92,22 +85,15 @@ const faqSchema = {
 export default function PricesPage() {
   return (
     <>
-      <SchemaMarkup schema={breadcrumbSchema} />
       <SchemaMarkup schema={offersSchema} />
       <SchemaMarkup schema={faqSchema} />
 
-      {/* Breadcrumb */}
-      <nav aria-label="Breadcrumb" className="max-w-6xl mx-auto px-4 py-3 text-sm text-gray-500">
-        <ol className="flex flex-wrap items-center gap-0">
-          <li>
-            <Link href="/" prefetch={false} className="hover:text-[#FFB800]"><span>Home</span></Link>
-          </li>
-          <li className="mx-2" aria-hidden="true" role="presentation">›</li>
-          <li>
-            <span><span className="text-gray-800 font-medium">Prices</span></span>
-          </li>
-        </ol>
-      </nav>
+      <Breadcrumbs
+        items={[
+          { name: 'Home', href: '/' },
+          { name: 'Prices', href: '/prices' },
+        ]}
+      />
 
       {/* Hero */}
       <section className="py-12 px-4 text-white" style={{ background: '#0F1B2D' }}>

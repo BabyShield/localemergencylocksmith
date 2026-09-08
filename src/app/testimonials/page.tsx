@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
-import Link from 'next/link'
 import { ExternalLink, SearchCheck } from 'lucide-react'
 import { GOOGLE_REVIEWS, SITE_CONFIG } from '@/data/config'
+import Breadcrumbs from '@/components/Breadcrumbs'
 import SchemaMarkup from '@/components/SchemaMarkup'
 import CTABlock from '@/components/CTABlock'
 
@@ -27,33 +27,18 @@ export const metadata: Metadata = {
   },
 }
 
-const breadcrumbSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'BreadcrumbList',
-  itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_CONFIG.domain },
-    { '@type': 'ListItem', position: 2, name: 'Review information', item: `${SITE_CONFIG.domain}/testimonials` },
-  ],
-}
 
 export default function TestimonialsPage() {
   return (
     <>
-      <SchemaMarkup schema={breadcrumbSchema} />
 
-      <nav aria-label="Breadcrumb" className="max-w-4xl mx-auto px-4 py-3 text-sm text-gray-500">
-        <ol className="flex flex-wrap items-center gap-0">
-          <li>
-            <Link href="/" prefetch={false} className="hover:text-[#FFB800]">
-              <span>Home</span>
-            </Link>
-          </li>
-          <li className="mx-2" aria-hidden="true" role="presentation">›</li>
-          <li>
-            <span className="font-medium text-gray-800">Review information</span>
-          </li>
-        </ol>
-      </nav>
+      <Breadcrumbs
+        width="article"
+        items={[
+          { name: 'Home', href: '/' },
+          { name: 'Review information', href: '/testimonials' },
+        ]}
+      />
 
       <section className="bg-[#0F1B2D] px-4 py-16 text-white">
         <div className="mx-auto max-w-3xl text-center">

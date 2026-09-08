@@ -2,6 +2,7 @@ import { AREAS } from '@/data/areas'
 import { SERVICE_PROVIDER_SCHEMA, SITE_CONFIG } from '@/data/config'
 import { Metadata } from 'next'
 import Link from 'next/link'
+import Breadcrumbs from '@/components/Breadcrumbs'
 import SchemaMarkup from '@/components/SchemaMarkup'
 import CTABlock from '@/components/CTABlock'
 import { MapPin, ArrowRight, Clock, CheckCircle } from 'lucide-react'
@@ -55,14 +56,6 @@ export default async function PostcodePage({ params }: Props) {
   if (relevantAreas.length === 0) notFound()
 
   // Two items in both JSON-LD and microdata — there is no /postcodes hub page.
-  const breadcrumbSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_CONFIG.domain },
-      { '@type': 'ListItem', position: 2, name: `Locksmith ${upper}`, item: `${SITE_CONFIG.domain}/postcodes/${postcode}` },
-    ],
-  }
 
   // Service offered in this postcode, provided by the canonical business
   // entity from layout.tsx — no rating markup, no entity redefinition.
@@ -88,21 +81,15 @@ export default async function PostcodePage({ params }: Props) {
 
   return (
     <>
-      <SchemaMarkup schema={breadcrumbSchema} />
       <SchemaMarkup schema={serviceSchema} />
 
-      {/* Breadcrumb */}
-      <nav aria-label="Breadcrumb" className="max-w-6xl mx-auto px-4 py-3 text-sm text-gray-500">
-        <ol className="flex flex-wrap items-center gap-0">
-          <li>
-            <Link href="/" prefetch={false} className="hover:text-[#FFB800]"><span>Home</span></Link>
-          </li>
-          <li className="mx-2" aria-hidden="true" role="presentation">›</li>
-          <li>
-            <span><span className="text-gray-800 font-medium">Locksmith {upper}</span></span>
-          </li>
-        </ol>
-      </nav>
+      <Breadcrumbs
+        items={[
+          { name: 'Home', href: '/' },
+          { name: 'Areas', href: '/areas' },
+          { name: `Locksmith ${upper}`, href: `/postcodes/${postcode}` },
+        ]}
+      />
 
       {/* Hero */}
       <section className="relative pt-8 pb-16 px-4 sm:px-6 lg:px-8 overflow-hidden bg-[#0F1B2D]">

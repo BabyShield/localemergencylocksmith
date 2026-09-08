@@ -2,7 +2,10 @@ import { spawn } from 'node:child_process'
 
 const BASE_URL = process.env.SEO_BASE_URL ?? 'http://127.0.0.1:3000'
 const CANONICAL_ORIGIN = process.env.SEO_CANONICAL_ORIGIN ?? 'https://www.localemergencylocksmith.co.uk'
-const EXPECTED_SITEMAP_URLS = 178
+const EXPECTED_SITEMAP_URLS = 186
+// A published article, as opposed to the /blog/topic/<pillar> hubs above them.
+const BLOG_POST_PATH = /^\/blog\/(?!topic\/)[^/]+$/
+const BLOG_TOPIC_PATH = /^\/blog\/topic\/[^/]+$/
 const UNVERIFIED_PROFILE_URL = 'https://share.google/bdboAzi1gJOpOjPck'
 const failures = []
 const warnings = []
@@ -1353,7 +1356,9 @@ try {
       )
     }
 
-    if (productionUrl.pathname.startsWith('/blog/')) {
+    // /blog/topic/<pillar> hubs curate existing articles; only the article URLs
+    // themselves are expected to carry BlogPosting authorship and dates.
+    if (BLOG_POST_PATH.test(productionUrl.pathname)) {
       const article = parsedSchemaNodes.find(node => hasSchemaType(node, 'BlogPosting'))
       const author = article?.author
       check(author?.['@type'] === 'Person', `${productionUrl.pathname} BlogPosting author is not a Person`)
@@ -1632,6 +1637,41 @@ try {
     focusPagesWithoutContextualInbound.length === 0,
     `SEO focus pages without a contextual inbound link: ${focusPagesWithoutContextualInbound.join(', ')}`,
   )
+
+  // Blog taxonomy contract: every article sits under exactly one topic hub, the
+  // hub lists it, and the article links back. A hub that lists nothing, or an
+  // article no hub claims, means the pillar data and the routes have drifted.
+  const topicHubPaths = pages.map(page => page.path).filter(path => BLOG_TOPIC_PATH.test(path))
+  const blogPostPaths = pages.map(page => page.path).filter(path => BLOG_POST_PATH.test(path))
+  check(topicHubPaths.length === 8, `blog taxonomy found ${topicHubPaths.length} topic hubs; expected 8`)
+
+  const hubByPost = new Map()
+  for (const hubPath of topicHubPaths) {
+    const listed = [...(pageByPath.get(hubPath)?.mainLinks ?? [])].filter(path => BLOG_POST_PATH.test(path))
+    check(listed.length > 0, `${hubPath} lists no articles`)
+    check(
+      pageByPath.get('/blog')?.mainLinks.has(hubPath),
+      `/blog main content does not link topic hub ${hubPath}`,
+    )
+    for (const postPath of listed) {
+      const existingOwner = hubByPost.get(postPath)
+      check(
+        existingOwner === undefined || existingOwner === hubPath,
+        `${postPath} is listed on two topic hubs: ${existingOwner} and ${hubPath}`,
+      )
+      hubByPost.set(postPath, hubPath)
+    }
+  }
+  for (const postPath of blogPostPaths) {
+    const hubPath = hubByPost.get(postPath)
+    check(Boolean(hubPath), `${postPath} is not listed on any topic hub`)
+    if (hubPath) {
+      check(
+        pageByPath.get(postPath)?.mainLinks.has(hubPath),
+        `${postPath} main content does not link back to its topic hub ${hubPath}`,
+      )
+    }
+  }
 
   for (const areaPath of areaPaths) {
     const contextualInboundCount = pages.filter(source => (

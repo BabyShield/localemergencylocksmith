@@ -17,14 +17,33 @@ export const metadata: Metadata = {
   description:
     'Local locksmith in Coventry for lockouts, door lock repairs, replacements, uPVC locks and security upgrades. Available 24/7 from £59; no VAT or call-out fee.',
   metadataBase: new URL(SITE_CONFIG.domain),
+  applicationName: 'Local Emergency Locksmith',
+  authors: [{ name: 'Albert', url: `${SITE_CONFIG.domain}/about` }],
+  creator: 'Albert',
+  publisher: SITE_CONFIG.businessName,
   openGraph: {
     siteName: 'Local Emergency Locksmith',
     locale: 'en_GB',
     type: 'website',
   },
+  // Inherited by every route. X/Twitter falls back to the per-page og:image,
+  // so pages only need to override this when the card text should differ.
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Locksmith Coventry | Local 24/7 Service | From £59',
+    description:
+      'Local locksmith in Coventry for lockouts, lock repairs, replacements and uPVC locks. 24/7 from £59; no VAT or call-out fee.',
+  },
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+      'max-video-preview': -1,
+    },
   },
 }
 

@@ -11,6 +11,7 @@ import { getAreaAuthority } from '@/data/area-authorities'
 import { getBlogPostBySlug } from '@/data/blog-posts'
 import { SERVICE_GUIDE_SLUGS } from '@/data/blog-seo'
 import { hasTownService } from '@/data/governed-town-services'
+import Breadcrumbs from '@/components/Breadcrumbs'
 import HeroSection from '@/components/HeroSection'
 import CTABlock from '@/components/CTABlock'
 import FAQSection from '@/components/FAQSection'
@@ -106,15 +107,6 @@ export default async function AreaPage({ params }: Props) {
         ...serviceGuidance.map(({ guidance }) => guidance.faq),
       ]
 
-  const breadcrumbSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_CONFIG.domain },
-      { '@type': 'ListItem', position: 2, name: 'Areas', item: `${SITE_CONFIG.domain}/areas` },
-      { '@type': 'ListItem', position: 3, name: area.name, item: `${SITE_CONFIG.domain}/areas/${slug}` },
-    ],
-  }
 
   const areaSchema = {
     '@context': 'https://schema.org',
@@ -180,26 +172,17 @@ export default async function AreaPage({ params }: Props) {
 
   return (
     <>
-      <SchemaMarkup schema={breadcrumbSchema} />
       <SchemaMarkup schema={areaSchema} />
       <SchemaMarkup schema={webPageSchema} />
       <SchemaMarkup schema={faqSchema} />
 
-      <nav aria-label="Breadcrumb" className="max-w-6xl mx-auto px-4 py-3 text-sm text-gray-500">
-        <ol className="flex flex-wrap items-center gap-0">
-          <li>
-            <Link href="/" prefetch={false} className="hover:text-[#FFB800]"><span>Home</span></Link>
-          </li>
-          <li className="mx-2" aria-hidden="true" role="presentation">›</li>
-          <li>
-            <Link href="/areas" prefetch={false} className="hover:text-[#FFB800]"><span>Areas</span></Link>
-          </li>
-          <li className="mx-2" aria-hidden="true" role="presentation">›</li>
-          <li>
-            <span className="text-gray-800 font-medium">{area.name}</span>
-          </li>
-        </ol>
-      </nav>
+      <Breadcrumbs
+        items={[
+          { name: 'Home', href: '/' },
+          { name: 'Areas', href: '/areas' },
+          { name: area.name, href: `/areas/${slug}` },
+        ]}
+      />
 
       <HeroSection
         heading={hasDedicatedServicePages

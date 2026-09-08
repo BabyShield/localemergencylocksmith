@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { SITE_CONFIG } from '@/data/config'
+import Breadcrumbs from '@/components/Breadcrumbs'
 import SchemaMarkup from '@/components/SchemaMarkup'
 import { Phone, Mail, MapPin, Clock } from 'lucide-react'
 
@@ -24,14 +25,6 @@ export const metadata: Metadata = {
   },
 }
 
-const breadcrumbSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'BreadcrumbList',
-  itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_CONFIG.domain },
-    { '@type': 'ListItem', position: 2, name: 'Contact', item: `${SITE_CONFIG.domain}/contact` },
-  ],
-}
 
 const contactSchema = {
   '@context': 'https://schema.org',
@@ -43,20 +36,14 @@ const contactSchema = {
 export default function ContactPage() {
   return (
     <>
-      <SchemaMarkup schema={breadcrumbSchema} />
       <SchemaMarkup schema={contactSchema} />
 
-      <nav aria-label="Breadcrumb" className="max-w-6xl mx-auto px-4 py-3 text-sm text-gray-500">
-        <ol className="flex flex-wrap items-center gap-0">
-          <li>
-            <Link href="/" prefetch={false} className="hover:text-[#FFB800]"><span>Home</span></Link>
-          </li>
-          <li className="mx-2" aria-hidden="true" role="presentation">›</li>
-          <li>
-            <span><span className="text-gray-800 font-medium">Contact</span></span>
-          </li>
-        </ol>
-      </nav>
+      <Breadcrumbs
+        items={[
+          { name: 'Home', href: '/' },
+          { name: 'Contact', href: '/contact' },
+        ]}
+      />
 
       <section className="py-12 px-4 text-white" style={{ background: '#0F1B2D' }}>
         <div className="max-w-3xl mx-auto text-center">

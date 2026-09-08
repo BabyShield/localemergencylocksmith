@@ -19,6 +19,7 @@ import { SERVICE_GUIDES_REVIEWED_ON } from '@/data/content-dates'
 import { getTechnicalEvidenceSource } from '@/data/locksmith-evidence'
 import { getBlogPostBySlug } from '@/data/blog-posts'
 import { SERVICE_GUIDE_SLUGS } from '@/data/blog-seo'
+import Breadcrumbs from '@/components/Breadcrumbs'
 import HeroSection from '@/components/HeroSection'
 import CTABlock from '@/components/CTABlock'
 import FAQSection from '@/components/FAQSection'
@@ -349,15 +350,6 @@ export default async function ServicePage({ params }: Props) {
 
   /* ---- Schema markup ---- */
 
-  const breadcrumbSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_CONFIG.domain },
-      { '@type': 'ListItem', position: 2, name: 'Services', item: `${SITE_CONFIG.domain}/services` },
-      { '@type': 'ListItem', position: 3, name: service.shortName, item: `${SITE_CONFIG.domain}/services/${slug}` },
-    ],
-  }
 
   const serviceSchema = {
     '@context': 'https://schema.org',
@@ -432,29 +424,17 @@ export default async function ServicePage({ params }: Props) {
 
   return (
     <>
-      <SchemaMarkup schema={breadcrumbSchema} />
       <SchemaMarkup schema={serviceSchema} />
       <SchemaMarkup schema={webPageSchema} />
       <SchemaMarkup schema={faqSchema} />
 
-      {/* ============================================================ */}
-      {/*  1. Breadcrumb                                                */}
-      {/* ============================================================ */}
-      <nav aria-label="Breadcrumb" className="max-w-6xl mx-auto px-4 py-3 text-sm text-gray-500">
-        <ol className="flex flex-wrap items-center gap-0">
-          <li>
-            <Link href="/" prefetch={false} className="hover:text-[#8A5A00] transition-colors"><span>Home</span></Link>
-          </li>
-          <li className="mx-2 text-gray-300" aria-hidden="true" role="presentation">›</li>
-          <li>
-            <Link href="/services" prefetch={false} className="hover:text-[#8A5A00] transition-colors"><span>Services</span></Link>
-          </li>
-          <li className="mx-2 text-gray-300" aria-hidden="true" role="presentation">›</li>
-          <li>
-            <span><span className="text-[#0F1B2D] font-semibold">{service.shortName}</span></span>
-          </li>
-        </ol>
-      </nav>
+      <Breadcrumbs
+        items={[
+          { name: 'Home', href: '/' },
+          { name: 'Services', href: '/services' },
+          { name: service.shortName, href: `/services/${slug}` },
+        ]}
+      />
 
       {/* ============================================================ */}
       {/*  2. Hero                                                      */}

@@ -6,6 +6,8 @@ import { LOCKSMITH_AUTHOR_SCHEMA, SITE_CONFIG } from '@/data/config'
 import { ALL_BLOG_POSTS, getBlogPostBySlug, getRelatedPosts, PILLARS } from '@/data/blog-posts'
 import { ALL_BLOG_CONTENT } from '@/data/blog-content'
 import { BLOG_CONTENT_UPDATED, BLOG_CTA_BY_PILLAR, BLOG_CTA_BY_SLUG, BLOG_META_DESCRIPTIONS, BLOG_SEARCH_TITLES } from '@/data/blog-seo'
+import { getBlogTopic } from '@/data/blog-topics'
+import Breadcrumbs from '@/components/Breadcrumbs'
 import CTABlock from '@/components/CTABlock'
 import SchemaMarkup from '@/components/SchemaMarkup'
 
@@ -105,6 +107,7 @@ export default async function BlogPostPage({ params }: Props) {
   const hasBeenUpdated = modifiedDate !== post.date
   const related = getRelatedPosts(slug, 4)
   const pillar = PILLARS.find((p) => p.slug === post.pillarSlug)
+  const topic = getBlogTopic(post.pillarSlug)
   const serviceCta = BLOG_CTA_BY_SLUG[slug] ?? BLOG_CTA_BY_PILLAR[post.pillarSlug]
   const citations = Array.from(
     new Set(Array.from(content.body.matchAll(/\[[^\]]+\]\((https?:\/\/[^)]+)\)/g), match => match[1]))
@@ -143,15 +146,14 @@ export default async function BlogPostPage({ params }: Props) {
     })),
   } : null
 
-  const breadcrumbSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_CONFIG.domain },
-      { '@type': 'ListItem', position: 2, name: 'Blog', item: `${SITE_CONFIG.domain}/blog` },
-      { '@type': 'ListItem', position: 3, name: post.title, item: `${SITE_CONFIG.domain}/blog/${slug}` },
-    ],
-  }
+  // Home › Blog › Topic › Article. The topic level is a real page, so the trail
+  // matches the site structure a reader can actually navigate.
+  const breadcrumbItems = [
+    { name: 'Home', href: '/' },
+    { name: 'Blog', href: '/blog' },
+    ...(topic ? [{ name: topic.breadcrumbName, href: `/blog/topic/${topic.slug}` }] : []),
+    { name: post.title, href: `/blog/${slug}` },
+  ]
 
   // Parse markdown-ish content into sections
   const sections = content.body.split('\n## ').map((section, i) => {
@@ -163,30 +165,16 @@ export default async function BlogPostPage({ params }: Props) {
     <>
       <SchemaMarkup schema={articleSchema} />
       {faqSchema && <SchemaMarkup schema={faqSchema} />}
-      <SchemaMarkup schema={breadcrumbSchema} />
 
-      <nav aria-label="Breadcrumb" className="max-w-4xl mx-auto px-4 py-3 text-sm text-gray-500">
-        <ol className="flex flex-wrap items-center gap-0">
-          <li>
-            <Link href="/" prefetch={false} className="hover:text-[#FFB800]"><span>Home</span></Link>
-          </li>
-          <li className="mx-2" aria-hidden="true" role="presentation">›</li>
-          <li>
-            <Link href="/blog" prefetch={false} className="hover:text-[#FFB800]"><span>Blog</span></Link>
-          </li>
-          <li className="mx-2" aria-hidden="true" role="presentation">›</li>
-          <li>
-            <span><span className="text-gray-800 font-medium truncate max-w-xs inline-block align-bottom">{post.title}</span></span>
-          </li>
-        </ol>
-      </nav>
+      <Breadcrumbs width="article" items={breadcrumbItems} />
 
       <article className="py-12 px-4">
         <div className="max-w-3xl mx-auto">
-          {/* Pillar tag */}
+          {/* Pillar tag — points at the topic hub, not an anchor on /blog */}
           {pillar && (
             <Link
-              href={`/blog#${pillar.slug}`}
+              href={`/blog/topic/${pillar.slug}`}
+              prefetch={false}
               className="inline-block bg-[#F7F7F5] text-[#0F1B2D] text-xs font-bold px-3 py-1 rounded-full mb-4 hover:bg-[#FFB800] transition-colors"
             >
               {pillar.name}

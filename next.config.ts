@@ -117,8 +117,19 @@ const nextConfig: NextConfig = {
       { source: '/locksmith', destination: '/areas', permanent: true },
       { source: '/reviews/:areaSlug', destination: '/areas/:areaSlug', permanent: true },
       { source: '/reviews', destination: '/testimonials', permanent: true },
-      // Covers all templated area articles, incl. the 5 previously cut slugs
-      { source: '/blog/:areaSlug/:articleSlug', destination: '/areas/:areaSlug', permanent: true },
+      // Covers all templated area articles, incl. the 5 previously cut slugs.
+      // Redirects are evaluated before filesystem routes, so the live topic hubs
+      // at /blog/topic/:slug must be excluded here or they would 308 to a
+      // non-existent /areas/topic page. Keep this lookahead in sync with the
+      // static segment used by src/app/blog/topic/[slug]/page.tsx.
+      // The lookahead must test for the segment terminator, not end-of-string:
+      // the pattern is spliced into a whole-path regex, so `topic$` would never
+      // match a path that still has an article segment after it.
+      {
+        source: '/blog/:areaSlug((?!topic\\/)[^\\/]+)/:articleSlug',
+        destination: '/areas/:areaSlug',
+        permanent: true,
+      },
       { source: '/guides/:path*', destination: '/blog', permanent: true },
       { source: '/near-me/:keyword/:areaSlug', destination: '/areas/:areaSlug', permanent: true },
       { source: '/near-me/:keyword', destination: '/', permanent: true },

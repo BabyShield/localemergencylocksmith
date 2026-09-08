@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { LOCKSMITH_AUTHOR_SCHEMA, SITE_CONFIG } from '@/data/config'
+import Breadcrumbs from '@/components/Breadcrumbs'
 import SchemaMarkup from '@/components/SchemaMarkup'
 import CTABlock from '@/components/CTABlock'
 
@@ -43,33 +44,19 @@ const aboutSchema = {
   ],
 }
 
-const breadcrumbSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'BreadcrumbList',
-  itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_CONFIG.domain },
-    { '@type': 'ListItem', position: 2, name: 'About', item: `${SITE_CONFIG.domain}/about` },
-  ],
-}
 
 export default function AboutPage() {
   return (
     <>
       <SchemaMarkup schema={aboutSchema} />
-      <SchemaMarkup schema={breadcrumbSchema} />
 
-      {/* Breadcrumb */}
-      <nav aria-label="Breadcrumb" className="bg-[#F7F7F5] py-3 px-4 border-b border-gray-200">
-        <ol className="max-w-3xl mx-auto text-sm text-gray-500 flex flex-wrap items-center gap-0">
-          <li>
-            <Link href="/" prefetch={false} className="hover:text-[#0F1B2D] transition-colors"><span>Home</span></Link>
-          </li>
-          <li className="mx-2" aria-hidden="true" role="presentation">›</li>
-          <li>
-            <span><span className="text-[#0F1B2D] font-medium">About</span></span>
-          </li>
-        </ol>
-      </nav>
+      <Breadcrumbs
+        width="narrow"
+        items={[
+          { name: 'Home', href: '/' },
+          { name: 'About', href: '/about' },
+        ]}
+      />
 
       {/* Main content */}
       <article className="py-14 px-4 bg-white">

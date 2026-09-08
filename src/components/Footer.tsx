@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { SITE_CONFIG } from '@/data/config'
 import { SERVICES } from '@/data/services'
+import { BLOG_TOPICS } from '@/data/blog-topics'
 
 export default function Footer() {
   const year = new Date().getFullYear()
@@ -113,6 +114,29 @@ export default function Footer() {
             ))}
           </ul>
         </div>
+      </div>
+
+      {/* Guide topics — sitewide crawl paths into the blog taxonomy */}
+      <div className="max-w-6xl mx-auto mt-10 pt-6 border-t border-gray-700">
+        <h3 className="text-white font-bold mb-3 text-sm">Guides by topic</h3>
+        <ul className="flex flex-wrap gap-x-5 gap-y-2 text-sm">
+          {BLOG_TOPICS.map((topic) => (
+            <li key={topic.slug}>
+              <Link
+                href={`/blog/topic/${topic.slug}`}
+                prefetch={false}
+                className="hover:text-white transition-colors"
+              >
+                {topic.breadcrumbName}
+              </Link>
+            </li>
+          ))}
+          <li>
+            <Link href="/blog" prefetch={false} className="hover:text-white transition-colors font-semibold text-[#FFB800]">
+              All guides &rarr;
+            </Link>
+          </li>
+        </ul>
       </div>
 
       <div className="max-w-6xl mx-auto mt-8 pt-6 border-t border-gray-700">

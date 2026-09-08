@@ -11,6 +11,7 @@ import {
 import { getAreaAuthority } from '@/data/area-authorities'
 import { getBlogPostBySlug } from '@/data/blog-posts'
 import { SERVICE_GUIDE_SLUGS } from '@/data/blog-seo'
+import Breadcrumbs from '@/components/Breadcrumbs'
 import HeroSection from '@/components/HeroSection'
 import CTABlock from '@/components/CTABlock'
 import FAQSection from '@/components/FAQSection'
@@ -120,16 +121,6 @@ export default async function TownServicePage({ params }: Props) {
     .map((guideSlug) => getBlogPostBySlug(guideSlug))
     .filter((post): post is NonNullable<typeof post> => post != null)
 
-  const breadcrumbSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_CONFIG.domain },
-      { '@type': 'ListItem', position: 2, name: 'Areas', item: `${SITE_CONFIG.domain}/areas` },
-      { '@type': 'ListItem', position: 3, name: area.name, item: `${SITE_CONFIG.domain}/areas/${slug}` },
-      { '@type': 'ListItem', position: 4, name: service.shortName, item: `${SITE_CONFIG.domain}/areas/${slug}/${serviceSlug}` },
-    ],
-  }
 
   // Service in this town, provided by the single canonical business entity
   // defined in layout.tsx — no rating markup, no entity redefinition.
@@ -191,31 +182,18 @@ export default async function TownServicePage({ params }: Props) {
 
   return (
     <>
-      <SchemaMarkup schema={breadcrumbSchema} />
       <SchemaMarkup schema={serviceSchema} />
       <SchemaMarkup schema={webPageSchema} />
       <SchemaMarkup schema={faqSchema} />
 
-      {/* Breadcrumb */}
-      <nav aria-label="Breadcrumb" className="max-w-6xl mx-auto px-4 py-3 text-sm text-gray-500">
-        <ol className="flex flex-wrap items-center gap-0">
-          <li>
-            <Link href="/" prefetch={false} className="hover:text-[#FFB800]"><span>Home</span></Link>
-          </li>
-          <li className="mx-2" aria-hidden="true" role="presentation">›</li>
-          <li>
-            <Link href="/areas" prefetch={false} className="hover:text-[#FFB800]"><span>Areas</span></Link>
-          </li>
-          <li className="mx-2" aria-hidden="true" role="presentation">›</li>
-          <li>
-            <Link href={`/areas/${slug}`} prefetch={false} className="hover:text-[#FFB800]"><span>{area.name}</span></Link>
-          </li>
-          <li className="mx-2" aria-hidden="true" role="presentation">›</li>
-          <li>
-            <span><span className="text-gray-800 font-medium">{service.shortName}</span></span>
-          </li>
-        </ol>
-      </nav>
+      <Breadcrumbs
+        items={[
+          { name: 'Home', href: '/' },
+          { name: 'Areas', href: '/areas' },
+          { name: area.name, href: `/areas/${slug}` },
+          { name: service.shortName, href: `/areas/${slug}/${serviceSlug}` },
+        ]}
+      />
 
       <HeroSection
         heading={pageHeading}
