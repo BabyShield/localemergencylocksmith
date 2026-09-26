@@ -1,12 +1,15 @@
 import { SITE_CONFIG } from '@/data/config'
+import { whatsappHref } from '@/lib/enquiry'
 import { UserRound, FileCheck2, Clock } from 'lucide-react'
 import PPCHandler from './PPCHandler'
+import CallbackLink from './CallbackLink'
 
 interface HeroSectionProps {
   heading: string
   subheading: string
   areaName?: string
   compact?: boolean
+  callbackHref?: string
   // Evidence-governed pages confirm the current ETA by phone rather than
   // rendering a fixed journey-time promise.
   showResponseTime?: boolean
@@ -17,6 +20,7 @@ export default function HeroSection({
   subheading,
   areaName,
   compact,
+  callbackHref = '/contact#callback',
   showResponseTime = true,
 }: HeroSectionProps) {
   return (
@@ -48,15 +52,28 @@ export default function HeroSection({
         </p>
 
         {/* CTA cluster */}
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-6">
+        <div className="flex flex-col sm:flex-row gap-3 justify-center items-center mb-4">
           <a
             href={`tel:${SITE_CONFIG.phoneTel}`}
+            data-track="hero"
             className="group relative inline-flex flex-col items-center bg-[#FFB800] hover:bg-[#FFC933] text-[#0F1B2D] px-10 py-5 rounded-2xl font-black transition-all duration-200 min-h-[72px] justify-center shadow-[0_4px_24px_rgba(255,184,0,0.3)] hover:shadow-[0_4px_32px_rgba(255,184,0,0.5)] hover:scale-[1.02]"
           >
             <span className="text-xs font-bold uppercase tracking-[0.15em] text-[#0F1B2D]">Call Now — Free Quote</span>
             <span className="text-2xl md:text-3xl">{SITE_CONFIG.phone}</span>
           </a>
+          <a
+            href={whatsappHref()}
+            data-track="hero"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center gap-2 border border-white/25 hover:border-[#25D366] hover:bg-[#25D366] hover:text-[#0F1B2D] text-white px-8 py-5 rounded-2xl font-black min-h-[72px] transition-colors"
+          >
+            WhatsApp
+          </a>
         </div>
+        <CallbackLink href={callbackHref} className="inline-block mb-6 text-sm font-semibold text-[#FFB800] underline underline-offset-4 hover:text-[#FFC933]">
+          Can&apos;t call right now? Request a callback
+        </CallbackLink>
 
         {/* Verifiable booking information, not unproved credential claims. */}
         <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm text-gray-400">

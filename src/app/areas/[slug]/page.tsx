@@ -11,6 +11,15 @@ import { getAreaAuthority } from '@/data/area-authorities'
 import { getBlogPostBySlug } from '@/data/blog-posts'
 import { SERVICE_GUIDE_SLUGS } from '@/data/blog-seo'
 import { hasTownService } from '@/data/governed-town-services'
+import {
+  areaPlaceSchema,
+  getAreaKeywords,
+  getAreaSearchH1,
+  getAreaSearchTitle,
+  pageSocialMetadata,
+  SERVICE_HOURS_SCHEMA,
+  serviceChannelSchema,
+} from '@/data/local-seo'
 import Breadcrumbs from '@/components/Breadcrumbs'
 import HeroSection from '@/components/HeroSection'
 import CTABlock from '@/components/CTABlock'
@@ -46,26 +55,29 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   const guide = areaGuideOrThrow(slug)
   const hasDedicatedServicePages = hasTownService(area.slug, 'emergency-lockout')
-  const title = hasDedicatedServicePages
-    ? `Locksmith ${area.name} ${area.postcode} | 5 Services | From £59`
-    : `Locksmith ${area.name} ${area.postcode} | 24/7 Help | From £59`
+  const title = getAreaSearchTitle(area, hasDedicatedServicePages)
   const description = guide.searchDescription
+  const canonical = `${SITE_CONFIG.domain}/areas/${slug}`
 
   return {
     title,
     description,
-    alternates: { canonical: `${SITE_CONFIG.domain}/areas/${slug}` },
+    keywords: getAreaKeywords(area),
+    alternates: { canonical },
     openGraph: {
       type: 'website',
+      locale: 'en_GB',
+      siteName: SITE_CONFIG.businessName,
       title,
       description,
-      url: `${SITE_CONFIG.domain}/areas/${slug}`,
+      url: canonical,
       images: [{
         url: `${SITE_CONFIG.domain}/api/og?title=${encodeURIComponent(`Locksmith in ${area.name}`)}`,
         width: 1200,
         height: 630,
       }],
     },
+    ...pageSocialMetadata(title, description),
   }
 }
 
@@ -108,25 +120,20 @@ export default async function AreaPage({ params }: Props) {
       ]
 
 
+  const pageUrl = `${SITE_CONFIG.domain}/areas/${slug}`
   const areaSchema = {
     '@context': 'https://schema.org',
     '@type': 'Service',
-    '@id': `${SITE_CONFIG.domain}/areas/${slug}#service`,
+    '@id': `${pageUrl}#service`,
     serviceType: 'Locksmith services',
     name: `Locksmith services in ${area.name}`,
-    url: `${SITE_CONFIG.domain}/areas/${slug}`,
-    description: `Lockout help, lock repair and replacement, uPVC lock repair, boarding up and lock upgrades in ${area.name}. Call to confirm the current ETA and price basis.`,
+    url: pageUrl,
+    description: `24/7 lockout help, door lock repair and replacement, uPVC lock repair, boarding up and lock upgrades in ${area.name}. Call to confirm the current ETA and price basis.`,
     provider: SERVICE_PROVIDER_SCHEMA,
-    areaServed: {
-      '@type': 'Place',
-      name: area.name,
-      address: {
-        '@type': 'PostalAddress',
-        postalCode: area.postcode,
-        addressRegion: areaAuthority.addressRegion,
-        addressCountry: 'GB',
-      },
-    },
+    providerMobility: 'dynamic',
+    hoursAvailable: SERVICE_HOURS_SCHEMA,
+    availableChannel: serviceChannelSchema(pageUrl),
+    areaServed: areaPlaceSchema(area, areaAuthority.addressRegion),
     hasOfferCatalog: {
       '@type': 'OfferCatalog',
       name: `Locksmith services in ${area.name}`,
@@ -149,14 +156,15 @@ export default async function AreaPage({ params }: Props) {
   const webPageSchema = {
     '@context': 'https://schema.org',
     '@type': 'WebPage',
-    '@id': `${SITE_CONFIG.domain}/areas/${slug}#webpage`,
-    url: `${SITE_CONFIG.domain}/areas/${slug}`,
-    name: `Locksmith services in ${area.name}`,
+    '@id': `${pageUrl}#webpage`,
+    url: pageUrl,
+    name: getAreaSearchTitle(area, hasDedicatedServicePages),
     description: guide.searchDescription,
+    inLanguage: 'en-GB',
     dateModified: guide.reviewedOn,
     author: LOCKSMITH_AUTHOR_SCHEMA,
     publisher: { '@id': `${SITE_CONFIG.domain}/#business` },
-    mainEntity: { '@id': `${SITE_CONFIG.domain}/areas/${slug}#service` },
+    mainEntity: { '@id': `${pageUrl}#service` },
     citation: pageSources.map(source => source.url),
   }
 
@@ -185,9 +193,7 @@ export default async function AreaPage({ params }: Props) {
       />
 
       <HeroSection
-        heading={hasDedicatedServicePages
-          ? `Locksmith Services in ${area.name}`
-          : `Locksmith Services in ${area.name} — Emergency & Planned Help`}
+        heading={getAreaSearchH1(area, hasDedicatedServicePages)}
         subheading={`Locked out or dealing with a faulty or damaged lock in ${area.name}? Call for the current ETA, scope and price before attendance. No VAT or separate call-out fee.`}
         areaName={area.name}
         showResponseTime={false}

@@ -1,4 +1,5 @@
 import { SITE_CONFIG } from '@/data/config'
+import { whatsappHref } from '@/lib/enquiry'
 
 const NAV_LINKS = [
   { href: '/services', label: 'Services' },
@@ -77,9 +78,20 @@ export default function StickyHeader() {
           ))}
         </nav>
 
+        <a
+          href={whatsappHref()}
+          data-track="header"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hidden md:inline-flex items-center justify-center bg-[#25D366] hover:bg-[#20BD5A] text-[#0F1B2D] px-3 py-2.5 rounded-xl font-black text-sm min-h-[48px]"
+        >
+          WhatsApp
+        </a>
+
         {/* Call button */}
         <a
           href={`tel:${SITE_CONFIG.phoneTel}`}
+          data-track="header"
           className="flex items-center gap-2 bg-[#FFB800] hover:bg-[#FFC933] text-[#0F1B2D] px-4 py-2.5 rounded-xl transition-all duration-200 min-h-[48px] hover:shadow-[0_2px_12px_rgba(255,184,0,0.3)]"
         >
           <svg className="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">

@@ -82,7 +82,14 @@ export default function PrivacyPage() {
               When you submit our contact form, we collect:
             </p>
             <ul className="space-y-2 mb-6">
-              {['Your name', 'Phone number', 'Postcode', 'Message / description of your enquiry'].map((item) => (
+              {[
+                'Your name, if you provide it',
+                'Phone number',
+                'Postcode, if you provide it',
+                'The job you need and how soon you need help, if you select them',
+                'Message / description of your enquiry, if you provide it',
+                'The page address the form was sent from',
+              ].map((item) => (
                 <li key={item} className="flex items-start gap-3">
                   <svg
                     className="w-5 h-5 text-[#FFB800] mt-0.5 flex-shrink-0"
@@ -118,7 +125,7 @@ export default function PrivacyPage() {
                 {
                   purpose: 'Respond to your enquiry',
                   detail:
-                    'We use your name, phone number, postcode, and message to respond to your locksmith enquiry and arrange a visit if needed.',
+                    'We use your name, phone number, postcode, the job, how soon you need help, and your message to respond to your locksmith enquiry and arrange a visit if needed.',
                 },
                 {
                   purpose: 'Improve our website',
@@ -175,7 +182,8 @@ export default function PrivacyPage() {
             <ul className="space-y-2">
               {[
                 'Google Analytics — anonymised website usage data for analytics purposes.',
-                'Resend — our email service provider, used to deliver contact form submissions to us securely.',
+                'Resend — our email service provider, used to deliver contact form submissions to us when that service is configured.',
+                'A private notification webhook, only when one is configured on the server, receives the same enquiry so it can be answered. Form submissions are not sent to an advertising network.',
               ].map((item) => (
                 <li key={item} className="flex items-start gap-3">
                   <svg

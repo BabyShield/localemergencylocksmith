@@ -993,6 +993,12 @@ function sentenceStart(value: string): string {
   return value.charAt(0).toUpperCase() + value.slice(1)
 }
 
+function fittingTitle(label: string, candidates: string[]): string {
+  const title = candidates.find(candidate => candidate.length >= 30 && candidate.length <= 60)
+  if (!title) throw new Error(`No 30-60 character town-service title for ${label}`)
+  return title
+}
+
 const EMERGENCY_LOCKOUT_PRICE = serviceStartingPrice('emergency-lockout')
 const LOCK_CHANGE_PRICE = serviceStartingPrice('lock-change')
 const UPVC_LOCK_REPAIR_PRICE = serviceStartingPrice('upvc-lock-repair')
@@ -1004,9 +1010,12 @@ const SERVICE_BLUEPRINTS: Record<ServiceAreaSlug, ServiceBlueprint> = {
     name: 'Emergency Locksmith',
     shortName: 'Emergency Lockout',
     priceFrom: EMERGENCY_LOCKOUT_PRICE,
-    metaTitle: area => `Emergency Locksmith ${area} | Lockout From £${EMERGENCY_LOCKOUT_PRICE}`,
+    metaTitle: area => fittingTitle(area, [
+      `Emergency Locksmith ${area} | 24/7 Lockout`,
+      `Emergency Locksmith ${area} | From £${EMERGENCY_LOCKOUT_PRICE}`,
+    ]),
     metaDescription: area => `Locked out in ${area.name}? Locksmith from £${EMERGENCY_LOCKOUT_PRICE}, with ${area.metaDifferentiator}, authority checks and price basis agreed before travel.`,
-    h1: area => `Emergency Locksmith for Lockouts in ${area}`,
+    h1: area => `24/7 Emergency Locksmith for Lockouts in ${area}`,
     intro: area => `If you are locked out in ${area}, call with the exact address, entrance type and a short description of what the key, handle and door are doing. I will confirm the current estimated arrival time and the price basis before travelling. On arrival I verify your authority to enter, inspect the lock and start with an appropriate low-damage method where the lock and circumstances allow. Non-destructive entry is an aim, not a guarantee; if drilling or replacement becomes necessary, I explain why and agree it first.`,
     scenarios: ['Slammed door where the lock has not been deadlocked', 'Lost or stolen keys requiring entry and a separate key-control decision', 'A key snapped or trapped in the lock', 'A failed lock or mechanism leaving the authorised occupier outside'],
     preparation: ['Move to a safe, well-lit place if you feel at risk', 'Do not force the key or handle and worsen the fault', 'Prepare identification or other evidence connecting you to the address', 'Ask for the total price basis and current ETA before attendance'],
@@ -1022,7 +1031,11 @@ const SERVICE_BLUEPRINTS: Record<ServiceAreaSlug, ServiceBlueprint> = {
     name: 'Door Lock Repair & Replacement',
     shortName: 'Lock Repair & Replacement',
     priceFrom: LOCK_CHANGE_PRICE,
-    metaTitle: area => `Lock Repair & Replacement ${area} | From £${LOCK_CHANGE_PRICE}`,
+    metaTitle: area => fittingTitle(area, [
+      `Door Lock Repair & Replacement ${area} | From £${LOCK_CHANGE_PRICE}`,
+      `Door Lock Repair & Replacement ${area}`,
+      `Door Lock Repair ${area} | From £${LOCK_CHANGE_PRICE}`,
+    ]),
     metaDescription: area => `Lock repair and replacement in ${area.name}. Euro-cylinder replacement from £${LOCK_CHANGE_PRICE}. ${sentenceStart(area.metaDifferentiator)}. No VAT/call-out fee.`,
     h1: area => `Door Lock Repair & Replacement in ${area}`,
     intro: area => `For a failed, worn or compromised door lock in ${area}, the first decision is whether the lock can be adjusted or repaired, whether one component needs replacing, or whether the complete lock is unsuitable. I inspect the door, frame, lock markings, cylinder or mechanism before agreeing the remedy. A move, lost keys and mechanical failure create different key-control and repair needs. Product, keys, fitting and any alignment work are explained in the price so a headline replacement figure is not confused with a diagnosis.`,
@@ -1046,9 +1059,12 @@ const SERVICE_BLUEPRINTS: Record<ServiceAreaSlug, ServiceBlueprint> = {
     name: 'uPVC Door & Window Lock Repair',
     shortName: 'uPVC Lock Repair',
     priceFrom: UPVC_LOCK_REPAIR_PRICE,
-    metaTitle: area => `uPVC Door Lock Repair ${area} | From £${UPVC_LOCK_REPAIR_PRICE}`,
+    metaTitle: area => fittingTitle(area, [
+      `uPVC Door Lock Repair & Replacement ${area}`,
+      `uPVC Door Lock Repair ${area} | From £${UPVC_LOCK_REPAIR_PRICE}`,
+    ]),
     metaDescription: area => `uPVC door lock diagnosis in ${area.name} from £${UPVC_LOCK_REPAIR_PRICE}. Alignment, cylinder, handle and multipoint checks with ${area.metaDifferentiator}.`,
-    h1: area => `uPVC Door Lock Repair in ${area}`,
+    h1: area => `uPVC Door Lock Repair & Replacement in ${area}`,
     intro: area => `A stiff handle, key that will not turn, hooks that miss their keeps, or a door that locks open but not closed can have different causes. For a uPVC or composite door in ${area}, I check alignment, handle movement, cylinder operation and the multipoint mechanism before proposing parts. Continuing to force a binding handle can turn an alignment issue into mechanism damage. Compatibility must be established from markings and measurements; the town, estate or apparent door age is not a reliable parts catalogue.`,
     scenarios: ['Door locks while open but binds or fails when closed', 'Handle is stiff, loose, floppy or will not lift fully', 'Key or euro cylinder turns badly or not at all', 'Multipoint hooks, rollers or gearbox fail to move correctly'],
     preparation: ['Stop forcing a stiff handle or key', 'Note whether operation changes with the door open', 'Photograph the full faceplate and any printed code', 'Mention if the entrance is communal, managed or fire-rated'],
@@ -1069,7 +1085,10 @@ const SERVICE_BLUEPRINTS: Record<ServiceAreaSlug, ServiceBlueprint> = {
     name: 'Emergency Boarding Up & Burglary Repairs',
     shortName: 'Boarding Up & Burglary Repairs',
     priceFrom: BOARDING_UP_PRICE,
-    metaTitle: area => `Emergency Boarding Up ${area} | From £${BOARDING_UP_PRICE}`,
+    metaTitle: area => fittingTitle(area, [
+      `Emergency Boarding Up ${area} | Burglary Repairs`,
+      `Emergency Boarding Up ${area} | From £${BOARDING_UP_PRICE}`,
+    ]),
     metaDescription: area => `Boarding up in ${area.name} from £${BOARDING_UP_PRICE}. Evidence-aware temporary security for damaged doors or windows, with ${area.metaDifferentiator}.`,
     h1: area => `Emergency Boarding Up & Burglary Repairs in ${area}`,
     intro: area => `If a door or window in ${area} has been forced or broken, protect people first and follow police instructions about the scene. Photograph damage and avoid disturbing possible evidence unless told otherwise. Boarding is a temporary measure intended to reduce immediate access and weather exposure while glazing, joinery, door or structural repairs are arranged. I assess the opening, remaining frame and compromised locks, explain what the temporary work can and cannot do, and record any permanent work still required.`,

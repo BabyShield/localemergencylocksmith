@@ -27,11 +27,11 @@ const mergedDraftGuides: Partial<Record<AreaSlug, GovernedAreaGuideDraft>> = {
 const AREA_NAMES = new Map(AREAS.map(area => [area.slug, area.name]))
 
 const SERVICE_SEARCH_HEADINGS: Record<ServiceAreaSlug, string> = {
-  'emergency-lockout': 'Emergency Locksmith and Lockout Help',
-  'lock-change': 'Lock Repair and Replacement',
-  'upvc-lock-repair': 'uPVC Door Lock Repair',
-  'boarding-up': 'Emergency Boarding Up',
-  'lock-upgrade': 'Lock Upgrades and Door Security',
+  'emergency-lockout': 'Emergency Locksmith and 24 Hour Lockout Help',
+  'lock-change': 'Door Lock Repair and Replacement',
+  'upvc-lock-repair': 'uPVC Door Lock Repair and Replacement',
+  'boarding-up': 'Emergency Boarding Up and Burglary Repairs',
+  'lock-upgrade': 'Anti-Snap Lock Upgrades and Door Security',
 }
 
 function technicalSourceId(

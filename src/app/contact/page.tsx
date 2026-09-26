@@ -1,8 +1,10 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { SITE_CONFIG } from '@/data/config'
+import { whatsappHref } from '@/lib/enquiry'
 import Breadcrumbs from '@/components/Breadcrumbs'
 import SchemaMarkup from '@/components/SchemaMarkup'
+import CallbackForm from '@/components/CallbackForm'
 import { Phone, Mail, MapPin, Clock } from 'lucide-react'
 
 export const metadata: Metadata = {
@@ -33,7 +35,14 @@ const contactSchema = {
   url: `${SITE_CONFIG.domain}/contact`,
 }
 
-export default function ContactPage() {
+export default async function ContactPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ submitted?: string | string[] }>
+}) {
+  const params = await searchParams
+  const submitted = Array.isArray(params.submitted) ? params.submitted[0] : params.submitted
+
   return (
     <>
       <SchemaMarkup schema={contactSchema} />
@@ -51,13 +60,25 @@ export default function ContactPage() {
           <p className="text-gray-300 text-lg mb-6">
             For emergencies, call to confirm current availability, the ETA, and the price basis.
           </p>
-          <a
-            href={`tel:${SITE_CONFIG.phoneTel}`}
-            className="inline-flex flex-col items-center bg-[#FFB800] hover:bg-[#FFC933] text-[#0F1B2D] px-8 py-4 rounded-xl font-black text-xl transition-colors shadow"
-          >
-            <span className="text-sm font-bold uppercase tracking-widest text-[#0F1B2D]/70">Call Now — 24/7</span>
-            <span className="text-2xl">{SITE_CONFIG.phone}</span>
-          </a>
+          <div className="flex flex-col sm:flex-row gap-3 justify-center items-center">
+            <a
+              href={`tel:${SITE_CONFIG.phoneTel}`}
+              data-track="contact-hero"
+              className="inline-flex flex-col items-center bg-[#FFB800] hover:bg-[#FFC933] text-[#0F1B2D] px-8 py-4 rounded-xl font-black text-xl transition-colors shadow"
+            >
+              <span className="text-sm font-bold uppercase tracking-widest text-[#0F1B2D]/70">Call Now — 24/7</span>
+              <span className="text-2xl">{SITE_CONFIG.phone}</span>
+            </a>
+            <a
+              href={whatsappHref()}
+              data-track="contact-hero"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center bg-[#25D366] hover:bg-[#20BD5A] text-[#0F1B2D] px-8 py-4 rounded-xl font-black min-h-[72px]"
+            >
+              WhatsApp
+            </a>
+          </div>
         </div>
       </section>
 
@@ -118,75 +139,27 @@ export default function ContactPage() {
           </div>
 
           {/* Contact form */}
-          <div>
-            <h2 className="text-2xl font-black text-gray-900 mb-6">Send a Message</h2>
-            <p className="text-gray-600 text-sm mb-6">
-              For non-urgent enquiries, quotes, or planned work, use the form below. For an urgent
-              lock problem, call instead so current availability can be checked.
+          <div id="callback" className="scroll-mt-24">
+            <h2 className="text-2xl font-black text-gray-900 mb-3">Request a callback</h2>
+            <p className="text-gray-600 text-sm mb-4">
+              A phone number is enough. For a lockout, call or WhatsApp so the current ETA can be confirmed straight away.
             </p>
-            <form
-              action="/api/contact"
-              method="POST"
-              className="space-y-4"
-            >
-              <div>
-                <label htmlFor="name" className="block text-sm font-semibold text-gray-700 mb-1">
-                  Your Name *
-                </label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  required
-                  className="w-full border border-gray-300 rounded-lg px-4 py-3 text-gray-900 focus:outline-none focus:ring-2 focus:ring-[#0F1B2D] focus:border-transparent"
-                  placeholder="John Smith"
-                />
-              </div>
-              <div>
-                <label htmlFor="phone" className="block text-sm font-semibold text-gray-700 mb-1">
-                  Phone Number *
-                </label>
-                <input
-                  type="tel"
-                  id="phone"
-                  name="phone"
-                  required
-                  className="w-full border border-gray-300 rounded-lg px-4 py-3 text-gray-900 focus:outline-none focus:ring-2 focus:ring-[#0F1B2D] focus:border-transparent"
-                  placeholder="07700 000000"
-                />
-              </div>
-              <div>
-                <label htmlFor="postcode" className="block text-sm font-semibold text-gray-700 mb-1">
-                  Your Postcode
-                </label>
-                <input
-                  type="text"
-                  id="postcode"
-                  name="postcode"
-                  className="w-full border border-gray-300 rounded-lg px-4 py-3 text-gray-900 focus:outline-none focus:ring-2 focus:ring-[#0F1B2D] focus:border-transparent"
-                  placeholder="CV1 1AA"
-                />
-              </div>
-              <div>
-                <label htmlFor="message" className="block text-sm font-semibold text-gray-700 mb-1">
-                  Message *
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  required
-                  rows={4}
-                  className="w-full border border-gray-300 rounded-lg px-4 py-3 text-gray-900 focus:outline-none focus:ring-2 focus:ring-[#0F1B2D] focus:border-transparent"
-                  placeholder="Describe what you need..."
-                />
-              </div>
-              <button
-                type="submit"
-                className="w-full bg-[#0F1B2D] hover:bg-[#162438] text-white py-3 px-6 rounded-lg font-bold transition-colors min-h-[48px]"
-              >
-                Send Message
-              </button>
-            </form>
+            {submitted === '1' && (
+              <p className="mb-4 rounded-lg bg-[#F7F7F5] border border-gray-200 p-4 text-sm font-semibold text-[#0F1B2D]" role="status">
+                Callback request sent. If you are locked out, call {SITE_CONFIG.phone} as well.
+              </p>
+            )}
+            {submitted === 'undelivered' && (
+              <p className="mb-4 rounded-lg border border-amber-300 bg-amber-50 p-4 text-sm text-[#0F1B2D]" role="alert">
+                The website could not deliver that message. Call {SITE_CONFIG.phone} or email {SITE_CONFIG.email}.
+              </p>
+            )}
+            {submitted === 'invalid' && (
+              <p className="mb-4 rounded-lg border border-red-200 bg-red-50 p-4 text-sm text-red-800" role="alert">
+                Enter a phone number I can call, then send the form again. Or call {SITE_CONFIG.phone}.
+              </p>
+            )}
+            <CallbackForm source="contact" />
           </div>
         </div>
       </section>

@@ -6,6 +6,7 @@ import { TOWN_SLUGS } from '@/data/governed-town-services'
 import { AREA_SERVED_SCHEMA } from '@/data/areas'
 import Breadcrumbs from '@/components/Breadcrumbs'
 import ServiceCard from '@/components/ServiceCard'
+import QuickEnquiry from '@/components/QuickEnquiry'
 import CTABlock from '@/components/CTABlock'
 import SchemaMarkup from '@/components/SchemaMarkup'
 
@@ -90,7 +91,7 @@ export default function ServicesPage() {
           <h2 id="services-list-heading" className="sr-only">Available Locksmith Services</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {SERVICES.map((service) => (
-              <ServiceCard key={service.slug} service={service} />
+              <ServiceCard key={service.slug} service={service} callbackHref="#quick-enquiry" />
             ))}
           </div>
         </div>
@@ -128,7 +129,9 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      <CTABlock />
+      <QuickEnquiry source="services" />
+
+      <CTABlock callbackHref="#quick-enquiry" />
     </>
   )
 }

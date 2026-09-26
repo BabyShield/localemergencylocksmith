@@ -10,6 +10,7 @@ import SchemaMarkup from '@/components/SchemaMarkup'
 import DirectAnswer from '@/components/DirectAnswer'
 import LastUpdated from '@/components/LastUpdated'
 import CredentialsStrip from '@/components/CredentialsStrip'
+import QuickEnquiry from '@/components/QuickEnquiry'
 import { SERVICES } from '@/data/services'
 import { SITE_CONFIG, CONTENT_UPDATED, GOOGLE_REVIEWS } from '@/data/config'
 import { AREA_SERVED_SCHEMA } from '@/data/areas'
@@ -29,6 +30,12 @@ export const metadata: Metadata = {
     description: 'Local mobile Coventry locksmith for lockouts, door lock repairs, replacements and security upgrades. Call to confirm attendance; no VAT or call-out fee.',
     url: SITE_CONFIG.domain,
     images: [{ url: `${SITE_CONFIG.domain}/og-image.png`, width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Locksmith Coventry | Local 24/7 Service | From £59',
+    description:
+      'Local mobile locksmith in Coventry for lockouts, door lock repairs, replacements, uPVC locks and security upgrades. 24/7 from £59; no VAT or call-out fee.',
   },
 }
 
@@ -140,6 +147,7 @@ export default function HomePage() {
         heading="Local Locksmith Coventry — Available 24/7"
         subheading="Lockouts, door lock repairs and replacements handled personally. Call for the current ETA and agreed price basis — no VAT or separate call-out fee."
         showResponseTime={false}
+        callbackHref="#quick-enquiry"
       />
 
       {/* 2. Personal trust bar */}
@@ -178,6 +186,8 @@ export default function HomePage() {
           </a>
         </div>
       </div>
+
+      <QuickEnquiry source="homepage" />
 
       {/* Direct Answer */}
       <section className="py-6 px-4 bg-white">
@@ -250,7 +260,7 @@ export default function HomePage() {
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {SERVICES.map((service) => (
-              <ServiceCard key={service.slug} service={service} />
+              <ServiceCard key={service.slug} service={service} callbackHref="#quick-enquiry" />
             ))}
           </div>
         </div>
@@ -272,8 +282,8 @@ export default function HomePage() {
               {[
                 {
                   step: '1',
-                  title: 'Call Me',
-                  desc: 'Call 024 7522 4730. I answer personally — day or night, 365 days a year.',
+                  title: 'Call, WhatsApp, or callback',
+                  desc: 'Call 024 7522 4730, message on WhatsApp, or leave your number. I answer the phone personally — day or night, 365 days a year.',
                 },
                 {
                   step: '2',
@@ -509,7 +519,7 @@ export default function HomePage() {
 
       {/* 14. CTA */}
       <div className="defer-render">
-        <CTABlock />
+        <CTABlock callbackHref="#quick-enquiry" />
       </div>
     </>
   )

@@ -8,6 +8,13 @@ import {
   getTownService,
   hasTownService,
 } from '@/data/governed-town-services'
+import {
+  areaPlaceSchema,
+  getTownServiceKeywords,
+  pageSocialMetadata,
+  SERVICE_HOURS_SCHEMA,
+  serviceChannelSchema,
+} from '@/data/local-seo'
 import { getAreaAuthority } from '@/data/area-authorities'
 import { getBlogPostBySlug } from '@/data/blog-posts'
 import { SERVICE_GUIDE_SLUGS } from '@/data/blog-seo'
@@ -43,7 +50,7 @@ const SERVICE_SEARCH_INTENT_COPY: Record<string, {
 }> = {
   'emergency-lockout': {
     heading: (areaName) => `Locked Out of Your House in ${areaName}?`,
-    body: (areaName) => `This emergency lockout service covers calls in ${areaName} when you are locked out of the house, have lost your keys, or need a 24-hour emergency locksmith.`,
+    body: (areaName) => `This emergency lockout service covers calls in ${areaName} when you are locked out of the house, have lost your keys, or need a 24 hour locksmith or 24-hour emergency locksmith.`,
   },
   'lock-change': {
     heading: (areaName) => `Door Lock Repair & Replacement in ${areaName}`,
@@ -74,18 +81,22 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   const intentTitle = content.metaTitle
   const intentDescription = content.metaDescription
+  const canonical = `${SITE_CONFIG.domain}/areas/${slug}/${serviceSlug}`
 
   return {
     title: intentTitle,
     description: intentDescription,
+    keywords: getTownServiceKeywords(area, service.shortName),
     alternates: {
-      canonical: `${SITE_CONFIG.domain}/areas/${slug}/${serviceSlug}`,
+      canonical,
     },
     openGraph: {
       type: 'website',
+      locale: 'en_GB',
+      siteName: SITE_CONFIG.businessName,
       title: intentTitle,
       description: intentDescription,
-      url: `${SITE_CONFIG.domain}/areas/${slug}/${serviceSlug}`,
+      url: canonical,
       images: [
         {
           url: `${SITE_CONFIG.domain}/api/og?title=${encodeURIComponent(intentTitle)}`,
@@ -94,6 +105,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         },
       ],
     },
+    ...pageSocialMetadata(intentTitle, intentDescription),
   }
 }
 
@@ -112,11 +124,7 @@ export default async function TownServicePage({ params }: Props) {
     (candidate) => candidate.slug !== serviceSlug && hasTownService(slug, candidate.slug),
   )
   const searchIntentCopy = SERVICE_SEARCH_INTENT_COPY[serviceSlug]
-  const pageHeading = serviceSlug === 'lock-change'
-    ? `Door Lock Repair & Replacement in ${area.name}`
-    : serviceSlug === 'boarding-up'
-      ? `Emergency Boarding Up & Burglary Repairs in ${area.name}`
-      : content.h1
+  const pageHeading = content.h1
   const guidePosts = (SERVICE_GUIDE_SLUGS[serviceSlug] ?? [])
     .map((guideSlug) => getBlogPostBySlug(guideSlug))
     .filter((post): post is NonNullable<typeof post> => post != null)
@@ -124,28 +132,23 @@ export default async function TownServicePage({ params }: Props) {
 
   // Service in this town, provided by the single canonical business entity
   // defined in layout.tsx — no rating markup, no entity redefinition.
+  const pageUrl = `${SITE_CONFIG.domain}/areas/${slug}/${serviceSlug}`
   const serviceSchema = {
     '@context': 'https://schema.org',
     '@type': 'Service',
-    '@id': `${SITE_CONFIG.domain}/areas/${slug}/${serviceSlug}#service`,
+    '@id': `${pageUrl}#service`,
     serviceType: service.shortName,
     name: pageHeading,
-    url: `${SITE_CONFIG.domain}/areas/${slug}/${serviceSlug}`,
+    url: pageUrl,
     description: content.metaDescription,
     provider: SERVICE_PROVIDER_SCHEMA,
-    areaServed: {
-      '@type': 'Place',
-      name: area.name,
-      address: {
-        '@type': 'PostalAddress',
-        postalCode: area.postcode,
-        addressRegion: areaAuthority.addressRegion,
-        addressCountry: 'GB',
-      },
-    },
+    providerMobility: 'dynamic',
+    hoursAvailable: SERVICE_HOURS_SCHEMA,
+    availableChannel: serviceChannelSchema(pageUrl),
+    areaServed: areaPlaceSchema(area, areaAuthority.addressRegion),
     offers: {
       '@type': 'Offer',
-      url: `${SITE_CONFIG.domain}/areas/${slug}/${serviceSlug}`,
+      url: pageUrl,
       priceSpecification: {
         '@type': 'PriceSpecification',
         minPrice: String(service.priceFrom),
@@ -159,14 +162,15 @@ export default async function TownServicePage({ params }: Props) {
   const webPageSchema = {
     '@context': 'https://schema.org',
     '@type': 'WebPage',
-    '@id': `${SITE_CONFIG.domain}/areas/${slug}/${serviceSlug}#webpage`,
-    url: `${SITE_CONFIG.domain}/areas/${slug}/${serviceSlug}`,
+    '@id': `${pageUrl}#webpage`,
+    url: pageUrl,
     name: pageHeading,
     description: content.metaDescription,
+    inLanguage: 'en-GB',
     dateModified: content.reviewedOn,
     author: LOCKSMITH_AUTHOR_SCHEMA,
     publisher: { '@id': `${SITE_CONFIG.domain}/#business` },
-    mainEntity: { '@id': `${SITE_CONFIG.domain}/areas/${slug}/${serviceSlug}#service` },
+    mainEntity: { '@id': `${pageUrl}#service` },
     citation: content.sources.map(source => source.url),
   }
 

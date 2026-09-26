@@ -1,18 +1,22 @@
 import Link from 'next/link'
 import type { Service } from '@/data/services'
+import { SITE_CONFIG } from '@/data/config'
 import ServiceIcon from './ServiceIcon'
+import CallbackLink from './CallbackLink'
 
 interface ServiceCardProps {
   service: Service
+  callbackHref?: string
 }
 
-export default function ServiceCard({ service }: ServiceCardProps) {
+export default function ServiceCard({ service, callbackHref = '/contact#callback' }: ServiceCardProps) {
   return (
-    <Link
-      href={`/services/${service.slug}`}
-      prefetch={false}
-      className="group relative bg-white rounded-2xl border border-gray-100 hover:border-[#FFB800]/50 transition-all duration-300 p-6 hover:shadow-lg hover:shadow-[#FFB800]/5 hover:-translate-y-0.5"
-    >
+    <article className="group relative flex flex-col bg-white rounded-2xl border border-gray-100 hover:border-[#FFB800]/50 transition-all duration-300 p-6 hover:shadow-lg hover:shadow-[#FFB800]/5 hover:-translate-y-0.5">
+      <Link
+        href={`/services/${service.slug}`}
+        prefetch={false}
+        className="flex flex-1 flex-col"
+      >
       {/* Price badge */}
       <div className="absolute top-4 right-4 bg-[#0F1B2D] text-[#FFB800] font-black text-sm px-3 py-1 rounded-lg">
         from &pound;{service.priceFrom}
@@ -34,6 +38,22 @@ export default function ServiceCard({ service }: ServiceCardProps) {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
         </svg>
       </div>
-    </Link>
+      </Link>
+      <div className="mt-4 grid grid-cols-2 gap-2">
+        <a
+          href={`tel:${SITE_CONFIG.phoneTel}`}
+          data-track="service-card"
+          className="inline-flex items-center justify-center rounded-xl bg-[#FFB800] px-3 py-2.5 text-sm font-black text-[#0F1B2D] hover:bg-[#FFC933]"
+        >
+          Call
+        </a>
+        <CallbackLink
+          href={callbackHref}
+          className="inline-flex items-center justify-center rounded-xl border border-[#0F1B2D] px-3 py-2.5 text-sm font-black text-[#0F1B2D] hover:bg-[#0F1B2D] hover:text-white"
+        >
+          Callback
+        </CallbackLink>
+      </div>
+    </article>
   )
 }

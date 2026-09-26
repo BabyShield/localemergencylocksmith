@@ -18,9 +18,9 @@ export const SERVICES: Service[] = [
     shortName: 'Emergency Lockout',
     description: '24/7 house and flat lockout service for listed Coventry-area locations. The entry method depends on authority, the fitted lock, the door and its condition.',
     priceFrom: serviceStartingPrice('emergency-lockout'),
-    keywords: ['emergency locksmith coventry', 'locked out of house coventry', 'emergency lockout service coventry', '24 hour emergency locksmith coventry', 'emergency door opening coventry', 'non destructive entry coventry'],
-    metaTitle: `Emergency Locksmith for Lockouts Coventry | From £${serviceStartingPrice('emergency-lockout')}`,
-    metaDescription: `Locked out of your house in Coventry? Call a 24-hour emergency locksmith for lockout service from £${serviceStartingPrice('emergency-lockout')}, with no VAT or call-out fee.`,
+    keywords: ['emergency locksmith coventry', '24 hour locksmith coventry', 'locked out of house coventry', 'emergency lockout service coventry', '24 hour emergency locksmith coventry', 'emergency door opening coventry', 'non destructive entry coventry'],
+    metaTitle: 'Emergency Locksmith Coventry | 24 Hour Lockouts',
+    metaDescription: `Locked out of your house in Coventry? Call a 24 hour locksmith for emergency lockouts from £${serviceStartingPrice('emergency-lockout')}. No VAT or separate call-out fee.`,
   },
   {
     slug: 'lock-change',
@@ -39,7 +39,7 @@ export const SERVICES: Service[] = [
     description: 'Diagnosis and repair options for uPVC multipoint systems, cylinders, handles and window locks across listed Coventry-area locations.',
     priceFrom: serviceStartingPrice('upvc-lock-repair'),
     keywords: ['upvc door lock replacement coventry', 'upvc door lock repair coventry', 'upvc door lock mechanism replacement coventry', 'upvc lock repair coventry', 'window lock repair coventry', 'composite door lock replacement coventry'],
-    metaTitle: 'uPVC Door Lock Repair & Replacement Coventry',
+    metaTitle: `uPVC Door Lock Repair & Replacement Coventry | From £${serviceStartingPrice('upvc-lock-repair')}`,
     metaDescription: `uPVC door lock repair and replacement in Coventry, including failed mechanisms, multipoint locks and window locks. From £${serviceStartingPrice('upvc-lock-repair')}, no VAT or call-out fee.`,
   },
   {

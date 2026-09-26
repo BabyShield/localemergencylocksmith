@@ -9,6 +9,8 @@ import { SOUTH_WEST_AREA_GUIDES } from '../src/data/area-guides-south-west.ts'
 import { SERVICE_AREA_SLUGS } from '../src/data/service-area-types.ts'
 import { TECHNICAL_EVIDENCE_SOURCES } from '../src/data/locksmith-evidence.ts'
 import { supplementalGuidanceSourceIds } from '../src/data/area-guide-evidence-policy.ts'
+import { hasTownService } from '../src/data/governed-town-services.ts'
+import { getAreaSearchH1, getAreaSearchTitle } from '../src/data/local-seo.ts'
 
 const EXPECTED_AREA_COUNT = 78
 const EXPECTED_SERVICE_COUNT = 5
@@ -86,24 +88,24 @@ const AUDIT_SERVICE_TECHNICAL_SOURCE_ROLES = Object.freeze({
 
 const AUDIT_SERVICE_SEARCH_HEADING_INTENTS = Object.freeze({
   'emergency-lockout': {
-    label: 'emergency locksmith and lockout',
-    patterns: [/\bemergency locksmith\b/i, /\blockout\b/i],
+    label: 'emergency locksmith, 24 hour and lockout',
+    patterns: [/\bemergency locksmith\b/i, /\b24 hour\b/i, /\blockout\b/i],
   },
   'lock-change': {
-    label: 'lock repair and replacement',
-    patterns: [/\block repair\b/i, /\breplacement\b/i],
+    label: 'door lock repair and replacement',
+    patterns: [/\bdoor lock repair\b/i, /\breplacement\b/i],
   },
   'upvc-lock-repair': {
-    label: 'uPVC door lock repair',
-    patterns: [/\bupvc\b/i, /\bdoor lock repair\b/i],
+    label: 'uPVC door lock repair and replacement',
+    patterns: [/\bupvc\b/i, /\bdoor lock repair\b/i, /\breplacement\b/i],
   },
   'boarding-up': {
-    label: 'emergency boarding up',
-    patterns: [/\bemergency boarding up\b/i],
+    label: 'emergency boarding up and burglary repairs',
+    patterns: [/\bemergency boarding up\b/i, /\bburglary repairs\b/i],
   },
   'lock-upgrade': {
-    label: 'lock upgrades and door security',
-    patterns: [/\block upgrades?\b/i, /\bdoor security\b/i],
+    label: 'anti-snap lock upgrades and door security',
+    patterns: [/\banti-snap\b/i, /\block upgrades?\b/i, /\bdoor security\b/i],
   },
 })
 
@@ -599,6 +601,7 @@ const areaEditorialRecords = []
 const hubOwnedAreaEditorialRecords = []
 const dedicatedParentEditorialRecords = []
 const searchDescriptionOwners = new Map()
+const searchTitleOwners = new Map()
 const factHeadingOwners = new Map()
 
 check(AREAS.length === EXPECTED_AREA_COUNT, `area registry has ${AREAS.length} entries; expected ${EXPECTED_AREA_COUNT}`)
@@ -777,6 +780,16 @@ for (const area of AREAS) {
 
   const searchDescription = guide.searchDescription?.trim() ?? ''
   const searchDescriptionSourceIds = guide.searchDescriptionSourceIds ?? []
+  const hasDedicatedServicePages = hasTownService(area.slug, 'emergency-lockout')
+  const searchTitle = getAreaSearchTitle(area, hasDedicatedServicePages)
+  const searchH1 = getAreaSearchH1(area, hasDedicatedServicePages)
+  check(searchTitle.length >= 30 && searchTitle.length <= 60, `${label} search title is ${searchTitle.length} characters; expected 30-60`)
+  check(searchTitle.includes(area.name), `${label} search title does not name ${area.name}`)
+  check(/^Locksmith\b/.test(searchTitle), `${label} search title does not lead with locksmith intent`)
+  const previousTitleOwner = searchTitleOwners.get(searchTitle)
+  check(!previousTitleOwner, `${label} repeats the search title used by ${previousTitleOwner}`)
+  if (searchTitle) searchTitleOwners.set(searchTitle, label)
+  check(searchH1.startsWith(`Locksmith Services in ${area.name}`), `${label} H1 does not start with Locksmith Services in ${area.name}`)
   check(searchDescription.length >= 125, `${label} search description is ${searchDescription.length} characters; expected at least 125`)
   check(searchDescription.length <= 160, `${label} search description is ${searchDescription.length} characters; expected at most 160`)
   check(searchDescription.includes(area.name), `${label} search description does not name ${area.name}`)

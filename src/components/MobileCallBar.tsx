@@ -1,14 +1,14 @@
 import { SITE_CONFIG } from '@/data/config'
+import { whatsappHref } from '@/lib/enquiry'
 
 // One consolidated action bar: call (primary) + WhatsApp (secondary).
 // Replaces the separate floating WhatsApp bubble that overlapped content.
 export default function MobileCallBar() {
-  const whatsappUrl = `https://wa.me/442475224730?text=${encodeURIComponent('Hi, I need a locksmith. Can you help?')}`
-
   return (
     <div className="fixed bottom-0 left-0 right-0 z-50 md:hidden flex shadow-[0_-2px_16px_rgba(0,0,0,0.15)]">
       <a
         href={`tel:${SITE_CONFIG.phoneTel}`}
+        data-track="mobile-bar"
         className="flex flex-[2] items-center justify-center gap-2.5 bg-[#FFB800] hover:bg-[#FFC933] text-[#0F1B2D] font-black py-3.5 px-4 transition-colors min-h-[56px]"
       >
         <svg className="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -17,7 +17,8 @@ export default function MobileCallBar() {
         <span className="text-base whitespace-nowrap">CALL {SITE_CONFIG.phone}</span>
       </a>
       <a
-        href={whatsappUrl}
+        href={whatsappHref()}
+        data-track="mobile-bar"
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Message on WhatsApp"

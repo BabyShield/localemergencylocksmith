@@ -28,6 +28,13 @@ import DirectAnswer from '@/components/DirectAnswer'
 import LastUpdated from '@/components/LastUpdated'
 import ServiceIcon from '@/components/ServiceIcon'
 import ContentAuthorNote from '@/components/ContentAuthorNote'
+import QuickEnquiry from '@/components/QuickEnquiry'
+import { whatsappHref } from '@/lib/enquiry'
+import {
+  pageSocialMetadata,
+  SERVICE_HOURS_SCHEMA,
+  serviceChannelSchema,
+} from '@/data/local-seo'
 
 export const dynamic = 'force-static'
 export const revalidate = false
@@ -72,19 +79,24 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params
   const service = getServiceBySlug(slug)
   if (!service) return {}
+  const canonical = `${SITE_CONFIG.domain}/services/${slug}`
   return {
     title: service.metaTitle,
     description: service.metaDescription,
+    keywords: service.keywords.join(', '),
     alternates: {
-      canonical: `${SITE_CONFIG.domain}/services/${slug}`,
+      canonical,
     },
     openGraph: {
       type: 'website',
+      locale: 'en_GB',
+      siteName: SITE_CONFIG.businessName,
       title: service.metaTitle,
       description: service.metaDescription,
-      url: `${SITE_CONFIG.domain}/services/${slug}`,
+      url: canonical,
       images: [{ url: `${SITE_CONFIG.domain}/api/og?title=${encodeURIComponent(service.metaTitle)}`, width: 1200, height: 630 }],
     },
+    ...pageSocialMetadata(service.metaTitle, service.metaDescription),
   }
 }
 
@@ -106,9 +118,9 @@ const SERVICE_CONTENT: Record<string, {
   voiceFaqs: { q: string; a: string }[]
 }> = {
   'emergency-lockout': {
-    h1: 'Emergency Locksmith for House Lockouts in Coventry',
+    h1: '24 Hour Emergency Locksmith for House Lockouts in Coventry',
     intro: [
-      "Being locked out of your house is stressful — especially late at night or in bad weather. I provide a professional emergency lockout service across Coventry and Warwickshire, available 24 hours a day, 7 days a week, 365 days a year.",
+      "Being locked out of your house is stressful — especially late at night or in bad weather. I am a 24 hour locksmith providing a professional emergency lockout service across Coventry and Warwickshire, available 24 hours a day, 7 days a week, 365 days a year.",
       `When you call me, I'll ask for the full address and a brief description of the door and lock. I confirm the current ETA and the price basis for the described scope — from £${STANDARD_LOCKOUT_PRICE}, with no VAT or separate call-out fee.`,
       "I try appropriate non-destructive entry methods first where the lock, door and circumstances allow. If a destructive step or replacement becomes necessary, I explain why and confirm the cost before proceeding.",
     ],
@@ -126,7 +138,7 @@ const SERVICE_CONTENT: Record<string, {
       { q: 'Do you charge more for late night callouts?', a: `The published starting-price basis has no separate night, weekend or bank-holiday surcharge. A standard lockout starts from £${STANDARD_LOCKOUT_PRICE} with no VAT or separate call-out fee; the agreed total still depends on the diagnosed work, method, parts and approved scope.` },
       { q: 'How long does it take to open a locked door?', a: 'The time depends on the lock, door, condition and available method. I inspect the entrance and explain the likely method before starting rather than promise a fixed opening time.' },
     ],
-    howToName: 'How to Get an Emergency Locksmith in Coventry',
+    howToName: 'How to Get a 24 Hour Emergency Locksmith in Coventry',
     benefits: [
       "Non-destructive entry — your lock and door stay intact where possible",
       "No separate time-of-day surcharge — the agreed total still depends on diagnosed scope and parts",
@@ -154,7 +166,7 @@ const SERVICE_CONTENT: Record<string, {
   'lock-change': {
     h1: 'Door Lock Repair & Replacement Coventry',
     intro: [
-      "A stiff, broken, or unreliable door lock does not always need a full security upgrade. I diagnose door lock faults across Coventry and repair the existing lock where that is practical, or replace it when wear or damage makes replacement the better option.",
+      "A stiff, broken, or unreliable door lock does not always need a full security upgrade. I diagnose door lock faults across Coventry, including front door lock replacement and door lock repair, and repair the existing lock where that is practical, or replace it when wear or damage makes replacement the better option.",
       "This service covers Yale nightlatches, mortice locks, euro cylinders, broken front-door locks, and planned lock changes after lost keys or a house move. I explain the repair and replacement options before any work starts.",
       `Door lock repair or replacement starts from £${EURO_CYLINDER_PRICE} including labour and any part explicitly stated in the quote. No VAT. No separate call-out fee.`,
     ],
@@ -218,7 +230,7 @@ const SERVICE_CONTENT: Record<string, {
       { q: 'My uPVC door will not lock at all — is this urgent?', a: 'An entrance that cannot be secured needs prompt attention. Call with the full address and observable symptoms so I can confirm current availability, the ETA and the safe next step.' },
       { q: 'Do you repair window locks on uPVC windows?', a: 'Yes — I repair and replace espagnolette window locks and cockspur handles on uPVC and aluminium windows.' },
     ],
-    howToName: 'How to Get a uPVC Lock Repaired in Coventry',
+    howToName: 'How to Get a uPVC Door Lock Repaired or Replaced in Coventry',
     benefits: [
       "Assessment of common uPVC multipoint systems using visible markings and measured component details",
       "Diagnose before quoting — I'll tell you if a repair is possible before recommending replacement",
@@ -291,7 +303,7 @@ const SERVICE_CONTENT: Record<string, {
   'lock-upgrade': {
     h1: 'Anti-Snap Locks & BS3621 Lock Upgrades Coventry',
     intro: [
-      "Anti-snap cylinders and BS3621-marked locks address different products and tested requirements. If you are following written policy wording, improving resistance to a specified attack method, or replacing a faulty lock, I assess the actual door and explain compatible options.",
+      "Anti-snap locks and BS3621-marked locks address different products and tested requirements. If you are following written policy wording, improving resistance to a specified attack method, or replacing a faulty lock, I assess the actual door and explain compatible options.",
       "I assess anti-snap euro cylinders, BS3621-marked mortice deadlocks and other independently certified options against the actual entrance, measurements and required function.",
       `Lock upgrade prices start from £${ANTI_SNAP_PRICE} for an anti-snap euro cylinder, including the stated lock and fitting. No VAT. No separate call-out fee.`,
     ],
@@ -351,19 +363,23 @@ export default async function ServicePage({ params }: Props) {
   /* ---- Schema markup ---- */
 
 
+  const pageUrl = `${SITE_CONFIG.domain}/services/${slug}`
   const serviceSchema = {
     '@context': 'https://schema.org',
     '@type': 'Service',
-    '@id': `${SITE_CONFIG.domain}/services/${slug}#service`,
-    url: `${SITE_CONFIG.domain}/services/${slug}`,
+    '@id': `${pageUrl}#service`,
+    url: pageUrl,
     name: service.name,
     description: service.description,
     serviceType: service.shortName,
     provider: SERVICE_PROVIDER_SCHEMA,
+    providerMobility: 'dynamic',
+    hoursAvailable: SERVICE_HOURS_SCHEMA,
+    availableChannel: serviceChannelSchema(pageUrl),
     areaServed: AREA_SERVED_SCHEMA,
     offers: {
       '@type': 'Offer',
-      url: `${SITE_CONFIG.domain}/services/${slug}`,
+      url: pageUrl,
       priceSpecification: {
         '@type': 'PriceSpecification',
         minPrice: service.priceFrom.toString(),
@@ -377,15 +393,40 @@ export default async function ServicePage({ params }: Props) {
   const webPageSchema = {
     '@context': 'https://schema.org',
     '@type': 'WebPage',
-    '@id': `${SITE_CONFIG.domain}/services/${slug}#webpage`,
-    url: `${SITE_CONFIG.domain}/services/${slug}`,
+    '@id': `${pageUrl}#webpage`,
+    url: pageUrl,
     name: service.metaTitle,
     description: service.metaDescription,
+    inLanguage: 'en-GB',
     dateModified: SERVICE_GUIDES_REVIEWED_ON,
     author: LOCKSMITH_AUTHOR_SCHEMA,
     publisher: { '@id': `${SITE_CONFIG.domain}/#business` },
-    mainEntity: { '@id': `${SITE_CONFIG.domain}/services/${slug}#service` },
+    mainEntity: { '@id': `${pageUrl}#service` },
+    speakable: {
+      '@type': 'SpeakableSpecification',
+      cssSelector: ['.direct-answer'],
+    },
     citation: evidenceSources.map(source => source.url),
+  }
+
+  const howToSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'HowTo',
+    '@id': `${pageUrl}#howto`,
+    name: content.howToName,
+    description: service.metaDescription,
+    inLanguage: 'en-GB',
+    estimatedCost: {
+      '@type': 'MonetaryAmount',
+      currency: 'GBP',
+      minValue: service.priceFrom,
+    },
+    step: content.steps.map((text, index) => ({
+      '@type': 'HowToStep',
+      position: index + 1,
+      name: `Step ${index + 1}`,
+      text,
+    })),
   }
 
   // Only add voice-search questions that cover a distinct intent. The source
@@ -426,6 +467,7 @@ export default async function ServicePage({ params }: Props) {
     <>
       <SchemaMarkup schema={serviceSchema} />
       <SchemaMarkup schema={webPageSchema} />
+      <SchemaMarkup schema={howToSchema} />
       <SchemaMarkup schema={faqSchema} />
 
       <Breadcrumbs
@@ -443,6 +485,7 @@ export default async function ServicePage({ params }: Props) {
         heading={content.h1}
         subheading={`${service.description} Call now for a price — no VAT, no call-out fee.`}
         compact
+        callbackHref="#quick-enquiry"
       />
 
       {/* ============================================================ */}
@@ -479,15 +522,34 @@ export default async function ServicePage({ params }: Props) {
               No Time-of-Day Surcharge
             </span>
           </div>
+          <div className="flex flex-wrap items-center justify-center gap-2">
           <a
             href={`tel:${SITE_CONFIG.phoneTel}`}
+            data-track="service-price-bar"
             className="inline-flex items-center gap-2 bg-[#FFB800] hover:bg-[#FFC933] text-[#0F1B2D] px-6 py-3 rounded-xl font-black text-lg transition-all duration-200 shadow-[0_2px_12px_rgba(255,184,0,0.3)] hover:shadow-[0_4px_20px_rgba(255,184,0,0.5)] hover:scale-[1.02] whitespace-nowrap"
           >
             <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" /></svg>
             {SITE_CONFIG.phone}
           </a>
+          <a
+            href={whatsappHref()}
+            data-track="service-price-bar"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center bg-[#25D366] hover:bg-[#20BD5A] text-[#0F1B2D] px-5 py-3 rounded-xl font-black"
+          >
+            WhatsApp
+          </a>
+          </div>
         </div>
       </section>
+
+      <QuickEnquiry
+        source={`service-${slug}`}
+        defaultJob={slug}
+        heading={`Call or request a callback for ${service.shortName.toLowerCase()}`}
+        intro={`Use the phone or WhatsApp to confirm the current ETA and price basis for ${service.shortName.toLowerCase()}. If you cannot talk, leave your number and I will call you back.`}
+      />
 
       {/* ============================================================ */}
       {/*  4. Main intro content                                        */}
@@ -566,7 +628,7 @@ export default async function ServicePage({ params }: Props) {
       <section className="py-16 px-4 bg-gradient-to-br from-[#0A1628] via-[#0F1B2D] to-[#162438]">
         <div className="max-w-3xl mx-auto">
           <h2 className="text-2xl md:text-3xl font-black text-white mb-3 text-center">
-            What Happens When You Call
+            {content.howToName}
           </h2>
           <p className="text-gray-400 text-center mb-12 max-w-lg mx-auto">
             From phone call to job done — here is exactly how it works.
@@ -900,6 +962,7 @@ export default async function ServicePage({ params }: Props) {
       <CTABlock
         heading={`Need ${service.shortName.toLowerCase()} help? Call me now.`}
         subtext={`I'm available 24/7, 365 days a year. ${service.shortName} from £${service.priceFrom}. No VAT or separate call-out fee. I confirm the price basis first and agree any scope change before work proceeds.`}
+        callbackHref="#quick-enquiry"
       />
     </>
   )

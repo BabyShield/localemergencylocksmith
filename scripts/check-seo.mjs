@@ -73,10 +73,12 @@ const CORE_SEARCH_INTENT_CONTRACTS = Object.freeze({
   ],
   '/services/emergency-lockout': [
     { label: 'emergency locksmith', pattern: /\bemergency locksmith\b/i },
+    { label: '24 hour locksmith', pattern: /\b24 hour locksmith\b/i },
     { label: 'lockout', pattern: /\blockouts?\b/i },
   ],
   '/services/lock-change': [
     { label: 'door lock repair', pattern: /\bdoor lock repair\b/i },
+    { label: 'front door lock replacement', pattern: /\bfront door lock replacement\b/i },
     { label: 'lock replacement', pattern: /\block replacement\b/i },
   ],
   '/services/upvc-lock-repair': [
@@ -830,7 +832,26 @@ try {
       !headingLevelSkip,
       `${productionUrl.pathname} main heading order jumps from H${headingLevelSkip?.previous.level ?? '?'} to H${headingLevelSkip?.current.level ?? '?'} at ${JSON.stringify(headingLevelSkip?.current.text || 'unnamed heading')}`,
     )
+    const twitterTitle = getMeta(html, 'name', 'twitter:title') ?? getMeta(html, 'property', 'twitter:title') ?? ''
     check(Boolean(ogImage), `${productionUrl.pathname} has no og:image`)
+    if (productionUrl.pathname !== '/') {
+      check(
+        twitterTitle !== 'Locksmith Coventry | Local 24/7 Service | From £59',
+        `${productionUrl.pathname} inherits the homepage Twitter title`,
+      )
+    }
+    if (
+      twitterTitle
+      && (
+        /^\/areas\/[^/]+(?:\/[^/]+)?$/.test(productionUrl.pathname)
+        || /^\/services\/(?:emergency-lockout|lock-change|upvc-lock-repair|boarding-up|lock-upgrade)$/.test(productionUrl.pathname)
+      )
+    ) {
+      check(twitterTitle === title, `${productionUrl.pathname} twitter:title does not match its document title`)
+    }
+    if (/^\/services\/(?:emergency-lockout|lock-change|upvc-lock-repair|boarding-up|lock-upgrade)$/.test(productionUrl.pathname)) {
+      check(/"@type":"HowTo"/.test(html), `${productionUrl.pathname} is missing HowTo schema`)
+    }
     check(mainHtml.length > 0, `${productionUrl.pathname} has no main content landmark`)
     check(!html.includes('https://localemergencylocksmith.co.uk'), `${productionUrl.pathname} contains the redirecting apex origin`)
     check(!html.includes(UNVERIFIED_PROFILE_URL), `${productionUrl.pathname} exposes the unverified differently named Google profile`)

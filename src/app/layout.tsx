@@ -4,6 +4,7 @@ import StickyHeader from '@/components/StickyHeader'
 import MobileCallBar from '@/components/MobileCallBar'
 import TrustStrip from '@/components/TrustStrip'
 import Footer from '@/components/Footer'
+import ConversionTracker from '@/components/ConversionTracker'
 import { SITE_CONFIG } from '@/data/config'
 
 const CRITICAL_RENDER_CSS = `
@@ -26,13 +27,10 @@ export const metadata: Metadata = {
     locale: 'en_GB',
     type: 'website',
   },
-  // Inherited by every route. X/Twitter falls back to the per-page og:image,
-  // so pages only need to override this when the card text should differ.
+  // Card type only. Title and description must come from each route so area
+  // and service pages do not inherit the homepage Twitter snippet.
   twitter: {
     card: 'summary_large_image',
-    title: 'Locksmith Coventry | Local 24/7 Service | From £59',
-    description:
-      'Local locksmith in Coventry for lockouts, lock repairs, replacements and uPVC locks. 24/7 from £59; no VAT or call-out fee.',
   },
   robots: {
     index: true,
@@ -83,6 +81,7 @@ export default function RootLayout({
       </head>
       <body className="site-system-font antialiased bg-white text-gray-900">
         <a href="#main-content" className="skip-link">Skip to main content</a>
+        <ConversionTracker />
         <StickyHeader />
         <TrustStrip />
         <main id="main-content">{children}</main>

@@ -5,6 +5,7 @@ import Breadcrumbs from '@/components/Breadcrumbs'
 import CTABlock from '@/components/CTABlock'
 import SchemaMarkup from '@/components/SchemaMarkup'
 import DirectAnswer from '@/components/DirectAnswer'
+import QuickEnquiry from '@/components/QuickEnquiry'
 import { PUBLISHED_PRICES } from '@/data/pricing'
 
 export const metadata: Metadata = {
@@ -107,6 +108,7 @@ export default function PricesPage() {
           </p>
           <a
             href={`tel:${SITE_CONFIG.phoneTel}`}
+            data-track="prices-hero"
             className="inline-flex flex-col items-center bg-[#FFB800] hover:bg-[#FFC933] text-[#0F1B2D] px-8 py-4 rounded-xl font-black text-xl transition-colors shadow"
           >
             <span className="text-sm font-bold uppercase tracking-widest text-[#0F1B2D]/70">Get a Quote Now</span>
@@ -123,6 +125,12 @@ export default function PricesPage() {
           />
         </div>
       </section>
+
+      <QuickEnquiry
+        source="prices"
+        heading="Seen the from-price? Ask me to confirm it"
+        intro="The published figures are starting prices. Call or WhatsApp with the door and the fault, or leave your number and I will call you back with the price basis for the described job."
+      />
 
       {/* Price table */}
       <section className="py-12 px-4 bg-white" aria-labelledby="published-prices-heading">
@@ -253,7 +261,7 @@ export default function PricesPage() {
         </div>
       </section>
 
-      <CTABlock />
+      <CTABlock callbackHref="#quick-enquiry" />
     </>
   )
 }

@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { SITE_CONFIG } from '@/data/config'
+import { whatsappHref } from '@/lib/enquiry'
 import { SERVICES } from '@/data/services'
 import { BLOG_TOPICS } from '@/data/blog-topics'
 
@@ -33,7 +34,8 @@ export default function Footer() {
           <p className="text-sm mt-1">
             <span className="text-[#FFB800] font-semibold">WhatsApp: </span>
             <a
-              href={`https://wa.me/442475224730?text=${encodeURIComponent('Hi, I need a locksmith. Can you help?')}`}
+              href={whatsappHref()}
+              data-track="footer"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-white transition-colors"

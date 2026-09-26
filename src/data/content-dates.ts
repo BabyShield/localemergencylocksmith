@@ -14,7 +14,7 @@ export const CORE_ROUTE_LAST_MODIFIED = {
 
 // All five canonical service pages share one editorial template and were
 // reviewed together. This date also owns their visible and schema review date.
-export const SERVICE_GUIDES_REVIEWED_ON = '2026-08-29'
+export const SERVICE_GUIDES_REVIEWED_ON = '2026-09-18'
 
 // The eight blog topic hubs were written and reviewed together, so one date
 // owns their sitemap lastModified and their visible "reviewed" line.
