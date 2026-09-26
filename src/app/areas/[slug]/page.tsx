@@ -21,6 +21,7 @@ import {
   serviceChannelSchema,
 } from '@/data/local-seo'
 import Breadcrumbs from '@/components/Breadcrumbs'
+import DirectAnswer from '@/components/DirectAnswer'
 import HeroSection from '@/components/HeroSection'
 import CTABlock from '@/components/CTABlock'
 import FAQSection from '@/components/FAQSection'
@@ -199,6 +200,15 @@ export default async function AreaPage({ params }: Props) {
         showResponseTime={false}
       />
 
+      <section className="py-6 px-4 bg-white">
+        <div className="max-w-3xl mx-auto">
+          <DirectAnswer
+            question={`Which locksmith services cover ${area.name}?`}
+            answer={`${guide.searchDescription} The published services are emergency lockouts, door lock repair and replacement, uPVC lock repair, boarding up and lock upgrades.`}
+          />
+        </div>
+      </section>
+
       <section className="py-12 px-4 bg-white">
         <div className="max-w-3xl mx-auto">
           <p className="text-sm font-bold uppercase tracking-wider text-[#8A5A00] mb-3">Practical local booking guide</p>
@@ -247,14 +257,14 @@ export default async function AreaPage({ params }: Props) {
               : 'Use these five service sections to understand what to describe when you call, which checks can be made before booking, and what still depends on the exact entrance, authority and on-site inspection.'}
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-            {serviceGuidance.map(({ service, localOwnerHref }) => (
+            {serviceGuidance.map(({ service, guidance, localOwnerHref }) => (
               hasDedicatedServicePages ? (
                 <Link key={service.slug} href={localOwnerHref} prefetch={false} className="rounded-lg border border-white/15 bg-white/5 px-4 py-3 text-sm font-semibold hover:border-[#FFB800] hover:text-[#FFB800] transition-colors">
-                  {service.shortName} in {area.name}
+                  {guidance.searchHeading}
                 </Link>
               ) : (
                 <a key={service.slug} href={`#${service.slug}`} className="rounded-lg border border-white/15 bg-white/5 px-4 py-3 text-sm font-semibold hover:border-[#FFB800] hover:text-[#FFB800] transition-colors">
-                  {service.shortName} in {area.name}
+                  {guidance.searchHeading}
                 </a>
               )
             ))}

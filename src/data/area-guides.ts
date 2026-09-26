@@ -17,6 +17,7 @@ import { SOUTH_WEST_AREA_GUIDES } from './area-guides-south-west.ts'
 import { getTechnicalEvidenceSource } from './locksmith-evidence.ts'
 import { SERVICE_AREA_SLUGS, type ServiceAreaSlug } from './service-area-types.ts'
 import { getAreaSearchDescription } from './area-search-descriptions.ts'
+import { getServiceAreaSearchHeading } from './local-seo.ts'
 
 const mergedDraftGuides: Partial<Record<AreaSlug, GovernedAreaGuideDraft>> = {
   ...COVENTRY_AREA_GUIDES,
@@ -25,14 +26,6 @@ const mergedDraftGuides: Partial<Record<AreaSlug, GovernedAreaGuideDraft>> = {
 }
 
 const AREA_NAMES = new Map(AREAS.map(area => [area.slug, area.name]))
-
-const SERVICE_SEARCH_HEADINGS: Record<ServiceAreaSlug, string> = {
-  'emergency-lockout': 'Emergency Locksmith and 24 Hour Lockout Help',
-  'lock-change': 'Door Lock Repair and Replacement',
-  'upvc-lock-repair': 'uPVC Door Lock Repair and Replacement',
-  'boarding-up': 'Emergency Boarding Up and Burglary Repairs',
-  'lock-upgrade': 'Anti-Snap Lock Upgrades and Door Security',
-}
 
 function technicalSourceId(
   guide: GovernedAreaGuideDraft,
@@ -154,7 +147,7 @@ function publishGuide(guide: GovernedAreaGuideDraft): PublishedGovernedAreaGuide
         serviceSlug,
         {
           ...guidance,
-          searchHeading: `${SERVICE_SEARCH_HEADINGS[serviceSlug]} in ${areaName}`,
+          searchHeading: getServiceAreaSearchHeading(serviceSlug, areaName),
           sourceIds: sourceIdsForGuidance(augmentedGuide, serviceSlug, guidance),
         },
       ]

@@ -31,10 +31,12 @@ import ContentAuthorNote from '@/components/ContentAuthorNote'
 import QuickEnquiry from '@/components/QuickEnquiry'
 import { whatsappHref } from '@/lib/enquiry'
 import {
+  getServiceAreaSearchHeading,
   pageSocialMetadata,
   SERVICE_HOURS_SCHEMA,
   serviceChannelSchema,
 } from '@/data/local-seo'
+import { SERVICE_AREA_SLUGS, type ServiceAreaSlug } from '@/data/service-area-types'
 
 export const dynamic = 'force-static'
 export const revalidate = false
@@ -784,7 +786,9 @@ export default async function ServicePage({ params }: Props) {
                       prefetch={false}
                       className="text-sm text-gray-600 hover:text-[#0F1B2D] bg-white hover:bg-white px-3 py-1.5 rounded-lg border border-gray-200 hover:border-[#FFB800] transition-all duration-200"
                     >
-                      {service.shortName} in {area.name}
+                      {SERVICE_AREA_SLUGS.includes(slug as ServiceAreaSlug)
+                        ? getServiceAreaSearchHeading(slug as ServiceAreaSlug, area.name)
+                        : `${service.shortName} in ${area.name}`}
                     </Link>
                   ))}
                 </div>

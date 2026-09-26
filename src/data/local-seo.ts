@@ -1,5 +1,6 @@
 import type { Area } from './areas.ts'
 import { SITE_CONFIG } from './config.ts'
+import type { ServiceAreaSlug } from './service-area-types.ts'
 
 const MIN_TITLE_LENGTH = 30
 const MAX_TITLE_LENGTH = 60
@@ -66,6 +67,19 @@ export function getAreaSearchH1(
   return hasDedicatedServicePages
     ? `Locksmith Services in ${area.name}`
     : `Locksmith Services in ${area.name} — ${area.postcode} Lockouts & Repairs`
+}
+
+const SERVICE_SEARCH_HEADINGS: Record<ServiceAreaSlug, string> = {
+  'emergency-lockout': 'Emergency Locksmith and 24 Hour Lockout Help',
+  'lock-change': 'Door Lock Repair and Replacement',
+  'upvc-lock-repair': 'uPVC Door Lock Repair and Replacement',
+  'boarding-up': 'Emergency Boarding Up and Burglary Repairs',
+  'lock-upgrade': 'Anti-Snap Lock Upgrades and Door Security',
+}
+
+/** Query-shaped heading for one service in one area. The place name keeps each page distinct. */
+export function getServiceAreaSearchHeading(serviceSlug: ServiceAreaSlug, areaName: string): string {
+  return `${SERVICE_SEARCH_HEADINGS[serviceSlug]} in ${areaName}`
 }
 
 export function getAreaKeywords(area: Pick<Area, 'name' | 'postcode'>): string {
