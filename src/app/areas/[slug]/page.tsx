@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { MapPin, PoundSterling, CheckCircle, Lock, Clock, BookOpen } from 'lucide-react'
-import { AREAS, getAreaBySlug, getAreaNeighbours } from '@/data/areas'
+import { AREAS, getAreaBySlug, getAreaNeighbours, getSamePostcodeAreas } from '@/data/areas'
 import { SERVICES } from '@/data/services'
 import { LOCKSMITH_AUTHOR_SCHEMA, SERVICE_PROVIDER_SCHEMA, SITE_CONFIG } from '@/data/config'
 import { getAreaGuide } from '@/data/area-guides'
@@ -91,6 +91,7 @@ export default async function AreaPage({ params }: Props) {
   const hasDedicatedServicePages = hasTownService(area.slug, 'emergency-lockout')
   const hasPairLinkedServiceEvidence = guide.serviceEvidenceMode !== 'hub-context-only'
   const neighbours = getAreaNeighbours(area)
+  const samePostcodeAreas = getSamePostcodeAreas(area)
   const areaAuthority = getAreaAuthority(area.slug)
   const pageSources = hasDedicatedServicePages
     ? guide.sources.filter(source => source.kind !== 'technical')
@@ -518,6 +519,33 @@ export default async function AreaPage({ params }: Props) {
                 </Link>
               ))}
             </div>
+          </div>
+        </section>
+      )}
+
+      {samePostcodeAreas.length > 0 && (
+        <section className="py-9 px-4 bg-white" aria-labelledby="same-postcode-heading">
+          <div className="max-w-3xl mx-auto">
+            <h2 id="same-postcode-heading" className="text-xl font-black text-gray-900 mb-3">
+              More locksmith guides in {area.postcode}
+            </h2>
+            <p className="text-gray-700 leading-relaxed mb-4">
+              {area.name} is filed under the {area.postcode} outward code. These other guides use
+              the same code, and each one still needs the full postcode before attendance is confirmed.
+            </p>
+            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              {samePostcodeAreas.map(other => (
+                <li key={other.slug}>
+                  <Link
+                    href={`/areas/${other.slug}`}
+                    prefetch={false}
+                    className="block rounded-lg border border-gray-200 bg-gray-50 px-4 py-3 text-sm font-semibold text-[#0F1B2D] hover:border-[#FFB800] hover:bg-white"
+                  >
+                    Locksmith {other.name} {other.postcode}
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </div>
         </section>
       )}

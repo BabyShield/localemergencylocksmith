@@ -654,6 +654,18 @@ export function getAreaNeighbours(area: Area): Area[] {
     .filter(Boolean) as Area[]
 }
 
+// Same outward code, but not already shown as an adjoining guide. These links
+// connect places such as the CV6 suburbs that are published separately.
+export function getSamePostcodeAreas(area: Area): Area[] {
+  const linked = new Set(area.neighbours)
+  return AREAS.filter(
+    candidate =>
+      candidate.slug !== area.slug &&
+      candidate.postcode === area.postcode &&
+      !linked.has(candidate.slug),
+  )
+}
+
 export function getAllAreasByRegion(): Record<string, Area[]> {
   return AREAS.reduce((acc, area) => {
     if (!acc[area.region]) acc[area.region] = []
