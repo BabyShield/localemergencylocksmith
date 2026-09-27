@@ -401,7 +401,7 @@ export default async function AreaPage({ params }: Props) {
                       )}
                     </div>
                     <Link href={detailsHref} prefetch={false} className="shrink-0 text-sm font-bold text-[#0F1B2D] underline decoration-[#FFB800] underline-offset-4 hover:text-[#8A5A00]">
-                      View {service.shortName} service details
+                      {service.shortName} service page
                     </Link>
                   </div>
                   {guidance.body.map(paragraph => (
@@ -462,6 +462,25 @@ export default async function AreaPage({ params }: Props) {
                     })}
                     </ul>
                   </div>
+                  {samePostcodeAreas.length > 0 && (
+                    <p className="mt-5 text-sm text-gray-600">
+                      Same {area.postcode} outward code:{' '}
+                      {samePostcodeAreas.map((other, index) => (
+                        <span key={other.slug}>
+                          {index > 0 && ' · '}
+                          <Link
+                            href={hasTownService(other.slug, service.slug)
+                              ? `/areas/${other.slug}/${service.slug}`
+                              : `/areas/${other.slug}#${service.slug}`}
+                            prefetch={false}
+                            className="font-semibold text-[#0F1B2D] underline decoration-[#FFB800] underline-offset-2 hover:text-[#8A5A00]"
+                          >
+                            {service.shortName} in {other.name}
+                          </Link>
+                        </span>
+                      ))}
+                    </p>
+                  )}
                 </article>
               ))}
             </div>
@@ -502,7 +521,11 @@ export default async function AreaPage({ params }: Props) {
           <p className="text-gray-700 leading-relaxed">
             This page uses {area.postcode} as an outward-code reference for {area.name}; it does
             not claim that the code defines the locality boundary. Call with the full postcode to
-            confirm the address, current coverage and arrival estimate.
+            confirm the address, current coverage and arrival estimate. Starting figures are on the{' '}
+            <Link href="/prices" className="font-semibold underline decoration-[#FFB800] underline-offset-2 hover:text-[#8A5A00]">
+              locksmith prices
+            </Link>{' '}
+            page.
           </p>
         </div>
       </section>

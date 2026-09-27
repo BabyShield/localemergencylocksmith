@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { notFound, permanentRedirect } from 'next/navigation'
 import Link from 'next/link'
-import { AREAS, getAreaBySlug, getAreaNeighbours } from '@/data/areas'
+import { AREAS, getAreaBySlug, getAreaNeighbours, getSamePostcodeAreas } from '@/data/areas'
 import { SERVICES, getServiceBySlug } from '@/data/services'
 import { LOCKSMITH_AUTHOR_SCHEMA, SERVICE_PROVIDER_SCHEMA, SITE_CONFIG } from '@/data/config'
 import {
@@ -119,6 +119,7 @@ export default async function TownServicePage({ params }: Props) {
   if (!content) permanentRedirect(`/areas/${slug}#${serviceSlug}`)
 
   const neighbours = getAreaNeighbours(area)
+  const samePostcodeAreas = getSamePostcodeAreas(area)
   const areaAuthority = getAreaAuthority(area.slug)
   const otherServices = SERVICES.filter(
     (candidate) => candidate.slug !== serviceSlug && hasTownService(slug, candidate.slug),
@@ -434,7 +435,29 @@ export default async function TownServicePage({ params }: Props) {
             <Link href={`/services/${serviceSlug}`} className="text-[#0F1B2D] font-bold hover:text-[#FFB800] transition-colors">
               {service.shortName} across Coventry &amp; Warwickshire &rarr;
             </Link>
+            <Link href="/prices" className="text-[#0F1B2D] font-bold hover:text-[#FFB800] transition-colors">
+              Locksmith prices
+            </Link>
           </div>
+          {samePostcodeAreas.length > 0 && (
+            <p className="text-sm text-gray-500 mt-4">
+              Same {area.postcode} outward code:{' '}
+              {samePostcodeAreas.map((other, index) => (
+                <span key={other.slug}>
+                  {index > 0 && ' · '}
+                  <Link
+                    href={hasTownService(other.slug, serviceSlug)
+                      ? `/areas/${other.slug}/${serviceSlug}`
+                      : `/areas/${other.slug}#${serviceSlug}`}
+                    prefetch={false}
+                    className="underline hover:text-[#0F1B2D]"
+                  >
+                    {service.shortName} in {other.name}
+                  </Link>
+                </span>
+              ))}
+            </p>
+          )}
           {neighbours.length > 0 && (
             <p className="text-sm text-gray-500 mt-4" data-service-directory-links="true">
               Other areas served:{' '}
